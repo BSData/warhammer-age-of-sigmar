@@ -47,6 +47,9 @@
         <category id="62d7-ac7a-abd2-db51" name="Skaven" minSelections="0" maxSelections="-1" minPoints="0.0" maxPoints="-1.0" minPercentage="0" maxPercentage="-1" countTowardsParentMinSelections="false" countTowardsParentMaxSelections="false" countTowardsParentMinPoints="false" countTowardsParentMaxPoints="false" countTowardsParentMinPercentage="false" countTowardsParentMaxPercentage="false">
           <modifiers/>
         </category>
+        <category id="e531-1935-4fe1-d29b" name="Khorne Bloodbound" minSelections="0" maxSelections="-1" minPoints="0.0" maxPoints="-1.0" minPercentage="0" maxPercentage="-1" countTowardsParentMinSelections="false" countTowardsParentMaxSelections="false" countTowardsParentMinPoints="false" countTowardsParentMaxPoints="false" countTowardsParentMinPercentage="false" countTowardsParentMaxPercentage="false">
+          <modifiers/>
+        </category>
       </categories>
       <forceTypes/>
     </forceType>
@@ -90,6 +93,13 @@
         <characteristic id="0054-981e-bc82-2ce2" name="Wounds"/>
         <characteristic id="d875-64d5-4fad-c5c3" name="Save"/>
         <characteristic id="2b7b-be5f-5b04-1ec4" name="Bravery"/>
+      </characteristics>
+    </profileType>
+    <profileType id="21fa-9a76-487a-9ce6" name="Spell">
+      <characteristics>
+        <characteristic id="37d7-a851-4f44-4550" name="Casting Value"/>
+        <characteristic id="287b-151d-4cbe-1224" name="Result"/>
+        <characteristic id="211b-1286-f492-1050" name="Known By"/>
       </characteristics>
     </profileType>
   </profileTypes>
