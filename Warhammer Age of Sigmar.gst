@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="13ba-994f-8c12-9f8d" revision="1" battleScribeVersion="1.15" name="Warhammer Age of Sigmar" authorName="Markus W. (taalas)" authorUrl="https://github.com/taalas" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="13ba-994f-8c12-9f8d" revision="2" battleScribeVersion="1.15" name="Warhammer Age of Sigmar" authorName="Markus W. (taalas)" authorUrl="https://github.com/taalas" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <forceTypes>
     <forceType id="14ea-1c32-3c73-06a2" name="Order" minSelections="0" maxSelections="-1" minPoints="0.0" maxPoints="-1.0" minPercentage="0" maxPercentage="-1" countTowardsParentMinSelections="false" countTowardsParentMaxSelections="false" countTowardsParentMinPoints="false" countTowardsParentMaxPoints="false" countTowardsParentMinPercentage="false" countTowardsParentMaxPercentage="false">
       <categories>
@@ -25,6 +25,9 @@
           <modifiers/>
         </category>
         <category id="e092-c885-923d-1c82" name="Stormcast Eternal" minSelections="0" maxSelections="-1" minPoints="0.0" maxPoints="-1.0" minPercentage="0" maxPercentage="-1" countTowardsParentMinSelections="false" countTowardsParentMaxSelections="false" countTowardsParentMinPoints="false" countTowardsParentMaxPoints="false" countTowardsParentMinPercentage="false" countTowardsParentMaxPercentage="false">
+          <modifiers/>
+        </category>
+        <category id="c96d-1643-ed56-ba60" name="Sylvaneth" minSelections="0" maxSelections="-1" minPoints="0.0" maxPoints="-1.0" minPercentage="0" maxPercentage="-1" countTowardsParentMinSelections="false" countTowardsParentMaxSelections="false" countTowardsParentMinPoints="false" countTowardsParentMaxPoints="false" countTowardsParentMinPercentage="false" countTowardsParentMaxPercentage="false">
           <modifiers/>
         </category>
       </categories>
