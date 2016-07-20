@@ -150,14 +150,6 @@
     </forceType>
   </forceTypes>
   <profileTypes>
-    <profileType id="90d1-a434-348d-a861" name="04 Wound Table">
-      <characteristics>
-        <characteristic id="420a-645a-ab28-93a0" name="Variable 1"/>
-        <characteristic id="4cdd-1e03-530f-0ff7" name="Variable 2"/>
-        <characteristic id="b1ea-56be-ba52-16e9" name="Variable 3"/>
-        <characteristic id="ad26-bf56-95c4-80f1" name="Variable 4"/>
-      </characteristics>
-    </profileType>
     <profileType id="1960-ca8e-67ce-2014" name="01 Unit">
       <characteristics>
         <characteristic id="8655-6213-2824-1752" name="Move"/>
@@ -189,6 +181,20 @@
         <characteristic id="b5b6-4cbd-661d-1b70" name="Damage"/>
       </characteristics>
     </profileType>
+	<profileType id="90d1-a434-348d-a861" name="04 Wound Table">
+      <characteristics>
+        <characteristic id="420a-645a-ab28-93a0" name="Variable 1"/>
+        <characteristic id="4cdd-1e03-530f-0ff7" name="Variable 2"/>
+        <characteristic id="b1ea-56be-ba52-16e9" name="Variable 3"/>
+        <characteristic id="ad26-bf56-95c4-80f1" name="Variable 4"/>
+      </characteristics>
+    </profileType>    
+	<profileType id="2e81-5e22-c6e1-73cb" name="05 Spell">
+      <characteristics>
+        <characteristic id="2508-b604-1258-a920" name="Casting Value"/>
+        <characteristic id="76ff-781d-b8e6-5f27" name="Description"/>
+      </characteristics>
+    </profileType>
     <profileType id="c137-4d1f-9d1a-524d" name="06 Ability (Allegience)">
       <characteristics>
         <characteristic id="9fdd-b4b1-5f7a-0970" name="Ability Details"/>
@@ -199,6 +205,11 @@
         <characteristic id="1b71-4c83-4e8c-093f" name="Ability Details"/>
       </characteristics>
     </profileType>
+    <profileType id="0ac4-aacb-2481-8e72" name="09 Artefact">
+      <characteristics>
+        <characteristic id="0918-c47a-d84e-c0cf" name="Artefact Details"/>
+      </characteristics>
+    </profileType>
     <profileType id="c924-5a68-471a-2fd5" name="08 Ability (Unit)">
       <characteristics>
         <characteristic id="d4dc-8e81-bc0e-b8f0" name="Ability Details"/>
@@ -207,17 +218,6 @@
     <profileType id="c749-bae4-71a8-0c36" name="10 Command Trait">
       <characteristics>
         <characteristic id="ee96-6f3a-e5ca-2350" name="Trait Details"/>
-      </characteristics>
-    </profileType>
-    <profileType id="0ac4-aacb-2481-8e72" name="09 Artefact">
-      <characteristics>
-        <characteristic id="0918-c47a-d84e-c0cf" name="Artefact Details"/>
-      </characteristics>
-    </profileType>
-    <profileType id="2e81-5e22-c6e1-73cb" name="05 Spell">
-      <characteristics>
-        <characteristic id="2508-b604-1258-a920" name="Casting Value"/>
-        <characteristic id="76ff-781d-b8e6-5f27" name="Description"/>
       </characteristics>
     </profileType>
   </profileTypes>
