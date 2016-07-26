@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="e51d-b1a3-75fc-dc33" revision="5" battleScribeVersion="1.15" name="Age of Sigmar" books="The General&apos;s Handbook" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="e51d-b1a3-75fc-dc33" revision="6" battleScribeVersion="1.15" name="Age of Sigmar" books="The General&apos;s Handbook" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <forceTypes>
     <forceType id="6ace-8bcc-48b2-6de7" name="Pitched Battle (1,000)" minSelections="0" maxSelections="-1" minPoints="0.0" maxPoints="-1.0" minPercentage="0" maxPercentage="-1" countTowardsParentMinSelections="false" countTowardsParentMaxSelections="false" countTowardsParentMinPoints="false" countTowardsParentMaxPoints="false" countTowardsParentMinPercentage="false" countTowardsParentMaxPercentage="false">
       <categories>
@@ -148,6 +148,32 @@
       </categories>
       <forceTypes/>
     </forceType>
+    <forceType id="dcf7-ee28-719c-355d" name="Open Play" minSelections="0" maxSelections="-1" minPoints="0.0" maxPoints="-1.0" minPercentage="0" maxPercentage="-1" countTowardsParentMinSelections="false" countTowardsParentMaxSelections="false" countTowardsParentMinPoints="false" countTowardsParentMaxPoints="false" countTowardsParentMinPercentage="false" countTowardsParentMaxPercentage="false">
+      <categories>
+        <category id="be17-6bbd-b857-3f43" name="Battalion" minSelections="0" maxSelections="-1" minPoints="0.0" maxPoints="-1.0" minPercentage="0" maxPercentage="-1" countTowardsParentMinSelections="false" countTowardsParentMaxSelections="false" countTowardsParentMinPoints="false" countTowardsParentMaxPoints="false" countTowardsParentMinPercentage="false" countTowardsParentMaxPercentage="false">
+          <modifiers/>
+        </category>
+        <category id="6c6b-e787-f9b8-a510" name="Leader" minSelections="0" maxSelections="-1" minPoints="0.0" maxPoints="-1.0" minPercentage="0" maxPercentage="-1" countTowardsParentMinSelections="false" countTowardsParentMaxSelections="false" countTowardsParentMinPoints="false" countTowardsParentMaxPoints="false" countTowardsParentMinPercentage="false" countTowardsParentMaxPercentage="false">
+          <modifiers/>
+        </category>
+        <category id="a790-d5f5-d0c2-2eb6" name="Leader/Behemoth" minSelections="0" maxSelections="-1" minPoints="0.0" maxPoints="-1.0" minPercentage="0" maxPercentage="-1" countTowardsParentMinSelections="false" countTowardsParentMaxSelections="false" countTowardsParentMinPoints="false" countTowardsParentMaxPoints="false" countTowardsParentMinPercentage="false" countTowardsParentMaxPercentage="false">
+          <modifiers/>
+        </category>
+        <category id="e9f2-765a-b7b8-ce8e" name="Battleline" minSelections="0" maxSelections="-1" minPoints="0.0" maxPoints="-1.0" minPercentage="0" maxPercentage="-1" countTowardsParentMinSelections="false" countTowardsParentMaxSelections="false" countTowardsParentMinPoints="false" countTowardsParentMaxPoints="false" countTowardsParentMinPercentage="false" countTowardsParentMaxPercentage="false">
+          <modifiers/>
+        </category>
+        <category id="1d26-07fc-6a66-d73e" name="Artillery" minSelections="0" maxSelections="-1" minPoints="0.0" maxPoints="-1.0" minPercentage="0" maxPercentage="-1" countTowardsParentMinSelections="false" countTowardsParentMaxSelections="false" countTowardsParentMinPoints="false" countTowardsParentMaxPoints="false" countTowardsParentMinPercentage="false" countTowardsParentMaxPercentage="false">
+          <modifiers/>
+        </category>
+        <category id="fa0c-9044-2568-fa02" name="Behemoth" minSelections="0" maxSelections="-1" minPoints="0.0" maxPoints="-1.0" minPercentage="0" maxPercentage="-1" countTowardsParentMinSelections="false" countTowardsParentMaxSelections="false" countTowardsParentMinPoints="false" countTowardsParentMaxPoints="false" countTowardsParentMinPercentage="false" countTowardsParentMaxPercentage="false">
+          <modifiers/>
+        </category>
+        <category id="065e-fda7-fd27-1f40" name="Other" minSelections="0" maxSelections="-1" minPoints="0.0" maxPoints="-1.0" minPercentage="0" maxPercentage="-1" countTowardsParentMinSelections="false" countTowardsParentMaxSelections="false" countTowardsParentMinPoints="false" countTowardsParentMaxPoints="false" countTowardsParentMinPercentage="false" countTowardsParentMaxPercentage="false">
+          <modifiers/>
+        </category>
+      </categories>
+      <forceTypes/>
+    </forceType>
   </forceTypes>
   <profileTypes>
     <profileType id="1960-ca8e-67ce-2014" name="01 Unit">
@@ -181,15 +207,15 @@
         <characteristic id="b5b6-4cbd-661d-1b70" name="Damage"/>
       </characteristics>
     </profileType>
-	<profileType id="90d1-a434-348d-a861" name="04 Wound Table">
+    <profileType id="90d1-a434-348d-a861" name="04 Wound Table">
       <characteristics>
         <characteristic id="420a-645a-ab28-93a0" name="Variable 1"/>
         <characteristic id="4cdd-1e03-530f-0ff7" name="Variable 2"/>
         <characteristic id="b1ea-56be-ba52-16e9" name="Variable 3"/>
         <characteristic id="ad26-bf56-95c4-80f1" name="Variable 4"/>
       </characteristics>
-    </profileType>    
-	<profileType id="2e81-5e22-c6e1-73cb" name="05 Spell">
+    </profileType>
+    <profileType id="2e81-5e22-c6e1-73cb" name="05 Spell">
       <characteristics>
         <characteristic id="2508-b604-1258-a920" name="Casting Value"/>
         <characteristic id="76ff-781d-b8e6-5f27" name="Description"/>
