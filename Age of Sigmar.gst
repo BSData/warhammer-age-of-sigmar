@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="e51d-b1a3-75fc-dc33" revision="6" battleScribeVersion="1.15" name="Age of Sigmar" books="The General&apos;s Handbook" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="e51d-b1a3-75fc-dc33" revision="7" battleScribeVersion="1.15" name="Age of Sigmar" books="The General&apos;s Handbook" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <forceTypes>
     <forceType id="6ace-8bcc-48b2-6de7" name="Pitched Battle (1,000)" minSelections="0" maxSelections="-1" minPoints="0.0" maxPoints="-1.0" minPercentage="0" maxPercentage="-1" countTowardsParentMinSelections="false" countTowardsParentMaxSelections="false" countTowardsParentMinPoints="false" countTowardsParentMaxPoints="false" countTowardsParentMinPercentage="false" countTowardsParentMaxPercentage="false">
       <categories>
@@ -17,8 +17,16 @@
         </category>
         <category id="a790-d5f5-d0c2-2eb6" name="Leader/Behemoth" minSelections="0" maxSelections="2" minPoints="0.0" maxPoints="-1.0" minPercentage="0" maxPercentage="-1" countTowardsParentMinSelections="false" countTowardsParentMaxSelections="false" countTowardsParentMinPoints="false" countTowardsParentMaxPoints="false" countTowardsParentMinPercentage="false" countTowardsParentMaxPercentage="false">
           <modifiers>
-            <modifier type="decrement" field="maxSelections" value="1.0" repeat="true" numRepeats="1" incrementParentId="6c6b-e787-f9b8-a510" incrementField="selections" incrementValue="1.0">
-              <conditions/>
+            <modifier type="decrement" field="maxSelections" value="1.0" repeat="false" numRepeats="1" incrementParentId="fa0c-9044-2568-fa02" incrementField="selections" incrementValue="1.0">
+              <conditions>
+                <condition parentId="6c6b-e787-f9b8-a510" field="selections" type="at least" value="3.0"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="decrement" field="maxSelections" value="1.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementField="points limit" incrementValue="1.0">
+              <conditions>
+                <condition parentId="6c6b-e787-f9b8-a510" field="selections" type="at least" value="4.0"/>
+              </conditions>
               <conditionGroups/>
             </modifier>
             <modifier type="decrement" field="maxSelections" value="1.0" repeat="true" numRepeats="1" incrementParentId="fa0c-9044-2568-fa02" incrementField="selections" incrementValue="1.0">
@@ -66,12 +74,32 @@
         </category>
         <category id="a790-d5f5-d0c2-2eb6" name="Leader/Behemoth" minSelections="0" maxSelections="4" minPoints="0.0" maxPoints="-1.0" minPercentage="0" maxPercentage="-1" countTowardsParentMinSelections="false" countTowardsParentMaxSelections="false" countTowardsParentMinPoints="false" countTowardsParentMaxPoints="false" countTowardsParentMinPercentage="false" countTowardsParentMaxPercentage="false">
           <modifiers>
-            <modifier type="decrement" field="maxSelections" value="1.0" repeat="true" numRepeats="1" incrementParentId="6c6b-e787-f9b8-a510" incrementField="selections" incrementValue="1.0">
-              <conditions/>
+            <modifier type="decrement" field="maxSelections" value="1.0" repeat="false" numRepeats="1" incrementParentId="6c6b-e787-f9b8-a510" incrementField="selections" incrementValue="1.0">
+              <conditions>
+                <condition parentId="6c6b-e787-f9b8-a510" field="selections" type="at least" value="3.0"/>
+              </conditions>
               <conditionGroups/>
             </modifier>
             <modifier type="decrement" field="maxSelections" value="1.0" repeat="true" numRepeats="1" incrementParentId="fa0c-9044-2568-fa02" incrementField="selections" incrementValue="1.0">
               <conditions/>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="decrement" field="maxSelections" value="1.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementField="points limit" incrementValue="1.0">
+              <conditions>
+                <condition parentId="6c6b-e787-f9b8-a510" field="selections" type="at least" value="4.0"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="decrement" field="maxSelections" value="1.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementField="points limit" incrementValue="1.0">
+              <conditions>
+                <condition parentId="6c6b-e787-f9b8-a510" field="selections" type="at least" value="5.0"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="decrement" field="maxSelections" value="1.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementField="points limit" incrementValue="1.0">
+              <conditions>
+                <condition parentId="6c6b-e787-f9b8-a510" field="selections" type="at least" value="6.0"/>
+              </conditions>
               <conditionGroups/>
             </modifier>
           </modifiers>
@@ -115,12 +143,38 @@
         </category>
         <category id="a790-d5f5-d0c2-2eb6" name="Leader/Behemoth" minSelections="0" maxSelections="5" minPoints="0.0" maxPoints="-1.0" minPercentage="0" maxPercentage="-1" countTowardsParentMinSelections="false" countTowardsParentMaxSelections="false" countTowardsParentMinPoints="false" countTowardsParentMaxPoints="false" countTowardsParentMinPercentage="false" countTowardsParentMaxPercentage="false">
           <modifiers>
-            <modifier type="decrement" field="maxSelections" value="1.0" repeat="true" numRepeats="1" incrementParentId="6c6b-e787-f9b8-a510" incrementField="selections" incrementValue="1.0">
-              <conditions/>
+            <modifier type="decrement" field="maxSelections" value="1.0" repeat="false" numRepeats="1" incrementParentId="6c6b-e787-f9b8-a510" incrementField="selections" incrementValue="1.0">
+              <conditions>
+                <condition parentId="6c6b-e787-f9b8-a510" field="selections" type="at least" value="4.0"/>
+              </conditions>
               <conditionGroups/>
             </modifier>
             <modifier type="decrement" field="maxSelections" value="1.0" repeat="true" numRepeats="1" incrementParentId="fa0c-9044-2568-fa02" incrementField="selections" incrementValue="1.0">
               <conditions/>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="decrement" field="maxSelections" value="1.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementField="points limit" incrementValue="1.0">
+              <conditions>
+                <condition parentId="6c6b-e787-f9b8-a510" field="selections" type="at least" value="5.0"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="decrement" field="maxSelections" value="1.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementField="points limit" incrementValue="1.0">
+              <conditions>
+                <condition parentId="6c6b-e787-f9b8-a510" field="selections" type="at least" value="6.0"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="decrement" field="maxSelections" value="1.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementField="points limit" incrementValue="1.0">
+              <conditions>
+                <condition parentId="6c6b-e787-f9b8-a510" field="selections" type="at least" value="7.0"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="decrement" field="maxSelections" value="1.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementField="points limit" incrementValue="1.0">
+              <conditions>
+                <condition parentId="6c6b-e787-f9b8-a510" field="selections" type="at least" value="8.0"/>
+              </conditions>
               <conditionGroups/>
             </modifier>
           </modifiers>
