@@ -5,5 +5,7 @@
 Catalog Progression:
   - Order: Points, Completed
   - Chaos: Points, Work in Progress
-  - Death: Working on after Chaos
-  - Destruction: Working on after Chaos
+  - Death: Points, Completed
+  - Destruction: Points, Completed
+  - Compendium Armies: Working on after all main alliance armies
+
