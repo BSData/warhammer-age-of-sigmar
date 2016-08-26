@@ -4,7 +4,7 @@
 
 Catalog Progression:
   - Order: Points, Completed
-  - Chaos: Points, Completed
+  - Chaos: Reworking Alliances
   - Death: Points, Completed
   - Destruction: Points, Completed
   - Compendium Armies: Points, In Progress
