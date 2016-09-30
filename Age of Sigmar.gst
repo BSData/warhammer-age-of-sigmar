@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="e51d-b1a3-75fc-dc33" revision="7" battleScribeVersion="1.15" name="Age of Sigmar" books="The General&apos;s Handbook" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="e51d-b1a3-75fc-dc33" revision="8" battleScribeVersion="1.15" name="Age of Sigmar" books="The General&apos;s Handbook" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <forceTypes>
     <forceType id="6ace-8bcc-48b2-6de7" name="Pitched Battle (1,000)" minSelections="0" maxSelections="-1" minPoints="0.0" maxPoints="-1.0" minPercentage="0" maxPercentage="-1" countTowardsParentMinSelections="false" countTowardsParentMaxSelections="false" countTowardsParentMinPoints="false" countTowardsParentMaxPoints="false" countTowardsParentMinPercentage="false" countTowardsParentMaxPercentage="false">
       <categories>
@@ -277,12 +277,12 @@
     </profileType>
     <profileType id="c137-4d1f-9d1a-524d" name="06 Ability (Allegience)">
       <characteristics>
-        <characteristic id="9fdd-b4b1-5f7a-0970" name="Ability Details"/>
+        <characteristic id="9fdd-b4b1-5f7a-0970" name="Allegience Ability Details"/>
       </characteristics>
     </profileType>
     <profileType id="f71f-b0a4-730e-ced3" name="07 Ability (Command)">
       <characteristics>
-        <characteristic id="1b71-4c83-4e8c-093f" name="Ability Details"/>
+        <characteristic id="1b71-4c83-4e8c-093f" name="Command Ability Details"/>
       </characteristics>
     </profileType>
     <profileType id="0ac4-aacb-2481-8e72" name="09 Artefact">
@@ -297,7 +297,7 @@
     </profileType>
     <profileType id="c749-bae4-71a8-0c36" name="10 Command Trait">
       <characteristics>
-        <characteristic id="ee96-6f3a-e5ca-2350" name="Trait Details"/>
+        <characteristic id="ee96-6f3a-e5ca-2350" name="Command Trait Details"/>
       </characteristics>
     </profileType>
   </profileTypes>
