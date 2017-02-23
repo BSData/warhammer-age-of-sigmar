@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="ec09-7606-dae2-0b3d" name="Grand Alliance: Order" book="Grand Alliance: Order" revision="35" battleScribeVersion="2.00" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="ec09-7606-dae2-0b3d" name="Grand Alliance: Order" book="Grand Alliance: Order" revision="36" battleScribeVersion="2.00" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks/>
@@ -11393,33 +11393,379 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="993b-d238-93ba-a4f2" name="Judicators" hidden="false" collective="false" categoryEntryId="(No Category)" type="unit">
-      <profiles/>
+      <profiles>
+        <profile id="cda6-0679-0941-4468" name="Judicators" hidden="false" profileTypeId="1960-ca8e-67ce-2014" profileTypeName="01 Unit">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Move" characteristicTypeId="8655-6213-2824-1752" value="5&quot;"/>
+            <characteristic name="Wounds" characteristicTypeId="cd0e-fea6-411f-904d" value="2"/>
+            <characteristic name="Bravery" characteristicTypeId="0c85-bf79-836b-759e" value="6"/>
+            <characteristic name="Save" characteristicTypeId="f8dd-4f2a-8543-4f36" value="4+"/>
+            <characteristic name="Keywords" characteristicTypeId="215c-9d21-4da5-990f" value="Order, Celestial, Human, Stormcast Eternal, Justicar, Judicators"/>
+          </characteristics>
+        </profile>
+        <profile id="818c-4d3b-7936-64cd" name="Judicator-Prime" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="08 Ability (Unit)">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="A Judicator-Prime leads this unit. Add 1 to the hit rolls for a Judicator-Prime."/>
+          </characteristics>
+        </profile>
+        <profile id="78a8-47ce-357c-790a" name="Rapid Fire" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="08 Ability (Unit)">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <repeats/>
+              <conditions/>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="993b-d238-93ba-a4f2" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4a16-69a8-14c8-2be2" type="equalTo"/>
+                  </conditions>
+                  <conditionGroups/>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <characteristics>
+            <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="If a unit of Judicators does not move in the movement phase, then you can add 1 to the Attacks characteristic of any Boltstorm Crossbows the unit uses in the shooting phase of the same turn."/>
+          </characteristics>
+        </profile>
+        <profile id="4d72-af9f-0bbb-2a2a" name="Chained Lightning" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="08 Ability (Unit)">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <repeats/>
+              <conditions/>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="993b-d238-93ba-a4f2" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7101-e9f9-96f6-93af" type="equalTo"/>
+                  </conditions>
+                  <conditionGroups/>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <characteristics>
+            <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="If a Judicator attacking with a Shockbolt Bow scores a hit then the bolt explodes into a storm of lightning. Instead of making a single wound roll, roll a dice and make a number of wound rolls equal to the number scored. "/>
+          </characteristics>
+        </profile>
+        <profile id="b5c6-42e9-e2d0-c5c8" name="Eternal Judgement" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="08 Ability (Unit)">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="You may re-roll any hit rolls of 1 when a Judicator attacks a &lt;b&gt;Chaos&lt;/b&gt; unit in the shooting phase."/>
+          </characteristics>
+        </profile>
+        <profile id="3f39-c4e3-1583-ca35" name="Thunderbolt Crossbow" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="03 Weapon">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <repeats/>
+              <conditions/>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="993b-d238-93ba-a4f2" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="418e-3a4a-dc62-25cd" type="equalTo"/>
+                  </conditions>
+                  <conditionGroups/>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <characteristics>
+            <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Missile"/>
+            <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="18&quot;"/>
+            <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0"/>
+            <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269"/>
+            <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc"/>
+            <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707"/>
+            <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70"/>
+          </characteristics>
+        </profile>
+        <profile id="8fcb-6748-0b02-8a82" name="Skybolt Bow" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="03 Weapon">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <repeats/>
+              <conditions/>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="993b-d238-93ba-a4f2" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="13f1-b660-6ee4-9ea3" type="equalTo"/>
+                  </conditions>
+                  <conditionGroups/>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <characteristics>
+            <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Missile"/>
+            <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="24&quot;"/>
+            <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="1"/>
+            <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="3+"/>
+            <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="3+"/>
+            <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-1"/>
+            <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="1"/>
+          </characteristics>
+        </profile>
+        <profile id="df2f-edfd-7de3-3b96" name="Boltstorm Crossbow" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="03 Weapon">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <repeats/>
+              <conditions/>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="993b-d238-93ba-a4f2" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4a16-69a8-14c8-2be2" type="equalTo"/>
+                  </conditions>
+                  <conditionGroups/>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <characteristics>
+            <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Missile"/>
+            <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="12&quot;"/>
+            <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="2"/>
+            <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="3+"/>
+            <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="4+"/>
+            <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-"/>
+            <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="1"/>
+          </characteristics>
+        </profile>
+        <profile id="9162-cd2a-2cb4-187d" name="Shockbolt Bow" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="03 Weapon">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <repeats/>
+              <conditions/>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="993b-d238-93ba-a4f2" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7101-e9f9-96f6-93af" type="equalTo"/>
+                  </conditions>
+                  <conditionGroups/>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <characteristics>
+            <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Missile"/>
+            <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="24&quot;"/>
+            <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="1"/>
+            <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="3+"/>
+            <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="3+"/>
+            <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-1"/>
+            <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="1"/>
+          </characteristics>
+        </profile>
+        <profile id="c43b-859b-cece-bb8d" name="Storm Gladius" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="03 Weapon">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
+            <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="1&quot;"/>
+            <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="1"/>
+            <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="3+"/>
+            <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="4+"/>
+            <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-"/>
+            <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="1"/>
+          </characteristics>
+        </profile>
+        <profile id="a448-ba85-8f6c-e92a" name="Thunderbolt Crossbow" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="08 Ability (Unit)">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <repeats/>
+              <conditions/>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="993b-d238-93ba-a4f2" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="418e-3a4a-dc62-25cd" type="equalTo"/>
+                  </conditions>
+                  <conditionGroups/>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <characteristics>
+            <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="When a model attacks with a Thundebolt Crossbow the target is struck by a mighty blast of Celestial energy; pick an enemy unit withing 18&quot; and roll a dice. Subtract 1 from the roll if the target is a &lt;b&gt;Monster&lt;/b&gt;. If the result is equal to or less then the number of models in the unit, the unit suffers D3 mortal wounds. "/>
+          </characteristics>
+        </profile>
+      </profiles>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="increment" field="points" value="160">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="993b-d238-93ba-a4f2" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ada5-76ec-c639-4daa" type="greaterThan"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <repeats/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="81f4-ef16-b80c-6926" type="equalTo"/>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d51d-dec8-f7a7-351d" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="increment" field="points" value="160">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="993b-d238-93ba-a4f2" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ada5-76ec-c639-4daa" type="greaterThan"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="increment" field="points" value="160">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="993b-d238-93ba-a4f2" value="15.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ada5-76ec-c639-4daa" type="greaterThan"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <constraints/>
       <selectionEntries>
-        <selectionEntry id="ada5-76ec-c639-4daa" name="5 Judicators" hidden="false" collective="false" categoryEntryId="(No Category)" type="model">
+        <selectionEntry id="ada5-76ec-c639-4daa" name="Judicators" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers/>
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="minSelections" type="min"/>
-            <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
+            <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="minSelections" type="min"/>
+            <constraint field="selections" scope="parent" value="20.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
           </constraints>
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
-          <costs>
-            <cost name="pts" costTypeId="points" value="160.0"/>
-          </costs>
+          <costs/>
         </selectionEntry>
       </selectionEntries>
-      <selectionEntryGroups/>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="eaf8-6850-617d-b9ba" name="Weapons" hidden="false" collective="false" defaultSelectionEntryId="13f1-b660-6ee4-9ea3">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6cd9-bc26-f53a-6802" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cdd6-b4db-b54c-ee15" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="4a16-69a8-14c8-2be2" name="Boltstorm Crossbow" hidden="false" collective="false" type="upgrade">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="19ec-a084-5f4a-7231" type="max"/>
+              </constraints>
+              <selectionEntries/>
+              <selectionEntryGroups/>
+              <entryLinks/>
+              <costs/>
+            </selectionEntry>
+            <selectionEntry id="13f1-b660-6ee4-9ea3" name="Skybolt Bow" hidden="false" collective="false" type="upgrade">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="99d5-b664-2c3e-e0ec" type="max"/>
+              </constraints>
+              <selectionEntries/>
+              <selectionEntryGroups/>
+              <entryLinks/>
+              <costs/>
+            </selectionEntry>
+          </selectionEntries>
+          <selectionEntryGroups/>
+          <entryLinks/>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="ecb3-41a0-b755-d900" name="Grand Weapons" hidden="false" collective="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="increment" field="f55e-505e-b12c-557a" value="1">
+              <repeats>
+                <repeat field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ada5-76ec-c639-4daa" repeats="1" roundUp="false"/>
+              </repeats>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f55e-505e-b12c-557a" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="7101-e9f9-96f6-93af" name="Shockbolt Bow" hidden="false" collective="false" type="upgrade">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints>
+                <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="419e-0399-88c0-5a23" type="max"/>
+              </constraints>
+              <selectionEntries/>
+              <selectionEntryGroups/>
+              <entryLinks/>
+              <costs/>
+            </selectionEntry>
+            <selectionEntry id="418e-3a4a-dc62-25cd" name="Thunderbolt Crossbow" hidden="false" collective="false" type="upgrade">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints>
+                <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="952d-dc3a-688b-fcc5" type="max"/>
+              </constraints>
+              <selectionEntries/>
+              <selectionEntryGroups/>
+              <entryLinks/>
+              <costs/>
+            </selectionEntry>
+          </selectionEntries>
+          <selectionEntryGroups/>
+          <entryLinks/>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
       <entryLinks/>
       <costs>
-        <cost name="pts" costTypeId="points" value="0.0"/>
+        <cost name="pts" costTypeId="points" value="160.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="adc8-0565-ad36-8c59" name="Kharibdyss" hidden="false" collective="false" categoryEntryId="(No Category)" type="upgrade">
@@ -11614,7 +11960,79 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="9320-740f-eb76-c07b" name="Knight-Vexillor" hidden="false" collective="false" categoryEntryId="(No Category)" type="unit">
-      <profiles/>
+      <profiles>
+        <profile id="5ea0-565d-ec3f-2480" name="Knight-Vexillor" hidden="false" profileTypeId="1960-ca8e-67ce-2014" profileTypeName="01 Unit">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Move" characteristicTypeId="8655-6213-2824-1752" value="4&quot;"/>
+            <characteristic name="Wounds" characteristicTypeId="cd0e-fea6-411f-904d" value="5"/>
+            <characteristic name="Bravery" characteristicTypeId="0c85-bf79-836b-759e" value="9"/>
+            <characteristic name="Save" characteristicTypeId="f8dd-4f2a-8543-4f36" value="3+"/>
+            <characteristic name="Keywords" characteristicTypeId="215c-9d21-4da5-990f" value="Order, Celestial, Human, Stormcast Eternal, Hero, Totem, Knight-Vexillor"/>
+          </characteristics>
+        </profile>
+        <profile id="5f10-072c-6850-4a90" name="Warhammer" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="03 Weapon">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
+            <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="1&quot;"/>
+            <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="4"/>
+            <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="4+"/>
+            <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="3+"/>
+            <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-"/>
+            <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="1"/>
+          </characteristics>
+        </profile>
+        <profile id="c7cc-3370-c3d4-617b" name="Icon of War" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="08 Ability (Unit)">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="You can re-roll charge rolls for &lt;b&gt;Stormcast Eternal&lt;/b&gt; units in your army that are within 12&quot;, as they are inspired to glorious acts of valour."/>
+          </characteristics>
+        </profile>
+        <profile id="49f8-a0f3-5402-cc6b" name="Meteroic Standard" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="08 Ability (Unit)">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="9320-740f-eb76-c07b" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0b19-a3ca-b190-f305" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+          <characteristics>
+            <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="Once per battle, a Knight-Vexillor carrying a Meteoric Standard can call down a comet in your hero phase. To do so, pick a point on the battlefield within 24&quot; of this model and roll two dice, adding the results together. Each unit that is within that many inches of the point that you picked suffers D3 mortal wounds."/>
+          </characteristics>
+        </profile>
+        <profile id="4aeb-4af8-de70-ffb0" name="Pennant of the Stormbringer" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="08 Ability (Unit)">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="9320-740f-eb76-c07b" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3e02-c56d-492d-f8c5" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+          <characteristics>
+            <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="Once per battle, a Knight-Vexillor carrying a Pennant of the Stormbringer can summon a mighty hurricane in your hero phase. To do so, pick a &lt;b&gt;Stormcast Eternal&lt;/b&gt; unit in your army and remove it from play, then set it up anywhere more than 9&quot; from the enemy. It cannot move in the following movement phase. "/>
+          </characteristics>
+        </profile>
+      </profiles>
       <rules/>
       <infoLinks/>
       <modifiers>
@@ -11634,7 +12052,48 @@
       </modifiers>
       <constraints/>
       <selectionEntries/>
-      <selectionEntryGroups/>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="5051-843c-ab1e-7d83" name="Standard" hidden="false" collective="false" defaultSelectionEntryId="0b19-a3ca-b190-f305">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d023-a363-8d48-850c" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bf36-67fe-513f-1809" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="0b19-a3ca-b190-f305" name="Meteoric Standard" hidden="false" collective="false" type="upgrade">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="83a4-3073-0775-6dd7" type="max"/>
+              </constraints>
+              <selectionEntries/>
+              <selectionEntryGroups/>
+              <entryLinks/>
+              <costs/>
+            </selectionEntry>
+            <selectionEntry id="3e02-c56d-492d-f8c5" name="Pennant of the Stormbringer" hidden="false" collective="false" type="upgrade">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8e26-e017-e9ab-f743" type="max"/>
+              </constraints>
+              <selectionEntries/>
+              <selectionEntryGroups/>
+              <entryLinks/>
+              <costs/>
+            </selectionEntry>
+          </selectionEntries>
+          <selectionEntryGroups/>
+          <entryLinks/>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
       <entryLinks/>
       <costs>
         <cost name="pts" costTypeId="points" value="140.0"/>
@@ -12415,7 +12874,49 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="15e7-d7b5-5bed-3c54" name="Lord-Castellant" hidden="false" collective="false" categoryEntryId="(No Category)" type="unit">
-      <profiles/>
+      <profiles>
+        <profile id="b989-6398-4cc3-6c7d" name="Lord-Castellant" hidden="false" profileTypeId="1960-ca8e-67ce-2014" profileTypeName="01 Unit">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Move" characteristicTypeId="8655-6213-2824-1752" value="5&quot;"/>
+            <characteristic name="Wounds" characteristicTypeId="cd0e-fea6-411f-904d" value="6"/>
+            <characteristic name="Bravery" characteristicTypeId="0c85-bf79-836b-759e" value="9"/>
+            <characteristic name="Save" characteristicTypeId="f8dd-4f2a-8543-4f36" value="3+"/>
+            <characteristic name="Keywords" characteristicTypeId="215c-9d21-4da5-990f" value="Order, Celestial, Human, Stormcast Eternal, Hero, Lord-Castellant"/>
+          </characteristics>
+        </profile>
+        <profile id="79ef-b436-3e6a-c1a1" name="Warding Lantern" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="08 Ability (Unit)">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="In your hero phase the Lord-Castellant may unleash the magical energies of his Warding Lantern. If he does so, pick either a &lt;b&gt;Chaos&lt;/b&gt; unit or a &lt;b&gt;Stormcast Eternal&lt;/b&gt; unit that is within 12&quot; of the Lord-Castellant.&lt;br&gt;
+&lt;br&gt;
+If a &lt;b&gt;Chaos&lt;/b&gt; unit is chosen then it is struck by the searing light of the Celestial Realm  and suffers a mortal wound. &lt;b&gt;Chaos Demon&lt;/b&gt; units cannot abide the touch of this light and suffer D3 mortal wounds instead.&lt;br&gt;
+&lt;br&gt;
+if a &lt;b&gt;Storcast Eternal&lt;/b&gt; unit is chosen it is bathed in the healing energies of the lantern and you can add 1 to all save rolls it has to make until your next hero phase. In addition, until your next hero phase, each time you make a save roll of 7 or more for that unit, one model in the unit heals a wound."/>
+          </characteristics>
+        </profile>
+        <profile id="c1eb-4958-823f-6c0f" name="Castellant&apos;s Halberd" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="03 Weapon">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
+            <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="2&quot;"/>
+            <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="3"/>
+            <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="3+"/>
+            <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="3+"/>
+            <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-1"/>
+            <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="2"/>
+          </characteristics>
+        </profile>
+      </profiles>
       <rules/>
       <infoLinks/>
       <modifiers>
@@ -12442,7 +12943,78 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="425f-9d59-b2f6-b5f0" name="Lord-Celestant" hidden="false" collective="false" categoryEntryId="(No Category)" type="unit">
-      <profiles/>
+      <profiles>
+        <profile id="9fbe-7208-fa52-ecc1" name="Lord-Celestant" hidden="false" profileTypeId="1960-ca8e-67ce-2014" profileTypeName="01 Unit">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Move" characteristicTypeId="8655-6213-2824-1752" value="5&quot;"/>
+            <characteristic name="Wounds" characteristicTypeId="cd0e-fea6-411f-904d" value="5"/>
+            <characteristic name="Bravery" characteristicTypeId="0c85-bf79-836b-759e" value="9"/>
+            <characteristic name="Save" characteristicTypeId="f8dd-4f2a-8543-4f36" value="3+"/>
+            <characteristic name="Keywords" characteristicTypeId="215c-9d21-4da5-990f" value="Order, Celestial, Human, Stormcast Eternal, Hero, Lord-Celestant"/>
+          </characteristics>
+        </profile>
+        <profile id="f04b-6707-ede9-1c21" name="Sigmarite Runeblade" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="03 Weapon">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
+            <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="1&quot;"/>
+            <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="4"/>
+            <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="3+"/>
+            <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="3+"/>
+            <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-1"/>
+            <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="1"/>
+          </characteristics>
+        </profile>
+        <profile id="18bd-a330-7b5f-a399" name="Warhammer" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="03 Weapon">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
+            <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="1&quot;"/>
+            <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="2"/>
+            <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="4+"/>
+            <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="3+"/>
+            <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-"/>
+            <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="1"/>
+          </characteristics>
+        </profile>
+        <profile id="8334-f571-d45b-9853" name="Inescapable Vengeance" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="08 Ability (Unit)">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="If this model has made a charge move this turn, it can make 1 extra attack with each of its melee weapons."/>
+          </characteristics>
+        </profile>
+        <profile id="c20b-8184-64fb-dc3c" name="Sigmarite Warcloak" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="08 Ability (Unit)">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="In your shooting phase, you can unleash D6 hammers from this model&apos;s Sigmarite Warcloak. Pick an enemy unit within 16&quot; of this model for each hammer that is unleashed, then roll a dice for each unit you picked. On a roll of 4 or more the unit suffers a mortal wound. Note that you can pick the same unit more than once in a phase."/>
+          </characteristics>
+        </profile>
+        <profile id="2c84-7b99-724c-b66a" name="Furious Retribution" hidden="false" profileTypeId="f71f-b0a4-730e-ced3" profileTypeName="07 Ability (Command)">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Command Ability Details" characteristicTypeId="1b71-4c83-4e8c-093f" value="If this model is your general and uses this ability, then until your next hero phase you can add 1 to the result of any hit rolls in the combat phase for this model and friendly &lt;b&gt; Stormcast Eternal&lt;/b&gt; units within 9&quot; of him."/>
+          </characteristics>
+        </profile>
+      </profiles>
       <rules/>
       <infoLinks/>
       <modifiers>
