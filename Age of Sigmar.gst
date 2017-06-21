@@ -1,5 +1,55 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" book="The General&apos;s Handbook" revision="8" battleScribeVersion="2.00" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<?xml version="1.0" encoding="UTF-8"?><gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" battleScribeVersion="2.01" id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" book="The General's Handbook" revision="8" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar">
+<categoryEntries>
+<categoryEntry id="6c6b-e787-f9b8-a510" name="Leader" hidden="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          
+          
+        </categoryEntry>
+<categoryEntry id="a790-d5f5-d0c2-2eb6" name="Leader/Behemoth" hidden="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          
+          
+        </categoryEntry>
+<categoryEntry id="fa0c-9044-2568-fa02" name="Behemoth" hidden="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          
+          
+        </categoryEntry>
+<categoryEntry id="1d26-07fc-6a66-d73e" name="Artillery" hidden="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          
+          
+        </categoryEntry>
+<categoryEntry id="e9f2-765a-b7b8-ce8e" name="Battleline" hidden="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          
+          
+        </categoryEntry>
+<categoryEntry id="065e-fda7-fd27-1f40" name="Other" hidden="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          
+          
+        </categoryEntry>
+<categoryEntry id="be17-6bbd-b857-3f43" name="Battalion" hidden="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          
+          
+        </categoryEntry>
+</categoryEntries>
   <profiles/>
   <rules/>
   <infoLinks/>
@@ -80,13 +130,8 @@
   </profileTypes>
   <forceEntries>
     <forceEntry id="6ace-8bcc-48b2-6de7" name="Pitched Battle (1,000)" hidden="false">
-      <profiles/>
-      <rules/>
-      <infoLinks/>
-      <modifiers/>
-      <constraints/>
-      <categoryEntries>
-        <categoryEntry id="6c6b-e787-f9b8-a510" name="Leader" hidden="false">
+<categoryLinks>
+<categoryLink id="6ace-8bcc-48b2-6de7-6c6b-e787-f9b8-a510" targetId="6c6b-e787-f9b8-a510" name="Leader" hidden="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -110,8 +155,8 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="minSelections" type="min"/>
             <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="maxSelections" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="a790-d5f5-d0c2-2eb6" name="Leader/Behemoth" hidden="false">
+        </categoryLink>
+<categoryLink id="6ace-8bcc-48b2-6de7-a790-d5f5-d0c2-2eb6" targetId="a790-d5f5-d0c2-2eb6" name="Leader/Behemoth" hidden="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -141,8 +186,8 @@
           <constraints>
             <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="maxSelections" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="fa0c-9044-2568-fa02" name="Behemoth" hidden="false">
+        </categoryLink>
+<categoryLink id="6ace-8bcc-48b2-6de7-fa0c-9044-2568-fa02" targetId="fa0c-9044-2568-fa02" name="Behemoth" hidden="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -158,8 +203,8 @@
           <constraints>
             <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="maxSelections" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="1d26-07fc-6a66-d73e" name="Artillery" hidden="false">
+        </categoryLink>
+<categoryLink id="6ace-8bcc-48b2-6de7-1d26-07fc-6a66-d73e" targetId="1d26-07fc-6a66-d73e" name="Artillery" hidden="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -167,8 +212,8 @@
           <constraints>
             <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="maxSelections" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="e9f2-765a-b7b8-ce8e" name="Battleline" hidden="false">
+        </categoryLink>
+<categoryLink id="6ace-8bcc-48b2-6de7-e9f2-765a-b7b8-ce8e" targetId="e9f2-765a-b7b8-ce8e" name="Battleline" hidden="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -176,32 +221,33 @@
           <constraints>
             <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="minSelections" type="min"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="065e-fda7-fd27-1f40" name="Other" hidden="false">
+        </categoryLink>
+<categoryLink id="6ace-8bcc-48b2-6de7-065e-fda7-fd27-1f40" targetId="065e-fda7-fd27-1f40" name="Other" hidden="false">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers/>
           <constraints/>
-        </categoryEntry>
-        <categoryEntry id="be17-6bbd-b857-3f43" name="Battalion" hidden="false">
+        </categoryLink>
+<categoryLink id="6ace-8bcc-48b2-6de7-be17-6bbd-b857-3f43" targetId="be17-6bbd-b857-3f43" name="Battalion" hidden="false">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers/>
           <constraints/>
-        </categoryEntry>
-      </categoryEntries>
-      <forceEntries/>
-    </forceEntry>
-    <forceEntry id="68de-f89f-a288-4234" name="Pitched Battle (2,000)" hidden="false">
+        </categoryLink>
+</categoryLinks>
       <profiles/>
       <rules/>
       <infoLinks/>
       <modifiers/>
       <constraints/>
-      <categoryEntries>
-        <categoryEntry id="6c6b-e787-f9b8-a510" name="Leader" hidden="false">
+      
+      <forceEntries/>
+    </forceEntry>
+    <forceEntry id="68de-f89f-a288-4234" name="Pitched Battle (2,000)" hidden="false">
+<categoryLinks>
+<categoryLink id="68de-f89f-a288-4234-6c6b-e787-f9b8-a510" targetId="6c6b-e787-f9b8-a510" name="Leader" hidden="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -225,8 +271,8 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="minSelections" type="min"/>
             <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="maxSelections" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="a790-d5f5-d0c2-2eb6" name="Leader/Behemoth" hidden="false">
+        </categoryLink>
+<categoryLink id="68de-f89f-a288-4234-a790-d5f5-d0c2-2eb6" targetId="a790-d5f5-d0c2-2eb6" name="Leader/Behemoth" hidden="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -270,8 +316,8 @@
           <constraints>
             <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="maxSelections" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="fa0c-9044-2568-fa02" name="Behemoth" hidden="false">
+        </categoryLink>
+<categoryLink id="68de-f89f-a288-4234-fa0c-9044-2568-fa02" targetId="fa0c-9044-2568-fa02" name="Behemoth" hidden="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -287,8 +333,8 @@
           <constraints>
             <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="maxSelections" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="1d26-07fc-6a66-d73e" name="Artillery" hidden="false">
+        </categoryLink>
+<categoryLink id="68de-f89f-a288-4234-1d26-07fc-6a66-d73e" targetId="1d26-07fc-6a66-d73e" name="Artillery" hidden="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -296,8 +342,8 @@
           <constraints>
             <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="maxSelections" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="e9f2-765a-b7b8-ce8e" name="Battleline" hidden="false">
+        </categoryLink>
+<categoryLink id="68de-f89f-a288-4234-e9f2-765a-b7b8-ce8e" targetId="e9f2-765a-b7b8-ce8e" name="Battleline" hidden="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -305,32 +351,33 @@
           <constraints>
             <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="minSelections" type="min"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="065e-fda7-fd27-1f40" name="Other" hidden="false">
+        </categoryLink>
+<categoryLink id="68de-f89f-a288-4234-065e-fda7-fd27-1f40" targetId="065e-fda7-fd27-1f40" name="Other" hidden="false">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers/>
           <constraints/>
-        </categoryEntry>
-        <categoryEntry id="be17-6bbd-b857-3f43" name="Battalion" hidden="false">
+        </categoryLink>
+<categoryLink id="68de-f89f-a288-4234-be17-6bbd-b857-3f43" targetId="be17-6bbd-b857-3f43" name="Battalion" hidden="false">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers/>
           <constraints/>
-        </categoryEntry>
-      </categoryEntries>
-      <forceEntries/>
-    </forceEntry>
-    <forceEntry id="77d6-f72b-3fd5-04b9" name="Pitched Battle (2,500)" hidden="false">
+        </categoryLink>
+</categoryLinks>
       <profiles/>
       <rules/>
       <infoLinks/>
       <modifiers/>
       <constraints/>
-      <categoryEntries>
-        <categoryEntry id="6c6b-e787-f9b8-a510" name="Leader" hidden="false">
+      
+      <forceEntries/>
+    </forceEntry>
+    <forceEntry id="77d6-f72b-3fd5-04b9" name="Pitched Battle (2,500)" hidden="false">
+<categoryLinks>
+<categoryLink id="77d6-f72b-3fd5-04b9-6c6b-e787-f9b8-a510" targetId="6c6b-e787-f9b8-a510" name="Leader" hidden="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -354,8 +401,8 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="minSelections" type="min"/>
             <constraint field="selections" scope="parent" value="8.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="maxSelections" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="a790-d5f5-d0c2-2eb6" name="Leader/Behemoth" hidden="false">
+        </categoryLink>
+<categoryLink id="77d6-f72b-3fd5-04b9-a790-d5f5-d0c2-2eb6" targetId="a790-d5f5-d0c2-2eb6" name="Leader/Behemoth" hidden="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -406,8 +453,8 @@
           <constraints>
             <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="maxSelections" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="fa0c-9044-2568-fa02" name="Behemoth" hidden="false">
+        </categoryLink>
+<categoryLink id="77d6-f72b-3fd5-04b9-fa0c-9044-2568-fa02" targetId="fa0c-9044-2568-fa02" name="Behemoth" hidden="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -423,8 +470,8 @@
           <constraints>
             <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="maxSelections" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="1d26-07fc-6a66-d73e" name="Artillery" hidden="false">
+        </categoryLink>
+<categoryLink id="77d6-f72b-3fd5-04b9-1d26-07fc-6a66-d73e" targetId="1d26-07fc-6a66-d73e" name="Artillery" hidden="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -432,8 +479,8 @@
           <constraints>
             <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="maxSelections" type="max"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="e9f2-765a-b7b8-ce8e" name="Battleline" hidden="false">
+        </categoryLink>
+<categoryLink id="77d6-f72b-3fd5-04b9-e9f2-765a-b7b8-ce8e" targetId="e9f2-765a-b7b8-ce8e" name="Battleline" hidden="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -441,81 +488,88 @@
           <constraints>
             <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="minSelections" type="min"/>
           </constraints>
-        </categoryEntry>
-        <categoryEntry id="065e-fda7-fd27-1f40" name="Other" hidden="false">
+        </categoryLink>
+<categoryLink id="77d6-f72b-3fd5-04b9-065e-fda7-fd27-1f40" targetId="065e-fda7-fd27-1f40" name="Other" hidden="false">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers/>
           <constraints/>
-        </categoryEntry>
-        <categoryEntry id="be17-6bbd-b857-3f43" name="Battalion" hidden="false">
+        </categoryLink>
+<categoryLink id="77d6-f72b-3fd5-04b9-be17-6bbd-b857-3f43" targetId="be17-6bbd-b857-3f43" name="Battalion" hidden="false">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers/>
           <constraints/>
-        </categoryEntry>
-      </categoryEntries>
-      <forceEntries/>
-    </forceEntry>
-    <forceEntry id="dcf7-ee28-719c-355d" name="Open Play" hidden="false">
+        </categoryLink>
+</categoryLinks>
       <profiles/>
       <rules/>
       <infoLinks/>
       <modifiers/>
       <constraints/>
-      <categoryEntries>
-        <categoryEntry id="be17-6bbd-b857-3f43" name="Battalion" hidden="false">
+      
+      <forceEntries/>
+    </forceEntry>
+    <forceEntry id="dcf7-ee28-719c-355d" name="Open Play" hidden="false">
+<categoryLinks>
+<categoryLink id="dcf7-ee28-719c-355d-be17-6bbd-b857-3f43" targetId="be17-6bbd-b857-3f43" name="Battalion" hidden="false">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers/>
           <constraints/>
-        </categoryEntry>
-        <categoryEntry id="6c6b-e787-f9b8-a510" name="Leader" hidden="false">
+        </categoryLink>
+<categoryLink id="dcf7-ee28-719c-355d-6c6b-e787-f9b8-a510" targetId="6c6b-e787-f9b8-a510" name="Leader" hidden="false">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers/>
           <constraints/>
-        </categoryEntry>
-        <categoryEntry id="a790-d5f5-d0c2-2eb6" name="Leader/Behemoth" hidden="false">
+        </categoryLink>
+<categoryLink id="dcf7-ee28-719c-355d-a790-d5f5-d0c2-2eb6" targetId="a790-d5f5-d0c2-2eb6" name="Leader/Behemoth" hidden="false">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers/>
           <constraints/>
-        </categoryEntry>
-        <categoryEntry id="e9f2-765a-b7b8-ce8e" name="Battleline" hidden="false">
+        </categoryLink>
+<categoryLink id="dcf7-ee28-719c-355d-e9f2-765a-b7b8-ce8e" targetId="e9f2-765a-b7b8-ce8e" name="Battleline" hidden="false">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers/>
           <constraints/>
-        </categoryEntry>
-        <categoryEntry id="1d26-07fc-6a66-d73e" name="Artillery" hidden="false">
+        </categoryLink>
+<categoryLink id="dcf7-ee28-719c-355d-1d26-07fc-6a66-d73e" targetId="1d26-07fc-6a66-d73e" name="Artillery" hidden="false">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers/>
           <constraints/>
-        </categoryEntry>
-        <categoryEntry id="fa0c-9044-2568-fa02" name="Behemoth" hidden="false">
+        </categoryLink>
+<categoryLink id="dcf7-ee28-719c-355d-fa0c-9044-2568-fa02" targetId="fa0c-9044-2568-fa02" name="Behemoth" hidden="false">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers/>
           <constraints/>
-        </categoryEntry>
-        <categoryEntry id="065e-fda7-fd27-1f40" name="Other" hidden="false">
+        </categoryLink>
+<categoryLink id="dcf7-ee28-719c-355d-065e-fda7-fd27-1f40" targetId="065e-fda7-fd27-1f40" name="Other" hidden="false">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers/>
           <constraints/>
-        </categoryEntry>
-      </categoryEntries>
+        </categoryLink>
+</categoryLinks>
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+      
       <forceEntries/>
     </forceEntry>
   </forceEntries>
