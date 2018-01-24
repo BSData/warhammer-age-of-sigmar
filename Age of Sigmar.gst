@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" book="The General&apos;s Handbook" revision="9" battleScribeVersion="2.01" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" book="The General&apos;s Handbook" revision="10" battleScribeVersion="2.01" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <profiles/>
   <rules/>
   <infoLinks/>
@@ -133,6 +133,13 @@
       <modifiers/>
       <constraints/>
     </categoryEntry>
+    <categoryEntry id="f79c-e161-4ad3-876d" name="Allies" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
   </categoryEntries>
   <forceEntries>
     <forceEntry id="6ace-8bcc-48b2-6de7" name="Pitched Battle (1,000)" hidden="false">
@@ -202,6 +209,15 @@
           <infoLinks/>
           <modifiers/>
           <constraints/>
+        </categoryLink>
+        <categoryLink id="1e63-601d-46aa-fdb6" name="Allies" hidden="false" targetId="f79c-e161-4ad3-876d" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="points" scope="parent" value="200.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ea3a-d89e-9312-ff0f" type="max"/>
+          </constraints>
         </categoryLink>
       </categoryLinks>
     </forceEntry>
@@ -331,6 +347,15 @@
           <infoLinks/>
           <modifiers/>
           <constraints/>
+        </categoryLink>
+        <categoryLink id="f111-a3f8-a023-df10" name="Allies" hidden="false" targetId="f79c-e161-4ad3-876d" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="points" scope="parent" value="400.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7830-4889-16af-79a8" type="max"/>
+          </constraints>
         </categoryLink>
       </categoryLinks>
     </forceEntry>
@@ -468,6 +493,15 @@
           <modifiers/>
           <constraints/>
         </categoryLink>
+        <categoryLink id="6880-119c-943c-a5d0" name="Allies" hidden="false" targetId="f79c-e161-4ad3-876d" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="points" scope="parent" value="500.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9950-8551-2e29-9744" type="max"/>
+          </constraints>
+        </categoryLink>
       </categoryLinks>
     </forceEntry>
     <forceEntry id="dcf7-ee28-719c-355d" name="Open Play" hidden="false">
@@ -521,6 +555,13 @@
           <constraints/>
         </categoryLink>
         <categoryLink id="dcf7-ee28-719c-355d-065e-fda7-fd27-1f40" name="Other" hidden="false" targetId="065e-fda7-fd27-1f40" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </categoryLink>
+        <categoryLink id="c605-12a7-4c22-700e" name="Allies" hidden="false" targetId="f79c-e161-4ad3-876d" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
