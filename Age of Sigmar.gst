@@ -216,7 +216,7 @@
           <infoLinks/>
           <modifiers/>
           <constraints>
-            <constraint field="points" scope="parent" value="200.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ea3a-d89e-9312-ff0f" type="max"/>
+            <constraint field="points" scope="force" value="200.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ea3a-d89e-9312-ff0f" type="max"/>
           </constraints>
         </categoryLink>
       </categoryLinks>
@@ -354,7 +354,7 @@
           <infoLinks/>
           <modifiers/>
           <constraints>
-            <constraint field="points" scope="parent" value="400.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7830-4889-16af-79a8" type="max"/>
+            <constraint field="points" scope="force" value="400.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7830-4889-16af-79a8" type="max"/>
           </constraints>
         </categoryLink>
       </categoryLinks>
@@ -499,7 +499,7 @@
           <infoLinks/>
           <modifiers/>
           <constraints>
-            <constraint field="points" scope="parent" value="500.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9950-8551-2e29-9744" type="max"/>
+            <constraint field="points" scope="force" value="500.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9950-8551-2e29-9744" type="max"/>
           </constraints>
         </categoryLink>
       </categoryLinks>
