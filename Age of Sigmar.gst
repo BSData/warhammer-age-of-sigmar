@@ -16,13 +16,8 @@
         <characteristicType id="215c-9d21-4da5-990f" name="Keywords"/>
       </characteristicTypes>
     </profileType>
-    <profileType id="f55d-ee3a-1597-110f" name="Unit (Wizard)">
+    <profileType id="f55d-ee3a-1597-110f" name="Magic">
       <characteristicTypes>
-        <characteristicType id="9228-8333-6754-40ff" name="Move"/>
-        <characteristicType id="2ffa-f81d-5896-7f88" name="Wounds"/>
-        <characteristicType id="eab0-f4f9-81c6-c468" name="Bravery"/>
-        <characteristicType id="e0e5-ea94-1ca7-fe47" name="Save"/>
-        <characteristicType id="659a-35cc-7a05-fb96" name="Keywords"/>
         <characteristicType id="8294-f605-2c0f-8f92" name="Cast/Unbind"/>
         <characteristicType id="dc9c-47d3-6931-859c" name="Spells Known"/>
       </characteristicTypes>
