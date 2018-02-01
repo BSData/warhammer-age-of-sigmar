@@ -47,12 +47,12 @@
         <characteristicType id="76ff-781d-b8e6-5f27" name="Description"/>
       </characteristicTypes>
     </profileType>
-    <profileType id="c137-4d1f-9d1a-524d" name="Ability (Allegiance)">
+    <profileType id="c137-4d1f-9d1a-524d" name="Battle Trait">
       <characteristicTypes>
-        <characteristicType id="9fdd-b4b1-5f7a-0970" name="Allegience Ability Details"/>
+        <characteristicType id="9fdd-b4b1-5f7a-0970" name="Battle Trait Details"/>
       </characteristicTypes>
     </profileType>
-    <profileType id="f71f-b0a4-730e-ced3" name="Ability (Command)">
+    <profileType id="f71f-b0a4-730e-ced3" name="Command Abilities">
       <characteristicTypes>
         <characteristicType id="1b71-4c83-4e8c-093f" name="Command Ability Details"/>
       </characteristicTypes>
@@ -62,7 +62,7 @@
         <characteristicType id="0918-c47a-d84e-c0cf" name="Artefact Details"/>
       </characteristicTypes>
     </profileType>
-    <profileType id="c924-5a68-471a-2fd5" name="Ability (Unit)">
+    <profileType id="c924-5a68-471a-2fd5" name="Unit Abilities">
       <characteristicTypes>
         <characteristicType id="d4dc-8e81-bc0e-b8f0" name="Ability Details"/>
       </characteristicTypes>
@@ -72,7 +72,7 @@
         <characteristicType id="ee96-6f3a-e5ca-2350" name="Command Trait Details"/>
       </characteristicTypes>
     </profileType>
-    <profileType id="bdc6-78da-3796-60a3" name="Abilities (Battalion)">
+    <profileType id="bdc6-78da-3796-60a3" name="Battalion Abilities">
       <characteristicTypes>
         <characteristicType id="08e0-9ead-1dbe-c801" name="Battalion Ability Details"/>
       </characteristicTypes>
