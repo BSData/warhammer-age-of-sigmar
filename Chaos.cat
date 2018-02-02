@@ -32,6 +32,11 @@
         <characteristicType id="ab4d-bdbd-c0da-dfd3" name="Benefit"/>
       </characteristicTypes>
     </profileType>
+    <profileType id="d0c4-0803-9249-9cd3" name="Peal of Doom - 2D6 Roll">
+      <characteristicTypes>
+        <characteristicType id="bbc9-6420-c480-59b5" name="Effect"/>
+      </characteristicTypes>
+    </profileType>
   </profileTypes>
   <categoryEntries/>
   <forceEntries/>
@@ -2913,7 +2918,7 @@
         </categoryLink>
       </categoryLinks>
     </entryLink>
-    <entryLink id="9339-5411-fc43-7fa4" name="Verminlord Warspeer" hidden="false" targetId="5b13-7605-f6ef-8296" type="selectionEntry">
+    <entryLink id="9339-5411-fc43-7fa4" name="Verminlord Warpseer" hidden="false" targetId="5b13-7605-f6ef-8296" type="selectionEntry">
       <profiles/>
       <rules/>
       <infoLinks/>
@@ -3924,14 +3929,20 @@
           <conditions/>
           <conditionGroups>
             <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="12e2-8381-f656-a0e0" type="equalTo"/>
-              </conditions>
+              <conditions/>
               <conditionGroups>
                 <conditionGroup type="and">
                   <conditions>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="12e2-8381-f656-a0e0" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4c0f-8d37-9abe-330f" type="equalTo"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4c0f-8d37-9abe-330f" type="equalTo"/>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="67ac-7bbe-e1e5-6eaa" type="equalTo"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="12e2-8381-f656-a0e0" type="equalTo"/>
+                  </conditions>
+                  <conditionGroups/>
+                </conditionGroup>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2f94-b57b-a13f-43f7" type="equalTo"/>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ca65-42ff-13dd-8ddc" type="equalTo"/>
                   </conditions>
                   <conditionGroups/>
                 </conditionGroup>
@@ -3959,7 +3970,7 @@
         <modifier type="set" field="hidden" value="true">
           <repeats/>
           <conditions>
-            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="12e2-8381-f656-a0e0" type="equalTo"/>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ca65-42ff-13dd-8ddc" type="equalTo"/>
           </conditions>
           <conditionGroups/>
         </modifier>
@@ -5406,7 +5417,7 @@
         <modifier type="set" field="hidden" value="true">
           <repeats/>
           <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d550-242d-9c39-d5d4" type="equalTo"/>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="627f-3f14-a3ca-2f57" type="equalTo"/>
           </conditions>
           <conditionGroups/>
         </modifier>
@@ -5430,7 +5441,7 @@
         <modifier type="set" field="hidden" value="true">
           <repeats/>
           <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d550-242d-9c39-d5d4" type="equalTo"/>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="627f-3f14-a3ca-2f57" type="equalTo"/>
           </conditions>
           <conditionGroups/>
         </modifier>
@@ -5963,12 +5974,17 @@
       <rules/>
       <infoLinks/>
       <modifiers>
-        <modifier type="set" field="hidden" value="false">
+        <modifier type="set" field="hidden" value="true">
           <repeats/>
-          <conditions>
-            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d550-242d-9c39-d5d4" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d550-242d-9c39-d5d4" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints/>
@@ -6059,10 +6075,16 @@
               <modifiers>
                 <modifier type="set" field="hidden" value="false">
                   <repeats/>
-                  <conditions>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2f94-b57b-a13f-43f7" type="equalTo"/>
-                  </conditions>
-                  <conditionGroups/>
+                  <conditions/>
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2f94-b57b-a13f-43f7" type="equalTo"/>
+                        <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="53ef-0ef0-b19b-aa2f" type="equalTo"/>
+                      </conditions>
+                      <conditionGroups/>
+                    </conditionGroup>
+                  </conditionGroups>
                 </modifier>
               </modifiers>
               <constraints>
@@ -6083,10 +6105,16 @@
               <modifiers>
                 <modifier type="set" field="hidden" value="false">
                   <repeats/>
-                  <conditions>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2f94-b57b-a13f-43f7" type="equalTo"/>
-                  </conditions>
-                  <conditionGroups/>
+                  <conditions/>
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2f94-b57b-a13f-43f7" type="equalTo"/>
+                        <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2c06-1798-2a08-1b21" type="equalTo"/>
+                      </conditions>
+                      <conditionGroups/>
+                    </conditionGroup>
+                  </conditionGroups>
                 </modifier>
               </modifiers>
               <constraints>
@@ -6167,10 +6195,16 @@
               <modifiers>
                 <modifier type="set" field="hidden" value="false">
                   <repeats/>
-                  <conditions>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2f94-b57b-a13f-43f7" type="equalTo"/>
-                  </conditions>
-                  <conditionGroups/>
+                  <conditions/>
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2f94-b57b-a13f-43f7" type="equalTo"/>
+                        <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3057-860d-375e-01c0" type="equalTo"/>
+                      </conditions>
+                      <conditionGroups/>
+                    </conditionGroup>
+                  </conditionGroups>
                 </modifier>
               </modifiers>
               <constraints>
@@ -6275,10 +6309,16 @@
               <modifiers>
                 <modifier type="set" field="hidden" value="false">
                   <repeats/>
-                  <conditions>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2f94-b57b-a13f-43f7" type="equalTo"/>
-                  </conditions>
-                  <conditionGroups/>
+                  <conditions/>
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2f94-b57b-a13f-43f7" type="equalTo"/>
+                        <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7277-7810-6957-80c5" type="equalTo"/>
+                      </conditions>
+                      <conditionGroups/>
+                    </conditionGroup>
+                  </conditionGroups>
                 </modifier>
               </modifiers>
               <constraints>
@@ -6447,10 +6487,16 @@
               <modifiers>
                 <modifier type="set" field="hidden" value="false">
                   <repeats/>
-                  <conditions>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2f94-b57b-a13f-43f7" type="equalTo"/>
-                  </conditions>
-                  <conditionGroups/>
+                  <conditions/>
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2f94-b57b-a13f-43f7" type="equalTo"/>
+                        <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3867-7978-6c22-d5d3" type="equalTo"/>
+                      </conditions>
+                      <conditionGroups/>
+                    </conditionGroup>
+                  </conditionGroups>
                 </modifier>
               </modifiers>
               <constraints>
@@ -6471,10 +6517,16 @@
               <modifiers>
                 <modifier type="set" field="hidden" value="false">
                   <repeats/>
-                  <conditions>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2f94-b57b-a13f-43f7" type="equalTo"/>
-                  </conditions>
-                  <conditionGroups/>
+                  <conditions/>
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2f94-b57b-a13f-43f7" type="equalTo"/>
+                        <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ca65-42ff-13dd-8ddc" type="equalTo"/>
+                      </conditions>
+                      <conditionGroups/>
+                    </conditionGroup>
+                  </conditionGroups>
                 </modifier>
               </modifiers>
               <constraints>
@@ -10217,7 +10269,7 @@
         <cost name="pts" costTypeId="points" value="300.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="5355-f3af-0548-aef2" name="Bullgors" hidden="true" collective="false" type="unit">
+    <selectionEntry id="5355-f3af-0548-aef2" name="Bullgors" hidden="false" collective="false" type="unit">
       <profiles>
         <profile id="7c4c-80e6-dd56-656b" name="Bloodkine" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="08 Ability (Unit)">
           <profiles/>
@@ -17004,7 +17056,7 @@
           <infoLinks/>
           <modifiers/>
           <characteristics>
-            <characteristic name="Benefit" characteristicTypeId="ab4d-bdbd-c0da-dfd3" value="You can add 1 to all wound rolls for Lord Verminking"/>
+            <characteristic name="Benefit" characteristicTypeId="ab4d-bdbd-c0da-dfd3" value="You can add 1 to all wound rolls for Lord Verminking."/>
           </characteristics>
         </profile>
         <profile id="3840-4f49-e015-ebf5" name="Skryre Clan" hidden="false" profileTypeId="63d5-4311-92f8-d2f3" profileTypeName="The Thirteen-headed One">
@@ -17040,7 +17092,7 @@
           <infoLinks/>
           <modifiers/>
           <characteristics>
-            <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="In each of your hero phases, Lord Verminking can select one of the benefits below."/>
+            <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="In each of your hero phases, Lord Verminking can select one of the benefits in the table."/>
           </characteristics>
         </profile>
         <profile id="0365-b736-7d3c-815e" name="Lord Skreech Verminking" hidden="false" profileTypeId="f55d-ee3a-1597-110f" profileTypeName="Magic">
@@ -17060,6 +17112,78 @@
           <modifiers/>
           <characteristics>
             <characteristic name="Command Ability Details" characteristicTypeId="1b71-4c83-4e8c-093f" value="If Lord Skreech Verminking uses this ability, then until your next hero phase you can re-roll wound rolls of 1 for all SKAVEN units within 13&quot; of Lord Verminking where they attack in the combat phase."/>
+          </characteristics>
+        </profile>
+        <profile id="7c02-31de-31ec-12f0" name="Verminking" hidden="false" profileTypeId="90d1-a434-348d-a861" profileTypeName="Damage Table">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Variable 1" characteristicTypeId="420a-645a-ab28-93a0" value="Wounds Suffered"/>
+            <characteristic name="Variable 2" characteristicTypeId="4cdd-1e03-530f-0ff7" value="Move"/>
+            <characteristic name="Variable 3" characteristicTypeId="b1ea-56be-ba52-16e9" value="Prehensile Tails"/>
+            <characteristic name="Variable 4" characteristicTypeId="ad26-bf56-95c4-80f1" value="Plaguereaper"/>
+          </characteristics>
+        </profile>
+        <profile id="cb15-143d-2cb3-bef5" name="Verminking1" hidden="false" profileTypeId="90d1-a434-348d-a861" profileTypeName="Damage Table">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Variable 1" characteristicTypeId="420a-645a-ab28-93a0" value="0-2"/>
+            <characteristic name="Variable 2" characteristicTypeId="4cdd-1e03-530f-0ff7" value="12&quot;"/>
+            <characteristic name="Variable 3" characteristicTypeId="b1ea-56be-ba52-16e9" value="5"/>
+            <characteristic name="Variable 4" characteristicTypeId="ad26-bf56-95c4-80f1" value="5"/>
+          </characteristics>
+        </profile>
+        <profile id="d294-f469-d1e2-1876" name="Verminking2" hidden="false" profileTypeId="90d1-a434-348d-a861" profileTypeName="Damage Table">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Variable 1" characteristicTypeId="420a-645a-ab28-93a0" value="3-4"/>
+            <characteristic name="Variable 2" characteristicTypeId="4cdd-1e03-530f-0ff7" value="10&quot;"/>
+            <characteristic name="Variable 3" characteristicTypeId="b1ea-56be-ba52-16e9" value="4"/>
+            <characteristic name="Variable 4" characteristicTypeId="ad26-bf56-95c4-80f1" value="5"/>
+          </characteristics>
+        </profile>
+        <profile id="7331-6621-011f-a509" name="Verminking3" hidden="false" profileTypeId="90d1-a434-348d-a861" profileTypeName="Damage Table">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Variable 1" characteristicTypeId="420a-645a-ab28-93a0" value="5-7"/>
+            <characteristic name="Variable 2" characteristicTypeId="4cdd-1e03-530f-0ff7" value="8&quot;"/>
+            <characteristic name="Variable 3" characteristicTypeId="b1ea-56be-ba52-16e9" value="3"/>
+            <characteristic name="Variable 4" characteristicTypeId="ad26-bf56-95c4-80f1" value="4"/>
+          </characteristics>
+        </profile>
+        <profile id="1f9e-f7a5-e5e3-b1b5" name="Verminking4" hidden="false" profileTypeId="90d1-a434-348d-a861" profileTypeName="Damage Table">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Variable 1" characteristicTypeId="420a-645a-ab28-93a0" value="8-9"/>
+            <characteristic name="Variable 2" characteristicTypeId="4cdd-1e03-530f-0ff7" value="6&quot;"/>
+            <characteristic name="Variable 3" characteristicTypeId="b1ea-56be-ba52-16e9" value="2"/>
+            <characteristic name="Variable 4" characteristicTypeId="ad26-bf56-95c4-80f1" value="4"/>
+          </characteristics>
+        </profile>
+        <profile id="50ed-99b9-b03d-1c18" name="Verminking5" hidden="false" profileTypeId="90d1-a434-348d-a861" profileTypeName="Damage Table">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Variable 1" characteristicTypeId="420a-645a-ab28-93a0" value="10+"/>
+            <characteristic name="Variable 2" characteristicTypeId="4cdd-1e03-530f-0ff7" value="4&quot;"/>
+            <characteristic name="Variable 3" characteristicTypeId="b1ea-56be-ba52-16e9" value="1"/>
+            <characteristic name="Variable 4" characteristicTypeId="ad26-bf56-95c4-80f1" value="3"/>
           </characteristics>
         </profile>
       </profiles>
@@ -17121,7 +17245,7 @@
               <modifiers/>
               <characteristics>
                 <characteristic name="Casting Value" characteristicTypeId="2508-b604-1258-a920" value="8"/>
-                <characteristic name="Description" characteristicTypeId="76ff-781d-b8e6-5f27" value="If successfuly cast, pick a visible enem unit within 13&quot; and roll 13 dice. For each roll of 4 or more that unit suffers a mortal wound. Each model slain by the spell is mutated into a skaven as follows: after resolving this spell you can set up a new VERMINUS unit within 9&quot; of the target unit - set up one model in this new unit for each model slain by this spell. The unit may not move in the following movement phase."/>
+                <characteristic name="Description" characteristicTypeId="76ff-781d-b8e6-5f27" value="If successfuly cast, pick a visible enemy unit within 13&quot; and roll 13 dice. For each roll of 4 or more that unit suffers a mortal wound. Each model slain by the spell is mutated into a skaven as follows: after resolving this spell you can set up a new VERMINUS unit within 9&quot; of the target unit - set up one model in this new unit for each model slain by this spell. The unit may not move in the following movement phase."/>
               </characteristics>
             </profile>
           </profiles>
@@ -17136,7 +17260,42 @@
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
-          <costs/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="4c6d-4700-c66f-0af2" name="Plaguereaper" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="b432-8080-fac4-8c5b" name="Plaguereaper" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="Weapon">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
+                <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="1&quot;"/>
+                <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="*"/>
+                <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="3+"/>
+                <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="3+"/>
+                <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-"/>
+                <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="1"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2da2-a048-5786-1aa4" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="283c-6a96-e271-2247" type="min"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups/>
@@ -17150,6 +17309,22 @@
           <categoryLinks/>
         </entryLink>
         <entryLink id="6225-d0f4-21db-7dec" name="Arcane Bolt" hidden="false" targetId="869c-168d-eba5-eacf" type="selectionEntry">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+          <categoryLinks/>
+        </entryLink>
+        <entryLink id="20d7-0bdb-8b11-fc82" name="Doom Glaive" hidden="false" targetId="9113-2b30-d50d-71d8" type="selectionEntry">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+          <categoryLinks/>
+        </entryLink>
+        <entryLink id="511f-30f6-0fc2-8681" name="Prehensile Tails" hidden="false" targetId="082e-175f-0ccd-15c2" type="selectionEntry">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -19130,31 +19305,384 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="f063-e5d5-be97-6f8f" name="Screaming Bell" hidden="true" collective="false" type="unit">
-      <profiles/>
+      <profiles>
+        <profile id="10eb-ffe8-f25f-c102" name="Screaming Bell" hidden="false" profileTypeId="1960-ca8e-67ce-2014" profileTypeName="Unit">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Move" characteristicTypeId="8655-6213-2824-1752" value="*"/>
+            <characteristic name="Wounds" characteristicTypeId="cd0e-fea6-411f-904d" value="12"/>
+            <characteristic name="Bravery" characteristicTypeId="0c85-bf79-836b-759e" value="10"/>
+            <characteristic name="Save" characteristicTypeId="f8dd-4f2a-8543-4f36" value="4+"/>
+            <characteristic name="Keywords" characteristicTypeId="215c-9d21-4da5-990f" value="Chaos, Skaven, Masterclan, Hero, Wizard, Grey Seer, Screaming Bell"/>
+          </characteristics>
+        </profile>
+        <profile id="e5b7-3e26-2af6-9b75" name="-" hidden="false" profileTypeId="d0c4-0803-9249-9cd3" profileTypeName="Peal of Doom - 2D6 Roll">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Effect" characteristicTypeId="bbc9-6420-c480-59b5" value="In your hero phase, the Screaming Bell tolls. Roll two dice, add the scores together and consult the table below to see what happens (no modifier can be applied to this roll). If a result says that it affects units &apos;within range of the Peal of Doom&apos;, consult the Damage Table to see the current range of that effect."/>
+          </characteristics>
+        </profile>
+        <profile id="6092-6da5-29a1-7fb2" name="02 - Magical Backlash" hidden="false" profileTypeId="d0c4-0803-9249-9cd3" profileTypeName="Peal of Doom - 2D6 Roll">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Effect" characteristicTypeId="bbc9-6420-c480-59b5" value="The Screaming Bell immediately suffers 1 mortal wound."/>
+          </characteristics>
+        </profile>
+        <profile id="3488-327b-ab1c-1e58" name="03-04 - Unholy Clamour" hidden="false" profileTypeId="d0c4-0803-9249-9cd3" profileTypeName="Peal of Doom - 2D6 Roll">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Effect" characteristicTypeId="bbc9-6420-c480-59b5" value="The Screaming Bell can move an extra 6&quot; in its next movement phase."/>
+          </characteristics>
+        </profile>
+        <profile id="19b0-2919-9853-dcec" name="05-06 - Deafening Peals" hidden="false" profileTypeId="d0c4-0803-9249-9cd3" profileTypeName="Peal of Doom - 2D6 Roll">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Effect" characteristicTypeId="bbc9-6420-c480-59b5" value="Roll a dice for every enemy unit within range of the Peal of Doom. On a 4 or more, that unit suffers a mortal wound."/>
+          </characteristics>
+        </profile>
+        <profile id="af08-3216-c9bf-e89c" name="07 - Avalanche of Energy" hidden="false" profileTypeId="d0c4-0803-9249-9cd3" profileTypeName="Peal of Doom - 2D6 Roll">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Effect" characteristicTypeId="bbc9-6420-c480-59b5" value="Add 1 to all cating rolls for SKAVEN WIZARDS that are within range of the Peal of Doom during this hero phase."/>
+          </characteristics>
+        </profile>
+        <profile id="3318-3c02-9f0b-ed0d" name="08-09 - Apocalyptic Doom" hidden="false" profileTypeId="d0c4-0803-9249-9cd3" profileTypeName="Peal of Doom - 2D6 Roll">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Effect" characteristicTypeId="bbc9-6420-c480-59b5" value="Roll a dice for every enemy unit within range of the Peal of Doom. On a 4 or more, that unit suffers D3 mortal wounds."/>
+          </characteristics>
+        </profile>
+        <profile id="c910-f622-0c63-a2da" name="10-11 - Wall of Unholy Sound" hidden="false" profileTypeId="d0c4-0803-9249-9cd3" profileTypeName="Peal of Doom - 2D6 Roll">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Effect" characteristicTypeId="bbc9-6420-c480-59b5" value="All SKAVEN models from your army within 13&quot; of the Screaming Bell when they attack in your next combat phase make one extra attack with each of their melee weapons."/>
+          </characteristics>
+        </profile>
+        <profile id="fc87-af07-8185-c4da" name="12 - A Stirring Beyond the Veil" hidden="false" profileTypeId="d0c4-0803-9249-9cd3" profileTypeName="Peal of Doom - 2D6 Roll">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Effect" characteristicTypeId="bbc9-6420-c480-59b5" value="The bell summons a Verminlord to the battle.Set up a single VERMINLORD anywhere on the battlefield that is morethan 9&quot; from any enemy model. The Verminlord cannot move in its next movement phase."/>
+          </characteristics>
+        </profile>
+        <profile id="5507-2928-5dfa-8f26" name="13 - Improbable Victory!" hidden="false" profileTypeId="d0c4-0803-9249-9cd3" profileTypeName="Peal of Doom - 2D6 Roll">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Effect" characteristicTypeId="bbc9-6420-c480-59b5" value="Against all probabilty and reason, you immediately win the battle (and are hereafter branded a cheat - not that that should bother a true skaven general)."/>
+          </characteristics>
+        </profile>
+        <profile id="6d10-4c11-ce03-1249" name="Pushed Into Battle" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="For every 3 SKAVEN models that are within 1&quot; of a Screaming Bell at the start of your movement phase, add 1 to its movement characteristic until the end of the phase. If there are at least 10 SKAVEN models within 1&quot; of this model when you roll the dice to see how far it can charge, it makes 2D6 attacks with its Rusty Wheels and Spikes in the following combat phase rather than D6."/>
+          </characteristics>
+        </profile>
+        <profile id="a4e6-f85d-9d25-5884" name="Warpstone Brazier" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="All WIZARDS must subtract 1 from their casting rolls if they are within 6&quot; of any Screaming Bells. This does not affect CHAOS WIZARDS."/>
+          </characteristics>
+        </profile>
+        <profile id="6427-3a2a-4ba3-d6f9" name="Screaming Bell" hidden="false" profileTypeId="f55d-ee3a-1597-110f" profileTypeName="Magic">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Cast/Unbind" characteristicTypeId="8294-f605-2c0f-8f92" value="1/1"/>
+            <characteristic name="Spells Known" characteristicTypeId="dc9c-47d3-6931-859c" value="Arcane Bolt, Mystic Shield, Cracks Call"/>
+          </characteristics>
+        </profile>
+        <profile id="91ef-4163-79f8-54c5" name="The Altar of the Horned Rat" hidden="false" profileTypeId="f71f-b0a4-730e-ced3" profileTypeName="Command Abilities">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Command Ability Details" characteristicTypeId="1b71-4c83-4e8c-093f" value="If the Grey Seer atop the Screaming Bell uses this ability, then until your next hero phase you can add one to the Move and Bravery of all SKAVEN units from your army that can see the Screaming Bell."/>
+          </characteristics>
+        </profile>
+        <profile id="fdb3-04a7-f56a-d48d" name="Screaming Bell" hidden="false" profileTypeId="90d1-a434-348d-a861" profileTypeName="Damage Table">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Variable 1" characteristicTypeId="420a-645a-ab28-93a0" value="Wounds Suffered"/>
+            <characteristic name="Variable 2" characteristicTypeId="4cdd-1e03-530f-0ff7" value="Move"/>
+            <characteristic name="Variable 3" characteristicTypeId="b1ea-56be-ba52-16e9" value="Rusty Wheels and Spikes"/>
+            <characteristic name="Variable 4" characteristicTypeId="ad26-bf56-95c4-80f1" value="Peal of Doom Range"/>
+          </characteristics>
+        </profile>
+        <profile id="8b56-8a43-7d72-389f" name="Screaming Bell1" hidden="false" profileTypeId="90d1-a434-348d-a861" profileTypeName="Damage Table">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Variable 1" characteristicTypeId="420a-645a-ab28-93a0" value="0-2"/>
+            <characteristic name="Variable 2" characteristicTypeId="4cdd-1e03-530f-0ff7" value="4&quot;"/>
+            <characteristic name="Variable 3" characteristicTypeId="b1ea-56be-ba52-16e9" value="2+"/>
+            <characteristic name="Variable 4" characteristicTypeId="ad26-bf56-95c4-80f1" value="13&quot;"/>
+          </characteristics>
+        </profile>
+        <profile id="1f6c-e840-fc0c-f3b7" name="Screaming Bell2" hidden="false" profileTypeId="90d1-a434-348d-a861" profileTypeName="Damage Table">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Variable 1" characteristicTypeId="420a-645a-ab28-93a0" value="3-4"/>
+            <characteristic name="Variable 2" characteristicTypeId="4cdd-1e03-530f-0ff7" value="4&quot;"/>
+            <characteristic name="Variable 3" characteristicTypeId="b1ea-56be-ba52-16e9" value="3+"/>
+            <characteristic name="Variable 4" characteristicTypeId="ad26-bf56-95c4-80f1" value="11&quot;"/>
+          </characteristics>
+        </profile>
+        <profile id="128b-a45e-b088-ae60" name="Screaming Bell3" hidden="false" profileTypeId="90d1-a434-348d-a861" profileTypeName="Damage Table">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Variable 1" characteristicTypeId="420a-645a-ab28-93a0" value="5-7"/>
+            <characteristic name="Variable 2" characteristicTypeId="4cdd-1e03-530f-0ff7" value="2&quot;"/>
+            <characteristic name="Variable 3" characteristicTypeId="b1ea-56be-ba52-16e9" value="4+"/>
+            <characteristic name="Variable 4" characteristicTypeId="ad26-bf56-95c4-80f1" value="9&quot;"/>
+          </characteristics>
+        </profile>
+        <profile id="86c6-1025-f2e4-9c5b" name="Screaming Bell4" hidden="false" profileTypeId="90d1-a434-348d-a861" profileTypeName="Damage Table">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Variable 1" characteristicTypeId="420a-645a-ab28-93a0" value="8-9"/>
+            <characteristic name="Variable 2" characteristicTypeId="4cdd-1e03-530f-0ff7" value="2&quot;"/>
+            <characteristic name="Variable 3" characteristicTypeId="b1ea-56be-ba52-16e9" value="4+"/>
+            <characteristic name="Variable 4" characteristicTypeId="ad26-bf56-95c4-80f1" value="7&quot;"/>
+          </characteristics>
+        </profile>
+        <profile id="0c5d-2a3b-a30c-462b" name="Screaming Bell5" hidden="false" profileTypeId="90d1-a434-348d-a861" profileTypeName="Damage Table">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Variable 1" characteristicTypeId="420a-645a-ab28-93a0" value="10+"/>
+            <characteristic name="Variable 2" characteristicTypeId="4cdd-1e03-530f-0ff7" value="1&quot;"/>
+            <characteristic name="Variable 3" characteristicTypeId="b1ea-56be-ba52-16e9" value="5+"/>
+            <characteristic name="Variable 4" characteristicTypeId="ad26-bf56-95c4-80f1" value="5&quot;"/>
+          </characteristics>
+        </profile>
+      </profiles>
       <rules/>
       <infoLinks/>
       <modifiers>
-        <modifier type="set" field="hidden" value="true">
+        <modifier type="set" field="hidden" value="false">
           <repeats/>
           <conditions/>
           <conditionGroups>
             <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7235-9a79-05ae-ec67" type="equalTo"/>
-                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4c0f-8d37-9abe-330f" type="equalTo"/>
-              </conditions>
-              <conditionGroups/>
+              <conditions/>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7235-9a79-05ae-ec67" type="equalTo"/>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4c0f-8d37-9abe-330f" type="equalTo"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="def3-fb3a-34ff-441f" type="equalTo"/>
+                  </conditions>
+                  <conditionGroups/>
+                </conditionGroup>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2f94-b57b-a13f-43f7" type="equalTo"/>
+                  </conditions>
+                  <conditionGroups/>
+                </conditionGroup>
+              </conditionGroups>
             </conditionGroup>
           </conditionGroups>
         </modifier>
       </modifiers>
       <constraints/>
       <categoryLinks/>
-      <selectionEntries/>
+      <selectionEntries>
+        <selectionEntry id="3115-97c8-d1e7-f77c" name="Cracks Call" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="e7f1-c0ce-0342-2208" name="Cracks Call" hidden="false" profileTypeId="2e81-5e22-c6e1-73cb" profileTypeName="Spell">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Casting Value" characteristicTypeId="2508-b604-1258-a920" value="6"/>
+                <characteristic name="Description" characteristicTypeId="76ff-781d-b8e6-5f27" value="If successfully cast, select a unit within 18&quot; and roll two dice. That unit suffers a mortal wound for each point by which the total score exceeds its Move characteristic (for example, if you rolled a 7, and the unit&apos;s Move was 4, it would suffer 3 mortal wounds). Cracks Call has no effect on units that can fly."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c0ba-91ef-21bd-2211" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6996-87a7-979c-9652" type="min"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs/>
+        </selectionEntry>
+        <selectionEntry id="0ea0-a86c-96dc-2597" name="Warpstone Staff" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="a7f6-b58f-8e9c-89bc" name="Warpstone Staff" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="Weapon">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
+                <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="2&quot;"/>
+                <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="3"/>
+                <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="4+"/>
+                <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="4+"/>
+                <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-1"/>
+                <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="1"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="abc8-b047-6f37-f94f" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="55c8-4909-9506-b84a" type="max"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs/>
+        </selectionEntry>
+        <selectionEntry id="baf4-5981-2f29-f58f" name="Rat Ogor&apos;s Claws" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="f157-e8f7-2d36-87c6" name="Rat Ogor&apos;s Claws" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="Weapon">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
+                <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="1&quot;"/>
+                <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="4"/>
+                <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="4+"/>
+                <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="3+"/>
+                <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-1"/>
+                <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="2"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e114-b381-7ad4-3d58" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="088c-9456-fd7e-2b02" type="min"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs/>
+        </selectionEntry>
+        <selectionEntry id="a245-ca34-4d57-60e6" name="Rusty Wheels and Spikes" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="d7b7-3a0f-e990-324e" name="Rusty Wheels and Spikes" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="Weapon">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
+                <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="1&quot;"/>
+                <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="D6"/>
+                <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="*"/>
+                <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="3+"/>
+                <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-"/>
+                <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="1"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d83b-9c35-3402-7ebe" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d5ac-bc57-983c-a344" type="max"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs/>
+        </selectionEntry>
+      </selectionEntries>
       <selectionEntryGroups/>
-      <entryLinks/>
+      <entryLinks>
+        <entryLink id="147f-d6f7-1c9e-a8ba" name="Arcane Bolt" hidden="false" targetId="869c-168d-eba5-eacf" type="selectionEntry">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+          <categoryLinks/>
+        </entryLink>
+        <entryLink id="ef89-1b36-d045-22f8" name="Mystic Shield" hidden="false" targetId="5fdd-6634-f9f8-068a" type="selectionEntry">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+          <categoryLinks/>
+        </entryLink>
+      </entryLinks>
       <costs>
-        <cost name="pts" costTypeId="points" value="260.0"/>
+        <cost name="pts" costTypeId="points" value="200.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="eaeb-9bf6-6a8c-2890" name="Scyla Anfingrimm" hidden="true" collective="false" type="unit">
@@ -21042,7 +21570,9 @@
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
-          <costs/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="2dde-cf2c-118f-792a" name="Warpfire Projectors" hidden="false" collective="false" type="upgrade">
           <profiles>
@@ -21073,7 +21603,9 @@
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
-          <costs/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="489f-8c67-132c-5045" name="Staff of the Horned Rat" hidden="false" collective="false" type="upgrade">
           <profiles>
@@ -21104,7 +21636,9 @@
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
-          <costs/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="11bc-7e34-48b4-8e19" name="Warpfire Braziers" hidden="false" collective="false" type="upgrade">
           <profiles>
@@ -21135,7 +21669,9 @@
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
-          <costs/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="0c72-5cab-3dc5-585e" name="Crushing Blows" hidden="false" collective="false" type="upgrade">
           <profiles>
@@ -21166,7 +21702,9 @@
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
-          <costs/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups/>
@@ -22591,16 +23129,29 @@
       <rules/>
       <infoLinks/>
       <modifiers>
-        <modifier type="set" field="hidden" value="true">
+        <modifier type="set" field="hidden" value="false">
           <repeats/>
           <conditions/>
           <conditionGroups>
             <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f5bc-4064-652f-f049" type="equalTo"/>
-                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4c0f-8d37-9abe-330f" type="equalTo"/>
-              </conditions>
-              <conditionGroups/>
+              <conditions/>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f5bc-4064-652f-f049" type="equalTo"/>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4c0f-8d37-9abe-330f" type="equalTo"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="def3-fb3a-34ff-441f" type="equalTo"/>
+                  </conditions>
+                  <conditionGroups/>
+                </conditionGroup>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2f94-b57b-a13f-43f7" type="equalTo"/>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3057-860d-375e-01c0" type="equalTo"/>
+                  </conditions>
+                  <conditionGroups/>
+                </conditionGroup>
+              </conditionGroups>
             </conditionGroup>
           </conditionGroups>
         </modifier>
@@ -22614,21 +23165,147 @@
         <cost name="pts" costTypeId="points" value="300.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="5b13-7605-f6ef-8296" name="Verminlord Warspeer" hidden="true" collective="false" type="unit">
-      <profiles/>
+    <selectionEntry id="5b13-7605-f6ef-8296" name="Verminlord Warpseer" hidden="true" collective="false" type="unit">
+      <profiles>
+        <profile id="3a0a-755f-56f0-444b" name="Verminlord Warpseer" hidden="false" profileTypeId="1960-ca8e-67ce-2014" profileTypeName="Unit">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Move" characteristicTypeId="8655-6213-2824-1752" value="*"/>
+            <characteristic name="Wounds" characteristicTypeId="cd0e-fea6-411f-904d" value="12"/>
+            <characteristic name="Bravery" characteristicTypeId="0c85-bf79-836b-759e" value="10"/>
+            <characteristic name="Save" characteristicTypeId="f8dd-4f2a-8543-4f36" value="4+"/>
+            <characteristic name="Keywords" characteristicTypeId="215c-9d21-4da5-990f" value="Chaos, Daemon, Masterclan, Hero, Wizard, Monster, Verminlord, Verminlord Warpseer"/>
+          </characteristics>
+        </profile>
+        <profile id="fb81-c57e-f397-8db1" name="Scry-orb" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="You can re-roll failed save rolls for a Verminlord Warpseer with a Scry-orb. Once per battle, in your shooting phase, the Verminlord Warpseer can choose to throw its Scry-orb. If it does so, select a unit within 13&quot;. That unit suffers D6 mortal wounds (the unit suffers 6 mortal wounds instead if it has a Move of 5&quot; or less). Once the Scry-orb has been thrown you can no longer re-roll failed save rolls for the Verminlord Warpseer."/>
+          </characteristics>
+        </profile>
+        <profile id="474f-3f37-0bc8-2605" name="Verminlord Warpseer" hidden="false" profileTypeId="f55d-ee3a-1597-110f" profileTypeName="Magic">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Cast/Unbind" characteristicTypeId="8294-f605-2c0f-8f92" value="2/1"/>
+            <characteristic name="Spells Known" characteristicTypeId="dc9c-47d3-6931-859c" value="Arcane Bolt, Mystic Shield, Howling Warpgale"/>
+          </characteristics>
+        </profile>
+        <profile id="380e-fa28-015e-c1b2" name="Forth-forth, Children of the Horned Rat" hidden="false" profileTypeId="f71f-b0a4-730e-ced3" profileTypeName="Command Abilities">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Command Ability Details" characteristicTypeId="1b71-4c83-4e8c-093f" value="If a Verminlord Warpseer uses this ability, you can summon a unit of Giant Rats to the battlefield. Set up a unit of Giant Rats anywhere within 13&quot; of the Verminlord Warpseer and more than 9&quot; from any enemy model. The unit is added to your army but cannot move in your next movement phase."/>
+          </characteristics>
+        </profile>
+        <profile id="c6f2-9902-0e81-d5e4" name="Warpseer" hidden="false" profileTypeId="90d1-a434-348d-a861" profileTypeName="Damage Table">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Variable 1" characteristicTypeId="420a-645a-ab28-93a0" value="Wounds Suffered"/>
+            <characteristic name="Variable 2" characteristicTypeId="4cdd-1e03-530f-0ff7" value="Move"/>
+            <characteristic name="Variable 3" characteristicTypeId="b1ea-56be-ba52-16e9" value="Prehensile Tails"/>
+            <characteristic name="Variable 4" characteristicTypeId="ad26-bf56-95c4-80f1" value="Doom Glaive"/>
+          </characteristics>
+        </profile>
+        <profile id="c0b7-8901-44e4-d5a6" name="Warpseer1" hidden="false" profileTypeId="90d1-a434-348d-a861" profileTypeName="Damage Table">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Variable 1" characteristicTypeId="420a-645a-ab28-93a0" value="0-2"/>
+            <characteristic name="Variable 2" characteristicTypeId="4cdd-1e03-530f-0ff7" value="12&quot;"/>
+            <characteristic name="Variable 3" characteristicTypeId="b1ea-56be-ba52-16e9" value="5"/>
+            <characteristic name="Variable 4" characteristicTypeId="ad26-bf56-95c4-80f1" value="2+"/>
+          </characteristics>
+        </profile>
+        <profile id="5ede-3add-0ec7-ffc5" name="Warpseer2" hidden="false" profileTypeId="90d1-a434-348d-a861" profileTypeName="Damage Table">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Variable 1" characteristicTypeId="420a-645a-ab28-93a0" value="3-4"/>
+            <characteristic name="Variable 2" characteristicTypeId="4cdd-1e03-530f-0ff7" value="10&quot;"/>
+            <characteristic name="Variable 3" characteristicTypeId="b1ea-56be-ba52-16e9" value="4"/>
+            <characteristic name="Variable 4" characteristicTypeId="ad26-bf56-95c4-80f1" value="2+"/>
+          </characteristics>
+        </profile>
+        <profile id="7695-daf6-3647-6201" name="Warpseer3" hidden="false" profileTypeId="90d1-a434-348d-a861" profileTypeName="Damage Table">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Variable 1" characteristicTypeId="420a-645a-ab28-93a0" value="5-7"/>
+            <characteristic name="Variable 2" characteristicTypeId="4cdd-1e03-530f-0ff7" value="8&quot;"/>
+            <characteristic name="Variable 3" characteristicTypeId="b1ea-56be-ba52-16e9" value="3"/>
+            <characteristic name="Variable 4" characteristicTypeId="ad26-bf56-95c4-80f1" value="3+"/>
+          </characteristics>
+        </profile>
+        <profile id="49e3-2c89-5dee-9eb0" name="Warpseer4" hidden="false" profileTypeId="90d1-a434-348d-a861" profileTypeName="Damage Table">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Variable 1" characteristicTypeId="420a-645a-ab28-93a0" value="8-9"/>
+            <characteristic name="Variable 2" characteristicTypeId="4cdd-1e03-530f-0ff7" value="6&quot;"/>
+            <characteristic name="Variable 3" characteristicTypeId="b1ea-56be-ba52-16e9" value="2"/>
+            <characteristic name="Variable 4" characteristicTypeId="ad26-bf56-95c4-80f1" value="3+"/>
+          </characteristics>
+        </profile>
+        <profile id="8574-5ef8-9928-b04a" name="Warpseer5" hidden="false" profileTypeId="90d1-a434-348d-a861" profileTypeName="Damage Table">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Variable 1" characteristicTypeId="420a-645a-ab28-93a0" value="10+"/>
+            <characteristic name="Variable 2" characteristicTypeId="4cdd-1e03-530f-0ff7" value="4&quot;"/>
+            <characteristic name="Variable 3" characteristicTypeId="b1ea-56be-ba52-16e9" value="1"/>
+            <characteristic name="Variable 4" characteristicTypeId="ad26-bf56-95c4-80f1" value="4+"/>
+          </characteristics>
+        </profile>
+      </profiles>
       <rules/>
       <infoLinks/>
       <modifiers>
-        <modifier type="set" field="hidden" value="true">
+        <modifier type="set" field="hidden" value="false">
           <repeats/>
           <conditions/>
           <conditionGroups>
             <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7235-9a79-05ae-ec67" type="equalTo"/>
-                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4c0f-8d37-9abe-330f" type="equalTo"/>
-              </conditions>
-              <conditionGroups/>
+              <conditions/>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7235-9a79-05ae-ec67" type="equalTo"/>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4c0f-8d37-9abe-330f" type="equalTo"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="def3-fb3a-34ff-441f" type="equalTo"/>
+                  </conditions>
+                  <conditionGroups/>
+                </conditionGroup>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2f94-b57b-a13f-43f7" type="equalTo"/>
+                  </conditions>
+                  <conditionGroups/>
+                </conditionGroup>
+              </conditionGroups>
             </conditionGroup>
           </conditionGroups>
         </modifier>
@@ -22637,7 +23314,24 @@
       <categoryLinks/>
       <selectionEntries/>
       <selectionEntryGroups/>
-      <entryLinks/>
+      <entryLinks>
+        <entryLink id="156c-e0dd-3e4e-3003" name="Doom Glaive" hidden="false" targetId="9113-2b30-d50d-71d8" type="selectionEntry">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+          <categoryLinks/>
+        </entryLink>
+        <entryLink id="536f-c8a3-ac09-8560" name="Prehensile Tails" hidden="false" targetId="082e-175f-0ccd-15c2" type="selectionEntry">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+          <categoryLinks/>
+        </entryLink>
+      </entryLinks>
       <costs>
         <cost name="pts" costTypeId="points" value="260.0"/>
       </costs>
@@ -24988,6 +25682,88 @@
                 <cost name="pts" costTypeId="points" value="0.0"/>
               </costs>
             </selectionEntry>
+            <selectionEntry id="53ef-0ef0-b19b-aa2f" name="Allegiance: Skaven Eshin" hidden="false" collective="false" type="upgrade">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+              <categoryLinks/>
+              <selectionEntries/>
+              <selectionEntryGroups/>
+              <entryLinks/>
+              <costs>
+                <cost name="pts" costTypeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="2c06-1798-2a08-1b21" name="Allegiance: Skaven Moulder" hidden="false" collective="false" type="upgrade">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+              <categoryLinks/>
+              <selectionEntries/>
+              <selectionEntryGroups/>
+              <entryLinks/>
+              <costs>
+                <cost name="pts" costTypeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="7277-7810-6957-80c5" name="Allegiance: Everchosen" hidden="false" collective="false" type="upgrade">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+              <categoryLinks/>
+              <selectionEntries/>
+              <selectionEntryGroups/>
+              <entryLinks/>
+              <costs>
+                <cost name="pts" costTypeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="3867-7978-6c22-d5d3" name="Allegiance: Thunderscorn" hidden="false" collective="false" type="upgrade">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+              <categoryLinks/>
+              <selectionEntries/>
+              <selectionEntryGroups/>
+              <entryLinks/>
+              <costs>
+                <cost name="pts" costTypeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="ca65-42ff-13dd-8ddc" name="Allegiance: Warherd" hidden="false" collective="false" type="upgrade">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+              <categoryLinks/>
+              <selectionEntries/>
+              <selectionEntryGroups/>
+              <entryLinks/>
+              <costs>
+                <cost name="pts" costTypeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="3057-860d-375e-01c0" name="Allegiance: Skaven Verminus" hidden="false" collective="false" type="upgrade">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+              <categoryLinks/>
+              <selectionEntries/>
+              <selectionEntryGroups/>
+              <entryLinks/>
+              <costs/>
+            </selectionEntry>
           </selectionEntries>
           <selectionEntryGroups/>
           <entryLinks/>
@@ -25242,6 +26018,80 @@
       <modifiers/>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a50f-dbf9-5e09-e08d" type="max"/>
+      </constraints>
+      <categoryLinks/>
+      <selectionEntries/>
+      <selectionEntryGroups/>
+      <entryLinks/>
+      <costs>
+        <cost name="pts" costTypeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="9113-2b30-d50d-71d8" name="Doom Glaive" hidden="false" collective="false" type="upgrade">
+      <profiles>
+        <profile id="4ffa-1fee-99d0-5b4f" name="Doom Glaive" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="Weapon">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="set" field="8842-17f1-9794-4efc" value="*">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5b13-7605-f6ef-8296" type="instanceOf"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+          <characteristics>
+            <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
+            <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="3&quot;"/>
+            <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="4"/>
+            <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="3+"/>
+            <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="3+"/>
+            <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-1"/>
+            <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="3"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="aa0e-90d4-a3e5-b812" type="max"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d861-40c2-f20c-8666" type="min"/>
+      </constraints>
+      <categoryLinks/>
+      <selectionEntries/>
+      <selectionEntryGroups/>
+      <entryLinks/>
+      <costs>
+        <cost name="pts" costTypeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="082e-175f-0ccd-15c2" name="Prehensile Tails" hidden="false" collective="false" type="upgrade">
+      <profiles>
+        <profile id="3b84-6e5d-92f8-a715" name="Prehensile Tails" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="Weapon">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Missile"/>
+            <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="6&quot;"/>
+            <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="*"/>
+            <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="3+"/>
+            <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="4+"/>
+            <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-"/>
+            <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="1"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="93ce-26b3-d50c-3708" type="max"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c8e5-9bd4-846c-d8ef" type="min"/>
       </constraints>
       <categoryLinks/>
       <selectionEntries/>
