@@ -77,6 +77,11 @@
         <characteristicType id="08e0-9ead-1dbe-c801" name="Battalion Ability Details"/>
       </characteristicTypes>
     </profileType>
+    <profileType id="eed7-4131-0a52-0668" name="Prayer">
+      <characteristicTypes>
+        <characteristicType id="0746-6cfb-5e15-53cb" name="Description"/>
+      </characteristicTypes>
+    </profileType>
   </profileTypes>
   <categoryEntries>
     <categoryEntry id="6c6b-e787-f9b8-a510" name="Leader" hidden="false">
