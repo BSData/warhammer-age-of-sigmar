@@ -175,6 +175,20 @@
       <modifiers/>
       <constraints/>
     </categoryEntry>
+    <categoryEntry id="3504-ea8e-28ec-5150" name="TOTEM" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="e8a5-e4c1-3d11-e7dd" name="PRIEST" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
   </categoryEntries>
   <forceEntries>
     <forceEntry id="6ace-8bcc-48b2-6de7" name="Pitched Battle (1,000)" hidden="false">
