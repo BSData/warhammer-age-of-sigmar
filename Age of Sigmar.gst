@@ -140,6 +140,41 @@
       <modifiers/>
       <constraints/>
     </categoryEntry>
+    <categoryEntry id="4e0e-664d-51ea-0929" name="HERO" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="1959-9f6a-3056-913a" name="MONSTER" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="880e-1e33-b965-71ec" name="WAR MACHINE" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="4f53-8230-2f02-9639" name="WIZARD" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="1418-9a68-9f9e-e9a7" name="DAEMON" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
   </categoryEntries>
   <forceEntries>
     <forceEntry id="6ace-8bcc-48b2-6de7" name="Pitched Battle (1,000)" hidden="false">
