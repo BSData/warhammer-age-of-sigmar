@@ -1,7 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" book="The General&apos;s Handbook" revision="12" battleScribeVersion="2.01" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" book="The General&apos;s Handbook" revision="13" battleScribeVersion="2.01" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <profiles/>
-  <rules/>
+  <rules>
+    <rule id="a954-6cfc-59ca-674e" name="Inspiring Presence" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b745-17c4-8fbf-8b04" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>If your General uses this ability, pick a unit from your army within 12&quot; of your general. The unit that you pick does not have to take battleshock tests until your next hero phase.</description>
+    </rule>
+  </rules>
   <infoLinks/>
   <costTypes>
     <costType id="points" name="pts" defaultCostLimit="0.0"/>
@@ -13,7 +29,6 @@
         <characteristicType id="cd0e-fea6-411f-904d" name="Wounds"/>
         <characteristicType id="0c85-bf79-836b-759e" name="Bravery"/>
         <characteristicType id="f8dd-4f2a-8543-4f36" name="Save"/>
-        <characteristicType id="215c-9d21-4da5-990f" name="Keywords"/>
       </characteristicTypes>
     </profileType>
     <profileType id="f55d-ee3a-1597-110f" name="Magic">
@@ -188,6 +203,15 @@
       <infoLinks/>
       <modifiers/>
       <constraints/>
+    </categoryEntry>
+    <categoryEntry id="b745-17c4-8fbf-8b04" name="General" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2478-fe21-434e-7881" type="max"/>
+      </constraints>
     </categoryEntry>
   </categoryEntries>
   <forceEntries>
