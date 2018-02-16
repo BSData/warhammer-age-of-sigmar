@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="b2d4-7046-2927-b79d" name="Grand Alliance: Death" book="Grand Alliance: Death" revision="10" battleScribeVersion="2.01" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="7" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="b2d4-7046-2927-b79d" name="Grand Alliance: Death" book="Grand Alliance: Death" revision="11" battleScribeVersion="2.01" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="7" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks/>
@@ -189,6 +189,20 @@
       <constraints/>
     </categoryEntry>
     <categoryEntry id="e7fb-b135-7b81-7f1f" name="USHABTI" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="8675-0e65-e69e-e854" name="DESERT LEGIONS" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="004b-e0d4-fd87-57e1" name="SKELETAL LEGIONNAIRES" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
@@ -579,7 +593,6 @@
               <conditions>
                 <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6cdb-5c69-0347-16a0" type="equalTo"/>
                 <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0395-882a-0826-8ab8" type="equalTo"/>
-                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d8cb-2bfe-3e58-1ed8" type="equalTo"/>
               </conditions>
               <conditionGroups/>
             </conditionGroup>
@@ -2959,6 +2972,36 @@
         </categoryLink>
       </categoryLinks>
     </entryLink>
+    <entryLink id="a2f0-7666-b533-0d51" name="-Skeletal Legionnaires" hidden="false" targetId="e316-b4dd-8f23-c139" type="selectionEntry">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <repeats/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0395-882a-0826-8ab8" type="equalTo"/>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d8cb-2bfe-3e58-1ed8" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints/>
+      <categoryLinks>
+        <categoryLink id="7f31-e42a-069d-5e53" name="New CategoryLink" hidden="false" targetId="e9f2-765a-b7b8-ce8e" primary="true">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </categoryLink>
+      </categoryLinks>
+    </entryLink>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="9515-1a15-4d1e-7f92" name="Abhorrant Ghoul King" page="135" hidden="false" collective="false" type="upgrade">
@@ -3472,7 +3515,9 @@
       <selectionEntries/>
       <selectionEntryGroups/>
       <entryLinks/>
-      <costs/>
+      <costs>
+        <cost name="pts" costTypeId="points" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="21ba-8310-cc6a-8043" name="Black Coach" page="135" hidden="false" collective="false" type="upgrade">
       <profiles/>
@@ -4201,6 +4246,21 @@
             <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="Add 1 to save rolls for this unit if it is within 9&quot; of any friendly CORPSE CARTS."/>
           </characteristics>
         </profile>
+        <profile id="a481-2cd1-087d-aa8f" name="Rotting Fangs and Claws" book="Legions of Nagash" page="119" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="Weapon">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
+            <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="1&quot;"/>
+            <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="2"/>
+            <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="4+"/>
+            <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="4+"/>
+            <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-"/>
+            <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="1"/>
+          </characteristics>
+        </profile>
       </profiles>
       <rules/>
       <infoLinks/>
@@ -4267,23 +4327,7 @@
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="ba13-232e-c665-f804" name="5 Dire Wolves" hidden="false" collective="false" type="upgrade">
-          <profiles>
-            <profile id="7c58-b50c-7ce3-0410" name="Rotting Fangs and Claws" book="Legions of Nagash" page="119" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="Weapon">
-              <profiles/>
-              <rules/>
-              <infoLinks/>
-              <modifiers/>
-              <characteristics>
-                <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
-                <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="1&quot;"/>
-                <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="2"/>
-                <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="4+"/>
-                <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="4+"/>
-                <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-"/>
-                <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="1"/>
-              </characteristics>
-            </profile>
-          </profiles>
+          <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers/>
@@ -4596,15 +4640,6 @@
     </selectionEntry>
     <selectionEntry id="5e67-30b5-a4af-f7a8" name="-Mortis Engine" page="135" hidden="false" collective="false" type="upgrade">
       <profiles>
-        <profile id="a9d6-cd9a-4136-6485" name="Wail of the Damned " hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <characteristics>
-            <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="When making a Wail of the Damned attack, roll two dice for each enemy unit within the range shown on the damage table. If the total is higher than that unit’s Bravery, it suffers D3 mortal wounds."/>
-          </characteristics>
-        </profile>
         <profile id="aab6-8033-55ea-5978" name="The Reliquary - ROLL 4D6" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
           <profiles/>
           <rules/>
@@ -4635,15 +4670,81 @@
             <characteristic name="Save" characteristicTypeId="f8dd-4f2a-8543-4f36" value="4+"/>
           </characteristics>
         </profile>
-      </profiles>
-      <rules/>
-      <infoLinks>
-        <infoLink id="004a-cd8c-5ea0-4c96" name="Frightful Touch" hidden="false" targetId="92af-f1e1-04e3-1ce5" type="profile">
+        <profile id="4965-5aac-7756-56a6" name="Mortis Engine" hidden="false" profileTypeId="90d1-a434-348d-a861" profileTypeName="Damage Table">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers/>
-        </infoLink>
+          <characteristics>
+            <characteristic name="Variable 1" characteristicTypeId="420a-645a-ab28-93a0" value="Wounds Suffered"/>
+            <characteristic name="Variable 2" characteristicTypeId="4cdd-1e03-530f-0ff7" value="Move"/>
+            <characteristic name="Variable 3" characteristicTypeId="b1ea-56be-ba52-16e9" value="Wail of the Damned"/>
+            <characteristic name="Variable 4" characteristicTypeId="ad26-bf56-95c4-80f1" value="Ethereal Weapons"/>
+          </characteristics>
+        </profile>
+        <profile id="ce0b-0737-0774-148d" name="Mortis Engine1" hidden="false" profileTypeId="90d1-a434-348d-a861" profileTypeName="Damage Table">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Variable 1" characteristicTypeId="420a-645a-ab28-93a0" value="0-2"/>
+            <characteristic name="Variable 2" characteristicTypeId="4cdd-1e03-530f-0ff7" value="14&quot;"/>
+            <characteristic name="Variable 3" characteristicTypeId="b1ea-56be-ba52-16e9" value="9&quot;"/>
+            <characteristic name="Variable 4" characteristicTypeId="ad26-bf56-95c4-80f1" value="12"/>
+          </characteristics>
+        </profile>
+        <profile id="57d2-51da-96a9-9879" name="Mortis Engine2" hidden="false" profileTypeId="90d1-a434-348d-a861" profileTypeName="Damage Table">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Variable 1" characteristicTypeId="420a-645a-ab28-93a0" value="3-4"/>
+            <characteristic name="Variable 2" characteristicTypeId="4cdd-1e03-530f-0ff7" value="12&quot;"/>
+            <characteristic name="Variable 3" characteristicTypeId="b1ea-56be-ba52-16e9" value="8&quot;"/>
+            <characteristic name="Variable 4" characteristicTypeId="ad26-bf56-95c4-80f1" value="10"/>
+          </characteristics>
+        </profile>
+        <profile id="4461-9907-adb0-99cc" name="Mortis Engine3" hidden="false" profileTypeId="90d1-a434-348d-a861" profileTypeName="Damage Table">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Variable 1" characteristicTypeId="420a-645a-ab28-93a0" value="5-7"/>
+            <characteristic name="Variable 2" characteristicTypeId="4cdd-1e03-530f-0ff7" value="10&quot;"/>
+            <characteristic name="Variable 3" characteristicTypeId="b1ea-56be-ba52-16e9" value="7&quot;"/>
+            <characteristic name="Variable 4" characteristicTypeId="ad26-bf56-95c4-80f1" value="8"/>
+          </characteristics>
+        </profile>
+        <profile id="2ed0-d80f-e93c-8ac1" name="Mortis Engine4" hidden="false" profileTypeId="90d1-a434-348d-a861" profileTypeName="Damage Table">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Variable 1" characteristicTypeId="420a-645a-ab28-93a0" value="8-9"/>
+            <characteristic name="Variable 2" characteristicTypeId="4cdd-1e03-530f-0ff7" value="8&quot;"/>
+            <characteristic name="Variable 3" characteristicTypeId="b1ea-56be-ba52-16e9" value="6&quot;"/>
+            <characteristic name="Variable 4" characteristicTypeId="ad26-bf56-95c4-80f1" value="6"/>
+          </characteristics>
+        </profile>
+        <profile id="6540-173d-be82-2c5f" name="Mortis Engine5" hidden="false" profileTypeId="90d1-a434-348d-a861" profileTypeName="Damage Table">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Variable 1" characteristicTypeId="420a-645a-ab28-93a0" value="10+"/>
+            <characteristic name="Variable 2" characteristicTypeId="4cdd-1e03-530f-0ff7" value="4&quot;"/>
+            <characteristic name="Variable 3" characteristicTypeId="b1ea-56be-ba52-16e9" value="5&quot;"/>
+            <characteristic name="Variable 4" characteristicTypeId="ad26-bf56-95c4-80f1" value="4"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules/>
+      <infoLinks>
         <infoLink id="bf19-3217-74da-e1c2" name="Fly" hidden="false" targetId="8e0c-cbe4-27be-8a30" type="profile">
           <profiles/>
           <rules/>
@@ -4684,96 +4785,9 @@
         </categoryLink>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="aefd-32d7-89ff-ecbd" name="Mortis Engine" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="db3b-76dd-694c-8474" name="Corpsmaster&apos;s Mortis Staff" hidden="false" collective="false" type="upgrade">
           <profiles>
-            <profile id="6dcb-3ae5-4d69-7dac" name="Mortis Engine" hidden="false" profileTypeId="90d1-a434-348d-a861" profileTypeName="Damage Table">
-              <profiles/>
-              <rules/>
-              <infoLinks/>
-              <modifiers/>
-              <characteristics>
-                <characteristic name="Variable 1" characteristicTypeId="420a-645a-ab28-93a0" value="Wounds Suffered"/>
-                <characteristic name="Variable 2" characteristicTypeId="4cdd-1e03-530f-0ff7" value="Move"/>
-                <characteristic name="Variable 3" characteristicTypeId="b1ea-56be-ba52-16e9" value="Wail of the Damned"/>
-                <characteristic name="Variable 4" characteristicTypeId="ad26-bf56-95c4-80f1" value="Ethereal Weapons"/>
-              </characteristics>
-            </profile>
-            <profile id="6255-4c59-cc4e-ae49" name="Mortis Engine1" hidden="false" profileTypeId="90d1-a434-348d-a861" profileTypeName="Damage Table">
-              <profiles/>
-              <rules/>
-              <infoLinks/>
-              <modifiers/>
-              <characteristics>
-                <characteristic name="Variable 1" characteristicTypeId="420a-645a-ab28-93a0" value="0-2"/>
-                <characteristic name="Variable 2" characteristicTypeId="4cdd-1e03-530f-0ff7" value="14&quot;"/>
-                <characteristic name="Variable 3" characteristicTypeId="b1ea-56be-ba52-16e9" value="9&quot;"/>
-                <characteristic name="Variable 4" characteristicTypeId="ad26-bf56-95c4-80f1" value="12"/>
-              </characteristics>
-            </profile>
-            <profile id="497c-83f9-c088-d1e7" name="Mortis Engine2" hidden="false" profileTypeId="90d1-a434-348d-a861" profileTypeName="Damage Table">
-              <profiles/>
-              <rules/>
-              <infoLinks/>
-              <modifiers/>
-              <characteristics>
-                <characteristic name="Variable 1" characteristicTypeId="420a-645a-ab28-93a0" value="3-4"/>
-                <characteristic name="Variable 2" characteristicTypeId="4cdd-1e03-530f-0ff7" value="12&quot;"/>
-                <characteristic name="Variable 3" characteristicTypeId="b1ea-56be-ba52-16e9" value="8&quot;"/>
-                <characteristic name="Variable 4" characteristicTypeId="ad26-bf56-95c4-80f1" value="10"/>
-              </characteristics>
-            </profile>
-            <profile id="de53-ed71-6c0e-4012" name="Mortis Engine3" hidden="false" profileTypeId="90d1-a434-348d-a861" profileTypeName="Damage Table">
-              <profiles/>
-              <rules/>
-              <infoLinks/>
-              <modifiers/>
-              <characteristics>
-                <characteristic name="Variable 1" characteristicTypeId="420a-645a-ab28-93a0" value="5-7"/>
-                <characteristic name="Variable 2" characteristicTypeId="4cdd-1e03-530f-0ff7" value="10&quot;"/>
-                <characteristic name="Variable 3" characteristicTypeId="b1ea-56be-ba52-16e9" value="7&quot;"/>
-                <characteristic name="Variable 4" characteristicTypeId="ad26-bf56-95c4-80f1" value="8"/>
-              </characteristics>
-            </profile>
-            <profile id="84a2-9d51-9bc9-58c0" name="Mortis Engine5" hidden="false" profileTypeId="90d1-a434-348d-a861" profileTypeName="Damage Table">
-              <profiles/>
-              <rules/>
-              <infoLinks/>
-              <modifiers/>
-              <characteristics>
-                <characteristic name="Variable 1" characteristicTypeId="420a-645a-ab28-93a0" value="10+"/>
-                <characteristic name="Variable 2" characteristicTypeId="4cdd-1e03-530f-0ff7" value="4&quot;"/>
-                <characteristic name="Variable 3" characteristicTypeId="b1ea-56be-ba52-16e9" value="5&quot;"/>
-                <characteristic name="Variable 4" characteristicTypeId="ad26-bf56-95c4-80f1" value="4"/>
-              </characteristics>
-            </profile>
-            <profile id="d3cf-a6a4-1fe0-92d2" name="Mortis Engine4" hidden="false" profileTypeId="90d1-a434-348d-a861" profileTypeName="Damage Table">
-              <profiles/>
-              <rules/>
-              <infoLinks/>
-              <modifiers/>
-              <characteristics>
-                <characteristic name="Variable 1" characteristicTypeId="420a-645a-ab28-93a0" value="8-9"/>
-                <characteristic name="Variable 2" characteristicTypeId="4cdd-1e03-530f-0ff7" value="8&quot;"/>
-                <characteristic name="Variable 3" characteristicTypeId="b1ea-56be-ba52-16e9" value="6&quot;"/>
-                <characteristic name="Variable 4" characteristicTypeId="ad26-bf56-95c4-80f1" value="6"/>
-              </characteristics>
-            </profile>
-            <profile id="3fe3-5ebf-53a7-cd92" name="Wail of the Damned" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="Weapon">
-              <profiles/>
-              <rules/>
-              <infoLinks/>
-              <modifiers/>
-              <characteristics>
-                <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Missile"/>
-                <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="*"/>
-                <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="Special"/>
-                <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="Special"/>
-                <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="Special"/>
-                <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="Special"/>
-                <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="Special"/>
-              </characteristics>
-            </profile>
-            <profile id="c176-1577-5bb3-39d1" name="Corpsmaster&apos;s Mortis Staff" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="Weapon">
+            <profile id="f9a6-54da-e069-10ef" name="Corpsmaster&apos;s Mortis Staff" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="Weapon">
               <profiles/>
               <rules/>
               <infoLinks/>
@@ -4788,7 +4802,23 @@
                 <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="D3"/>
               </characteristics>
             </profile>
-            <profile id="60e0-a8af-bf20-ac67" name="Spectral Host&apos;s Ethereal Weapons" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="Weapon">
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="caed-f7fa-7ed5-84a6" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cb0c-1429-41d1-2aea" type="max"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs/>
+        </selectionEntry>
+        <selectionEntry id="6f7d-48a9-590f-54d9" name="Spectral Host&apos;s Ethereal Weapons" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="5948-6d4b-dba9-b962" name="Spectral Host&apos;s Ethereal Weapons" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="Weapon">
               <profiles/>
               <rules/>
               <infoLinks/>
@@ -4805,19 +4835,64 @@
             </profile>
           </profiles>
           <rules/>
-          <infoLinks/>
+          <infoLinks>
+            <infoLink id="8794-1d9b-7a75-be22" name="Frightful Touch" hidden="false" targetId="92af-f1e1-04e3-1ce5" type="profile">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+          </infoLinks>
           <modifiers/>
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="minSelections" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bcdd-fce2-f2e2-3a4a" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7b94-9f99-72aa-45a9" type="max"/>
           </constraints>
           <categoryLinks/>
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
-          <costs>
-            <cost name="pts" costTypeId="points" value="0.0"/>
-          </costs>
+          <costs/>
+        </selectionEntry>
+        <selectionEntry id="2a87-3a40-1dc9-ab4e" name="Wail of the Damned" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="4659-5af6-95b2-2e52" name="Wail of the Damned " hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="When making a Wail of the Damned attack, roll two dice for each enemy unit within the range shown on the damage table. If the total is higher than that unit’s Bravery, it suffers D3 mortal wounds."/>
+              </characteristics>
+            </profile>
+            <profile id="3c29-25b3-a14b-15e2" name="Wail of the Damned" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="Weapon">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Missile"/>
+                <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="*"/>
+                <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="Special"/>
+                <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="Special"/>
+                <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="Special"/>
+                <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="Special"/>
+                <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="Special"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="09f3-3622-e649-6c7a" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="622b-3871-ddd2-7b52" type="max"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs/>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups/>
@@ -5433,7 +5508,9 @@
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
-          <costs/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="0262-2d35-5d80-d4a3" name="Necromancer&apos;s Staff" hidden="false" collective="false" type="upgrade">
           <profiles>
@@ -5464,7 +5541,9 @@
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
-          <costs/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups/>
@@ -5582,7 +5661,9 @@
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
-          <costs/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="2232-a9fb-dff0-2172" name="Nightmare&apos;s Hooves and Teeth" hidden="false" collective="false" type="upgrade">
           <profiles>
@@ -5613,7 +5694,9 @@
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
-          <costs/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="270e-f5a7-ff0b-c78f" name="Vanhel&apos;s Danse Macabre" book="Vampire Counts: Warscroll Compendium" page="3" hidden="false" collective="false" type="upgrade">
           <profiles>
@@ -5639,7 +5722,9 @@
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
-          <costs/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups/>
@@ -6051,7 +6136,9 @@
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
-          <costs/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="0ee7-4cf6-b341-1ccd" name="Blessed Blade" hidden="false" collective="false" type="upgrade">
           <profiles>
@@ -6082,7 +6169,9 @@
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
-          <costs/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups/>
@@ -6363,90 +6452,90 @@
           </constraints>
           <categoryLinks/>
           <selectionEntries/>
-          <selectionEntryGroups>
-            <selectionEntryGroup id="7a44-2179-df7e-5482" name="Weapon Choice for Unit" hidden="false" collective="false">
-              <profiles/>
-              <rules/>
-              <infoLinks/>
-              <modifiers/>
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0100-9bb4-2f3e-5019" type="max"/>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e1eb-c9c7-3060-04c0" type="min"/>
-              </constraints>
-              <categoryLinks/>
-              <selectionEntries>
-                <selectionEntry id="9bdb-93cf-6eb7-e109" name="Ancient Spear" hidden="false" collective="false" type="upgrade">
-                  <profiles>
-                    <profile id="16e8-2535-7f9e-95d7" name="Ancient Spear" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="Weapon">
-                      <profiles/>
-                      <rules/>
-                      <infoLinks/>
-                      <modifiers/>
-                      <characteristics>
-                        <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
-                        <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="2&quot;"/>
-                        <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="1"/>
-                        <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="5+"/>
-                        <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="4+"/>
-                        <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-"/>
-                        <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="1"/>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                  <rules/>
-                  <infoLinks/>
-                  <modifiers/>
-                  <constraints/>
-                  <categoryLinks/>
-                  <selectionEntries/>
-                  <selectionEntryGroups/>
-                  <entryLinks/>
-                  <costs>
-                    <cost name="pts" costTypeId="points" value="0.0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="28a2-d1e7-7c2a-a015" name="Ancient Blade" hidden="false" collective="false" type="upgrade">
-                  <profiles>
-                    <profile id="ee38-c334-0c69-36ed" name="Ancient Blade" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="Weapon">
-                      <profiles/>
-                      <rules/>
-                      <infoLinks/>
-                      <modifiers/>
-                      <characteristics>
-                        <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
-                        <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="1&quot;"/>
-                        <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="1"/>
-                        <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="4+"/>
-                        <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="4+"/>
-                        <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-"/>
-                        <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="1"/>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                  <rules/>
-                  <infoLinks/>
-                  <modifiers/>
-                  <constraints/>
-                  <categoryLinks/>
-                  <selectionEntries/>
-                  <selectionEntryGroups/>
-                  <entryLinks/>
-                  <costs>
-                    <cost name="pts" costTypeId="points" value="0.0"/>
-                  </costs>
-                </selectionEntry>
-              </selectionEntries>
-              <selectionEntryGroups/>
-              <entryLinks/>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
+          <selectionEntryGroups/>
           <entryLinks/>
           <costs>
             <cost name="pts" costTypeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
-      <selectionEntryGroups/>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="b3dc-449d-b0bb-55ed" name="Weapon Choice for Unit" hidden="false" collective="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="990f-568a-9bdf-0dbe" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="143e-f6a4-35ce-ced4" type="min"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries>
+            <selectionEntry id="640f-7565-6244-95b1" name="Ancient Spear" hidden="false" collective="false" type="upgrade">
+              <profiles>
+                <profile id="9eb2-ab30-acd1-0cc7" name="Ancient Spear" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="Weapon">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                  <characteristics>
+                    <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
+                    <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="2&quot;"/>
+                    <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="1"/>
+                    <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="5+"/>
+                    <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="4+"/>
+                    <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-"/>
+                    <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="1"/>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+              <categoryLinks/>
+              <selectionEntries/>
+              <selectionEntryGroups/>
+              <entryLinks/>
+              <costs>
+                <cost name="pts" costTypeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="af6b-7bf7-1716-6c57" name="Ancient Blade" hidden="false" collective="false" type="upgrade">
+              <profiles>
+                <profile id="2700-87e3-c816-d17c" name="Ancient Blade" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="Weapon">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                  <characteristics>
+                    <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
+                    <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="1&quot;"/>
+                    <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="1"/>
+                    <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="4+"/>
+                    <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="4+"/>
+                    <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-"/>
+                    <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="1"/>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+              <categoryLinks/>
+              <selectionEntries/>
+              <selectionEntryGroups/>
+              <entryLinks/>
+              <costs>
+                <cost name="pts" costTypeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <selectionEntryGroups/>
+          <entryLinks/>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
       <entryLinks/>
       <costs>
         <cost name="pts" costTypeId="points" value="80.0"/>
@@ -6516,6 +6605,78 @@
             <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="When this model is slain, before removing the model, each unit (friend or foe) within 3&quot; of it suffers D3 mortal wounds."/>
           </characteristics>
         </profile>
+        <profile id="89a4-3f9a-9f72-c86e" name="Terrorgheist" hidden="false" profileTypeId="90d1-a434-348d-a861" profileTypeName="Damage Table">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Variable 1" characteristicTypeId="420a-645a-ab28-93a0" value="Wounds Suffered"/>
+            <characteristic name="Variable 2" characteristicTypeId="4cdd-1e03-530f-0ff7" value="Move"/>
+            <characteristic name="Variable 3" characteristicTypeId="b1ea-56be-ba52-16e9" value="Death Shriek"/>
+            <characteristic name="Variable 4" characteristicTypeId="ad26-bf56-95c4-80f1" value="Skeletal Claws"/>
+          </characteristics>
+        </profile>
+        <profile id="b085-0fc8-cc12-9f66" name="Terrorgheist1" hidden="false" profileTypeId="90d1-a434-348d-a861" profileTypeName="Damage Table">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Variable 1" characteristicTypeId="420a-645a-ab28-93a0" value="0-3"/>
+            <characteristic name="Variable 2" characteristicTypeId="4cdd-1e03-530f-0ff7" value="14&quot;"/>
+            <characteristic name="Variable 3" characteristicTypeId="b1ea-56be-ba52-16e9" value="6"/>
+            <characteristic name="Variable 4" characteristicTypeId="ad26-bf56-95c4-80f1" value="4"/>
+          </characteristics>
+        </profile>
+        <profile id="86e7-0c51-bcd4-9991" name="Terrorgheist2" hidden="false" profileTypeId="90d1-a434-348d-a861" profileTypeName="Damage Table">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Variable 1" characteristicTypeId="420a-645a-ab28-93a0" value="4-6"/>
+            <characteristic name="Variable 2" characteristicTypeId="4cdd-1e03-530f-0ff7" value="12&quot;"/>
+            <characteristic name="Variable 3" characteristicTypeId="b1ea-56be-ba52-16e9" value="5"/>
+            <characteristic name="Variable 4" characteristicTypeId="ad26-bf56-95c4-80f1" value="4"/>
+          </characteristics>
+        </profile>
+        <profile id="bcd5-8203-48f3-0e4f" name="Terrorgheist3" hidden="false" profileTypeId="90d1-a434-348d-a861" profileTypeName="Damage Table">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Variable 1" characteristicTypeId="420a-645a-ab28-93a0" value="7-9"/>
+            <characteristic name="Variable 2" characteristicTypeId="4cdd-1e03-530f-0ff7" value="10&quot;"/>
+            <characteristic name="Variable 3" characteristicTypeId="b1ea-56be-ba52-16e9" value="4"/>
+            <characteristic name="Variable 4" characteristicTypeId="ad26-bf56-95c4-80f1" value="3"/>
+          </characteristics>
+        </profile>
+        <profile id="0410-e6f1-5bef-62d9" name="Terrorgheist4" hidden="false" profileTypeId="90d1-a434-348d-a861" profileTypeName="Damage Table">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Variable 1" characteristicTypeId="420a-645a-ab28-93a0" value="10-12"/>
+            <characteristic name="Variable 2" characteristicTypeId="4cdd-1e03-530f-0ff7" value="8&quot;"/>
+            <characteristic name="Variable 3" characteristicTypeId="b1ea-56be-ba52-16e9" value="3"/>
+            <characteristic name="Variable 4" characteristicTypeId="ad26-bf56-95c4-80f1" value="3"/>
+          </characteristics>
+        </profile>
+        <profile id="d2f3-0bae-e58a-7b10" name="Terrorgheist5" hidden="false" profileTypeId="90d1-a434-348d-a861" profileTypeName="Damage Table">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Variable 1" characteristicTypeId="420a-645a-ab28-93a0" value="13+"/>
+            <characteristic name="Variable 2" characteristicTypeId="4cdd-1e03-530f-0ff7" value="6&quot;"/>
+            <characteristic name="Variable 3" characteristicTypeId="b1ea-56be-ba52-16e9" value="2"/>
+            <characteristic name="Variable 4" characteristicTypeId="ad26-bf56-95c4-80f1" value="2"/>
+          </characteristics>
+        </profile>
       </profiles>
       <rules/>
       <infoLinks>
@@ -6552,96 +6713,51 @@
         </categoryLink>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="2bff-0c3e-9a7f-5eee" name="Terrorgheist" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="ce98-9d12-32f4-afc5" name="Death Shriek" hidden="false" collective="false" type="upgrade">
           <profiles>
-            <profile id="0309-07d9-265e-95e2" name="Terrorgheist1" hidden="false" profileTypeId="90d1-a434-348d-a861" profileTypeName="Damage Table">
+            <profile id="e279-a7e6-1690-ab32" name="Death Shriek" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="Weapon">
               <profiles/>
               <rules/>
               <infoLinks/>
               <modifiers/>
               <characteristics>
-                <characteristic name="Variable 1" characteristicTypeId="420a-645a-ab28-93a0" value="0-3"/>
-                <characteristic name="Variable 2" characteristicTypeId="4cdd-1e03-530f-0ff7" value="14&quot;"/>
-                <characteristic name="Variable 3" characteristicTypeId="b1ea-56be-ba52-16e9" value="6"/>
-                <characteristic name="Variable 4" characteristicTypeId="ad26-bf56-95c4-80f1" value="4"/>
+                <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Missile Weapon"/>
+                <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="10&quot;"/>
+                <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="1"/>
+                <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="*"/>
+                <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="*"/>
+                <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="*"/>
+                <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="*"/>
               </characteristics>
             </profile>
-            <profile id="69f0-5077-1aeb-9802" name="Terrorgheist" hidden="false" profileTypeId="90d1-a434-348d-a861" profileTypeName="Damage Table">
+            <profile id="f847-e114-491e-8828" name="Death Shriek" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
               <profiles/>
               <rules/>
               <infoLinks/>
               <modifiers/>
               <characteristics>
-                <characteristic name="Variable 1" characteristicTypeId="420a-645a-ab28-93a0" value="Wounds Suffered"/>
-                <characteristic name="Variable 2" characteristicTypeId="4cdd-1e03-530f-0ff7" value="Move"/>
-                <characteristic name="Variable 3" characteristicTypeId="b1ea-56be-ba52-16e9" value="Death Shriek"/>
-                <characteristic name="Variable 4" characteristicTypeId="ad26-bf56-95c4-80f1" value="Skeletal Claws"/>
+                <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="When making a Death Shriek attack, pick an enemy unit within range and roll a dice, adding the number shown in the damage table. If the total is higher than that unit’s Bravery characteristic, it suffers a number of mortal wounds equal to the difference."/>
               </characteristics>
             </profile>
-            <profile id="90b9-1485-d46f-3981" name="Terrorgheist2" hidden="false" profileTypeId="90d1-a434-348d-a861" profileTypeName="Damage Table">
-              <profiles/>
-              <rules/>
-              <infoLinks/>
-              <modifiers/>
-              <characteristics>
-                <characteristic name="Variable 1" characteristicTypeId="420a-645a-ab28-93a0" value="4-6"/>
-                <characteristic name="Variable 2" characteristicTypeId="4cdd-1e03-530f-0ff7" value="12&quot;"/>
-                <characteristic name="Variable 3" characteristicTypeId="b1ea-56be-ba52-16e9" value="5"/>
-                <characteristic name="Variable 4" characteristicTypeId="ad26-bf56-95c4-80f1" value="4"/>
-              </characteristics>
-            </profile>
-            <profile id="84a8-efbe-02bd-6460" name="Terrorgheist4" hidden="false" profileTypeId="90d1-a434-348d-a861" profileTypeName="Damage Table">
-              <profiles/>
-              <rules/>
-              <infoLinks/>
-              <modifiers/>
-              <characteristics>
-                <characteristic name="Variable 1" characteristicTypeId="420a-645a-ab28-93a0" value="10-12"/>
-                <characteristic name="Variable 2" characteristicTypeId="4cdd-1e03-530f-0ff7" value="8&quot;"/>
-                <characteristic name="Variable 3" characteristicTypeId="b1ea-56be-ba52-16e9" value="3"/>
-                <characteristic name="Variable 4" characteristicTypeId="ad26-bf56-95c4-80f1" value="3"/>
-              </characteristics>
-            </profile>
-            <profile id="8dd1-3f15-5758-be42" name="Terrorgheist5" hidden="false" profileTypeId="90d1-a434-348d-a861" profileTypeName="Damage Table">
-              <profiles/>
-              <rules/>
-              <infoLinks/>
-              <modifiers/>
-              <characteristics>
-                <characteristic name="Variable 1" characteristicTypeId="420a-645a-ab28-93a0" value="13+"/>
-                <characteristic name="Variable 2" characteristicTypeId="4cdd-1e03-530f-0ff7" value="6&quot;"/>
-                <characteristic name="Variable 3" characteristicTypeId="b1ea-56be-ba52-16e9" value="2"/>
-                <characteristic name="Variable 4" characteristicTypeId="ad26-bf56-95c4-80f1" value="2"/>
-              </characteristics>
-            </profile>
-            <profile id="e55e-faca-7950-d82b" name="Terrorgheist3" hidden="false" profileTypeId="90d1-a434-348d-a861" profileTypeName="Damage Table">
-              <profiles/>
-              <rules/>
-              <infoLinks/>
-              <modifiers/>
-              <characteristics>
-                <characteristic name="Variable 1" characteristicTypeId="420a-645a-ab28-93a0" value="7-9"/>
-                <characteristic name="Variable 2" characteristicTypeId="4cdd-1e03-530f-0ff7" value="10&quot;"/>
-                <characteristic name="Variable 3" characteristicTypeId="b1ea-56be-ba52-16e9" value="4"/>
-                <characteristic name="Variable 4" characteristicTypeId="ad26-bf56-95c4-80f1" value="3"/>
-              </characteristics>
-            </profile>
-            <profile id="da1f-9de8-9e11-5fb9" name="Skeletal Claws" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="Weapon">
-              <profiles/>
-              <rules/>
-              <infoLinks/>
-              <modifiers/>
-              <characteristics>
-                <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
-                <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="2&quot;"/>
-                <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="*"/>
-                <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="4+"/>
-                <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="3+"/>
-                <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-1"/>
-                <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="D3"/>
-              </characteristics>
-            </profile>
-            <profile id="f4c7-f4c5-acec-76d1" name="Fanged Maw" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="Weapon">
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5f97-a1c3-585b-7545" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cbac-19dc-03a9-1513" type="min"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="35e2-82b3-1035-0373" name="Fanged Maw" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="a601-f407-27b5-393d" name="Fanged Maw" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="Weapon">
               <profiles/>
               <rules/>
               <infoLinks/>
@@ -6661,59 +6777,45 @@
           <infoLinks/>
           <modifiers/>
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="minSelections" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fb96-eb39-4c0e-0c81" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="824c-af98-3821-d195" type="max"/>
           </constraints>
           <categoryLinks/>
-          <selectionEntries>
-            <selectionEntry id="3ef7-46b3-b234-8bb5" name="Death Shriek" hidden="false" collective="false" type="upgrade">
-              <profiles>
-                <profile id="49fd-ff1f-b6ba-a7a3" name="Death Shriek" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="Weapon">
-                  <profiles/>
-                  <rules/>
-                  <infoLinks/>
-                  <modifiers/>
-                  <characteristics>
-                    <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Missile Weapon"/>
-                    <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="10&quot;"/>
-                    <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="1"/>
-                    <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="*"/>
-                    <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="*"/>
-                    <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="*"/>
-                    <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="*"/>
-                  </characteristics>
-                </profile>
-                <profile id="c6e2-2d99-9076-a67a" name="Death Shriek" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
-                  <profiles/>
-                  <rules/>
-                  <infoLinks/>
-                  <modifiers/>
-                  <characteristics>
-                    <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="When making a Death Shriek attack, pick an enemy unit within range and roll a dice, adding the number shown in the damage table. If the total is higher than that unit’s Bravery characteristic, it suffers a number of mortal wounds equal to the difference."/>
-                  </characteristics>
-                </profile>
-              </profiles>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs/>
+        </selectionEntry>
+        <selectionEntry id="71b2-4934-7f1c-0ce9" name="Skeletal Claws" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="94b3-942c-497a-6336" name="Skeletal Claws" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="Weapon">
+              <profiles/>
               <rules/>
               <infoLinks/>
               <modifiers/>
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6368-406c-ad1b-7a08" type="max"/>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ab52-15b2-6426-b2ee" type="min"/>
-              </constraints>
-              <categoryLinks/>
-              <selectionEntries/>
-              <selectionEntryGroups/>
-              <entryLinks/>
-              <costs>
-                <cost name="pts" costTypeId="points" value="0.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
+              <characteristics>
+                <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
+                <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="2&quot;"/>
+                <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="*"/>
+                <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="4+"/>
+                <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="3+"/>
+                <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-1"/>
+                <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="D3"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="843c-3e30-c854-21bc" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4b95-8322-ee7a-bb6d" type="max"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
-          <costs>
-            <cost name="pts" costTypeId="points" value="0.0"/>
-          </costs>
+          <costs/>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups/>
@@ -7035,7 +7137,9 @@
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
-          <costs/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups/>
@@ -7140,7 +7244,9 @@
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
-          <costs/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -7181,7 +7287,9 @@
               <selectionEntries/>
               <selectionEntryGroups/>
               <entryLinks/>
-              <costs/>
+              <costs>
+                <cost name="pts" costTypeId="points" value="0.0"/>
+              </costs>
             </selectionEntry>
             <selectionEntry id="dffb-26e7-f091-18f3" name="Great Bows and Stone Fists" hidden="false" collective="false" type="upgrade">
               <profiles>
@@ -7224,7 +7332,9 @@
               <selectionEntries/>
               <selectionEntryGroups/>
               <entryLinks/>
-              <costs/>
+              <costs>
+                <cost name="pts" costTypeId="points" value="0.0"/>
+              </costs>
             </selectionEntry>
           </selectionEntries>
           <selectionEntryGroups/>
@@ -7404,7 +7514,9 @@
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
-          <costs/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="cd0d-5dac-a7ab-7c4a" name="Abyssal Terror&apos;s Claws and Tusks" hidden="false" collective="false" type="upgrade">
           <profiles>
@@ -7435,7 +7547,9 @@
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
-          <costs/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -7479,7 +7593,9 @@
               <selectionEntries/>
               <selectionEntryGroups/>
               <entryLinks/>
-              <costs/>
+              <costs>
+                <cost name="pts" costTypeId="points" value="0.0"/>
+              </costs>
             </selectionEntry>
             <selectionEntry id="c704-e165-8de7-499e" name="Deathlance" hidden="false" collective="false" type="upgrade">
               <profiles>
@@ -7519,7 +7635,9 @@
               <selectionEntries/>
               <selectionEntryGroups/>
               <entryLinks/>
-              <costs/>
+              <costs>
+                <cost name="pts" costTypeId="points" value="0.0"/>
+              </costs>
             </selectionEntry>
           </selectionEntries>
           <selectionEntryGroups/>
@@ -7559,7 +7677,9 @@
               <selectionEntries/>
               <selectionEntryGroups/>
               <entryLinks/>
-              <costs/>
+              <costs>
+                <cost name="pts" costTypeId="points" value="0.0"/>
+              </costs>
             </selectionEntry>
           </selectionEntries>
           <selectionEntryGroups/>
@@ -8344,7 +8464,6 @@
       <infoLinks/>
       <modifiers/>
       <constraints>
-        <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="aa81-b4fc-36ee-b867" type="min"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1e95-19e1-1269-dc7b" type="max"/>
       </constraints>
       <categoryLinks>
@@ -8359,19 +8478,230 @@
       <selectionEntries/>
       <selectionEntryGroups/>
       <entryLinks/>
-      <costs/>
+      <costs>
+        <cost name="pts" costTypeId="points" value="0.0"/>
+      </costs>
     </selectionEntry>
-    <selectionEntry id="e316-b4dd-8f23-c139" name="Skeletal Legionnaires" hidden="false" collective="false" type="upgrade">
-      <profiles/>
+    <selectionEntry id="e316-b4dd-8f23-c139" name="-Skeletal Legionnaires" hidden="false" collective="false" type="upgrade">
+      <profiles>
+        <profile id="85d4-863f-1389-bf54" name="SKELETON CHAMPION" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="The leader of this unit is a Skeleton Champion. Add 1 to the Attacks characteristic of the Skeleton Champion’s Ancient Blade or Ancient Spear."/>
+          </characteristics>
+        </profile>
+        <profile id="ca21-adf4-2cb5-e819" name="Skeleton Legion" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="Add 1 to the Attacks characteristic of this unit’s melee weapons if it has 20 or more models. If it has 30 or more models, add 2 instead."/>
+          </characteristics>
+        </profile>
+        <profile id="15a0-dda0-8199-29df" name="Serve in Death" book="Tomb Kings" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="Add 1 to this unit’s hit rolls while it is within 18&quot; of any friendly Embalmed Hero."/>
+          </characteristics>
+        </profile>
+        <profile id="ed36-8cc3-cb48-eb49" name="Tomb Shield" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="A unit carrying Tomb Shields can create a shield fortress instead of running or charging in its turn. If it does so, add 1 to save rolls for the unit until its next movement phase."/>
+          </characteristics>
+        </profile>
+        <profile id="7e38-7a75-e8a2-eff8" name="Skeletal Legionnaires" page="" hidden="false" profileTypeId="1960-ca8e-67ce-2014" profileTypeName="Unit">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Move" characteristicTypeId="8655-6213-2824-1752" value="4&quot;"/>
+            <characteristic name="Wounds" characteristicTypeId="cd0e-fea6-411f-904d" value="1"/>
+            <characteristic name="Bravery" characteristicTypeId="0c85-bf79-836b-759e" value="10"/>
+            <characteristic name="Save" characteristicTypeId="f8dd-4f2a-8543-4f36" value="6+"/>
+          </characteristics>
+        </profile>
+      </profiles>
       <rules/>
-      <infoLinks/>
-      <modifiers/>
+      <infoLinks>
+        <infoLink id="c3fe-040c-46cc-e84f" name="HORNBLOWER" hidden="false" targetId="441f-bd49-e0b1-3709" type="profile">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+        </infoLink>
+        <infoLink id="475d-ddee-4f6c-16f2" name="ICON BEARER" hidden="false" targetId="0088-d360-cdb7-7d5c" type="profile">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+        </infoLink>
+      </infoLinks>
+      <modifiers>
+        <modifier type="decrement" field="points" value="80">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="e316-b4dd-8f23-c139" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a00f-4ed6-bb0f-5c43" type="greaterThan"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="increment" field="points" value="80">
+          <repeats>
+            <repeat field="selections" scope="e316-b4dd-8f23-c139" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a00f-4ed6-bb0f-5c43" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions/>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <constraints/>
-      <categoryLinks/>
-      <selectionEntries/>
-      <selectionEntryGroups/>
+      <categoryLinks>
+        <categoryLink id="e826-0f5b-8132-4d3e" name="New CategoryLink" hidden="false" targetId="0c09-9d52-aa48-3c9b" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </categoryLink>
+        <categoryLink id="a7a7-ab88-5317-8630" name="New CategoryLink" hidden="false" targetId="1590-1b2b-fa81-d412" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </categoryLink>
+        <categoryLink id="010c-50b7-13a7-596b" name="New CategoryLink" hidden="false" targetId="a2b3-901c-9a34-0ab2" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </categoryLink>
+        <categoryLink id="d500-8f4a-286d-1073" name="New CategoryLink" hidden="false" targetId="8675-0e65-e69e-e854" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </categoryLink>
+        <categoryLink id="fc91-15dd-dbda-0152" name="New CategoryLink" hidden="false" targetId="004b-e0d4-fd87-57e1" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </categoryLink>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="a00f-4ed6-bb0f-5c43" name="10 Skeletal Legionnaires" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="959b-7628-792f-239b" type="min"/>
+            <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5de4-48b8-af8d-1479" type="max"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="8050-abb9-ed5d-ccfa" name="Weapon Choice for Unit" hidden="false" collective="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c463-0e96-854f-c655" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a633-aa9c-a4cc-420c" type="min"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries>
+            <selectionEntry id="660e-b29b-27fb-1af0" name="Ancient Spear" hidden="false" collective="false" type="upgrade">
+              <profiles>
+                <profile id="6b0d-b218-88c9-e2d1" name="Ancient Spear" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="Weapon">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                  <characteristics>
+                    <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
+                    <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="2&quot;"/>
+                    <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="1"/>
+                    <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="5+"/>
+                    <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="4+"/>
+                    <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-"/>
+                    <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="1"/>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+              <categoryLinks/>
+              <selectionEntries/>
+              <selectionEntryGroups/>
+              <entryLinks/>
+              <costs>
+                <cost name="pts" costTypeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="0a86-70ed-6418-2318" name="Ancient Blade" hidden="false" collective="false" type="upgrade">
+              <profiles>
+                <profile id="70d2-ba2a-147a-2ef3" name="Ancient Blade" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="Weapon">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                  <characteristics>
+                    <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
+                    <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="1&quot;"/>
+                    <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="1"/>
+                    <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="4+"/>
+                    <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="4+"/>
+                    <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-"/>
+                    <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="1"/>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+              <categoryLinks/>
+              <selectionEntries/>
+              <selectionEntryGroups/>
+              <entryLinks/>
+              <costs>
+                <cost name="pts" costTypeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <selectionEntryGroups/>
+          <entryLinks/>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
       <entryLinks/>
-      <costs/>
+      <costs>
+        <cost name="pts" costTypeId="points" value="80.0"/>
+      </costs>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups/>
@@ -8410,7 +8740,7 @@
       <infoLinks/>
       <modifiers/>
       <characteristics>
-        <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="Each time you make a hit roll of 6+ for &lt;Reaper Scythe&gt; &lt;Chill Dagger&gt; &lt;Spectral Scythe&gt; &lt;Cairn Wraith&apos;s Reaper Scythe&gt; &lt;Spectral Claws and Daggers&gt;, that attack inflicts 1 mortal wound instead of the normal damage (do not make a wound or save roll)."/>
+        <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="Each time you make a hit roll of 6+ for &lt;Reaper Scythe&gt; &lt;Chill Dagger&gt; &lt;Spectral Scythe&gt; &lt;Cairn Wraith&apos;s Reaper Scythe&gt; &lt;Spectral Claws and Daggers&gt; &lt;Spectral Host&apos;s Ethereal Weapons&gt;, that attack inflicts 1 mortal wound instead of the normal damage (do not make a wound or save roll)."/>
       </characteristics>
     </profile>
     <profile id="441f-bd49-e0b1-3709" name="HORNBLOWER" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
@@ -8447,6 +8777,15 @@
       <modifiers/>
       <characteristics>
         <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="“If the target unit has 5 or more models, you can re-roll failed hit rolls for this model&apos;s &lt;Reaper Scythe&gt; or  &lt;Cairn Wraith&apos;s Reaper Scythe&gt;."/>
+      </characteristics>
+    </profile>
+    <profile id="0088-d360-cdb7-7d5c" name="ICON BEARER" book="Tomb Kings: Warscroll Compendium" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <characteristics>
+        <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="Models in this unit may be Icon Bearers. You can return D6 slain models to this unit in your hero phase if it includes any Icon Bearers."/>
       </characteristics>
     </profile>
   </sharedProfiles>
