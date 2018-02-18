@@ -1,10 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="b2d4-7046-2927-b79d" name="Grand Alliance: Death" book="Grand Alliance: Death" revision="12" battleScribeVersion="2.01" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="7" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="b2d4-7046-2927-b79d" name="Grand Alliance: Death" book="Grand Alliance: Death" revision="13" battleScribeVersion="2.01" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="7" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks/>
   <costTypes/>
-  <profileTypes/>
+  <profileTypes>
+    <profileType id="2d7b-0280-473b-9c00" name="Screaming Skull Crew Table">
+      <characteristicTypes>
+        <characteristicType id="b8b6-7486-00a9-ab3f" name="Crew within 1&quot;"/>
+        <characteristicType id="ca83-f7cb-271c-e91e" name="Move"/>
+        <characteristicType id="146f-6f2e-67ab-d1a3" name="Screaming Skulls"/>
+      </characteristicTypes>
+    </profileType>
+  </profileTypes>
   <categoryEntries>
     <categoryEntry id="0c09-9d52-aa48-3c9b" name="DEATH" hidden="false">
       <profiles/>
@@ -203,6 +211,41 @@
       <constraints/>
     </categoryEntry>
     <categoryEntry id="004b-e0d4-fd87-57e1" name="SKELETAL LEGIONNAIRES" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="90cb-868b-84f3-bcd3" name="CARRION" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="0434-7fcc-c208-2a3a" name="SCREAMING SKULL CATAPULT" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="3a6f-342a-6bd3-758d" name="CREW" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="f9c2-7bc0-118b-6dd3" name="SEPULCHRAL STALKERS" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="35b3-8eed-c7b6-1b16" name="TOMB SCORPIONS" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
@@ -1369,7 +1412,7 @@
         </categoryLink>
       </categoryLinks>
     </entryLink>
-    <entryLink id="60e3-fc81-2917-9d3c" hidden="false" targetId="2543-422f-dbf5-e953" type="selectionEntry">
+    <entryLink id="60e3-fc81-2917-9d3c" name="Battalion: Royal Family" hidden="false" targetId="2543-422f-dbf5-e953" type="selectionEntry">
       <profiles/>
       <rules/>
       <infoLinks/>
@@ -2046,7 +2089,7 @@
         </categoryLink>
       </categoryLinks>
     </entryLink>
-    <entryLink id="08dd-77df-941a-cd73" name="Necromancer on Nightmare (Depreciated)" hidden="false" targetId="10de-5ca9-17e8-8212" type="selectionEntry">
+    <entryLink id="08dd-77df-941a-cd73" name="-Necromancer on Nightmare" hidden="false" targetId="10de-5ca9-17e8-8212" type="selectionEntry">
       <profiles/>
       <rules/>
       <infoLinks/>
@@ -2055,12 +2098,24 @@
           <repeats/>
           <conditions/>
           <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0395-882a-0826-8ab8" type="equalTo"/>
-                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="82ba-fe74-90f0-7681" type="equalTo"/>
-              </conditions>
-              <conditionGroups/>
+            <conditionGroup type="or">
+              <conditions/>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d13e-ab2e-39be-6d0a" type="equalTo"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edf8-b8cf-c258-7521" type="equalTo"/>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="82ba-fe74-90f0-7681" type="equalTo"/>
+                  </conditions>
+                  <conditionGroups/>
+                </conditionGroup>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0395-882a-0826-8ab8" type="equalTo"/>
+                  </conditions>
+                  <conditionGroups/>
+                </conditionGroup>
+              </conditionGroups>
             </conditionGroup>
           </conditionGroups>
         </modifier>
@@ -2085,12 +2140,24 @@
           <repeats/>
           <conditions/>
           <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0395-882a-0826-8ab8" type="equalTo"/>
-                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="82ba-fe74-90f0-7681" type="equalTo"/>
-              </conditions>
-              <conditionGroups/>
+            <conditionGroup type="or">
+              <conditions/>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d13e-ab2e-39be-6d0a" type="equalTo"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edf8-b8cf-c258-7521" type="equalTo"/>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="82ba-fe74-90f0-7681" type="equalTo"/>
+                  </conditions>
+                  <conditionGroups/>
+                </conditionGroup>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0395-882a-0826-8ab8" type="equalTo"/>
+                  </conditions>
+                  <conditionGroups/>
+                </conditionGroup>
+              </conditionGroups>
             </conditionGroup>
           </conditionGroups>
         </modifier>
@@ -2956,10 +3023,17 @@
                   </conditions>
                   <conditionGroups/>
                 </conditionGroup>
-                <conditionGroup type="or">
+                <conditionGroup type="and">
                   <conditions>
                     <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0395-882a-0826-8ab8" type="equalTo"/>
                     <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1ef6-7bbc-0f95-da2f" type="equalTo"/>
+                  </conditions>
+                  <conditionGroups/>
+                </conditionGroup>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d63a-f1b7-1b56-9558" type="equalTo"/>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1ef6-7bbc-0f95-da2f" type="equalTo"/>
                   </conditions>
                   <conditionGroups/>
                 </conditionGroup>
@@ -2990,7 +3064,7 @@
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="dd93-10cc-cdf3-c1c2" type="equalTo"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d63a-f1b7-1b56-9558" type="equalTo"/>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1ef6-7bbc-0f95-da2f" type="equalTo"/>
               </conditions>
               <conditionGroups/>
@@ -3236,7 +3310,7 @@
             <conditionGroup type="and">
               <conditions>
                 <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0395-882a-0826-8ab8" type="equalTo"/>
-                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d8cb-2bfe-3e58-1ed8" type="equalTo"/>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1ef6-7bbc-0f95-da2f" type="equalTo"/>
               </conditions>
               <conditionGroups/>
             </conditionGroup>
@@ -3266,7 +3340,7 @@
             <conditionGroup type="and">
               <conditions>
                 <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0395-882a-0826-8ab8" type="equalTo"/>
-                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d8cb-2bfe-3e58-1ed8" type="equalTo"/>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1ef6-7bbc-0f95-da2f" type="equalTo"/>
               </conditions>
               <conditionGroups/>
             </conditionGroup>
@@ -3364,7 +3438,16 @@
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups/>
-      <entryLinks/>
+      <entryLinks>
+        <entryLink id="b195-f855-a98b-f061" name="General" hidden="false" targetId="88d2-d540-0573-3402" type="selectionEntry">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+          <categoryLinks/>
+        </entryLink>
+      </entryLinks>
       <costs>
         <cost name="pts" costTypeId="points" value="0.0"/>
       </costs>
@@ -3396,7 +3479,16 @@
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups/>
-      <entryLinks/>
+      <entryLinks>
+        <entryLink id="e950-ab06-cc32-de63" name="General" hidden="false" targetId="88d2-d540-0573-3402" type="selectionEntry">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+          <categoryLinks/>
+        </entryLink>
+      </entryLinks>
       <costs>
         <cost name="pts" costTypeId="points" value="0.0"/>
       </costs>
@@ -3428,7 +3520,16 @@
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups/>
-      <entryLinks/>
+      <entryLinks>
+        <entryLink id="4123-58ce-995d-a59d" name="General" hidden="false" targetId="88d2-d540-0573-3402" type="selectionEntry">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+          <categoryLinks/>
+        </entryLink>
+      </entryLinks>
       <costs>
         <cost name="pts" costTypeId="points" value="0.0"/>
       </costs>
@@ -3592,7 +3693,9 @@
               <selectionEntries/>
               <selectionEntryGroups/>
               <entryLinks/>
-              <costs/>
+              <costs>
+                <cost name="pts" costTypeId="points" value="0.0"/>
+              </costs>
             </selectionEntry>
           </selectionEntries>
           <selectionEntryGroups/>
@@ -3631,7 +3734,16 @@
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups/>
-      <entryLinks/>
+      <entryLinks>
+        <entryLink id="d015-06b8-0982-1ba6" name="General" hidden="false" targetId="88d2-d540-0573-3402" type="selectionEntry">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+          <categoryLinks/>
+        </entryLink>
+      </entryLinks>
       <costs>
         <cost name="pts" costTypeId="points" value="320.0"/>
       </costs>
@@ -3808,9 +3920,38 @@
         <cost name="pts" costTypeId="points" value="60.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="a859-3f3d-e030-cd7a" name="Battalion: Royal Legion of Chariots" page="150" hidden="false" collective="false" type="upgrade">
-      <profiles/>
-      <rules/>
+    <selectionEntry id="a859-3f3d-e030-cd7a" name="Battalion: Royal Legion of Chariots" book="Tomb Kings (2015)" page="" hidden="false" collective="false" type="upgrade">
+      <profiles>
+        <profile id="a8a7-8a63-0cd9-5c8c" name="The Pride of Nehekhara" hidden="false" profileTypeId="bdc6-78da-3796-60a3" profileTypeName="Battalion Abilities">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Battalion Ability Details" characteristicTypeId="08e0-9ead-1dbe-c801" value="The fighting quality of a Tomb King’s Royal Legion of Chariots is a reflection of his own power and martial prowess. Only the finest steeds and the most noble of warriors  fight in such an elite brigade. You can add 1 to all hit rolls for Skeleton Chariots that are part of a Royal Legion of Chariots."/>
+          </characteristics>
+        </profile>
+        <profile id="0b54-880a-76a4-f8e5" name="Bone-crunching Impact" hidden="false" profileTypeId="bdc6-78da-3796-60a3" profileTypeName="Battalion Abilities">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Battalion Ability Details" characteristicTypeId="08e0-9ead-1dbe-c801" value="The chariots in this Legion impact with devastating force, wave after wave of war machines crushing bodies beneath heavy wheels. Roll a dice after a model from a Royal Legion of Chariots completes a charge move within 1&quot; of an enemy unit. On a 4 or more, that unit suffers a mortal wound."/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="6e00-e662-913e-dadf" name="Battalion: Royal Legion of Chariots" hidden="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <description>A Royal Legion of Chariots consists of the following units:
+• 1 Tomb King in Royal Chariot 
+• 4 units of Skeleton Chariots</description>
+        </rule>
+      </rules>
       <infoLinks/>
       <modifiers/>
       <constraints/>
@@ -3818,9 +3959,7 @@
       <selectionEntries/>
       <selectionEntryGroups/>
       <entryLinks/>
-      <costs>
-        <cost name="pts" costTypeId="points" value="140.0"/>
-      </costs>
+      <costs/>
     </selectionEntry>
     <selectionEntry id="f76b-c286-6e6d-6e43" name="Battalion: Royal Menagerie" page="135" hidden="false" collective="false" type="upgrade">
       <profiles/>
@@ -3850,9 +3989,44 @@
         <cost name="pts" costTypeId="points" value="20.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="8681-41f8-3108-dbf7" name="Battalion: Tomb Legion" page="150" hidden="false" collective="false" type="upgrade">
-      <profiles/>
-      <rules/>
+    <selectionEntry id="8681-41f8-3108-dbf7" name="Battalion: Tomb Legion" book="Tomb Kings (2015)" page="" hidden="false" collective="false" type="upgrade">
+      <profiles>
+        <profile id="25db-7c2a-d1dd-632b" name="The Hierophant&apos;s Duty" hidden="false" profileTypeId="bdc6-78da-3796-60a3" profileTypeName="Battalion Abilities">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Battalion Ability Details" characteristicTypeId="08e0-9ead-1dbe-c801" value=" e Hierophant’s Duty: A Tomb Legion’s Liche Priest is known by the title Hierophant, and it is his responsibility to awaken the warriors’ souls and restore their fallen bodies. Roll a dice if a model in a Tomb Legion is slain within 18&quot; of their Liche Priest; on a 6, the Hierophant immediately resurrects that warrior and the wound or mortal wound that caused that model to be slain is ignored."/>
+          </characteristics>
+        </profile>
+        <profile id="9e46-7207-707b-63d1" name="The Tomb King&apos;s Wrath" hidden="false" profileTypeId="bdc6-78da-3796-60a3" profileTypeName="Battalion Abilities">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Battalion Ability Details" characteristicTypeId="08e0-9ead-1dbe-c801" value="ABILITIES
+The Tomb King’s Wrath: Every Tomb King is an aggressive warlord, able to instil the warriors of their Tomb Legion with their own unyielding vigour. If you roll a wound roll of 6 or more in the combat phase for a model in a Tomb Legion and that model’s unit is within 18&quot; of their Tomb King, it can immediately make one extra attack using the same weapon."/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="c9da-cdde-1fe3-bb42" name="Battalion: Tomb Legion" book="Tomb Kings (2015)" hidden="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <description>A Tomb Legion consists of the following units:
+• 1 Tomb King
+• 1 Liche Priest
+• 2 units of Skeleton Warriors
+• 2 units of Skeleton Archers
+• 1 unit of Tomb Guard
+• 1 unit of Skeleton Chariots, Skeleton Horsemen, Skeleton Horse Archers or Necropolis Knights
+</description>
+        </rule>
+      </rules>
       <infoLinks/>
       <modifiers/>
       <constraints/>
@@ -4230,13 +4404,73 @@
         <cost name="pts" costTypeId="points" value="60.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="6d03-1f77-9ebe-c771" name="Carrion" book="Tomb Kings" page="" hidden="false" collective="false" type="unit">
-      <profiles/>
+    <selectionEntry id="6d03-1f77-9ebe-c771" name="-Carrion" book="Tomb Kings" page="" hidden="false" collective="false" type="unit">
+      <profiles>
+        <profile id="a147-de31-8527-4883" name="Carrion" hidden="false" profileTypeId="1960-ca8e-67ce-2014" profileTypeName="Unit">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Move" characteristicTypeId="8655-6213-2824-1752" value="12&quot;"/>
+            <characteristic name="Wounds" characteristicTypeId="cd0e-fea6-411f-904d" value="3"/>
+            <characteristic name="Bravery" characteristicTypeId="0c85-bf79-836b-759e" value="10"/>
+            <characteristic name="Save" characteristicTypeId="f8dd-4f2a-8543-4f36" value="6+"/>
+          </characteristics>
+        </profile>
+        <profile id="7a0b-b6e7-ea6f-9a08" name="Circling High Above" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="When first set up, units of Carrion are assumed to be flying high above the battle eld. As long as they remain high in the sky, they cannot be charged, attacked, targeted by spells or a ected by abilities used by either side, and they also cannot make any attacks themselves as they soar far above their foes. Other units ignore the Carrion as they move (they move underneath them)."/>
+          </characteristics>
+        </profile>
+        <profile id="b2be-3696-9614-c96a" name="Scavenger&apos;s Dive" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="The first time this unit declares a charge, you can roll 3 dice rather than 2 to see how far it charges (when doing so, you can declare a charge if it is within 18&quot; of the enemy, rather than 12&quot;). As they charge, the Carrion are assumed to drop down to low level, and the Circling High Above ability no longer applies to the unit for the rest of the battle."/>
+          </characteristics>
+        </profile>
+      </profiles>
       <rules/>
-      <infoLinks/>
+      <infoLinks>
+        <infoLink id="48d7-4e41-82fe-5492" name="Fly" hidden="false" targetId="8e0c-cbe4-27be-8a30" type="profile">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+        </infoLink>
+      </infoLinks>
       <modifiers/>
       <constraints/>
-      <categoryLinks/>
+      <categoryLinks>
+        <categoryLink id="c469-42a2-c3eb-ae90" name="New CategoryLink" hidden="false" targetId="0c09-9d52-aa48-3c9b" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </categoryLink>
+        <categoryLink id="8c10-a2df-a774-de18" name="New CategoryLink" hidden="false" targetId="1590-1b2b-fa81-d412" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </categoryLink>
+        <categoryLink id="00f4-790b-2203-3ccf" name="New CategoryLink" hidden="false" targetId="90cb-868b-84f3-bcd3" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </categoryLink>
+      </categoryLinks>
       <selectionEntries>
         <selectionEntry id="591d-ac19-634e-fe94" name="3 Carrion" hidden="false" collective="false" type="model">
           <profiles/>
@@ -4246,6 +4480,39 @@
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="minSelections" type="min"/>
             <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="9c07-ea58-d509-ea84" name="Rotting Talons and Sharp Beaks" book="" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="e774-1118-3e89-b610" name="Rotting Talons and Sharp Beaks" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="Weapon">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
+                <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="1&quot;"/>
+                <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="4"/>
+                <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="4+"/>
+                <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="3+"/>
+                <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-"/>
+                <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="1"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="51bc-68aa-2627-edd9" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5f65-9e96-1276-fea6" type="max"/>
           </constraints>
           <categoryLinks/>
           <selectionEntries/>
@@ -4269,7 +4536,16 @@
       <categoryLinks/>
       <selectionEntries/>
       <selectionEntryGroups/>
-      <entryLinks/>
+      <entryLinks>
+        <entryLink id="2c8f-b721-5200-d934" name="General" hidden="false" targetId="88d2-d540-0573-3402" type="selectionEntry">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+          <categoryLinks/>
+        </entryLink>
+      </entryLinks>
       <costs>
         <cost name="pts" costTypeId="points" value="160.0"/>
       </costs>
@@ -4778,18 +5054,32 @@
       <modifiers/>
       <constraints/>
       <categoryLinks/>
-      <selectionEntries/>
-      <selectionEntryGroups/>
-      <entryLinks>
-        <entryLink id="dd93-10cc-cdf3-c1c2" name="General" hidden="false" targetId="88d2-d540-0573-3402" type="selectionEntry">
+      <selectionEntries>
+        <selectionEntry id="d63a-f1b7-1b56-9558" name="General" hidden="false" collective="false" type="upgrade">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers/>
-          <constraints/>
-          <categoryLinks/>
-        </entryLink>
-      </entryLinks>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1c9b-ba94-25a7-f125" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="7844-5c35-aa3a-94f6" name="New CategoryLink" hidden="false" targetId="b745-17c4-8fbf-8b04" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs/>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups/>
+      <entryLinks/>
       <costs>
         <cost name="pts" costTypeId="points" value="0.0"/>
       </costs>
@@ -4817,9 +5107,18 @@
       <categoryLinks/>
       <selectionEntries/>
       <selectionEntryGroups/>
-      <entryLinks/>
+      <entryLinks>
+        <entryLink id="730c-eca0-de5a-a7d6" name="General" hidden="false" targetId="88d2-d540-0573-3402" type="selectionEntry">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+          <categoryLinks/>
+        </entryLink>
+      </entryLinks>
       <costs>
-        <cost name="pts" costTypeId="points" value="0.0"/>
+        <cost name="pts" costTypeId="points" value="120.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="993f-68a2-b801-2702" name="Manfred, Mortarch of Night" page="135" hidden="false" collective="false" type="upgrade">
@@ -5667,7 +5966,16 @@
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups/>
-      <entryLinks/>
+      <entryLinks>
+        <entryLink id="98aa-08c5-5a26-f95d" name="General" hidden="false" targetId="88d2-d540-0573-3402" type="selectionEntry">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+          <categoryLinks/>
+        </entryLink>
+      </entryLinks>
       <costs>
         <cost name="pts" costTypeId="points" value="800.0"/>
       </costs>
@@ -5833,7 +6141,16 @@
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups/>
-      <entryLinks/>
+      <entryLinks>
+        <entryLink id="e039-7fde-88a9-bda7" name="General" hidden="false" targetId="88d2-d540-0573-3402" type="selectionEntry">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+          <categoryLinks/>
+        </entryLink>
+      </entryLinks>
       <costs>
         <cost name="pts" costTypeId="points" value="110.0"/>
       </costs>
@@ -6014,15 +6331,50 @@
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups/>
-      <entryLinks/>
+      <entryLinks>
+        <entryLink id="cc41-988c-fb2c-5f0b" name="General" hidden="false" targetId="88d2-d540-0573-3402" type="selectionEntry">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+          <categoryLinks/>
+        </entryLink>
+      </entryLinks>
       <costs>
         <cost name="pts" costTypeId="points" value="140.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="2a68-7e76-4014-60ee" name="Necropolis Knights" book="Tomb Kings" page="" hidden="false" collective="false" type="upgrade">
-      <profiles/>
+    <selectionEntry id="2a68-7e76-4014-60ee" name="-Necropolis Knights" book="Tomb Kings" page="" hidden="false" collective="false" type="upgrade">
+      <profiles>
+        <profile id="b5e4-0031-3f35-0985" name="ICON BEARER" book="Tomb Kings: Warscroll Compendium" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="Models in this unit may be Icon Bearers. You can return 1 slain models to this unit in your hero phase if it includes any Icon Bearers."/>
+          </characteristics>
+        </profile>
+        <profile id="757a-471c-5017-1802" name="NECROPOLIS CAPTAIN" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value=" The leader of this unit is a Necropolis Captain. Add 1 to the Attacks characteristic of the Necropolis Captain’s Knight’s Heavy Spear."/>
+          </characteristics>
+        </profile>
+      </profiles>
       <rules/>
-      <infoLinks/>
+      <infoLinks>
+        <infoLink id="da44-0e91-5c71-0966" name="HORNBLOWER" hidden="false" targetId="441f-bd49-e0b1-3709" type="profile">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+        </infoLink>
+      </infoLinks>
       <modifiers/>
       <constraints/>
       <categoryLinks/>
@@ -6040,10 +6392,126 @@
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="20bd-5552-bcfc-82e7" name="Knight&apos;s Heavy Spear" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="1677-b157-7498-ee84" name="Knight&apos;s Heavy Spear" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="Weapon">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
+                <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="2&quot;"/>
+                <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="2"/>
+                <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="3+"/>
+                <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="3+"/>
+                <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-1"/>
+                <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="1"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4707-ee60-7799-cc4e" type="min"/>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b9ae-4b90-7228-fabc" type="max"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs/>
+        </selectionEntry>
+        <selectionEntry id="c7b4-9113-2515-0de0" name="Necroserpent&apos;s Poisoned Fangs" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="31ac-7e3d-0e92-08e1" name="Necroserpent&apos;s Poisoned Fangs" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="Weapon">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
+                <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="2&quot;"/>
+                <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="3"/>
+                <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="4+"/>
+                <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="3+"/>
+                <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-1"/>
+                <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="D3"/>
+              </characteristics>
+            </profile>
+            <profile id="8253-2fc7-0500-e4a8" name="Necrovenom" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="Each time you make a wound roll of 6+ for a Necroserpent’s Poisoned Fangs, that attack inflicts 1 mortal wound in addition to its normal damage."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0d99-e91f-b92d-57aa" type="min"/>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ef68-2e93-f0e1-3389" type="max"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
           <costs/>
         </selectionEntry>
       </selectionEntries>
-      <selectionEntryGroups/>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="80a9-4ce0-b91b-bc86" name="Shield" hidden="false" collective="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3e43-3168-64a7-5baa" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="10f4-fdd6-f862-d2ac" type="max"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries>
+            <selectionEntry id="1951-434c-46f8-4190" name="Necropolis Shield" hidden="false" collective="false" type="upgrade">
+              <profiles>
+                <profile id="5442-c0ba-19e5-46f1" name="Necropolis Shield" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                  <characteristics>
+                    <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="Add 1 to the save rolls for a unit of Necropolis Knights with Necropolis shields in the combat phase."/>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5916-f8fe-5015-133a" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7d7d-a906-7964-86c9" type="max"/>
+              </constraints>
+              <categoryLinks/>
+              <selectionEntries/>
+              <selectionEntryGroups/>
+              <entryLinks/>
+              <costs>
+                <cost name="pts" costTypeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <selectionEntryGroups/>
+          <entryLinks/>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
       <entryLinks/>
       <costs>
         <cost name="pts" costTypeId="points" value="240.0"/>
@@ -6072,7 +6540,16 @@
       <categoryLinks/>
       <selectionEntries/>
       <selectionEntryGroups/>
-      <entryLinks/>
+      <entryLinks>
+        <entryLink id="d17f-6098-79ac-57b9" name="General" hidden="false" targetId="88d2-d540-0573-3402" type="selectionEntry">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+          <categoryLinks/>
+        </entryLink>
+      </entryLinks>
       <costs>
         <cost name="pts" costTypeId="points" value="100.0"/>
       </costs>
@@ -6118,7 +6595,16 @@
       <categoryLinks/>
       <selectionEntries/>
       <selectionEntryGroups/>
-      <entryLinks/>
+      <entryLinks>
+        <entryLink id="6a4e-c6dc-ded9-16b6" name="General" hidden="false" targetId="88d2-d540-0573-3402" type="selectionEntry">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+          <categoryLinks/>
+        </entryLink>
+      </entryLinks>
       <costs>
         <cost name="pts" costTypeId="points" value="80.0"/>
       </costs>
@@ -6132,32 +6618,356 @@
       <categoryLinks/>
       <selectionEntries/>
       <selectionEntryGroups/>
-      <entryLinks/>
+      <entryLinks>
+        <entryLink id="3c25-0aaf-a25b-4a95" name="General" hidden="false" targetId="88d2-d540-0573-3402" type="selectionEntry">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+          <categoryLinks/>
+        </entryLink>
+      </entryLinks>
       <costs>
-        <cost name="pts" costTypeId="points" value="0.0"/>
+        <cost name="pts" costTypeId="points" value="440.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="bbc3-e0e2-f667-01c9" name="Screaming Skull Catapult" book="Tomb Kings" page="" hidden="false" collective="false" type="unit">
-      <profiles/>
+    <selectionEntry id="bbc3-e0e2-f667-01c9" name="-Screaming Skull Catapult" book="Tomb Kings" page="" hidden="false" collective="false" type="unit">
+      <profiles>
+        <profile id="e96b-202e-4bf5-41fc" name="Screaming Skull Catapult " hidden="false" profileTypeId="1960-ca8e-67ce-2014" profileTypeName="Unit">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Move" characteristicTypeId="8655-6213-2824-1752" value="*"/>
+            <characteristic name="Wounds" characteristicTypeId="cd0e-fea6-411f-904d" value="5"/>
+            <characteristic name="Bravery" characteristicTypeId="0c85-bf79-836b-759e" value="-"/>
+            <characteristic name="Save" characteristicTypeId="f8dd-4f2a-8543-4f36" value="4+"/>
+          </characteristics>
+        </profile>
+        <profile id="8d40-dc98-27ff-aeca" name="Crewed War Machine" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="A Screaming Skull Catapult can only move if its CREW are within 1&quot; at the start of the movement phase. If its CREW are within 1&quot; of the catapult in the shooting phase, they can fire the war machine.  The war machine cannot make charge moves, does not need to take battleshock tests and is unaffected by any attack or ability that uses Bravery. The CREW are in cover while they are within 1&quot; of their war machine."/>
+          </characteristics>
+        </profile>
+        <profile id="348b-29e4-bc0a-254d" name="Arcing Skulls" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="This war machine can shoot at targets that are not visible to it."/>
+          </characteristics>
+        </profile>
+        <profile id="9cc2-b470-d657-536d" name="Screaming Amunition" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="A unit that suffers any wounds from Screaming Skulls must subtract 2 from its Bravery characteristic until the end of the turn."/>
+          </characteristics>
+        </profile>
+        <profile id="41bd-6a2c-2c38-6508" name="Deathless Overseer" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="You can fire Screaming Skulls an additional time in your shooting phase if there are any friendly Necrotects within 1&quot; of the war machine."/>
+          </characteristics>
+        </profile>
+      </profiles>
       <rules/>
       <infoLinks/>
       <modifiers/>
       <constraints/>
-      <categoryLinks/>
-      <selectionEntries/>
+      <categoryLinks>
+        <categoryLink id="e2ae-dc4b-9688-4609" name="New CategoryLink" hidden="false" targetId="0c09-9d52-aa48-3c9b" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </categoryLink>
+        <categoryLink id="f20b-7120-a8a5-7f3e" name="New CategoryLink" hidden="false" targetId="1590-1b2b-fa81-d412" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </categoryLink>
+        <categoryLink id="c7b8-5a69-0d3a-a919" name="New CategoryLink" hidden="false" targetId="880e-1e33-b965-71ec" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </categoryLink>
+        <categoryLink id="7082-3743-38f5-2b4b" name="New CategoryLink" hidden="false" targetId="0434-7fcc-c208-2a3a" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </categoryLink>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="9c51-ceea-bad4-c581" name="Screaming Skull Catapult Crew" hidden="false" collective="false" type="model">
+          <profiles>
+            <profile id="5440-3e52-c056-9598" name="Screaming Skull Catapult Crew" hidden="false" profileTypeId="1960-ca8e-67ce-2014" profileTypeName="Unit">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Move" characteristicTypeId="8655-6213-2824-1752" value="4&quot;"/>
+                <characteristic name="Wounds" characteristicTypeId="cd0e-fea6-411f-904d" value="1"/>
+                <characteristic name="Bravery" characteristicTypeId="0c85-bf79-836b-759e" value="10"/>
+                <characteristic name="Save" characteristicTypeId="f8dd-4f2a-8543-4f36" value="6+"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0773-058d-56e7-e59d" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0978-cf9a-4462-21c8" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="5dd9-f4d9-0080-79d4" name="New CategoryLink" hidden="false" targetId="0c09-9d52-aa48-3c9b" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+            <categoryLink id="8eb7-cb13-5d0e-4d78" name="New CategoryLink" hidden="false" targetId="1590-1b2b-fa81-d412" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+            <categoryLink id="90e9-20a0-1455-fb93" name="New CategoryLink" hidden="false" targetId="8675-0e65-e69e-e854" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+            <categoryLink id="0ecf-c5d8-6d42-5bf8" name="New CategoryLink" hidden="false" targetId="a2b3-901c-9a34-0ab2" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+            <categoryLink id="8ecd-9c02-a60f-bfcd" name="New CategoryLink" hidden="false" targetId="3a6f-342a-6bd3-758d" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries>
+            <selectionEntry id="46b1-f110-357a-a5fe" name="Crew&apos;s Tools" hidden="false" collective="false" type="upgrade">
+              <profiles>
+                <profile id="941d-ca44-6d62-d47a" name="Crew&apos;s Tools" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="Weapon">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                  <characteristics>
+                    <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
+                    <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="1&quot;"/>
+                    <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="1"/>
+                    <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="5+"/>
+                    <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="5+"/>
+                    <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-"/>
+                    <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="1"/>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="344a-5055-3361-80c3" type="min"/>
+                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7e13-9247-8f95-a43f" type="max"/>
+              </constraints>
+              <categoryLinks/>
+              <selectionEntries/>
+              <selectionEntryGroups/>
+              <entryLinks/>
+              <costs/>
+            </selectionEntry>
+          </selectionEntries>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs/>
+        </selectionEntry>
+        <selectionEntry id="7fbf-4c7d-4b71-f19c" name="Warmachine Crew Table" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="8ad0-0ef4-88bc-4840" name="-" hidden="false" profileTypeId="2d7b-0280-473b-9c00" profileTypeName="Screaming Skull Crew Table">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Crew within 1&quot;" characteristicTypeId="b8b6-7486-00a9-ab3f" value="3 models"/>
+                <characteristic name="Move" characteristicTypeId="ca83-f7cb-271c-e91e" value="4&quot;"/>
+                <characteristic name="Screaming Skulls" characteristicTypeId="146f-6f2e-67ab-d1a3" value="4"/>
+              </characteristics>
+            </profile>
+            <profile id="a641-bdb7-d0a5-af4d" name="1" hidden="false" profileTypeId="2d7b-0280-473b-9c00" profileTypeName="Screaming Skull Crew Table">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Crew within 1&quot;" characteristicTypeId="b8b6-7486-00a9-ab3f" value="2 models"/>
+                <characteristic name="Move" characteristicTypeId="ca83-f7cb-271c-e91e" value="3&quot;"/>
+                <characteristic name="Screaming Skulls" characteristicTypeId="146f-6f2e-67ab-d1a3" value="3"/>
+              </characteristics>
+            </profile>
+            <profile id="521e-6234-06a7-8d23" name="2" hidden="false" profileTypeId="2d7b-0280-473b-9c00" profileTypeName="Screaming Skull Crew Table">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Crew within 1&quot;" characteristicTypeId="b8b6-7486-00a9-ab3f" value="1 models"/>
+                <characteristic name="Move" characteristicTypeId="ca83-f7cb-271c-e91e" value="2&quot;"/>
+                <characteristic name="Screaming Skulls" characteristicTypeId="146f-6f2e-67ab-d1a3" value="2"/>
+              </characteristics>
+            </profile>
+            <profile id="6b04-1232-407d-5849" name="3" hidden="false" profileTypeId="2d7b-0280-473b-9c00" profileTypeName="Screaming Skull Crew Table">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Crew within 1&quot;" characteristicTypeId="b8b6-7486-00a9-ab3f" value="0 models"/>
+                <characteristic name="Move" characteristicTypeId="ca83-f7cb-271c-e91e" value="0&quot;"/>
+                <characteristic name="Screaming Skulls" characteristicTypeId="146f-6f2e-67ab-d1a3" value="0"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7499-9121-349f-d69d" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4363-32ab-9141-005d" type="max"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs/>
+        </selectionEntry>
+        <selectionEntry id="b237-b59a-7b93-3dd7" name="Screaming Skulls" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="376a-afc8-ed74-013e" name="Screaming Skulls " hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="Weapon">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Missile"/>
+                <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="6-36&quot;"/>
+                <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="1"/>
+                <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="4+"/>
+                <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="3+"/>
+                <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-1"/>
+                <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="*"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ea14-dc5c-8000-7cf8" type="min"/>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="99ad-7094-62e4-4efe" type="max"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs/>
+        </selectionEntry>
+      </selectionEntries>
       <selectionEntryGroups/>
       <entryLinks/>
       <costs>
         <cost name="pts" costTypeId="points" value="160.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="3c01-6a5d-c449-b5ad" name="Sepulchral Stalkers" book="Tomb Kings" page="150" hidden="false" collective="false" type="unit">
-      <profiles/>
+    <selectionEntry id="3c01-6a5d-c449-b5ad" name="-Sepulchral Stalkers" book="Tomb Kings" page="150" hidden="false" collective="false" type="unit">
+      <profiles>
+        <profile id="b255-6f6f-7053-3d36" name="Sepulchral Stalkers" hidden="false" profileTypeId="bdc6-78da-3796-60a3" profileTypeName="Battalion Abilities">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Battalion Ability Details" characteristicTypeId="08e0-9ead-1dbe-c801"/>
+          </characteristics>
+        </profile>
+        <profile id="31b9-ca0f-42d9-22f4" name="Underground Stalkers" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="Instead of setting up a unit of Sepulchral Stalkers on the battlefield, you can place them to one side and say that they are set up beneath the ground. In any of your movement phases, you can set the unit up on the battlefield more than 9&quot; from any enemy models.
+This is the unit’s move for that movement phase.  The Sepulchral Stalkers can burrow back underground in any of your future movement phases. If they do, remove the unit from the battlefield – it can return in a later turn as described above."/>
+          </characteristics>
+        </profile>
+      </profiles>
       <rules/>
       <infoLinks/>
       <modifiers/>
       <constraints/>
-      <categoryLinks/>
+      <categoryLinks>
+        <categoryLink id="1cda-36b5-c243-0550" name="New CategoryLink" hidden="false" targetId="0c09-9d52-aa48-3c9b" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </categoryLink>
+        <categoryLink id="fcba-6e52-f06d-791e" name="New CategoryLink" hidden="false" targetId="1590-1b2b-fa81-d412" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </categoryLink>
+        <categoryLink id="9eb6-8ada-5631-212e" name="New CategoryLink" hidden="false" targetId="4529-6256-6fef-0279" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </categoryLink>
+        <categoryLink id="ef98-3b6d-ae4f-4a32" name="New CategoryLink" hidden="false" targetId="f9c2-7bc0-118b-6dd3" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </categoryLink>
+      </categoryLinks>
       <selectionEntries>
         <selectionEntry id="0813-0d3d-7686-ea33" name="3 Sepulchral Stalkers" hidden="false" collective="false" type="upgrade">
           <profiles/>
@@ -6172,7 +6982,84 @@
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
-          <costs/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="db16-895e-fd1e-2d88" name="Transmogrifying Gaze" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="df97-4a6d-7c73-d7cd" name="Transmogrifying Gaze" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="Weapon">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Missile"/>
+                <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="10&quot;"/>
+                <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="*"/>
+                <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="*"/>
+                <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="*"/>
+                <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="*"/>
+                <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="*"/>
+              </characteristics>
+            </profile>
+            <profile id="0801-3850-3683-1c7b" name="Transmogrifying Gaze" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="When this unit makes a Transmogrifying Gaze attack, choose an enemy unit within 10&quot;. Roll a dice for each model in the attacking unit; for each roll of 1, a Sepulchral Stalker has caught a glimpse of its own reflection and the attacking unit suffers 1 mortal wound. On a 2 or 3 the target unit keeps its eyes shut and nothing happens. On a 4 or 5 the target unit suffers 1 mortal wound as it briefly meets the Stalker’s gaze, but on a 6 it suffers D3 mortal wounds as it foolishly stares into the Stalker&apos;s eyes and crumbles to sand."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="41ad-cdb7-3c43-73a8" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f5f7-f0c6-fecd-db0a" type="max"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="d970-ea53-2abe-ed4e" name="Ornate Stave" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="cb57-5bf0-9a05-9ccb" name="Ornate Stave" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="Weapon">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
+                <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="2&quot;"/>
+                <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="2"/>
+                <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="4+"/>
+                <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="3+"/>
+                <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-1"/>
+                <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="2"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3774-ad56-8ee4-e3db" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="33c2-1f0a-893a-1515" type="max"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups/>
@@ -6181,7 +7068,7 @@
         <cost name="pts" costTypeId="points" value="140.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="3e1f-0565-432b-f8e8" name="-Tomb King on Exalted Chariot" book="" page="150" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="3e1f-0565-432b-f8e8" name="-Tomb King on Exalted Chariot (Settra)" book="Tomb Kings" page="" hidden="false" collective="false" type="upgrade">
       <profiles>
         <profile id="3a18-d227-69e8-aaa3" name="Tomb King on Exalted Chariot" hidden="false" profileTypeId="1960-ca8e-67ce-2014" profileTypeName="Unit">
           <profiles/>
@@ -6365,30 +7252,18 @@
             <cost name="pts" costTypeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="faa7-f7f1-f2e8-e2c1" name="General" hidden="false" collective="false" type="upgrade">
+      </selectionEntries>
+      <selectionEntryGroups/>
+      <entryLinks>
+        <entryLink id="d7e3-276e-7e11-546a" name="General" hidden="false" targetId="88d2-d540-0573-3402" type="selectionEntry">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers/>
           <constraints/>
           <categoryLinks/>
-          <selectionEntries/>
-          <selectionEntryGroups/>
-          <entryLinks>
-            <entryLink id="88d8-2a8c-6d65-70f3" name="General" hidden="false" targetId="88d2-d540-0573-3402" type="selectionEntry">
-              <profiles/>
-              <rules/>
-              <infoLinks/>
-              <modifiers/>
-              <constraints/>
-              <categoryLinks/>
-            </entryLink>
-          </entryLinks>
-          <costs/>
-        </selectionEntry>
-      </selectionEntries>
-      <selectionEntryGroups/>
-      <entryLinks/>
+        </entryLink>
+      </entryLinks>
       <costs>
         <cost name="pts" costTypeId="points" value="460.0"/>
       </costs>
@@ -6414,7 +7289,9 @@
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
-          <costs/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups/>
@@ -6444,7 +7321,9 @@
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
-          <costs/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups/>
@@ -6474,7 +7353,9 @@
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
-          <costs/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups/>
@@ -7079,7 +7960,9 @@
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
-          <costs/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups/>
@@ -7097,7 +7980,16 @@
       <categoryLinks/>
       <selectionEntries/>
       <selectionEntryGroups/>
-      <entryLinks/>
+      <entryLinks>
+        <entryLink id="5eee-d82a-7a1b-abb2" name="General" hidden="false" targetId="88d2-d540-0573-3402" type="selectionEntry">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+          <categoryLinks/>
+        </entryLink>
+      </entryLinks>
       <costs>
         <cost name="pts" costTypeId="points" value="100.0"/>
       </costs>
@@ -7122,7 +8014,7 @@
         </entryLink>
       </entryLinks>
       <costs>
-        <cost name="pts" costTypeId="points" value="0.0"/>
+        <cost name="pts" costTypeId="points" value="100.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="4fb8-4453-9252-9977" name="Tomb King in Royal Chariot" page="150" hidden="false" collective="false" type="upgrade">
@@ -7148,22 +8040,134 @@
         <cost name="pts" costTypeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="ffc6-bc7c-b2ba-b8f3" name="Tomb Scorpions" page="150" hidden="false" collective="false" type="upgrade">
-      <profiles/>
+    <selectionEntry id="ffc6-bc7c-b2ba-b8f3" name="-Tomb Scorpions" page="150" hidden="false" collective="false" type="upgrade">
+      <profiles>
+        <profile id="7a80-f55b-3ab9-eb72" name="Tomb Scorpions" hidden="false" profileTypeId="1960-ca8e-67ce-2014" profileTypeName="Unit">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Move" characteristicTypeId="8655-6213-2824-1752" value="6&quot;"/>
+            <characteristic name="Wounds" characteristicTypeId="cd0e-fea6-411f-904d" value="5"/>
+            <characteristic name="Bravery" characteristicTypeId="0c85-bf79-836b-759e" value="10"/>
+            <characteristic name="Save" characteristicTypeId="f8dd-4f2a-8543-4f36" value="4+"/>
+          </characteristics>
+        </profile>
+        <profile id="2585-137a-fb18-abf2" name="Entombed Beneath the Sand" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="Instead of setting up a unit of Tomb Scorpions on the battlefield, you can place them to one side and say that they are set up beneath the ground. In any of your movement phases, you can set the unit up on the battlefi eld more than 9&quot; from any enemy models.  This is the unit’s move for that movement phase."/>
+          </characteristics>
+        </profile>
+        <profile id="3db5-b1de-69c1-57b2" name="Liche Priest&apos;s Sarcophagi" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="Roll a dice each time a model in this unit suffers a wound or a mortal wound caused by a spell. Add 1 to the roll if the model is within 18&quot; of a friendly Necrotect. On a 5+ that wound or mortal wound is negated and has no effect."/>
+          </characteristics>
+        </profile>
+      </profiles>
       <rules/>
       <infoLinks/>
       <modifiers/>
       <constraints>
         <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
       </constraints>
-      <categoryLinks/>
-      <selectionEntries>
-        <selectionEntry id="3197-09f9-cc29-9abb" name="Tomb Scorpions" hidden="false" collective="false" type="upgrade">
+      <categoryLinks>
+        <categoryLink id="cd99-a229-e9b9-6fbb" name="New CategoryLink" hidden="false" targetId="0c09-9d52-aa48-3c9b" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers/>
           <constraints/>
+        </categoryLink>
+        <categoryLink id="8739-3237-4adc-ec0e" name="New CategoryLink" hidden="false" targetId="1590-1b2b-fa81-d412" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </categoryLink>
+        <categoryLink id="ab32-ef8c-0a92-813f" name="New CategoryLink" hidden="false" targetId="4529-6256-6fef-0279" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </categoryLink>
+        <categoryLink id="cfe0-866b-f86c-aeb2" name="New CategoryLink" hidden="false" targetId="35b3-8eed-c7b6-1b16" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </categoryLink>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="8c32-7f7e-0147-b0d7" name="Tail Stinger" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="2d41-7237-36ce-2c6b" name="Tail Stinger" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="Weapon">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
+                <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="3&quot;"/>
+                <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="1"/>
+                <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="3+"/>
+                <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="3+"/>
+                <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-1"/>
+                <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="3"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2aea-fc7b-06b6-4227" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="da0a-8528-d41a-44cc" type="max"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="c749-5f68-d515-341e" name="Powerful Pincers" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="8152-6582-5320-130c" name="Powerful Pincers" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="Weapon">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
+                <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="2&quot;"/>
+                <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="2"/>
+                <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="4+"/>
+                <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="3+"/>
+                <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-2"/>
+                <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="D3"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="360d-89f7-f548-cb65" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="68bd-ce0b-b7b8-ae12" type="max"/>
+          </constraints>
           <categoryLinks/>
           <selectionEntries/>
           <selectionEntryGroups/>
@@ -7850,7 +8854,16 @@
           <entryLinks/>
         </selectionEntryGroup>
       </selectionEntryGroups>
-      <entryLinks/>
+      <entryLinks>
+        <entryLink id="bf98-d482-8cda-de07" name="General" hidden="false" targetId="88d2-d540-0573-3402" type="selectionEntry">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+          <categoryLinks/>
+        </entryLink>
+      </entryLinks>
       <costs>
         <cost name="pts" costTypeId="points" value="300.0"/>
       </costs>
