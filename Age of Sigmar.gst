@@ -204,13 +204,13 @@
       <modifiers/>
       <constraints/>
     </categoryEntry>
-    <categoryEntry id="b745-17c4-8fbf-8b04" name="General" hidden="false">
+    <categoryEntry id="b745-17c4-8fbf-8b04" name="General" hidden="true">
       <profiles/>
       <rules/>
       <infoLinks/>
       <modifiers/>
       <constraints>
-        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2478-fe21-434e-7881" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="2478-fe21-434e-7881" type="max"/>
       </constraints>
     </categoryEntry>
   </categoryEntries>
@@ -292,6 +292,13 @@
             <constraint field="points" scope="force" value="200.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="ea3a-d89e-9312-ff0f" type="max"/>
           </constraints>
         </categoryLink>
+        <categoryLink id="4ca7-8bab-bdf5-f207" name="General" hidden="false" targetId="b745-17c4-8fbf-8b04" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </categoryLink>
       </categoryLinks>
     </forceEntry>
     <forceEntry id="68de-f89f-a288-4234" name="Pitched Battle (2,000)" hidden="false">
@@ -370,6 +377,13 @@
           <constraints>
             <constraint field="points" scope="force" value="400.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="7830-4889-16af-79a8" type="max"/>
           </constraints>
+        </categoryLink>
+        <categoryLink id="82ff-b3ea-ddc9-cda6" name="General" hidden="false" targetId="b745-17c4-8fbf-8b04" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
         </categoryLink>
       </categoryLinks>
     </forceEntry>
@@ -450,6 +464,13 @@
             <constraint field="points" scope="force" value="500.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="9950-8551-2e29-9744" type="max"/>
           </constraints>
         </categoryLink>
+        <categoryLink id="bc22-1882-1c1b-6b8b" name="General" hidden="false" targetId="b745-17c4-8fbf-8b04" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </categoryLink>
       </categoryLinks>
     </forceEntry>
     <forceEntry id="dcf7-ee28-719c-355d" name="Open Play" hidden="false">
@@ -510,6 +531,13 @@
           <constraints/>
         </categoryLink>
         <categoryLink id="c605-12a7-4c22-700e" name="Allies" hidden="false" targetId="f79c-e161-4ad3-876d" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </categoryLink>
+        <categoryLink id="631d-efc1-46ba-8269" name="General" hidden="false" targetId="b745-17c4-8fbf-8b04" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
