@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="b2d4-7046-2927-b79d" name="Grand Alliance: Death" book="Grand Alliance: Death" revision="19" battleScribeVersion="2.01" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="7" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="b2d4-7046-2927-b79d" name="Grand Alliance: Death" book="Grand Alliance: Death" revision="20" battleScribeVersion="2.01" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="7" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks/>
@@ -31,6 +31,12 @@
         <characteristicType id="dbf0-fae4-c88a-45bc" name="Fiery Roar"/>
         <characteristicType id="9877-4f32-d919-e682" name="Stone Claws and Teeth"/>
         <characteristicType id="f00b-1e29-4022-3bc0" name="Tomb Guards&apos; Spears"/>
+      </characteristicTypes>
+    </profileType>
+    <profileType id="c098-3f9a-28af-206d" name="Mourngul Wound Table">
+      <characteristicTypes>
+        <characteristicType id="ee94-3600-01cf-5bb4" name="Move"/>
+        <characteristicType id="a22d-fcce-e696-075e" name="Nightmarish Claws and Fangs"/>
       </characteristicTypes>
     </profileType>
   </profileTypes>
@@ -428,6 +434,13 @@
       <constraints/>
     </categoryEntry>
     <categoryEntry id="9bf2-2d82-0c92-3ea2" name="FLESH-EATER COURTS" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="ab17-4dea-ab9a-f358" name="MOURNGUL" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
@@ -2522,7 +2535,7 @@
         </categoryLink>
       </categoryLinks>
     </entryLink>
-    <entryLink id="455f-9915-5768-974f" hidden="false" targetId="8478-fe53-87a6-0428" type="selectionEntry">
+    <entryLink id="455f-9915-5768-974f" name="Mourngul" hidden="false" targetId="8478-fe53-87a6-0428" type="selectionEntry">
       <profiles/>
       <rules/>
       <infoLinks/>
@@ -2531,12 +2544,25 @@
           <repeats/>
           <conditions/>
           <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7b65-f69b-f915-00d3" type="equalTo"/>
-                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0395-882a-0826-8ab8" type="equalTo"/>
-              </conditions>
-              <conditionGroups/>
+            <conditionGroup type="or">
+              <conditions/>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7b65-f69b-f915-00d3" type="equalTo"/>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0395-882a-0826-8ab8" type="equalTo"/>
+                  </conditions>
+                  <conditionGroups/>
+                </conditionGroup>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="43e5-72fa-d4ca-df80" type="equalTo"/>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d13e-ab2e-39be-6d0a" type="equalTo"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edf8-b8cf-c258-7521" type="equalTo"/>
+                  </conditions>
+                  <conditionGroups/>
+                </conditionGroup>
+              </conditionGroups>
             </conditionGroup>
           </conditionGroups>
         </modifier>
@@ -4408,6 +4434,42 @@
         </categoryLink>
       </categoryLinks>
     </entryLink>
+    <entryLink id="4392-7c8c-7880-8297" name="Mourngul" hidden="false" targetId="8478-fe53-87a6-0428" type="selectionEntry">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <repeats/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="09ef-f8bc-807f-5c8f" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints/>
+      <categoryLinks>
+        <categoryLink id="56b9-eb74-a61c-1a46" hidden="false" targetId="fa0c-9044-2568-fa02" primary="true">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </categoryLink>
+        <categoryLink id="1814-4f7e-0993-3535" name="New CategoryLink" hidden="false" targetId="f79c-e161-4ad3-876d" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </categoryLink>
+      </categoryLinks>
+    </entryLink>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="9515-1a15-4d1e-7f92" name="[FEC]Abhorrant Ghoul King" page="135" hidden="false" collective="false" type="upgrade">
@@ -4850,7 +4912,9 @@ An Attendants at Court battalion consists of the following units:
       <selectionEntries/>
       <selectionEntryGroups/>
       <entryLinks/>
-      <costs/>
+      <costs>
+        <cost name="pts" costTypeId="points" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="0f6f-2fbb-c19f-803a" name="[FEC]Battalion: Deadwatch" page="135" hidden="false" collective="false" type="upgrade">
       <profiles/>
@@ -4884,7 +4948,9 @@ An Attendants at Court battalion consists of the following units:
       <selectionEntries/>
       <selectionEntryGroups/>
       <entryLinks/>
-      <costs/>
+      <costs>
+        <cost name="pts" costTypeId="points" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="bd10-d21e-8d3e-4787" name="[FEC]Battalion: Fleash-eater Court" page="135" hidden="false" collective="false" type="upgrade">
       <profiles/>
@@ -4962,7 +5028,9 @@ An Attendants at Court battalion consists of the following units:
       <selectionEntries/>
       <selectionEntryGroups/>
       <entryLinks/>
-      <costs/>
+      <costs>
+        <cost name="pts" costTypeId="points" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="2543-422f-dbf5-e953" name="[FEC]Battalion: Royal Family" book="" page="135" hidden="false" collective="false" type="upgrade">
       <profiles>
@@ -5904,7 +5972,9 @@ An Attendants at Court battalion consists of the following units:
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
-          <costs/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups/>
@@ -5948,7 +6018,9 @@ An Attendants at Court battalion consists of the following units:
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
-          <costs/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups/>
@@ -5977,7 +6049,9 @@ An Attendants at Court battalion consists of the following units:
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
-          <costs/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups/>
@@ -6038,7 +6112,9 @@ An Attendants at Court battalion consists of the following units:
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
-          <costs/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups/>
@@ -7475,18 +7551,192 @@ An Attendants at Court battalion consists of the following units:
         <cost name="pts" costTypeId="points" value="180.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="8478-fe53-87a6-0428" name="Mourngul" page="135" hidden="false" collective="false" type="upgrade">
-      <profiles/>
+    <selectionEntry id="8478-fe53-87a6-0428" name="-Mourngul" page="" hidden="false" collective="false" type="unit">
+      <profiles>
+        <profile id="2095-f7bb-0bdd-cf7c" name="Mourngul" hidden="false" profileTypeId="1960-ca8e-67ce-2014" profileTypeName="Unit">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Move" characteristicTypeId="8655-6213-2824-1752" value="*"/>
+            <characteristic name="Wounds" characteristicTypeId="cd0e-fea6-411f-904d" value="10"/>
+            <characteristic name="Bravery" characteristicTypeId="0c85-bf79-836b-759e" value="10"/>
+            <characteristic name="Save" characteristicTypeId="f8dd-4f2a-8543-4f36" value="3+"/>
+          </characteristics>
+        </profile>
+        <profile id="548d-5773-f49f-73cb" name="Haunter of the Dark" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="Ignore the attacking weapon’s Rend characteristic when making save rolls for this unit."/>
+          </characteristics>
+        </profile>
+        <profile id="1aee-dd42-07ca-36af" name="Ghastly Apparition" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="Subtract 1 from hit rolls for attacks made by enemy units while they are within 6&quot; of any models with this ability."/>
+          </characteristics>
+        </profile>
+        <profile id="0b93-7b28-2f9b-bf15" name="Devourer of Flesh and Souls" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="If a Mourngul slays any models, at the end of that combat phase heal D3 wounds that have been allocated to it."/>
+          </characteristics>
+        </profile>
+        <profile id="b61f-7039-0815-06c7" name="Ravening Onslaught" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="Each time you roll a hit roll of 6+ for a Mourngul&apos;s Nightmarish Claws and Fangs, add 1 to the weapon’s Damage characteristic for that attack."/>
+          </characteristics>
+        </profile>
+        <profile id="4f1a-72e3-073c-9a76" name="0-2" hidden="false" profileTypeId="c098-3f9a-28af-206d" profileTypeName="Mourngul Wound Table">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Move" characteristicTypeId="ee94-3600-01cf-5bb4" value="12&quot;"/>
+            <characteristic name="Nightmarish Claws and Fangs" characteristicTypeId="a22d-fcce-e696-075e" value="8"/>
+          </characteristics>
+        </profile>
+        <profile id="1c34-b122-cd9d-0a5a" name="3-4" hidden="false" profileTypeId="c098-3f9a-28af-206d" profileTypeName="Mourngul Wound Table">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Move" characteristicTypeId="ee94-3600-01cf-5bb4" value="10&quot;"/>
+            <characteristic name="Nightmarish Claws and Fangs" characteristicTypeId="a22d-fcce-e696-075e" value="7"/>
+          </characteristics>
+        </profile>
+        <profile id="8cdb-4302-a49c-e35a" name="5-6" hidden="false" profileTypeId="c098-3f9a-28af-206d" profileTypeName="Mourngul Wound Table">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Move" characteristicTypeId="ee94-3600-01cf-5bb4" value="9&quot;"/>
+            <characteristic name="Nightmarish Claws and Fangs" characteristicTypeId="a22d-fcce-e696-075e" value="6"/>
+          </characteristics>
+        </profile>
+        <profile id="16b1-d42c-a5d0-b7bd" name="7-8" hidden="false" profileTypeId="c098-3f9a-28af-206d" profileTypeName="Mourngul Wound Table">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Move" characteristicTypeId="ee94-3600-01cf-5bb4" value="8&quot;"/>
+            <characteristic name="Nightmarish Claws and Fangs" characteristicTypeId="a22d-fcce-e696-075e" value="5"/>
+          </characteristics>
+        </profile>
+        <profile id="655f-0690-f250-0e93" name="9+" hidden="false" profileTypeId="c098-3f9a-28af-206d" profileTypeName="Mourngul Wound Table">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Move" characteristicTypeId="ee94-3600-01cf-5bb4" value="5&quot;"/>
+            <characteristic name="Nightmarish Claws and Fangs" characteristicTypeId="a22d-fcce-e696-075e" value="2"/>
+          </characteristics>
+        </profile>
+      </profiles>
       <rules/>
-      <infoLinks/>
+      <infoLinks>
+        <infoLink id="60eb-1b80-5455-c9ab" name="Fly" hidden="false" targetId="8e0c-cbe4-27be-8a30" type="profile">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+        </infoLink>
+      </infoLinks>
       <modifiers/>
       <constraints/>
-      <categoryLinks/>
-      <selectionEntries/>
+      <categoryLinks>
+        <categoryLink id="d12d-20ec-69c8-927e" name="New CategoryLink" hidden="false" targetId="0c09-9d52-aa48-3c9b" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </categoryLink>
+        <categoryLink id="863e-57c6-ef4f-128a" name="New CategoryLink" hidden="false" targetId="c21c-0e74-70a9-18bb" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </categoryLink>
+        <categoryLink id="bf70-ddd4-0f9c-156b" name="New CategoryLink" hidden="false" targetId="3951-2b84-de11-4843" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </categoryLink>
+        <categoryLink id="95be-e40a-f633-73ab" name="New CategoryLink" hidden="false" targetId="1959-9f6a-3056-913a" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </categoryLink>
+        <categoryLink id="eebf-197e-3184-b784" name="New CategoryLink" hidden="false" targetId="ab17-4dea-ab9a-f358" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </categoryLink>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="1d17-9e1b-44f3-cddc" name="Nightmarish Claws and Fangs" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="6109-ef16-24a9-acfa" name="Nightmarish Claws and Fangs" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="Weapon">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
+                <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="2&quot;"/>
+                <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="*"/>
+                <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="3+"/>
+                <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="3+"/>
+                <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-1"/>
+                <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="2"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c82c-3d21-80d6-ed0a" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="87e9-3113-c868-ad34" type="max"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs/>
+        </selectionEntry>
+      </selectionEntries>
       <selectionEntryGroups/>
       <entryLinks/>
       <costs>
-        <cost name="pts" costTypeId="points" value="0.0"/>
+        <cost name="pts" costTypeId="points" value="350.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="7c0c-91b9-f052-24af" name="-Nagash, Supreme Lord of the Undead" book="Battletome: Legions of Nagash" page="96" hidden="false" collective="false" type="upgrade">
@@ -13441,7 +13691,7 @@ An Attendants at Court battalion consists of the following units:
         <cost name="pts" costTypeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="f124-2ae2-055e-c865" name="Varghulf Courtier" page="135" hidden="false" collective="false" type="unit">
+    <selectionEntry id="f124-2ae2-055e-c865" name="[FEC]Varghulf Courtier" page="135" hidden="false" collective="false" type="unit">
       <profiles/>
       <rules/>
       <infoLinks/>
