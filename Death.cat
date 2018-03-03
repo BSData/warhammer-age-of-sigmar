@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="b2d4-7046-2927-b79d" name="Grand Alliance: Death" book="Grand Alliance: Death" revision="24" battleScribeVersion="2.01" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="7" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="b2d4-7046-2927-b79d" name="Grand Alliance: Death" book="Grand Alliance: Death" revision="25" battleScribeVersion="2.01" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="7" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks/>
@@ -584,6 +584,27 @@
       <constraints/>
     </categoryEntry>
     <categoryEntry id="e2da-3eb4-92e4-8efb" name="ABHORRANT GHOUL KING" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="e8f4-3b13-f9d1-eb56" name="GRAVE GUARD" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="6284-6685-6d56-978a" name="SPIRIT HOSTS" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="0058-2720-19c2-b46e" name="VARGHEISTS" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
@@ -7205,7 +7226,9 @@
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
-          <costs/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="f95e-a16f-e74f-08c2" name="Zombie Dragon&apos;s Pestilential Breath" hidden="false" collective="false" type="upgrade">
           <profiles>
@@ -7245,7 +7268,9 @@
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
-          <costs/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="5295-f692-14d0-bae7" name="Feeding Frenzy" hidden="false" collective="false" type="upgrade">
           <profiles>
@@ -10151,47 +10176,283 @@ An Attendants at Court battalion consists of the following units:
         <cost name="pts" costTypeId="points" value="80.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="ae91-dab3-c987-4379" name="Grave Guard" page="135" hidden="false" collective="false" type="upgrade">
-      <profiles/>
+    <selectionEntry id="ae91-dab3-c987-4379" name="-Grave Guard" page="135" hidden="false" collective="false" type="unit">
+      <profiles>
+        <profile id="6ce9-ed5c-d2c1-2125" name="Grave Guard" hidden="false" profileTypeId="1960-ca8e-67ce-2014" profileTypeName="Unit">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Move" characteristicTypeId="8655-6213-2824-1752" value="4&quot;"/>
+            <characteristic name="Wounds" characteristicTypeId="cd0e-fea6-411f-904d" value="1"/>
+            <characteristic name="Bravery" characteristicTypeId="0c85-bf79-836b-759e" value="10"/>
+            <characteristic name="Save" characteristicTypeId="f8dd-4f2a-8543-4f36" value="5+"/>
+          </characteristics>
+        </profile>
+        <profile id="1d4f-ae1c-b9a6-2787" name="Senechal" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="The leader of this unit is a Seneschal. Add 1 to the Attacks characteristic of a Seneschal’s Wight Blade or Great Wight Blade."/>
+          </characteristics>
+        </profile>
+        <profile id="23e8-2a46-b029-5886" name="Cursed Weapons" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="If the wound roll for an attack made with a Wight Blade or Great Wight Blade is 6+, double the Damage characteristic of that attack."/>
+          </characteristics>
+        </profile>
+      </profiles>
       <rules/>
-      <infoLinks/>
-      <modifiers/>
+      <infoLinks>
+        <infoLink id="b29f-ec92-a372-cdf2" name="HORNBLOWER" hidden="false" targetId="441f-bd49-e0b1-3709" type="profile">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+        </infoLink>
+        <infoLink id="e9c7-3031-761c-190b" name="STANDARD BEARER" hidden="false" targetId="82d7-72c8-891a-50e8" type="profile">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+        </infoLink>
+      </infoLinks>
+      <modifiers>
+        <modifier type="increment" field="points" value="80">
+          <repeats>
+            <repeat field="selections" scope="ae91-dab3-c987-4379" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions/>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="decrement" field="points" value="80">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="ae91-dab3-c987-4379" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="decrement" field="points" value="60">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="ae91-dab3-c987-4379" value="6.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <constraints/>
-      <categoryLinks/>
+      <categoryLinks>
+        <categoryLink id="05c7-4284-635a-9d56" name="New CategoryLink" hidden="false" targetId="0c09-9d52-aa48-3c9b" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </categoryLink>
+        <categoryLink id="f373-d129-35c3-3493" name="New CategoryLink" hidden="false" targetId="a2b3-901c-9a34-0ab2" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </categoryLink>
+        <categoryLink id="6893-d683-171c-f09a" name="New CategoryLink" hidden="false" targetId="96d0-849a-a8cc-a6cf" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </categoryLink>
+        <categoryLink id="a888-fa5b-d99a-b8e7" name="New CategoryLink" hidden="false" targetId="d51a-b7de-3b60-a231" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </categoryLink>
+        <categoryLink id="afc0-8a58-7637-5efa" name="New CategoryLink" hidden="false" targetId="e8f4-3b13-f9d1-eb56" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </categoryLink>
+      </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="6631-ac55-59fc-1fb0" name="5 Grave Guard" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="6631-ac55-59fc-1fb0" name="5 Grave Guard" hidden="false" collective="false" type="model">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers/>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="minSelections" type="min"/>
-            <constraint field="selections" scope="parent" value="7.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
+            <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
           </constraints>
           <categoryLinks/>
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
-          <costs>
-            <cost name="pts" costTypeId="points" value="80.0"/>
-          </costs>
+          <costs/>
         </selectionEntry>
       </selectionEntries>
-      <selectionEntryGroups/>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="3f79-a3b2-3807-18d9" name="Weapon Choice for Unit" hidden="false" collective="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3513-f084-c799-40c2" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a704-eaf7-59ed-ac1b" type="min"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries>
+            <selectionEntry id="79fb-a0a3-ea0b-5e5d" name="Great Wight Blade" hidden="false" collective="false" type="upgrade">
+              <profiles>
+                <profile id="339e-d9fc-ff90-241f" name="Great Wight Blade" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="Weapon">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                  <characteristics>
+                    <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
+                    <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="1&quot;"/>
+                    <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="2"/>
+                    <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="3+"/>
+                    <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="3+"/>
+                    <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-1"/>
+                    <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="1"/>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+              <categoryLinks/>
+              <selectionEntries/>
+              <selectionEntryGroups/>
+              <entryLinks/>
+              <costs>
+                <cost name="pts" costTypeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="f641-c917-bd8a-0b97" name="Wight Blade and Crypt Shield" hidden="false" collective="false" type="upgrade">
+              <profiles>
+                <profile id="44db-c0e7-ac0f-00dc" name="Wight Blade" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="Weapon">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                  <characteristics>
+                    <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
+                    <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="1&quot;"/>
+                    <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="2"/>
+                    <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="3+"/>
+                    <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="4+"/>
+                    <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-1"/>
+                    <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="1"/>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <rules/>
+              <infoLinks>
+                <infoLink id="da40-7496-8178-570c" name="Crypt Shields" hidden="false" targetId="eda1-3a57-7377-bb35" type="profile">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                </infoLink>
+              </infoLinks>
+              <modifiers/>
+              <constraints/>
+              <categoryLinks/>
+              <selectionEntries/>
+              <selectionEntryGroups/>
+              <entryLinks/>
+              <costs>
+                <cost name="pts" costTypeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <selectionEntryGroups/>
+          <entryLinks/>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
       <entryLinks/>
       <costs>
-        <cost name="pts" costTypeId="points" value="0.0"/>
+        <cost name="pts" costTypeId="points" value="80.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="5801-7f4f-cd22-b629" name="Hexwraith" page="135" hidden="false" collective="false" type="upgrade">
-      <profiles/>
+    <selectionEntry id="5801-7f4f-cd22-b629" name="-Hexwraith" page="135" hidden="false" collective="false" type="unit">
+      <profiles>
+        <profile id="cf52-b079-27ab-7753" name="Spectral Hunters" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="In the movement phase, immediately after this unit has moved, you can pick an enemy unit that was passed across by any models from this unit. If you do so, roll a dice for each Hexwraith that passed across that enemy unit. For each roll of 5+, that enemy unit suffers 1 mortal wound."/>
+          </characteristics>
+        </profile>
+        <profile id="4884-7c05-f031-10ae" name="Hellwraith" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="The leader of this unit is a Hellwraith. Add 1 to the Attacks characteristic of a Hellwraith’s Spectral Scythe."/>
+          </characteristics>
+        </profile>
+      </profiles>
       <rules/>
-      <infoLinks/>
-      <modifiers/>
+      <infoLinks>
+        <infoLink id="e080-ae78-94ac-f47e" name="Fly" hidden="false" targetId="8e0c-cbe4-27be-8a30" type="profile">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+        </infoLink>
+        <infoLink id="6d0a-579f-25a7-aa93" name="Ethereal" hidden="false" targetId="2cf0-8194-2a24-cf92" type="profile">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+        </infoLink>
+        <infoLink id="cfc8-14da-4e8a-efe1" name="Frightful Touch" hidden="false" targetId="92af-f1e1-04e3-1ce5" type="profile">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+        </infoLink>
+      </infoLinks>
+      <modifiers>
+        <modifier type="increment" field="points" value="160">
+          <repeats>
+            <repeat field="selections" scope="5801-7f4f-cd22-b629" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions/>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="decrement" field="points" value="160">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="5801-7f4f-cd22-b629" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <constraints/>
       <categoryLinks/>
       <selectionEntries>
-        <selectionEntry id="cffe-f77e-34e7-21d6" name="5 Hexwraith" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="cffe-f77e-34e7-21d6" name="5 Hexwraith" hidden="false" collective="false" type="model">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -10204,15 +10465,79 @@ An Attendants at Court battalion consists of the following units:
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
+          <costs/>
+        </selectionEntry>
+        <selectionEntry id="230a-93ab-c344-4aac" name="Spectral Scythe" page="117" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="7ca5-b5a6-c749-6daf" name="Spectral Scythe" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="Weapon">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
+                <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="1&quot;"/>
+                <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="2"/>
+                <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="4+"/>
+                <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="3+"/>
+                <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-1"/>
+                <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="1"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b78b-145a-3d89-b951" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4bdf-9ba1-f5f3-b8f9" type="max"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="points" value="160.0"/>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="3621-07f8-9c7a-447f" name="Skeletal Steed&apos;s Hooves and Teeth" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="6557-41ae-2841-318f" name="Skeletal Steed&apos;s Hooves and Teeth" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="Weapon">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
+                <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="1&quot;"/>
+                <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="2"/>
+                <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="4+"/>
+                <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="5+"/>
+                <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-"/>
+                <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="1"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ae3e-c216-9dfa-e42f" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="73e8-9940-fc47-7bdc" type="max"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups/>
       <entryLinks/>
       <costs>
-        <cost name="pts" costTypeId="points" value="0.0"/>
+        <cost name="pts" costTypeId="points" value="160.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="d3e1-356c-4cd8-cc4c" name="-[TK]Tomb Queen (High Queen Khalida)" page="150" hidden="false" collective="false" type="upgrade">
@@ -15980,15 +16305,92 @@ An Attendants at Court battalion consists of the following units:
         <cost name="pts" costTypeId="points" value="80.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="2055-9856-0485-8553" name="Spirit Hosts" page="135" hidden="false" collective="false" type="upgrade">
-      <profiles/>
+    <selectionEntry id="2055-9856-0485-8553" name="-Spirit Hosts" page="135" hidden="false" collective="false" type="unit">
+      <profiles>
+        <profile id="c8c0-fa36-0042-cf9e" name="Spirit Hosts" hidden="false" profileTypeId="1960-ca8e-67ce-2014" profileTypeName="Unit">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Move" characteristicTypeId="8655-6213-2824-1752" value="6&quot;"/>
+            <characteristic name="Wounds" characteristicTypeId="cd0e-fea6-411f-904d" value="3"/>
+            <characteristic name="Bravery" characteristicTypeId="0c85-bf79-836b-759e" value="10"/>
+            <characteristic name="Save" characteristicTypeId="f8dd-4f2a-8543-4f36" value="4+"/>
+          </characteristics>
+        </profile>
+      </profiles>
       <rules/>
-      <infoLinks/>
-      <modifiers/>
+      <infoLinks>
+        <infoLink id="5782-7c40-92b7-333a" name="Ethereal" hidden="false" targetId="2cf0-8194-2a24-cf92" type="profile">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+        </infoLink>
+        <infoLink id="7f79-9344-72b1-f72b" name="Fly" hidden="false" targetId="8e0c-cbe4-27be-8a30" type="profile">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+        </infoLink>
+      </infoLinks>
+      <modifiers>
+        <modifier type="increment" field="points" value="120">
+          <repeats>
+            <repeat field="selections" scope="2055-9856-0485-8553" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions/>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="decrement" field="points" value="120">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="2055-9856-0485-8553" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <constraints/>
-      <categoryLinks/>
+      <categoryLinks>
+        <categoryLink id="8360-af9b-d453-f3cb" name="New CategoryLink" hidden="false" targetId="0c09-9d52-aa48-3c9b" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </categoryLink>
+        <categoryLink id="5bad-b7ab-5c8c-a060" name="New CategoryLink" hidden="false" targetId="c21c-0e74-70a9-18bb" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </categoryLink>
+        <categoryLink id="0626-8f55-05d8-37a9" name="New CategoryLink" hidden="false" targetId="3951-2b84-de11-4843" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </categoryLink>
+        <categoryLink id="6772-83bd-c556-2338" name="New CategoryLink" hidden="false" targetId="d51a-b7de-3b60-a231" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </categoryLink>
+        <categoryLink id="f64e-e765-14f4-ea08" name="New CategoryLink" hidden="false" targetId="6284-6685-6d56-978a" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </categoryLink>
+      </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="76bf-8565-d570-85fe" name="3 Spirit Hosts" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="76bf-8565-d570-85fe" name="3 Spirit Hosts" hidden="false" collective="false" type="model">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -16001,15 +16403,53 @@ An Attendants at Court battalion consists of the following units:
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
+          <costs/>
+        </selectionEntry>
+        <selectionEntry id="2202-a0f0-6d30-59e2" name="Spectral Claws and Daggers" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="631d-6141-3d99-77bd" name="Spectral Claws and Daggers" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="Weapon">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
+                <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="1&quot;"/>
+                <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="6"/>
+                <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="5+"/>
+                <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="4+"/>
+                <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-"/>
+                <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="1"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks>
+            <infoLink id="4b5c-9949-b855-3a7d" name="Frightful Touch" hidden="false" targetId="92af-f1e1-04e3-1ce5" type="profile">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+          </infoLinks>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="eaa5-de98-cdfa-6d53" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9cd9-97b5-0638-94cb" type="max"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="points" value="120.0"/>
+            <cost name="pts" costTypeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups/>
       <entryLinks/>
       <costs>
-        <cost name="pts" costTypeId="points" value="0.0"/>
+        <cost name="pts" costTypeId="points" value="120.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="f808-e030-4647-63f9" name="-Terrorgheist" page="135" hidden="false" collective="false" type="upgrade">
@@ -18308,7 +18748,9 @@ An Attendants at Court battalion consists of the following units:
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
-          <costs/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="6448-b019-e6e5-1670" name="Pestilential Breath" hidden="false" collective="false" type="upgrade">
           <profiles>
@@ -18348,7 +18790,9 @@ An Attendants at Court battalion consists of the following units:
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
-          <costs/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="7c63-cc1a-b26f-4763" name="Ancient Shield" hidden="false" collective="false" type="upgrade">
           <profiles>
@@ -18373,7 +18817,9 @@ An Attendants at Court battalion consists of the following units:
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
-          <costs/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="d6f9-4a43-6cd9-57d6" name="Chalice of Blood" hidden="false" collective="false" type="upgrade">
           <profiles>
@@ -18398,7 +18844,9 @@ An Attendants at Court battalion consists of the following units:
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
-          <costs/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="5f07-54ee-78d8-a089" name="Blood Boil" hidden="false" collective="false" type="upgrade">
           <profiles>
@@ -18556,15 +19004,97 @@ An Attendants at Court battalion consists of the following units:
         <cost name="pts" costTypeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="62c8-5a99-7804-109a" name="Vargheist" page="135" hidden="false" collective="false" type="upgrade">
-      <profiles/>
+    <selectionEntry id="62c8-5a99-7804-109a" name="-Vargheists" page="135" hidden="false" collective="false" type="unit">
+      <profiles>
+        <profile id="ecff-a927-8f8a-b863" name="Vargoyle" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="The leader of this unit is a Vargoyle. Add 1 to the Attacks characteristic of a Vargoyle’s Murderous Fangs and Talons."/>
+          </characteristics>
+        </profile>
+        <profile id="6454-47a8-9571-976e" name="Blood-maddening Feeding Frenzy" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="Each time a model from this unit slays an enemy model, roll a dice. On a 6+ it can immediately make one additional attack against the same unit."/>
+          </characteristics>
+        </profile>
+        <profile id="0557-08a0-2deb-7601" name="Vargheists" hidden="false" profileTypeId="1960-ca8e-67ce-2014" profileTypeName="Unit">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Move" characteristicTypeId="8655-6213-2824-1752" value="12&quot;"/>
+            <characteristic name="Wounds" characteristicTypeId="cd0e-fea6-411f-904d" value="4"/>
+            <characteristic name="Bravery" characteristicTypeId="0c85-bf79-836b-759e" value="10"/>
+            <characteristic name="Save" characteristicTypeId="f8dd-4f2a-8543-4f36" value="5+"/>
+          </characteristics>
+        </profile>
+      </profiles>
       <rules/>
-      <infoLinks/>
-      <modifiers/>
+      <infoLinks>
+        <infoLink id="861e-0d3d-d0b6-b28d" name="Fly" hidden="false" targetId="8e0c-cbe4-27be-8a30" type="profile">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+        </infoLink>
+      </infoLinks>
+      <modifiers>
+        <modifier type="increment" field="points" value="160">
+          <repeats>
+            <repeat field="selections" scope="62c8-5a99-7804-109a" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions/>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="decrement" field="points" value="160">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="62c8-5a99-7804-109a" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <constraints/>
-      <categoryLinks/>
+      <categoryLinks>
+        <categoryLink id="c38f-f425-e542-de51" name="New CategoryLink" hidden="false" targetId="0c09-9d52-aa48-3c9b" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </categoryLink>
+        <categoryLink id="16a4-4ea7-ebf7-0905" name="New CategoryLink" hidden="false" targetId="d1e1-d80a-c667-b587" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </categoryLink>
+        <categoryLink id="eac2-0524-1f58-f490" name="New CategoryLink" hidden="false" targetId="bb14-0194-9bf5-4519" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </categoryLink>
+        <categoryLink id="a4e9-6c0a-57c7-969d" name="New CategoryLink" hidden="false" targetId="0058-2720-19c2-b46e" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </categoryLink>
+      </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="f75b-16ec-a5fd-7139" name="3 Vargheist" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="f75b-16ec-a5fd-7139" name="3 Vargheists" hidden="false" collective="false" type="model">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -18577,15 +19107,46 @@ An Attendants at Court battalion consists of the following units:
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
+          <costs/>
+        </selectionEntry>
+        <selectionEntry id="c7f9-91c5-322a-4582" name="Murderous Fangs and Talons" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="81ee-f706-7455-570e" name="Murderous Fangs and Talons" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="Weapon">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
+                <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="1&quot;"/>
+                <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="3"/>
+                <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="3+"/>
+                <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="3+"/>
+                <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-1"/>
+                <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="2"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="65fc-ff6e-3724-ef0b" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cd7b-89b7-80fe-cb0e" type="max"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="points" value="160.0"/>
+            <cost name="pts" costTypeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups/>
       <entryLinks/>
       <costs>
-        <cost name="pts" costTypeId="points" value="0.0"/>
+        <cost name="pts" costTypeId="points" value="160.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="f124-2ae2-055e-c865" name="[FEC]Varghulf Courtier" page="135" hidden="false" collective="false" type="unit">
@@ -18791,7 +19352,9 @@ An Attendants at Court battalion consists of the following units:
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
-          <costs/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="f1a2-d4f0-e474-e4bc" name="Snapping Maw" hidden="false" collective="false" type="upgrade">
           <profiles>
@@ -18822,7 +19385,9 @@ An Attendants at Court battalion consists of the following units:
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
-          <costs/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="0e2f-a07c-d9e9-9fbf" name="Sword-like Claws" hidden="false" collective="false" type="upgrade">
           <profiles>
@@ -20746,7 +21311,9 @@ An Attendants at Court battalion consists of the following units:
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
-          <costs/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="7f63-0624-6cf1-c21d" name="Snapping Maw" hidden="false" collective="false" type="upgrade">
           <profiles>
@@ -20777,7 +21344,9 @@ An Attendants at Court battalion consists of the following units:
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
-          <costs/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups/>
