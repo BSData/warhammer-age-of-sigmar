@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" book="The General&apos;s Handbook" revision="15" battleScribeVersion="2.01" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" book="The General&apos;s Handbook" revision="16" battleScribeVersion="2.01" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <profiles/>
   <rules>
     <rule id="a954-6cfc-59ca-674e" name="Inspiring Presence" hidden="false">
@@ -253,7 +253,7 @@
     </categoryEntry>
   </categoryEntries>
   <forceEntries>
-    <forceEntry id="6ace-8bcc-48b2-6de7" name="Pitched Battle (1,000)" hidden="false">
+    <forceEntry id="6ace-8bcc-48b2-6de7" name="*Pitched Battle (1,000)" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
@@ -266,7 +266,7 @@
           <infoLinks/>
           <modifiers/>
           <constraints>
-            <constraint field="points" scope="force" value="200.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="e5a4-457c-da30-174b" type="max"/>
+            <constraint field="points" scope="roster" value="200.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="e5a4-457c-da30-174b" type="max"/>
           </constraints>
           <forceEntries/>
           <categoryLinks>
@@ -292,13 +292,6 @@
               <constraints/>
             </categoryLink>
             <categoryLink id="71aa-c4ec-5b0f-fb06" name="Behemoth" hidden="false" targetId="fa0c-9044-2568-fa02" primary="false">
-              <profiles/>
-              <rules/>
-              <infoLinks/>
-              <modifiers/>
-              <constraints/>
-            </categoryLink>
-            <categoryLink id="4941-89a9-7ca6-39e7" name="Leader" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="false">
               <profiles/>
               <rules/>
               <infoLinks/>
@@ -392,7 +385,7 @@
         </categoryLink>
       </categoryLinks>
     </forceEntry>
-    <forceEntry id="68de-f89f-a288-4234" name="Pitched Battle (2,000)" hidden="false">
+    <forceEntry id="68de-f89f-a288-4234" name="*Pitched Battle (2,000)" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
@@ -485,7 +478,7 @@
         </categoryLink>
       </categoryLinks>
     </forceEntry>
-    <forceEntry id="77d6-f72b-3fd5-04b9" name="Pitched Battle (2,500)" hidden="false">
+    <forceEntry id="77d6-f72b-3fd5-04b9" name="*Pitched Battle (2,500)" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
