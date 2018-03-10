@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="b2d4-7046-2927-b79d" name="Grand Alliance: Death" book="Grand Alliance: Death" revision="29" battleScribeVersion="2.01" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="7" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="b2d4-7046-2927-b79d" name="Grand Alliance: Death" book="Grand Alliance: Death" revision="30" battleScribeVersion="2.01" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="7" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks/>
@@ -654,6 +654,13 @@
       <constraints/>
     </categoryEntry>
     <categoryEntry id="3844-597f-8938-7d8d" name="WIGHT KING" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="5444-7ff5-341d-3933" name="CRYPT GHAST COURTIER" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
@@ -7812,8 +7819,7 @@
                   <infoLinks/>
                   <modifiers/>
                   <characteristics>
-                    <characteristic name="Battle Trait Details" characteristicTypeId="9fdd-b4b1-5f7a-0970" value="Whenever an enemy unit is destroyed, before removing the last model, you may pick one of your gravesites within 6&quot; of that model. Roll a dice, then remove the model. On a 4+, you may pick a
-friendly SUMMONABLE unit that has been destroyed and set it up again wholly within 9&quot; of that gravesite and more than 9&quot; from any enemy models."/>
+                    <characteristic name="Battle Trait Details" characteristicTypeId="9fdd-b4b1-5f7a-0970" value="Whenever an enemy unit is destroyed, before removing the last model, you may pick one of your gravesites within 6&quot; of that model. Roll a dice, then remove the model. On a 4+, you may pick a friendly SUMMONABLE unit that has been destroyed and set it up again wholly within 9&quot; of that gravesite and more than 9&quot; from any enemy models."/>
                   </characteristics>
                 </profile>
                 <profile id="00cf-6086-7033-bdb8" name="The Black Disciples" hidden="false" profileTypeId="c137-4d1f-9d1a-524d" profileTypeName="Battle Trait">
@@ -22962,7 +22968,7 @@ An Attendants at Court battalion consists of the following units:
           <infoLinks/>
           <modifiers/>
           <characteristics>
-            <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="At the start of your shooting phase, pick an enemy unit within 8&quot; of this model that is visible to it. Then roll a dice, adding 1 to the result if this model slew any enemy models in the previous combat phase. On a 3+ that unit suffers a number of mortal wounds as shown on the damage table above."/>
+            <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="At the start of your shooting phase, pick an enemy unit within 8&quot; of this model that is visible to it. Then roll a dice, adding 1 to the result if this model slew any enemy models in the previous combat phase. On a 3+ that unit suffers a number of mortal wounds as shown on the damage table above. *FAQ v1.3*"/>
           </characteristics>
         </profile>
         <profile id="09c8-dee4-0a13-68fd" name="Magic" hidden="false" profileTypeId="f55d-ee3a-1597-110f" profileTypeName="Magic">
@@ -24221,6 +24227,38 @@ An Attendants at Court battalion consists of the following units:
           <constraints/>
           <categoryLinks/>
         </entryLink>
+        <entryLink id="02e5-e3fe-ab52-8bcf" name="Nighaunt Artefacts" hidden="false" targetId="3113-73d1-4b73-452c" type="selectionEntryGroup">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7b65-f69b-f915-00d3" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+          <constraints/>
+          <categoryLinks/>
+        </entryLink>
+        <entryLink id="ed9c-f892-d90f-69df" name="Flesh-Eater Courts Artefacts" hidden="false" targetId="2072-8001-6f68-7cbe" type="selectionEntryGroup">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="705f-02ae-f4f5-987a" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+          <constraints/>
+          <categoryLinks/>
+        </entryLink>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="4752-682c-da1f-a5d5" name="Artefacts of Nagash" hidden="false" collective="false">
@@ -24234,7 +24272,17 @@ An Attendants at Court battalion consists of the following units:
       <categoryLinks/>
       <selectionEntries>
         <selectionEntry id="0de2-a069-d443-2b20" name="1. Deathforged Chain" hidden="false" collective="false" type="upgrade">
-          <profiles/>
+          <profiles>
+            <profile id="3b7d-85a1-5911-16b1" name="Deathforged Chain" hidden="false" profileTypeId="0ac4-aacb-2481-8e72" profileTypeName="Artefact">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Artefact Details" characteristicTypeId="0918-c47a-d84e-c0cf" value="At the start of your hero phase, the bearer heals 1 wound that has been allocated to it."/>
+              </characteristics>
+            </profile>
+          </profiles>
           <rules/>
           <infoLinks/>
           <modifiers/>
@@ -24258,7 +24306,17 @@ An Attendants at Court battalion consists of the following units:
           </costs>
         </selectionEntry>
         <selectionEntry id="6ce8-d369-269b-13ad" name="2. Balefire Lantern" hidden="false" collective="false" type="upgrade">
-          <profiles/>
+          <profiles>
+            <profile id="0b7f-5822-a216-483c" name="Balefire Lantern" hidden="false" profileTypeId="0ac4-aacb-2481-8e72" profileTypeName="Artefact">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Artefact Details" characteristicTypeId="0918-c47a-d84e-c0cf" value="Subtract 1 from wound rolls for enemy units within 6&quot; of the bearer. In addition, re-roll successful casting rolls for enemy WIZARDS within 6&quot; of the bearer."/>
+              </characteristics>
+            </profile>
+          </profiles>
           <rules/>
           <infoLinks/>
           <modifiers/>
@@ -24282,7 +24340,17 @@ An Attendants at Court battalion consists of the following units:
           </costs>
         </selectionEntry>
         <selectionEntry id="a9e4-e290-d524-5934" name="3. Grave-sand Timeglass" hidden="false" collective="false" type="upgrade">
-          <profiles/>
+          <profiles>
+            <profile id="1b05-f038-32ec-d9a8" name="Grave-sand Timeglass" hidden="false" profileTypeId="0ac4-aacb-2481-8e72" profileTypeName="Artefact">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Artefact Details" characteristicTypeId="0918-c47a-d84e-c0cf" value="Whilst the bearer is on the battlefield, once per battle, in your hero phase, you can pick an enemy HERO on the battlefield. The enemy hero suffers D3 mortal wounds. At the start of each of your subsequent hero phases, roll a dice. On a 4+ the enemy hero suffers 1 mortal wound."/>
+              </characteristics>
+            </profile>
+          </profiles>
           <rules/>
           <infoLinks/>
           <modifiers/>
@@ -24306,7 +24374,17 @@ An Attendants at Court battalion consists of the following units:
           </costs>
         </selectionEntry>
         <selectionEntry id="61c6-5d79-e60d-21ed" name="4. Ossific Diadem" hidden="false" collective="false" type="upgrade">
-          <profiles/>
+          <profiles>
+            <profile id="d3d8-0273-6be8-e8db" name="Ossific Diadem" hidden="false" profileTypeId="0ac4-aacb-2481-8e72" profileTypeName="Artefact">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Artefact Details" characteristicTypeId="0918-c47a-d84e-c0cf" value="Roll a dice each time you allocate a wound or mortal wound to a friendly DEATHRATTLEmodel within 12&quot; of the bearer. On a 6+ the wound is negated."/>
+              </characteristics>
+            </profile>
+          </profiles>
           <rules/>
           <infoLinks/>
           <modifiers/>
@@ -24330,7 +24408,17 @@ An Attendants at Court battalion consists of the following units:
           </costs>
         </selectionEntry>
         <selectionEntry id="305e-2ed5-e2b3-6a61" name="5. Amethyst Shard" hidden="false" collective="false" type="upgrade">
-          <profiles/>
+          <profiles>
+            <profile id="74c0-11a5-bd61-d976" name="Amethyst Shard" hidden="false" profileTypeId="0ac4-aacb-2481-8e72" profileTypeName="Artefact">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Artefact Details" characteristicTypeId="0918-c47a-d84e-c0cf" value="Once per battle, in your hero phase, you can declare that the bearer will merge the shard with one of their melee weapons. Pick one of the bearer’s melee weapons. Until your next hero phase, add 1 to hit and wound rolls made for that weapon."/>
+              </characteristics>
+            </profile>
+          </profiles>
           <rules/>
           <infoLinks/>
           <modifiers/>
@@ -24354,7 +24442,17 @@ An Attendants at Court battalion consists of the following units:
           </costs>
         </selectionEntry>
         <selectionEntry id="ddcc-58c0-9e1a-68fb" name="6. Terrorgheist Mantle" hidden="false" collective="false" type="upgrade">
-          <profiles/>
+          <profiles>
+            <profile id="853e-12d5-75f6-3ac6" name="Terrorgheist Mantle" hidden="false" profileTypeId="0ac4-aacb-2481-8e72" profileTypeName="Artefact">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Artefact Details" characteristicTypeId="0918-c47a-d84e-c0cf" value="In your shooting phase, you can declare that the bearer will unleash a death shriek. Pick an enemy unit within 10&quot; of the bearer and roll 2 dice. If the total is higher than the enemy unit’s Bravery characteristic, it suffers a number of mortal wounds equal to the difference."/>
+              </characteristics>
+            </profile>
+          </profiles>
           <rules/>
           <infoLinks/>
           <modifiers/>
@@ -24773,7 +24871,9 @@ An Attendants at Court battalion consists of the following units:
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
-          <costs/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -25701,7 +25801,9 @@ An Attendants at Court battalion consists of the following units:
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
-          <costs/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="92ba-8099-c7f4-6272" name="2. Predator of the Shadows" hidden="false" collective="false" type="upgrade">
           <profiles>
@@ -25725,7 +25827,9 @@ An Attendants at Court battalion consists of the following units:
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
-          <costs/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="234d-a584-810b-6de4" name="3. Death Incarnate" hidden="false" collective="false" type="upgrade">
           <profiles>
@@ -25749,7 +25853,9 @@ An Attendants at Court battalion consists of the following units:
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
-          <costs/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="150f-cb43-44a3-e390" name="4. Master of the Black Arts" hidden="false" collective="false" type="upgrade">
           <profiles>
@@ -25773,7 +25879,9 @@ An Attendants at Court battalion consists of the following units:
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
-          <costs/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="23bb-9b6c-9308-414f" name="5. Red Fury" hidden="false" collective="false" type="upgrade">
           <profiles>
@@ -25797,7 +25905,9 @@ An Attendants at Court battalion consists of the following units:
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
-          <costs/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="49d5-bc61-edda-e9e9" name="6. Supernatural Horror" hidden="false" collective="false" type="upgrade">
           <profiles>
@@ -25819,7 +25929,9 @@ An Attendants at Court battalion consists of the following units:
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
-          <costs/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups/>
@@ -25891,6 +26003,70 @@ An Attendants at Court battalion consists of the following units:
           <constraints/>
           <categoryLinks/>
         </entryLink>
+        <entryLink id="19c7-dc17-0c49-a8d0" name="Nighthaunt Command Traits" hidden="false" targetId="35f4-3de6-0ede-c816" type="selectionEntryGroup">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7b65-f69b-f915-00d3" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+          <constraints/>
+          <categoryLinks/>
+        </entryLink>
+        <entryLink id="001d-605e-3718-ece5" name="Flesh-Eater Courts Command Traits" hidden="false" targetId="f944-ca97-7cdc-4616" type="selectionEntryGroup">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="705f-02ae-f4f5-987a" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+          <constraints/>
+          <categoryLinks/>
+        </entryLink>
+        <entryLink id="0591-16f8-c7c7-1e07" name="Grand Host of Nagash Command Traits" hidden="false" targetId="2d6e-6f22-c967-c81f" type="selectionEntryGroup">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d285-0a74-a36b-e277" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+          <constraints/>
+          <categoryLinks/>
+        </entryLink>
+        <entryLink id="001a-a1d6-84c2-6480" name="Legion of Sacrament Command Traits" hidden="false" targetId="3339-096f-0ac0-09fd" type="selectionEntryGroup">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="59ec-1803-f129-8830" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+          <constraints/>
+          <categoryLinks/>
+        </entryLink>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="b9c0-19b9-20dc-8a6d" name="Soulblight Command Traits" hidden="false" collective="false">
@@ -25925,7 +26101,9 @@ An Attendants at Court battalion consists of the following units:
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
-          <costs/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="187a-3f87-2d41-4640" name="2. Deathless Duellist" hidden="false" collective="false" type="upgrade">
           <profiles>
@@ -25949,7 +26127,9 @@ An Attendants at Court battalion consists of the following units:
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
-          <costs/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="3bb8-2a1b-0705-ae7e" name="3. Transfix" hidden="false" collective="false" type="upgrade">
           <profiles>
@@ -25973,7 +26153,9 @@ An Attendants at Court battalion consists of the following units:
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
-          <costs/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="f6d7-06b4-e10c-29b5" name="4. Mist Form" hidden="false" collective="false" type="upgrade">
           <profiles>
@@ -25997,7 +26179,9 @@ An Attendants at Court battalion consists of the following units:
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
-          <costs/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="71e4-f5b2-6d31-b5e4" name="5. Killing Blow" hidden="false" collective="false" type="upgrade">
           <profiles>
@@ -26021,7 +26205,9 @@ An Attendants at Court battalion consists of the following units:
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
-          <costs/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="8b45-6bc0-d387-85ae" name="6. Blood Fury" hidden="false" collective="false" type="upgrade">
           <profiles>
@@ -26040,6 +26226,1078 @@ An Attendants at Court battalion consists of the following units:
           <modifiers/>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="48bb-71b4-9d8f-1844" type="max"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups/>
+      <entryLinks/>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="3113-73d1-4b73-452c" name="Nighaunt Artefacts" hidden="false" collective="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2ca1-f00d-66b4-3673" type="max"/>
+      </constraints>
+      <categoryLinks/>
+      <selectionEntries>
+        <selectionEntry id="fd73-621f-ccc4-45fa" name="1. Cloak of the Waxing Moon" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="f933-cfd0-e2fd-6196" name="Cloak of the Waxing Moon" hidden="false" profileTypeId="0ac4-aacb-2481-8e72" profileTypeName="Artefact">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Artefact Details" characteristicTypeId="0918-c47a-d84e-c0cf" value="Your opponent must subtract 1 from wound rolls made for enemy melee weapons that target this model."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4ac8-7f75-7889-a598" type="max"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs/>
+        </selectionEntry>
+        <selectionEntry id="8833-7633-30e3-e8ce" name="2. Pendant of the Fell Wind" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="83e7-89ca-e3f5-198c" name="Pendant of the Fell Wind" hidden="false" profileTypeId="0ac4-aacb-2481-8e72" profileTypeName="Artefact">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Artefact Details" characteristicTypeId="0918-c47a-d84e-c0cf" value="Add 3&quot; to the Move characteristic of any friendly NIGHTHAUNT units within 6&quot; of this model at the start of the movement phase."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2358-dcc7-ed39-33aa" type="max"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs/>
+        </selectionEntry>
+        <selectionEntry id="8501-ea06-bf17-04ac" name="3. Dreadbolt Ring" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="5bec-4a89-073e-bd52" name="Dreadbolt Ring" hidden="false" profileTypeId="0ac4-aacb-2481-8e72" profileTypeName="Artefact">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Artefact Details" characteristicTypeId="0918-c47a-d84e-c0cf" value="If this model inflicts one or more wounds with its attacks in the combat phase, you can inflict a mortal wound on one enemy unit within 3&quot; of this model after this model completes its other attacks in the phase."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="33b7-08df-b8ea-3efe" type="max"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs/>
+        </selectionEntry>
+        <selectionEntry id="8426-2638-3ab7-b3d2" name="4. Lightshard of the Harvest Moon" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="24ac-a397-ee69-8e8e" name="Lightshard of the Harvest Moon" hidden="false" profileTypeId="0ac4-aacb-2481-8e72" profileTypeName="Artefact">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Artefact Details" characteristicTypeId="0918-c47a-d84e-c0cf" value="You can use this artefact once per battle in your combat phase. When you do so, you can re-roll failed hit rolls for friendly NIGHTHAUNT units within 6&quot; of this model when they attack in that combat phase."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="39c5-0b30-e30f-f338" type="max"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs/>
+        </selectionEntry>
+        <selectionEntry id="cf9b-d93e-e334-5f50" name="5. Midnight Tome" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="12b8-f233-9efa-cca5" name="Midnight Tome" hidden="false" profileTypeId="0ac4-aacb-2481-8e72" profileTypeName="Artefact">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Artefact Details" characteristicTypeId="0918-c47a-d84e-c0cf" value="The bearer of the Midnight Tome becomes a WIZARD and knows the Arcane Bolt and Mystic Shield spells. They can attempt to cast one spell in their own hero phase, and attempt to unbind one spell in each enemy hero phase."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8009-2504-e667-9c7c" type="max"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs/>
+        </selectionEntry>
+        <selectionEntry id="b3ed-44e8-8fa1-3e43" name="6. Covetous Familiar" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="63f6-cd27-2128-a557" name="Covetous Familiar" hidden="false" profileTypeId="0ac4-aacb-2481-8e72" profileTypeName="Artefact">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Artefact Details" characteristicTypeId="0918-c47a-d84e-c0cf" value="Roll a dice for each enemy unit within 3&quot; of this model at the start of the combat phase. On a roll of 4 or more that unit suffers 1 mortal wound."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ebe6-0579-de0f-6962" type="max"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs/>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups/>
+      <entryLinks/>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="35f4-3de6-0ede-c816" name="Nighthaunt Command Traits" hidden="false" collective="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a6c5-66f1-73cf-8375" type="max"/>
+      </constraints>
+      <categoryLinks/>
+      <selectionEntries>
+        <selectionEntry id="fe57-fcf8-f154-a020" name="1. Hatred of the Living" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="1a9b-40f7-a479-7506" name="1. Hatred of the Living" hidden="false" profileTypeId="c749-bae4-71a8-0c36" profileTypeName="Command Trait">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Command Trait Details" characteristicTypeId="ee96-6f3a-e5ca-2350" value="You can re-roll hit rolls of 1 for attacks made by the general unless the target has the DEATH or DAEMON keyword."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2777-fd53-237c-e7ab" type="max"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs/>
+        </selectionEntry>
+        <selectionEntry id="1911-5767-62b8-8811" name="2. Terrifying Entity" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="2ce5-527e-41cc-c788" name="Terrifying Entity" hidden="false" profileTypeId="c749-bae4-71a8-0c36" profileTypeName="Command Trait">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Command Trait Details" characteristicTypeId="ee96-6f3a-e5ca-2350" value="Subtract 1 from the Bravery of enemy units within 6&quot; of the general."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9411-340c-12e8-fa87" type="max"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs/>
+        </selectionEntry>
+        <selectionEntry id="1418-3c0f-3aaa-44f6" name="3. Lingering Spirit" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="ae1a-a1d9-1ea3-8a5b" name="Lingering Spirit" hidden="false" profileTypeId="c749-bae4-71a8-0c36" profileTypeName="Command Trait">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Command Trait Details" characteristicTypeId="ee96-6f3a-e5ca-2350" value="Add 1 to the general’s Wounds characteristic."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1dfc-3d56-5a84-a507" type="max"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs/>
+        </selectionEntry>
+        <selectionEntry id="4102-26a6-7c40-fc69" name="4. Pitiless Executioner" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="6bcf-532c-ad7c-d92c" name="Pitiless Executioner" hidden="false" profileTypeId="c749-bae4-71a8-0c36" profileTypeName="Command Trait">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Command Trait Details" characteristicTypeId="ee96-6f3a-e5ca-2350" value="Add 1 to the damage caused by an attack made by the general if the hit roll was 6 or more."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cd32-16c6-dfff-c84f" type="max"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs/>
+        </selectionEntry>
+        <selectionEntry id="dced-2fc7-400b-dc91" name="5. Cloaked in Shadow" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="1baf-8b74-6415-96f1" name="Cloaked in Shadow" hidden="false" profileTypeId="c749-bae4-71a8-0c36" profileTypeName="Command Trait">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Command Trait Details" characteristicTypeId="ee96-6f3a-e5ca-2350" value="Add 1 to the general’s save rolls."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="de79-48b2-c9b5-6838" type="max"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs/>
+        </selectionEntry>
+        <selectionEntry id="c34d-1632-1e37-cefc" name="6. Ruler of the Spirit Host" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="b22f-f277-da05-0ae5" name="Ruler of the Spirit Host" hidden="false" profileTypeId="c749-bae4-71a8-0c36" profileTypeName="Command Trait">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Command Trait Details" characteristicTypeId="ee96-6f3a-e5ca-2350" value="As long as the general is alive you can re-roll the dice when attempting to call a unit from the underworld to the battlefield (see the Ethereal Rulers battle trait)."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dbd8-8522-3383-b81f" type="max"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs/>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups/>
+      <entryLinks/>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="f944-ca97-7cdc-4616" name="Flesh-Eater Courts Command Traits" hidden="false" collective="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d79b-9eb1-1bc7-3349" type="max"/>
+      </constraints>
+      <categoryLinks/>
+      <selectionEntries>
+        <selectionEntry id="26a8-4ba1-f71b-bc79" name="1. Bringer of Death" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="19c8-08c4-d21d-64c8" name="Bringer of Death" hidden="false" profileTypeId="c749-bae4-71a8-0c36" profileTypeName="Command Trait">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Command Trait Details" characteristicTypeId="ee96-6f3a-e5ca-2350" value="You can re-roll wound rolls of 1 for the general."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e23d-66d8-b5fe-ad9f" type="max"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs/>
+        </selectionEntry>
+        <selectionEntry id="564a-ea16-73d0-e36a" name="2. Frenzied Flesh-eater" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="371c-da24-6622-bd6b" name="Frenzied Flesh-eater" hidden="false" profileTypeId="c749-bae4-71a8-0c36" profileTypeName="Command Trait">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Command Trait Details" characteristicTypeId="ee96-6f3a-e5ca-2350" value="Re-roll failed hit rolls while the general is subject to a feeding frenzy (see battle traits)."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="51a1-343e-c785-06a0" type="max"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs/>
+        </selectionEntry>
+        <selectionEntry id="00b4-d7a4-002e-bc42" name="3. Majestic Horror" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="db85-200c-d00c-d3a4" name="Majestic Horror" hidden="false" profileTypeId="c749-bae4-71a8-0c36" profileTypeName="Command Trait">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Command Trait Details" characteristicTypeId="ee96-6f3a-e5ca-2350" value="If the general has a command ability that allows them to summon models to the battlefield, they can use it twice in each of their hero phases. If they do not have such a command ability, they can use the Summon Men-at-arms ability from the Abhorrant Ghoul King’s warscroll once in each of their hero phases."/>
+              </characteristics>
+            </profile>
+            <profile id="45a9-ea02-eb08-aed0" name="Summon Men-at-arms (Majestic Horror)" hidden="false" profileTypeId="f71f-b0a4-730e-ced3" profileTypeName="Command Abilities">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <repeats/>
+                  <conditions/>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e2da-3eb4-92e4-8efb" type="instanceOf"/>
+                      </conditions>
+                      <conditionGroups/>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <characteristics>
+                <characteristic name="Command Ability Details" characteristicTypeId="1b71-4c83-4e8c-093f" value="If an Abhorrant Ghoul King uses this ability, you can set up a new unit of up to 10 Crypt Ghouls within 3&quot; of any edge of the battlefield and more than 9&quot; from enemy models. They cannot move in the subsequent movement phase. *See: Majestic Horror*"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="12a8-62f0-22fb-5d81" type="max"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs/>
+        </selectionEntry>
+        <selectionEntry id="6dd1-2c20-da91-4dd9" name="4. Savage Beyond Reason" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="d367-61b3-6d42-55ab" name="Savage Beyond Reason" hidden="false" profileTypeId="c749-bae4-71a8-0c36" profileTypeName="Command Trait">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Command Trait Details" characteristicTypeId="ee96-6f3a-e5ca-2350" value="Add 1 to the dice roll to see if the general becomes subject to a feeding frenzy (see battle traits)."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="44fb-09ee-3ac9-c312" type="max"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs/>
+        </selectionEntry>
+        <selectionEntry id="bf5c-8d17-4aed-9551" name="5. Dark Wizardry" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="1e0b-6398-9368-f0dc" name="Dark Wizardry" hidden="false" profileTypeId="c749-bae4-71a8-0c36" profileTypeName="Command Trait">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Command Trait Details" characteristicTypeId="ee96-6f3a-e5ca-2350" value="Add 1 to casting and unbinding rolls for the general. If the general is not a WIZARD, they gain the WIZARD keyword and can use the same magical abilities as an Abhorrant Ghoul King."/>
+              </characteristics>
+            </profile>
+            <profile id="4832-2d49-7600-3105" name="Black Hunger (Dark Wizardry)" hidden="false" profileTypeId="2e81-5e22-c6e1-73cb" profileTypeName="Spell">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <repeats/>
+                  <conditions/>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e2da-3eb4-92e4-8efb" type="instanceOf"/>
+                      </conditions>
+                      <conditionGroups/>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <characteristics>
+                <characteristic name="Casting Value" characteristicTypeId="2508-b604-1258-a920" value="5"/>
+                <characteristic name="Description" characteristicTypeId="76ff-781d-b8e6-5f27" value="If successfully cast, pick a FLESH-EATER COURTS unit within 18&quot;. Add 1 to the Attacks characteristic of any melee weapons used by that unit until your next hero phase."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks>
+            <infoLink id="1f4a-361e-deff-679e" name="Arcane Bolt" hidden="false" targetId="ae02-a84f-a903-1ff8" type="profile">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <repeats/>
+                  <conditions/>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e2da-3eb4-92e4-8efb" type="instanceOf"/>
+                      </conditions>
+                      <conditionGroups/>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </infoLink>
+            <infoLink id="fabe-fa63-3a3c-6e04" name="Mystic Shield" hidden="false" targetId="b41f-f1ce-7aa5-4f81" type="profile">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <repeats/>
+                  <conditions/>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e2da-3eb4-92e4-8efb" type="instanceOf"/>
+                      </conditions>
+                      <conditionGroups/>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1f4f-fcb3-2c9e-fc3a" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="a708-3f3f-d158-14b5" name="New CategoryLink" hidden="false" targetId="4f53-8230-2f02-9639" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs/>
+        </selectionEntry>
+        <selectionEntry id="c328-bd9a-3114-455e" name="6. Completely Delusional" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="43a5-9a12-994b-00a9" name="Completely Delusional" hidden="false" profileTypeId="c749-bae4-71a8-0c36" profileTypeName="Command Trait">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Command Trait Details" characteristicTypeId="ee96-6f3a-e5ca-2350" value="As long as the general is alive, at the start of your hero phase you can change the delusion the army suffers from (see battle traits) to a different one of your choice."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cb3b-7159-cb51-62e6" type="max"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs/>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups/>
+      <entryLinks/>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="2072-8001-6f68-7cbe" name="Flesh-Eater Courts Artefacts" hidden="false" collective="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="83d3-4d84-8b97-f7be" type="max"/>
+      </constraints>
+      <categoryLinks/>
+      <selectionEntries>
+        <selectionEntry id="0b4c-c712-1c3d-7c07" name="1. Splintervane Broach" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="2727-9824-e49d-a737" name="Splintervane Broach" hidden="false" profileTypeId="0ac4-aacb-2481-8e72" profileTypeName="Artefact">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Artefact Details" characteristicTypeId="0918-c47a-d84e-c0cf" value="Subtract 1 from casting rolls made for enemy WIZARDS within 12&quot; of this model."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="882a-f367-1766-faa2" type="max"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs/>
+        </selectionEntry>
+        <selectionEntry id="cd08-1f85-af86-6ce4" name="2. The Grim Garland" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="de6d-673e-78d8-6025" name="The Grim Garland" hidden="false" profileTypeId="0ac4-aacb-2481-8e72" profileTypeName="Artefact">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Artefact Details" characteristicTypeId="0918-c47a-d84e-c0cf" value="Subtract 2 from the Bravery of enemy units within 6&quot; of this model."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="73d4-86d2-9491-c3cf" type="max"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs/>
+        </selectionEntry>
+        <selectionEntry id="fcac-9cbc-1fcd-f57e" name="3. Keening Bone" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="87ff-332e-3be5-2168" name="Keening Bone" hidden="false" profileTypeId="0ac4-aacb-2481-8e72" profileTypeName="Artefact">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Artefact Details" characteristicTypeId="0918-c47a-d84e-c0cf" value="Pick one melee weapon this model can use. Increase the range of this weapon to 3&quot;."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3be2-c380-b090-8bb1" type="max"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs/>
+        </selectionEntry>
+        <selectionEntry id="ab7d-e4a7-3029-3f51" name="4. The Flayed Pennant" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="dbeb-9fe0-d757-4ae5" name="The Flayed Pennant" hidden="false" profileTypeId="0ac4-aacb-2481-8e72" profileTypeName="Artefact">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Artefact Details" characteristicTypeId="0918-c47a-d84e-c0cf" value="You can use this artefact once per battle in your charge phase. When you do so, friendly FLESH-EATER COURTS units within 6&quot; of this model can attempt a charge if they are within 15&quot; of the enemy, and you can add 3 to their charge roll if they do so."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="043d-a10f-7061-ae78" type="max"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs/>
+        </selectionEntry>
+        <selectionEntry id="1cdd-8d72-8fd7-6f8c" name="5. Blood River Chalice" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="08a0-3cd8-80e2-02b1" name="Blood River Chalice" hidden="false" profileTypeId="0ac4-aacb-2481-8e72" profileTypeName="Artefact">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Artefact Details" characteristicTypeId="0918-c47a-d84e-c0cf" value="You can use this artefact once per battle in your hero phase. When you do so, this model heals D6 wounds."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8908-c194-6f96-71d9" type="max"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs/>
+        </selectionEntry>
+        <selectionEntry id="7458-7963-ae8e-6ef5" name="6. Heart of the Gargant Feast" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="6df8-833a-73d5-1b33" name="Heart of the Gargant Feast" hidden="false" profileTypeId="0ac4-aacb-2481-8e72" profileTypeName="Artefact">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Artefact Details" characteristicTypeId="0918-c47a-d84e-c0cf" value="You can use this artefact once per battle in your combat phase. When you do so, you can re-roll failed wound rolls for this model in that combat phase."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8be2-c5ce-658b-b8d7" type="max"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs/>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups/>
+      <entryLinks/>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="2d6e-6f22-c967-c81f" name="Grand Host of Nagash Command Traits" hidden="false" collective="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d428-6013-f8e9-83a6" type="max"/>
+      </constraints>
+      <categoryLinks/>
+      <selectionEntries>
+        <selectionEntry id="4847-4b36-102c-1d9a" name="1. Master of Death" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="aa8a-c154-d4f4-15d5" name="Master of Death" hidden="false" profileTypeId="c749-bae4-71a8-0c36" profileTypeName="Command Trait">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Command Trait Details" characteristicTypeId="ee96-6f3a-e5ca-2350" value="Re-roll results of 1 (i.e. rolls of 1-2 on a D3) for friendly units affected by a Deathly Invocation ability that are within 12&quot; of this general."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cee3-d81c-6a03-546b" type="max"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="b5c8-dd24-895d-d140" name="2. Chosen Champion" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="4917-02bc-483e-4610" name="Chosen Champion" hidden="false" profileTypeId="c749-bae4-71a8-0c36" profileTypeName="Command Trait">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Command Trait Details" characteristicTypeId="ee96-6f3a-e5ca-2350" value="Add 1 to the Damage characteristic of melee weapons used by this general for attacks made against enemy HEROES."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="24a4-db43-febd-40a7" type="max"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="71f3-a56a-dbf5-a747" name="3. Bane of the Living" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="ead7-432b-9940-8037" name="Bane of the Living" hidden="false" profileTypeId="c749-bae4-71a8-0c36" profileTypeName="Command Trait">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Command Trait Details" characteristicTypeId="ee96-6f3a-e5ca-2350" value="Re-roll wound rolls of 1 for this general for attacks made against enemy units that do not have the DEATH keyword."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dd43-d29d-8ad0-3cae" type="max"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="2c33-4b1d-8996-ae7b" name="4. Aura of Ages" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="87f7-3248-2dbc-9cc6" name="Aura of Ages" hidden="false" profileTypeId="c749-bae4-71a8-0c36" profileTypeName="Command Trait">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Command Trait Details" characteristicTypeId="ee96-6f3a-e5ca-2350" value="At the start of the combat phase, roll a dice for each enemy unit within 3&quot; of this general. On a 4+ subtract 1 from hit rolls made for that unit until the end of the combat phase."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cb99-6e35-7aec-6f72" type="max"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="d44b-9e9f-bb3c-246c" name="5. Ancient Strategist" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="d2e1-bb29-139c-ff1b" name="Ancient Strategist" hidden="false" profileTypeId="c749-bae4-71a8-0c36" profileTypeName="Command Trait">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Command Trait Details" characteristicTypeId="ee96-6f3a-e5ca-2350" value="Re-roll failed charge rolls for friendly DEATHRATTLE and MORGHAST units that are within 9&quot; of this general."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="48c1-1c16-728d-ac20" type="max"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="d14b-930a-00dd-fb70" name="6. Lord of Nagashizzar" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="f18a-fc68-b176-abed" name="Lord of Nagashizzar" hidden="false" profileTypeId="c749-bae4-71a8-0c36" profileTypeName="Command Trait">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Command Trait Details" characteristicTypeId="ee96-6f3a-e5ca-2350" value="Add 1 to the Attacks characteristic of melee weapons used by friendly DEATHRATTLE units that are within 6&quot; of this general."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4902-46b9-0228-e751" type="max"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups/>
+      <entryLinks/>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="3339-096f-0ac0-09fd" name="Legion of Sacrament Command Traits" hidden="false" collective="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8069-f0aa-135f-b4fb" type="max"/>
+      </constraints>
+      <categoryLinks/>
+      <selectionEntries>
+        <selectionEntry id="93d9-2603-e624-3b96" name="1. Emissary of the Master" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="efde-5700-a781-e460" name="Emissary of the Master" hidden="false" profileTypeId="c749-bae4-71a8-0c36" profileTypeName="Command Trait">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Command Trait Details" characteristicTypeId="ee96-6f3a-e5ca-2350" value="You can re-roll failed charge rolls for friendly DEATH units that are within 6&quot; of this general at the start of the charge phase."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="78d5-c333-f7e2-b8fe" type="max"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs/>
+        </selectionEntry>
+        <selectionEntry id="7c41-5dd5-d03d-4da2" name="2. Mark of the Favoured" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="2fcb-4010-c18d-ae77" name="Mark of the Favoured" hidden="false" profileTypeId="c749-bae4-71a8-0c36" profileTypeName="Command Trait">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Command Trait Details" characteristicTypeId="ee96-6f3a-e5ca-2350" value="Each time this general is selected as the target of an attack in the combat phase, roll a dice. ‘On a 6+ the attacking unit suffers 1 mortal wound after all of its attacks have been resolved.’ *FAQ v1.3*"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="276d-de1d-1c6e-6432" type="max"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs/>
+        </selectionEntry>
+        <selectionEntry id="4b17-8770-65a5-e27f" name="3. Dark Acolyte" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="3c2c-39cf-1e51-fd05" name="Dark Acolyte" hidden="false" profileTypeId="c749-bae4-71a8-0c36" profileTypeName="Command Trait">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Command Trait Details" characteristicTypeId="ee96-6f3a-e5ca-2350" value="This general is a WIZARD that knows the Arcane Bolt and Mystic Shield spells, as well as a single spell from one of the Lores of the Dead. If this general is already a WIZARD, they may generate an additional spell from one of the Lores of the Dead."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="45f8-d28f-4e95-e959" type="max"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks>
+            <entryLink id="1bcf-dcd2-736c-4df9" name="Lores of the Dead" hidden="false" targetId="8417-93fc-9562-a748" type="selectionEntryGroup">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+              <categoryLinks/>
+            </entryLink>
+          </entryLinks>
+          <costs/>
+        </selectionEntry>
+        <selectionEntry id="ab36-8f6d-4b9d-d089" name="4. Mastery of Death" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="dcd8-5b39-fd9b-4adb" name="Mastery of Death" hidden="false" profileTypeId="c749-bae4-71a8-0c36" profileTypeName="Command Trait">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Command Trait Details" characteristicTypeId="ee96-6f3a-e5ca-2350" value="At the start of your hero phase, all friendly DEATH units within 6&quot; of this general may immediately make a move of up to 3&quot; as if it were your movement phase. They may not run as part of this move."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="43ac-ab19-025b-7751" type="max"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs/>
+        </selectionEntry>
+        <selectionEntry id="8b29-62c3-3d1b-3f63" name="5. Peerless Commander" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="86a3-3eff-a624-f610" name="Peerless Commander" hidden="false" profileTypeId="c749-bae4-71a8-0c36" profileTypeName="Command Trait">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Command Trait Details" characteristicTypeId="ee96-6f3a-e5ca-2350" value="This general may summon a unit from a gravesite (see &quot;The Unquiet Dead&quot; battle trait) whilst they are within 12&quot; rather than 9&quot;."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4efa-386f-413a-5c77" type="max"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs/>
+        </selectionEntry>
+        <selectionEntry id="7c88-a31d-e295-2dc1" name="6. Bound to the Master" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="0303-1bfe-041a-6c84" name="Bound to the Master" hidden="false" profileTypeId="c749-bae4-71a8-0c36" profileTypeName="Command Trait">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Command Trait Details" characteristicTypeId="ee96-6f3a-e5ca-2350" value="This general may use Arkhan the Black’s First of the Mortarchs command ability."/>
+              </characteristics>
+            </profile>
+            <profile id="fc2b-633a-2983-2f93" name="First of the Mortarchs (Bound to the Master)" hidden="false" profileTypeId="f71f-b0a4-730e-ced3" profileTypeName="Command Abilities">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Command Ability Details" characteristicTypeId="1b71-4c83-4e8c-093f" value="If Arkhan the Black (or General with &apos;Bound to the Master&apos;) uses this ability, then until the end of the hero phase all friendly DEATH WIZARDS within 18&quot; of him can increase the range of their spells by 6."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="425d-9a9a-2121-8cf0" type="max"/>
           </constraints>
           <categoryLinks/>
           <selectionEntries/>
