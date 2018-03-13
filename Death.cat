@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="b2d4-7046-2927-b79d" name="Grand Alliance: Death" book="Grand Alliance: Death" revision="32" battleScribeVersion="2.01" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="7" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="b2d4-7046-2927-b79d" name="Grand Alliance: Death" book="Grand Alliance: Death" revision="34" battleScribeVersion="2.01" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="7" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks>
@@ -744,6 +744,13 @@
       <constraints/>
     </categoryEntry>
     <categoryEntry id="b8b2-91fc-0a0d-ae80" name="CRYPT FLAYERS" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="cb1a-7964-cd9e-f9ed" name="THE SEPULCHRAL GUARD" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
@@ -1532,7 +1539,6 @@
                     <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0395-882a-0826-8ab8" type="equalTo"/>
                     <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d935-8702-2198-a55d" type="equalTo"/>
                     <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b38e-4752-5708-d73c" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fe1a-4d0a-1b78-9573" type="equalTo"/>
                   </conditions>
                   <conditionGroups/>
                 </conditionGroup>
@@ -6912,6 +6918,35 @@
         </categoryLink>
       </categoryLinks>
     </entryLink>
+    <entryLink id="7e5a-b27d-ef5b-84d8" name="The Sepulchral Guard" hidden="false" targetId="a4e9-75d4-55bd-e162" type="selectionEntry">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <repeats/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0395-882a-0826-8ab8" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints/>
+      <categoryLinks>
+        <categoryLink id="24b5-6e21-4d3b-2abf" name="New CategoryLink" hidden="false" targetId="065e-fda7-fd27-1f40" primary="true">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </categoryLink>
+      </categoryLinks>
+    </entryLink>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="9515-1a15-4d1e-7f92" name="[FEC]Abhorrant Ghoul King" page="135" hidden="false" collective="false" type="upgrade">
@@ -8078,7 +8113,7 @@
                 <cost name="pts" costTypeId="points" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="0395-882a-0826-8ab8" name="Allegiance: Death" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="0395-882a-0826-8ab8" name="Allegiance: *Death*" hidden="false" collective="false" type="upgrade">
               <profiles/>
               <rules/>
               <infoLinks>
@@ -8093,7 +8128,92 @@
               <constraints/>
               <categoryLinks/>
               <selectionEntries/>
-              <selectionEntryGroups/>
+              <selectionEntryGroups>
+                <selectionEntryGroup id="ddb9-817c-076f-0bb5" name="Firestorm: The Wraith Fleet" hidden="false" collective="false">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6ffe-89f4-9ee4-3bc4" type="min"/>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="682b-f489-ed8f-95f1" type="max"/>
+                  </constraints>
+                  <categoryLinks/>
+                  <selectionEntries>
+                    <selectionEntry id="be3b-18f4-1252-2d25" name="The Wraith Fleet" hidden="false" collective="false" type="upgrade">
+                      <profiles>
+                        <profile id="e29a-dfc7-2fc5-527e" name="Without Warning" hidden="false" profileTypeId="c137-4d1f-9d1a-524d" profileTypeName="Battle Trait">
+                          <profiles/>
+                          <rules/>
+                          <infoLinks/>
+                          <modifiers/>
+                          <characteristics>
+                            <characteristic name="Battle Trait Details" characteristicTypeId="9fdd-b4b1-5f7a-0970" value="Instead of setting up a unit from a Wraith Fleet army on the battlefield, you can place it to one side and say that it is embarked on the fleet. In each of your movement phases, roll a dice for each of these hnits. On a roll of 1 or 2 the unit does not arrive this turn - you can roll fr them again in subsequent turns. On a result of 3 or more, the unit arrives on the battlefield - set up the unit on the battlefield so that all of its models are within 6&quot; of an edge of the battlefield and more than 9&quot; from any enemy models. This is their move for that movement phase.If a unit is still embarked when the battle ends, it is considered to be destroyed."/>
+                          </characteristics>
+                        </profile>
+                        <profile id="a830-38b9-d49b-b9ee" name="Nimbus of Shrieking Spirits" hidden="false" profileTypeId="c137-4d1f-9d1a-524d" profileTypeName="Battle Trait">
+                          <profiles/>
+                          <rules/>
+                          <infoLinks/>
+                          <modifiers/>
+                          <characteristics>
+                            <characteristic name="Battle Trait Details" characteristicTypeId="9fdd-b4b1-5f7a-0970" value="Substract 1 from the Bravery of enemy units in the battleshock phase if they are within 12&quot; of a Wraith Fleet unit that arrived on the battlefield durring the same turn."/>
+                          </characteristics>
+                        </profile>
+                        <profile id="15bd-289e-7046-67b5" name="SOULBLIGHT" hidden="false" profileTypeId="823d-e366-580b-9b07" profileTypeName="Battalion Organization">
+                          <profiles/>
+                          <rules/>
+                          <infoLinks/>
+                          <modifiers/>
+                          <characteristics>
+                            <characteristic name="Required" characteristicTypeId="bc6e-e731-eed7-c384" value="Any"/>
+                          </characteristics>
+                        </profile>
+                        <profile id="9e14-39fa-6480-5008" name="DEATHRATTLE" hidden="false" profileTypeId="823d-e366-580b-9b07" profileTypeName="Battalion Organization">
+                          <profiles/>
+                          <rules/>
+                          <infoLinks/>
+                          <modifiers/>
+                          <characteristics>
+                            <characteristic name="Required" characteristicTypeId="bc6e-e731-eed7-c384" value="Any"/>
+                          </characteristics>
+                        </profile>
+                        <profile id="122d-2972-6725-b951" name="NIGHTHAUNT" hidden="false" profileTypeId="823d-e366-580b-9b07" profileTypeName="Battalion Organization">
+                          <profiles/>
+                          <rules/>
+                          <infoLinks/>
+                          <modifiers/>
+                          <characteristics>
+                            <characteristic name="Required" characteristicTypeId="bc6e-e731-eed7-c384" value="Any"/>
+                          </characteristics>
+                        </profile>
+                        <profile id="a7d9-e0ce-2e1d-91af" name="-" hidden="false" profileTypeId="823d-e366-580b-9b07" profileTypeName="Battalion Organization">
+                          <profiles/>
+                          <rules/>
+                          <infoLinks/>
+                          <modifiers/>
+                          <characteristics>
+                            <characteristic name="Required" characteristicTypeId="bc6e-e731-eed7-c384" value="The Wraith Fleet only consists of units with the following KEYWORDS:"/>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                      <rules/>
+                      <infoLinks/>
+                      <modifiers/>
+                      <constraints/>
+                      <categoryLinks/>
+                      <selectionEntries/>
+                      <selectionEntryGroups/>
+                      <entryLinks/>
+                      <costs>
+                        <cost name="pts" costTypeId="points" value="0.0"/>
+                      </costs>
+                    </selectionEntry>
+                  </selectionEntries>
+                  <selectionEntryGroups/>
+                  <entryLinks/>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
               <entryLinks/>
               <costs>
                 <cost name="pts" costTypeId="points" value="0.0"/>
@@ -8403,72 +8523,10 @@
                 <cost name="pts" costTypeId="points" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="fe1a-4d0a-1b78-9573" name="Allegiance: Death - The Wraith Fleet" hidden="false" collective="false" type="upgrade">
-              <profiles>
-                <profile id="3e1c-4e9c-d8f1-15ac" name="Without Warning" hidden="false" profileTypeId="c137-4d1f-9d1a-524d" profileTypeName="Battle Trait">
-                  <profiles/>
-                  <rules/>
-                  <infoLinks/>
-                  <modifiers/>
-                  <characteristics>
-                    <characteristic name="Battle Trait Details" characteristicTypeId="9fdd-b4b1-5f7a-0970" value="Instead of setting up a unit from a Wraith Fleet army on the battlefield, you can place it to one side and say that it is embarked on the fleet. In each of your movement phases, roll a dice for each of these hnits. On a roll of 1 or 2 the unit does not arrive this turn - you can roll fr them again in subsequent turns. On a result of 3 or more, the unit arrives on the battlefield - set up the unit on the battlefield so that all of its models are within 6&quot; of an edge of the battlefield and more than 9&quot; from any enemy models. This is their move for that movement phase.If a unit is still embarked when the battle ends, it is considered to be destroyed."/>
-                  </characteristics>
-                </profile>
-                <profile id="21a1-9aaf-b54e-00ba" name="Nimbus of Shrieking Spirits" hidden="false" profileTypeId="c137-4d1f-9d1a-524d" profileTypeName="Battle Trait">
-                  <profiles/>
-                  <rules/>
-                  <infoLinks/>
-                  <modifiers/>
-                  <characteristics>
-                    <characteristic name="Battle Trait Details" characteristicTypeId="9fdd-b4b1-5f7a-0970" value="Substract 1 from the Bravery of enemy units in the battleshock phase if they are within 12&quot; of a Wraith Fleet unit that arrived on the battlefield durring the same turn."/>
-                  </characteristics>
-                </profile>
-                <profile id="ff48-0409-2ba8-a1c8" name="SOULBLIGHT" hidden="false" profileTypeId="823d-e366-580b-9b07" profileTypeName="Battalion Organization">
-                  <profiles/>
-                  <rules/>
-                  <infoLinks/>
-                  <modifiers/>
-                  <characteristics>
-                    <characteristic name="Required" characteristicTypeId="bc6e-e731-eed7-c384" value="Any"/>
-                  </characteristics>
-                </profile>
-                <profile id="dfd9-8f4e-02a9-c4b4" name="DEATHMAGES" hidden="false" profileTypeId="823d-e366-580b-9b07" profileTypeName="Battalion Organization">
-                  <profiles/>
-                  <rules/>
-                  <infoLinks/>
-                  <modifiers/>
-                  <characteristics>
-                    <characteristic name="Required" characteristicTypeId="bc6e-e731-eed7-c384" value="Any"/>
-                  </characteristics>
-                </profile>
-                <profile id="3f92-6f9e-b2ad-50d1" name="DEATHRATTLE" hidden="false" profileTypeId="823d-e366-580b-9b07" profileTypeName="Battalion Organization">
-                  <profiles/>
-                  <rules/>
-                  <infoLinks/>
-                  <modifiers/>
-                  <characteristics>
-                    <characteristic name="Required" characteristicTypeId="bc6e-e731-eed7-c384" value="Any"/>
-                  </characteristics>
-                </profile>
-                <profile id="bf0c-672f-3229-e722" name="NIGHTHAUNT" hidden="false" profileTypeId="823d-e366-580b-9b07" profileTypeName="Battalion Organization">
-                  <profiles/>
-                  <rules/>
-                  <infoLinks/>
-                  <modifiers/>
-                  <characteristics>
-                    <characteristic name="Required" characteristicTypeId="bc6e-e731-eed7-c384" value="Any"/>
-                  </characteristics>
-                </profile>
-              </profiles>
+            <selectionEntry id="1ef6-7bbc-0f95-da2f" name="Allegiance: Tomb Kings (Compendium)" hidden="false" collective="false" type="upgrade">
+              <profiles/>
               <rules/>
-              <infoLinks>
-                <infoLink id="6af7-a6ed-7b2b-9f74" name="Deathless Minions" hidden="false" targetId="3998-f3e4-90e7-348a" type="profile">
-                  <profiles/>
-                  <rules/>
-                  <infoLinks/>
-                  <modifiers/>
-                </infoLink>
-              </infoLinks>
+              <infoLinks/>
               <modifiers/>
               <constraints/>
               <categoryLinks/>
@@ -8479,7 +8537,63 @@
                 <cost name="pts" costTypeId="points" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="1ef6-7bbc-0f95-da2f" name="Allegiance: Tomb Kings" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="1d5c-8cc0-8082-e822" name="Allegiance: Deathrattle" hidden="false" collective="false" type="upgrade">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+              <categoryLinks/>
+              <selectionEntries/>
+              <selectionEntryGroups/>
+              <entryLinks/>
+              <costs>
+                <cost name="pts" costTypeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="bc34-a2de-d871-4151" name="Allegiance: Deadwalkers" hidden="false" collective="false" type="upgrade">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+              <categoryLinks/>
+              <selectionEntries/>
+              <selectionEntryGroups/>
+              <entryLinks/>
+              <costs>
+                <cost name="pts" costTypeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="9e7e-a260-9c3c-568e" name="Allegiance: Deathlords" hidden="false" collective="false" type="upgrade">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+              <categoryLinks/>
+              <selectionEntries/>
+              <selectionEntryGroups/>
+              <entryLinks/>
+              <costs>
+                <cost name="pts" costTypeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="d3be-c685-2896-35f8" name="Allegiance: Deathmages" hidden="false" collective="false" type="upgrade">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+              <categoryLinks/>
+              <selectionEntries/>
+              <selectionEntryGroups/>
+              <entryLinks/>
+              <costs>
+                <cost name="pts" costTypeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="b4cd-2f14-91f1-37e4" name="Allegiance: Vampire Counts (Compendium)" hidden="false" collective="false" type="upgrade">
               <profiles/>
               <rules/>
               <infoLinks/>
@@ -26023,6 +26137,351 @@
         <cost name="pts" costTypeId="points" value="80.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="a4e9-75d4-55bd-e162" name="The Sepulchral Guard" page="" hidden="false" collective="false" type="unit">
+      <profiles>
+        <profile id="089b-0811-fb0e-0a40" name="The Sepulchral Guard" page="" hidden="false" profileTypeId="1960-ca8e-67ce-2014" profileTypeName="Unit">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Move" characteristicTypeId="8655-6213-2824-1752" value="4&quot;"/>
+            <characteristic name="Wounds" characteristicTypeId="cd0e-fea6-411f-904d" value="1"/>
+            <characteristic name="Bravery" characteristicTypeId="0c85-bf79-836b-759e" value="10"/>
+            <characteristic name="Save" characteristicTypeId="f8dd-4f2a-8543-4f36" value="6+"/>
+          </characteristics>
+        </profile>
+        <profile id="bda7-e998-cf41-c6de" name="Serve in Death" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="You can add 1 to hit rolls for this unit if it is wholly within 18&quot; of any friendly DEATH HEROES."/>
+          </characteristics>
+        </profile>
+        <profile id="97b1-b378-bcac-55e0" name="Frightening Speed" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="You can re-roll charge rolls for this unit."/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1040-cdce-d373-aa9a" type="max"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink id="14f7-e123-41bb-5f6d" name="New CategoryLink" hidden="false" targetId="0c09-9d52-aa48-3c9b" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </categoryLink>
+        <categoryLink id="8ab8-9c9b-d58e-732c" name="New CategoryLink" hidden="false" targetId="a2b3-901c-9a34-0ab2" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </categoryLink>
+        <categoryLink id="e9df-2b8f-300c-0fca" name="New CategoryLink" hidden="false" targetId="96d0-849a-a8cc-a6cf" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </categoryLink>
+        <categoryLink id="ae02-1832-6654-1838" name="New CategoryLink" hidden="false" targetId="df35-6945-ec60-128e" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </categoryLink>
+        <categoryLink id="71ad-9dee-2c6c-2ddb" name="New CategoryLink" hidden="false" targetId="cb1a-7964-cd9e-f9ed" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </categoryLink>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="95b7-9757-6906-7749" name="Sepulchral Warden (with Ancient Spear and Crypt Shield)" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="4561-f2bf-36ca-883e" name="The Sepulchral Warden" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="The leader of this unit is the Sepulchral Warden. In each of your hero phases you can return D3 slain models to this unit while the Sepulchral Warden is on the battlefield."/>
+              </characteristics>
+            </profile>
+            <profile id="87c1-401e-4d18-de87" name="The Sepulchral Warden&apos;s Ancient Spear" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="Weapon">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
+                <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="2&quot;"/>
+                <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="3"/>
+                <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="4+"/>
+                <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="4+"/>
+                <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-"/>
+                <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="1"/>
+              </characteristics>
+            </profile>
+            <profile id="9bec-3451-5f1e-226e" name="Crypt Shields" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="If any models from the unit are carrying Crypt Shields, add 1 to save rolls against attacks that have a Rend characteristic of ‘-’."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="56d8-26df-6e21-9596" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3a30-9d21-765f-2cb1" type="max"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="3e8e-bcb4-0021-f708" name="3 Petitioners" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="624e-a821-43e4-32b6" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8099-f7b0-32b0-1cb8" type="max"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups>
+            <selectionEntryGroup id="11af-c66a-2160-e11d" name="Weapon Choice" hidden="false" collective="false" defaultSelectionEntryId="1933-aa62-6c56-2ec3">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints>
+                <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dd92-d443-f6ac-42a9" type="min"/>
+                <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="50a5-4b1c-34aa-d28e" type="max"/>
+              </constraints>
+              <categoryLinks/>
+              <selectionEntries>
+                <selectionEntry id="1933-aa62-6c56-2ec3" name="Ancient Blade" hidden="false" collective="false" type="upgrade">
+                  <profiles>
+                    <profile id="c2b9-3efa-9db7-4f71" name="Ancient Blade" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="Weapon">
+                      <profiles/>
+                      <rules/>
+                      <infoLinks/>
+                      <modifiers/>
+                      <characteristics>
+                        <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
+                        <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="1&quot;"/>
+                        <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="1"/>
+                        <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="4+"/>
+                        <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="4+"/>
+                        <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-"/>
+                        <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="1"/>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                  <constraints/>
+                  <categoryLinks/>
+                  <selectionEntries/>
+                  <selectionEntryGroups/>
+                  <entryLinks/>
+                  <costs>
+                    <cost name="pts" costTypeId="points" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry id="a38f-e2b0-fdbb-5aea" name="Ancient Blade and Crypt Shield" hidden="false" collective="false" type="upgrade">
+                  <profiles>
+                    <profile id="b792-03d3-bc1b-c9f4" name="Ancient Blade" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="Weapon">
+                      <profiles/>
+                      <rules/>
+                      <infoLinks/>
+                      <modifiers/>
+                      <characteristics>
+                        <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
+                        <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="1&quot;"/>
+                        <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="1"/>
+                        <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="4+"/>
+                        <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="4+"/>
+                        <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-"/>
+                        <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="1"/>
+                      </characteristics>
+                    </profile>
+                    <profile id="d513-afdf-bec0-0440" name="Crypt Shields" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+                      <profiles/>
+                      <rules/>
+                      <infoLinks/>
+                      <modifiers/>
+                      <characteristics>
+                        <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="If any models from the unit are carrying Crypt Shields, add 1 to save rolls against attacks that have a Rend characteristic of ‘-’."/>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                  <constraints/>
+                  <categoryLinks/>
+                  <selectionEntries/>
+                  <selectionEntryGroups/>
+                  <entryLinks/>
+                  <costs>
+                    <cost name="pts" costTypeId="points" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+              <selectionEntryGroups/>
+              <entryLinks/>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="caad-1af8-b73c-0d73" name="Prince of Dust (with Ancient Mace and Crypt Shield)" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="e623-ef34-54e9-e5c9" name="Prince of Dust&apos;s Ancient Mace" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="Weapon">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
+                <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="1&quot;"/>
+                <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="2"/>
+                <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="4+"/>
+                <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="3+"/>
+                <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-"/>
+                <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="1"/>
+              </characteristics>
+            </profile>
+            <profile id="ae4f-8329-f473-54fa" name="Crypt Shields" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="If any models from the unit are carrying Crypt Shields, add 1 to save rolls against attacks that have a Rend characteristic of ‘-’."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8736-e27e-8d94-7090" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c868-d02f-8056-1899" type="max"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="e79d-2df6-44cf-af5e" name="The Champion (with Ancient Greatblade)" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="5b9e-2093-3b0a-d07b" name="The Champion&apos;s Ancient Greatblade" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="Weapon">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
+                <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="1&quot;"/>
+                <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="2"/>
+                <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="4+"/>
+                <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="4+"/>
+                <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-1"/>
+                <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="1"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="64a0-9ae6-f0b1-8585" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4077-c33a-42c6-1e66" type="max"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="fc20-cd59-705b-6ead" name="The Harvester (with Ancient Scythe)" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="313f-5399-d886-4b87" name="The Harvester&apos;s Ancient Scythe" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="Weapon">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
+                <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="1&quot;"/>
+                <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="2"/>
+                <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="4+"/>
+                <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="3+"/>
+                <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-"/>
+                <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="2"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5e4b-a417-e5c9-0938" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d893-01f4-d11e-3811" type="max"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups/>
+      <entryLinks/>
+      <costs>
+        <cost name="pts" costTypeId="points" value="80.0"/>
+      </costs>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="a2c1-3fba-5acb-d560" name="Artefacts" hidden="false" collective="false">
@@ -26597,8 +27056,7 @@
               <infoLinks/>
               <modifiers/>
               <characteristics>
-                <characteristic name="Artefact Details" characteristicTypeId="0918-c47a-d84e-c0cf" value="When the bearer is selected to fight in the combat phase, you can pick an enemy model within 3&quot; of them and roll a dice. On a 5+ you can pick a melee weapon that the enemy model is armed with (though not one that has a value for one or more characteristics that is given as &apos;*&apos; or ‘See below’). For this combat phase, the bearer of this ring may attack with that weapon in addition to their own.
-‘Abilities, modifers or re-rolls that apply to attacks made with that weapon when it is used by the enemy model do not apply to the attacks made with it by the bearer.’ *FAQ v1.3*"/>
+                <characteristic name="Artefact Details" characteristicTypeId="0918-c47a-d84e-c0cf" value="When the bearer is selected to fight in the combat phase, you can pick an enemy model within 3&quot; of them and roll a dice. On a 5+ you can pick a melee weapon that the enemy model is armed with (though not one that has a value for one or more characteristics that is given as &apos;*&apos; or ‘See below’). For this combat phase, the bearer of this ring may attack with that weapon in addition to their own. ‘Abilities, modifers or re-rolls that apply to attacks made with that weapon when it is used by the enemy model do not apply to the attacks made with it by the bearer.’ *FAQ v1.3*"/>
               </characteristics>
             </profile>
           </profiles>
