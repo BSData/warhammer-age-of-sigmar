@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" book="The General&apos;s Handbook" revision="18" battleScribeVersion="2.01" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" book="The General&apos;s Handbook" revision="19" battleScribeVersion="2.01" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <profiles/>
   <rules>
     <rule id="a954-6cfc-59ca-674e" name="Inspiring Presence" hidden="false">
@@ -1310,6 +1310,334 @@
               <modifiers/>
               <characteristics>
                 <characteristic name="Command Trait Details" characteristicTypeId="ee96-6f3a-e5ca-2350" value="Double the number of models that flee from enemy units if they are within 12&quot; of this general in the battleshock phase."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups/>
+      <entryLinks/>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="19d0-4499-b76e-96c1" name="Artefacts of Order" hidden="false" collective="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="36de-d52c-e982-5496" type="max"/>
+      </constraints>
+      <categoryLinks/>
+      <selectionEntries>
+        <selectionEntry id="d331-f8fb-e5b6-ce86" name="1. Quicksilver Potion" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="3a43-6770-060b-8c47" name="Quicksilver Potion" hidden="false" profileTypeId="0ac4-aacb-2481-8e72" profileTypeName="Artefact">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Artefact Details" characteristicTypeId="0918-c47a-d84e-c0cf" value="You can use the potion once per battle at the start of a combat phase. This model (and its mount, if it has one) attacks in the combat phase before any other models, and before the player whose turn is taking place picks a unit to attack with."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="92b9-ba4c-27fe-5c79" type="max"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="5267-a512-3a5a-7bd1" name="2. Obstinate Blade" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="0f22-7a6e-b484-1dec" name="Obstinate Blade" hidden="false" profileTypeId="0ac4-aacb-2481-8e72" profileTypeName="Artefact">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Artefact Details" characteristicTypeId="0918-c47a-d84e-c0cf" value="Pick one melee weapon that this model can use. Increase the Rend characteristic of the weapon by 1."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ede6-5785-c9b1-4c21" type="max"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="4105-6bba-1392-af57" name="3. Relic Blade" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="d034-c9ef-6ad9-a394" name="Relic Blade" hidden="false" profileTypeId="0ac4-aacb-2481-8e72" profileTypeName="Artefact">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Artefact Details" characteristicTypeId="0918-c47a-d84e-c0cf" value="Pick one melee weapon that this model can use. Increase the Damage characteristic of that weapon by 1."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1975-2e04-ce6d-60e7" type="max"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="e0bf-d68d-2041-def8" name="4. Hoarfrost" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="3bea-73cb-1ed0-8ddb" name="Hoarfrost" hidden="false" profileTypeId="0ac4-aacb-2481-8e72" profileTypeName="Artefact">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Artefact Details" characteristicTypeId="0918-c47a-d84e-c0cf" value="Pick one melee weapon that this model can use. If an enemy model suffers any wounds from this weapon and is not slain, subtract 1 from its hit rolls for the rest of the battle."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2147-b1f7-1072-e1b1" type="max"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="5f1a-ca29-b89a-b54c" name="5. Talisman of Blinding Light" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="e23f-0b1b-424b-8d13" name="Talisman of Blinding Light" hidden="false" profileTypeId="0ac4-aacb-2481-8e72" profileTypeName="Artefact">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Artefact Details" characteristicTypeId="0918-c47a-d84e-c0cf" value="You can use the amulet once per battle at the start of a combat phase. Your opponent must subtract 1 from hit rolls made for attacks that target this model in that combat phase."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="bf45-7575-1da2-049b" type="max"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="8d55-5ef8-63ab-1165" name="6. Phoenix Stone" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="21b1-e0cb-230c-0a0e" name="Phoenix Stone" hidden="false" profileTypeId="0ac4-aacb-2481-8e72" profileTypeName="Artefact">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Artefact Details" characteristicTypeId="0918-c47a-d84e-c0cf" value="You can heal 1 wound suffered by this model in each player’s hero phase."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8778-6f69-2c70-7525" type="max"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups/>
+      <entryLinks/>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="50aa-000b-1848-15c3" name="Order Command Traits" hidden="false" collective="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bcf5-a4a0-82fa-e16f" type="max"/>
+      </constraints>
+      <categoryLinks/>
+      <selectionEntries>
+        <selectionEntry id="8975-b71a-3a01-d9fc" name="1. Strategic Genius" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="638e-c114-429a-7cb4" name="Strategic Genius" hidden="false" profileTypeId="c749-bae4-71a8-0c36" profileTypeName="Command Trait">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Command Trait Details" characteristicTypeId="ee96-6f3a-e5ca-2350" value="Roll a dice for the general at the start of each of their hero phases. On a roll of 5 or more they can use two different command abilities in that hero phase, or they can use the Inspiring Presence command ability twice in that hero phase."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="4631-2d01-d887-a219" name="2. Inspiring" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="5f97-b7fd-6796-df0f" name="Inspiring" hidden="false" profileTypeId="c749-bae4-71a8-0c36" profileTypeName="Command Trait">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Command Trait Details" characteristicTypeId="ee96-6f3a-e5ca-2350" value="Friendly ORDER units that are within 6&quot; of the general do not have to take battleshock tests."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="3c2f-bebe-5487-4d9e" name="3. Reckless" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="8280-a6ab-6fac-75ef" name="Reckless" hidden="false" profileTypeId="c749-bae4-71a8-0c36" profileTypeName="Command Trait">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Command Trait Details" characteristicTypeId="ee96-6f3a-e5ca-2350" value="You can re-roll charge rolls for the general."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="9ce7-d085-7716-cf27" name="4. Tenacious" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="8a59-e94b-f13e-7ee9" name="Tenacious" hidden="false" profileTypeId="c749-bae4-71a8-0c36" profileTypeName="Command Trait">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Command Trait Details" characteristicTypeId="ee96-6f3a-e5ca-2350" value="Add 1 to the general’s Wounds characteristic."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="e64b-199f-b54a-d53f" name="5. Legendary Fighter" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="633e-03f3-c699-9bdf" name="Legendary Fighter" hidden="false" profileTypeId="c749-bae4-71a8-0c36" profileTypeName="Command Trait">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Command Trait Details" characteristicTypeId="ee96-6f3a-e5ca-2350" value="Add 1 to the number of attacks the general makes with one melee weapon each combat phase. A different weapon can be chosen in different combat phases if desired."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="1fb9-faa3-4d06-2959" name="6. Master of Defence" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="aca9-a0fa-adee-64cf" name="Master of Defence" hidden="false" profileTypeId="c749-bae4-71a8-0c36" profileTypeName="Command Trait">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Command Trait Details" characteristicTypeId="ee96-6f3a-e5ca-2350" value="Roll a dice for each wound or mortal wound inflicted on the general. On a roll of 6 or more the wound or mortal wound is negated and has no effect."/>
               </characteristics>
             </profile>
           </profiles>
