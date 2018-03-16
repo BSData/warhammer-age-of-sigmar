@@ -1634,7 +1634,17 @@ Once per battle, in any of your hero phases, you can declare that this model wil
       <entryLinks/>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
-  <sharedRules/>
+  <sharedRules>
+    <rule id="4571-8f36-98ca-2d16" name="Rampaging Destroyers" book="General&apos;s Handbook 2017" page="156" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <description>Those that owe allegiance to Destruction are always eager to get to grips with their enemies.
+
+Roll a dice in your hero phase for your general and each DESTRUCTION HERO in your army. Add 2 to the roll for the general. On a roll of 6 or more, pick a friendly DESTRUCTION unit within 6&quot; of the general or HERO being rolled for. That unit can immediately move 6&quot; if it is more than 12&quot; from the enemy, can immediately pile in if it is within 3&quot; of the enemy, or can immediately declare a charge in any other circumstances. It cannot run when it makes the move, but can move, charge or pile in again later in the same turn.</description>
+    </rule>
+  </sharedRules>
   <sharedProfiles>
     <profile id="ae02-a84f-a903-1ff8" name="Arcane Bolt" hidden="false" profileTypeId="2e81-5e22-c6e1-73cb" profileTypeName="05 Spell">
       <profiles/>
