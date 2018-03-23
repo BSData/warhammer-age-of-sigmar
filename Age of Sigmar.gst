@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" book="The General&apos;s Handbook" revision="19" battleScribeVersion="2.01" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" book="The General&apos;s Handbook" revision="20" battleScribeVersion="2.01" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <profiles/>
   <rules>
     <rule id="a954-6cfc-59ca-674e" name="Inspiring Presence" hidden="false">
@@ -482,6 +482,27 @@
       <modifiers/>
       <constraints/>
     </categoryEntry>
+    <categoryEntry id="3b06-91e8-6a97-dfff" name="BALEWIND VORTEX" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="a147-d195-662c-5984" name="Scenery" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="8910-7c1d-6c74-37ff" name="SCENERY" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
   </categoryEntries>
   <forceEntries>
     <forceEntry id="6ace-8bcc-48b2-6de7" name="*Pitched Battle (1,000)*" hidden="false">
@@ -613,6 +634,13 @@
           <constraints>
             <constraint field="selections" scope="6ace-8bcc-48b2-6de7" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f4a3-c384-5e68-ce91" type="min"/>
           </constraints>
+        </categoryLink>
+        <categoryLink id="a49c-51d9-e8d9-fbb6" name="Scenery" hidden="false" targetId="a147-d195-662c-5984" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
         </categoryLink>
       </categoryLinks>
     </forceEntry>
@@ -746,6 +774,13 @@
             <constraint field="selections" scope="68de-f89f-a288-4234" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2772-3580-33d2-0378" type="min"/>
           </constraints>
         </categoryLink>
+        <categoryLink id="1492-e3ed-7420-71da" name="Scenery" hidden="false" targetId="a147-d195-662c-5984" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </categoryLink>
       </categoryLinks>
     </forceEntry>
     <forceEntry id="77d6-f72b-3fd5-04b9" name="*Pitched Battle (2,500)*" hidden="false">
@@ -869,6 +904,22 @@
           <modifiers/>
           <constraints/>
         </categoryLink>
+        <categoryLink id="5b07-cc96-2bf0-4c70" name="Scenery" hidden="false" targetId="a147-d195-662c-5984" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </categoryLink>
+        <categoryLink id="752a-834e-f69c-a8ee" name="Allegiance" hidden="false" targetId="87e8-c095-f059-5f7b" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="77d6-f72b-3fd5-04b9" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3730-b9ac-0830-453d" type="min"/>
+          </constraints>
+        </categoryLink>
       </categoryLinks>
     </forceEntry>
     <forceEntry id="dcf7-ee28-719c-355d" name="Open Play" hidden="false">
@@ -935,11 +986,35 @@
           <modifiers/>
           <constraints/>
         </categoryLink>
+        <categoryLink id="32b8-e41b-3439-3ec7" name="Scenery" hidden="false" targetId="a147-d195-662c-5984" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </categoryLink>
       </categoryLinks>
     </forceEntry>
   </forceEntries>
   <selectionEntries/>
-  <entryLinks/>
+  <entryLinks>
+    <entryLink id="cde9-da1a-a5f6-c36a" name="Balewind Vortex" hidden="false" targetId="99ba-8365-e255-96e2" type="selectionEntry">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+      <categoryLinks>
+        <categoryLink id="2176-c0eb-18fb-8f33" name="New CategoryLink" hidden="false" targetId="a147-d195-662c-5984" primary="true">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </categoryLink>
+      </categoryLinks>
+    </entryLink>
+  </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="869c-168d-eba5-eacf" name="Arcane Bolt" hidden="false" collective="false" type="upgrade">
       <profiles/>
@@ -989,9 +1064,84 @@
         <cost name="pts" costTypeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="99ba-8365-e255-96e2" name="Balewind Vortex" book="Warscroll: Balewind Vortex" page="1" hidden="false" collective="false" type="upgrade">
+      <profiles>
+        <profile id="3ec3-e71d-a513-89ab" name="Balewind Call" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="If you have a Balewind Vortex model, WIZARD HEROES in your army know the Summon Balewind Vortex spell in addition to any others they know, provided they are also not a MONSTER."/>
+          </characteristics>
+        </profile>
+        <profile id="d2b4-2229-8800-6272" name="Summon Balewind Vortex" hidden="false" profileTypeId="2e81-5e22-c6e1-73cb" profileTypeName="Spell">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Casting Value" characteristicTypeId="2508-b604-1258-a920" value="7"/>
+            <characteristic name="Description" characteristicTypeId="76ff-781d-b8e6-5f27" value="If successfully cast, remove the caster and set up a Balewind Vortex where they stood. You and your opponent must then move any models so that none are within 3&quot; of the Balewind Vortex if possible to do so. Then, place the caster on the upper platform. If this spell is cast, it does not count towards the number of spells the WIZARD can attempt to cast in a turn."/>
+          </characteristics>
+        </profile>
+        <profile id="6f9c-74c3-3e5d-a72f" name="Rolling Vortex of Magic" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="Models cannot move within 3&quot; of a Balewind Vortex while a WIZARD is atop it, nor can they charge the WIZARD. In addition, you can add 1 to the casting and unbinding rolls made for a WIZARD atop a Balewind Vortex, and double the range of any spells they attempt to cast."/>
+          </characteristics>
+        </profile>
+        <profile id="aabf-60f4-c583-dcda" name="Held Aloft" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="A WIZARD atop a Balewind Vortex cannot move. However, at the start of your hero phase, a WIZARD atop a Balewind Vortex can banish it and return to the ground. If it does so, remove the Balewind Vortex from the battlefield until it is summoned again."/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="a409-1260-cbbd-d7d5" name="Balewind Vortex" hidden="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <description>Do not set up this model at the start of the game - it is set up during the battle as described in Balewind Call.</description>
+        </rule>
+      </rules>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+      <categoryLinks>
+        <categoryLink id="add6-fc70-65fa-0109" name="New CategoryLink" hidden="false" targetId="3b06-91e8-6a97-dfff" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </categoryLink>
+        <categoryLink id="e324-5c86-c531-27de" name="New CategoryLink" hidden="false" targetId="8910-7c1d-6c74-37ff" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </categoryLink>
+      </categoryLinks>
+      <selectionEntries/>
+      <selectionEntryGroups/>
+      <entryLinks/>
+      <costs>
+        <cost name="pts" costTypeId="points" value="100.0"/>
+      </costs>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
-   <selectionEntryGroup id="e02e-6203-a19f-c021" name="Artefacts of Death" hidden="false" collective="false">
+    <selectionEntryGroup id="e02e-6203-a19f-c021" name="Artefacts of Death" hidden="false" collective="false">
       <profiles/>
       <rules/>
       <infoLinks/>
@@ -1009,7 +1159,6 @@
               <infoLinks/>
               <modifiers/>
               <characteristics>
-
                 <characteristic name="Artefact Details" characteristicTypeId="0918-c47a-d84e-c0cf" value="Subtract 1 from the hit rolls of any unit within 3&quot; of the bearer unless it has the DEATH keyword."/>
               </characteristics>
             </profile>
@@ -1646,26 +1795,26 @@
       <selectionEntryGroups/>
       <entryLinks/>
     </selectionEntryGroup>
-     <selectionEntryGroup id="f179-9104-3d7f-1ea1" name="Chaos Command Traits" hidden="false" collective="false">
-       <profiles/>
+    <selectionEntryGroup id="f179-9104-3d7f-1ea1" name="Chaos Command Traits" hidden="false" collective="false">
+      <profiles/>
       <rules/>
       <infoLinks/>
       <modifiers/>
       <constraints>
-	          <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e106-91bb-bef8-c7e9" type="max"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e106-91bb-bef8-c7e9" type="max"/>
       </constraints>
       <categoryLinks/>
       <selectionEntries>
         <selectionEntry id="5584-75b3-7445-e2cf" name="1. Dark Avenger" hidden="false" collective="false" type="upgrade">
           <profiles>
             <profile id="d11e-4267-ecf7-1094" name="Dark Avenger" hidden="false" profileTypeId="c749-bae4-71a8-0c36" profileTypeName="Command Trait">
-			              <profiles/>
+              <profiles/>
               <rules/>
               <infoLinks/>
               <modifiers/>
               <characteristics>
-			  <characteristic name="Command Trait Details" characteristicTypeId="ee96-6f3a-e5ca-2350" value="The general, and all friendly CHAOS units within 10&quot; of them, add 1 to hit rolls against targets with the ORDER keyword."/>
-			                </characteristics>
+                <characteristic name="Command Trait Details" characteristicTypeId="ee96-6f3a-e5ca-2350" value="The general, and all friendly CHAOS units within 10&quot; of them, add 1 to hit rolls against targets with the ORDER keyword."/>
+              </characteristics>
             </profile>
           </profiles>
           <rules/>
@@ -1680,16 +1829,16 @@
             <cost name="pts" costTypeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-		<selectionEntry id="aa8d-2468-307b-7223" name="2. Spiteful Destroyer" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="aa8d-2468-307b-7223" name="2. Spiteful Destroyer" hidden="false" collective="false" type="upgrade">
           <profiles>
             <profile id="9c75-4d0a-1a86-b59d" name="Spiteful Destroyer" hidden="false" profileTypeId="c749-bae4-71a8-0c36" profileTypeName="Command Trait">
-			              <profiles/>
+              <profiles/>
               <rules/>
               <infoLinks/>
               <modifiers/>
               <characteristics>
-			  <characteristic name="Command Trait Details" characteristicTypeId="ee96-6f3a-e5ca-2350" value="Add 1 to the wound rolls made for the general&apos;s melee weapons."/>
-		              </characteristics>
+                <characteristic name="Command Trait Details" characteristicTypeId="ee96-6f3a-e5ca-2350" value="Add 1 to the wound rolls made for the general&apos;s melee weapons."/>
+              </characteristics>
             </profile>
           </profiles>
           <rules/>
@@ -1704,16 +1853,16 @@
             <cost name="pts" costTypeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-		        <selectionEntry id="2ed5-ce10-22f2-9b67" name="3. Cunning Deceiver" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="2ed5-ce10-22f2-9b67" name="3. Cunning Deceiver" hidden="false" collective="false" type="upgrade">
           <profiles>
             <profile id="babc-4418-2091-f9c2" name="Cunning Deceiver" hidden="false" profileTypeId="c749-bae4-71a8-0c36" profileTypeName="Command Trait">
-			              <profiles/>
+              <profiles/>
               <rules/>
               <infoLinks/>
               <modifiers/>
               <characteristics>
-			  <characteristic name="Command Trait Details" characteristicTypeId="ee96-6f3a-e5ca-2350" value="Subtract 1 from the hit rolls of all enemy attacks made in the first battle round."/>
-			                </characteristics>
+                <characteristic name="Command Trait Details" characteristicTypeId="ee96-6f3a-e5ca-2350" value="Subtract 1 from the hit rolls of all enemy attacks made in the first battle round."/>
+              </characteristics>
             </profile>
           </profiles>
           <rules/>
@@ -1728,16 +1877,16 @@
             <cost name="pts" costTypeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-		        <selectionEntry id="ce7b-5079-8e73-49df" name="4. Lord of War" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="ce7b-5079-8e73-49df" name="4. Lord of War" hidden="false" collective="false" type="upgrade">
           <profiles>
             <profile id="264c-5601-8894-49c6" name="Lord of War" hidden="false" profileTypeId="c749-bae4-71a8-0c36" profileTypeName="Command Trait">
-			              <profiles/>
+              <profiles/>
               <rules/>
               <infoLinks/>
               <modifiers/>
               <characteristics>
-			  <characteristic name="Command Trait Details" characteristicTypeId="ee96-6f3a-e5ca-2350" value="Pick a friendly CHAOS unit within 3&quot; of the general in your hero phase and roll a dice. On a roll of 3 or more you can add 1 to the hit rolls for that unit until your next hero phase."/>
-			                </characteristics>
+                <characteristic name="Command Trait Details" characteristicTypeId="ee96-6f3a-e5ca-2350" value="Pick a friendly CHAOS unit within 3&quot; of the general in your hero phase and roll a dice. On a roll of 3 or more you can add 1 to the hit rolls for that unit until your next hero phase."/>
+              </characteristics>
             </profile>
           </profiles>
           <rules/>
@@ -1752,16 +1901,16 @@
             <cost name="pts" costTypeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-		        <selectionEntry id="100a-f21d-30bd-0e9a" name="5. Terrifying Presence" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="100a-f21d-30bd-0e9a" name="5. Terrifying Presence" hidden="false" collective="false" type="upgrade">
           <profiles>
             <profile id="5b4b-6ac6-d235-c9da" name="Terrifying Presence" hidden="false" profileTypeId="c749-bae4-71a8-0c36" profileTypeName="Command Trait">
-			              <profiles/>
+              <profiles/>
               <rules/>
               <infoLinks/>
               <modifiers/>
               <characteristics>
-			  <characteristic name="Command Trait Details" characteristicTypeId="ee96-6f3a-e5ca-2350" value="Subtract 1 from the Bravery of enemy units within 3&quot; of your general."/>
-			                </characteristics>
+                <characteristic name="Command Trait Details" characteristicTypeId="ee96-6f3a-e5ca-2350" value="Subtract 1 from the Bravery of enemy units within 3&quot; of your general."/>
+              </characteristics>
             </profile>
           </profiles>
           <rules/>
@@ -1776,16 +1925,16 @@
             <cost name="pts" costTypeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-		        <selectionEntry id="3f5f-faca-cb53-7d82" name="6. Great Destroyer" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="3f5f-faca-cb53-7d82" name="6. Great Destroyer" hidden="false" collective="false" type="upgrade">
           <profiles>
             <profile id="617b-164a-a339-55ae" name="Great Destroyer" hidden="false" profileTypeId="c749-bae4-71a8-0c36" profileTypeName="Command Trait">
-			              <profiles/>
+              <profiles/>
               <rules/>
               <infoLinks/>
               <modifiers/>
               <characteristics>
-			  <characteristic name="Command Trait Details" characteristicTypeId="ee96-6f3a-e5ca-2350" value="Add 1 to Unpredictable Destruction rolls (see battle traits) for units that are within 12&quot; of the general."/>
-			                </characteristics>
+                <characteristic name="Command Trait Details" characteristicTypeId="ee96-6f3a-e5ca-2350" value="Add 1 to Unpredictable Destruction rolls (see battle traits) for units that are within 12&quot; of the general."/>
+              </characteristics>
             </profile>
           </profiles>
           <rules/>
@@ -2133,25 +2282,25 @@
       <entryLinks/>
     </selectionEntryGroup>
     <selectionEntryGroup id="3c13-922a-683d-7de7" name="Artefacts of Chaos" hidden="false" collective="false">
-	      <profiles/>
+      <profiles/>
       <rules/>
       <infoLinks/>
       <modifiers/>
       <constraints>
-	          <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="180e-001b-6cfa-238a" type="max"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="180e-001b-6cfa-238a" type="max"/>
       </constraints>
       <categoryLinks/>
       <selectionEntries>
         <selectionEntry id="f703-969e-2701-396f" name="1. Daemonic Weapon" hidden="false" collective="false" type="upgrade">
           <profiles>
             <profile id="c526-fe9d-86ef-39f9" name="Daemonic Weapon" hidden="false" profileTypeId="0ac4-aacb-2481-8e72" profileTypeName="Artefact">
-			              <profiles/>
+              <profiles/>
               <rules/>
               <infoLinks/>
               <modifiers/>
               <characteristics>
-                  <characteristic name="Artefact Details" characteristicTypeId="0918-c47a-d84e-c0cf" value="Pick one melee weapon that this model can use. Wound rolls of 6 or more for that weapon inflict a mortal wound in addition to any damage they would normally inflict."/>
-				                </characteristics>
+                <characteristic name="Artefact Details" characteristicTypeId="0918-c47a-d84e-c0cf" value="Pick one melee weapon that this model can use. Wound rolls of 6 or more for that weapon inflict a mortal wound in addition to any damage they would normally inflict."/>
+              </characteristics>
             </profile>
           </profiles>
           <rules/>
@@ -2160,7 +2309,7 @@
           <constraints/>
           <categoryLinks>
             <categoryLink id="d8a8-4ff4-d670-0782" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false">
-             <profiles/>
+              <profiles/>
               <rules/>
               <infoLinks/>
               <modifiers/>
@@ -2182,7 +2331,7 @@
               <infoLinks/>
               <modifiers/>
               <characteristics>
-<characteristic name="Artefact Details" characteristicTypeId="0918-c47a-d84e-c0cf" value="Pick one melee weapon that this model can use. Increase the Attacks characteristic of that weapon by 1."/>			  
+                <characteristic name="Artefact Details" characteristicTypeId="0918-c47a-d84e-c0cf" value="Pick one melee weapon that this model can use. Increase the Attacks characteristic of that weapon by 1."/>
               </characteristics>
             </profile>
           </profiles>
@@ -2190,64 +2339,64 @@
           <infoLinks/>
           <modifiers/>
           <constraints/>
-		            <categoryLinks>
+          <categoryLinks>
             <categoryLink id="ce33-8f9d-3b55-f545" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false">
-			              <profiles/>
+              <profiles/>
               <rules/>
               <infoLinks/>
               <modifiers/>
-			                <constraints/>
+              <constraints/>
             </categoryLink>
           </categoryLinks>
-		            <selectionEntries/>
+          <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
             <cost name="pts" costTypeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-		        <selectionEntry id="8a25-2b31-1228-58ed" name="3. Beguiling Gem" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="8a25-2b31-1228-58ed" name="3. Beguiling Gem" hidden="false" collective="false" type="upgrade">
           <profiles>
             <profile id="057d-22fb-6708-f98f" name="Beguiling Gem" hidden="false" profileTypeId="0ac4-aacb-2481-8e72" profileTypeName="Artefact">
-			              <profiles/>
+              <profiles/>
               <rules/>
               <infoLinks/>
               <modifiers/>
               <characteristics>
-			  <characteristic name="Artefact Details" characteristicTypeId="0918-c47a-d84e-c0cf" value="Once per battle, at the start of a combat phase, pick one enemy model within 3&quot; of this model. Your opponent must subtract 1 from hit rolls made for that model in that combat phase."/>
-			                </characteristics>
+                <characteristic name="Artefact Details" characteristicTypeId="0918-c47a-d84e-c0cf" value="Once per battle, at the start of a combat phase, pick one enemy model within 3&quot; of this model. Your opponent must subtract 1 from hit rolls made for that model in that combat phase."/>
+              </characteristics>
             </profile>
           </profiles>
           <rules/>
           <infoLinks/>
           <modifiers/>
           <constraints/>
-		            <categoryLinks>
+          <categoryLinks>
             <categoryLink id="d192-ec68-a611-41a9" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false">
-			              <profiles/>
+              <profiles/>
               <rules/>
               <infoLinks/>
               <modifiers/>
-			                <constraints/>
+              <constraints/>
             </categoryLink>
           </categoryLinks>
-		            <selectionEntries/>
+          <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
             <cost name="pts" costTypeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-		        <selectionEntry id="4048-8842-13f8-6487" name="4. Chaos Talisman" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="4048-8842-13f8-6487" name="4. Chaos Talisman" hidden="false" collective="false" type="upgrade">
           <profiles>
             <profile id="f0fd-58df-77bf-7a88" name="Chaos Talisman" hidden="false" profileTypeId="0ac4-aacb-2481-8e72" profileTypeName="Artefact">
-			              <profiles/>
+              <profiles/>
               <rules/>
               <infoLinks/>
               <modifiers/>
               <characteristics>
-			  <characteristic name="Artefact Details" characteristicTypeId="0918-c47a-d84e-c0cf" value="Roll a dice for each wound or mortal wound inflicted on this model. On a roll of 6, the wound is negated and has no effect. Add 1 to the roll if the wound was inflicted by a model with the ORDER keyword."/>
-			                </characteristics>
+                <characteristic name="Artefact Details" characteristicTypeId="0918-c47a-d84e-c0cf" value="Roll a dice for each wound or mortal wound inflicted on this model. On a roll of 6, the wound is negated and has no effect. Add 1 to the roll if the wound was inflicted by a model with the ORDER keyword."/>
+              </characteristics>
             </profile>
           </profiles>
           <rules/>
@@ -2256,37 +2405,36 @@
           <constraints/>
           <categoryLinks>
             <categoryLink id="fe47-4784-c4b7-6d39" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false">
-			              <profiles/>
+              <profiles/>
               <rules/>
               <infoLinks/>
               <modifiers/>
-			                <constraints/>
+              <constraints/>
             </categoryLink>
           </categoryLinks>
-		  
-		           <selectionEntries/>
+          <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
             <cost name="pts" costTypeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-		        <selectionEntry id="99a8-19b8-c4fc-5b82" name="5. Favour of the Gods" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="99a8-19b8-c4fc-5b82" name="5. Favour of the Gods" hidden="false" collective="false" type="upgrade">
           <profiles>
             <profile id="d726-c6db-121c-8a13" name="Favour of the Gods" hidden="false" profileTypeId="0ac4-aacb-2481-8e72" profileTypeName="Artefact">
-			              <profiles/>
+              <profiles/>
               <rules/>
               <infoLinks/>
               <modifiers/>
               <characteristics>
-			  <characteristic name="Artefact Details" characteristicTypeId="0918-c47a-d84e-c0cf" value="Add 1 to the Wounds characteristic of this model."/>
-			                </characteristics>
+                <characteristic name="Artefact Details" characteristicTypeId="0918-c47a-d84e-c0cf" value="Add 1 to the Wounds characteristic of this model."/>
+              </characteristics>
             </profile>
           </profiles>
           <rules/>
           <infoLinks/>
           <modifiers/>
-		            <constraints/>
+          <constraints/>
           <categoryLinks/>
           <selectionEntries/>
           <selectionEntryGroups/>
@@ -2295,7 +2443,7 @@
             <cost name="pts" costTypeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-		        <selectionEntry id="b9dd-e27b-f206-d911" name="6. Crown of Conquest" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="b9dd-e27b-f206-d911" name="6. Crown of Conquest" hidden="false" collective="false" type="upgrade">
           <profiles>
             <profile id="fe7c-fded-1e2c-6c81" name="Crown of Conquest" hidden="false" profileTypeId="0ac4-aacb-2481-8e72" profileTypeName="Artefact">
               <profiles/>
@@ -2303,14 +2451,14 @@
               <infoLinks/>
               <modifiers/>
               <characteristics>
-			                  <characteristic name="Artefact Details" characteristicTypeId="0918-c47a-d84e-c0cf" value="Roll a dice for this model at the start of each of your hero phases. On a 5 or more, it can use the Inspiring Presence command ability even if it is not a general. If this model is a general, on a roll of 5 or more it can use the Inspiring Presence ability and one other command ability in that hero phase, or use the Inspiring Presence ability twice in that hero phase."/>
+                <characteristic name="Artefact Details" characteristicTypeId="0918-c47a-d84e-c0cf" value="Roll a dice for this model at the start of each of your hero phases. On a 5 or more, it can use the Inspiring Presence command ability even if it is not a general. If this model is a general, on a roll of 5 or more it can use the Inspiring Presence ability and one other command ability in that hero phase, or use the Inspiring Presence ability twice in that hero phase."/>
               </characteristics>
             </profile>
           </profiles>
           <rules/>
           <infoLinks/>
           <modifiers/>
-		  <constraints/>
+          <constraints/>
           <categoryLinks/>
           <selectionEntries/>
           <selectionEntryGroups/>
