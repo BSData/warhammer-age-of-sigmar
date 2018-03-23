@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" book="The General&apos;s Handbook" revision="22" battleScribeVersion="2.01" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" book="The General&apos;s Handbook" revision="23" battleScribeVersion="2.01" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <profiles/>
   <rules>
     <rule id="a954-6cfc-59ca-674e" name="Inspiring Presence" hidden="false">
@@ -95,6 +95,11 @@
     <profileType id="eed7-4131-0a52-0668" name="Prayer">
       <characteristicTypes>
         <characteristicType id="0746-6cfb-5e15-53cb" name="Description"/>
+      </characteristicTypes>
+    </profileType>
+    <profileType id="75e0-a332-e4f5-bf36" name="Battalion Organisation">
+      <characteristicTypes>
+        <characteristicType id="eb5f-e9d2-e457-bff5" name="Required"/>
       </characteristicTypes>
     </profileType>
   </profileTypes>
