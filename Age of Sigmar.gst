@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" book="The General&apos;s Handbook" revision="20" battleScribeVersion="2.01" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" book="The General&apos;s Handbook" revision="21" battleScribeVersion="2.01" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <profiles/>
   <rules>
     <rule id="a954-6cfc-59ca-674e" name="Inspiring Presence" hidden="false">
@@ -557,6 +557,13 @@
               <modifiers/>
               <constraints/>
             </categoryLink>
+            <categoryLink id="96bc-ea1b-4e31-e7bc" name="Scenery" hidden="false" targetId="a147-d195-662c-5984" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
           </categoryLinks>
         </forceEntry>
       </forceEntries>
@@ -696,6 +703,13 @@
               <modifiers/>
               <constraints/>
             </categoryLink>
+            <categoryLink id="fd17-ddb8-b6bf-8808" name="Scenery" hidden="false" targetId="a147-d195-662c-5984" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
           </categoryLinks>
         </forceEntry>
       </forceEntries>
@@ -829,6 +843,13 @@
               <constraints/>
             </categoryLink>
             <categoryLink id="f5f3-45fd-c910-45d3" name="Battalion" hidden="false" targetId="be17-6bbd-b857-3f43" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+            <categoryLink id="11cc-5855-6e5f-d83e" name="Scenery" hidden="false" targetId="a147-d195-662c-5984" primary="false">
               <profiles/>
               <rules/>
               <infoLinks/>
