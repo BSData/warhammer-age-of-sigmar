@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" book="The General&apos;s Handbook" revision="20" battleScribeVersion="2.01" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" book="The General&apos;s Handbook" revision="23" battleScribeVersion="2.01" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <profiles/>
   <rules>
     <rule id="a954-6cfc-59ca-674e" name="Inspiring Presence" hidden="false">
@@ -95,6 +95,11 @@
     <profileType id="eed7-4131-0a52-0668" name="Prayer">
       <characteristicTypes>
         <characteristicType id="0746-6cfb-5e15-53cb" name="Description"/>
+      </characteristicTypes>
+    </profileType>
+    <profileType id="75e0-a332-e4f5-bf36" name="Battalion Organisation">
+      <characteristicTypes>
+        <characteristicType id="eb5f-e9d2-e457-bff5" name="Required"/>
       </characteristicTypes>
     </profileType>
   </profileTypes>
@@ -482,20 +487,6 @@
       <modifiers/>
       <constraints/>
     </categoryEntry>
-    <categoryEntry id="3b06-91e8-6a97-dfff" name="BALEWIND VORTEX" hidden="false">
-      <profiles/>
-      <rules/>
-      <infoLinks/>
-      <modifiers/>
-      <constraints/>
-    </categoryEntry>
-    <categoryEntry id="a147-d195-662c-5984" name="Scenery" hidden="false">
-      <profiles/>
-      <rules/>
-      <infoLinks/>
-      <modifiers/>
-      <constraints/>
-    </categoryEntry>
     <categoryEntry id="8910-7c1d-6c74-37ff" name="SCENERY" hidden="false">
       <profiles/>
       <rules/>
@@ -635,13 +626,6 @@
             <constraint field="selections" scope="6ace-8bcc-48b2-6de7" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f4a3-c384-5e68-ce91" type="min"/>
           </constraints>
         </categoryLink>
-        <categoryLink id="a49c-51d9-e8d9-fbb6" name="Scenery" hidden="false" targetId="a147-d195-662c-5984" primary="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints/>
-        </categoryLink>
       </categoryLinks>
     </forceEntry>
     <forceEntry id="68de-f89f-a288-4234" name="*Pitched Battle (2,000)*" hidden="false">
@@ -774,13 +758,6 @@
             <constraint field="selections" scope="68de-f89f-a288-4234" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2772-3580-33d2-0378" type="min"/>
           </constraints>
         </categoryLink>
-        <categoryLink id="1492-e3ed-7420-71da" name="Scenery" hidden="false" targetId="a147-d195-662c-5984" primary="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints/>
-        </categoryLink>
       </categoryLinks>
     </forceEntry>
     <forceEntry id="77d6-f72b-3fd5-04b9" name="*Pitched Battle (2,500)*" hidden="false">
@@ -904,13 +881,6 @@
           <modifiers/>
           <constraints/>
         </categoryLink>
-        <categoryLink id="5b07-cc96-2bf0-4c70" name="Scenery" hidden="false" targetId="a147-d195-662c-5984" primary="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints/>
-        </categoryLink>
         <categoryLink id="752a-834e-f69c-a8ee" name="Allegiance" hidden="false" targetId="87e8-c095-f059-5f7b" primary="false">
           <profiles/>
           <rules/>
@@ -986,35 +956,11 @@
           <modifiers/>
           <constraints/>
         </categoryLink>
-        <categoryLink id="32b8-e41b-3439-3ec7" name="Scenery" hidden="false" targetId="a147-d195-662c-5984" primary="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints/>
-        </categoryLink>
       </categoryLinks>
     </forceEntry>
   </forceEntries>
   <selectionEntries/>
-  <entryLinks>
-    <entryLink id="cde9-da1a-a5f6-c36a" name="Balewind Vortex" hidden="false" targetId="99ba-8365-e255-96e2" type="selectionEntry">
-      <profiles/>
-      <rules/>
-      <infoLinks/>
-      <modifiers/>
-      <constraints/>
-      <categoryLinks>
-        <categoryLink id="2176-c0eb-18fb-8f33" name="New CategoryLink" hidden="false" targetId="a147-d195-662c-5984" primary="true">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints/>
-        </categoryLink>
-      </categoryLinks>
-    </entryLink>
-  </entryLinks>
+  <entryLinks/>
   <sharedSelectionEntries>
     <selectionEntry id="869c-168d-eba5-eacf" name="Arcane Bolt" hidden="false" collective="false" type="upgrade">
       <profiles/>
@@ -1062,81 +1008,6 @@
       <entryLinks/>
       <costs>
         <cost name="pts" costTypeId="points" value="0.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="99ba-8365-e255-96e2" name="Balewind Vortex" book="Warscroll: Balewind Vortex" page="1" hidden="false" collective="false" type="upgrade">
-      <profiles>
-        <profile id="3ec3-e71d-a513-89ab" name="Balewind Call" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <characteristics>
-            <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="If you have a Balewind Vortex model, WIZARD HEROES in your army know the Summon Balewind Vortex spell in addition to any others they know, provided they are also not a MONSTER."/>
-          </characteristics>
-        </profile>
-        <profile id="d2b4-2229-8800-6272" name="Summon Balewind Vortex" hidden="false" profileTypeId="2e81-5e22-c6e1-73cb" profileTypeName="Spell">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <characteristics>
-            <characteristic name="Casting Value" characteristicTypeId="2508-b604-1258-a920" value="7"/>
-            <characteristic name="Description" characteristicTypeId="76ff-781d-b8e6-5f27" value="If successfully cast, remove the caster and set up a Balewind Vortex where they stood. You and your opponent must then move any models so that none are within 3&quot; of the Balewind Vortex if possible to do so. Then, place the caster on the upper platform. If this spell is cast, it does not count towards the number of spells the WIZARD can attempt to cast in a turn."/>
-          </characteristics>
-        </profile>
-        <profile id="6f9c-74c3-3e5d-a72f" name="Rolling Vortex of Magic" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <characteristics>
-            <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="Models cannot move within 3&quot; of a Balewind Vortex while a WIZARD is atop it, nor can they charge the WIZARD. In addition, you can add 1 to the casting and unbinding rolls made for a WIZARD atop a Balewind Vortex, and double the range of any spells they attempt to cast."/>
-          </characteristics>
-        </profile>
-        <profile id="aabf-60f4-c583-dcda" name="Held Aloft" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <characteristics>
-            <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="A WIZARD atop a Balewind Vortex cannot move. However, at the start of your hero phase, a WIZARD atop a Balewind Vortex can banish it and return to the ground. If it does so, remove the Balewind Vortex from the battlefield until it is summoned again."/>
-          </characteristics>
-        </profile>
-      </profiles>
-      <rules>
-        <rule id="a409-1260-cbbd-d7d5" name="Balewind Vortex" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <description>Do not set up this model at the start of the game - it is set up during the battle as described in Balewind Call.</description>
-        </rule>
-      </rules>
-      <infoLinks/>
-      <modifiers/>
-      <constraints/>
-      <categoryLinks>
-        <categoryLink id="add6-fc70-65fa-0109" name="New CategoryLink" hidden="false" targetId="3b06-91e8-6a97-dfff" primary="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints/>
-        </categoryLink>
-        <categoryLink id="e324-5c86-c531-27de" name="New CategoryLink" hidden="false" targetId="8910-7c1d-6c74-37ff" primary="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints/>
-        </categoryLink>
-      </categoryLinks>
-      <selectionEntries/>
-      <selectionEntryGroups/>
-      <entryLinks/>
-      <costs>
-        <cost name="pts" costTypeId="points" value="100.0"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>
