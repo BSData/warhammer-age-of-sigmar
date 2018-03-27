@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="bf19-727d-9c0f-1c38" name="Order - Sylvaneth" book="Order Battletome - Sylvaneth" revision="6" battleScribeVersion="2.01" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="bf19-727d-9c0f-1c38" name="Order - Sylvaneth" book="Order Battletome: Sylvaneth" revision="7" battleScribeVersion="2.01" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks/>
@@ -2163,6 +2163,21 @@ If a Winterleaf Wargrove contains the maximum number of battalions, it gains the
             <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="The leader of this unit is a Branch Nymph. A Branch Nymph makes 3 attacks rather than 2."/>
           </characteristics>
         </profile>
+        <profile id="2b34-631c-e0d8-2724" name="Wracking Talons (Branch Nymph)" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="03 Weapon">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
+            <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="2&quot;"/>
+            <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="3"/>
+            <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="4+"/>
+            <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="4+"/>
+            <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-"/>
+            <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="1"/>
+          </characteristics>
+        </profile>
       </profiles>
       <rules/>
       <infoLinks/>
@@ -2184,7 +2199,7 @@ If a Winterleaf Wargrove contains the maximum number of battalions, it gains the
         <modifier type="decrement" field="points" value="30">
           <repeats/>
           <conditions>
-            <condition field="selections" scope="0a14-90fc-1335-3c79" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7168-d6ef-c51b-b011" type="equalTo"/>
+            <condition field="selections" scope="0a14-90fc-1335-3c79" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7168-d6ef-c51b-b011" type="equalTo"/>
           </conditions>
           <conditionGroups/>
         </modifier>
@@ -2435,12 +2450,15 @@ If a Winterleaf Wargrove contains the maximum number of battalions, it gains the
       </categoryLinks>
       <selectionEntries/>
       <selectionEntryGroups>
-        <selectionEntryGroup id="0b3f-77bb-d654-cf65" name="Weapons" hidden="false" collective="false">
+        <selectionEntryGroup id="0b3f-77bb-d654-cf65" name="Weapon Options" hidden="false" collective="false">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers/>
-          <constraints/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ed78-f4d5-969b-885d" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7bd3-31d0-699c-65ab" type="min"/>
+          </constraints>
           <categoryLinks/>
           <selectionEntries>
             <selectionEntry id="d5e4-d564-f027-5adf" name="Colony of Flitterfuries" hidden="false" collective="false" type="upgrade">
@@ -2466,7 +2484,7 @@ If a Winterleaf Wargrove contains the maximum number of battalions, it gains the
                   <infoLinks/>
                   <modifiers/>
                   <characteristics>
-                    <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="When she attacks with her Colony of Flitterfuries, roll 10 dice for each unit within the range shown on the damage table. For each roll of a 6, that unit suffers a mortal wound."/>
+                    <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="When she attacks with her Colony of Flitterfuries, roll 10 dice for each enemy unit within the range shown on the damage table. For each roll of a 6, that unit suffers a mortal wound."/>
                   </characteristics>
                 </profile>
               </profiles>
@@ -2614,36 +2632,6 @@ If a Winterleaf Wargrove contains the maximum number of battalions, it gains the
             <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="At the end of the combat phase, pick an enemy unit and roll a dice for each Kurnoth Hunter from this unit that is within 1&quot; of it. For each result of 4 or more, the enemy unit suffers a mortal wound."/>
           </characteristics>
         </profile>
-        <profile id="4dc9-4e19-310d-e860" name="Kurnoth Greatbow" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="Weapon">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <characteristics>
-            <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Misile"/>
-            <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="30&quot;"/>
-            <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="2"/>
-            <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="4+"/>
-            <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="3+"/>
-            <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-1"/>
-            <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="D3"/>
-          </characteristics>
-        </profile>
-        <profile id="5c6a-7649-1ba5-afea" name="Quiverling&apos;s Vicious Claws" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="Weapon">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <characteristics>
-            <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
-            <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="1&quot;"/>
-            <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="3"/>
-            <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="4+"/>
-            <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="4+"/>
-            <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-"/>
-            <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="1"/>
-          </characteristics>
-        </profile>
       </profiles>
       <rules/>
       <infoLinks/>
@@ -2707,12 +2695,30 @@ If a Winterleaf Wargrove contains the maximum number of battalions, it gains the
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup id="b07c-03e3-23e2-a8ad" name="Weapons" hidden="false" collective="false">
+        <selectionEntryGroup id="b07c-03e3-23e2-a8ad" name="Weapon Options" hidden="false" collective="false">
           <profiles/>
           <rules/>
           <infoLinks/>
-          <modifiers/>
-          <constraints/>
+          <modifiers>
+            <modifier type="increment" field="d034-25c0-1684-4d43" value="3">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d357-2269-6b84-c599" repeats="1" roundUp="false"/>
+              </repeats>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="increment" field="28ce-1c16-dbae-51d6" value="3">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d357-2269-6b84-c599" repeats="1" roundUp="false"/>
+              </repeats>
+              <conditions/>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d034-25c0-1684-4d43" type="max"/>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="28ce-1c16-dbae-51d6" type="min"/>
+          </constraints>
           <categoryLinks/>
           <selectionEntries>
             <selectionEntry id="fc0a-e8f4-f488-0bbc" name="Kurnoth Greatsword" hidden="false" collective="false" type="upgrade">
@@ -2774,6 +2780,49 @@ If a Winterleaf Wargrove contains the maximum number of battalions, it gains the
               <costs>
                 <cost name="pts" costTypeId="points" value="0.0"/>
               </costs>
+            </selectionEntry>
+            <selectionEntry id="d769-1ea4-beb8-5160" name="Kurnoth Greatbow and Quiverling" hidden="false" collective="false" type="upgrade">
+              <profiles>
+                <profile id="814b-1f73-5a8d-f5f1" name="Kurnoth Greatbow" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="Weapon">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                  <characteristics>
+                    <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Misile"/>
+                    <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="30&quot;"/>
+                    <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="2"/>
+                    <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="4+"/>
+                    <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="3+"/>
+                    <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-1"/>
+                    <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="D3"/>
+                  </characteristics>
+                </profile>
+                <profile id="c9df-cc20-f911-6d39" name="Quiverling&apos;s Vicious Claws" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="Weapon">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                  <characteristics>
+                    <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
+                    <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="1&quot;"/>
+                    <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="3"/>
+                    <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="4+"/>
+                    <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="4+"/>
+                    <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-"/>
+                    <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="1"/>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+              <categoryLinks/>
+              <selectionEntries/>
+              <selectionEntryGroups/>
+              <entryLinks/>
+              <costs/>
             </selectionEntry>
           </selectionEntries>
           <selectionEntryGroups/>
@@ -2922,7 +2971,7 @@ If a Winterleaf Wargrove contains the maximum number of battalions, it gains the
           <infoLinks/>
           <modifiers/>
           <characteristics>
-            <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="At the start of the combat phase, the Spirit of Durthu stomps the ground; roll a dice for each enemy unit within 3&quot; of this model. On a roll of 4 or more, that unit is knocked off their feet by the impact and must subtract 1 from all hit rolls in that combat phase as they regain their footing."/>
+            <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="At the start of the combat phase, roll a dice for each enemy unit within 3&quot; of any models with this ability. On a roll of 4 or more, that unit is knocked off their feet by the impact and must subtract 1 from all hit rolls in that combat phase as they regain their footing."/>
           </characteristics>
         </profile>
         <profile id="b361-1b4f-2bf7-fb23" name="Impale" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
@@ -3109,22 +3158,25 @@ If a Winterleaf Wargrove contains the maximum number of battalions, it gains the
             <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="Enemy units within 3&quot; of any Spite-Revenants must subtract 1 from their Bravery."/>
           </characteristics>
         </profile>
+        <profile id="bde4-ff0f-844b-4d61" name="Cruel Talons and Fangs (Shadestalker)" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="Weapon">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
+            <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="1&quot;"/>
+            <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="4"/>
+            <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="4+"/>
+            <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="4+"/>
+            <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-"/>
+            <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="1"/>
+          </characteristics>
+        </profile>
       </profiles>
       <rules/>
       <infoLinks/>
       <modifiers>
-        <modifier type="decrement" field="points" value="80">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="b487-315c-b64c-88b0" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2471-3b80-3a47-7def" type="greaterThan"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-        <modifier type="increment" field="points" value="80">
-          <repeats/>
-          <conditions/>
-          <conditionGroups/>
-        </modifier>
         <modifier type="increment" field="points" value="80">
           <repeats>
             <repeat field="selections" scope="b487-315c-b64c-88b0" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2471-3b80-3a47-7def" repeats="1" roundUp="false"/>
@@ -3136,6 +3188,13 @@ If a Winterleaf Wargrove contains the maximum number of battalions, it gains the
           <repeats/>
           <conditions>
             <condition field="selections" scope="b487-315c-b64c-88b0" value="6.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2471-3b80-3a47-7def" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="decrement" field="points" value="80">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="b487-315c-b64c-88b0" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2471-3b80-3a47-7def" type="greaterThan"/>
           </conditions>
           <conditionGroups/>
         </modifier>
@@ -3218,21 +3277,6 @@ If a Winterleaf Wargrove contains the maximum number of battalions, it gains the
             <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="1"/>
           </characteristics>
         </profile>
-        <profile id="2250-b363-4232-0c4c" name="Protector Glaive" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="Weapon">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <characteristics>
-            <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
-            <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="1&quot;"/>
-            <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="2"/>
-            <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="4+"/>
-            <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="3+"/>
-            <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-1"/>
-            <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="2"/>
-          </characteristics>
-        </profile>
         <profile id="6e34-d4ab-8f4b-e0a8" name="Scion" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
           <profiles/>
           <rules/>
@@ -3273,13 +3317,6 @@ If a Winterleaf Wargrove contains the maximum number of battalions, it gains the
       <rules/>
       <infoLinks/>
       <modifiers>
-        <modifier type="decrement" field="points" value="80">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="a74a-7377-3ed9-0f5e" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4273-ddcc-db2a-e23f" type="greaterThan"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
         <modifier type="increment" field="points" value="80">
           <repeats>
             <repeat field="selections" scope="a74a-7377-3ed9-0f5e" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4273-ddcc-db2a-e23f" repeats="1" roundUp="false"/>
@@ -3291,6 +3328,13 @@ If a Winterleaf Wargrove contains the maximum number of battalions, it gains the
           <repeats/>
           <conditions>
             <condition field="selections" scope="a74a-7377-3ed9-0f5e" value="6.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4273-ddcc-db2a-e23f" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="decrement" field="points" value="80">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="a74a-7377-3ed9-0f5e" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4273-ddcc-db2a-e23f" type="greaterThan"/>
           </conditions>
           <conditionGroups/>
         </modifier>
@@ -3333,15 +3377,84 @@ If a Winterleaf Wargrove contains the maximum number of battalions, it gains the
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
-          <costs>
-            <cost name="pts" costTypeId="points" value="0.0"/>
-          </costs>
+          <costs/>
         </selectionEntry>
       </selectionEntries>
-      <selectionEntryGroups/>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="e6bc-d6dd-54cb-8879" name="Weapon Options (Scion)" hidden="false" collective="true">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2ba9-7566-ba24-cf9a" type="max"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries>
+            <selectionEntry id="1abc-5f2b-6210-0366" name="Enchanted Blade" hidden="false" collective="false" type="upgrade">
+              <profiles>
+                <profile id="ba43-5d48-10a6-94a9" name="Enchanted Blade (Scion)" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="Weapon">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                  <characteristics>
+                    <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
+                    <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="1&quot;"/>
+                    <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="4"/>
+                    <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="4+"/>
+                    <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="3+"/>
+                    <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-1"/>
+                    <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="1"/>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+              <categoryLinks/>
+              <selectionEntries/>
+              <selectionEntryGroups/>
+              <entryLinks/>
+              <costs/>
+            </selectionEntry>
+            <selectionEntry id="9cbf-8f2c-870d-9e7a" name="Protector Glaive" hidden="false" collective="false" type="upgrade">
+              <profiles>
+                <profile id="5f49-0bca-1b88-e183" name="Protector Glaive" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="Weapon">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                  <characteristics>
+                    <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
+                    <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="1&quot;"/>
+                    <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="2"/>
+                    <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="4+"/>
+                    <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="3+"/>
+                    <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-1"/>
+                    <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="2"/>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+              <categoryLinks/>
+              <selectionEntries/>
+              <selectionEntryGroups/>
+              <entryLinks/>
+              <costs/>
+            </selectionEntry>
+          </selectionEntries>
+          <selectionEntryGroups/>
+          <entryLinks/>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
       <entryLinks/>
       <costs>
-        <cost name="pts" costTypeId="points" value="90.0"/>
+        <cost name="pts" costTypeId="points" value="80.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="0861-c6bd-bf12-f2f4" name="Treelord" hidden="false" collective="false" type="unit">
@@ -3418,7 +3531,7 @@ If a Winterleaf Wargrove contains the maximum number of battalions, it gains the
           <infoLinks/>
           <modifiers/>
           <characteristics>
-            <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="At the start of the combat phase the Treelord stomps the ground; roll a dice for each enemy unit within 3&quot; of this model. On a roll of 4 or more that unit is knocked off their feet by the impact and must subtract 1 from all hit rolls in that combat phase as they regain their footing."/>
+            <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="At the start of the combat phase, roll a dice for each enemy unit within 3&quot; of any models with this ability. On a roll of 4 or more that unit is knocked off their feet by the impact and must subtract 1 from all hit rolls in that combat phase as they regain their footing."/>
           </characteristics>
         </profile>
         <profile id="f568-59f2-69be-60fe" name="Spirit Paths" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="08 Ability (Unit)">
@@ -3564,7 +3677,7 @@ If a Winterleaf Wargrove contains the maximum number of battalions, it gains the
           <infoLinks/>
           <modifiers/>
           <characteristics>
-            <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="At the start of the combat phase the Treelord Ancient stomps the ground; roll a dice for each enemy unit within 3&quot; of this model. On a roll of 4 or more that unit is knocked off their feet by the impact and must subtract 1 from all hit rolls in that combat phase as they regain their footing."/>
+            <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="At the start of the combat phase, roll a dice for each enemy unit within 3&quot; of any models with this ability. On a roll of 4 or more that unit is knocked off their feet by the impact and must subtract 1 from all hit rolls in that combat phase as they regain their footing."/>
           </characteristics>
         </profile>
         <profile id="c829-bca4-bd7d-2b51" name="Impale" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="08 Ability (Unit)">
