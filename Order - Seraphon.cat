@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="3721-70d4-3f5f-4609" name="Order - Seraphon" book="Order Battletime - Seraphon" revision="6" battleScribeVersion="2.01" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="3721-70d4-3f5f-4609" name="Order - Seraphon" book="Order Battletime - Seraphon" revision="10" battleScribeVersion="2.01" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks/>
@@ -8,6 +8,41 @@
     <profileType id="b2f2-0f78-6242-9249" name="Cosmic Engine">
       <characteristicTypes>
         <characteristicType id="8daf-9834-9a87-a2b4" name="Effect"/>
+      </characteristicTypes>
+    </profileType>
+    <profileType id="405e-e534-dd84-1f2d" name="Carnosaur">
+      <characteristicTypes>
+        <characteristicType id="ba6f-1fdc-93e3-e395" name="Move"/>
+        <characteristicType id="2444-4a40-ee7e-6b5b" name="Clawed Forelimbs"/>
+        <characteristicType id="acd1-e427-2031-2e3f" name="Massive Jaws"/>
+      </characteristicTypes>
+    </profileType>
+    <profileType id="98ed-33ff-64e7-1768" name="Stegadon">
+      <characteristicTypes>
+        <characteristicType id="89b7-8e41-f374-6a72" name="Move"/>
+        <characteristicType id="58b0-5135-004a-3ece" name="Massive Horns"/>
+        <characteristicType id="e1d1-8889-2d6d-129e" name="Crushing Stomps"/>
+      </characteristicTypes>
+    </profileType>
+    <profileType id="72a0-8c74-4a91-4287" name="Engine of The Gods">
+      <characteristicTypes>
+        <characteristicType id="bdc5-04c9-966b-ad8e" name="Move"/>
+        <characteristicType id="4169-1130-e205-f377" name="Crushing Stomps"/>
+        <characteristicType id="ed96-a72e-51c3-cdf3" name="Cosmic Engine"/>
+      </characteristicTypes>
+    </profileType>
+    <profileType id="5286-4cd3-c253-13eb" name="Dread Saurian">
+      <characteristicTypes>
+        <characteristicType id="7735-d4f7-7357-6f91" name="Move"/>
+        <characteristicType id="6a1b-05e0-e5ea-b7e1" name="Gargantuan Jaws"/>
+        <characteristicType id="8813-f356-4a94-9eca" name="Raking Claws"/>
+      </characteristicTypes>
+    </profileType>
+    <profileType id="9b0b-1e4e-345a-0ced" name="Troglodon">
+      <characteristicTypes>
+        <characteristicType id="7640-a039-3f40-ebf7" name="Move"/>
+        <characteristicType id="a8cd-ef3c-4147-9671" name="Noxious Spittle"/>
+        <characteristicType id="cdeb-ce96-a92a-c18a" name="Venomous Bite"/>
       </characteristicTypes>
     </profileType>
   </profileTypes>
@@ -1295,21 +1330,44 @@
             <characteristic name="Battalion Ability Details" characteristicTypeId="08e0-9ead-1dbe-c801" value="The Saurus Oldblood, and any other HEROES from its starhost that are within 20&quot; in the hero phase, can use the command abilities on their warscrolls even if they are not your general."/>
           </characteristics>
         </profile>
-      </profiles>
-      <rules>
-        <rule id="12bc-c7b9-df3f-176a" name="Organisation" hidden="false">
+        <profile id="db6a-61cd-97ee-2f0d" name="-" hidden="false" profileTypeId="75e0-a332-e4f5-bf36" profileTypeName="Battalion Organisation">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers/>
-          <description>A Bloodclaw Starhost consists of the following units:
-
-• 1 Saurus Oldblood or Saurus Oldblood on Carnosaur
-• 3 Heroes chosen in any combination from the following list: Saurus Sunblood, Saurus Scar-Veteran, Saurus Scar-Veteran on Cold One, Saurus Scar-Veteran on Carnosaur, Saurus Eternity Warden.
-• 3-9 Units chosen in any combination from the following list: Saurus Warriors, Saurus Knights, Saurus Guard
-</description>
-        </rule>
-      </rules>
+          <characteristics>
+            <characteristic name="Required" characteristicTypeId="eb5f-e9d2-e457-bff5" value="A Bloodclaw Starhost consists of the following units:"/>
+          </characteristics>
+        </profile>
+        <profile id="2ad3-f3fe-0a18-506b" name="Saurus Oldblood or Saurus Oldblood on Carnosaur" hidden="false" profileTypeId="75e0-a332-e4f5-bf36" profileTypeName="Battalion Organisation">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Required" characteristicTypeId="eb5f-e9d2-e457-bff5" value="1"/>
+          </characteristics>
+        </profile>
+        <profile id="ccda-aa28-cecb-8c47" name="Saurus Sunblood, Saurus Scar-Veteran, Saurus Scar-Veteran on Cold One, Saurus Scar-Veteran on Carnosaur, Saurus Eternity Warden" hidden="false" profileTypeId="75e0-a332-e4f5-bf36" profileTypeName="Battalion Organisation">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Required" characteristicTypeId="eb5f-e9d2-e457-bff5" value="3 HEROES in any combination."/>
+          </characteristics>
+        </profile>
+        <profile id="4edc-d4d0-ebd8-3d5e" name="Saurus Warriors, Saurus Knights, Saurus Guard" hidden="false" profileTypeId="75e0-a332-e4f5-bf36" profileTypeName="Battalion Organisation">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Required" characteristicTypeId="eb5f-e9d2-e457-bff5" value="3-9 units in any combination."/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules/>
       <infoLinks/>
       <modifiers/>
       <constraints/>
@@ -1341,19 +1399,35 @@
             <characteristic name="Battalion Ability Details" characteristicTypeId="08e0-9ead-1dbe-c801" value="While the Saurus Guard that form an Eternal Starhost remain motionless, their weapons gather celestial energy that discharged with the force of a supernova. If a unit of Saurus Guard from an Eternal Starhost does not move in its movement or charge phases, its Celestite Polearms have a Damage characterisic of D3 rather than 1 in the following combat phase."/>
           </characteristics>
         </profile>
-      </profiles>
-      <rules>
-        <rule id="94f3-d033-378e-d95a" name="Organisation" hidden="false">
+        <profile id="7c7e-f25a-bd5d-acab" name="-" hidden="false" profileTypeId="75e0-a332-e4f5-bf36" profileTypeName="Battalion Organisation">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers/>
-          <description>An Eternal Starhost consists of the following units:
-
-• 1 Saurus Eternity Warden
-• 3 units of Saurus Guard</description>
-        </rule>
-      </rules>
+          <characteristics>
+            <characteristic name="Required" characteristicTypeId="eb5f-e9d2-e457-bff5" value="An Eternal Starhost consists of the following units:"/>
+          </characteristics>
+        </profile>
+        <profile id="cc73-b0d4-0797-b773" name="Saurus Eternity Warden" hidden="false" profileTypeId="75e0-a332-e4f5-bf36" profileTypeName="Battalion Organisation">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Required" characteristicTypeId="eb5f-e9d2-e457-bff5" value="1"/>
+          </characteristics>
+        </profile>
+        <profile id="5058-7099-a478-92f2" name="Saurus Guard Units" hidden="false" profileTypeId="75e0-a332-e4f5-bf36" profileTypeName="Battalion Organisation">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Required" characteristicTypeId="eb5f-e9d2-e457-bff5" value="3"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules/>
       <infoLinks/>
       <modifiers/>
       <constraints/>
@@ -1385,19 +1459,35 @@
             <characteristic name="Battalion Ability Details" characteristicTypeId="08e0-9ead-1dbe-c801" value="Firelance Starhosts are saturated with the magic of Azyr, causing their weapons to burn with azure flame. If the wound roll for a Celestite weapon carried by a model from a Firelance Starhost is 6 or higher and it charged in the same turn, the attack inflicts an additional mortal wound, as well as any caused by the Saurus Knight&apos;s Blazing Lances ability."/>
           </characteristics>
         </profile>
-      </profiles>
-      <rules>
-        <rule id="809c-03ed-793f-bc4b" name="Organisation" hidden="false">
+        <profile id="0db6-a463-5da8-7334" name="-" hidden="false" profileTypeId="75e0-a332-e4f5-bf36" profileTypeName="Battalion Organisation">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers/>
-          <description>A Firelance Starhost consists of the following units:
-
-• 1 Scar-Veteran on Cold One or Scar-Veteran on Carnosaur
-• 3 units of Saurus Knights</description>
-        </rule>
-      </rules>
+          <characteristics>
+            <characteristic name="Required" characteristicTypeId="eb5f-e9d2-e457-bff5" value="A Firelance Starhost consists of the following units:"/>
+          </characteristics>
+        </profile>
+        <profile id="fbd4-8e3c-3c2b-f157" name="Scar-Veteran on Cold One or Scar-Veteran on Carnosaur" hidden="false" profileTypeId="75e0-a332-e4f5-bf36" profileTypeName="Battalion Organisation">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Required" characteristicTypeId="eb5f-e9d2-e457-bff5" value="1"/>
+          </characteristics>
+        </profile>
+        <profile id="4ab2-77bf-50c2-c3fa" name="Saurus Knights Units" hidden="false" profileTypeId="75e0-a332-e4f5-bf36" profileTypeName="Battalion Organisation">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Required" characteristicTypeId="eb5f-e9d2-e457-bff5" value="3"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules/>
       <infoLinks/>
       <modifiers/>
       <constraints/>
@@ -1429,21 +1519,46 @@
             <characteristic name="Battalion Ability Details" characteristicTypeId="08e0-9ead-1dbe-c801" value="The great beasts of the Seraphon are almost invincible when they march forth in a pack. In your hero phase each MONSTER from this batallion heals a wound."/>
           </characteristics>
         </profile>
-      </profiles>
-      <rules>
-        <rule id="a8c4-5b40-c6f9-5fc8" name="Organisation" hidden="false">
+        <profile id="ec24-9fa8-4def-4d3c" name="-" hidden="false" profileTypeId="75e0-a332-e4f5-bf36" profileTypeName="Battalion Organisation">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers/>
-          <description>A Heavenswatch Starhost consists of the following units:
-
-• 1 Skink Starseer
-• 2 Heroes chosen in any combination from the following list: Skink Starpriest, Skink Priest, Troglodon
-• 3-9 Units chosen in any combination from the following list: Skinks, Terradon Riders, Ripperdactyl Riders, Bastiladon, Stegadon, Engine of the Gods, Kroxigor, Hunting Pack (each Hunting Pack consists of 1 unit of Skink Handlers and 1 unit of Razordons or Salamanders)
-</description>
-        </rule>
-      </rules>
+          <characteristics>
+            <characteristic name="Required" characteristicTypeId="eb5f-e9d2-e457-bff5" value="A Heavenswatch Starhost consists of the following units:"/>
+          </characteristics>
+        </profile>
+        <profile id="c602-7321-4dec-aad0" name="Skink Starseer" hidden="false" profileTypeId="75e0-a332-e4f5-bf36" profileTypeName="Battalion Organisation">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Required" characteristicTypeId="eb5f-e9d2-e457-bff5" value="1"/>
+          </characteristics>
+        </profile>
+        <profile id="3cf5-0e64-8eff-f84a" name="Skink Starpriest, Skink Priest, Troglodon" hidden="false" profileTypeId="75e0-a332-e4f5-bf36" profileTypeName="Battalion Organisation">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Required" characteristicTypeId="eb5f-e9d2-e457-bff5" value="2 HEROES in any combination."/>
+          </characteristics>
+        </profile>
+        <profile id="7fd0-7b15-8691-d86b" name="Skinks, Terradon Riders, Ripperdactyl Riders, Bastiladon, Stegadon, Engine of the Gods, Kroxigor, Hunting Pack" hidden="false" profileTypeId="75e0-a332-e4f5-bf36" profileTypeName="Battalion Organisation">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Required" characteristicTypeId="eb5f-e9d2-e457-bff5" value="3-9 units in any combination.
+Each Hunting Pack consists of 1 unit of Skink Handlers and 1 unit of Razordons or Salamanders.
+"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules/>
       <infoLinks/>
       <modifiers/>
       <constraints/>
@@ -1484,20 +1599,45 @@
             <characteristic name="Battalion Ability Details" characteristicTypeId="08e0-9ead-1dbe-c801" value="Instead of setting up the flying unit from this battalion on the battlefield, you can place it to one side and say that it is hidden amid the clouds. In any of your movement phases, the unit can plummet from the skies to assail the foe. When it does so, you can set it up anywhere more than 3&quot; from the enemy. In the following combat phase, add 1 to the result of any wound rolls made for models from that unit."/>
           </characteristics>
         </profile>
-      </profiles>
-      <rules>
-        <rule id="0218-0ed5-329c-cb31" name="Organisation" hidden="false">
+        <profile id="ccd6-42bb-52ae-c9dc" name="-" hidden="false" profileTypeId="75e0-a332-e4f5-bf36" profileTypeName="Battalion Organisation">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers/>
-          <description>A Shadowstrike Starhost consists of the following units:
-
-• 1 Skink Starpriest or Skink Priest
-• 2 units of Skinks or Chameleon Skinks, in any combination
-• 1 unit of Terradon Riders or Ripperdactyl Riders</description>
-        </rule>
-      </rules>
+          <characteristics>
+            <characteristic name="Required" characteristicTypeId="eb5f-e9d2-e457-bff5" value="A Shadowstrike Starhost consists of the following units:
+"/>
+          </characteristics>
+        </profile>
+        <profile id="d225-05a1-a949-550b" name="Skink Starpriest or Skink Priest" hidden="false" profileTypeId="75e0-a332-e4f5-bf36" profileTypeName="Battalion Organisation">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Required" characteristicTypeId="eb5f-e9d2-e457-bff5" value="1"/>
+          </characteristics>
+        </profile>
+        <profile id="d9de-3273-fff5-756b" name="Skinks or Chameleon Skinks" hidden="false" profileTypeId="75e0-a332-e4f5-bf36" profileTypeName="Battalion Organisation">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Required" characteristicTypeId="eb5f-e9d2-e457-bff5" value="2 units in any combination."/>
+          </characteristics>
+        </profile>
+        <profile id="0ec7-54de-cd26-572f" name="Terradon Riders or Ripperdactyl Riders" hidden="false" profileTypeId="75e0-a332-e4f5-bf36" profileTypeName="Battalion Organisation">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Required" characteristicTypeId="eb5f-e9d2-e457-bff5" value="1"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules/>
       <infoLinks/>
       <modifiers/>
       <constraints/>
@@ -1529,24 +1669,80 @@
             <characteristic name="Battalion Ability Details" characteristicTypeId="08e0-9ead-1dbe-c801" value="When and Oldblood is attended by capable lieutenants, it forms the warriors under its command into a lethal machine capable of incredible feats of strategy. The Saurus Oldblood, and any other HEROES from the batallion that are within 20&quot;, can use the command abilities on their warscrolls even if they are not your general."/>
           </characteristics>
         </profile>
-      </profiles>
-      <rules>
-        <rule id="b832-f8e8-09d0-5e5b" name="Organisation" hidden="false">
+        <profile id="4886-da6b-b09a-5541" name="-" hidden="false" profileTypeId="75e0-a332-e4f5-bf36" profileTypeName="Battalion Organisation">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers/>
-          <description>A Starbeast Constellation consists of the following units:
-
-• 1 Saurus Oldblood or Saurus Oldblood on Carnosaur
-• 1 Skink Starseer
-• 1 Sunclaw Starhost
-• 1 Eternal Starhost
-• 1 Firelance Starhost
-• 1 Shadowstrike Starhost
-• 1 Thunderquake Starhost</description>
-        </rule>
-      </rules>
+          <characteristics>
+            <characteristic name="Required" characteristicTypeId="eb5f-e9d2-e457-bff5" value="A Starbeast Constellation consists of the following units:"/>
+          </characteristics>
+        </profile>
+        <profile id="4422-8802-b27d-3073" name="Saurus Oldblood or Saurus Oldblood on Carnosaur" hidden="false" profileTypeId="75e0-a332-e4f5-bf36" profileTypeName="Battalion Organisation">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Required" characteristicTypeId="eb5f-e9d2-e457-bff5" value="1"/>
+          </characteristics>
+        </profile>
+        <profile id="57ac-1135-039c-82be" name="Skink Starseer" hidden="false" profileTypeId="75e0-a332-e4f5-bf36" profileTypeName="Battalion Organisation">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Required" characteristicTypeId="eb5f-e9d2-e457-bff5" value="1"/>
+          </characteristics>
+        </profile>
+        <profile id="c3f2-7fff-1394-1e07" name="Sunclaw Starhost Battalion" hidden="false" profileTypeId="75e0-a332-e4f5-bf36" profileTypeName="Battalion Organisation">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Required" characteristicTypeId="eb5f-e9d2-e457-bff5" value="1"/>
+          </characteristics>
+        </profile>
+        <profile id="0e42-10ff-f7d5-1fd7" name="Eternal Starhost Battalion" hidden="false" profileTypeId="75e0-a332-e4f5-bf36" profileTypeName="Battalion Organisation">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Required" characteristicTypeId="eb5f-e9d2-e457-bff5" value="1"/>
+          </characteristics>
+        </profile>
+        <profile id="e3a9-4937-fe9b-3891" name="Firelance Starhost Battalion" hidden="false" profileTypeId="75e0-a332-e4f5-bf36" profileTypeName="Battalion Organisation">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Required" characteristicTypeId="eb5f-e9d2-e457-bff5" value="1"/>
+          </characteristics>
+        </profile>
+        <profile id="201c-cf56-96ed-c7b9" name="Shadowstrike Starhost Battalion" hidden="false" profileTypeId="75e0-a332-e4f5-bf36" profileTypeName="Battalion Organisation">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Required" characteristicTypeId="eb5f-e9d2-e457-bff5" value="1"/>
+          </characteristics>
+        </profile>
+        <profile id="b3cd-b7eb-19d8-b577" name="Thunderquake Starhost Battalion" hidden="false" profileTypeId="75e0-a332-e4f5-bf36" profileTypeName="Battalion Organisation">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Required" characteristicTypeId="eb5f-e9d2-e457-bff5" value="1"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules/>
       <infoLinks/>
       <modifiers/>
       <constraints/>
@@ -1578,19 +1774,36 @@
             <characteristic name="Battalion Ability Details" characteristicTypeId="08e0-9ead-1dbe-c801" value="Saurus Warriors from a Sunclaw Starhost make 2 attacks with their Powerful Jaws and Stardrake Shields rather than 1."/>
           </characteristics>
         </profile>
-      </profiles>
-      <rules>
-        <rule id="14b2-d0e8-5571-7d66" name="Organisation" hidden="false">
+        <profile id="60d9-b9a3-5414-36a6" name="-" hidden="false" profileTypeId="75e0-a332-e4f5-bf36" profileTypeName="Battalion Organisation">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers/>
-          <description>A Sunclaw Starhost consists of the following units:
-
-• 1 Saurus Sunblood
-• 3 units of Saurus Warriors</description>
-        </rule>
-      </rules>
+          <characteristics>
+            <characteristic name="Required" characteristicTypeId="eb5f-e9d2-e457-bff5" value="A Sunclaw Starhost consists of the following units:
+"/>
+          </characteristics>
+        </profile>
+        <profile id="18c2-295d-4201-29ca" name="Saurus Sunblood" hidden="false" profileTypeId="75e0-a332-e4f5-bf36" profileTypeName="Battalion Organisation">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Required" characteristicTypeId="eb5f-e9d2-e457-bff5" value="1"/>
+          </characteristics>
+        </profile>
+        <profile id="1ce3-b55f-4532-5b78" name="Saurus Warrior Units" hidden="false" profileTypeId="75e0-a332-e4f5-bf36" profileTypeName="Battalion Organisation">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Required" characteristicTypeId="eb5f-e9d2-e457-bff5" value="3"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules/>
       <infoLinks/>
       <modifiers/>
       <constraints/>
@@ -1622,22 +1835,48 @@
             <characteristic name="Battalion Ability Details" characteristicTypeId="08e0-9ead-1dbe-c801" value="The great beasts of the Seraphon are almost invincible when they march forth as a pack, even more so when in the presence of the Starmaster that created them. In your hero phase, each model from the Thunderquake Starhost heals a wound. Models from a Thunderquake Starhost that are within 10&quot; of a SLANN heal D3 wounds instead."/>
           </characteristics>
         </profile>
-      </profiles>
-      <rules>
-        <rule id="94da-9ff2-d9b1-89a1" name="Organisation" hidden="false">
+        <profile id="c4c6-e7db-2a0a-8564" name="-" hidden="false" profileTypeId="75e0-a332-e4f5-bf36" profileTypeName="Battalion Organisation">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers/>
-          <description>A Thunderquake Starhost consists of the following units:
+          <characteristics>
+            <characteristic name="Required" characteristicTypeId="eb5f-e9d2-e457-bff5" value="A Thunderquake Starhost consists of the following units:"/>
+          </characteristics>
+        </profile>
+        <profile id="d9fa-5368-c85d-2f61" name="Engine of the Gods or Troglodon" hidden="false" profileTypeId="75e0-a332-e4f5-bf36" profileTypeName="Battalion Organisation">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Required" characteristicTypeId="eb5f-e9d2-e457-bff5" value="1"/>
+          </characteristics>
+        </profile>
+        <profile id="1008-8414-8303-0aec" name="Stegadon or Bastiladon" hidden="false" profileTypeId="75e0-a332-e4f5-bf36" profileTypeName="Battalion Organisation">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Required" characteristicTypeId="eb5f-e9d2-e457-bff5" value="2 units in any combination."/>
+          </characteristics>
+        </profile>
+        <profile id="11d2-fdf5-bae6-e2db" name="Kroxigor or Skink Handlers and Razordons or Salamanders" hidden="false" profileTypeId="75e0-a332-e4f5-bf36" profileTypeName="Battalion Organisation">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Required" characteristicTypeId="eb5f-e9d2-e457-bff5" value="1
 
-• 1 Engine of the Gods or Troglodon
-• 2 units chosen in any combination from the following list: Stegadon or Bastiladon
-• Either of the following:
-   - 1 unit of Kroxigor
-   - 1 unit of Skink Handlers, and 1 unit of Razordons or Salamanders</description>
-        </rule>
-      </rules>
+Either of the following:
+   1 unit of Kroxigor
+   1 unit of Skink Handlers, and 1 unit of Razordons or Salamanders"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules/>
       <infoLinks/>
       <modifiers/>
       <constraints/>
@@ -1732,22 +1971,7 @@
       </profiles>
       <rules/>
       <infoLinks/>
-      <modifiers>
-        <modifier type="decrement" field="points" value="120">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="99f3-0152-aa8c-41ff" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c199-6358-a517-5ad7" type="greaterThan"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-        <modifier type="increment" field="points" value="0.0">
-          <repeats>
-            <repeat field="selections" scope="99f3-0152-aa8c-41ff" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c199-6358-a517-5ad7" repeats="1" roundUp="false"/>
-          </repeats>
-          <conditions/>
-          <conditionGroups/>
-        </modifier>
-      </modifiers>
+      <modifiers/>
       <constraints/>
       <categoryLinks>
         <categoryLink id="73a3-0c19-555f-c0c7" name="New CategoryLink" hidden="false" targetId="7c69-4225-cf08-7991" primary="false">
@@ -1808,14 +2032,14 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="points" value="0.0"/>
+            <cost name="pts" costTypeId="points" value="120.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups/>
       <entryLinks/>
       <costs>
-        <cost name="pts" costTypeId="points" value="120.0"/>
+        <cost name="pts" costTypeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="b68f-a523-1ee5-5173" name="Dread Saurian" hidden="false" collective="false" type="unit">
@@ -1889,78 +2113,6 @@
             <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="1"/>
           </characteristics>
         </profile>
-        <profile id="dd32-2da2-f0e3-584c" name="Wounds0" hidden="false" profileTypeId="90d1-a434-348d-a861" profileTypeName="04 Wound Table">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <characteristics>
-            <characteristic name="Variable 1" characteristicTypeId="420a-645a-ab28-93a0" value="Wounds Suffered"/>
-            <characteristic name="Variable 2" characteristicTypeId="4cdd-1e03-530f-0ff7" value="Move"/>
-            <characteristic name="Variable 3" characteristicTypeId="b1ea-56be-ba52-16e9" value="Gargantuan Jaws"/>
-            <characteristic name="Variable 4" characteristicTypeId="ad26-bf56-95c4-80f1" value="Raking Claws"/>
-          </characteristics>
-        </profile>
-        <profile id="7cc2-597d-317d-ee3c" name="Wounds1" hidden="false" profileTypeId="90d1-a434-348d-a861" profileTypeName="04 Wound Table">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <characteristics>
-            <characteristic name="Variable 1" characteristicTypeId="420a-645a-ab28-93a0" value="0-3"/>
-            <characteristic name="Variable 2" characteristicTypeId="4cdd-1e03-530f-0ff7" value="1&quot;"/>
-            <characteristic name="Variable 3" characteristicTypeId="b1ea-56be-ba52-16e9" value="D6"/>
-            <characteristic name="Variable 4" characteristicTypeId="ad26-bf56-95c4-80f1" value="2D6"/>
-          </characteristics>
-        </profile>
-        <profile id="3881-efad-94ae-c8ab" name="Wounds2" book="" hidden="false" profileTypeId="90d1-a434-348d-a861" profileTypeName="04 Wound Table">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <characteristics>
-            <characteristic name="Variable 1" characteristicTypeId="420a-645a-ab28-93a0" value="4-7"/>
-            <characteristic name="Variable 2" characteristicTypeId="4cdd-1e03-530f-0ff7" value="9&quot;"/>
-            <characteristic name="Variable 3" characteristicTypeId="b1ea-56be-ba52-16e9" value="D6"/>
-            <characteristic name="Variable 4" characteristicTypeId="ad26-bf56-95c4-80f1" value="2D6"/>
-          </characteristics>
-        </profile>
-        <profile id="1400-0147-8802-2880" name="Wounds3" book="" hidden="false" profileTypeId="90d1-a434-348d-a861" profileTypeName="04 Wound Table">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <characteristics>
-            <characteristic name="Variable 1" characteristicTypeId="420a-645a-ab28-93a0" value="8-10"/>
-            <characteristic name="Variable 2" characteristicTypeId="4cdd-1e03-530f-0ff7" value="8&quot;"/>
-            <characteristic name="Variable 3" characteristicTypeId="b1ea-56be-ba52-16e9" value="D3"/>
-            <characteristic name="Variable 4" characteristicTypeId="ad26-bf56-95c4-80f1" value="D6"/>
-          </characteristics>
-        </profile>
-        <profile id="3761-3a07-266a-ce27" name="Wounds4" book="" hidden="false" profileTypeId="90d1-a434-348d-a861" profileTypeName="04 Wound Table">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <characteristics>
-            <characteristic name="Variable 1" characteristicTypeId="420a-645a-ab28-93a0" value="11-13"/>
-            <characteristic name="Variable 2" characteristicTypeId="4cdd-1e03-530f-0ff7" value="7&quot;"/>
-            <characteristic name="Variable 3" characteristicTypeId="b1ea-56be-ba52-16e9" value="D3"/>
-            <characteristic name="Variable 4" characteristicTypeId="ad26-bf56-95c4-80f1" value="D6"/>
-          </characteristics>
-        </profile>
-        <profile id="1633-e99a-47e7-b8ed" name="Wounds5" book="" hidden="false" profileTypeId="90d1-a434-348d-a861" profileTypeName="04 Wound Table">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <characteristics>
-            <characteristic name="Variable 1" characteristicTypeId="420a-645a-ab28-93a0" value="14+"/>
-            <characteristic name="Variable 2" characteristicTypeId="4cdd-1e03-530f-0ff7" value="6&quot;"/>
-            <characteristic name="Variable 3" characteristicTypeId="b1ea-56be-ba52-16e9" value="1"/>
-            <characteristic name="Variable 4" characteristicTypeId="ad26-bf56-95c4-80f1" value="D3"/>
-          </characteristics>
-        </profile>
       </profiles>
       <rules/>
       <infoLinks/>
@@ -2003,7 +2155,81 @@
           <constraints/>
         </categoryLink>
       </categoryLinks>
-      <selectionEntries/>
+      <selectionEntries>
+        <selectionEntry id="2ce3-5ae0-6de5-a985" name="Wound Track Dread Saurian" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="23c5-d0b5-9159-6796" name="14+" hidden="false" profileTypeId="5286-4cd3-c253-13eb" profileTypeName="Dread Saurian">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Move" characteristicTypeId="7735-d4f7-7357-6f91" value="6&quot;"/>
+                <characteristic name="Gargantuan Jaws" characteristicTypeId="6a1b-05e0-e5ea-b7e1" value="1"/>
+                <characteristic name="Raking Claws" characteristicTypeId="8813-f356-4a94-9eca" value="D3"/>
+              </characteristics>
+            </profile>
+            <profile id="bfb0-a32c-7f44-41c5" name="11-13" hidden="false" profileTypeId="5286-4cd3-c253-13eb" profileTypeName="Dread Saurian">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Move" characteristicTypeId="7735-d4f7-7357-6f91" value="7&quot;"/>
+                <characteristic name="Gargantuan Jaws" characteristicTypeId="6a1b-05e0-e5ea-b7e1" value="D3"/>
+                <characteristic name="Raking Claws" characteristicTypeId="8813-f356-4a94-9eca" value="D6"/>
+              </characteristics>
+            </profile>
+            <profile id="bc41-cce5-5099-f2d4" name="08-10" hidden="false" profileTypeId="5286-4cd3-c253-13eb" profileTypeName="Dread Saurian">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Move" characteristicTypeId="7735-d4f7-7357-6f91" value="8&quot;"/>
+                <characteristic name="Gargantuan Jaws" characteristicTypeId="6a1b-05e0-e5ea-b7e1" value="D3"/>
+                <characteristic name="Raking Claws" characteristicTypeId="8813-f356-4a94-9eca" value="D6"/>
+              </characteristics>
+            </profile>
+            <profile id="d0fa-9a54-59fb-39ff" name="04-07" hidden="false" profileTypeId="5286-4cd3-c253-13eb" profileTypeName="Dread Saurian">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Move" characteristicTypeId="7735-d4f7-7357-6f91" value="9&quot;"/>
+                <characteristic name="Gargantuan Jaws" characteristicTypeId="6a1b-05e0-e5ea-b7e1" value="D6"/>
+                <characteristic name="Raking Claws" characteristicTypeId="8813-f356-4a94-9eca" value="2D6"/>
+              </characteristics>
+            </profile>
+            <profile id="c076-2823-db0d-3a4c" name="00-03" hidden="false" profileTypeId="5286-4cd3-c253-13eb" profileTypeName="Dread Saurian">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Move" characteristicTypeId="7735-d4f7-7357-6f91" value="10&quot;"/>
+                <characteristic name="Gargantuan Jaws" characteristicTypeId="6a1b-05e0-e5ea-b7e1" value="D6"/>
+                <characteristic name="Raking Claws" characteristicTypeId="8813-f356-4a94-9eca" value="2D6"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="283d-f754-abce-0e11" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e27f-c85c-aa59-abff" type="min"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
       <selectionEntryGroups/>
       <entryLinks/>
       <costs>
@@ -2061,78 +2287,6 @@
           <modifiers/>
           <characteristics>
             <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="In your hero phase, roll a number of dice as shown on the Cosmic Engine column of the Stegadon damage table and consult the table below. If there is a SLANN wihin 10&quot;, it can flex its will to better control the engine; roll one additional dice, then discard one of your choice before adding them together."/>
-          </characteristics>
-        </profile>
-        <profile id="850d-ecf0-182a-3b5a" name="Wounds0" hidden="false" profileTypeId="90d1-a434-348d-a861" profileTypeName="04 Wound Table">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <characteristics>
-            <characteristic name="Variable 1" characteristicTypeId="420a-645a-ab28-93a0" value="Wounds Suffered"/>
-            <characteristic name="Variable 2" characteristicTypeId="4cdd-1e03-530f-0ff7" value="Move"/>
-            <characteristic name="Variable 3" characteristicTypeId="b1ea-56be-ba52-16e9" value="Crushing Stomps"/>
-            <characteristic name="Variable 4" characteristicTypeId="ad26-bf56-95c4-80f1" value="Cosmic Engine"/>
-          </characteristics>
-        </profile>
-        <profile id="3780-22a0-cd71-bdfa" name="Wounds1" hidden="false" profileTypeId="90d1-a434-348d-a861" profileTypeName="04 Wound Table">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <characteristics>
-            <characteristic name="Variable 1" characteristicTypeId="420a-645a-ab28-93a0" value="0-2"/>
-            <characteristic name="Variable 2" characteristicTypeId="4cdd-1e03-530f-0ff7" value="8&quot;"/>
-            <characteristic name="Variable 3" characteristicTypeId="b1ea-56be-ba52-16e9" value="3D6"/>
-            <characteristic name="Variable 4" characteristicTypeId="ad26-bf56-95c4-80f1" value="3 dice"/>
-          </characteristics>
-        </profile>
-        <profile id="d808-4695-eb85-d2c1" name="Wounds2" hidden="false" profileTypeId="90d1-a434-348d-a861" profileTypeName="04 Wound Table">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <characteristics>
-            <characteristic name="Variable 1" characteristicTypeId="420a-645a-ab28-93a0" value="3-4"/>
-            <characteristic name="Variable 2" characteristicTypeId="4cdd-1e03-530f-0ff7" value="7&quot;"/>
-            <characteristic name="Variable 3" characteristicTypeId="b1ea-56be-ba52-16e9" value="2D6"/>
-            <characteristic name="Variable 4" characteristicTypeId="ad26-bf56-95c4-80f1" value="3 dice"/>
-          </characteristics>
-        </profile>
-        <profile id="d60c-12f4-afdc-a30c" name="Wounds3" hidden="false" profileTypeId="90d1-a434-348d-a861" profileTypeName="04 Wound Table">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <characteristics>
-            <characteristic name="Variable 1" characteristicTypeId="420a-645a-ab28-93a0" value="5-6"/>
-            <characteristic name="Variable 2" characteristicTypeId="4cdd-1e03-530f-0ff7" value="6&quot;"/>
-            <characteristic name="Variable 3" characteristicTypeId="b1ea-56be-ba52-16e9" value="2D6"/>
-            <characteristic name="Variable 4" characteristicTypeId="ad26-bf56-95c4-80f1" value="2 dice"/>
-          </characteristics>
-        </profile>
-        <profile id="d25f-e19c-73ef-ccbc" name="Wounds4" hidden="false" profileTypeId="90d1-a434-348d-a861" profileTypeName="04 Wound Table">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <characteristics>
-            <characteristic name="Variable 1" characteristicTypeId="420a-645a-ab28-93a0" value="7-8"/>
-            <characteristic name="Variable 2" characteristicTypeId="4cdd-1e03-530f-0ff7" value="5&quot;"/>
-            <characteristic name="Variable 3" characteristicTypeId="b1ea-56be-ba52-16e9" value="D6"/>
-            <characteristic name="Variable 4" characteristicTypeId="ad26-bf56-95c4-80f1" value="2 dice"/>
-          </characteristics>
-        </profile>
-        <profile id="92ad-9d09-131a-e51a" name="Wounds5" hidden="false" profileTypeId="90d1-a434-348d-a861" profileTypeName="04 Wound Table">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <characteristics>
-            <characteristic name="Variable 1" characteristicTypeId="420a-645a-ab28-93a0" value="9+"/>
-            <characteristic name="Variable 2" characteristicTypeId="4cdd-1e03-530f-0ff7" value="4&quot;"/>
-            <characteristic name="Variable 3" characteristicTypeId="b1ea-56be-ba52-16e9" value="D6"/>
-            <characteristic name="Variable 4" characteristicTypeId="ad26-bf56-95c4-80f1" value="1 dice"/>
           </characteristics>
         </profile>
         <profile id="268e-5262-4469-21e1" name="01-02" hidden="false" profileTypeId="b2f2-0f78-6242-9249" profileTypeName="Cosmic Engine">
@@ -2285,7 +2439,81 @@
           <constraints/>
         </categoryLink>
       </categoryLinks>
-      <selectionEntries/>
+      <selectionEntries>
+        <selectionEntry id="2f43-793a-0ea4-28fa" name="Wound Track Engine of The Gods" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="eefe-e929-e417-766e" name="00-02" hidden="false" profileTypeId="72a0-8c74-4a91-4287" profileTypeName="Engine of The Gods">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Move" characteristicTypeId="bdc5-04c9-966b-ad8e" value="8&quot;"/>
+                <characteristic name="Crushing Stomps" characteristicTypeId="4169-1130-e205-f377" value="3D6"/>
+                <characteristic name="Cosmic Engine" characteristicTypeId="ed96-a72e-51c3-cdf3" value="3 Dice"/>
+              </characteristics>
+            </profile>
+            <profile id="d13b-de02-e887-0387" name="07-08" hidden="false" profileTypeId="72a0-8c74-4a91-4287" profileTypeName="Engine of The Gods">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Move" characteristicTypeId="bdc5-04c9-966b-ad8e" value="4&quot;"/>
+                <characteristic name="Crushing Stomps" characteristicTypeId="4169-1130-e205-f377" value="D6"/>
+                <characteristic name="Cosmic Engine" characteristicTypeId="ed96-a72e-51c3-cdf3" value="2 Dice"/>
+              </characteristics>
+            </profile>
+            <profile id="1302-f797-ff01-1925" name="09+" hidden="false" profileTypeId="72a0-8c74-4a91-4287" profileTypeName="Engine of The Gods">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Move" characteristicTypeId="bdc5-04c9-966b-ad8e" value="5&quot;"/>
+                <characteristic name="Crushing Stomps" characteristicTypeId="4169-1130-e205-f377" value="D6"/>
+                <characteristic name="Cosmic Engine" characteristicTypeId="ed96-a72e-51c3-cdf3" value="1 Dice"/>
+              </characteristics>
+            </profile>
+            <profile id="0776-6a7d-0665-88c5" name="05-06" hidden="false" profileTypeId="72a0-8c74-4a91-4287" profileTypeName="Engine of The Gods">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Move" characteristicTypeId="bdc5-04c9-966b-ad8e" value="6&quot;"/>
+                <characteristic name="Crushing Stomps" characteristicTypeId="4169-1130-e205-f377" value="2D6"/>
+                <characteristic name="Cosmic Engine" characteristicTypeId="ed96-a72e-51c3-cdf3" value="2 Dice"/>
+              </characteristics>
+            </profile>
+            <profile id="2d84-45a9-dd97-afb5" name="03-04" hidden="false" profileTypeId="72a0-8c74-4a91-4287" profileTypeName="Engine of The Gods">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Move" characteristicTypeId="bdc5-04c9-966b-ad8e" value="7&quot;"/>
+                <characteristic name="Crushing Stomps" characteristicTypeId="4169-1130-e205-f377" value="2D6"/>
+                <characteristic name="Cosmic Engine" characteristicTypeId="ed96-a72e-51c3-cdf3" value="3 Dice"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3122-5e7b-0793-5200" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2c8d-62cd-f042-28c7" type="min"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
       <selectionEntryGroups/>
       <entryLinks>
         <entryLink id="e249-2ed7-2113-b46d" name="General" hidden="false" targetId="b341-0885-3f1c-7d8a" type="selectionEntry">
@@ -2448,22 +2676,7 @@
       </profiles>
       <rules/>
       <infoLinks/>
-      <modifiers>
-        <modifier type="decrement" field="points" value="160">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="0df2-7203-d8e4-aa17" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e1cf-94ea-0559-15cc" type="greaterThan"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-        <modifier type="increment" field="points" value="160">
-          <repeats>
-            <repeat field="selections" scope="0df2-7203-d8e4-aa17" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e1cf-94ea-0559-15cc" repeats="1" roundUp="false"/>
-          </repeats>
-          <conditions/>
-          <conditionGroups/>
-        </modifier>
-      </modifiers>
+      <modifiers/>
       <constraints/>
       <categoryLinks>
         <categoryLink id="83bd-ed2b-ea8c-cd94" name="New CategoryLink" hidden="false" targetId="7c69-4225-cf08-7991" primary="false">
@@ -2517,7 +2730,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="points" value="0.0"/>
+            <cost name="pts" costTypeId="points" value="160.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="e781-bd0c-ccd3-6ec1" name="Moon Hammer" hidden="false" collective="false" type="model">
@@ -2549,7 +2762,7 @@
       <selectionEntryGroups/>
       <entryLinks/>
       <costs>
-        <cost name="pts" costTypeId="points" value="160.0"/>
+        <cost name="pts" costTypeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="6e20-8b6e-8d9e-affc" name="Lord Kroak" hidden="false" collective="false" type="unit">
@@ -2826,22 +3039,7 @@
       </profiles>
       <rules/>
       <infoLinks/>
-      <modifiers>
-        <modifier type="decrement" field="points" value="40">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="c7a2-671d-0225-6b08" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7cbc-9956-1395-8640" type="greaterThan"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-        <modifier type="increment" field="points" value="40">
-          <repeats>
-            <repeat field="selections" scope="c7a2-671d-0225-6b08" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7cbc-9956-1395-8640" repeats="1" roundUp="false"/>
-          </repeats>
-          <conditions/>
-          <conditionGroups/>
-        </modifier>
-      </modifiers>
+      <modifiers/>
       <constraints/>
       <categoryLinks>
         <categoryLink id="3009-a707-53af-c361" name="New CategoryLink" hidden="false" targetId="7c69-4225-cf08-7991" primary="false">
@@ -2895,14 +3093,14 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="points" value="0.0"/>
+            <cost name="pts" costTypeId="points" value="40.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups/>
       <entryLinks/>
       <costs>
-        <cost name="pts" costTypeId="points" value="40.0"/>
+        <cost name="pts" costTypeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="59d6-54e3-b800-14f5" name="Ripperdactyl Riders" hidden="false" collective="false" type="unit">
@@ -3016,22 +3214,7 @@
           <modifiers/>
         </infoLink>
       </infoLinks>
-      <modifiers>
-        <modifier type="decrement" field="points" value="140">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="59d6-54e3-b800-14f5" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c0eb-7835-1354-a54c" type="greaterThan"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-        <modifier type="increment" field="points" value="140">
-          <repeats>
-            <repeat field="selections" scope="59d6-54e3-b800-14f5" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c0eb-7835-1354-a54c" repeats="1" roundUp="false"/>
-          </repeats>
-          <conditions/>
-          <conditionGroups/>
-        </modifier>
-      </modifiers>
+      <modifiers/>
       <constraints/>
       <categoryLinks>
         <categoryLink id="9ce8-88b2-e5d0-9973" name="New CategoryLink" hidden="false" targetId="7c69-4225-cf08-7991" primary="false">
@@ -3092,14 +3275,14 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="points" value="0.0"/>
+            <cost name="pts" costTypeId="points" value="140.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups/>
       <entryLinks/>
       <costs>
-        <cost name="pts" costTypeId="points" value="140.0"/>
+        <cost name="pts" costTypeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="4ec3-a2b6-0f8e-7323" name="Salamanders" hidden="false" collective="false" type="unit">
@@ -3167,22 +3350,7 @@
       </profiles>
       <rules/>
       <infoLinks/>
-      <modifiers>
-        <modifier type="decrement" field="points" value="40">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="4ec3-a2b6-0f8e-7323" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a8fd-ec37-9db8-05d1" type="greaterThan"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-        <modifier type="increment" field="points" value="40">
-          <repeats>
-            <repeat field="selections" scope="4ec3-a2b6-0f8e-7323" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a8fd-ec37-9db8-05d1" repeats="1" roundUp="false"/>
-          </repeats>
-          <conditions/>
-          <conditionGroups/>
-        </modifier>
-      </modifiers>
+      <modifiers/>
       <constraints/>
       <categoryLinks>
         <categoryLink id="160f-a64a-cecf-970e" name="New CategoryLink" hidden="false" targetId="7c69-4225-cf08-7991" primary="false">
@@ -3236,14 +3404,14 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="points" value="0.0"/>
+            <cost name="pts" costTypeId="points" value="40.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups/>
       <entryLinks/>
       <costs>
-        <cost name="pts" costTypeId="points" value="40.0"/>
+        <cost name="pts" costTypeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="edfc-b6e7-ad62-c2d2" name="Saurus Astrolith Bearer" hidden="false" collective="false" type="unit">
@@ -3626,22 +3794,7 @@
           <modifiers/>
         </infoLink>
       </infoLinks>
-      <modifiers>
-        <modifier type="decrement" field="points" value="100">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="cadc-7cee-683e-2d27" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2d24-52d9-6e57-fe09" type="greaterThan"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-        <modifier type="increment" field="points" value="100">
-          <repeats>
-            <repeat field="selections" scope="cadc-7cee-683e-2d27" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2d24-52d9-6e57-fe09" repeats="1" roundUp="false"/>
-          </repeats>
-          <conditions/>
-          <conditionGroups/>
-        </modifier>
-      </modifiers>
+      <modifiers/>
       <constraints/>
       <categoryLinks>
         <categoryLink id="6596-8828-873e-fd36" name="New CategoryLink" hidden="false" targetId="7c69-4225-cf08-7991" primary="false">
@@ -3702,14 +3855,14 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="points" value="0.0"/>
+            <cost name="pts" costTypeId="points" value="100.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups/>
       <entryLinks/>
       <costs>
-        <cost name="pts" costTypeId="points" value="100.0"/>
+        <cost name="pts" costTypeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="009b-8ce8-ffd9-6e54" name="Saurus Knights" hidden="false" collective="false" type="unit">
@@ -3775,22 +3928,7 @@
           <modifiers/>
         </infoLink>
       </infoLinks>
-      <modifiers>
-        <modifier type="decrement" field="points" value="100">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="009b-8ce8-ffd9-6e54" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="91c6-6399-eb1b-e84c" type="greaterThan"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-        <modifier type="increment" field="points" value="100">
-          <repeats>
-            <repeat field="selections" scope="009b-8ce8-ffd9-6e54" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="91c6-6399-eb1b-e84c" repeats="1" roundUp="false"/>
-          </repeats>
-          <conditions/>
-          <conditionGroups/>
-        </modifier>
-      </modifiers>
+      <modifiers/>
       <constraints/>
       <categoryLinks>
         <categoryLink id="45cc-985d-de20-f53b" name="New CategoryLink" hidden="false" targetId="7c69-4225-cf08-7991" primary="false">
@@ -3851,7 +3989,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="points" value="0.0"/>
+            <cost name="pts" costTypeId="points" value="100.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -3947,7 +4085,7 @@
       </selectionEntryGroups>
       <entryLinks/>
       <costs>
-        <cost name="pts" costTypeId="points" value="100.0"/>
+        <cost name="pts" costTypeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="fb13-beda-22dd-b479" name="Saurus Oldblood" hidden="false" collective="false" type="unit">
@@ -4304,78 +4442,6 @@
             <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="If the Saurus Oldblood atop the Carnosaur targets a CHAOS DAEMONunit with its Sunbolt Gauntlet, you can add 2 to the result of the wound rolls."/>
           </characteristics>
         </profile>
-        <profile id="08f3-20bf-bffb-eb96" name="Wounds0" hidden="false" profileTypeId="90d1-a434-348d-a861" profileTypeName="04 Wound Table">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <characteristics>
-            <characteristic name="Variable 1" characteristicTypeId="420a-645a-ab28-93a0" value="Wounds Suffered"/>
-            <characteristic name="Variable 2" characteristicTypeId="4cdd-1e03-530f-0ff7" value="Move"/>
-            <characteristic name="Variable 3" characteristicTypeId="b1ea-56be-ba52-16e9" value="Clawed Forelimbs"/>
-            <characteristic name="Variable 4" characteristicTypeId="ad26-bf56-95c4-80f1" value="Massive Jaws"/>
-          </characteristics>
-        </profile>
-        <profile id="112b-ae4f-5c68-360b" name="Wounds1" hidden="false" profileTypeId="90d1-a434-348d-a861" profileTypeName="04 Wound Table">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <characteristics>
-            <characteristic name="Variable 1" characteristicTypeId="420a-645a-ab28-93a0" value="0-2"/>
-            <characteristic name="Variable 2" characteristicTypeId="4cdd-1e03-530f-0ff7" value="10&quot;"/>
-            <characteristic name="Variable 3" characteristicTypeId="b1ea-56be-ba52-16e9" value="3+"/>
-            <characteristic name="Variable 4" characteristicTypeId="ad26-bf56-95c4-80f1" value="5"/>
-          </characteristics>
-        </profile>
-        <profile id="ca8d-203d-b675-a390" name="Wounds2" hidden="false" profileTypeId="90d1-a434-348d-a861" profileTypeName="04 Wound Table">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <characteristics>
-            <characteristic name="Variable 1" characteristicTypeId="420a-645a-ab28-93a0" value="3-4"/>
-            <characteristic name="Variable 2" characteristicTypeId="4cdd-1e03-530f-0ff7" value="10&quot;"/>
-            <characteristic name="Variable 3" characteristicTypeId="b1ea-56be-ba52-16e9" value="4+"/>
-            <characteristic name="Variable 4" characteristicTypeId="ad26-bf56-95c4-80f1" value="4"/>
-          </characteristics>
-        </profile>
-        <profile id="3d06-635e-90b3-93ff" name="Wounds3" hidden="false" profileTypeId="90d1-a434-348d-a861" profileTypeName="04 Wound Table">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <characteristics>
-            <characteristic name="Variable 1" characteristicTypeId="420a-645a-ab28-93a0" value="5-7"/>
-            <characteristic name="Variable 2" characteristicTypeId="4cdd-1e03-530f-0ff7" value="8&quot;"/>
-            <characteristic name="Variable 3" characteristicTypeId="b1ea-56be-ba52-16e9" value="4+"/>
-            <characteristic name="Variable 4" characteristicTypeId="ad26-bf56-95c4-80f1" value="3"/>
-          </characteristics>
-        </profile>
-        <profile id="9497-3429-1882-38f2" name="Wounds4" hidden="false" profileTypeId="90d1-a434-348d-a861" profileTypeName="04 Wound Table">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <characteristics>
-            <characteristic name="Variable 1" characteristicTypeId="420a-645a-ab28-93a0" value="8-9"/>
-            <characteristic name="Variable 2" characteristicTypeId="4cdd-1e03-530f-0ff7" value="8&quot;"/>
-            <characteristic name="Variable 3" characteristicTypeId="b1ea-56be-ba52-16e9" value="5+"/>
-            <characteristic name="Variable 4" characteristicTypeId="ad26-bf56-95c4-80f1" value="2"/>
-          </characteristics>
-        </profile>
-        <profile id="4db0-6d79-4c19-ce28" name="Wounds5" hidden="false" profileTypeId="90d1-a434-348d-a861" profileTypeName="04 Wound Table">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <characteristics>
-            <characteristic name="Variable 1" characteristicTypeId="420a-645a-ab28-93a0" value="10+"/>
-            <characteristic name="Variable 2" characteristicTypeId="4cdd-1e03-530f-0ff7" value="6&quot;"/>
-            <characteristic name="Variable 3" characteristicTypeId="b1ea-56be-ba52-16e9" value="5+"/>
-            <characteristic name="Variable 4" characteristicTypeId="ad26-bf56-95c4-80f1" value="1"/>
-          </characteristics>
-        </profile>
       </profiles>
       <rules/>
       <infoLinks>
@@ -4498,6 +4564,14 @@
           <constraints/>
           <categoryLinks/>
         </entryLink>
+        <entryLink id="ef47-2d15-2365-d430" name="Wound Track Carnosaur" hidden="false" targetId="547b-eb24-b3d0-c6ed" type="selectionEntry">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+          <categoryLinks/>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" costTypeId="points" value="280.0"/>
@@ -4539,78 +4613,6 @@
           <modifiers/>
           <characteristics>
             <characteristic name="Command Ability Details" characteristicTypeId="1b71-4c83-4e8c-093f" value="The Scar-Veteran looses an ear-splitting roar that drives nearby saurus into a frenzy. If the Saurus Scar-Veteran on Carnosaur use this ability, pick a SAURUS unit within 15&quot;. Until your next hero phase, whenever you roll a hit roll of 6 or more for a model in that unit, that model can immediately make one additional attack using the same weapon."/>
-          </characteristics>
-        </profile>
-        <profile id="509f-75e4-180c-8f82" name="Wounds0" hidden="false" profileTypeId="90d1-a434-348d-a861" profileTypeName="04 Wound Table">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <characteristics>
-            <characteristic name="Variable 1" characteristicTypeId="420a-645a-ab28-93a0" value="Wounds Suffered"/>
-            <characteristic name="Variable 2" characteristicTypeId="4cdd-1e03-530f-0ff7" value="Move"/>
-            <characteristic name="Variable 3" characteristicTypeId="b1ea-56be-ba52-16e9" value="Clawed Forelimbs"/>
-            <characteristic name="Variable 4" characteristicTypeId="ad26-bf56-95c4-80f1" value="Massive Jaws"/>
-          </characteristics>
-        </profile>
-        <profile id="7e73-28e5-7a6b-6098" name="Wounds1" hidden="false" profileTypeId="90d1-a434-348d-a861" profileTypeName="04 Wound Table">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <characteristics>
-            <characteristic name="Variable 1" characteristicTypeId="420a-645a-ab28-93a0" value="0-2"/>
-            <characteristic name="Variable 2" characteristicTypeId="4cdd-1e03-530f-0ff7" value="10&quot;"/>
-            <characteristic name="Variable 3" characteristicTypeId="b1ea-56be-ba52-16e9" value="3+"/>
-            <characteristic name="Variable 4" characteristicTypeId="ad26-bf56-95c4-80f1" value="5"/>
-          </characteristics>
-        </profile>
-        <profile id="86e4-e997-b690-d35e" name="Wounds2" hidden="false" profileTypeId="90d1-a434-348d-a861" profileTypeName="04 Wound Table">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <characteristics>
-            <characteristic name="Variable 1" characteristicTypeId="420a-645a-ab28-93a0" value="3-4"/>
-            <characteristic name="Variable 2" characteristicTypeId="4cdd-1e03-530f-0ff7" value="10&quot;"/>
-            <characteristic name="Variable 3" characteristicTypeId="b1ea-56be-ba52-16e9" value="4+"/>
-            <characteristic name="Variable 4" characteristicTypeId="ad26-bf56-95c4-80f1" value="4"/>
-          </characteristics>
-        </profile>
-        <profile id="2274-8cf6-c5e0-c494" name="Wounds3" hidden="false" profileTypeId="90d1-a434-348d-a861" profileTypeName="04 Wound Table">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <characteristics>
-            <characteristic name="Variable 1" characteristicTypeId="420a-645a-ab28-93a0" value="5-7"/>
-            <characteristic name="Variable 2" characteristicTypeId="4cdd-1e03-530f-0ff7" value="8&quot;"/>
-            <characteristic name="Variable 3" characteristicTypeId="b1ea-56be-ba52-16e9" value="4+"/>
-            <characteristic name="Variable 4" characteristicTypeId="ad26-bf56-95c4-80f1" value="3"/>
-          </characteristics>
-        </profile>
-        <profile id="8d40-9c55-d4a8-7c79" name="Wounds4" hidden="false" profileTypeId="90d1-a434-348d-a861" profileTypeName="04 Wound Table">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <characteristics>
-            <characteristic name="Variable 1" characteristicTypeId="420a-645a-ab28-93a0" value="8-9"/>
-            <characteristic name="Variable 2" characteristicTypeId="4cdd-1e03-530f-0ff7" value="8&quot;"/>
-            <characteristic name="Variable 3" characteristicTypeId="b1ea-56be-ba52-16e9" value="5+"/>
-            <characteristic name="Variable 4" characteristicTypeId="ad26-bf56-95c4-80f1" value="2"/>
-          </characteristics>
-        </profile>
-        <profile id="d954-1c49-43fe-5feb" name="Wounds5" hidden="false" profileTypeId="90d1-a434-348d-a861" profileTypeName="04 Wound Table">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <characteristics>
-            <characteristic name="Variable 1" characteristicTypeId="420a-645a-ab28-93a0" value="10+"/>
-            <characteristic name="Variable 2" characteristicTypeId="4cdd-1e03-530f-0ff7" value="6&quot;"/>
-            <characteristic name="Variable 3" characteristicTypeId="b1ea-56be-ba52-16e9" value="5+"/>
-            <characteristic name="Variable 4" characteristicTypeId="ad26-bf56-95c4-80f1" value="1"/>
           </characteristics>
         </profile>
       </profiles>
@@ -4852,6 +4854,14 @@
           <categoryLinks/>
         </entryLink>
         <entryLink id="f3f6-6ea3-b12a-f52d" name="Command Traits" hidden="false" targetId="1d10-2017-059e-f52d" type="selectionEntryGroup">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+          <categoryLinks/>
+        </entryLink>
+        <entryLink id="884c-6da6-37bd-d883" name="Wound Track Carnosaur" hidden="false" targetId="547b-eb24-b3d0-c6ed" type="selectionEntry">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -5234,29 +5244,7 @@
           <modifiers/>
         </infoLink>
       </infoLinks>
-      <modifiers>
-        <modifier type="decrement" field="points" value="100">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="30aa-c696-5aba-545b" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8404-001a-8b83-a251" type="greaterThan"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-        <modifier type="increment" field="points" value="100">
-          <repeats>
-            <repeat field="selections" scope="30aa-c696-5aba-545b" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8404-001a-8b83-a251" repeats="1" roundUp="false"/>
-          </repeats>
-          <conditions/>
-          <conditionGroups/>
-        </modifier>
-        <modifier type="decrement" field="points" value="40">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="30aa-c696-5aba-545b" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8404-001a-8b83-a251" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-      </modifiers>
+      <modifiers/>
       <constraints/>
       <categoryLinks>
         <categoryLink id="dd57-20d9-ef2b-8b08" name="New CategoryLink" hidden="false" targetId="7c69-4225-cf08-7991" primary="false">
@@ -5307,7 +5295,15 @@
           <profiles/>
           <rules/>
           <infoLinks/>
-          <modifiers/>
+          <modifiers>
+            <modifier type="decrement" field="points" value="10">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="30aa-c696-5aba-545b" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8404-001a-8b83-a251" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="minSelections" type="min"/>
             <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
@@ -5317,7 +5313,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="points" value="0.0"/>
+            <cost name="pts" costTypeId="points" value="100.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -5404,7 +5400,7 @@
       </selectionEntryGroups>
       <entryLinks/>
       <costs>
-        <cost name="pts" costTypeId="points" value="100.0"/>
+        <cost name="pts" costTypeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="26d0-e465-fd8a-4fe2" name="Skink Handlers" hidden="false" collective="false" type="unit">
@@ -5448,22 +5444,7 @@
       </profiles>
       <rules/>
       <infoLinks/>
-      <modifiers>
-        <modifier type="decrement" field="points" value="40">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="26d0-e465-fd8a-4fe2" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7bbd-058a-03ea-1b6e" type="greaterThan"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-        <modifier type="increment" field="points" value="40">
-          <repeats>
-            <repeat field="selections" scope="26d0-e465-fd8a-4fe2" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7bbd-058a-03ea-1b6e" repeats="1" roundUp="false"/>
-          </repeats>
-          <conditions/>
-          <conditionGroups/>
-        </modifier>
-      </modifiers>
+      <modifiers/>
       <constraints/>
       <categoryLinks>
         <categoryLink id="d098-5f6a-100a-8185" name="New CategoryLink" hidden="false" targetId="7c69-4225-cf08-7991" primary="false">
@@ -5524,14 +5505,14 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="points" value="0.0"/>
+            <cost name="pts" costTypeId="points" value="40.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups/>
       <entryLinks/>
       <costs>
-        <cost name="pts" costTypeId="points" value="40.0"/>
+        <cost name="pts" costTypeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="d1f4-b364-c443-efad" name="Skink Priest" hidden="false" collective="false" type="unit">
@@ -6115,29 +6096,7 @@
       </profiles>
       <rules/>
       <infoLinks/>
-      <modifiers>
-        <modifier type="decrement" field="points" value="60">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="71f7-5d3f-645e-a2f6" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="955a-1ec0-b01d-80d5" type="greaterThan"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-        <modifier type="increment" field="points" value="60">
-          <repeats>
-            <repeat field="selections" scope="71f7-5d3f-645e-a2f6" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="955a-1ec0-b01d-80d5" repeats="1" roundUp="false"/>
-          </repeats>
-          <conditions/>
-          <conditionGroups/>
-        </modifier>
-        <modifier type="decrement" field="points" value="40">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="71f7-5d3f-645e-a2f6" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="955a-1ec0-b01d-80d5" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-      </modifiers>
+      <modifiers/>
       <constraints/>
       <categoryLinks>
         <categoryLink id="e560-9c58-4579-cb78" name="New CategoryLink" hidden="false" targetId="7c69-4225-cf08-7991" primary="false">
@@ -6181,7 +6140,15 @@
           <profiles/>
           <rules/>
           <infoLinks/>
-          <modifiers/>
+          <modifiers>
+            <modifier type="decrement" field="points" value="10">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="71f7-5d3f-645e-a2f6" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="955a-1ec0-b01d-80d5" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="minSelections" type="min"/>
             <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
@@ -6191,7 +6158,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="points" value="0.0"/>
+            <cost name="pts" costTypeId="points" value="60.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -6816,78 +6783,6 @@
             <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="1"/>
           </characteristics>
         </profile>
-        <profile id="7a08-582d-47b2-fb6c" name="Wounds0" hidden="false" profileTypeId="90d1-a434-348d-a861" profileTypeName="04 Wound Table">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <characteristics>
-            <characteristic name="Variable 1" characteristicTypeId="420a-645a-ab28-93a0" value="Wounds Suffered"/>
-            <characteristic name="Variable 2" characteristicTypeId="4cdd-1e03-530f-0ff7" value="Move"/>
-            <characteristic name="Variable 3" characteristicTypeId="b1ea-56be-ba52-16e9" value="Massive Horns"/>
-            <characteristic name="Variable 4" characteristicTypeId="ad26-bf56-95c4-80f1" value="Crushing Stomps"/>
-          </characteristics>
-        </profile>
-        <profile id="1054-314d-41c1-4340" name="Wounds1" hidden="false" profileTypeId="90d1-a434-348d-a861" profileTypeName="04 Wound Table">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <characteristics>
-            <characteristic name="Variable 1" characteristicTypeId="420a-645a-ab28-93a0" value="0-2"/>
-            <characteristic name="Variable 2" characteristicTypeId="4cdd-1e03-530f-0ff7" value="8&quot;"/>
-            <characteristic name="Variable 3" characteristicTypeId="b1ea-56be-ba52-16e9" value="-3"/>
-            <characteristic name="Variable 4" characteristicTypeId="ad26-bf56-95c4-80f1" value="3D6"/>
-          </characteristics>
-        </profile>
-        <profile id="868c-540a-ddf9-573a" name="Wounds2" hidden="false" profileTypeId="90d1-a434-348d-a861" profileTypeName="04 Wound Table">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <characteristics>
-            <characteristic name="Variable 1" characteristicTypeId="420a-645a-ab28-93a0" value="3-4"/>
-            <characteristic name="Variable 2" characteristicTypeId="4cdd-1e03-530f-0ff7" value="7&quot;"/>
-            <characteristic name="Variable 3" characteristicTypeId="b1ea-56be-ba52-16e9" value="-2"/>
-            <characteristic name="Variable 4" characteristicTypeId="ad26-bf56-95c4-80f1" value="2D6"/>
-          </characteristics>
-        </profile>
-        <profile id="2240-4687-2f00-b68e" name="Wounds3" hidden="false" profileTypeId="90d1-a434-348d-a861" profileTypeName="04 Wound Table">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <characteristics>
-            <characteristic name="Variable 1" characteristicTypeId="420a-645a-ab28-93a0" value="5-6"/>
-            <characteristic name="Variable 2" characteristicTypeId="4cdd-1e03-530f-0ff7" value="6&quot;"/>
-            <characteristic name="Variable 3" characteristicTypeId="b1ea-56be-ba52-16e9" value="-2"/>
-            <characteristic name="Variable 4" characteristicTypeId="ad26-bf56-95c4-80f1" value="2D6"/>
-          </characteristics>
-        </profile>
-        <profile id="2f38-206d-c46e-6e32" name="Wounds4" hidden="false" profileTypeId="90d1-a434-348d-a861" profileTypeName="04 Wound Table">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <characteristics>
-            <characteristic name="Variable 1" characteristicTypeId="420a-645a-ab28-93a0" value="7-8"/>
-            <characteristic name="Variable 2" characteristicTypeId="4cdd-1e03-530f-0ff7" value="5&quot;"/>
-            <characteristic name="Variable 3" characteristicTypeId="b1ea-56be-ba52-16e9" value="-1"/>
-            <characteristic name="Variable 4" characteristicTypeId="ad26-bf56-95c4-80f1" value="D6"/>
-          </characteristics>
-        </profile>
-        <profile id="b91a-e1a4-820e-cc68" name="Wounds5" hidden="false" profileTypeId="90d1-a434-348d-a861" profileTypeName="04 Wound Table">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <characteristics>
-            <characteristic name="Variable 1" characteristicTypeId="420a-645a-ab28-93a0" value="9+"/>
-            <characteristic name="Variable 2" characteristicTypeId="4cdd-1e03-530f-0ff7" value="4&quot;"/>
-            <characteristic name="Variable 3" characteristicTypeId="b1ea-56be-ba52-16e9" value="-1"/>
-            <characteristic name="Variable 4" characteristicTypeId="ad26-bf56-95c4-80f1" value="D6"/>
-          </characteristics>
-        </profile>
       </profiles>
       <rules/>
       <infoLinks>
@@ -6963,7 +6858,81 @@
           <constraints/>
         </categoryLink>
       </categoryLinks>
-      <selectionEntries/>
+      <selectionEntries>
+        <selectionEntry id="cd18-eda5-d8d9-1258" name="Wound Track Stegadon" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="e7de-01be-8b13-6190" name="00-02" hidden="false" profileTypeId="98ed-33ff-64e7-1768" profileTypeName="Stegadon">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Move" characteristicTypeId="89b7-8e41-f374-6a72" value="8&quot;"/>
+                <characteristic name="Massive Horns" characteristicTypeId="58b0-5135-004a-3ece" value="-3"/>
+                <characteristic name="Crushing Stomps" characteristicTypeId="e1d1-8889-2d6d-129e" value="3D6"/>
+              </characteristics>
+            </profile>
+            <profile id="f44c-73a9-f730-d583" name="07-08" hidden="false" profileTypeId="98ed-33ff-64e7-1768" profileTypeName="Stegadon">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Move" characteristicTypeId="89b7-8e41-f374-6a72" value="4&quot;"/>
+                <characteristic name="Massive Horns" characteristicTypeId="58b0-5135-004a-3ece" value="-1"/>
+                <characteristic name="Crushing Stomps" characteristicTypeId="e1d1-8889-2d6d-129e" value="D6"/>
+              </characteristics>
+            </profile>
+            <profile id="688d-2dfd-fec7-0eba" name="09+" hidden="false" profileTypeId="98ed-33ff-64e7-1768" profileTypeName="Stegadon">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Move" characteristicTypeId="89b7-8e41-f374-6a72" value="5&quot;"/>
+                <characteristic name="Massive Horns" characteristicTypeId="58b0-5135-004a-3ece" value="-1"/>
+                <characteristic name="Crushing Stomps" characteristicTypeId="e1d1-8889-2d6d-129e" value="D6"/>
+              </characteristics>
+            </profile>
+            <profile id="2513-d2fb-a6d8-accf" name="05-06" hidden="false" profileTypeId="98ed-33ff-64e7-1768" profileTypeName="Stegadon">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Move" characteristicTypeId="89b7-8e41-f374-6a72" value="6&quot;"/>
+                <characteristic name="Massive Horns" characteristicTypeId="58b0-5135-004a-3ece" value="-2"/>
+                <characteristic name="Crushing Stomps" characteristicTypeId="e1d1-8889-2d6d-129e" value="2D6"/>
+              </characteristics>
+            </profile>
+            <profile id="bcaf-b2e3-5423-a9a1" name="03-04" hidden="false" profileTypeId="98ed-33ff-64e7-1768" profileTypeName="Stegadon">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Move" characteristicTypeId="89b7-8e41-f374-6a72" value="7&quot;"/>
+                <characteristic name="Massive Horns" characteristicTypeId="58b0-5135-004a-3ece" value="-2"/>
+                <characteristic name="Crushing Stomps" characteristicTypeId="e1d1-8889-2d6d-129e" value="2D6"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2c99-e2b5-361b-979b" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6f16-1ed9-9ca8-7258" type="min"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="c086-373c-e907-8e4b" name="Unit Leader" hidden="false" collective="false">
           <profiles/>
@@ -7449,78 +7418,6 @@
             <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="If a unit suffers any wounds from this model&apos;s Noxious Spittle in the shotting phase, the sound of screams and the smell of sizzling flesh will help the Troglodon locate its prey. If the Troglodon charges in the subsequent charge phase, you can add 3&quot; to its charge distance as long as it ends its charge within 1/2&quot; of the screaming unit."/>
           </characteristics>
         </profile>
-        <profile id="e277-4147-a645-0655" name="Wounds0" hidden="false" profileTypeId="90d1-a434-348d-a861" profileTypeName="04 Wound Table">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <characteristics>
-            <characteristic name="Variable 1" characteristicTypeId="420a-645a-ab28-93a0" value="Wounds Suffered"/>
-            <characteristic name="Variable 2" characteristicTypeId="4cdd-1e03-530f-0ff7" value="Move"/>
-            <characteristic name="Variable 3" characteristicTypeId="b1ea-56be-ba52-16e9" value="Noxious Spittle"/>
-            <characteristic name="Variable 4" characteristicTypeId="ad26-bf56-95c4-80f1" value="Venomous Bite"/>
-          </characteristics>
-        </profile>
-        <profile id="9690-2ffa-788a-d606" name="Wounds1" hidden="false" profileTypeId="90d1-a434-348d-a861" profileTypeName="04 Wound Table">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <characteristics>
-            <characteristic name="Variable 1" characteristicTypeId="420a-645a-ab28-93a0" value="0-2"/>
-            <characteristic name="Variable 2" characteristicTypeId="4cdd-1e03-530f-0ff7" value="10&quot;"/>
-            <characteristic name="Variable 3" characteristicTypeId="b1ea-56be-ba52-16e9" value="18&quot;"/>
-            <characteristic name="Variable 4" characteristicTypeId="ad26-bf56-95c4-80f1" value="2+"/>
-          </characteristics>
-        </profile>
-        <profile id="6c01-d8e3-4dc8-f0cc" name="Wounds2" hidden="false" profileTypeId="90d1-a434-348d-a861" profileTypeName="04 Wound Table">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <characteristics>
-            <characteristic name="Variable 1" characteristicTypeId="420a-645a-ab28-93a0" value="3-4"/>
-            <characteristic name="Variable 2" characteristicTypeId="4cdd-1e03-530f-0ff7" value="9&quot;"/>
-            <characteristic name="Variable 3" characteristicTypeId="b1ea-56be-ba52-16e9" value="15&quot;"/>
-            <characteristic name="Variable 4" characteristicTypeId="ad26-bf56-95c4-80f1" value="3+"/>
-          </characteristics>
-        </profile>
-        <profile id="93cb-46b9-6487-d373" name="Wounds3" hidden="false" profileTypeId="90d1-a434-348d-a861" profileTypeName="04 Wound Table">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <characteristics>
-            <characteristic name="Variable 1" characteristicTypeId="420a-645a-ab28-93a0" value="5-7"/>
-            <characteristic name="Variable 2" characteristicTypeId="4cdd-1e03-530f-0ff7" value="8&quot;"/>
-            <characteristic name="Variable 3" characteristicTypeId="b1ea-56be-ba52-16e9" value="12&quot;"/>
-            <characteristic name="Variable 4" characteristicTypeId="ad26-bf56-95c4-80f1" value="3+"/>
-          </characteristics>
-        </profile>
-        <profile id="ba1c-8935-99a6-f4a9" name="Wounds4" hidden="false" profileTypeId="90d1-a434-348d-a861" profileTypeName="04 Wound Table">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <characteristics>
-            <characteristic name="Variable 1" characteristicTypeId="420a-645a-ab28-93a0" value="8-9"/>
-            <characteristic name="Variable 2" characteristicTypeId="4cdd-1e03-530f-0ff7" value="7&quot;"/>
-            <characteristic name="Variable 3" characteristicTypeId="b1ea-56be-ba52-16e9" value="9&quot;"/>
-            <characteristic name="Variable 4" characteristicTypeId="ad26-bf56-95c4-80f1" value="4+"/>
-          </characteristics>
-        </profile>
-        <profile id="acd7-f3e0-33d1-2bd5" name="Wounds5" hidden="false" profileTypeId="90d1-a434-348d-a861" profileTypeName="04 Wound Table">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <characteristics>
-            <characteristic name="Variable 1" characteristicTypeId="420a-645a-ab28-93a0" value="10+"/>
-            <characteristic name="Variable 2" characteristicTypeId="4cdd-1e03-530f-0ff7" value="6&quot;"/>
-            <characteristic name="Variable 3" characteristicTypeId="b1ea-56be-ba52-16e9" value="6&quot;"/>
-            <characteristic name="Variable 4" characteristicTypeId="ad26-bf56-95c4-80f1" value="5+"/>
-          </characteristics>
-        </profile>
       </profiles>
       <rules/>
       <infoLinks/>
@@ -7577,7 +7474,81 @@
           <constraints/>
         </categoryLink>
       </categoryLinks>
-      <selectionEntries/>
+      <selectionEntries>
+        <selectionEntry id="2fcd-0eda-6101-2150" name="Wound Track Troglodon" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="d722-c65b-f8f5-3a83" name="08-09" hidden="false" profileTypeId="9b0b-1e4e-345a-0ced" profileTypeName="Troglodon">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Move" characteristicTypeId="7640-a039-3f40-ebf7" value="7&quot;"/>
+                <characteristic name="Noxious Spittle" characteristicTypeId="a8cd-ef3c-4147-9671" value="9&quot;"/>
+                <characteristic name="Venomous Bite" characteristicTypeId="cdeb-ce96-a92a-c18a" value="4+"/>
+              </characteristics>
+            </profile>
+            <profile id="37e0-fac0-3fce-7381" name="05-07" hidden="false" profileTypeId="9b0b-1e4e-345a-0ced" profileTypeName="Troglodon">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Move" characteristicTypeId="7640-a039-3f40-ebf7" value="8&quot;"/>
+                <characteristic name="Noxious Spittle" characteristicTypeId="a8cd-ef3c-4147-9671" value="12&quot;"/>
+                <characteristic name="Venomous Bite" characteristicTypeId="cdeb-ce96-a92a-c18a" value="3+"/>
+              </characteristics>
+            </profile>
+            <profile id="08aa-d9cb-9dc1-f5b4" name="03-04" hidden="false" profileTypeId="9b0b-1e4e-345a-0ced" profileTypeName="Troglodon">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Move" characteristicTypeId="7640-a039-3f40-ebf7" value="9&quot;"/>
+                <characteristic name="Noxious Spittle" characteristicTypeId="a8cd-ef3c-4147-9671" value="15&quot;"/>
+                <characteristic name="Venomous Bite" characteristicTypeId="cdeb-ce96-a92a-c18a" value="3+"/>
+              </characteristics>
+            </profile>
+            <profile id="495a-cb5a-2bfc-88c1" name="00-02" hidden="false" profileTypeId="9b0b-1e4e-345a-0ced" profileTypeName="Troglodon">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Move" characteristicTypeId="7640-a039-3f40-ebf7" value="10&quot;"/>
+                <characteristic name="Noxious Spittle" characteristicTypeId="a8cd-ef3c-4147-9671" value="18&quot;"/>
+                <characteristic name="Venomous Bite" characteristicTypeId="cdeb-ce96-a92a-c18a" value="2+"/>
+              </characteristics>
+            </profile>
+            <profile id="988e-ccf3-591c-51cc" name="10+" hidden="false" profileTypeId="9b0b-1e4e-345a-0ced" profileTypeName="Troglodon">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Move" characteristicTypeId="7640-a039-3f40-ebf7" value="6&quot;"/>
+                <characteristic name="Noxious Spittle" characteristicTypeId="a8cd-ef3c-4147-9671" value="6&quot;"/>
+                <characteristic name="Venomous Bite" characteristicTypeId="cdeb-ce96-a92a-c18a" value="5+"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="506c-9fa5-a989-5548" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4189-f7ec-57d9-f33b" type="min"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
       <selectionEntryGroups/>
       <entryLinks/>
       <costs>
@@ -7635,28 +7606,59 @@
             <characteristic name="Battalion Ability Details" characteristicTypeId="08e0-9ead-1dbe-c801" value="In the hero phase, Kuoteq can cast any number of summoning spells that summon SAURUS units to the battlefield, as long as each unit that he summons comes from this battalion. Furthermore, he does not need to make a casting roll in order to cast the spells, and the opposing player cannot attempt to unbind the spells. However, each spell that he casts must summon a different unit chosen from a different warscroll – Kuoteq cannot cast exactly the same spell more than once per turn.  For example, in one hero phase Kuoteq can summon a Saurus Eternity Warden from this battalion using the Summon Eternity Warden spell, and a Saurus Sunblood from this battalion using the Summon Sunblood spell, but he cannot summon two Saurus Eternity Wardens in the same hero phase. "/>
           </characteristics>
         </profile>
-      </profiles>
-      <rules>
-        <rule id="3dad-aa4c-86e9-e4e9" name="Organisation" hidden="false">
+        <profile id="9124-9285-b9bb-9fcd" name="-" hidden="false" profileTypeId="75e0-a332-e4f5-bf36" profileTypeName="Battalion Organisation">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers/>
-          <description>The Dracothion’s Tail battalion consists of the following:
-
-• 1 Slann Starmaster (Kuoteq)
-• 1 Firelance Starhost
-
-The Dracothion’s Tail battalion may also contain:
-
-• 0-4 warscroll battalions chosen in any combination from the following list:
-   - Sunclaw Starhost
-   - Firelance Starhost
-   - Eternal Starhost
-   - Shadowstrike Starhost
-• Any number of additional SERAPHON units
-
-If a Dracothion’s Tail battalion contains the maximum number of battalions, it gains the Strategic Mastery ability from the Starbeast Constellation warscroll battalion.</description>
+          <characteristics>
+            <characteristic name="Required" characteristicTypeId="eb5f-e9d2-e457-bff5" value="The Dracothion’s Tail battalion consists of the following:"/>
+          </characteristics>
+        </profile>
+        <profile id="72a7-8906-2240-28d1" name="Slann Starmaster (Kuoteq)" hidden="false" profileTypeId="75e0-a332-e4f5-bf36" profileTypeName="Battalion Organisation">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Required" characteristicTypeId="eb5f-e9d2-e457-bff5" value="1"/>
+          </characteristics>
+        </profile>
+        <profile id="a576-9fd5-8743-6d5b" name="Firelance Starhost Battalion" hidden="false" profileTypeId="75e0-a332-e4f5-bf36" profileTypeName="Battalion Organisation">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Required" characteristicTypeId="eb5f-e9d2-e457-bff5" value="1"/>
+          </characteristics>
+        </profile>
+        <profile id="12d8-f560-0a87-ab83" name="Sunclaw Starhost, Firelance Starhost, Eternal Starhost, Shadowstrike Starhost" hidden="false" profileTypeId="75e0-a332-e4f5-bf36" profileTypeName="Battalion Organisation">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Required" characteristicTypeId="eb5f-e9d2-e457-bff5" value="0-4"/>
+          </characteristics>
+        </profile>
+        <profile id="cdfe-db5e-688f-f2ac" name="SERAPHON Units" hidden="false" profileTypeId="75e0-a332-e4f5-bf36" profileTypeName="Battalion Organisation">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Required" characteristicTypeId="eb5f-e9d2-e457-bff5" value="Any number."/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="3dad-aa4c-86e9-e4e9" name="Maximum Battalion" hidden="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <description>If a Dracothion’s Tail battalion contains the maximum number of battalions, it gains the Strategic Mastery ability from the Starbeast Constellation warscroll battalion.</description>
         </rule>
       </rules>
       <infoLinks/>
@@ -7699,29 +7701,68 @@ If a Dracothion’s Tail battalion contains the maximum number of battalions, it
             <characteristic name="Battalion Ability Details" characteristicTypeId="08e0-9ead-1dbe-c801" value="You can add 1 to the dice roll when using Ku-Quar’s Bloodroar ability."/>
           </characteristics>
         </profile>
-      </profiles>
-      <rules>
-        <rule id="bdb0-94b3-c5f6-1e06" name="Organisation" hidden="false">
+        <profile id="cdf9-6664-6982-00a5" name="-" hidden="false" profileTypeId="75e0-a332-e4f5-bf36" profileTypeName="Battalion Organisation">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers/>
-          <description>The Fangs of Sotek battalion consists of the following:
-
-• 1 Slann Starmaster (Zectoka)
-• 1 Saurus Oldblood on Carnosaur (Ku-Quar)
-• 1 Sunclaw Starhost
-
-The Fangs of Sotek battalion may also contain:
-
-• 0-4 warscroll battalions chosen in any combination from the following list:
-   - Sunclaw Starhost
-   - Firelance Starhost
-   - Eternal Starhost
-   - Thunderquake Starhost
-• Any number of additional SERAPHON units
-
-If a Fangs of Sotek battalion contains the maximum number of battalions, it gains the Strategic Mastery ability from the Starbeast Constellation warscroll battalion.
+          <characteristics>
+            <characteristic name="Required" characteristicTypeId="eb5f-e9d2-e457-bff5" value="The Fangs of Sotek battalion consists of the following:"/>
+          </characteristics>
+        </profile>
+        <profile id="e2d0-eb58-90c6-54e5" name="Slann Starmaster (Zectoka)" hidden="false" profileTypeId="75e0-a332-e4f5-bf36" profileTypeName="Battalion Organisation">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Required" characteristicTypeId="eb5f-e9d2-e457-bff5" value="1"/>
+          </characteristics>
+        </profile>
+        <profile id="b2cf-4355-0856-c4b6" name="Saurus Oldblood on Carnosaur (Ku-Quar)" hidden="false" profileTypeId="75e0-a332-e4f5-bf36" profileTypeName="Battalion Organisation">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Required" characteristicTypeId="eb5f-e9d2-e457-bff5" value="1"/>
+          </characteristics>
+        </profile>
+        <profile id="a44c-9a54-1106-f1fc" name="Sunclaw Starhost Battalion" hidden="false" profileTypeId="75e0-a332-e4f5-bf36" profileTypeName="Battalion Organisation">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Required" characteristicTypeId="eb5f-e9d2-e457-bff5" value="1"/>
+          </characteristics>
+        </profile>
+        <profile id="0340-3ce1-d13f-dfa6" name="Sunclaw Starhost, Firelance Starhost, Eternal Starhost, Thunderquake Starhost" hidden="false" profileTypeId="75e0-a332-e4f5-bf36" profileTypeName="Battalion Organisation">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Required" characteristicTypeId="eb5f-e9d2-e457-bff5" value="0-4"/>
+          </characteristics>
+        </profile>
+        <profile id="1e97-91f4-bfb1-f837" name="SERAPHON Units" hidden="false" profileTypeId="75e0-a332-e4f5-bf36" profileTypeName="Battalion Organisation">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Required" characteristicTypeId="eb5f-e9d2-e457-bff5" value="Any number."/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="bdb0-94b3-c5f6-1e06" name="Maximum Battalion" hidden="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <description>If a Fangs of Sotek battalion contains the maximum number of battalions, it gains the Strategic Mastery ability from the Starbeast Constellation warscroll battalion.
 </description>
         </rule>
       </rules>
@@ -7734,6 +7775,79 @@ If a Fangs of Sotek battalion contains the maximum number of battalions, it gain
       <entryLinks/>
       <costs>
         <cost name="pts" costTypeId="points" value="100.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="547b-eb24-b3d0-c6ed" name="Wound Track Carnosaur" hidden="false" collective="false" type="upgrade">
+      <profiles>
+        <profile id="f441-e595-c1d8-4d94" name="00-02" hidden="false" profileTypeId="405e-e534-dd84-1f2d" profileTypeName="Carnosaur">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Move" characteristicTypeId="ba6f-1fdc-93e3-e395" value="10&quot;"/>
+            <characteristic name="Clawed Forelimbs" characteristicTypeId="2444-4a40-ee7e-6b5b" value="3+"/>
+            <characteristic name="Massive Jaws" characteristicTypeId="acd1-e427-2031-2e3f" value="5"/>
+          </characteristics>
+        </profile>
+        <profile id="43b3-74c4-9456-5264" name="03-04" hidden="false" profileTypeId="405e-e534-dd84-1f2d" profileTypeName="Carnosaur">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Move" characteristicTypeId="ba6f-1fdc-93e3-e395" value="10&quot;"/>
+            <characteristic name="Clawed Forelimbs" characteristicTypeId="2444-4a40-ee7e-6b5b" value="4+"/>
+            <characteristic name="Massive Jaws" characteristicTypeId="acd1-e427-2031-2e3f" value="4"/>
+          </characteristics>
+        </profile>
+        <profile id="7aca-0bc9-6f17-1e60" name="05-07" hidden="false" profileTypeId="405e-e534-dd84-1f2d" profileTypeName="Carnosaur">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Move" characteristicTypeId="ba6f-1fdc-93e3-e395" value="8&quot;"/>
+            <characteristic name="Clawed Forelimbs" characteristicTypeId="2444-4a40-ee7e-6b5b" value="4+"/>
+            <characteristic name="Massive Jaws" characteristicTypeId="acd1-e427-2031-2e3f" value="3"/>
+          </characteristics>
+        </profile>
+        <profile id="845d-e734-ec9a-814e" name="08-09" hidden="false" profileTypeId="405e-e534-dd84-1f2d" profileTypeName="Carnosaur">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Move" characteristicTypeId="ba6f-1fdc-93e3-e395" value="8&quot;"/>
+            <characteristic name="Clawed Forelimbs" characteristicTypeId="2444-4a40-ee7e-6b5b" value="5+"/>
+            <characteristic name="Massive Jaws" characteristicTypeId="acd1-e427-2031-2e3f" value="2"/>
+          </characteristics>
+        </profile>
+        <profile id="82cd-c31f-2bd8-e164" name="10+" hidden="false" profileTypeId="405e-e534-dd84-1f2d" profileTypeName="Carnosaur">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Move" characteristicTypeId="ba6f-1fdc-93e3-e395" value="6&quot;"/>
+            <characteristic name="Clawed Forelimbs" characteristicTypeId="2444-4a40-ee7e-6b5b" value="5+"/>
+            <characteristic name="Massive Jaws" characteristicTypeId="acd1-e427-2031-2e3f" value="1"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2da1-1f80-992d-8241" type="max"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a65e-1b72-7aa2-e05b" type="min"/>
+      </constraints>
+      <categoryLinks/>
+      <selectionEntries/>
+      <selectionEntryGroups/>
+      <entryLinks/>
+      <costs>
+        <cost name="pts" costTypeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>
