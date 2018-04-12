@@ -583,6 +583,54 @@
         </categoryLink>
       </categoryLinks>
     </entryLink>
+    <entryLink id="e223-9109-3553-cb1a" name="Plague Monks" hidden="false" targetId="23db-8084-a4b7-750c" type="selectionEntry">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+      <categoryLinks>
+        <categoryLink id="a90e-3991-49e3-a578" name="New CategoryLink" hidden="false" targetId="065e-fda7-fd27-1f40" primary="true">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </categoryLink>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="2336-007a-367b-cfe4" name="Clanrats" hidden="false" targetId="ff51-5dac-313e-b769" type="selectionEntry">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+      <categoryLinks>
+        <categoryLink id="461c-95fa-91fe-dc7d" name="New CategoryLink" hidden="false" targetId="e9f2-765a-b7b8-ce8e" primary="true">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </categoryLink>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="876b-6077-42f1-652e" name="Plague Priest" hidden="false" targetId="8d7d-46a4-7a4b-28a8" type="selectionEntry">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+      <categoryLinks>
+        <categoryLink id="f204-2dc8-d362-b4b3" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </categoryLink>
+      </categoryLinks>
+    </entryLink>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="aca2-1d43-0220-2465" name="Skritch Spiteclaw" hidden="false" collective="false" type="upgrade">
@@ -3535,37 +3583,23 @@
       </profiles>
       <rules/>
       <infoLinks/>
-      <modifiers>
-        <modifier type="decrement" field="points" value="70">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="23db-8084-a4b7-750c" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="30ba-9d00-8003-dc57" type="greaterThan"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-        <modifier type="increment" field="points" value="70">
-          <repeats>
-            <repeat field="selections" scope="23db-8084-a4b7-750c" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="30ba-9d00-8003-dc57" repeats="1" roundUp="false"/>
-          </repeats>
-          <conditions/>
-          <conditionGroups/>
-        </modifier>
-        <modifier type="decrement" field="points" value="40">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="23db-8084-a4b7-750c" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="30ba-9d00-8003-dc57" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-      </modifiers>
+      <modifiers/>
       <constraints/>
       <categoryLinks/>
       <selectionEntries>
-        <selectionEntry id="30ba-9d00-8003-dc57" name="10 Plague Monks" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="30ba-9d00-8003-dc57" name="10 Plague Monks" hidden="false" collective="false" type="model">
           <profiles/>
           <rules/>
           <infoLinks/>
-          <modifiers/>
+          <modifiers>
+            <modifier type="decrement" field="points" value="10">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="23db-8084-a4b7-750c" value="4.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="30ba-9d00-8003-dc57" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a1db-fd39-2f9a-7e74" type="min"/>
             <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="bbc9-4a7c-6594-0ea8" type="max"/>
@@ -3575,7 +3609,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="points" value="0.0"/>
+            <cost name="pts" costTypeId="points" value="70.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="aff5-54e4-050e-8757" name="Icon Bearers" hidden="false" collective="false" type="upgrade">
@@ -3880,9 +3914,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks/>
-      <costs>
-        <cost name="pts" costTypeId="points" value="70.0"/>
-      </costs>
+      <costs/>
     </selectionEntry>
     <selectionEntry id="8d7d-46a4-7a4b-28a8" name="Plague Priest" hidden="false" collective="false" type="unit">
       <profiles>
@@ -3896,15 +3928,6 @@
             <characteristic name="Wounds" characteristicTypeId="cd0e-fea6-411f-904d" value="5"/>
             <characteristic name="Bravery" characteristicTypeId="0c85-bf79-836b-759e" value="6"/>
             <characteristic name="Save" characteristicTypeId="f8dd-4f2a-8543-4f36" value="5+"/>
-          </characteristics>
-        </profile>
-        <profile id="09c2-30b4-044d-0250" name="Pestilence-filled Censer" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <characteristics>
-            <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="All WIZARDS must subtract 1 from teir casting rolls if they are within 6&quot; of any Plague Priests. This does not effect NURGLE WIZARDS."/>
           </characteristics>
         </profile>
         <profile id="d4cb-d70d-8f7a-b597" name="Frenzied Assault" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
@@ -3946,45 +3969,142 @@
       </profiles>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="append" field="name" value="with Warpstone-tipped Staff">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="8d7d-46a4-7a4b-28a8" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a78e-144b-e0eb-48cb" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="append" field="name" value="with Plague Censer">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="8d7d-46a4-7a4b-28a8" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b4bc-dd82-e4b5-e743" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <constraints/>
       <categoryLinks/>
-      <selectionEntries>
-        <selectionEntry id="5ffb-f0d8-8cba-0cbf" name="Warpstone-tipped Staff" hidden="false" collective="false" type="upgrade">
-          <profiles>
-            <profile id="c5fe-df15-e1e0-bd32" name="Warpstone-tipped Staff" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="Weapon">
-              <profiles/>
-              <rules/>
-              <infoLinks/>
-              <modifiers/>
-              <characteristics>
-                <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
-                <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="2&quot;"/>
-                <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="1"/>
-                <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="4+"/>
-                <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="3+"/>
-                <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-1"/>
-                <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="D3"/>
-              </characteristics>
-            </profile>
-          </profiles>
+      <selectionEntries/>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="b506-419b-9455-d8f3" name="Weapon Choice" hidden="false" collective="false">
+          <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers/>
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ada9-5234-f438-6c8b" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="79ec-6002-36e1-cca7" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9527-db74-7828-962c" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5306-6a25-4bc9-5daa" type="min"/>
           </constraints>
           <categoryLinks/>
-          <selectionEntries/>
+          <selectionEntries>
+            <selectionEntry id="a78e-144b-e0eb-48cb" name="Warpstone-tipped Staff" hidden="false" collective="false" type="upgrade">
+              <profiles>
+                <profile id="eb93-e661-17ef-57c9" name="Warpstone-tipped Staff" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="Weapon">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                  <characteristics>
+                    <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
+                    <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="2&quot;"/>
+                    <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="1"/>
+                    <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="4+"/>
+                    <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="3+"/>
+                    <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-1"/>
+                    <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="D3"/>
+                  </characteristics>
+                </profile>
+                <profile id="e713-4424-24f0-b3ec" name="Pestilence-filled Censer" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                  <characteristics>
+                    <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="All WIZARDS must subtract 1 from teir casting rolls if they are within 6&quot; of any Plague Priests. This does not effect NURGLE WIZARDS."/>
+                  </characteristics>
+                </profile>
+                <profile id="4eec-05a0-9693-3676" name="Frenzied Assault" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                  <characteristics>
+                    <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="A Plague Priest makes 1 additional attack with its Warpstone-tipped Staff if it charged in the same turn."/>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0e92-054b-5f6a-3b9f" type="max"/>
+              </constraints>
+              <categoryLinks/>
+              <selectionEntries/>
+              <selectionEntryGroups/>
+              <entryLinks/>
+              <costs>
+                <cost name="pts" costTypeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="b4bc-dd82-e4b5-e743" name="Plague Censer" hidden="false" collective="false" type="upgrade">
+              <profiles>
+                <profile id="b801-7708-6f7a-b638" name="Plague Censer" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="Weapon">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                  <characteristics>
+                    <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
+                    <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="2&quot;"/>
+                    <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="2"/>
+                    <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="4+"/>
+                    <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="3+"/>
+                    <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-1"/>
+                    <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="1"/>
+                  </characteristics>
+                </profile>
+                <profile id="38d8-bfda-8ccf-a116" name="Plague Tome" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                  <characteristics>
+                    <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="Once per battle, in your hero phase, pick an enemy unit within 13&quot;. Until your next hero phase, you can re-roll all failed wound rolls made against that unit."/>
+                  </characteristics>
+                </profile>
+                <profile id="9d98-79e2-0cb0-8c52" name="Frenzied Assault" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                  <characteristics>
+                    <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="A Plague Priest makes 1 additional attack with its Plague Censer if it charged in the same turn."/>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1951-37ad-aad7-79f7" type="max"/>
+              </constraints>
+              <categoryLinks/>
+              <selectionEntries/>
+              <selectionEntryGroups/>
+              <entryLinks/>
+              <costs>
+                <cost name="pts" costTypeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
           <selectionEntryGroups/>
           <entryLinks/>
-          <costs>
-            <cost name="pts" costTypeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-      <selectionEntryGroups/>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
       <entryLinks>
         <entryLink id="42ad-3247-b3d9-e1f2" name="General" hidden="false" targetId="c71b-c7bd-77ca-12b9" type="selectionEntry">
           <profiles/>
@@ -8658,8 +8778,7 @@
           <infoLinks/>
           <modifiers/>
           <characteristics>
-            <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="When deploying your army, you may choose to place the Warpgnaw Verminlord and a single unit of Clanrats or Stormvermin to one side and say they are set up in
-the twisting passages of the gnawholes between reality. In any of your movement phases, you can transport the units to the battlefield. When you do so, set up the units on the battle eld more than 9&quot; from any enemy models and with at least one model from the accompanying Clanrat or Stormvermin unit within 3&quot; of the Warpgnaw Verminlord. This is their move for that movement phase."/>
+            <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="When deploying your army, you may choose to place the Warpgnaw Verminlord and a single unit of Clanrats or Stormvermin to one side and say they are set up in the twisting passages of the gnawholes between reality. In any of your movement phases, you can transport the units to the battlefield. When you do so, set up the units on the battle eld more than 9&quot; from any enemy models and with at least one model from the accompanying Clanrat or Stormvermin unit within 3&quot; of the Warpgnaw Verminlord. This is their move for that movement phase."/>
           </characteristics>
         </profile>
         <profile id="3567-3f5d-f286-b5e8" name="Warpgnaw Verminlord" hidden="false" profileTypeId="f55d-ee3a-1597-110f" profileTypeName="Magic">
@@ -8679,8 +8798,7 @@ the twisting passages of the gnawholes between reality. In any of your movement 
           <modifiers/>
           <characteristics>
             <characteristic name="Casting Value" characteristicTypeId="2508-b604-1258-a920" value="6"/>
-            <characteristic name="Description" characteristicTypeId="76ff-781d-b8e6-5f27" value="If successfully cast, select a single friendly SKAVEN
-unit within 3&quot; of the caster and which is visible to them. The chosen unit has its move characteristic increased by 6&quot; until the start of your next hero phase. While under the effects of this spell a unit may pass through scenery as if it were not there, as long as it does not end its move in otherwise impassable scenery."/>
+            <characteristic name="Description" characteristicTypeId="76ff-781d-b8e6-5f27" value="If successfully cast, select a single friendly SKAVEN unit within 3&quot; of the caster and which is visible to them. The chosen unit has its move characteristic increased by 6&quot; until the start of your next hero phase. While under the effects of this spell a unit may pass through scenery as if it were not there, as long as it does not end its move in otherwise impassable scenery."/>
           </characteristics>
         </profile>
       </profiles>
@@ -8810,6 +8928,146 @@ unit within 3&quot; of the caster and which is visible to them. The chosen unit 
       </entryLinks>
       <costs>
         <cost name="pts" costTypeId="points" value="340.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="db27-7a01-58ca-09c7" name="Battalion: Congregation of Filth" hidden="false" collective="false" type="upgrade">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+      <categoryLinks/>
+      <selectionEntries/>
+      <selectionEntryGroups/>
+      <entryLinks/>
+      <costs>
+        <cost name="pts" costTypeId="points" value="140.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="a2e5-0b7e-5d60-5225" name="Battalion: Foulrain Congregation" hidden="false" collective="false" type="upgrade">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+      <categoryLinks/>
+      <selectionEntries/>
+      <selectionEntryGroups/>
+      <entryLinks/>
+      <costs>
+        <cost name="pts" costTypeId="points" value="200.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="1a31-088d-3872-2119" name="Battalion: Plaguesmog Congregation" hidden="false" collective="false" type="upgrade">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+      <categoryLinks/>
+      <selectionEntries/>
+      <selectionEntryGroups/>
+      <entryLinks/>
+      <costs>
+        <cost name="pts" costTypeId="points" value="160.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="a917-ada1-09bb-20db" name="Battalion: Virulent Procession" hidden="false" collective="false" type="upgrade">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+      <categoryLinks/>
+      <selectionEntries/>
+      <selectionEntryGroups/>
+      <entryLinks/>
+      <costs>
+        <cost name="pts" costTypeId="points" value="180.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="41d0-b487-3598-aafa" name="Battalion: Clan Skryre" hidden="false" collective="false" type="upgrade">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+      <categoryLinks/>
+      <selectionEntries/>
+      <selectionEntryGroups/>
+      <entryLinks/>
+      <costs>
+        <cost name="pts" costTypeId="points" value="100.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="c215-d854-841b-c02b" name="Enginecoven: Whyrlblade Threshik" hidden="false" collective="false" type="upgrade">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+      <categoryLinks/>
+      <selectionEntries/>
+      <selectionEntryGroups/>
+      <entryLinks/>
+      <costs>
+        <cost name="pts" costTypeId="points" value="50.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="5ec4-1b45-cdaa-8933" name="Enginecoven: Arkhspark Voltik" hidden="false" collective="false" type="upgrade">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+      <categoryLinks/>
+      <selectionEntries/>
+      <selectionEntryGroups/>
+      <entryLinks/>
+      <costs>
+        <cost name="pts" costTypeId="points" value="50.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="2a60-adf6-d9c9-377d" name="Enginecoven: Gautfyre Skorch" hidden="false" collective="false" type="upgrade">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+      <categoryLinks/>
+      <selectionEntries/>
+      <selectionEntryGroups/>
+      <entryLinks/>
+      <costs>
+        <cost name="pts" costTypeId="points" value="50.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="590d-74da-e1ca-60cb" name="Enginecoven: Gascloud Chokelung" hidden="false" collective="false" type="upgrade">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+      <categoryLinks/>
+      <selectionEntries/>
+      <selectionEntryGroups/>
+      <entryLinks/>
+      <costs>
+        <cost name="pts" costTypeId="points" value="50.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="1f6f-f265-31b5-0b56" name="Enginecoven: Rattlegauge Warplock" hidden="false" collective="false" type="upgrade">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+      <categoryLinks/>
+      <selectionEntries/>
+      <selectionEntryGroups/>
+      <entryLinks/>
+      <costs>
+        <cost name="pts" costTypeId="points" value="50.0"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>
@@ -9509,7 +9767,9 @@ unit within 3&quot; of the caster and which is visible to them. The chosen unit 
       <rules/>
       <infoLinks/>
       <modifiers/>
-      <constraints/>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6c07-a295-fce8-4a5b" type="max"/>
+      </constraints>
       <categoryLinks/>
       <selectionEntries>
         <selectionEntry id="c736-bb8b-f020-1412" name="1. Malevolent" hidden="false" collective="false" type="upgrade">
