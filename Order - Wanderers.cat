@@ -1,28 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="8b53-4c24-306b-db2a" name="Order - Wanderers" book="Grand Alliance: Order" revision="4" battleScribeVersion="2.01" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="8b53-4c24-306b-db2a" name="Order - Wanderers" book="Grand Alliance: Order" revision="6" battleScribeVersion="2.01" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks/>
   <costTypes/>
-  <profileTypes>
-    <profileType id="b2f2-0f78-6242-9249" name="Cosmic Engine">
-      <characteristicTypes>
-        <characteristicType id="8daf-9834-9a87-a2b4" name="Effect"/>
-      </characteristicTypes>
-    </profileType>
-    <profileType id="28a5-8f4d-66de-50bf" name="The Kharadron Code">
-      <characteristicTypes>
-        <characteristicType id="77cd-1eb0-f6eb-ab02" name="Effect"/>
-      </characteristicTypes>
-    </profileType>
-    <profileType id="9cb4-15df-780d-f4ee" name="Crew Table">
-      <characteristicTypes>
-        <characteristicType id="16e7-fc98-da3d-921d" name="Variable1"/>
-        <characteristicType id="93ac-2863-3f94-b8ac" name="Variable2"/>
-        <characteristicType id="c11c-4fd8-5dac-cb38" name="Variable3"/>
-      </characteristicTypes>
-    </profileType>
-  </profileTypes>
+  <profileTypes/>
   <categoryEntries>
     <categoryEntry id="7fe9-bc03-2c82-0a00" name="AELF" hidden="false">
       <profiles/>
@@ -132,10 +114,25 @@
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <repeats/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="62e4-370f-3318-cdbd" type="notInstanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="78f3-8a59-699a-61e8" type="notInstanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b78c-c342-c8aa-aa45" type="notInstanceOf"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <constraints/>
       <categoryLinks>
-        <categoryLink id="145f-c3b5-e16f-02a2-e9f2-765a-b7b8-ce8e" hidden="false" targetId="e9f2-765a-b7b8-ce8e" primary="true">
+        <categoryLink id="9fea-b667-b90a-bb78" name="New CategoryLink" hidden="false" targetId="065e-fda7-fd27-1f40" primary="true">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -440,6 +437,37 @@
         </categoryLink>
       </categoryLinks>
     </entryLink>
+    <entryLink id="db0d-c68f-739b-100b" name="Glade Guard" hidden="false" targetId="6bfb-e34e-5d61-a216" type="selectionEntry">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <repeats/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="62e4-370f-3318-cdbd" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="78f3-8a59-699a-61e8" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b78c-c342-c8aa-aa45" type="instanceOf"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints/>
+      <categoryLinks>
+        <categoryLink id="6800-7f4e-998b-cabd" hidden="false" targetId="e9f2-765a-b7b8-ce8e" primary="true">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </categoryLink>
+      </categoryLinks>
+    </entryLink>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="98ee-d743-8207-7e5f" name="Allegiance" hidden="false" collective="false" type="unit">
@@ -533,7 +561,80 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="3e4b-f9a2-f125-6b68" name="Battalion: Waystone Pathfinders" hidden="false" collective="false" type="upgrade">
-      <profiles/>
+      <profiles>
+        <profile id="2a23-25cd-6c1e-4308" name="-" hidden="false" profileTypeId="75e0-a332-e4f5-bf36" profileTypeName="Battalion Organisation">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Required" characteristicTypeId="eb5f-e9d2-e457-bff5" value="A Waystone Pathfinders battalion consists of the following units:"/>
+          </characteristics>
+        </profile>
+        <profile id="b2fd-6c60-da12-9f81" name="Nomad Prince" hidden="false" profileTypeId="75e0-a332-e4f5-bf36" profileTypeName="Battalion Organisation">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Required" characteristicTypeId="eb5f-e9d2-e457-bff5" value="1"/>
+          </characteristics>
+        </profile>
+        <profile id="fba4-7a27-328c-3601" name="Spellweaver" hidden="false" profileTypeId="75e0-a332-e4f5-bf36" profileTypeName="Battalion Organisation">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Required" characteristicTypeId="eb5f-e9d2-e457-bff5" value="1"/>
+          </characteristics>
+        </profile>
+        <profile id="3091-20b6-4a23-5943" name="Wayfinder, Waystrider or Waywatch" hidden="false" profileTypeId="75e0-a332-e4f5-bf36" profileTypeName="Battalion Organisation">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Required" characteristicTypeId="eb5f-e9d2-e457-bff5" value="Any 3 HEROES."/>
+          </characteristics>
+        </profile>
+        <profile id="b5a6-f8e8-a0b7-7549" name="Eternal Guard, Glade Guard, Wildwood Rangers or Sisters of the Watch" hidden="false" profileTypeId="75e0-a332-e4f5-bf36" profileTypeName="Battalion Organisation">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Required" characteristicTypeId="eb5f-e9d2-e457-bff5" value="Any 4 units."/>
+          </characteristics>
+        </profile>
+        <profile id="bb6e-4add-ab1d-bcb7" name="Wild Riders or Sisters of the Thorn" hidden="false" profileTypeId="75e0-a332-e4f5-bf36" profileTypeName="Battalion Organisation">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Required" characteristicTypeId="eb5f-e9d2-e457-bff5" value="Any 2 units."/>
+          </characteristics>
+        </profile>
+        <profile id="0d59-c060-b047-9d68" name="Realm Wanderers" hidden="false" profileTypeId="bdc6-78da-3796-60a3" profileTypeName="Battalion Abilities">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Battalion Ability Details" characteristicTypeId="08e0-9ead-1dbe-c801" value="Instead of setting up the units in this battalion on the battlefield, you can place them to one side.  In your first movement phase, set up all of these units wholly within 6&quot; of the edges of the battlefield, and more than 9&quot; from any enemy models.   This is each unit&apos;s move for that movement phase."/>
+          </characteristics>
+        </profile>
+        <profile id="a5ae-6c4f-a2e6-de08" name="Protective Volley" hidden="false" profileTypeId="bdc6-78da-3796-60a3" profileTypeName="Battalion Abilities">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Battalion Ability Details" characteristicTypeId="08e0-9ead-1dbe-c801" value="In your hero phase, pick one enemy unit within 12&quot; of the battalion&apos;s Nomad Prince.   All other Waystone Pathfinder units can immediately make a shooting attack against that unit as if it were the shooting phase."/>
+          </characteristics>
+        </profile>
+      </profiles>
       <rules/>
       <infoLinks/>
       <modifiers/>
@@ -2776,7 +2877,7 @@
       <infoLinks/>
       <modifiers/>
       <characteristics>
-        <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="You can re-roll a single dice when determining how far this unit can charge if it includes any Horn Blowers."/>
+        <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="You can re-roll a single dice when determining how far this unit can run if it includes any Horn Blowers."/>
       </characteristics>
     </profile>
     <profile id="b47d-343e-8649-b986" name="Standard Bearer" hidden="false" profileTypeId="c924-5a68-471a-2fd5">
