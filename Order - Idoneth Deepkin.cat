@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="cac4-1eec-d548-b34d" name="Order - Idoneth Deepkin" book="Order Battletome Idoneth Deepkin" revision="2" battleScribeVersion="2.01" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="cac4-1eec-d548-b34d" name="Order - Idoneth Deepkin" book="Order Battletome Idoneth Deepkin" revision="3" battleScribeVersion="2.01" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks/>
@@ -16,6 +16,11 @@
       <characteristicTypes>
         <characteristicType id="41bf-1d9a-c900-4a55" name="Turn"/>
         <characteristicType id="d0a7-be18-7209-6a57" name="Effect"/>
+      </characteristicTypes>
+    </profileType>
+    <profileType id="d2bf-4e28-aa1f-c410" name="Isharann Rituals">
+      <characteristicTypes>
+        <characteristicType id="e939-5881-6512-499b" name="Effect"/>
       </characteristicTypes>
     </profileType>
   </profileTypes>
@@ -216,6 +221,17 @@ the Tides of Death table."/>
                     <characteristic name="Battle Trait Details" characteristicTypeId="9fdd-b4b1-5f7a-0970" value="After all other terrain features are set up, but before players choose territories or set up their armies, you can set up a maximum of two Etheric Vortex terrain features anywhere on the battlefield so that each is more than 1&quot; from any other terrain features. If both players can set up Etheric Vortex terrain features, each player rolls a dice, rolling again in the case of a tie, and whoever rolls higher can choose the order in which each Etheric Vortex terrain feature is set up. "/>
                   </characteristics>
                 </profile>
+                <profile id="6414-7a4a-1169-ee80" name="Isharann Rituals" hidden="false" profileTypeId="bdc6-78da-3796-60a3" profileTypeName="Battalion Abilities">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                  <characteristics>
+                    <characteristic name="Battalion Ability Details" characteristicTypeId="08e0-9ead-1dbe-c801" value="ISHARANNHEROESfrom an Idoneth Deepkin army can perform the following Isharann rituals in your hero phase. A maximum of one Isharann ritual can be performed in each hero phase.
+
+In order to perform a ritual, at the start of your hero phase, say which ritual is being performed and then pick one ISHARANN HERO from your army that is more than 9&quot; from any enemy models. Then roll 2D6. Add 1 to the roll if the HERO performing the ritual is within 1&quot; of a Gloomtide Shipwreck, and add a further 1 to the roll if they are a PRIEST. In addition, add 1 to the roll for each other friendly ISHARANN HERO that is within 3&quot; of the model performing the ritual (add 2 instead for each HERO within 3&quot; that is a PRIEST). On a 10+ the ritual is successfully performed. On any other result, the ritual fails and nothing happens."/>
+                  </characteristics>
+                </profile>
               </profiles>
               <rules/>
               <infoLinks/>
@@ -313,6 +329,49 @@ the Tides of Death table."/>
                       <entryLinks/>
                       <costs/>
                     </selectionEntry>
+                    <selectionEntry id="d429-3f80-b787-f9fc" name="Isharann Rituals" hidden="false" collective="false" type="upgrade">
+                      <profiles>
+                        <profile id="92a0-ef25-7725-7160" name="Ritual of Erosion" hidden="false" profileTypeId="d2bf-4e28-aa1f-c410" profileTypeName="Isharann Rituals">
+                          <profiles/>
+                          <rules/>
+                          <infoLinks/>
+                          <modifiers/>
+                          <characteristics>
+                            <characteristic name="Effect" characteristicTypeId="e939-5881-6512-499b" value="Until your next hero phase, enemy units do not receive any benefit for being in cover."/>
+                          </characteristics>
+                        </profile>
+                        <profile id="6507-481a-62a2-637a" name="Ritual of Rousing" hidden="false" profileTypeId="d2bf-4e28-aa1f-c410" profileTypeName="Isharann Rituals">
+                          <profiles/>
+                          <rules/>
+                          <infoLinks/>
+                          <modifiers/>
+                          <characteristics>
+                            <characteristic name="Effect" characteristicTypeId="e939-5881-6512-499b" value="Heal 1 wound allocated to each friendly EIDOLON on the battlefield. In addition, you can re-roll failed hit rolls and casting rolls for friendly EIDOLONS until your next hero phase."/>
+                          </characteristics>
+                        </profile>
+                        <profile id="60dd-e2c2-a7e2-1fa6" name="Ritual of the Tempest" hidden="false" profileTypeId="d2bf-4e28-aa1f-c410" profileTypeName="Isharann Rituals">
+                          <profiles/>
+                          <rules/>
+                          <infoLinks/>
+                          <modifiers/>
+                          <characteristics>
+                            <characteristic name="Effect" characteristicTypeId="e939-5881-6512-499b" value="Until your next hero phase, enemy models cannot fly."/>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                      <rules/>
+                      <infoLinks/>
+                      <modifiers/>
+                      <constraints>
+                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="afda-2f25-43d4-f139" type="min"/>
+                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2884-4550-504a-ebb5" type="max"/>
+                      </constraints>
+                      <categoryLinks/>
+                      <selectionEntries/>
+                      <selectionEntryGroups/>
+                      <entryLinks/>
+                      <costs/>
+                    </selectionEntry>
                   </selectionEntries>
                   <selectionEntryGroups/>
                   <entryLinks/>
@@ -340,14 +399,234 @@ the Tides of Death table."/>
                     </entryLink>
                   </entryLinks>
                 </selectionEntryGroup>
-                <selectionEntryGroup id="e3c8-b285-d21a-04c9" name="Faction" hidden="false" collective="false">
+                <selectionEntryGroup id="e3c8-b285-d21a-04c9" name="Enclaves" hidden="false" collective="false">
                   <profiles/>
                   <rules/>
                   <infoLinks/>
                   <modifiers/>
-                  <constraints/>
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="aa62-240c-724c-84d3" type="min"/>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2031-9a56-2c0d-ba3e" type="max"/>
+                  </constraints>
                   <categoryLinks/>
-                  <selectionEntries/>
+                  <selectionEntries>
+                    <selectionEntry id="1f20-e3d6-a454-7a0e" name="Ionrach" hidden="false" collective="false" type="upgrade">
+                      <profiles>
+                        <profile id="551c-98b3-b03e-c2ec" name="Strong in Magic" hidden="false" profileTypeId="bdc6-78da-3796-60a3" profileTypeName="Battalion Abilities">
+                          <profiles/>
+                          <rules/>
+                          <infoLinks/>
+                          <modifiers/>
+                          <characteristics>
+                            <characteristic name="Battalion Ability Details" characteristicTypeId="08e0-9ead-1dbe-c801" value="Add 1 to casting and unbinding rolls for Ionrach WIZARDS."/>
+                          </characteristics>
+                        </profile>
+                        <profile id="70c3-d379-1c70-6f88" name="Ionrach Command Trait" hidden="false" profileTypeId="bdc6-78da-3796-60a3" profileTypeName="Battalion Abilities">
+                          <profiles/>
+                          <rules/>
+                          <infoLinks/>
+                          <modifiers/>
+                          <characteristics>
+                            <characteristic name="Battalion Ability Details" characteristicTypeId="08e0-9ead-1dbe-c801" value="An Ionrach general must have the Emissary of the Deep Places command trait."/>
+                          </characteristics>
+                        </profile>
+                        <profile id="88e4-9da8-79a3-2d90" name="Emissary of the Deep Places" hidden="false" profileTypeId="c749-bae4-71a8-0c36" profileTypeName="Command Trait">
+                          <profiles/>
+                          <rules/>
+                          <infoLinks/>
+                          <modifiers/>
+                          <characteristics>
+                            <characteristic name="Command Trait Details" characteristicTypeId="ee96-6f3a-e5ca-2350" value="Allied units in an Ionrach army are treated as having the Tides of Death battle trait and can therefore use abilities from the Tides of Death table each battle round."/>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                      <rules/>
+                      <infoLinks/>
+                      <modifiers/>
+                      <constraints/>
+                      <categoryLinks/>
+                      <selectionEntries/>
+                      <selectionEntryGroups/>
+                      <entryLinks/>
+                      <costs/>
+                    </selectionEntry>
+                    <selectionEntry id="1d48-183a-c16d-fad8" name="Dhom-hain" hidden="false" collective="false" type="upgrade">
+                      <profiles>
+                        <profile id="eae7-e5f3-8f14-c9ec" name="Savage Fighters" hidden="false" profileTypeId="bdc6-78da-3796-60a3" profileTypeName="Battalion Abilities">
+                          <profiles/>
+                          <rules/>
+                          <infoLinks/>
+                          <modifiers/>
+                          <characteristics>
+                            <characteristic name="Battalion Ability Details" characteristicTypeId="08e0-9ead-1dbe-c801" value="In your combat phase, re-roll hit rolls of 1 for Dhom-hain AKHELIAN and Dhom-hain NAMARTI units that made a charge move in the same turn."/>
+                          </characteristics>
+                        </profile>
+                        <profile id="6a77-275a-5e73-718f" name="Deep Questors" hidden="false" profileTypeId="bdc6-78da-3796-60a3" profileTypeName="Battalion Abilities">
+                          <profiles/>
+                          <rules/>
+                          <infoLinks/>
+                          <modifiers/>
+                          <characteristics>
+                            <characteristic name="Battalion Ability Details" characteristicTypeId="08e0-9ead-1dbe-c801" value="You can re-roll failed wound rolls for Dhom-hain AKHELIAN units if the target is a MONSTER."/>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                      <rules/>
+                      <infoLinks/>
+                      <modifiers/>
+                      <constraints/>
+                      <categoryLinks/>
+                      <selectionEntries/>
+                      <selectionEntryGroups/>
+                      <entryLinks/>
+                      <costs/>
+                    </selectionEntry>
+                    <selectionEntry id="ecff-0f1b-c90f-b748" name="Fuethán" hidden="false" collective="false" type="upgrade">
+                      <profiles>
+                        <profile id="339f-695a-995f-8206" name="Revel in Slaughter" hidden="false" profileTypeId="bdc6-78da-3796-60a3" profileTypeName="Battalion Abilities">
+                          <profiles/>
+                          <rules/>
+                          <infoLinks/>
+                          <modifiers/>
+                          <characteristics>
+                            <characteristic name="Battalion Ability Details" characteristicTypeId="08e0-9ead-1dbe-c801" value="You can re-roll hit rolls of 1 for Fuethán units that are affected by the Flood Tide ability from the Tides of Death table (pg 86). In addition, whenever a Fuethán unit would be affected by the Ebb Tide ability from the Tides of Death table, they are instead affected by the Flood Tide ability from the same table."/>
+                          </characteristics>
+                        </profile>
+                        <profile id="aaa0-9d13-590f-473b" name="Fiercest of Creatures" hidden="false" profileTypeId="bdc6-78da-3796-60a3" profileTypeName="Battalion Abilities">
+                          <profiles/>
+                          <rules/>
+                          <infoLinks/>
+                          <modifiers/>
+                          <characteristics>
+                            <characteristic name="Battalion Ability Details" characteristicTypeId="08e0-9ead-1dbe-c801" value="In the combat phase, re-roll wound rolls of 1 for Fuethán mounts."/>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                      <rules/>
+                      <infoLinks/>
+                      <modifiers/>
+                      <constraints/>
+                      <categoryLinks/>
+                      <selectionEntries/>
+                      <selectionEntryGroups/>
+                      <entryLinks/>
+                      <costs/>
+                    </selectionEntry>
+                    <selectionEntry id="67e1-282d-3244-fdef" name="Mor&apos;phan" hidden="false" collective="false" type="upgrade">
+                      <profiles>
+                        <profile id="553c-9faf-b23a-833e" name="Tidecaster Spell" hidden="false" profileTypeId="bdc6-78da-3796-60a3" profileTypeName="Battalion Abilities">
+                          <profiles/>
+                          <rules/>
+                          <infoLinks/>
+                          <modifiers/>
+                          <characteristics>
+                            <characteristic name="Battalion Ability Details" characteristicTypeId="08e0-9ead-1dbe-c801" value="Mor’phann Tidecasters know the Freezing Mists spell instead of a spell from the Lore of the Deeps."/>
+                          </characteristics>
+                        </profile>
+                        <profile id="9cf6-cbb9-4566-8fcb" name="Freezing Mists" hidden="false" profileTypeId="2e81-5e22-c6e1-73cb" profileTypeName="Spell">
+                          <profiles/>
+                          <rules/>
+                          <infoLinks/>
+                          <modifiers/>
+                          <characteristics>
+                            <characteristic name="Casting Value" characteristicTypeId="2508-b604-1258-a920" value="6"/>
+                            <characteristic name="Description" characteristicTypeId="76ff-781d-b8e6-5f27" value="If successfullycast, pick an enemy unit within 12&quot;of the caster that is visible to them. Until your next hero phase, that unit can only move 1&quot; when it piles in, and any abilities that would increase its pilein move are ignored."/>
+                          </characteristics>
+                        </profile>
+                        <profile id="0126-8b33-4caf-4cd2" name="Soul Magic Adepts" hidden="false" profileTypeId="bdc6-78da-3796-60a3" profileTypeName="Battalion Abilities">
+                          <profiles/>
+                          <rules/>
+                          <infoLinks/>
+                          <modifiers/>
+                          <characteristics>
+                            <characteristic name="Battalion Ability Details" characteristicTypeId="08e0-9ead-1dbe-c801" value="When a Mor’phann Isharann Soulrender uses their Lurelight ability, add 3 to the number of models that are returned."/>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                      <rules/>
+                      <infoLinks/>
+                      <modifiers/>
+                      <constraints/>
+                      <categoryLinks/>
+                      <selectionEntries/>
+                      <selectionEntryGroups/>
+                      <entryLinks/>
+                      <costs/>
+                    </selectionEntry>
+                    <selectionEntry id="cf71-e2de-6231-5064" name="Nautilar" hidden="false" collective="false" type="upgrade">
+                      <profiles>
+                        <profile id="4c72-d6fc-0839-5535" name="Protective Barrier" hidden="false" profileTypeId="2e81-5e22-c6e1-73cb" profileTypeName="Spell">
+                          <profiles/>
+                          <rules/>
+                          <infoLinks/>
+                          <modifiers/>
+                          <characteristics>
+                            <characteristic name="Casting Value" characteristicTypeId="2508-b604-1258-a920" value="4"/>
+                            <characteristic name="Description" characteristicTypeId="76ff-781d-b8e6-5f27" value="If successfully cast, pick a friendly Nautilar unit within 12&quot;of the caster that is visible to them. Until your next hero phase, worsen the Rend characteristic of attacks that target that unit by 1 (to a minimum of ‘-’)."/>
+                          </characteristics>
+                        </profile>
+                        <profile id="a951-0ab9-a711-ffbf" name="Consummate Defenders" hidden="false" profileTypeId="bdc6-78da-3796-60a3" profileTypeName="Battalion Abilities">
+                          <profiles/>
+                          <rules/>
+                          <infoLinks/>
+                          <modifiers/>
+                          <characteristics>
+                            <characteristic name="Battalion Ability Details" characteristicTypeId="08e0-9ead-1dbe-c801" value="You can re-roll failed hit rolls for Nautilar units in the combat phase if the target made a charge move in the same turn."/>
+                          </characteristics>
+                        </profile>
+                        <profile id="5c7a-fec9-3ac4-edf0" name="Tidecaster Spell" hidden="false" profileTypeId="bdc6-78da-3796-60a3" profileTypeName="Battalion Abilities">
+                          <profiles/>
+                          <rules/>
+                          <infoLinks/>
+                          <modifiers/>
+                          <characteristics>
+                            <characteristic name="Battalion Ability Details" characteristicTypeId="08e0-9ead-1dbe-c801" value="Nautilar Tidecasters know the Protective Barrier spell instead
+of a spell from the Lore of the Deeps."/>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                      <rules/>
+                      <infoLinks/>
+                      <modifiers/>
+                      <constraints/>
+                      <categoryLinks/>
+                      <selectionEntries/>
+                      <selectionEntryGroups/>
+                      <entryLinks/>
+                      <costs/>
+                    </selectionEntry>
+                    <selectionEntry id="809b-7596-3e87-f78e" name="Briomidar" hidden="false" collective="false" type="upgrade">
+                      <profiles>
+                        <profile id="7135-5233-03ae-e8f0" name="Supreme Soulscryers" hidden="false" profileTypeId="bdc6-78da-3796-60a3" profileTypeName="Battalion Abilities">
+                          <profiles/>
+                          <rules/>
+                          <infoLinks/>
+                          <modifiers/>
+                          <characteristics>
+                            <characteristic name="Battalion Ability Details" characteristicTypeId="08e0-9ead-1dbe-c801" value="If a Briomdar Soulscryer uses their Finder ofWays ability, up to three friendly Briomdar units can join them instead of only two. In addition, you can set up the units that join a Briomdar Soulscryer wholly within 18&quot;of the Soulscryer instead of wholly within 12&quot;of the Soulscryer."/>
+                          </characteristics>
+                        </profile>
+                        <profile id="0c43-9c6c-6a09-1392" name="Unstopable Raiders" hidden="false" profileTypeId="bdc6-78da-3796-60a3" profileTypeName="Battalion Abilities">
+                          <profiles/>
+                          <rules/>
+                          <infoLinks/>
+                          <modifiers/>
+                          <characteristics>
+                            <characteristic name="Battalion Ability Details" characteristicTypeId="08e0-9ead-1dbe-c801" value="Briomdar units that cannot normally flyignore terrain features when they move, as if they could fly.  Note that this does not allow them to ignore enemy models when they move."/>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                      <rules/>
+                      <infoLinks/>
+                      <modifiers/>
+                      <constraints/>
+                      <categoryLinks/>
+                      <selectionEntries/>
+                      <selectionEntryGroups/>
+                      <entryLinks/>
+                      <costs/>
+                    </selectionEntry>
+                  </selectionEntries>
                   <selectionEntryGroups/>
                   <entryLinks/>
                 </selectionEntryGroup>
@@ -3860,42 +4139,5 @@ the Tides of Death table."/>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <sharedRules/>
-  <sharedProfiles>
-    <profile id="1e59-b134-d86a-40da" name="Khorne Cares Not From Whence The Blood Flows" hidden="false" profileTypeId="bdc6-78da-3796-60a3" profileTypeName="Battalion Abilities">
-      <profiles/>
-      <rules/>
-      <infoLinks/>
-      <modifiers/>
-      <characteristics>
-        <characteristic name="Battalion Ability Details" characteristicTypeId="08e0-9ead-1dbe-c801" value="If any units are wiped out during the combat phase, you can add 1 to the Attacks characteristic of all melee weapons used by this battalion for the remainder of that combat phase."/>
-      </characteristics>
-    </profile>
-    <profile id="6967-3d69-b8ab-31c6" name="The Blood God&apos;s Scorn" hidden="false" profileTypeId="bdc6-78da-3796-60a3" profileTypeName="Battalion Abilities">
-      <profiles/>
-      <rules/>
-      <infoLinks/>
-      <modifiers/>
-      <characteristics>
-        <characteristic name="Battalion Ability Details" characteristicTypeId="08e0-9ead-1dbe-c801" value="Units from the the Bloodbound Warhorde can attempt to unbind one spell (or one additional spell if they could already do so) in each enemy hero phase in the same manner as a wizard. If a Mighty Lord of Khorne or a SLAUGHTERPRIEST from the Warhorde successfully unbinds a spell, you immediately earn one Blood Tithe point."/>
-      </characteristics>
-    </profile>
-    <profile id="36e9-4a71-42b0-dafd" name="Revel in Carnage" hidden="false" profileTypeId="bdc6-78da-3796-60a3" profileTypeName="Battalion Abilities">
-      <profiles/>
-      <rules/>
-      <infoLinks/>
-      <modifiers/>
-      <characteristics>
-        <characteristic name="Battalion Ability Details" characteristicTypeId="08e0-9ead-1dbe-c801" value="You immediately gain 1 Blood Tithe point at the start of each of your hero phases."/>
-      </characteristics>
-    </profile>
-    <profile id="4e1d-2fe5-a0c4-09c6" name="New Profile" hidden="false" profileTypeId="bdc6-78da-3796-60a3" profileTypeName="Battalion Abilities">
-      <profiles/>
-      <rules/>
-      <infoLinks/>
-      <modifiers/>
-      <characteristics>
-        <characteristic name="Battalion Ability Details" characteristicTypeId="08e0-9ead-1dbe-c801"/>
-      </characteristics>
-    </profile>
-  </sharedProfiles>
+  <sharedProfiles/>
 </catalogue>
