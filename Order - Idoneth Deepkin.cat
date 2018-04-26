@@ -7040,7 +7040,7 @@
       </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="66b8-0a0d-876f-c383" type="max"/>
-        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="69ed-7725-af11-2022" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="69ed-7725-af11-2022" type="max"/>
       </constraints>
       <categoryLinks/>
       <selectionEntries/>
@@ -8437,22 +8437,6 @@
       <selectionEntries/>
       <selectionEntryGroups/>
       <entryLinks>
-        <entryLink id="2160-21e0-f6e4-bd1c" name="Nautilar spell" hidden="false" targetId="cc98-57c8-c1aa-ac9d" type="selectionEntryGroup">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <repeats/>
-              <conditions>
-                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c131-28a2-ee27-cc6e" type="equalTo"/>
-              </conditions>
-              <conditionGroups/>
-            </modifier>
-          </modifiers>
-          <constraints/>
-          <categoryLinks/>
-        </entryLink>
         <entryLink id="0e9f-7799-6d9d-7f58" name="Lore of the Deeps" hidden="false" targetId="c3bd-b58a-1c9c-6b11" type="selectionEntryGroup">
           <profiles/>
           <rules/>
@@ -8475,17 +8459,23 @@
           <constraints/>
           <categoryLinks/>
         </entryLink>
-        <entryLink id="a77e-7020-ac97-948b" name="Mor&apos;phan spell" hidden="false" targetId="95b0-9ae2-c523-070c" type="selectionEntryGroup">
+        <entryLink id="a77e-7020-ac97-948b" name="Enclave Spells" hidden="false" targetId="4eac-82d6-26ac-c93f" type="selectionEntryGroup">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <repeats/>
-              <conditions>
-                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2900-4cc3-0ac7-2afb" type="equalTo"/>
-              </conditions>
-              <conditionGroups/>
+              <conditions/>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2900-4cc3-0ac7-2afb" type="equalTo"/>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c131-28a2-ee27-cc6e" type="equalTo"/>
+                  </conditions>
+                  <conditionGroups/>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
           <constraints/>
@@ -8793,6 +8783,87 @@
           <rules/>
           <infoLinks/>
           <modifiers/>
+          <constraints/>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups/>
+      <entryLinks/>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="4eac-82d6-26ac-c93f" name="Enclave Spells" hidden="false" collective="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="57fc-1d69-8c7a-3d16" type="max"/>
+        <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9689-6729-c74c-c0a2" type="min"/>
+      </constraints>
+      <categoryLinks/>
+      <selectionEntries>
+        <selectionEntry id="eca6-650d-9cc2-0f8c" name="Freezing Mists" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="8166-4dcd-50ac-e807" name="Freezing Mists" hidden="false" profileTypeId="2e81-5e22-c6e1-73cb" profileTypeName="Spell">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Casting Value" characteristicTypeId="2508-b604-1258-a920" value="6"/>
+                <characteristic name="Description" characteristicTypeId="76ff-781d-b8e6-5f27" value="If successfullycast, pick an enemy unit within 12&quot;of the caster that is visible to them. Until your next hero phase, that unit can only move 1&quot; when it piles in, and any abilities that would increase its pilein move are ignored."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2900-4cc3-0ac7-2afb" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+          <constraints/>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="6431-eb21-3932-952a" name="Protective Barrier" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="5434-d1de-8dc8-6fc0" name="Protective Barrier" hidden="false" profileTypeId="2e81-5e22-c6e1-73cb" profileTypeName="Spell">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Casting Value" characteristicTypeId="2508-b604-1258-a920" value="4"/>
+                <characteristic name="Description" characteristicTypeId="76ff-781d-b8e6-5f27" value="If successfully cast, pick a friendly Nautilar unit within 12&quot;of the caster that is visible to them. Until your next hero phase, worsen the Rend characteristic of attacks that target that unit by 1 (to a minimum of ‘-’)."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c131-28a2-ee27-cc6e" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
           <constraints/>
           <categoryLinks/>
           <selectionEntries/>
