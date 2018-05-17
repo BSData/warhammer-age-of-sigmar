@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="50c5-e039-3d93-b26b" name="Destruction - Beastclaw Raiders" book="Destruction - Beastclaw Radiers" revision="1" battleScribeVersion="2.01" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="6" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="50c5-e039-3d93-b26b" name="Destruction - Beastclaw Raiders" book="Destruction - Beastclaw Radiers" revision="2" battleScribeVersion="2.01" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="6" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks/>
@@ -17,6 +17,22 @@
         <characteristicType id="ad70-7958-2119-ab08" name="Move"/>
         <characteristicType id="52ad-8267-7682-1505" name="Frost-Wreathed Ice"/>
         <characteristicType id="ca56-5de6-8223-726d" name="Crushing Blows"/>
+      </characteristicTypes>
+    </profileType>
+    <profileType id="8351-262c-0b40-f9cf" name="Everwinter Result">
+      <characteristicTypes>
+        <characteristicType id="8aae-9133-c864-191b" name="Result"/>
+        <characteristicType id="5826-2fe3-4fc4-8248" name="Description"/>
+      </characteristicTypes>
+    </profileType>
+    <profileType id="8571-3bca-3d1a-af0f" name="Elixir of Froswyrm">
+      <characteristicTypes>
+        <characteristicType id="1a22-a82c-3e37-d7f5" name="Description"/>
+      </characteristicTypes>
+    </profileType>
+    <profileType id="7b06-2d2f-6286-ec51" name="Blizzard-speaker">
+      <characteristicTypes>
+        <characteristicType id="a0d5-c765-53e8-9ba8" name="Ability"/>
       </characteristicTypes>
     </profileType>
   </profileTypes>
@@ -924,25 +940,51 @@
                   <infoLinks/>
                   <modifiers/>
                   <characteristics>
-                    <characteristic name="Battle Trait Details" characteristicTypeId="9fdd-b4b1-5f7a-0970" value="Roll a dice at the start of each of your hero phases to determine the effects of Everwinter&apos;s Blessing on the battle: &lt;br&gt;&lt;br&gt;  D6&lt;br&gt; 1-2 - &lt;b&gt;Fortifying Hoarfrost&lt;/b: You can re-roll save rolls of 1 for all friendly BEASTCLAW RAIDER models until the start of your next hero phase.&lt;br&gt;  3-4 - &lt;b&gt;Freezing Tailwinds&lt;/b&gt;: All friendly BEASTCLAW RAIDERS models can immediately move 3&quot; as if it were the movement phase (they cannot run or retreat as part of this move). &lt;br&gt; 5 - &lt;b&gt;Deadly Frostbite&lt;/b&gt;: Roll a dice for each enemy unit within 3&quot; of at least one of your BEASTCLAW RAIDERS models. On a 6 that unit suffers D3 mortal wounds. &lt;br&gt; 6 - &lt;b&gt;Raging Blizzard&lt;/b&gt;Roll a dice for each enemy unit within 3&quot; of at least one of your BEASTCLAW RAIDERS models. On a 6 that unit suffers D6 mortal wounds. &lt;br&gt;"/>
+                    <characteristic name="Battle Trait Details" characteristicTypeId="9fdd-b4b1-5f7a-0970" value="Roll a dice at the start of each of your hero phases to determine the effects of Everwinter&apos;s Blessing on the battle (reference table for result)"/>
+                  </characteristics>
+                </profile>
+                <profile id="2f05-0ab0-987c-66e6" name="1-2" hidden="false" profileTypeId="8351-262c-0b40-f9cf" profileTypeName="Everwinter Result">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                  <characteristics>
+                    <characteristic name="Result" characteristicTypeId="8aae-9133-c864-191b" value="Fortifying Hoarfrost"/>
+                    <characteristic name="Description" characteristicTypeId="5826-2fe3-4fc4-8248" value="You can re-roll save rolls of 1 for all friendly BEASTCLAW RAIDER models until the start of your next hero phase"/>
+                  </characteristics>
+                </profile>
+                <profile id="fac8-36fe-7afa-ba49" name="3-4" book="" hidden="false" profileTypeId="8351-262c-0b40-f9cf" profileTypeName="Everwinter Result">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                  <characteristics>
+                    <characteristic name="Result" characteristicTypeId="8aae-9133-c864-191b" value="Freezing Tailwinds"/>
+                    <characteristic name="Description" characteristicTypeId="5826-2fe3-4fc4-8248" value="All friendly BEASTCLAW RAIDERS models can immediately move 3&quot; as if it were the movement phase (they cannot run or retreat as part of this move)."/>
+                  </characteristics>
+                </profile>
+                <profile id="8ddd-c58a-06b7-91be" name="5" hidden="false" profileTypeId="8351-262c-0b40-f9cf" profileTypeName="Everwinter Result">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                  <characteristics>
+                    <characteristic name="Result" characteristicTypeId="8aae-9133-c864-191b" value="Deadly Frostbite"/>
+                    <characteristic name="Description" characteristicTypeId="5826-2fe3-4fc4-8248" value="Roll a dice for each enemy unit within 3&quot; of at least one of your BEASTCLAW RAIDERS models. On a 6 that unit suffers D3 mortal wounds."/>
+                  </characteristics>
+                </profile>
+                <profile id="211f-e106-b7fd-5909" name="6" book="" hidden="false" profileTypeId="8351-262c-0b40-f9cf" profileTypeName="Everwinter Result">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                  <characteristics>
+                    <characteristic name="Result" characteristicTypeId="8aae-9133-c864-191b" value="Raging Blizzard"/>
+                    <characteristic name="Description" characteristicTypeId="5826-2fe3-4fc4-8248" value="Roll a dice for each enemy unit within 3&quot; of at least one of your BEASTCLAW RAIDERS models. On a 6 that unit suffers D6 mortal wounds."/>
                   </characteristics>
                 </profile>
               </profiles>
-              <rules>
-                <rule id="5eb2-b6db-7adb-9f3c" name="Beastclaw Stampede" hidden="false">
-                  <profiles/>
-                  <rules/>
-                  <infoLinks/>
-                  <modifiers/>
-                  <description>On a turn in which they charge into combat, you can re-roll all wound rolls of 1 made for BEASTCLAW RAIDER models in the combat phase. </description>
-                </rule>
-                <rule id="5036-d268-98f1-f819" name="Everwinters Blessing" hidden="false">
-                  <profiles/>
-                  <rules/>
-                  <infoLinks/>
-                  <modifiers/>
-                </rule>
-              </rules>
+              <rules/>
               <infoLinks/>
               <modifiers/>
               <constraints>
@@ -1198,7 +1240,7 @@
           <infoLinks/>
           <modifiers/>
           <characteristics>
-            <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="&lt;b&gt;Heart-numbing Chill&lt;/b&gt;: When the Thundertusks of the Torrbad gather in number, the strength of their freezing magical enchantments magnifies to chill the blood of those not used to its bitter touch. Enemy units cannot retreat whilst they are within 3&quot; of any Torrbad unit. Furthermore, roll a dice in each of your hero phases for each enemy unit within 3&quot; of at least one of your Torrbad Thundertusk. Add 1 to the result of the dice roll for each additinoal Torrbad Thundertusk that is within 3&quot; of the unit being rolled for. On a &lt;b&gt;6&lt;/b&gt; the unit suffers &lt;b&gt;a mortal wound&lt;/b&gt;, on a &lt;b&gt;7&lt;/b&gt; it suffers &lt;b&gt;D3 mortal wounds&lt;/b&gt; and on an &lt;b&gt;8 or more&lt;/b&gt; it suffers &lt;b&gt;D6 mortal wounds&lt;/b&gt;. "/>
+            <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="When the Thundertusks of the Torrbad gather in number, the strength of their freezing magical enchantments magnifies to chill the blood of those not used to its bitter touch. Enemy units cannot retreat whilst they are within 3&quot; of any Torrbad unit. Furthermore, roll a dice in each of your hero phases for each enemy unit within 3&quot; of at least one of your Torrbad Thundertusk. Add 1 to the result of the dice roll for each additinoal Torrbad Thundertusk that is within 3&quot; of the unit being rolled for. On a 6 the unit suffers A MORTAL WOUND, on a 7 it suffers D3 MORTAL WOUNDS and on an 8 OR MORE it suffers D6 MORTAL WOUNDS."/>
           </characteristics>
         </profile>
       </profiles>
@@ -1286,7 +1328,7 @@
     </selectionEntry>
     <selectionEntry id="68f4-e571-980e-30f3" name="Frost Sabres" hidden="false" collective="false" type="unit">
       <profiles>
-        <profile id="687a-2428-1782-7e35" name="Profile: Frost Sabres " hidden="false" profileTypeId="1960-ca8e-67ce-2014" profileTypeName="01 Unit">
+        <profile id="687a-2428-1782-7e35" name="Frost Sabres " hidden="false" profileTypeId="1960-ca8e-67ce-2014" profileTypeName="01 Unit">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -1304,7 +1346,7 @@
           <infoLinks/>
           <modifiers/>
           <characteristics>
-            <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="&lt;b&gt;Their Masters Voice&lt;/b&gt;: If this unit is within 16&quot; of a friendly &lt;b&gt;ICEBROW HUNTER&lt;/b&gt; at the start of the charge phase, you can add 3 to any charge rolls made for it in that phase. In addition, whilst the Frost Sabres are within 16&quot; of a friendly &lt;b&gt;ICEBROW HUNTER&lt;/b&gt; they have a Bravery of 7 rather than 5. "/>
+            <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="If this unit is within 16&quot; of a friendly ICEBROW HUNTER at the start of the charge phase, you can add 3 to any charge rolls made for it in that phase. In addition, whilst the Frost Sabres are within 16&quot; of a friendly ICEBROW HUNTER they have a Bravery of 7 rather than 5. "/>
           </characteristics>
         </profile>
         <profile id="c3c1-f998-602d-0deb" name="Elongated Fangs" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="03 Weapon">
@@ -1323,20 +1365,7 @@
           </characteristics>
         </profile>
       </profiles>
-      <rules>
-        <rule id="0b0b-8b78-370c-5faf" name="Elongated Fangs" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-        </rule>
-        <rule id="6d85-6765-8b74-164d" name="Their Masters Voice" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-        </rule>
-      </rules>
+      <rules/>
       <infoLinks/>
       <modifiers/>
       <constraints/>
@@ -2221,17 +2250,9 @@
                   <profiles/>
                   <rules/>
                   <infoLinks/>
-                  <modifiers>
-                    <modifier type="set" field="hidden" value="true">
-                      <repeats/>
-                      <conditions>
-                        <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="equalTo"/>
-                      </conditions>
-                      <conditionGroups/>
-                    </modifier>
-                  </modifiers>
+                  <modifiers/>
                   <characteristics>
-                    <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="&lt;b&gt;Blood Vulture&lt;/b&gt;: A Huskard with a Blood Vulture can release it to hunt in each of your shooting phases. When he does so,pick a unit within 30&quot; of the Huskard. Your opponent then picks one of their own units within 30&quot; of the Huskard. Roll a dice; on a 1,2 or 3 the unit your opponent picked suffers a mortal wound. On a 4, 5 or 6 the unit you picked suffers a mortal wound. "/>
+                    <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="A Huskard with a Blood Vulture can release it to hunt in each of your shooting phases. When he does so,pick a unit within 30&quot; of the Huskard. Your opponent then picks one of their own units within 30&quot; of the Huskard. Roll a dice; on a 1,2 or 3 the unit your opponent picked suffers a mortal wound. On a 4, 5 or 6 the unit you picked suffers a mortal wound. "/>
                   </characteristics>
                 </profile>
               </profiles>
@@ -2314,15 +2335,6 @@
           <modifiers/>
           <characteristics>
             <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="In the shooting phase, pick a unit within 18&quot; that is visible to the Thundertusk. Roll a dice, on a 2 or more that unit is struck and suffers a number of mortal wounds shown on the damage table above. "/>
-          </characteristics>
-        </profile>
-        <profile id="735c-b5de-21f3-8f80" name="Blizzard-speaker" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="08 Ability (Unit)">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <characteristics>
-            <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="In your hero phase, a Huskard on a Thundertusk can attempt to harness the strange wintery magic that clings to his mount. To do so select a BEASTCLAW RAIDERS unit within 18&quot; and roll a dice. Add one to the result for each other friendly THUNDERTUSK unit within 19&quot; of the unit you picked. On a 4 or more, select on of the abilities from the list below to apply to the unit you picked. &lt;br&gt;&lt;br&gt;  &lt;i&gt;Winter&apos;s Endurance&lt;/i&gt;: A second skin of ice forms on the unit as it is rimed with a healing frost. One model in the unit heals D3 wounds. &lt;br&gt;  &lt;i&gt;Winters Strength&lt;/i&gt;: Winter winds howl through the unit, chilling their blood and lending them strength. You can reroll wound rolls of 1 for the unit until the start of your next hero phase. "/>
           </characteristics>
         </profile>
         <profile id="3d8c-7ff1-45e8-45f3" name="00-02" hidden="false" profileTypeId="b30f-f7bd-58e7-2395" profileTypeName="Damage Table: Thundertusk">
@@ -2505,6 +2517,51 @@
             <cost name="pts" costTypeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
+        <selectionEntry id="8b07-0792-96db-3e61" name="Blizzard-speaker" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="9e9e-8da3-8b7d-20c1" name="Blizzard-speaker" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="08 Ability (Unit)">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="In your hero phase, a Huskard on a Thundertusk can attempt to harness the strange wintery magic that clings to his mount. To do so select a BEASTCLAW RAIDERS unit within 18&quot; and roll a dice. Add one to the result for each other friendly THUNDERTUSK unit within 19&quot; of the unit you picked. On a 4 or more, select on of the abilities from the list below to apply to the unit you picked."/>
+              </characteristics>
+            </profile>
+            <profile id="995a-ba35-d34f-fe8e" name="Winter&apos;s Endurance" hidden="false" profileTypeId="7b06-2d2f-6286-ec51" profileTypeName="Blizzard-speaker">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Ability" characteristicTypeId="a0d5-c765-53e8-9ba8" value="A second skin of ice forms on the unit as it is rimed with a healing frost. One model in the unit heals D3 wounds."/>
+              </characteristics>
+            </profile>
+            <profile id="2b54-4046-6881-470a" name="Winter&apos;s Strength" hidden="false" profileTypeId="7b06-2d2f-6286-ec51" profileTypeName="Blizzard-speaker">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Ability" characteristicTypeId="a0d5-c765-53e8-9ba8" value="Winter winds howl through the unit, chilling their blood and lending them strength. You can reroll wound rolls of 1 for the unit until the start of your next hero phase."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0a02-baf8-da89-79e8" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="338f-eb3e-7097-b147" type="max"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="c062-2a12-9d72-87ba" name="Must choose one of the following weapons:" hidden="false" collective="false">
@@ -2604,17 +2661,9 @@
                   <profiles/>
                   <rules/>
                   <infoLinks/>
-                  <modifiers>
-                    <modifier type="set" field="hidden" value="true">
-                      <repeats/>
-                      <conditions>
-                        <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="equalTo"/>
-                      </conditions>
-                      <conditionGroups/>
-                    </modifier>
-                  </modifiers>
+                  <modifiers/>
                   <characteristics>
-                    <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="&lt;b&gt;Blood Vulture&lt;/b&gt;: A Huskard with a Blood Vulture can release it to hunt in each of your shooting phases. When he does so,pick a unit within 30&quot; of the Huskard. Your opponent then picks one of their own units within 30&quot; of the Huskard. Roll a dice; on a 1,2 or 3 the unit your opponent picked suffers a mortal wound. On a 4, 5 or 6 the unit you picked suffers a mortal wound. "/>
+                    <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="A Huskard with a Blood Vulture can release it to hunt in each of your shooting phases. When he does so,pick a unit within 30&quot; of the Huskard. Your opponent then picks one of their own units within 30&quot; of the Huskard. Roll a dice; on a 1,2 or 3 the unit your opponent picked suffers a mortal wound. On a 4, 5 or 6 the unit you picked suffers a mortal wound. "/>
                   </characteristics>
                 </profile>
               </profiles>
@@ -3517,17 +3566,9 @@
                   <profiles/>
                   <rules/>
                   <infoLinks/>
-                  <modifiers>
-                    <modifier type="set" field="hidden" value="true">
-                      <repeats/>
-                      <conditions>
-                        <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="equalTo"/>
-                      </conditions>
-                      <conditionGroups/>
-                    </modifier>
-                  </modifiers>
+                  <modifiers/>
                   <characteristics>
-                    <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="&lt;b&gt;Blood Vulture&lt;/b&gt;: A Huskard with a Blood Vulture can release it to hunt in each of your shooting phases. When he does so,pick a unit within 30&quot; of the Huskard. Your opponent then picks one of their own units within 30&quot; of the Huskard. Roll a dice; on a 1,2 or 3 the unit your opponent picked suffers a mortal wound. On a 4, 5 or 6 the unit you picked suffers a mortal wound. "/>
+                    <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="A Huskard with a Blood Vulture can release it to hunt in each of your shooting phases. When he does so,pick a unit within 30&quot; of the Huskard. Your opponent then picks one of their own units within 30&quot; of the Huskard. Roll a dice; on a 1,2 or 3 the unit your opponent picked suffers a mortal wound. On a 4, 5 or 6 the unit you picked suffers a mortal wound. "/>
                   </characteristics>
                 </profile>
               </profiles>
@@ -3575,7 +3616,7 @@
           <infoLinks/>
           <modifiers/>
           <characteristics>
-            <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="&lt;b&gt;Numbing Chill&lt;/b&gt;:Your opponent must subtract 1 from any hit rolls that target this model in the combat phase. "/>
+            <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="Your opponent must subtract 1 from any hit rolls that target this model in the combat phase. "/>
           </characteristics>
         </profile>
         <profile id="b17c-3cb2-8f2e-1d18" name="Blasts of Frost-wreathed Ice" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="08 Ability (Unit)">
@@ -3847,7 +3888,7 @@
                     </modifier>
                   </modifiers>
                   <characteristics>
-                    <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="&lt;b&gt;Blood Vulture&lt;/b&gt;: A Huskard with a Blood Vulture can release it to hunt in each of your shooting phases. When he does so,pick a unit within 30&quot; of the Huskard. Your opponent then picks one of their own units within 30&quot; of the Huskard. Roll a dice; on a 1,2 or 3 the unit your opponent picked suffers a mortal wound. On a 4, 5 or 6 the unit you picked suffers a mortal wound. "/>
+                    <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="A Huskard with a Blood Vulture can release it to hunt in each of your shooting phases. When he does so,pick a unit within 30&quot; of the Huskard. Your opponent then picks one of their own units within 30&quot; of the Huskard. Roll a dice; on a 1,2 or 3 the unit your opponent picked suffers a mortal wound. On a 4, 5 or 6 the unit you picked suffers a mortal wound. "/>
                   </characteristics>
                 </profile>
               </profiles>
@@ -4027,17 +4068,45 @@
               <profiles/>
               <rules/>
               <infoLinks/>
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <repeats/>
-                  <conditions>
-                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="equalTo"/>
-                  </conditions>
-                  <conditionGroups/>
-                </modifier>
-              </modifiers>
+              <modifiers/>
               <characteristics>
-                <characteristic name="Artefact Details" characteristicTypeId="0918-c47a-d84e-c0cf" value="In each of your shooting phases, the bearer can drink from the Elixir of Frostwyrm. If they do, pick a unit within 9&quot; that is visible to them and roll a dice:&lt;br&gt;&lt;br&gt;  &lt;b&gt;D6&lt;/b&gt;&lt;br&gt; 1 - The drinker suffers a mortal wound as the elixir ravages their guts. They cannot drink the Elixir of Frostwyrm again during this battle. &lt;br&gt; 2-3 - The unit you picked suffers 1 mortal wound.&lt;br&gt; 4-5 - The unit you picked suffers D3 mortal wounds. &lt;br&gt; 6 - The unit you picked suffers D6 mortal wounds. "/>
+                <characteristic name="Artefact Details" characteristicTypeId="0918-c47a-d84e-c0cf" value="In each of your shooting phases, the bearer can drink from the Elixir of Frostwyrm. If they do, pick a unit within 9&quot; that is visible to them and roll a dice"/>
+              </characteristics>
+            </profile>
+            <profile id="9961-ddd4-586f-1fdc" name="1" hidden="false" profileTypeId="8571-3bca-3d1a-af0f" profileTypeName="Elixir of Froswyrm">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Description" characteristicTypeId="1a22-a82c-3e37-d7f5" value="The drinker suffers a mortal wound as the elixir ravages their guts. They cannot drink the Elixir of Frostwyrm again during this battle."/>
+              </characteristics>
+            </profile>
+            <profile id="7ca5-8197-2b1f-5d20" name="2-3" hidden="false" profileTypeId="8571-3bca-3d1a-af0f" profileTypeName="Elixir of Froswyrm">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Description" characteristicTypeId="1a22-a82c-3e37-d7f5" value="The unit you picked suffers 1 mortal wound"/>
+              </characteristics>
+            </profile>
+            <profile id="dd03-463a-a721-69f4" name="4-5" hidden="false" profileTypeId="8571-3bca-3d1a-af0f" profileTypeName="Elixir of Froswyrm">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Description" characteristicTypeId="1a22-a82c-3e37-d7f5" value="The unit you picked suffers D3 mortal wounds"/>
+              </characteristics>
+            </profile>
+            <profile id="cce9-1c19-293e-089d" name="6" hidden="false" profileTypeId="8571-3bca-3d1a-af0f" profileTypeName="Elixir of Froswyrm">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Description" characteristicTypeId="1a22-a82c-3e37-d7f5" value="The unit you picked suffers D6 mortal wounds"/>
               </characteristics>
             </profile>
           </profiles>
