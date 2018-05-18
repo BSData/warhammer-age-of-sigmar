@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="3721-70d4-3f5f-4609" name="Order - Seraphon" book="Order Battletime - Seraphon" revision="16" battleScribeVersion="2.01" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="3721-70d4-3f5f-4609" name="Order - Seraphon" book="Order Battletime - Seraphon" revision="19" battleScribeVersion="2.01" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks/>
@@ -43,6 +43,11 @@
         <characteristicType id="7640-a039-3f40-ebf7" name="Move"/>
         <characteristicType id="a8cd-ef3c-4147-9671" name="Noxious Spittle"/>
         <characteristicType id="cdeb-ce96-a92a-c18a" name="Venomous Bite"/>
+      </characteristicTypes>
+    </profileType>
+    <profileType id="6f06-d1b5-d5b4-cbd9" name="Celestial Configuration">
+      <characteristicTypes>
+        <characteristicType id="18d1-50f1-0e9d-da53" name="Ascendent Constellation"/>
       </characteristicTypes>
     </profileType>
   </profileTypes>
@@ -1127,7 +1132,7 @@
       <categoryLinks/>
       <selectionEntries/>
       <selectionEntryGroups>
-        <selectionEntryGroup id="dcab-3034-f776-022e" name="Allegiance" hidden="false" collective="false">
+        <selectionEntryGroup id="dcab-3034-f776-022e" name="Allegiance" hidden="false" collective="false" defaultSelectionEntryId="1819-5e57-783b-70d0">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -1209,21 +1214,6 @@
             <characteristic name="Save" characteristicTypeId="f8dd-4f2a-8543-4f36" value="3+"/>
           </characteristics>
         </profile>
-        <profile id="c2ac-e499-9e25-01dc" name="Bludgeoning Tail" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="03 Weapon">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <characteristics>
-            <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
-            <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="2&quot;"/>
-            <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="3"/>
-            <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="3+"/>
-            <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="3+"/>
-            <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-1"/>
-            <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="D3"/>
-          </characteristics>
-        </profile>
         <profile id="1140-1089-6f4f-774d" name="Impervious Defence" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="08 Ability (Unit)">
           <profiles/>
           <rules/>
@@ -1235,14 +1225,7 @@
         </profile>
       </profiles>
       <rules/>
-      <infoLinks>
-        <infoLink id="9930-5b9a-31a6-b630" name="Meteoric Javelins (Stegadon)" hidden="false" targetId="b722-623c-858a-2d67" type="profile">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-        </infoLink>
-      </infoLinks>
+      <infoLinks/>
       <modifiers/>
       <constraints/>
       <categoryLinks>
@@ -1296,7 +1279,65 @@
           <constraints/>
         </categoryLink>
       </categoryLinks>
-      <selectionEntries/>
+      <selectionEntries>
+        <selectionEntry id="4618-7a1d-f1fc-ef8c" name="Bludgeoning Tail" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="12f9-6fef-c74f-7b28" name="Bludgeoning Tail" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="03 Weapon">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
+                <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="2&quot;"/>
+                <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="3"/>
+                <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="3+"/>
+                <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="3+"/>
+                <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-1"/>
+                <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="D3"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="47d7-fac5-4cc4-0149" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2cfe-bda1-c055-4f25" type="min"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="c26c-5923-f8fa-3141" name="Meteoric Javelins" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks>
+            <infoLink id="0b44-8b7f-3b78-5cca" name="Meteoric Javelins (Stegadon)" hidden="false" targetId="b722-623c-858a-2d67" type="profile">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+          </infoLinks>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a49c-364c-1157-6656" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ae76-db50-1af5-3a7d" type="min"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="2aa3-cbf5-0292-069b" name="Weapon Options" hidden="false" collective="false" defaultSelectionEntryId="135b-0d63-c92b-126c">
           <profiles/>
@@ -3040,36 +3081,6 @@
             <characteristic name="Save" characteristicTypeId="f8dd-4f2a-8543-4f36" value="6&quot;"/>
           </characteristics>
         </profile>
-        <profile id="bd6d-6284-66b6-154f" name="Dartpipe" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="03 Weapon">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <characteristics>
-            <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Missile"/>
-            <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="16&quot;"/>
-            <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="2"/>
-            <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="3+"/>
-            <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="4+"/>
-            <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-"/>
-            <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="1"/>
-          </characteristics>
-        </profile>
-        <profile id="2304-7525-7ba0-3985" name="Envenomed Dart" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="03 Weapon">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <characteristics>
-            <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
-            <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="1&quot;"/>
-            <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="1"/>
-            <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="5+"/>
-            <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="5+"/>
-            <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-"/>
-            <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="1"/>
-          </characteristics>
-        </profile>
         <profile id="4184-714f-4157-cb37" name="Chameleon Ambush" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="08 Ability (Unit)">
           <profiles/>
           <rules/>
@@ -3173,6 +3184,72 @@
             <cost name="pts" costTypeId="points" value="120.0"/>
           </costs>
         </selectionEntry>
+        <selectionEntry id="e62d-254d-2717-5284" name="Dartpipe" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="33af-febf-593f-1fbc" name="Dartpipe" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="03 Weapon">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Missile"/>
+                <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="16&quot;"/>
+                <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="2"/>
+                <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="3+"/>
+                <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="4+"/>
+                <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-"/>
+                <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="1"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1c41-ea65-beef-0634" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="eac9-4e51-2469-0e7d" type="min"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="a5a1-811f-ca2a-a803" name="Envenomed Dart" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="4e03-40d3-3a7a-50bd" name="Envenomed Dart" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="03 Weapon">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
+                <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="1&quot;"/>
+                <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="1"/>
+                <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="5+"/>
+                <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="5+"/>
+                <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-"/>
+                <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="1"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bc0f-c683-4a3f-2199" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fdeb-f811-a8bd-cec5" type="min"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups/>
       <entryLinks/>
@@ -3219,36 +3296,6 @@
           <modifiers/>
           <characteristics>
             <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="The Dread Saurian is bedecked in glyph plates containing the arcane power of the Slann. If this unit inflicts damage on one or more enemy units in the combat phase, then the Dread Saurian may heal D3 wounds it has previously suffered."/>
-          </characteristics>
-        </profile>
-        <profile id="179f-4281-3ed3-8043" name="Gargantuan Jaws" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="03 Weapon">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <characteristics>
-            <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
-            <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="2&quot;"/>
-            <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="4"/>
-            <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="3+"/>
-            <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="3+"/>
-            <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-3"/>
-            <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="*"/>
-          </characteristics>
-        </profile>
-        <profile id="6525-20aa-b13f-0278" name="Raking Claws" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="03 Weapon">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <characteristics>
-            <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
-            <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="1&quot;"/>
-            <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="*"/>
-            <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="4+"/>
-            <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="3+"/>
-            <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-1"/>
-            <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="1"/>
           </characteristics>
         </profile>
       </profiles>
@@ -3367,6 +3414,72 @@
             <cost name="pts" costTypeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
+        <selectionEntry id="464a-44e6-2e3b-8547" name="Gargantuan Jaws" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="2a5f-3e80-50f6-9b7b" name="Gargantuan Jaws" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="03 Weapon">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
+                <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="2&quot;"/>
+                <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="4"/>
+                <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="3+"/>
+                <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="3+"/>
+                <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-3"/>
+                <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="*"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0df0-56c8-0741-d126" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="898b-e185-0e88-2345" type="min"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="8f37-9f67-ea17-8abd" name="Raking Claws" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="913c-90f6-5e85-37af" name="Raking Claws" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="03 Weapon">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
+                <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="1&quot;"/>
+                <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="*"/>
+                <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="4+"/>
+                <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="3+"/>
+                <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-1"/>
+                <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="1"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0385-752a-ef47-0f18" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="29b5-eb5c-89d3-96a0" type="min"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups/>
       <entryLinks/>
@@ -3386,36 +3499,6 @@
             <characteristic name="Wounds" characteristicTypeId="cd0e-fea6-411f-904d" value="10"/>
             <characteristic name="Bravery" characteristicTypeId="0c85-bf79-836b-759e" value="10"/>
             <characteristic name="Save" characteristicTypeId="f8dd-4f2a-8543-4f36" value="4+"/>
-          </characteristics>
-        </profile>
-        <profile id="aedc-e289-4c8b-0d66" name="Sharpened Claws" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="03 Weapon">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <characteristics>
-            <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
-            <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="2&quot;"/>
-            <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="4"/>
-            <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="3+"/>
-            <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="3+"/>
-            <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-1"/>
-            <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="2"/>
-          </characteristics>
-        </profile>
-        <profile id="6523-f83f-0693-58e9" name="Crushing Stomps" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="03 Weapon">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <characteristics>
-            <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
-            <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="1&quot;"/>
-            <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="*"/>
-            <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="4+"/>
-            <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="4+"/>
-            <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-"/>
-            <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="1"/>
           </characteristics>
         </profile>
         <profile id="25fe-195b-b218-832f" name="Cosmic Engine" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="08 Ability (Unit)">
@@ -3484,12 +3567,6 @@
       </profiles>
       <rules/>
       <infoLinks>
-        <infoLink id="a33f-ab6e-3bf7-38c9" name="Meteoric Javelins (Stegadon)" hidden="false" targetId="b722-623c-858a-2d67" type="profile">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-        </infoLink>
         <infoLink id="f6eb-ee9b-bf6d-7214" name="Steadfast Majesty" hidden="false" targetId="910d-c4af-f0e1-2342" type="profile">
           <profiles/>
           <rules/>
@@ -3651,6 +3728,96 @@
             <cost name="pts" costTypeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
+        <selectionEntry id="0139-03d6-a9c8-cca7" name="Crushing Stomps" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="ed01-3ea2-c8c1-19e0" name="Crushing Stomps" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="03 Weapon">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
+                <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="1&quot;"/>
+                <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="*"/>
+                <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="4+"/>
+                <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="4+"/>
+                <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-"/>
+                <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="1"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1251-9825-d040-c412" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="97c7-2ff8-1779-65e5" type="min"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="b3df-be0d-dc15-d3ec" name="Sharpened Claws" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="c027-8f01-9d79-18ca" name="Sharpened Claws" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="03 Weapon">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
+                <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="2&quot;"/>
+                <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="4"/>
+                <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="3+"/>
+                <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="3+"/>
+                <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-1"/>
+                <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="2"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="edf4-67e7-1a34-e815" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b8c0-1026-45ee-02bc" type="min"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="b44a-4608-e7e0-b9d0" name="Meteoric Javelins" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks>
+            <infoLink id="34fc-ba74-dce0-7869" name="Meteoric Javelins (Stegadon)" hidden="false" targetId="b722-623c-858a-2d67" type="profile">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+          </infoLinks>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8d7e-430b-3ff3-0898" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="13de-239f-1089-a8eb" type="min"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups/>
       <entryLinks>
@@ -3758,21 +3925,6 @@
             <characteristic name="Save" characteristicTypeId="f8dd-4f2a-8543-4f36" value="4+"/>
           </characteristics>
         </profile>
-        <profile id="0a50-8192-9844-52f5" name="Drakebite Maul" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="03 Weapon">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <characteristics>
-            <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
-            <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="2&quot;"/>
-            <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="4"/>
-            <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="4+"/>
-            <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="3+"/>
-            <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-"/>
-            <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="2"/>
-          </characteristics>
-        </profile>
         <profile id="c3e0-fb67-cfa1-ed8c" name="Moon Hammer" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="03 Weapon">
           <profiles/>
           <rules/>
@@ -3793,21 +3945,6 @@
             <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="4+"/>
             <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="3+"/>
             <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-1"/>
-            <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="2"/>
-          </characteristics>
-        </profile>
-        <profile id="21eb-c89a-22d0-b41b" name="Vice-like Jaws" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="03 Weapon">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <characteristics>
-            <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
-            <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="2&quot;"/>
-            <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="4"/>
-            <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="4+"/>
-            <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="3+"/>
-            <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-"/>
             <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="2"/>
           </characteristics>
         </profile>
@@ -3896,6 +4033,72 @@
             <cost name="pts" costTypeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
+        <selectionEntry id="02db-aba8-ce8c-df91" name="Drakebite Maul" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="53e9-7f22-de68-8ba4" name="Drakebite Maul" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="03 Weapon">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
+                <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="2&quot;"/>
+                <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="4"/>
+                <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="4+"/>
+                <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="3+"/>
+                <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-"/>
+                <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="2"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="68d6-9bd0-dff7-c4c1" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6e8d-8648-5239-a842" type="min"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="8ca9-b3b6-604c-02e4" name="Vice-like Jaws" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="ad60-e3d4-e54e-5da1" name="Vice-like Jaws" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="03 Weapon">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
+                <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="2&quot;"/>
+                <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="4"/>
+                <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="4+"/>
+                <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="3+"/>
+                <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-"/>
+                <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="2"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1b32-56d7-2a78-10c8" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8ab1-3b3b-94b0-43f1" type="min"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups/>
       <entryLinks/>
@@ -3905,28 +4108,13 @@
     </selectionEntry>
     <selectionEntry id="6e20-8b6e-8d9e-affc" name="Lord Kroak" hidden="false" collective="false" type="unit">
       <profiles>
-        <profile id="f1b9-a889-2900-a3ac" name="Ancient Spirits&apos; Spectral Claws" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="03 Weapon">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <characteristics>
-            <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
-            <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="3&quot;"/>
-            <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="2D6"/>
-            <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="3+"/>
-            <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="3+"/>
-            <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-1"/>
-            <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="1"/>
-          </characteristics>
-        </profile>
         <profile id="2734-2910-8625-a4f6" name="Dead for Innumerable Ages" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="08 Ability (Unit)">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers/>
           <characteristics>
-            <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="Lord Kroak&apos;s physical form is ancient, withered and preserved only by his indomitable spirit. As such, he is immune to all but the most devastating attacks - those which can temporarily divorce his conciousness from his corpse. &lt;BR&gt;&lt;BR&gt; In the battleshock phase of each turn, roll a dice and add the number of wounds that Lord Kroak suffered during the turn. If the result is higher than his Bravery, he is &apos;slain&apos;. Otherwise, any wounds he has suffered are immediately healed. If an abilitiy or rule would cause him to be slain outright, he is not; instead, he suffers D6 mortal wounds."/>
+            <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="Lord Kroak&apos;s physical form is ancient, withered and preserved only by his indomitable spirit. As such, he is immune to all but the most devastating attacks - those which can temporarily divorce his conciousness from his corpse. In the battleshock phase of each turn, roll a dice and add the number of wounds that Lord Kroak suffered during the turn. If the result is higher than his Bravery, he is &apos;slain&apos;. Otherwise, any wounds he has suffered are immediately healed. If an abilitiy or rule would cause him to be slain outright, he is not; instead, he suffers D6 mortal wounds."/>
           </characteristics>
         </profile>
         <profile id="d70f-f8c9-6dbf-ecde" name="Magic" hidden="false" profileTypeId="f55d-ee3a-1597-110f" profileTypeName="02 Unit (Wizard)">
@@ -3945,8 +4133,8 @@
           <infoLinks/>
           <modifiers/>
           <characteristics>
-            <characteristic name="Casting Value" characteristicTypeId="2508-b604-1258-a920" value="&lt;TABLE&gt; &lt;TR&gt; &lt;TD&gt;7&lt;/TD&gt; &lt;TD&gt;1st cast&lt;/TD&gt; &lt;/TR&gt; &lt;TR&gt; &lt;TD&gt;8&lt;/TD&gt; &lt;TD&gt;2nd cast&lt;/TD&gt; &lt;/TR&gt; &lt;TR&gt; &lt;TD&gt;9&lt;/TD&gt; &lt;TD&gt;3rd cast&lt;/TD&gt; &lt;/TR&gt; &lt;/TABLE&gt;"/>
-            <characteristic name="Description" characteristicTypeId="76ff-781d-b8e6-5f27" value="The spirits surround Kroak&apos;s palanquin quiver with unfettered force before exploding outwards to bring uin to the enemies of the Seraphon. &lt;BR&gt;&lt;BR&gt; Lord Kroak can cast Celestial Deliverance up to three times in the hero phase. It has a casting value of 8 the first time it is cast, 8 the second time and 9 the third time. If it is successfully cast, roll three dice to determine the spirits&apos; reach in inches. Each enemey unit within range suffers D3 mortal wounds. The vengeful spririts reseruve a special hatred for &lt;B&gt;CHAOS DAEMONS&lt;/B&gt; and tear into them with something akin to glee; as such, these units suffer D6 mortal wounds instead of D3."/>
+            <characteristic name="Casting Value" characteristicTypeId="2508-b604-1258-a920" value="7, 8, or 9"/>
+            <characteristic name="Description" characteristicTypeId="76ff-781d-b8e6-5f27" value="The spirits surround Kroak&apos;s palanquin quiver with unfettered force before exploding outwards to bring uin to the enemies of the Seraphon.   Lord Kroak can cast Celestial Deliverance up to three times in the hero phase. It has a casting value of 7 the first time it is cast, 8 the second time and 9 the third time. If it is successfully cast, roll three dice to determine the spirits&apos; reach in inches. Each enemey unit within range suffers D3 mortal wounds. The vengeful spririts reseruve a special hatred for CHAOS DAEMONS and tear into them with something akin to glee; as such, these units suffer D6 mortal wounds instead of D3."/>
           </characteristics>
         </profile>
         <profile id="4af4-dcd8-658b-529f" name="Comet&apos;s Call" hidden="false" profileTypeId="2e81-5e22-c6e1-73cb" profileTypeName="05 Spell">
@@ -4045,7 +4233,41 @@
           <constraints/>
         </categoryLink>
       </categoryLinks>
-      <selectionEntries/>
+      <selectionEntries>
+        <selectionEntry id="bdd8-7f2a-6765-b05a" name="Ancient Spirits&apos; Spectral Claws" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="844c-b1d6-39e6-93ba" name="Ancient Spirits&apos; Spectral Claws" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="03 Weapon">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
+                <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="3&quot;"/>
+                <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="2D6"/>
+                <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="3+"/>
+                <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="3+"/>
+                <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-1"/>
+                <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="1"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d7a5-9463-39b8-517b" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4442-9e90-4102-4836" type="min"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
       <selectionEntryGroups/>
       <entryLinks>
         <entryLink id="08ec-ee1a-4368-f9ef" name="General" hidden="false" targetId="b341-0885-3f1c-7d8a" type="selectionEntry">
@@ -4115,36 +4337,6 @@
             <characteristic name="Wounds" characteristicTypeId="cd0e-fea6-411f-904d" value="3"/>
             <characteristic name="Bravery" characteristicTypeId="0c85-bf79-836b-759e" value="10"/>
             <characteristic name="Save" characteristicTypeId="f8dd-4f2a-8543-4f36" value="4+"/>
-          </characteristics>
-        </profile>
-        <profile id="e2a1-d6d9-b808-3356" name="Volley of Spikes" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="03 Weapon">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <characteristics>
-            <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Missile"/>
-            <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="12&quot;"/>
-            <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="2D6"/>
-            <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="3+"/>
-            <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="4+"/>
-            <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-"/>
-            <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="1"/>
-          </characteristics>
-        </profile>
-        <profile id="ca35-8470-c527-f5d5" name="Fierce Bite and Spiked Tail" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="03 Weapon">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <characteristics>
-            <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
-            <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="1&quot;"/>
-            <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="3"/>
-            <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="4+"/>
-            <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="3+"/>
-            <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-"/>
-            <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="1"/>
           </characteristics>
         </profile>
         <profile id="f860-5de2-9704-204e" name="Goaded to Anger" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
@@ -4234,6 +4426,72 @@
             <cost name="pts" costTypeId="points" value="40.0"/>
           </costs>
         </selectionEntry>
+        <selectionEntry id="89ba-d5bd-6f6c-54a4" name="Fierce Bite and Spiked Tail" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="c622-6ee4-5c8c-f91a" name="Fierce Bite and Spiked Tail" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="03 Weapon">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
+                <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="1&quot;"/>
+                <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="3"/>
+                <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="4+"/>
+                <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="3+"/>
+                <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-"/>
+                <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="1"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5cc4-8d23-5182-a0e4" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8b36-1eed-76ba-b77d" type="min"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="05c8-6cb1-0d6f-6dc1" name="Volley of Spikes" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="5d7d-e012-2754-64f5" name="Volley of Spikes" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="03 Weapon">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Missile"/>
+                <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="12&quot;"/>
+                <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="2D6"/>
+                <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="3+"/>
+                <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="4+"/>
+                <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-"/>
+                <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="1"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5455-6b75-3add-cd18" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f6ca-b7d5-0e61-2fd8" type="min"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups/>
       <entryLinks/>
@@ -4253,51 +4511,6 @@
             <characteristic name="Wounds" characteristicTypeId="cd0e-fea6-411f-904d" value="3"/>
             <characteristic name="Bravery" characteristicTypeId="0c85-bf79-836b-759e" value="10"/>
             <characteristic name="Save" characteristicTypeId="f8dd-4f2a-8543-4f36" value="5+"/>
-          </characteristics>
-        </profile>
-        <profile id="dbad-184b-8c7e-c7f3" name="Moonstone War-spear" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="03 Weapon">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <characteristics>
-            <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
-            <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="2&quot;"/>
-            <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="1"/>
-            <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="4+"/>
-            <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="4+"/>
-            <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-"/>
-            <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="1"/>
-          </characteristics>
-        </profile>
-        <profile id="82fa-8268-ce04-fa12" name="Ripperdactyl&apos;s Slashing Claws" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="03 Weapon">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <characteristics>
-            <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
-            <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="1&quot;"/>
-            <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="3"/>
-            <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="3+"/>
-            <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="3+"/>
-            <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-"/>
-            <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="1"/>
-          </characteristics>
-        </profile>
-        <profile id="4620-15f8-070b-df68" name="Ripperdactyl&apos;s Vicious Beak" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="03 Weapon">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <characteristics>
-            <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
-            <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="1&quot;"/>
-            <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="1"/>
-            <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="4+"/>
-            <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="3+"/>
-            <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-"/>
-            <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="1"/>
           </characteristics>
         </profile>
         <profile id="7d60-0364-26b6-8a13" name="Swooping Dive" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="08 Ability (Unit)">
@@ -4416,6 +4629,105 @@
             <cost name="pts" costTypeId="points" value="140.0"/>
           </costs>
         </selectionEntry>
+        <selectionEntry id="f471-c2ed-ce1a-9d0d" name="Moonstone War-spear" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="ac53-5ebc-f369-ec73" name="Moonstone War-spear" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="03 Weapon">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
+                <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="2&quot;"/>
+                <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="1"/>
+                <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="4+"/>
+                <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="4+"/>
+                <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-"/>
+                <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="1"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4c22-4a3a-30ef-e223" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ef13-e5c4-8c77-e9e4" type="min"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="dcba-6b54-2ecc-9b30" name="Ripperdactyl&apos;s Slashing Claws" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="3ac0-8879-1723-912b" name="Ripperdactyl&apos;s Slashing Claws" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="03 Weapon">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
+                <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="1&quot;"/>
+                <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="3"/>
+                <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="3+"/>
+                <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="3+"/>
+                <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-"/>
+                <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="1"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b4ce-c223-1419-5021" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a9ec-0d06-09e5-7209" type="min"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="8bb0-de5e-469c-4efc" name="Ripperdactyl&apos;s Vicious Beak" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="e75d-1317-51ce-dd59" name="Ripperdactyl&apos;s Vicious Beak" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="03 Weapon">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
+                <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="1&quot;"/>
+                <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="1"/>
+                <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="4+"/>
+                <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="3+"/>
+                <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-"/>
+                <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="1"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="93cd-ae89-d846-fe71" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7836-8c55-56df-7d28" type="min"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups/>
       <entryLinks/>
@@ -4435,36 +4747,6 @@
             <characteristic name="Wounds" characteristicTypeId="cd0e-fea6-411f-904d" value="3"/>
             <characteristic name="Bravery" characteristicTypeId="0c85-bf79-836b-759e" value="10"/>
             <characteristic name="Save" characteristicTypeId="f8dd-4f2a-8543-4f36" value="5+"/>
-          </characteristics>
-        </profile>
-        <profile id="9306-63f1-6591-8254" name="Stream of Fire" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="03 Weapon">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <characteristics>
-            <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Missile"/>
-            <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="8&quot;"/>
-            <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="1"/>
-            <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="3+"/>
-            <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="3+"/>
-            <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-2"/>
-            <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="D6"/>
-          </characteristics>
-        </profile>
-        <profile id="e1f7-6355-000e-31b9" name="Corrosive Bite" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="03 Weapon">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <characteristics>
-            <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
-            <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="1&quot;"/>
-            <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="3"/>
-            <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="3+"/>
-            <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="3+"/>
-            <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-1"/>
-            <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="1"/>
           </characteristics>
         </profile>
         <profile id="5d08-1800-e984-a954" name="It Burns!" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
@@ -4545,6 +4827,72 @@
             <cost name="pts" costTypeId="points" value="40.0"/>
           </costs>
         </selectionEntry>
+        <selectionEntry id="1cb6-2bfd-045c-8820" name="Corrosive Bite" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="2631-cd90-fa26-1ea3" name="Corrosive Bite" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="03 Weapon">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
+                <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="1&quot;"/>
+                <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="3"/>
+                <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="3+"/>
+                <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="3+"/>
+                <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-1"/>
+                <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="1"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d566-12c6-636f-dd15" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2067-f43e-dd3b-79a8" type="min"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="e59e-26be-2687-1ece" name="Stream of Fire" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="1b38-170d-0488-308c" name="Stream of Fire" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="03 Weapon">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Missile"/>
+                <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="8&quot;"/>
+                <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="1"/>
+                <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="3+"/>
+                <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="3+"/>
+                <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-2"/>
+                <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="D6"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6bce-4911-514d-c530" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4375-1c46-073e-bde2" type="min"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups/>
       <entryLinks/>
@@ -4564,21 +4912,6 @@
             <characteristic name="Wounds" characteristicTypeId="cd0e-fea6-411f-904d" value="6"/>
             <characteristic name="Bravery" characteristicTypeId="0c85-bf79-836b-759e" value="10"/>
             <characteristic name="Save" characteristicTypeId="f8dd-4f2a-8543-4f36" value="4+"/>
-          </characteristics>
-        </profile>
-        <profile id="3220-977f-cd87-74f2" name="Fearsome Jaws" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="03 Weapon">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <characteristics>
-            <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
-            <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="1&quot;"/>
-            <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="1"/>
-            <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="4+"/>
-            <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="4+"/>
-            <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-"/>
-            <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="1"/>
           </characteristics>
         </profile>
         <profile id="0aed-5373-63df-babd" name="Celestial Conduit" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="08 Ability (Unit)">
@@ -4601,14 +4934,7 @@
         </profile>
       </profiles>
       <rules/>
-      <infoLinks>
-        <infoLink id="ae3b-a820-a7c5-22ae" name="Celestite War-pick" hidden="false" targetId="92d4-f154-89ca-c1f6" type="profile">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-        </infoLink>
-      </infoLinks>
+      <infoLinks/>
       <modifiers/>
       <constraints/>
       <categoryLinks>
@@ -4669,7 +4995,65 @@
           <constraints/>
         </categoryLink>
       </categoryLinks>
-      <selectionEntries/>
+      <selectionEntries>
+        <selectionEntry id="e398-e135-5226-793c" name="Fearsome Jaws" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="9d77-54eb-35d7-0792" name="Fearsome Jaws" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="03 Weapon">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
+                <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="1&quot;"/>
+                <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="1"/>
+                <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="4+"/>
+                <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="4+"/>
+                <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-"/>
+                <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="1"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a859-e3e4-5144-b9ad" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="090b-0ed6-2fd8-74fa" type="min"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="85ff-96a6-edab-b808" name="Celestite War-pick" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks>
+            <infoLink id="6faa-30bf-1811-6ddc" name="Celestite War-pick" hidden="false" targetId="92d4-f154-89ca-c1f6" type="profile">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+          </infoLinks>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7bb5-eadb-1387-d900" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9020-04e6-615e-ab1a" type="min"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
       <selectionEntryGroups/>
       <entryLinks>
         <entryLink id="4a67-eb94-8e72-7341" name="General" hidden="false" targetId="b341-0885-3f1c-7d8a" type="selectionEntry">
@@ -4713,36 +5097,6 @@
             <characteristic name="Wounds" characteristicTypeId="cd0e-fea6-411f-904d" value="7"/>
             <characteristic name="Bravery" characteristicTypeId="0c85-bf79-836b-759e" value="10"/>
             <characteristic name="Save" characteristicTypeId="f8dd-4f2a-8543-4f36" value="4+"/>
-          </characteristics>
-        </profile>
-        <profile id="34fa-996a-e7f9-f1e3" name="Star-stone Mace" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="03 Weapon">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <characteristics>
-            <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
-            <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="1&quot;"/>
-            <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="3"/>
-            <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="3+"/>
-            <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="3+"/>
-            <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-1"/>
-            <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="2"/>
-          </characteristics>
-        </profile>
-        <profile id="e7e0-c47f-a0bc-3a8b" name="Fearsome Jaws" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="03 Weapon">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <characteristics>
-            <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
-            <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="1&quot;"/>
-            <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="1"/>
-            <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="4+"/>
-            <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="4+"/>
-            <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-"/>
-            <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="1"/>
           </characteristics>
         </profile>
         <profile id="e35f-8d1c-238c-ec7b" name="Alpha Warden" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="08 Ability (Unit)">
@@ -4819,7 +5173,74 @@
           <constraints/>
         </categoryLink>
       </categoryLinks>
-      <selectionEntries/>
+      <selectionEntries>
+        <selectionEntry id="f3e8-57f9-a4bf-0a86" name="Fearsome Jaws" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="3b83-a764-85a2-a2a3" name="Fearsome Jaws" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="03 Weapon">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
+                <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="1&quot;"/>
+                <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="1"/>
+                <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="4+"/>
+                <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="4+"/>
+                <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-"/>
+                <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="1"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8a47-5c22-fa63-911c" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e0d3-ea75-67a7-1a09" type="min"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="2995-15eb-ba00-ebef" name="Star-stone Mace" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="1c7e-3209-e05b-cd2e" name="Star-stone Mace" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="03 Weapon">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
+                <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="1&quot;"/>
+                <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="3"/>
+                <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="3+"/>
+                <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="3+"/>
+                <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-1"/>
+                <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="2"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="418f-1b64-04c8-e67a" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5ca3-24bb-fab2-9731" type="min"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
       <selectionEntryGroups/>
       <entryLinks>
         <entryLink id="3c37-c833-c85d-f904" name="General" hidden="false" targetId="b341-0885-3f1c-7d8a" type="selectionEntry">
@@ -4853,21 +5274,6 @@
     </selectionEntry>
     <selectionEntry id="cadc-7cee-683e-2d27" name="Saurus Guard" hidden="false" collective="false" type="unit">
       <profiles>
-        <profile id="ee54-adc5-b315-d77b" name="Celestite Polearm" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="03 Weapon">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <characteristics>
-            <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
-            <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="1&quot;"/>
-            <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="2"/>
-            <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="3+"/>
-            <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="3+"/>
-            <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-1"/>
-            <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="1"/>
-          </characteristics>
-        </profile>
         <profile id="8193-8ba6-3e29-9d6e" name="Sworn Guardians" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="08 Ability (Unit)">
           <profiles/>
           <rules/>
@@ -4889,24 +5295,6 @@
             <characteristic name="Save" characteristicTypeId="f8dd-4f2a-8543-4f36" value="4+"/>
           </characteristics>
         </profile>
-        <profile id="a545-cb09-ec2d-c98e" name="Stardrake Icon" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <characteristics>
-            <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="Models in this unit may carry stardrake icons that pulse with the terrifying essence of a celestial predator. If a battleshock test is made for an enemy unit within 5&quot; of any stardrake icons, add 1 to the result."/>
-          </characteristics>
-        </profile>
-        <profile id="af73-87a9-a758-2c9d" name="Wardrum" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <characteristics>
-            <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="Models in this unit may carry wardrums. A unit that includes any wardrums can march in its movement phase. When it does so, it doubles its Move characteritic but cannot run or charge in the same turn."/>
-          </characteristics>
-        </profile>
         <profile id="f814-40ed-c696-33eb" name="Alpha Guardian" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
           <profiles/>
           <rules/>
@@ -4920,12 +5308,6 @@
       <rules/>
       <infoLinks>
         <infoLink id="8460-a549-7270-36f8" name="Stardrake Shields" hidden="false" targetId="a123-4616-9def-c7d6" type="profile">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-        </infoLink>
-        <infoLink id="3abf-f618-5fb3-dfb5" name="Powerful Jaws and Stardrake Shield" hidden="false" targetId="4e62-7be2-b623-c53f" type="profile">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -4996,6 +5378,117 @@
             <cost name="pts" costTypeId="points" value="100.0"/>
           </costs>
         </selectionEntry>
+        <selectionEntry id="8ab3-e18a-8bb9-4a74" name="Celestite Polearm" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="c749-9248-4930-7477" name="Celestite Polearm" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="03 Weapon">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
+                <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="1&quot;"/>
+                <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="2"/>
+                <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="3+"/>
+                <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="3+"/>
+                <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-1"/>
+                <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="1"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5bab-b738-a707-df53" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e9fe-9326-06ae-4404" type="min"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="c671-7bf0-f08c-d934" name="Wardrum" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="9abe-0a3a-6d99-6c7c" name="Wardrum" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="Models in this unit may carry wardrums. A unit that includes any wardrums can march in its movement phase. When it does so, it doubles its Move characteritic but cannot run or charge in the same turn."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7de3-ae19-86bb-63f5" type="max"/>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="581a-0417-5681-e1c1" type="min"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="2a68-8e41-510b-0e17" name="Stardrake Icon" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="2777-0990-bfb2-ea25" name="Stardrake Icon" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="Models in this unit may carry stardrake icons that pulse with the terrifying essence of a celestial predator. If a battleshock test is made for an enemy unit within 5&quot; of any stardrake icons, add 1 to the result."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="df56-1bdf-4eec-2541" type="max"/>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b82b-9666-25bb-e9a5" type="min"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="8ab6-b851-59bf-3d07" name="Powerful Jaws and Stardrake Shield" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks>
+            <infoLink id="c7eb-5da9-84ea-2ba5" name="Powerful Jaws and Stardrake Shield" hidden="false" targetId="4e62-7be2-b623-c53f" type="profile">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+          </infoLinks>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7045-3712-3afb-fa5d" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="93bd-7ffc-22bd-19d7" type="min"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups/>
       <entryLinks/>
@@ -5017,24 +5510,6 @@
             <characteristic name="Save" characteristicTypeId="f8dd-4f2a-8543-4f36" value="5+"/>
           </characteristics>
         </profile>
-        <profile id="7ae2-cd46-6c9c-1f62" name="Wardrum" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <characteristics>
-            <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="Models in this unit may carry wardrums. A unit that includes any wardrums can march in its movement phase. When it does so, it doubles its Move characteritic but cannot run or charge in the same turn."/>
-          </characteristics>
-        </profile>
-        <profile id="02bf-787b-0fe7-c0b8" name="Stardrake Icon" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <characteristics>
-            <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="Models in this unit may carry stardrake icons that pulse with the terrifying essence of a celestial predator. If a battleshock test is made for an enemy unit within 5&quot; of any stardrake icons, add 1 to the result."/>
-          </characteristics>
-        </profile>
         <profile id="6e9f-00b7-e8ea-2b0a" name="Alpha Knight" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
           <profiles/>
           <rules/>
@@ -5048,18 +5523,6 @@
       <rules/>
       <infoLinks>
         <infoLink id="d77c-7ca7-96ff-beb4" name="Stardrake Shields" hidden="false" targetId="a123-4616-9def-c7d6" type="profile">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-        </infoLink>
-        <infoLink id="5a90-344a-1247-e2a1" name="Powerful Jaws and Stardrake Shield" hidden="false" targetId="4e62-7be2-b623-c53f" type="profile">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-        </infoLink>
-        <infoLink id="bd9a-5ccf-eee1-a002" name="Cold One&apos;s Vicious Bite" hidden="false" targetId="07a1-aaf7-d5ab-1be7" type="profile">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -5128,6 +5591,108 @@
           <entryLinks/>
           <costs>
             <cost name="pts" costTypeId="points" value="100.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="c156-22f6-a34f-8c90" name="Stardrake Icon" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="faee-98bc-2e0a-aedb" name="Stardrake Icon" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="Models in this unit may carry stardrake icons that pulse with the terrifying essence of a celestial predator. If a battleshock test is made for an enemy unit within 5&quot; of any stardrake icons, add 1 to the result."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="24ac-f8be-1168-5a49" type="max"/>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a8ec-c0a7-5f0a-4a7b" type="min"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="dab1-3960-ad79-fe3a" name="Wardrum" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="bb34-0b0c-b027-7cbd" name="Wardrum" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="Models in this unit may carry wardrums. A unit that includes any wardrums can march in its movement phase. When it does so, it doubles its Move characteritic but cannot run or charge in the same turn."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dde9-52c7-ea4e-6616" type="max"/>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d173-f737-8c0e-ec91" type="min"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="d80b-8c75-342e-9a67" name="Cold One&apos;s Vicious Bite" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks>
+            <infoLink id="e043-c0d2-3cc0-4479" name="Cold One&apos;s Vicious Bite" hidden="false" targetId="07a1-aaf7-d5ab-1be7" type="profile">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+          </infoLinks>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="534e-2aea-dac7-b68f" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0868-2a07-bbb5-5d0f" type="min"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="47e1-70ed-dee1-630f" name="Powerful Jaws and Stardrake Shield" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks>
+            <infoLink id="3ab5-16f8-a7da-1a41" name="Powerful Jaws and Stardrake Shield" hidden="false" targetId="4e62-7be2-b623-c53f" type="profile">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+          </infoLinks>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e5cb-03ef-6eaa-98ad" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bf5c-537f-a3de-fe6b" type="min"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -5267,12 +5832,6 @@
           <infoLinks/>
           <modifiers/>
         </infoLink>
-        <infoLink id="ecd4-961d-6e7d-fb66" name="Fearsome Jaws and Stardrake Shield" hidden="false" targetId="b48e-3943-8bf4-f5e5" type="profile">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-        </infoLink>
       </infoLinks>
       <modifiers/>
       <constraints/>
@@ -5327,7 +5886,32 @@
           <constraints/>
         </categoryLink>
       </categoryLinks>
-      <selectionEntries/>
+      <selectionEntries>
+        <selectionEntry id="7fea-1a2d-de16-ec41" name="Fearsome Jaws and Stardrake Shield" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks>
+            <infoLink id="2ebd-789c-da86-bb58" name="Fearsome Jaws and Stardrake Shield" hidden="false" targetId="b48e-3943-8bf4-f5e5" type="profile">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+          </infoLinks>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ea7b-e67a-570d-203e" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d8ca-a4a7-8f1d-f1bb" type="min"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="e123-4012-fdbf-adb6" name="Weapon Options" hidden="false" collective="false" defaultSelectionEntryId="64c2-2389-2d99-f85b">
           <profiles/>
@@ -5517,51 +6101,6 @@
             <characteristic name="Save" characteristicTypeId="f8dd-4f2a-8543-4f36" value="4+"/>
           </characteristics>
         </profile>
-        <profile id="0c35-e648-d0c0-ed91" name="Sunbolt Gauntlet" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="03 Weapon">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <characteristics>
-            <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Missile"/>
-            <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="18&quot;"/>
-            <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="D6"/>
-            <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="3+"/>
-            <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="4+"/>
-            <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-1"/>
-            <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="1"/>
-          </characteristics>
-        </profile>
-        <profile id="7b5a-04ec-12d4-3240" name="Sunstone Spear" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="03 Weapon">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <characteristics>
-            <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
-            <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="2&quot;"/>
-            <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="3"/>
-            <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="3+"/>
-            <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="3+"/>
-            <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-1"/>
-            <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="D3"/>
-          </characteristics>
-        </profile>
-        <profile id="363f-d324-19e6-5646" name="Carnosaur&apos;s Massive Jaws" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="03 Weapon">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <characteristics>
-            <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
-            <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="2&quot;"/>
-            <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="*"/>
-            <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="4+"/>
-            <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="3+"/>
-            <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-1"/>
-            <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="3"/>
-          </characteristics>
-        </profile>
         <profile id="208e-dba2-e8ac-37ce" name="Ancient Warlord" hidden="false" profileTypeId="f71f-b0a4-730e-ced3" profileTypeName="07 Ability (Command)">
           <profiles/>
           <rules/>
@@ -5583,12 +6122,6 @@
       </profiles>
       <rules/>
       <infoLinks>
-        <infoLink id="4d68-df20-a772-662b" name="Carnosaur&apos;s Clawed Forelimbs" hidden="false" targetId="9a79-cf16-3959-49a5" type="profile">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-        </infoLink>
         <infoLink id="218b-07e3-f6c5-9fbf" name="Pinned Down" hidden="false" targetId="976f-70e0-9977-834c" type="profile">
           <profiles/>
           <rules/>
@@ -5675,7 +6208,131 @@
           <constraints/>
         </categoryLink>
       </categoryLinks>
-      <selectionEntries/>
+      <selectionEntries>
+        <selectionEntry id="5d4b-e5e3-fa02-dd84" name="Carnosaur&apos;s Massive Jaws" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="97d6-0296-fea9-bdcc" name="Carnosaur&apos;s Massive Jaws" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="03 Weapon">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
+                <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="2&quot;"/>
+                <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="*"/>
+                <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="4+"/>
+                <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="3+"/>
+                <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-1"/>
+                <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="3"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8e4e-de85-0ffe-6d85" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e480-9333-e400-41b9" type="min"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="40ba-9663-b4da-316c" name="Sunbolt Gauntlet" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="a0e2-3e40-dd71-5ba0" name="Sunbolt Gauntlet" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="03 Weapon">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Missile"/>
+                <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="18&quot;"/>
+                <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="D6"/>
+                <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="3+"/>
+                <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="4+"/>
+                <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-1"/>
+                <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="1"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cb98-4670-0b42-a4e4" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b35c-8f54-843b-760a" type="min"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="d7e3-ec53-5e44-879a" name="Sunstone Spear" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="2b9d-2f4b-aeb7-ccda" name="Sunstone Spear" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="03 Weapon">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
+                <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="2&quot;"/>
+                <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="3"/>
+                <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="3+"/>
+                <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="3+"/>
+                <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-1"/>
+                <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="D3"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c334-f48a-6063-5f06" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="13ac-789e-8cb1-f2bf" type="min"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="09c2-c6c9-e741-b0f4" name="Carnosaur&apos;s Clawed Forelimbs" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks>
+            <infoLink id="de5f-53b7-5638-acdb" name="Carnosaur&apos;s Clawed Forelimbs" hidden="false" targetId="9a79-cf16-3959-49a5" type="profile">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+          </infoLinks>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d086-c94a-505b-c65d" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="951f-0cdb-5bb7-72bd" type="min"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
       <selectionEntryGroups/>
       <entryLinks>
         <entryLink id="0f4b-26f3-c4d3-ec06" name="General" hidden="false" targetId="b341-0885-3f1c-7d8a" type="selectionEntry">
@@ -5729,21 +6386,6 @@
             <characteristic name="Save" characteristicTypeId="f8dd-4f2a-8543-4f36" value="4+"/>
           </characteristics>
         </profile>
-        <profile id="ed07-7113-2445-5948" name="Carnosaur&apos;s Massive Jaws" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="03 Weapon">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <characteristics>
-            <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
-            <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="2&quot;"/>
-            <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="*"/>
-            <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="3+"/>
-            <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="3+"/>
-            <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-1"/>
-            <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="D3"/>
-          </characteristics>
-        </profile>
         <profile id="b33b-a1d0-c2a4-1a72" name="Saurian Savagery" hidden="false" profileTypeId="f71f-b0a4-730e-ced3" profileTypeName="07 Ability (Command)">
           <profiles/>
           <rules/>
@@ -5757,18 +6399,6 @@
       <rules/>
       <infoLinks>
         <infoLink id="c808-4ab6-55d9-5108" name="Stardrake Shields" hidden="false" targetId="a123-4616-9def-c7d6" type="profile">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-        </infoLink>
-        <infoLink id="459d-502f-5635-4278" name="Fearsome Jaws and Stardrake Shield" hidden="false" targetId="b48e-3943-8bf4-f5e5" type="profile">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-        </infoLink>
-        <infoLink id="2083-85c9-8f9d-d33f" name="Carnosaur&apos;s Clawed Forelimbs" hidden="false" targetId="9a79-cf16-3959-49a5" type="profile">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -5860,7 +6490,89 @@
           <constraints/>
         </categoryLink>
       </categoryLinks>
-      <selectionEntries/>
+      <selectionEntries>
+        <selectionEntry id="7e48-c190-83bd-2641" name="Carnosaur&apos;s Massive Jaws" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="0b17-bb00-a537-7aba" name="Carnosaur&apos;s Massive Jaws" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="03 Weapon">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
+                <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="2&quot;"/>
+                <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="*"/>
+                <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="3+"/>
+                <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="3+"/>
+                <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-1"/>
+                <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="D3"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="73b7-38d7-ff41-742c" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="afb1-bdbd-d0cc-e0ba" type="min"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="61ee-b2d7-422e-dc01" name="Carnosaur&apos;s Clawed Forelimbs" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks>
+            <infoLink id="f751-fd4d-a8fa-66ce" name="Carnosaur&apos;s Clawed Forelimbs" hidden="false" targetId="9a79-cf16-3959-49a5" type="profile">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+          </infoLinks>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1da5-c4bc-8c26-673d" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="00df-889c-89d0-471c" type="min"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="7b9a-0945-60ff-7f95" name="Fearsome Jaws and Stardrake Shield" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks>
+            <infoLink id="980d-1ebf-bdb1-c5a1" name="Fearsome Jaws and Stardrake Shield" hidden="false" targetId="b48e-3943-8bf4-f5e5" type="profile">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+          </infoLinks>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c972-9c34-5a62-5643" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9373-c01c-765b-2d06" type="min"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="fb05-9c44-af71-6aa9" name="Weapon Options" hidden="false" collective="false" defaultSelectionEntryId="c031-5854-c2b6-9dc2">
           <profiles/>
@@ -6047,25 +6759,7 @@
       </profiles>
       <rules/>
       <infoLinks>
-        <infoLink id="a6ef-9930-580d-a262" name="Celestite War-pick" hidden="false" targetId="92d4-f154-89ca-c1f6" type="profile">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-        </infoLink>
-        <infoLink id="51c2-f8f1-0094-19bf" name="Cold One&apos;s Vicious Bite" hidden="false" targetId="07a1-aaf7-d5ab-1be7" type="profile">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-        </infoLink>
         <infoLink id="5cdd-356f-32a0-d99b" name="Stardrake Shields" hidden="false" targetId="a123-4616-9def-c7d6" type="profile">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-        </infoLink>
-        <infoLink id="0835-11a9-df95-6ab6" name="Fearsome Jaws and Stardrake Shield" hidden="false" targetId="b48e-3943-8bf4-f5e5" type="profile">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -6125,7 +6819,80 @@
           <constraints/>
         </categoryLink>
       </categoryLinks>
-      <selectionEntries/>
+      <selectionEntries>
+        <selectionEntry id="72ee-799a-7bee-2944" name="Celestite War-pick" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks>
+            <infoLink id="c56e-89b2-d280-b5f1" name="Celestite War-pick" hidden="false" targetId="92d4-f154-89ca-c1f6" type="profile">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+          </infoLinks>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5d86-d711-3d8c-0e18" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d514-ad78-88af-7854" type="min"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="39c0-31ce-0ace-5034" name="Fearsome Jaws and Stardrake Shield" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks>
+            <infoLink id="b90f-e790-6632-216c" name="Fearsome Jaws and Stardrake Shield" hidden="false" targetId="b48e-3943-8bf4-f5e5" type="profile">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+          </infoLinks>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1123-481d-f9d8-12b4" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="593f-e4dd-39bb-d398" type="min"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="bd5f-d07c-b385-56d6" name="Cold One&apos;s Vicious Bite" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks>
+            <infoLink id="9ee3-7972-cc44-f318" name="Cold One&apos;s Vicious Bite" hidden="false" targetId="07a1-aaf7-d5ab-1be7" type="profile">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+          </infoLinks>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dd89-45b3-b514-c1c4" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0141-6d4c-a60f-0af1" type="min"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
       <selectionEntryGroups/>
       <entryLinks>
         <entryLink id="10da-72df-50f6-4444" name="General" hidden="false" targetId="b341-0885-3f1c-7d8a" type="selectionEntry">
@@ -6169,36 +6936,6 @@
             <characteristic name="Wounds" characteristicTypeId="cd0e-fea6-411f-904d" value="7"/>
             <characteristic name="Bravery" characteristicTypeId="0c85-bf79-836b-759e" value="10"/>
             <characteristic name="Save" characteristicTypeId="f8dd-4f2a-8543-4f36" value="4+"/>
-          </characteristics>
-        </profile>
-        <profile id="b015-46fa-2447-b8af" name="Celestite War-mace" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="03 Weapon">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <characteristics>
-            <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
-            <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="1&quot;"/>
-            <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="5"/>
-            <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="3+"/>
-            <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="3+"/>
-            <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-1"/>
-            <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="1"/>
-          </characteristics>
-        </profile>
-        <profile id="5874-0393-d43f-6edf" name="Fearsome Jaws and Aeon Shield" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="03 Weapon">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <characteristics>
-            <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
-            <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="1&quot;"/>
-            <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="2"/>
-            <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="4+"/>
-            <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="3+"/>
-            <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-"/>
-            <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="1"/>
           </characteristics>
         </profile>
         <profile id="c459-92cf-d49e-b1cf" name="Aeon Shield" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="08 Ability (Unit)">
@@ -6284,7 +7021,74 @@
           <constraints/>
         </categoryLink>
       </categoryLinks>
-      <selectionEntries/>
+      <selectionEntries>
+        <selectionEntry id="69b2-08f3-a5e1-7819" name="Celestite War-mace" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="4f8d-a5f8-d065-834f" name="Celestite War-mace" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="03 Weapon">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
+                <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="1&quot;"/>
+                <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="5"/>
+                <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="3+"/>
+                <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="3+"/>
+                <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-1"/>
+                <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="1"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5b34-95cc-15b9-82d1" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e704-b016-a73f-8e0c" type="min"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="6d83-ded0-1723-318a" name="Fearsome Jaws and Aeon Shield" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="818b-aaf7-e727-391b" name="Fearsome Jaws and Aeon Shield" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="03 Weapon">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
+                <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="1&quot;"/>
+                <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="2"/>
+                <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="4+"/>
+                <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="3+"/>
+                <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-"/>
+                <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="1"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="83ea-1012-5032-9f83" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e7b9-e78d-09a4-ed9e" type="min"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
       <selectionEntryGroups/>
       <entryLinks>
         <entryLink id="b442-3333-5177-ddc7" name="General" hidden="false" targetId="b341-0885-3f1c-7d8a" type="selectionEntry">
@@ -6348,34 +7152,10 @@
             <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="The leader of this unit is the Alpha Talon. An Alpha Talon makes 2 attacks rather than 1 with its Celestite Club or Spear."/>
           </characteristics>
         </profile>
-        <profile id="3108-b04f-6b44-fada" name="Stardrake Icon" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <characteristics>
-            <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="Models in this unit may carry stardrake icons that pulse with the terrifying essence of a celestial predator. If a battleshock test is made for an enemy unit within 5&quot; of any stardrake icons, add 1 to the result."/>
-          </characteristics>
-        </profile>
-        <profile id="df62-48f0-351f-b1c7" name="Wardrum" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <characteristics>
-            <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="Models in this unit may carry wardrums. A unit that includes any wardrums can march in its movement phase. When it does so, it doubles its Move characteritic but cannot run or charge in the same turn."/>
-          </characteristics>
-        </profile>
       </profiles>
       <rules/>
       <infoLinks>
         <infoLink id="9c06-8e0d-13e2-b908" name="Stardrake Shields" hidden="false" targetId="a123-4616-9def-c7d6" type="profile">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-        </infoLink>
-        <infoLink id="3de4-8e4e-c1cf-cc47" name="Powerful Jaws and Stardrake Shield" hidden="false" targetId="4e62-7be2-b623-c53f" type="profile">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -6452,6 +7232,84 @@
           <entryLinks/>
           <costs>
             <cost name="pts" costTypeId="points" value="100.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="f061-c9fd-5dde-ce5c" name="Stardrake Icon" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="908e-4aa6-4548-5e0b" name="Stardrake Icon" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="Models in this unit may carry stardrake icons that pulse with the terrifying essence of a celestial predator. If a battleshock test is made for an enemy unit within 5&quot; of any stardrake icons, add 1 to the result."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c4ee-728f-8bae-b488" type="max"/>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="963f-6f69-c539-e476" type="min"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="2638-3213-3be7-7bdb" name="Wardrum" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="1b51-351a-1e17-7ae5" name="Wardrum" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="Models in this unit may carry wardrums. A unit that includes any wardrums can march in its movement phase. When it does so, it doubles its Move characteritic but cannot run or charge in the same turn."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1f35-0d35-59c8-f398" type="max"/>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dd98-b589-18f9-9c96" type="min"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="f5cd-dfa5-b5e6-ab2a" name="Powerful Jaws and Stardrake Shield" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks>
+            <infoLink id="320b-a78b-6e9c-4860" name="Powerful Jaws and Stardrake Shield" hidden="false" targetId="4e62-7be2-b623-c53f" type="profile">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+          </infoLinks>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f86f-a588-50c4-8f0c" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="db47-3767-ba37-5ce6" type="min"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -6543,21 +7401,6 @@
     </selectionEntry>
     <selectionEntry id="26d0-e465-fd8a-4fe2" name="Skink Handlers" hidden="false" collective="false" type="unit">
       <profiles>
-        <profile id="f684-62b8-8464-7794" name="Goad-spears" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="03 Weapon">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <characteristics>
-            <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
-            <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="2&quot;"/>
-            <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="1"/>
-            <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="5+"/>
-            <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="5+"/>
-            <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-"/>
-            <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="1"/>
-          </characteristics>
-        </profile>
         <profile id="9192-b994-30f1-9098" name="Aim for their Eyes" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="08 Ability (Unit)">
           <profiles/>
           <rules/>
@@ -6646,6 +7489,39 @@
             <cost name="pts" costTypeId="points" value="40.0"/>
           </costs>
         </selectionEntry>
+        <selectionEntry id="078b-3deb-7fbf-6f47" name="Goad-spears" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="9635-a9d7-c3f4-cfbe" name="Goad-spears" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="03 Weapon">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
+                <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="2&quot;"/>
+                <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="1"/>
+                <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="5+"/>
+                <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="5+"/>
+                <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-"/>
+                <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="1"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b610-e26c-e4c3-f113" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9234-a489-c755-28d1" type="min"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups/>
       <entryLinks/>
@@ -6665,21 +7541,6 @@
             <characteristic name="Wounds" characteristicTypeId="cd0e-fea6-411f-904d" value="4"/>
             <characteristic name="Bravery" characteristicTypeId="0c85-bf79-836b-759e" value="10"/>
             <characteristic name="Save" characteristicTypeId="f8dd-4f2a-8543-4f36" value="5+"/>
-          </characteristics>
-        </profile>
-        <profile id="e57c-c243-4f83-de05" name="Star-stone Staff" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="03 Weapon">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <characteristics>
-            <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
-            <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="1&quot;"/>
-            <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="3"/>
-            <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="4+"/>
-            <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="3+"/>
-            <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-1"/>
-            <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="1"/>
           </characteristics>
         </profile>
         <profile id="0f02-64cd-92da-c5f3" name="Celestial Rites" book="" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="08 Ability (Unit)">
@@ -6754,7 +7615,41 @@
           <constraints/>
         </categoryLink>
       </categoryLinks>
-      <selectionEntries/>
+      <selectionEntries>
+        <selectionEntry id="98f6-c055-608a-332b" name="Star-stone Staff" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="23ec-3c20-1342-1de3" name="Star-stone Staff" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="03 Weapon">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
+                <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="1&quot;"/>
+                <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="3"/>
+                <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="4+"/>
+                <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="3+"/>
+                <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-1"/>
+                <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="1"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1be8-9cc2-d383-5978" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="babf-990a-dd88-636f" type="min"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="9d67-f42d-a63b-5fd5" name="Weapon Options" hidden="false" collective="false" defaultSelectionEntryId="04aa-e1be-53dc-81ee">
           <profiles/>
@@ -6881,21 +7776,6 @@
             <characteristic name="Spells Known" characteristicTypeId="dc9c-47d3-6931-859c" value="Arcane Bolt, Mystic Shield, Summon Starlight"/>
           </characteristics>
         </profile>
-        <profile id="a955-1171-52e4-7358" name="Star-stone Dagger" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="03 Weapon">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <characteristics>
-            <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
-            <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="1&quot;"/>
-            <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="3"/>
-            <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="3+"/>
-            <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="4+"/>
-            <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-1"/>
-            <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="1"/>
-          </characteristics>
-        </profile>
         <profile id="660d-b68a-c0a1-9d08" name="Serpent Staff" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="08 Ability (Unit)">
           <profiles/>
           <rules/>
@@ -6998,7 +7878,41 @@
           <constraints/>
         </categoryLink>
       </categoryLinks>
-      <selectionEntries/>
+      <selectionEntries>
+        <selectionEntry id="5485-0417-01f2-2f8e" name="Star-stone Dagger" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="27b1-9354-c311-f75f" name="Star-stone Dagger" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="03 Weapon">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
+                <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="1&quot;"/>
+                <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="3"/>
+                <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="3+"/>
+                <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="4+"/>
+                <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-1"/>
+                <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="1"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8a10-9425-60c0-2bff" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e13a-5aa4-2d53-003e" type="min"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
       <selectionEntryGroups/>
       <entryLinks>
         <entryLink id="8ba8-f0ca-7a9f-2efa" name="General" hidden="false" targetId="b341-0885-3f1c-7d8a" type="selectionEntry">
@@ -7049,21 +7963,6 @@
           <modifiers/>
           <characteristics>
             <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="In your hero phase, a Skink Starseer can attempt to scry the future. Both you and your opponent secretly place a dice to show any number, then reveal them. You gain as many insights as the number on your dice - however, if your opponent&apos;s dice shows the same number, the Starseer misreads the portents that are revealed and your opponent gains the insights instead! Each insight can be used to re-roll any single dice before your next hero phase."/>
-          </characteristics>
-        </profile>
-        <profile id="1b6b-94ea-caa8-d549" name="Astromancer&apos;s Staff" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="03 Weapon">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <characteristics>
-            <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
-            <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="2&quot;"/>
-            <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="1"/>
-            <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="4+"/>
-            <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="4+"/>
-            <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-1"/>
-            <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="D3"/>
           </characteristics>
         </profile>
         <profile id="480a-1165-cbd9-cfd5" name="Curse of Fates" hidden="false" profileTypeId="2e81-5e22-c6e1-73cb" profileTypeName="05 Spell">
@@ -7158,7 +8057,41 @@
           <constraints/>
         </categoryLink>
       </categoryLinks>
-      <selectionEntries/>
+      <selectionEntries>
+        <selectionEntry id="d1d9-d02e-050e-ee16" name="Astromancer&apos;s Staff" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="1e18-3045-7076-452f" name="Astromancer&apos;s Staff" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="03 Weapon">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
+                <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="2&quot;"/>
+                <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="1"/>
+                <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="4+"/>
+                <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="4+"/>
+                <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-1"/>
+                <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="D3"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f0ab-cb96-da64-0b51" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2970-91b1-fe3f-72f4" type="min"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
       <selectionEntryGroups/>
       <entryLinks>
         <entryLink id="49db-4c60-a7e8-ee1b" name="General" hidden="false" targetId="b341-0885-3f1c-7d8a" type="selectionEntry">
@@ -7698,15 +8631,6 @@
             <characteristic name="Description" characteristicTypeId="76ff-781d-b8e6-5f27" value="The Starmaster blinks slowly and raises its hands, bathing the battlefield in purest starlight. Light of the Heavens has a casting value of 6. If successfullly cast, then until your next hero phase any battleschok tests for CELESTIAL DAEMON or CHAOS DAEMON units are made by rolling two dice rather than one. For CELESTIAL units, discard the highest of the two dice; for CHAOS units, discard the lowest."/>
           </characteristics>
         </profile>
-        <profile id="83ea-7be3-acbc-9820" name="Celestial Configuration" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="08 Ability (Unit)">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <characteristics>
-            <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="If your army includes any Slann Starmasters, roll a dice after set-up is complete and consult the table below to see which constellation is in the ascendant, and how it affects your army. This effect lasts as long as you have a Slann Starmaster on the battlefield, or until a new constellation comes into effect. &lt;BR&gt; &lt;TABLE&gt; &lt;TR&gt; &lt;TD&gt;&lt;B&gt;Roll&lt;/B&gt;&lt;/TD&gt; &lt;TD&gt;&lt;B&gt;Ascendant Constellation&lt;/B&gt;&lt;/TD&gt; &lt;/TR&gt; &lt;TR&gt; &lt;TD&gt;1-2&lt;/TD&gt; &lt;TD&gt;&lt;I&gt;The Hunter&apos;s Steed&lt;/I&gt;: The image of a galloping war-beast blazes bright in the sky. Add 1 to run and charge rolls for SERAPHON units in your army while this constellation is ascendant.&lt;/TD&gt; &lt;/TR&gt; &lt;TR&gt; &lt;TD&gt;3-4&lt;/TD&gt; &lt;TD&gt;&lt;I&gt;The Sage&apos;s Staff&lt;/I&gt;: This constellation is held as a mythical portent of wisdom and magic - while it is ascendant, add 1 to casting rolls when &lt;B&gt;SERAPHON WIZARDS&lt;/B&gt; in your army attempt to cast spells.&lt;/TD&gt; &lt;/TR&gt; &lt;TR&gt; &lt;TD&gt;5-6&lt;/TD&gt; &lt;TD&gt;&lt;I&gt;The Great Drake&lt;/I&gt;: The vast form of Dracothion himself writes in the firmament. You can re-roll hit rolls of 1 for SERAPHON units in your army while this constellation is ascendant.&lt;/TD&gt; &lt;/TR&gt; &lt;/TABLE&gt; &lt;BR&gt; At the start of your hero phase, one Slann Starmaster in your army can attempt to turn the constellations to its advantage instead of casting one of its spells. If it does so, roll a dice. If the result is a 1, the Slann is distracted by its exertions and cannot cast and spells this phase. If the result is 4 or higher, you can pick a new ascendant constellation from the table. Otherwise there is no effect."/>
-          </characteristics>
-        </profile>
         <profile id="3df5-0a48-e6ac-cbb9" name="Arcane Vassal" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="08 Ability (Unit)">
           <profiles/>
           <rules/>
@@ -7723,21 +8647,6 @@
           <modifiers/>
           <characteristics>
             <characteristic name="Command Ability Details" characteristicTypeId="1b71-4c83-4e8c-093f" value="If a Slann Starmaster uses this ability, SERAPHON units from your army that are within 10&quot; of him are wrapped in a mantle of Azyrite energy, allowing them to disregard the natural laws that govern the Mortal Realms. Until your next hero phase, those units can fly and you can re-roll failed save rolls for them in the shooting phase."/>
-          </characteristics>
-        </profile>
-        <profile id="b5c8-d48e-3074-7ca6" name="Azure Lightning" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="03 Weapon">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <characteristics>
-            <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
-            <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="3+"/>
-            <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="6"/>
-            <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="4+"/>
-            <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="3+"/>
-            <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-1"/>
-            <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="1"/>
           </characteristics>
         </profile>
         <profile id="63a5-6dea-4b86-8ec5" name="Summon Starseer" page="" hidden="false" profileTypeId="2e81-5e22-c6e1-73cb" profileTypeName="05 Spell">
@@ -7845,7 +8754,95 @@
           <constraints/>
         </categoryLink>
       </categoryLinks>
-      <selectionEntries/>
+      <selectionEntries>
+        <selectionEntry id="2016-8d76-64c9-8700" name="Azure Lightning" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="59b8-620c-8eca-87c2" name="Azure Lightning" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="03 Weapon">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
+                <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="3+"/>
+                <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="6"/>
+                <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="4+"/>
+                <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="3+"/>
+                <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-1"/>
+                <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="1"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8e49-11da-108b-5461" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="13c3-db66-1e8e-7f61" type="min"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="025c-fb92-3881-5280" name="Celestial Configuration" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="7083-d297-4302-e1b0" name="Celestial Configuration" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="08 Ability (Unit)">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="If your army includes any Slann Starmasters, roll a dice after set-up is complete and consult the table below to see which constellation is in the ascendant, and how it affects your army. This effect lasts as long as you have a Slann Starmaster on the battlefield, or until a new constellation comes into effect.   At the start of your hero phase, one Slann Starmaster in your army can attempt to turn the constellations to its advantage instead of casting one of its spells. If it does so, roll a dice. If the result is a 1, the Slann is distracted by its exertions and cannot cast and spells this phase. If the result is 4 or higher, you can pick a new ascendant constellation from the table. Otherwise there is no effect."/>
+              </characteristics>
+            </profile>
+            <profile id="06d8-d84a-94f0-cdcb" name="1-2" hidden="false" profileTypeId="6f06-d1b5-d5b4-cbd9" profileTypeName="Celestial Configuration">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Ascendent Constellation" characteristicTypeId="18d1-50f1-0e9d-da53" value="The Hunter’s Steed: The image of a galloping war-beast blazes bright in the sky. Add 1 to run and charge rolls for SERAPHON units in your army while this constellation is ascendant."/>
+              </characteristics>
+            </profile>
+            <profile id="ae5c-3cac-8f8a-8db6" name="3-4" hidden="false" profileTypeId="6f06-d1b5-d5b4-cbd9" profileTypeName="Celestial Configuration">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Ascendent Constellation" characteristicTypeId="18d1-50f1-0e9d-da53" value="The Sage’s Staff: This constellation is held as a mythical portent of wisdom and magic – while it is ascendant, add 1 to casting rolls when SERAPHON WIZARDS in your army attempt to cast spells."/>
+              </characteristics>
+            </profile>
+            <profile id="86a0-a161-720f-0c17" name="5-6" hidden="false" profileTypeId="6f06-d1b5-d5b4-cbd9" profileTypeName="Celestial Configuration">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Ascendent Constellation" characteristicTypeId="18d1-50f1-0e9d-da53" value="The Great Drake: The vast form of Dracothion himself writhes in the firmament. You can re-roll hit rolls of 1 for SERAPHON units in your army while this constellation is ascendant."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b347-5225-56b1-d925" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0b4a-c039-9017-85a5" type="min"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
       <selectionEntryGroups/>
       <entryLinks>
         <entryLink id="2757-e72a-078c-9d6b" name="General" hidden="false" targetId="b341-0885-3f1c-7d8a" type="selectionEntry">
@@ -7891,46 +8888,10 @@
             <characteristic name="Save" characteristicTypeId="f8dd-4f2a-8543-4f36" value="4+"/>
           </characteristics>
         </profile>
-        <profile id="61b3-9906-08cd-7390" name="Massive Horns" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="03 Weapon">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <characteristics>
-            <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
-            <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="2&quot;"/>
-            <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="3"/>
-            <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="3+"/>
-            <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="3+"/>
-            <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="*"/>
-            <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="2"/>
-          </characteristics>
-        </profile>
-        <profile id="c84d-efcd-931d-40f7" name="Crushing Stomps" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="03 Weapon">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <characteristics>
-            <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
-            <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="1&quot;"/>
-            <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="*"/>
-            <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="4+"/>
-            <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="3+"/>
-            <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value=""/>
-            <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="1"/>
-          </characteristics>
-        </profile>
       </profiles>
       <rules/>
       <infoLinks>
         <infoLink id="d0b8-4a5c-6638-1183" name="Unstoppable Stampede" hidden="false" targetId="0f12-8724-2f27-a637" type="profile">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-        </infoLink>
-        <infoLink id="570c-5a6c-157c-5b84" name="Meteoric Javelins (Stegadon)" hidden="false" targetId="b722-623c-858a-2d67" type="profile">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -8061,6 +9022,96 @@
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2c99-e2b5-361b-979b" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6f16-1ed9-9ca8-7258" type="min"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="0a27-3d4e-4b2c-db00" name="Crushing Stomps" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="8976-809a-79a0-f50d" name="Crushing Stomps" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="03 Weapon">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
+                <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="1&quot;"/>
+                <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="*"/>
+                <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="4+"/>
+                <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="3+"/>
+                <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value=""/>
+                <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="1"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0ba6-106b-fe21-756b" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="29bf-72d1-bb3e-8b09" type="min"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="d508-35af-4f98-8406" name="Massive Horns" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="fed4-c930-fd9c-ffec" name="Massive Horns" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="03 Weapon">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
+                <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="2&quot;"/>
+                <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="3"/>
+                <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="3+"/>
+                <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="3+"/>
+                <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="*"/>
+                <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="2"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e9c5-a411-e840-f3a2" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c332-9935-a1d0-e5e9" type="min"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="92c7-194e-899b-93c8" name="Meteoric Javelins" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks>
+            <infoLink id="7b8b-3736-25d2-1b4d" name="Meteoric Javelins (Stegadon)" hidden="false" targetId="b722-623c-858a-2d67" type="profile">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+          </infoLinks>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="75ed-48ac-b795-988b" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a07e-b085-95ca-3a10" type="min"/>
           </constraints>
           <categoryLinks/>
           <selectionEntries/>
@@ -8204,36 +9255,6 @@
             <characteristic name="Save" characteristicTypeId="f8dd-4f2a-8543-4f36" value="5+"/>
           </characteristics>
         </profile>
-        <profile id="128d-4b5a-8635-5857" name="Terradon&apos;s Razor-sharp Beak" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="03 Weapon">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <characteristics>
-            <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
-            <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="1&quot;"/>
-            <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="4"/>
-            <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="4+"/>
-            <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="4+"/>
-            <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-"/>
-            <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="1"/>
-          </characteristics>
-        </profile>
-        <profile id="5ab4-abef-f1fb-5d34" name="Skyblade" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="03 Weapon">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <characteristics>
-            <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
-            <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="1&quot;"/>
-            <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="3"/>
-            <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="3+"/>
-            <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="4+"/>
-            <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-"/>
-            <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="1"/>
-          </characteristics>
-        </profile>
         <profile id="f11b-d40c-5faf-aed5" name="Deadly Charge" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="08 Ability (Unit)">
           <profiles/>
           <rules/>
@@ -8344,6 +9365,72 @@
             <cost name="pts" costTypeId="points" value="120.0"/>
           </costs>
         </selectionEntry>
+        <selectionEntry id="b998-4e0d-d9cf-3b7d" name="Skyblade" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="e146-ae1e-fd79-b8e7" name="Skyblade" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="03 Weapon">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
+                <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="1&quot;"/>
+                <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="3"/>
+                <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="3+"/>
+                <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="4+"/>
+                <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-"/>
+                <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="1"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="eef1-9075-8b56-b171" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9321-7223-9e0c-9dca" type="min"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="a79f-aaac-3aa7-a69a" name="Terradon&apos;s Razor-sharp Beak" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="c52e-433c-4359-f050" name="Terradon&apos;s Razor-sharp Beak" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="03 Weapon">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
+                <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="1&quot;"/>
+                <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="4"/>
+                <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="4+"/>
+                <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="4+"/>
+                <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-"/>
+                <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="1"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cc38-07db-867c-7409" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3a80-040a-20a5-01df" type="min"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="f603-ab04-3bad-9d95" name="Weapon Options" hidden="false" collective="false" defaultSelectionEntryId="40a8-29cf-3543-95ba">
@@ -8452,66 +9539,6 @@
             <characteristic name="Wounds" characteristicTypeId="cd0e-fea6-411f-904d" value="12"/>
             <characteristic name="Bravery" characteristicTypeId="0c85-bf79-836b-759e" value="10"/>
             <characteristic name="Save" characteristicTypeId="f8dd-4f2a-8543-4f36" value="4+"/>
-          </characteristics>
-        </profile>
-        <profile id="228e-be71-2bef-4290" name="Noxious Spittle" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="03 Weapon">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <characteristics>
-            <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Missile"/>
-            <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="*"/>
-            <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="D3"/>
-            <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="3+"/>
-            <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="3+"/>
-            <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-"/>
-            <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="2"/>
-          </characteristics>
-        </profile>
-        <profile id="f8cc-3281-9638-d683" name="Troglodon&apos;s Clawed Forelimbs" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="03 Weapon">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <characteristics>
-            <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
-            <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="2&quot;"/>
-            <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="2"/>
-            <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="4+"/>
-            <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="3+"/>
-            <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-"/>
-            <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="2"/>
-          </characteristics>
-        </profile>
-        <profile id="bf1f-25a7-1a12-da47" name="Venomous Bite" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="03 Weapon">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <characteristics>
-            <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
-            <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="2&quot;"/>
-            <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="6"/>
-            <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="4+"/>
-            <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="*"/>
-            <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-"/>
-            <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="2"/>
-          </characteristics>
-        </profile>
-        <profile id="ef72-c603-346d-ab70" name="Skink Oracle&apos;s Divining Rod" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="03 Weapon">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <characteristics>
-            <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
-            <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="1&quot;"/>
-            <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="1"/>
-            <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="4+"/>
-            <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="5+"/>
-            <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-"/>
-            <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="1"/>
           </characteristics>
         </profile>
         <profile id="a360-6729-53da-fe52" name="Divining Rod" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="08 Ability (Unit)">
@@ -8662,6 +9689,138 @@
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="506c-9fa5-a989-5548" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4189-f7ec-57d9-f33b" type="min"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="ce19-0fcc-c1b2-21ca" name="Noxious Spittle" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="da0b-9261-78a3-a22c" name="Noxious Spittle" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="03 Weapon">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Missile"/>
+                <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="*"/>
+                <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="D3"/>
+                <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="3+"/>
+                <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="3+"/>
+                <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-"/>
+                <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="2"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d417-1d88-d403-6e70" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4aba-b72d-bacf-6c86" type="min"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="aa8b-1ba6-5d10-523c" name="Skink Oracle&apos;s Divining Rod" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="1f51-f72a-cd2a-55a2" name="Skink Oracle&apos;s Divining Rod" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="03 Weapon">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
+                <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="1&quot;"/>
+                <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="1"/>
+                <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="4+"/>
+                <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="5+"/>
+                <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-"/>
+                <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="1"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1d03-32aa-21dd-ca9b" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fb29-1be2-0f02-741d" type="min"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="eb4a-afe9-087b-9b85" name="Troglodon&apos;s Clawed Forelimbs" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="17bd-70a2-a5d4-047c" name="Troglodon&apos;s Clawed Forelimbs" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="03 Weapon">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
+                <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="2&quot;"/>
+                <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="2"/>
+                <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="4+"/>
+                <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="3+"/>
+                <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-"/>
+                <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="2"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e2a3-fad1-c1c7-7be7" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e7cf-3360-99ef-5e6b" type="min"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="0112-e113-8777-f49f" name="Venomous Bite" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="20c8-f72a-e204-6d2a" name="Venomous Bite" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="03 Weapon">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
+                <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="2&quot;"/>
+                <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="6"/>
+                <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="4+"/>
+                <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="*"/>
+                <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-"/>
+                <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="2"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0533-d999-ee97-2a08" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6e5a-373f-ff34-ef9e" type="min"/>
           </constraints>
           <categoryLinks/>
           <selectionEntries/>
