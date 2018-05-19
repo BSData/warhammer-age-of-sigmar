@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" book="The General&apos;s Handbook" revision="26" battleScribeVersion="2.01" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" book="The General&apos;s Handbook" revision="27" battleScribeVersion="2.01" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <profiles/>
   <rules>
     <rule id="a954-6cfc-59ca-674e" name="Inspiring Presence" hidden="false">
@@ -982,9 +982,7 @@
           <rules/>
           <infoLinks/>
           <modifiers/>
-          <constraints>
-            <constraint field="selections" scope="dcf7-ee28-719c-355d" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="acaa-487e-f505-d312" type="min"/>
-          </constraints>
+          <constraints/>
         </categoryLink>
       </categoryLinks>
     </forceEntry>
