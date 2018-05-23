@@ -1259,7 +1259,9 @@
               <categoryLinks/>
             </entryLink>
           </entryLinks>
-          <costs/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups/>
@@ -1387,8 +1389,18 @@
         <cost name="pts" costTypeId="points" value="140.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="6e12-78d2-7832-7cdc" name="Battalion: Svard Alfrostun" hidden="false" collective="false" type="upgrade">
-      <profiles/>
+    <selectionEntry id="b5c4-0dea-165b-3f21" name="Battalion: Teef Rukk" hidden="false" collective="false" type="upgrade">
+      <profiles>
+        <profile id="0f2f-ba25-ddde-28d8" name="Crazed Monster Hunters" hidden="false" profileTypeId="bdc6-78da-3796-60a3" profileTypeName="Battalion Abilities">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Battalion Ability Details" characteristicTypeId="08e0-9ead-1dbe-c801" value="In your hero phase, pick an enemy MONSTER. Each unit from a Teef Rukk that is within 6&quot; of the MONSTERcan pile in 6&quot; and then make an attack as if it were the combat phase. This does not stop them from attacking again later in the same turn"/>
+          </characteristics>
+        </profile>
+      </profiles>
       <rules/>
       <infoLinks/>
       <modifiers/>
@@ -1396,39 +1408,46 @@
       <categoryLinks/>
       <selectionEntries/>
       <selectionEntryGroups/>
-      <entryLinks/>
-      <costs>
-        <cost name="pts" costTypeId="points" value="180.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="b5c4-0dea-165b-3f21" name="Battalion: Teef Rukk" hidden="false" collective="false" type="upgrade">
-      <profiles/>
-      <rules/>
-      <infoLinks/>
-      <modifiers/>
-      <constraints/>
-      <categoryLinks/>
-      <selectionEntries>
-        <selectionEntry id="455e-4fdd-1e7a-7636" name="Savage Big Stabbas" hidden="false" collective="false" type="upgrade">
+      <entryLinks>
+        <entryLink id="7510-3356-788f-0aa9" name="Savage Big Stabbas" hidden="false" targetId="e930-136b-3f26-a52c" type="selectionEntry">
           <profiles/>
           <rules/>
           <infoLinks/>
-          <modifiers/>
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <repeats/>
+              <conditions/>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions/>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="db37-22b2-39f5-f49e" type="lessThan"/>
+                        <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="33cb-28e3-cf3d-7f21" type="lessThan"/>
+                      </conditions>
+                      <conditionGroups/>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5e8a-c7ae-3324-3d88" type="min"/>
-            <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9bd1-509f-64b9-5564" type="max"/>
+            <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="feff-db6d-65ab-563f" type="max"/>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e596-0a88-c309-fee0" type="min"/>
           </constraints>
-          <categoryLinks/>
-          <selectionEntries/>
-          <selectionEntryGroups/>
-          <entryLinks/>
-          <costs>
-            <cost name="pts" costTypeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-      <selectionEntryGroups/>
-      <entryLinks/>
+          <categoryLinks>
+            <categoryLink id="59e8-551f-880e-d2ef" hidden="false" targetId="065e-fda7-fd27-1f40" primary="true">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+        </entryLink>
+      </entryLinks>
       <costs>
         <cost name="pts" costTypeId="points" value="90.0"/>
       </costs>
