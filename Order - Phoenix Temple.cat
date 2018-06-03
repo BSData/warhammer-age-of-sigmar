@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="6a30-71aa-a93f-819e" name="Order - Phoenix Temple" book="Grand Alliance: Order" revision="5" battleScribeVersion="2.01" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="25" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="6a30-71aa-a93f-819e" name="Order - Phoenix Temple" book="Grand Alliance: Order" revision="7" battleScribeVersion="2.01" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="25" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks/>
@@ -242,6 +242,22 @@
         </categoryLink>
       </categoryLinks>
     </entryLink>
+    <entryLink id="6003-a0f4-41df-97ce" name="Spyreheart Warhost" hidden="false" targetId="a476-883c-ba7f-e775" type="selectionEntry">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+      <categoryLinks>
+        <categoryLink id="e315-f7d4-6dd7-edef" name="New CategoryLink" hidden="false" targetId="be17-6bbd-b857-3f43" primary="true">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </categoryLink>
+      </categoryLinks>
+    </entryLink>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="8d1f-3d51-6c54-a3f4" name="Allegiance" hidden="false" collective="false" type="unit">
@@ -256,7 +272,7 @@
       <categoryLinks/>
       <selectionEntries/>
       <selectionEntryGroups>
-        <selectionEntryGroup id="2e38-d4f0-4b2f-fe9d" name="Allegiance" hidden="false" collective="false" defaultSelectionEntryId="a03a-aef6-677a-7ea4">
+        <selectionEntryGroup id="2e38-d4f0-4b2f-fe9d" name="Allegiance" hidden="false" collective="false" defaultSelectionEntryId="ddd7-617b-162e-6a64">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -376,50 +392,178 @@
             <characteristic name="Battalion Ability Details" characteristicTypeId="08e0-9ead-1dbe-c801" value="In the hero phase, select one enemy unit and roll a dice for each Flamespyre and/or Frostheart Phoenix from this battalion that is within 9&quot; of it.  For each result of 4 or more, that unit suffers D3 mortal wounds."/>
           </characteristics>
         </profile>
-        <profile id="0447-dd73-d863-3168" name="-" hidden="false" profileTypeId="75e0-a332-e4f5-bf36" profileTypeName="Battalion Organisation">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <characteristics>
-            <characteristic name="Required" characteristicTypeId="eb5f-e9d2-e457-bff5" value="A Spyreheart Warhost consists of the following units:"/>
-          </characteristics>
-        </profile>
-        <profile id="4898-ac28-8de0-0233" name="Flamespyre Phoenix or Frostheart Phoenix Units" book="Order Official FAQs and errata, Version 1.4" hidden="false" profileTypeId="75e0-a332-e4f5-bf36" profileTypeName="Battalion Organisation">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <characteristics>
-            <characteristic name="Required" characteristicTypeId="eb5f-e9d2-e457-bff5" value="2-4 in any combination, Neither unit may be ridden by an Anointed."/>
-          </characteristics>
-        </profile>
-        <profile id="c4e3-6807-db97-fff9" name="Anoited" hidden="false" profileTypeId="75e0-a332-e4f5-bf36" profileTypeName="Battalion Organisation">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <characteristics>
-            <characteristic name="Required" characteristicTypeId="eb5f-e9d2-e457-bff5" value="1"/>
-          </characteristics>
-        </profile>
-        <profile id="0108-3bc1-6719-0c05" name="Phoenix Guard Units" hidden="false" profileTypeId="75e0-a332-e4f5-bf36" profileTypeName="Battalion Organisation">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <characteristics>
-            <characteristic name="Required" characteristicTypeId="eb5f-e9d2-e457-bff5" value="2"/>
-          </characteristics>
-        </profile>
       </profiles>
-      <rules/>
+      <rules>
+        <rule id="b5dc-97b9-21a3-1da2" name="Flamespyre Phoenix or Frostheart Phoenix Units" hidden="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <description>Neither unit may be ridden by an Anointed.</description>
+        </rule>
+      </rules>
       <infoLinks/>
       <modifiers/>
       <constraints/>
       <categoryLinks/>
       <selectionEntries/>
-      <selectionEntryGroups/>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="d7a1-a473-47b3-a865" name="1 Anoited" hidden="false" collective="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e25b-589b-4730-a9b7" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5f1f-3b11-c20b-afb0" type="max"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks>
+            <entryLink id="55ea-3a92-f5db-5f57" name="Anointed" hidden="false" targetId="02ab-4d45-6d53-43a2" type="selectionEntry">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+              <categoryLinks>
+                <categoryLink id="8025-a19b-689b-750d" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                  <constraints/>
+                </categoryLink>
+              </categoryLinks>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="8f8a-a231-03a3-7f7b" name="2 Phoenix Guard Units" hidden="false" collective="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1b57-46bf-6a92-3f33" type="min"/>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e37b-6647-bdbc-d8a5" type="max"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks>
+            <entryLink id="4fa4-a658-7c08-7658" name="Phoenix Guard" hidden="false" targetId="cdd2-70b9-b9e4-06f7" type="selectionEntry">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <repeats/>
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ddd7-617b-162e-6a64" type="equalTo"/>
+                  </conditions>
+                  <conditionGroups/>
+                </modifier>
+              </modifiers>
+              <constraints/>
+              <categoryLinks>
+                <categoryLink id="47b2-712a-36bc-f50f" name="New CategoryLink" hidden="false" targetId="065e-fda7-fd27-1f40" primary="true">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                  <constraints/>
+                </categoryLink>
+              </categoryLinks>
+            </entryLink>
+            <entryLink id="ee44-f6f1-5e29-4289" name="Phoenix Guard" hidden="false" targetId="cdd2-70b9-b9e4-06f7" type="selectionEntry">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <repeats/>
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ddd7-617b-162e-6a64" type="equalTo"/>
+                  </conditions>
+                  <conditionGroups/>
+                </modifier>
+              </modifiers>
+              <constraints/>
+              <categoryLinks>
+                <categoryLink id="7b68-d03c-3991-f46f" name="New CategoryLink" hidden="false" targetId="e9f2-765a-b7b8-ce8e" primary="true">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                  <constraints/>
+                </categoryLink>
+              </categoryLinks>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="ae84-f16a-8267-779f" name="2-4 Flamespyre Phoenix or Frostheart Phoenix Units" hidden="false" collective="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="aa6b-35c5-841d-f31d" type="min"/>
+            <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ced7-9187-b9eb-6d32" type="max"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks>
+            <entryLink id="6da9-bd8b-dbb4-f78a" name="Flamespyre Phoenix" hidden="false" targetId="460e-08ab-020b-c188" type="selectionEntry">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+              <categoryLinks>
+                <categoryLink id="5abb-0b55-16b3-1ffd" name="New CategoryLink" hidden="false" targetId="fa0c-9044-2568-fa02" primary="false">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                  <constraints/>
+                </categoryLink>
+                <categoryLink id="f8ca-b5ba-c629-d22c" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                  <constraints/>
+                </categoryLink>
+              </categoryLinks>
+            </entryLink>
+            <entryLink id="df5a-f6a7-a00e-6192" name="Frostheart Phoenix" hidden="false" targetId="a965-5c2a-c214-6879" type="selectionEntry">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+              <categoryLinks>
+                <categoryLink id="bac9-06f8-b217-f758" name="New CategoryLink" hidden="false" targetId="fa0c-9044-2568-fa02" primary="false">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                  <constraints/>
+                </categoryLink>
+                <categoryLink id="f316-df27-406d-ea5d" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                  <constraints/>
+                </categoryLink>
+              </categoryLinks>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
       <entryLinks/>
       <costs>
         <cost name="pts" costTypeId="points" value="200.0"/>
