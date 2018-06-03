@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="deca-a1f9-2c0a-3a3b" name="Order - Order Draconis" book="Grand Alliance: Order" revision="3" battleScribeVersion="2.01" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="25" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="deca-a1f9-2c0a-3a3b" name="Order - Order Draconis" book="Grand Alliance: Order" revision="4" battleScribeVersion="2.01" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="25" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks/>
@@ -1223,7 +1223,7 @@
       <categoryLinks/>
       <selectionEntries/>
       <selectionEntryGroups>
-        <selectionEntryGroup id="9735-73b7-61e1-2e20" name="Allegiance" hidden="false" collective="false" defaultSelectionEntryId="c4b0-d4e3-f904-00bd">
+        <selectionEntryGroup id="9735-73b7-61e1-2e20" name="Allegiance" hidden="false" collective="false" defaultSelectionEntryId="a664-a69b-93ed-5579">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -1343,33 +1343,6 @@
             <characteristic name="Battalion Ability Details" characteristicTypeId="08e0-9ead-1dbe-c801" value="Once per battle, in any of your hero phases, the Dragonlord Host&apos;s Dragonload, and each other unit from his battalion that is within 8&quot; of him, can make a move as if it were the movement phase (models cannot run as part of this move).  If, after a unit moves, there are any enemy units within 12&quot; of it, roll a dice; on a 4 or more that unit can then attempt to charge as if it were the charge phase.  On a 4 or more the Dragonlord can instead choose to attack with its Dragonfire as if it were the shooting phase."/>
           </characteristics>
         </profile>
-        <profile id="80a9-dfaa-c50a-b9c4" name="-" hidden="false" profileTypeId="75e0-a332-e4f5-bf36" profileTypeName="Battalion Organisation">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <characteristics>
-            <characteristic name="Required" characteristicTypeId="eb5f-e9d2-e457-bff5" value="An Dragonlord Host consists of the following units:"/>
-          </characteristics>
-        </profile>
-        <profile id="0232-3063-9149-ffdb" name="Dragonlord" hidden="false" profileTypeId="75e0-a332-e4f5-bf36" profileTypeName="Battalion Organisation">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <characteristics>
-            <characteristic name="Required" characteristicTypeId="eb5f-e9d2-e457-bff5" value="1"/>
-          </characteristics>
-        </profile>
-        <profile id="45ea-8a0a-b664-99d1" name="Dragonblade Units" hidden="false" profileTypeId="75e0-a332-e4f5-bf36" profileTypeName="Battalion Organisation">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <characteristics>
-            <characteristic name="Required" characteristicTypeId="eb5f-e9d2-e457-bff5" value="2-3"/>
-          </characteristics>
-        </profile>
       </profiles>
       <rules/>
       <infoLinks/>
@@ -1377,7 +1350,109 @@
       <constraints/>
       <categoryLinks/>
       <selectionEntries/>
-      <selectionEntryGroups/>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="c990-3401-ce6f-773c" name="2-3 Dragon Blade Units" hidden="false" collective="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8fae-08aa-4841-b733" type="min"/>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="814b-8eda-ea51-1a84" type="max"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks>
+            <entryLink id="90c7-6637-ecfa-2d33" name="Dragon Blades" hidden="false" targetId="8711-cb27-9a0e-8f60" type="selectionEntry">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <repeats/>
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a664-a69b-93ed-5579" type="equalTo"/>
+                  </conditions>
+                  <conditionGroups/>
+                </modifier>
+              </modifiers>
+              <constraints/>
+              <categoryLinks>
+                <categoryLink id="4ca9-23dd-dceb-7f13" name="New CategoryLink" hidden="false" targetId="065e-fda7-fd27-1f40" primary="true">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                  <constraints/>
+                </categoryLink>
+              </categoryLinks>
+            </entryLink>
+            <entryLink id="f97d-97ac-7525-5dba" name="Dragon Blades" hidden="false" targetId="8711-cb27-9a0e-8f60" type="selectionEntry">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <repeats/>
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a664-a69b-93ed-5579" type="equalTo"/>
+                  </conditions>
+                  <conditionGroups/>
+                </modifier>
+              </modifiers>
+              <constraints/>
+              <categoryLinks>
+                <categoryLink id="2478-0a57-58f9-a95c" name="New CategoryLink" hidden="false" targetId="e9f2-765a-b7b8-ce8e" primary="true">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                  <constraints/>
+                </categoryLink>
+              </categoryLinks>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="49a0-581e-d3a7-33ca" name="1 Dragonlord" hidden="false" collective="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cd20-ad13-492c-6007" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1807-67d7-4afe-94b4" type="max"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks>
+            <entryLink id="d8e5-8656-b9df-f4b6" name="Dragonlord" hidden="false" targetId="85ce-115e-c49c-db90" type="selectionEntry">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+              <categoryLinks>
+                <categoryLink id="f108-f04c-1617-fdad" name="New CategoryLink" hidden="false" targetId="fa0c-9044-2568-fa02" primary="false">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                  <constraints/>
+                </categoryLink>
+                <categoryLink id="73ad-dc8c-0f7b-7be2" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                  <constraints/>
+                </categoryLink>
+              </categoryLinks>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
       <entryLinks/>
       <costs>
         <cost name="pts" costTypeId="points" value="180.0"/>
