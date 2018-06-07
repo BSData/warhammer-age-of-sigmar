@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" book="The General&apos;s Handbook" revision="29" battleScribeVersion="2.01" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" book="The General&apos;s Handbook" revision="30" battleScribeVersion="2.01" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <profiles/>
   <rules>
     <rule id="a954-6cfc-59ca-674e" name="Inspiring Presence" hidden="false">
@@ -537,7 +537,7 @@
           <infoLinks/>
           <modifiers/>
           <constraints>
-            <constraint field="points" scope="roster" value="200.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="e5a4-457c-da30-174b" type="max"/>
+            <constraint field="points" scope="roster" value="200.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" id="e5a4-457c-da30-174b" type="max"/>
           </constraints>
           <forceEntries/>
           <categoryLinks>
@@ -669,7 +669,7 @@
           <infoLinks/>
           <modifiers/>
           <constraints>
-            <constraint field="points" scope="roster" value="400.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="e8b7-258f-e821-0970" type="max"/>
+            <constraint field="points" scope="roster" value="400.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" id="e8b7-258f-e821-0970" type="max"/>
           </constraints>
           <forceEntries/>
           <categoryLinks>
@@ -801,7 +801,7 @@
           <infoLinks/>
           <modifiers/>
           <constraints>
-            <constraint field="points" scope="roster" value="500.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="44ec-d9bf-f542-c9b6" type="max"/>
+            <constraint field="points" scope="roster" value="500.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" id="44ec-d9bf-f542-c9b6" type="max"/>
           </constraints>
           <forceEntries/>
           <categoryLinks>
