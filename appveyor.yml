@@ -1,0 +1,23 @@
+# This is a reference script - it should be saved as 'appveyor.yml' in repo root.
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# Please fill 'version' property with a version string you want appended with `.{build}`  #
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+version: '1.50.8.{build}'
+image: Visual Studio 2017
+install:
+  - ps: |
+      $install_script_url = 'https://raw.githubusercontent.com/BSData/catalogue-development/master/scripts/appveyor-ci-install-script-v1.0.ps1'
+      (New-Object System.Net.WebClient).DownloadString($install_script_url) | iex
+build_script:
+  - ps: |
+      $build_script_url = 'https://raw.githubusercontent.com/BSData/catalogue-development/master/scripts/appveyor-ci-build-script-v1.0.ps1'
+      (New-Object System.Net.WebClient).DownloadString($build_script_url) | iexx
+test_script:
+  - ps: |
+      $test_script_url = 'https://raw.githubusercontent.com/BSData/catalogue-development/master/scripts/appveyor-ci-test-script-v1.0.ps1'
+      (New-Object System.Net.WebClient).DownloadString($test_script_url) | iex
+artifacts:
+  - path: 'artifacts\*.bsi'
+  - path: 'artifacts\*.bsr'
