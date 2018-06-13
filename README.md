@@ -1,6 +1,11 @@
 Warhammer Age of Sigmar 2017 Edition
 ============================
 
+[![GitHub release](https://img.shields.io/github/release/BSData/warhammer-age-of-sigmar.svg?style=flat-square)](https://github.com/BSData/warhammer-age-of-sigmar/releases/latest)
+![Github commits (since latest release)](https://img.shields.io/github/commits-since/BSData/warhammer-age-of-sigmar/latest.svg?style=flat-square)
+[![AppVeyor master branch](https://img.shields.io/appveyor/ci/BSData/warhammer-age-of-sigmar/master.svg?style=flat-square)](https://ci.appveyor.com/project/BSData/warhammer-age-of-sigmar)
+[![Gitter](https://img.shields.io/gitter/room/BSData/warhammer-age-of-sigmar.svg?style=flat-square)](https://gitter.im/BSData/warhammer-age-of-sigmar)
+
 ## Important ##
 [Important]: #important
 
@@ -8,8 +13,6 @@ Warhammer Age of Sigmar 2017 Edition
 
 **UPDATE - May 25, 2018:**
 The Catalogs have been updated to support the Matched Play forces supported in the GHB 2017 with updates through May 2018. 
-
-[![Gitter](https://badges.gitter.im/BSData/warhammer-age-of-sigmar.svg)](https://gitter.im/BSData/warhammer-age-of-sigmar?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 #### Contents ####
 [Contents]: #contents
