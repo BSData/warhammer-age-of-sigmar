@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="9aab-52b0-df34-4f7d" name="Order - Dispossessed" book="Grand Alliance: Order" revision="7" battleScribeVersion="2.01" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="9aab-52b0-df34-4f7d" name="Order - Dispossessed" book="Grand Alliance: Order" revision="8" battleScribeVersion="2.01" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks/>
@@ -241,7 +241,15 @@
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="93f9-6eb2-a22a-057a" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <constraints/>
       <categoryLinks>
         <categoryLink id="7758-abcd-d076-8df1-065e-fda7-fd27-1f40" hidden="false" targetId="065e-fda7-fd27-1f40" primary="true">
@@ -395,6 +403,30 @@
       <constraints/>
       <categoryLinks>
         <categoryLink id="2784-4e5e-84f0-cb85" hidden="false" targetId="e9f2-765a-b7b8-ce8e" primary="true">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </categoryLink>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="2693-8a3d-8125-ed72" name="Ironbreakers" hidden="false" targetId="a182-1bde-3bfc-39c1" type="selectionEntry">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="93f9-6eb2-a22a-057a" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <constraints/>
+      <categoryLinks>
+        <categoryLink id="2842-8504-48e0-e3d0" name="New CategoryLink" hidden="false" targetId="e9f2-765a-b7b8-ce8e" primary="true">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -1045,7 +1077,7 @@
       </selectionEntryGroups>
       <entryLinks/>
       <costs>
-        <cost name="pts" costTypeId="points" value="160.0"/>
+        <cost name="pts" costTypeId="points" value="170.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="e495-584f-7f83-fddd" name="Hammerers" hidden="false" collective="false" type="unit">
@@ -1083,29 +1115,7 @@
       </profiles>
       <rules/>
       <infoLinks/>
-      <modifiers>
-        <modifier type="decrement" field="points" value="180">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="e495-584f-7f83-fddd" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b3d8-29f5-cd01-af47" type="greaterThan"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-        <modifier type="increment" field="points" value="180">
-          <repeats>
-            <repeat field="selections" scope="e495-584f-7f83-fddd" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b3d8-29f5-cd01-af47" repeats="1" roundUp="false"/>
-          </repeats>
-          <conditions/>
-          <conditionGroups/>
-        </modifier>
-        <modifier type="decrement" field="points" value="60">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="e495-584f-7f83-fddd" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b3d8-29f5-cd01-af47" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-      </modifiers>
+      <modifiers/>
       <constraints/>
       <categoryLinks>
         <categoryLink id="8d77-a9a0-e243-45a4" name="New CategoryLink" hidden="false" targetId="945b-2f5e-58f0-75e2" primary="false">
@@ -1142,7 +1152,15 @@
           <profiles/>
           <rules/>
           <infoLinks/>
-          <modifiers/>
+          <modifiers>
+            <modifier type="decrement" field="points" value="60">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="e495-584f-7f83-fddd" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b3d8-29f5-cd01-af47" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="minSelections" type="min"/>
             <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
@@ -1152,7 +1170,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="points" value="0.0"/>
+            <cost name="pts" costTypeId="points" value="160.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="06d0-d1b8-c5a7-96cd" name="Standard Bearer" hidden="false" collective="false" type="upgrade">
@@ -1245,9 +1263,7 @@
       </selectionEntries>
       <selectionEntryGroups/>
       <entryLinks/>
-      <costs>
-        <cost name="pts" costTypeId="points" value="180.0"/>
-      </costs>
+      <costs/>
     </selectionEntry>
     <selectionEntry id="a182-1bde-3bfc-39c1" name="Ironbreakers" hidden="false" collective="false" type="unit">
       <profiles>
@@ -1284,29 +1300,7 @@
       </profiles>
       <rules/>
       <infoLinks/>
-      <modifiers>
-        <modifier type="decrement" field="points" value="160">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="a182-1bde-3bfc-39c1" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="26c7-4ed9-05bd-bf17" type="greaterThan"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-        <modifier type="increment" field="points" value="160">
-          <repeats>
-            <repeat field="selections" scope="a182-1bde-3bfc-39c1" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="26c7-4ed9-05bd-bf17" repeats="1" roundUp="false"/>
-          </repeats>
-          <conditions/>
-          <conditionGroups/>
-        </modifier>
-        <modifier type="decrement" field="points" value="80">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="a182-1bde-3bfc-39c1" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="26c7-4ed9-05bd-bf17" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-      </modifiers>
+      <modifiers/>
       <constraints/>
       <categoryLinks>
         <categoryLink id="5148-9531-da9c-22b5" name="New CategoryLink" hidden="false" targetId="945b-2f5e-58f0-75e2" primary="false">
@@ -1343,7 +1337,15 @@
           <profiles/>
           <rules/>
           <infoLinks/>
-          <modifiers/>
+          <modifiers>
+            <modifier type="decrement" field="points" value="60">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="a182-1bde-3bfc-39c1" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="26c7-4ed9-05bd-bf17" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="minSelections" type="min"/>
             <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
@@ -1353,7 +1355,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="points" value="0.0"/>
+            <cost name="pts" costTypeId="points" value="140.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="d033-8dcc-c395-05cc" name="Icon Bearer" hidden="false" collective="false" type="upgrade">
@@ -1582,9 +1584,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks/>
-      <costs>
-        <cost name="pts" costTypeId="points" value="160.0"/>
-      </costs>
+      <costs/>
     </selectionEntry>
     <selectionEntry id="5a93-6cd1-a1ae-4d4a" name="Irondrakes" hidden="false" collective="false" type="unit">
       <profiles>
@@ -1660,22 +1660,7 @@
       </profiles>
       <rules/>
       <infoLinks/>
-      <modifiers>
-        <modifier type="decrement" field="points" value="200">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="5a93-6cd1-a1ae-4d4a" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a1e1-10b0-8797-da7d" type="greaterThan"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-        <modifier type="increment" field="points" value="200">
-          <repeats>
-            <repeat field="selections" scope="5a93-6cd1-a1ae-4d4a" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a1e1-10b0-8797-da7d" repeats="1" roundUp="false"/>
-          </repeats>
-          <conditions/>
-          <conditionGroups/>
-        </modifier>
-      </modifiers>
+      <modifiers/>
       <constraints/>
       <categoryLinks>
         <categoryLink id="9cb9-eb85-a2d5-443d" name="New CategoryLink" hidden="false" targetId="945b-2f5e-58f0-75e2" primary="false">
@@ -1722,7 +1707,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="points" value="0.0"/>
+            <cost name="pts" costTypeId="points" value="180.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="5727-f66a-7506-0cb3" name="Hornblowers" hidden="false" collective="false" type="upgrade">
@@ -1947,9 +1932,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks/>
-      <costs>
-        <cost name="pts" costTypeId="points" value="200.0"/>
-      </costs>
+      <costs/>
     </selectionEntry>
     <selectionEntry id="5875-6808-8640-6a7c" name="Longbeards" hidden="false" collective="false" type="unit">
       <profiles>
@@ -1977,29 +1960,7 @@
       </profiles>
       <rules/>
       <infoLinks/>
-      <modifiers>
-        <modifier type="decrement" field="points" value="120">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="5875-6808-8640-6a7c" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1d4c-b572-e673-4961" type="greaterThan"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-        <modifier type="increment" field="points" value="120">
-          <repeats>
-            <repeat field="selections" scope="5875-6808-8640-6a7c" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1d4c-b572-e673-4961" repeats="1" roundUp="false"/>
-          </repeats>
-          <conditions/>
-          <conditionGroups/>
-        </modifier>
-        <modifier type="decrement" field="points" value="60">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="5875-6808-8640-6a7c" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1d4c-b572-e673-4961" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-      </modifiers>
+      <modifiers/>
       <constraints/>
       <categoryLinks>
         <categoryLink id="cf86-868e-e466-54c4" name="New CategoryLink" hidden="false" targetId="945b-2f5e-58f0-75e2" primary="false">
@@ -2036,7 +1997,15 @@
           <profiles/>
           <rules/>
           <infoLinks/>
-          <modifiers/>
+          <modifiers>
+            <modifier type="decrement" field="points" value="30">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="5875-6808-8640-6a7c" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1d4c-b572-e673-4961" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="minSelections" type="min"/>
             <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
@@ -2046,7 +2015,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="points" value="0.0"/>
+            <cost name="pts" costTypeId="points" value="100.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="3123-41ad-44bc-851e" name="Standard Bearer" hidden="false" collective="false" type="upgrade">
@@ -2220,9 +2189,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks/>
-      <costs>
-        <cost name="pts" costTypeId="points" value="120.0"/>
-      </costs>
+      <costs/>
     </selectionEntry>
     <selectionEntry id="30e5-318c-9a9e-2578" name="Quarrellers" hidden="false" collective="false" type="unit">
       <profiles>
@@ -2259,22 +2226,7 @@
       </profiles>
       <rules/>
       <infoLinks/>
-      <modifiers>
-        <modifier type="decrement" field="points" value="120">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="30e5-318c-9a9e-2578" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2032-2a41-cd5f-514e" type="greaterThan"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-        <modifier type="increment" field="points" value="120">
-          <repeats>
-            <repeat field="selections" scope="30e5-318c-9a9e-2578" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2032-2a41-cd5f-514e" repeats="1" roundUp="false"/>
-          </repeats>
-          <conditions/>
-          <conditionGroups/>
-        </modifier>
-      </modifiers>
+      <modifiers/>
       <constraints/>
       <categoryLinks>
         <categoryLink id="64d1-1ad7-c709-551f" name="New CategoryLink" hidden="false" targetId="945b-2f5e-58f0-75e2" primary="false">
@@ -2321,7 +2273,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="points" value="0.0"/>
+            <cost name="pts" costTypeId="points" value="120.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="78e9-a512-c4fb-2e77" name="Drummers" hidden="false" collective="false" type="upgrade">
@@ -2522,9 +2474,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks/>
-      <costs>
-        <cost name="pts" costTypeId="points" value="120.0"/>
-      </costs>
+      <costs/>
     </selectionEntry>
     <selectionEntry id="af53-09f6-7f6a-5a4e" name="Runelord" hidden="false" collective="false" type="unit">
       <profiles>
@@ -2703,7 +2653,7 @@
         </entryLink>
       </entryLinks>
       <costs>
-        <cost name="pts" costTypeId="points" value="80.0"/>
+        <cost name="pts" costTypeId="points" value="100.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="68c2-7d4b-1706-a009" name="Thunderers" hidden="false" collective="false" type="upgrade">
@@ -2741,22 +2691,7 @@
       </profiles>
       <rules/>
       <infoLinks/>
-      <modifiers>
-        <modifier type="decrement" field="points" value="120">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="68c2-7d4b-1706-a009" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d493-acd2-cd38-fa87" type="greaterThan"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-        <modifier type="increment" field="points" value="120">
-          <repeats>
-            <repeat field="selections" scope="68c2-7d4b-1706-a009" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d493-acd2-cd38-fa87" repeats="1" roundUp="false"/>
-          </repeats>
-          <conditions/>
-          <conditionGroups/>
-        </modifier>
-      </modifiers>
+      <modifiers/>
       <constraints/>
       <categoryLinks>
         <categoryLink id="db78-4851-5838-42a8" name="New CategoryLink" hidden="false" targetId="945b-2f5e-58f0-75e2" primary="false">
@@ -2803,7 +2738,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="points" value="0.0"/>
+            <cost name="pts" costTypeId="points" value="120.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="02af-938e-b34a-6ab8" name="Duardin Handgun" hidden="false" collective="false" type="upgrade">
@@ -3060,9 +2995,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks/>
-      <costs>
-        <cost name="pts" costTypeId="points" value="120.0"/>
-      </costs>
+      <costs/>
     </selectionEntry>
     <selectionEntry id="f79a-e9a6-72d7-3c50" name="Unforged" hidden="false" collective="false" type="upgrade">
       <profiles>
@@ -3406,29 +3339,7 @@
       </profiles>
       <rules/>
       <infoLinks/>
-      <modifiers>
-        <modifier type="decrement" field="points" value="80">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="d37d-9460-288e-8d0f" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="32be-e9af-0879-7dd0" type="greaterThan"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-        <modifier type="increment" field="points" value="80">
-          <repeats>
-            <repeat field="selections" scope="d37d-9460-288e-8d0f" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="32be-e9af-0879-7dd0" repeats="1" roundUp="false"/>
-          </repeats>
-          <conditions/>
-          <conditionGroups/>
-        </modifier>
-        <modifier type="decrement" field="points" value="40">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="d37d-9460-288e-8d0f" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="32be-e9af-0879-7dd0" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-      </modifiers>
+      <modifiers/>
       <constraints/>
       <categoryLinks>
         <categoryLink id="2f09-6377-4be6-829b" name="New CategoryLink" hidden="false" targetId="945b-2f5e-58f0-75e2" primary="false">
@@ -3465,7 +3376,15 @@
           <profiles/>
           <rules/>
           <infoLinks/>
-          <modifiers/>
+          <modifiers>
+            <modifier type="decrement" field="points" value="40">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="d37d-9460-288e-8d0f" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="32be-e9af-0879-7dd0" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="minSelections" type="min"/>
             <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
@@ -3475,7 +3394,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="points" value="0.0"/>
+            <cost name="pts" costTypeId="points" value="80.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="73c5-a391-ed30-b5cd" name="Hornblowers" hidden="false" collective="false" type="upgrade">
@@ -3674,9 +3593,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks/>
-      <costs>
-        <cost name="pts" costTypeId="points" value="80.0"/>
-      </costs>
+      <costs/>
     </selectionEntry>
     <selectionEntry id="b341-0885-3f1c-7d8a" name="General" hidden="false" collective="false" type="upgrade">
       <profiles/>
