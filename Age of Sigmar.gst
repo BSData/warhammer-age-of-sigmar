@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" book="The General&apos;s Handbook" revision="33" battleScribeVersion="2.01" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" book="The General&apos;s Handbook" revision="34" battleScribeVersion="2.01" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <profiles/>
   <rules>
     <rule id="a954-6cfc-59ca-674e" name="Inspiring Presence" book="Core Rules" page="3" hidden="false">
@@ -588,6 +588,27 @@
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="8466-6600-12e7-0833" type="max"/>
       </constraints>
+    </categoryEntry>
+    <categoryEntry id="31f4-2067-3ade-e6f8" name="ENDLESS SPELL" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="eecb-ed66-d474-9ddd" name="Malign Sorcery" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="8be8-3ccd-be93-b55e" name="Command Points" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
     </categoryEntry>
   </categoryEntries>
   <forceEntries>
@@ -1305,10 +1326,64 @@
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" id="7025-70e4-7ad4-407a" type="max"/>
           </constraints>
         </categoryLink>
+        <categoryLink id="f0b1-06e5-134a-1cd1" name="Malign Sorcery" hidden="false" targetId="eecb-ed66-d474-9ddd" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </categoryLink>
+        <categoryLink id="4f35-ed38-e2f8-b024" name="Command Points" hidden="false" targetId="8be8-3ccd-be93-b55e" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </categoryLink>
       </categoryLinks>
     </forceEntry>
   </forceEntries>
-  <selectionEntries/>
+  <selectionEntries>
+    <selectionEntry id="745a-d2c9-a076-2d70" name="Purchased Command Points" hidden="false" collective="false" type="upgrade">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints>
+        <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="584d-611d-064d-0a33" type="min"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink id="d882-d72a-6391-a6be" name="New CategoryLink" hidden="false" targetId="8be8-3ccd-be93-b55e" primary="true">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </categoryLink>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="967b-d3ad-e0b5-e6c9" name="1 Command Point" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7126-cd45-a30a-dbb3" type="max"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="50.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups/>
+      <entryLinks/>
+      <costs/>
+    </selectionEntry>
+  </selectionEntries>
   <entryLinks>
     <entryLink id="1a07-20e9-829c-2f2a" name="Realm of Origin" hidden="false" targetId="268a-c131-4914-7087" type="selectionEntry">
       <profiles/>
@@ -1334,6 +1409,22 @@
       <constraints/>
       <categoryLinks>
         <categoryLink id="baa5-3a0c-fa64-212c" name="New CategoryLink" hidden="false" targetId="1974-3f49-7f0b-8422" primary="true">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </categoryLink>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="7aaa-04ab-d0c3-c7fe" name="Endless Spells" hidden="false" targetId="7e27-867f-400c-b20b" type="selectionEntry">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+      <categoryLinks>
+        <categoryLink id="e072-803f-6fb3-8c69" name="New CategoryLink" hidden="false" targetId="eecb-ed66-d474-9ddd" primary="true">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -1432,6 +1523,31 @@
       <selectionEntryGroups/>
       <entryLinks>
         <entryLink id="39f6-88b3-177e-2535" name="Game Type (ALL GAME TYPES MUST MATCH ACROSS FORCES)" hidden="false" targetId="5927-9c5a-8b20-8f37" type="selectionEntryGroup">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+          <categoryLinks/>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name="pts" costTypeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="7e27-867f-400c-b20b" name="Endless Spells" hidden="false" collective="false" type="upgrade">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8070-21a7-c79e-a493" type="max"/>
+      </constraints>
+      <categoryLinks/>
+      <selectionEntries/>
+      <selectionEntryGroups/>
+      <entryLinks>
+        <entryLink id="cd0f-1b79-de92-e5ca" name="Endless Spells" hidden="false" targetId="8ea1-6791-75d8-aba3" type="selectionEntryGroup">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -2746,7 +2862,7 @@
               <infoLinks/>
               <modifiers/>
               <characteristics>
-                <characteristic name="Artefact Details" characteristicTypeId="0918-c47a-d84e-c0cf" value="Pick one melee weapon that this model can use. Wound rolls of 6 or more for that weapon inflict a mortal wound in addition to any damage they would normally inflict."/>
+                <characteristic name="Artefact Details" characteristicTypeId="0918-c47a-d84e-c0cf" value="Pick one of the bearers melee weapons.Each time you roll a wound roll of 6+ for that weapon, that attack inflicts 1 mortal wound in addition to its normal damage."/>
               </characteristics>
             </profile>
           </profiles>
@@ -5533,7 +5649,9 @@
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
-          <costs/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="cea8-e4b2-c44f-c7b4" name="2000 Points - Battlehost" hidden="false" collective="false" type="upgrade">
           <profiles/>
@@ -5569,7 +5687,9 @@
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
-          <costs/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="ef67-15fb-487c-397a" name="2500 Points - Warhost" hidden="false" collective="false" type="upgrade">
           <profiles/>
@@ -5605,7 +5725,9 @@
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
-          <costs/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="ca54-0d07-72c2-d26f" name="No Points or Battlerole Validation (Open)" hidden="false" collective="false" type="upgrade">
           <profiles/>
@@ -5617,7 +5739,359 @@
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
-          <costs/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups/>
+      <entryLinks/>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="8ea1-6791-75d8-aba3" name="Endless Spells" hidden="false" collective="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints>
+        <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a642-3e9b-21a9-ec96" type="min"/>
+      </constraints>
+      <categoryLinks/>
+      <selectionEntries>
+        <selectionEntry id="982a-a39f-ef3f-4720" name="Balewind Vortex" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ef45-b059-9863-72c3" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="e035-7e9d-b2fe-88c8" name="New CategoryLink" hidden="false" targetId="31f4-2067-3ade-e6f8" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="40.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="a09c-d5d6-81b7-5786" name="Aethervoid Pendulum" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c56d-2b1e-13df-e2c4" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="5fd3-8482-c9c6-16d1" name="New CategoryLink" hidden="false" targetId="31f4-2067-3ade-e6f8" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="40.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="88d8-6a1f-8483-b6ea" name="Chronomatic Cogs" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7ee5-eb5e-b0dd-56c6" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="f35f-fab0-729b-5bb9" name="New CategoryLink" hidden="false" targetId="31f4-2067-3ade-e6f8" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="60.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="7c3d-e67e-928b-10cc" name="Emerald Lifeswarm" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="09f5-f937-401d-ee13" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="c9e7-8860-645a-2ac0" name="New CategoryLink" hidden="false" targetId="31f4-2067-3ade-e6f8" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="60.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="ffa3-5211-7c11-afc6" name="Geminids of Uhl-Gyish" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a707-d029-6cfd-17c7" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="9d3d-a6fa-2ff9-a847" name="New CategoryLink" hidden="false" targetId="31f4-2067-3ade-e6f8" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="40.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="90d3-f76c-d63e-7eeb" name="Malevolent Maelstrom" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a941-10ef-6a07-91ac" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="1061-013e-90fb-b4be" name="New CategoryLink" hidden="false" targetId="31f4-2067-3ade-e6f8" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="20.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="ec40-8615-4669-6c17" name="Prismatic Palisade" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c90b-e6e2-7e45-cd52" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="15f0-05f3-1141-4495" name="New CategoryLink" hidden="false" targetId="31f4-2067-3ade-e6f8" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="30.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="2e2e-a332-031d-8499" name="Purple Sun of Shyish" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="596f-683c-9f6a-fd1d" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="0158-8b5a-c54a-a150" name="New CategoryLink" hidden="false" targetId="31f4-2067-3ade-e6f8" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="100.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="6273-9b6e-e4c9-127a" name="Quicksilver Swords" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0b23-5718-2087-a52e" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="a6f4-2f68-1f18-8d77" name="New CategoryLink" hidden="false" targetId="31f4-2067-3ade-e6f8" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="20.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="ab9b-dc68-e256-9260" name="Ravenak&apos;s Gnashing Jaws" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6d72-47d7-38dc-1197" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="72bd-48bb-86f1-3a13" name="New CategoryLink" hidden="false" targetId="31f4-2067-3ade-e6f8" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="40.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="db2b-0d75-3bab-ff3a" name="Soulsnare Shackles" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7246-5d11-6654-59ce" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="8c78-abb4-360b-b040" name="New CategoryLink" hidden="false" targetId="31f4-2067-3ade-e6f8" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="20.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="849e-470b-05c2-19b7" name="Suffocating﻿﻿ Gravetide﻿" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9211-4404-c522-c9d3" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="e1f8-276e-104f-06cd" name="New CategoryLink" hidden="false" targetId="31f4-2067-3ade-e6f8" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="30.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="270a-b509-6851-5e75" name="The B﻿urning Head﻿﻿﻿" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2647-60fd-5c01-b15b" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="f18e-4646-16b4-3c84" name="New CategoryLink" hidden="false" targetId="31f4-2067-3ade-e6f8" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="40.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="e6ec-45ee-65b8-8520" name="Umbral Sp﻿ellporta﻿l﻿﻿" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="51c1-19b9-7107-59cb" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="9f49-9937-cd19-f89d" name="New CategoryLink" hidden="false" targetId="31f4-2067-3ade-e6f8" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="60.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups/>
@@ -5643,7 +6117,8 @@ Roll a dice in your hero phase for your general and each DESTRUCTION HERO in you
       <modifiers/>
       <characteristics>
         <characteristic name="Casting Value" characteristicTypeId="2508-b604-1258-a920" value="5"/>
-        <characteristic name="Description" characteristicTypeId="76ff-781d-b8e6-5f27" value="If successfully cast, pick an enemy unit within 18&quot; of the caster and that is visible to them. The unit you pick suffers D3 mortal wounds."/>
+        <characteristic name="Description" characteristicTypeId="76ff-781d-b8e6-5f27" value="If successfully cast, pick an enemy unit within 18&quot; of the caster that is visible to them. That unit suffers 1 mortal
+wound. If the casting roll was 10 or more, the unit suffers D3 mortal wounds instead."/>
       </characteristics>
     </profile>
     <profile id="b41f-f1ce-7aa5-4f81" name="Mystic Shield" hidden="false" profileTypeId="2e81-5e22-c6e1-73cb" profileTypeName="05 Spell">
@@ -5653,7 +6128,7 @@ Roll a dice in your hero phase for your general and each DESTRUCTION HERO in you
       <modifiers/>
       <characteristics>
         <characteristic name="Casting Value" characteristicTypeId="2508-b604-1258-a920" value="6"/>
-        <characteristic name="Description" characteristicTypeId="76ff-781d-b8e6-5f27" value="If successfully cast, pick the caster, or a friendly unit within 18&quot; of the caster and which is visible to them. You can add 1 to all save rolls for the unit you pick until the start of your next hero phase."/>
+        <characteristic name="Description" characteristicTypeId="76ff-781d-b8e6-5f27" value="If successfully cast, pick a friendly unit within 18&quot; of the caster that is visible to them. Re-roll save rolls of 1 for that unit until your next hero phase."/>
       </characteristics>
     </profile>
     <profile id="8e0c-cbe4-27be-8a30" name="Fly" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="08 Ability (Unit)">
@@ -5665,13 +6140,13 @@ Roll a dice in your hero phase for your general and each DESTRUCTION HERO in you
         <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="This unit can fly."/>
       </characteristics>
     </profile>
-    <profile id="6884-967e-0150-274e" name="Unpredictable Destruction" hidden="false" profileTypeId="c137-4d1f-9d1a-524d" profileTypeName="Battle Trait">
+    <profile id="6884-967e-0150-274e" name="Unbridled Malice" hidden="false" profileTypeId="c137-4d1f-9d1a-524d" profileTypeName="Battle Trait">
       <profiles/>
       <rules/>
       <infoLinks/>
       <modifiers/>
       <characteristics>
-        <characteristic name="Battle Trait Details" characteristicTypeId="9fdd-b4b1-5f7a-0970" value="Roll a dice when you pick a CHAOS unit to attack in the combat phase if it is within 12&quot; of your general or 3&quot; of another HERO from your army. On a roll of 6 or more, you can add 1 to all hit rolls for the unit being rolled for in that phase."/>
+        <characteristic name="Battle Trait Details" characteristicTypeId="9fdd-b4b1-5f7a-0970" value="When a friendly CHAOS unit is picked to fight, roll a dice if it is within 12&quot; of your general or 3&quot; of a friendly HERO. On a 6+, add 1 to hit rolls for the unit for that fight."/>
       </characteristics>
     </profile>
   </sharedProfiles>
