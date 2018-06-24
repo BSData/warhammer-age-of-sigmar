@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="e67a-06d2-888c-b9be" name="Order - Fyreslayers" book="Order Battletome: Fyreslayers" revision="11" battleScribeVersion="2.01" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="e67a-06d2-888c-b9be" name="Order - Fyreslayers" book="Order Battletome: Fyreslayers" revision="12" battleScribeVersion="2.01" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks/>
@@ -768,24 +768,10 @@
       <rules/>
       <infoLinks/>
       <modifiers>
-        <modifier type="decrement" field="points" value="100">
+        <modifier type="set" field="points" value="480">
           <repeats/>
           <conditions>
-            <condition field="selections" scope="1823-43dd-1af2-b910" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1b98-d13e-3461-998c" type="greaterThan"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-        <modifier type="increment" field="points" value="100">
-          <repeats>
-            <repeat field="selections" scope="1823-43dd-1af2-b910" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1b98-d13e-3461-998c" repeats="1" roundUp="false"/>
-          </repeats>
-          <conditions/>
-          <conditionGroups/>
-        </modifier>
-        <modifier type="decrement" field="points" value="120">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="1823-43dd-1af2-b910" value="6.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1b98-d13e-3461-998c" type="equalTo"/>
+            <condition field="selections" scope="1823-43dd-1af2-b910" value="6.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="equalTo"/>
           </conditions>
           <conditionGroups/>
         </modifier>
@@ -822,11 +808,19 @@
         </categoryLink>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="1b98-d13e-3461-998c" name="5 Auric Hearthguards" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="1b98-d13e-3461-998c" name="5 Auric Hearthguards" hidden="false" collective="false" type="model">
           <profiles/>
           <rules/>
           <infoLinks/>
-          <modifiers/>
+          <modifiers>
+            <modifier type="set" field="points" value="0">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="parent" value="6.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="minSelections" type="min"/>
             <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
@@ -836,7 +830,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="points" value="0.0"/>
+            <cost name="pts" costTypeId="points" value="100.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="7964-ff38-1619-e2a8" name="Magmapike" hidden="false" collective="false" type="upgrade">
@@ -933,7 +927,7 @@
       <selectionEntryGroups/>
       <entryLinks/>
       <costs>
-        <cost name="pts" costTypeId="points" value="100.0"/>
+        <cost name="pts" costTypeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="88ae-2998-b72a-3f1c" name="Auric Runefather" book="Order Battletime - Fyreslayers" page="103" hidden="false" collective="false" type="model">
@@ -1129,7 +1123,7 @@
         </entryLink>
       </entryLinks>
       <costs>
-        <cost name="pts" costTypeId="points" value="80.0"/>
+        <cost name="pts" costTypeId="points" value="100.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="d62c-b254-872a-3500" name="Auric Runefather on Magmadroth" book="Order Battletime - Fyreslayers" page="98" hidden="false" collective="false" type="unit">
@@ -1849,7 +1843,7 @@
         </entryLink>
       </entryLinks>
       <costs>
-        <cost name="pts" costTypeId="points" value="80.0"/>
+        <cost name="pts" costTypeId="points" value="120.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="92c5-8b9d-f3e2-20e5" name="Auric Runesmiter on Magmadroth" hidden="false" collective="false" type="unit">
@@ -2978,7 +2972,7 @@
       </selectionEntryGroups>
       <entryLinks/>
       <costs>
-        <cost name="pts" costTypeId="points" value="130.0"/>
+        <cost name="pts" costTypeId="points" value="140.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="4dc7-ae33-e25d-977c" name="Grand Fyrd" hidden="false" collective="false" type="upgrade">
@@ -3105,7 +3099,7 @@
       </selectionEntryGroups>
       <entryLinks/>
       <costs>
-        <cost name="pts" costTypeId="points" value="180.0"/>
+        <cost name="pts" costTypeId="points" value="60.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="86c5-e66e-8180-8a6b" name="Lords of the Lodge" hidden="false" collective="false" type="upgrade">
@@ -3330,7 +3324,7 @@
       </selectionEntryGroups>
       <entryLinks/>
       <costs>
-        <cost name="pts" costTypeId="points" value="90.0"/>
+        <cost name="pts" costTypeId="points" value="110.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="0638-0925-ef33-408d" name="Warrior Kinband" hidden="false" collective="false" type="upgrade">
@@ -3495,7 +3489,7 @@
       </selectionEntryGroups>
       <entryLinks/>
       <costs>
-        <cost name="pts" costTypeId="points" value="90.0"/>
+        <cost name="pts" costTypeId="points" value="120.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="f45a-1818-8096-1147" name="Battlesmith" hidden="false" collective="false" type="unit">
@@ -3666,7 +3660,7 @@
         </entryLink>
       </entryLinks>
       <costs>
-        <cost name="pts" costTypeId="points" value="80.0"/>
+        <cost name="pts" costTypeId="points" value="120.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="5480-a1cb-81b1-45c7" name="Doomseeker" hidden="false" collective="false" type="upgrade">
@@ -4084,25 +4078,11 @@
       <rules/>
       <infoLinks/>
       <modifiers>
-        <modifier type="decrement" field="points" value="100">
+        <modifier type="set" field="points" value="480">
           <repeats/>
           <conditions>
-            <condition field="selections" scope="3973-d948-c464-bddc" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b1d0-e370-cb9b-eeca" type="greaterThan"/>
+            <condition field="selections" scope="3973-d948-c464-bddc" value="6.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="equalTo"/>
           </conditions>
-          <conditionGroups/>
-        </modifier>
-        <modifier type="decrement" field="points" value="120">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="3973-d948-c464-bddc" value="6.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b1d0-e370-cb9b-eeca" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-        <modifier type="increment" field="points" value="100">
-          <repeats>
-            <repeat field="selections" scope="3973-d948-c464-bddc" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b1d0-e370-cb9b-eeca" repeats="1" roundUp="false"/>
-          </repeats>
-          <conditions/>
           <conditionGroups/>
         </modifier>
       </modifiers>
@@ -4142,7 +4122,15 @@
           <profiles/>
           <rules/>
           <infoLinks/>
-          <modifiers/>
+          <modifiers>
+            <modifier type="set" field="points" value="0">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="parent" value="6.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="minSelections" type="min"/>
             <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
@@ -4152,7 +4140,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="points" value="0.0"/>
+            <cost name="pts" costTypeId="points" value="100.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="dc4e-f428-6b47-d65f" name="Fyresteel Throwing Axe" hidden="false" collective="false" type="upgrade">
@@ -4272,7 +4260,7 @@
       </selectionEntryGroups>
       <entryLinks/>
       <costs>
-        <cost name="pts" costTypeId="points" value="100.0"/>
+        <cost name="pts" costTypeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="5380-8f39-8882-eae7" name="Vulkite Bezerkers" hidden="false" collective="false" type="unit">
@@ -4319,29 +4307,7 @@
       </profiles>
       <rules/>
       <infoLinks/>
-      <modifiers>
-        <modifier type="decrement" field="points" value="120">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="5380-8f39-8882-eae7" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5cd4-7e3c-e940-22a6" type="greaterThan"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-        <modifier type="increment" field="points" value="120">
-          <repeats>
-            <repeat field="selections" scope="5380-8f39-8882-eae7" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5cd4-7e3c-e940-22a6" repeats="1" roundUp="false"/>
-          </repeats>
-          <conditions/>
-          <conditionGroups/>
-        </modifier>
-        <modifier type="decrement" field="points" value="30">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="5380-8f39-8882-eae7" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5cd4-7e3c-e940-22a6" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-      </modifiers>
+      <modifiers/>
       <constraints/>
       <categoryLinks>
         <categoryLink id="91ec-587f-865e-be30" name="New CategoryLink" hidden="false" targetId="945b-2f5e-58f0-75e2" primary="false">
@@ -4388,7 +4354,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="points" value="0.0"/>
+            <cost name="pts" costTypeId="points" value="120.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="40e9-9966-5df9-4a03" name="Fyresteel Throwing Axe" hidden="false" collective="false" type="upgrade">
@@ -4517,7 +4483,7 @@
       </selectionEntryGroups>
       <entryLinks/>
       <costs>
-        <cost name="pts" costTypeId="points" value="120.0"/>
+        <cost name="pts" costTypeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="b341-0885-3f1c-7d8a" name="General" hidden="false" collective="false" type="upgrade">
@@ -4713,7 +4679,7 @@
       </selectionEntryGroups>
       <entryLinks/>
       <costs>
-        <cost name="pts" costTypeId="points" value="100.0"/>
+        <cost name="pts" costTypeId="points" value="60.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="655c-f560-263a-ab0c" name="Vostarg Lodge" hidden="false" collective="false" type="upgrade">
@@ -4878,7 +4844,7 @@
       </selectionEntryGroups>
       <entryLinks/>
       <costs>
-        <cost name="pts" costTypeId="points" value="120.0"/>
+        <cost name="pts" costTypeId="points" value="100.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="40af-3522-0296-167c" name="Fjul-Grimnir" hidden="false" collective="false" type="model">

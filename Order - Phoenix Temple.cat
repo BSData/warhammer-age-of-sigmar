@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="6a30-71aa-a93f-819e" name="Order - Phoenix Temple" book="Grand Alliance: Order" revision="7" battleScribeVersion="2.01" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="25" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="6a30-71aa-a93f-819e" name="Order - Phoenix Temple" book="Grand Alliance: Order" revision="8" battleScribeVersion="2.01" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="25" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks/>
@@ -566,7 +566,7 @@
       </selectionEntryGroups>
       <entryLinks/>
       <costs>
-        <cost name="pts" costTypeId="points" value="200.0"/>
+        <cost name="pts" costTypeId="points" value="130.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="02ab-4d45-6d53-43a2" name="Anointed" hidden="false" collective="false" type="unit">
@@ -928,7 +928,7 @@
         </entryLink>
       </entryLinks>
       <costs>
-        <cost name="pts" costTypeId="points" value="240.0"/>
+        <cost name="pts" costTypeId="points" value="380.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="a965-5c2a-c214-6879" name="Frostheart Phoenix" hidden="false" collective="false" type="unit">
@@ -1132,7 +1132,7 @@
         </entryLink>
       </entryLinks>
       <costs>
-        <cost name="pts" costTypeId="points" value="240.0"/>
+        <cost name="pts" costTypeId="points" value="280.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="cdd2-70b9-b9e4-06f7" name="Phoenix Guard" hidden="false" collective="false" type="unit">
@@ -1189,24 +1189,10 @@
       <rules/>
       <infoLinks/>
       <modifiers>
-        <modifier type="decrement" field="points" value="160">
+        <modifier type="set" field="points" value="360">
           <repeats/>
           <conditions>
-            <condition field="selections" scope="cdd2-70b9-b9e4-06f7" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f9a4-a0c8-4566-5db8" type="greaterThan"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-        <modifier type="increment" field="points" value="160">
-          <repeats>
-            <repeat field="selections" scope="cdd2-70b9-b9e4-06f7" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f9a4-a0c8-4566-5db8" repeats="1" roundUp="false"/>
-          </repeats>
-          <conditions/>
-          <conditionGroups/>
-        </modifier>
-        <modifier type="decrement" field="points" value="60">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="cdd2-70b9-b9e4-06f7" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f9a4-a0c8-4566-5db8" type="equalTo"/>
+            <condition field="selections" scope="cdd2-70b9-b9e4-06f7" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="equalTo"/>
           </conditions>
           <conditionGroups/>
         </modifier>
@@ -1247,7 +1233,15 @@
           <profiles/>
           <rules/>
           <infoLinks/>
-          <modifiers/>
+          <modifiers>
+            <modifier type="set" field="points" value="0">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2aa9-aedb-92e3-d85c" type="min"/>
             <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="08f5-6f29-d476-7d3a" type="max"/>
@@ -1257,7 +1251,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="points" value="0.0"/>
+            <cost name="pts" costTypeId="points" value="140.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="525e-9efa-3568-d172" name="Phoenix Halberd" hidden="false" collective="false" type="upgrade">
@@ -1351,7 +1345,7 @@
       <selectionEntryGroups/>
       <entryLinks/>
       <costs>
-        <cost name="pts" costTypeId="points" value="160.0"/>
+        <cost name="pts" costTypeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>

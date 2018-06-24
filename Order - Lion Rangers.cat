@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="a7cd-494d-8e0e-ce24" name="Order - Lion Rangers" book="Grand Alliance: Order" revision="2" battleScribeVersion="2.01" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="25" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="a7cd-494d-8e0e-ce24" name="Order - Lion Rangers" book="Grand Alliance: Order" revision="3" battleScribeVersion="2.01" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="25" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks/>
@@ -132,22 +132,7 @@
       </profiles>
       <rules/>
       <infoLinks/>
-      <modifiers>
-        <modifier type="decrement" field="points" value="100">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="9edd-f775-c5e3-9540" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9705-fb45-dd40-28e1" type="greaterThan"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-        <modifier type="increment" field="points" value="100">
-          <repeats>
-            <repeat field="selections" scope="9edd-f775-c5e3-9540" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9705-fb45-dd40-28e1" repeats="1" roundUp="false"/>
-          </repeats>
-          <conditions/>
-          <conditionGroups/>
-        </modifier>
-      </modifiers>
+      <modifiers/>
       <constraints/>
       <categoryLinks>
         <categoryLink id="0243-05bc-b78b-9686" name="New CategoryLink" hidden="false" targetId="9ebc-4c77-4432-f0ba" primary="false">
@@ -194,7 +179,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="points" value="0.0"/>
+            <cost name="pts" costTypeId="points" value="80.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="82d5-a9b7-b61d-a7fc" name="Ranger Great Axes" hidden="false" collective="false" type="upgrade">
@@ -267,7 +252,7 @@
       <selectionEntryGroups/>
       <entryLinks/>
       <costs>
-        <cost name="pts" costTypeId="points" value="100.0"/>
+        <cost name="pts" costTypeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="5655-e6a0-b889-d2a2" name="White Lions" hidden="false" collective="false" type="unit">
@@ -315,24 +300,10 @@
       <rules/>
       <infoLinks/>
       <modifiers>
-        <modifier type="decrement" field="points" value="140">
+        <modifier type="set" field="points" value="300">
           <repeats/>
           <conditions>
-            <condition field="selections" scope="5655-e6a0-b889-d2a2" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7ed2-9509-4c7a-926c" type="greaterThan"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-        <modifier type="increment" field="points" value="140">
-          <repeats>
-            <repeat field="selections" scope="5655-e6a0-b889-d2a2" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7ed2-9509-4c7a-926c" repeats="1" roundUp="false"/>
-          </repeats>
-          <conditions/>
-          <conditionGroups/>
-        </modifier>
-        <modifier type="decrement" field="points" value="60">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="5655-e6a0-b889-d2a2" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7ed2-9509-4c7a-926c" type="equalTo"/>
+            <condition field="selections" scope="5655-e6a0-b889-d2a2" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="equalTo"/>
           </conditions>
           <conditionGroups/>
         </modifier>
@@ -369,11 +340,19 @@
         </categoryLink>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="7ed2-9509-4c7a-926c" name="10 White Lions" hidden="false" collective="false" type="unit">
+        <selectionEntry id="7ed2-9509-4c7a-926c" name="10 White Lions" hidden="false" collective="false" type="model">
           <profiles/>
           <rules/>
           <infoLinks/>
-          <modifiers/>
+          <modifiers>
+            <modifier type="set" field="points" value="0">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b67c-cc93-23f0-86b4" type="min"/>
             <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b9e0-1359-7c7a-c914" type="max"/>
@@ -383,7 +362,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="points" value="0.0"/>
+            <cost name="pts" costTypeId="points" value="120.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="a800-9714-f2ad-634c" name="Ranger Great Axe" hidden="false" collective="false" type="upgrade">
@@ -477,7 +456,7 @@
       <selectionEntryGroups/>
       <entryLinks/>
       <costs>
-        <cost name="pts" costTypeId="points" value="140.0"/>
+        <cost name="pts" costTypeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="e1af-f59c-3da7-ab85" name="Allegiance" hidden="false" collective="false" type="unit">
