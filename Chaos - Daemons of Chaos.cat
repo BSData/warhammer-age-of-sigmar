@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="c8da-7df9-793f-98ba" name="Chaos - Daemons of Chaos" book="Grand Alliance: Chaos" revision="4" battleScribeVersion="2.01" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="25" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="c8da-7df9-793f-98ba" name="Chaos - Daemons of Chaos" book="Grand Alliance: Chaos" revision="5" battleScribeVersion="2.01" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="25" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks/>
@@ -15,6 +15,12 @@
     <profileType id="1d4d-2cd3-a921-678f" name="Immortal Champion">
       <characteristicTypes>
         <characteristicType id="4571-ae64-68a3-0bc5" name="Ability"/>
+      </characteristicTypes>
+    </profileType>
+    <profileType id="a2ca-2474-78fd-9f6a" name="Hellcannon Crew within 1&quot;">
+      <characteristicTypes>
+        <characteristicType id="ed2b-f656-85e0-0813" name="Caged Fury"/>
+        <characteristicType id="1ce1-ed70-09a1-7afc" name="Doomfire"/>
       </characteristicTypes>
     </profileType>
   </profileTypes>
@@ -41,6 +47,20 @@
       <constraints/>
     </categoryEntry>
     <categoryEntry id="3461-9201-d262-e792" name="BE&apos;LAKOR" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="b89d-91be-7107-ad6f" name="HELLCANNON" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="7809-e1d9-0224-cb10" name="DUARDIN" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
@@ -137,6 +157,22 @@
       <constraints/>
       <categoryLinks>
         <categoryLink id="06e4-fa2a-503d-dd19" name="New CategoryLink" hidden="false" targetId="fa0c-9044-2568-fa02" primary="true">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </categoryLink>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="7438-c739-7aa2-237f" name="Hellcannon" hidden="false" targetId="1c75-efc8-9808-d109" type="selectionEntry">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+      <categoryLinks>
+        <categoryLink id="2d83-0cfd-4c63-eb9a" name="New CategoryLink" hidden="false" targetId="1d26-07fc-6a66-d73e" primary="true">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -275,7 +311,8 @@
       <infoLinks/>
       <modifiers/>
       <constraints>
-        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9784-9b35-9549-a7c8" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9784-9b35-9549-a7c8" type="max"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5a1d-237a-277a-405a" type="max"/>
       </constraints>
       <categoryLinks>
         <categoryLink id="5bea-e9d7-060b-cfdc" name="New CategoryLink" hidden="false" targetId="7cdd-80ea-cbeb-8e16" primary="false">
@@ -689,15 +726,7 @@
           <modifiers/>
         </infoLink>
       </infoLinks>
-      <modifiers>
-        <modifier type="set" field="points" value="320">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="88ab-4ca0-48c5-c539" value="6.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="86bf-5743-f4ff-4a82" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-      </modifiers>
+      <modifiers/>
       <constraints/>
       <categoryLinks>
         <categoryLink id="f9ea-120f-0c49-549d" name="New CategoryLink" hidden="false" targetId="7cdd-80ea-cbeb-8e16" primary="false">
@@ -727,15 +756,7 @@
           <profiles/>
           <rules/>
           <infoLinks/>
-          <modifiers>
-            <modifier type="decrement" field="points" value="60">
-              <repeats/>
-              <conditions>
-                <condition field="selections" scope="parent" value="6.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="86bf-5743-f4ff-4a82" type="equalTo"/>
-              </conditions>
-              <conditionGroups/>
-            </modifier>
-          </modifiers>
+          <modifiers/>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0ea7-c141-acdb-46d5" type="min"/>
             <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3e4f-4441-9fdd-dc96" type="max"/>
@@ -753,7 +774,7 @@
       <entryLinks/>
       <costs/>
     </selectionEntry>
-    <selectionEntry id="4f41-1c22-84e9-6cfa" name="Soul Grinder" hidden="false" collective="false" type="unit">
+    <selectionEntry id="4f41-1c22-84e9-6cfa" name="Soul Grinder" book="Grand Alliance: Chaos" hidden="false" collective="false" type="unit">
       <profiles>
         <profile id="f99e-5c9f-6a16-41c2" name="Soul Grinder" hidden="false" profileTypeId="1960-ca8e-67ce-2014" profileTypeName="Unit">
           <profiles/>
@@ -1077,6 +1098,301 @@
       <entryLinks/>
       <costs>
         <cost name="pts" costTypeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="1c75-efc8-9808-d109" name="? Hellcannon" book="Warscroll Compendium: Warriors of Chaos" hidden="false" collective="false" type="unit">
+      <profiles>
+        <profile id="8dfe-0ee0-e71f-8923" name="Daemon-forged Cover" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="A Hellcannon’s Crew can use their war machine as cover while they are within 1&quot; of it."/>
+          </characteristics>
+        </profile>
+        <profile id="954a-b334-4d30-3cb9" name="Caged Fury" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="If the Hellcannon is not within 3&quot; of an enemy unit at the start of your movement phase, roll a dice and consult the War Machine Crew Table above. If the dice roll is equal to or greater than the score shown, the crew have caged the Hellfire’s fury this turn. Otherwise, the Hellcannon must move as far as it can towards the closest enemy unit that is visible to it."/>
+          </characteristics>
+        </profile>
+        <profile id="0791-c52b-7ad6-a3d0" name="2 models" hidden="false" profileTypeId="a2ca-2474-78fd-9f6a" profileTypeName="Hellcannon Crew within 1&quot;">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Caged Fury" characteristicTypeId="ed2b-f656-85e0-0813" value="3 or more"/>
+            <characteristic name="Doomfire" characteristicTypeId="1ce1-ed70-09a1-7afc" value="2"/>
+          </characteristics>
+        </profile>
+        <profile id="2285-7556-a87b-f5f2" name="1 model" hidden="false" profileTypeId="a2ca-2474-78fd-9f6a" profileTypeName="Hellcannon Crew within 1&quot;">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Caged Fury" characteristicTypeId="ed2b-f656-85e0-0813" value="4 or more"/>
+            <characteristic name="Doomfire" characteristicTypeId="1ce1-ed70-09a1-7afc" value="1"/>
+          </characteristics>
+        </profile>
+        <profile id="84a7-8d60-3543-ff44" name="0 models" hidden="false" profileTypeId="a2ca-2474-78fd-9f6a" profileTypeName="Hellcannon Crew within 1&quot;">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Caged Fury" characteristicTypeId="ed2b-f656-85e0-0813" value="Cannot cage fury"/>
+            <characteristic name="Doomfire" characteristicTypeId="1ce1-ed70-09a1-7afc" value="0"/>
+          </characteristics>
+        </profile>
+        <profile id="42bf-1dcc-b264-fa13" name="3 Models" hidden="false" profileTypeId="a2ca-2474-78fd-9f6a" profileTypeName="Hellcannon Crew within 1&quot;">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Caged Fury" characteristicTypeId="ed2b-f656-85e0-0813" value="2 or more"/>
+            <characteristic name="Doomfire" characteristicTypeId="1ce1-ed70-09a1-7afc" value="2"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+      <categoryLinks/>
+      <selectionEntries>
+        <selectionEntry id="2f63-1d8c-e827-b7f9" name="WAR MACHINE" hidden="false" collective="false" type="model">
+          <profiles>
+            <profile id="aa6c-d260-6fb8-26a2" name="WAR MACHINE" hidden="false" profileTypeId="1960-ca8e-67ce-2014" profileTypeName="Unit">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Move" characteristicTypeId="8655-6213-2824-1752" value="2D6&quot;"/>
+                <characteristic name="Wounds" characteristicTypeId="cd0e-fea6-411f-904d" value="7"/>
+                <characteristic name="Bravery" characteristicTypeId="0c85-bf79-836b-759e" value="10"/>
+                <characteristic name="Save" characteristicTypeId="f8dd-4f2a-8543-4f36" value="4+"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a2cb-7f05-315c-0b85" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8bc2-27dd-c1bf-0031" type="min"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="d676-b956-464f-1a74" name="New CategoryLink" hidden="false" targetId="7cdd-80ea-cbeb-8e16" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+            <categoryLink id="bc13-6815-a8d3-27b4" name="New CategoryLink" hidden="false" targetId="1418-9a68-9f9e-e9a7" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+            <categoryLink id="55e4-07bc-e65c-b62f" name="New CategoryLink" hidden="false" targetId="880e-1e33-b965-71ec" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+            <categoryLink id="baf9-6e46-c723-2b73" name="New CategoryLink" hidden="false" targetId="b89d-91be-7107-ad6f" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries>
+            <selectionEntry id="8fe1-3e01-28b3-5d22" name="Doomfire" hidden="false" collective="false" type="upgrade">
+              <profiles>
+                <profile id="6cf3-7016-32e1-a63c" name="Doomfire" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="Weapon">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                  <characteristics>
+                    <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Missile"/>
+                    <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="12-48&quot;"/>
+                    <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="*"/>
+                    <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="4+"/>
+                    <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="See Ability"/>
+                    <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="See Ability"/>
+                    <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="See Ability"/>
+                  </characteristics>
+                </profile>
+                <profile id="d53e-426b-a549-7161" name="War Machine - Doomfire" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                  <characteristics>
+                    <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="The Hellcannon can only make Doomfire attacks if its crew are within 1&quot; of the war machine in the shooting phase. To make a Doomfire attack, pick an enemy unit within range, even if it is not visible to the Hellcannon, and roll to hit. Add 1 to the hit roll if the Hellcannon did not move in your preceding movement phase and add another 1 if the target unit has 20 or more models. A unit hit by Doomfire suffers D6 mortal wounds."/>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="afae-0969-6f21-c28f" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cb1f-a5c6-9470-7065" type="max"/>
+              </constraints>
+              <categoryLinks/>
+              <selectionEntries/>
+              <selectionEntryGroups/>
+              <entryLinks/>
+              <costs>
+                <cost name="pts" costTypeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="da40-a71a-51af-880e" name="Daemonic Maw" hidden="false" collective="false" type="upgrade">
+              <profiles>
+                <profile id="af99-01a3-1935-b822" name="Daemonic Maw" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="Weapon">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                  <characteristics>
+                    <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
+                    <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="1&quot;"/>
+                    <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="3"/>
+                    <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="4+"/>
+                    <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="3+"/>
+                    <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-1"/>
+                    <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="D3"/>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d4c5-5289-cf20-843f" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6b3c-2ae3-b6a0-77a6" type="max"/>
+              </constraints>
+              <categoryLinks/>
+              <selectionEntries/>
+              <selectionEntryGroups/>
+              <entryLinks/>
+              <costs>
+                <cost name="pts" costTypeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="6874-72ab-4c42-8d0f" name="CREW" hidden="false" collective="true" type="model">
+          <profiles>
+            <profile id="0813-93ee-1e19-6609" name="CREW" hidden="false" profileTypeId="1960-ca8e-67ce-2014" profileTypeName="Unit">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Move" characteristicTypeId="8655-6213-2824-1752" value="4&quot;"/>
+                <characteristic name="Wounds" characteristicTypeId="cd0e-fea6-411f-904d" value="1"/>
+                <characteristic name="Bravery" characteristicTypeId="0c85-bf79-836b-759e" value="6"/>
+                <characteristic name="Save" characteristicTypeId="f8dd-4f2a-8543-4f36" value="5+"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0c7d-f558-fe16-4c1a" type="min"/>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6007-9d02-b35c-3fd4" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="e494-b232-5d08-09ef" name="New CategoryLink" hidden="false" targetId="7cdd-80ea-cbeb-8e16" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+            <categoryLink id="1299-db06-7fbb-1ef0" name="New CategoryLink" hidden="false" targetId="7809-e1d9-0224-cb10" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+            <categoryLink id="cf9d-3c43-806a-d216" name="New CategoryLink" hidden="false" targetId="c4f8-4679-229d-7c37" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries>
+            <selectionEntry id="f320-d938-2e97-0a5d" name="Crew&apos;s Improvised Weapons" hidden="false" collective="true" type="upgrade">
+              <profiles>
+                <profile id="c52f-c2bf-f5e8-cf4f" name="Crew&apos;s Improvised Weapons" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="Weapon">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                  <characteristics>
+                    <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
+                    <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="1&quot;"/>
+                    <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="1"/>
+                    <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="5+"/>
+                    <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="5+"/>
+                    <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-"/>
+                    <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="1"/>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="036c-b68e-5524-43f0" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4b9e-a317-fd9d-d3d0" type="max"/>
+              </constraints>
+              <categoryLinks/>
+              <selectionEntries/>
+              <selectionEntryGroups/>
+              <entryLinks/>
+              <costs>
+                <cost name="pts" costTypeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups/>
+      <entryLinks/>
+      <costs>
+        <cost name="pts" costTypeId="points" value="300.0"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>
