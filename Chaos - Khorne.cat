@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="cac4-1eec-d548-b34d" name="Chaos - Khorne" book="Chaos Battletome Blade of Khorne" revision="15" battleScribeVersion="2.01" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="cac4-1eec-d548-b34d" name="Chaos - Khorne" book="Chaos Battletome: Blades of Khorne" revision="16" battleScribeVersion="2.01" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks/>
@@ -85,6 +85,11 @@
         <characteristicType id="03ed-1cd2-0d05-559d" name="Move"/>
         <characteristicType id="2b90-338b-0385-ad6f" name="Harrow Meat"/>
         <characteristicType id="a7b0-c2ce-697b-fba1" name="Ancyte&apos;s Shield Blades"/>
+      </characteristicTypes>
+    </profileType>
+    <profileType id="9980-f03a-cc21-50ab" name="Blood Tithe Table - Unit Summoning">
+      <characteristicTypes>
+        <characteristicType id="9c6e-712e-2ec7-a4cf" name="Cost"/>
       </characteristicTypes>
     </profileType>
   </profileTypes>
@@ -557,7 +562,7 @@
         </categoryLink>
       </categoryLinks>
     </entryLink>
-    <entryLink id="a2b3-c723-4e18-d0fc" name="Bloodbound Warhorde" hidden="false" targetId="45b7-db81-23e4-78c8" type="selectionEntry">
+    <entryLink id="a2b3-c723-4e18-d0fc" name="Battalion: Bloodbound Warhorde" hidden="false" targetId="45b7-db81-23e4-78c8" type="selectionEntry">
       <profiles/>
       <rules/>
       <infoLinks/>
@@ -1859,11 +1864,26 @@
         </categoryLink>
       </categoryLinks>
     </entryLink>
-    <entryLink id="85bb-fd8e-2611-8937" name="Battalion: Bloodmarked Warband (BLOODBOUND)" hidden="false" targetId="c148-96c9-13fa-ae62" type="selectionEntry">
+    <entryLink id="85bb-fd8e-2611-8937" name="Battalion: Bloodmarked Warband" hidden="false" targetId="c148-96c9-13fa-ae62" type="selectionEntry">
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <repeats/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="62e4-370f-3318-cdbd" type="notInstanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="78f3-8a59-699a-61e8" type="notInstanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b78c-c342-c8aa-aa45" type="notInstanceOf"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <constraints/>
       <categoryLinks>
         <categoryLink id="b7e5-e637-4c09-1457" name="New CategoryLink" hidden="false" targetId="be17-6bbd-b857-3f43" primary="true">
@@ -3135,36 +3155,7 @@
           <constraints/>
         </categoryLink>
       </categoryLinks>
-      <selectionEntries>
-        <selectionEntry id="2b83-3dc4-ab4d-22cf" name="Summon Blood Throne" hidden="false" collective="false" type="upgrade">
-          <profiles>
-            <profile id="f1cd-d26d-2bef-1eb0" name="Summon Blood Throne" hidden="false" profileTypeId="2e81-5e22-c6e1-73cb" profileTypeName="Spell">
-              <profiles/>
-              <rules/>
-              <infoLinks/>
-              <modifiers/>
-              <characteristics>
-                <characteristic name="Casting Value" characteristicTypeId="2508-b604-1258-a920" value="8"/>
-                <characteristic name="Description" characteristicTypeId="76ff-781d-b8e6-5f27" value="If successfully cast, you can set up a Blood Throne within 16&quot; of the caster and more than 9&quot; from nay enemy models. This model is added to your army but cannot move in the following movement phase."/>
-              </characteristics>
-            </profile>
-          </profiles>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4460-c050-bcb7-acc4" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4317-2010-545c-a4c4" type="max"/>
-          </constraints>
-          <categoryLinks/>
-          <selectionEntries/>
-          <selectionEntryGroups/>
-          <entryLinks/>
-          <costs>
-            <cost name="pts" costTypeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
+      <selectionEntries/>
       <selectionEntryGroups/>
       <entryLinks>
         <entryLink id="b98d-2e07-1860-dfae" name="Gnashing Maw" hidden="false" targetId="275c-8db7-3d1b-8973" type="selectionEntry">
@@ -3489,34 +3480,6 @@
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0747-56e5-c08e-2084" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c3ab-342a-446f-38b8" type="min"/>
-          </constraints>
-          <categoryLinks/>
-          <selectionEntries/>
-          <selectionEntryGroups/>
-          <entryLinks/>
-          <costs>
-            <cost name="pts" costTypeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="f70d-0d05-0d22-053e" name="Summon Skull Cannon" hidden="false" collective="false" type="upgrade">
-          <profiles>
-            <profile id="d557-6b06-8ac7-dcdb" name="Summon Skull Cannon" hidden="false" profileTypeId="2e81-5e22-c6e1-73cb" profileTypeName="Spell">
-              <profiles/>
-              <rules/>
-              <infoLinks/>
-              <modifiers/>
-              <characteristics>
-                <characteristic name="Casting Value" characteristicTypeId="2508-b604-1258-a920" value="8"/>
-                <characteristic name="Description" characteristicTypeId="76ff-781d-b8e6-5f27" value="If successfully cast, you can set up a Skull Cannon within 16&quot; of the caster and more than 9&quot; away from any enemy models. The unit is added to your army but cannot move in the following movement phase."/>
-              </characteristics>
-            </profile>
-          </profiles>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4c4f-f521-4ee3-855b" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2727-4c39-7e7f-ad78" type="max"/>
           </constraints>
           <categoryLinks/>
           <selectionEntries/>
@@ -4576,7 +4539,7 @@
               <infoLinks/>
               <modifiers/>
               <characteristics>
-                <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="Models in this unit may be Icon Bearers. If you roll a 1 when taking a battleshock test for a unit that includes any Icon Bearers, reality blinks and the daemonic hordes are bolstered. Add D3 Bloodcrushers to the unit."/>
+                <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="Models in this unit may be Icon Bearers. If the unmodified roll for a battleshock test for a unit that includes any Icon Bearers is 1, you can add 1 model to that unit, and no models from that unit will flee in that battleshock phase. *ERRATA Jun&apos;18*"/>
               </characteristics>
             </profile>
           </profiles>
@@ -4611,34 +4574,6 @@
           <modifiers/>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="115f-bad2-afac-343b" type="max"/>
-          </constraints>
-          <categoryLinks/>
-          <selectionEntries/>
-          <selectionEntryGroups/>
-          <entryLinks/>
-          <costs>
-            <cost name="pts" costTypeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="2b9f-3bf4-cd74-4126" name="Summon Bloodcrushers" hidden="false" collective="false" type="upgrade">
-          <profiles>
-            <profile id="a7d5-5c1f-4241-d983" name="Summon Bloodcrushers" hidden="false" profileTypeId="2e81-5e22-c6e1-73cb" profileTypeName="05 Spell">
-              <profiles/>
-              <rules/>
-              <infoLinks/>
-              <modifiers/>
-              <characteristics>
-                <characteristic name="Casting Value" characteristicTypeId="2508-b604-1258-a920" value="6"/>
-                <characteristic name="Description" characteristicTypeId="76ff-781d-b8e6-5f27" value="If successfully cast, you can set up a unit of up to 3 Bloodcrushers within 16&quot; of the caster and more than 9&quot; from any enemy models. The unit is added to your army but cannot move in the following movement phase. If the result of the casting roll was 11 or more, set up a unit of up to 6 Bloodcrushers instead."/>
-              </characteristics>
-            </profile>
-          </profiles>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5fdb-e91e-4ea2-8dda" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b2aa-b753-c474-04fd" type="max"/>
           </constraints>
           <categoryLinks/>
           <selectionEntries/>
@@ -5015,34 +4950,6 @@
             <cost name="pts" costTypeId="points" value="120.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="9236-2859-50a1-9ff9" name="Summon Bloodletters" hidden="false" collective="false" type="upgrade">
-          <profiles>
-            <profile id="c7be-4d2b-3f1f-2057" name="Summon Bloodletters" hidden="false" profileTypeId="2e81-5e22-c6e1-73cb" profileTypeName="05 Spell">
-              <profiles/>
-              <rules/>
-              <infoLinks/>
-              <modifiers/>
-              <characteristics>
-                <characteristic name="Casting Value" characteristicTypeId="2508-b604-1258-a920" value="6"/>
-                <characteristic name="Description" characteristicTypeId="76ff-781d-b8e6-5f27" value="If successfully cast, you can set up a unit of up to 10 Bloodletters within 16&quot; of the caster and more than 9&quot; from any enemy models. The unit is added to your army but cannot move in the following movement phase. If the result of the casting roll was 11 or more, set up a unit of up to 20 Bloodletters instead."/>
-              </characteristics>
-            </profile>
-          </profiles>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="daea-f354-c9dd-7fc7" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bd90-8e1a-7108-6eae" type="max"/>
-          </constraints>
-          <categoryLinks/>
-          <selectionEntries/>
-          <selectionEntryGroups/>
-          <entryLinks/>
-          <costs>
-            <cost name="pts" costTypeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
         <selectionEntry id="f224-59e7-64e9-24bf" name="Icon Bearer" hidden="false" collective="false" type="upgrade">
           <profiles>
             <profile id="17d9-f82e-650b-c1ce" name="Icon Bearer" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="08 Ability (Unit)">
@@ -5108,7 +5015,7 @@
                       <infoLinks/>
                       <modifiers/>
                       <characteristics>
-                        <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="If you roll a 1 when making a battleshock test for a unit that includes any Gore-drenched Icons, reality blinks and the daemonic horde is bolstered. Add D6 Bloodletters to the unit. "/>
+                        <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="If the unmodified roll for a battleshock test for a unit that includes any Gore-drenched Icons is 1, you can add D6 models to that unit, and no models from that unit will flee in that battleshock phase. *ERRATA Jun&apos;18*"/>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -5165,7 +5072,7 @@
       </selectionEntries>
       <selectionEntryGroups/>
       <entryLinks>
-        <entryLink id="9298-9157-4702-afe3" name="Hellblade" hidden="false" targetId="e04a-a861-f864-53e4" type="selectionEntry">
+        <entryLink id="9298-9157-4702-afe3" name="Hellblades" hidden="false" targetId="e04a-a861-f864-53e4" type="selectionEntry">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -5259,36 +5166,7 @@
           <constraints/>
         </categoryLink>
       </categoryLinks>
-      <selectionEntries>
-        <selectionEntry id="d353-e0d8-fba5-343e" name="Summon Bloodmaster" hidden="false" collective="false" type="upgrade">
-          <profiles>
-            <profile id="150c-e149-8966-b4d5" name="Summon Bloodmaster" hidden="false" profileTypeId="2e81-5e22-c6e1-73cb" profileTypeName="Spell">
-              <profiles/>
-              <rules/>
-              <infoLinks/>
-              <modifiers/>
-              <characteristics>
-                <characteristic name="Casting Value" characteristicTypeId="2508-b604-1258-a920" value="5"/>
-                <characteristic name="Description" characteristicTypeId="76ff-781d-b8e6-5f27" value="If successfully cast, you can set up a Bloodmaster, Herald of Khorne within 16&quot; of the caster and more than 9&quot; away from any enemy models. The model is added to your army but cannot move in the following movement phase."/>
-              </characteristics>
-            </profile>
-          </profiles>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="853e-d785-9681-6385" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2561-22f1-96a2-40b7" type="max"/>
-          </constraints>
-          <categoryLinks/>
-          <selectionEntries/>
-          <selectionEntryGroups/>
-          <entryLinks/>
-          <costs>
-            <cost name="pts" costTypeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
+      <selectionEntries/>
       <selectionEntryGroups/>
       <entryLinks>
         <entryLink id="ad21-8bb5-3b1e-4948" name="Blade of Blood" hidden="false" targetId="f467-75dd-fd93-d5ec" type="selectionEntry">
@@ -6057,34 +5935,6 @@
             <cost name="pts" costTypeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="9db0-8ed7-8291-14e9" name="Summon Bloodthirster of Rage" hidden="false" collective="false" type="upgrade">
-          <profiles>
-            <profile id="6c9e-0fc9-3f8a-117d" name="Summon Bloodthirster of Rage" hidden="false" profileTypeId="2e81-5e22-c6e1-73cb" profileTypeName="Spell">
-              <profiles/>
-              <rules/>
-              <infoLinks/>
-              <modifiers/>
-              <characteristics>
-                <characteristic name="Casting Value" characteristicTypeId="2508-b604-1258-a920" value="10"/>
-                <characteristic name="Description" characteristicTypeId="76ff-781d-b8e6-5f27" value="If successfully cast, you can set up a Bloodthirster of Insensate Rage within 16&quot; of the caster and more than 9&quot; from any enemy models. The unit is added to your army but cannot move in the following movement phase."/>
-              </characteristics>
-            </profile>
-          </profiles>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6ed2-7bbd-77b6-d90d" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1226-9ebe-e125-8982" type="max"/>
-          </constraints>
-          <categoryLinks/>
-          <selectionEntries/>
-          <selectionEntryGroups/>
-          <entryLinks/>
-          <costs>
-            <cost name="pts" costTypeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
         <selectionEntry id="4f4e-fa52-2afe-c695" name="Wound Track Bloodthirster" hidden="false" collective="false" type="upgrade">
           <profiles>
             <profile id="cc19-66cd-0ae8-879f" name="00-03" hidden="false" profileTypeId="1d77-62a1-bb6c-78b5" profileTypeName="Bloodthirster of Rage Wounds">
@@ -6361,34 +6211,6 @@
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7903-df33-cbdc-ec19" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d541-b33d-2336-8166" type="max"/>
-          </constraints>
-          <categoryLinks/>
-          <selectionEntries/>
-          <selectionEntryGroups/>
-          <entryLinks/>
-          <costs>
-            <cost name="pts" costTypeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="fa7d-8afc-c2d1-c4d8" name="Summon Bloodthirster of Fury" hidden="false" collective="false" type="upgrade">
-          <profiles>
-            <profile id="8f76-c641-5e8b-7498" name="Summon Bloodthirster of Fury" hidden="false" profileTypeId="2e81-5e22-c6e1-73cb" profileTypeName="Spell">
-              <profiles/>
-              <rules/>
-              <infoLinks/>
-              <modifiers/>
-              <characteristics>
-                <characteristic name="Casting Value" characteristicTypeId="2508-b604-1258-a920" value="10"/>
-                <characteristic name="Description" characteristicTypeId="76ff-781d-b8e6-5f27" value="If successfully cast, you can set up a Bloodthirster of Unfettered Fury within 16&quot; of the caster and more than 9&quot; from any enemy models. The unit is added to your army but cannot move in the following movement phase."/>
-              </characteristics>
-            </profile>
-          </profiles>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3561-ef58-cd09-f1c1" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0578-ea8e-9841-2e2f" type="max"/>
           </constraints>
           <categoryLinks/>
           <selectionEntries/>
@@ -6845,7 +6667,7 @@
           <infoLinks/>
           <modifiers/>
           <characteristics>
-            <characteristic name="Battalion Ability Details" characteristicTypeId="08e0-9ead-1dbe-c801" value="You can use the Rejoice in the Slaughter command ability of the Charnel Host&apos;s Bloodthirster of Unfettered Fury in your hero phase, even if it is not your general."/>
+            <characteristic name="Battalion Ability Details" characteristicTypeId="08e0-9ead-1dbe-c801" value="You can use the Rejoice in the Slaughter command ability of the Charnel Host’s Bloodthirster of Unfettered Fury once in each of your hero phases without spending a command point to do so."/>
           </characteristics>
         </profile>
         <profile id="2365-6551-33f7-abd2" name="Butchers of Khorne" hidden="false" profileTypeId="bdc6-78da-3796-60a3" profileTypeName="Battalion Abilities">
@@ -7052,7 +6874,7 @@
           <infoLinks/>
           <modifiers/>
           <characteristics>
-            <characteristic name="Battalion Ability Details" characteristicTypeId="08e0-9ead-1dbe-c801" value="Each BLOODTHIRSTER from a Council of Blood can use the command ability on its warscroll in each of your hero phases, even if they are not your army&apos;s general."/>
+            <characteristic name="Battalion Ability Details" characteristicTypeId="08e0-9ead-1dbe-c801" value="Each Bloodthirster from a Council of Blood can use the command ability on its warscroll once in each of your hero phases without spending a command point to do so. *ERRATA Jun&apos;18*"/>
           </characteristics>
         </profile>
       </profiles>
@@ -7926,16 +7748,6 @@
             <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="CHAOS WIZARDS know the Summon Flesh Hounds spell, in addtion to any others they know."/>
           </characteristics>
         </profile>
-        <profile id="e989-ca2d-ab1a-c4d5" name="Summon Flesh Hounds" hidden="false" profileTypeId="2e81-5e22-c6e1-73cb" profileTypeName="Spell">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <characteristics>
-            <characteristic name="Casting Value" characteristicTypeId="2508-b604-1258-a920" value="6"/>
-            <characteristic name="Description" characteristicTypeId="76ff-781d-b8e6-5f27" value="If successfully cast, you can set up a unit of up to 5 Felsh Hounds witihn 16&quot; of the caster and more than 9&quot; from any enemy models. The unit is added to your army but cannot move in the following movement phase. If the result of the casting roll was 11 or more, set up a unit of up to 10 Flesh Hounds instead."/>
-          </characteristics>
-        </profile>
       </profiles>
       <rules/>
       <infoLinks/>
@@ -7972,7 +7784,7 @@
         </categoryLink>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="dbc1-3197-c451-e4f0" name="5 Flesh Hounds" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="dbc1-3197-c451-e4f0" name="5 Flesh Hounds" hidden="false" collective="false" type="model">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -8815,7 +8627,7 @@
           <infoLinks/>
           <modifiers/>
           <characteristics>
-            <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="Once per game, if Karanak is within 8&quot; of his quarry during your hero phase, you can set up a unit of Flesh Hounds anywhere within 8&quot; of Karanak. This unit is added to your army but cannot move in the following movement phase."/>
+            <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="Once per game, if Karanak is within 8&quot; of his quarry during the hero phase, you can summon a unit of 5 Flesh Hounds to the battlefield, and add it to your army. The summoned unit must be set up wholly within 8&quot; of Karanak and more than 9&quot; from any enemy units. The summoned unit cannot move in the following movement phase. *ERRATA Jun&apos;18*"/>
           </characteristics>
         </profile>
       </profiles>
@@ -9330,7 +9142,7 @@
           <infoLinks/>
           <modifiers/>
           <characteristics>
-            <characteristic name="Command Ability Details" characteristicTypeId="1b71-4c83-4e8c-093f" value="If this model uses this ability, pick up to 3 MORTAL KHORNE units within 24&quot; of him. Until your next hero phase, add 1 to the wound rolls made in the combat phase for this model and any units you picked, as long as they charged in the same turn."/>
+            <characteristic name="Command Ability Details" characteristicTypeId="1b71-4c83-4e8c-093f" value="If this model uses this ability, pick up to 3 MORTAL KHORNE units within 24&quot; of him. Until your next hero phase, add 1 to the wound rolls made in the combat phase for this model and any units you picked, as long as they charged in the same turn. The same unit cannot be chosen to benefit from this command ability more than once in the same hero phase. *ERRATA Jun&apos;18*"/>
           </characteristics>
         </profile>
       </profiles>
@@ -11360,34 +11172,6 @@
         </categoryLink>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="11c2-3ec1-9a2a-6e3f" name="Summon Skullmaster" hidden="false" collective="false" type="upgrade">
-          <profiles>
-            <profile id="40ed-e502-7235-9179" name="Summon Skullmaster" hidden="false" profileTypeId="2e81-5e22-c6e1-73cb" profileTypeName="Spell">
-              <profiles/>
-              <rules/>
-              <infoLinks/>
-              <modifiers/>
-              <characteristics>
-                <characteristic name="Casting Value" characteristicTypeId="2508-b604-1258-a920" value="5"/>
-                <characteristic name="Description" characteristicTypeId="76ff-781d-b8e6-5f27" value="If successfully cast, you can set up a Skullmaster, Herald of Khorne within 16&quot; of the caster and more than 9&quot; away from any enemy models. The model is added to your army but cannot move in the following movement phase."/>
-              </characteristics>
-            </profile>
-          </profiles>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3b7b-779f-a896-ccaa" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0405-2594-cd04-6024" type="max"/>
-          </constraints>
-          <categoryLinks/>
-          <selectionEntries/>
-          <selectionEntryGroups/>
-          <entryLinks/>
-          <costs>
-            <cost name="pts" costTypeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
         <selectionEntry id="9517-e07e-e189-6699" name="General" hidden="false" collective="false" type="upgrade">
           <profiles/>
           <rules/>
@@ -14993,34 +14777,6 @@
             <cost name="pts" costTypeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="8152-881d-1d13-ae0b" name="Summon Bloodthirster of Wrath" hidden="false" collective="false" type="upgrade">
-          <profiles>
-            <profile id="7a86-891e-7e97-0cbf" name="Summon Bloodthirster of Wrath" hidden="false" profileTypeId="2e81-5e22-c6e1-73cb" profileTypeName="Spell">
-              <profiles/>
-              <rules/>
-              <infoLinks/>
-              <modifiers/>
-              <characteristics>
-                <characteristic name="Casting Value" characteristicTypeId="2508-b604-1258-a920" value="10"/>
-                <characteristic name="Description" characteristicTypeId="76ff-781d-b8e6-5f27" value="If successfully cast, you can set up a Wrath of Khorne Bloodthirster within 16&quot; of the caster and more than 9&quot; from any enemy models. The unit is added to your army but cannot move in the following movement phase."/>
-              </characteristics>
-            </profile>
-          </profiles>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b49a-e827-f4fd-645f" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3be8-2641-798c-f464" type="max"/>
-          </constraints>
-          <categoryLinks/>
-          <selectionEntries/>
-          <selectionEntryGroups/>
-          <entryLinks/>
-          <costs>
-            <cost name="pts" costTypeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
         <selectionEntry id="b733-66dc-0de3-a77d" name="Wound Track Bloodthirster" hidden="false" collective="false" type="upgrade">
           <profiles>
             <profile id="7b6b-fafa-fab2-4d4b" name="00-03" hidden="false" profileTypeId="bd1a-5b0d-2603-f60e" profileTypeName="Wrath of Khorne Bloodthirster Wounds">
@@ -15388,7 +15144,7 @@
                   <infoLinks/>
                   <modifiers/>
                   <characteristics>
-                    <characteristic name="Reward" characteristicTypeId="47cb-238b-c069-698e" value="Bloody Exemplar: Select a KHORNE HERO from your army that has a command ability on their warscroll and immediately use that command ability. If this model is your general, they can use another command ability as normal."/>
+                    <characteristic name="Reward" characteristicTypeId="47cb-238b-c069-698e" value="Bloody Exemplar: Select a friendly Khorne Hero that has a command ability on their warscroll and immediately use that command ability without spending a command point to do so. *ERRATA Jun&apos;18*"/>
                   </characteristics>
                 </profile>
                 <profile id="e962-d0dc-4873-c12a" name="2" hidden="false" profileTypeId="74b3-3c57-6c6a-cd77" profileTypeName="Blood Tithe Table - Points Expended">
@@ -15451,7 +15207,144 @@
                   <infoLinks/>
                   <modifiers/>
                   <characteristics>
-                    <characteristic name="Reward" characteristicTypeId="47cb-238b-c069-698e" value="Blood Pact: Set up a new KHORNE DAEMON unit anywhere on the battlefield that is more than 9&quot; from any enemy models. This unit cannot move in the following movement phase."/>
+                    <characteristic name="Reward" characteristicTypeId="47cb-238b-c069-698e" value="Blood Pact: Pick a Khorne Daemon unit from the summoning list below and add it to your army. Set up the unit anywhere on the battlefield that is more than 9&quot; from any enemy units. It cannot move in the following movement phase. *ERRATA Jun&apos;18*"/>
+                  </characteristics>
+                </profile>
+                <profile id="b4ad-298d-c8d3-2829" name="(02) 1 Bloodthirster of Insensate Rage" hidden="false" profileTypeId="9980-f03a-cc21-50ab" profileTypeName="Blood Tithe Summoning Table - Unit">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                  <characteristics>
+                    <characteristic name="Cost" characteristicTypeId="9c6e-712e-2ec7-a4cf" value="8"/>
+                  </characteristics>
+                </profile>
+                <profile id="c016-11dc-34c5-2341" name="(01) 1 Wrath of Khorne Bloodthirster" hidden="false" profileTypeId="9980-f03a-cc21-50ab" profileTypeName="Blood Tithe Summoning Table - Unit">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                  <characteristics>
+                    <characteristic name="Cost" characteristicTypeId="9c6e-712e-2ec7-a4cf" value="8"/>
+                  </characteristics>
+                </profile>
+                <profile id="2b96-8e67-c8f7-87c6" name="(05) 15 Bloodletters" hidden="false" profileTypeId="9980-f03a-cc21-50ab" profileTypeName="Blood Tithe Summoning Table - Unit">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                  <characteristics>
+                    <characteristic name="Cost" characteristicTypeId="9c6e-712e-2ec7-a4cf" value="6"/>
+                  </characteristics>
+                </profile>
+                <profile id="2b52-276c-1881-4906" name="Summon Daemons of Khorne" hidden="false" profileTypeId="c137-4d1f-9d1a-524d" profileTypeName="Battle Trait">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                  <characteristics>
+                    <characteristic name="Battle Trait Details" characteristicTypeId="9fdd-b4b1-5f7a-0970" value="You can summon units of Khorne Daemons to the battlefield by expending Blood Tithe points instead of choosing a reward from the Blood Tithe table.
+If you have 2 or more Blood Tithe points at the end of your movement phase, you can summon one or more units from the list below onto the battlefield, and add them to your army. Each unit you summon costs a number of Blood Tithe points, as shown on the list, and you can only summon a unit if you have enough Blood Tithe points to pay its cost. If you summon any units in this manner, your Blood Tithe points total is reset to zero immediately after the last unit has been set up (you cannot save any Blood Tithe points you did not use).
+Summoned units must be set up wholly within 12&quot; of a friendly Khorne Hero and more than 9&quot; from any enemy units."/>
+                  </characteristics>
+                </profile>
+                <profile id="0b32-f57b-6f38-b717" name="(04) 20 Bloodletters" hidden="false" profileTypeId="9980-f03a-cc21-50ab" profileTypeName="Blood Tithe Summoning Table - Unit">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                  <characteristics>
+                    <characteristic name="Cost" characteristicTypeId="9c6e-712e-2ec7-a4cf" value="7"/>
+                  </characteristics>
+                </profile>
+                <profile id="0fa9-9ff6-a6eb-d362" name="(03) 1 Bloodthirster of Unfettered Fury" hidden="false" profileTypeId="9980-f03a-cc21-50ab" profileTypeName="Blood Tithe Summoning Table - Unit">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                  <characteristics>
+                    <characteristic name="Cost" characteristicTypeId="9c6e-712e-2ec7-a4cf" value="8"/>
+                  </characteristics>
+                </profile>
+                <profile id="3749-34c0-2357-14ee" name="(06) 10 Flesh Hounds" hidden="false" profileTypeId="9980-f03a-cc21-50ab" profileTypeName="Blood Tithe Summoning Table - Unit">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                  <characteristics>
+                    <characteristic name="Cost" characteristicTypeId="9c6e-712e-2ec7-a4cf" value="6"/>
+                  </characteristics>
+                </profile>
+                <profile id="0095-305d-7fbe-9525" name="(14) 1 Bloodmaster, Herald of Khorne" hidden="false" profileTypeId="9980-f03a-cc21-50ab" profileTypeName="Blood Tithe Summoning Table - Unit">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                  <characteristics>
+                    <characteristic name="Cost" characteristicTypeId="9c6e-712e-2ec7-a4cf" value="2"/>
+                  </characteristics>
+                </profile>
+                <profile id="04ef-bfdf-feb0-aedb" name="(07) 3 Bloodcrushers" hidden="false" profileTypeId="9980-f03a-cc21-50ab" profileTypeName="Blood Tithe Summoning Table - Unit">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                  <characteristics>
+                    <characteristic name="Cost" characteristicTypeId="9c6e-712e-2ec7-a4cf" value="5"/>
+                  </characteristics>
+                </profile>
+                <profile id="65c0-09e8-f84b-db8c" name="(12) 1 Skullmaster, Herald of Khorne" hidden="false" profileTypeId="9980-f03a-cc21-50ab" profileTypeName="Blood Tithe Summoning Table - Unit">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                  <characteristics>
+                    <characteristic name="Cost" characteristicTypeId="9c6e-712e-2ec7-a4cf" value="3"/>
+                  </characteristics>
+                </profile>
+                <profile id="5c2a-4465-d80e-0266" name="(11) 5 Flesh Hounds" hidden="false" profileTypeId="9980-f03a-cc21-50ab" profileTypeName="Blood Tithe Summoning Table - Unit">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                  <characteristics>
+                    <characteristic name="Cost" characteristicTypeId="9c6e-712e-2ec7-a4cf" value="3"/>
+                  </characteristics>
+                </profile>
+                <profile id="a20a-a118-1e97-83a8" name="(10) 1 Blood Throne" hidden="false" profileTypeId="9980-f03a-cc21-50ab" profileTypeName="Blood Tithe Summoning Table - Unit">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                  <characteristics>
+                    <characteristic name="Cost" characteristicTypeId="9c6e-712e-2ec7-a4cf" value="4"/>
+                  </characteristics>
+                </profile>
+                <profile id="551b-f690-d862-6dee" name="(09) 10 Bloodletters" hidden="false" profileTypeId="9980-f03a-cc21-50ab" profileTypeName="Blood Tithe Summoning Table - Unit">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                  <characteristics>
+                    <characteristic name="Cost" characteristicTypeId="9c6e-712e-2ec7-a4cf" value="4"/>
+                  </characteristics>
+                </profile>
+                <profile id="96cf-3d5a-fe8e-6bea" name="(08) 1 Skull Cannon" hidden="false" profileTypeId="9980-f03a-cc21-50ab" profileTypeName="Blood Tithe Summoning Table - Unit">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                  <characteristics>
+                    <characteristic name="Cost" characteristicTypeId="9c6e-712e-2ec7-a4cf" value="5"/>
+                  </characteristics>
+                </profile>
+                <profile id="bd2d-f4e3-d450-dc72" name="(13) 5 Bloodletters" hidden="false" profileTypeId="9980-f03a-cc21-50ab" profileTypeName="Blood Tithe Summoning Table - Unit">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                  <characteristics>
+                    <characteristic name="Cost" characteristicTypeId="9c6e-712e-2ec7-a4cf" value="2"/>
                   </characteristics>
                 </profile>
               </profiles>
@@ -16617,16 +16510,6 @@
     </selectionEntry>
     <selectionEntry id="05ed-b451-22d2-d2ab" name="Soul Grinder (of Khorne)" hidden="false" collective="false" type="unit">
       <profiles>
-        <profile id="7d39-2d98-78b0-7bdf" name="Summon Soul Grinder" hidden="false" profileTypeId="2e81-5e22-c6e1-73cb" profileTypeName="05 Spell">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <characteristics>
-            <characteristic name="Casting Value" characteristicTypeId="2508-b604-1258-a920" value="10"/>
-            <characteristic name="Description" characteristicTypeId="76ff-781d-b8e6-5f27" value="Chaos Wizards know the Summon Soul Grinder spell, in addition to any others they know.  If successfully cast, you can set up a Soul Grinder within 16&quot; of the caster and more than 9&quot; from any enemy models. The unit is added to your army but cannot move in the following movement phase."/>
-          </characteristics>
-        </profile>
         <profile id="da3c-8db5-5269-6177" name="Soul Grinder (of Khorne)" hidden="false" profileTypeId="1960-ca8e-67ce-2014" profileTypeName="Unit">
           <profiles/>
           <rules/>
@@ -17373,34 +17256,6 @@
             <cost name="pts" costTypeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="2245-5e7e-aaa6-1380" name="Summon Daemon Prince" hidden="false" collective="false" type="upgrade">
-          <profiles>
-            <profile id="0d8d-48fe-cbf3-ea09" name="Summon Daemon Prince" hidden="false" profileTypeId="2e81-5e22-c6e1-73cb" profileTypeName="Spell">
-              <profiles/>
-              <rules/>
-              <infoLinks/>
-              <modifiers/>
-              <characteristics>
-                <characteristic name="Casting Value" characteristicTypeId="2508-b604-1258-a920" value="8"/>
-                <characteristic name="Description" characteristicTypeId="76ff-781d-b8e6-5f27" value="If successfully cast, you can set up a Daemon Prince within 16&quot; of the summoner and more than 9&quot; from any enemy models. The model is added to your army but cannot move in the following movement phase."/>
-              </characteristics>
-            </profile>
-          </profiles>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5f36-e9c2-60cd-7cd6" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b8ef-ad1e-a1d0-11a8" type="min"/>
-          </constraints>
-          <categoryLinks/>
-          <selectionEntries/>
-          <selectionEntryGroups/>
-          <entryLinks/>
-          <costs>
-            <cost name="pts" costTypeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
         <selectionEntry id="fc99-863f-0096-fc65" name="Wings" hidden="false" collective="false" type="upgrade">
           <profiles/>
           <rules/>
@@ -17679,7 +17534,7 @@
         </categoryLink>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="a354-0bfa-e69e-19b0" name="5 Furies" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="a354-0bfa-e69e-19b0" name="5 Furies" hidden="false" collective="false" type="model">
           <profiles/>
           <rules/>
           <infoLinks/>
