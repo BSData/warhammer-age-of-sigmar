@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" book="The General&apos;s Handbook" revision="35" battleScribeVersion="2.01" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" book="The General&apos;s Handbook" revision="36" battleScribeVersion="2.01" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <profiles/>
   <rules>
     <rule id="a954-6cfc-59ca-674e" name="Inspiring Presence" book="Core Rules" page="3" hidden="false">
@@ -612,7 +612,7 @@
     </categoryEntry>
   </categoryEntries>
   <forceEntries>
-    <forceEntry id="6ace-8bcc-48b2-6de7" name="*Pitched Battle (1,000)*" hidden="false">
+    <forceEntry id="6ace-8bcc-48b2-6de7" name="*Pitched Battle (1,000)*" hidden="true">
       <profiles/>
       <rules/>
       <infoLinks/>
@@ -744,7 +744,7 @@
         </categoryLink>
       </categoryLinks>
     </forceEntry>
-    <forceEntry id="68de-f89f-a288-4234" name="*Pitched Battle (2,000)*" hidden="false">
+    <forceEntry id="68de-f89f-a288-4234" name="*Pitched Battle (2,000)*" hidden="true">
       <profiles/>
       <rules/>
       <infoLinks/>
@@ -876,14 +876,14 @@
         </categoryLink>
       </categoryLinks>
     </forceEntry>
-    <forceEntry id="77d6-f72b-3fd5-04b9" name="*Pitched Battle (2,500)*" hidden="false">
+    <forceEntry id="77d6-f72b-3fd5-04b9" name="*Pitched Battle (2,500)*" hidden="true">
       <profiles/>
       <rules/>
       <infoLinks/>
       <modifiers/>
       <constraints/>
       <forceEntries>
-        <forceEntry id="78f3-8a59-699a-61e8" name="Allies" hidden="false">
+        <forceEntry id="2396-223e-a4f3-a50f" name="Allies" hidden="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -1060,7 +1060,7 @@
         <constraint field="points" scope="roster" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" id="e8e3-9adc-3526-c6d6" type="max"/>
       </constraints>
       <forceEntries>
-        <forceEntry id="c477-eadc-b047-26de" name="Allies" hidden="false">
+        <forceEntry id="78f3-8a59-699a-61e8" name="Allies" hidden="false">
           <profiles/>
           <rules/>
           <infoLinks/>
