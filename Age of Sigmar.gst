@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" book="The General&apos;s Handbook" revision="37" battleScribeVersion="2.01" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" book="The General&apos;s Handbook" revision="38" battleScribeVersion="2.01" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <profiles/>
   <rules>
     <rule id="a954-6cfc-59ca-674e" name="Inspiring Presence" book="Core Rules" page="3" hidden="false">
@@ -1962,13 +1962,13 @@
       <selectionEntries>
         <selectionEntry id="0214-b6fa-c58d-2123" name="1. Hammerblade" hidden="false" collective="false" type="upgrade">
           <profiles>
-            <profile id="3c81-80a2-a7fe-6433" name="Hammerblade" book="General&apos;s Handbook 2017" hidden="false" profileTypeId="0ac4-aacb-2481-8e72" profileTypeName="Artefact">
+            <profile id="3c81-80a2-a7fe-6433" name="Hammerblade" book="General&apos;s Handbook 2018" hidden="false" profileTypeId="0ac4-aacb-2481-8e72" profileTypeName="Artefact">
               <profiles/>
               <rules/>
               <infoLinks/>
               <modifiers/>
               <characteristics>
-                <characteristic name="Artefact Details" characteristicTypeId="0918-c47a-d84e-c0cf" value="The Hammerblade is moulded from a massive lump of compressed meteoric iron. When swung down to smash into the ground, energy explodes outwards from the point of impact.  Pick one melee weapon that this model can use. Instead of attacking normally with that weapon, the bearer can use it to smash the ground. If they do so, roll a dice for each model (friend or foe) within 3&quot; of the bearer. On a roll of 5 or 6, the unit the model belongs to suffers one mortal wound."/>
+                <characteristic name="Artefact Details" characteristicTypeId="0918-c47a-d84e-c0cf" value="Pick one melee weapon that this model can use. Instead of attacking normally with that weapon, you can roll a dice for each model within 3&quot; of the bearer (apart from the bearer). On a roll of 5 or 6, 1 mortal wound is inflicted on that model&apos;s unit."/>
               </characteristics>
             </profile>
           </profiles>
@@ -2002,7 +2002,7 @@
               <infoLinks/>
               <modifiers/>
               <characteristics>
-                <characteristic name="Artefact Details" characteristicTypeId="0918-c47a-d84e-c0cf" value="This once finely wrought gemstone is now a dirt-encrusted, chipped remnant of its former glory, but its defensive powers still activate against powerful attacks.  Roll a dice each time this model suffers a mortal wound. On a roll of 5 or more, the mortal wound is negated and has no effect."/>
+                <characteristic name="Artefact Details" characteristicTypeId="0918-c47a-d84e-c0cf" value="Roll a dice each time you allocate a mortal wound to the bearer. On a 5+, the mortal wound is negated."/>
               </characteristics>
             </profile>
           </profiles>
@@ -2036,7 +2036,7 @@
               <infoLinks/>
               <modifiers/>
               <characteristics>
-                <characteristic name="Artefact Details" characteristicTypeId="0918-c47a-d84e-c0cf" value="The bearer of a Rockeye has plucked out one of their own eyes and replaced it with this rough gemstone, which gives them the power of second sight.  In your hero phase, pick an enemy unit within 12&quot; of this model. Add 1 to all hit rolls made by this model against the chosen unit until your next hero phase."/>
+                <characteristic name="Artefact Details" characteristicTypeId="0918-c47a-d84e-c0cf" value="In your hero phase, pick an enemy unit within 12&quot; of this bearer. Until your next hero phase, add 1 to hit rolls made by the bearer when they target the unit you picked."/>
               </characteristics>
             </profile>
           </profiles>
@@ -2070,7 +2070,7 @@
               <infoLinks/>
               <modifiers/>
               <characteristics>
-                <characteristic name="Artefact Details" characteristicTypeId="0918-c47a-d84e-c0cf" value="This blade seems to empower the wielder in proportion to the volume of insults he shouts at the leaders of the opposing army.  In the combat phase, you can re-roll one failed wound roll for this model for each enemy HERO that is within 12&quot; of this model."/>
+                <characteristic name="Artefact Details" characteristicTypeId="0918-c47a-d84e-c0cf" value="When the bearer is picked to fight, you can re-roll one failed wound roll for bearers attacks in that fight for each enemy HERO that was within 12&quot; of the bearer when they were picked to fight."/>
               </characteristics>
             </profile>
           </profiles>
@@ -2104,7 +2104,7 @@
               <infoLinks/>
               <modifiers/>
               <characteristics>
-                <characteristic name="Artefact Details" characteristicTypeId="0918-c47a-d84e-c0cf" value="This studded collar is inscribed with ancient glyphs that have the power to subdue the fiercest monstrous creatures.  At the start of the enemy movement phase, pick an enemy MONSTER within 3&quot; of this model. Then, roll two dice and add them together. If the total is equal to or greater than the enemy MONSTER’s Bravery, it must make a retreat move in that movement phase."/>
+                <characteristic name="Artefact Details" characteristicTypeId="0918-c47a-d84e-c0cf" value="At the start of the enemy movement phase, pick an enemy MONSTER within 3&quot; of the bearer and roll 2D6. If the roll is equal to or greater than the enemy MONSTER’s Bravery characteristic, it must retreat in that movement phase."/>
               </characteristics>
             </profile>
           </profiles>
@@ -2138,7 +2138,7 @@
               <infoLinks/>
               <modifiers/>
               <characteristics>
-                <characteristic name="Artefact Details" characteristicTypeId="0918-c47a-d84e-c0cf" value="This pungent liquid can rouse the drinker to prodigious feats. If too much is drunk, though, it will quickly rot his innards.  Once per battle, in any of your hero phases, you can declare that this model will drink either one or two swigs of Battle Brew. If the HERO takes one swig, add 1 to all hit and wound rolls for the model until your next hero phase. If the HERO takes two swigs, add 2 to all hit and wound rolls for the model until your next hero phase, but the HEROsuffers D6 mortal wounds at the end of the turn in which they drank the brew."/>
+                <characteristic name="Artefact Details" characteristicTypeId="0918-c47a-d84e-c0cf" value="Once per battle, in your hero phase, you can declare that bearer will take either one or two swigs of Battle Brew. If the bearer takes one swig, add 1 to all hit and wound rolls for the bearer until your next hero phase. If the bearer takes two swigs, add 2 to all hit and wound rolls for the model until your next hero phase, but you must allocate D6 mortal wounds to the earer at the end of the turn in which they drank the brew."/>
               </characteristics>
             </profile>
           </profiles>
@@ -2202,7 +2202,7 @@
             <cost name="pts" costTypeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="b456-2252-df66-a511" name="2. Might is Right" book="General&apos;s Handbook 2017" page="156" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="b456-2252-df66-a511" name="2. Might is Right" book="General&apos;s Handbook 2018" page="" hidden="false" collective="false" type="upgrade">
           <profiles>
             <profile id="7e70-bb8b-13b3-bb52" name="Might is Right" book="General&apos;s Handbook 2017" page="156" hidden="false" profileTypeId="c749-bae4-71a8-0c36" profileTypeName="Command Trait">
               <profiles/>
@@ -2234,7 +2234,7 @@
               <infoLinks/>
               <modifiers/>
               <characteristics>
-                <characteristic name="Command Trait Details" characteristicTypeId="ee96-6f3a-e5ca-2350" value="Add 1 to the general’s hit rolls if they have suffered any wounds."/>
+                <characteristic name="Command Trait Details" characteristicTypeId="ee96-6f3a-e5ca-2350" value="When this General is picked to fight, pick one of their melee weapons. Add 1 to the attach characterisict of that melee weapon for the fight. While 3 or more wounds are allocated to this general, instread add 2 to the Attacks characteristic of that melee weapon for that fight."/>
               </characteristics>
             </profile>
           </profiles>
@@ -2252,13 +2252,13 @@
         </selectionEntry>
         <selectionEntry id="6b78-5f06-40c7-eab6" name="4. Bellowing Tyrant" book="General&apos;s Handbook 2017" page="156" hidden="false" collective="false" type="upgrade">
           <profiles>
-            <profile id="e6c7-5519-f527-355c" name="Bellowing Tyrant" book="General&apos;s Handbook 2017" page="156" hidden="false" profileTypeId="c749-bae4-71a8-0c36" profileTypeName="Command Trait">
+            <profile id="e6c7-5519-f527-355c" name="Bellowing Tyrant" book="General&apos;s Handbook 2018" page="" hidden="false" profileTypeId="c749-bae4-71a8-0c36" profileTypeName="Command Trait">
               <profiles/>
               <rules/>
               <infoLinks/>
               <modifiers/>
               <characteristics>
-                <characteristic name="Command Trait Details" characteristicTypeId="ee96-6f3a-e5ca-2350" value="Pick a friendly DESTRUCTION unit within 6&quot; of the general in your hero phase. Until your next hero phase, add 1 to charge and run rolls for the unit, and use the general’s Bravery characteristic for the unit instead of its own."/>
+                <characteristic name="Command Trait Details" characteristicTypeId="ee96-6f3a-e5ca-2350" value="In your hero phase, pick a friendly DESTRUCTION unit within 6&quot; of the general in your hero phase. Until your next hero phase, add 1 to charge and run rolls for the unit, and use the general’s Bravery characteristic for the unit instead of its own."/>
               </characteristics>
             </profile>
           </profiles>
@@ -2300,13 +2300,13 @@
         </selectionEntry>
         <selectionEntry id="fdf2-ddc3-5dd8-f6e6" name="6. Ravager" book="General&apos;s Handbook 2017" page="156" hidden="false" collective="false" type="upgrade">
           <profiles>
-            <profile id="6c53-2a68-0348-adc4" name="Ravager" book="General&apos;s Handbook 2017" page="156" hidden="false" profileTypeId="c749-bae4-71a8-0c36" profileTypeName="Command Trait">
+            <profile id="6c53-2a68-0348-adc4" name="Ravager" book="General&apos;s Handbook 2018" page="" hidden="false" profileTypeId="c749-bae4-71a8-0c36" profileTypeName="Command Trait">
               <profiles/>
               <rules/>
               <infoLinks/>
               <modifiers/>
               <characteristics>
-                <characteristic name="Command Trait Details" characteristicTypeId="ee96-6f3a-e5ca-2350" value="Add 1 to the Rampaging Destroyers dice roll (see battle traits) for the general."/>
+                <characteristic name="Command Trait Details" characteristicTypeId="ee96-6f3a-e5ca-2350" value="Add 3 to the Rampaging Destroyers dice roll (see battle traits) for the general instead of 2."/>
               </characteristics>
             </profile>
           </profiles>
@@ -6369,9 +6369,7 @@
       <rules/>
       <infoLinks/>
       <modifiers/>
-      <description>Those that owe allegiance to Destruction are always eager to get to grips with their enemies.
-
-Roll a dice in your hero phase for your general and each DESTRUCTION HERO in your army. Add 2 to the roll for the general. On a roll of 6 or more, pick a friendly DESTRUCTION unit within 6&quot; of the general or HERO being rolled for. That unit can immediately move 6&quot; if it is more than 12&quot; from the enemy, can immediately pile in if it is within 3&quot; of the enemy, or can immediately declare a charge in any other circumstances. It cannot run when it makes the move, but can move, charge or pile in again later in the same turn.</description>
+      <description>Roll a dice in your hero phase for your general and each DESTRUCTION HERO in your army. Add 2 to the roll for the general. On a roll of 6 or more, pick a friendly DESTRUCTION unit within 6&quot; of the general or HERO being rolled for. That unit can immediately move 6&quot; if it is more than 12&quot; from the enemy, can immediately pile in if it is within 3&quot; of the enemy, or can immediately declare a charge in any other circumstances. It cannot run when it makes the move, but can move, charge or pile in again later in the same turn.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
