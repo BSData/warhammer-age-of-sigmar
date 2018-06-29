@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" book="The General&apos;s Handbook" revision="36" battleScribeVersion="2.01" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" book="The General&apos;s Handbook" revision="37" battleScribeVersion="2.01" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <profiles/>
   <rules>
     <rule id="a954-6cfc-59ca-674e" name="Inspiring Presence" book="Core Rules" page="3" hidden="false">
@@ -612,7 +612,7 @@
     </categoryEntry>
   </categoryEntries>
   <forceEntries>
-    <forceEntry id="6ace-8bcc-48b2-6de7" name="*Pitched Battle (1,000)*" hidden="true">
+    <forceEntry id="6ace-8bcc-48b2-6de7" name="*Old* *Pitched Battle (1,000)*" hidden="true">
       <profiles/>
       <rules/>
       <infoLinks/>
@@ -744,7 +744,7 @@
         </categoryLink>
       </categoryLinks>
     </forceEntry>
-    <forceEntry id="68de-f89f-a288-4234" name="*Pitched Battle (2,000)*" hidden="true">
+    <forceEntry id="68de-f89f-a288-4234" name="*Old* *Pitched Battle (2,000)*" hidden="true">
       <profiles/>
       <rules/>
       <infoLinks/>
@@ -876,7 +876,7 @@
         </categoryLink>
       </categoryLinks>
     </forceEntry>
-    <forceEntry id="77d6-f72b-3fd5-04b9" name="*Pitched Battle (2,500)*" hidden="true">
+    <forceEntry id="77d6-f72b-3fd5-04b9" name="*Old* *Pitched Battle (2,500)*" hidden="true">
       <profiles/>
       <rules/>
       <infoLinks/>
@@ -1008,7 +1008,7 @@
         </categoryLink>
       </categoryLinks>
     </forceEntry>
-    <forceEntry id="36b7-ee1e-0855-f23f" name="*Pitched Battle*" hidden="false">
+    <forceEntry id="36b7-ee1e-0855-f23f" name="**Pitched Battle**" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
