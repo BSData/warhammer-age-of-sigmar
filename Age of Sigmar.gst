@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" book="The General&apos;s Handbook" revision="30" battleScribeVersion="2.01" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" book="The General&apos;s Handbook" revision="38" battleScribeVersion="2.01" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <profiles/>
   <rules>
-    <rule id="a954-6cfc-59ca-674e" name="Inspiring Presence" hidden="false">
+    <rule id="a954-6cfc-59ca-674e" name="Inspiring Presence" book="Core Rules" page="3" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
@@ -15,7 +15,37 @@
           <conditionGroups/>
         </modifier>
       </modifiers>
-      <description>If your General uses this ability, pick a unit from your army within 12&quot; of your general. The unit that you pick does not have to take battleshock tests until your next hero phase.</description>
+      <description>You can use this command ability at the start of the battleshock phase. If you do so, pick a friendly unit that is within 6&quot; of friendly HERO, or 12&quot; of a friendly HERO that is a general. That unit does not have to take battleshock tests in that phase.</description>
+    </rule>
+    <rule id="3f48-3925-7123-3392" name="At the Double" book="Core Rules" page="3" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b745-17c4-8fbf-8b04" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>You can use this command ability after you make a run roll for a friendly unit that is within 6&quot; of a friendly HERO, or 12&quot; of a friendly HERO that is a general. If you do so, the run roll is treated as being a 6.</description>
+    </rule>
+    <rule id="c157-62a0-2514-c4f4" name="Forward to Victory" book="Core Rules" page="3" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b745-17c4-8fbf-8b04" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <description>You can use this command ability after you make a charge roll for a friendly unit that is within 6&quot; of a friendly HERO, or 12&quot; of a friendly HERO that is a general. If you do so, re-roll the charge roll.</description>
     </rule>
   </rules>
   <infoLinks/>
@@ -522,9 +552,67 @@
       <modifiers/>
       <constraints/>
     </categoryEntry>
+    <categoryEntry id="1974-3f49-7f0b-8422" name="Game Options" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="fd9f-428a-177d-c765" name="Vanguard" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="6330-7561-7a32-0851" name="Battlehost" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="1e63-0b49-ac04-321f" name="Warhost" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="5c6d-5384-bcb1-b474" name="Realm of Origin" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="8466-6600-12e7-0833" type="max"/>
+      </constraints>
+    </categoryEntry>
+    <categoryEntry id="31f4-2067-3ade-e6f8" name="ENDLESS SPELL" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="eecb-ed66-d474-9ddd" name="Malign Sorcery" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="8be8-3ccd-be93-b55e" name="Command Points" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
   </categoryEntries>
   <forceEntries>
-    <forceEntry id="6ace-8bcc-48b2-6de7" name="*Pitched Battle (1,000)*" hidden="false">
+    <forceEntry id="6ace-8bcc-48b2-6de7" name="*Old* *Pitched Battle (1,000)*" hidden="true">
       <profiles/>
       <rules/>
       <infoLinks/>
@@ -656,7 +744,7 @@
         </categoryLink>
       </categoryLinks>
     </forceEntry>
-    <forceEntry id="68de-f89f-a288-4234" name="*Pitched Battle (2,000)*" hidden="false">
+    <forceEntry id="68de-f89f-a288-4234" name="*Old* *Pitched Battle (2,000)*" hidden="true">
       <profiles/>
       <rules/>
       <infoLinks/>
@@ -788,14 +876,14 @@
         </categoryLink>
       </categoryLinks>
     </forceEntry>
-    <forceEntry id="77d6-f72b-3fd5-04b9" name="*Pitched Battle (2,500)*" hidden="false">
+    <forceEntry id="77d6-f72b-3fd5-04b9" name="*Old* *Pitched Battle (2,500)*" hidden="true">
       <profiles/>
       <rules/>
       <infoLinks/>
       <modifiers/>
       <constraints/>
       <forceEntries>
-        <forceEntry id="78f3-8a59-699a-61e8" name="Allies" hidden="false">
+        <forceEntry id="2396-223e-a4f3-a50f" name="Allies" hidden="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -920,9 +1008,434 @@
         </categoryLink>
       </categoryLinks>
     </forceEntry>
+    <forceEntry id="36b7-ee1e-0855-f23f" name="**Pitched Battle**" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers>
+        <modifier type="set" field="e8e3-9adc-3526-c6d6" value="1000">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fd9f-428a-177d-c765" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="e8e3-9adc-3526-c6d6" value="2000">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6330-7561-7a32-0851" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="set" field="e8e3-9adc-3526-c6d6" value="2500">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1e63-0b49-ac04-321f" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="append" field="name" value="1,000">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fd9f-428a-177d-c765" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="append" field="name" value="2,000">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6330-7561-7a32-0851" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+        <modifier type="append" field="name" value="2,500">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1e63-0b49-ac04-321f" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="points" scope="roster" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" id="e8e3-9adc-3526-c6d6" type="max"/>
+      </constraints>
+      <forceEntries>
+        <forceEntry id="78f3-8a59-699a-61e8" name="Allies" hidden="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="set" field="94dd-25fb-4a00-e373" value="500">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1e63-0b49-ac04-321f" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="set" field="94dd-25fb-4a00-e373" value="400">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6330-7561-7a32-0851" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="set" field="94dd-25fb-4a00-e373" value="200">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fd9f-428a-177d-c765" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="points" scope="roster" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" id="94dd-25fb-4a00-e373" type="max"/>
+          </constraints>
+          <forceEntries/>
+          <categoryLinks>
+            <categoryLink id="ffdd-9af0-d56e-86a5" name="Artillery" hidden="false" targetId="1d26-07fc-6a66-d73e" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+            <categoryLink id="7054-f9e4-5cb2-39b6" name="Behemoth" hidden="false" targetId="fa0c-9044-2568-fa02" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+            <categoryLink id="6e3f-492a-d37a-bdaf" name="Leader" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+            <categoryLink id="31f4-75e9-931e-3484" name="Other" hidden="false" targetId="065e-fda7-fd27-1f40" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+            <categoryLink id="f8f6-1315-7c9b-9598" name="Battalion" hidden="false" targetId="be17-6bbd-b857-3f43" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+        </forceEntry>
+      </forceEntries>
+      <categoryLinks>
+        <categoryLink id="da17-2e5a-0e3e-7cda" name="Leader" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="set" field="ba85-6aef-72d4-ebc4" value="4">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fd9f-428a-177d-c765" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="set" field="ba85-6aef-72d4-ebc4" value="6">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6330-7561-7a32-0851" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="set" field="ba85-6aef-72d4-ebc4" value="6">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1e63-0b49-ac04-321f" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="set" field="5c22-cda7-10c7-da36" value="1">
+              <repeats/>
+              <conditions/>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6330-7561-7a32-0851" type="equalTo"/>
+                    <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1e63-0b49-ac04-321f" type="equalTo"/>
+                    <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fd9f-428a-177d-c765" type="equalTo"/>
+                  </conditions>
+                  <conditionGroups/>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="5c22-cda7-10c7-da36" type="min"/>
+            <constraint field="selections" scope="roster" value="-1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="ba85-6aef-72d4-ebc4" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="9483-c7a6-8a0b-4ab3" name="Behemoth" hidden="false" targetId="fa0c-9044-2568-fa02" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="set" field="e7b6-33e8-13db-8935" value="2">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fd9f-428a-177d-c765" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="set" field="e7b6-33e8-13db-8935" value="4">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6330-7561-7a32-0851" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="set" field="e7b6-33e8-13db-8935" value="5">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1e63-0b49-ac04-321f" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="roster" value="-1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="e7b6-33e8-13db-8935" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="3c3f-f6ef-cc1f-8186" name="Artillery" hidden="false" targetId="1d26-07fc-6a66-d73e" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="set" field="0247-cd5a-628b-8b0d" value="5">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1e63-0b49-ac04-321f" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="set" field="0247-cd5a-628b-8b0d" value="2">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fd9f-428a-177d-c765" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="set" field="0247-cd5a-628b-8b0d" value="4">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6330-7561-7a32-0851" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="roster" value="-1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="0247-cd5a-628b-8b0d" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="63aa-6681-a0ff-0d99" name="Battleline" hidden="false" targetId="e9f2-765a-b7b8-ce8e" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="set" field="73c7-ba20-18e8-8b37" value="2">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fd9f-428a-177d-c765" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="set" field="73c7-ba20-18e8-8b37" value="4">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1e63-0b49-ac04-321f" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+            <modifier type="set" field="73c7-ba20-18e8-8b37" value="3">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6330-7561-7a32-0851" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="73c7-ba20-18e8-8b37" type="min"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="5156-dc6f-149b-1a5e" name="Other" hidden="false" targetId="065e-fda7-fd27-1f40" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </categoryLink>
+        <categoryLink id="bc41-5536-8011-4348" name="Battalion" hidden="false" targetId="be17-6bbd-b857-3f43" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </categoryLink>
+        <categoryLink id="fadd-b7fa-31f8-4fb3" name="General" hidden="false" targetId="b745-17c4-8fbf-8b04" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </categoryLink>
+        <categoryLink id="f81e-6d6a-67b4-db13" name="Artefact" hidden="false" targetId="3564-4c26-10b4-d953" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </categoryLink>
+        <categoryLink id="f631-f98a-5c53-05bb" name="Allegiance" hidden="false" targetId="87e8-c095-f059-5f7b" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5841-14a7-e06c-3f06" type="min"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="e091-0150-8eee-0258" name="Game Options" hidden="false" targetId="1974-3f49-7f0b-8422" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3158-e802-1116-85db" type="max"/>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="8193-da83-7e29-c1bb" type="min"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="7d52-926e-b20f-95c8" name="Realm of Origin" hidden="false" targetId="5c6d-5384-bcb1-b474" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" id="7025-70e4-7ad4-407a" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="f0b1-06e5-134a-1cd1" name="Malign Sorcery" hidden="false" targetId="eecb-ed66-d474-9ddd" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </categoryLink>
+        <categoryLink id="4f35-ed38-e2f8-b024" name="Command Points" hidden="false" targetId="8be8-3ccd-be93-b55e" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </categoryLink>
+      </categoryLinks>
+    </forceEntry>
   </forceEntries>
-  <selectionEntries/>
-  <entryLinks/>
+  <selectionEntries>
+    <selectionEntry id="745a-d2c9-a076-2d70" name="Purchased Command Points" hidden="false" collective="false" type="upgrade">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints>
+        <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="584d-611d-064d-0a33" type="min"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink id="d882-d72a-6391-a6be" name="New CategoryLink" hidden="false" targetId="8be8-3ccd-be93-b55e" primary="true">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </categoryLink>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="967b-d3ad-e0b5-e6c9" name="1 Command Point" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7126-cd45-a30a-dbb3" type="max"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="50.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups/>
+      <entryLinks/>
+      <costs>
+        <cost name="pts" costTypeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+  </selectionEntries>
+  <entryLinks>
+    <entryLink id="1a07-20e9-829c-2f2a" name="Realm of Origin" hidden="false" targetId="268a-c131-4914-7087" type="selectionEntry">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+      <categoryLinks>
+        <categoryLink id="c10b-5319-ef5d-0259" name="New CategoryLink" hidden="false" targetId="5c6d-5384-bcb1-b474" primary="true">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </categoryLink>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="e12e-ffc5-6892-4795" name="Game Type" hidden="false" targetId="a741-5681-7572-fa32" type="selectionEntry">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+      <categoryLinks>
+        <categoryLink id="baa5-3a0c-fa64-212c" name="New CategoryLink" hidden="false" targetId="1974-3f49-7f0b-8422" primary="true">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </categoryLink>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="7aaa-04ab-d0c3-c7fe" name="Endless Spells" hidden="false" targetId="7e27-867f-400c-b20b" type="selectionEntry">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+      <categoryLinks>
+        <categoryLink id="e072-803f-6fb3-8c69" name="New CategoryLink" hidden="false" targetId="eecb-ed66-d474-9ddd" primary="true">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </categoryLink>
+      </categoryLinks>
+    </entryLink>
+  </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="869c-168d-eba5-eacf" name="Arcane Bolt" hidden="false" collective="false" type="upgrade">
       <profiles/>
@@ -968,6 +1481,83 @@
       <selectionEntries/>
       <selectionEntryGroups/>
       <entryLinks/>
+      <costs>
+        <cost name="pts" costTypeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="268a-c131-4914-7087" name="Realm of Origin" hidden="false" collective="false" type="upgrade">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8609-fea1-53ce-d735" type="max"/>
+      </constraints>
+      <categoryLinks/>
+      <selectionEntries/>
+      <selectionEntryGroups/>
+      <entryLinks>
+        <entryLink id="abe0-0cb9-7db6-f034" name="Army&apos;s Realm of Origin" hidden="false" targetId="0d51-8ed8-dcf5-76a0" type="selectionEntryGroup">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+          <categoryLinks/>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name="pts" costTypeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="a741-5681-7572-fa32" name="Game Type" hidden="false" collective="false" type="upgrade">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4dba-58f3-abe5-0919" type="min"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="deb1-5691-1d7c-4165" type="max"/>
+        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d083-8baa-f745-aa0e" type="max"/>
+      </constraints>
+      <categoryLinks/>
+      <selectionEntries/>
+      <selectionEntryGroups/>
+      <entryLinks>
+        <entryLink id="39f6-88b3-177e-2535" name="Game Type (ALL GAME TYPES MUST MATCH ACROSS FORCES)" hidden="false" targetId="5927-9c5a-8b20-8f37" type="selectionEntryGroup">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+          <categoryLinks/>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name="pts" costTypeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="7e27-867f-400c-b20b" name="Endless Spells" hidden="false" collective="false" type="upgrade">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8070-21a7-c79e-a493" type="max"/>
+      </constraints>
+      <categoryLinks/>
+      <selectionEntries/>
+      <selectionEntryGroups/>
+      <entryLinks>
+        <entryLink id="cd0f-1b79-de92-e5ca" name="Endless Spells" hidden="false" targetId="8ea1-6791-75d8-aba3" type="selectionEntryGroup">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+          <categoryLinks/>
+        </entryLink>
+      </entryLinks>
       <costs>
         <cost name="pts" costTypeId="points" value="0.0"/>
       </costs>
@@ -1372,20 +1962,22 @@
       <selectionEntries>
         <selectionEntry id="0214-b6fa-c58d-2123" name="1. Hammerblade" hidden="false" collective="false" type="upgrade">
           <profiles>
-            <profile id="3c81-80a2-a7fe-6433" name="Hammerblade" book="General&apos;s Handbook 2017" hidden="false" profileTypeId="0ac4-aacb-2481-8e72" profileTypeName="Artefact">
+            <profile id="3c81-80a2-a7fe-6433" name="Hammerblade" book="General&apos;s Handbook 2018" hidden="false" profileTypeId="0ac4-aacb-2481-8e72" profileTypeName="Artefact">
               <profiles/>
               <rules/>
               <infoLinks/>
               <modifiers/>
               <characteristics>
-                <characteristic name="Artefact Details" characteristicTypeId="0918-c47a-d84e-c0cf" value="The Hammerblade is moulded from a massive lump of compressed meteoric iron. When swung down to smash into the ground, energy explodes outwards from the point of impact.  Pick one melee weapon that this model can use. Instead of attacking normally with that weapon, the bearer can use it to smash the ground. If they do so, roll a dice for each model (friend or foe) within 3&quot; of the bearer. On a roll of 5 or 6, the unit the model belongs to suffers one mortal wound."/>
+                <characteristic name="Artefact Details" characteristicTypeId="0918-c47a-d84e-c0cf" value="Pick one melee weapon that this model can use. Instead of attacking normally with that weapon, you can roll a dice for each model within 3&quot; of the bearer (apart from the bearer). On a roll of 5 or 6, 1 mortal wound is inflicted on that model&apos;s unit."/>
               </characteristics>
             </profile>
           </profiles>
           <rules/>
           <infoLinks/>
           <modifiers/>
-          <constraints/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="57b0-0dc0-4f80-7fe9" type="max"/>
+          </constraints>
           <categoryLinks>
             <categoryLink id="05a1-082d-0c9f-b63d" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false">
               <profiles/>
@@ -1410,14 +2002,16 @@
               <infoLinks/>
               <modifiers/>
               <characteristics>
-                <characteristic name="Artefact Details" characteristicTypeId="0918-c47a-d84e-c0cf" value="This once finely wrought gemstone is now a dirt-encrusted, chipped remnant of its former glory, but its defensive powers still activate against powerful attacks.  Roll a dice each time this model suffers a mortal wound. On a roll of 5 or more, the mortal wound is negated and has no effect."/>
+                <characteristic name="Artefact Details" characteristicTypeId="0918-c47a-d84e-c0cf" value="Roll a dice each time you allocate a mortal wound to the bearer. On a 5+, the mortal wound is negated."/>
               </characteristics>
             </profile>
           </profiles>
           <rules/>
           <infoLinks/>
           <modifiers/>
-          <constraints/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="addc-60fb-ee24-bcfb" type="max"/>
+          </constraints>
           <categoryLinks>
             <categoryLink id="1498-8111-b71e-2c79" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false">
               <profiles/>
@@ -1442,14 +2036,16 @@
               <infoLinks/>
               <modifiers/>
               <characteristics>
-                <characteristic name="Artefact Details" characteristicTypeId="0918-c47a-d84e-c0cf" value="The bearer of a Rockeye has plucked out one of their own eyes and replaced it with this rough gemstone, which gives them the power of second sight.  In your hero phase, pick an enemy unit within 12&quot; of this model. Add 1 to all hit rolls made by this model against the chosen unit until your next hero phase."/>
+                <characteristic name="Artefact Details" characteristicTypeId="0918-c47a-d84e-c0cf" value="In your hero phase, pick an enemy unit within 12&quot; of this bearer. Until your next hero phase, add 1 to hit rolls made by the bearer when they target the unit you picked."/>
               </characteristics>
             </profile>
           </profiles>
           <rules/>
           <infoLinks/>
           <modifiers/>
-          <constraints/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5099-38d5-7540-a044" type="max"/>
+          </constraints>
           <categoryLinks>
             <categoryLink id="4963-8263-9449-d0b7" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false">
               <profiles/>
@@ -1474,14 +2070,16 @@
               <infoLinks/>
               <modifiers/>
               <characteristics>
-                <characteristic name="Artefact Details" characteristicTypeId="0918-c47a-d84e-c0cf" value="This blade seems to empower the wielder in proportion to the volume of insults he shouts at the leaders of the opposing army.  In the combat phase, you can re-roll one failed wound roll for this model for each enemy HERO that is within 12&quot; of this model."/>
+                <characteristic name="Artefact Details" characteristicTypeId="0918-c47a-d84e-c0cf" value="When the bearer is picked to fight, you can re-roll one failed wound roll for bearers attacks in that fight for each enemy HERO that was within 12&quot; of the bearer when they were picked to fight."/>
               </characteristics>
             </profile>
           </profiles>
           <rules/>
           <infoLinks/>
           <modifiers/>
-          <constraints/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5e0e-d321-e948-0878" type="max"/>
+          </constraints>
           <categoryLinks>
             <categoryLink id="0943-73b6-1080-7b58" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false">
               <profiles/>
@@ -1506,14 +2104,16 @@
               <infoLinks/>
               <modifiers/>
               <characteristics>
-                <characteristic name="Artefact Details" characteristicTypeId="0918-c47a-d84e-c0cf" value="This studded collar is inscribed with ancient glyphs that have the power to subdue the fiercest monstrous creatures.  At the start of the enemy movement phase, pick an enemy MONSTER within 3&quot; of this model. Then, roll two dice and add them together. If the total is equal to or greater than the enemy MONSTER’s Bravery, it must make a retreat move in that movement phase."/>
+                <characteristic name="Artefact Details" characteristicTypeId="0918-c47a-d84e-c0cf" value="At the start of the enemy movement phase, pick an enemy MONSTER within 3&quot; of the bearer and roll 2D6. If the roll is equal to or greater than the enemy MONSTER’s Bravery characteristic, it must retreat in that movement phase."/>
               </characteristics>
             </profile>
           </profiles>
           <rules/>
           <infoLinks/>
           <modifiers/>
-          <constraints/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e351-213d-edf0-2ef5" type="max"/>
+          </constraints>
           <categoryLinks>
             <categoryLink id="c10f-514d-7ead-ea4f" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false">
               <profiles/>
@@ -1538,14 +2138,16 @@
               <infoLinks/>
               <modifiers/>
               <characteristics>
-                <characteristic name="Artefact Details" characteristicTypeId="0918-c47a-d84e-c0cf" value="This pungent liquid can rouse the drinker to prodigious feats. If too much is drunk, though, it will quickly rot his innards.  Once per battle, in any of your hero phases, you can declare that this model will drink either one or two swigs of Battle Brew. If the HERO takes one swig, add 1 to all hit and wound rolls for the model until your next hero phase. If the HERO takes two swigs, add 2 to all hit and wound rolls for the model until your next hero phase, but the HEROsuffers D6 mortal wounds at the end of the turn in which they drank the brew."/>
+                <characteristic name="Artefact Details" characteristicTypeId="0918-c47a-d84e-c0cf" value="Once per battle, in your hero phase, you can declare that bearer will take either one or two swigs of Battle Brew. If the bearer takes one swig, add 1 to all hit and wound rolls for the bearer until your next hero phase. If the bearer takes two swigs, add 2 to all hit and wound rolls for the model until your next hero phase, but you must allocate D6 mortal wounds to the earer at the end of the turn in which they drank the brew."/>
               </characteristics>
             </profile>
           </profiles>
           <rules/>
           <infoLinks/>
           <modifiers/>
-          <constraints/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d399-9741-b80c-5a52" type="max"/>
+          </constraints>
           <categoryLinks>
             <categoryLink id="fa96-9d2b-0053-d3cd" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false">
               <profiles/>
@@ -1600,7 +2202,7 @@
             <cost name="pts" costTypeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="b456-2252-df66-a511" name="2. Might is Right" book="General&apos;s Handbook 2017" page="156" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="b456-2252-df66-a511" name="2. Might is Right" book="General&apos;s Handbook 2018" page="" hidden="false" collective="false" type="upgrade">
           <profiles>
             <profile id="7e70-bb8b-13b3-bb52" name="Might is Right" book="General&apos;s Handbook 2017" page="156" hidden="false" profileTypeId="c749-bae4-71a8-0c36" profileTypeName="Command Trait">
               <profiles/>
@@ -1632,7 +2234,7 @@
               <infoLinks/>
               <modifiers/>
               <characteristics>
-                <characteristic name="Command Trait Details" characteristicTypeId="ee96-6f3a-e5ca-2350" value="Add 1 to the general’s hit rolls if they have suffered any wounds."/>
+                <characteristic name="Command Trait Details" characteristicTypeId="ee96-6f3a-e5ca-2350" value="When this General is picked to fight, pick one of their melee weapons. Add 1 to the attach characterisict of that melee weapon for the fight. While 3 or more wounds are allocated to this general, instread add 2 to the Attacks characteristic of that melee weapon for that fight."/>
               </characteristics>
             </profile>
           </profiles>
@@ -1650,13 +2252,13 @@
         </selectionEntry>
         <selectionEntry id="6b78-5f06-40c7-eab6" name="4. Bellowing Tyrant" book="General&apos;s Handbook 2017" page="156" hidden="false" collective="false" type="upgrade">
           <profiles>
-            <profile id="e6c7-5519-f527-355c" name="Bellowing Tyrant" book="General&apos;s Handbook 2017" page="156" hidden="false" profileTypeId="c749-bae4-71a8-0c36" profileTypeName="Command Trait">
+            <profile id="e6c7-5519-f527-355c" name="Bellowing Tyrant" book="General&apos;s Handbook 2018" page="" hidden="false" profileTypeId="c749-bae4-71a8-0c36" profileTypeName="Command Trait">
               <profiles/>
               <rules/>
               <infoLinks/>
               <modifiers/>
               <characteristics>
-                <characteristic name="Command Trait Details" characteristicTypeId="ee96-6f3a-e5ca-2350" value="Pick a friendly DESTRUCTION unit within 6&quot; of the general in your hero phase. Until your next hero phase, add 1 to charge and run rolls for the unit, and use the general’s Bravery characteristic for the unit instead of its own."/>
+                <characteristic name="Command Trait Details" characteristicTypeId="ee96-6f3a-e5ca-2350" value="In your hero phase, pick a friendly DESTRUCTION unit within 6&quot; of the general in your hero phase. Until your next hero phase, add 1 to charge and run rolls for the unit, and use the general’s Bravery characteristic for the unit instead of its own."/>
               </characteristics>
             </profile>
           </profiles>
@@ -1698,13 +2300,13 @@
         </selectionEntry>
         <selectionEntry id="fdf2-ddc3-5dd8-f6e6" name="6. Ravager" book="General&apos;s Handbook 2017" page="156" hidden="false" collective="false" type="upgrade">
           <profiles>
-            <profile id="6c53-2a68-0348-adc4" name="Ravager" book="General&apos;s Handbook 2017" page="156" hidden="false" profileTypeId="c749-bae4-71a8-0c36" profileTypeName="Command Trait">
+            <profile id="6c53-2a68-0348-adc4" name="Ravager" book="General&apos;s Handbook 2018" page="" hidden="false" profileTypeId="c749-bae4-71a8-0c36" profileTypeName="Command Trait">
               <profiles/>
               <rules/>
               <infoLinks/>
               <modifiers/>
               <characteristics>
-                <characteristic name="Command Trait Details" characteristicTypeId="ee96-6f3a-e5ca-2350" value="Add 1 to the Rampaging Destroyers dice roll (see battle traits) for the general."/>
+                <characteristic name="Command Trait Details" characteristicTypeId="ee96-6f3a-e5ca-2350" value="Add 3 to the Rampaging Destroyers dice roll (see battle traits) for the general instead of 2."/>
               </characteristics>
             </profile>
           </profiles>
@@ -1900,7 +2502,7 @@
               <infoLinks/>
               <modifiers/>
               <characteristics>
-                <characteristic name="Command Trait Details" characteristicTypeId="ee96-6f3a-e5ca-2350" value="Roll a dice for the general at the start of each of their hero phases. On a roll of 5 or more they can use two different command abilities in that hero phase, or they can use the Inspiring Presence command ability twice in that hero phase."/>
+                <characteristic name="Command Trait Details" characteristicTypeId="ee96-6f3a-e5ca-2350" value="At the start of the first battle round, you receive 1 extra command point."/>
               </characteristics>
             </profile>
           </profiles>
@@ -1924,7 +2526,7 @@
               <infoLinks/>
               <modifiers/>
               <characteristics>
-                <characteristic name="Command Trait Details" characteristicTypeId="ee96-6f3a-e5ca-2350" value="Friendly ORDER units that are within 6&quot; of the general do not have to take battleshock tests."/>
+                <characteristic name="Command Trait Details" characteristicTypeId="ee96-6f3a-e5ca-2350" value="Friendly ORDER units do not have to take battleshock tests while they are within 6&quot; of this general."/>
               </characteristics>
             </profile>
           </profiles>
@@ -1940,15 +2542,15 @@
             <cost name="pts" costTypeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="0bfc-2753-ba37-63ec" name="3. Reckless" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="0bfc-2753-ba37-63ec" name="3. Dauntless" hidden="false" collective="false" type="upgrade">
           <profiles>
-            <profile id="3b26-c45b-9b90-ff4f" name="Reckless" hidden="false" profileTypeId="c749-bae4-71a8-0c36" profileTypeName="Command Trait">
+            <profile id="3b26-c45b-9b90-ff4f" name="Dauntless" hidden="false" profileTypeId="c749-bae4-71a8-0c36" profileTypeName="Command Trait">
               <profiles/>
               <rules/>
               <infoLinks/>
               <modifiers/>
               <characteristics>
-                <characteristic name="Command Trait Details" characteristicTypeId="ee96-6f3a-e5ca-2350" value="You can re-roll charge rolls for the general."/>
+                <characteristic name="Command Trait Details" characteristicTypeId="ee96-6f3a-e5ca-2350" value="You can re-roll charge rolls for this general."/>
               </characteristics>
             </profile>
           </profiles>
@@ -1972,7 +2574,7 @@
               <infoLinks/>
               <modifiers/>
               <characteristics>
-                <characteristic name="Command Trait Details" characteristicTypeId="ee96-6f3a-e5ca-2350" value="Add 1 to the general’s Wounds characteristic."/>
+                <characteristic name="Command Trait Details" characteristicTypeId="ee96-6f3a-e5ca-2350" value="Add 1 to this general’s Wounds characteristic."/>
               </characteristics>
             </profile>
           </profiles>
@@ -1996,7 +2598,7 @@
               <infoLinks/>
               <modifiers/>
               <characteristics>
-                <characteristic name="Command Trait Details" characteristicTypeId="ee96-6f3a-e5ca-2350" value="Add 1 to the number of attacks the general makes with one melee weapon each combat phase. A different weapon can be chosen in different combat phases if desired."/>
+                <characteristic name="Command Trait Details" characteristicTypeId="ee96-6f3a-e5ca-2350" value="When this general is selected to fight, add 1 to the Attacks characteristic of one of their melee weapons for that fight."/>
               </characteristics>
             </profile>
           </profiles>
@@ -2020,7 +2622,7 @@
               <infoLinks/>
               <modifiers/>
               <characteristics>
-                <characteristic name="Command Trait Details" characteristicTypeId="ee96-6f3a-e5ca-2350" value="Roll a dice for each wound or mortal wound inflicted on the general. On a roll of 6 or more the wound or mortal wound is negated and has no effect."/>
+                <characteristic name="Command Trait Details" characteristicTypeId="ee96-6f3a-e5ca-2350" value="Each tim you allocate a wound or mortal wound to this general, roll a dice. On a 6+ the wound is negated."/>
               </characteristics>
             </profile>
           </profiles>
@@ -2058,7 +2660,7 @@
               <infoLinks/>
               <modifiers/>
               <characteristics>
-                <characteristic name="Artefact Details" characteristicTypeId="0918-c47a-d84e-c0cf" value="You can use the potion once per battle at the start of a combat phase. This model (and its mount, if it has one) attacks in the combat phase before any other models, and before the player whose turn is taking place picks a unit to attack with."/>
+                <characteristic name="Artefact Details" characteristicTypeId="0918-c47a-d84e-c0cf" value="Once per battle, at the start of a combat phase, you can use this potion. If you do so, in that combat phase, the bearer (and its mount, if it has one) fights immediately, instead of fighting later in the combat phase."/>
               </characteristics>
             </profile>
           </profiles>
@@ -2092,7 +2694,7 @@
               <infoLinks/>
               <modifiers/>
               <characteristics>
-                <characteristic name="Artefact Details" characteristicTypeId="0918-c47a-d84e-c0cf" value="Pick one melee weapon that this model can use. Increase the Rend characteristic of the weapon by 1."/>
+                <characteristic name="Artefact Details" characteristicTypeId="0918-c47a-d84e-c0cf" value="Pick one of the bearer&apos;s melee weapons. Improve the Rend characteristic of the weapon by 1."/>
               </characteristics>
             </profile>
           </profiles>
@@ -2126,7 +2728,7 @@
               <infoLinks/>
               <modifiers/>
               <characteristics>
-                <characteristic name="Artefact Details" characteristicTypeId="0918-c47a-d84e-c0cf" value="Pick one melee weapon that this model can use. Increase the Damage characteristic of that weapon by 1."/>
+                <characteristic name="Artefact Details" characteristicTypeId="0918-c47a-d84e-c0cf" value="Pick one of the bearer&apos;s melee weapons. Increase the Damage characteristic of that weapon by 1."/>
               </characteristics>
             </profile>
           </profiles>
@@ -2160,7 +2762,7 @@
               <infoLinks/>
               <modifiers/>
               <characteristics>
-                <characteristic name="Artefact Details" characteristicTypeId="0918-c47a-d84e-c0cf" value="Pick one melee weapon that this model can use. If an enemy model suffers any wounds from this weapon and is not slain, subtract 1 from its hit rolls for the rest of the battle."/>
+                <characteristic name="Artefact Details" characteristicTypeId="0918-c47a-d84e-c0cf" value="Pick one of the bearer&apos;s melee weapons. If an enemy model is allocated any wounds from this weapon and is not slain, subtract 1 from that model&apos;s hit rolls for the rest of the battle."/>
               </characteristics>
             </profile>
           </profiles>
@@ -2194,7 +2796,7 @@
               <infoLinks/>
               <modifiers/>
               <characteristics>
-                <characteristic name="Artefact Details" characteristicTypeId="0918-c47a-d84e-c0cf" value="You can use the amulet once per battle at the start of a combat phase. Your opponent must subtract 1 from hit rolls made for attacks that target this model in that combat phase."/>
+                <characteristic name="Artefact Details" characteristicTypeId="0918-c47a-d84e-c0cf" value="Once per battle, at the start of a combat phase, you can use this amulet. If you do so, in that combat phase, subtract 1 from hit rolls made for attacks that target the bearer."/>
               </characteristics>
             </profile>
           </profiles>
@@ -2228,7 +2830,7 @@
               <infoLinks/>
               <modifiers/>
               <characteristics>
-                <characteristic name="Artefact Details" characteristicTypeId="0918-c47a-d84e-c0cf" value="You can heal 1 wound suffered by this model in each player’s hero phase."/>
+                <characteristic name="Artefact Details" characteristicTypeId="0918-c47a-d84e-c0cf" value="In each hero phase, you can heal 1 wound that has been allocated to the bearer."/>
               </characteristics>
             </profile>
           </profiles>
@@ -2276,14 +2878,16 @@
               <infoLinks/>
               <modifiers/>
               <characteristics>
-                <characteristic name="Artefact Details" characteristicTypeId="0918-c47a-d84e-c0cf" value="Pick one melee weapon that this model can use. Wound rolls of 6 or more for that weapon inflict a mortal wound in addition to any damage they would normally inflict."/>
+                <characteristic name="Artefact Details" characteristicTypeId="0918-c47a-d84e-c0cf" value="Pick one of the bearers melee weapons.Each time you roll a wound roll of 6+ for that weapon, that attack inflicts 1 mortal wound in addition to its normal damage."/>
               </characteristics>
             </profile>
           </profiles>
           <rules/>
           <infoLinks/>
           <modifiers/>
-          <constraints/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="87b9-a2a3-ef6e-2f7d" type="max"/>
+          </constraints>
           <categoryLinks>
             <categoryLink id="d8a8-4ff4-d670-0782" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false">
               <profiles/>
@@ -2315,7 +2919,9 @@
           <rules/>
           <infoLinks/>
           <modifiers/>
-          <constraints/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="04b9-bd63-8e03-b108" type="max"/>
+          </constraints>
           <categoryLinks>
             <categoryLink id="ce33-8f9d-3b55-f545" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false">
               <profiles/>
@@ -2347,7 +2953,9 @@
           <rules/>
           <infoLinks/>
           <modifiers/>
-          <constraints/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0959-900b-7900-7438" type="max"/>
+          </constraints>
           <categoryLinks>
             <categoryLink id="d192-ec68-a611-41a9" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false">
               <profiles/>
@@ -2379,7 +2987,9 @@
           <rules/>
           <infoLinks/>
           <modifiers/>
-          <constraints/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="675a-b8d6-59f5-114f" type="max"/>
+          </constraints>
           <categoryLinks>
             <categoryLink id="fe47-4784-c4b7-6d39" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false">
               <profiles/>
@@ -2411,7 +3021,9 @@
           <rules/>
           <infoLinks/>
           <modifiers/>
-          <constraints/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b7ed-39dd-49f5-9397" type="max"/>
+          </constraints>
           <categoryLinks/>
           <selectionEntries/>
           <selectionEntryGroups/>
@@ -2435,7 +3047,9 @@
           <rules/>
           <infoLinks/>
           <modifiers/>
-          <constraints/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b303-544d-589b-0409" type="max"/>
+          </constraints>
           <categoryLinks/>
           <selectionEntries/>
           <selectionEntryGroups/>
@@ -2615,6 +3229,3139 @@
       <selectionEntryGroups/>
       <entryLinks/>
     </selectionEntryGroup>
+    <selectionEntryGroup id="37b0-af21-630c-d8af" name="Realm Artefacts of Power" hidden="false" collective="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0d51-8ed8-dcf5-76a0" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9a1d-788e-288d-9971" type="max"/>
+      </constraints>
+      <categoryLinks/>
+      <selectionEntries/>
+      <selectionEntryGroups/>
+      <entryLinks>
+        <entryLink id="b698-c91c-04c4-4ec0" name="Weapons of Ghyran" hidden="false" targetId="541f-8308-ce85-6f3d" type="selectionEntryGroup">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+          <categoryLinks/>
+        </entryLink>
+        <entryLink id="5b4c-2c28-bf39-b7fe" name="Relics of Ghyran" hidden="false" targetId="692b-77fc-05c5-d070" type="selectionEntryGroup">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+          <categoryLinks/>
+        </entryLink>
+        <entryLink id="03c2-028c-05f3-7e1b" name="Relics of Ghur" hidden="false" targetId="463d-7799-7dca-4724" type="selectionEntryGroup">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+          <categoryLinks/>
+        </entryLink>
+        <entryLink id="c34e-037e-4770-d4fc" name="Weapons of Ghur" hidden="false" targetId="9ef0-62f7-ba83-0dab" type="selectionEntryGroup">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+          <categoryLinks/>
+        </entryLink>
+        <entryLink id="ca16-6c24-a367-b23f" name="Relics of Aqshy" hidden="false" targetId="dff7-19b4-9850-89a7" type="selectionEntryGroup">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+          <categoryLinks/>
+        </entryLink>
+        <entryLink id="3e9e-cd54-55b9-b535" name="Weapons of Aqshy" hidden="false" targetId="f4d9-1997-cea0-5804" type="selectionEntryGroup">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+          <categoryLinks/>
+        </entryLink>
+        <entryLink id="8ef1-c77e-a64f-32c9" name="Relics of Chamon" hidden="false" targetId="302c-ef0b-a9d6-685e" type="selectionEntryGroup">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+          <categoryLinks/>
+        </entryLink>
+        <entryLink id="96bb-c7ed-f76f-14fb" name="Weapons of Chamon" hidden="false" targetId="b611-7315-706b-82ef" type="selectionEntryGroup">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+          <categoryLinks/>
+        </entryLink>
+        <entryLink id="4aaf-139c-3837-ac1d" name="Weapons of Hysh" hidden="false" targetId="b7ad-b3d0-d9c3-8cd6" type="selectionEntryGroup">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+          <categoryLinks/>
+        </entryLink>
+        <entryLink id="6266-f4be-74ac-9535" name="Relics of Hysh" hidden="false" targetId="0823-7018-722c-3bcb" type="selectionEntryGroup">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+          <categoryLinks/>
+        </entryLink>
+        <entryLink id="d992-0fe3-4bcc-0506" name="Relics of Shyish" hidden="false" targetId="f685-ff72-7c6d-d0f5" type="selectionEntryGroup">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+          <categoryLinks/>
+        </entryLink>
+        <entryLink id="509c-7cf5-9abc-9903" name="Weapons of Shyish" hidden="false" targetId="666d-dbde-1db1-c29c" type="selectionEntryGroup">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+          <categoryLinks/>
+        </entryLink>
+        <entryLink id="5e7a-a472-6882-6005" name="Relics of Ulgu" hidden="false" targetId="158b-c95d-0272-ca62" type="selectionEntryGroup">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+          <categoryLinks/>
+        </entryLink>
+        <entryLink id="b545-af79-b1d1-1721" name="Weapons of Ulgu" hidden="false" targetId="f33b-19f2-d190-7659" type="selectionEntryGroup">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+          <categoryLinks/>
+        </entryLink>
+      </entryLinks>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="541f-8308-ce85-6f3d" name="Weapons of Ghyran" hidden="false" collective="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2b64-08f8-641d-be66" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c719-1b09-bb28-6adf" type="max"/>
+      </constraints>
+      <categoryLinks/>
+      <selectionEntries>
+        <selectionEntry id="69f0-ec99-78e5-b06a" name="1. Entangling Blade" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5d8d-e8db-1240-e506" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="f5fd-5e12-2e04-7052" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="54c8-4897-57f2-4500" name="6. Arboreal Stave" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2df3-57f8-b219-e14a" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="9731-0fce-ed92-f320" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="1c8a-477f-17b5-5520" name="5. Ghyrstrike" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4ca9-b4e2-30fa-550b" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="0fb9-e2ce-f945-e9af" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="bb2f-c070-85ff-60eb" name="4. The Sunderblade" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4644-d7bc-62a4-8755" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="b468-a483-9e83-f7f3" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="1d7e-107a-1d2d-53c8" name="2. Jadewound Thorn" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2e04-fbf0-ebd9-51f2" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="3ac8-3abe-a5ed-cc17" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="72be-ec0c-894a-fc00" name="3. Blade of Hammerhal Ghyra" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6f79-a08c-e0c5-5f78" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="0ef1-b302-d4e1-8c7d" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups/>
+      <entryLinks/>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="0d51-8ed8-dcf5-76a0" name="Realm of Origin" hidden="false" collective="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f8f1-eb73-a419-b92e" type="max"/>
+        <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0476-58c6-f5ef-f2f3" type="min"/>
+      </constraints>
+      <categoryLinks/>
+      <selectionEntries>
+        <selectionEntry id="2b64-08f8-641d-be66" name="Origin: Ghyran" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="4c81-5c75-b32a-c854" name="Origin: Ghur" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="e938-2bcb-c732-9572" name="Origin: Chamon" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="804d-fbe5-0759-58ce" name="Origin: Aqshy" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="916b-8d03-321f-4845" name="Origin: Shyish" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="689f-c36d-3382-5eca" name="Origin: Ulgu" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="52b1-a41c-c680-c537" name="Origin: Hysh" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups/>
+      <entryLinks/>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="692b-77fc-05c5-d070" name="Relics of Ghyran" hidden="false" collective="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2b64-08f8-641d-be66" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0a52-d7d8-ace3-3ce7" type="max"/>
+      </constraints>
+      <categoryLinks/>
+      <selectionEntries>
+        <selectionEntry id="7730-ae84-c481-cc6c" name="1. Hypersnare Seeds" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d6ce-6ea7-f5fe-f036" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="c34c-e511-812e-65c1" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="07bb-d221-2a3b-506b" name="6. Wand of Restoration" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ddff-ea79-f1a9-1c3f" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="dbc6-9ab4-b21d-74cf" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="2391-76ae-60e1-9d73" name="5. Ghyrropian Gauntlets" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1df8-8660-f931-de26" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="7a28-e4ba-da1a-d222" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="3c09-25d7-d1dd-588a" name="4. Greenglade Flask" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b66c-7f8e-871f-59cb" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="8bee-c40d-58aa-0d59" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="66c8-af5a-7b1a-992d" name="2. Verdant Mantle" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f3fe-fa5f-053c-607c" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="5b14-03a9-4fee-4582" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="3acc-7b56-47f8-9c73" name="3. Jade Diadem" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c4db-6ced-82f1-46aa" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="2038-6f1c-9747-a50d" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups/>
+      <entryLinks/>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="9ef0-62f7-ba83-0dab" name="Weapons of Ghur" hidden="false" collective="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4c81-5c75-b32a-c854" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a3d0-9bc8-6ff6-cded" type="max"/>
+      </constraints>
+      <categoryLinks/>
+      <selectionEntries>
+        <selectionEntry id="59f0-3391-2b67-5f6f" name="1. Stonehorn Blade" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="cf63-430b-8f5e-a4bb" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="5768-641f-7562-8db0" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="82f7-06d7-505d-320c" name="6. Rockjaws" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="04ad-2173-dcf9-8033" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="ce82-b1db-6ee4-5a86" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="efd0-3f4d-7378-7685" name="5. Rageblade" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="77d7-2719-3825-ec96" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="73f8-f3cd-ec49-446c" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="da04-d621-d130-6fe3" name="4. Blade of Carving" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="53a1-be5a-cc2b-52df" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="bed6-aa5a-1586-204a" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="f6fb-6bfa-ba52-33c7" name="2. Anraheir&apos;s Claw" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f5bb-1d41-ae77-67a4" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="e6b1-5c26-c12d-88a8" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="aff9-0ce2-3166-5e59" name="3. Amberglaive" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="96d1-33fb-55f6-a0b9" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="3e00-486c-b85d-c86e" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups/>
+      <entryLinks/>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="463d-7799-7dca-4724" name="Relics of Ghur" hidden="false" collective="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4c81-5c75-b32a-c854" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5940-4140-d3d3-ab11" type="max"/>
+      </constraints>
+      <categoryLinks/>
+      <selectionEntries>
+        <selectionEntry id="66d3-8efa-52b7-22c2" name="1. Beastcaller&apos;s Bones" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f80a-af57-50cf-5e1d" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="04f6-1089-63b7-ebd1" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="b620-c40f-1d1c-0f1b" name="6. Tuskhelm" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5a8d-ceab-9559-733e" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="ba58-c3f3-8631-9be6" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="618d-f9ee-ab56-a4e9" name="5. Shardfist Pelt" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3c23-d223-917e-6c4e" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="71a3-4a56-2a98-a55e" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="c5d7-e7c4-b337-6e7e" name="4. Gargant-bone Dice" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a87a-9f06-0158-e674" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="68b7-13ce-c029-d1bf" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="de85-aed2-1790-61d5" name="2. Drakeforged Plate" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8cca-3474-bf8a-3528" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="1a1b-1a52-f0f4-2024" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="4501-c14b-1eff-9f70" name="3. Gryph-feather Charm" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1dee-6d40-df13-c28e" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="30b4-ec4a-4f03-92f2" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups/>
+      <entryLinks/>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="302c-ef0b-a9d6-685e" name="Relics of Chamon" hidden="false" collective="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e938-2bcb-c732-9572" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="abf1-8434-c8fc-1e30" type="max"/>
+      </constraints>
+      <categoryLinks/>
+      <selectionEntries>
+        <selectionEntry id="eee1-fd9e-9a24-be79" name="1. Gildenbane" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9dc0-356e-ed39-b1c5" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="4737-67fb-147a-6260" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="1188-3b82-444f-9457" name="6. Alchemical Chain" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3516-d49f-2a49-1eba" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="7ea5-c85c-ed84-7ef4" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="1456-df51-b3d0-8ec5" name="5. Bejeweled Gauntlet" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3a64-51c1-30b8-16bf" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="18ac-f383-e580-eda3" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="67a6-2298-7df0-9ec1" name="4. Godwrought Helm" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e8bc-3159-ffef-5722" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="65b9-51a3-8aba-333e" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="f715-2087-6630-b11e" name="2. Argent Armor" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ad1a-d53f-d829-3f08" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="62e6-932a-a488-9855" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="9c7b-05ba-1d3a-caff" name="3. Hydroxskin Cloak" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b32e-2ae8-af9a-0a2e" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="ff2a-0965-856e-6e4e" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups/>
+      <entryLinks/>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="b611-7315-706b-82ef" name="Weapons of Chamon" hidden="false" collective="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e938-2bcb-c732-9572" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3157-7da8-f48f-d724" type="max"/>
+      </constraints>
+      <categoryLinks/>
+      <selectionEntries>
+        <selectionEntry id="af2e-9e84-098a-4219" name="1. Aiban&apos;s Hidden Blade" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="53c8-48d5-f4a9-3737" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="d56d-101c-f3cc-ff72" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="2922-c584-6fa1-1c16" name="6. Argentine&apos;s Tooth" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5a91-11c8-c268-0ff1" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="464c-cc53-027f-253f" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="faa8-f0c4-277f-a544" name="5. Chamonite Darts" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d4d5-934d-7410-dca3" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="328a-8f53-c028-16a9" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="995a-e41e-8588-5b77" name="4. Crucible of Molten Silver" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5b67-5020-6474-8226" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="59aa-0460-3c7a-ad62" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="6910-46ba-6955-6476" name="2. Flowstone Blade" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a337-5148-0b5a-d20f" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="9221-fb6e-5b27-e1fc" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="fbd5-a623-b866-a1cd" name="3. Rune Blade" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9de7-644a-9097-85a2" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="0657-4603-7b03-ab61" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups/>
+      <entryLinks/>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="f4d9-1997-cea0-5804" name="Weapons of Aqshy" hidden="false" collective="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="804d-fbe5-0759-58ce" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e3e7-5acd-c1e6-fd69" type="max"/>
+      </constraints>
+      <categoryLinks/>
+      <selectionEntries>
+        <selectionEntry id="8cb1-9a2d-bdbc-139f" name="1. Ruby Ring" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7948-5d93-5f5c-3d50" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="bd30-f8a1-f3a3-328f" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="58c5-5363-e6df-18a7" name="6. Exile Torch" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b873-a40d-66bf-800b" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="a2fe-2bac-9851-df40" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="3060-6f01-f57d-ea2e" name="5. Onyx Blade" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c3f5-34e3-6135-d2de" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="7c01-24c8-7a22-c941" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="083a-22af-c049-0c9a" name="4. Purefire Brazier" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d569-06e0-0031-e678" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="2c68-6671-d376-3d21" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="98ab-afd6-284a-e71f" name="2. Magmaforged Blade" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d294-9fe2-5efd-8832" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="c70b-fd56-3806-f983" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="6c58-255e-26d4-7017" name="3. Magmadroth Blood Vials" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ce16-cc51-f797-fc89" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="3c01-7ef7-9a4d-932d" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups/>
+      <entryLinks/>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="dff7-19b4-9850-89a7" name="Relics of Aqshy" hidden="false" collective="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="804d-fbe5-0759-58ce" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9a2b-0c1a-55a2-1130" type="max"/>
+      </constraints>
+      <categoryLinks/>
+      <selectionEntries>
+        <selectionEntry id="c17a-4a8a-0041-6aa4" name="1. Essence of Vulcatrix" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b558-0ae0-a88e-a88d" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="db95-222f-4d46-46f2" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="5e6b-a904-d91c-5cd9" name="6. Cleansing Brooch" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="eccf-b2b8-03bc-dc64" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="3fb4-bdcb-1130-4cbb" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="e304-52a2-d708-c8ed" name="5. Crown of Flames" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="cc61-0a36-9831-afa0" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="855a-c456-6201-ec22" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="c2ec-ef72-e71e-14d3" name="4. Ignax&apos;s Scales" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="923b-53a1-4c44-e763" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="aa17-0292-3847-3dfe" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="2796-36b9-60fc-24f5" name="2. Thermalrider Cloak" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f3c1-1961-4182-32b8" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="6f35-674d-3322-b4c2" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="cf45-f3d5-d8db-f702" name="3. Smouldering Helm" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f542-d148-4014-35b5" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="01b4-5074-1cae-89f3" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups/>
+      <entryLinks/>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="f685-ff72-7c6d-d0f5" name="Relics of Shyish" hidden="false" collective="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="916b-8d03-321f-4845" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d5cf-8707-c545-4378" type="max"/>
+      </constraints>
+      <categoryLinks/>
+      <selectionEntries>
+        <selectionEntry id="6b68-0515-abda-2f10" name="1. Cronehair Fetish" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e4e7-b413-ab20-71ee" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="ebda-446f-f171-020b" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="9329-b3ee-9346-c9f8" name="6. Goblet of Draining" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="32db-c91f-34ca-cf2b" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="2ffc-d729-24c9-e55f" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="5202-af59-260c-df5a" name="5. The Ragged Cloak" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="cd3d-a3e5-402e-1f4b" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="a076-1b5c-2a4d-2207" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="5e4b-90f7-6a80-6ac2" name="4. Amethyst Blindmask" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a42a-d543-7398-6aa4" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="176e-92ff-41c3-495f" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="49a7-5b8c-27ca-ee12" name="2. Ethereal Amulet" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ae7a-c769-9010-9310" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="b973-c4cd-2252-7fab" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="7df7-3cb3-327b-c146" name="3. Sepulchral Plate" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="80bc-615a-4652-6901" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="f880-6fca-e21d-4e85" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups/>
+      <entryLinks/>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="666d-dbde-1db1-c29c" name="Weapons of Shyish" hidden="false" collective="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="916b-8d03-321f-4845" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bca0-933d-8985-a3d1" type="max"/>
+      </constraints>
+      <categoryLinks/>
+      <selectionEntries>
+        <selectionEntry id="bbde-9daa-cdcd-4335" name="1. Blade of Endings" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="28f0-483d-e8ee-4315" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="0ae1-79f0-6b78-d369" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="75c6-4c80-702f-bb3c" name="6. Splintertooth" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3722-e8b0-62f1-c62a" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="a442-83ec-8b02-015e" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="6f88-548f-0fc1-3a08" name="5. Wraithbow" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="849c-cf96-7783-4fa3" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="9b2b-f089-f9ba-bc8e" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="86c2-d74e-9264-40c4" name="4. Sliver of Decrepitude" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="aabb-d75f-6baa-692d" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="c682-05b3-5f75-703f" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="1002-e26a-a6a2-9f8c" name="2. Banshee Blade" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="06f1-ef91-b955-bf2f" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="a852-5395-19cc-9467" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="d73f-b922-f27d-6d81" name="3. Lifebane" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8702-02cc-eda1-d0fa" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="d374-ad95-da8c-5358" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups/>
+      <entryLinks/>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="f33b-19f2-d190-7659" name="Weapons of Ulgu" hidden="false" collective="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="689f-c36d-3382-5eca" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="eb80-35de-3725-ec5a" type="max"/>
+      </constraints>
+      <categoryLinks/>
+      <selectionEntries>
+        <selectionEntry id="3b97-d4bb-f1ed-9b53" name="1. Miasmatic Blade" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="40f8-9a63-59a7-81ad" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="2f54-6dd6-83ab-8c94" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="503a-423c-b819-0463" name="6. Sword of Judgement" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0a6f-4fb0-8c72-e199" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="b174-dc18-82c0-27bd" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="e6f8-0cdc-df85-fd8a" name="5. Dimensional Blade" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="cc65-1f01-0530-d9cb" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="6fbf-c592-d819-468a" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="4607-16be-833e-c760" name="4. Blade of Secrets" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d35a-d4cf-c376-4db3" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="0866-e5be-458a-b20e" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="7b75-945d-f1ee-28af" name="2. Blade of the Thirteen Dominions" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="104f-1d3d-e5de-7ce9" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="2c38-919e-56e4-2a59" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="2a9a-55aa-0422-eabf" name="3. Blade of Folded Shadow" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b6bc-f64f-e52f-1c6a" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="e088-786f-2646-9c3a" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups/>
+      <entryLinks/>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="158b-c95d-0272-ca62" name="Relics of Ulgu" hidden="false" collective="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="689f-c36d-3382-5eca" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e82f-9be2-4b51-34ea" type="max"/>
+      </constraints>
+      <categoryLinks/>
+      <selectionEntries>
+        <selectionEntry id="37a9-a1d5-b66f-fb9e" name="1. Spellmirror" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1b8f-5a62-0312-2c50" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="4b6e-1c5f-de06-99e2" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="fd17-d428-7cc8-0c87" name="6. Talisman of the Watcher" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f45d-b9e4-878a-d641" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="d117-b24e-e1b5-4b5e" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="7e05-cd53-def8-b5a2" name="5. Betrayer&apos;s Crown" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8658-708c-2c8f-d114" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="8097-0f41-9513-fec9" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="e23f-4a06-14f5-f374" name="4. Doppelganger Cloak" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="73f4-9623-bf27-6e0f" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="00be-caae-274c-b9d5" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="2aed-d3ae-5042-05a6" name="2. Trickster&apos;s Helm" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="195f-2405-c56f-14b3" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="ba2a-34f3-b216-551f" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="c658-8a97-884c-f03d" name="3. Wristbands of Illusion" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="76ea-e727-dc73-5706" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="ace7-e143-5a58-89c5" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups/>
+      <entryLinks/>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="0823-7018-722c-3bcb" name="Relics of Hysh" hidden="false" collective="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="52b1-a41c-c680-c537" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3706-a482-187c-1677" type="max"/>
+      </constraints>
+      <categoryLinks/>
+      <selectionEntries>
+        <selectionEntry id="aca2-8b74-8482-75ab" name="1. Atherquartz Brooch" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2867-20b7-9e06-73f1" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="0d62-7744-121c-f538" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="11cc-f63e-bf15-ce1e" name="6. Sash of the Ten Paradises" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6fe7-29a8-88f4-39c0" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="feb0-1e21-9a2a-dfaf" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="056e-659f-8866-c36e" name="5. Guardian&apos;s Coronet" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b6e2-8cd0-5c27-d633" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="33f7-b4d3-85a6-dc53" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="7b85-1d3a-a8ef-710f" name="4. Lightshard" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="efde-839b-e586-88b1" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="202a-af05-4d1f-2a79" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="bb14-f48b-91ca-089e" name="2. Lens of Refraction" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="dbce-b3dc-1775-f2c9" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="1430-9e56-d54d-8c82" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="2d9b-887b-232e-3955" name="3. Mirrored Curiass" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="69a3-788a-6fc9-64ba" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="699a-622a-95f8-3b82" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups/>
+      <entryLinks/>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="b7ad-b3d0-d9c3-8cd6" name="Weapons of Hysh" hidden="false" collective="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="52b1-a41c-c680-c537" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5986-6cc3-20c9-07ab" type="max"/>
+      </constraints>
+      <categoryLinks/>
+      <selectionEntries>
+        <selectionEntry id="44cd-7d35-8aa2-fe5b" name="1. Blade of Symmetry" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1f24-a08d-53e4-6e1b" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="736c-7ee1-f94d-4bc9" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="f2d1-04f9-6b07-c53c" name="6. Prism Amyntok" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1943-3fb2-31af-d68d" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="97a3-a302-e3d5-ee1e" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="4e65-81f7-0865-a385" name="5. Crystalline Blade" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4e4c-f4c4-62c5-4f86" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="04f1-c7b0-b566-f515" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="ccd0-e22d-6c13-2c01" name="4. Sunblade" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a589-9e3e-a4fc-081b" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="4a9e-4ecd-1301-0345" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="2c10-8afb-5484-0a53" name="2. Gleaming Blade" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="243a-1a34-3ac4-2843" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="385e-17bb-b37a-1659" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="bb40-99c1-db7f-4eaa" name="3. Luminary Rod" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="055f-28b6-4b0c-fe5e" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="f59c-e8e3-55f8-71c2" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups/>
+      <entryLinks/>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="5927-9c5a-8b20-8f37" name="Game Type (GAME TYPE MUST BE IDENTICAL FOR ALL FORCES)" hidden="false" collective="false" defaultSelectionEntryId="cea8-e4b2-c44f-c7b4">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7628-622c-8d7b-ec34" type="min"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9f24-8ab9-ab48-5541" type="max"/>
+      </constraints>
+      <categoryLinks/>
+      <selectionEntries>
+        <selectionEntry id="e860-9b1e-36bd-a54f" name="1000 Points - Vanguard" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="set" field="2a41-d48b-8500-7a1a" value="0.0">
+              <repeats/>
+              <conditions/>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" childId="cea8-e4b2-c44f-c7b4" type="greaterThan"/>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="ef67-15fb-487c-397a" type="greaterThan"/>
+                  </conditions>
+                  <conditionGroups/>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2a41-d48b-8500-7a1a" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="af62-e1d8-3f54-8de9" name="New CategoryLink" hidden="false" targetId="fd9f-428a-177d-c765" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="cea8-e4b2-c44f-c7b4" name="2000 Points - Battlehost" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="set" field="c95c-2781-073b-887d" value="0.0">
+              <repeats/>
+              <conditions/>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" childId="e860-9b1e-36bd-a54f" type="greaterThan"/>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="ef67-15fb-487c-397a" type="greaterThan"/>
+                  </conditions>
+                  <conditionGroups/>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c95c-2781-073b-887d" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="49d8-0b4f-f1d0-e5fc" name="New CategoryLink" hidden="false" targetId="6330-7561-7a32-0851" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="ef67-15fb-487c-397a" name="2500 Points - Warhost" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="set" field="94c1-18a9-d27c-23df" value="0.0">
+              <repeats/>
+              <conditions/>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" childId="cea8-e4b2-c44f-c7b4" type="greaterThan"/>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="e860-9b1e-36bd-a54f" type="greaterThan"/>
+                  </conditions>
+                  <conditionGroups/>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="94c1-18a9-d27c-23df" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="6ada-6fab-25e6-7377" name="New CategoryLink" hidden="false" targetId="1e63-0b49-ac04-321f" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="ca54-0d07-72c2-d26f" name="No Points or Battlerole Validation (Open)" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups/>
+      <entryLinks/>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="8ea1-6791-75d8-aba3" name="Endless Spells" hidden="false" collective="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints>
+        <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a642-3e9b-21a9-ec96" type="min"/>
+      </constraints>
+      <categoryLinks/>
+      <selectionEntries>
+        <selectionEntry id="982a-a39f-ef3f-4720" name="Balewind Vortex" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ef45-b059-9863-72c3" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="e035-7e9d-b2fe-88c8" name="New CategoryLink" hidden="false" targetId="31f4-2067-3ade-e6f8" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="40.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="a09c-d5d6-81b7-5786" name="Aethervoid Pendulum" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c56d-2b1e-13df-e2c4" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="5fd3-8482-c9c6-16d1" name="New CategoryLink" hidden="false" targetId="31f4-2067-3ade-e6f8" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="40.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="88d8-6a1f-8483-b6ea" name="Chronomatic Cogs" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7ee5-eb5e-b0dd-56c6" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="f35f-fab0-729b-5bb9" name="New CategoryLink" hidden="false" targetId="31f4-2067-3ade-e6f8" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="60.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="7c3d-e67e-928b-10cc" name="Emerald Lifeswarm" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="09f5-f937-401d-ee13" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="c9e7-8860-645a-2ac0" name="New CategoryLink" hidden="false" targetId="31f4-2067-3ade-e6f8" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="60.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="ffa3-5211-7c11-afc6" name="Geminids of Uhl-Gyish" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a707-d029-6cfd-17c7" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="9d3d-a6fa-2ff9-a847" name="New CategoryLink" hidden="false" targetId="31f4-2067-3ade-e6f8" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="40.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="90d3-f76c-d63e-7eeb" name="Malevolent Maelstrom" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a941-10ef-6a07-91ac" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="1061-013e-90fb-b4be" name="New CategoryLink" hidden="false" targetId="31f4-2067-3ade-e6f8" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="20.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="ec40-8615-4669-6c17" name="Prismatic Palisade" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c90b-e6e2-7e45-cd52" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="15f0-05f3-1141-4495" name="New CategoryLink" hidden="false" targetId="31f4-2067-3ade-e6f8" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="30.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="2e2e-a332-031d-8499" name="Purple Sun of Shyish" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="596f-683c-9f6a-fd1d" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="0158-8b5a-c54a-a150" name="New CategoryLink" hidden="false" targetId="31f4-2067-3ade-e6f8" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="100.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="6273-9b6e-e4c9-127a" name="Quicksilver Swords" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0b23-5718-2087-a52e" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="a6f4-2f68-1f18-8d77" name="New CategoryLink" hidden="false" targetId="31f4-2067-3ade-e6f8" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="20.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="ab9b-dc68-e256-9260" name="Ravenak&apos;s Gnashing Jaws" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6d72-47d7-38dc-1197" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="72bd-48bb-86f1-3a13" name="New CategoryLink" hidden="false" targetId="31f4-2067-3ade-e6f8" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="40.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="db2b-0d75-3bab-ff3a" name="Soulsnare Shackles" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7246-5d11-6654-59ce" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="8c78-abb4-360b-b040" name="New CategoryLink" hidden="false" targetId="31f4-2067-3ade-e6f8" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="20.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="849e-470b-05c2-19b7" name="Suffocating﻿﻿ Gravetide﻿" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9211-4404-c522-c9d3" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="e1f8-276e-104f-06cd" name="New CategoryLink" hidden="false" targetId="31f4-2067-3ade-e6f8" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="30.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="270a-b509-6851-5e75" name="The B﻿urning Head﻿﻿﻿" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2647-60fd-5c01-b15b" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="f18e-4646-16b4-3c84" name="New CategoryLink" hidden="false" targetId="31f4-2067-3ade-e6f8" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="40.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="e6ec-45ee-65b8-8520" name="Umbral Sp﻿ellporta﻿l﻿﻿" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="51c1-19b9-7107-59cb" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="9f49-9937-cd19-f89d" name="New CategoryLink" hidden="false" targetId="31f4-2067-3ade-e6f8" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="60.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups/>
+      <entryLinks/>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="c0f9-cbae-79d2-3d07" name="Malign Portents Artefacts - Mortal Slaanesh" hidden="false" collective="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <repeats/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a934-6d15-9932-b7ea" type="notInstanceOf"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3963-2e99-aa63-c65e" type="notEqualTo"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3963-2e99-aa63-c65e" type="notInstanceOf"/>
+                  </conditions>
+                  <conditionGroups/>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="31d8-cd17-9573-a7ee" type="max"/>
+      </constraints>
+      <categoryLinks/>
+      <selectionEntries>
+        <selectionEntry id="6320-47ca-5cc8-d1d3" name="The Realmwalker Greaves" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="fdda-9094-6d6a-d9de" name="The Realmwalker Greaves" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="[...] The bearer can fly. In addition, if the bearer’s Move characteristic is less than 12″, treat it as being 12″."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5688-0639-323c-01a7" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="b380-b165-2821-38b0" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+          </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups/>
+      <entryLinks/>
+    </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <sharedRules>
     <rule id="4571-8f36-98ca-2d16" name="Rampaging Destroyers" book="General&apos;s Handbook 2017" page="156" hidden="false">
@@ -2622,9 +6369,7 @@
       <rules/>
       <infoLinks/>
       <modifiers/>
-      <description>Those that owe allegiance to Destruction are always eager to get to grips with their enemies.
-
-Roll a dice in your hero phase for your general and each DESTRUCTION HERO in your army. Add 2 to the roll for the general. On a roll of 6 or more, pick a friendly DESTRUCTION unit within 6&quot; of the general or HERO being rolled for. That unit can immediately move 6&quot; if it is more than 12&quot; from the enemy, can immediately pile in if it is within 3&quot; of the enemy, or can immediately declare a charge in any other circumstances. It cannot run when it makes the move, but can move, charge or pile in again later in the same turn.</description>
+      <description>Roll a dice in your hero phase for your general and each DESTRUCTION HERO in your army. Add 2 to the roll for the general. On a roll of 6 or more, pick a friendly DESTRUCTION unit within 6&quot; of the general or HERO being rolled for. That unit can immediately move 6&quot; if it is more than 12&quot; from the enemy, can immediately pile in if it is within 3&quot; of the enemy, or can immediately declare a charge in any other circumstances. It cannot run when it makes the move, but can move, charge or pile in again later in the same turn.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
@@ -2635,7 +6380,7 @@ Roll a dice in your hero phase for your general and each DESTRUCTION HERO in you
       <modifiers/>
       <characteristics>
         <characteristic name="Casting Value" characteristicTypeId="2508-b604-1258-a920" value="5"/>
-        <characteristic name="Description" characteristicTypeId="76ff-781d-b8e6-5f27" value="If successfully cast, pick an enemy unit within 18&quot; of the caster and that is visible to them. The unit you pick suffers D3 mortal wounds."/>
+        <characteristic name="Description" characteristicTypeId="76ff-781d-b8e6-5f27" value="If successfully cast, pick an enemy unit within 18&quot; of the caster that is visible to them. That unit suffers 1 mortal wound. If the casting roll was 10 or more, the unit suffers D3 mortal wounds instead."/>
       </characteristics>
     </profile>
     <profile id="b41f-f1ce-7aa5-4f81" name="Mystic Shield" hidden="false" profileTypeId="2e81-5e22-c6e1-73cb" profileTypeName="05 Spell">
@@ -2645,7 +6390,7 @@ Roll a dice in your hero phase for your general and each DESTRUCTION HERO in you
       <modifiers/>
       <characteristics>
         <characteristic name="Casting Value" characteristicTypeId="2508-b604-1258-a920" value="6"/>
-        <characteristic name="Description" characteristicTypeId="76ff-781d-b8e6-5f27" value="If successfully cast, pick the caster, or a friendly unit within 18&quot; of the caster and which is visible to them. You can add 1 to all save rolls for the unit you pick until the start of your next hero phase."/>
+        <characteristic name="Description" characteristicTypeId="76ff-781d-b8e6-5f27" value="If successfully cast, pick a friendly unit within 18&quot; of the caster that is visible to them. Re-roll save rolls of 1 for that unit until your next hero phase."/>
       </characteristics>
     </profile>
     <profile id="8e0c-cbe4-27be-8a30" name="Fly" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="08 Ability (Unit)">
@@ -2657,13 +6402,13 @@ Roll a dice in your hero phase for your general and each DESTRUCTION HERO in you
         <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="This unit can fly."/>
       </characteristics>
     </profile>
-    <profile id="6884-967e-0150-274e" name="Unpredictable Destruction" hidden="false" profileTypeId="c137-4d1f-9d1a-524d" profileTypeName="Battle Trait">
+    <profile id="6884-967e-0150-274e" name="Unbridled Malice" hidden="false" profileTypeId="c137-4d1f-9d1a-524d" profileTypeName="Battle Trait">
       <profiles/>
       <rules/>
       <infoLinks/>
       <modifiers/>
       <characteristics>
-        <characteristic name="Battle Trait Details" characteristicTypeId="9fdd-b4b1-5f7a-0970" value="Roll a dice when you pick a CHAOS unit to attack in the combat phase if it is within 12&quot; of your general or 3&quot; of another HERO from your army. On a roll of 6 or more, you can add 1 to all hit rolls for the unit being rolled for in that phase."/>
+        <characteristic name="Battle Trait Details" characteristicTypeId="9fdd-b4b1-5f7a-0970" value="When a friendly CHAOS unit is picked to fight, roll a dice if it is within 12&quot; of your general or 3&quot; of a friendly HERO. On a 6+, add 1 to hit rolls for the unit for that fight."/>
       </characteristics>
     </profile>
   </sharedProfiles>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="c8da-7df9-793f-98ba" name="Chaos - Daemons of Chaos" book="Grand Alliance: Chaos" revision="3" battleScribeVersion="2.01" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="25" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="c8da-7df9-793f-98ba" name="Chaos - Daemons of Chaos" book="Grand Alliance: Chaos" revision="7" battleScribeVersion="2.01" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="25" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks/>
@@ -15,6 +15,12 @@
     <profileType id="1d4d-2cd3-a921-678f" name="Immortal Champion">
       <characteristicTypes>
         <characteristicType id="4571-ae64-68a3-0bc5" name="Ability"/>
+      </characteristicTypes>
+    </profileType>
+    <profileType id="a2ca-2474-78fd-9f6a" name="Hellcannon Crew within 1&quot;">
+      <characteristicTypes>
+        <characteristicType id="ed2b-f656-85e0-0813" name="Caged Fury"/>
+        <characteristicType id="1ce1-ed70-09a1-7afc" name="Doomfire"/>
       </characteristicTypes>
     </profileType>
   </profileTypes>
@@ -275,7 +281,8 @@
       <infoLinks/>
       <modifiers/>
       <constraints>
-        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9784-9b35-9549-a7c8" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9784-9b35-9549-a7c8" type="max"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5a1d-237a-277a-405a" type="max"/>
       </constraints>
       <categoryLinks>
         <categoryLink id="5bea-e9d7-060b-cfdc" name="New CategoryLink" hidden="false" targetId="7cdd-80ea-cbeb-8e16" primary="false">
@@ -332,22 +339,6 @@
       <selectionEntryGroups/>
       <entryLinks>
         <entryLink id="ed01-764c-4c22-9929" name="General" hidden="false" targetId="3833-8279-cc38-22ce" type="selectionEntry">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints/>
-          <categoryLinks/>
-        </entryLink>
-        <entryLink id="5db1-a5f6-f6a8-d1c0" name="Artefacts" hidden="false" targetId="8bf6-840d-35a1-123e" type="selectionEntryGroup">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints/>
-          <categoryLinks/>
-        </entryLink>
-        <entryLink id="dbd9-2d6c-e036-d947" name="Command Traits" hidden="false" targetId="7954-00ae-9382-83d2" type="selectionEntryGroup">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -689,29 +680,7 @@
           <modifiers/>
         </infoLink>
       </infoLinks>
-      <modifiers>
-        <modifier type="decrement" field="points" value="60">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="88ab-4ca0-48c5-c539" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="86bf-5743-f4ff-4a82" type="greaterThan"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-        <modifier type="increment" field="points" value="60">
-          <repeats>
-            <repeat field="selections" scope="88ab-4ca0-48c5-c539" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="86bf-5743-f4ff-4a82" repeats="1" roundUp="false"/>
-          </repeats>
-          <conditions/>
-          <conditionGroups/>
-        </modifier>
-        <modifier type="decrement" field="points" value="40">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="88ab-4ca0-48c5-c539" value="6.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="86bf-5743-f4ff-4a82" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-      </modifiers>
+      <modifiers/>
       <constraints/>
       <categoryLinks>
         <categoryLink id="f9ea-120f-0c49-549d" name="New CategoryLink" hidden="false" targetId="7cdd-80ea-cbeb-8e16" primary="false">
@@ -751,17 +720,17 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="points" value="0.0"/>
+            <cost name="pts" costTypeId="points" value="60.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups/>
       <entryLinks/>
       <costs>
-        <cost name="pts" costTypeId="points" value="60.0"/>
+        <cost name="pts" costTypeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="4f41-1c22-84e9-6cfa" name="Soul Grinder" hidden="false" collective="false" type="unit">
+    <selectionEntry id="4f41-1c22-84e9-6cfa" name="Soul Grinder" book="Grand Alliance: Chaos" hidden="false" collective="false" type="unit">
       <profiles>
         <profile id="f99e-5c9f-6a16-41c2" name="Soul Grinder" hidden="false" profileTypeId="1960-ca8e-67ce-2014" profileTypeName="Unit">
           <profiles/>
@@ -781,7 +750,7 @@
           <infoLinks/>
           <modifiers/>
           <characteristics>
-            <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="If you wish, when setting up a Soul Grinder, you can pick one of the following keywords to apply to this unit for the duration of hte battle: KHORNE, TZEENTCH, NURGLE or SLAANESH."/>
+            <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="If you wish, when setting up a Soul Grinder, you can pick one of the following keywords to apply to this unit for the duration of the battle: KHORNE, TZEENTCH, NURGLE or SLAANESH."/>
           </characteristics>
         </profile>
         <profile id="1d14-5281-504f-6ebc" name="Implacable Advance" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
@@ -1051,7 +1020,7 @@
       </selectionEntryGroups>
       <entryLinks/>
       <costs>
-        <cost name="pts" costTypeId="points" value="280.0"/>
+        <cost name="pts" costTypeId="points" value="260.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="3833-8279-cc38-22ce" name="General" hidden="false" collective="false" type="upgrade">
@@ -1093,7 +1062,22 @@
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <repeats/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b78c-c342-c8aa-aa45" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="62e4-370f-3318-cdbd" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="78f3-8a59-699a-61e8" type="instanceOf"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ad2e-3da0-655b-26f6" type="max"/>
       </constraints>
@@ -1102,6 +1086,14 @@
       <selectionEntryGroups/>
       <entryLinks>
         <entryLink id="6849-aa1f-8dec-fd49" name="Artefacts of Chaos" hidden="false" targetId="3c13-922a-683d-7de7" type="selectionEntryGroup">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+          <categoryLinks/>
+        </entryLink>
+        <entryLink id="4c93-ec32-932e-4859" name="Realm Artefacts of Power" hidden="false" targetId="37b0-af21-630c-d8af" type="selectionEntryGroup">
           <profiles/>
           <rules/>
           <infoLinks/>

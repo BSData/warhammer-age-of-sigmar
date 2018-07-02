@@ -11,8 +11,8 @@ Warhammer Age of Sigmar 2017 Edition
 
 **The Battlescribe data editor can cause problems when merging updates. Because of this, and also to avoid duplicated effort where multiple people are working on the same files, please join us on Gitter before you commit changes to the files.**
 
-**UPDATE - May 25, 2018:**
-The Catalogs have been updated to support the Matched Play forces supported in the GHB 2017 with updates through May 2018. 
+**UPDATE -July 2, 2018:**
+The Catalogs have been updated to support Matched Play points and FAQ's for the June 2018 AoS v2.0 release. Core support for Endless Spells, Realms of Origin and Points Lists with no validation for battle-role or points have been added in the new **\***Pitched Battle***\** Profile
 
 #### Contents ####
 [Contents]: #contents

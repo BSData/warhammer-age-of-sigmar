@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="22a9-8d6a-b96d-d4b8" name="Order - Devoted of Sigmar" book="Grand Alliance: Order" revision="4" battleScribeVersion="2.01" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="25" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="22a9-8d6a-b96d-d4b8" name="Order - Devoted of Sigmar" book="Grand Alliance: Order" revision="7" battleScribeVersion="2.01" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="25" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks/>
@@ -485,7 +485,7 @@
       </selectionEntryGroups>
       <entryLinks/>
       <costs>
-        <cost name="pts" costTypeId="points" value="160.0"/>
+        <cost name="pts" costTypeId="points" value="140.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="fc8f-172f-972b-0c8b" name="Excelsior Warpriest" hidden="false" collective="false" type="unit">
@@ -1220,7 +1220,7 @@
         </entryLink>
       </entryLinks>
       <costs>
-        <cost name="pts" costTypeId="points" value="60.0"/>
+        <cost name="pts" costTypeId="points" value="50.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="c176-f3f7-129e-b668" name="War Alter of Sigmar" hidden="false" collective="false" type="unit">
@@ -1318,13 +1318,13 @@
             <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="The Arch Lector atop a War Alter of Sigmar can attempt to unbind 1 spell in each enemy hero phase as is if he were a wizard."/>
           </characteristics>
         </profile>
-        <profile id="0b4b-46c3-b3e9-5fe3" name="Sigmar&apos;s Shield" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+        <profile id="0b4b-46c3-b3e9-5fe3" name="Sigmar&apos;s Shield" book="Grand Alliance: Order Errata, June 2018" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers/>
           <characteristics>
-            <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="You can roll a dice each time a DEVOTED OF SIGMAR model from your army is slain within range of this model (see damage table).  On a 6, that model has been miraculously saved from harm and ignores that wound that slew it."/>
+            <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="If a friendly Devoted of Sigmar model is slain by a wound or mortal wound that has been allocated to the model while it is within range of any friendly models with the Sigmar’s Shield ability, roll a dice before the slain model is removed from play. On a 6, the wound or mortal wound is negated and the model is not slain. The range of the Sigmar’s Shield ability for this model is shown on the damage table."/>
           </characteristics>
         </profile>
         <profile id="30af-5d12-d69b-89ab" name="The Power of Faith" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
@@ -1637,24 +1637,10 @@
       <rules/>
       <infoLinks/>
       <modifiers>
-        <modifier type="decrement" field="points" value="80">
+        <modifier type="set" field="points" value="260">
           <repeats/>
           <conditions>
-            <condition field="selections" scope="b34f-e62d-392c-bb04" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b57a-85b9-63e6-b2d4" type="greaterThan"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-        <modifier type="increment" field="points" value="80">
-          <repeats>
-            <repeat field="selections" scope="b34f-e62d-392c-bb04" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b57a-85b9-63e6-b2d4" repeats="1" roundUp="false"/>
-          </repeats>
-          <conditions/>
-          <conditionGroups/>
-        </modifier>
-        <modifier type="decrement" field="points" value="60">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="b34f-e62d-392c-bb04" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b57a-85b9-63e6-b2d4" type="equalTo"/>
+            <condition field="selections" scope="b34f-e62d-392c-bb04" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="equalTo"/>
           </conditions>
           <conditionGroups/>
         </modifier>
@@ -1698,11 +1684,19 @@
         </categoryLink>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="b57a-85b9-63e6-b2d4" name="10 Flagellants" hidden="false" collective="false" type="unit">
+        <selectionEntry id="b57a-85b9-63e6-b2d4" name="10 Flagellants" hidden="false" collective="false" type="model">
           <profiles/>
           <rules/>
           <infoLinks/>
-          <modifiers/>
+          <modifiers>
+            <modifier type="set" field="points" value="0">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a5ed-63bb-8278-5a6f" type="min"/>
             <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3c2e-972d-66d3-37eb" type="max"/>
@@ -1712,7 +1706,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="points" value="0.0"/>
+            <cost name="pts" costTypeId="points" value="80.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="2559-df37-1510-d0b3" name="Castigating Flails and Clubs" hidden="false" collective="false" type="upgrade">
@@ -1752,7 +1746,7 @@
       <selectionEntryGroups/>
       <entryLinks/>
       <costs>
-        <cost name="pts" costTypeId="points" value="80.0"/>
+        <cost name="pts" costTypeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>
@@ -1770,6 +1764,14 @@
       <selectionEntryGroups/>
       <entryLinks>
         <entryLink id="d4e8-ce2d-aa0a-3a9e" name="Artefacts of Order" hidden="false" targetId="19d0-4499-b76e-96c1" type="selectionEntryGroup">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+          <categoryLinks/>
+        </entryLink>
+        <entryLink id="39c5-5f44-5417-1296" name="Realm Artefacts of Power" hidden="false" targetId="37b0-af21-630c-d8af" type="selectionEntryGroup">
           <profiles/>
           <rules/>
           <infoLinks/>

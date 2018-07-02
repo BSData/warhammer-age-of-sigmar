@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="d844-4a7f-5eb8-18a6" name="Chaos - Brayherd" book="Grand Alliance: Chaos" revision="3" battleScribeVersion="2.01" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="15" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="d844-4a7f-5eb8-18a6" name="Chaos - Brayherd" book="Grand Alliance: Chaos" revision="6" battleScribeVersion="2.01" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="15" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks/>
@@ -362,7 +362,7 @@
           <infoLinks/>
           <modifiers/>
           <characteristics>
-            <characteristic name="Command Ability Details" characteristicTypeId="1b71-4c83-4e8c-093f" value="A Beastlord can use this ability if any attacks it made in the previous turn resulted in an enemy model being slain. If it does so, then until your next hero phase, all BRAYHERD units in your army can add 1 to their charge, run and hit rolls whilst they are within 16&quot; of the Beastlord."/>
+            <characteristic name="Command Ability Details" characteristicTypeId="1b71-4c83-4e8c-093f" value="A Beastlord can use this ability if any attacks it made in the previous turn resulted in an enemy model being slain. If it does so, then until your next hero phase, all BRAYHERD units in your army can add 1 to their charge, run and hit rolls whilst they are within 16&quot; of the Beastlord. The same unit cannot benefit from this command ability more than once in the same phase. *ERRATA Jun&apos;18*"/>
           </characteristics>
         </profile>
         <profile id="cd3e-ba4a-2b87-58ad" name="Hatred of Heroes" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="08 Ability (Unit)">
@@ -558,7 +558,7 @@
         </entryLink>
       </entryLinks>
       <costs>
-        <cost name="pts" costTypeId="points" value="80.0"/>
+        <cost name="pts" costTypeId="points" value="90.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="9a9a-7579-ec51-6d76" name="General" hidden="false" collective="false" type="upgrade">
@@ -712,29 +712,7 @@
       </profiles>
       <rules/>
       <infoLinks/>
-      <modifiers>
-        <modifier type="increment" field="points" value="140">
-          <repeats>
-            <repeat field="selections" scope="4d85-7b64-ec14-e748" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1a70-0c82-31a9-fd14" repeats="1" roundUp="false"/>
-          </repeats>
-          <conditions/>
-          <conditionGroups/>
-        </modifier>
-        <modifier type="decrement" field="points" value="140">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="4d85-7b64-ec14-e748" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1a70-0c82-31a9-fd14" type="greaterThan"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-        <modifier type="decrement" field="points" value="60">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="4d85-7b64-ec14-e748" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1a70-0c82-31a9-fd14" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-      </modifiers>
+      <modifiers/>
       <constraints/>
       <categoryLinks>
         <categoryLink id="e53d-fe35-cd01-9242" name="New CategoryLink" hidden="false" targetId="dd5d-1b9d-1202-478a" primary="false">
@@ -760,11 +738,19 @@
         </categoryLink>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="1a70-0c82-31a9-fd14" name="10 Bestigors" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="1a70-0c82-31a9-fd14" name="10 Bestigors" hidden="false" collective="false" type="model">
           <profiles/>
           <rules/>
           <infoLinks/>
-          <modifiers/>
+          <modifiers>
+            <modifier type="decrement" field="points" value="20">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e2ea-78f3-b1aa-411b" type="min"/>
             <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1edf-5b5a-a9a1-375a" type="max"/>
@@ -774,7 +760,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="points" value="0.0"/>
+            <cost name="pts" costTypeId="points" value="120.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="9ece-b51b-0083-bbf2" name="Bestigor Great Axe" hidden="false" collective="false" type="upgrade">
@@ -831,7 +817,7 @@
         </entryLink>
       </entryLinks>
       <costs>
-        <cost name="pts" costTypeId="points" value="140.0"/>
+        <cost name="pts" costTypeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="d291-6d60-d863-0231" name="Ungor Raiders" hidden="false" collective="false" type="unit">
@@ -876,29 +862,7 @@
           <modifiers/>
         </infoLink>
       </infoLinks>
-      <modifiers>
-        <modifier type="increment" field="points" value="100">
-          <repeats>
-            <repeat field="selections" scope="d291-6d60-d863-0231" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b49b-38da-4fd9-f581" repeats="1" roundUp="false"/>
-          </repeats>
-          <conditions/>
-          <conditionGroups/>
-        </modifier>
-        <modifier type="decrement" field="points" value="100">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="d291-6d60-d863-0231" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b49b-38da-4fd9-f581" type="greaterThan"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-        <modifier type="decrement" field="points" value="40">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="d291-6d60-d863-0231" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b49b-38da-4fd9-f581" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-      </modifiers>
+      <modifiers/>
       <constraints/>
       <categoryLinks>
         <categoryLink id="f592-1025-c095-d955" name="New CategoryLink" hidden="false" targetId="df72-cd00-909b-cb05" primary="false">
@@ -931,7 +895,7 @@
         </categoryLink>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="b49b-38da-4fd9-f581" name="10 Ungor Raiders" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="b49b-38da-4fd9-f581" name="10 Ungor Raiders" hidden="false" collective="false" type="model">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -945,7 +909,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="points" value="0.0"/>
+            <cost name="pts" costTypeId="points" value="80.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="22e7-ccce-0e71-a9d3" name="Raider Bow" hidden="false" collective="false" type="upgrade">
@@ -1035,7 +999,7 @@
         </entryLink>
       </entryLinks>
       <costs>
-        <cost name="pts" costTypeId="points" value="100.0"/>
+        <cost name="pts" costTypeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="17c1-1a15-36ff-4a86" name="Ungors" hidden="false" collective="false" type="unit">
@@ -1080,29 +1044,7 @@
           <modifiers/>
         </infoLink>
       </infoLinks>
-      <modifiers>
-        <modifier type="increment" field="points" value="60">
-          <repeats>
-            <repeat field="selections" scope="17c1-1a15-36ff-4a86" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f872-2484-46b7-e78f" repeats="1" roundUp="false"/>
-          </repeats>
-          <conditions/>
-          <conditionGroups/>
-        </modifier>
-        <modifier type="decrement" field="points" value="60">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="17c1-1a15-36ff-4a86" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f872-2484-46b7-e78f" type="greaterThan"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-        <modifier type="decrement" field="points" value="40">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="17c1-1a15-36ff-4a86" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f872-2484-46b7-e78f" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-      </modifiers>
+      <modifiers/>
       <constraints/>
       <categoryLinks>
         <categoryLink id="6e5b-da64-dfb6-f57e" name="New CategoryLink" hidden="false" targetId="05e2-38e9-a8c3-b35d" primary="false">
@@ -1121,11 +1063,19 @@
         </categoryLink>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="f872-2484-46b7-e78f" name="10 Ungors" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="f872-2484-46b7-e78f" name="10 Ungors" hidden="false" collective="false" type="model">
           <profiles/>
           <rules/>
           <infoLinks/>
-          <modifiers/>
+          <modifiers>
+            <modifier type="decrement" field="points" value="10">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c31c-c426-4af3-e804" type="min"/>
             <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6504-bdc7-df11-5484" type="max"/>
@@ -1135,7 +1085,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="points" value="0.0"/>
+            <cost name="pts" costTypeId="points" value="60.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -1235,7 +1185,7 @@
         </entryLink>
       </entryLinks>
       <costs>
-        <cost name="pts" costTypeId="points" value="60.0"/>
+        <cost name="pts" costTypeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="04c9-810f-2f9a-91d2" name="Allegiance" hidden="false" collective="false" type="upgrade">
@@ -1334,29 +1284,7 @@
       </profiles>
       <rules/>
       <infoLinks/>
-      <modifiers>
-        <modifier type="increment" field="points" value="80">
-          <repeats>
-            <repeat field="selections" scope="7afe-7eae-9c2e-f9cb" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c84c-29ee-c820-4ad2" repeats="1" roundUp="false"/>
-          </repeats>
-          <conditions/>
-          <conditionGroups/>
-        </modifier>
-        <modifier type="decrement" field="points" value="80">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="7afe-7eae-9c2e-f9cb" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c84c-29ee-c820-4ad2" type="greaterThan"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-        <modifier type="decrement" field="points" value="30">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="7afe-7eae-9c2e-f9cb" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c84c-29ee-c820-4ad2" type="equalTo"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-      </modifiers>
+      <modifiers/>
       <constraints/>
       <categoryLinks>
         <categoryLink id="cbe7-ca4a-de58-fc00" name="New CategoryLink" hidden="false" targetId="05e2-38e9-a8c3-b35d" primary="false">
@@ -1375,7 +1303,7 @@
         </categoryLink>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="c84c-29ee-c820-4ad2" name="10 Gors" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="c84c-29ee-c820-4ad2" name="10 Gors" hidden="false" collective="false" type="model">
           <profiles>
             <profile id="9bf7-be8b-bb4f-d399" name="Gor Blade" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="03 Weapon">
               <profiles/>
@@ -1395,7 +1323,15 @@
           </profiles>
           <rules/>
           <infoLinks/>
-          <modifiers/>
+          <modifiers>
+            <modifier type="decrement" field="points" value="10">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a1e6-efb0-e7e5-bd44" type="min"/>
             <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ba27-aa13-64a0-90ab" type="max"/>
@@ -1405,7 +1341,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="points" value="0.0"/>
+            <cost name="pts" costTypeId="points" value="80.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -1493,7 +1429,7 @@
         </entryLink>
       </entryLinks>
       <costs>
-        <cost name="pts" costTypeId="points" value="80.0"/>
+        <cost name="pts" costTypeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="33c2-cb5f-8ee8-7c1e" name="Great Bray-shaman" hidden="false" collective="false" type="unit">
@@ -1572,16 +1508,16 @@
         </categoryLink>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="48b4-2376-01be-8aad" name="Savage Dominion" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="48b4-2376-01be-8aad" name="Devolve" hidden="false" collective="false" type="upgrade">
           <profiles>
-            <profile id="2d43-cdc6-da2e-fd2b" name="Savage Dominion" hidden="false" profileTypeId="2e81-5e22-c6e1-73cb" profileTypeName="05 Spell">
+            <profile id="2d43-cdc6-da2e-fd2b" name="Devolve" hidden="false" profileTypeId="2e81-5e22-c6e1-73cb" profileTypeName="05 Spell">
               <profiles/>
               <rules/>
               <infoLinks/>
               <modifiers/>
               <characteristics>
-                <characteristic name="Casting Value" characteristicTypeId="2508-b604-1258-a920" value="9"/>
-                <characteristic name="Description" characteristicTypeId="76ff-781d-b8e6-5f27" value="If successfully cast, you can summon one CHAOS MONSTER and add it to your army. Set up the summoned model within 6&quot; of the edge of the battlefield and more than 9&quot; from any enemy models. This counts as its move for the upcoming movement phase."/>
+                <characteristic name="Casting Value" characteristicTypeId="2508-b604-1258-a920" value="7"/>
+                <characteristic name="Description" characteristicTypeId="76ff-781d-b8e6-5f27" value="If successfully cast, pick an enemy unit within 18&quot; of the caster that is visible to them and not within 3&quot; of any friendly units. Your opponent must move that unit 2D6 inches. In addition, that unit must finish that move as close as possible to the model from the caster’s army that was nearest at the start of that move. *ERRATA Jun&apos;18*"/>
               </characteristics>
             </profile>
           </profiles>
@@ -1678,7 +1614,7 @@
         </entryLink>
       </entryLinks>
       <costs>
-        <cost name="pts" costTypeId="points" value="90.0"/>
+        <cost name="pts" costTypeId="points" value="100.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="9a50-0724-a3d4-4680" name="Tuskgor Chariots" hidden="false" collective="false" type="unit">
@@ -1695,22 +1631,7 @@
       </profiles>
       <rules/>
       <infoLinks/>
-      <modifiers>
-        <modifier type="increment" field="points" value="60">
-          <repeats>
-            <repeat field="selections" scope="9a50-0724-a3d4-4680" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c966-93be-cf3b-1fb4" repeats="1" roundUp="false"/>
-          </repeats>
-          <conditions/>
-          <conditionGroups/>
-        </modifier>
-        <modifier type="decrement" field="points" value="60">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="9a50-0724-a3d4-4680" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c966-93be-cf3b-1fb4" type="greaterThan"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-      </modifiers>
+      <modifiers/>
       <constraints/>
       <categoryLinks>
         <categoryLink id="10cc-df61-2b35-b9d6" name="New CategoryLink" hidden="false" targetId="dd5d-1b9d-1202-478a" primary="false">
@@ -1815,14 +1736,14 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="points" value="0.0"/>
+            <cost name="pts" costTypeId="points" value="60.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups/>
       <entryLinks/>
       <costs>
-        <cost name="pts" costTypeId="points" value="60.0"/>
+        <cost name="pts" costTypeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="d676-1a4b-df19-36f5" name="Allegiance Abilities" hidden="false" collective="false" type="upgrade">
@@ -1929,7 +1850,6 @@
           <modifiers/>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8c4c-9237-46e1-3e51" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a44b-7698-3fb7-f718" type="max"/>
           </constraints>
           <categoryLinks/>
           <selectionEntries/>
@@ -1940,7 +1860,9 @@
               <rules/>
               <infoLinks/>
               <modifiers/>
-              <constraints/>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0f7c-577f-9fff-369c" type="max"/>
+              </constraints>
               <categoryLinks>
                 <categoryLink id="43f9-da0e-380c-636a" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true">
                   <profiles/>
@@ -2102,7 +2024,6 @@
           <modifiers/>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9f5c-c85f-14c8-4560" type="min"/>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1dd1-36c3-a827-fe7c" type="max"/>
           </constraints>
           <categoryLinks/>
           <selectionEntries/>
@@ -2113,7 +2034,9 @@
               <rules/>
               <infoLinks/>
               <modifiers/>
-              <constraints/>
+              <constraints>
+                <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5360-4998-9bfa-dc92" type="max"/>
+              </constraints>
               <categoryLinks>
                 <categoryLink id="14cd-f49f-2268-0f38" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true">
                   <profiles/>
@@ -2240,7 +2163,7 @@
       </selectionEntryGroups>
       <entryLinks/>
       <costs>
-        <cost name="pts" costTypeId="points" value="240.0"/>
+        <cost name="pts" costTypeId="points" value="210.0"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>
@@ -2663,6 +2586,14 @@
               <conditionGroups/>
             </modifier>
           </modifiers>
+          <constraints/>
+          <categoryLinks/>
+        </entryLink>
+        <entryLink id="81bc-7e1b-cef5-d241" name="Realm Artefacts of Power" hidden="false" targetId="37b0-af21-630c-d8af" type="selectionEntryGroup">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
           <constraints/>
           <categoryLinks/>
         </entryLink>

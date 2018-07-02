@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="6ae0-54d7-1f10-1e34" name="Chaos - Warherds" book="Grand Alliance: Chaos" revision="3" battleScribeVersion="2.01" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="25" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="6ae0-54d7-1f10-1e34" name="Chaos - Warherds" book="Grand Alliance: Chaos" revision="6" battleScribeVersion="2.01" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="25" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks/>
@@ -255,22 +255,7 @@
       </profiles>
       <rules/>
       <infoLinks/>
-      <modifiers>
-        <modifier type="decrement" field="points" value="180">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="0b07-2253-32ce-3bc2" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d619-674c-e5b0-d682" type="greaterThan"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-        <modifier type="increment" field="points" value="180">
-          <repeats>
-            <repeat field="selections" scope="0b07-2253-32ce-3bc2" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d619-674c-e5b0-d682" repeats="1" roundUp="false"/>
-          </repeats>
-          <conditions/>
-          <conditionGroups/>
-        </modifier>
-      </modifiers>
+      <modifiers/>
       <constraints/>
       <categoryLinks>
         <categoryLink id="22c6-2454-1ba7-9030" name="New CategoryLink" hidden="false" targetId="1152-b488-d2a1-3073" primary="false">
@@ -310,7 +295,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="points" value="0.0"/>
+            <cost name="pts" costTypeId="points" value="160.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="92e3-efda-857a-85cd" name="Warherd Banner Bearer" hidden="false" collective="false" type="upgrade">
@@ -483,7 +468,7 @@
       </selectionEntryGroups>
       <entryLinks/>
       <costs>
-        <cost name="pts" costTypeId="points" value="180.0"/>
+        <cost name="pts" costTypeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="9ede-34b2-d65d-37c1" name="Cygor" hidden="false" collective="false" type="unit">
@@ -703,7 +688,7 @@
       <selectionEntryGroups/>
       <entryLinks/>
       <costs>
-        <cost name="pts" costTypeId="points" value="200.0"/>
+        <cost name="pts" costTypeId="points" value="180.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="1611-a7dc-23c8-fc7b" name="Doombull" hidden="false" collective="false" type="unit">
@@ -714,7 +699,7 @@
           <infoLinks/>
           <modifiers/>
           <characteristics>
-            <characteristic name="Command Ability Details" characteristicTypeId="1b71-4c83-4e8c-093f" value="If a Doombull uses this ability, then until your next hero phase, you can add 1 to all wound rolls made for WARHERD units in your army that are within 16&quot; of this model when they attack in the combat phase."/>
+            <characteristic name="Command Ability Details" characteristicTypeId="1b71-4c83-4e8c-093f" value="If a Doombull uses this ability, then until your next hero phase, you can add 1 to all wound rolls made for WARHERD units in your army that are within 16&quot; of this model when they attack in the combat phase. The same unit cannot benefit from this command ability more than once in the same phase.*ERRATA Jun&apos;18*"/>
           </characteristics>
         </profile>
         <profile id="6937-033f-4264-b175" name="Doombull" hidden="false" profileTypeId="1960-ca8e-67ce-2014" profileTypeName="01 Unit">
@@ -1182,7 +1167,22 @@
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <repeats/>
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b78c-c342-c8aa-aa45" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="62e4-370f-3318-cdbd" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="78f3-8a59-699a-61e8" type="instanceOf"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="04c9-3af0-3c4e-f654" type="max"/>
       </constraints>
@@ -1191,6 +1191,14 @@
       <selectionEntryGroups/>
       <entryLinks>
         <entryLink id="921c-6212-1402-1da7" name="Artefacts of Chaos" hidden="false" targetId="3c13-922a-683d-7de7" type="selectionEntryGroup">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+          <categoryLinks/>
+        </entryLink>
+        <entryLink id="4faf-2e53-b5e2-36a2" name="Realm Artefacts of Power" hidden="false" targetId="37b0-af21-630c-d8af" type="selectionEntryGroup">
           <profiles/>
           <rules/>
           <infoLinks/>
