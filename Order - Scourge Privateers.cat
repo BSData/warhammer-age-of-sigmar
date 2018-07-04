@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="deec-d475-9196-86ea" name="Order - Scourge Privateers" book="Grand Alliance: Order" revision="6" battleScribeVersion="2.01" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="25" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="deec-d475-9196-86ea" name="Order - Scourge Privateers" book="Grand Alliance: Order" revision="7" battleScribeVersion="2.01" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="25" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks/>
@@ -668,19 +668,27 @@
       </profiles>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="points" value="260">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="c78f-05e8-eb26-9c75" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="equalTo"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <constraints/>
       <categoryLinks/>
       <selectionEntries>
-        <selectionEntry id="8b70-d38e-1e61-d8ed" name="10 Black Ark Corsairs" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="8b70-d38e-1e61-d8ed" name="10 Black Ark Corsairs" hidden="false" collective="false" type="model">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers>
-            <modifier type="decrement" field="points" value="60">
+            <modifier type="set" field="points" value="0">
               <repeats/>
               <conditions>
-                <condition field="selections" scope="c78f-05e8-eb26-9c75" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8b70-d38e-1e61-d8ed" type="equalTo"/>
+                <condition field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="equalTo"/>
               </conditions>
               <conditionGroups/>
             </modifier>
@@ -906,26 +914,11 @@
       </profiles>
       <rules/>
       <infoLinks/>
-      <modifiers>
-        <modifier type="increment" field="points" value="100">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="30f7-1600-90d4-7d5f" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="db37-b9f6-6378-a246" type="greaterThan"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-        <modifier type="increment" field="points" value="100">
-          <repeats>
-            <repeat field="selections" scope="30f7-1600-90d4-7d5f" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="db37-b9f6-6378-a246" repeats="1" roundUp="false"/>
-          </repeats>
-          <conditions/>
-          <conditionGroups/>
-        </modifier>
-      </modifiers>
+      <modifiers/>
       <constraints/>
       <categoryLinks/>
       <selectionEntries>
-        <selectionEntry id="db37-b9f6-6378-a246" name="Scourgerunner Chariot" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="db37-b9f6-6378-a246" name="Scourgerunner Chariot" hidden="false" collective="false" type="model">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -939,7 +932,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="points" value="0.0"/>
+            <cost name="pts" costTypeId="points" value="80.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="ef94-c5b5-ce7b-8471" name="Dark Steeds&apos; Vicious Bites" hidden="false" collective="false" type="upgrade">
@@ -1077,9 +1070,7 @@
       </selectionEntries>
       <selectionEntryGroups/>
       <entryLinks/>
-      <costs>
-        <cost name="pts" costTypeId="points" value="80.0"/>
-      </costs>
+      <costs/>
     </selectionEntry>
     <selectionEntry id="8f60-3005-a32a-60a3" name="Realm Reavers" hidden="false" collective="false" type="upgrade">
       <profiles>
