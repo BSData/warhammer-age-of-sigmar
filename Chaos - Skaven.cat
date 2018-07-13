@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="bcc4-c671-9435-d259" name="Chaos - Skaven" book="Chaos Battletome - Grand Alliance: Chaos / Battletome: Skaven Pestilens" revision="8" battleScribeVersion="2.01" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://gitter.im/BSData/warhammer-age-of-sigmar" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="23" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="bcc4-c671-9435-d259" name="Chaos - Skaven" book="Chaos Battletome - Grand Alliance: Chaos / Battletome: Skaven Pestilens" revision="10" battleScribeVersion="2.01" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://gitter.im/BSData/warhammer-age-of-sigmar" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="23" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks/>
@@ -11268,7 +11268,9 @@
             </selectionEntryGroup>
           </selectionEntryGroups>
           <entryLinks/>
-          <costs/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups/>
@@ -11345,7 +11347,7 @@
         </categoryLink>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="2673-7682-0b49-852a" name="10 Stormvermin" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="2673-7682-0b49-852a" name="10 Stormvermin" hidden="false" collective="false" type="model">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -11465,6 +11467,31 @@
           <entryLinks/>
           <costs>
             <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="9511-4b57-af91-1f38" name="Horde Pricing" hidden="false" collective="false" type="upgrade">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="f870-2e45-e4aa-eb7b" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2673-7682-0b49-852a" type="lessThan"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c436-5197-72a6-a815" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1ea4-c862-0958-34e5" type="max"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="80.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -14281,7 +14308,14 @@
                   <infoLinks/>
                   <modifiers/>
                   <characteristics>
-                    <characteristic name="Battle Trait Details" characteristicTypeId="9fdd-b4b1-5f7a-0970" value="At the start of the battle, before either army is set up, roll a D3 and add 3 to the roll. The result is the number of warpstone sparks that the army has available (you may wish to keep track of them with small counters). Each warpstone spark can be used once per battle, either to re-roll a casting roll or unbinding roll for a SKRYRE WIZARD from your army, or to re-roll a failed hit or wound roll for an attack made by a SKRYRE HERO from your army, or to double the Damage characteristic of a weapon used by a SKRYRE model from your army for one successful attack. You must decide if you want to re-roll a roll immediately after making it. You cannot use more than one warpstone spark in the same phase. Roll a dice after using the warpstone spark and completing the spell or attacks it was used to affect. On a roll of 1 the unit that cast the spell or made the attack suffers D6 mortal wounds."/>
+                    <characteristic name="Battle Trait Details" characteristicTypeId="9fdd-b4b1-5f7a-0970" value="At the start of the battle, before either army is set up, roll a D3 and add 3 to the roll. The result is the number of warpstone sparks that you can use during the battle. Keep track of these with small counters.
+Each time you use a warpstone spark, discard one of your warpstone spark counters. Each warpstone spark can be used once per battle and you cannot use more than one warpstone spark in the same phase.
+Roll a dice after using a warpstone spark and resolving the spell or attack it was used to affect. On a 1 the unit that cast the spell or made the attack suffers D3 mortal wounds.
+Each warpstone spark can be used to do one of the following:
+• Re-roll a casting roll or unbinding roll for a friendly SKRYRE WIZARD.
+• Re-roll a failed hit or wound roll for an attack made by a friendly SKRYRE HERO.
+• Add 1 to the Damage characteristic of a weapon used by a friendly SKRYREmodel that has made a successful attack.
+You must decide if you want to re-roll a roll immediately after making it."/>
                   </characteristics>
                 </profile>
                 <profile id="7292-656a-33ba-f11b" name="Strength in Numbers" hidden="false" profileTypeId="c137-4d1f-9d1a-524d" profileTypeName="Battle Trait">
@@ -14290,7 +14324,7 @@
                   <infoLinks/>
                   <modifiers/>
                   <characteristics>
-                    <characteristic name="Battle Trait Details" characteristicTypeId="9fdd-b4b1-5f7a-0970" value="When a SKAVEN SKRYRE unit takes a battleshock test, add 2 to its Bravery for every 10 models in the unit, rather than only adding 1 for every 10 models."/>
+                    <characteristic name="Battle Trait Details" characteristicTypeId="9fdd-b4b1-5f7a-0970" value="When a SKAVEN SKRYRE unit takes a battleshock test, add 2 instead of 1 to its Bravery characteristic for every 10 models in the unit."/>
                   </characteristics>
                 </profile>
               </profiles>
