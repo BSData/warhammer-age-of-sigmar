@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" book="The General&apos;s Handbook" revision="40" battleScribeVersion="2.01" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" book="The General&apos;s Handbook" revision="41" battleScribeVersion="2.01" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <profiles/>
   <rules>
     <rule id="a954-6cfc-59ca-674e" name="Inspiring Presence" book="Core Rules" page="3" hidden="false">
@@ -604,6 +604,160 @@
       <constraints/>
     </categoryEntry>
     <categoryEntry id="8be8-3ccd-be93-b55e" name="Command Points" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="5647-b7a8-9716-1d17" name="AETHERVOID PENDULUM" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="0ac5-cc94-b7fe-7160" name="BALEWIND VORTEX" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="bed0-e4a0-f704-1eab" name="AZYR" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="1619-fea5-de7e-8a67" name="CHRONOMANTIC COGS" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="0b26-9340-45cf-07ee" name="GHYRAN" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="14d2-605b-536f-dd47" name="EMERALD LIFESWORM" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="722d-a8ac-da30-e6be" name="GEMINIDS OF UHL-GYSH" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="2b18-8032-739f-7929" name="HYSH" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="3f66-cb68-8afb-ce99" name="ULGU" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="2cc9-0867-b2e3-da55" name="SHYISH" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="aeb3-e51f-7f02-619e" name="MALEVOLENT MAELSTROM" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="316f-32e5-0c7c-72af" name="PRISMATIC PALISADE" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="7eb6-e91d-bf00-1c84" name="PURPLE SUN OF SHYISH" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="65dc-260f-90f3-8a5a" name="QUICKSILVER SWORDS" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="97c8-2ca9-2b12-327f" name="CHAMON" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="c33b-1c2d-83d9-53df" name="GHUR" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="8b8e-c0b7-d668-19f2" name="RAVENAK&apos;S GNASHING JAWS" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="4949-2041-939a-baa6" name="SOULSNARE SHACKLES" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="8e84-834f-0c7d-0d45" name="SUFFOCATING GRAVETIDE" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="f760-2ebe-1af7-ff48" name="AQSHY" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="3115-9f9c-85db-1d63" name="THE BURNING HEAD" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+    </categoryEntry>
+    <categoryEntry id="82b0-19da-b868-9f6c" name="UMBRAL SPELLPORTAL" hidden="false">
       <profiles/>
       <rules/>
       <infoLinks/>
@@ -1452,7 +1606,9 @@
               <selectionEntries/>
               <selectionEntryGroups/>
               <entryLinks/>
-              <costs/>
+              <costs>
+                <cost name="pts" costTypeId="points" value="0.0"/>
+              </costs>
             </selectionEntry>
             <selectionEntry id="aa3a-742d-9e34-e701" name="- 250" hidden="false" collective="false" type="upgrade">
               <profiles/>
@@ -1466,7 +1622,9 @@
               <selectionEntries/>
               <selectionEntryGroups/>
               <entryLinks/>
-              <costs/>
+              <costs>
+                <cost name="pts" costTypeId="points" value="0.0"/>
+              </costs>
             </selectionEntry>
             <selectionEntry id="4c1d-7a55-fa32-d2be" name="+ 250" hidden="false" collective="false" type="upgrade">
               <profiles/>
@@ -1480,7 +1638,9 @@
               <selectionEntries/>
               <selectionEntryGroups/>
               <entryLinks/>
-              <costs/>
+              <costs>
+                <cost name="pts" costTypeId="points" value="0.0"/>
+              </costs>
             </selectionEntry>
             <selectionEntry id="45c9-0873-d072-007a" name="+  500" hidden="false" collective="false" type="upgrade">
               <profiles/>
@@ -1494,7 +1654,9 @@
               <selectionEntries/>
               <selectionEntryGroups/>
               <entryLinks/>
-              <costs/>
+              <costs>
+                <cost name="pts" costTypeId="points" value="0.0"/>
+              </costs>
             </selectionEntry>
           </selectionEntries>
           <selectionEntryGroups/>
@@ -1502,7 +1664,9 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks/>
-      <costs/>
+      <costs>
+        <cost name="pts" costTypeId="points" value="0.0"/>
+      </costs>
     </selectionEntry>
   </selectionEntries>
   <entryLinks>
@@ -6072,8 +6236,54 @@
       <categoryLinks/>
       <selectionEntries>
         <selectionEntry id="982a-a39f-ef3f-4720" name="Balewind Vortex" hidden="false" collective="false" type="upgrade">
-          <profiles/>
-          <rules/>
+          <profiles>
+            <profile id="4a04-ce81-a394-26d2" name="Summon Balewind Vortex" hidden="false" profileTypeId="2e81-5e22-c6e1-73cb" profileTypeName="Spell">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Casting Value" characteristicTypeId="2508-b604-1258-a920" value="6"/>
+                <characteristic name="Description" characteristicTypeId="76ff-781d-b8e6-5f27" value="WIZARDS with a Wounds characteristic of 9 or more, that are part of a unit of two or more models, or that are already on a Balewind Vortex, cannot attempt to cast this spell. If successfully cast, set up a Balewind Vortex model within 1&quot; of the caster and more than 3&quot; from any enemy models, and then place the caster on the upper platform."/>
+              </characteristics>
+            </profile>
+            <profile id="cb85-22fc-4c5c-25df" name="Against the Aetheric Wind" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="Add 1 to save rolls for a WIZARD on a Balewind Vortex. "/>
+              </characteristics>
+            </profile>
+            <profile id="9b47-3d3c-feee-7332" name="Arcane Invigoration" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="A WIZARD on a Balewind Vortex can attempt to cast an additional spell in each of their hero phases (including the turn in which the Summon Balewind Vortex spell was cast), and you can add 6&quot; to the range of any spells that the WIZARD casts."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules>
+            <rule id="029c-ba9f-e0c9-5988" name="Balewind Vortex" hidden="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <description>As long as the Balewind Vortex remains on the battlefield, the caster and the Balewind Vortex are treated as being a single model
+from the caster’s army that uses the caster’s warscroll as well as the endless spells rules. It is treated as an enemy model by the opposing player’s army. A WIZARD on a Balewind Vortex cannot move. 
+
+If a WIZARD on a Balewind Vortex attempts to dispel it, the attempt is automatically successful (do not roll any dice). This uses up the additional spell that the WIZARD would have received in that hero phase, and still counts as the single attempt they can make to dispel an endless spell this hero phase, but allows them to use any remaining spell casting attempts normally. 
+
+If the WIZARD on the Balewind Vortex is slain, then the Balewind Vortex is immediately dispelled and removed from play along with the slain WIZARD. 
+
+If a Balewind Vortex is dispelled and the WIZARD on it has not been slain, set up the WIZARD wholly within 6&quot; of the Balewind
+Vortex and more than 3&quot; from any enemy models, and then remove the Balewind Vortex model from play. If it is impossible
+to set up the WIZARD, then the WIZARD is slain.</description>
+            </rule>
+          </rules>
           <infoLinks/>
           <modifiers/>
           <constraints>
@@ -6081,6 +6291,13 @@
           </constraints>
           <categoryLinks>
             <categoryLink id="e035-7e9d-b2fe-88c8" name="New CategoryLink" hidden="false" targetId="31f4-2067-3ade-e6f8" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+            <categoryLink id="dfa8-9a75-84a0-b762" name="BALEWIND VORTEX" hidden="false" targetId="0ac5-cc94-b7fe-7160" primary="false">
               <profiles/>
               <rules/>
               <infoLinks/>
@@ -6096,15 +6313,76 @@
           </costs>
         </selectionEntry>
         <selectionEntry id="a09c-d5d6-81b7-5786" name="Aethervoid Pendulum" hidden="false" collective="false" type="upgrade">
-          <profiles/>
+          <profiles>
+            <profile id="e0e5-efed-e187-864b" name="Summon Aethervoid Pendulum" hidden="false" profileTypeId="2e81-5e22-c6e1-73cb" profileTypeName="Spell">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Casting Value" characteristicTypeId="2508-b604-1258-a920" value="6"/>
+                <characteristic name="Description" characteristicTypeId="76ff-781d-b8e6-5f27" value="If successfully cast, set up an Aethervoid Pendulum model wholly within 6&quot; of the caster so that it points lengthways in the direction you wish it to move."/>
+              </characteristics>
+            </profile>
+            <profile id="0153-e77d-010e-2cbb" name="Predatory" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="An Aethervoid Pendulum is a predatory endless spell. It can move up to 8&quot; and can fly. "/>
+              </characteristics>
+            </profile>
+            <profile id="4040-1250-26f7-bc80" name="Slicing Into Reality" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="When this model is set up, the player who set it up can immediately make a move with it."/>
+              </characteristics>
+            </profile>
+            <profile id="18f9-0fe9-0f67-6035" name="Scything Blade" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="After this model has moved, each unit that has any models it passed across, and each other unit that is within 1&quot; of it at the end of its move, suffers D6 mortal wounds. "/>
+              </characteristics>
+            </profile>
+            <profile id="e980-657b-8217-c235" name="Unstoppable Mechanism" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="Whenever you set up an Aethervoid Pendulum, you must place it lengthways in the direction you wish it to move. Whenever it moves, move it in a straight line in that direction."/>
+              </characteristics>
+            </profile>
+          </profiles>
           <rules/>
-          <infoLinks/>
+          <infoLinks>
+            <infoLink id="231c-cd93-5dc5-c424" name="Fly" hidden="false" targetId="8e0c-cbe4-27be-8a30" type="profile">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+          </infoLinks>
           <modifiers/>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c56d-2b1e-13df-e2c4" type="max"/>
           </constraints>
           <categoryLinks>
             <categoryLink id="5fd3-8482-c9c6-16d1" name="New CategoryLink" hidden="false" targetId="31f4-2067-3ade-e6f8" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+            <categoryLink id="9174-0ecd-a99d-872a" name="AETHERVOID PENDULUM" hidden="false" targetId="5647-b7a8-9716-1d17" primary="false">
               <profiles/>
               <rules/>
               <infoLinks/>
@@ -6120,7 +6398,31 @@
           </costs>
         </selectionEntry>
         <selectionEntry id="88d8-6a1f-8483-b6ea" name="Chronomatic Cogs" hidden="false" collective="false" type="upgrade">
-          <profiles/>
+          <profiles>
+            <profile id="d450-442d-f4bc-596c" name="Summon Chronomatic Cogs" hidden="false" profileTypeId="2e81-5e22-c6e1-73cb" profileTypeName="Spell">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Casting Value" characteristicTypeId="2508-b604-1258-a920" value="7"/>
+                <characteristic name="Description" characteristicTypeId="76ff-781d-b8e6-5f27" value="If successfully cast, set up a Chronomantic Cogs model wholly within 12&quot; of the caster. "/>
+              </characteristics>
+            </profile>
+            <profile id="9575-69c3-78c5-9937" name="Mechanisms of Time" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="In their controlling player’s hero phase, a single Wizard within 9&quot; of this model may manipulate the cogs to increase or decrease the flow of time. They may do this in the same phase as the Chronomantic Cogs are set up. If they do so, choose one of the effects opposite. The effect lasts until their next hero phase, or until an enemy Wizard chooses to manipulate the cogs.
+
+Speed Up Time: Add 2&quot; to the Move characteristic of all units on the battlefield. In addition, add 2 to charge rolls for all units on the battlefield.
+
+Slow Down Time: The wizard manipulating the cogs can cast 1 additional spell in this hero phase. In addition, re-roll failed save rolls for that wizard."/>
+              </characteristics>
+            </profile>
+          </profiles>
           <rules/>
           <infoLinks/>
           <modifiers/>
@@ -6129,6 +6431,20 @@
           </constraints>
           <categoryLinks>
             <categoryLink id="f35f-fab0-729b-5bb9" name="New CategoryLink" hidden="false" targetId="31f4-2067-3ade-e6f8" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+            <categoryLink id="02d1-a9c7-4396-b90d" name="AZYR" hidden="false" targetId="bed0-e4a0-f704-1eab" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+            <categoryLink id="9cc5-6780-8953-61aa" name="CHRONOMANTIC COGS" hidden="false" targetId="1619-fea5-de7e-8a67" primary="false">
               <profiles/>
               <rules/>
               <infoLinks/>
@@ -6144,15 +6460,74 @@
           </costs>
         </selectionEntry>
         <selectionEntry id="7c3d-e67e-928b-10cc" name="Emerald Lifeswarm" hidden="false" collective="false" type="upgrade">
-          <profiles/>
+          <profiles>
+            <profile id="1820-904c-ab47-f3ad" name="Summon Emerald Lifeswarm" hidden="false" profileTypeId="2e81-5e22-c6e1-73cb" profileTypeName="Spell">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Casting Value" characteristicTypeId="2508-b604-1258-a920" value="6"/>
+                <characteristic name="Description" characteristicTypeId="76ff-781d-b8e6-5f27" value="If successfully cast, set up an Emerald Lifeswarm model wholly within 15&quot; of the caster. "/>
+              </characteristics>
+            </profile>
+            <profile id="9a33-3b30-d7da-472d" name="Predatory" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="An Emerald Lifeswarm is a predatory endless spell. Emerald Lifeswarms can move up to 10&quot; and can fly."/>
+              </characteristics>
+            </profile>
+            <profile id="9148-f96b-19db-e885" name="Bounteous Healing" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="After this model is set up or after it has moved, pick 1 unit within 1&quot; of it. You can either heal D3 wounds that have been allocated to that unit or, if no wounds are currently allocated to the unit, you may return a number of slain models to it that have a combined Wounds characteristic equal to or less than the roll of a D3. "/>
+              </characteristics>
+            </profile>
+            <profile id="c1fe-5b0f-4b16-5dfc" name="Empowered by Ghyran" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="If your battle is taking place in the Realm of Life, roll a D6 to determine the number of wounds healed or wounds worth of slain models returned by the Emerald Lifeswarm’s Bounteous Healing ability. "/>
+              </characteristics>
+            </profile>
+          </profiles>
           <rules/>
-          <infoLinks/>
+          <infoLinks>
+            <infoLink id="2b18-2f4f-a24f-e828" name="Fly" hidden="false" targetId="8e0c-cbe4-27be-8a30" type="profile">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+          </infoLinks>
           <modifiers/>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="09f5-f937-401d-ee13" type="max"/>
           </constraints>
           <categoryLinks>
             <categoryLink id="c9e7-8860-645a-2ac0" name="New CategoryLink" hidden="false" targetId="31f4-2067-3ade-e6f8" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+            <categoryLink id="f2db-2be5-ace8-d6ce" name="EMERALD LIFESWORM" hidden="false" targetId="14d2-605b-536f-dd47" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+            <categoryLink id="16e1-e0d9-3073-3a8a" name="GHYRAN" hidden="false" targetId="0b26-9340-45cf-07ee" primary="false">
               <profiles/>
               <rules/>
               <infoLinks/>
@@ -6168,15 +6543,101 @@
           </costs>
         </selectionEntry>
         <selectionEntry id="ffa3-5211-7c11-afc6" name="Geminids of Uhl-Gyish" hidden="false" collective="false" type="upgrade">
-          <profiles/>
+          <profiles>
+            <profile id="5620-ddd2-449f-e2d2" name="Summon Geminids of Uhl-Gyish" hidden="false" profileTypeId="2e81-5e22-c6e1-73cb" profileTypeName="Spell">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Casting Value" characteristicTypeId="2508-b604-1258-a920" value="7"/>
+                <characteristic name="Description" characteristicTypeId="76ff-781d-b8e6-5f27" value="If successfully cast, set up both models within 6&quot; of each other and both wholly within 18&quot; of the caster. You must then nominate one model to be the Light Geminid and the other to be the Shadow Geminid."/>
+              </characteristics>
+            </profile>
+            <profile id="6fea-3e30-c272-a3cb" name="Unleashed" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="When this model is set up, the player who set it up can immediately make a move with it. "/>
+              </characteristics>
+            </profile>
+            <profile id="72c5-5472-f2f9-2532" name="Tendrils of Shadow and Light" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="After the Shadow Geminid model has moved, each unit that has any models it passed across suffers D3 mortal wounds. In addition, subtract 1 (to a minimum of 1) from the Attacks characteristic of melee weapons used by each unit that has any models it passed across until the end of the battle round.
+
+After the Light Geminid model has moved, each unit that has any models it passed across suffers D3 mortal wounds. In addition, subtract 1 from hit rolls for each unit that has any models it passed across until the end of the battle round."/>
+              </characteristics>
+            </profile>
+            <profile id="3429-c00a-619d-471f" name="Empowered by Hysh" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="If your battle is taking place in the Realm of Light, you can re-roll the dice to determine the number of mortal wounds suffered by a unit that has any models passed across by the Light Geminid."/>
+              </characteristics>
+            </profile>
+            <profile id="3fe3-19d5-e61c-f13e" name="Empowered by Ulgu" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="If your battle is taking place in the Realm of Shadow, you can re-roll the dice to determine the number of mortal wounds suffered by a unit that has any models passed across by the Shadow Geminid."/>
+              </characteristics>
+            </profile>
+            <profile id="4aa0-8031-eff6-7a9c" name="Predatory" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="Geminids of Uhl-Gysh is a predatory endless spell. They can move up to 8&quot; and can fly. When you move this endless spell, the second model must finish its move within 6&quot; of the first. If this is impossible, this spell is dispelled. "/>
+              </characteristics>
+            </profile>
+          </profiles>
           <rules/>
-          <infoLinks/>
+          <infoLinks>
+            <infoLink id="6b47-2286-38ec-5a46" name="Fly" hidden="false" targetId="8e0c-cbe4-27be-8a30" type="profile">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+          </infoLinks>
           <modifiers/>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a707-d029-6cfd-17c7" type="max"/>
           </constraints>
           <categoryLinks>
             <categoryLink id="9d3d-a6fa-2ff9-a847" name="New CategoryLink" hidden="false" targetId="31f4-2067-3ade-e6f8" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+            <categoryLink id="17a0-61e7-608e-a4df" name="GEMINIDS OF UHL-GYSH" hidden="false" targetId="722d-a8ac-da30-e6be" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+            <categoryLink id="c74d-c99b-8514-b4bc" name="HYSH" hidden="false" targetId="2b18-8032-739f-7929" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+            <categoryLink id="cb77-2ff1-f6d2-fdeb" name="ULGU" hidden="false" targetId="3f66-cb68-8afb-ce99" primary="false">
               <profiles/>
               <rules/>
               <infoLinks/>
@@ -6192,15 +6653,85 @@
           </costs>
         </selectionEntry>
         <selectionEntry id="90d3-f76c-d63e-7eeb" name="Malevolent Maelstrom" hidden="false" collective="false" type="upgrade">
-          <profiles/>
+          <profiles>
+            <profile id="e591-6106-2a1d-a035" name="Summon Malevolent Maelstrom" hidden="false" profileTypeId="2e81-5e22-c6e1-73cb" profileTypeName="Spell">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Casting Value" characteristicTypeId="2508-b604-1258-a920" value="7"/>
+                <characteristic name="Description" characteristicTypeId="76ff-781d-b8e6-5f27" value="If successfully cast, set up a Malevolent Maelstrom model wholly within 18&quot; of the caster."/>
+              </characteristics>
+            </profile>
+            <profile id="e720-d684-8fb2-f535" name="Predatory" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="A Malevolent Maelstrom is a predatory endless spell. It can move up to 8&quot; and can fly."/>
+              </characteristics>
+            </profile>
+            <profile id="0803-0c8b-e322-1d22" name="Devourerer of Sorcery and Souls" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="If a WIZARD successfully casts a spell within 12&quot; of a Malevolent Maelstrom, and that spell is not unbound, the Malevolent Maelstrom will attempt to steal the energies of the spell. Make an additional unbinding roll for that spell. If this unbinding roll is successful, the spell is unbound and 1 energy point is allocated to this model.
+
+In addition, 1 energy point is allocated to this model for each unit destroyed within 6&quot; of this model. "/>
+              </characteristics>
+            </profile>
+            <profile id="e15f-4551-895e-c294" name="Morbid Detonation" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="At the end of each battle round, roll a dice for each Malevolent Maelstrom and add the number of energy points allocated to that model to the roll. On a 7+ that Malevolent Maelstrom explodes. Each unit within 3D6&quot; of the model that exploded suffers D3 mortal wounds. The model that exploded is then dispelled."/>
+              </characteristics>
+            </profile>
+            <profile id="f134-5989-3ed3-e240" name="Empowered by Shyish" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="If your battle is taking place in the Realm of Death, allocate 1 additional energy point to this model at the start of each battle round."/>
+              </characteristics>
+            </profile>
+          </profiles>
           <rules/>
-          <infoLinks/>
+          <infoLinks>
+            <infoLink id="7801-fff9-999e-8216" name="Fly" hidden="false" targetId="8e0c-cbe4-27be-8a30" type="profile">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+          </infoLinks>
           <modifiers/>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a941-10ef-6a07-91ac" type="max"/>
           </constraints>
           <categoryLinks>
             <categoryLink id="1061-013e-90fb-b4be" name="New CategoryLink" hidden="false" targetId="31f4-2067-3ade-e6f8" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+            <categoryLink id="8759-c4b0-4dc5-5745" name="MALEVOLENT MAELSTROM" hidden="false" targetId="aeb3-e51f-7f02-619e" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+            <categoryLink id="ff3e-2491-783f-e276" name="SHYISH" hidden="false" targetId="2cc9-0867-b2e3-da55" primary="false">
               <profiles/>
               <rules/>
               <infoLinks/>
@@ -6216,7 +6747,45 @@
           </costs>
         </selectionEntry>
         <selectionEntry id="ec40-8615-4669-6c17" name="Prismatic Palisade" hidden="false" collective="false" type="upgrade">
-          <profiles/>
+          <profiles>
+            <profile id="62ae-f9b8-4819-d952" name="Summon Prismatic Palisade" hidden="false" profileTypeId="2e81-5e22-c6e1-73cb" profileTypeName="Spell">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Casting Value" characteristicTypeId="2508-b604-1258-a920" value="5"/>
+                <characteristic name="Description" characteristicTypeId="76ff-781d-b8e6-5f27" value="If successfully cast, set up a Prismatic Palisade model wholly within 18&quot; of the caster."/>
+              </characteristics>
+            </profile>
+            <profile id="b821-b2f5-1e1c-7a84" name="Blinding Light" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="At the start of each turn, roll a dice for each unit within 6&quot; of this model. On a 5+ subtract 1 from hit rolls for attacks made by that unit until the end of the turn."/>
+              </characteristics>
+            </profile>
+            <profile id="6a3f-cdd4-d5a1-6c5f" name="Dazzling Brilliance" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="A model cannot see another model if an imaginary straight line, 1mm wide, drawn from the centre of its base to the centre of the other model’s base passes over this model."/>
+              </characteristics>
+            </profile>
+            <profile id="62f6-e2e8-97ed-782c" name="Empowered by Hysh" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="If your battle is taking place in the Realm of Light, add 1 to rolls made to determine if a unit is affected by this model’s Blinding Light ability."/>
+              </characteristics>
+            </profile>
+          </profiles>
           <rules/>
           <infoLinks/>
           <modifiers/>
@@ -6225,6 +6794,20 @@
           </constraints>
           <categoryLinks>
             <categoryLink id="15f0-05f3-1141-4495" name="New CategoryLink" hidden="false" targetId="31f4-2067-3ade-e6f8" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+            <categoryLink id="002f-5a18-5494-b718" name="HYSH" hidden="false" targetId="2b18-8032-739f-7929" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+            <categoryLink id="9c8d-860a-364f-6277" name="PRISMATIC PALISADE" hidden="false" targetId="316f-32e5-0c7c-72af" primary="false">
               <profiles/>
               <rules/>
               <infoLinks/>
@@ -6240,15 +6823,92 @@
           </costs>
         </selectionEntry>
         <selectionEntry id="2e2e-a332-031d-8499" name="Purple Sun of Shyish" hidden="false" collective="false" type="upgrade">
-          <profiles/>
+          <profiles>
+            <profile id="cb80-3282-1bed-8311" name="Summon Purple Sun of Shyish" hidden="false" profileTypeId="2e81-5e22-c6e1-73cb" profileTypeName="Spell">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Casting Value" characteristicTypeId="2508-b604-1258-a920" value="8"/>
+                <characteristic name="Description" characteristicTypeId="76ff-781d-b8e6-5f27" value="If successfully cast, set up a Purple Sun of Shyish model wholly within 6&quot; of the caster."/>
+              </characteristics>
+            </profile>
+            <profile id="570f-e6e0-3bae-971b" name="Predatory" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="The Purple Sun of Shyish is a predatory endless spell. It can move up to 9&quot; and can fly. "/>
+              </characteristics>
+            </profile>
+            <profile id="adf3-e540-fd67-3c7e" name="Swirling Death" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="When this model is set up, the player who set it up can immediately make a move with it."/>
+              </characteristics>
+            </profile>
+            <profile id="6a78-37ad-442b-df7f" name="End Given Form" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="After this model has moved, each unit that has any models it passed across, and each other unit that is within 1&quot; of it at the end of its move, is subjected to the Purple Sun’s baleful energies. For each unit subjected to the baleful energies, roll a number of dice equal to the number of models in that unit. For each 6+ one model in that unit is slain. If the unit has Wounds characteristic of 6 or more, it suffers 2D6 mortal wounds instead."/>
+              </characteristics>
+            </profile>
+            <profile id="9b16-5704-3bbe-43a6" name="Visage of Xereus" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="Subtract 1 from the Bravery characteristic of all units while they are within 6&quot; of this model."/>
+              </characteristics>
+            </profile>
+            <profile id="e8ac-84e4-055a-a17d" name="Empowered by Shyish" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="If your battle is taking place in the Realm of Death, this model can move 12&quot; instead of 9&quot;. "/>
+              </characteristics>
+            </profile>
+          </profiles>
           <rules/>
-          <infoLinks/>
+          <infoLinks>
+            <infoLink id="f062-e87f-918b-cb46" name="Fly" hidden="false" targetId="8e0c-cbe4-27be-8a30" type="profile">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+          </infoLinks>
           <modifiers/>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="596f-683c-9f6a-fd1d" type="max"/>
           </constraints>
           <categoryLinks>
             <categoryLink id="0158-8b5a-c54a-a150" name="New CategoryLink" hidden="false" targetId="31f4-2067-3ade-e6f8" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+            <categoryLink id="cc75-efec-a099-5971" name="PURPLE SUN OF SHYISH" hidden="false" targetId="7eb6-e91d-bf00-1c84" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+            <categoryLink id="792d-e0aa-ab5f-423d" name="SHYISH" hidden="false" targetId="2cc9-0867-b2e3-da55" primary="false">
               <profiles/>
               <rules/>
               <infoLinks/>
@@ -6264,15 +6924,83 @@
           </costs>
         </selectionEntry>
         <selectionEntry id="6273-9b6e-e4c9-127a" name="Quicksilver Swords" hidden="false" collective="false" type="upgrade">
-          <profiles/>
+          <profiles>
+            <profile id="c4ba-901a-4f4e-36dd" name="Summon Quicksilver Swords" hidden="false" profileTypeId="2e81-5e22-c6e1-73cb" profileTypeName="Spell">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Casting Value" characteristicTypeId="2508-b604-1258-a920" value="6"/>
+                <characteristic name="Description" characteristicTypeId="76ff-781d-b8e6-5f27" value="If successfully cast, set up a Quicksilver Swords model wholly within 10&quot; of the caster."/>
+              </characteristics>
+            </profile>
+            <profile id="182b-ab2b-1a20-df95" name="Predatory" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="Quicksilver Swords is a predatory endless spell. It can move up to 8&quot; and can fly."/>
+              </characteristics>
+            </profile>
+            <profile id="70f3-e631-8288-1c6a" name="Volley of Blades" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="When this model is set up, the player who set it up can immediately make a move with it."/>
+              </characteristics>
+            </profile>
+            <profile id="c92c-4e29-513a-d270" name="Dancing Blades" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="After this model has moved, you can pick 1 unit within 6&quot; of it and roll 12 dice. For each roll of 6+ that unit suffers 1 mortal wound. If the unit being rolled for is a CHAOS unit, it suffers 1 mortal wound for each roll of 5+ instead."/>
+              </characteristics>
+            </profile>
+            <profile id="af67-7816-b4f4-186e" name="Empowered by Chamon" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="If your battle is taking place in the Realm of Metal, you can roll 15 dice for this model’s Dancing Blades ability instead of 12."/>
+              </characteristics>
+            </profile>
+          </profiles>
           <rules/>
-          <infoLinks/>
+          <infoLinks>
+            <infoLink id="69a9-1293-52b6-3429" name="Fly" hidden="false" targetId="8e0c-cbe4-27be-8a30" type="profile">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+          </infoLinks>
           <modifiers/>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0b23-5718-2087-a52e" type="max"/>
           </constraints>
           <categoryLinks>
             <categoryLink id="a6f4-2f68-1f18-8d77" name="New CategoryLink" hidden="false" targetId="31f4-2067-3ade-e6f8" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+            <categoryLink id="c494-41da-ed2d-de01" name="CHAMON" hidden="false" targetId="97c8-2ca9-2b12-327f" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+            <categoryLink id="778f-09dd-3832-ff4e" name="QUICKSILVER SWORDS" hidden="false" targetId="65dc-260f-90f3-8a5a" primary="false">
               <profiles/>
               <rules/>
               <infoLinks/>
@@ -6288,15 +7016,83 @@
           </costs>
         </selectionEntry>
         <selectionEntry id="ab9b-dc68-e256-9260" name="Ravenak&apos;s Gnashing Jaws" hidden="false" collective="false" type="upgrade">
-          <profiles/>
+          <profiles>
+            <profile id="4703-b694-7146-af34" name="Summon Ravenak&apos;s Gnashing Jaws" hidden="false" profileTypeId="2e81-5e22-c6e1-73cb" profileTypeName="Spell">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Casting Value" characteristicTypeId="2508-b604-1258-a920" value="8"/>
+                <characteristic name="Description" characteristicTypeId="76ff-781d-b8e6-5f27" value="If successfully cast, set up a Ravenak’s Gnashing Jaws model wholly within 6&quot; of the caster."/>
+              </characteristics>
+            </profile>
+            <profile id="87c8-39d2-3514-3d40" name="Predatory" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="Ravenak’s Gnashing Jaws is a predatory endless spell. It can move up to 12&quot; and can fly."/>
+              </characteristics>
+            </profile>
+            <profile id="bbe5-b9cc-d728-dc9f" name="Endless Appetite" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="When this model is set up, the player who set it up can immediately make a move with it. "/>
+              </characteristics>
+            </profile>
+            <profile id="d1bd-f8e0-1ab6-26ae" name="Ravening Hunger" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="After this model has moved, each unit that has any models it passed across, and each other unit that is within 1&quot; of it at the end of its move, suffers D3 mortal wounds. In addition, subtract 1 from the Bravery characteristic of each unit that each unit that has any models it passed across until the end of the battle round."/>
+              </characteristics>
+            </profile>
+            <profile id="3cea-6f6c-2004-bef4" name="Empowered by Ghur" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="If your battle is taking place in the Realm of Beasts, this model can move up to D6+12&quot; instead of 12&quot;."/>
+              </characteristics>
+            </profile>
+          </profiles>
           <rules/>
-          <infoLinks/>
+          <infoLinks>
+            <infoLink id="bfbd-dce8-c445-2fa3" name="Fly" hidden="false" targetId="8e0c-cbe4-27be-8a30" type="profile">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+          </infoLinks>
           <modifiers/>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6d72-47d7-38dc-1197" type="max"/>
           </constraints>
           <categoryLinks>
             <categoryLink id="72bd-48bb-86f1-3a13" name="New CategoryLink" hidden="false" targetId="31f4-2067-3ade-e6f8" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+            <categoryLink id="4eac-423a-29c5-e8ca" name="GHUR" hidden="false" targetId="c33b-1c2d-83d9-53df" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+            <categoryLink id="b13c-e0e2-f1a0-28f3" name="RAVENAK&apos;S GNASHING JAWS" hidden="false" targetId="8b8e-c0b7-d668-19f2" primary="false">
               <profiles/>
               <rules/>
               <infoLinks/>
@@ -6312,7 +7108,36 @@
           </costs>
         </selectionEntry>
         <selectionEntry id="db2b-0d75-3bab-ff3a" name="Soulsnare Shackles" hidden="false" collective="false" type="upgrade">
-          <profiles/>
+          <profiles>
+            <profile id="e410-bdf4-7d5e-bcca" name="Summon Soulsnare Shackles" hidden="false" profileTypeId="2e81-5e22-c6e1-73cb" profileTypeName="Spell">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Casting Value" characteristicTypeId="2508-b604-1258-a920" value="5"/>
+                <characteristic name="Description" characteristicTypeId="76ff-781d-b8e6-5f27" value="If successfully cast, set up a Soulsnare Shackles model wholly within 12&quot; of the caster, then set up the second and third Soulsnare Shackles models wholly within 6&quot; of the first."/>
+              </characteristics>
+            </profile>
+            <profile id="1d56-f5e7-5f62-4b13" name="Bound for the Great Oubliette" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="At the start of the movement phase, roll a dice for each unit within 6&quot; of any Soulsnare Shackles models. On a 3+ halve the move characteristic of that unit until the end of that phase. On a 6 that unit also suffers D3 mortal wounds. "/>
+              </characteristics>
+            </profile>
+            <profile id="b3c1-0e0f-c7f7-e8ac" name="Empowered by Shyish" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="If your battle is taking place in the Realm of Death, the second and third Soulsnare Shackles models can be set up wholly within 9&quot; of the first, instead of 6&quot;."/>
+              </characteristics>
+            </profile>
+          </profiles>
           <rules/>
           <infoLinks/>
           <modifiers/>
@@ -6321,6 +7146,20 @@
           </constraints>
           <categoryLinks>
             <categoryLink id="8c78-abb4-360b-b040" name="New CategoryLink" hidden="false" targetId="31f4-2067-3ade-e6f8" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+            <categoryLink id="31cd-52c1-a704-d17e" name="SHYISH" hidden="false" targetId="2cc9-0867-b2e3-da55" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+            <categoryLink id="18f5-8968-f663-f433" name="SOULSNARE SHACKLES" hidden="false" targetId="4949-2041-939a-baa6" primary="false">
               <profiles/>
               <rules/>
               <infoLinks/>
@@ -6336,15 +7175,92 @@
           </costs>
         </selectionEntry>
         <selectionEntry id="849e-470b-05c2-19b7" name="Suffocating﻿﻿ Gravetide﻿" hidden="false" collective="false" type="upgrade">
-          <profiles/>
+          <profiles>
+            <profile id="7c5c-6b46-4e13-0e09" name="Summon Suffocating﻿﻿ Gravetide﻿" hidden="false" profileTypeId="2e81-5e22-c6e1-73cb" profileTypeName="Spell">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Casting Value" characteristicTypeId="2508-b604-1258-a920" value="6"/>
+                <characteristic name="Description" characteristicTypeId="76ff-781d-b8e6-5f27" value="If successfully cast, set up a Suffocating Gravetide model wholly within 4&quot; of the caster. "/>
+              </characteristics>
+            </profile>
+            <profile id="61a1-7f89-3102-5efa" name="Necrotic Tide" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="When this model is set up, the player who set it up can immediately make a move with it. "/>
+              </characteristics>
+            </profile>
+            <profile id="6dc9-4242-3911-cc8d" name="Pulled to the Grave" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="After this model has moved, each unit that has any models it passed across suffers D3 mortal wounds. In addition, subtract 1 from the Bravery characteristic of each unit that has any models it passed across until the end of the battle round."/>
+              </characteristics>
+            </profile>
+            <profile id="3a53-36f7-af78-d22d" name="Rolling Barricade" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="When a missile weapon targets a unit that has all of its models within 1&quot; of this model, the target unit receives the benefit of cover if the attacking unit is closer to this model than it is to the target unit. "/>
+              </characteristics>
+            </profile>
+            <profile id="2758-912b-2b7e-9c71" name="Empowered by Shyish" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="If your battle is taking place in the Realm of Death, this model can move up to 12&quot; instead of 8&quot;."/>
+              </characteristics>
+            </profile>
+            <profile id="a1ff-7da4-247a-398b" name="Predatory" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="A Suffocating Gravetide is a predatory endless spell. It can move up to 8&quot; and can fly. "/>
+              </characteristics>
+            </profile>
+          </profiles>
           <rules/>
-          <infoLinks/>
+          <infoLinks>
+            <infoLink id="5eb4-83b7-8837-72a6" name="Fly" hidden="false" targetId="8e0c-cbe4-27be-8a30" type="profile">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+          </infoLinks>
           <modifiers/>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9211-4404-c522-c9d3" type="max"/>
           </constraints>
           <categoryLinks>
             <categoryLink id="e1f8-276e-104f-06cd" name="New CategoryLink" hidden="false" targetId="31f4-2067-3ade-e6f8" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+            <categoryLink id="db9e-703a-7d92-6f04" name="SHYISH" hidden="false" targetId="2cc9-0867-b2e3-da55" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+            <categoryLink id="ca79-7b4b-45f5-dd18" name="SUFFOCATING GRAVETIDE" hidden="false" targetId="8e84-834f-0c7d-0d45" primary="false">
               <profiles/>
               <rules/>
               <infoLinks/>
@@ -6360,15 +7276,92 @@
           </costs>
         </selectionEntry>
         <selectionEntry id="270a-b509-6851-5e75" name="The B﻿urning Head﻿﻿﻿" hidden="false" collective="false" type="upgrade">
-          <profiles/>
+          <profiles>
+            <profile id="26f1-440d-9725-e22e" name="Summon B﻿urning Head﻿﻿﻿" hidden="false" profileTypeId="2e81-5e22-c6e1-73cb" profileTypeName="Spell">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Casting Value" characteristicTypeId="2508-b604-1258-a920" value="7"/>
+                <characteristic name="Description" characteristicTypeId="76ff-781d-b8e6-5f27" value="If successfully cast, set up a Burning Head model wholly within 3&quot; of the caster."/>
+              </characteristics>
+            </profile>
+            <profile id="4658-af10-16ac-63b8" name="Predatory" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="The Burning Head is a predatory endless spell. It can move up to 9&quot; and can fly."/>
+              </characteristics>
+            </profile>
+            <profile id="b267-b8b7-58a4-e8cd" name="Fiery Missile" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="When this model is set up, the player who set it up can immediately make a move with it. "/>
+              </characteristics>
+            </profile>
+            <profile id="7b96-fcef-dad1-ca07" name="Flaming Skull" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="After this model has moved, each unit that has any models it passed across, and each other unit that is within 1&quot; of it at the end of its move, suffers D3 mortal wounds. "/>
+              </characteristics>
+            </profile>
+            <profile id="7a2f-23be-596b-2eea" name="Wrathful Aura" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="Re-roll hit rolls of 1 for attacks made by units while they are wholly within 9&quot; of this model. "/>
+              </characteristics>
+            </profile>
+            <profile id="875b-5f6d-b51c-d8f0" name="Empowered by Aqshy" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="If your battle is taking place in the Realm of Fire, add 1 to the number of mortal wounds inflicted by the Flaming Skull ability."/>
+              </characteristics>
+            </profile>
+          </profiles>
           <rules/>
-          <infoLinks/>
+          <infoLinks>
+            <infoLink id="1ed6-cd6e-ad53-088e" name="Fly" hidden="false" targetId="8e0c-cbe4-27be-8a30" type="profile">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+            </infoLink>
+          </infoLinks>
           <modifiers/>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2647-60fd-5c01-b15b" type="max"/>
           </constraints>
           <categoryLinks>
             <categoryLink id="f18e-4646-16b4-3c84" name="New CategoryLink" hidden="false" targetId="31f4-2067-3ade-e6f8" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+            <categoryLink id="8291-5f42-f2b9-9203" name="AQSHY" hidden="false" targetId="f760-2ebe-1af7-ff48" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+            <categoryLink id="099a-b013-c8e0-9d4b" name="THE BURNING HEAD" hidden="false" targetId="3115-9f9c-85db-1d63" primary="false">
               <profiles/>
               <rules/>
               <infoLinks/>
@@ -6384,7 +7377,38 @@
           </costs>
         </selectionEntry>
         <selectionEntry id="e6ec-45ee-65b8-8520" name="Umbral Sp﻿ellporta﻿l﻿﻿" hidden="false" collective="false" type="upgrade">
-          <profiles/>
+          <profiles>
+            <profile id="db2d-60a4-c86b-1c32" name="Summon Umbral Sp﻿ellporta﻿l﻿﻿" hidden="false" profileTypeId="2e81-5e22-c6e1-73cb" profileTypeName="Spell">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Casting Value" characteristicTypeId="2508-b604-1258-a920" value="5"/>
+                <characteristic name="Description" characteristicTypeId="76ff-781d-b8e6-5f27" value="If successfully cast, set up the first Umbral Spellportal model wholly within 12&quot; of the caster, and then set up the second Umbral Spellportal model wholly within 18&quot; of the first."/>
+              </characteristics>
+            </profile>
+            <profile id="aa9a-0aa6-d8a3-98d0" name="Arcane Passage" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="If a Wizard successfully casts a spell while they are within 1&quot; of an Umbral Spellportal model, the range and visibility of the spell can be measured from the other Umbral Spellportal model from this endless spell.
+
+If a predatory endless spell finishes a move within 6&quot; of an Umbral Spellportal model, remove it from the battlefield and set it up again anywhere within 6&quot; of the other Umbral Spellportal model from this endless spell."/>
+              </characteristics>
+            </profile>
+            <profile id="6418-d37c-76e2-8d1b" name="Empowered by Ulgu" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="If your battle is taking place in the Realm of Shadow, the second Umbral Spellportal model can be set up anywhere on the battlefield, instead of within 18&quot; of the first."/>
+              </characteristics>
+            </profile>
+          </profiles>
           <rules/>
           <infoLinks/>
           <modifiers/>
@@ -6393,6 +7417,20 @@
           </constraints>
           <categoryLinks>
             <categoryLink id="9f49-9937-cd19-f89d" name="New CategoryLink" hidden="false" targetId="31f4-2067-3ade-e6f8" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+            <categoryLink id="4482-73ef-bf46-f961" name="ULGU" hidden="false" targetId="3f66-cb68-8afb-ce99" primary="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <constraints/>
+            </categoryLink>
+            <categoryLink id="4c48-fe5e-df85-e11f" name="UMBRAL SPELLPORTAL" hidden="false" targetId="82b0-19da-b868-9f6c" primary="false">
               <profiles/>
               <rules/>
               <infoLinks/>
