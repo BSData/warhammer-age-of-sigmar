@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="bcc4-c671-9435-d259" name="Chaos - Skaven" book="Chaos Battletome - Grand Alliance: Chaos / Battletome: Skaven Pestilens" revision="10" battleScribeVersion="2.01" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://gitter.im/BSData/warhammer-age-of-sigmar" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="23" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="bcc4-c671-9435-d259" name="Chaos - Skaven" book="Chaos Battletome - Grand Alliance: Chaos / Battletome: Skaven Pestilens" revision="11" battleScribeVersion="2.01" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://gitter.im/BSData/warhammer-age-of-sigmar" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="23" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks/>
@@ -9788,7 +9788,7 @@
           <infoLinks/>
           <modifiers/>
           <characteristics>
-            <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="Instead of setting up a Skaven Assassin normally, you can place hm to one side and say that he is set up in hiding. If you do so, secretly note down one of your SKAVEN units for this unit to hide in. At the start of any combat phase you can reveal the Skaven Assassin; set him up within 1&quot; of the unit you selected. The Assassin can then pile in and attack even if it is your opponent&apos;s turn to choose a unit to attack with. If the unit hiding the Assassin is destroyed befrore he is revealed, he is destroyed as well."/>
+            <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="Instead of setting up this model on the battlefield, you can place it to one side and say that it is set up in hiding as a reserve unit. If you do so, at the start of a combat phase, you can set up this model within 1&quot; of a friendly Skaven unit with 5 or more models and a Wounds characteristic of 1. If this model is not set up on the battlefield before the start of the fourth battle round, it is slain. *ERRATA Jul&apos;18*"/>
           </characteristics>
         </profile>
       </profiles>
@@ -10227,7 +10227,7 @@
           <infoLinks/>
           <modifiers/>
           <characteristics>
-            <characteristic name="Command Ability Details" characteristicTypeId="1b71-4c83-4e8c-093f" value="If a Skaven Warlord uses this ability, pick one VERMINUS  unit within 13&quot;. Until your next hero phase, all models in that unit make one extra attack with each of their melee weapons."/>
+            <characteristic name="Command Ability Details" characteristicTypeId="1b71-4c83-4e8c-093f" value="You can use this command ability at the start of the combat phase. If you do so, pick 1 friendly Verminus unit wholly within 13&quot; of a model with this command ability. Add 1 to the Attacks characteristic of melee weapons used by that unit in that phase. You cannot pick the same unit to benefit from this command ability more than once per combat phase. *Errata Jul&apos;18*"/>
           </characteristics>
         </profile>
       </profiles>
@@ -11351,10 +11351,18 @@
           <profiles/>
           <rules/>
           <infoLinks/>
-          <modifiers/>
+          <modifiers>
+            <modifier type="decrement" field="points" value="15">
+              <repeats/>
+              <conditions>
+                <condition field="selections" scope="f870-2e45-e4aa-eb7b" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2673-7682-0b49-852a" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="cda0-b147-d72b-df04" type="min"/>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5877-a41f-9693-d9d3" type="max"/>
+            <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5877-a41f-9693-d9d3" type="max"/>
           </constraints>
           <categoryLinks/>
           <selectionEntries/>
@@ -11467,31 +11475,6 @@
           <entryLinks/>
           <costs>
             <cost name="pts" costTypeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="9511-4b57-af91-1f38" name="Horde Pricing" hidden="false" collective="false" type="upgrade">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <repeats/>
-              <conditions>
-                <condition field="selections" scope="f870-2e45-e4aa-eb7b" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2673-7682-0b49-852a" type="lessThan"/>
-              </conditions>
-              <conditionGroups/>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c436-5197-72a6-a815" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1ea4-c862-0958-34e5" type="max"/>
-          </constraints>
-          <categoryLinks/>
-          <selectionEntries/>
-          <selectionEntryGroups/>
-          <entryLinks/>
-          <costs>
-            <cost name="pts" costTypeId="points" value="80.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -14275,7 +14258,14 @@
             <selectionEntry id="c5f9-2e91-454a-d12e" name="Allegiance: Eshin" hidden="false" collective="false" type="upgrade">
               <profiles/>
               <rules/>
-              <infoLinks/>
+              <infoLinks>
+                <infoLink id="73d0-886e-ebf9-d194" name="Unbridled Malice" hidden="false" targetId="6884-967e-0150-274e" type="profile">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                </infoLink>
+              </infoLinks>
               <modifiers/>
               <constraints/>
               <categoryLinks/>
@@ -14289,7 +14279,14 @@
             <selectionEntry id="832d-9d3c-2b39-8092" name="Allegiance: Moulder" hidden="false" collective="false" type="upgrade">
               <profiles/>
               <rules/>
-              <infoLinks/>
+              <infoLinks>
+                <infoLink id="11c8-dd73-fac9-d128" name="Unbridled Malice" hidden="false" targetId="6884-967e-0150-274e" type="profile">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                </infoLink>
+              </infoLinks>
               <modifiers/>
               <constraints/>
               <categoryLinks/>
@@ -14308,14 +14305,7 @@
                   <infoLinks/>
                   <modifiers/>
                   <characteristics>
-                    <characteristic name="Battle Trait Details" characteristicTypeId="9fdd-b4b1-5f7a-0970" value="At the start of the battle, before either army is set up, roll a D3 and add 3 to the roll. The result is the number of warpstone sparks that you can use during the battle. Keep track of these with small counters.
-Each time you use a warpstone spark, discard one of your warpstone spark counters. Each warpstone spark can be used once per battle and you cannot use more than one warpstone spark in the same phase.
-Roll a dice after using a warpstone spark and resolving the spell or attack it was used to affect. On a 1 the unit that cast the spell or made the attack suffers D3 mortal wounds.
-Each warpstone spark can be used to do one of the following:
-• Re-roll a casting roll or unbinding roll for a friendly SKRYRE WIZARD.
-• Re-roll a failed hit or wound roll for an attack made by a friendly SKRYRE HERO.
-• Add 1 to the Damage characteristic of a weapon used by a friendly SKRYREmodel that has made a successful attack.
-You must decide if you want to re-roll a roll immediately after making it."/>
+                    <characteristic name="Battle Trait Details" characteristicTypeId="9fdd-b4b1-5f7a-0970" value="At the start of the battle, before either army is set up, roll a D3 and add 3 to the roll. The result is the number of warpstone sparks that you can use during the battle. Keep track of these with small counters. Each time you use a warpstone spark, discard one of your warpstone spark counters. Each warpstone spark can be used once per battle and you cannot use more than one warpstone spark in the same phase. Roll a dice after using a warpstone spark and resolving the spell or attack it was used to affect. On a 1 the unit that cast the spell or made the attack suffers D3 mortal wounds. Each warpstone spark can be used to do one of the following: • Re-roll a casting roll or unbinding roll for a friendly SKRYRE WIZARD. • Re-roll a failed hit or wound roll for an attack made by a friendly SKRYRE HERO. • Add 1 to the damage inflicted by 1 successful attack made by a friendly SKRYRE model with a missile weapon or melee weapon. *Errata Jul&apos;18*"/>
                   </characteristics>
                 </profile>
                 <profile id="7292-656a-33ba-f11b" name="Strength in Numbers" hidden="false" profileTypeId="c137-4d1f-9d1a-524d" profileTypeName="Battle Trait">
@@ -14343,7 +14333,14 @@ You must decide if you want to re-roll a roll immediately after making it."/>
             <selectionEntry id="51b7-c778-b260-8e6a" name="Allegiance: Verminus" hidden="false" collective="false" type="upgrade">
               <profiles/>
               <rules/>
-              <infoLinks/>
+              <infoLinks>
+                <infoLink id="8671-3212-7a28-00c1" name="Unbridled Malice" hidden="false" targetId="6884-967e-0150-274e" type="profile">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                </infoLink>
+              </infoLinks>
               <modifiers/>
               <constraints/>
               <categoryLinks/>
@@ -14371,7 +14368,14 @@ You must decide if you want to re-roll a roll immediately after making it."/>
             <selectionEntry id="da51-ec27-2154-619f" name="Allegiance: Masterclan" hidden="false" collective="false" type="upgrade">
               <profiles/>
               <rules/>
-              <infoLinks/>
+              <infoLinks>
+                <infoLink id="6253-c53f-c23e-657c" name="Unbridled Malice" hidden="false" targetId="6884-967e-0150-274e" type="profile">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                </infoLink>
+              </infoLinks>
               <modifiers/>
               <constraints/>
               <categoryLinks/>
@@ -14385,7 +14389,14 @@ You must decide if you want to re-roll a roll immediately after making it."/>
             <selectionEntry id="1e14-2a18-41d5-4dd0" name="Allegiance: Skaven" hidden="false" collective="false" type="upgrade">
               <profiles/>
               <rules/>
-              <infoLinks/>
+              <infoLinks>
+                <infoLink id="2e1c-8d0e-b1df-c6b1" name="Unbridled Malice" hidden="false" targetId="6884-967e-0150-274e" type="profile">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                </infoLink>
+              </infoLinks>
               <modifiers/>
               <constraints/>
               <categoryLinks/>
@@ -14399,7 +14410,14 @@ You must decide if you want to re-roll a roll immediately after making it."/>
             <selectionEntry id="8ad8-d79e-9e11-0646" name="Allegiance: CHAOS" hidden="false" collective="false" type="upgrade">
               <profiles/>
               <rules/>
-              <infoLinks/>
+              <infoLinks>
+                <infoLink id="695c-0701-474e-c266" name="Unbridled Malice" hidden="false" targetId="6884-967e-0150-274e" type="profile">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                </infoLink>
+              </infoLinks>
               <modifiers/>
               <constraints/>
               <categoryLinks/>
@@ -18459,10 +18477,8 @@ You must decide if you want to re-roll a roll immediately after making it."/>
               <conditionGroups>
                 <conditionGroup type="or">
                   <conditions>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2f63-fe92-879b-12c9" type="greaterThan"/>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c3d2-fbb5-3b55-aad6" type="greaterThan"/>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c198-086c-093d-7790" type="greaterThan"/>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="034f-34fa-0750-85ff" type="greaterThan"/>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fdc0-6652-0d6c-3a9d" type="equalTo"/>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9296-dcb7-c238-dfe1" type="equalTo"/>
                   </conditions>
                   <conditionGroups/>
                 </conditionGroup>
@@ -18479,17 +18495,10 @@ You must decide if you want to re-roll a roll immediately after making it."/>
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <repeats/>
-              <conditions/>
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9296-dcb7-c238-dfe1" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d22d-d98d-5ef6-d8bf" type="greaterThan"/>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f179-9104-3d7f-1ea1" type="greaterThan"/>
-                  </conditions>
-                  <conditionGroups/>
-                </conditionGroup>
-              </conditionGroups>
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9296-dcb7-c238-dfe1" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
             </modifier>
           </modifiers>
           <constraints/>
@@ -18502,17 +18511,10 @@ You must decide if you want to re-roll a roll immediately after making it."/>
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <repeats/>
-              <conditions/>
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fdc0-6652-0d6c-3a9d" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f179-9104-3d7f-1ea1" type="greaterThan"/>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d22d-d98d-5ef6-d8bf" type="greaterThan"/>
-                  </conditions>
-                  <conditionGroups/>
-                </conditionGroup>
-              </conditionGroups>
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fdc0-6652-0d6c-3a9d" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
             </modifier>
           </modifiers>
           <constraints/>
@@ -18564,10 +18566,8 @@ You must decide if you want to re-roll a roll immediately after making it."/>
               <conditionGroups>
                 <conditionGroup type="or">
                   <conditions>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2f63-fe92-879b-12c9" type="greaterThan"/>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c3d2-fbb5-3b55-aad6" type="greaterThan"/>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c198-086c-093d-7790" type="greaterThan"/>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="034f-34fa-0750-85ff" type="greaterThan"/>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fdc0-6652-0d6c-3a9d" type="equalTo"/>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9296-dcb7-c238-dfe1" type="equalTo"/>
                   </conditions>
                   <conditionGroups/>
                 </conditionGroup>
@@ -18584,17 +18584,10 @@ You must decide if you want to re-roll a roll immediately after making it."/>
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <repeats/>
-              <conditions/>
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d22d-d98d-5ef6-d8bf" type="greaterThan"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9296-dcb7-c238-dfe1" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f179-9104-3d7f-1ea1" type="greaterThan"/>
-                  </conditions>
-                  <conditionGroups/>
-                </conditionGroup>
-              </conditionGroups>
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9296-dcb7-c238-dfe1" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
             </modifier>
           </modifiers>
           <constraints/>
@@ -18607,17 +18600,10 @@ You must decide if you want to re-roll a roll immediately after making it."/>
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <repeats/>
-              <conditions/>
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fdc0-6652-0d6c-3a9d" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f179-9104-3d7f-1ea1" type="greaterThan"/>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d22d-d98d-5ef6-d8bf" type="greaterThan"/>
-                  </conditions>
-                  <conditionGroups/>
-                </conditionGroup>
-              </conditionGroups>
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fdc0-6652-0d6c-3a9d" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
             </modifier>
           </modifiers>
           <constraints/>
@@ -18787,7 +18773,7 @@ You must decide if you want to re-roll a roll immediately after making it."/>
               <infoLinks/>
               <modifiers/>
               <characteristics>
-                <characteristic name="Artefact Details" characteristicTypeId="0918-c47a-d84e-c0cf" value="This model can use the Pestilent Prayers ability from the Plague Priest&apos;s warscroll. If this model is a Plague Priest, then it can use the Pestilent Prayers ability twice in each of your hero phases."/>
+                <characteristic name="Artefact Details" characteristicTypeId="0918-c47a-d84e-c0cf" value="The bearer can use the Pestilent Prayers ability from the Plague Priest warscroll. If the bearer can already use the Pestilent Prayers ability, then it can use the Pestilent Prayers ability twice in your hero phase. *Errata July &apos;18*"/>
               </characteristics>
             </profile>
           </profiles>
