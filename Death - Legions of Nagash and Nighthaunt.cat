@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="e320-d5ec-ac8e-03dd" name="Death: Legions of Nagash and Nighthaunt" book="Battletome: Legions of Nagash and Battletome: Nighthaunt" revision="28" battleScribeVersion="2.01" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="7" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="e320-d5ec-ac8e-03dd" name="Death: Legions of Nagash and Nighthaunt" book="Battletome: Legions of Nagash and Battletome: Nighthaunt" revision="30" battleScribeVersion="2.01" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="7" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules>
     <rule id="c7d8-4531-1671-0e10" name="Returning Slain Models - Nighthaunt" book="Battletome: Nighthaunt" hidden="false">
@@ -12381,7 +12381,7 @@ The slain models you return to a unit can only be set up withi 3&quot; of an ene
           <infoLinks/>
           <modifiers/>
           <characteristics>
-            <characteristic name="Command Ability Details" characteristicTypeId="1b71-4c83-4e8c-093f" value="If this model uses this ability, pick a friendly DEATH unit within 15&quot; of it. Models in that unit make one extra attack with each of their melee weapons until your next hero phase."/>
+            <characteristic name="Command Ability Details" characteristicTypeId="1b71-4c83-4e8c-093f" value="If this model uses this ability, pick a friendly DEATH unit within 15&quot; of it. Models in that unit make one extra attack with each of their melee weapons until your next hero phase. You cannot pick the same unit to benefit from this command ability more than once per hero phase. *Errata Jul&apos;18*"/>
           </characteristics>
         </profile>
       </profiles>
@@ -12807,6 +12807,13 @@ The slain models you return to a unit can only be set up withi 3&quot; of an ene
           <constraints/>
         </categoryLink>
         <categoryLink id="1033-ad92-0091-5ecf" name="New CategoryLink" hidden="false" targetId="7bf1-507e-d551-9b60" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </categoryLink>
+        <categoryLink id="5c33-0f12-e82b-18f3" name="VAMPIRE" hidden="false" targetId="d1e1-d80a-c667-b587" primary="false">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -13314,7 +13321,7 @@ The slain models you return to a unit can only be set up withi 3&quot; of an ene
           <infoLinks/>
           <modifiers/>
           <characteristics>
-            <characteristic name="Command Ability Details" characteristicTypeId="1b71-4c83-4e8c-093f" value="If this model uses this ability, pick a friendly DEATHRATTLE unit within 18&quot; of it. Until your next hero phase, add 1 to the Attacks characteristic of that unit’s melee weapons."/>
+            <characteristic name="Command Ability Details" characteristicTypeId="1b71-4c83-4e8c-093f" value="If this model uses this ability, pick a friendly DEATHRATTLE unit within 18&quot; of it. Until your next hero phase, add 1 to the Attacks characteristic of that unit’s melee weapons. You cannot pick the same unit to benefit from this command ability more than once per hero phase. *Errata Jul&apos;18*"/>
           </characteristics>
         </profile>
       </profiles>
@@ -13505,7 +13512,7 @@ The slain models you return to a unit can only be set up withi 3&quot; of an ene
           <infoLinks/>
           <modifiers/>
           <characteristics>
-            <characteristic name="Command Ability Details" characteristicTypeId="1b71-4c83-4e8c-093f" value="If this model uses this ability, pick a friendly DEATHRATTLE unit within 18&quot; of it. Until your next hero phase, add 1 to the Attacks characteristic of that unit’s melee weapons."/>
+            <characteristic name="Command Ability Details" characteristicTypeId="1b71-4c83-4e8c-093f" value="If this model uses this ability, pick a friendly DEATHRATTLE unit within 18&quot; of it. Until your next hero phase, add 1 to the Attacks characteristic of that unit’s melee weapons. You cannot pick the same unit to benefit from this command ability more than once per hero phase. *Errata Jul&apos;18*"/>
           </characteristics>
         </profile>
         <profile id="e8cb-66f7-2b83-d2aa" name="Barrow Armor" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
@@ -18266,7 +18273,22 @@ The slain models you return to a unit can only be set up withi 3&quot; of an ene
           <profiles/>
           <rules/>
           <infoLinks/>
-          <modifiers/>
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <repeats/>
+              <conditions/>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="78f3-8a59-699a-61e8" type="instanceOf"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="78f3-8a59-699a-61e8" type="instanceOf"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="78f3-8a59-699a-61e8" type="instanceOf"/>
+                  </conditions>
+                  <conditionGroups/>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
           <constraints/>
           <categoryLinks/>
         </entryLink>
@@ -18664,14 +18686,6 @@ The slain models you return to a unit can only be set up withi 3&quot; of an ene
           <categoryLinks/>
         </entryLink>
         <entryLink id="088b-a113-47d5-029e" name="General" hidden="false" targetId="88d2-d540-0573-3402" type="selectionEntry">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <constraints/>
-          <categoryLinks/>
-        </entryLink>
-        <entryLink id="67b3-5043-199a-882d" name="Lores of the Dead" hidden="false" targetId="8417-93fc-9562-a748" type="selectionEntryGroup">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -22828,8 +22842,7 @@ The slain models you return to a unit can only be set up withi 3&quot; of an ene
           <infoLinks/>
           <modifiers/>
           <characteristics>
-            <characteristic name="Battalion Ability Details" characteristicTypeId="08e0-9ead-1dbe-c801" value="Roll a dice each time you allocate a wound or mortal wound to a BLADEGHEIST REVENANT model from a unit in this battalion wholly within 12&quot; of a KNIGHT
-OF SHROUDS or REIKENOR THE GRIMHAILER from the same battalion. On a 5+, that wound or mortal wound is negated. If you use this ability, you cannot also use the Deathless Spirits battle trait to try to negate the same wound or mortal wound."/>
+            <characteristic name="Battalion Ability Details" characteristicTypeId="08e0-9ead-1dbe-c801" value="Roll a dice each time you allocate a wound or mortal wound to a BLADEGHEIST REVENANT model from a unit in this battalion wholly within 12&quot; of a KNIGHT OF SHROUDS or REIKENOR THE GRIMHAILER from the same battalion. On a 5+, that wound or mortal wound is negated. If you use this ability, you cannot also use the Deathless Spirits battle trait to try to negate the same wound or mortal wound."/>
           </characteristics>
         </profile>
       </profiles>
@@ -23804,17 +23817,10 @@ OF SHROUDS or REIKENOR THE GRIMHAILER from the same battalion. On a 5+, that wou
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <repeats/>
-              <conditions/>
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5fe6-6e9f-702b-241b" type="greaterThan"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d285-0a74-a36b-e277" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d93f-9d41-966a-4fe9" type="greaterThan"/>
-                  </conditions>
-                  <conditionGroups/>
-                </conditionGroup>
-              </conditionGroups>
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d285-0a74-a36b-e277" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
             </modifier>
           </modifiers>
           <constraints/>
@@ -23827,17 +23833,10 @@ OF SHROUDS or REIKENOR THE GRIMHAILER from the same battalion. On a 5+, that wou
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <repeats/>
-              <conditions/>
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="59ec-1803-f129-8830" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d93f-9d41-966a-4fe9" type="greaterThan"/>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5fe6-6e9f-702b-241b" type="greaterThan"/>
-                  </conditions>
-                  <conditionGroups/>
-                </conditionGroup>
-              </conditionGroups>
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="59ec-1803-f129-8830" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
             </modifier>
           </modifiers>
           <constraints/>
@@ -23850,17 +23849,10 @@ OF SHROUDS or REIKENOR THE GRIMHAILER from the same battalion. On a 5+, that wou
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <repeats/>
-              <conditions/>
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d93f-9d41-966a-4fe9" type="greaterThan"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d935-8702-2198-a55d" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5fe6-6e9f-702b-241b" type="greaterThan"/>
-                  </conditions>
-                  <conditionGroups/>
-                </conditionGroup>
-              </conditionGroups>
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d935-8702-2198-a55d" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
             </modifier>
           </modifiers>
           <constraints/>
@@ -23873,17 +23865,10 @@ OF SHROUDS or REIKENOR THE GRIMHAILER from the same battalion. On a 5+, that wou
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <repeats/>
-              <conditions/>
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b38e-4752-5708-d73c" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d93f-9d41-966a-4fe9" type="greaterThan"/>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5fe6-6e9f-702b-241b" type="greaterThan"/>
-                  </conditions>
-                  <conditionGroups/>
-                </conditionGroup>
-              </conditionGroups>
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b38e-4752-5708-d73c" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
             </modifier>
           </modifiers>
           <constraints/>
@@ -23896,17 +23881,10 @@ OF SHROUDS or REIKENOR THE GRIMHAILER from the same battalion. On a 5+, that wou
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <repeats/>
-              <conditions/>
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="69c3-97a2-07a2-394b" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d93f-9d41-966a-4fe9" type="greaterThan"/>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5fe6-6e9f-702b-241b" type="greaterThan"/>
-                  </conditions>
-                  <conditionGroups/>
-                </conditionGroup>
-              </conditionGroups>
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="69c3-97a2-07a2-394b" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
             </modifier>
           </modifiers>
           <constraints/>
@@ -23919,17 +23897,10 @@ OF SHROUDS or REIKENOR THE GRIMHAILER from the same battalion. On a 5+, that wou
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <repeats/>
-              <conditions/>
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d93f-9d41-966a-4fe9" type="greaterThan"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7b65-f69b-f915-00d3" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5fe6-6e9f-702b-241b" type="greaterThan"/>
-                  </conditions>
-                  <conditionGroups/>
-                </conditionGroup>
-              </conditionGroups>
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7b65-f69b-f915-00d3" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
             </modifier>
           </modifiers>
           <constraints/>
@@ -23946,18 +23917,12 @@ OF SHROUDS or REIKENOR THE GRIMHAILER from the same battalion. On a 5+, that wou
               <conditionGroups>
                 <conditionGroup type="or">
                   <conditions>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a28f-09a3-92d6-876e" type="greaterThan"/>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="19c7-dc17-0c49-a8d0" type="greaterThan"/>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5f1c-bc6d-6ed4-e316" type="greaterThan"/>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="02e5-e3fe-ab52-8bcf" type="greaterThan"/>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="650a-1994-bdc8-1c3c" type="greaterThan"/>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="aac7-d581-545a-2540" type="greaterThan"/>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2597-8596-5b4f-6ec1" type="greaterThan"/>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fba2-3ed1-00e0-c1d5" type="greaterThan"/>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b1b1-f0af-4578-f69a" type="greaterThan"/>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0591-16f8-c7c7-1e07" type="greaterThan"/>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ff1f-1c0c-762e-d93d" type="greaterThan"/>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="001a-a1d6-84c2-6480" type="greaterThan"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d285-0a74-a36b-e277" type="greaterThan"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b38e-4752-5708-d73c" type="greaterThan"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="59ec-1803-f129-8830" type="greaterThan"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7b65-f69b-f915-00d3" type="greaterThan"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="69c3-97a2-07a2-394b" type="greaterThan"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d935-8702-2198-a55d" type="greaterThan"/>
                   </conditions>
                   <conditionGroups/>
                 </conditionGroup>
@@ -24006,17 +23971,10 @@ OF SHROUDS or REIKENOR THE GRIMHAILER from the same battalion. On a 5+, that wou
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <repeats/>
-              <conditions/>
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d93f-9d41-966a-4fe9" type="greaterThan"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7b65-f69b-f915-00d3" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5fe6-6e9f-702b-241b" type="greaterThan"/>
-                  </conditions>
-                  <conditionGroups/>
-                </conditionGroup>
-              </conditionGroups>
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7b65-f69b-f915-00d3" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
             </modifier>
           </modifiers>
           <constraints/>
@@ -24922,11 +24880,11 @@ OF SHROUDS or REIKENOR THE GRIMHAILER from the same battalion. On a 5+, that wou
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d285-0a74-a36b-e277" type="lessThan"/>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="59ec-1803-f129-8830" type="lessThan"/>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d935-8702-2198-a55d" type="lessThan"/>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b38e-4752-5708-d73c" type="lessThan"/>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="69c3-97a2-07a2-394b" type="lessThan"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d285-0a74-a36b-e277" type="equalTo"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b38e-4752-5708-d73c" type="equalTo"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="59ec-1803-f129-8830" type="equalTo"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="69c3-97a2-07a2-394b" type="equalTo"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d935-8702-2198-a55d" type="equalTo"/>
               </conditions>
               <conditionGroups/>
             </conditionGroup>
@@ -24953,7 +24911,6 @@ OF SHROUDS or REIKENOR THE GRIMHAILER from the same battalion. On a 5+, that wou
                     <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9b9d-ac6f-768a-123f" type="notInstanceOf"/>
                     <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a3df-7eeb-bcac-ac90" type="notInstanceOf"/>
                     <condition field="selections" scope="ancestor" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4b17-8770-65a5-e27f" type="notInstanceOf"/>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c352-dff7-7050-6f8d" type="notInstanceOf"/>
                   </conditions>
                   <conditionGroups/>
                 </conditionGroup>
@@ -25143,7 +25100,6 @@ OF SHROUDS or REIKENOR THE GRIMHAILER from the same battalion. On a 5+, that wou
                     <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d1e1-d80a-c667-b587" type="notInstanceOf"/>
                     <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a3df-7eeb-bcac-ac90" type="notInstanceOf"/>
                     <condition field="selections" scope="ancestor" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4b17-8770-65a5-e27f" type="notInstanceOf"/>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c352-dff7-7050-6f8d" type="notInstanceOf"/>
                   </conditions>
                   <conditionGroups/>
                 </conditionGroup>
@@ -25750,18 +25706,10 @@ OF SHROUDS or REIKENOR THE GRIMHAILER from the same battalion. On a 5+, that wou
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <repeats/>
-              <conditions/>
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8dfa-2d50-a239-9a14" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b38e-4752-5708-d73c" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5fe6-6e9f-702b-241b" type="greaterThan"/>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d93f-9d41-966a-4fe9" type="greaterThan"/>
-                  </conditions>
-                  <conditionGroups/>
-                </conditionGroup>
-              </conditionGroups>
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b38e-4752-5708-d73c" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
             </modifier>
           </modifiers>
           <constraints/>
@@ -25774,41 +25722,26 @@ OF SHROUDS or REIKENOR THE GRIMHAILER from the same battalion. On a 5+, that wou
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <repeats/>
-              <conditions/>
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8dfa-2d50-a239-9a14" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="69c3-97a2-07a2-394b" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5fe6-6e9f-702b-241b" type="greaterThan"/>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d93f-9d41-966a-4fe9" type="greaterThan"/>
-                  </conditions>
-                  <conditionGroups/>
-                </conditionGroup>
-              </conditionGroups>
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="69c3-97a2-07a2-394b" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
             </modifier>
           </modifiers>
           <constraints/>
           <categoryLinks/>
         </entryLink>
-        <entryLink id="19c7-dc17-0c49-a8d0" name="Nighthaunt Command Traits" hidden="false" targetId="35f4-3de6-0ede-c816" type="selectionEntryGroup">
+        <entryLink id="19c7-dc17-0c49-a8d0" name="Shades of Death" hidden="false" targetId="35f4-3de6-0ede-c816" type="selectionEntryGroup">
           <profiles/>
           <rules/>
           <infoLinks/>
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <repeats/>
-              <conditions/>
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5fe6-6e9f-702b-241b" type="greaterThan"/>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7b65-f69b-f915-00d3" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d93f-9d41-966a-4fe9" type="greaterThan"/>
-                  </conditions>
-                  <conditionGroups/>
-                </conditionGroup>
-              </conditionGroups>
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7b65-f69b-f915-00d3" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
             </modifier>
           </modifiers>
           <constraints/>
@@ -25821,18 +25754,10 @@ OF SHROUDS or REIKENOR THE GRIMHAILER from the same battalion. On a 5+, that wou
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <repeats/>
-              <conditions/>
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8dfa-2d50-a239-9a14" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d285-0a74-a36b-e277" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5fe6-6e9f-702b-241b" type="greaterThan"/>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d93f-9d41-966a-4fe9" type="greaterThan"/>
-                  </conditions>
-                  <conditionGroups/>
-                </conditionGroup>
-              </conditionGroups>
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d285-0a74-a36b-e277" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
             </modifier>
           </modifiers>
           <constraints/>
@@ -25845,18 +25770,10 @@ OF SHROUDS or REIKENOR THE GRIMHAILER from the same battalion. On a 5+, that wou
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <repeats/>
-              <conditions/>
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="59ec-1803-f129-8830" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8dfa-2d50-a239-9a14" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5fe6-6e9f-702b-241b" type="greaterThan"/>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d93f-9d41-966a-4fe9" type="greaterThan"/>
-                  </conditions>
-                  <conditionGroups/>
-                </conditionGroup>
-              </conditionGroups>
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="59ec-1803-f129-8830" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
             </modifier>
           </modifiers>
           <constraints/>
@@ -25869,18 +25786,10 @@ OF SHROUDS or REIKENOR THE GRIMHAILER from the same battalion. On a 5+, that wou
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <repeats/>
-              <conditions/>
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8dfa-2d50-a239-9a14" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d935-8702-2198-a55d" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d93f-9d41-966a-4fe9" type="greaterThan"/>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5fe6-6e9f-702b-241b" type="greaterThan"/>
-                  </conditions>
-                  <conditionGroups/>
-                </conditionGroup>
-              </conditionGroups>
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d935-8702-2198-a55d" type="equalTo"/>
+              </conditions>
+              <conditionGroups/>
             </modifier>
           </modifiers>
           <constraints/>
@@ -25897,18 +25806,12 @@ OF SHROUDS or REIKENOR THE GRIMHAILER from the same battalion. On a 5+, that wou
               <conditionGroups>
                 <conditionGroup type="or">
                   <conditions>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a28f-09a3-92d6-876e" type="greaterThan"/>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="19c7-dc17-0c49-a8d0" type="greaterThan"/>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5f1c-bc6d-6ed4-e316" type="greaterThan"/>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="02e5-e3fe-ab52-8bcf" type="greaterThan"/>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="650a-1994-bdc8-1c3c" type="greaterThan"/>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="aac7-d581-545a-2540" type="greaterThan"/>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2597-8596-5b4f-6ec1" type="greaterThan"/>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fba2-3ed1-00e0-c1d5" type="greaterThan"/>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b1b1-f0af-4578-f69a" type="greaterThan"/>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0591-16f8-c7c7-1e07" type="greaterThan"/>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ff1f-1c0c-762e-d93d" type="greaterThan"/>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="001a-a1d6-84c2-6480" type="greaterThan"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d285-0a74-a36b-e277" type="greaterThan"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b38e-4752-5708-d73c" type="greaterThan"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="59ec-1803-f129-8830" type="greaterThan"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7b65-f69b-f915-00d3" type="greaterThan"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="69c3-97a2-07a2-394b" type="greaterThan"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d935-8702-2198-a55d" type="greaterThan"/>
                   </conditions>
                   <conditionGroups/>
                 </conditionGroup>
