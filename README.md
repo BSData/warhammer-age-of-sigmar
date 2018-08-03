@@ -32,7 +32,7 @@ The Catalogs have been updated to support Matched Play points and FAQ's for the 
 
 * __What's this?__
 
-  _BSData organisation created this project. It's a GitHub repository of datafiles. Maintained by the community, in no way endorsed by BattleScribe. If you want to develop - cool! We need you! Take a look at [Getting Started wiki][]_ and when you're done there take a look at the [WAoS Catalog Wiki - Implementation Guidelines][]_
+  _BSData organisation created this project. It's a GitHub repository of datafiles. Maintained by the community, in no way endorsed by BattleScribe. If you want to develop - cool! We need you! Take a look at [Getting Started wiki][]_ and when you're done there take a look at the [WAoS Catalog Wiki - Implementation Guidelines][]
 
 * __Okay, nice project. Is it actually working?__ _I just want those files..._
  
@@ -67,5 +67,5 @@ The Catalogs have been updated to support Matched Play points and FAQ's for the 
 
 [BattleScribe homepage]: http://www.battlescribe.net/
 [BattleScribe Data on Appspot]: http://battlescribedata.appspot.com/#/repos
-[Getting Started wiki]: https://github.com/BSData/bsdata/wiki/Home#getting-started
+[Getting Started wiki]: https://github.com/BSData/catalogue-development/wiki/Getting-Started
 [WAoS Catalog Wiki - Implementation Guidelines]: https://github.com/BSData/warhammer-age-of-sigmar/wiki/Implementation-Guidelines
