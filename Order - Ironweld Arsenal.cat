@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="7e5a-f2b2-2dfb-00f3" name="Order - Ironweld Arsenal" book="Grand Alliance: Order" revision="8" battleScribeVersion="2.01" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="25" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="7e5a-f2b2-2dfb-00f3" name="Order - Ironweld Arsenal" book="Grand Alliance: Order" revision="9" battleScribeVersion="2.01" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="25" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks/>
@@ -422,6 +422,36 @@
             <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="A Cannon can only move if its Crew are within 1&quot; at the start of the movement phase.  If its Crew are within 1&quot; of the Cannon in the shooting phase, they can fire the war machine.  The war machine cannot make charge moves, does not need to take battleshock tests and is unaffected by any attack or ability the uses Bravery.  The Crew are in cover while they are within 1&quot; of their war machine."/>
           </characteristics>
         </profile>
+        <profile id="f56b-adb4-9122-3d63" name="Crew" hidden="false" profileTypeId="1960-ca8e-67ce-2014" profileTypeName="Unit">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Move" characteristicTypeId="8655-6213-2824-1752" value="4"/>
+            <characteristic name="Wounds" characteristicTypeId="cd0e-fea6-411f-904d" value="1"/>
+            <characteristic name="Bravery" characteristicTypeId="0c85-bf79-836b-759e" value="6"/>
+            <characteristic name="Save" characteristicTypeId="f8dd-4f2a-8543-4f36" value="5+"/>
+          </characteristics>
+        </profile>
+        <profile id="6865-f5a1-ad3e-8e63" name="Explosive Shells" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="You can re-roll the damage inflicted by a Cannon Shell if the target unit has 10 or more models."/>
+          </characteristics>
+        </profile>
+        <profile id="8e66-cab7-7890-b1b3" name="Run of Accuracy" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="You can re-roll failed hit rolls when firing a Cannon Shell if there is an ENGINEER from your army within 1&quot; of the war machine."/>
+          </characteristics>
+        </profile>
       </profiles>
       <rules/>
       <infoLinks/>
@@ -483,6 +513,37 @@
           <costs>
             <cost name="pts" costTypeId="points" value="0.0"/>
           </costs>
+        </selectionEntry>
+        <selectionEntry id="3dae-26c4-f38f-a81f" name="Crew&apos;s Tools" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="e487-d72d-3101-a7a9" name="Crew&apos;s Tools" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="Weapon">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
+                <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="1"/>
+                <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="1"/>
+                <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="4+"/>
+                <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="5+"/>
+                <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-"/>
+                <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="1"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3cdf-1293-3955-babe" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9915-7826-ea2c-77cc" type="min"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs/>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups/>
@@ -560,6 +621,54 @@
             <characteristic name="Variable3" characteristicTypeId="0491-444f-6247-5164" value="-"/>
           </characteristics>
         </profile>
+        <profile id="25a3-8c5d-8ea6-89c4" name="Point Blank" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="You can add 1 to hit rolls for this model&apos;s Volley of Shots if the target unit is within 13&quot;."/>
+          </characteristics>
+        </profile>
+        <profile id="341d-446c-abf2-c847" name="Crewed Artillery" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="A Helblaster Volley Gun can only move if its Crew are within 1&quot; at the start of the movement phase.  If its Crew are within 1&quot; of the Volley Gun in the shooting phase, they can fire the war machine.  The war machine cannot make charge moves, does not need to take battleshock tests and is unaffected by any attack or ability the uses Bravery.  The Crew are in cover while they are within 1&quot; of their war machine."/>
+          </characteristics>
+        </profile>
+        <profile id="c0c7-63d6-78a1-30c1" name="Helblaster Volley" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="In the shooting phase the Helblaster Volley Gun&apos;s Crew can attempt to load and fire 1, 2 or 3 gun decks.  If they load 2 gun decks, the war machine makes 2D6 attacks when it fires its Volley of Shots instead of D6, and if they loaded 3 gun decks, it will make 3D6 attacks.  However, if any doubles are rolled when determining how many attacks are made when firing a Volley of Shot, the Helblaster Volley Gun jams and no shots are fired this phase."/>
+          </characteristics>
+        </profile>
+        <profile id="abf6-f523-5912-35dc" name="Working Like Clockwork" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="You can re-roll all the dice when determing how many attacks are made with a Volley of Shots if there is an ENGINEER from your army within 1&quot; of this war machine."/>
+          </characteristics>
+        </profile>
+        <profile id="4b99-c552-b8dd-045b" name="Crew" hidden="false" profileTypeId="1960-ca8e-67ce-2014" profileTypeName="Unit">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Move" characteristicTypeId="8655-6213-2824-1752" value="5&quot;"/>
+            <characteristic name="Wounds" characteristicTypeId="cd0e-fea6-411f-904d" value="1"/>
+            <characteristic name="Bravery" characteristicTypeId="0c85-bf79-836b-759e" value="5"/>
+            <characteristic name="Save" characteristicTypeId="f8dd-4f2a-8543-4f36" value="6+"/>
+          </characteristics>
+        </profile>
       </profiles>
       <rules/>
       <infoLinks/>
@@ -621,6 +730,37 @@
           <costs>
             <cost name="pts" costTypeId="points" value="0.0"/>
           </costs>
+        </selectionEntry>
+        <selectionEntry id="c292-bc21-16f8-405c" name="Crew&apos;s Tools" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="70b7-f13a-5dce-bfa4" name="Crew&apos;s Tools" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="Weapon">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
+                <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="1"/>
+                <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="1"/>
+                <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="5+"/>
+                <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="5+"/>
+                <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-"/>
+                <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="1"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0473-31e4-2422-fd47" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f286-0cf9-d76b-bd4b" type="min"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs/>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups/>
@@ -698,6 +838,54 @@
             <characteristic name="Variable3" characteristicTypeId="0491-444f-6247-5164" value="0"/>
           </characteristics>
         </profile>
+        <profile id="65df-d115-592e-a47a" name="Crew" hidden="false" profileTypeId="1960-ca8e-67ce-2014" profileTypeName="Unit">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Move" characteristicTypeId="8655-6213-2824-1752" value="5&quot;"/>
+            <characteristic name="Wounds" characteristicTypeId="cd0e-fea6-411f-904d" value="1"/>
+            <characteristic name="Bravery" characteristicTypeId="0c85-bf79-836b-759e" value="5"/>
+            <characteristic name="Save" characteristicTypeId="f8dd-4f2a-8543-4f36" value="6+"/>
+          </characteristics>
+        </profile>
+        <profile id="0fe9-e8b7-e8f1-74db" name="Crewed Artillery" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="A Helstorm Rocket Battery can only move if its Crew are within 1&quot; at the start of the movement phase.  If its Crew are within 1&quot; of the Rocket Battery in the shooting phase, they can fire the war machine.  The war machine cannot make charge moves, does not need to take battleshock tests and is unaffected by any attack or ability the uses Bravery.  The Crew are in cover while they are within 1&quot; of their war machine."/>
+          </characteristics>
+        </profile>
+        <profile id="af02-5be3-591f-f6be" name="Arcing Ordinance" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="A Helstorm Rocket Battery can fire Helstorm Rocket Salvoes at units that are not visible to it."/>
+          </characteristics>
+        </profile>
+        <profile id="ea2f-50cb-d156-2565" name="Rocket Salvo" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="Before firing their war machine, a Helstorm Rocket Battery crew can choose to fire all their Rocket Salvoes at the same target.  If they do, you can add 1 to the hit rolls for the shots."/>
+          </characteristics>
+        </profile>
+        <profile id="79bc-c358-af2b-5ceb" name="I Meant to Hit That One, Honest" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="If there is an ENGINEER from you army within 1&quot; of this war machine and you fail to hit with a Helstorm Rocket Salvo, you may pick a different unit within 10&quot; of the original target and roll a dice; on a 6 that shot hits that unit instead."/>
+          </characteristics>
+        </profile>
       </profiles>
       <rules/>
       <infoLinks/>
@@ -759,6 +947,37 @@
           <costs>
             <cost name="pts" costTypeId="points" value="0.0"/>
           </costs>
+        </selectionEntry>
+        <selectionEntry id="5211-fe21-c3c4-1d94" name="Crew&apos;s Tools" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="f7ae-0bc1-efbc-d7e5" name="Crew&apos;s Tools" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="Weapon">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
+                <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="1"/>
+                <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="1"/>
+                <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="5+"/>
+                <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="5+"/>
+                <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-"/>
+                <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="1"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="42fd-8b8d-25e1-2e75" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c6c0-24c6-77bc-ef3b" type="min"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs/>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups/>
@@ -863,6 +1082,36 @@
             <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="You can re-roll the dice rolled to see if an Organ Gun jams if there is an Engineer from your army within 1&quot; of the war machine."/>
           </characteristics>
         </profile>
+        <profile id="f5a8-df22-cd01-386c" name="Crew" hidden="false" profileTypeId="1960-ca8e-67ce-2014" profileTypeName="Unit">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Move" characteristicTypeId="8655-6213-2824-1752" value="4"/>
+            <characteristic name="Wounds" characteristicTypeId="cd0e-fea6-411f-904d" value="1"/>
+            <characteristic name="Bravery" characteristicTypeId="0c85-bf79-836b-759e" value="6"/>
+            <characteristic name="Save" characteristicTypeId="f8dd-4f2a-8543-4f36" value="5+"/>
+          </characteristics>
+        </profile>
+        <profile id="2ffe-4cd5-5ab8-ff81" name="Organ Fire" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="In the shooting phase the Organ Gun&apos;s Crew can load 1, 2, 3 or 4 barrels.  If they load 2 or more barrels, roll a dice; if the result is equal to or greater than the number of loaded barrels, make one Barrage of Shots attack for each loaded barrel (roll seperately to determine the number of Barrage of Shots attacks made for each barrel being fired).  However, if the result is less than the number of loaded barrels, the Organ Gun jams and no shots are fired in this phase."/>
+          </characteristics>
+        </profile>
+        <profile id="a7b8-b79b-a95a-114e" name="Rune of Forging" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <characteristics>
+            <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="You can re-roll the dice rolled to see if an Organ Gun jams if there is an ENGINEER from your army within 1&quot; of the war machine."/>
+          </characteristics>
+        </profile>
       </profiles>
       <rules/>
       <infoLinks/>
@@ -924,6 +1173,37 @@
           <costs>
             <cost name="pts" costTypeId="points" value="0.0"/>
           </costs>
+        </selectionEntry>
+        <selectionEntry id="720b-bd6d-9f19-f32a" name="Crew&apos;s Tools" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="babd-556c-dee2-2d18" name="Crew&apos;s Tools" hidden="false" profileTypeId="96df-ab28-5d72-bbb3" profileTypeName="Weapon">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Type" characteristicTypeId="655c-362e-a663-3e50" value="Melee"/>
+                <characteristic name="Range" characteristicTypeId="ee32-7f8e-ccd7-b7b0" value="1"/>
+                <characteristic name="Attacks" characteristicTypeId="0bd7-bded-a0e0-19a0" value="1"/>
+                <characteristic name="To Hit" characteristicTypeId="87f2-fb99-33f9-7269" value="4+"/>
+                <characteristic name="To Wound" characteristicTypeId="8842-17f1-9794-4efc" value="5+"/>
+                <characteristic name="Rend" characteristicTypeId="f578-d2a5-f0d3-b707" value="-"/>
+                <characteristic name="Damage" characteristicTypeId="b5b6-4cbd-661d-1b70" value="1"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9b43-dc52-e37b-6d9a" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b150-c3a4-d741-c8b4" type="min"/>
+          </constraints>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs/>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups/>
