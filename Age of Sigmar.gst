@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" book="The General&apos;s Handbook" revision="43" battleScribeVersion="2.01" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" book="The General&apos;s Handbook" revision="45" battleScribeVersion="2.01" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <profiles/>
   <rules>
     <rule id="a954-6cfc-59ca-674e" name="Inspiring Presence" book="Core Rules" page="3" hidden="false">
@@ -764,6 +764,15 @@
       <modifiers/>
       <constraints/>
     </categoryEntry>
+    <categoryEntry id="5e28-c4f1-4a92-b75c" name="Realm of Battle" hidden="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="aeab-ce73-e115-d5bd" type="max"/>
+      </constraints>
+    </categoryEntry>
   </categoryEntries>
   <forceEntries>
     <forceEntry id="6ace-8bcc-48b2-6de7" name="*Old* *Pitched Battle (1,000)*" hidden="true">
@@ -1519,6 +1528,15 @@
           <modifiers/>
           <constraints/>
         </categoryLink>
+        <categoryLink id="3e68-25b0-23a7-10a3" name="Realm of Battle" hidden="false" targetId="5e28-c4f1-4a92-b75c" primary="false">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" id="13f0-17b9-371a-c147" type="max"/>
+          </constraints>
+        </categoryLink>
       </categoryLinks>
     </forceEntry>
   </forceEntries>
@@ -1718,6 +1736,22 @@
         </categoryLink>
       </categoryLinks>
     </entryLink>
+    <entryLink id="e116-d465-3e8e-864c" name="Realm of Battle" hidden="false" targetId="35ce-f528-13ad-8cea" type="selectionEntry">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints/>
+      <categoryLinks>
+        <categoryLink id="5552-cffb-c874-4e24" name="Realm of Battle" hidden="false" targetId="5e28-c4f1-4a92-b75c" primary="true">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+        </categoryLink>
+      </categoryLinks>
+    </entryLink>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="869c-168d-eba5-eacf" name="Arcane Bolt" hidden="false" collective="false" type="upgrade">
@@ -1780,7 +1814,7 @@
       <selectionEntries/>
       <selectionEntryGroups/>
       <entryLinks>
-        <entryLink id="abe0-0cb9-7db6-f034" name="Army&apos;s Realm of Origin" hidden="false" targetId="0d51-8ed8-dcf5-76a0" type="selectionEntryGroup">
+        <entryLink id="abe0-0cb9-7db6-f034" name="Realm of Origin" hidden="false" targetId="0d51-8ed8-dcf5-76a0" type="selectionEntryGroup">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -1832,6 +1866,31 @@
       <selectionEntryGroups/>
       <entryLinks>
         <entryLink id="cd0f-1b79-de92-e5ca" name="Endless Spells" hidden="false" targetId="8ea1-6791-75d8-aba3" type="selectionEntryGroup">
+          <profiles/>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+          <categoryLinks/>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name="pts" costTypeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="35ce-f528-13ad-8cea" name="Realm of Battle" hidden="false" collective="false" type="upgrade">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="63d3-b671-c649-faf6" type="max"/>
+      </constraints>
+      <categoryLinks/>
+      <selectionEntries/>
+      <selectionEntryGroups/>
+      <entryLinks>
+        <entryLink id="a937-013e-50ba-3bac" name="Realm of Battle" hidden="false" targetId="825c-e98c-986d-7985" type="selectionEntryGroup">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -4852,13 +4911,13 @@
         </selectionEntry>
         <selectionEntry id="9c7b-05ba-1d3a-caff" name="3. Hydroxskin Cloak" hidden="false" collective="false" type="upgrade">
           <profiles>
-            <profile id="edc9-b33c-3caf-0e93" name="Hydroxskin Cloak" hidden="false" profileTypeId="0ac4-aacb-2481-8e72" profileTypeName="Artefact">
+            <profile id="edc9-b33c-3caf-0e93" name="Hydroxskin Cloak" book="Malign Sorcery; Errata, July 2018" hidden="false" profileTypeId="0ac4-aacb-2481-8e72" profileTypeName="Artefact">
               <profiles/>
               <rules/>
               <infoLinks/>
               <modifiers/>
               <characteristics>
-                <characteristic name="Artefact Details" characteristicTypeId="0918-c47a-d84e-c0cf" value="The bearer can fly. After the bearer has moved, you can pick a unit that has models that the bearer has passed across and roll a dice. On a 3+ that unit suffers D3 mortal wounds."/>
+                <characteristic name="Artefact Details" characteristicTypeId="0918-c47a-d84e-c0cf" value="The bearer can fly. After the bearer has made a normal move, you can pick 1 unit that has any models that the bearer has passed across and roll a dice. On a 3+ that unit suffers D3 mortal wounds."/>
               </characteristics>
             </profile>
           </profiles>
@@ -6626,13 +6685,13 @@
         </selectionEntry>
         <selectionEntry id="bb14-f48b-91ca-089e" name="2. Lens of Refraction" hidden="false" collective="false" type="upgrade">
           <profiles>
-            <profile id="04d2-fb64-23c3-6aa9" name="Lens of Refraction" hidden="false" profileTypeId="0ac4-aacb-2481-8e72" profileTypeName="Artefact">
+            <profile id="04d2-fb64-23c3-6aa9" name="Lens of Refraction" book="Malign Sorcery; Errata, July 2018" hidden="false" profileTypeId="0ac4-aacb-2481-8e72" profileTypeName="Artefact">
               <profiles/>
               <rules/>
               <infoLinks/>
               <modifiers/>
               <characteristics>
-                <characteristic name="Artefact Details" characteristicTypeId="0918-c47a-d84e-c0cf" value="Each time a friendly unit within 6&quot; of the bearer would suffer any mortal wounds from a spell cast by an enemy WIZARD , roll a D3 and reduce the number of mortal wounds suffered by the result."/>
+                <characteristic name="Artefact Details" characteristicTypeId="0918-c47a-d84e-c0cf" value="Once per battle round, the first time a friendly unit within 6&quot; of the bearer suffers any mortal wounds inflicted by a spell or endless spell, roll a D3 and reduce the number of mortal wounds suffered by the roll."/>
               </characteristics>
             </profile>
           </profiles>
@@ -7399,13 +7458,13 @@ to set up the WIZARD, then the WIZARD is slain.</description>
                 <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="When this model is set up, the player who set it up can immediately make a move with it. "/>
               </characteristics>
             </profile>
-            <profile id="72c5-5472-f2f9-2532" name="Tendrils of Shadow and Light" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+            <profile id="72c5-5472-f2f9-2532" name="Tendrils of Shadow and Light" book="Malign Sorcery; Errata, July 2018" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
               <profiles/>
               <rules/>
               <infoLinks/>
               <modifiers/>
               <characteristics>
-                <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="After the Shadow Geminid model has moved, each unit that has any models it passed across suffers D3 mortal wounds. In addition, subtract 1 (to a minimum of 1) from the Attacks characteristic of melee weapons used by each unit that has any models it passed across until the end of the battle round.  After the Light Geminid model has moved, each unit that has any models it passed across suffers D3 mortal wounds. In addition, subtract 1 from hit rolls for each unit that has any models it passed across until the end of the battle round."/>
+                <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="After the Shadow Geminid model has moved, each unit that has any models it passed across suffers D3 mortal wounds. In addition, subtract 1 (to a minimum of 1) from the Attacks characteristic of melee weapons used by each unit that has any models it passed across until the end of the battle round. A unit is not affected by the Shadow Geminid model if it has been passed across by the Light Geminid model earlier in the same battle round. After the Light Geminid model has moved, each unit that has any models it passed across suffers D3 mortal wounds. In addition, subtract 1 from hit rolls for each unit that has any models it passed across until the end of the battle round. A unit is not affected by the Light Geminid model if it has been passed across by the Shadow Geminind model earlier in the same battle round (a unit can be affected by one or other of the models each battle round, but not both)."/>
               </characteristics>
             </profile>
             <profile id="3429-c00a-619d-471f" name="Empowered by Hysh" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
@@ -8220,13 +8279,13 @@ to set up the WIZARD, then the WIZARD is slain.</description>
                 <characteristic name="Description" characteristicTypeId="76ff-781d-b8e6-5f27" value="If successfully cast, set up the first Umbral Spellportal model wholly within 12&quot; of the caster, and then set up the second Umbral Spellportal model wholly within 18&quot; of the first."/>
               </characteristics>
             </profile>
-            <profile id="aa9a-0aa6-d8a3-98d0" name="Arcane Passage" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
+            <profile id="aa9a-0aa6-d8a3-98d0" name="Arcane Passage" book="Malign Sorcery; Errata, July 2018" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
               <profiles/>
               <rules/>
               <infoLinks/>
               <modifiers/>
               <characteristics>
-                <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="If a Wizard successfully casts a spell while they are within 1&quot; of an Umbral Spellportal model, the range and visibility of the spell can be measured from the other Umbral Spellportal model from this endless spell.  If a predatory endless spell finishes a move within 6&quot; of an Umbral Spellportal model, remove it from the battlefield and set it up again anywhere within 6&quot; of the other Umbral Spellportal model from this endless spell."/>
+                <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="If a Wizard successfully casts a spell while they are within 1&quot; of an Umbral Spellportal model, the range and visibility of the spell can be measured from the other Umbral Spellportal model from this endless spell. After the range and visibility for a spell has been measured from an Umbral Spellportal, you cannot use the Arcane Passage ability again for that Umbral Spellportal in that phase. If a predatory endless spell finishes a move within 6&quot; of an Umbral Spellportal model, remove it from the battlefield and set it up again anywhere within 6&quot; of the other Umbral Spellportal model from this endless spell. After an endless spell finishes a move within 6&quot; of an Umbral Spellportal and is set up again, it cannot move again in that phase, and you cannot use the Arcane Passage ability again for that Umbral Spellportal in that phase."/>
               </characteristics>
             </profile>
             <profile id="6418-d37c-76e2-8d1b" name="Empowered by Ulgu" hidden="false" profileTypeId="c924-5a68-471a-2fd5" profileTypeName="Unit Abilities">
@@ -8337,6 +8396,546 @@ to set up the WIZARD, then the WIZARD is slain.</description>
               <constraints/>
             </categoryLink>
           </categoryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups/>
+      <entryLinks/>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="825c-e98c-986d-7985" name="Realm of Battle" hidden="false" collective="false">
+      <profiles/>
+      <rules/>
+      <infoLinks/>
+      <modifiers/>
+      <constraints>
+        <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cf45-ef51-0f55-7f28" type="min"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3277-c810-a600-3a73" type="max"/>
+      </constraints>
+      <categoryLinks/>
+      <selectionEntries>
+        <selectionEntry id="ba2b-ec63-fa08-88ef" name="Battle: Aqshy" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="dbea-58cc-3513-1868" name="Stoke Rage" book="Malign Sorcery" page="75" hidden="false" profileTypeId="2e81-5e22-c6e1-73cb" profileTypeName="Spell">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Casting Value" characteristicTypeId="2508-b604-1258-a920" value="6"/>
+                <characteristic name="Description" characteristicTypeId="76ff-781d-b8e6-5f27" value="If successfully cast, pick a friendly unit within 12&quot; of the caster that is visible to them. Add 1 to wound rolls and charge rolls for that unit until your next hero phase."/>
+              </characteristics>
+            </profile>
+            <profile id="c833-e77e-7d86-96fe" name="Inferno Blades" book="Malign Sorcery" page="75" hidden="false" profileTypeId="2e81-5e22-c6e1-73cb" profileTypeName="Spell">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Casting Value" characteristicTypeId="2508-b604-1258-a920" value="6"/>
+                <characteristic name="Description" characteristicTypeId="76ff-781d-b8e6-5f27" value="If successfully cast, pick a friendly unit within 12&quot; of the caster. Add 1 to the Damage characteristic of melee weapons used by that unit until your next hero phase."/>
+              </characteristics>
+            </profile>
+            <profile id="da41-8a88-bda1-7c5f" name="Fiery Blast" book="Malign Sorcery" page="75" hidden="false" profileTypeId="2e81-5e22-c6e1-73cb" profileTypeName="Spell">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Casting Value" characteristicTypeId="2508-b604-1258-a920" value="7"/>
+                <characteristic name="Description" characteristicTypeId="76ff-781d-b8e6-5f27" value="If successfully cast, pick a point on the battlefield within 18&quot; of the caster that is visible to them. Roll a dice for each unit (friend or foe) within 3&quot; of this point. On a 4+ that unit suffers D3 mortal wounds."/>
+              </characteristics>
+            </profile>
+            <profile id="297e-c1cf-ad98-4df9" name="Glare of Vulcatrix" book="Malign Sorcery" page="75" hidden="false" profileTypeId="2e81-5e22-c6e1-73cb" profileTypeName="Spell">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Casting Value" characteristicTypeId="2508-b604-1258-a920" value="8"/>
+                <characteristic name="Description" characteristicTypeId="76ff-781d-b8e6-5f27" value="If successfully cast, pick an enemy unit within 9&quot; of the caster that is visible to them. Roll a dice; if the result is higher than the unit’s Wounds characteristic, a model from that unit is slain."/>
+              </characteristics>
+            </profile>
+            <profile id="5312-c3ec-1d59-ed83" name="Parch" book="Malign Sorcery" page="75" hidden="false" profileTypeId="2e81-5e22-c6e1-73cb" profileTypeName="Spell">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Casting Value" characteristicTypeId="2508-b604-1258-a920" value="6"/>
+                <characteristic name="Description" characteristicTypeId="76ff-781d-b8e6-5f27" value="If successfully cast, pick an enemy unit within 18&quot; of the caster. That unit must halve its Move characteristic until your next hero phase. In addition, roll a dice each time that unit completes a charge move until your next hero phase. On a 5+ the unit suffers D3 mortal wounds."/>
+              </characteristics>
+            </profile>
+            <profile id="b054-6b9d-5733-a302" name="Incandescent Form" book="Malign Sorcery" page="75" hidden="false" profileTypeId="2e81-5e22-c6e1-73cb" profileTypeName="Spell">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Casting Value" characteristicTypeId="2508-b604-1258-a920" value="6"/>
+                <characteristic name="Description" characteristicTypeId="76ff-781d-b8e6-5f27" value="If successfully cast, subtract 1 from hit rolls for attacks that target the caster until your next hero phase."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="ed53-d347-e94c-2431" name="Battle: Chamon" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="2c42-d061-a087-9527" name="Rain of Lead" book="Malign Socery" page="74" hidden="false" profileTypeId="2e81-5e22-c6e1-73cb" profileTypeName="Spell">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Casting Value" characteristicTypeId="2508-b604-1258-a920" value="6"/>
+                <characteristic name="Description" characteristicTypeId="76ff-781d-b8e6-5f27" value="If successfully cast, pick an enemy unit within 18&quot; of the caster that is visible to them. That unit suffers D3 mortal wounds. In addition, subtract 1&quot; from that unit’s Move characteristic until your next hero phase."/>
+              </characteristics>
+            </profile>
+            <profile id="0f74-a77d-dd05-d038" name="Curse of Rust" book="Malign Sorcery" page="74" hidden="false" profileTypeId="2e81-5e22-c6e1-73cb" profileTypeName="Spell">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Casting Value" characteristicTypeId="2508-b604-1258-a920" value="7"/>
+                <characteristic name="Description" characteristicTypeId="76ff-781d-b8e6-5f27" value="If successfully cast, pick an enemy unit within 12&quot; of the caster that is visible to them. Subtract 1 from hit rolls and save rolls for that unit until your next hero phase."/>
+              </characteristics>
+            </profile>
+            <profile id="ed1d-11ec-1a8d-004a" name="Molten Gaze" book="Malign Sorcery" page="74" hidden="false" profileTypeId="2e81-5e22-c6e1-73cb" profileTypeName="Spell">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Casting Value" characteristicTypeId="2508-b604-1258-a920" value="6"/>
+                <characteristic name="Description" characteristicTypeId="76ff-781d-b8e6-5f27" value="If successfully cast, pick a point on the battlefield within 12&quot; of the caster that is visible to them and draw an imaginary straight line 1mm wide between that point and the closest part of the caster. Each unit other than the caster that has models passed across by this line suffers 1 mortal wound."/>
+              </characteristics>
+            </profile>
+            <profile id="1617-a762-c075-2410" name="Rule of Burning Iron" book="Malign Sorcery" page="74" hidden="false" profileTypeId="2e81-5e22-c6e1-73cb" profileTypeName="Spell">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Casting Value" characteristicTypeId="2508-b604-1258-a920" value="8"/>
+                <characteristic name="Description" characteristicTypeId="76ff-781d-b8e6-5f27" value="If successfully cast, pick an enemy unit within 12&quot; of the caster that is visible to them. Roll a dice for each model in that unit. For each 6+ that unit suffers 1 mortal wound."/>
+              </characteristics>
+            </profile>
+            <profile id="3784-d44d-177e-60e3" name="Glittering Robe" book="Malign Sorcery" page="74" hidden="false" profileTypeId="2e81-5e22-c6e1-73cb" profileTypeName="Spell">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Casting Value" characteristicTypeId="2508-b604-1258-a920" value="6"/>
+                <characteristic name="Description" characteristicTypeId="76ff-781d-b8e6-5f27" value="If successfully cast, re-roll save rolls of 1 for the caster until your next hero phase."/>
+              </characteristics>
+            </profile>
+            <profile id="02b9-131b-e438-e1da" name="Transmutation" book="Malign Sorcery" page="74" hidden="false" profileTypeId="2e81-5e22-c6e1-73cb" profileTypeName="Spell">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Casting Value" characteristicTypeId="2508-b604-1258-a920" value="7"/>
+                <characteristic name="Description" characteristicTypeId="76ff-781d-b8e6-5f27" value="If successfully cast, pick an enemy unit within 18&quot; of the caster that is visible to them and roll 3 dice. For each roll that is greater than that unit’s Wounds characteristic, 1 model from that unit is slain."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="afb2-6845-cd03-2596" name="Battle: Ghur" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="4980-8f82-01df-d8c1" name="The Amber Spear" book="Malign Socery" page="73" hidden="false" profileTypeId="2e81-5e22-c6e1-73cb" profileTypeName="Spell">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Casting Value" characteristicTypeId="2508-b604-1258-a920" value="6"/>
+                <characteristic name="Description" characteristicTypeId="76ff-781d-b8e6-5f27" value="If successfully cast, pick a point on the battlefield within 12&quot; of the caster that is visible to them and draw an imaginary straight line 1mm wide between that point and the closest part of the caster. Each unit other than the caster that has models passed across by this line suffers 1 mortal wound."/>
+              </characteristics>
+            </profile>
+            <profile id="47d2-8fe8-a1cd-fcd4" name="Bestial Spirit" book="Malign Sorcery" page="73" hidden="false" profileTypeId="2e81-5e22-c6e1-73cb" profileTypeName="Spell">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Casting Value" characteristicTypeId="2508-b604-1258-a920" value="6"/>
+                <characteristic name="Description" characteristicTypeId="76ff-781d-b8e6-5f27" value="If successfully cast, pick an enemy unit within 18&quot; of the caster that is visible to them. That unit suffers D3 mortal wounds. In addition, if the unit suffers 3 mortal wounds from this spell, subtract 1 from its Bravery characteristic until your next hero phase."/>
+              </characteristics>
+            </profile>
+            <profile id="b570-a87b-a5d6-4314" name="Flock of Doom" book="Malign Sorcery" page="73" hidden="false" profileTypeId="2e81-5e22-c6e1-73cb" profileTypeName="Spell">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Casting Value" characteristicTypeId="2508-b604-1258-a920" value="6"/>
+                <characteristic name="Description" characteristicTypeId="76ff-781d-b8e6-5f27" value="If successfully cast, pick an enemy unit within 18&quot; of the caster that is visible to them and roll 12 dice. For each 6+ that enemy unit suffers 1 mortal wound."/>
+              </characteristics>
+            </profile>
+            <profile id="c34f-e0f3-8aa6-27b2" name="Impenetrable Hide" book="Malign Sorcery" page="73" hidden="false" profileTypeId="2e81-5e22-c6e1-73cb" profileTypeName="Spell">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Casting Value" characteristicTypeId="2508-b604-1258-a920" value="6"/>
+                <characteristic name="Description" characteristicTypeId="76ff-781d-b8e6-5f27" value="If successfully cast, you can re-roll failed save rolls for the caster until the start of your next hero phase."/>
+              </characteristics>
+            </profile>
+            <profile id="796c-59cd-7791-1fb9" name="Cower" book="Malign Sorcery" page="73" hidden="false" profileTypeId="2e81-5e22-c6e1-73cb" profileTypeName="Spell">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Casting Value" characteristicTypeId="2508-b604-1258-a920" value="6"/>
+                <characteristic name="Description" characteristicTypeId="76ff-781d-b8e6-5f27" value="If successfully cast, pick an enemy MONSTER within 12&quot; of the caster that is visible to them and roll 2D6. If the result is higher than that MONSTER ’s Bravery characteristic, it cannot make a charge move in your opponent’s next turn."/>
+              </characteristics>
+            </profile>
+            <profile id="130c-f54d-8df0-2a75" name="Primal Hunter" book="Malign Sorcery" page="73" hidden="false" profileTypeId="2e81-5e22-c6e1-73cb" profileTypeName="Spell">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Casting Value" characteristicTypeId="2508-b604-1258-a920" value="8"/>
+                <characteristic name="Description" characteristicTypeId="76ff-781d-b8e6-5f27" value="If successfully cast, pick a friendly HERO within 12&quot; of the caster that is visible to them. Re-roll failed charge rolls and hit rolls for that HERO until your next hero phase."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="286a-bfe7-f725-ca75" name="Battle: Ghyran" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="bf34-4284-e813-d06a" name="Whipvines" book="Malign Sorcery" page="72" hidden="false" profileTypeId="2e81-5e22-c6e1-73cb" profileTypeName="Spell">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Casting Value" characteristicTypeId="2508-b604-1258-a920" value="5"/>
+                <characteristic name="Description" characteristicTypeId="76ff-781d-b8e6-5f27" value="If successfully cast, pick a point on the battlefield within 18&quot; of the caster that is visible to them. Roll a dice for each enemy unit within 3&quot; of this point. On a 4+ the unit being rolled for suffers 1 mortal wound."/>
+              </characteristics>
+            </profile>
+            <profile id="981d-92e1-a330-a142" name="Mirrorpool" book="Malign Sorcery" page="72" hidden="false" profileTypeId="2e81-5e22-c6e1-73cb" profileTypeName="Spell">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Casting Value" characteristicTypeId="2508-b604-1258-a920" value="6"/>
+                <characteristic name="Description" characteristicTypeId="76ff-781d-b8e6-5f27" value="If successfully cast, remove the caster from the battlefield and set them up again anywhere within 18&quot; of their previous position, more than 9&quot; from any enemy models."/>
+              </characteristics>
+            </profile>
+            <profile id="8ead-e4d4-d566-1cad" name="Realmblood" book="Malign Sorcery" page="72" hidden="false" profileTypeId="2e81-5e22-c6e1-73cb" profileTypeName="Spell">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Casting Value" characteristicTypeId="2508-b604-1258-a920" value="7"/>
+                <characteristic name="Description" characteristicTypeId="76ff-781d-b8e6-5f27" value="If successfully cast, heal D3 wounds allocated to the caster."/>
+              </characteristics>
+            </profile>
+            <profile id="ad7d-da4d-95bf-85d7" name="Briarstorm" book="Malign Sorcery" page="72" hidden="false" profileTypeId="2e81-5e22-c6e1-73cb" profileTypeName="Spell">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Casting Value" characteristicTypeId="2508-b604-1258-a920" value="6"/>
+                <characteristic name="Description" characteristicTypeId="76ff-781d-b8e6-5f27" value="If successfully cast, pick a point on the battlefield within 18&quot; of the caster. Until your next hero phase, any unit that finishes a move within 3&quot; of that point suffers D3 mortal wounds."/>
+              </characteristics>
+            </profile>
+            <profile id="c6ac-bacc-b44a-ee43" name="Flesh to Stone" book="Malign Sorcery" page="72" hidden="false" profileTypeId="2e81-5e22-c6e1-73cb" profileTypeName="Spell">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Casting Value" characteristicTypeId="2508-b604-1258-a920" value="7"/>
+                <characteristic name="Description" characteristicTypeId="76ff-781d-b8e6-5f27" value="If successfully cast, re-roll successful wound rolls for attacks that target the caster until your next hero phase."/>
+              </characteristics>
+            </profile>
+            <profile id="f1e2-5c25-57d9-2a96" name="Sicklewind" book="Malign Sorcery" page="72" hidden="false" profileTypeId="2e81-5e22-c6e1-73cb" profileTypeName="Spell">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Casting Value" characteristicTypeId="2508-b604-1258-a920" value="7"/>
+                <characteristic name="Description" characteristicTypeId="76ff-781d-b8e6-5f27" value="If successfully cast, pick a point on the battlefield within 12&quot; of the caster that is visible to them and draw an imaginary straight line 1mm wide between that point and the closest part of the caster. Each unit other than the caster that has models passed across by this line suffers D3 mortal wounds."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="632b-73ed-9385-2491" name="Battle: Hysh" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="6a62-fd42-aa4d-5e6a" name="Exorcising Beam" book="Malign Sorcery" page="78" hidden="false" profileTypeId="2e81-5e22-c6e1-73cb" profileTypeName="Spell">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Casting Value" characteristicTypeId="2508-b604-1258-a920" value="6"/>
+                <characteristic name="Description" characteristicTypeId="76ff-781d-b8e6-5f27" value="If successfully cast, pick an enemy unit within 12&quot; of the caster that is visible to them. That unit suffers D3 mortal wounds. If the enemy unit is a DAEMON or DEATH unit, it suffers D6 mortal wounds instead."/>
+              </characteristics>
+            </profile>
+            <profile id="bf05-2d97-bcc4-15f5" name="Light of Battle" book="Malign Sorcery" page="78" hidden="false" profileTypeId="2e81-5e22-c6e1-73cb" profileTypeName="Spell">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Casting Value" characteristicTypeId="2508-b604-1258-a920" value="5"/>
+                <characteristic name="Description" characteristicTypeId="76ff-781d-b8e6-5f27" value="If successfully cast, pick a friendly unit within 18&quot; of the caster. Do not take battleshock tests for that unit until your next hero phase."/>
+              </characteristics>
+            </profile>
+            <profile id="1106-ad78-0b0e-c029" name="Vengeful Illumination" book="Malign Sorcery" page="78" hidden="false" profileTypeId="2e81-5e22-c6e1-73cb" profileTypeName="Spell">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Casting Value" characteristicTypeId="2508-b604-1258-a920" value="7"/>
+                <characteristic name="Description" characteristicTypeId="76ff-781d-b8e6-5f27" value="If successfully cast, pick an enemy unit within 18&quot; of the caster that is visible to them. Add 1 to hit rolls for attacks made with missile weapons that target that unit until your next hero phase."/>
+              </characteristics>
+            </profile>
+            <profile id="42b6-a83b-993f-08c1" name="Aetheric Net" book="Malign Sorcery" page="78" hidden="false" profileTypeId="2e81-5e22-c6e1-73cb" profileTypeName="Spell">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Casting Value" characteristicTypeId="2508-b604-1258-a920" value="6"/>
+                <characteristic name="Description" characteristicTypeId="76ff-781d-b8e6-5f27" value="If successfully cast, pick a point on the battlefield within 18&quot; of the caster. Roll a dice for each unit (friend or foe) within 3&quot; of that point. On a 4+ that unit suffers 1 mortal wound, and its Move characteristic is halved until your next hero phase."/>
+              </characteristics>
+            </profile>
+            <profile id="b132-e233-e288-8114" name="Healing Glow" book="Malign Sorcery" page="78" hidden="false" profileTypeId="2e81-5e22-c6e1-73cb" profileTypeName="Spell">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Casting Value" characteristicTypeId="2508-b604-1258-a920" value="7"/>
+                <characteristic name="Description" characteristicTypeId="76ff-781d-b8e6-5f27" value="If successfully cast, pick a friendly unit within 6&quot; of the caster that is visible to them. Heal D3 wounds allocated to that unit."/>
+              </characteristics>
+            </profile>
+            <profile id="777d-7786-4576-16e8" name="Banishment" book="Malign Sorcery; Errata, July 2018" page="78" hidden="false" profileTypeId="2e81-5e22-c6e1-73cb" profileTypeName="Spell">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Casting Value" characteristicTypeId="2508-b604-1258-a920" value="8"/>
+                <characteristic name="Description" characteristicTypeId="76ff-781d-b8e6-5f27" value="If successfully cast, pick 1 enemy unit within 12&quot; of the caster that is visible to them. Your opponent must remove that unit from the battlefield and then set it up again, anywhere on the battlefield more than 24&quot; from the caster and more than 9&quot; from any other models from the caster’s army."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="098f-0986-2570-bece" name="Battle: Shyish" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="6e51-da62-4ca8-04ad" name="Word of Ending" book="Malign Sorcery" page="76" hidden="false" profileTypeId="2e81-5e22-c6e1-73cb" profileTypeName="Spell">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Casting Value" characteristicTypeId="2508-b604-1258-a920" value="6"/>
+                <characteristic name="Description" characteristicTypeId="76ff-781d-b8e6-5f27" value="If successfully cast, pick an enemy HERO within 12&quot; of the caster that is visible to them and roll a dice. If the result is more than the number of wounds allocated to that model, it suffers D3 mortal wounds."/>
+              </characteristics>
+            </profile>
+            <profile id="80ae-e158-1210-7d7c" name="Night&apos;s Touch" book="Malign Sorcery" page="76" hidden="false" profileTypeId="2e81-5e22-c6e1-73cb" profileTypeName="Spell">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Casting Value" characteristicTypeId="2508-b604-1258-a920" value="8"/>
+                <characteristic name="Description" characteristicTypeId="76ff-781d-b8e6-5f27" value="If successfully cast, pick a friendly unit within 6&quot; of the caster that is visible to them. Ignore modifiers (positive and negative) when making save rolls for that unit until your next hero phase."/>
+              </characteristics>
+            </profile>
+            <profile id="80b8-a2bc-5bf4-8b4d" name="Soulshroud" book="Malign Sorcery" page="76" hidden="false" profileTypeId="2e81-5e22-c6e1-73cb" profileTypeName="Spell">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Casting Value" characteristicTypeId="2508-b604-1258-a920" value="6"/>
+                <characteristic name="Description" characteristicTypeId="76ff-781d-b8e6-5f27" value="If successfully cast, pick a friendly unit within 12&quot; of the caster that is visible to them. That unit is not affected by other spells until your next hero phase."/>
+              </characteristics>
+            </profile>
+            <profile id="7ae9-bda5-9bee-9446" name="Unnatural Darkness" book="Malign Sorcery" page="76" hidden="false" profileTypeId="2e81-5e22-c6e1-73cb" profileTypeName="Spell">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Casting Value" characteristicTypeId="2508-b604-1258-a920" value="6"/>
+                <characteristic name="Description" characteristicTypeId="76ff-781d-b8e6-5f27" value="If successfully cast, pick a friendly unit within 12&quot; of the caster that is visible to them. Subtract 1 from hit rolls for attacks that target that unit until your next hero phase."/>
+              </characteristics>
+            </profile>
+            <profile id="4f5e-3629-2e27-f24b" name="Soulflay" book="Malign Sorcery" page="76" hidden="false" profileTypeId="2e81-5e22-c6e1-73cb" profileTypeName="Spell">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Casting Value" characteristicTypeId="2508-b604-1258-a920" value="7"/>
+                <characteristic name="Description" characteristicTypeId="76ff-781d-b8e6-5f27" value="If successfully cast, pick an enemy HERO within 12&quot; of the caster that is visible to them. That unit suffers D3 mortal wounds. In addition, if the unit suffers 3 mortal wounds from this spell, subtract 2 from its Bravery characteristic until your next hero phase."/>
+              </characteristics>
+            </profile>
+            <profile id="19ff-bb06-bb69-7dd5" name="Ethereal Guide" book="Malign Sorcery" page="76" hidden="false" profileTypeId="2e81-5e22-c6e1-73cb" profileTypeName="Spell">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Casting Value" characteristicTypeId="2508-b604-1258-a920" value="6"/>
+                <characteristic name="Description" characteristicTypeId="76ff-781d-b8e6-5f27" value="If successfully cast, add 1 to hit rolls for attacks made by the caster until your next hero phase."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+          <categoryLinks/>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="3923-b6b9-c500-1062" name="Battle: Ulgu" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="7b58-9346-d870-903a" name="Labyrinth of Sorrows" book="Malign Sorcery" page="77" hidden="false" profileTypeId="2e81-5e22-c6e1-73cb" profileTypeName="Spell">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Casting Value" characteristicTypeId="2508-b604-1258-a920" value="5"/>
+                <characteristic name="Description" characteristicTypeId="76ff-781d-b8e6-5f27" value="If successfully cast, pick an enemy unit within 12&quot; of the caster that is visible to them. Halve the Move characteristic of that unit until your next hero phase."/>
+              </characteristics>
+            </profile>
+            <profile id="b468-8c05-4668-3d4c" name="Crown of Asphyxiation" book="Malign Sorcery" page="77" hidden="false" profileTypeId="2e81-5e22-c6e1-73cb" profileTypeName="Spell">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Casting Value" characteristicTypeId="2508-b604-1258-a920" value="6"/>
+                <characteristic name="Description" characteristicTypeId="76ff-781d-b8e6-5f27" value="If successfully cast, roll a dice for each enemy unit within 3&quot; of the caster. On a 4+ that unit suffers 1 mortal wound."/>
+              </characteristics>
+            </profile>
+            <profile id="5483-9381-e6dd-60c6" name="The Enfeebling" book="Malign Sorcery" page="77" hidden="false" profileTypeId="2e81-5e22-c6e1-73cb" profileTypeName="Spell">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Casting Value" characteristicTypeId="2508-b604-1258-a920" value="6"/>
+                <characteristic name="Description" characteristicTypeId="76ff-781d-b8e6-5f27" value="If successfully cast, pick an enemy unit within 12&quot; of the caster. Re-roll failed wound rolls for attacks that target this unit until your next hero phase."/>
+              </characteristics>
+            </profile>
+            <profile id="6a2d-6e7c-c48b-10bb" name="Phantasmal Guardian" book="Malign Sorcery" page="77" hidden="false" profileTypeId="2e81-5e22-c6e1-73cb" profileTypeName="Spell">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Casting Value" characteristicTypeId="2508-b604-1258-a920" value="6"/>
+                <characteristic name="Description" characteristicTypeId="76ff-781d-b8e6-5f27" value="If successfully cast, roll a dice each time you allocate a wound or mortal wound to the caster until your next hero phase. On a 5+ the wound is negated."/>
+              </characteristics>
+            </profile>
+            <profile id="9abb-8076-099a-4563" name="Bridge of Shadows" book="Malign Sorcery" page="77" hidden="false" profileTypeId="2e81-5e22-c6e1-73cb" profileTypeName="Spell">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Casting Value" characteristicTypeId="2508-b604-1258-a920" value="6"/>
+                <characteristic name="Description" characteristicTypeId="76ff-781d-b8e6-5f27" value="If successfully cast, pick a friendly unit wholly within 12&quot; of the caster and remove it from the battlefield. Set it up anywhere on the battlefield that is wholly within 24&quot; of the caster and more than 9&quot; from any enemy models. It may not move in the subsequent movement phase."/>
+              </characteristics>
+            </profile>
+            <profile id="1078-c3cd-bed1-ea1c" name="Aetheric Tendrils" book="Malign Sorcery" page="77" hidden="false" profileTypeId="2e81-5e22-c6e1-73cb" profileTypeName="Spell">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <characteristics>
+                <characteristic name="Casting Value" characteristicTypeId="2508-b604-1258-a920" value="6"/>
+                <characteristic name="Description" characteristicTypeId="76ff-781d-b8e6-5f27" value="If successfully cast, pick an enemy unit within 12&quot; of the caster that is visible to them. That unit suffers D3 mortal wounds. If that unit is a HERO or MONSTER, you can make a normal move with that unit as if it had a Move characteristic of 4&quot;."/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules/>
+          <infoLinks/>
+          <modifiers/>
+          <constraints/>
+          <categoryLinks/>
           <selectionEntries/>
           <selectionEntryGroups/>
           <entryLinks/>
