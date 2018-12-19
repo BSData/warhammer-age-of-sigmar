@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" book="The General&apos;s Handbook" revision="45" battleScribeVersion="2.01" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" book="The General&apos;s Handbook" revision="46" battleScribeVersion="2.01" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <profiles/>
   <rules>
     <rule id="a954-6cfc-59ca-674e" name="Inspiring Presence" book="Core Rules" page="3" hidden="false">
@@ -4233,13 +4233,13 @@
         </selectionEntry>
         <selectionEntry id="3acc-7b56-47f8-9c73" name="3. Jade Diadem" hidden="false" collective="false" type="upgrade">
           <profiles>
-            <profile id="d11d-df26-af25-0ff6" name="Jade Diadem" hidden="false" profileTypeId="0ac4-aacb-2481-8e72" profileTypeName="Artefact">
+            <profile id="d11d-df26-af25-0ff6" name="Jade Diadem" book="Malign Sorcery; Official Errata, December 2018" hidden="false" profileTypeId="0ac4-aacb-2481-8e72" profileTypeName="Artefact">
               <profiles/>
               <rules/>
               <infoLinks/>
               <modifiers/>
               <characteristics>
-                <characteristic name="Artefact Details" characteristicTypeId="0918-c47a-d84e-c0cf" value="Each time you make a successful save roll of 6+ for the bearer, heal 1 wound allocated to them."/>
+                <characteristic name="Artefact Details" characteristicTypeId="0918-c47a-d84e-c0cf" value="If the unmodified save roll for an attack that targets the bearer is 6, heal 1 wound allocated to the bearer."/>
               </characteristics>
             </profile>
           </profiles>
@@ -6357,13 +6357,13 @@
         </selectionEntry>
         <selectionEntry id="fd17-d428-7cc8-0c87" name="6. Talisman of the Watcher" hidden="false" collective="false" type="upgrade">
           <profiles>
-            <profile id="d17f-c2f2-b06b-e153" name="Talisman of the Watcher" hidden="false" profileTypeId="0ac4-aacb-2481-8e72" profileTypeName="Artefact">
+            <profile id="d17f-c2f2-b06b-e153" name="Talisman of the Watcher" book="Malign Sorcery; Official Errata, December 2018" hidden="false" profileTypeId="0ac4-aacb-2481-8e72" profileTypeName="Artefact">
               <profiles/>
               <rules/>
               <infoLinks/>
               <modifiers/>
               <characteristics>
-                <characteristic name="Artefact Details" characteristicTypeId="0918-c47a-d84e-c0cf" value="If the bearer is not within 3&quot; of an enemy unit at the start of the combat phase, pick a friendly unit within 9&quot; of the bearer. Re-roll save rolls of 1 for that unit."/>
+                <characteristic name="Artefact Details" characteristicTypeId="0918-c47a-d84e-c0cf" value="If the bearer is not within 3&quot; of an enemy unit at the start of the combat phase, pick a friendly unit within 9&quot; of the bearer. You can re-roll save rolls of 1 for that unit until the end of that phase."/>
               </characteristics>
             </profile>
           </profiles>
@@ -6425,13 +6425,13 @@
         </selectionEntry>
         <selectionEntry id="e23f-4a06-14f5-f374" name="4. Doppelganger Cloak" hidden="false" collective="false" type="upgrade">
           <profiles>
-            <profile id="7da8-f3cc-2a76-58ac" name="Doppelganger Cloak" hidden="false" profileTypeId="0ac4-aacb-2481-8e72" profileTypeName="Artefact">
+            <profile id="7da8-f3cc-2a76-58ac" name="Doppelganger Cloak" book="Malign Sorcery; Official Errata, December 2018" hidden="false" profileTypeId="0ac4-aacb-2481-8e72" profileTypeName="Artefact">
               <profiles/>
               <rules/>
               <infoLinks/>
               <modifiers/>
               <characteristics>
-                <characteristic name="Artefact Details" characteristicTypeId="0918-c47a-d84e-c0cf" value="The bearer cannot be chosen as the target of an attack with an enemy melee weapon unless the bearer has made any attacks earlier in the same phase."/>
+                <characteristic name="Artefact Details" characteristicTypeId="0918-c47a-d84e-c0cf" value="Once per battle, at the start of the combat phase, you can say that the bearer will put on the cloak. If you do so, the bearer cannot be chosen as the target of attacks made with melee weapons unless the bearer has made any attacks earlier in that phase."/>
               </characteristics>
             </profile>
           </profiles>
@@ -8655,14 +8655,14 @@ to set up the WIZARD, then the WIZARD is slain.</description>
                 <characteristic name="Description" characteristicTypeId="76ff-781d-b8e6-5f27" value="If successfully cast, pick a point on the battlefield within 18&quot; of the caster that is visible to them. Roll a dice for each enemy unit within 3&quot; of this point. On a 4+ the unit being rolled for suffers 1 mortal wound."/>
               </characteristics>
             </profile>
-            <profile id="981d-92e1-a330-a142" name="Mirrorpool" book="Malign Sorcery" page="72" hidden="false" profileTypeId="2e81-5e22-c6e1-73cb" profileTypeName="Spell">
+            <profile id="981d-92e1-a330-a142" name="Mirrorpool" book="Malign Sorcery; Official Errata, December 2018" page="72; 1" hidden="false" profileTypeId="2e81-5e22-c6e1-73cb" profileTypeName="Spell">
               <profiles/>
               <rules/>
               <infoLinks/>
               <modifiers/>
               <characteristics>
                 <characteristic name="Casting Value" characteristicTypeId="2508-b604-1258-a920" value="6"/>
-                <characteristic name="Description" characteristicTypeId="76ff-781d-b8e6-5f27" value="If successfully cast, remove the caster from the battlefield and set them up again anywhere within 18&quot; of their previous position, more than 9&quot; from any enemy models."/>
+                <characteristic name="Description" characteristicTypeId="76ff-781d-b8e6-5f27" value="If successfully cast, remove the caster from the battlefield and set them up again anywhere within 18&quot; of their previous position, more than 9&quot; from any enemy models. It may not move in the subsequent movement phase."/>
               </characteristics>
             </profile>
             <profile id="8ead-e4d4-d566-1cad" name="Realmblood" book="Malign Sorcery" page="72" hidden="false" profileTypeId="2e81-5e22-c6e1-73cb" profileTypeName="Spell">
