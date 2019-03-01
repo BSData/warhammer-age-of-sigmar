@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="fda2-055f-0f40-2e23" name="Destruction - Ironjawz" book="Destruction Battletome: Ironjawz" revision="12" battleScribeVersion="2.01" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="6" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="fda2-055f-0f40-2e23" name="Destruction - Ironjawz" book="Destruction Battletome: Ironjawz" revision="15" battleScribeVersion="2.01" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="6" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profiles/>
   <rules/>
   <infoLinks/>
@@ -24,6 +24,11 @@
         <characteristicType id="85cc-4c75-0058-b8f6" name="Move"/>
         <characteristicType id="89c3-c419-d973-8625" name="Mighty Fists"/>
         <characteristicType id="51f4-7738-ea97-df2b" name="Destructive Bulk"/>
+      </characteristicTypes>
+    </profileType>
+    <profileType id="341f-0e93-bc23-fb03" name="D66">
+      <characteristicTypes>
+        <characteristicType id="1250-a611-a8a1-287d" name="Strategem"/>
       </characteristicTypes>
     </profileType>
   </profileTypes>
@@ -615,7 +620,15 @@
       <profiles/>
       <rules/>
       <infoLinks/>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <repeats/>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c97b-ef6e-0177-f377" type="greaterThan"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <constraints/>
       <categoryLinks>
         <categoryLink id="f428-4a8d-4016-12be" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true">
@@ -647,7 +660,9 @@
           <conditions/>
           <conditionGroups>
             <conditionGroup type="or">
-              <conditions/>
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c97b-ef6e-0177-f377" type="greaterThan"/>
+              </conditions>
               <conditionGroups>
                 <conditionGroup type="and">
                   <conditions>
@@ -682,7 +697,9 @@
           <conditions/>
           <conditionGroups>
             <conditionGroup type="or">
-              <conditions/>
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c97b-ef6e-0177-f377" type="greaterThan"/>
+              </conditions>
               <conditionGroups>
                 <conditionGroup type="and">
                   <conditions>
@@ -757,7 +774,174 @@
               </constraints>
               <categoryLinks/>
               <selectionEntries/>
-              <selectionEntryGroups/>
+              <selectionEntryGroups>
+                <selectionEntryGroup id="5ac9-586d-6b97-e526" name="Firestorm: Stoneklaw&apos;s Gutstompas" hidden="false" collective="false">
+                  <profiles/>
+                  <rules/>
+                  <infoLinks/>
+                  <modifiers/>
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d907-1233-5fd8-a206" type="min"/>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="048f-d454-44f0-03ca" type="max"/>
+                  </constraints>
+                  <categoryLinks/>
+                  <selectionEntries>
+                    <selectionEntry id="c97b-ef6e-0177-f377" name="Stoneklaw&apos;s Gutstompas" hidden="false" collective="false" type="upgrade">
+                      <profiles>
+                        <profile id="9736-fda7-421a-ecb7" name="Insane Advice" hidden="false" profileTypeId="c137-4d1f-9d1a-524d" profileTypeName="Battle Trait">
+                          <profiles/>
+                          <rules/>
+                          <infoLinks/>
+                          <modifiers/>
+                          <characteristics>
+                            <characteristic name="Battle Trait Details" characteristicTypeId="9fdd-b4b1-5f7a-0970" value="After setting up, but before the first battle round begins, make two D66 rolls to determine the advice given to Stoneklaw by his pair of severed heads. You must pick one of the rolls, which is the advice that is followed.  The advice allows you to use a stratagem without having to spend strategy points in order to do so, and it also allows you to use the stratagem in a non-campaign game where strategy points are not being used."/>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                      <rules/>
+                      <infoLinks/>
+                      <modifiers/>
+                      <constraints/>
+                      <categoryLinks/>
+                      <selectionEntries>
+                        <selectionEntry id="803d-825f-4c73-2c84" name="Insane Advice Table" hidden="false" collective="false" type="upgrade">
+                          <profiles>
+                            <profile id="7b00-5ae4-a743-101b" name="11-13" hidden="false" profileTypeId="341f-0e93-bc23-fb03" profileTypeName="D66">
+                              <profiles/>
+                              <rules/>
+                              <infoLinks/>
+                              <modifiers/>
+                              <characteristics>
+                                <characteristic name="Strategem" characteristicTypeId="1250-a611-a8a1-287d" value="Choose a result."/>
+                              </characteristics>
+                            </profile>
+                            <profile id="7e27-01cb-00b7-b42e" name="61-63" hidden="false" profileTypeId="341f-0e93-bc23-fb03" profileTypeName="D66">
+                              <profiles/>
+                              <rules/>
+                              <infoLinks/>
+                              <modifiers/>
+                              <characteristics>
+                                <characteristic name="Strategem" characteristicTypeId="1250-a611-a8a1-287d" value="Regicide"/>
+                              </characteristics>
+                            </profile>
+                            <profile id="90a6-b2fb-c8fd-4402" name="54-56" hidden="false" profileTypeId="341f-0e93-bc23-fb03" profileTypeName="D66">
+                              <profiles/>
+                              <rules/>
+                              <infoLinks/>
+                              <modifiers/>
+                              <characteristics>
+                                <characteristic name="Strategem" characteristicTypeId="1250-a611-a8a1-287d" value="Redeploy"/>
+                              </characteristics>
+                            </profile>
+                            <profile id="b09b-57b5-aee9-911c" name="51-53" hidden="false" profileTypeId="341f-0e93-bc23-fb03" profileTypeName="D66">
+                              <profiles/>
+                              <rules/>
+                              <infoLinks/>
+                              <modifiers/>
+                              <characteristics>
+                                <characteristic name="Strategem" characteristicTypeId="1250-a611-a8a1-287d" value="Pre-emptive Attack"/>
+                              </characteristics>
+                            </profile>
+                            <profile id="6f35-d5f2-8ca3-3fb6" name="44-46" hidden="false" profileTypeId="341f-0e93-bc23-fb03" profileTypeName="D66">
+                              <profiles/>
+                              <rules/>
+                              <infoLinks/>
+                              <modifiers/>
+                              <characteristics>
+                                <characteristic name="Strategem" characteristicTypeId="1250-a611-a8a1-287d" value="Night Attack"/>
+                              </characteristics>
+                            </profile>
+                            <profile id="144e-b1ca-fcfc-a79d" name="41-43" hidden="false" profileTypeId="341f-0e93-bc23-fb03" profileTypeName="D66">
+                              <profiles/>
+                              <rules/>
+                              <infoLinks/>
+                              <modifiers/>
+                              <characteristics>
+                                <characteristic name="Strategem" characteristicTypeId="1250-a611-a8a1-287d" value="Inspiring Speech"/>
+                              </characteristics>
+                            </profile>
+                            <profile id="15f6-986e-4d8f-2586" name="34-36" hidden="false" profileTypeId="341f-0e93-bc23-fb03" profileTypeName="D66">
+                              <profiles/>
+                              <rules/>
+                              <infoLinks/>
+                              <modifiers/>
+                              <characteristics>
+                                <characteristic name="Strategem" characteristicTypeId="1250-a611-a8a1-287d" value="Hatred"/>
+                              </characteristics>
+                            </profile>
+                            <profile id="3f4c-568c-78a8-fbc3" name="31-33" hidden="false" profileTypeId="341f-0e93-bc23-fb03" profileTypeName="D66">
+                              <profiles/>
+                              <rules/>
+                              <infoLinks/>
+                              <modifiers/>
+                              <characteristics>
+                                <characteristic name="Strategem" characteristicTypeId="1250-a611-a8a1-287d" value="Forced March"/>
+                              </characteristics>
+                            </profile>
+                            <profile id="5ae3-46b1-51f3-9b9b" name="24-26" hidden="false" profileTypeId="341f-0e93-bc23-fb03" profileTypeName="D66">
+                              <profiles/>
+                              <rules/>
+                              <infoLinks/>
+                              <modifiers/>
+                              <characteristics>
+                                <characteristic name="Strategem" characteristicTypeId="1250-a611-a8a1-287d" value="Firestarter"/>
+                              </characteristics>
+                            </profile>
+                            <profile id="efe6-8278-ccc1-a7c2" name="14-16" hidden="false" profileTypeId="341f-0e93-bc23-fb03" profileTypeName="D66">
+                              <profiles/>
+                              <rules/>
+                              <infoLinks/>
+                              <modifiers/>
+                              <characteristics>
+                                <characteristic name="Strategem" characteristicTypeId="1250-a611-a8a1-287d" value="Ambush"/>
+                              </characteristics>
+                            </profile>
+                            <profile id="3a51-1ade-d055-adad" name="21-23" hidden="false" profileTypeId="341f-0e93-bc23-fb03" profileTypeName="D66">
+                              <profiles/>
+                              <rules/>
+                              <infoLinks/>
+                              <modifiers/>
+                              <characteristics>
+                                <characteristic name="Strategem" characteristicTypeId="1250-a611-a8a1-287d" value="Feigned Retreat"/>
+                              </characteristics>
+                            </profile>
+                            <profile id="1e3b-8b80-2880-4426" name="64-66" hidden="false" profileTypeId="341f-0e93-bc23-fb03" profileTypeName="D66">
+                              <profiles/>
+                              <rules/>
+                              <infoLinks/>
+                              <modifiers/>
+                              <characteristics>
+                                <characteristic name="Strategem" characteristicTypeId="1250-a611-a8a1-287d" value="Reinforcements"/>
+                              </characteristics>
+                            </profile>
+                          </profiles>
+                          <rules/>
+                          <infoLinks/>
+                          <modifiers/>
+                          <constraints>
+                            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="50c3-317d-e4e1-52b7" type="max"/>
+                            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="367e-2c94-aa26-f47b" type="min"/>
+                          </constraints>
+                          <categoryLinks/>
+                          <selectionEntries/>
+                          <selectionEntryGroups/>
+                          <entryLinks/>
+                          <costs>
+                            <cost name="pts" costTypeId="points" value="0.0"/>
+                          </costs>
+                        </selectionEntry>
+                      </selectionEntries>
+                      <selectionEntryGroups/>
+                      <entryLinks/>
+                      <costs>
+                        <cost name="pts" costTypeId="points" value="0.0"/>
+                      </costs>
+                    </selectionEntry>
+                  </selectionEntries>
+                  <selectionEntryGroups/>
+                  <entryLinks/>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
               <entryLinks/>
               <costs>
                 <cost name="pts" costTypeId="points" value="0.0"/>
@@ -895,7 +1079,7 @@
         <cost name="pts" costTypeId="points" value="170.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="182d-d1bc-030a-6091" name="Battalion: Brawl" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="182d-d1bc-030a-6091" name="Super Battalion: Brawl" hidden="false" collective="false" type="upgrade">
       <profiles>
         <profile id="3937-cc30-6d58-a5c0" name="Big Waaagh!" hidden="false" profileTypeId="f71f-b0a4-730e-ced3">
           <profiles/>
@@ -1069,7 +1253,7 @@
           <infoLinks/>
           <modifiers/>
           <characteristics>
-            <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="A BRUTEFIST is a living tide of destruction that can pulverise even the toughest of foes. In your hero phase, units from the battalion within 10&quot; of its BRUTE BIG BOSS (including his own unit) can make a charge move as if it were the charge phase. If the charge is successful, pick one enemy unit within 3&quot; of the unit that charged; it suffers D3 mortal wounds."/>
+            <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="In your hero phase, units from the battalion within 10&quot; of its BRUTE BIG BOSS (including his own unit) can make a charge move as if it were the charge phase. If the charge is successful, pick one enemy unit within 3&quot; of the unit that charged; it suffers D3 mortal wounds."/>
           </characteristics>
         </profile>
       </profiles>
@@ -1080,7 +1264,7 @@
       <categoryLinks/>
       <selectionEntries/>
       <selectionEntryGroups>
-        <selectionEntryGroup id="eb12-57ef-1e47-2aaf" name="Brutefist" hidden="false" collective="false" defaultSelectionEntryId="438d-8ccb-c17f-7ef4">
+        <selectionEntryGroup id="eb12-57ef-1e47-2aaf" name="Brutes (3 to 5)" hidden="false" collective="false" defaultSelectionEntryId="438d-8ccb-c17f-7ef4">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -1134,7 +1318,7 @@
           <infoLinks/>
           <modifiers/>
           <characteristics>
-            <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="GORE GRUNTA BIG BOSS often come up with cunning formations, like the Tusks of Gork or the Snorting Snout Spear. You can tell your opponent that this battalion is in such a formation when you set it up if all of the units are within 10&quot; of the BIG BOSS&apos; unit (you should also come up with a name for the formation!). The formation allows all of the units in the battalion to make a move of 15&quot; in the hero phase of their first turn. The move is made as if it were the movement phase, except that the units cannot run. It does not stop the units from moving again normally later in the turn. After the first turn is over, the formation dissolves into anarchy and the normal rules apply for the rest of the battle."/>
+            <characteristic name="Ability Details" characteristicTypeId="d4dc-8e81-bc0e-b8f0" value="You can tell your opponent that this battalion is in a formation when you set it up if all of the units are within 10&quot; of the BIG BOSS&apos;s unit. This formation allows all of the units in the battalion to make a move of 15&quot; in the hero phase of their first turn. The move is made as if it were the movement phase, except that the units cannot run. It does not stop the units from moving again normally later in the turn. After the first turn is over, the normal rules apply for the rest of the battle."/>
           </characteristics>
         </profile>
       </profiles>
@@ -1145,7 +1329,7 @@
       <categoryLinks/>
       <selectionEntries/>
       <selectionEntryGroups>
-        <selectionEntryGroup id="a863-da10-a9c6-5c19" name="Gorefist" hidden="false" collective="false" defaultSelectionEntryId="590b-75b1-552e-ae5f">
+        <selectionEntryGroup id="a863-da10-a9c6-5c19" name="Gore-gruntas (3 to 5)" hidden="false" collective="false" defaultSelectionEntryId="590b-75b1-552e-ae5f">
           <profiles/>
           <rules/>
           <infoLinks/>
@@ -2337,20 +2521,6 @@
           </conditions>
           <conditionGroups/>
         </modifier>
-        <modifier type="decrement" field="points" value="160">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="6c50-1d09-e785-f11e" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d05a-773e-1d60-9d53" type="greaterThan"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-        <modifier type="increment" field="points" value="160">
-          <repeats>
-            <repeat field="selections" scope="6c50-1d09-e785-f11e" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d05a-773e-1d60-9d53" repeats="1" roundUp="false"/>
-          </repeats>
-          <conditions/>
-          <conditionGroups/>
-        </modifier>
       </modifiers>
       <constraints/>
       <categoryLinks>
@@ -2398,7 +2568,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="points" value="0.0"/>
+            <cost name="pts" costTypeId="points" value="160.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="7ff1-128d-6225-a48a" name="Standard Bearer (Orruk)" hidden="false" collective="false" type="upgrade">
@@ -2574,20 +2744,35 @@
             <cost name="pts" costTypeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-      </selectionEntries>
-      <selectionEntryGroups/>
-      <entryLinks>
-        <entryLink id="84a1-cb61-8195-f98a" name="Waaagh! Drummer" hidden="false" targetId="b974-9531-b959-d27e" type="selectionEntry">
+        <selectionEntry id="70ec-15b6-bb47-3bb8" name="Waaagh! Drummer" hidden="false" collective="false" type="upgrade">
           <profiles/>
-          <rules/>
+          <rules>
+            <rule id="e8d1-b389-20e4-edb8" name="Waaagh! Drummer" hidden="false">
+              <profiles/>
+              <rules/>
+              <infoLinks/>
+              <modifiers/>
+              <description>Models in this unit may be Waaagh! Drummers. Add 2 to charge rolls for a unit that includes any Waaagh! Drummers.</description>
+            </rule>
+          </rules>
           <infoLinks/>
           <modifiers/>
-          <constraints/>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="dc0f-12dc-56c5-f6c3" type="max"/>
+          </constraints>
           <categoryLinks/>
-        </entryLink>
-      </entryLinks>
+          <selectionEntries/>
+          <selectionEntryGroups/>
+          <entryLinks/>
+          <costs>
+            <cost name="pts" costTypeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups/>
+      <entryLinks/>
       <costs>
-        <cost name="pts" costTypeId="points" value="160.0"/>
+        <cost name="pts" costTypeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="6e56-eef2-e6a3-f622" name="Orruk Brutes" hidden="false" collective="false" type="unit">
@@ -2640,22 +2825,7 @@
         </rule>
       </rules>
       <infoLinks/>
-      <modifiers>
-        <modifier type="increment" field="points" value="180">
-          <repeats>
-            <repeat field="selections" scope="6e56-eef2-e6a3-f622" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0873-dbd9-0f07-71aa" repeats="1" roundUp="false"/>
-          </repeats>
-          <conditions/>
-          <conditionGroups/>
-        </modifier>
-        <modifier type="decrement" field="points" value="180">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="6e56-eef2-e6a3-f622" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0873-dbd9-0f07-71aa" type="greaterThan"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-      </modifiers>
+      <modifiers/>
       <constraints/>
       <categoryLinks>
         <categoryLink id="b476-4228-6d03-9c06" name="New CategoryLink" hidden="false" targetId="d963-a5fb-c348-2371" primary="false">
@@ -2702,7 +2872,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="points" value="0.0"/>
+            <cost name="pts" costTypeId="points" value="180.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -2935,7 +3105,7 @@
       </selectionEntryGroups>
       <entryLinks/>
       <costs>
-        <cost name="pts" costTypeId="points" value="180.0"/>
+        <cost name="pts" costTypeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="9c10-f99b-878b-0ecc" name="Orruk Gore-Gruntas" hidden="false" collective="false" type="unit">
@@ -2994,22 +3164,7 @@
         </rule>
       </rules>
       <infoLinks/>
-      <modifiers>
-        <modifier type="decrement" field="points" value="140">
-          <repeats/>
-          <conditions>
-            <condition field="selections" scope="9c10-f99b-878b-0ecc" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="32a4-72ca-15cd-fd08" type="greaterThan"/>
-          </conditions>
-          <conditionGroups/>
-        </modifier>
-        <modifier type="increment" field="points" value="140">
-          <repeats>
-            <repeat field="selections" scope="9c10-f99b-878b-0ecc" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="32a4-72ca-15cd-fd08" repeats="1" roundUp="false"/>
-          </repeats>
-          <conditions/>
-          <conditionGroups/>
-        </modifier>
-      </modifiers>
+      <modifiers/>
       <constraints/>
       <categoryLinks>
         <categoryLink id="4bc6-079e-48ec-fe29" name="New CategoryLink" hidden="false" targetId="d963-a5fb-c348-2371" primary="false">
@@ -3056,7 +3211,7 @@
           <selectionEntryGroups/>
           <entryLinks/>
           <costs>
-            <cost name="pts" costTypeId="points" value="0.0"/>
+            <cost name="pts" costTypeId="points" value="140.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -3143,7 +3298,7 @@
       </selectionEntryGroups>
       <entryLinks/>
       <costs>
-        <cost name="pts" costTypeId="points" value="140.0"/>
+        <cost name="pts" costTypeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="a45c-cdf2-9c3e-b9ad" name="Orruk Megaboss" hidden="false" collective="false" type="model">
@@ -3719,30 +3874,6 @@
       </entryLinks>
       <costs>
         <cost name="pts" costTypeId="points" value="120.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="b974-9531-b959-d27e" name="Waaagh! Drummer" hidden="false" collective="false" type="upgrade">
-      <profiles/>
-      <rules>
-        <rule id="b4dc-691e-29bc-b196" name="Waaagh! Drummer" hidden="false">
-          <profiles/>
-          <rules/>
-          <infoLinks/>
-          <modifiers/>
-          <description>Models in this unit may be Waaagh! Drummers. Add 2 to charge rolls for a unit that includes any Waaagh! Drummers.</description>
-        </rule>
-      </rules>
-      <infoLinks/>
-      <modifiers/>
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
-      </constraints>
-      <categoryLinks/>
-      <selectionEntries/>
-      <selectionEntryGroups/>
-      <entryLinks/>
-      <costs>
-        <cost name="pts" costTypeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="8d73-9c72-4d56-ff4a" name="Ironskull&apos;z Boyz" hidden="false" collective="false" type="unit">
