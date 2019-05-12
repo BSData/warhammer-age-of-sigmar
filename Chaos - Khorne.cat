@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="cac4-1eec-d548-b34d" name="Chaos - Khorne" revision="35" battleScribeVersion="2.02" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="cac4-1eec-d548-b34d" name="Chaos - Khorne" revision="36" battleScribeVersion="2.02" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="cac4-1eec-pubN65537" name="Chaos Battletome: Blades of Khorne"/>
     <publication id="cac4-1eec-pubN105675" name="Grand Alliance: Chaos"/>
@@ -748,17 +748,12 @@
     </entryLink>
     <entryLink id="fe1b-7765-9f4d-8fd3" name="Chaos Marauders" hidden="false" collective="false" targetId="08c1-05a1-4828-6983" type="selectionEntry">
       <categoryLinks>
-        <categoryLink id="6ba0-42d2-b9c6-c777" name="New CategoryLink" hidden="false" targetId="065e-fda7-fd27-1f40" primary="true"/>
-      </categoryLinks>
-    </entryLink>
-    <entryLink id="1126-9d65-3fd5-e2c3" name="Chaos Spawn" hidden="false" collective="false" targetId="494c-81bb-bb30-3d33" type="selectionEntry">
-      <categoryLinks>
-        <categoryLink id="89f9-409a-867e-135d" name="New CategoryLink" hidden="false" targetId="065e-fda7-fd27-1f40" primary="true"/>
+        <categoryLink id="29f9-52ad-2b69-7b25" name="New CategoryLink" hidden="false" targetId="be17-6bbd-b857-3f43" primary="true"/>
       </categoryLinks>
     </entryLink>
     <entryLink id="4b27-8498-2028-e43d" name="Chaos Warriors" hidden="false" collective="false" targetId="22ed-600b-a62c-7ebe" type="selectionEntry">
       <categoryLinks>
-        <categoryLink id="293e-f733-9ccc-0032" name="New CategoryLink" hidden="false" targetId="065e-fda7-fd27-1f40" primary="true"/>
+        <categoryLink id="a3e2-7a09-b716-18aa" name="Battleline" hidden="false" targetId="e9f2-765a-b7b8-ce8e" primary="true"/>
       </categoryLinks>
     </entryLink>
     <entryLink id="8f39-5eb2-93af-437b" name="Exalted Hero of Chaos" hidden="false" collective="false" targetId="69e5-b08e-9813-f378" type="selectionEntry">
@@ -769,6 +764,12 @@
     <entryLink id="c2c0-9d44-c088-90b1" name="Lord of Chaos" hidden="false" collective="false" targetId="1ccb-5743-64df-f027" type="selectionEntry">
       <categoryLinks>
         <categoryLink id="574e-1b13-f5d7-96dd" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="35c0-2093-581d-a8cf" name="Chaos Lord on Manticore" hidden="false" collective="false" targetId="3303-cef0-2064-a5f5" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="aa5d-9305-59ed-1954" name="Behemoth" hidden="false" targetId="fa0c-9044-2568-fa02" primary="false"/>
+        <categoryLink id="8b77-a556-b4e7-ca18" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
       </categoryLinks>
     </entryLink>
   </entryLinks>
@@ -907,6 +908,9 @@
                   </characteristics>
                 </profile>
               </profiles>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -9049,13 +9053,9 @@
     <selectionEntryGroup id="0879-c394-8274-958b" name="Command Traits" hidden="false" collective="false">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b745-17c4-8fbf-8b04" type="notInstanceOf"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
+          <conditions>
+            <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b745-17c4-8fbf-8b04" type="equalTo"/>
+          </conditions>
         </modifier>
       </modifiers>
       <constraints>
@@ -9077,7 +9077,7 @@
               <conditionGroups>
                 <conditionGroup type="or">
                   <conditions>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b541-3b22-08bb-d772" type="equalTo"/>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="b541-3b22-08bb-d772" type="equalTo"/>
                     <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="28cc-5c0c-ed3e-fa91" type="notInstanceOf"/>
                     <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="088b-3a27-03f7-8249" type="instanceOf"/>
                   </conditions>
@@ -9086,13 +9086,13 @@
             </modifier>
           </modifiers>
         </entryLink>
-        <entryLink id="85fe-db23-313b-e988" name="Khorne Daemon Command Traits" hidden="false" collective="false" targetId="b97a-cfd6-d78b-38ab" type="selectionEntryGroup">
+        <entryLink id="85fe-db23-313b-e988" name="Traits:Khorne Daemon" hidden="false" collective="false" targetId="b97a-cfd6-d78b-38ab" type="selectionEntryGroup">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditionGroups>
                 <conditionGroup type="or">
                   <conditions>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b541-3b22-08bb-d772" type="equalTo"/>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="b541-3b22-08bb-d772" type="equalTo"/>
                     <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1418-9a68-9f9e-e9a7" type="notInstanceOf"/>
                     <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="088b-3a27-03f7-8249" type="instanceOf"/>
                   </conditions>
@@ -9107,7 +9107,7 @@
               <conditionGroups>
                 <conditionGroup type="or">
                   <conditions>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b541-3b22-08bb-d772" type="equalTo"/>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="b541-3b22-08bb-d772" type="equalTo"/>
                     <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a934-6d15-9932-b7ea" type="notInstanceOf"/>
                     <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="088b-3a27-03f7-8249" type="instanceOf"/>
                   </conditions>
@@ -9116,14 +9116,14 @@
             </modifier>
           </modifiers>
         </entryLink>
-        <entryLink id="a7a7-6f5d-3f88-bd9a" name="Slaughterhost Command Traits" hidden="false" collective="false" targetId="1aa0-14d1-5940-3c9e" type="selectionEntryGroup"/>
+        <entryLink id="a7a7-6f5d-3f88-bd9a" name="Traits: Slaughterhost" hidden="false" collective="false" targetId="1aa0-14d1-5940-3c9e" type="selectionEntryGroup"/>
       </entryLinks>
     </selectionEntryGroup>
-    <selectionEntryGroup id="52f9-2399-5743-ad4d" name="Traits: Khorne Bloodbound" hidden="false" collective="false">
+    <selectionEntryGroup id="52f9-2399-5743-ad4d" name="Traits: Khorne Bloodbound" hidden="true" collective="false">
       <modifiers>
-        <modifier type="set" field="hidden" value="true">
+        <modifier type="set" field="hidden" value="false">
           <conditions>
-            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="28cc-5c0c-ed3e-fa91" type="notInstanceOf"/>
+            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="28cc-5c0c-ed3e-fa91" type="instanceOf"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -9199,11 +9199,11 @@
         <entryLink id="8e69-b1a8-73c6-7c94" name="3. Slaughterborn" hidden="false" collective="false" targetId="fb36-3423-2456-12de" type="selectionEntry"/>
       </entryLinks>
     </selectionEntryGroup>
-    <selectionEntryGroup id="b97a-cfd6-d78b-38ab" name="Traits:Khorne Daemon" hidden="false" collective="false">
+    <selectionEntryGroup id="b97a-cfd6-d78b-38ab" name="Traits: Khorne Daemon" hidden="true" collective="false">
       <modifiers>
-        <modifier type="set" field="hidden" value="true">
+        <modifier type="set" field="hidden" value="false">
           <conditions>
-            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1418-9a68-9f9e-e9a7" type="notInstanceOf"/>
+            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1418-9a68-9f9e-e9a7" type="instanceOf"/>
           </conditions>
         </modifier>
       </modifiers>
