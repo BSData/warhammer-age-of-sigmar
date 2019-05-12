@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="0339-0157-6910-d29c" name="Chaos Data" revision="4" battleScribeVersion="2.02" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="15" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="0339-0157-6910-d29c" name="Chaos Data" revision="5" battleScribeVersion="2.02" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="15" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="c9b2-1fe6-pubN65537" name="Battletome: Beasts of Chaos"/>
     <publication id="c9b2-1fe6-pubN83353" name="1"/>
@@ -1003,14 +1003,14 @@ If a unit that is affected by this battle trait is also affected by any rules th
         </selectionEntry>
         <selectionEntry id="9b6b-ab31-28c6-d214" name="The Goretide" hidden="false" collective="false" type="upgrade">
           <profiles>
-            <profile id="10b3-0160-8bbd-185c" name="Hew the Foe" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
-              <characteristics>
-                <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">Add 1 to the Damage characteristic of the general&apos;s melee weapons.</characteristic>
-              </characteristics>
-            </profile>
             <profile id="d452-d0c4-ecb2-2e5e" name="Tireless Conquerors" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
               <characteristics>
                 <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">You can re-roll wound rolls of 1 for attacks made with melee weapons by friendly GORETIDE MORTAL units wholly within 12&quot; of an objective marker. </characteristic>
+              </characteristics>
+            </profile>
+            <profile id="67d1-d514-dca0-f0cb" name="Ever Onwards" hidden="false" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
+              <characteristics>
+                <characteristic name="Command Ability Details" typeId="1b71-4c83-4e8c-093f">You can use this command ability before you make a run roll for 1 friendly GORETIDE BLOODREAVERS or GORETIDE BLOOD WARRIORS unit wholly within 16&quot; of a friendly model with this command ability. If you do so, that run roll is treated as being 6. In addition, that unit can run and still charge later in the same turn.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -1042,9 +1042,9 @@ If a unit that is affected by this battle trait is also affected by any rules th
                 <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">You can re-roll wound rolls of 1 for attacks made by friendly BLOODLORDS DAEMON units that target a HERO or MONSTER.</characteristic>
               </characteristics>
             </profile>
-            <profile id="5302-912b-1a44-2901" name="Slaughterer&apos;s Thirst" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
+            <profile id="7b18-fe38-af94-831e" name="First In His Sight" hidden="false" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
               <characteristics>
-                <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">Add 4&quot; to the Move characteristic of this general. In addition, you can re-roll charge rolls for this general.</characteristic>
+                <characteristic name="Command Ability Details" typeId="1b71-4c83-4e8c-093f">You can use this command ability at the start of the hero phase. If you do so, pick a friendly model with this command ability. You can heal 1 wound allocated to each friendly BLOODLORDS DAEMON unit wholly within 16&quot; of that model.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -1058,7 +1058,7 @@ If a unit that is affected by this battle trait is also affected by any rules th
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditions>
-            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="92c7-7625-2526-73bc" type="equalTo"/>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="92c7-7625-2526-73bc" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -1066,7 +1066,7 @@ If a unit that is affected by this battle trait is also affected by any rules th
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2680-65cb-dc6f-25b4" type="max"/>
       </constraints>
       <selectionEntries>
-        <selectionEntry id="7df0-9bab-d743-e24e" name="0. Ever Onwards" hidden="true" collective="false" type="upgrade">
+        <selectionEntry id="7df0-9bab-d743-e24e" name="0. Hew the Foe" hidden="false" collective="false" type="upgrade">
           <modifiers>
             <modifier type="set" field="9a80-9d74-6d63-6d4d" value="1">
               <conditionGroups>
@@ -1078,9 +1078,9 @@ If a unit that is affected by this battle trait is also affected by any rules th
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="set" field="hidden" value="false">
+            <modifier type="set" field="hidden" value="true">
               <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9b6b-ab31-28c6-d214" type="equalTo"/>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9b6b-ab31-28c6-d214" type="equalTo"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -1089,9 +1089,9 @@ If a unit that is affected by this battle trait is also affected by any rules th
             <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="9a80-9d74-6d63-6d4d" type="min"/>
           </constraints>
           <profiles>
-            <profile id="2be9-d129-ea71-2cde" name="Ever Onwards" hidden="false" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
+            <profile id="fa6c-baba-4b8d-b599" name="Hew the Foe" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
               <characteristics>
-                <characteristic name="Command Ability Details" typeId="1b71-4c83-4e8c-093f">You can use this command ability before you make a run roll for 1 friendly GORETIDE BLOODREAVERS or GORETIDE BLOOD WARRIORS unit wholly within 16&quot; of a friendly model with this command ability. If you do so, that run roll is treated as being 6. In addition, that unit can run and still charge later in the same turn.</characteristic>
+                <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">Add 1 to the Damage characteristic of the general&apos;s melee weapons.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -1099,7 +1099,7 @@ If a unit that is affected by this battle trait is also affected by any rules th
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="d730-2fbf-ea96-5239" name="0. First In His Sight" hidden="true" collective="false" type="upgrade">
+        <selectionEntry id="d730-2fbf-ea96-5239" name="0. Slaughterer&apos;s Thirst" hidden="false" collective="false" type="upgrade">
           <modifiers>
             <modifier type="set" field="92e0-2a8c-6206-93f2" value="1">
               <conditionGroups>
@@ -1111,9 +1111,9 @@ If a unit that is affected by this battle trait is also affected by any rules th
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="set" field="hidden" value="false">
+            <modifier type="set" field="hidden" value="true">
               <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="e7b9-37ef-0611-590b" type="equalTo"/>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="e7b9-37ef-0611-590b" type="equalTo"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -1122,9 +1122,9 @@ If a unit that is affected by this battle trait is also affected by any rules th
             <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="92e0-2a8c-6206-93f2" type="min"/>
           </constraints>
           <profiles>
-            <profile id="54f8-bf25-a725-7630" name="First In His Sight" hidden="false" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
+            <profile id="5e71-7b8b-494f-d894" name="Slaughterer&apos;s Thirst" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
               <characteristics>
-                <characteristic name="Command Ability Details" typeId="1b71-4c83-4e8c-093f">You can use this command ability at the start of the hero phase. If you do so, pick a friendly model with this command ability. You can heal 1 wound allocated to each friendly BLOODLORDS DAEMON unit wholly within 16&quot; of that model.</characteristic>
+                <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">Add 4&quot; to the Move characteristic of this general. In addition, you can re-roll charge rolls for this general.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -1132,7 +1132,7 @@ If a unit that is affected by this battle trait is also affected by any rules th
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="a7cb-4274-c48b-c81b" name="0. Master Decapitator" hidden="true" collective="false" type="upgrade">
+        <selectionEntry id="a7cb-4274-c48b-c81b" name="0. Master Decapitator" hidden="false" collective="false" type="upgrade">
           <modifiers>
             <modifier type="set" field="cf77-952e-8e4f-55bc" value="1">
               <conditionGroups>
@@ -1144,9 +1144,9 @@ If a unit that is affected by this battle trait is also affected by any rules th
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="set" field="hidden" value="false">
+            <modifier type="set" field="hidden" value="true">
               <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fc8d-f151-e3dc-1c8b" type="equalTo"/>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fc8d-f151-e3dc-1c8b" type="equalTo"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -1165,7 +1165,7 @@ If a unit that is affected by this battle trait is also affected by any rules th
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="8bc5-7fc2-1600-c5ed" name="0. Mage Eater" hidden="true" collective="false" type="upgrade">
+        <selectionEntry id="8bc5-7fc2-1600-c5ed" name="0. Mage Eater" hidden="false" collective="false" type="upgrade">
           <modifiers>
             <modifier type="set" field="87dc-670a-a31a-51b2" value="1">
               <conditionGroups>
@@ -1177,12 +1177,11 @@ If a unit that is affected by this battle trait is also affected by any rules th
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="set" field="hidden" value="false">
+            <modifier type="set" field="hidden" value="true">
               <conditionGroups>
-                <conditionGroup type="and">
+                <conditionGroup type="or">
                   <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="126d-e042-f9f9-af49" type="equalTo"/>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="088b-3a27-03f7-8249" type="notInstanceOf"/>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="126d-e042-f9f9-af49" type="equalTo"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
