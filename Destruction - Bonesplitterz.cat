@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="7e25-33bb-f612-bfca" name="Destruction - Bonesplitterz" revision="12" battleScribeVersion="2.02" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="6" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="7e25-33bb-f612-bfca" name="Destruction - Bonesplitterz" revision="13" battleScribeVersion="2.02" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="6" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="7e25-33bb-pubN65537" name="Destruction Battletome: Bonesplitterz"/>
-    <publication id="7e25-33bb-pubN80404" name="Destruction Battletome: Bonesplitters"/>
     <publication id="7e25-33bb-pubN82863" name="Age of Sigmar: The Rules"/>
     <publication id="7e25-33bb-pubN82892" name="Destruction Battletomb: Ironjawz"/>
   </publications>
@@ -1262,7 +1261,7 @@
         </profile>
         <profile id="5c2d-f49e-c343-cc73" name="Maniak Weirdnob" hidden="false" typeId="f55d-ee3a-1597-110f" typeName="Magic">
           <characteristics>
-            <characteristic name="Cast/Unbind" typeId="8294-f605-2c0f-8f92">1</characteristic>
+            <characteristic name="Cast/Unbind" typeId="8294-f605-2c0f-8f92">1/1</characteristic>
             <characteristic name="Spells Known" typeId="dc9c-47d3-6931-859c">Arcane Bolt, Mystic Shield and Bone Spirit</characteristic>
           </characteristics>
         </profile>
@@ -1273,6 +1272,10 @@
           </characteristics>
         </profile>
       </profiles>
+      <infoLinks>
+        <infoLink id="2465-1a81-343a-adac" name="Arcane Bolt" hidden="false" targetId="ae02-a84f-a903-1ff8" type="profile"/>
+        <infoLink id="a491-01fa-17fc-dc7f" name="Mystic Shield" hidden="false" targetId="b41f-f1ce-7aa5-4f81" type="profile"/>
+      </infoLinks>
       <categoryLinks>
         <categoryLink id="8430-7a2a-6b3c-508f" name="New CategoryLink" hidden="false" targetId="4f53-8230-2f02-9639" primary="false"/>
         <categoryLink id="c75b-fe69-e20b-f0ca" name="New CategoryLink" hidden="false" targetId="d963-a5fb-c348-2371" primary="false"/>
@@ -1745,13 +1748,6 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="bfed-dba3-ebd5-04b1" name="Savage Orruks" hidden="false" collective="false" type="unit">
-      <modifiers>
-        <modifier type="decrement" field="points" value="60">
-          <conditions>
-            <condition field="selections" scope="bfed-dba3-ebd5-04b1" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d7c0-be7c-766b-c015" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <profiles>
         <profile id="f6fd-c038-942d-8691" name="Savage Orruks" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
           <characteristics>
@@ -1794,7 +1790,14 @@
         <categoryLink id="f47e-f244-07a0-f9ff" name="New CategoryLink" hidden="false" targetId="9fdf-2d50-6d40-665e" primary="false"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="d7c0-be7c-766b-c015" name="10 Savage Orruks" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="d7c0-be7c-766b-c015" name="10 Savage Orruks" hidden="false" collective="false" type="model">
+          <modifiers>
+            <modifier type="set" field="points" value="100.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="minSelections" type="min"/>
             <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
@@ -1805,7 +1808,7 @@
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup id="4b2b-6793-5811-fc34" name="Melee Weapons" hidden="false" collective="false">
+        <selectionEntryGroup id="4b2b-6793-5811-fc34" name="Weapon Options" hidden="false" collective="false">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0819-5ab0-573d-f6e7" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f26c-46a1-f401-7d0f" type="min"/>
@@ -2011,13 +2014,6 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="64ec-d3e1-bc29-aa24" name="Savage Orruk Morboys" hidden="false" collective="false" type="unit">
-      <modifiers>
-        <modifier type="decrement" field="points" value="60">
-          <conditions>
-            <condition field="selections" scope="64ec-d3e1-bc29-aa24" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6fc5-a96e-258e-b3cd" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <profiles>
         <profile id="65e4-80c8-4f12-a03c" name="Savage Orruks Morboys" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
           <characteristics>
@@ -2045,7 +2041,14 @@
         <categoryLink id="7ab7-cd4d-2570-ec91" name="New CategoryLink" hidden="false" targetId="d06e-e1ed-a7e0-1330" primary="false"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="6fc5-a96e-258e-b3cd" name="10 Savage Orruk Morboys" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="6fc5-a96e-258e-b3cd" name="10 Savage Orruk Morboys" hidden="false" collective="false" type="model">
+          <modifiers>
+            <modifier type="set" field="points" value="100.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="minSelections" type="min"/>
             <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
@@ -2127,7 +2130,7 @@
       <profiles>
         <profile id="1be5-464d-2aac-2e0f" name="Wardokk" hidden="false" typeId="f55d-ee3a-1597-110f" typeName="Magic">
           <characteristics>
-            <characteristic name="Cast/Unbind" typeId="8294-f605-2c0f-8f92">1</characteristic>
+            <characteristic name="Cast/Unbind" typeId="8294-f605-2c0f-8f92">1/1</characteristic>
             <characteristic name="Spells Known" typeId="dc9c-47d3-6931-859c">Arcane Bolt and Mystic Shield</characteristic>
           </characteristics>
         </profile>
@@ -2155,6 +2158,10 @@
           </characteristics>
         </profile>
       </profiles>
+      <infoLinks>
+        <infoLink id="2047-2f19-6456-8ed9" name="Arcane Bolt" hidden="false" targetId="ae02-a84f-a903-1ff8" type="profile"/>
+        <infoLink id="331f-c059-3781-f203" name="Mystic Shield" hidden="false" targetId="b41f-f1ce-7aa5-4f81" type="profile"/>
+      </infoLinks>
       <categoryLinks>
         <categoryLink id="6ffe-42f1-6f89-39e2" name="New CategoryLink" hidden="false" targetId="d963-a5fb-c348-2371" primary="false"/>
         <categoryLink id="50fa-0a37-d4db-e97a" name="New CategoryLink" hidden="false" targetId="f643-013c-7718-007d" primary="false"/>
@@ -2220,7 +2227,7 @@
         </profile>
         <profile id="06d8-d9a4-732a-3165" name="Wurrgog Prophet" hidden="false" typeId="f55d-ee3a-1597-110f" typeName="Magic">
           <characteristics>
-            <characteristic name="Cast/Unbind" typeId="8294-f605-2c0f-8f92">2</characteristic>
+            <characteristic name="Cast/Unbind" typeId="8294-f605-2c0f-8f92">2/2</characteristic>
             <characteristic name="Spells Known" typeId="dc9c-47d3-6931-859c">Arcane Bolt, Mystic Shield, and Fists of Gork</characteristic>
           </characteristics>
         </profile>
@@ -2244,6 +2251,10 @@
           </characteristics>
         </profile>
       </profiles>
+      <infoLinks>
+        <infoLink id="6ca5-98e8-08ff-7e3d" name="Arcane Bolt" hidden="false" targetId="ae02-a84f-a903-1ff8" type="profile"/>
+        <infoLink id="0cbc-5bf1-a761-c446" name="Mystic Shield" hidden="false" targetId="b41f-f1ce-7aa5-4f81" type="profile"/>
+      </infoLinks>
       <categoryLinks>
         <categoryLink id="2bd9-0c2d-98e6-a7c4" name="New CategoryLink" hidden="false" targetId="d963-a5fb-c348-2371" primary="false"/>
         <categoryLink id="9d6a-cba2-e299-7188" name="New CategoryLink" hidden="false" targetId="f643-013c-7718-007d" primary="false"/>
@@ -2583,7 +2594,7 @@
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3512-8fac-1846-5761" type="max"/>
       </constraints>
       <selectionEntries>
-        <selectionEntry id="f73b-4978-6b3d-b546" name="1. Glowin’ Tattooz" publicationId="7e25-33bb-pubN80404" page="88" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="f73b-4978-6b3d-b546" name="1. Glowin’ Tattooz" page="" hidden="false" collective="false" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9778-7792-3f61-1bec" type="max"/>
           </constraints>
@@ -2598,7 +2609,7 @@
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="0804-848e-ea46-8ad2" name="2. Dragon Toof" publicationId="7e25-33bb-pubN80404" page="88" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="0804-848e-ea46-8ad2" name="2. Dragon Toof" page="" hidden="false" collective="false" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="729d-482d-cc71-3c56" type="max"/>
           </constraints>
@@ -2613,7 +2624,7 @@
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="60fc-9e5a-9301-76e8" name="3. Weepwood Big Shiv" publicationId="7e25-33bb-pubN80404" page="88" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="60fc-9e5a-9301-76e8" name="3. Weepwood Big Shiv" page="" hidden="false" collective="false" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f31e-6b42-555f-9c30" type="max"/>
           </constraints>
@@ -2628,7 +2639,7 @@
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="40bf-9334-a72f-9e13" name="4. Dokk Juice" publicationId="7e25-33bb-pubN80404" page="88" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="40bf-9334-a72f-9e13" name="4. Dokk Juice" page="" hidden="false" collective="false" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a74e-ac2e-7b71-7585" type="max"/>
           </constraints>
@@ -2643,7 +2654,7 @@
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="d34b-0e09-f23f-de22" name="5. Savage Trophy" publicationId="7e25-33bb-pubN80404" page="88" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="d34b-0e09-f23f-de22" name="5. Savage Trophy" page="" hidden="false" collective="false" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c70b-40cd-0ab8-2e57" type="max"/>
           </constraints>
@@ -2658,7 +2669,7 @@
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="e321-5079-86f9-09a5" name="6. Lucky Bone" publicationId="7e25-33bb-pubN80404" page="88" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="e321-5079-86f9-09a5" name="6. Lucky Bone" page="" hidden="false" collective="false" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e639-81fc-a2c9-ece5" type="max"/>
           </constraints>
@@ -2687,7 +2698,7 @@
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0211-6299-ea8f-f444" type="max"/>
       </constraints>
       <selectionEntries>
-        <selectionEntry id="fe9a-27f1-6455-8081" name="1. Squirmy Warpaint" publicationId="7e25-33bb-pubN80404" page="85" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="fe9a-27f1-6455-8081" name="1. Squirmy Warpaint" page="" hidden="false" collective="false" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="55a4-ada4-31f9-01e6" type="max"/>
           </constraints>
@@ -2702,7 +2713,7 @@
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="2159-45c0-3635-888b" name="2. Prophet of da Waaagh!" publicationId="7e25-33bb-pubN80404" page="85" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="2159-45c0-3635-888b" name="2. Prophet of da Waaagh!" page="" hidden="false" collective="false" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dfa5-4e7c-c482-0423" type="max"/>
           </constraints>
@@ -2717,7 +2728,7 @@
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="3efc-611c-0c3d-6cf6" name="3. Great Hunter" publicationId="7e25-33bb-pubN80404" page="85" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="3efc-611c-0c3d-6cf6" name="3. Great Hunter" page="" hidden="false" collective="false" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a657-fc70-ab4f-1d4b" type="max"/>
           </constraints>
@@ -2732,7 +2743,7 @@
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="c772-c425-2e40-cf7c" name="4. Killa Instinkt" publicationId="7e25-33bb-pubN80404" page="85" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="c772-c425-2e40-cf7c" name="4. Killa Instinkt" page="" hidden="false" collective="false" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1866-c6ff-df9a-7019" type="max"/>
           </constraints>
@@ -2747,7 +2758,7 @@
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="20b6-2759-eb08-4267" name="5. Waaagh!-monger" publicationId="7e25-33bb-pubN80404" page="85" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="20b6-2759-eb08-4267" name="5. Waaagh!-monger" page="" hidden="false" collective="false" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c8c1-c108-51b6-b00c" type="max"/>
           </constraints>
@@ -2762,7 +2773,7 @@
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="1cba-090e-5b61-3709" name="6. Monster Killa" publicationId="7e25-33bb-pubN80404" page="85" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="1cba-090e-5b61-3709" name="6. Monster Killa" page="" hidden="false" collective="false" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="74b4-d3d0-8290-fb59" type="max"/>
           </constraints>
@@ -2796,7 +2807,7 @@
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="558e-a31a-21eb-007f" type="max"/>
       </constraints>
       <selectionEntries>
-        <selectionEntry id="5c6e-1546-6229-8284" name="1. Ju-ju Wotnotz" publicationId="7e25-33bb-pubN80404" page="89" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="5c6e-1546-6229-8284" name="1. Ju-ju Wotnotz" page="" hidden="false" collective="false" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d016-841d-18a0-76fb" type="max"/>
           </constraints>
@@ -2811,7 +2822,7 @@
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="c0c8-f256-f55a-9a09" name="2. Big Spirit Stikk" publicationId="7e25-33bb-pubN80404" page="89" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="c0c8-f256-f55a-9a09" name="2. Big Spirit Stikk" page="" hidden="false" collective="false" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4448-5561-fb7e-91ea" type="max"/>
           </constraints>
@@ -2826,7 +2837,7 @@
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="f5a4-3d7e-8df3-8e32" name="3. Mork’s Boney Bitz" publicationId="7e25-33bb-pubN80404" page="89" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="f5a4-3d7e-8df3-8e32" name="3. Mork’s Boney Bitz" page="" hidden="false" collective="false" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f59f-9918-5174-2d58" type="max"/>
           </constraints>
@@ -2841,7 +2852,7 @@
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="5282-47c1-c45c-8b8d" name="4. Da Great Zappa Squig" publicationId="7e25-33bb-pubN80404" page="89" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="5282-47c1-c45c-8b8d" name="4. Da Great Zappa Squig" page="" hidden="false" collective="false" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d9b3-24b8-90f2-4ffd" type="max"/>
           </constraints>
@@ -2856,7 +2867,7 @@
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="2ba0-a3ad-cde5-e27d" name="5. Big Wurrgog Mask" publicationId="7e25-33bb-pubN80404" page="89" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="2ba0-a3ad-cde5-e27d" name="5. Big Wurrgog Mask" page="" hidden="false" collective="false" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2150-d68e-a6f4-4a90" type="max"/>
           </constraints>
@@ -2871,7 +2882,7 @@
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="3d35-6ae0-ab00-2dde" name="6. Mystic Waaagh! Paint" publicationId="7e25-33bb-pubN80404" page="89" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="3d35-6ae0-ab00-2dde" name="6. Mystic Waaagh! Paint" page="" hidden="false" collective="false" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="064a-76e9-b60c-17d6" type="max"/>
           </constraints>
@@ -3050,36 +3061,6 @@
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <sharedProfiles>
-    <profile id="c6f8-bdbf-4b80-f9fa" name="Arcane Bolt" publicationId="7e25-33bb-pubN82863" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
-      <characteristics>
-        <characteristic name="Casting Value" typeId="2508-b604-1258-a920">5</characteristic>
-        <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick an enemy unit within 18&quot; of the caster and which is visible to them. The unit you pick suffers D3 mortal wounds.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="09f4-1910-9246-31c6" name="Foot of Gork" publicationId="7e25-33bb-pubN82892" page="114" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
-      <characteristics>
-        <characteristic name="Casting Value" typeId="2508-b604-1258-a920">10</characteristic>
-        <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">Foot of Gork has a casting value of 10. If successfully cast, inflict D6 mortal wounds on a unit within 18&quot;. Then roll a dice - on a 4 or more, Gork stomps again: resolve another D6 mortal wounds on an eligible unit. Gork keeps on stomping until you fail to roll a 4 or more.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="7d06-23ee-57de-edcb" name="Gaze of Mork" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
-      <characteristics>
-        <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
-        <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">As the Shaman chants and thrusts its head forward, beams of green energy blasts outwards to smash into its victims. Gaze of Mork has a casting value of 6. If successfully cast, select up to 3 visible enemy units with 20&quot;. Roll a dice for each unit chosen; on a 1 it escapes unharmed, on a 2-5 it suffers 1 mortal wound, and on a 6 it suffers D3 mortal wounds.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="c8f0-1d8f-ec06-2a61" name="Green Puke" publicationId="7e25-33bb-pubN82892" page="114" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
-      <characteristics>
-        <characteristic name="Casting Value" typeId="2508-b604-1258-a920">8</characteristic>
-        <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">Green Puke has a casting value of 8. Draw a straight line 2D6&quot; long from the mouth of the Shaman. Each enemy unit crossed by the line suffers D3 mortal wounds.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="89b0-78a7-7435-cbbd" name="Mystic Shield" publicationId="7e25-33bb-pubN82863" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
-      <characteristics>
-        <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
-        <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick the caster, or a friendly unit within 18&quot; of the caster and which is visible to them. You can add 1 to all save rolls for the unit you pick until the start of your next hero phase.</characteristic>
-      </characteristics>
-    </profile>
     <profile id="8221-cd08-baac-c528" name="Orruk Banner" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
       <characteristics>
         <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">You can add 2 to the Bravery of all models in a unit that includes any Orruk Banners, as long as the enemy are within 3&quot; of the unit.</characteristic>
