@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="e983-4c8a-26ac-6720" name="Destruction - Greenskinz" revision="25" battleScribeVersion="2.02" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="6" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="e983-4c8a-26ac-6720" name="Destruction - Greenskinz" revision="26" battleScribeVersion="2.02" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="6" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="e983-4c8a-pubN65537" name="Grand Alliance: Destruction"/>
     <publication id="e983-4c8a-pubN70942" name="Age of Sigmar: The Rules"/>
@@ -165,18 +165,6 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="cf99-42d0-afa8-5cdc" name="Orruk Boar Chariots" hidden="false" collective="false" type="unit">
-      <modifiers>
-        <modifier type="increment" field="points" value="80">
-          <repeats>
-            <repeat field="selections" scope="cf99-42d0-afa8-5cdc" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="52e2-9733-9fe5-1dc1" repeats="1" roundUp="false"/>
-          </repeats>
-        </modifier>
-        <modifier type="decrement" field="points" value="80">
-          <conditions>
-            <condition field="selections" scope="cf99-42d0-afa8-5cdc" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="52e2-9733-9fe5-1dc1" type="greaterThan"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <profiles>
         <profile id="8d90-54a5-25ab-7b51" name="Orruk Boar Chariots" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
           <characteristics>
@@ -198,43 +186,45 @@
         </rule>
       </rules>
       <infoLinks>
-        <infoLink id="58b7-5b8d-66ce-0ec2" hidden="false" targetId="731c-0307-aa27-caa9" type="profile"/>
-        <infoLink id="4729-e14e-e52b-452b" hidden="false" targetId="a0e5-4c01-9371-34fb" type="profile"/>
-        <infoLink id="cad8-aba1-9469-a8f3" hidden="false" targetId="b825-e23d-3dab-a80e" type="profile"/>
+        <infoLink id="58b7-5b8d-66ce-0ec2" name="Tusker Charge" hidden="false" targetId="731c-0307-aa27-caa9" type="profile"/>
       </infoLinks>
       <selectionEntries>
-        <selectionEntry id="52e2-9733-9fe5-1dc1" name="Orruk Boar Chariot" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="52e2-9733-9fe5-1dc1" name="Orruk Boar Chariot" hidden="false" collective="false" type="model">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="minSelections" type="min"/>
             <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
           </constraints>
           <costs>
+            <cost name="pts" typeId="points" value="80.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="d380-dd1b-928f-fe6c" name="Pigstikka Spear" hidden="false" collective="false" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b883-31d2-58e9-72e9" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e658-9612-41df-be8c" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="6950-23ae-a6e2-160f" name="Pigstikka Spear" hidden="false" targetId="b825-e23d-3dab-a80e" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="cf4a-a93c-e3aa-0a76" name="War Boar&apos;s Tusks" hidden="false" collective="false" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="73d5-1fcc-91ec-aaf0" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="872d-42a5-4112-4a4e" type="min"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="3752-ae58-59e6-9678" name="War Boar&apos;s Tusks" hidden="false" targetId="a0e5-4c01-9371-34fb" type="profile"/>
+          </infoLinks>
+          <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
-      <costs>
-        <cost name="pts" typeId="points" value="80.0"/>
-      </costs>
     </selectionEntry>
     <selectionEntry id="26a8-4652-5c61-0b84" name="Orruk Boarboys" hidden="false" collective="false" type="unit">
-      <modifiers>
-        <modifier type="increment" field="points" value="100">
-          <repeats>
-            <repeat field="selections" scope="26a8-4652-5c61-0b84" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a97c-0c71-c3d5-8f45" repeats="1" roundUp="false"/>
-          </repeats>
-        </modifier>
-        <modifier type="decrement" field="points" value="100">
-          <conditions>
-            <condition field="selections" scope="26a8-4652-5c61-0b84" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a97c-0c71-c3d5-8f45" type="greaterThan"/>
-          </conditions>
-        </modifier>
-        <modifier type="decrement" field="points" value="40">
-          <conditions>
-            <condition field="selections" scope="26a8-4652-5c61-0b84" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a97c-0c71-c3d5-8f45" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <profiles>
         <profile id="8696-7b5e-349e-30e7" name="Orruk Boarboys" publicationId="e983-4c8a-pubN65537" page="16" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
           <characteristics>
@@ -254,18 +244,24 @@
         </rule>
       </rules>
       <infoLinks>
-        <infoLink id="c58f-b955-56ea-b52e" name="War Boar&apos;s Tusks" hidden="false" targetId="a0e5-4c01-9371-34fb" type="profile"/>
-        <infoLink id="5936-43aa-24cd-90af" hidden="false" targetId="445f-ff95-c013-bc3f" type="profile"/>
+        <infoLink id="5936-43aa-24cd-90af" name="Tusker Shields" hidden="false" targetId="445f-ff95-c013-bc3f" type="profile"/>
         <infoLink id="c0a5-a461-c71b-9c03" name="Tusker Charge" hidden="false" targetId="731c-0307-aa27-caa9" type="profile"/>
       </infoLinks>
       <selectionEntries>
-        <selectionEntry id="a97c-0c71-c3d5-8f45" name="5 Orruk Boarboys" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="a97c-0c71-c3d5-8f45" name="5 Orruk Boarboys" hidden="false" collective="false" type="model">
+          <modifiers>
+            <modifier type="set" field="points" value="90.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="minSelections" type="min"/>
             <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="pts" typeId="points" value="100.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="4a2a-1d5f-f1e9-0722" name="Glyph Bearer" hidden="false" collective="false" type="upgrade">
@@ -294,6 +290,18 @@
               </characteristics>
             </profile>
           </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="1e3a-1665-c655-99ad" name="War Boar&apos;s Tusks" hidden="false" collective="false" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5598-09df-659e-4184" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1958-9858-5889-710b" type="min"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="d2c7-e4c0-4729-2013" name="War Boar&apos;s Tusks" hidden="false" targetId="a0e5-4c01-9371-34fb" type="profile"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
@@ -331,34 +339,42 @@
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
-      <costs>
-        <cost name="pts" typeId="points" value="100.0"/>
-      </costs>
     </selectionEntry>
     <selectionEntry id="fbf3-2a5c-37f8-3055" name="Orruk Great Shaman" hidden="false" collective="false" type="unit">
-      <profiles>
-        <profile id="d9e0-a06c-dc3e-b9e7" name="Totemic Staff" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
-          <characteristics>
-            <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
-            <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">2&quot;</characteristic>
-            <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">1</characteristic>
-            <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
-            <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
-            <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
-            <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">D3</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
       <rules>
         <rule id="8f97-4f62-2d92-0e99" name="Orruk Great Shaman" hidden="false">
           <description>An Orruk Great Shaman is a single model. It is armed with a Totemic Staff.</description>
         </rule>
       </rules>
       <infoLinks>
-        <infoLink id="46aa-0eac-d591-d0a0" name="Arcane Bolt" hidden="false" targetId="c6f8-bdbf-4b80-f9fa" type="profile"/>
-        <infoLink id="aba4-4b99-ed74-49c5" name="Mystic Shield" hidden="false" targetId="89b0-78a7-7435-cbbd" type="profile"/>
+        <infoLink id="46aa-0eac-d591-d0a0" name="Arcane Bolt" hidden="false" targetId="ae02-a84f-a903-1ff8" type="profile"/>
+        <infoLink id="aba4-4b99-ed74-49c5" name="Mystic Shield" hidden="false" targetId="b41f-f1ce-7aa5-4f81" type="profile"/>
         <infoLink id="be11-8a9d-9ce2-3e61" name="Gaze of Mork" hidden="false" targetId="7d06-23ee-57de-edcb" type="profile"/>
       </infoLinks>
+      <selectionEntries>
+        <selectionEntry id="7101-4c8f-1d1b-ec21" name="Totemic Staff" hidden="false" collective="false" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9c6a-7a39-81bc-fdc5" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="348f-435b-e26b-9973" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="8e5c-190d-0d1a-dbe4" name="Totemic Staff" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">2&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">1</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">D3</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="e274-148c-a86a-f775" name="War Boar Option" hidden="false" collective="false" defaultSelectionEntryId="1a46-40a0-19e6-ce84">
           <constraints>
@@ -394,7 +410,7 @@
                 </profile>
               </profiles>
               <infoLinks>
-                <infoLink id="4ff8-900d-0e1c-8774" hidden="false" targetId="a0e5-4c01-9371-34fb" type="profile"/>
+                <infoLink id="4ff8-900d-0e1c-8774" name="War Boar&apos;s Tusks" hidden="false" targetId="a0e5-4c01-9371-34fb" type="profile"/>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="points" value="0.0"/>
@@ -599,28 +615,6 @@
             <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">4+</characteristic>
           </characteristics>
         </profile>
-        <profile id="8c2b-c1df-b8ea-e5d0" name="Wyvern&apos;s Horns, Claws and Teeth" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
-          <characteristics>
-            <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
-            <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">2&quot;</characteristic>
-            <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">*</characteristic>
-            <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
-            <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
-            <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
-            <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">2</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="8bb7-aa69-80e9-2c1c" name="Wyvern&apos;s Barbed, Venomous Tail" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
-          <characteristics>
-            <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
-            <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">3&quot;</characteristic>
-            <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">2</characteristic>
-            <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
-            <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">*</characteristic>
-            <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
-            <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">3</characteristic>
-          </characteristics>
-        </profile>
         <profile id="44c1-1565-133b-e0ea" name="Fly" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
             <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">An Orruk Warboss on Wyvern can fly.</characteristic>
@@ -682,6 +676,50 @@
                 <characteristic name="Move" typeId="4d18-4c14-0506-44c0">4&quot;</characteristic>
                 <characteristic name="Horns, Claws, and Teeth" typeId="a8cf-79e3-95b1-72f0">1</characteristic>
                 <characteristic name="Barbed, Venomous Tail" typeId="68ff-d954-0d95-a881">6+</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="960a-9bf2-9c39-6156" name="Wyvern&apos;s Barbed, Venomous Tail" hidden="false" collective="false" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a138-61e5-49d6-3375" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cbdd-7914-51c4-bd1c" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="eb57-c7f2-7903-7c12" name="Wyvern&apos;s Barbed, Venomous Tail" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">3&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">2</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">*</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">3</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="c6fe-2b29-eed8-2944" name="Wyvern&apos;s Horns, Claws and Teeth" hidden="false" collective="false" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="827e-7e6b-d10b-6e9a" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="356f-73c5-a415-77d2" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="19cf-e1ed-f8c2-98ee" name="Wyvern&apos;s Horns, Claws and Teeth" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">2&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">*</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">2</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -759,23 +797,6 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="3a7e-1646-f5e5-a8db" name="Orruks" hidden="false" collective="false" type="unit">
-      <modifiers>
-        <modifier type="increment" field="points" value="80">
-          <repeats>
-            <repeat field="selections" scope="3a7e-1646-f5e5-a8db" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4e05-33ef-a6b6-2a24" repeats="1" roundUp="false"/>
-          </repeats>
-        </modifier>
-        <modifier type="decrement" field="points" value="80">
-          <conditions>
-            <condition field="selections" scope="3a7e-1646-f5e5-a8db" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4e05-33ef-a6b6-2a24" type="greaterThan"/>
-          </conditions>
-        </modifier>
-        <modifier type="decrement" field="points" value="40">
-          <conditions>
-            <condition field="selections" scope="3a7e-1646-f5e5-a8db" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4e05-33ef-a6b6-2a24" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <profiles>
         <profile id="5cb2-1922-f51f-dcdd" name="Orruks" publicationId="e983-4c8a-pubN65537" page="15" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
           <characteristics>
@@ -792,21 +813,25 @@
         </profile>
       </profiles>
       <rules>
-        <rule id="3218-d1ce-f835-24d5" name="Orruks" hidden="false">
-          <description>A unit of ORRUKS has 10 or more models. Most units of ORRUKS are armed wither with Choppas or Pigstikka Spears, and carry Waaagh! Shields. Some units of ORRUKS are instead armed with a pair of Choppas. A few units are instead armed with Orruk Bows to shoot the enemy, and Cuttas for when things get close and personal.</description>
-        </rule>
         <rule id="fe24-cf3d-fc17-99ed" name="Orruk Boss" hidden="false">
           <description>The leader of this unit is an Orruk Boss. An Orruk Boss makes 2 attacks rather than 1.</description>
         </rule>
       </rules>
       <selectionEntries>
-        <selectionEntry id="4e05-33ef-a6b6-2a24" name="10 Orruks" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="4e05-33ef-a6b6-2a24" name="10 Orruks" hidden="false" collective="false" type="model">
+          <modifiers>
+            <modifier type="set" field="points" value="70.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="minSelections" type="min"/>
             <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="pts" typeId="points" value="80.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="0727-d87c-0ca6-fdb7" name="Standard Bearer" hidden="false" collective="false" type="upgrade">
@@ -955,9 +980,6 @@
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
-      <costs>
-        <cost name="pts" typeId="points" value="80.0"/>
-      </costs>
     </selectionEntry>
     <selectionEntry id="d7dd-acbb-a8db-2fe5" name="General" hidden="false" collective="false" type="upgrade">
       <modifiers>
@@ -1012,34 +1034,10 @@
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <sharedProfiles>
-    <profile id="c6f8-bdbf-4b80-f9fa" name="Arcane Bolt" publicationId="e983-4c8a-pubN70942" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
-      <characteristics>
-        <characteristic name="Casting Value" typeId="2508-b604-1258-a920">5</characteristic>
-        <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick an enemy unit within 18&quot; of the caster and which is visible to them. The unit you pick suffers D3 mortal wounds.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="09f4-1910-9246-31c6" name="Foot of Gork" publicationId="e983-4c8a-pubN70971" page="114" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
-      <characteristics>
-        <characteristic name="Casting Value" typeId="2508-b604-1258-a920">10</characteristic>
-        <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">Foot of Gork has a casting value of 10. If successfully cast, inflict D6 mortal wounds on a unit within 18&quot;. Then roll a dice - on a 4 or more, Gork stomps again: resolve another D6 mortal wounds on an eligible unit. Gork keeps on stomping until you fail to roll a 4 or more.</characteristic>
-      </characteristics>
-    </profile>
     <profile id="7d06-23ee-57de-edcb" name="Gaze of Mork" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
       <characteristics>
         <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
         <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">As the Shaman chants and thrusts its head forward, beams of green energy blasts outwards to smash into its victims. Gaze of Mork has a casting value of 6. If successfully cast, select up to 3 visible enemy units with 20&quot;. Roll a dice for each unit chosen; on a 1 it escapes unharmed, on a 2-5 it suffers 1 mortal wound, and on a 6 it suffers D3 mortal wounds.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="c8f0-1d8f-ec06-2a61" name="Green Puke" publicationId="e983-4c8a-pubN70971" page="114" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
-      <characteristics>
-        <characteristic name="Casting Value" typeId="2508-b604-1258-a920">8</characteristic>
-        <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">Green Puke has a casting value of 8. Draw a straight line 2D6&quot; long from the mouth of the Shaman. Each enemy unit crossed by the line suffers D3 mortal wounds.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="89b0-78a7-7435-cbbd" name="Mystic Shield" publicationId="e983-4c8a-pubN70942" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
-      <characteristics>
-        <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
-        <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick the caster, or a friendly unit within 18&quot; of the caster and which is visible to them. You can add 1 to all save rolls for the unit you pick until the start of your next hero phase.</characteristic>
       </characteristics>
     </profile>
     <profile id="8221-cd08-baac-c528" name="Orruk Banner" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
@@ -1095,17 +1093,6 @@
         <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
       </characteristics>
     </profile>
-    <profile id="77cb-33ac-4b6e-962f" name="Moon-sickle" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
-      <characteristics>
-        <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
-        <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
-        <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">3</characteristic>
-        <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
-        <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">4+</characteristic>
-        <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
-        <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
-      </characteristics>
-    </profile>
     <profile id="94a8-c226-f44c-e15b" name="Spore Squig’s Vicious Teef" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
       <characteristics>
         <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
@@ -1115,22 +1102,6 @@
         <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">4+</characteristic>
         <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
         <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="7ff7-91fb-2996-52ce" name="Regeneration" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-      <characteristics>
-        <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Roll a dice for each Troggoth in each of your hero phases. On a 2 or more that model heals D3 wounds.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="4045-ce4a-e1e0-3570" name="Noxious Vomit" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
-      <characteristics>
-        <characteristic name="Type" typeId="655c-362e-a663-3e50">Missile</characteristic>
-        <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">6&quot;</characteristic>
-        <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">1</characteristic>
-        <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
-        <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
-        <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-2</characteristic>
-        <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">D3</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
