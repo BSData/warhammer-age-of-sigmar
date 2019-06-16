@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="47" battleScribeVersion="2.02" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="49" battleScribeVersion="2.02" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <publications>
-    <publication id="e51d-b1a3-pubN65537" name="The General&apos;s Handbook"/>
-    <publication id="e51d-b1a3-pubN65553" name="Core Rules"/>
-    <publication id="e51d-b1a3-pubN71790" name="General&apos;s Handbook 2018"/>
-    <publication id="e51d-b1a3-pubN71872" name="General&apos;s Handbook 2017"/>
-    <publication id="e51d-b1a3-pubN76834" name="Malign Sorcery; Official Errata, December 2018"/>
-    <publication id="e51d-b1a3-pubN78644" name="Malign Sorcery; Errata, July 2018"/>
-    <publication id="e51d-b1a3-pubN88025" name="Malign Sorcery"/>
-    <publication id="e51d-b1a3-pubN88246" name="Malign Socery"/>
+    <publication id="e51d-b1a3-pubEC" name="The General&apos;s Handbook"/>
+    <publication id="e51d-b1a3-pubEQ" name="Core Rules"/>
+    <publication id="e51d-b1a3-pubE5LCI" name="General&apos;s Handbook 2018"/>
+    <publication id="e51d-b1a3-pubEQOCI" name="General&apos;s Handbook 2017"/>
+    <publication id="e51d-b1a3-pubETJDK" name="Malign Sorcery; Official Errata, December 2018"/>
+    <publication id="e51d-b1a3-pubEFCFK" name="Malign Sorcery; Errata, July 2018"/>
+    <publication id="e51d-b1a3-pubEKHGM" name="Malign Sorcery"/>
+    <publication id="e51d-b1a3-pubEHOGM" name="Malign Socery"/>
   </publications>
   <costTypes>
     <costType id="points" name="pts" defaultCostLimit="0.0"/>
@@ -203,10 +203,6 @@
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="aeab-ce73-e115-d5bd" type="max"/>
       </constraints>
     </categoryEntry>
-    <categoryEntry id="39fb-f7df-c324-a046" name="HORRORGHAST" hidden="false"/>
-    <categoryEntry id="1f14-20c6-8c93-b9e8" name="LAUCHON THE SOULSEEKER" hidden="false"/>
-    <categoryEntry id="866a-39f9-df3c-16c4" name="SHARDS OF VALAGHARR" hidden="false"/>
-    <categoryEntry id="f905-c88d-2c7c-1625" name="SOULSCREAM BRIDGE" hidden="false"/>
     <categoryEntry id="2c4b-6186-2939-7f2b" name="BEASTS OF CHAOS" hidden="false"/>
     <categoryEntry id="088b-3a27-03f7-8249" name="Named" hidden="false"/>
     <categoryEntry id="2ff5-b7a1-655a-1655" name="GREATER DAEMON" hidden="false"/>
@@ -568,6 +564,115 @@
         </categoryLink>
       </categoryLinks>
     </forceEntry>
+    <forceEntry id="af42-5af7-420c-7ab6" name="Meeting Engagement - Spearhead" hidden="true">
+      <categoryLinks>
+        <categoryLink id="a779-9bae-d844-746e" name="Leader" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="false">
+          <constraints>
+            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="13bd-761b-1412-7ab3" type="min"/>
+            <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="1fd6-77bc-ae2f-558d" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="c208-0d8b-7a00-f45e" name="Battleline" hidden="false" targetId="e9f2-765a-b7b8-ce8e" primary="false">
+          <constraints>
+            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="ee5c-21f2-923a-5a45" type="min"/>
+            <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="558f-65a6-efed-67b9" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="0c40-fc0f-dc12-41ff" name="Behemoth" hidden="false" targetId="fa0c-9044-2568-fa02" primary="false">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true"/>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="cb64-cdda-2453-5a5b" type="min"/>
+            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="e3fb-fe86-e79a-4ba4" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="6206-aa1c-9374-288e" name="Other" hidden="false" targetId="065e-fda7-fd27-1f40" primary="false">
+          <constraints>
+            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="d9e0-2947-bd90-d408" type="min"/>
+            <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="8df5-8a13-6dfe-876f" type="max"/>
+          </constraints>
+        </categoryLink>
+      </categoryLinks>
+    </forceEntry>
+    <forceEntry id="cce4-bc9d-0c7e-74c3" name="Meeting Engagement - Main Body" hidden="true">
+      <categoryLinks>
+        <categoryLink id="d8b0-937f-e675-3538" name="Leader" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="false">
+          <constraints>
+            <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="49e7-39fc-712c-6b08" type="min"/>
+            <constraint field="selections" scope="force" value="2.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="9ce6-1bcf-5e31-2890" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="86b6-86d5-fb18-9288" name="Battleline" hidden="false" targetId="e9f2-765a-b7b8-ce8e" primary="false">
+          <constraints>
+            <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="61ef-0b33-6c18-17ee" type="min"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="0fcb-e9ae-2065-8258" name="Behemoth" hidden="false" targetId="fa0c-9044-2568-fa02" primary="false">
+          <constraints>
+            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="2d76-2596-83fb-bfa6" type="min"/>
+            <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="5434-44d8-3a16-7b2a" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="d4f2-f448-86e4-38d6" name="Other" hidden="false" targetId="065e-fda7-fd27-1f40" primary="false">
+          <constraints>
+            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="5894-736b-3be1-5a94" type="min"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="f893-5b2f-eb0f-0a31" name="Allegiance" hidden="false" targetId="87e8-c095-f059-5f7b" primary="false">
+          <constraints>
+            <constraint field="selections" scope="cce4-bc9d-0c7e-74c3" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a84b-92b6-09fc-c9bb" type="min"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="3482-1176-7c83-8374" name="Command Points" hidden="false" targetId="8be8-3ccd-be93-b55e" primary="false"/>
+        <categoryLink id="c800-4d89-230a-a2e4" name="Game Options" hidden="false" targetId="1974-3f49-7f0b-8422" primary="false"/>
+        <categoryLink id="fcf3-8315-3d50-aede" name="Malign Sorcery" hidden="false" targetId="eecb-ed66-d474-9ddd" primary="false"/>
+        <categoryLink id="e7ee-4c42-6e86-db5a" name="Realm of Battle" hidden="false" targetId="5e28-c4f1-4a92-b75c" primary="false">
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" id="8c2f-68f0-5136-3cf2" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="830b-65a1-c8d6-ca9e" name="Realm of Origin" hidden="false" targetId="5c6d-5384-bcb1-b474" primary="false">
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" id="ad26-168d-8f48-46ed" type="max"/>
+          </constraints>
+        </categoryLink>
+      </categoryLinks>
+    </forceEntry>
+    <forceEntry id="57e3-99c7-6fc4-1cff" name="Meeting Engagement - Rearguard" hidden="true">
+      <categoryLinks>
+        <categoryLink id="c29b-073e-cd0d-34f5" name="Leader" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="false">
+          <constraints>
+            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="bab3-3903-f18f-ab9b" type="min"/>
+            <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="2f01-a90a-6f9a-8ef1" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="1efe-8035-c9f8-80ae" name="Battleline" hidden="false" targetId="e9f2-765a-b7b8-ce8e" primary="false">
+          <constraints>
+            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="bbaa-b8ed-159a-3348" type="min"/>
+            <constraint field="selections" scope="force" value="2.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="1877-0e10-fd27-1a6e" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="e820-200e-1821-463f" name="Behemoth" hidden="false" targetId="fa0c-9044-2568-fa02" primary="false">
+          <constraints>
+            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="8570-cefa-30ba-7786" type="min"/>
+            <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="26b7-33a1-788c-039d" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="0b98-2a3e-36b0-688e" name="Other" hidden="false" targetId="065e-fda7-fd27-1f40" primary="false">
+          <constraints>
+            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="62ad-70aa-e62a-919b" type="min"/>
+            <constraint field="selections" scope="force" value="2.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="af1b-bef9-5bcd-da03" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="7024-6dc3-83b0-33c6" name="Artillery" hidden="false" targetId="1d26-07fc-6a66-d73e" primary="false">
+          <constraints>
+            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="7dfb-87e6-d14f-5aa4" type="min"/>
+            <constraint field="selections" scope="force" value="2.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="f26e-080f-27d8-4cb2" type="max"/>
+          </constraints>
+        </categoryLink>
+      </categoryLinks>
+    </forceEntry>
   </forceEntries>
   <selectionEntries>
     <selectionEntry id="745a-d2c9-a076-2d70" name="Purchased Command Points" hidden="false" collective="false" type="upgrade">
@@ -668,7 +773,7 @@
     </entryLink>
   </entryLinks>
   <rules>
-    <rule id="a954-6cfc-59ca-674e" name="Inspiring Presence" publicationId="e51d-b1a3-pubN65553" page="3" hidden="false">
+    <rule id="a954-6cfc-59ca-674e" name="Inspiring Presence" publicationId="e51d-b1a3-pubEQ" page="3" hidden="false">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditions>
@@ -678,7 +783,7 @@
       </modifiers>
       <description>You can use this command ability at the start of the battleshock phase. If you do so, pick a friendly unit that is within 6&quot; of friendly HERO, or 12&quot; of a friendly HERO that is a general. That unit does not have to take battleshock tests in that phase.</description>
     </rule>
-    <rule id="3f48-3925-7123-3392" name="At the Double" publicationId="e51d-b1a3-pubN65553" page="3" hidden="false">
+    <rule id="3f48-3925-7123-3392" name="At the Double" publicationId="e51d-b1a3-pubEQ" page="3" hidden="false">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditions>
@@ -688,7 +793,7 @@
       </modifiers>
       <description>You can use this command ability after you make a run roll for a friendly unit that is within 6&quot; of a friendly HERO, or 12&quot; of a friendly HERO that is a general. If you do so, the run roll is treated as being a 6.</description>
     </rule>
-    <rule id="c157-62a0-2514-c4f4" name="Forward to Victory" publicationId="e51d-b1a3-pubN65553" page="3" hidden="false">
+    <rule id="c157-62a0-2514-c4f4" name="Forward to Victory" publicationId="e51d-b1a3-pubEQ" page="3" hidden="false">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditions>
@@ -898,7 +1003,7 @@
           <profiles>
             <profile id="0764-cc0b-794f-7edb" name="Ruler of the Night" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
               <characteristics>
-                <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">Friendly DEATH units are affected by the Deathless Minions battle trait if they are within 12&quot; of this general rather than only 6&quot;.</characteristic>
+                <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">Friendly DEATH units are affected by the Deathless Minions battle trait if they are within 12&quot; of this general rather than only 6&quot;.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -990,7 +1095,7 @@
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="57b0-0dc0-4f80-7fe9" type="max"/>
           </constraints>
           <profiles>
-            <profile id="3c81-80a2-a7fe-6433" name="Hammerblade" publicationId="e51d-b1a3-pubN71790" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
+            <profile id="3c81-80a2-a7fe-6433" name="Hammerblade" publicationId="e51d-b1a3-pubE5LCI" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
               <characteristics>
                 <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Pick one melee weapon that this model can use. Instead of attacking normally with that weapon, you can roll a dice for each model within 3&quot; of the bearer (apart from the bearer). On a roll of 5 or 6, 1 mortal wound is inflicted on that model&apos;s unit.</characteristic>
               </characteristics>
@@ -1003,12 +1108,12 @@
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="11ee-4b6d-7d08-dd98" name="2. Battered Talisman" publicationId="e51d-b1a3-pubN71872" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="11ee-4b6d-7d08-dd98" name="2. Battered Talisman" publicationId="e51d-b1a3-pubEQOCI" hidden="false" collective="false" type="upgrade">
           <constraints>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="addc-60fb-ee24-bcfb" type="max"/>
           </constraints>
           <profiles>
-            <profile id="8f53-5df2-f0c3-3733" name="Battered Talisman" publicationId="e51d-b1a3-pubN71872" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
+            <profile id="8f53-5df2-f0c3-3733" name="Battered Talisman" publicationId="e51d-b1a3-pubEQOCI" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
               <characteristics>
                 <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Roll a dice each time you allocate a mortal wound to the bearer. On a 5+, the mortal wound is negated.</characteristic>
               </characteristics>
@@ -1021,12 +1126,12 @@
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="e734-c953-e710-a42a" name="3. Rockeye" publicationId="e51d-b1a3-pubN71872" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="e734-c953-e710-a42a" name="3. Rockeye" publicationId="e51d-b1a3-pubEQOCI" hidden="false" collective="false" type="upgrade">
           <constraints>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5099-38d5-7540-a044" type="max"/>
           </constraints>
           <profiles>
-            <profile id="9a86-99f2-1f5e-6f23" name="Rockeye" publicationId="e51d-b1a3-pubN71872" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
+            <profile id="9a86-99f2-1f5e-6f23" name="Rockeye" publicationId="e51d-b1a3-pubEQOCI" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
               <characteristics>
                 <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">In your hero phase, pick an enemy unit within 12&quot; of this bearer. Until your next hero phase, add 1 to hit rolls made by the bearer when they target the unit you picked.</characteristic>
               </characteristics>
@@ -1039,12 +1144,12 @@
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="b111-9840-cc58-ca44" name="4. Bellowing Blade" publicationId="e51d-b1a3-pubN71872" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="b111-9840-cc58-ca44" name="4. Bellowing Blade" publicationId="e51d-b1a3-pubEQOCI" hidden="false" collective="false" type="upgrade">
           <constraints>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5e0e-d321-e948-0878" type="max"/>
           </constraints>
           <profiles>
-            <profile id="c24f-4f2e-f512-ecf9" name="Bellowing Blade" publicationId="e51d-b1a3-pubN71872" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
+            <profile id="c24f-4f2e-f512-ecf9" name="Bellowing Blade" publicationId="e51d-b1a3-pubEQOCI" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
               <characteristics>
                 <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">When the bearer is picked to fight, you can re-roll one failed wound roll for bearers attacks in that fight for each enemy HERO that was within 12&quot; of the bearer when they were picked to fight.</characteristic>
               </characteristics>
@@ -1057,7 +1162,7 @@
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="3cdf-ca0c-9c35-0727" name="5. Collar of Domination" publicationId="e51d-b1a3-pubN71872" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="3cdf-ca0c-9c35-0727" name="5. Collar of Domination" publicationId="e51d-b1a3-pubEQOCI" hidden="false" collective="false" type="upgrade">
           <constraints>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e351-213d-edf0-2ef5" type="max"/>
           </constraints>
@@ -1075,12 +1180,12 @@
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="40a6-edd2-8f4c-bcbc" name="6. Battle Brew" publicationId="e51d-b1a3-pubN71872" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="40a6-edd2-8f4c-bcbc" name="6. Battle Brew" publicationId="e51d-b1a3-pubEQOCI" hidden="false" collective="false" type="upgrade">
           <constraints>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d399-9741-b80c-5a52" type="max"/>
           </constraints>
           <profiles>
-            <profile id="c11d-9966-5de8-6dad" name="Battle Brew" publicationId="e51d-b1a3-pubN71872" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
+            <profile id="c11d-9966-5de8-6dad" name="Battle Brew" publicationId="e51d-b1a3-pubEQOCI" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
               <characteristics>
                 <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Once per battle, in your hero phase, you can declare that bearer will take either one or two swigs of Battle Brew. If the bearer takes one swig, add 1 to all hit and wound rolls for the bearer until your next hero phase. If the bearer takes two swigs, add 2 to all hit and wound rolls for the model until your next hero phase, but you must allocate D6 mortal wounds to the earer at the end of the turn in which they drank the brew.</characteristic>
               </characteristics>
@@ -1095,14 +1200,14 @@
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
-    <selectionEntryGroup id="1319-8f5e-1ff1-08c9" name="Destruction Command Traits" publicationId="e51d-b1a3-pubN71872" page="156" hidden="false" collective="false">
+    <selectionEntryGroup id="1319-8f5e-1ff1-08c9" name="Destruction Command Traits" publicationId="e51d-b1a3-pubEQOCI" page="156" hidden="false" collective="false">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="effb-aa38-5e89-7631" type="max"/>
       </constraints>
       <selectionEntries>
-        <selectionEntry id="dace-f335-0d87-3b0d" name="1. Nothing Left Standing" publicationId="e51d-b1a3-pubN71872" page="156" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="dace-f335-0d87-3b0d" name="1. Nothing Left Standing" publicationId="e51d-b1a3-pubEQOCI" page="156" hidden="false" collective="false" type="upgrade">
           <profiles>
-            <profile id="bcd1-9176-4492-23ec" name="Nothing Left Standing" publicationId="e51d-b1a3-pubN71872" page="156" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
+            <profile id="bcd1-9176-4492-23ec" name="Nothing Left Standing" publicationId="e51d-b1a3-pubEQOCI" page="156" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
               <characteristics>
                 <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">In your hero phase, pick a terrain feature that is within 6&quot; of your general and at least 5 other friendly DESTRUCTION models. That terrain feature no longer gives cover to models that are in or on it.</characteristic>
               </characteristics>
@@ -1112,9 +1217,9 @@
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="b456-2252-df66-a511" name="2. Might is Right" publicationId="e51d-b1a3-pubN71790" page="" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="b456-2252-df66-a511" name="2. Might is Right" publicationId="e51d-b1a3-pubE5LCI" page="" hidden="false" collective="false" type="upgrade">
           <profiles>
-            <profile id="7e70-bb8b-13b3-bb52" name="Might is Right" publicationId="e51d-b1a3-pubN71872" page="156" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
+            <profile id="7e70-bb8b-13b3-bb52" name="Might is Right" publicationId="e51d-b1a3-pubEQOCI" page="156" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
               <characteristics>
                 <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">Add 1 to the wound rolls made for the general’s melee weapons.</characteristic>
               </characteristics>
@@ -1124,9 +1229,9 @@
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="33e4-5c70-c48b-9472" name="3. Wild Fury" publicationId="e51d-b1a3-pubN71872" page="156" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="33e4-5c70-c48b-9472" name="3. Wild Fury" publicationId="e51d-b1a3-pubEQOCI" page="156" hidden="false" collective="false" type="upgrade">
           <profiles>
-            <profile id="abd9-cb56-8363-375f" name="Wild Fury" publicationId="e51d-b1a3-pubN71872" page="156" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
+            <profile id="abd9-cb56-8363-375f" name="Wild Fury" publicationId="e51d-b1a3-pubEQOCI" page="156" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
               <characteristics>
                 <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">When this General is picked to fight, pick one of their melee weapons. Add 1 to the attach characterisict of that melee weapon for the fight. While 3 or more wounds are allocated to this general, instread add 2 to the Attacks characteristic of that melee weapon for that fight.</characteristic>
               </characteristics>
@@ -1136,9 +1241,9 @@
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="6b78-5f06-40c7-eab6" name="4. Bellowing Tyrant" publicationId="e51d-b1a3-pubN71872" page="156" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="6b78-5f06-40c7-eab6" name="4. Bellowing Tyrant" publicationId="e51d-b1a3-pubEQOCI" page="156" hidden="false" collective="false" type="upgrade">
           <profiles>
-            <profile id="e6c7-5519-f527-355c" name="Bellowing Tyrant" publicationId="e51d-b1a3-pubN71790" page="" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
+            <profile id="e6c7-5519-f527-355c" name="Bellowing Tyrant" publicationId="e51d-b1a3-pubE5LCI" page="" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
               <characteristics>
                 <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">In your hero phase, pick a friendly DESTRUCTION unit within 6&quot; of the general in your hero phase. Until your next hero phase, add 1 to charge and run rolls for the unit, and use the general’s Bravery characteristic for the unit instead of its own.</characteristic>
               </characteristics>
@@ -1148,9 +1253,9 @@
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="e5b1-baeb-ed1b-e3f3" name="5. Big and Brutish" publicationId="e51d-b1a3-pubN71872" page="156" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="e5b1-baeb-ed1b-e3f3" name="5. Big and Brutish" publicationId="e51d-b1a3-pubEQOCI" page="156" hidden="false" collective="false" type="upgrade">
           <profiles>
-            <profile id="1851-80dd-639c-fce5" name="Big and Brutish" publicationId="e51d-b1a3-pubN71872" page="156" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
+            <profile id="1851-80dd-639c-fce5" name="Big and Brutish" publicationId="e51d-b1a3-pubEQOCI" page="156" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
               <characteristics>
                 <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">Add 1 to the general’s Wounds characteristic.</characteristic>
               </characteristics>
@@ -1160,9 +1265,9 @@
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="fdf2-ddc3-5dd8-f6e6" name="6. Ravager" publicationId="e51d-b1a3-pubN71872" page="156" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="fdf2-ddc3-5dd8-f6e6" name="6. Ravager" publicationId="e51d-b1a3-pubEQOCI" page="156" hidden="false" collective="false" type="upgrade">
           <profiles>
-            <profile id="6c53-2a68-0348-adc4" name="Ravager" publicationId="e51d-b1a3-pubN71790" page="" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
+            <profile id="6c53-2a68-0348-adc4" name="Ravager" publicationId="e51d-b1a3-pubE5LCI" page="" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
               <characteristics>
                 <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">Add 3 to the Rampaging Destroyers dice roll (see battle traits) for the general instead of 2.</characteristic>
               </characteristics>
@@ -1477,7 +1582,7 @@
           <profiles>
             <profile id="0043-fadd-e00b-8ebc" name="Chaos Runeblade" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
               <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Pick one of the bearer’s melee weapons. Increase the Attacks characteristic of that weapon by 1.</characteristic>
+                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Pick one of the bearer’s melee weapons. Increase the Attacks characteristic of that weapon by 1.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -1943,7 +2048,7 @@
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c4db-6ced-82f1-46aa" type="max"/>
           </constraints>
           <profiles>
-            <profile id="d11d-df26-af25-0ff6" name="Jade Diadem" publicationId="e51d-b1a3-pubN76834" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
+            <profile id="d11d-df26-af25-0ff6" name="Jade Diadem" publicationId="e51d-b1a3-pubETJDK" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
               <characteristics>
                 <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">If the unmodified save roll for an attack that targets the bearer is 6, heal 1 wound allocated to the bearer.</characteristic>
               </characteristics>
@@ -2309,7 +2414,7 @@
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b32e-2ae8-af9a-0a2e" type="max"/>
           </constraints>
           <profiles>
-            <profile id="edc9-b33c-3caf-0e93" name="Hydroxskin Cloak" publicationId="e51d-b1a3-pubN78644" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
+            <profile id="edc9-b33c-3caf-0e93" name="Hydroxskin Cloak" publicationId="e51d-b1a3-pubEFCFK" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
               <characteristics>
                 <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">The bearer can fly. After the bearer has made a normal move, you can pick 1 unit that has any models that the bearer has passed across and roll a dice. On a 3+ that unit suffers D3 mortal wounds.</characteristic>
               </characteristics>
@@ -3091,7 +3196,7 @@
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f45d-b9e4-878a-d641" type="max"/>
           </constraints>
           <profiles>
-            <profile id="d17f-c2f2-b06b-e153" name="Talisman of the Watcher" publicationId="e51d-b1a3-pubN76834" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
+            <profile id="d17f-c2f2-b06b-e153" name="Talisman of the Watcher" publicationId="e51d-b1a3-pubETJDK" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
               <characteristics>
                 <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">If the bearer is not within 3&quot; of an enemy unit at the start of the combat phase, pick a friendly unit within 9&quot; of the bearer. You can re-roll save rolls of 1 for that unit until the end of that phase.</characteristic>
               </characteristics>
@@ -3127,7 +3232,7 @@
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="73f4-9623-bf27-6e0f" type="max"/>
           </constraints>
           <profiles>
-            <profile id="7da8-f3cc-2a76-58ac" name="Doppelganger Cloak" publicationId="e51d-b1a3-pubN76834" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
+            <profile id="7da8-f3cc-2a76-58ac" name="Doppelganger Cloak" publicationId="e51d-b1a3-pubETJDK" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
               <characteristics>
                 <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Once per battle, at the start of the combat phase, you can say that the bearer will put on the cloak. If you do so, the bearer cannot be chosen as the target of attacks made with melee weapons unless the bearer has made any attacks earlier in that phase.</characteristic>
               </characteristics>
@@ -3267,7 +3372,7 @@
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="dbce-b3dc-1775-f2c9" type="max"/>
           </constraints>
           <profiles>
-            <profile id="04d2-fb64-23c3-6aa9" name="Lens of Refraction" publicationId="e51d-b1a3-pubN78644" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
+            <profile id="04d2-fb64-23c3-6aa9" name="Lens of Refraction" publicationId="e51d-b1a3-pubEFCFK" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
               <characteristics>
                 <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Once per battle round, the first time a friendly unit within 6&quot; of the bearer suffers any mortal wounds inflicted by a spell or endless spell, roll a D3 and reduce the number of mortal wounds suffered by the roll.</characteristic>
               </characteristics>
@@ -3677,7 +3782,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
                 <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">When this model is set up, the player who set it up can immediately make a move with it. </characteristic>
               </characteristics>
             </profile>
-            <profile id="72c5-5472-f2f9-2532" name="Tendrils of Shadow and Light" publicationId="e51d-b1a3-pubN78644" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+            <profile id="72c5-5472-f2f9-2532" name="Tendrils of Shadow and Light" publicationId="e51d-b1a3-pubEFCFK" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
               <characteristics>
                 <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">After the Shadow Geminid model has moved, each unit that has any models it passed across suffers D3 mortal wounds. In addition, subtract 1 (to a minimum of 1) from the Attacks characteristic of melee weapons used by each unit that has any models it passed across until the end of the battle round. A unit is not affected by the Shadow Geminid model if it has been passed across by the Light Geminid model earlier in the same battle round. After the Light Geminid model has moved, each unit that has any models it passed across suffers D3 mortal wounds. In addition, subtract 1 from hit rolls for each unit that has any models it passed across until the end of the battle round. A unit is not affected by the Light Geminid model if it has been passed across by the Shadow Geminind model earlier in the same battle round (a unit can be affected by one or other of the models each battle round, but not both).</characteristic>
               </characteristics>
@@ -4068,7 +4173,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, set up the first Umbral Spellportal model wholly within 12&quot; of the caster, and then set up the second Umbral Spellportal model wholly within 18&quot; of the first.</characteristic>
               </characteristics>
             </profile>
-            <profile id="aa9a-0aa6-d8a3-98d0" name="Arcane Passage" publicationId="e51d-b1a3-pubN78644" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+            <profile id="aa9a-0aa6-d8a3-98d0" name="Arcane Passage" publicationId="e51d-b1a3-pubEFCFK" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
               <characteristics>
                 <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If a Wizard successfully casts a spell while they are within 1&quot; of an Umbral Spellportal model, the range and visibility of the spell can be measured from the other Umbral Spellportal model from this endless spell. After the range and visibility for a spell has been measured from an Umbral Spellportal, you cannot use the Arcane Passage ability again for that Umbral Spellportal in that phase. If a predatory endless spell finishes a move within 6&quot; of an Umbral Spellportal model, remove it from the battlefield and set it up again anywhere within 6&quot; of the other Umbral Spellportal model from this endless spell. After an endless spell finishes a move within 6&quot; of an Umbral Spellportal and is set up again, it cannot move again in that phase, and you cannot use the Arcane Passage ability again for that Umbral Spellportal in that phase.</characteristic>
               </characteristics>
@@ -4086,156 +4191,6 @@ to set up the WIZARD, then the WIZARD is slain.</description>
           </categoryLinks>
           <costs>
             <cost name="pts" typeId="points" value="60.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="d953-406b-2273-3885" name="Horrorghast" hidden="false" collective="false" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b472-4496-1d9b-da4a" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="921c-ac6c-124f-8f4f" name="Summon Horrorghast" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
-              <characteristics>
-                <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
-                <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, set up a Horrorghast model wholly within 12&quot; of the caster.</characteristic>
-              </characteristics>
-            </profile>
-            <profile id="ab8e-6c68-7ee8-b388" name="Prey on Fear" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-              <characteristics>
-                <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Subtract 1 from the Bravery characteristic of units while they are within 12&quot; of this model. Subtract 2 instead from the Bravery characteristic of units while they are within 6&quot; of this model.</characteristic>
-              </characteristics>
-            </profile>
-            <profile id="bc37-3cc1-c081-7af6" name="Empowered by Shyish" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-              <characteristics>
-                <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If your battle is taking place in the Realm of Death, this model can move up to 12&quot; instead of up to 9&quot;.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <infoLinks>
-            <infoLink id="507d-98cd-a7b8-bcd1" name="Fly" hidden="false" targetId="8e0c-cbe4-27be-8a30" type="profile"/>
-          </infoLinks>
-          <categoryLinks>
-            <categoryLink id="2600-2c45-3661-005a" name="ENDLESS SPELL" hidden="false" targetId="31f4-2067-3ade-e6f8" primary="false"/>
-            <categoryLink id="441e-4bf1-3ad9-a9f4" name="HORRORGHAST" hidden="false" targetId="39fb-f7df-c324-a046" primary="false"/>
-            <categoryLink id="a93d-edcc-8989-28bc" name="SHYISH" hidden="false" targetId="2cc9-0867-b2e3-da55" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="60.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="b5c3-fe3d-2440-a17a" name="Lauchon the Soulseeker" hidden="false" collective="false" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5bd8-f6eb-c5ef-0caa" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="638a-420f-55a7-cb87" name="Predatory" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-              <characteristics>
-                <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Lauchon the Soulseeker is a predatory endless spell. It can move up to 12&quot; and can fly.</characteristic>
-              </characteristics>
-            </profile>
-            <profile id="a74a-c511-164e-4e3e" name="Summon Lauchon the Soulseeker" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
-              <characteristics>
-                <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
-                <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, set up a Lauchon the Soulseeker model wholly within 12&quot; of the caster.</characteristic>
-              </characteristics>
-            </profile>
-            <profile id="f21c-8cf5-890c-e257" name="Navigate Deathly Tides" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-              <characteristics>
-                <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">When this model is set up, the player who set it up can immediately make a move with it.</characteristic>
-              </characteristics>
-            </profile>
-            <profile id="bcf5-03ee-a383-04b7" name="Empowered with Shyish" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-              <characteristics>
-                <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If your battle is taking place in the Realm of Death, this model can move up to 18&quot; instead of up to 12&quot;.</characteristic>
-              </characteristics>
-            </profile>
-            <profile id="aa65-3f98-a641-f175" name="Soul Price" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-              <characteristics>
-                <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Before a player makes a move with this model, that player can pick a friendly unit wholly within 3&quot; of this model. Remove that unit and place it to one side. After this model has moved, set that unit up again wholly within 3&quot; of this model and more than 9&quot; from any enemy units. Once that unit has been set up, 1 model from that unit is immediately slain.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <infoLinks>
-            <infoLink id="0f05-7ee2-4850-9e57" name="Fly" hidden="false" targetId="8e0c-cbe4-27be-8a30" type="profile"/>
-          </infoLinks>
-          <categoryLinks>
-            <categoryLink id="7000-9a7f-2d74-5d12" name="ENDLESS SPELL" hidden="false" targetId="31f4-2067-3ade-e6f8" primary="false"/>
-            <categoryLink id="d9ac-1e86-613c-0319" name="LAUCHON THE SOULSEEKER" hidden="false" targetId="1f14-20c6-8c93-b9e8" primary="false"/>
-            <categoryLink id="2ce6-dafb-4c67-278a" name="SHYISH" hidden="false" targetId="2cc9-0867-b2e3-da55" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="60.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="e8bb-4707-e833-9eaa" name="Shards of Valagharr" hidden="false" collective="false" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b101-c9b1-5f99-f3ef" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="2b6a-7dbd-9e75-da59" name="Summon Shards of Valagharr" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
-              <characteristics>
-                <characteristic name="Casting Value" typeId="2508-b604-1258-a920">5</characteristic>
-                <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, set up the first Shards of Valagharr model wholly within 6&quot; of the caster, and then set up the second Shards of Valagharr model wholly within 12&quot; of the first.</characteristic>
-              </characteristics>
-            </profile>
-            <profile id="df2a-af53-61e4-e070" name="Ensnaring Soul-drain" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-              <characteristics>
-                <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the start of the movement phase, draw an imaginary straight line 1mm wide between the closest parts of the bases of the two Shards of Valagharr models from this endless spell. Each unit passed across by this line is ensnared until the end of that turn. Halve the Move characteristic of a unit that is ensnared. In addition, subtract 1 from hit rolls for attacks made by units that are ensnared.</characteristic>
-              </characteristics>
-            </profile>
-            <profile id="dcbc-7b45-a531-3c17" name="Twilight Translocation" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-              <characteristics>
-                <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the start of the battle round, after determining who has the first turn, the players must roll off. The winner can remove one Shards of Valagharr model from this endless spell from the battlefield and set it up again anywhere on the battlefield wholly within 12&quot; of the other Shards of Valagharr model from this endless spell.</characteristic>
-              </characteristics>
-            </profile>
-            <profile id="a35c-51ff-048f-857c" name="Empowered by Shyish" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-              <characteristics>
-                <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If your battle is taking place in the Realm of Death, the first Shards of Valagharr model can be set up wholly within 12&quot; of the caster, instead of 6&quot;.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="e353-df9f-d40b-33e5" name="ENDLESS SPELL" hidden="false" targetId="31f4-2067-3ade-e6f8" primary="false"/>
-            <categoryLink id="a107-5e98-d8e2-00f7" name="SHARDS OF VALAGHARR" hidden="false" targetId="866a-39f9-df3c-16c4" primary="false"/>
-            <categoryLink id="d0a4-c11c-bc96-9ddb" name="SHYISH" hidden="false" targetId="2cc9-0867-b2e3-da55" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="40.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="7c37-3128-960b-ca68" name="Soulscream Bridge" hidden="false" collective="false" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="206c-f3be-191e-1ed6" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="60f4-63c4-441a-dec1" name="Summon Soulscream Bridge" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
-              <characteristics>
-                <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
-                <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, set up the first Soulscream Bridge model wholly within 6&quot; of the caster, and then set up the second Soulscream Bridge model wholly within 12&quot; of the first.</characteristic>
-              </characteristics>
-            </profile>
-            <profile id="e9ab-16fe-7de5-82ab" name="Deathly Passage" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-              <characteristics>
-                <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the start of your movement phase, friendly units wholly within 6&quot; of one Soulscream Bridge model from this endless spell can travel across the Soulscream Bridge. If they do so, remove that unit from the battlefield and set it up again wholly within 6&quot; of the other Soulscream Bridge model from this endless spell, more than 9&quot; from any enemy units. That unit cannot make a normal move that phase. </characteristic>
-              </characteristics>
-            </profile>
-            <profile id="5047-3037-5728-61c9" name="Nightmarish Construct" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-              <characteristics>
-                <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Subtract 1 from the Bravery characteristic of enemy units while they are within 6&quot; of a Soulscream Bridge model. This ability has no effect on DEATH units.</characteristic>
-              </characteristics>
-            </profile>
-            <profile id="1fdc-1c52-5eae-1d7e" name="Empowered by Shyish" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-              <characteristics>
-                <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If your battle is taking place in the Realm of Death, the second Soulscream Bridge model can be set up wholly within 24&quot; of the first, instead of within 12&quot; of the first.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="1b64-edc2-2667-df4e" name="ENDLESS SPELL" hidden="false" targetId="31f4-2067-3ade-e6f8" primary="false"/>
-            <categoryLink id="7f51-b20a-e666-4d2a" name="SHYISH" hidden="false" targetId="2cc9-0867-b2e3-da55" primary="false"/>
-            <categoryLink id="65d6-6f51-54a6-cf5d" name="SOULSCREAM BRIDGE" hidden="false" targetId="f905-c88d-2c7c-1625" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="80.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -4292,37 +4247,37 @@ to set up the WIZARD, then the WIZARD is slain.</description>
       <selectionEntries>
         <selectionEntry id="ba2b-ec63-fa08-88ef" name="Battle: Aqshy" hidden="false" collective="false" type="upgrade">
           <profiles>
-            <profile id="dbea-58cc-3513-1868" name="Stoke Rage" publicationId="e51d-b1a3-pubN88025" page="75" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+            <profile id="dbea-58cc-3513-1868" name="Stoke Rage" publicationId="e51d-b1a3-pubEKHGM" page="75" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick a friendly unit within 12&quot; of the caster that is visible to them. Add 1 to wound rolls and charge rolls for that unit until your next hero phase.</characteristic>
               </characteristics>
             </profile>
-            <profile id="c833-e77e-7d86-96fe" name="Inferno Blades" publicationId="e51d-b1a3-pubN88025" page="75" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+            <profile id="c833-e77e-7d86-96fe" name="Inferno Blades" publicationId="e51d-b1a3-pubEKHGM" page="75" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick a friendly unit within 12&quot; of the caster. Add 1 to the Damage characteristic of melee weapons used by that unit until your next hero phase.</characteristic>
               </characteristics>
             </profile>
-            <profile id="da41-8a88-bda1-7c5f" name="Fiery Blast" publicationId="e51d-b1a3-pubN88025" page="75" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+            <profile id="da41-8a88-bda1-7c5f" name="Fiery Blast" publicationId="e51d-b1a3-pubEKHGM" page="75" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick a point on the battlefield within 18&quot; of the caster that is visible to them. Roll a dice for each unit (friend or foe) within 3&quot; of this point. On a 4+ that unit suffers D3 mortal wounds.</characteristic>
               </characteristics>
             </profile>
-            <profile id="297e-c1cf-ad98-4df9" name="Glare of Vulcatrix" publicationId="e51d-b1a3-pubN88025" page="75" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+            <profile id="297e-c1cf-ad98-4df9" name="Glare of Vulcatrix" publicationId="e51d-b1a3-pubEKHGM" page="75" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">8</characteristic>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick an enemy unit within 9&quot; of the caster that is visible to them. Roll a dice; if the result is higher than the unit’s Wounds characteristic, a model from that unit is slain.</characteristic>
               </characteristics>
             </profile>
-            <profile id="5312-c3ec-1d59-ed83" name="Parch" publicationId="e51d-b1a3-pubN88025" page="75" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+            <profile id="5312-c3ec-1d59-ed83" name="Parch" publicationId="e51d-b1a3-pubEKHGM" page="75" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick an enemy unit within 18&quot; of the caster. That unit must halve its Move characteristic until your next hero phase. In addition, roll a dice each time that unit completes a charge move until your next hero phase. On a 5+ the unit suffers D3 mortal wounds.</characteristic>
               </characteristics>
             </profile>
-            <profile id="b054-6b9d-5733-a302" name="Incandescent Form" publicationId="e51d-b1a3-pubN88025" page="75" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+            <profile id="b054-6b9d-5733-a302" name="Incandescent Form" publicationId="e51d-b1a3-pubEKHGM" page="75" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, subtract 1 from hit rolls for attacks that target the caster until your next hero phase.</characteristic>
@@ -4335,37 +4290,37 @@ to set up the WIZARD, then the WIZARD is slain.</description>
         </selectionEntry>
         <selectionEntry id="ed53-d347-e94c-2431" name="Battle: Chamon" hidden="false" collective="false" type="upgrade">
           <profiles>
-            <profile id="2c42-d061-a087-9527" name="Rain of Lead" publicationId="e51d-b1a3-pubN88246" page="74" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+            <profile id="2c42-d061-a087-9527" name="Rain of Lead" publicationId="e51d-b1a3-pubEHOGM" page="74" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick an enemy unit within 18&quot; of the caster that is visible to them. That unit suffers D3 mortal wounds. In addition, subtract 1&quot; from that unit’s Move characteristic until your next hero phase.</characteristic>
               </characteristics>
             </profile>
-            <profile id="0f74-a77d-dd05-d038" name="Curse of Rust" publicationId="e51d-b1a3-pubN88025" page="74" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+            <profile id="0f74-a77d-dd05-d038" name="Curse of Rust" publicationId="e51d-b1a3-pubEKHGM" page="74" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick an enemy unit within 12&quot; of the caster that is visible to them. Subtract 1 from hit rolls and save rolls for that unit until your next hero phase.</characteristic>
               </characteristics>
             </profile>
-            <profile id="ed1d-11ec-1a8d-004a" name="Molten Gaze" publicationId="e51d-b1a3-pubN88025" page="74" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+            <profile id="ed1d-11ec-1a8d-004a" name="Molten Gaze" publicationId="e51d-b1a3-pubEKHGM" page="74" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick a point on the battlefield within 12&quot; of the caster that is visible to them and draw an imaginary straight line 1mm wide between that point and the closest part of the caster. Each unit other than the caster that has models passed across by this line suffers 1 mortal wound.</characteristic>
               </characteristics>
             </profile>
-            <profile id="1617-a762-c075-2410" name="Rule of Burning Iron" publicationId="e51d-b1a3-pubN88025" page="74" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+            <profile id="1617-a762-c075-2410" name="Rule of Burning Iron" publicationId="e51d-b1a3-pubEKHGM" page="74" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">8</characteristic>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick an enemy unit within 12&quot; of the caster that is visible to them. Roll a dice for each model in that unit. For each 6+ that unit suffers 1 mortal wound.</characteristic>
               </characteristics>
             </profile>
-            <profile id="3784-d44d-177e-60e3" name="Glittering Robe" publicationId="e51d-b1a3-pubN88025" page="74" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+            <profile id="3784-d44d-177e-60e3" name="Glittering Robe" publicationId="e51d-b1a3-pubEKHGM" page="74" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, re-roll save rolls of 1 for the caster until your next hero phase.</characteristic>
               </characteristics>
             </profile>
-            <profile id="02b9-131b-e438-e1da" name="Transmutation" publicationId="e51d-b1a3-pubN88025" page="74" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+            <profile id="02b9-131b-e438-e1da" name="Transmutation" publicationId="e51d-b1a3-pubEKHGM" page="74" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick an enemy unit within 18&quot; of the caster that is visible to them and roll 3 dice. For each roll that is greater than that unit’s Wounds characteristic, 1 model from that unit is slain.</characteristic>
@@ -4378,37 +4333,37 @@ to set up the WIZARD, then the WIZARD is slain.</description>
         </selectionEntry>
         <selectionEntry id="afb2-6845-cd03-2596" name="Battle: Ghur" hidden="false" collective="false" type="upgrade">
           <profiles>
-            <profile id="4980-8f82-01df-d8c1" name="The Amber Spear" publicationId="e51d-b1a3-pubN88246" page="73" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+            <profile id="4980-8f82-01df-d8c1" name="The Amber Spear" publicationId="e51d-b1a3-pubEHOGM" page="73" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick a point on the battlefield within 12&quot; of the caster that is visible to them and draw an imaginary straight line 1mm wide between that point and the closest part of the caster. Each unit other than the caster that has models passed across by this line suffers 1 mortal wound.</characteristic>
               </characteristics>
             </profile>
-            <profile id="47d2-8fe8-a1cd-fcd4" name="Bestial Spirit" publicationId="e51d-b1a3-pubN88025" page="73" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+            <profile id="47d2-8fe8-a1cd-fcd4" name="Bestial Spirit" publicationId="e51d-b1a3-pubEKHGM" page="73" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick an enemy unit within 18&quot; of the caster that is visible to them. That unit suffers D3 mortal wounds. In addition, if the unit suffers 3 mortal wounds from this spell, subtract 1 from its Bravery characteristic until your next hero phase.</characteristic>
               </characteristics>
             </profile>
-            <profile id="b570-a87b-a5d6-4314" name="Flock of Doom" publicationId="e51d-b1a3-pubN88025" page="73" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+            <profile id="b570-a87b-a5d6-4314" name="Flock of Doom" publicationId="e51d-b1a3-pubEKHGM" page="73" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick an enemy unit within 18&quot; of the caster that is visible to them and roll 12 dice. For each 6+ that enemy unit suffers 1 mortal wound.</characteristic>
               </characteristics>
             </profile>
-            <profile id="c34f-e0f3-8aa6-27b2" name="Impenetrable Hide" publicationId="e51d-b1a3-pubN88025" page="73" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+            <profile id="c34f-e0f3-8aa6-27b2" name="Impenetrable Hide" publicationId="e51d-b1a3-pubEKHGM" page="73" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, you can re-roll failed save rolls for the caster until the start of your next hero phase.</characteristic>
               </characteristics>
             </profile>
-            <profile id="796c-59cd-7791-1fb9" name="Cower" publicationId="e51d-b1a3-pubN88025" page="73" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+            <profile id="796c-59cd-7791-1fb9" name="Cower" publicationId="e51d-b1a3-pubEKHGM" page="73" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick an enemy MONSTER within 12&quot; of the caster that is visible to them and roll 2D6. If the result is higher than that MONSTER ’s Bravery characteristic, it cannot make a charge move in your opponent’s next turn.</characteristic>
               </characteristics>
             </profile>
-            <profile id="130c-f54d-8df0-2a75" name="Primal Hunter" publicationId="e51d-b1a3-pubN88025" page="73" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+            <profile id="130c-f54d-8df0-2a75" name="Primal Hunter" publicationId="e51d-b1a3-pubEKHGM" page="73" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">8</characteristic>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick a friendly HERO within 12&quot; of the caster that is visible to them. Re-roll failed charge rolls and hit rolls for that HERO until your next hero phase.</characteristic>
@@ -4421,37 +4376,37 @@ to set up the WIZARD, then the WIZARD is slain.</description>
         </selectionEntry>
         <selectionEntry id="286a-bfe7-f725-ca75" name="Battle: Ghyran" hidden="false" collective="false" type="upgrade">
           <profiles>
-            <profile id="bf34-4284-e813-d06a" name="Whipvines" publicationId="e51d-b1a3-pubN88025" page="72" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+            <profile id="bf34-4284-e813-d06a" name="Whipvines" publicationId="e51d-b1a3-pubEKHGM" page="72" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">5</characteristic>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick a point on the battlefield within 18&quot; of the caster that is visible to them. Roll a dice for each enemy unit within 3&quot; of this point. On a 4+ the unit being rolled for suffers 1 mortal wound.</characteristic>
               </characteristics>
             </profile>
-            <profile id="981d-92e1-a330-a142" name="Mirrorpool" publicationId="e51d-b1a3-pubN76834" page="72; 1" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+            <profile id="981d-92e1-a330-a142" name="Mirrorpool" publicationId="e51d-b1a3-pubETJDK" page="72; 1" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, remove the caster from the battlefield and set them up again anywhere within 18&quot; of their previous position, more than 9&quot; from any enemy models. It may not move in the subsequent movement phase.</characteristic>
               </characteristics>
             </profile>
-            <profile id="8ead-e4d4-d566-1cad" name="Realmblood" publicationId="e51d-b1a3-pubN88025" page="72" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+            <profile id="8ead-e4d4-d566-1cad" name="Realmblood" publicationId="e51d-b1a3-pubEKHGM" page="72" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, heal D3 wounds allocated to the caster.</characteristic>
               </characteristics>
             </profile>
-            <profile id="ad7d-da4d-95bf-85d7" name="Briarstorm" publicationId="e51d-b1a3-pubN88025" page="72" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+            <profile id="ad7d-da4d-95bf-85d7" name="Briarstorm" publicationId="e51d-b1a3-pubEKHGM" page="72" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick a point on the battlefield within 18&quot; of the caster. Until your next hero phase, any unit that finishes a move within 3&quot; of that point suffers D3 mortal wounds.</characteristic>
               </characteristics>
             </profile>
-            <profile id="c6ac-bacc-b44a-ee43" name="Flesh to Stone" publicationId="e51d-b1a3-pubN88025" page="72" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+            <profile id="c6ac-bacc-b44a-ee43" name="Flesh to Stone" publicationId="e51d-b1a3-pubEKHGM" page="72" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, re-roll successful wound rolls for attacks that target the caster until your next hero phase.</characteristic>
               </characteristics>
             </profile>
-            <profile id="f1e2-5c25-57d9-2a96" name="Sicklewind" publicationId="e51d-b1a3-pubN88025" page="72" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+            <profile id="f1e2-5c25-57d9-2a96" name="Sicklewind" publicationId="e51d-b1a3-pubEKHGM" page="72" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick a point on the battlefield within 12&quot; of the caster that is visible to them and draw an imaginary straight line 1mm wide between that point and the closest part of the caster. Each unit other than the caster that has models passed across by this line suffers D3 mortal wounds.</characteristic>
@@ -4464,37 +4419,37 @@ to set up the WIZARD, then the WIZARD is slain.</description>
         </selectionEntry>
         <selectionEntry id="632b-73ed-9385-2491" name="Battle: Hysh" hidden="false" collective="false" type="upgrade">
           <profiles>
-            <profile id="6a62-fd42-aa4d-5e6a" name="Exorcising Beam" publicationId="e51d-b1a3-pubN88025" page="78" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+            <profile id="6a62-fd42-aa4d-5e6a" name="Exorcising Beam" publicationId="e51d-b1a3-pubEKHGM" page="78" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick an enemy unit within 12&quot; of the caster that is visible to them. That unit suffers D3 mortal wounds. If the enemy unit is a DAEMON or DEATH unit, it suffers D6 mortal wounds instead.</characteristic>
               </characteristics>
             </profile>
-            <profile id="bf05-2d97-bcc4-15f5" name="Light of Battle" publicationId="e51d-b1a3-pubN88025" page="78" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+            <profile id="bf05-2d97-bcc4-15f5" name="Light of Battle" publicationId="e51d-b1a3-pubEKHGM" page="78" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">5</characteristic>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick a friendly unit within 18&quot; of the caster. Do not take battleshock tests for that unit until your next hero phase.</characteristic>
               </characteristics>
             </profile>
-            <profile id="1106-ad78-0b0e-c029" name="Vengeful Illumination" publicationId="e51d-b1a3-pubN88025" page="78" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+            <profile id="1106-ad78-0b0e-c029" name="Vengeful Illumination" publicationId="e51d-b1a3-pubEKHGM" page="78" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick an enemy unit within 18&quot; of the caster that is visible to them. Add 1 to hit rolls for attacks made with missile weapons that target that unit until your next hero phase.</characteristic>
               </characteristics>
             </profile>
-            <profile id="42b6-a83b-993f-08c1" name="Aetheric Net" publicationId="e51d-b1a3-pubN88025" page="78" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+            <profile id="42b6-a83b-993f-08c1" name="Aetheric Net" publicationId="e51d-b1a3-pubEKHGM" page="78" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick a point on the battlefield within 18&quot; of the caster. Roll a dice for each unit (friend or foe) within 3&quot; of that point. On a 4+ that unit suffers 1 mortal wound, and its Move characteristic is halved until your next hero phase.</characteristic>
               </characteristics>
             </profile>
-            <profile id="b132-e233-e288-8114" name="Healing Glow" publicationId="e51d-b1a3-pubN88025" page="78" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+            <profile id="b132-e233-e288-8114" name="Healing Glow" publicationId="e51d-b1a3-pubEKHGM" page="78" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick a friendly unit within 6&quot; of the caster that is visible to them. Heal D3 wounds allocated to that unit.</characteristic>
               </characteristics>
             </profile>
-            <profile id="777d-7786-4576-16e8" name="Banishment" publicationId="e51d-b1a3-pubN78644" page="78" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+            <profile id="777d-7786-4576-16e8" name="Banishment" publicationId="e51d-b1a3-pubEFCFK" page="78" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">8</characteristic>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick 1 enemy unit within 12&quot; of the caster that is visible to them. Your opponent must remove that unit from the battlefield and then set it up again, anywhere on the battlefield more than 24&quot; from the caster and more than 9&quot; from any other models from the caster’s army.</characteristic>
@@ -4507,37 +4462,37 @@ to set up the WIZARD, then the WIZARD is slain.</description>
         </selectionEntry>
         <selectionEntry id="098f-0986-2570-bece" name="Battle: Shyish" hidden="false" collective="false" type="upgrade">
           <profiles>
-            <profile id="6e51-da62-4ca8-04ad" name="Word of Ending" publicationId="e51d-b1a3-pubN88025" page="76" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+            <profile id="6e51-da62-4ca8-04ad" name="Word of Ending" publicationId="e51d-b1a3-pubEKHGM" page="76" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick an enemy HERO within 12&quot; of the caster that is visible to them and roll a dice. If the result is more than the number of wounds allocated to that model, it suffers D3 mortal wounds.</characteristic>
               </characteristics>
             </profile>
-            <profile id="80ae-e158-1210-7d7c" name="Night&apos;s Touch" publicationId="e51d-b1a3-pubN88025" page="76" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+            <profile id="80ae-e158-1210-7d7c" name="Night&apos;s Touch" publicationId="e51d-b1a3-pubEKHGM" page="76" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">8</characteristic>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick a friendly unit within 6&quot; of the caster that is visible to them. Ignore modifiers (positive and negative) when making save rolls for that unit until your next hero phase.</characteristic>
               </characteristics>
             </profile>
-            <profile id="80b8-a2bc-5bf4-8b4d" name="Soulshroud" publicationId="e51d-b1a3-pubN88025" page="76" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+            <profile id="80b8-a2bc-5bf4-8b4d" name="Soulshroud" publicationId="e51d-b1a3-pubEKHGM" page="76" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick a friendly unit within 12&quot; of the caster that is visible to them. That unit is not affected by other spells until your next hero phase.</characteristic>
               </characteristics>
             </profile>
-            <profile id="7ae9-bda5-9bee-9446" name="Unnatural Darkness" publicationId="e51d-b1a3-pubN88025" page="76" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+            <profile id="7ae9-bda5-9bee-9446" name="Unnatural Darkness" publicationId="e51d-b1a3-pubEKHGM" page="76" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick a friendly unit within 12&quot; of the caster that is visible to them. Subtract 1 from hit rolls for attacks that target that unit until your next hero phase.</characteristic>
               </characteristics>
             </profile>
-            <profile id="4f5e-3629-2e27-f24b" name="Soulflay" publicationId="e51d-b1a3-pubN88025" page="76" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+            <profile id="4f5e-3629-2e27-f24b" name="Soulflay" publicationId="e51d-b1a3-pubEKHGM" page="76" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick an enemy HERO within 12&quot; of the caster that is visible to them. That unit suffers D3 mortal wounds. In addition, if the unit suffers 3 mortal wounds from this spell, subtract 2 from its Bravery characteristic until your next hero phase.</characteristic>
               </characteristics>
             </profile>
-            <profile id="19ff-bb06-bb69-7dd5" name="Ethereal Guide" publicationId="e51d-b1a3-pubN88025" page="76" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+            <profile id="19ff-bb06-bb69-7dd5" name="Ethereal Guide" publicationId="e51d-b1a3-pubEKHGM" page="76" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, add 1 to hit rolls for attacks made by the caster until your next hero phase.</characteristic>
@@ -4550,37 +4505,37 @@ to set up the WIZARD, then the WIZARD is slain.</description>
         </selectionEntry>
         <selectionEntry id="3923-b6b9-c500-1062" name="Battle: Ulgu" hidden="false" collective="false" type="upgrade">
           <profiles>
-            <profile id="7b58-9346-d870-903a" name="Labyrinth of Sorrows" publicationId="e51d-b1a3-pubN88025" page="77" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+            <profile id="7b58-9346-d870-903a" name="Labyrinth of Sorrows" publicationId="e51d-b1a3-pubEKHGM" page="77" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">5</characteristic>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick an enemy unit within 12&quot; of the caster that is visible to them. Halve the Move characteristic of that unit until your next hero phase.</characteristic>
               </characteristics>
             </profile>
-            <profile id="b468-8c05-4668-3d4c" name="Crown of Asphyxiation" publicationId="e51d-b1a3-pubN88025" page="77" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+            <profile id="b468-8c05-4668-3d4c" name="Crown of Asphyxiation" publicationId="e51d-b1a3-pubEKHGM" page="77" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, roll a dice for each enemy unit within 3&quot; of the caster. On a 4+ that unit suffers 1 mortal wound.</characteristic>
               </characteristics>
             </profile>
-            <profile id="5483-9381-e6dd-60c6" name="The Enfeebling" publicationId="e51d-b1a3-pubN88025" page="77" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+            <profile id="5483-9381-e6dd-60c6" name="The Enfeebling" publicationId="e51d-b1a3-pubEKHGM" page="77" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick an enemy unit within 12&quot; of the caster. Re-roll failed wound rolls for attacks that target this unit until your next hero phase.</characteristic>
               </characteristics>
             </profile>
-            <profile id="6a2d-6e7c-c48b-10bb" name="Phantasmal Guardian" publicationId="e51d-b1a3-pubN88025" page="77" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+            <profile id="6a2d-6e7c-c48b-10bb" name="Phantasmal Guardian" publicationId="e51d-b1a3-pubEKHGM" page="77" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, roll a dice each time you allocate a wound or mortal wound to the caster until your next hero phase. On a 5+ the wound is negated.</characteristic>
               </characteristics>
             </profile>
-            <profile id="9abb-8076-099a-4563" name="Bridge of Shadows" publicationId="e51d-b1a3-pubN88025" page="77" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+            <profile id="9abb-8076-099a-4563" name="Bridge of Shadows" publicationId="e51d-b1a3-pubEKHGM" page="77" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick a friendly unit wholly within 12&quot; of the caster and remove it from the battlefield. Set it up anywhere on the battlefield that is wholly within 24&quot; of the caster and more than 9&quot; from any enemy models. It may not move in the subsequent movement phase.</characteristic>
               </characteristics>
             </profile>
-            <profile id="1078-c3cd-bed1-ea1c" name="Aetheric Tendrils" publicationId="e51d-b1a3-pubN88025" page="77" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+            <profile id="1078-c3cd-bed1-ea1c" name="Aetheric Tendrils" publicationId="e51d-b1a3-pubEKHGM" page="77" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick an enemy unit within 12&quot; of the caster that is visible to them. That unit suffers D3 mortal wounds. If that unit is a HERO or MONSTER, you can make a normal move with that unit as if it had a Move characteristic of 4&quot;.</characteristic>
@@ -4595,7 +4550,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <sharedRules>
-    <rule id="4571-8f36-98ca-2d16" name="Rampaging Destroyers" publicationId="e51d-b1a3-pubN71872" page="156" hidden="false">
+    <rule id="4571-8f36-98ca-2d16" name="Rampaging Destroyers" publicationId="e51d-b1a3-pubEQOCI" page="156" hidden="false">
       <description>Roll a dice in your hero phase for your general and each DESTRUCTION HERO in your army. Add 2 to the roll for the general. On a roll of 6 or more, pick a friendly DESTRUCTION unit within 6&quot; of the general or HERO being rolled for. That unit can immediately move 6&quot; if it is more than 12&quot; from the enemy, can immediately pile in if it is within 3&quot; of the enemy, or can immediately declare a charge in any other circumstances. It cannot run when it makes the move, but can move, charge or pile in again later in the same turn.</description>
     </rule>
   </sharedRules>
