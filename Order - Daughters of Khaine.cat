@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="388b-16d3-8182-d6c0" name="Order - Daughters of Khaine" revision="26" battleScribeVersion="2.02" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="18" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="388b-16d3-8182-d6c0" name="Order - Daughters of Khaine" revision="28" battleScribeVersion="2.02" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="18" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="388b-16d3-pubN65537" name="Order Battletome: Daughters of Khaine"/>
     <publication id="388b-16d3-pubN69838" name="Order Official FAQs and errata, Version 1.4"/>
@@ -1563,9 +1563,33 @@
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
+        <selectionEntry id="59d3-4faa-c48c-4850" name="General" hidden="false" collective="false" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b78c-c342-c8aa-aa45" type="instanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="62e4-370f-3318-cdbd" type="instanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="78f3-8a59-699a-61e8" type="instanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2876-aa2e-ef76-09a7" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e9a9-9520-b670-a6de" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="1a70-b84d-acb2-7641" name="New CategoryLink" hidden="false" targetId="b745-17c4-8fbf-8b04" primary="false"/>
+          </categoryLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink id="0d93-2565-0199-2ceb" name="General" hidden="false" collective="false" targetId="8a66-cfb1-6e7e-9f11" type="selectionEntry"/>
         <entryLink id="e65b-1620-95cb-b11a" name="Lore of Shadows" hidden="false" collective="false" targetId="0d48-c9e0-e8c1-6d3d" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
@@ -2038,7 +2062,7 @@
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c883-61a5-1194-d82a" type="max"/>
       </constraints>
       <profiles>
-        <profile id="53a1-c9ae-4aab-5de7" name="Horn Blower" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="">
+        <profile id="53a1-c9ae-4aab-5de7" name="Horn Blower" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
             <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">A unit that includes any Hornblowers can charge even if it ran in the same turn.</characteristic>
           </characteristics>
@@ -2053,7 +2077,7 @@
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d373-f770-66ba-a71c" type="max"/>
       </constraints>
       <profiles>
-        <profile id="5ea2-f751-7e76-1416" name="Standard Bearer" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="">
+        <profile id="5ea2-f751-7e76-1416" name="Standard Bearer" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
             <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If a unit includes any Standard Bearers when you take a battleshock test for it, roll two dice instead of one and discard the highest result.</characteristic>
           </characteristics>
@@ -2859,12 +2883,13 @@
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fafe-5100-312d-c298" type="equalTo"/>
               </conditions>
             </modifier>
-            <modifier type="set" field="df77-05e9-c301-f138" value="1">
+            <modifier type="set" field="df77-05e9-c301-f138" value="1.0">
               <conditionGroups>
                 <conditionGroup type="and">
                   <conditions>
                     <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fafe-5100-312d-c298" type="equalTo"/>
                     <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4e0e-664d-51ea-0929" type="atLeast"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="59d3-4faa-c48c-4850" type="equalTo"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -2898,6 +2923,7 @@
                   <conditions>
                     <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d02d-e093-7534-53a4" type="equalTo"/>
                     <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4e0e-664d-51ea-0929" type="atLeast"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="59d3-4faa-c48c-4850" type="equalTo"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
