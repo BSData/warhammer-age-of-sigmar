@@ -109,11 +109,7 @@
     <categoryEntry id="1418-9a68-9f9e-e9a7" name="DAEMON" hidden="false"/>
     <categoryEntry id="3504-ea8e-28ec-5150" name="TOTEM" hidden="false"/>
     <categoryEntry id="e8a5-e4c1-3d11-e7dd" name="PRIEST" hidden="false"/>
-    <categoryEntry id="b745-17c4-8fbf-8b04" name="General" hidden="true">
-      <constraints>
-        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="2478-fe21-434e-7881" type="max"/>
-      </constraints>
-    </categoryEntry>
+    <categoryEntry id="b745-17c4-8fbf-8b04" name="General" hidden="true"/>
     <categoryEntry id="3564-4c26-10b4-d953" name="Artefact" hidden="false">
       <modifiers>
         <modifier type="increment" field="459e-bc05-f498-6753" value="1">
@@ -211,6 +207,9 @@
     <categoryEntry id="1f14-20c6-8c93-b9e8" name="LAUCHON THE SOULSEEKER" hidden="false"/>
     <categoryEntry id="866a-39f9-df3c-16c4" name="SHARDS OF VALAGHARR" hidden="false"/>
     <categoryEntry id="f905-c88d-2c7c-1625" name="SOULSCREAM BRIDGE" hidden="false"/>
+    <categoryEntry id="2c4b-6186-2939-7f2b" name="BEASTS OF CHAOS" hidden="false"/>
+    <categoryEntry id="088b-3a27-03f7-8249" name="Named" hidden="false"/>
+    <categoryEntry id="2ff5-b7a1-655a-1655" name="GREATER DAEMON" hidden="false"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry id="6ace-8bcc-48b2-6de7" name="*Old* *Pitched Battle (1,000)*" hidden="true">
@@ -899,7 +898,7 @@
           <profiles>
             <profile id="0764-cc0b-794f-7edb" name="Ruler of the Night" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
               <characteristics>
-                <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">Friendly DEATH units are affected by the Deathless Minions battle trait if they are within 12&quot; of this general rather than only 6&quot;.</characteristic>
+                <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">Friendly DEATH units are affected by the Deathless Minions battle trait if they are within 12&quot; of this general rather than only 6&quot;.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -1478,7 +1477,7 @@
           <profiles>
             <profile id="0043-fadd-e00b-8ebc" name="Chaos Runeblade" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
               <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Pick one of the bearer’s melee weapons. Increase the Attacks characteristic of that weapon by 1.</characteristic>
+                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Pick one of the bearer’s melee weapons. Increase the Attacks characteristic of that weapon by 1.</characteristic>
               </characteristics>
             </profile>
           </profiles>
