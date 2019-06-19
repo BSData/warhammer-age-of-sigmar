@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="50" battleScribeVersion="2.02" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="51" battleScribeVersion="2.02" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <publications>
     <publication id="e51d-b1a3-pubEC" name="The General&apos;s Handbook"/>
     <publication id="e51d-b1a3-pubEQ" name="Core Rules"/>
@@ -112,10 +112,15 @@
     <categoryEntry id="b745-17c4-8fbf-8b04" name="General" hidden="true"/>
     <categoryEntry id="3564-4c26-10b4-d953" name="Artefact" hidden="false">
       <modifiers>
-        <modifier type="increment" field="459e-bc05-f498-6753" value="1">
+        <modifier type="increment" field="459e-bc05-f498-6753" value="1.0">
           <repeats>
             <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="be17-6bbd-b857-3f43" repeats="1" roundUp="false"/>
           </repeats>
+        </modifier>
+        <modifier type="increment" field="459e-bc05-f498-6753" value="2.0">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f60b-d58c-bfee-5aa7" type="greaterThan"/>
+          </conditions>
         </modifier>
       </modifiers>
       <constraints>
@@ -210,6 +215,10 @@
     <categoryEntry id="cff6-06c5-3294-b74b" name="SHARDS OF VALAGHARR" hidden="false"/>
     <categoryEntry id="3b54-23ed-a577-ea1f" name="LAUCHON THE SOULSEEKER" hidden="false"/>
     <categoryEntry id="9945-bd78-56ea-5cde" name="HORRORGHAST" hidden="false"/>
+    <categoryEntry id="c34d-acb9-a4d9-74be" name="VOSTARG" hidden="false"/>
+    <categoryEntry id="f60b-d58c-bfee-5aa7" name="GREYFYRD" hidden="false"/>
+    <categoryEntry id="3559-43bd-385b-59a0" name="HERMDAR" hidden="false"/>
+    <categoryEntry id="a89a-9904-cf30-0d17" name="LOFNIR" hidden="false"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry id="6ace-8bcc-48b2-6de7" name="*Old* *Pitched Battle (1,000)*" hidden="true">
