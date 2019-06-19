@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="49" battleScribeVersion="2.02" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="50" battleScribeVersion="2.02" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <publications>
     <publication id="e51d-b1a3-pubEC" name="The General&apos;s Handbook"/>
     <publication id="e51d-b1a3-pubEQ" name="Core Rules"/>
@@ -206,6 +206,10 @@
     <categoryEntry id="2c4b-6186-2939-7f2b" name="BEASTS OF CHAOS" hidden="false"/>
     <categoryEntry id="088b-3a27-03f7-8249" name="Named" hidden="false"/>
     <categoryEntry id="2ff5-b7a1-655a-1655" name="GREATER DAEMON" hidden="false"/>
+    <categoryEntry id="1d34-b962-7c7b-f287" name="SOULSCREAM BRIDGE" hidden="false"/>
+    <categoryEntry id="cff6-06c5-3294-b74b" name="SHARDS OF VALAGHARR" hidden="false"/>
+    <categoryEntry id="3b54-23ed-a577-ea1f" name="LAUCHON THE SOULSEEKER" hidden="false"/>
+    <categoryEntry id="9945-bd78-56ea-5cde" name="HORRORGHAST" hidden="false"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry id="6ace-8bcc-48b2-6de7" name="*Old* *Pitched Battle (1,000)*" hidden="true">
@@ -4188,6 +4192,161 @@ to set up the WIZARD, then the WIZARD is slain.</description>
             <categoryLink id="9f49-9937-cd19-f89d" name="New CategoryLink" hidden="false" targetId="31f4-2067-3ade-e6f8" primary="false"/>
             <categoryLink id="4482-73ef-bf46-f961" name="ULGU" hidden="false" targetId="3f66-cb68-8afb-ce99" primary="false"/>
             <categoryLink id="4c48-fe5e-df85-e11f" name="UMBRAL SPELLPORTAL" hidden="false" targetId="82b0-19da-b868-9f6c" primary="false"/>
+          </categoryLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="60.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="f360-5eae-2f8f-41ea" name="Soulscream Bridge" hidden="false" collective="false" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="49b3-46b7-5938-851a" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="52de-2eaf-5a15-0d0c" name="Summon Soulscream Bridge" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+              <characteristics>
+                <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
+                <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, set up the first Soulscream Bridge model wholly within 6&quot; of the caster, and then set up the second Soulscream Bridge model wholly within 12&quot; of the first.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="842c-e4e0-ce87-b92e" name="Deathly Passage" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+              <characteristics>
+                <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the start of your movement phase, friendly units wholly within 6&quot; of one Soulscream Bridge model from this endless spell can travel across the Soulscream Bridge. If they do so, remove that unit from the battlefield and set it up again wholly within 6&quot; of the other Soulscream Bridge model from this endless spell, more than 9&quot; from any enemy units. That unit cannot make a normal move that phase. </characteristic>
+              </characteristics>
+            </profile>
+            <profile id="cd12-1e5e-5940-baca" name="Nightmarish Construct" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+              <characteristics>
+                <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Subtract 1 from the Bravery characteristic of enemy units while they are within 6&quot; of a Soulscream Bridge model. This ability has no effect on DEATH units.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="a1a5-5af5-c5ee-2e7f" name="Empowered by Shyish" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+              <characteristics>
+                <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If your battle is taking place in the Realm of Death, the second Soulscream Bridge model can be set up wholly within 24&quot; of the first, instead of within 12&quot; of the first.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <categoryLinks>
+            <categoryLink id="7c6c-7c71-f3a4-76a5" name="ENDLESS SPELL" hidden="false" targetId="31f4-2067-3ade-e6f8" primary="false"/>
+            <categoryLink id="94aa-92b4-2dbb-5c67" name="SOULSCREAM BRIDGE" hidden="false" targetId="1d34-b962-7c7b-f287" primary="false"/>
+            <categoryLink id="0481-8acf-bf84-e22f" name="SHYISH" hidden="false" targetId="2cc9-0867-b2e3-da55" primary="false"/>
+          </categoryLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="80.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="6652-54f8-a7ea-21ff" name="Shards of Valagharr" hidden="false" collective="false" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cd54-8090-e5e8-ca30" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="b603-29ee-60c0-ca6d" name="Summon Shards of Valagharr" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+              <characteristics>
+                <characteristic name="Casting Value" typeId="2508-b604-1258-a920">5</characteristic>
+                <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, set up the first Shards of Valagharr model wholly within 6&quot; of the caster, and then set up the second Shards of Valagharr model wholly within 12&quot; of the first.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="787b-09cf-5379-66d8" name="Ensnaring Soul-drain" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+              <characteristics>
+                <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the start of the movement phase, draw an imaginary straight line 1mm wide between the closest parts of the bases of the two Shards of Valagharr models from this endless spell. Each unit passed across by this line is ensnared until the end of that turn. Halve the Move characteristic of a unit that is ensnared. In addition, subtract 1 from hit rolls for attacks made by units that are ensnared.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="4c96-7470-086d-ae2f" name="Twilight Translocation" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+              <characteristics>
+                <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the start of the battle round, after determining who has the first turn, the players must roll off. The winner can remove one Shards of Valagharr model from this endless spell from the battlefield and set it up again anywhere on the battlefield wholly within 12&quot; of the other Shards of Valagharr model from this endless spell.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="584f-1bfc-a9ea-a28f" name="Empowered by Shyish" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+              <characteristics>
+                <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If your battle is taking place in the Realm of Death, the first Shards of Valagharr model can be set up wholly within 12&quot; of the caster, instead of 6&quot;.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <categoryLinks>
+            <categoryLink id="5883-f0aa-e0dc-153a" name="ENDLESS SPELL" hidden="false" targetId="31f4-2067-3ade-e6f8" primary="false"/>
+            <categoryLink id="0609-b54b-d58f-6293" name="SHYISH" hidden="false" targetId="2cc9-0867-b2e3-da55" primary="false"/>
+            <categoryLink id="1642-0187-e35f-57a6" name="SHARDS OF VALAGHARR" hidden="false" targetId="cff6-06c5-3294-b74b" primary="false"/>
+          </categoryLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="40.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="f87d-63bc-ce04-ff23" name="Lauchon the Soulseeker" hidden="false" collective="false" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="145b-85ea-dfcf-2b49" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="c6ba-718c-7e25-f95c" name="Summon Lauchon the Soulseeker" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+              <characteristics>
+                <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
+                <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, set up a Lauchon the Soulseeker model wholly within 12&quot; of the caster.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="237f-dc91-3d07-86c3" name="Navigate Deathly Tides" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+              <characteristics>
+                <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">When this model is set up, the player who set it up can immediately make a move with it.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="928e-b821-7143-96fd" name="Empowered by Shyish" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+              <characteristics>
+                <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If your battle is taking place in the Realm of Death, this model can move up to 18&quot; instead of up to 12&quot;.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="69ab-3e78-cd1d-73dc" name="Soul Price" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+              <characteristics>
+                <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Before a player makes a move with this model, that player can pick a friendly unit wholly within 3&quot; of this model. Remove that unit and place it to one side. After this model has moved, set that unit up again wholly within 3&quot; of this model and more than 9&quot; from any enemy units. Once that unit has been set up, 1 model from that unit is immediately slain.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="9845-aef9-09dd-bcc4" name="Predatory" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+              <characteristics>
+                <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Lauchon the Soulseeker is a predatory endless spell. It can move up to 12&quot; and can fly. </characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="f79f-27f5-ec24-8b0a" name="Fly" hidden="false" targetId="8e0c-cbe4-27be-8a30" type="profile"/>
+          </infoLinks>
+          <categoryLinks>
+            <categoryLink id="ef30-11e3-e32e-cfeb" name="ENDLESS SPELL" hidden="false" targetId="31f4-2067-3ade-e6f8" primary="false"/>
+            <categoryLink id="8aa7-4fa7-be95-e935" name="LAUCHON THE SOULSEEKER" hidden="false" targetId="3b54-23ed-a577-ea1f" primary="false"/>
+            <categoryLink id="3aff-3708-66e4-6bd6" name="SHYISH" hidden="false" targetId="2cc9-0867-b2e3-da55" primary="false"/>
+          </categoryLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="60.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="0ce2-6f29-eeaf-8a4c" name="Horrorghast" hidden="false" collective="false" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="532a-b1ef-ddbf-bd28" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="0f09-45ab-d1cc-7839" name="Summon Horrorghast" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+              <characteristics>
+                <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
+                <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, set up a Horrorghast model wholly within 12&quot; of the caster.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="69b9-2771-a750-4dda" name="Prey on Fear" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+              <characteristics>
+                <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Subtract 1 from the Bravery characteristic of units while they are within 12&quot; of this model. Subtract 2 instead from the Bravery characteristic of units while they are within 6&quot; of this model.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="22c9-d971-d3a9-786b" name="Empowered by Shyish" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+              <characteristics>
+                <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If your battle is taking place in the Realm of Death, this model can move up to 12&quot; instead of up to 9&quot;.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="b31c-1d9a-1b65-5822" name="Predatory" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+              <characteristics>
+                <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">A Horrorghast is a predatory endless spell. It can move up to 9&quot; and can fly. </characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="5a0b-2dec-23e0-92e5" name="Fly" hidden="false" targetId="8e0c-cbe4-27be-8a30" type="profile"/>
+          </infoLinks>
+          <categoryLinks>
+            <categoryLink id="18b4-1516-f7a2-e087" name="ENDLESS SPELL" hidden="false" targetId="31f4-2067-3ade-e6f8" primary="false"/>
+            <categoryLink id="5802-10e0-2a73-ad7f" name="HORRORGHAST" hidden="false" targetId="9945-bd78-56ea-5cde" primary="false"/>
+            <categoryLink id="97f6-8d08-0414-8b17" name="SHYISH" hidden="false" targetId="2cc9-0867-b2e3-da55" primary="false"/>
           </categoryLinks>
           <costs>
             <cost name="pts" typeId="points" value="60.0"/>
