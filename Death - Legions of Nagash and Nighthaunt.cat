@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="e320-d5ec-ac8e-03dd" name="Death: Legions of Nagash and Nighthaunt" revision="43" battleScribeVersion="2.02" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="7" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="e320-d5ec-ac8e-03dd" name="Death: Legions of Nagash and Nighthaunt" revision="44" battleScribeVersion="2.02" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="7" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="e320-d5ec-pubN65537" name="Battletome: Legions of Nagash and Battletome: Nighthaunt"/>
     <publication id="e320-d5ec-pubN65555" name="Battletome: Nighthaunt"/>
@@ -3930,11 +3930,6 @@
         <categoryLink id="39ae-9fa8-c4b8-34de" name="New CategoryLink" hidden="false" targetId="be17-6bbd-b857-3f43" primary="true"/>
       </categoryLinks>
     </entryLink>
-    <entryLink id="e991-3dc3-86a3-020a" name="Endless Spells: Nighthaunt" hidden="false" collective="false" targetId="ca4b-1187-5120-b780" type="selectionEntry">
-      <categoryLinks>
-        <categoryLink id="1b3f-256c-d147-06e1" name="New CategoryLink" hidden="false" targetId="eecb-ed66-d474-9ddd" primary="true"/>
-      </categoryLinks>
-    </entryLink>
     <entryLink id="112a-b929-6ec5-5526" name="The Briar Queen" hidden="false" collective="false" targetId="858e-ff08-a895-01e0" type="selectionEntry">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
@@ -4083,6 +4078,21 @@
           </conditionGroups>
         </modifier>
       </modifiers>
+    </entryLink>
+    <entryLink id="310e-a0af-e590-e56a" name="Endless Spell: Mortalis Terminexus" hidden="false" collective="false" targetId="925f-f4ee-9c5e-2552" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="c4ac-1311-e6b4-039c" name="New CategoryLink" hidden="false" targetId="eecb-ed66-d474-9ddd" primary="true"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="bb13-7325-9a3f-9ada" name="Endless Spell: Shyish Reaper" hidden="false" collective="false" targetId="b904-52ba-13d8-a3cf" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="ac94-7b5a-c6fa-5aca" name="New CategoryLink" hidden="false" targetId="eecb-ed66-d474-9ddd" primary="true"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="f9c7-608e-5f74-f923" name="Endless Spell: Vault of Souls" hidden="false" collective="false" targetId="67ba-f5bf-62b6-08e6" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="2630-36a1-f160-11c1" name="New CategoryLink" hidden="false" targetId="eecb-ed66-d474-9ddd" primary="true"/>
+      </categoryLinks>
     </entryLink>
   </entryLinks>
   <rules>
@@ -13988,6 +13998,9 @@ The slain models you return to a unit can only be set up withi 3&quot; of an ene
       </costs>
     </selectionEntry>
     <selectionEntry id="925f-f4ee-9c5e-2552" name="Endless Spell: Mortalis Terminexus" hidden="false" collective="false" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="b627-37c3-f00c-5363" type="max"/>
+      </constraints>
       <profiles>
         <profile id="be6c-8155-ebb2-3b13" name="Summon Mortalis Terminexus" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
           <characteristics>
@@ -14000,15 +14013,19 @@ The slain models you return to a unit can only be set up withi 3&quot; of an ene
             <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">After this model is set up or has moved, the controlling player must decide whether the Mortalis Terminexus will reverse or hasten time. If they choose to reverse time, heal D3 wounds allocated to each unit within 6&quot; of this model. If they choose to hasten time, each unit within 6&quot; of this model suffers D3 mortal wounds.</characteristic>
           </characteristics>
         </profile>
-        <profile id="2fe7-f84e-5b7e-4a3d" name="Empowered by Shyish (Mortalis)" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+        <profile id="2fe7-f84e-5b7e-4a3d" name="Empowered by Shyish" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
             <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If your battle is being fought in the Realm of Shyish, the range of this model’s Keeper of Mortality ability – whether the controlling player chose to reverse or hasten time – is 12&quot; instead of 6&quot;.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="c7e5-d1cf-8893-d6a8" name="Predatory" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Mortalis Terminexus is a predatory endless spell. It can move 8&quot; and can fly.</characteristic>
           </characteristics>
         </profile>
       </profiles>
       <infoLinks>
         <infoLink id="f917-6e16-92d0-d061" name="Fly" hidden="false" targetId="8e0c-cbe4-27be-8a30" type="profile"/>
-        <infoLink id="4780-e4b2-bb81-bd09" name="PREDATORY (Nighthaunt)" hidden="false" targetId="bc8c-ff0f-e8ee-f66c" type="profile"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="2c1f-a1e9-b08c-de22" name="New CategoryLink" hidden="false" targetId="6cdf-dd4f-0e91-e9c4" primary="false"/>
@@ -14019,6 +14036,9 @@ The slain models you return to a unit can only be set up withi 3&quot; of an ene
       </costs>
     </selectionEntry>
     <selectionEntry id="b904-52ba-13d8-a3cf" name="Endless Spell: Shyish Reaper" hidden="false" collective="false" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="1df5-f5b8-7e14-23b3" type="max"/>
+      </constraints>
       <profiles>
         <profile id="54fc-91a8-4a94-c99e" name="Summon Shyish Reaper" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
           <characteristics>
@@ -14026,7 +14046,7 @@ The slain models you return to a unit can only be set up withi 3&quot; of an ene
             <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">Only Nagash, Supreme Lord of the Undead and Nighthaunt Wizards can attempt to cast Summon Shyish Reaper. [...] If successfully cast, set up a Shyish Reaper model wholly within 6&quot; of the caster.</characteristic>
           </characteristics>
         </profile>
-        <profile id="2493-7e1b-d06f-c02b" name="Empowered by Shyish (Reaper)" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+        <profile id="2493-7e1b-d06f-c02b" name="Empowered by Shyish" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
             <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If your battle is being fought in the Realm of Shyish, a Shyish Reaper can move 12&quot; instead of 8&quot;.</characteristic>
           </characteristics>
@@ -14041,9 +14061,13 @@ The slain models you return to a unit can only be set up withi 3&quot; of an ene
             <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Before moving a Shyish Reaper, pivot the model on the centre of its base so that it points lengthways in the direction you wish it to move. Then move it in a straight line in that direction. The initial pivot is free and does not count towards the distance the model moves. After this model has moved, roll a dice for each model that it moved over (including models it moved over when it pivoted); if the roll is equal to or greater than the model’s Save characteristic, that model’s unit suffers 1 mortal wound.</characteristic>
           </characteristics>
         </profile>
+        <profile id="cf72-82f3-c1a2-d784" name="Predatory" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Shyish Reaper is a predatory endless spell. It can move up to 8&quot; and can fly.</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="0282-1553-1bf0-eec7" name="PREDATORY (Nighthaunt)" hidden="false" targetId="bc8c-ff0f-e8ee-f66c" type="profile"/>
         <infoLink id="8ce0-7eec-aff0-c56e" name="Fly" hidden="false" targetId="8e0c-cbe4-27be-8a30" type="profile"/>
       </infoLinks>
       <categoryLinks>
@@ -14055,6 +14079,9 @@ The slain models you return to a unit can only be set up withi 3&quot; of an ene
       </costs>
     </selectionEntry>
     <selectionEntry id="67ba-f5bf-62b6-08e6" name="Endless Spell: Vault of Souls" hidden="false" collective="false" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="e38c-1634-dc5b-3b71" type="max"/>
+      </constraints>
       <profiles>
         <profile id="1a30-4b26-6471-e0f3" name="Summon Vault of Souls" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
           <characteristics>
@@ -14062,7 +14089,7 @@ The slain models you return to a unit can only be set up withi 3&quot; of an ene
             <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">Only Nagash, Supreme Lord of the Undead and Nighthaunt Wizards can attempt to cast Summon Vault of Souls. [...] If successfully cast, set up a Vault of Souls model wholly within 18&quot; of the caster.</characteristic>
           </characteristics>
         </profile>
-        <profile id="fd4a-2405-b6a8-3747" name="Empowered by Shyish (Vault)" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+        <profile id="fd4a-2405-b6a8-3747" name="Empowered by Shyish" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
             <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If your battle is being fought in the Realm of Shyish, the range of this model’s Soul Siphon ability is 9&quot; instead of 6&quot;.</characteristic>
           </characteristics>
@@ -14077,9 +14104,13 @@ The slain models you return to a unit can only be set up withi 3&quot; of an ene
             <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Keep track of the number of mortal wounds inflicted by this model. If the total is 20 or more at the end of any phase, all units within 6&quot; of this model suffer D6 mortal wounds, and then this model is dispelled.</characteristic>
           </characteristics>
         </profile>
+        <profile id="84e0-a0e0-79f9-0a19" name="Predatory" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Vault of Souls is a predatory endless spell. It can move 8&quot; and can fly.</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="8427-2d42-108b-e167" name="PREDATORY (Nighthaunt)" hidden="false" targetId="bc8c-ff0f-e8ee-f66c" type="profile"/>
         <infoLink id="ea5a-950f-49d4-fc71" name="Fly" hidden="false" targetId="8e0c-cbe4-27be-8a30" type="profile"/>
       </infoLinks>
       <categoryLinks>
@@ -14308,17 +14339,6 @@ The slain models you return to a unit can only be set up withi 3&quot; of an ene
       </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="points" value="280.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="ca4b-1187-5120-b780" name="Endless Spells: Nighthaunt" hidden="false" collective="false" type="upgrade">
-      <constraints>
-        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="669b-73fe-4ff5-99a4" type="max"/>
-      </constraints>
-      <entryLinks>
-        <entryLink id="ffdc-8935-1534-4f97" name="Endless Spells: Nighthaunt" hidden="false" collective="false" targetId="7614-f2ea-1e82-2e5d" type="selectionEntryGroup"/>
-      </entryLinks>
-      <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="afc8-8d6f-3a5e-ccea" name="3. Balefire Blade" hidden="false" collective="false" type="upgrade">
@@ -16852,11 +16872,6 @@ The slain models you return to a unit can only be set up withi 3&quot; of an ene
       </modifiers>
       <characteristics>
         <characteristic name="Command Ability Details" typeId="1b71-4c83-4e8c-093f">You can use this command ability at the end of your movement phase. If you do so, pick a gravesite that is within 9&quot; of your general, and then pick a friendly Summonable unit that has been destroyed. Set up that unit wholly within 9&quot; of that gravesite and more than 9&quot; from any enemy units. *ERRATA Jun&apos;18*</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="bc8c-ff0f-e8ee-f66c" name="PREDATORY (Nighthaunt)" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-      <characteristics>
-        <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This Endless Spell is a predatory endless spell. It can move 8&quot; and can fly.</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
