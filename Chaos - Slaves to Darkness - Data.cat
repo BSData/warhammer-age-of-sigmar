@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="e0d8-b631-6934-ee34" name="Chaos - Slaves to Darkness Data" revision="1" battleScribeVersion="2.02" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="16" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="e0d8-b631-6934-ee34" name="Chaos - Slaves to Darkness Data" revision="2" battleScribeVersion="2.02" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="16" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="798b-2f60-pubN65537" name="Grand Alliance: Chaos"/>
     <publication id="798b-2f60-pubN85643" name="Forgeworld: Monstrous Arcanum"/>
@@ -43,18 +43,6 @@
   </categoryEntries>
   <sharedSelectionEntries>
     <selectionEntry id="8bc4-05d4-ff31-086b" name="Chaos Chariots" hidden="false" collective="false" type="unit">
-      <modifiers>
-        <modifier type="decrement" field="points" value="80">
-          <conditions>
-            <condition field="selections" scope="8bc4-05d4-ff31-086b" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d13f-c9f9-01f2-c75f" type="greaterThan"/>
-          </conditions>
-        </modifier>
-        <modifier type="increment" field="points" value="80">
-          <repeats>
-            <repeat field="selections" scope="8bc4-05d4-ff31-086b" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d13f-c9f9-01f2-c75f" repeats="1" roundUp="false"/>
-          </repeats>
-        </modifier>
-      </modifiers>
       <profiles>
         <profile id="17d3-987c-71d4-ae24" name="Don&apos;t Spare the Lash" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
@@ -77,7 +65,14 @@
         <categoryLink id="ad32-491e-1691-3b48" name="New CategoryLink" hidden="false" targetId="4ba7-618a-4e30-2e0c" primary="false"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="d13f-c9f9-01f2-c75f" name="Chaos Chariot" hidden="false" collective="false" type="unit">
+        <selectionEntry id="d13f-c9f9-01f2-c75f" name="Chaos Chariot" hidden="false" collective="false" type="model">
+          <modifiers>
+            <modifier type="set" field="points" value="70.0">
+              <conditions>
+                <condition field="selections" scope="8bc4-05d4-ff31-086b" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d13f-c9f9-01f2-c75f" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="54ce-5008-a144-3adc" type="min"/>
             <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d58e-36fc-14e8-0c5d" type="max"/>
@@ -132,16 +127,13 @@
             <entryLink id="5ef1-583d-4ba4-7647" name="Lashing Whip" hidden="false" collective="false" targetId="adb4-9297-7e0b-e90f" type="selectionEntry"/>
           </entryLinks>
           <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="pts" typeId="points" value="80.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
         <entryLink id="0816-9efb-9fe1-7d2c" name="Mark of Chaos" hidden="false" collective="false" targetId="24d3-e75e-90ef-632f" type="selectionEntryGroup"/>
       </entryLinks>
-      <costs>
-        <cost name="pts" typeId="points" value="80.0"/>
-      </costs>
     </selectionEntry>
     <selectionEntry id="668e-bcfe-5da6-cad5" name="Chaos Greatblade" hidden="false" collective="false" type="upgrade">
       <profiles>
@@ -309,18 +301,6 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="7117-c074-dd10-883d" name="Chaos Chosen" hidden="false" collective="false" type="unit">
-      <modifiers>
-        <modifier type="decrement" field="points" value="140">
-          <conditions>
-            <condition field="selections" scope="7117-c074-dd10-883d" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bd1e-8c51-d5ca-6a1d" type="greaterThan"/>
-          </conditions>
-        </modifier>
-        <modifier type="increment" field="points" value="140">
-          <repeats>
-            <repeat field="selections" scope="7117-c074-dd10-883d" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bd1e-8c51-d5ca-6a1d" repeats="1" roundUp="false"/>
-          </repeats>
-        </modifier>
-      </modifiers>
       <profiles>
         <profile id="605f-9d5f-715e-bbbe" name="Chaos Chosen" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
           <characteristics>
@@ -348,13 +328,13 @@
         <categoryLink id="f4ad-6272-a4e0-c55e" name="New CategoryLink" hidden="false" targetId="4ba7-618a-4e30-2e0c" primary="false"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="bd1e-8c51-d5ca-6a1d" name="5 Chaos Chosen" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="bd1e-8c51-d5ca-6a1d" name="5 Chaos Chosen" hidden="false" collective="false" type="model">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d84a-87e9-06f5-cf62" type="min"/>
             <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e49a-fe63-81fb-a3ba" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="pts" typeId="points" value="140.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="07b2-a68e-5495-3210" name="Icon Bearer" hidden="false" collective="false" type="upgrade">
@@ -418,23 +398,8 @@
       <entryLinks>
         <entryLink id="1b0e-a97c-b19b-8b44" name="Mark of Chaos" hidden="false" collective="false" targetId="24d3-e75e-90ef-632f" type="selectionEntryGroup"/>
       </entryLinks>
-      <costs>
-        <cost name="pts" typeId="points" value="140.0"/>
-      </costs>
     </selectionEntry>
     <selectionEntry id="44d4-5116-6301-5c92" name="Chaos Gorebeast Chariots" hidden="false" collective="false" type="unit">
-      <modifiers>
-        <modifier type="increment" field="points" value="100">
-          <repeats>
-            <repeat field="selections" scope="44d4-5116-6301-5c92" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="62e6-384f-f90c-ad36" repeats="1" roundUp="false"/>
-          </repeats>
-        </modifier>
-        <modifier type="decrement" field="points" value="100">
-          <conditions>
-            <condition field="selections" scope="44d4-5116-6301-5c92" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="62e6-384f-f90c-ad36" type="greaterThan"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <profiles>
         <profile id="5378-a71f-b901-59ac" name="Explosive Brutality" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
@@ -512,16 +477,13 @@
             <entryLink id="bd7e-291c-ac82-edce" name="Lashing Whip" hidden="false" collective="false" targetId="adb4-9297-7e0b-e90f" type="selectionEntry"/>
           </entryLinks>
           <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="pts" typeId="points" value="100.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
         <entryLink id="0e64-cfc8-f8e8-a942" name="Mark of Chaos" hidden="false" collective="false" targetId="24d3-e75e-90ef-632f" type="selectionEntryGroup"/>
       </entryLinks>
-      <costs>
-        <cost name="pts" typeId="points" value="100.0"/>
-      </costs>
     </selectionEntry>
     <selectionEntry id="e432-9436-085d-4c93" name="Chaos Knights" hidden="false" collective="false" type="unit">
       <profiles>
@@ -1179,23 +1141,6 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="ce01-c0f8-2c4b-fddc" name="Chaos Marauder Horsemen" hidden="false" collective="false" type="unit">
-      <modifiers>
-        <modifier type="decrement" field="points" value="90">
-          <conditions>
-            <condition field="selections" scope="ce01-c0f8-2c4b-fddc" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="82ff-c2bb-471f-4610" type="greaterThan"/>
-          </conditions>
-        </modifier>
-        <modifier type="increment" field="points" value="90">
-          <repeats>
-            <repeat field="selections" scope="ce01-c0f8-2c4b-fddc" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="82ff-c2bb-471f-4610" repeats="1" roundUp="false"/>
-          </repeats>
-        </modifier>
-        <modifier type="decrement" field="points" value="60">
-          <conditions>
-            <condition field="selections" scope="ce01-c0f8-2c4b-fddc" value="6.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="82ff-c2bb-471f-4610" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <profiles>
         <profile id="29a7-6532-3227-11ac" name="Chaos Marauder Horsemen" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
           <characteristics>
@@ -1229,7 +1174,7 @@
             <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="be74-29b4-5d55-793d" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="pts" typeId="points" value="80.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="4665-98d4-8886-5fd6" name="Icon Bearer" hidden="false" collective="false" type="upgrade">
@@ -1376,9 +1321,6 @@
         <entryLink id="ea88-33a1-a7e6-6b45" name="Mark of Chaos" hidden="false" collective="false" targetId="24d3-e75e-90ef-632f" type="selectionEntryGroup"/>
         <entryLink id="8669-0365-d8c8-7a0c" name="Darkwood Shields" hidden="false" collective="false" targetId="1562-7a54-7090-e665" type="selectionEntry"/>
       </entryLinks>
-      <costs>
-        <cost name="pts" typeId="points" value="90.0"/>
-      </costs>
     </selectionEntry>
     <selectionEntry id="1562-7a54-7090-e665" name="Darkwood Shields" hidden="false" collective="false" type="upgrade">
       <constraints>
@@ -1425,7 +1367,7 @@
       <selectionEntries>
         <selectionEntry id="2e0a-c703-22d1-0f26" name="20 Chaos Marauders" hidden="false" collective="false" type="upgrade">
           <modifiers>
-            <modifier type="decrement" field="points" value="20">
+            <modifier type="set" field="points" value="100.0">
               <conditions>
                 <condition field="selections" scope="08c1-05a1-4828-6983" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2e0a-c703-22d1-0f26" type="equalTo"/>
               </conditions>
@@ -1813,18 +1755,6 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="494c-81bb-bb30-3d33" name="Chaos Spawn" hidden="false" collective="false" type="unit">
-      <modifiers>
-        <modifier type="decrement" field="points" value="50">
-          <conditions>
-            <condition field="selections" scope="494c-81bb-bb30-3d33" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7934-3382-28be-8f27" type="greaterThan"/>
-          </conditions>
-        </modifier>
-        <modifier type="increment" field="points" value="50">
-          <repeats>
-            <repeat field="selections" scope="494c-81bb-bb30-3d33" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7934-3382-28be-8f27" repeats="1" roundUp="false"/>
-          </repeats>
-        </modifier>
-      </modifiers>
       <profiles>
         <profile id="83da-dcf6-6212-3eab" name="Writhing Tentacles" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
@@ -1847,7 +1777,7 @@
         <categoryLink id="1b98-9e0d-4fd6-ddba" name="New CategoryLink" hidden="false" targetId="0513-d95b-1cf0-71fd" primary="false"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="7934-3382-28be-8f27" name="Chaos Spawn" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="7934-3382-28be-8f27" name="Chaos Spawn" hidden="false" collective="false" type="model">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b889-678a-c159-c6ff" type="min"/>
             <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6423-2612-2f64-b880" type="max"/>
@@ -1877,35 +1807,15 @@
             </selectionEntry>
           </selectionEntries>
           <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="pts" typeId="points" value="50.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
         <entryLink id="4ba1-148a-7623-2736" name="Mark of Chaos" hidden="false" collective="false" targetId="24d3-e75e-90ef-632f" type="selectionEntryGroup"/>
       </entryLinks>
-      <costs>
-        <cost name="pts" typeId="points" value="50.0"/>
-      </costs>
     </selectionEntry>
     <selectionEntry id="22ed-600b-a62c-7ebe" name="Chaos Warriors" hidden="false" collective="false" type="unit">
-      <modifiers>
-        <modifier type="decrement" field="points" value="90">
-          <conditions>
-            <condition field="selections" scope="22ed-600b-a62c-7ebe" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0553-10f8-d6ff-92e1" type="greaterThan"/>
-          </conditions>
-        </modifier>
-        <modifier type="increment" field="points" value="90">
-          <repeats>
-            <repeat field="selections" scope="22ed-600b-a62c-7ebe" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0553-10f8-d6ff-92e1" repeats="1" roundUp="false"/>
-          </repeats>
-        </modifier>
-        <modifier type="decrement" field="points" value="60">
-          <conditions>
-            <condition field="selections" scope="22ed-600b-a62c-7ebe" value="6.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0553-10f8-d6ff-92e1" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <profiles>
         <profile id="1ed6-e722-0ddd-b7b8" name="Chaos Warriors" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
           <characteristics>
@@ -1933,13 +1843,20 @@
         <categoryLink id="9cfc-c1bb-5a5d-67b3" name="New CategoryLink" hidden="false" targetId="4d1b-af5b-3b36-6425" primary="false"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="0553-10f8-d6ff-92e1" name="5 Chaos Warriors" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="0553-10f8-d6ff-92e1" name="5 Chaos Warriors" hidden="false" collective="false" type="model">
+          <modifiers>
+            <modifier type="set" field="points" value="80.0">
+              <conditions>
+                <condition field="selections" scope="22ed-600b-a62c-7ebe" value="6.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0553-10f8-d6ff-92e1" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b332-1cf0-8f76-7a92" type="min"/>
             <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3c96-78d8-4bda-149b" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="pts" typeId="points" value="90.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="7671-4a87-bfa3-c9b2" name="Standard Bearer" hidden="false" collective="false" type="upgrade">
@@ -2069,9 +1986,6 @@
       <entryLinks>
         <entryLink id="4205-9d4c-657b-df75" name="Mark of Chaos" hidden="false" collective="false" targetId="24d3-e75e-90ef-632f" type="selectionEntryGroup"/>
       </entryLinks>
-      <costs>
-        <cost name="pts" typeId="points" value="90.0"/>
-      </costs>
     </selectionEntry>
     <selectionEntry id="89b1-9d63-4211-96da" name="Chaos Warshrine" hidden="false" collective="false" type="unit">
       <profiles>
@@ -3528,7 +3442,7 @@
     </selectionEntry>
     <selectionEntry id="1dc4-ec25-d3df-f7d2" name="Nightmaw" publicationId="798b-2f60-pubN85643" hidden="false" collective="false" type="unit">
       <modifiers>
-        <modifier type="set" field="1cff-0304-e1e2-cd80" value="1">
+        <modifier type="set" field="1cff-0304-e1e2-cd80" value="1.0">
           <conditions>
             <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="689f-b7f7-e2ec-8a31" type="greaterThan"/>
           </conditions>
