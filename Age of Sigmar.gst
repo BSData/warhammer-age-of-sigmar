@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="52" battleScribeVersion="2.02" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="53" battleScribeVersion="2.02" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <publications>
     <publication id="e51d-b1a3-pubEC" name="The General&apos;s Handbook"/>
     <publication id="e51d-b1a3-pubEQ" name="Core Rules"/>
@@ -1001,7 +1001,7 @@
         <categoryLink id="bd9a-3f79-0b5f-7f8f" name="AETHERVOID PENDULUM" hidden="false" targetId="5647-b7a8-9716-1d17" primary="false"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="40.0"/>
+        <cost name="pts" typeId="points" value="50.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="98b9-64b2-7123-b7a2" name="Endless Spell: Balewind Vortex" hidden="false" collective="false" type="upgrade">
@@ -1071,7 +1071,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
         <categoryLink id="c22f-fc01-e217-f01d" name="CHRONOMANTIC COGS" hidden="false" targetId="1619-fea5-de7e-8a67" primary="false"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="60.0"/>
+        <cost name="pts" typeId="points" value="80.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="ec28-3ec9-f2fa-82e5" name="Endless Spell: Emerald Lifeswarm" hidden="false" collective="false" type="upgrade">
@@ -1110,7 +1110,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
         <categoryLink id="50fa-7469-e5cc-8169" name="GHYRAN" hidden="false" targetId="0b26-9340-45cf-07ee" primary="false"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="60.0"/>
+        <cost name="pts" typeId="points" value="50.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="1ce8-9373-9c22-75a0" name="Endless Spell: Geminids of Uhl-Gyish" hidden="false" collective="false" type="upgrade">
@@ -1160,7 +1160,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
         <categoryLink id="6e8c-7f5e-3e2e-fc43" name="ULGU" hidden="false" targetId="3f66-cb68-8afb-ce99" primary="false"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="40.0"/>
+        <cost name="pts" typeId="points" value="60.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="befc-365b-06f8-5575" name="Endless Spell: Horrorghast" hidden="false" collective="false" type="upgrade">
@@ -1287,7 +1287,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
         <categoryLink id="8e0f-7122-1605-3505" name="SHYISH" hidden="false" targetId="2cc9-0867-b2e3-da55" primary="false"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="20.0"/>
+        <cost name="pts" typeId="points" value="10.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="7ae1-8e71-327d-0893" name="Endless Spell: Prismatic Palisade" hidden="false" collective="false" type="upgrade">
@@ -1372,7 +1372,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
         <categoryLink id="3a3c-213b-2d2d-10f2" name="SHYISH" hidden="false" targetId="2cc9-0867-b2e3-da55" primary="false"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="100.0"/>
+        <cost name="pts" typeId="points" value="50.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="bc18-4df9-1a28-2df9" name="Endless Spell: Quicksilver Swords" hidden="false" collective="false" type="upgrade">
@@ -1416,7 +1416,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
         <categoryLink id="29f1-5754-fb05-5361" name="QUICKSILVER SWORDS" hidden="false" targetId="65dc-260f-90f3-8a5a" primary="false"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="20.0"/>
+        <cost name="pts" typeId="points" value="30.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="a99d-b987-6fa6-96f6" name="Endless Spell: Ravenak&apos;s Gnashing Jaws" hidden="false" collective="false" type="upgrade">
@@ -1460,7 +1460,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
         <categoryLink id="8064-0362-4e5d-1ed0" name="RAVENAK&apos;S GNASHING JAWS" hidden="false" targetId="8b8e-c0b7-d668-19f2" primary="false"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="40.0"/>
+        <cost name="pts" typeId="points" value="30.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="58a3-4afb-62c5-dd39" name="Endless Spell: Shards of Valagharr" hidden="false" collective="false" type="upgrade">
@@ -1563,7 +1563,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
         <categoryLink id="b32d-20d2-77e4-2013" name="SOULSNARE SHACKLES" hidden="false" targetId="4949-2041-939a-baa6" primary="false"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="20.0"/>
+        <cost name="pts" typeId="points" value="40.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="d6de-646a-4dcc-e37d" name="Endless Spell: Suffocating﻿﻿ Gravetide﻿" hidden="false" collective="false" type="upgrade">
@@ -1612,7 +1612,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
         <categoryLink id="7c7b-031f-df94-fe46" name="SUFFOCATING GRAVETIDE" hidden="false" targetId="8e84-834f-0c7d-0d45" primary="false"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="30.0"/>
+        <cost name="pts" typeId="points" value="20.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="3ad9-857b-32ff-e44e" name="Endless Spell: The B﻿urning Head﻿﻿﻿" hidden="false" collective="false" type="upgrade">
@@ -1661,7 +1661,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
         <categoryLink id="ec33-7fb2-331b-c7cb" name="THE BURNING HEAD" hidden="false" targetId="3115-9f9c-85db-1d63" primary="false"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="40.0"/>
+        <cost name="pts" typeId="points" value="30.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="d2dc-7e1a-c2e7-4cff" name="Endless Spell: Umbral Sp﻿ellporta﻿l﻿﻿" hidden="false" collective="false" type="upgrade">
@@ -1692,7 +1692,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
         <categoryLink id="5724-bd35-df7f-13c8" name="UMBRAL SPELLPORTAL" hidden="false" targetId="82b0-19da-b868-9f6c" primary="false"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="60.0"/>
+        <cost name="pts" typeId="points" value="70.0"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>
