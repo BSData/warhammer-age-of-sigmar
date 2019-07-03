@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="53" battleScribeVersion="2.02" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="54" battleScribeVersion="2.02" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <publications>
     <publication id="e51d-b1a3-pubEC" name="The General&apos;s Handbook"/>
     <publication id="e51d-b1a3-pubEQ" name="Core Rules"/>
@@ -219,6 +219,10 @@
     <categoryEntry id="f60b-d58c-bfee-5aa7" name="GREYFYRD" hidden="false"/>
     <categoryEntry id="3559-43bd-385b-59a0" name="HERMDAR" hidden="false"/>
     <categoryEntry id="a89a-9904-cf30-0d17" name="LOFNIR" hidden="false"/>
+    <categoryEntry id="d480-6910-5223-af4f" name="PENUMBRAL" hidden="false"/>
+    <categoryEntry id="798c-6e4e-1793-2fd9" name="STORMVAULT" hidden="false"/>
+    <categoryEntry id="e7f6-c6e9-1728-1807" name="PENUMBRAL ENGINE" hidden="false"/>
+    <categoryEntry id="bc8a-9257-1601-6d62" name="Scenery" hidden="false"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry id="6ace-8bcc-48b2-6de7" name="*Old* *Pitched Battle (1,000)*" hidden="true">
@@ -424,7 +428,7 @@
       <forceEntries>
         <forceEntry id="78f3-8a59-699a-61e8" name="Allies" hidden="false">
           <modifiers>
-            <modifier type="set" field="94dd-25fb-4a00-e373" value="500">
+            <modifier type="set" field="94dd-25fb-4a00-e373" value="500.0">
               <conditions>
                 <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1e63-0b49-ac04-321f" type="equalTo"/>
               </conditions>
@@ -434,7 +438,7 @@
                 <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6330-7561-7a32-0851" type="equalTo"/>
               </conditions>
             </modifier>
-            <modifier type="set" field="94dd-25fb-4a00-e373" value="200">
+            <modifier type="set" field="94dd-25fb-4a00-e373" value="200.0">
               <conditions>
                 <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fd9f-428a-177d-c765" type="equalTo"/>
               </conditions>
@@ -575,6 +579,7 @@
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" id="13f0-17b9-371a-c147" type="max"/>
           </constraints>
         </categoryLink>
+        <categoryLink id="9716-7416-c989-9575" name="Scenery" hidden="false" targetId="bc8a-9257-1601-6d62" primary="false"/>
       </categoryLinks>
     </forceEntry>
     <forceEntry id="af42-5af7-420c-7ab6" name="Meeting Engagement - Spearhead" hidden="true">
@@ -779,7 +784,7 @@
         <categoryLink id="5552-cffb-c874-4e24" name="Realm of Battle" hidden="false" targetId="5e28-c4f1-4a92-b75c" primary="true"/>
       </categoryLinks>
     </entryLink>
-    <entryLink id="28b7-9a3f-0f7b-c498" name="Aethervoid Pendulum" hidden="false" collective="false" targetId="98c8-838b-2c8a-a9f7" type="selectionEntry">
+    <entryLink id="28b7-9a3f-0f7b-c498" name="Endless Spell: Aethervoid Pendulum" hidden="false" collective="false" targetId="98c8-838b-2c8a-a9f7" type="selectionEntry">
       <categoryLinks>
         <categoryLink id="8ff7-043d-6044-8c48" name="Malign Sorcery" hidden="false" targetId="eecb-ed66-d474-9ddd" primary="true"/>
       </categoryLinks>
@@ -799,7 +804,7 @@
         <categoryLink id="102e-6e47-67c3-a9c8" name="New CategoryLink" hidden="false" targetId="eecb-ed66-d474-9ddd" primary="true"/>
       </categoryLinks>
     </entryLink>
-    <entryLink id="21eb-635c-39bd-dd60" name="Geminids of Uhl-Gyish" hidden="false" collective="false" targetId="1ce8-9373-9c22-75a0" type="selectionEntry">
+    <entryLink id="21eb-635c-39bd-dd60" name="Endless Spell: Geminids of Uhl-Gyish" hidden="false" collective="false" targetId="1ce8-9373-9c22-75a0" type="selectionEntry">
       <categoryLinks>
         <categoryLink id="819f-b709-0da8-07b1" name="New CategoryLink" hidden="false" targetId="eecb-ed66-d474-9ddd" primary="true"/>
       </categoryLinks>
@@ -864,9 +869,14 @@
         <categoryLink id="a795-b9f6-5518-72bc" name="New CategoryLink" hidden="false" targetId="eecb-ed66-d474-9ddd" primary="true"/>
       </categoryLinks>
     </entryLink>
-    <entryLink id="5094-7652-a4bc-244c" name="Umbral Sp﻿ellporta﻿l﻿﻿" hidden="false" collective="false" targetId="d2dc-7e1a-c2e7-4cff" type="selectionEntry">
+    <entryLink id="5094-7652-a4bc-244c" name="Endless Spell: Umbral Sp﻿ellporta﻿l﻿﻿" hidden="false" collective="false" targetId="d2dc-7e1a-c2e7-4cff" type="selectionEntry">
       <categoryLinks>
         <categoryLink id="f865-805f-d0d2-56bb" name="New CategoryLink" hidden="false" targetId="eecb-ed66-d474-9ddd" primary="true"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="29c2-52f9-f675-e67c" name="Scenery: Penumbral Engine" hidden="false" collective="false" targetId="8a3f-74ea-a98a-e1ee" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="f07b-c3d4-19b5-7fea" name="New CategoryLink" hidden="false" targetId="bc8a-9257-1601-6d62" primary="true"/>
       </categoryLinks>
     </entryLink>
   </entryLinks>
@@ -1693,6 +1703,34 @@ to set up the WIZARD, then the WIZARD is slain.</description>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="70.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="8a3f-74ea-a98a-e1ee" name="Scenery: Penumbral Engine" hidden="false" collective="false" type="upgrade">
+      <profiles>
+        <profile id="31ad-a3d5-b5b3-b8d3" name="Repercussion of the Necroquake" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the start of the first battle round, after determining who has the first turn, roll a dice and consult the table on the right to determine which function all PENUMBRA terrain features on the battlefield gain for the duration of the battle.
+
+1-3: Orrey of Obfuscation: Re-roll save rolls of 1 for attacks that target units wholly within 12&quot; of any Penumbral terrain features. 
+
+4-6: Orrey of Illumination: At the start of your hero phase, you receive 1 extra command point if any friendly HEROES are within 12&quot; of any PENUMBRAL terrain features.
+</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="9409-3a23-2431-05b2" name="Deteriorating State" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the start of each battle round after the first, roll a dice. On a 1-4 nothing happens. On a 5 or 6 the function that currently applies to all PENUMBRAL terrain features is replaced with the other function (see ‘Repercussions of the Necroquake’).</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="2383-8a69-c6f5-d92c" name="PENUMBRAL" hidden="false" targetId="d480-6910-5223-af4f" primary="false"/>
+        <categoryLink id="a529-3394-d2a5-97cb" name="PENUMBRAL ENGINE" hidden="false" targetId="e7f6-c6e9-1728-1807" primary="false"/>
+        <categoryLink id="26d0-dc30-848d-a8cc" name="SCENERY" hidden="false" targetId="8910-7c1d-6c74-37ff" primary="false"/>
+        <categoryLink id="f92e-b88f-0d9c-f932" name="STORMVAULT" hidden="false" targetId="798c-6e4e-1793-2fd9" primary="false"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="100.0"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>
