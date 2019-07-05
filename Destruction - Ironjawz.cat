@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="fda2-055f-0f40-2e23" name="Destruction - Ironjawz" revision="20" battleScribeVersion="2.02" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="6" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="fda2-055f-0f40-2e23" name="Destruction - Ironjawz" revision="21" battleScribeVersion="2.02" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="6" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="fda2-055f-pubN65537" name="Destruction Battletome: Ironjawz"/>
     <publication id="fda2-055f-pubN69212" name="Battletome: Ironjawz; Official Errata, Dec 2018"/>
@@ -74,7 +74,15 @@
         <categoryLink id="a63c-6baa-2ff9-30fd-065e-fda7-fd27-1f40" hidden="false" targetId="065e-fda7-fd27-1f40" primary="true"/>
       </categoryLinks>
     </entryLink>
-    <entryLink id="fc4d-9292-0908-041e" name="Allegiance" hidden="false" collective="false" targetId="9dbb-2d1a-12d8-7faf" type="selectionEntry"/>
+    <entryLink id="fc4d-9292-0908-041e" name="Allegiance" hidden="false" collective="false" targetId="9dbb-2d1a-12d8-7faf" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="78f3-8a59-699a-61e8" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
     <entryLink id="7c05-e81e-d6c8-d0ca" name="Orruk Ardboys" hidden="false" collective="false" targetId="6c50-1d09-e785-f11e" type="selectionEntry">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
@@ -356,8 +364,8 @@
   <sharedSelectionEntries>
     <selectionEntry id="9dbb-2d1a-12d8-7faf" name="Allegiance" hidden="false" collective="false" type="upgrade">
       <constraints>
-        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="840e-eca3-85ea-01b5" type="min"/>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f01d-653a-6bca-d024" type="max"/>
+        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="840e-eca3-85ea-01b5" type="min"/>
+        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f01d-653a-6bca-d024" type="max"/>
       </constraints>
       <categoryLinks>
         <categoryLink id="fd99-7031-dc99-899b" name="New CategoryLink" hidden="false" targetId="87e8-c095-f059-5f7b" primary="true"/>
