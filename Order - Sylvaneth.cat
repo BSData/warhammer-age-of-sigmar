@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="bf19-727d-9c0f-1c38" name="Order - Sylvaneth" revision="33" battleScribeVersion="2.02" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="bf19-727d-9c0f-1c38" name="Order - Sylvaneth" revision="34" battleScribeVersion="2.02" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="bf19-727d-pubN65537" name="Order Battletome: Sylvaneth"/>
     <publication id="bf19-727d-pubN68286" name="Battletome: Sylvaneth Errata, July 2018"/>
@@ -459,10 +459,34 @@
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
+        <selectionEntry id="d8f3-fc9b-77f1-5623" name="General" hidden="false" collective="false" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b78c-c342-c8aa-aa45" type="instanceOf"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="62e4-370f-3318-cdbd" type="instanceOf"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="78f3-8a59-699a-61e8" type="instanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bd07-4e68-4314-6942" type="max"/>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7a3a-fc58-15b2-f8cd" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="0f30-c620-ea3d-54c0" name="New CategoryLink" hidden="false" targetId="b745-17c4-8fbf-8b04" primary="false"/>
+          </categoryLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink id="a0fb-2d4a-e8de-aed6" name="General" hidden="false" collective="false" targetId="b341-0885-3f1c-7d8a" type="selectionEntry"/>
-        <entryLink id="5ea9-4683-453d-8142" name="Deepwood Spell Lore" hidden="false" collective="false" targetId="ad08-f268-8b24-726b" type="selectionEntryGroup"/>
+        <entryLink id="5ea9-4683-453d-8142" name="Lore of the Deepwood" hidden="false" collective="false" targetId="ad08-f268-8b24-726b" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="660.0"/>
@@ -506,12 +530,12 @@
                   <selectionEntries>
                     <selectionEntry id="5d80-ed30-6c38-85cc" name="Oakenbrow" hidden="false" collective="false" type="upgrade">
                       <profiles>
-                        <profile id="6382-a059-837b-6e5c" name="Our Roots Run Deep" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
+                        <profile id="6382-a059-837b-6e5c" name="Our Roots Run Deep" publicationId="3eb3-ef35-59aa-b7e2" page="72" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
                           <characteristics>
                             <characteristic name="Battalion Ability Details" typeId="08e0-9ead-1dbe-c801">Subtract 2 from the number of wounds suffered by OAKENBROW SPIRITS OF DURTHU, OAKENBROW TREELORD ANCIENTS and OAKENBROW TREELORDS when determining which row on their damage table to use (to a minimum of 0).</characteristic>
                           </characteristics>
                         </profile>
-                        <profile id="0c26-8dc6-2f68-ebac" name="Yield to None" hidden="false" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
+                        <profile id="0c26-8dc6-2f68-ebac" name="Yield to None" publicationId="3eb3-ef35-59aa-b7e2" page="72" hidden="false" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
                           <characteristics>
                             <characteristic name="Command Ability Details" typeId="1b71-4c83-4e8c-093f">Battleshock immunity wholly within 16&quot; of a selected hero.</characteristic>
                           </characteristics>
@@ -523,12 +547,12 @@
                     </selectionEntry>
                     <selectionEntry id="5abc-51b7-5b5b-0cdf" name="Gnarlroot" hidden="false" collective="false" type="upgrade">
                       <profiles>
-                        <profile id="d5eb-421c-c8c0-706a" name="Shield the Arcane" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
+                        <profile id="d5eb-421c-c8c0-706a" name="Shield the Arcane" publicationId="3eb3-ef35-59aa-b7e2" page="74" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
                           <characteristics>
                             <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">Re-roll hit rolls of 1 for attacks made by friendly GNARLROOT units while they are wholly within 12&quot; of any friendly GNARLROOT WIZARDS.</characteristic>
                           </characteristics>
                         </profile>
-                        <profile id="8fa9-f5f5-66d0-22e9" name="The Earth Defends" hidden="false" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
+                        <profile id="8fa9-f5f5-66d0-22e9" name="The Earth Defends" publicationId="3eb3-ef35-59aa-b7e2" page="74" hidden="false" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
                           <characteristics>
                             <characteristic name="Command Ability Details" typeId="1b71-4c83-4e8c-093f">You can use this command ability at the start of the combat phase.  If you do so, pick 1 friendly GNARLROOT unit wholly within 12&quot; of a friendly GNARLROOT HERO.  Until the end of that phase, roll a dice each time you allocate a wound or mortal wound to that unit.  On a 6+ that wound or mortal wound is negated.</characteristic>
                           </characteristics>
@@ -540,14 +564,14 @@
                     </selectionEntry>
                     <selectionEntry id="0b6c-7ed5-d2a6-6ae7" name="Heartwood" hidden="false" collective="false" type="upgrade">
                       <profiles>
-                        <profile id="886c-afd7-a691-96f1" name="Courage for Kurnoth" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
+                        <profile id="886c-afd7-a691-96f1" name="Courage for Kurnoth" publicationId="3eb3-ef35-59aa-b7e2" page="75" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
                           <characteristics>
-                            <characteristic name="Battalion Ability Details" typeId="08e0-9ead-1dbe-c801">+1 Bravery wholly within 12&quot; of heroes.</characteristic>
+                            <characteristic name="Battalion Ability Details" typeId="08e0-9ead-1dbe-c801">Add 1 to the Bravery characteristic of friendly HEARTWOOD units while they are wholly within 12&quot; of any friendly HEARTWOOD HEROES.</characteristic>
                           </characteristics>
                         </profile>
-                        <profile id="bf46-ba97-5497-7efe" name="Lord of the Hunt" hidden="false" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
+                        <profile id="bf46-ba97-5497-7efe" name="Lord of the Hunt" publicationId="3eb3-ef35-59aa-b7e2" page="75" hidden="false" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
                           <characteristics>
-                            <characteristic name="Command Ability Details" typeId="1b71-4c83-4e8c-093f"> Reroll hit and wound rolls of 1 against 1 enemy unit within 12&quot; of a hero.</characteristic>
+                            <characteristic name="Command Ability Details" typeId="1b71-4c83-4e8c-093f">You can use this command ability at the start of the combat phase.  If you do so, pick 1 enemy unit within 12&quot; of a friendly HEARTWOOD HERO.  Until the end of that phase, you can re-roll hit and wound rolls of 1 for attacks made by friendly HEARTWOOD units that target that enemy unit.</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
@@ -557,12 +581,12 @@
                     </selectionEntry>
                     <selectionEntry id="d6bb-a98f-175e-6f2d" name="Ironbark" hidden="false" collective="false" type="upgrade">
                       <profiles>
-                        <profile id="1f4a-a552-f92f-5cb0" name="Stubborn and Taciturn" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
+                        <profile id="1f4a-a552-f92f-5cb0" name="Stubborn and Taciturn" publicationId="3eb3-ef35-59aa-b7e2" page="76" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
                           <characteristics>
                             <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">You can re-roll battleshock tests for friendly IRONBARK units while they are wholly within 12&quot; of any friendl IRONBARK HEROS.</characteristic>
                           </characteristics>
                         </profile>
-                        <profile id="03d0-cc8d-0b43-6b1b" name="Stand Firm" hidden="false" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
+                        <profile id="03d0-cc8d-0b43-6b1b" name="Stand Firm" publicationId="3eb3-ef35-59aa-b7e2" page="76" hidden="false" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
                           <characteristics>
                             <characteristic name="Command Ability Details" typeId="1b71-4c83-4e8c-093f">You can use this command ability in the combat phase, before the players pick any units to fight.  If you do so, pick 1 enemy unit that made a charge move this turn and is within 1&quot; of a friendly IRONBARK unit and roll a dice.  On a 2+ that enemy unit suffers D3 mortal wounds.</characteristic>
                           </characteristics>
@@ -574,12 +598,12 @@
                     </selectionEntry>
                     <selectionEntry id="d87f-5abf-b2d6-4471" name="Winterleaf" hidden="false" collective="false" type="upgrade">
                       <profiles>
-                        <profile id="826c-f4bf-ab14-180f" name="Winter&apos;s Bite" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
+                        <profile id="826c-f4bf-ab14-180f" name="Winter&apos;s Bite" publicationId="3eb3-ef35-59aa-b7e2" page="77" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
                           <characteristics>
                             <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">If the unmodified hit roll for an attack made with a melee weapon by a friendly WINTERLEAF unit is 6, that attacks inflicts 2 hits on the target instead of 1.  Make a wound and save roll for each hit.</characteristic>
                           </characteristics>
                         </profile>
-                        <profile id="4900-c16c-df1c-78e2" name="Branch Blizzard" hidden="false" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
+                        <profile id="4900-c16c-df1c-78e2" name="Branch Blizzard" publicationId="3eb3-ef35-59aa-b7e2" page="77" hidden="false" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
                           <characteristics>
                             <characteristic name="Command Ability Details" typeId="1b71-4c83-4e8c-093f">You can use this command ability in your shooting phase.  If you do so, pick 1 enemy unit within 12&quot; of a friendly WINTERLEAF HERO and visible to them.  Roll a number of dice equal to the number of models in that unit.  For each 6+ that unit suffers 1 mortal wound.</characteristic>
                           </characteristics>
@@ -591,12 +615,12 @@
                     </selectionEntry>
                     <selectionEntry id="f989-c421-4019-1784" name="Dreadwood" hidden="false" collective="false" type="upgrade">
                       <profiles>
-                        <profile id="25b1-4960-c1db-3264" name="Malicious Tormentors" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
+                        <profile id="25b1-4960-c1db-3264" name="Malicious Tormentors" publicationId="3eb3-ef35-59aa-b7e2" page="78" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
                           <characteristics>
                             <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">You can re-roll hit rolls of 1 for attacks made by DREADWOOD SPITE-REVENANTS.</characteristic>
                           </characteristics>
                         </profile>
-                        <profile id="8b35-c417-f307-cbf9" name="Sinister Ambush" hidden="false" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
+                        <profile id="8b35-c417-f307-cbf9" name="Sinister Ambush" publicationId="3eb3-ef35-59aa-b7e2" page="78" hidden="false" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
                           <characteristics>
                             <characteristic name="Command Ability Details" typeId="1b71-4c83-4e8c-093f">You can use this command ability once during each of your turns, at the end of your movement phase. If you do so, pick 1 friendly DREADWOOD unit wholly within 18&quot; of a friendly DREADWOOD HERO. Remove that unit from the battlefield and then set it up again anywhere on the battlefield more than 9&quot; from any enemy units.</characteristic>
                           </characteristics>
@@ -608,12 +632,12 @@
                     </selectionEntry>
                     <selectionEntry id="c506-6738-cdd0-8b9a" name="Harvestboon" hidden="false" collective="false" type="upgrade">
                       <profiles>
-                        <profile id="4324-b040-45c3-1337" name="Vibrant Surge" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
+                        <profile id="4324-b040-45c3-1337" name="Vibrant Surge" publicationId="3eb3-ef35-59aa-b7e2" page="79" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
                           <characteristics>
                             <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">You can re-roll hit rolls of 1 for attacks made by a friendly HARVESTBOON units that made a charge move in the same turn.</characteristic>
                           </characteristics>
                         </profile>
-                        <profile id="3aef-742e-705b-cf89" name="Fertile Ground" hidden="false" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
+                        <profile id="3aef-742e-705b-cf89" name="Fertile Ground" publicationId="3eb3-ef35-59aa-b7e2" page="79" hidden="false" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
                           <characteristics>
                             <characteristic name="Command Ability Details" typeId="1b71-4c83-4e8c-093f">You can use this command ability at the start of the combat phase.  If you do so, pick 1 friendly HARVESTBOON unit wholly within 12&quot; of a friendly HARVESTBOON HERO.  Until the end of that phase, add 1 to the Attacks characteristic of that unit&apos;s melee weapons.  You cannot pick the same unit to benefit from this command ability more than once per combat phase.</characteristic>
                           </characteristics>
@@ -1358,10 +1382,34 @@
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
+        <selectionEntry id="32ae-a8bf-7451-70cb" name="General" hidden="false" collective="false" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b78c-c342-c8aa-aa45" type="instanceOf"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="62e4-370f-3318-cdbd" type="instanceOf"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="78f3-8a59-699a-61e8" type="instanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d017-d466-c8c8-1e6b" type="max"/>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1b9c-d49b-eb38-c0df" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="73e0-5583-c8bd-0723" name="New CategoryLink" hidden="false" targetId="b745-17c4-8fbf-8b04" primary="false"/>
+          </categoryLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink id="e8e3-4b70-eb51-e4e4" name="General" hidden="false" collective="false" targetId="b341-0885-3f1c-7d8a" type="selectionEntry"/>
-        <entryLink id="01a9-18bd-e206-8086" name="Deepwood Spell Lore" hidden="false" collective="false" targetId="ad08-f268-8b24-726b" type="selectionEntryGroup"/>
+        <entryLink id="01a9-18bd-e206-8086" name="Lore of the Deepwood" hidden="false" collective="false" targetId="ad08-f268-8b24-726b" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="320.0"/>
@@ -3216,6 +3264,7 @@
       </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2ba7-5c71-2b3a-bb00" type="max"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9cce-1802-c83f-37f6" type="min"/>
       </constraints>
       <selectionEntries>
         <selectionEntry id="6db0-fb38-c451-3bc9" name="1. Throne of Vines" hidden="false" collective="false" type="upgrade">
@@ -3540,12 +3589,28 @@
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="465b-9403-cd9b-f255" type="max"/>
       </constraints>
       <selectionEntries>
-        <selectionEntry id="b259-c676-6a56-3a04" name="0. Jewel of Withering" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="b259-c676-6a56-3a04" name="Jewel of Withering" hidden="false" collective="false" type="upgrade">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="f989-c421-4019-1784" type="equalTo"/>
               </conditions>
+            </modifier>
+            <modifier type="set" field="156b-1060-cb35-f30d" value="1.0">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="f989-c421-4019-1784" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="9a13-7143-0598-c714" value="1.0">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="f989-c421-4019-1784" type="equalTo"/>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d8f3-fc9b-77f1-5623" type="equalTo"/>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="32ae-a8bf-7451-70cb" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
           <constraints>
@@ -3553,7 +3618,7 @@
             <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="9a13-7143-0598-c714" type="min"/>
           </constraints>
           <profiles>
-            <profile id="aa1f-f980-babf-20ed" name="Jewel of Withering" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
+            <profile id="aa1f-f980-babf-20ed" name="Jewel of Withering" publicationId="3eb3-ef35-59aa-b7e2" page="78" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
               <characteristics>
                 <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Subtract 1 from wound rolls for attacks made with melee weapons that target the bearer.</characteristic>
               </characteristics>
@@ -3563,12 +3628,28 @@
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="0fae-a350-ba50-4ac1" name="0. Chalice of Nectar" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="0fae-a350-ba50-4ac1" name="Chalice of Nectar" hidden="false" collective="false" type="upgrade">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5abc-51b7-5b5b-0cdf" type="equalTo"/>
               </conditions>
+            </modifier>
+            <modifier type="set" field="d397-4492-7344-7ce6" value="1.0">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5abc-51b7-5b5b-0cdf" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="8f76-54b8-6eee-9942" value="1.0">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5abc-51b7-5b5b-0cdf" type="equalTo"/>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="32ae-a8bf-7451-70cb" type="equalTo"/>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d8f3-fc9b-77f1-5623" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
           <constraints>
@@ -3576,7 +3657,7 @@
             <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="8f76-54b8-6eee-9942" type="min"/>
           </constraints>
           <profiles>
-            <profile id="3dff-4032-3d7a-55d9" name="Chalice of Nectar" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
+            <profile id="3dff-4032-3d7a-55d9" name="Chalice of Nectar" publicationId="3eb3-ef35-59aa-b7e2" page="74" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
               <characteristics>
                 <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">When making a casting or unbinding roll for the bearer, roll 3D6, remove 1 dice of your choice, and then use the remaining 2D6 to determine that casting or unbinding roll.</characteristic>
               </characteristics>
@@ -3586,12 +3667,28 @@
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="1692-6709-efb3-31fe" name="0. The Silent Sickle" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="1692-6709-efb3-31fe" name="The Silent Sickle" hidden="false" collective="false" type="upgrade">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="c506-6738-cdd0-8b9a" type="equalTo"/>
               </conditions>
+            </modifier>
+            <modifier type="set" field="b531-9cc2-1bee-b570" value="1.0">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="c506-6738-cdd0-8b9a" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="bcff-2bd5-e0f6-82ef" value="1.0">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="c506-6738-cdd0-8b9a" type="equalTo"/>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d8f3-fc9b-77f1-5623" type="equalTo"/>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="32ae-a8bf-7451-70cb" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
           <constraints>
@@ -3599,7 +3696,7 @@
             <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="bcff-2bd5-e0f6-82ef" type="min"/>
           </constraints>
           <profiles>
-            <profile id="d89b-8c2e-3d5c-a52e" name="The Silent Sickle" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
+            <profile id="d89b-8c2e-3d5c-a52e" name="The Silent Sickle" publicationId="3eb3-ef35-59aa-b7e2" page="79" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
               <characteristics>
                 <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Pick 1 of the bearer&apos;s melee weapons.  Add 1 to the Attacks characteristic of that weapon.</characteristic>
               </characteristics>
@@ -3609,12 +3706,28 @@
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="d432-d265-31e5-3913" name="0. Horn of the Consort" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="d432-d265-31e5-3913" name="Horn of the Consort" hidden="false" collective="false" type="upgrade">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="0b6c-7ed5-d2a6-6ae7" type="equalTo"/>
               </conditions>
+            </modifier>
+            <modifier type="set" field="3c5b-cfca-b1b9-3633" value="1.0">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="0b6c-7ed5-d2a6-6ae7" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="3111-a37c-be27-b3c2" value="1.0">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="0b6c-7ed5-d2a6-6ae7" type="equalTo"/>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="32ae-a8bf-7451-70cb" type="equalTo"/>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d8f3-fc9b-77f1-5623" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
           <constraints>
@@ -3622,7 +3735,7 @@
             <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="3111-a37c-be27-b3c2" type="min"/>
           </constraints>
           <profiles>
-            <profile id="3a70-3936-6371-2f18" name="Horn of the Consort" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
+            <profile id="3a70-3936-6371-2f18" name="Horn of the Consort" publicationId="3eb3-ef35-59aa-b7e2" page="75" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
               <characteristics>
                 <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">You can re-roll hit rolls for attacks made by friendly HEARTWOOD KURNOTH HUNTERS wholly within 12&quot; of the bearer.</characteristic>
               </characteristics>
@@ -3632,12 +3745,28 @@
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="e917-daf1-e5ff-9b0a" name="0. Ironbark Talisman" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="e917-daf1-e5ff-9b0a" name="Ironbark Talisman" hidden="false" collective="false" type="upgrade">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="d6bb-a98f-175e-6f2d" type="equalTo"/>
               </conditions>
+            </modifier>
+            <modifier type="set" field="3b54-e46c-e684-715f" value="1.0">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="d6bb-a98f-175e-6f2d" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="ec50-5b01-740a-6e91" value="1.0">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="d6bb-a98f-175e-6f2d" type="equalTo"/>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d8f3-fc9b-77f1-5623" type="equalTo"/>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="32ae-a8bf-7451-70cb" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
           <constraints>
@@ -3645,7 +3774,7 @@
             <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="ec50-5b01-740a-6e91" type="min"/>
           </constraints>
           <profiles>
-            <profile id="4ba5-0fff-cec6-52e6" name="Ironbark Talisman" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
+            <profile id="4ba5-0fff-cec6-52e6" name="Ironbark Talisman" publicationId="3eb3-ef35-59aa-b7e2" page="76" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
               <characteristics>
                 <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Add 1 to wound rolls for attacks made with melee weapons by the bearer.</characteristic>
               </characteristics>
@@ -3655,12 +3784,28 @@
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="8922-e591-9fd0-c732" name="0. Frozen Kernel" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="8922-e591-9fd0-c732" name="Frozen Kernel" hidden="false" collective="false" type="upgrade">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="d87f-5abf-b2d6-4471" type="equalTo"/>
               </conditions>
+            </modifier>
+            <modifier type="set" field="48ef-3db7-6137-749d" value="1.0">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="d87f-5abf-b2d6-4471" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="7c08-a767-fff3-e90d" value="1.0">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="d87f-5abf-b2d6-4471" type="equalTo"/>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d8f3-fc9b-77f1-5623" type="equalTo"/>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="32ae-a8bf-7451-70cb" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
           <constraints>
@@ -3668,7 +3813,7 @@
             <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="7c08-a767-fff3-e90d" type="min"/>
           </constraints>
           <profiles>
-            <profile id="1ae2-69c9-6475-32cb" name="Frozen Kernel" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
+            <profile id="1ae2-69c9-6475-32cb" name="Frozen Kernel" publicationId="3eb3-ef35-59aa-b7e2" page="77" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
               <characteristics>
                 <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Once per battle, at the start of the combat phase, you can pick 1 friendly WINTERLEAF unit wholly within 18&quot; of the bearer.  After that unit has fought in that phase for the first time, if it is within 3&quot; of an enemy unit, it can make a pile-in move and then attack with all of its melee weapons it is armed with for a second time.</characteristic>
               </characteristics>
@@ -3678,11 +3823,27 @@
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="f33a-f414-8e02-d0d1" name="0. Dawnflask" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="f33a-f414-8e02-d0d1" name="Dawnflask" hidden="false" collective="false" type="upgrade">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5d80-ed30-6c38-85cc" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="7345-13c7-76f3-d0ee" value="1.0">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5d80-ed30-6c38-85cc" type="equalTo"/>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d8f3-fc9b-77f1-5623" type="equalTo"/>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="32ae-a8bf-7451-70cb" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" field="3ec0-6ff6-d17f-f49c" value="1.0">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5d80-ed30-6c38-85cc" type="equalTo"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -3691,9 +3852,10 @@
             <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3ec0-6ff6-d17f-f49c" type="max"/>
           </constraints>
           <profiles>
-            <profile id="98c0-3117-9d7f-c201" name="Dawnflask" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
+            <profile id="98c0-3117-9d7f-c201" name="Dawnflask" publicationId="3eb3-ef35-59aa-b7e2" page="72" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
               <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">6+ save against wounds and mortal wounds.</characteristic>
+                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Roll a dice each time you allocate a wound or mortal wound to the bearer.
+On a 6+ that wound or mortal wound is negated.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -3708,11 +3870,27 @@
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7ef8-5000-bc99-1a6c" type="max"/>
       </constraints>
       <selectionEntries>
-        <selectionEntry id="79b8-a283-e81e-7394" name="0. Paragon of Terror" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="79b8-a283-e81e-7394" name="Paragon of Terror" hidden="false" collective="false" type="upgrade">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="f989-c421-4019-1784" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="fca5-a8c4-298c-3875" value="1.0">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="f989-c421-4019-1784" type="equalTo"/>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="32ae-a8bf-7451-70cb" type="equalTo"/>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d8f3-fc9b-77f1-5623" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" field="47a3-6d63-39cc-0df9" value="1.0">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="f989-c421-4019-1784" type="equalTo"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -3721,7 +3899,7 @@
             <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="47a3-6d63-39cc-0df9" type="max"/>
           </constraints>
           <profiles>
-            <profile id="8da6-9a66-ee24-2a80" name="Paragon of Terror" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
+            <profile id="8da6-9a66-ee24-2a80" name="Paragon of Terror" publicationId="3eb3-ef35-59aa-b7e2" page="78" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
               <characteristics>
                 <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">Re-roll successful battleshock tests for enemy units while they are within 6&quot; of this general.</characteristic>
               </characteristics>
@@ -3731,11 +3909,27 @@
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="4913-c742-d6f0-44e6" name="0. Nurtured by Magic" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="4913-c742-d6f0-44e6" name="Nurtured by Magic" hidden="false" collective="false" type="upgrade">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5abc-51b7-5b5b-0cdf" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="489b-69c5-7b80-a0ee" value="1.0">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5abc-51b7-5b5b-0cdf" type="equalTo"/>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="32ae-a8bf-7451-70cb" type="equalTo"/>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d8f3-fc9b-77f1-5623" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" field="aac5-8f7a-1348-908b" value="1.0">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5abc-51b7-5b5b-0cdf" type="equalTo"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -3744,7 +3938,7 @@
             <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="aac5-8f7a-1348-908b" type="max"/>
           </constraints>
           <profiles>
-            <profile id="fd17-63c9-e68f-b359" name="Nurtured by Magic" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
+            <profile id="fd17-63c9-e68f-b359" name="Nurtured by Magic" publicationId="3eb3-ef35-59aa-b7e2" page="74" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
               <characteristics>
                 <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">Once in each of your hero phases, it this general successfully casts a spell that is not unbound, pick 1 friendly GNARLROOT unit wholly within 18&quot; of this general.  You can heal up to D3 wounds allocated to that unit.</characteristic>
               </characteristics>
@@ -3754,11 +3948,27 @@
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="5d9e-9719-07db-039a" name="0. Seek New Fruit" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="5d9e-9719-07db-039a" name="Seek New Fruit" hidden="false" collective="false" type="upgrade">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="c506-6738-cdd0-8b9a" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="aba7-c985-843c-7962" value="1.0">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="c506-6738-cdd0-8b9a" type="equalTo"/>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="32ae-a8bf-7451-70cb" type="equalTo"/>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d8f3-fc9b-77f1-5623" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" field="1e3a-e6fa-e7ce-6544" value="1.0">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="c506-6738-cdd0-8b9a" type="equalTo"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -3767,7 +3977,7 @@
             <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="1e3a-e6fa-e7ce-6544" type="max"/>
           </constraints>
           <profiles>
-            <profile id="6585-d1c7-8e19-000c" name="Seek New Fruit" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
+            <profile id="6585-d1c7-8e19-000c" name="Seek New Fruit" publicationId="3eb3-ef35-59aa-b7e2" page="79" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
               <characteristics>
                 <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">Each time this general attacks with its melee weapons, it can make a 6&quot; move after all of its attacks have been resolved.  If it does so, it must finish the move more than 3&quot; from enemy units.</characteristic>
               </characteristics>
@@ -3777,11 +3987,27 @@
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="01fc-13c7-54d2-d417" name="0. Mere Rainfall" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="01fc-13c7-54d2-d417" name="Mere Rainfall" hidden="false" collective="false" type="upgrade">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="d6bb-a98f-175e-6f2d" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="4bb0-f518-bcc4-51c6" value="1.0">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="d6bb-a98f-175e-6f2d" type="equalTo"/>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="32ae-a8bf-7451-70cb" type="equalTo"/>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d8f3-fc9b-77f1-5623" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" field="6296-f7c4-208c-387c" value="1.0">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="d6bb-a98f-175e-6f2d" type="equalTo"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -3790,7 +4016,7 @@
             <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="6296-f7c4-208c-387c" type="max"/>
           </constraints>
           <profiles>
-            <profile id="677b-1850-f543-fdf4" name="Mere Rainfall" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
+            <profile id="677b-1850-f543-fdf4" name="Mere Rainfall" publicationId="3eb3-ef35-59aa-b7e2" page="76" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
               <characteristics>
                 <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">You can re-roll save rolls for attacks made with missile weapons that target this general.</characteristic>
               </characteristics>
@@ -3800,11 +4026,27 @@
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="50c2-343c-7c87-59cc" name="0. My Heart Is Ice" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="50c2-343c-7c87-59cc" name="My Heart Is Ice" hidden="false" collective="false" type="upgrade">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="d87f-5abf-b2d6-4471" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="1883-04d8-460f-df84" value="1.0">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="d87f-5abf-b2d6-4471" type="equalTo"/>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d8f3-fc9b-77f1-5623" type="equalTo"/>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="32ae-a8bf-7451-70cb" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" field="f93a-2421-02a1-be44" value="1.0">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="d87f-5abf-b2d6-4471" type="equalTo"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -3813,7 +4055,7 @@
             <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="f93a-2421-02a1-be44" type="max"/>
           </constraints>
           <profiles>
-            <profile id="f014-bc60-8523-7125" name="My Heart Is Ice" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
+            <profile id="f014-bc60-8523-7125" name="My Heart Is Ice" publicationId="3eb3-ef35-59aa-b7e2" page="77" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
               <characteristics>
                 <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">Roll a dice each time a wound is inflicted by a melee weapon is allocated to this general and not negated.  On a 5+ the attacking unit suffers 1 mortal wound.</characteristic>
               </characteristics>
@@ -3823,12 +4065,28 @@
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="2833-ec31-1908-f9ab" name="0. Legacy of Valour" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="2833-ec31-1908-f9ab" name="Legacy of Valour" hidden="false" collective="false" type="upgrade">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="0b6c-7ed5-d2a6-6ae7" type="equalTo"/>
               </conditions>
+            </modifier>
+            <modifier type="set" field="e18e-64df-9c74-7637" value="1.0">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="0b6c-7ed5-d2a6-6ae7" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="3e74-a582-a9e9-7a28" value="1.0">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="0b6c-7ed5-d2a6-6ae7" type="equalTo"/>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d8f3-fc9b-77f1-5623" type="equalTo"/>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="32ae-a8bf-7451-70cb" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
           <constraints>
@@ -3836,7 +4094,7 @@
             <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3e74-a582-a9e9-7a28" type="min"/>
           </constraints>
           <profiles>
-            <profile id="5c8e-f350-e523-357e" name="Legacy of Valour" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
+            <profile id="5c8e-f350-e523-357e" name="Legacy of Valour" publicationId="3eb3-ef35-59aa-b7e2" page="75" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
               <characteristics>
                 <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">If the general is slain, do D3 mortal wounds to an enemy unit within 1&quot; on a 2+. On a 6, do D6 instead.</characteristic>
               </characteristics>
@@ -3846,12 +4104,28 @@
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="5719-f63b-f094-1175" name="0. Regal Old-growth" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="5719-f63b-f094-1175" name="Regal Old-growth" hidden="false" collective="false" type="upgrade">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5d80-ed30-6c38-85cc" type="equalTo"/>
               </conditions>
+            </modifier>
+            <modifier type="set" field="f91b-be78-d8e9-0b68" value="1.0">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5d80-ed30-6c38-85cc" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="cf99-5bdf-9e01-f4e8" value="1.0">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5d80-ed30-6c38-85cc" type="equalTo"/>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="32ae-a8bf-7451-70cb" type="equalTo"/>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d8f3-fc9b-77f1-5623" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
           <constraints>
@@ -3859,9 +4133,9 @@
             <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="cf99-5bdf-9e01-f4e8" type="min"/>
           </constraints>
           <profiles>
-            <profile id="8173-7789-6892-d1c7" name="Regal Old-growth" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
+            <profile id="8173-7789-6892-d1c7" name="Regal Old-growth" publicationId="3eb3-ef35-59aa-b7e2" page="72" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
               <characteristics>
-                <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">+1 wound.</characteristic>
+                <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">Add 1 to the Wounds characteristic of this general.</characteristic>
               </characteristics>
             </profile>
           </profiles>
