@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="0339-0157-6910-d29c" name="Chaos Data" revision="8" battleScribeVersion="2.02" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="15" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="0339-0157-6910-d29c" name="Chaos Data" revision="10" battleScribeVersion="2.02" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="15" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="c9b2-1fe6-pubN65537" name="Battletome: Beasts of Chaos"/>
     <publication id="c9b2-1fe6-pubN83353" name="1"/>
@@ -2649,12 +2649,17 @@ If a unit that is affected by this battle trait is also affected by any rules th
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
-    <selectionEntryGroup id="2654-fbf5-bb5b-f34b" name="Artefacts: Daemonic Boons" publicationId="4be9-7bc9-ca17-b1b4" page="64" hidden="false" collective="false">
+    <selectionEntryGroup id="2654-fbf5-bb5b-f34b" name="Artefacts: Daemonic Boons" publicationId="4be9-7bc9-ca17-b1b4" page="64" hidden="true" collective="false">
       <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1418-9a68-9f9e-e9a7" type="notInstanceOf"/>
-          </conditions>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1418-9a68-9f9e-e9a7" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="dd77-19a5-28eb-cbec" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -2738,9 +2743,14 @@ If a unit that is affected by this battle trait is also affected by any rules th
     <selectionEntryGroup id="7852-9de3-80af-1260" name="Traits: Nurgle Daemon" publicationId="4be9-7bc9-ca17-b1b4" page="62" hidden="true" collective="false">
       <modifiers>
         <modifier type="set" field="hidden" value="false">
-          <conditions>
-            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1418-9a68-9f9e-e9a7" type="instanceOf"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1418-9a68-9f9e-e9a7" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="dd77-19a5-28eb-cbec" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -2789,6 +2799,537 @@ If a unit that is affected by this battle trait is also affected by any rules th
         <entryLink id="1e44-5ddd-e844-1a50" name="2. Living Plague" hidden="false" collective="false" targetId="0ac8-3f27-65a4-8f35" type="selectionEntry"/>
         <entryLink id="fa59-52f7-e58a-80b3" name="3. Hulking Physique" hidden="false" collective="false" targetId="6071-13c4-6f0e-7336" type="selectionEntry"/>
       </entryLinks>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="3fa9-8659-7625-048f" name="Artefacts: Daemonic Powers" hidden="true" collective="false">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1418-9a68-9f9e-e9a7" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7d12-f4c5-3832-0f19" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5f90-0268-9a4b-c148" type="max"/>
+      </constraints>
+      <selectionEntries>
+        <selectionEntry id="5e75-f24c-21ee-522a" name="1. Lord of Flux" hidden="false" collective="false" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="12f1-9464-d7ab-de98" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="c395-b0cc-ce07-c450" name="Lord of Flux" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
+              <characteristics>
+                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Roll a dice at the beginning of each combat phase for each enemy unit within 3&quot; of this daemon. On a roll of 4 or more that unit suffers a mortal wound.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="2cbd-024a-a223-a88e" name="2. Aura of Mutability" hidden="false" collective="false" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e00f-4c25-672c-880f" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="f3e5-f553-cbfd-21cb" name="Aura of Mutability" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
+              <characteristics>
+                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">You can re-roll wound rolls of 1 for friendly units of TZEENTCH DAEMONS within 3&quot; of this daemon.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="3b7e-a48c-7afc-ab44" name="3. Cursed Ichor" hidden="false" collective="false" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7662-dc69-8537-40ea" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="5251-1ce2-f2c7-865b" name="Cursed Ichor" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
+              <characteristics>
+                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Roll a dice at the end of the combat phase if any wounds were allocated to this daemon in the combat phase (even if this daemon was slain). On a roll of 2 or more, one enemy unit that attacked this daemon in that combat phase suffers 1 mortal wound. If several enemy units attacked this daemon, randomly select the unit that suffers the mortal wound. *FAQ v1.4*</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="f54c-9e8f-7c4e-78d3" name="4. Wellspring of Arcane Might" hidden="false" collective="false" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="793a-7e59-79e1-6679" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="2ec6-b3d0-4b74-27c7" name="Wellspring of Arcane Might" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
+              <characteristics>
+                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">You can re-roll any casting roll dice which are showing a 1 for any friendly units of TZEENTCH DAEMONS within 9&quot; of this daemon.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="34e9-a3c0-cb93-38bc" name="5. Aspect of Tzeentch" hidden="false" collective="false" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7d88-a199-b80c-c6f5" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="7082-77b0-b240-9b89" name="Aspect of Tzeentch" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
+              <characteristics>
+                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Each time you expend a Destiny Dice whilst this daemon is on the battlefield, roll a dice. On a 6 you may immediately roll another dice and add it to your Destiny Dice pool.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="350e-b5ec-6b7e-5ca8" name="6. Mark of the Conjurer" hidden="false" collective="false" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2082-52ed-7666-a712" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="b8c2-42bf-d5c7-2363" name="Mark of the Conjurer" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
+              <characteristics>
+                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">If the casting roll for this daemon is a double, and is successful and not unbound, you receive 2 Fate Points instead of 1. *Errata Jul&apos;18*</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="2ae9-52aa-d981-f28b" name="Artefacts: Daemonic Weapons" page="78" hidden="true" collective="false">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1418-9a68-9f9e-e9a7" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7d12-f4c5-3832-0f19" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8b9a-896e-db56-907e" type="max"/>
+      </constraints>
+      <selectionEntries>
+        <selectionEntry id="e0e0-d07d-7dfa-d7c3" name="1. Warpfire Blade" hidden="false" collective="false" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="fd02-fc2f-c917-e511" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="f14d-c043-cab4-bb06" name="Warpfire Blade" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
+              <characteristics>
+                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Pick one of the bearer’s melee weapons to be a Warpfire Blade. Wound rolls of 6 or more made for this weapon cause a mortal wound in addition to their normal damage. *FAQ v1.4*</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="2718-79ce-cac6-3c45" name="2. Sentient Weapons" hidden="false" collective="false" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7ee5-5a3a-edd8-298f" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="a97d-ae34-c8dc-9a57" name="Sentient Weapons" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
+              <characteristics>
+                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Enemy units can never benefit from modifiers to their save rolls or Save characteristic (e.g. from being in cover) against attacks made by this daemon.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="efc0-2202-9fec-f4e6" name="3. Blade of Fate" hidden="false" collective="false" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="eb51-d079-24b5-d7e5" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="1f8e-0d65-ad63-0ded" name="Blade of Fate" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
+              <characteristics>
+                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Pick one of the bearer’s melee weapons to be a Blade of Fate. If you have at least one dice in your pool of Destiny Dice when making an attack with this weapon, you can re-roll failed hit and wound rolls of 1. However, if there are 9 Destiny Dice in the pool when the bearer attacks with this weapon, you can instead re-roll all failed hit and wound rolls.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="b619-8d8b-42d1-6553" name="4. Souleater" hidden="false" collective="false" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d8d5-4805-1a2e-c67f" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="aaa2-0c9c-343a-ca59" name="4. Souleater" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
+              <characteristics>
+                <characteristic name="Battalion Ability Details" typeId="08e0-9ead-1dbe-c801"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="dce7-d354-e7f2-4ce5" name="5. Phantasmal Weapons" hidden="false" collective="false" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6821-a0e9-1974-7610" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="4d74-0c75-24f8-a882" name="Phantasmal Weapons" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
+              <characteristics>
+                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Improve the Rend characteristic of all melee weapons wielded by this daemon by 1 (if it has a Rend characteristic of ‘-’ it becomes -1).</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="3d2a-ea96-0a92-ec11" name="6. Pyrofyre Stave" hidden="false" collective="false" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="fdef-f3f3-eef9-3b73" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="e131-de9c-693f-9b6f" name="Pyrofyre Stave" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
+              <characteristics>
+                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Add 1 to any wound rolls you make for the bearer’s attacks in the shooting phase.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="3f45-bc81-ef77-03e1" name="The Lore of Change (DAEMON)" hidden="true" collective="false">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1418-9a68-9f9e-e9a7" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7d12-f4c5-3832-0f19" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="daf3-a4bb-fd98-e188" type="max"/>
+        <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="47ef-a1f2-e67d-9dc0" type="min"/>
+      </constraints>
+      <selectionEntries>
+        <selectionEntry id="d2af-d59a-55fe-258f" name="1. Bolt of Tzeentch" hidden="false" collective="false" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="264c-5d02-4926-fda0" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="e7f9-b520-dd4c-a422" name="Bolt of Tzeentch" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+              <characteristics>
+                <characteristic name="Casting Value" typeId="2508-b604-1258-a920">8</characteristic>
+                <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick a visible enemy unit within 18&quot; of the caster. The unit you pick suffers D6 mortal wounds.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="7089-1fa6-7b0b-3764" name="2. Treason of Tzeentch" hidden="false" collective="false" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="32f3-e4c9-61c1-fbaa" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="0577-1ee2-d4c9-70b3" name="Treason of Tzeentch" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+              <characteristics>
+                <characteristic name="Casting Value" typeId="2508-b604-1258-a920">5</characteristic>
+                <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick an enemy unit with 2 or more models that is within 18” of the caster and which is visible to them. Roll a dice for each model in the unit you picked. It suffers 1 mortal wound for each dice roll of 6 or more. If, after any of the mortal wounds caused by this spell are allocated, only one model remains in the unit, any remaining mortal wounds caused by this spell are negated and have no effect.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="b3b1-1f30-1f93-4401" name="3. Arcane Transformation" hidden="false" collective="false" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ea4d-cb60-f20a-b8c5" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="53da-94b4-b126-853b" name="Arcane Transformation" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+              <characteristics>
+                <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
+                <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick a visible friendly HEROwithin 18&quot; of the caster. You can permanently increase that model’s Move, Bravery or the Attacks characteristic of one of its weapons by 1. However, each HERO can only be chosen as the target of this spell once per battle.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="3946-c164-c8c1-97d4" name="4. Unchecked Mutation" hidden="false" collective="false" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f289-ba23-b188-68bf" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="2caf-5606-a91a-26b5" name="Unchecked Mutation" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+              <characteristics>
+                <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
+                <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick a visible enemy unit within 18&quot; of the caster.That unit suffers D3 mortal wounds. After the mortal wounds have been allocated, roll a dice. On a roll of 5 or more, the unit suffers 1 more mortal wound. If the unit suffers 1 more mortal wound, roll a dice after the mortal wound has been allocated; on a roll of 5 or more the unit suffers 1 more mortal wound, and so on until you fail to roll a 5 or more. *FAQ v1.4*</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="749b-c951-5076-2c78" name="5. Fold Reality" hidden="false" collective="false" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="792c-dd96-df12-3f7a" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="2eca-8dc8-0464-6408" name="Fold Reality" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+              <characteristics>
+                <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
+                <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick a visible friendly unit of TZEENTCH DAEMONS within 18&quot; of the caster and roll a dice. On a roll of 2 or more, you can return that many slain models to the unit. On a roll of 1, the unit is wiped out!</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="f93d-8583-2fbc-e01e" name="6. Tzeentch&apos;s Inferno" hidden="false" collective="false" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8252-79dc-dc39-e02a" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="234e-e237-d595-28a3" name="Tzeentch&apos;s Inferno" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+              <characteristics>
+                <characteristic name="Casting Value" typeId="2508-b604-1258-a920">9</characteristic>
+                <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick a visible enemy unit within 18&quot; of the caster. Roll 9 dice – for each 6 that you roll the unit you picked suffers D3 mortal wounds. *FAQ v1.4*</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="2fed-6adf-afc8-28c2" name="Traits: Tzeentch Daemon" hidden="false" collective="false">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1418-9a68-9f9e-e9a7" type="notInstanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e2db-1fab-f088-7615" type="max"/>
+      </constraints>
+      <selectionEntries>
+        <selectionEntry id="b872-f542-932d-523c" name="1. Arch-sorcerer" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="3474-19c5-9773-fc6b" name="Arch-sorcerer" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
+              <characteristics>
+                <characteristic name="Battalion Ability Details" typeId="08e0-9ead-1dbe-c801">Generate two additional spells for your general from the Lore of Change.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <entryLinks>
+            <entryLink id="1d61-8bd4-7e9e-9b3a" name="The Lore of Change (DAEMON)" hidden="false" collective="false" targetId="3f45-bc81-ef77-03e1" type="selectionEntryGroup">
+              <modifiers>
+                <modifier type="set" field="daf3-a4bb-fd98-e188" value="2.0"/>
+                <modifier type="set" field="47ef-a1f2-e67d-9dc0" value="2.0"/>
+              </modifiers>
+            </entryLink>
+          </entryLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="26af-c745-a5a7-2517" name="4. Daemonspark" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="b491-3090-2101-9f96" name="Daemonspark" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
+              <characteristics>
+                <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">Once per battle, in your hero phase, you can unleash the Daemonspark. Add 1 to the Damage characteristic of all of your general’s melee weapons for the rest of the turn.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="0537-c99e-cef6-43a4" name="5. Incorporeal Form" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="939c-da92-91fe-a9b5" name="Incorporeal Form" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
+              <characteristics>
+                <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">Your opponent must subtract 1 from any hit rolls that target your general in the combat phase.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="2a23-dc71-9540-d370" name="6. Aether Tether" hidden="false" collective="false" type="upgrade">
+          <profiles>
+            <profile id="ae48-9f08-4f28-045f" name="Aether Tether" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
+              <characteristics>
+                <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">You can re-roll save rolls of 1 for your general.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <entryLinks>
+        <entryLink id="ddf3-fa02-39cd-40bc" name="3. Magical Supremacy" hidden="false" collective="false" targetId="5383-6978-9324-eb23" type="selectionEntry"/>
+        <entryLink id="e86b-fdb2-78bd-e90e" name="2. Nexus of Fate" hidden="false" collective="false" targetId="a68c-f836-7ae7-10e7" type="selectionEntry"/>
+      </entryLinks>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="1f7a-a4e5-cbd0-deef" name="The Lore of Fate (ARCANITE/MORTAL)" hidden="true" collective="false">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7d12-f4c5-3832-0f19" type="instanceOf"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a934-6d15-9932-b7ea" type="instanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a91f-7130-5f9c-30bf" type="instanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bf5e-5d8f-2f89-5f35" type="max"/>
+        <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c542-b097-9eb2-2840" type="min"/>
+      </constraints>
+      <selectionEntries>
+        <selectionEntry id="f754-5b94-1b24-3c44" name="1. Bolt of Tzeentch" hidden="false" collective="false" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0e25-301a-96bd-3fc4" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="80ac-85fe-7e14-07bc" name="Bolt of Tzeentch" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+              <characteristics>
+                <characteristic name="Casting Value" typeId="2508-b604-1258-a920">8</characteristic>
+                <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick a visible enemy unit within 18&quot; of the caster. The unit you pick suffers D6 mortal wounds.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="e16d-6635-8e9f-d23e" name="2. Arcane Suggestion" hidden="false" collective="false" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="501e-55c3-a5e3-12bc" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="fdfd-c0fb-493f-ea40" name="Arcane Suggestion" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+              <characteristics>
+                <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
+                <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">“If successfully cast, choose an enemy unit (but not a HERO or MONSTER) within 18&quot;, roll a dice and consult the following D3 Result: ROLL - 1 It’s Hopeless: The unit immediately suffers D3 mortal wounds. ROLL - 2 Drop Your Weapons:Until the end of this turn, subtract 1 from hit and wound rolls for the unit. ROLL - 3 Turn Around: Until the end of this turn, subtract 1 from save rolls for the unit</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="97f5-0a17-8a58-cec4" name="3. Glimpse the Future" hidden="false" collective="false" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ff52-a0ad-7cd9-8c64" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="abb9-e41d-dc52-7396" name="Glimpse the Future" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+              <characteristics>
+                <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
+                <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">Only one of your WIZARDS can attempt to cast this spell per turn. If successfully cast, roll a dice and add it to your Destiny Dice pool.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="6e68-e83b-8565-f8c5" name="4. Shield of Fate" hidden="false" collective="false" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dafc-232b-99ff-506f" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="0bc4-1bd3-35bb-3eee" name="Shield of Fate" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+              <characteristics>
+                <characteristic name="Casting Value" typeId="2508-b604-1258-a920">5</characteristic>
+                <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick a friendly TZEENTCH unit within 18&quot; of the caster. Until the start of your next hero phase, you can re-roll save rolls of 1 for the unit if you have 1-3 Destiny Dice, save rolls of 1 and 2 if you have 4-6 Destiny Dice, or save rolls of 1, 2 and 3 if you have 7-9 Destiny Dice. The dice results you can re-roll will change accordingly if any Destiny Dice are added to or expended from your pool.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="bb2b-0c45-7b63-b8fd" name="5. Infusion Arcanum" hidden="false" collective="false" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1f35-2057-0fee-69f2" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="ab93-39a5-2f6e-5adc" name="Infusion Arcanum" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+              <characteristics>
+                <characteristic name="Casting Value" typeId="2508-b604-1258-a920">5</characteristic>
+                <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, until your next hero phase you can add 1 to all hit and wound rolls for the caster.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="e11a-84aa-e6dc-ea59" name="6. Treacherous Bond" hidden="false" collective="false" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d9fe-6985-6f1e-ec6c" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="0024-9c28-8bf2-0c1b" name="Treacherous Bond" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+              <characteristics>
+                <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
+                <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick a visible friendly unit within 18&quot; of the caster. Until your next hero phase, so long as the bonded unit is within 9&quot; of the caster, roll a dice whenever the caster suffers an unsaved wound or mortal wound; on a 2 or more the chosen unit suffers the wound or mortal wound instead.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
 </catalogue>
