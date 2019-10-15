@@ -85,7 +85,11 @@
     <entryLink id="166d-212e-323a-5373" name="Flagellants" hidden="false" collective="false" import="true" targetId="6c57-67c3-945c-aaa9" type="selectionEntry"/>
     <entryLink id="36a3-909d-6d66-488b" name="Battlemage" hidden="false" collective="false" import="true" targetId="e803-f69f-40ca-f348" type="selectionEntry"/>
     <entryLink id="5fcf-5508-9075-5785" name="Battlemage on Griffon" hidden="false" collective="false" import="true" targetId="6e22-8a2b-42e3-af27" type="selectionEntry"/>
-    <entryLink id="9a80-45f2-d7a6-f86c" name="Allegiance" hidden="false" collective="false" import="true" targetId="87f8-d0f2-e2c7-0668" type="selectionEntry"/>
+    <entryLink id="9a80-45f2-d7a6-f86c" name="Allegiance" hidden="false" collective="false" import="true" targetId="87f8-d0f2-e2c7-0668" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="a0e4-eb32-1a4d-4294" name="New CategoryLink" hidden="false" targetId="87e8-c095-f059-5f7b" primary="true"/>
+      </categoryLinks>
+    </entryLink>
     <entryLink id="155c-455f-0315-e826" name="Sorceress on Black Dragon" hidden="false" collective="false" import="true" targetId="dcad-577b-ccd1-7412" type="selectionEntry"/>
     <entryLink id="4d0b-eb8f-e788-bba7" name="Eternal Guard" hidden="false" collective="false" import="true" targetId="d6a0-e2ca-0820-59f0" type="selectionEntry"/>
     <entryLink id="d0be-ebd9-03bb-5350" name="Black Guard" hidden="false" collective="false" import="true" targetId="23bd-bb48-cffe-de68" type="selectionEntry"/>
@@ -729,22 +733,22 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="87f8-d0f2-e2c7-0668" name="Allegiance" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="06ec-3221-cc77-09c5" value="0.0">
+          <conditions>
+            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="78f3-8a59-699a-61e8" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="06ec-3221-cc77-09c5" type="min"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="17ca-42a4-5740-2234" type="max"/>
       </constraints>
       <selectionEntryGroups>
         <selectionEntryGroup id="3076-1c56-348e-61de" name="Allegiance" hidden="false" collective="false" import="true" defaultSelectionEntryId="4455-f027-3b35-387c">
-          <modifiers>
-            <modifier type="set" field="8938-c999-0c01-9045" value="0.0">
-              <conditions>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="78f3-8a59-699a-61e8" type="instanceOf"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8938-c999-0c01-9045" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d2c6-67a8-82e1-ac3c" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8938-c999-0c01-9045" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d2c6-67a8-82e1-ac3c" type="max"/>
           </constraints>
           <selectionEntries>
             <selectionEntry id="67bf-fcea-b53b-f9c5" name="Allegiance: Order" hidden="false" collective="false" import="true" type="upgrade">
@@ -755,9 +759,6 @@
                   </characteristics>
                 </profile>
               </profiles>
-              <categoryLinks>
-                <categoryLink id="c8ac-caa7-1c6c-3fcb" name="Allegiance" hidden="false" targetId="87e8-c095-f059-5f7b" primary="false"/>
-              </categoryLinks>
               <costs>
                 <cost name="pts" typeId="points" value="0.0"/>
               </costs>
@@ -823,9 +824,6 @@ If a model already has a city keyword on its warscroll, it cannot gain another o
                   </characteristics>
                 </profile>
               </profiles>
-              <categoryLinks>
-                <categoryLink id="ffd3-7ab3-2dd1-e22c" name="Allegiance" hidden="false" targetId="87e8-c095-f059-5f7b" primary="false"/>
-              </categoryLinks>
               <selectionEntryGroups>
                 <selectionEntryGroup id="9537-749b-0874-b93c" name="Strongholds of Order" publicationId="e440-9199-1072-a7a0" hidden="false" collective="false" import="true">
                   <constraints>
@@ -7310,6 +7308,9 @@ The Rocket Battery and its crew are treated as a single model, using the charact
           </characteristics>
         </profile>
       </profiles>
+      <categoryLinks>
+        <categoryLink id="2e84-2196-cc1f-9538" name="Battalion" hidden="false" targetId="be17-6bbd-b857-3f43" primary="true"/>
+      </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="37cd-0bae-9d44-ece5" name="3 Units of Wildwood Rangers" hidden="false" collective="false" import="true" defaultSelectionEntryId="6183-8bc5-3044-c6a5">
           <constraints>
@@ -7409,6 +7410,9 @@ The Rocket Battery and its crew are treated as a single model, using the charact
           </characteristics>
         </profile>
       </profiles>
+      <categoryLinks>
+        <categoryLink id="c56b-3358-3766-06ef" name="New CategoryLink" hidden="false" targetId="be17-6bbd-b857-3f43" primary="true"/>
+      </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="5440-2454-7b26-f6ee" name="3-6 HERO WIZARDS" hidden="false" collective="false" import="true">
           <constraints>
@@ -8343,6 +8347,7 @@ The Rocket Battery and its crew are treated as a single model, using the charact
         <categoryLink id="a83a-04d8-7e36-b9d5" name="New CategoryLink" hidden="false" targetId="9bf4-4067-f587-a008" primary="false"/>
         <categoryLink id="72f7-c817-5bd5-06fa" name="New CategoryLink" hidden="false" targetId="b970-b3bf-e1a4-a6fc" primary="false"/>
         <categoryLink id="5724-f6c7-4d91-3989" name="New CategoryLink" hidden="false" targetId="9085-6734-ca06-e1e3" primary="false"/>
+        <categoryLink id="6d6e-064b-cce2-5923" name="New CategoryLink" hidden="false" targetId="065e-fda7-fd27-1f40" primary="true"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="a3b5-2e7b-5cbf-7a29" name="10 Sisters of the Watch" hidden="false" collective="false" import="true" type="model">
