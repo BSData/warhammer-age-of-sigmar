@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="522a-d5b0-4c7e-321d" name="Order - Cities of Sigmar" revision="5" battleScribeVersion="2.03" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="25" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="522a-d5b0-4c7e-321d" name="Order - Cities of Sigmar" revision="6" battleScribeVersion="2.03" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="25" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="deec-d475-pubN65537" name="Grand Alliance: Order"/>
     <publication id="e440-9199-1072-a7a0" name="Cities of Sigmar Battletome"/>
@@ -135,6 +135,7 @@
     <entryLink id="9dab-f2a5-a8cd-a035" name="Battalion: Hammerhalian Lancers" hidden="false" collective="false" import="true" targetId="045e-b385-6cd3-91bc" type="selectionEntry"/>
     <entryLink id="7923-c9c0-7ace-1c8b" name="Battlemage" hidden="false" collective="false" import="true" targetId="e803-f69f-40ca-f348" type="selectionEntry"/>
     <entryLink id="dbef-05d8-fa4b-ae26" name="Anointed" hidden="false" collective="false" import="true" targetId="6992-73c4-c062-3eab" type="selectionEntry"/>
+    <entryLink id="a423-ab88-ee7d-cff3" name="Steam Tank with Commander" hidden="false" collective="false" import="true" targetId="906e-3ce2-c77a-daef" type="selectionEntry"/>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="d618-803c-36f8-0a3a" name="General" hidden="false" collective="false" import="true" type="upgrade">
@@ -1237,7 +1238,7 @@ You can choose 1 additional friendly ANVILGARD DRAGON, ANVILGARD KHARIBDYSS or A
                 <entryLink id="9095-93c5-3c66-4739" name="General" hidden="false" collective="false" import="true" targetId="d618-803c-36f8-0a3a" type="selectionEntry"/>
               </entryLinks>
               <costs>
-                <cost name="pts" typeId="points" value="0.0"/>
+                <cost name="pts" typeId="points" value="100.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -3054,7 +3055,7 @@ You can choose 1 additional friendly ANVILGARD DRAGON, ANVILGARD KHARIBDYSS or A
                 <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2131-fb28-e411-de37" type="equalTo"/>
                 <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5b2f-302f-2c13-6c55" type="equalTo"/>
                 <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cc93-36fd-cabd-cced" type="equalTo"/>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8fae-83ba-e1f7-6c28" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="800e-e2f0-9b2b-7535" type="equalTo"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -6063,30 +6064,19 @@ You can choose 1 additional friendly ANVILGARD DRAGON, ANVILGARD KHARIBDYSS or A
       </costs>
     </selectionEntry>
     <selectionEntry id="b81e-3d25-eedb-91c1" name="Steam Tank" hidden="false" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="append" field="name" value="with Commander">
+      <modifierGroups>
+        <modifierGroup>
           <conditions>
-            <condition field="selections" scope="b81e-3d25-eedb-91c1" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="edf1-e71c-15f0-2d1c" type="greaterThan"/>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="800e-e2f0-9b2b-7535" type="equalTo"/>
           </conditions>
-        </modifier>
-        <modifier type="set-primary" field="category" value="e9f2-765a-b7b8-ce8e">
-          <conditions>
-            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8fae-83ba-e1f7-6c28" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
+          <modifiers>
+            <modifier type="set-primary" field="category" value="e9f2-765a-b7b8-ce8e"/>
+            <modifier type="remove" field="category" value="fa0c-9044-2568-fa02"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <profiles>
         <profile id="a89f-4b14-1169-4949" name="Steam Tank" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
-          <modifierGroups>
-            <modifierGroup>
-              <conditions>
-                <condition field="selections" scope="b81e-3d25-eedb-91c1" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="equalTo"/>
-              </conditions>
-              <modifiers>
-                <modifier type="append" field="name" value="with Commander"/>
-              </modifiers>
-            </modifierGroup>
-          </modifierGroups>
           <characteristics>
             <characteristic name="Move" typeId="8655-6213-2824-1752">*</characteristic>
             <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">12</characteristic>
@@ -6246,116 +6236,6 @@ If the roll is equal to or greater than the number of wounds currently allocated
           </costs>
         </selectionEntry>
       </selectionEntries>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="edf1-e71c-15f0-2d1c" name="Commander" hidden="false" collective="false" import="true">
-          <selectionEntries>
-            <selectionEntry id="1b99-47c8-2eb7-4101" name="Commander" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="set-primary" field="category" value="6c6b-e787-f9b8-a510">
-                  <conditions>
-                    <condition field="selections" scope="b81e-3d25-eedb-91c1" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1b99-47c8-2eb7-4101" type="greaterThan"/>
-                  </conditions>
-                </modifier>
-                <modifier type="remove" field="category" value="e9f2-765a-b7b8-ce8e">
-                  <conditions>
-                    <condition field="selections" scope="b81e-3d25-eedb-91c1" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1b99-47c8-2eb7-4101" type="greaterThan"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f64b-3667-5745-62bb" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="db5d-ab31-b99d-5cb7" name="Commander" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-                  <characteristics>
-                    <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This model can include 1 Commander armed with a Long Rifle, Repeater Handgun, and Sword or Rod. If it does, this unit has the HERO keyword. However, if it does, the Look Out, Sir! rule does not apply to this model, and any command traits or artefacts of power only affect attacks made by the Commander.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <categoryLinks>
-                <categoryLink id="306d-197f-1d9b-efaf" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="false"/>
-                <categoryLink id="c7fc-4c22-ad28-556f" name="New CategoryLink" hidden="false" targetId="4e0e-664d-51ea-0929" primary="false"/>
-              </categoryLinks>
-              <selectionEntries>
-                <selectionEntry id="55f3-3bde-88ed-72e6" name="Long Rifle" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f79e-7b8f-5dbc-774b" type="max"/>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bf83-437e-ba04-d05e" type="min"/>
-                  </constraints>
-                  <profiles>
-                    <profile id="b008-6534-055b-ecb7" name="Long Rifle" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
-                      <characteristics>
-                        <characteristic name="Type" typeId="655c-362e-a663-3e50">Missile</characteristic>
-                        <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">30&quot;</characteristic>
-                        <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">1</characteristic>
-                        <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
-                        <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
-                        <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
-                        <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">2</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0.0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="4bdc-7b8b-89b3-db34" name="Repeater Handgun" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="59c2-b0c0-9131-9c5b" type="max"/>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fb02-c379-d559-a5c2" type="min"/>
-                  </constraints>
-                  <profiles>
-                    <profile id="c2e8-8c47-75a0-0b29" name="Repeater Handgun" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
-                      <characteristics>
-                        <characteristic name="Type" typeId="655c-362e-a663-3e50">Missile</characteristic>
-                        <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">16&quot;</characteristic>
-                        <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">D3</characteristic>
-                        <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
-                        <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
-                        <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
-                        <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0.0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="dc8f-bee4-d9f6-0b51" name="Sword or Rod" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7c47-d752-636d-43b3" type="min"/>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="00f2-b286-0401-7f63" type="max"/>
-                  </constraints>
-                  <profiles>
-                    <profile id="1c34-44c8-ef48-d4bc" name="Sword or Rod" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
-                      <characteristics>
-                        <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
-                        <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
-                        <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">2</characteristic>
-                        <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">5+</characteristic>
-                        <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">4+</characteristic>
-                        <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
-                        <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0.0"/>
-                  </costs>
-                </selectionEntry>
-              </selectionEntries>
-              <entryLinks>
-                <entryLink id="4ec8-085e-65ea-87c3" name="Artefacts" hidden="false" collective="false" import="true" targetId="a00c-408d-babb-46bf" type="selectionEntryGroup"/>
-                <entryLink id="2014-9ba9-f933-c30e" name="Command Traits" hidden="false" collective="false" import="true" targetId="6a88-d7b5-6546-bea3" type="selectionEntryGroup"/>
-                <entryLink id="8fae-83ba-e1f7-6c28" name="General" hidden="false" collective="false" import="true" targetId="d618-803c-36f8-0a3a" type="selectionEntry"/>
-              </entryLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="50.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="points" value="200.0"/>
       </costs>
@@ -8036,7 +7916,7 @@ The Rocket Battery and its crew are treated as a single model, using the charact
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink id="87ff-9776-b132-cf88" name="General" hidden="false" collective="false" import="true" targetId="b341-0885-3f1c-7d8a" type="selectionEntry"/>
+        <entryLink id="87ff-9776-b132-cf88" name="General" hidden="false" collective="false" import="true" targetId="d618-803c-36f8-0a3a" type="selectionEntry"/>
         <entryLink id="230e-680e-f3b2-a62e" name="Artefacts" hidden="false" collective="false" import="true" targetId="a00c-408d-babb-46bf" type="selectionEntryGroup"/>
         <entryLink id="ccaa-0a58-e9d9-b657" name="Command Traits" hidden="false" collective="false" import="true" targetId="6a88-d7b5-6546-bea3" type="selectionEntryGroup"/>
         <entryLink id="1bb6-f723-aa10-2db2" name="General&apos;s Adjunct" hidden="false" collective="false" import="true" targetId="4ec5-902a-f5af-5cc6" type="selectionEntry"/>
@@ -8659,7 +8539,7 @@ In addition, until that unit moves, if the unmodified save roll for an attack ma
                 <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="ccd7-d678-30e1-2e26" type="equalTo"/>
                 <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="0e12-40c2-cf92-5bc2" type="equalTo"/>
                 <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="1d1c-6293-dfdb-1b9f" type="equalTo"/>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="8fae-83ba-e1f7-6c28" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="800e-e2f0-9b2b-7535" type="equalTo"/>
                 <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="5b2f-302f-2c13-6c55" type="equalTo"/>
                 <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="cc93-36fd-cabd-cced" type="equalTo"/>
                 <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="ec34-58e6-db73-143d" type="equalTo"/>
@@ -8687,7 +8567,7 @@ In addition, until that unit moves, if the unmodified save roll for an attack ma
                 <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ccd7-d678-30e1-2e26" type="equalTo"/>
                 <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0e12-40c2-cf92-5bc2" type="equalTo"/>
                 <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1d1c-6293-dfdb-1b9f" type="equalTo"/>
-                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8fae-83ba-e1f7-6c28" type="equalTo"/>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="800e-e2f0-9b2b-7535" type="equalTo"/>
                 <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5b2f-302f-2c13-6c55" type="equalTo"/>
                 <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cc93-36fd-cabd-cced" type="equalTo"/>
                 <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ec34-58e6-db73-143d" type="equalTo"/>
@@ -8703,6 +8583,266 @@ In addition, until that unit moves, if the unmodified save roll for an attack ma
       </constraints>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="906e-3ce2-c77a-daef" name="Steam Tank with Commander" hidden="false" collective="false" import="true" type="unit">
+      <profiles>
+        <profile id="42fe-eeb9-01ca-eb76" name="Steam Tank" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
+          <characteristics>
+            <characteristic name="Move" typeId="8655-6213-2824-1752">*</characteristic>
+            <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">12</characteristic>
+            <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">8</characteristic>
+            <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">3+</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="4fc7-4fe9-d41b-30e3" name="More Pressure!" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the start of your hero phase, you can choose to overpressure this model’s boiler. If you do so, roll 2D6. If the roll is less than the number of wounds currently allocated to this model, this model immediately suffers D3 mortal wounds.
+
+If the roll is equal to or greater than the number of wounds currently allocated to this model, until the start of your next hero phase, you can add 2 to this model’s Move characteristic and add 2 to the Attacks characteristic of this model’s Steam Gun.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="6cfc-1fa5-59a3-aca3" name="Steel Behemoth" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">After this model makes a charge move, you can pick 1 enemy unit within 1&quot; of this model and roll a dice. On a 2+, that enemy unit suffers D3 mortal wounds.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="7f87-663c-8d8d-1fee" name="Bouncing Cannon Balls" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">You can add 1 to hit rolls for a Steam Cannon if the target unit has 10 or more models.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="b808-a980-8a09-0568" name="I&apos;ll Fix It" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Instead of using the More Pressure! ability, the Steam Tank Commander can attempt to make repairs to the Steam Tank in your hero phase.  If he does, roll a dice; on a 4 or more he repairs one wound.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="6ed3-f49a-e712-ecc7" name="Wound0" hidden="false" typeId="90d1-a434-348d-a861" typeName="Damage Table">
+          <characteristics>
+            <characteristic name="Variable 1" typeId="420a-645a-ab28-93a0">Wounds Suffered</characteristic>
+            <characteristic name="Variable 2" typeId="4cdd-1e03-530f-0ff7">Move</characteristic>
+            <characteristic name="Variable 3" typeId="b1ea-56be-ba52-16e9">Steam Cannon</characteristic>
+            <characteristic name="Variable 4" typeId="ad26-bf56-95c4-80f1">Steam Gun</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="e622-04ef-148d-33f2" name="Wound1" hidden="false" typeId="90d1-a434-348d-a861" typeName="Damage Table">
+          <characteristics>
+            <characteristic name="Variable 1" typeId="420a-645a-ab28-93a0">0-2</characteristic>
+            <characteristic name="Variable 2" typeId="4cdd-1e03-530f-0ff7">2D6&quot;</characteristic>
+            <characteristic name="Variable 3" typeId="b1ea-56be-ba52-16e9">30&quot;</characteristic>
+            <characteristic name="Variable 4" typeId="ad26-bf56-95c4-80f1">2+</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="8ac9-f802-6e3a-ac44" name="Wound2" hidden="false" typeId="90d1-a434-348d-a861" typeName="Damage Table">
+          <characteristics>
+            <characteristic name="Variable 1" typeId="420a-645a-ab28-93a0">3-4</characteristic>
+            <characteristic name="Variable 2" typeId="4cdd-1e03-530f-0ff7">2D6&quot;</characteristic>
+            <characteristic name="Variable 3" typeId="b1ea-56be-ba52-16e9">24&quot;</characteristic>
+            <characteristic name="Variable 4" typeId="ad26-bf56-95c4-80f1">3+</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="b844-f63d-a2b3-7dc3" name="Wound3" hidden="false" typeId="90d1-a434-348d-a861" typeName="Damage Table">
+          <characteristics>
+            <characteristic name="Variable 1" typeId="420a-645a-ab28-93a0">5-7</characteristic>
+            <characteristic name="Variable 2" typeId="4cdd-1e03-530f-0ff7">D6&quot;</characteristic>
+            <characteristic name="Variable 3" typeId="b1ea-56be-ba52-16e9">18&quot;</characteristic>
+            <characteristic name="Variable 4" typeId="ad26-bf56-95c4-80f1">4+</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="1295-691b-2039-62ee" name="Wound4" hidden="false" typeId="90d1-a434-348d-a861" typeName="Damage Table">
+          <characteristics>
+            <characteristic name="Variable 1" typeId="420a-645a-ab28-93a0">8-9</characteristic>
+            <characteristic name="Variable 2" typeId="4cdd-1e03-530f-0ff7">D6&quot;</characteristic>
+            <characteristic name="Variable 3" typeId="b1ea-56be-ba52-16e9">12&quot;</characteristic>
+            <characteristic name="Variable 4" typeId="ad26-bf56-95c4-80f1">5+</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="efc4-b00c-0dd2-20c7" name="Wound5" hidden="false" typeId="90d1-a434-348d-a861" typeName="Damage Table">
+          <characteristics>
+            <characteristic name="Variable 1" typeId="420a-645a-ab28-93a0">10+</characteristic>
+            <characteristic name="Variable 2" typeId="4cdd-1e03-530f-0ff7">D3&quot;</characteristic>
+            <characteristic name="Variable 3" typeId="b1ea-56be-ba52-16e9">6&quot;</characteristic>
+            <characteristic name="Variable 4" typeId="ad26-bf56-95c4-80f1">6+</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="19d2-2317-d4a0-4650" name="Commander" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This model can include 1 Commander armed with a Long Rifle, Repeater Handgun, and Sword or Rod. If it does, this unit has the HERO keyword. However, if it does, the Look Out, Sir! rule does not apply to this model, and any command traits or artefacts of power only affect attacks made by the Commander.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="094d-ad17-0710-c692" name="New CategoryLink" hidden="false" targetId="2308-7db2-829e-94b3" primary="false"/>
+        <categoryLink id="0e06-cd42-21b1-cf6f" name="New CategoryLink" hidden="false" targetId="4807-239b-4c1d-3211" primary="false"/>
+        <categoryLink id="37b8-514c-fe56-5f6b" name="New CategoryLink" hidden="false" targetId="3805-83b3-bdf5-6342" primary="false"/>
+        <categoryLink id="1124-4aad-1de6-fc3d" name="New CategoryLink" hidden="false" targetId="880e-1e33-b965-71ec" primary="false"/>
+        <categoryLink id="d666-5ad5-1a76-9d04" name="New CategoryLink" hidden="false" targetId="b970-b3bf-e1a4-a6fc" primary="false"/>
+        <categoryLink id="9387-aabd-7814-c012" name="Behemoth" hidden="false" targetId="fa0c-9044-2568-fa02" primary="false"/>
+        <categoryLink id="697e-1397-d764-77e3" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="2400-ebe9-6fdc-9f02" name="Steam Gun" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="eb95-4126-b985-00f7" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="979c-7e66-2685-c5b6" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="1798-cda0-1787-97a8" name="Steam Gun" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Missile</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">8&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">2D6</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">*</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="8bbe-6297-eb18-09a9" name="Steam Cannon" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6163-c4ff-233b-f2c4" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4bbf-82b1-da55-a8df" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="ff65-4f27-b137-e078" name="Steam Cannon" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Missile</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">*</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">1</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">2+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-2</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">D6</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="c973-04d4-113a-74f0" name="Crushing Wheels" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="29cc-46b8-8bb9-3c83" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6231-0dad-2f96-8f5d" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="28b7-e908-b47a-788e" name="Crushing Wheels" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">D6</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">2</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="c516-9035-a61b-66e0" name="Commander" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ac20-8c39-8626-0dfe" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bbd4-0224-0e28-7fef" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="bec5-5db8-58c0-09d5" name="Commander" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+              <characteristics>
+                <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This model can include 1 Commander armed with a Long Rifle, Repeater Handgun, and Sword or Rod. If it does, this unit has the HERO keyword. However, if it does, the Look Out, Sir! rule does not apply to this model, and any command traits or artefacts of power only affect attacks made by the Commander.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <categoryLinks>
+            <categoryLink id="5ac4-2f48-f0f2-2c90" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="false"/>
+            <categoryLink id="4013-573c-2b7f-9fa7" name="New CategoryLink" hidden="false" targetId="4e0e-664d-51ea-0929" primary="false"/>
+          </categoryLinks>
+          <selectionEntries>
+            <selectionEntry id="577e-4961-8e7a-c91b" name="Long Rifle" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e18f-7abe-da7c-fd8a" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6120-fa17-6cf8-2e19" type="min"/>
+              </constraints>
+              <profiles>
+                <profile id="e1db-666e-e43a-d155" name="Long Rifle" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+                  <characteristics>
+                    <characteristic name="Type" typeId="655c-362e-a663-3e50">Missile</characteristic>
+                    <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">30&quot;</characteristic>
+                    <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">1</characteristic>
+                    <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+                    <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+                    <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
+                    <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">2</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="abdc-5e42-cf58-8318" name="Repeater Handgun" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="40da-aaf0-adea-e716" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ed49-fbe8-a85d-06af" type="min"/>
+              </constraints>
+              <profiles>
+                <profile id="e64c-7175-38da-dac6" name="Repeater Handgun" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+                  <characteristics>
+                    <characteristic name="Type" typeId="655c-362e-a663-3e50">Missile</characteristic>
+                    <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">16&quot;</characteristic>
+                    <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">D3</characteristic>
+                    <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
+                    <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+                    <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
+                    <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="0d55-f6c8-29eb-c855" name="Sword or Rod" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0930-3b54-81cf-402b" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8b08-3c5b-03ce-4a37" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="ba4e-c50f-3246-c917" name="Sword or Rod" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+                  <characteristics>
+                    <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                    <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
+                    <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">2</characteristic>
+                    <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">5+</characteristic>
+                    <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">4+</characteristic>
+                    <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
+                    <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <entryLinks>
+            <entryLink id="e524-1e53-30b0-956e" name="Artefacts" hidden="false" collective="false" import="true" targetId="a00c-408d-babb-46bf" type="selectionEntryGroup"/>
+            <entryLink id="89a6-a301-82fa-f89e" name="Command Traits" hidden="false" collective="false" import="true" targetId="6a88-d7b5-6546-bea3" type="selectionEntryGroup"/>
+            <entryLink id="800e-e2f0-9b2b-7535" name="General" hidden="false" collective="false" import="true" targetId="d618-803c-36f8-0a3a" type="selectionEntry"/>
+          </entryLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="50.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <costs>
+        <cost name="pts" typeId="points" value="200.0"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>
