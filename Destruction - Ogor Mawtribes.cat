@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="86c6-f50d-4d44-9d02" name="Destruction - Ogor Mawtribes" revision="2" battleScribeVersion="2.03" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="6" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="86c6-f50d-4d44-9d02" name="Destruction - Ogor Mawtribes" revision="3" battleScribeVersion="2.03" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="6" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="50c5-e039-pubN80915" name="Destruction Battletomb: Ironjawz"/>
     <publication id="50c5-e039-pubN81384" name="Destruction Battletome: Ogor Mawtribes"/>
@@ -166,6 +166,7 @@
         <categoryLink id="5dcd-f2f3-eb48-0fa6" hidden="false" targetId="be17-6bbd-b857-3f43" primary="true"/>
       </categoryLinks>
     </entryLink>
+    <entryLink id="dc1f-b1c5-68f7-daa2" name="Battalion: Kin-Eater&apos;s Bully Boys" hidden="false" collective="false" import="true" targetId="216f-28d8-d012-9705" type="selectionEntry"/>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="9dbb-2d1a-12d8-7faf" name="Allegiance" hidden="false" collective="false" import="true" type="upgrade">
@@ -1925,7 +1926,7 @@ At the end of your movement phase, you can set up this model anywhere on the bat
         <categoryLink id="a34c-48d4-2a99-387e" name="New CategoryLink" hidden="false" targetId="065e-fda7-fd27-1f40" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="c2ff-da0b-4858-526c" name="2 Mournfang Pack" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="c2ff-da0b-4858-526c" name="2 Mournfang Pack" hidden="false" collective="false" import="true" type="model">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="minSelections" type="min"/>
             <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
@@ -1959,6 +1960,7 @@ At the end of your movement phase, you can set up this model anywhere on the bat
         <selectionEntry id="558d-e8d9-ead7-6fcd" name="Ironlock Pistol" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b514-6abf-065d-465a" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="70ac-f155-8c17-834e" type="min"/>
           </constraints>
           <profiles>
             <profile id="22b3-65a5-0b41-fd60" name="Ironlock Pistol" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
@@ -1978,6 +1980,13 @@ At the end of your movement phase, you can set up this model anywhere on the bat
           </costs>
         </selectionEntry>
         <selectionEntry id="6520-408b-bfa0-b978" name="Banner Bearer" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7d29-960f-93ca-63b8" type="max"/>
           </constraints>
@@ -1993,6 +2002,13 @@ At the end of your movement phase, you can set up this model anywhere on the bat
           </costs>
         </selectionEntry>
         <selectionEntry id="d470-4dfa-bb23-352c" name="Horn Blower" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8d74-1728-d4e0-bfba" type="max"/>
           </constraints>
@@ -3178,6 +3194,13 @@ D6 Effect
           </costs>
         </selectionEntry>
         <selectionEntry id="69d9-f1c6-b444-edac" name="Bellower" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bfd1-ca18-f4bd-b8de" type="max"/>
           </constraints>
@@ -3192,17 +3215,21 @@ D6 Effect
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="b4d6-d2b9-4f6f-6db1" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="b4d6-d2b9-4f6f-6db1" name="Tribal Banner Bearer" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9684-8cde-3500-f656" type="max"/>
           </constraints>
           <profiles>
-            <profile id="920b-2e4b-4bdb-2644" name="Standard Bearer" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+            <profile id="920b-2e4b-4bdb-2644" name="Tribal Banner Bearer" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
               <characteristics>
-                <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 in every 6 models in this unit can be a Beast Skull Bearer, and 1 in every 6 models in this unit can be a Tribal Banner Bearer.
-
-Beast Skull Bearer: You can re-roll charge rolls for this unit while it includes any Beast Skull Bearers.
-Tribal Banner Bearer: Add 1 to the Bravery characteristic of this unit while it includes any Tribal Banner Bearers.</characteristic>
+                <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 in every 6 models in this unit can be a Tribal Banner Bearer. Add 1 to the Bravery characteristic of this unit while it includes any Tribal Banner Bearers.</characteristic>
               </characteristics>
             </profile>
             <profile id="8691-b406-2f5e-0e32" name="Lookout Gnoblar" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
@@ -3230,6 +3257,33 @@ Tribal Banner Bearer: Add 1 to the Bravery characteristic of this unit while it 
                 <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
                 <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
                 <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="eabd-7a82-3b23-e3bc" name="Beast Skull Bearer" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="477f-6e42-f67a-34f9" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="b659-0432-331a-7c51" name="Beast Skull Bearer" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+              <characteristics>
+                <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 in every 6 models in this unit can be a Beast Skull Bearer. You can re-roll charge rolls for this unit while it includes any Beast Skull Bearers.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="0251-e6e9-ea8a-c8f0" name="Lookout Gnoblar" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+              <characteristics>
+                <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Any Tribal Banner Bearers in this unit can have a Lookout Gnoblar. Roll a dice each time you allocate a wound inflicted by a missile weapon to a unit that includes any Lookout Gnoblars. On a 6, that wound is negated.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -3416,46 +3470,6 @@ In addition, each time a unit with any Rune Maw Bearers is affected by a spell o
           </costs>
         </selectionEntry>
       </selectionEntries>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="fa0b-3393-072a-d2e9" name="Ironfist or Paired Weapons" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0692-9090-bb57-3260" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b7d4-6659-6984-f626" type="min"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="a2bd-af0b-df12-11f0" name="Ironfist" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8a76-24ea-e999-b43e" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="9c70-7a6a-bc75-9d57" name="Ironfist" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-                  <characteristics>
-                    <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If the unmodified save roll for an attack made with a melee weapon that targets a unit armed with Ironfists is 6, the attacking unit suffers 1 mortal wound after all of its attacks have been resolved.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="points" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="20c8-f6dc-a418-e849" name="Paired Clubs or Blades" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3572-fec5-8759-315c" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="fbc3-e13c-dd18-0725" name="Paired Clubs or Blades" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-                  <characteristics>
-                    <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If the unmodified hit roll for an attack made with paired Clubs or Blades is 6, that attack inflicts 2 hits on the target instead of 1. Make a wound and save roll for each hit.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="points" value="0.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
@@ -3553,7 +3567,7 @@ In addition, each time a unit with any Rune Maw Bearers is affected by a spell o
             <conditionGroup type="and">
               <conditions>
                 <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="007b-7ecb-a450-1685" type="equalTo"/>
-                <condition field="selections" scope="1093-bd84-79cf-c379" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="equalTo"/>
+                <condition field="selections" scope="1093-bd84-79cf-c379" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="atLeast"/>
               </conditions>
               <conditionGroups>
                 <conditionGroup type="or">
@@ -3723,6 +3737,9 @@ In addition, each time a unit with any Rune Maw Bearers is affected by a spell o
               </characteristics>
             </profile>
           </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="bf1d-2c32-c085-817a" name="Ironblaster Cannon" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -3854,6 +3871,9 @@ In addition, each time a unit with any Rune Maw Bearers is affected by a spell o
               </characteristics>
             </profile>
           </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="f049-e455-a7b0-487f" name="Piles of Old Scrap" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -4482,11 +4502,61 @@ In addition, if this spell is successfully cast, add 1 to save rolls for attacks
         <cost name="pts" typeId="points" value="120.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="216f-28d8-d012-9705" name="Battalion: Kin-Eater&apos;s Bully Boys" hidden="false" collective="false" import="true" type="upgrade">
+      <profiles>
+        <profile id="bf58-762e-af6b-ade0" name="The Tyrant’s Butcher" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
+          <characteristics>
+            <characteristic name="Battalion Ability Details" typeId="08e0-9ead-1dbe-c801">The SLAUGHTERMASTER from this battalion can use its Great Cauldron ability twice in each of your hero phases instead of once.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="9052-feec-2b0b-d830" name="1. Tyrant" hidden="false" collective="false" import="true" defaultSelectionEntryId="57f6-04b7-6b3a-39b0">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6b4f-06aa-7300-b1ae" type="min"/>
+            <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="18c9-5b53-8cdb-f106" type="max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="57f6-04b7-6b3a-39b0" name="Tyrant" hidden="false" collective="false" import="true" targetId="5061-05bb-783b-374a" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="5c69-7202-b1db-5c1d" name="2. Ogor Gluttons" hidden="false" collective="false" import="true" defaultSelectionEntryId="7053-de8e-3c96-8372">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="83b4-6f2b-60b1-0a1d" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d7cf-4bd4-c3fd-8f6a" type="max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="7053-de8e-3c96-8372" name="Ogor Gluttons" hidden="false" collective="false" import="true" targetId="7aa5-e4c6-a836-9ef6" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="e628-5974-b07b-02aa" name="4. Ironblaster" hidden="false" collective="false" import="true" defaultSelectionEntryId="7922-0a9b-c491-29c8">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5357-53b4-d309-7822" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0777-8d3d-73bf-9d2d" type="max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="7922-0a9b-c491-29c8" name="Ironblaster" hidden="false" collective="false" import="true" targetId="45a4-4ebd-c321-751b" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="99cf-6d66-1407-e682" name="3. Leadbelchers" hidden="false" collective="false" import="true" defaultSelectionEntryId="0a75-16d3-8bd8-d699">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9c42-4d6d-f57a-e4c7" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="49f6-af0a-d184-a682" type="max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="0a75-16d3-8bd8-d699" name="Leadbelchers" hidden="false" collective="false" import="true" targetId="1093-bd84-79cf-c379" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="points" value="120.0"/>
+      </costs>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="e342-fd48-5b29-c708" name="Artefacts: Tyrant&apos;s Plunder" publicationId="50c5-e039-pubN81384" page="74" hidden="true" collective="false" import="true">
       <modifiers>
-        <modifier type="set" field="hidden" value="true">
+        <modifier type="set" field="hidden" value="false">
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
@@ -5387,14 +5457,14 @@ In addition, if this spell is successfully cast, add 1 to save rolls for attacks
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
-    <selectionEntryGroup id="aac6-2e89-5416-0d9d" name="Lore of Gutmagic" publicationId="50c5-e039-pubN81384" page="76" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="aac6-2e89-5416-0d9d" name="Lore of Gutmagic" publicationId="50c5-e039-pubN81384" page="76" hidden="true" collective="false" import="true">
       <modifiers>
-        <modifier type="set" field="hidden" value="true">
+        <modifier type="set" field="hidden" value="false">
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="007b-7ecb-a450-1685" type="lessThan"/>
-                <condition field="selections" scope="ancestor" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6005-aabb-fca3-f8ca" type="notInstanceOf"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="007b-7ecb-a450-1685" type="equalTo"/>
+                <condition field="selections" scope="ancestor" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6005-aabb-fca3-f8ca" type="instanceOf"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -5502,14 +5572,14 @@ In addition, if this spell is successfully cast, add 1 to save rolls for attacks
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
-    <selectionEntryGroup id="71ee-de28-1a4e-9d49" name="Lore of the Sun-Eater" publicationId="50c5-e039-pubN81384" page="77" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="71ee-de28-1a4e-9d49" name="Lore of the Sun-Eater" publicationId="50c5-e039-pubN81384" page="77" hidden="true" collective="false" import="true">
       <modifiers>
-        <modifier type="set" field="hidden" value="true">
+        <modifier type="set" field="hidden" value="false">
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="007b-7ecb-a450-1685" type="lessThan"/>
-                <condition field="selections" scope="ancestor" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="927c-2902-0852-853b" type="notInstanceOf"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="007b-7ecb-a450-1685" type="equalTo"/>
+                <condition field="selections" scope="ancestor" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="927c-2902-0852-853b" type="instanceOf"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
