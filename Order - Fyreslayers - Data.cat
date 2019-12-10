@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="81cf-7df5-86e6-b78f" name="Order - Fyreslayers - Data" revision="34" battleScribeVersion="2.03" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="81cf-7df5-86e6-b78f" name="Order - Fyreslayers - Data" revision="36" battleScribeVersion="2.03" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="e67a-06d2-pubN65537" name="Order Battletome: Fyreslayers"/>
     <publication id="e67a-06d2-pubN69594" name="Battletome: Fyreslayers Errata, July 2018"/>
@@ -217,6 +217,24 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="1823-43dd-1af2-b910" name="Auric Hearthguard" publicationId="e67a-06d2-pubN65537" page="111" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set-primary" field="category" value="e9f2-765a-b7b8-ce8e">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="94c9-6cd1-da31-5c7e" type="greaterThan"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a089-15db-b9ac-fc2f" type="greaterThan"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="afd0-613f-c3f8-31c9" name="Karl" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
@@ -242,6 +260,7 @@
         <categoryLink id="19f9-54db-f2bf-6ffc" name="New CategoryLink" hidden="false" targetId="945b-2f5e-58f0-75e2" primary="false"/>
         <categoryLink id="9ea0-0d64-c7e8-ae1d" name="New CategoryLink" hidden="false" targetId="b970-b3bf-e1a4-a6fc" primary="false"/>
         <categoryLink id="925c-f873-1f88-9ab5" name="New CategoryLink" hidden="false" targetId="4ec3-efa9-35ba-d55f" primary="false"/>
+        <categoryLink id="0989-e60b-2d3e-5253" name="Other" hidden="false" targetId="065e-fda7-fd27-1f40" primary="true"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="1b98-d13e-3461-998c" name="5 Auric Hearthguards" hidden="false" collective="false" import="true" type="model">
@@ -348,6 +367,7 @@
         <categoryLink id="9fcd-87b0-5f74-11a7" name="New CategoryLink" hidden="false" targetId="4e0e-664d-51ea-0929" primary="false"/>
         <categoryLink id="1d66-8915-ae19-7beb" name="New CategoryLink" hidden="false" targetId="4ec3-efa9-35ba-d55f" primary="false"/>
         <categoryLink id="c7e5-be47-fd04-e4a7" name="New CategoryLink" hidden="false" targetId="b970-b3bf-e1a4-a6fc" primary="false"/>
+        <categoryLink id="6eec-04d9-97b0-7fb4" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="bc39-a830-aaee-f739" name="General" hidden="false" collective="false" import="true" type="upgrade">
@@ -490,9 +510,9 @@
             <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Roll a dice each time a wound is allocated to this model that was inflicted by a melee weapon. On a 4+ the attacking unit suffers 1 mortal wound.</characteristic>
           </characteristics>
         </profile>
-        <profile id="9afd-5078-b947-454b" name="Steadfast Advance" publicationId="e67a-06d2-pubN69594" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
+        <profile id="9afd-5078-b947-454b" name="Steadfast Advance" publicationId="e67a-06d2-pubN69594" hidden="false" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
           <characteristics>
-            <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">You can use this command ability at the start of your hero phase. If you do so, pick a friendly model with this command ability. Until the start of your next hero phase, do not take battleshock tests for friendly FYRESLAYERS units while they are wholly within 18&quot; of that model.</characteristic>
+            <characteristic name="Command Ability Details" typeId="1b71-4c83-4e8c-093f">You can use this command ability at the start of your hero phase. If you do so, pick a friendly model with this command ability. Until the start of your next hero phase, do not take battleshock tests for friendly FYRESLAYERS units while they are wholly within 18&quot; of that model.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -508,6 +528,7 @@
         <categoryLink id="3de1-5578-3e7a-2c91" name="New CategoryLink" hidden="false" targetId="1959-9f6a-3056-913a" primary="false"/>
         <categoryLink id="5f63-b298-df82-a99b" name="New CategoryLink" hidden="false" targetId="4ec3-efa9-35ba-d55f" primary="false"/>
         <categoryLink id="4bbe-0733-f406-c7bf" name="New CategoryLink" hidden="false" targetId="b970-b3bf-e1a4-a6fc" primary="false"/>
+        <categoryLink id="a33a-ad78-b55b-b7d4" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="c836-b70c-9bfc-8a9d" name="Latchkey Grandaxe" hidden="false" collective="false" import="true" type="upgrade">
@@ -672,6 +693,7 @@
         <categoryLink id="b063-c16f-b2b3-1951" name="New CategoryLink" hidden="false" targetId="e8a5-e4c1-3d11-e7dd" primary="false"/>
         <categoryLink id="300f-0c31-b3b0-67e7" name="New CategoryLink" hidden="false" targetId="4ec3-efa9-35ba-d55f" primary="false"/>
         <categoryLink id="25fc-d7ad-4cc5-d9c0" name="New CategoryLink" hidden="false" targetId="b970-b3bf-e1a4-a6fc" primary="false"/>
+        <categoryLink id="e8f7-c813-c32c-e6d7" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="a089-15db-b9ac-fc2f" name="General" hidden="false" collective="false" import="true" type="upgrade">
@@ -792,6 +814,7 @@
         <categoryLink id="9296-9259-1edb-0b84" name="New CategoryLink" hidden="false" targetId="e8a5-e4c1-3d11-e7dd" primary="false"/>
         <categoryLink id="080e-9859-0d0e-9c00" name="New CategoryLink" hidden="false" targetId="4ec3-efa9-35ba-d55f" primary="false"/>
         <categoryLink id="67c4-33f2-9870-21b5" name="New CategoryLink" hidden="false" targetId="b970-b3bf-e1a4-a6fc" primary="false"/>
+        <categoryLink id="2119-b77c-db5e-af9f" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="ba19-48b7-c394-3143" name="Latch-axe" hidden="false" collective="false" import="true" type="upgrade">
@@ -978,6 +1001,7 @@
         <categoryLink id="d086-b668-b295-b04b" name="New CategoryLink" hidden="false" targetId="e8a5-e4c1-3d11-e7dd" primary="false"/>
         <categoryLink id="661c-8be5-aff5-a5f4" name="New CategoryLink" hidden="false" targetId="4ec3-efa9-35ba-d55f" primary="false"/>
         <categoryLink id="d385-14ec-db53-f37a" name="New CategoryLink" hidden="false" targetId="b970-b3bf-e1a4-a6fc" primary="false"/>
+        <categoryLink id="fba5-7195-1bed-2b3f" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="a2f0-83df-d9e1-422c" name="Latch-axe" hidden="false" collective="false" import="true" type="upgrade">
@@ -1153,9 +1177,9 @@
             <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">You can re-roll hit rolls for attacks made by this model if there are any other friendly AURIC RUNESONS within 6&quot; of this model.</characteristic>
           </characteristics>
         </profile>
-        <profile id="65db-4215-296a-fa3f" name="Dauntless Assault" publicationId="e67a-06d2-pubN69594" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
+        <profile id="65db-4215-296a-fa3f" name="Dauntless Assault" publicationId="e67a-06d2-pubN69594" hidden="false" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
           <characteristics>
-            <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">You can use this command ability at the start of the combat phase. If you do so, pick a friendly model with this command ability. Add 1 to wound rolls for attacks made by friendly FYRESLAYERS units wholly within 12&quot; of that model until the end of that phase.</characteristic>
+            <characteristic name="Command Ability Details" typeId="1b71-4c83-4e8c-093f">You can use this command ability at the start of the combat phase. If you do so, pick a friendly model with this command ability. Add 1 to wound rolls for attacks made by friendly FYRESLAYERS units wholly within 12&quot; of that model until the end of that phase.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1165,6 +1189,7 @@
         <categoryLink id="10f4-ad02-c949-d2c5" name="New CategoryLink" hidden="false" targetId="4e0e-664d-51ea-0929" primary="false"/>
         <categoryLink id="d6af-3002-e3c0-fe0e" name="New CategoryLink" hidden="false" targetId="4ec3-efa9-35ba-d55f" primary="false"/>
         <categoryLink id="2b51-6d8f-1825-baf7" name="New CategoryLink" hidden="false" targetId="b970-b3bf-e1a4-a6fc" primary="false"/>
+        <categoryLink id="a8ad-d846-7058-93bf" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="c4cc-8624-7a84-9f5c" name="Fyresteel Throwing Axe" hidden="false" collective="false" import="true" type="upgrade">
@@ -1335,9 +1360,9 @@
             <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">You can re-roll hit rolls for attacks made by this model if there are any other friendly AURIC RUNESONS within 6&quot; of this model.</characteristic>
           </characteristics>
         </profile>
-        <profile id="2be6-9c70-e4d8-7b6d" name="Molten Battering Ram" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
+        <profile id="2be6-9c70-e4d8-7b6d" name="Molten Battering Ram" hidden="false" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
           <characteristics>
-            <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">You can use this command ability at the start of your charge phase. If you do so, pick 1 friendly MAGMADROTH that is within 12&quot; of a friendly model with this command ability. After that unit makes a charge move in that charge phase, you can pick 1 enemy unit within 1&quot; of that model and roll a dice. On a 2+ that enemy unit suffers D6 mortal wounds. The same unit cannot be picked to be affected by this command ability more than once per phase.</characteristic>
+            <characteristic name="Command Ability Details" typeId="1b71-4c83-4e8c-093f">You can use this command ability at the start of your charge phase. If you do so, pick 1 friendly MAGMADROTH that is within 12&quot; of a friendly model with this command ability. After that unit makes a charge move in that charge phase, you can pick 1 enemy unit within 1&quot; of that model and roll a dice. On a 2+ that enemy unit suffers D6 mortal wounds. The same unit cannot be picked to be affected by this command ability more than once per phase.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1349,6 +1374,7 @@
         <categoryLink id="ef19-a984-37ad-b11e" name="New CategoryLink" hidden="false" targetId="1959-9f6a-3056-913a" primary="false"/>
         <categoryLink id="91ed-85be-b97e-05ca" name="New CategoryLink" hidden="false" targetId="4ec3-efa9-35ba-d55f" primary="false"/>
         <categoryLink id="bb82-ec7a-77b9-0ada" name="New CategoryLink" hidden="false" targetId="b970-b3bf-e1a4-a6fc" primary="false"/>
+        <categoryLink id="8395-e78e-e205-cfea" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="d711-1699-f6a3-b8a3" name="Claws and Horns" hidden="false" collective="false" import="true" type="upgrade">
@@ -1516,6 +1542,9 @@
           </characteristics>
         </profile>
       </profiles>
+      <categoryLinks>
+        <categoryLink id="4a4b-b6d8-c776-75cf" name="New CategoryLink" hidden="false" targetId="be17-6bbd-b857-3f43" primary="true"/>
+      </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="6de7-d5fd-4626-61c6" name="3 Auric Hearthguard Units" hidden="false" collective="false" import="true">
           <constraints>
@@ -1523,40 +1552,7 @@
             <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0cbf-e8db-46c3-8fd6" type="max"/>
           </constraints>
           <entryLinks>
-            <entryLink id="52e8-9639-b7f4-5be6" name="Auric Hearthguard" hidden="false" collective="false" import="true" targetId="1823-43dd-1af2-b910" type="selectionEntry">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="94c9-6cd1-da31-5c7e" type="equalTo"/>
-                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a089-15db-b9ac-fc2f" type="equalTo"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <categoryLinks>
-                <categoryLink id="7d26-abe7-cc5e-95cd" name="New CategoryLink" hidden="false" targetId="e9f2-765a-b7b8-ce8e" primary="true"/>
-              </categoryLinks>
-            </entryLink>
-            <entryLink id="905f-f008-04cf-d059" name="Auric Hearthguard" hidden="false" collective="false" import="true" targetId="1823-43dd-1af2-b910" type="selectionEntry">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="94c9-6cd1-da31-5c7e" type="equalTo"/>
-                        <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a089-15db-b9ac-fc2f" type="equalTo"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <categoryLinks>
-                <categoryLink id="52b3-5249-a3d4-0fe9" hidden="false" targetId="065e-fda7-fd27-1f40" primary="true"/>
-              </categoryLinks>
-            </entryLink>
+            <entryLink id="52e8-9639-b7f4-5be6" name="Auric Hearthguard" hidden="false" collective="false" import="true" targetId="1823-43dd-1af2-b910" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
         <selectionEntryGroup id="fba5-dddf-946f-ab51" name="1 Auric Runesmiter or Auric Runesmiter on Magmadroth" hidden="false" collective="false" import="true">
@@ -1591,6 +1587,9 @@
           </characteristics>
         </profile>
       </profiles>
+      <categoryLinks>
+        <categoryLink id="6af5-20f1-3351-8eef" name="New CategoryLink" hidden="false" targetId="be17-6bbd-b857-3f43" primary="true"/>
+      </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="c767-6b77-5b30-be98" name="1 Forge Brethren Battalion" hidden="false" collective="false" import="true">
           <constraints>
@@ -1631,7 +1630,7 @@
             </entryLink>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup id="a894-630d-0017-b9f0" name="0-1 Doomseekers" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="a894-630d-0017-b9f0" name="0-1 Doomseeker" hidden="false" collective="false" import="true">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7925-d999-d789-2fbc" type="max"/>
           </constraints>
@@ -1639,7 +1638,7 @@
             <entryLink id="6fba-d5cc-63e2-6f8f" name="Doomseeker" hidden="false" collective="false" import="true" targetId="5480-a1cb-81b1-45c7" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup id="b643-290d-c2cd-615c" name="0-1 Grimwrath Berzerkers" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="b643-290d-c2cd-615c" name="0-1 Grimwrath Berzerker" hidden="false" collective="false" import="true">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5db0-d5f9-455d-9b25" type="max"/>
           </constraints>
@@ -1660,8 +1659,11 @@
           </characteristics>
         </profile>
       </profiles>
+      <categoryLinks>
+        <categoryLink id="4900-32fe-188d-ecf2" name="New CategoryLink" hidden="false" targetId="be17-6bbd-b857-3f43" primary="true"/>
+      </categoryLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="67a0-4aa9-a5a8-c4a2" name="1 Auric Runefather or AuricRunefather on Magmadroth" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="67a0-4aa9-a5a8-c4a2" name="1 Auric Runefather or Auric Runefather on Magmadroth" hidden="false" collective="false" import="true">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1ee5-5b02-ee21-31d8" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="def2-137f-e302-3584" type="max"/>
@@ -1712,40 +1714,7 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9863-7387-cf45-d016" type="max"/>
           </constraints>
           <entryLinks>
-            <entryLink id="c6f1-19bc-6096-86e9" name="Hearthguard Berzerkers" hidden="false" collective="false" import="true" targetId="3973-d948-c464-bddc" type="selectionEntry">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="94c9-6cd1-da31-5c7e" type="equalTo"/>
-                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bc39-a830-aaee-f739" type="equalTo"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <categoryLinks>
-                <categoryLink id="2e6b-93be-d18e-879b" name="New CategoryLink" hidden="false" targetId="e9f2-765a-b7b8-ce8e" primary="true"/>
-              </categoryLinks>
-            </entryLink>
-            <entryLink id="df41-2fc7-8730-0d48" name="Hearthguard Berzerkers" hidden="false" collective="false" import="true" targetId="3973-d948-c464-bddc" type="selectionEntry">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="94c9-6cd1-da31-5c7e" type="equalTo"/>
-                        <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bc39-a830-aaee-f739" type="equalTo"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <categoryLinks>
-                <categoryLink id="ba6e-d6f7-22b4-3bbd" hidden="false" targetId="065e-fda7-fd27-1f40" primary="true"/>
-              </categoryLinks>
-            </entryLink>
+            <entryLink id="c6f1-19bc-6096-86e9" name="Hearthguard Berzerkers" hidden="false" collective="false" import="true" targetId="3973-d948-c464-bddc" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -1761,6 +1730,9 @@
           </characteristics>
         </profile>
       </profiles>
+      <categoryLinks>
+        <categoryLink id="3b13-81b4-3de5-ca57" name="New CategoryLink" hidden="false" targetId="be17-6bbd-b857-3f43" primary="true"/>
+      </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="991e-34f5-8f9d-4c40" name="1 Auric Runeson or Auric Runeson on Magmadroth" hidden="false" collective="false" import="true">
           <constraints>
@@ -1787,42 +1759,7 @@
             <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="aba3-3177-eded-8498" type="max"/>
           </constraints>
           <entryLinks>
-            <entryLink id="b0c0-b63e-ffa3-9f86" name="Vulkite Bezerkers" hidden="false" collective="false" import="true" targetId="5380-8f39-8882-eae7" type="selectionEntry">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="62e4-370f-3318-cdbd" type="instanceOf"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="78f3-8a59-699a-61e8" type="instanceOf"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b78c-c342-c8aa-aa45" type="instanceOf"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <categoryLinks>
-                <categoryLink id="db6f-994e-20f9-5c00" hidden="false" targetId="e9f2-765a-b7b8-ce8e" primary="true"/>
-              </categoryLinks>
-            </entryLink>
-            <entryLink id="6789-1ac6-fc6c-6263" name="Vulkite Bezerkers" hidden="false" collective="false" import="true" targetId="5380-8f39-8882-eae7" type="selectionEntry">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="62e4-370f-3318-cdbd" type="notInstanceOf"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="78f3-8a59-699a-61e8" type="notInstanceOf"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b78c-c342-c8aa-aa45" type="notInstanceOf"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <categoryLinks>
-                <categoryLink id="d95c-89f6-57c4-4d58" name="New CategoryLink" hidden="false" targetId="065e-fda7-fd27-1f40" primary="true"/>
-              </categoryLinks>
-            </entryLink>
+            <entryLink id="6789-1ac6-fc6c-6263" name="Vulkite Bezerkers" hidden="false" collective="false" import="true" targetId="5380-8f39-8882-eae7" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -1858,6 +1795,7 @@
         <categoryLink id="219d-a84f-2f2e-c7e8" name="New CategoryLink" hidden="false" targetId="3504-ea8e-28ec-5150" primary="false"/>
         <categoryLink id="3eb9-f332-6d2a-a91d" name="New CategoryLink" hidden="false" targetId="4ec3-efa9-35ba-d55f" primary="false"/>
         <categoryLink id="930d-0010-b597-46a5" name="New CategoryLink" hidden="false" targetId="b970-b3bf-e1a4-a6fc" primary="false"/>
+        <categoryLink id="2c07-53fe-0cc4-b7b9" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="050f-a99e-22ce-ac24" name="Ancestral Battle-axe" hidden="false" collective="false" import="true" type="upgrade">
@@ -1931,6 +1869,7 @@
         <categoryLink id="aa8a-9d7b-b714-bfe7" name="New CategoryLink" hidden="false" targetId="58a0-8e1a-977d-dbf4" primary="false"/>
         <categoryLink id="b8db-807b-576c-7542" name="New CategoryLink" hidden="false" targetId="4ec3-efa9-35ba-d55f" primary="false"/>
         <categoryLink id="de38-8557-4f25-8c5a" name="New CategoryLink" hidden="false" targetId="b970-b3bf-e1a4-a6fc" primary="false"/>
+        <categoryLink id="6042-3b64-5d13-cc02" name="New CategoryLink" hidden="false" targetId="065e-fda7-fd27-1f40" primary="true"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="2c47-36b4-0799-cbd5" name="Doomseeker Axe" hidden="false" collective="false" import="true" type="upgrade">
@@ -2029,6 +1968,7 @@
         <categoryLink id="7bc9-d7a9-eb4a-6a22" name="New CategoryLink" hidden="false" targetId="4e0e-664d-51ea-0929" primary="false"/>
         <categoryLink id="af9e-f114-cf4f-9a3f" name="New CategoryLink" hidden="false" targetId="4ec3-efa9-35ba-d55f" primary="false"/>
         <categoryLink id="0396-745c-3072-1627" name="New CategoryLink" hidden="false" targetId="b970-b3bf-e1a4-a6fc" primary="false"/>
+        <categoryLink id="ae53-42ab-20de-7666" name="New CategoryLink" hidden="false" targetId="065e-fda7-fd27-1f40" primary="true"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="6134-070c-3848-02e3" name="Fyrestorm Greataxe" hidden="false" collective="false" import="true" type="upgrade">
@@ -2074,6 +2014,25 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="3973-d948-c464-bddc" name="Hearthguard Berzerkers" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set-primary" field="category" value="e9f2-765a-b7b8-ce8e">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="94c9-6cd1-da31-5c7e" type="greaterThan"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0ab0-6e07-ea9d-aed9" type="greaterThan"/>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bc39-a830-aaee-f739" type="greaterThan"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="7f1a-1a1d-c3d8-4c43" name="Hearthguard Berzerkers" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
           <characteristics>
@@ -2099,6 +2058,7 @@
         <categoryLink id="aa40-6bc9-f4da-c26e" name="New CategoryLink" hidden="false" targetId="1089-32fd-fc13-0319" primary="false"/>
         <categoryLink id="9153-544a-2c84-e4c6" name="New CategoryLink" hidden="false" targetId="4ec3-efa9-35ba-d55f" primary="false"/>
         <categoryLink id="7675-ced7-3ebf-28cf" name="New CategoryLink" hidden="false" targetId="b970-b3bf-e1a4-a6fc" primary="false"/>
+        <categoryLink id="04fe-3c41-7a98-8434" name="New CategoryLink" hidden="false" targetId="065e-fda7-fd27-1f40" primary="true"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="b1d0-e370-cb9b-eeca" name="5 Hearthguard Berzerkers" hidden="false" collective="false" import="true" type="model">
@@ -2137,7 +2097,7 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7fe2-0a59-850e-346a" type="max"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="0d9b-653b-9b6d-fa3a" name="Bezerker Broadaxe" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="0d9b-653b-9b6d-fa3a" name="Berzerker Broadaxe" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="eb2b-dcf5-c05a-9fe7" type="max"/>
               </constraints>
@@ -2191,9 +2151,9 @@
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="5380-8f39-8882-eae7" name="Vulkite Bezerkers" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="5380-8f39-8882-eae7" name="Vulkite Berzerkers" hidden="false" collective="false" import="true" type="unit">
       <profiles>
-        <profile id="cbcb-b0e8-43fb-a160" name="Vulkite Bezerkers" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
+        <profile id="cbcb-b0e8-43fb-a160" name="Vulkite Berzerkers" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
           <characteristics>
             <characteristic name="Move" typeId="8655-6213-2824-1752">4&quot;</characteristic>
             <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">2</characteristic>
@@ -2206,7 +2166,7 @@
             <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 model in this unit can be a Karl. Add 1 to the Attacks characteristic of that model’s melee weapons.</characteristic>
           </characteristics>
         </profile>
-        <profile id="2c14-3399-9080-8ea3" name="Bezerk Fury" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+        <profile id="2c14-3399-9080-8ea3" name="Berzerk Fury" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
             <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Once per battle, at the start of the combat phase, you can choose to unleash this unit’s berserk fury. If you do so, until the end of that phase, if a model from this unit is slain, before that model is removed from play, that model can make a pile-in move and then attack with all of the melee weapons it is armed with.</characteristic>
           </characteristics>
@@ -2222,6 +2182,7 @@
         <categoryLink id="8ab7-c8ab-eee2-d6b9" name="New CategoryLink" hidden="false" targetId="57af-4591-5841-0c21" primary="false"/>
         <categoryLink id="7fa4-7dcc-d3ff-1e3d" name="New CategoryLink" hidden="false" targetId="4ec3-efa9-35ba-d55f" primary="false"/>
         <categoryLink id="ad27-105a-2e60-c7b9" name="New CategoryLink" hidden="false" targetId="b970-b3bf-e1a4-a6fc" primary="false"/>
+        <categoryLink id="2b06-fc34-e87f-908f" name="New CategoryLink" hidden="false" targetId="e9f2-765a-b7b8-ce8e" primary="true"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="5cd4-7e3c-e940-22a6" name="10 Vulkite Berzerkers" hidden="false" collective="false" import="true" type="model">
@@ -2383,6 +2344,7 @@
         <categoryLink id="241b-50f7-9244-4c79" name="New CategoryLink" hidden="false" targetId="4e0e-664d-51ea-0929" primary="false"/>
         <categoryLink id="4f51-ac88-3786-9d0c" name="New CategoryLink" hidden="false" targetId="b970-b3bf-e1a4-a6fc" primary="false"/>
         <categoryLink id="a5cb-2f6e-76a8-25fd" name="VOSTARG" hidden="false" targetId="c34d-acb9-a4d9-74be" primary="false"/>
+        <categoryLink id="dc68-5fee-1dfb-8747" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="032e-f634-e4c1-2a4c" name="Latchkey Grandaxe" hidden="false" collective="false" import="true" type="upgrade">
@@ -2466,6 +2428,7 @@
         <categoryLink id="474d-7cf5-79c1-c937" name="New CategoryLink" hidden="false" targetId="4c1e-bfe5-baf1-cf60" primary="false"/>
         <categoryLink id="6130-6b6d-2bb3-5d69" name="New CategoryLink" hidden="false" targetId="57af-4591-5841-0c21" primary="false"/>
         <categoryLink id="59e9-7c89-fd96-d94e" name="VOSTARG" hidden="false" targetId="c34d-acb9-a4d9-74be" primary="false"/>
+        <categoryLink id="b878-1cd6-2d14-c987" name="New CategoryLink" hidden="false" targetId="065e-fda7-fd27-1f40" primary="true"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="e831-2a7a-0034-07df" name="Fyresteel Great Axe" hidden="false" collective="false" import="true" type="upgrade">
@@ -2533,7 +2496,7 @@
       <categoryLinks>
         <categoryLink id="cb53-adbc-d886-14af" name="FYRESLAYERS" hidden="false" targetId="4ec3-efa9-35ba-d55f" primary="false"/>
         <categoryLink id="f5c7-5e5c-7df2-e36a" name="MAGMIC BATTLEFORGE" hidden="false" targetId="7e0a-5085-683c-dcdc" primary="false"/>
-        <categoryLink id="f5bc-ecbe-9361-2384" name="SCENERY" hidden="false" targetId="8910-7c1d-6c74-37ff" primary="false"/>
+        <categoryLink id="f5bc-ecbe-9361-2384" name="SCENERY" hidden="false" targetId="8910-7c1d-6c74-37ff" primary="true"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
@@ -2569,6 +2532,7 @@
       <categoryLinks>
         <categoryLink id="c08a-a7bf-618b-f70b" name="MOLTEN INFERNOTH" hidden="false" targetId="bd1d-439c-5b12-bf4c" primary="false"/>
         <categoryLink id="8c4a-ba61-b056-ff3e" name="MAGMIC INVOCATION" hidden="false" targetId="4b94-6bb2-6f57-3f3f" primary="false"/>
+        <categoryLink id="5aee-40c6-5cba-9f9e" name="New CategoryLink" hidden="false" targetId="eecb-ed66-d474-9ddd" primary="true"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="50.0"/>
@@ -2604,6 +2568,7 @@
       <categoryLinks>
         <categoryLink id="5930-0244-1647-95e1" name="MAGMIC INVOCATION" hidden="false" targetId="4b94-6bb2-6f57-3f3f" primary="false"/>
         <categoryLink id="a91a-5531-f555-61b6" name="RUNIC FIREWALL" hidden="false" targetId="4385-48e9-615c-c04e" primary="false"/>
+        <categoryLink id="3169-0b1b-04e1-3d27" name="New CategoryLink" hidden="false" targetId="eecb-ed66-d474-9ddd" primary="true"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="40.0"/>
@@ -2629,6 +2594,7 @@
       <categoryLinks>
         <categoryLink id="b66d-67c3-1a9d-2961" name="MAGMIC INVOCATION" hidden="false" targetId="4b94-6bb2-6f57-3f3f" primary="false"/>
         <categoryLink id="6f9e-2722-4865-7706" name="ZHARRGRON FLAME-SPITTER" hidden="false" targetId="24f1-0987-a9c8-48a8" primary="false"/>
+        <categoryLink id="0712-3e5a-9760-8d35" name="New CategoryLink" hidden="false" targetId="eecb-ed66-d474-9ddd" primary="true"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="60.0"/>
@@ -2642,6 +2608,9 @@
           </characteristics>
         </profile>
       </profiles>
+      <categoryLinks>
+        <categoryLink id="c557-af82-56f9-084d" name="New CategoryLink" hidden="false" targetId="be17-6bbd-b857-3f43" primary="true"/>
+      </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="e5f3-43ae-612a-f5d8" name="1 Auric Runesmiter (Dhurgan)" hidden="false" collective="false" import="true">
           <constraints>
@@ -2675,26 +2644,6 @@
                   </conditionGroups>
                 </modifier>
               </modifiers>
-              <categoryLinks>
-                <categoryLink id="bffe-e963-9111-7fac" hidden="false" targetId="065e-fda7-fd27-1f40" primary="true"/>
-              </categoryLinks>
-            </entryLink>
-            <entryLink id="c7ad-3de5-057f-7533" name="Auric Hearthguard" hidden="false" collective="false" import="true" targetId="1823-43dd-1af2-b910" type="selectionEntry">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="94c9-6cd1-da31-5c7e" type="equalTo"/>
-                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a089-15db-b9ac-fc2f" type="equalTo"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <categoryLinks>
-                <categoryLink id="4607-e4ba-d9aa-568a" name="New CategoryLink" hidden="false" targetId="e9f2-765a-b7b8-ce8e" primary="true"/>
-              </categoryLinks>
             </entryLink>
           </entryLinks>
         </selectionEntryGroup>
@@ -2711,6 +2660,9 @@
           </characteristics>
         </profile>
       </profiles>
+      <categoryLinks>
+        <categoryLink id="f077-50dc-33ef-680e" name="New CategoryLink" hidden="false" targetId="be17-6bbd-b857-3f43" primary="true"/>
+      </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="969d-7bb0-e084-d64b" name="1 Vostarg Auric Runeson" hidden="false" collective="false" import="true">
           <constraints>
@@ -2731,42 +2683,7 @@
             <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="318e-579d-9d25-7f63" type="max"/>
           </constraints>
           <entryLinks>
-            <entryLink id="a09d-bb5c-1175-af2c" name="Vulkite Bezerkers" hidden="false" collective="false" import="true" targetId="5380-8f39-8882-eae7" type="selectionEntry">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="62e4-370f-3318-cdbd" type="notInstanceOf"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="78f3-8a59-699a-61e8" type="notInstanceOf"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b78c-c342-c8aa-aa45" type="notInstanceOf"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <categoryLinks>
-                <categoryLink id="1abf-564f-cb86-e990" name="New CategoryLink" hidden="false" targetId="065e-fda7-fd27-1f40" primary="true"/>
-              </categoryLinks>
-            </entryLink>
-            <entryLink id="b12d-ec3c-1f9f-4810" name="Vulkite Bezerkers" hidden="false" collective="false" import="true" targetId="5380-8f39-8882-eae7" type="selectionEntry">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="62e4-370f-3318-cdbd" type="instanceOf"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="78f3-8a59-699a-61e8" type="instanceOf"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b78c-c342-c8aa-aa45" type="instanceOf"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <categoryLinks>
-                <categoryLink id="dddc-acc7-0a8c-4062" hidden="false" targetId="e9f2-765a-b7b8-ce8e" primary="true"/>
-              </categoryLinks>
-            </entryLink>
+            <entryLink id="b12d-ec3c-1f9f-4810" name="Vulkite Bezerkers" hidden="false" collective="false" import="true" targetId="5380-8f39-8882-eae7" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -2782,6 +2699,9 @@
           </characteristics>
         </profile>
       </profiles>
+      <categoryLinks>
+        <categoryLink id="77db-aa21-a10e-2c8f" name="New CategoryLink" hidden="false" targetId="be17-6bbd-b857-3f43" primary="true"/>
+      </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="eadd-5b2d-7af6-885e" name="1 Vostarg Auric Runemaster (Vaegor)" hidden="false" collective="false" import="true">
           <constraints>
@@ -2815,40 +2735,7 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="54d0-1bba-1b87-b79e" type="max"/>
           </constraints>
           <entryLinks>
-            <entryLink id="55d5-6212-762b-5cce" name="Hearthguard Berzerkers" hidden="false" collective="false" import="true" targetId="3973-d948-c464-bddc" type="selectionEntry">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="94c9-6cd1-da31-5c7e" type="equalTo"/>
-                        <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bc39-a830-aaee-f739" type="equalTo"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <categoryLinks>
-                <categoryLink id="3bc3-e082-8a24-c2bf" hidden="false" targetId="065e-fda7-fd27-1f40" primary="true"/>
-              </categoryLinks>
-            </entryLink>
-            <entryLink id="429d-44ed-d1ee-2caf" name="Hearthguard Berzerkers" hidden="false" collective="false" import="true" targetId="3973-d948-c464-bddc" type="selectionEntry">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="94c9-6cd1-da31-5c7e" type="equalTo"/>
-                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bc39-a830-aaee-f739" type="equalTo"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <categoryLinks>
-                <categoryLink id="e607-d0f8-58c3-2ddc" name="New CategoryLink" hidden="false" targetId="e9f2-765a-b7b8-ce8e" primary="true"/>
-              </categoryLinks>
-            </entryLink>
+            <entryLink id="55d5-6212-762b-5cce" name="Hearthguard Berzerkers" hidden="false" collective="false" import="true" targetId="3973-d948-c464-bddc" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
         <selectionEntryGroup id="6fba-21ac-981f-338c" name="1 Bael-Grimnir on Flamespitter" hidden="false" collective="false" import="true">
@@ -2878,6 +2765,9 @@
           </characteristics>
         </profile>
       </profiles>
+      <categoryLinks>
+        <categoryLink id="ac4b-56fb-fb84-e637" name="New CategoryLink" hidden="false" targetId="be17-6bbd-b857-3f43" primary="true"/>
+      </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="d027-29a8-16d3-5898" name="1 Lords of Vostarg" hidden="false" collective="false" import="true">
           <constraints>
@@ -3024,6 +2914,7 @@
         <categoryLink id="797a-1ae1-e646-215b" name="MONSTER" hidden="false" targetId="1959-9f6a-3056-913a" primary="false"/>
         <categoryLink id="710c-164c-6616-48d0" name="ORDER" hidden="false" targetId="b970-b3bf-e1a4-a6fc" primary="false"/>
         <categoryLink id="572f-e2a7-9227-d4ac" name="VOSTARG" hidden="false" targetId="c34d-acb9-a4d9-74be" primary="false"/>
+        <categoryLink id="ee01-9001-f7f3-ed89" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="dc5b-7b20-459c-cac5" name="Blazing Maw" hidden="false" collective="false" import="true" type="upgrade">
@@ -4076,11 +3967,6 @@
       <selectionEntries>
         <selectionEntry id="a083-294e-1c70-b651" name="0. Fiery Endurance" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
-            <modifier type="set" field="dc60-403f-2895-103f" value="1">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="6171-3137-0d61-9057" type="equalTo"/>
-              </conditions>
-            </modifier>
             <modifier type="set" field="4034-109f-e397-5c1d" value="1.0">
               <conditionGroups>
                 <conditionGroup type="and">
@@ -4099,7 +3985,7 @@
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="dc60-403f-2895-103f" type="max"/>
+            <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="dc60-403f-2895-103f" type="max"/>
             <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="4034-109f-e397-5c1d" type="min"/>
           </constraints>
           <profiles>
@@ -4115,11 +4001,6 @@
         </selectionEntry>
         <selectionEntry id="9ae4-39c3-061e-fd07" name="0. Battle-scarred Veteran" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
-            <modifier type="set" field="8e3d-aada-cd1f-3aaf" value="1">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="36c2-a62f-8269-3258" type="equalTo"/>
-              </conditions>
-            </modifier>
             <modifier type="set" field="a93b-7d88-4239-bc3d" value="1">
               <conditions>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="36c2-a62f-8269-3258" type="equalTo"/>
@@ -4132,7 +4013,7 @@
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="8e3d-aada-cd1f-3aaf" type="max"/>
+            <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="8e3d-aada-cd1f-3aaf" type="max"/>
             <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="a93b-7d88-4239-bc3d" type="min"/>
           </constraints>
           <profiles>
@@ -4148,12 +4029,7 @@
         </selectionEntry>
         <selectionEntry id="db94-5897-73a6-7f0c" name="0. Warrior Indominate" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
-            <modifier type="set" field="c1a4-2e7d-498b-f2f4" value="1">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="cd97-6ad4-a58c-1ad2" type="equalTo"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="03e0-628b-e9ee-7c15" value="1">
+            <modifier type="set" field="03e0-628b-e9ee-7c15" value="1.0">
               <conditions>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="cd97-6ad4-a58c-1ad2" type="equalTo"/>
               </conditions>
@@ -4165,7 +4041,7 @@
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="c1a4-2e7d-498b-f2f4" type="max"/>
+            <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="c1a4-2e7d-498b-f2f4" type="max"/>
             <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="03e0-628b-e9ee-7c15" type="min"/>
           </constraints>
           <profiles>
@@ -4181,11 +4057,6 @@
         </selectionEntry>
         <selectionEntry id="eb35-6a68-2def-ac61" name="0. Explosive Charge" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
-            <modifier type="set" field="d1e9-4997-7a60-2686" value="1">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="9f82-189a-71f2-b6ba" type="equalTo"/>
-              </conditions>
-            </modifier>
             <modifier type="set" field="f38f-d602-6d0b-893e" value="1">
               <conditions>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="9f82-189a-71f2-b6ba" type="equalTo"/>
@@ -4198,7 +4069,7 @@
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="d1e9-4997-7a60-2686" type="max"/>
+            <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="d1e9-4997-7a60-2686" type="max"/>
             <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="f38f-d602-6d0b-893e" type="min"/>
           </constraints>
           <profiles>
@@ -4221,12 +4092,7 @@
       <selectionEntries>
         <selectionEntry id="0901-004e-9726-9067" name="0. Voxaxe" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
-            <modifier type="set" field="f42d-e75b-38f9-c2f7" value="1">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="6171-3137-0d61-9057" type="equalTo"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="8c80-eb31-b008-8d30" value="1">
+            <modifier type="set" field="8c80-eb31-b008-8d30" value="1.0">
               <conditions>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="6171-3137-0d61-9057" type="equalTo"/>
               </conditions>
@@ -4238,7 +4104,7 @@
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="f42d-e75b-38f9-c2f7" type="max"/>
+            <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="f42d-e75b-38f9-c2f7" type="max"/>
             <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="8c80-eb31-b008-8d30" type="min"/>
           </constraints>
           <profiles>
@@ -4257,12 +4123,7 @@
         </selectionEntry>
         <selectionEntry id="83a3-3151-92b8-f248" name="0. Helm of Obsidian" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
-            <modifier type="set" field="38d1-0781-bccd-0508" value="1">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="36c2-a62f-8269-3258" type="equalTo"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="93f0-e140-bd18-8b47" value="1">
+            <modifier type="set" field="93f0-e140-bd18-8b47" value="1.0">
               <conditions>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="36c2-a62f-8269-3258" type="equalTo"/>
               </conditions>
@@ -4275,7 +4136,7 @@
           </modifiers>
           <constraints>
             <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="93f0-e140-bd18-8b47" type="min"/>
-            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="38d1-0781-bccd-0508" type="max"/>
+            <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="38d1-0781-bccd-0508" type="max"/>
           </constraints>
           <profiles>
             <profile id="12b6-74bc-3685-754f" name="Helm of Obsidian" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
@@ -4293,12 +4154,7 @@
         </selectionEntry>
         <selectionEntry id="b476-5ae5-7337-e404" name="0. Tyrant Slayer" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
-            <modifier type="set" field="4408-d97e-ab86-0b1e" value="1">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="cd97-6ad4-a58c-1ad2" type="equalTo"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="f597-3be8-ea34-704b" value="1">
+            <modifier type="set" field="f597-3be8-ea34-704b" value="1.0">
               <conditions>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="cd97-6ad4-a58c-1ad2" type="equalTo"/>
               </conditions>
@@ -4310,7 +4166,7 @@
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="4408-d97e-ab86-0b1e" type="max"/>
+            <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="4408-d97e-ab86-0b1e" type="max"/>
             <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="f597-3be8-ea34-704b" type="min"/>
           </constraints>
           <profiles>
@@ -4327,30 +4183,35 @@
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="0551-c85a-24fa-048a" name="0. Ingeous Battle-throne" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="0551-c85a-24fa-048a" name="0. Igneous Battle-throne" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
-            <modifier type="set" field="0008-a693-edef-4401" value="1">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="9f82-189a-71f2-b6ba" type="equalTo"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="62df-b2e5-ad41-1c07" value="1">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="9f82-189a-71f2-b6ba" type="equalTo"/>
-              </conditions>
+            <modifier type="set" field="62df-b2e5-ad41-1c07" value="1.0">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9277-1530-7f0f-718f" type="greaterThan"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="9f82-189a-71f2-b6ba" type="greaterThan"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
             <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="9f82-189a-71f2-b6ba" type="equalTo"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="9f82-189a-71f2-b6ba" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9277-1530-7f0f-718f" type="notInstanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="0008-a693-edef-4401" type="max"/>
+            <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="0008-a693-edef-4401" type="max"/>
             <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="62df-b2e5-ad41-1c07" type="min"/>
           </constraints>
           <profiles>
-            <profile id="396b-bb07-1ce9-d2bd" name="Ingeous Battle-throne" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
+            <profile id="396b-bb07-1ce9-d2bd" name="Igneous Battle-throne" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
               <characteristics>
                 <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Roll a dice each time you allocate a wound or mortal wound to the bearer.  On a 6+ that wound or mortal wound is negated.</characteristic>
               </characteristics>
@@ -4399,9 +4260,9 @@
         <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the end of the combat phase, pick an enemy HERO within 3&quot; of this model and roll a dice. On a 6, pick one of the melee weapons that model is armed with. Subtract 1 from hit rolls for attacks made with that weapon for the rest of the battle. You cannot pick the same weapon to be affected by this ability more than once per battle.</characteristic>
       </characteristics>
     </profile>
-    <profile id="bce0-112a-991d-00f4" name="Lodge Leader" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
+    <profile id="bce0-112a-991d-00f4" name="Lodge Leader" hidden="false" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
       <characteristics>
-        <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">You can use this command ability at the start of the charge phase. If you do so, pick a friendly model with this command ability. Add 1 charge rolls for friendly FYRESLAYERS units wholly within 12&quot; of that model until the end of that phase.</characteristic>
+        <characteristic name="Command Ability Details" typeId="1b71-4c83-4e8c-093f">You can use this command ability at the start of the charge phase. If you do so, pick a friendly model with this command ability. Add 1 charge rolls for friendly FYRESLAYERS units wholly within 12&quot; of that model until the end of that phase.</characteristic>
       </characteristics>
     </profile>
     <profile id="d9f9-9d7b-c429-2056" name="Fyresteel Handaxe" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">

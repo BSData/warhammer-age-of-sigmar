@@ -176,7 +176,7 @@
     <categoryEntry id="469f-24b2-d1fb-d182" name="Lantern" hidden="false"/>
   </categoryEntries>
   <sharedSelectionEntries>
-    <selectionEntry id="7f4c-7d4b-6b8e-575b" name="Alliegiance" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="7f4c-7d4b-6b8e-575b" name="Allegiance" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="maxSelections" type="min"/>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="maxInForce" type="max"/>
@@ -1843,6 +1843,18 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="e1b6-d729-99e0-dbfa" name="Morghast Archai" page="135" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set-primary" field="category" value="e9f2-765a-b7b8-ce8e">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0758-0294-87aa-6054" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5ee5-0c9c-61a5-78d4" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="434f-8c15-0393-a41c" name="Heralds of the Accursed One" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
@@ -1872,6 +1884,7 @@
         <categoryLink id="e3e0-e134-595f-1296" name="New CategoryLink" hidden="false" targetId="6d7d-5129-235c-f03e" primary="false"/>
         <categoryLink id="c63d-5f4a-62d0-cd06" name="New CategoryLink" hidden="false" targetId="a3df-7eeb-bcac-ac90" primary="false"/>
         <categoryLink id="64e3-43b5-52fe-c39a" name="New CategoryLink" hidden="false" targetId="a0df-cbe2-016c-eb18" primary="false"/>
+        <categoryLink id="6dcd-4852-de14-de03" name="New CategoryLink" hidden="false" targetId="065e-fda7-fd27-1f40" primary="true"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="0f80-0042-5043-b841" name="2 Morghast Archai" hidden="false" collective="false" import="true" type="model">
@@ -1935,6 +1948,18 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="5bd1-6315-591d-08c8" name="Morghast Harbingers" page="135" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set-primary" field="category" value="e9f2-765a-b7b8-ce8e">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0758-0294-87aa-6054" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5ee5-0c9c-61a5-78d4" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="a128-7285-900f-98ca" name="Heralds of the Accursed One" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
@@ -1964,6 +1989,7 @@
         <categoryLink id="c8a7-7eeb-359e-a912" name="New CategoryLink" hidden="false" targetId="6d7d-5129-235c-f03e" primary="false"/>
         <categoryLink id="48c1-5702-a187-ea1c" name="New CategoryLink" hidden="false" targetId="a3df-7eeb-bcac-ac90" primary="false"/>
         <categoryLink id="3866-c4ec-9f17-85dc" name="New CategoryLink" hidden="false" targetId="4426-c76b-0951-e966" primary="false"/>
+        <categoryLink id="b877-9089-393d-1c10" name="New CategoryLink" hidden="false" targetId="065e-fda7-fd27-1f40" primary="true"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="3754-d78f-896a-ee73" name="2 Morghast Harbingers" hidden="false" collective="false" import="true" type="model">
@@ -2264,6 +2290,13 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="7c0c-91b9-f052-24af" name="Nagash, Supreme Lord of the Undead" publicationId="e320-d5ec-pubN101284" page="96" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0758-0294-87aa-6054" type="lessThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="003b-5089-c9c6-efb1" type="max"/>
       </constraints>
@@ -3717,6 +3750,11 @@
         <modifier type="set" field="hidden" value="true">
           <conditions>
             <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b5ab-f60e-c534-427f" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set-primary" field="category" value="e9f2-765a-b7b8-ce8e">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0f2a-bc55-0944-940a" type="greaterThan"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -5679,6 +5717,7 @@
         <entryLink id="33e6-cddc-e5af-f028" name="Command Traits" hidden="false" collective="false" import="true" targetId="eda1-7945-4fea-a145" type="selectionEntryGroup"/>
         <entryLink id="088b-a113-47d5-029e" name="General" hidden="false" collective="false" import="true" targetId="88d2-d540-0573-3402" type="selectionEntry"/>
         <entryLink id="61cc-f5be-523c-bb69" name="Lore of the Underworld" hidden="false" collective="false" import="true" targetId="1d74-9116-3b63-3ea2" type="selectionEntryGroup"/>
+        <entryLink id="c4ad-0255-38e9-b631" name="Lore of Sorrows" hidden="false" collective="false" import="true" targetId="75b2-7567-deab-a948" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="140.0"/>
@@ -6073,6 +6112,13 @@
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="c6ce-8cf0-b037-bb97" name="4 Myrmourn Banshees" hidden="false" collective="false" import="true" type="model">
+          <modifiers>
+            <modifier type="decrement" field="points" value="10">
+              <conditions>
+                <condition field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="aff1-fa8a-1003-ace7" type="min"/>
             <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="42f2-a822-ed53-61cf" type="max"/>
@@ -7738,6 +7784,7 @@
         <categoryLink id="4e97-a7af-456e-9856" name="MIRRORGHAST BANSHEE" hidden="false" targetId="8cb3-efe9-850f-7fe7" primary="false"/>
         <categoryLink id="c967-ab34-5dc6-a774" name="WIZARD" hidden="false" targetId="4f53-8230-2f02-9639" primary="false"/>
         <categoryLink id="58ab-7a21-09a9-7ed8" name="THORNS OF THE BRIAR QUEEN" hidden="false" targetId="eb9d-a775-105f-6342" primary="false"/>
+        <categoryLink id="af90-6f62-5757-d9fc" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="69ee-1dcd-35f4-5eb0" name="Rending Scream" hidden="false" collective="false" import="true" type="upgrade">
@@ -7841,6 +7888,7 @@
         <categoryLink id="77d8-3c87-5965-532c" name="New CategoryLink" hidden="false" targetId="d51a-b7de-3b60-a231" primary="false"/>
         <categoryLink id="95ef-d2fd-90be-c1b5" name="New CategoryLink" hidden="false" targetId="f6a0-5e71-c565-59b9" primary="false"/>
         <categoryLink id="39db-65ff-b039-3906" name="THORNS OF THE BRIAR QUEEN" hidden="false" targetId="eb9d-a775-105f-6342" primary="false"/>
+        <categoryLink id="ba01-d9d6-08de-7cb1" name="New CategoryLink" hidden="false" targetId="065e-fda7-fd27-1f40" primary="true"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="5c49-cf82-7182-b663" name="Malignant Weapon" hidden="false" collective="true" import="true" type="upgrade">
@@ -8027,7 +8075,7 @@
       <profiles>
         <profile id="1388-e3db-f1d3-142b" name="Invigorating Aura" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
           <characteristics>
-            <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">At the start of your hero phase, pick a friendly SUMMONABLE unit within 9&quot; of a gravesite (see &quot;The Unquiet Dead&quot;). You can either heal D3 wounds that have been allocated to models in that unit or, if no wounds are currently allocated to any models in the unit, you can return a number of slain models to the unit that have a combined Wounds characteristic equal to or less than the roll of a D3. </characteristic>
+            <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">At the start of your hero phase, pick a friendly SUMMONABLE unit within 9&quot; of this gravesite (see &quot;The Unquiet Dead&quot;). You can either heal D3 wounds that have been allocated to models in that unit or, if no wounds are currently allocated to any models in the unit, you can return a number of slain models to the unit that have a combined Wounds characteristic equal to or less than the roll of a D3. </characteristic>
           </characteristics>
         </profile>
         <profile id="9d52-90bf-cb63-d0b3" name="Deathless Minions" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
@@ -8920,7 +8968,7 @@
         </modifier>
         <modifier type="set" field="hidden" value="true">
           <conditions>
-            <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7f4c-7d4b-6b8e-575b" type="notInstanceOf"/>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7f4c-7d4b-6b8e-575b" type="lessThan"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -9406,7 +9454,7 @@
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="8426-2638-3ab7-b3d2" name="4. Lightshard of the Harvest Moon" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="8426-2638-3ab7-b3d2" name="4. Mirror of Screaming Souls" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1a72-0c18-d4f7-020e" type="max"/>
           </constraints>
@@ -10249,6 +10297,9 @@
           </conditionGroups>
         </modifier>
       </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="83a4-6b62-91f2-2ce0" type="max"/>
+      </constraints>
       <selectionEntries>
         <selectionEntry id="b460-c92b-909b-5a67" name="1. Overwhelming Dread" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -10298,7 +10349,7 @@
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="7fbc-fe05-8ea4-08b4" name="4.Prison of Grief" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="7fbc-fe05-8ea4-08b4" name="4. Prison of Grief" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="54c5-d6d2-c7b9-4cff" type="max"/>
           </constraints>
@@ -10362,6 +10413,9 @@
           </conditionGroups>
         </modifier>
       </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4dfa-6569-dae1-e760" type="max"/>
+      </constraints>
       <selectionEntries>
         <selectionEntry id="e0bc-aa62-5c13-6d4b" name="1. Blades of Shyish" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -10597,6 +10651,9 @@
           </conditions>
         </modifier>
       </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6b7d-ba9e-59d6-40ef" type="max"/>
+      </constraints>
       <selectionEntries>
         <selectionEntry id="c847-9563-92f0-fc04" name="1. Dread Withering" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
