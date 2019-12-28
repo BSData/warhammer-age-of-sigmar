@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="e0d8-b631-6934-ee34" name="Chaos - Slaves to Darkness Data" revision="8" battleScribeVersion="2.03" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="16" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="e0d8-b631-6934-ee34" name="Chaos - Slaves to Darkness Data" revision="9" battleScribeVersion="2.03" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="16" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="798b-2f60-pubN65537" name="Grand Alliance: Chaos"/>
     <publication id="798b-2f60-pubN85643" name="Forgeworld: Monstrous Arcanum"/>
@@ -2190,10 +2190,10 @@
       <profiles>
         <profile id="324c-c9bd-6385-df6c" name="Daemon Prince" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
           <characteristics>
-            <characteristic name="Move" typeId="8655-6213-2824-1752">8&quot;</characteristic>
+            <characteristic name="Move" typeId="8655-6213-2824-1752">12&quot;</characteristic>
             <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">8</characteristic>
             <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">10</characteristic>
-            <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">4+</characteristic>
+            <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">3+</characteristic>
           </characteristics>
         </profile>
         <profile id="8c41-5d9f-9ddc-ceb5" name="Bounding Charge" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
@@ -2341,6 +2341,11 @@
                     <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
                     <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
                     <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">D3</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="743d-fa0e-d714-d3a5" name="Hellforged Sword" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+                  <characteristics>
+                    <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If the unmodified hit roll for an attack made with a Hellforged Sword is 6, that attack inflicts 2 mortal wounds on the target and the attack sequence ends (do not make a wound or save roll).</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -4317,9 +4322,9 @@ In addition, add 1 to the Damage characteristic of this model’s Rune-etched Ax
             <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the end of the combat phase, if any enemy models were slain by wounds inflicted by this model’s Hexed Battle-axe in that phase, you can heal up to D3 wounds allocated to this model.</characteristic>
           </characteristics>
         </profile>
-        <profile id="7ab9-f473-928b-4a3a" name="Brutish Rampage" hidden="false" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
+        <profile id="7ab9-f473-928b-4a3a" name="Brutish Rampage" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Command Ability Details" typeId="1b71-4c83-4e8c-093f">Roll a dice for each enemy unit that is within 1&quot; of this model after this model makes a charge move. On a 2+, that unit suffers D3 mortal wounds.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Roll a dice for each enemy unit that is within 1&quot; of this model after this model makes a charge move. On a 2+, that unit suffers D3 mortal wounds.</characteristic>
           </characteristics>
         </profile>
         <profile id="9a77-f282-9904-9879" name="The Knights of Chaos" hidden="false" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
@@ -4424,6 +4429,28 @@ In addition, add 1 to the Damage characteristic of this model’s Rune-etched Ax
             <profile id="05cc-1f56-165b-6b45" name="Daemonbound" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
               <characteristics>
                 <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If the unmodified hit roll for an attack made with a Daemonbound Blade is 6, that attack inflicts 1 mortal wound on the target in addition to any normal damage.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="5da0-0568-34f1-46ad" name="Battering Tail" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="072e-45d1-0745-2260" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8f64-53af-c8af-a05e" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="c034-e5df-e8bb-8934" name="Battering Tail" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">2</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">4+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
               </characteristics>
             </profile>
           </profiles>
