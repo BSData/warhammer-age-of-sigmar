@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="a990-882b-7e62-27e9" name="Chaos - Beasts of Chaos - Data" revision="14" battleScribeVersion="2.03" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="15" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="a990-882b-7e62-27e9" name="Chaos - Beasts of Chaos - Data" revision="15" battleScribeVersion="2.03" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="15" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="c9b2-1fe6-pubN65537" name="Battletome: Beasts of Chaos"/>
     <publication id="c9b2-1fe6-pubN83353" name="1"/>
@@ -3134,11 +3134,18 @@
       <modifiers>
         <modifier type="set-primary" field="category" value="e9f2-765a-b7b8-ce8e">
           <conditionGroups>
-            <conditionGroup type="and">
+            <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1378-5154-1483-85b9" type="equalTo"/>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a9d5-dd1c-0c21-9dd3" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="065f-c64d-3eb7-79d2" type="equalTo"/>
               </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1378-5154-1483-85b9" type="equalTo"/>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a9d5-dd1c-0c21-9dd3" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </conditionGroup>
           </conditionGroups>
         </modifier>
@@ -3181,7 +3188,7 @@
       <selectionEntries>
         <selectionEntry id="d98b-6aae-6435-24c8" name="Icon Bearers" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
-            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9433-b896-3aed-86a6" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9433-b896-3aed-86a6" type="max"/>
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c5fb-8cd0-b8fd-bb69" type="min"/>
           </constraints>
           <profiles>
@@ -3267,6 +3274,31 @@
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
+        </selectionEntry>
+        <selectionEntry id="1c0c-276b-817e-596d" name="Savage Greatblades" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="increment" field="4920-f4b3-1581-79d2" value="1.0">
+              <repeats>
+                <repeat field="selections" scope="d636-0425-7a14-923c" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d79d-6ffa-7e45-3000" repeats="4" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4920-f4b3-1581-79d2" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="c7e0-7b43-2488-b48f" name="Savage Greatblade" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">1</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">4+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">2</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -4615,6 +4647,10 @@
         <entryLink id="4ad2-aa21-6e40-2f74" name="Artefacts: Plagueridden Gifts" hidden="false" collective="false" import="true" targetId="1841-fdf2-dbb9-2174" type="selectionEntryGroup"/>
         <entryLink id="52f3-72f2-64b6-60a3" name="Artefacts: Murderous Artefacts" hidden="false" collective="false" import="true" targetId="8406-7326-ffc6-6ce4" type="selectionEntryGroup"/>
         <entryLink id="0edf-935b-d927-cb84" name="Artefacts: Fated Artefacts" hidden="false" collective="false" import="true" targetId="dfdf-9d22-6e78-49f0" type="selectionEntryGroup"/>
+        <entryLink id="357c-fabb-415f-8cc7" name="Artefacts: Daemonic Powers" hidden="false" collective="false" import="true" targetId="d337-deac-ccd8-677b" type="selectionEntryGroup"/>
+        <entryLink id="aa87-f90d-5a7f-8d6a" name="Artefacts: Change Coven" hidden="false" collective="false" import="true" targetId="e35c-e49d-2410-ea1d" type="selectionEntryGroup"/>
+        <entryLink id="8adc-462f-b182-2166" name="Artefacts: Treasures of the Cults" hidden="false" collective="false" import="true" targetId="3261-1fc9-eba8-e646" type="selectionEntryGroup"/>
+        <entryLink id="d637-bd4c-84bb-4eba" name="Artefacts: Daemonic Weapons" hidden="false" collective="false" import="true" targetId="a688-9cf0-b48e-bb85" type="selectionEntryGroup"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="cbff-8503-320a-ce0d" name="Command Traits" hidden="false" collective="false" import="true">
@@ -4688,6 +4724,9 @@
         <entryLink id="b621-4126-2e3b-57f3" name="Traits: Obsessions of the Invader" hidden="false" collective="false" import="true" targetId="f0b1-f554-bc8b-f75c" type="selectionEntryGroup"/>
         <entryLink id="5f71-105d-b50f-3d45" name="Traits: Khorne Mortal" hidden="false" collective="false" import="true" targetId="2db0-3894-8f6a-94b5" type="selectionEntryGroup"/>
         <entryLink id="eb2c-ce18-697a-047e" name="Traits: Nurgle Mortal" hidden="false" collective="false" import="true" targetId="8a09-f2db-da88-b9ff" type="selectionEntryGroup"/>
+        <entryLink id="4dfe-ff6f-40d7-d6b2" name="Traits: Tzeentch Arcanite" hidden="false" collective="false" import="true" targetId="bdb7-2e77-4755-e337" type="selectionEntryGroup"/>
+        <entryLink id="1e58-1f5f-6ec8-1898" name="Traits: Change Coven" hidden="false" collective="false" import="true" targetId="f019-57cf-f8db-bb16" type="selectionEntryGroup"/>
+        <entryLink id="6abf-954c-1ea6-ba0e" name="Traits: Tzeentch Daemon" hidden="false" collective="false" import="true" targetId="8dba-9de2-482b-ed5b" type="selectionEntryGroup"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="7016-ae89-f6cf-e026" name="Mark of Chaos" hidden="false" collective="false" import="true" defaultSelectionEntryId="39f4-785f-6b88-c22c">
@@ -5246,6 +5285,7 @@
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="812f-790a-4f66-0476" type="notInstanceOf"/>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1378-5154-1483-85b9" type="equalTo"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -5342,6 +5382,7 @@
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9a13-aa85-e9e2-9793" type="notInstanceOf"/>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1378-5154-1483-85b9" type="equalTo"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
