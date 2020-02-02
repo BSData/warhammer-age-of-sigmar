@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="0339-0157-6910-d29c" name="Chaos Data" revision="22" battleScribeVersion="2.03" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="15" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="0339-0157-6910-d29c" name="Chaos Data" revision="24" battleScribeVersion="2.03" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="15" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="c9b2-1fe6-pubN65537" name="Battletome: Beasts of Chaos"/>
     <publication id="c9b2-1fe6-pubN83353" name="1"/>
@@ -432,9 +432,28 @@ If a unit that is affected by this battle trait is also affected by any rules th
       <categoryLinks>
         <categoryLink id="915c-9a1f-05e3-6c98" name="New CategoryLink" hidden="false" targetId="be2f-aa63-6d82-e2fc" primary="false"/>
       </categoryLinks>
-      <entryLinks>
-        <entryLink id="5e67-fc29-3f20-4d53" name="Slaughterhost" hidden="false" collective="false" import="true" targetId="92c7-7625-2526-73bc" type="selectionEntryGroup"/>
-      </entryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="6952-1cfd-2fa3-73c8" name="Subfaction" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="69b6-270c-a873-8c6a" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="43d1-42fb-c1a2-cbe5" name="The Baleful Lords" hidden="true" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="09ba-d211-a404-688f" type="max"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry id="ba07-b61a-2769-1471" name="The Flayed" hidden="true" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="fa74-bde2-b5be-f9eb" type="max"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+          <entryLinks>
+            <entryLink id="9879-5dd6-b88c-401e" name="Slaughterhost" hidden="false" collective="false" import="true" targetId="92c7-7625-2526-73bc" type="selectionEntryGroup"/>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
@@ -731,129 +750,25 @@ Summoned units must be set up wholly within 12&quot; of a friendly TZEENTCH HERO
         <categoryLink id="9ea4-da3a-bff7-dd6b" name="New CategoryLink" hidden="false" targetId="7d12-f4c5-3832-0f19" primary="false"/>
       </categoryLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="fc77-30d7-0e58-194b" name="Change Coven" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="fc77-30d7-0e58-194b" name="Subfaction" hidden="false" collective="false" import="true">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c9d7-5335-2193-eb05" type="max"/>
           </constraints>
-          <profiles>
-            <profile id="f12b-99d1-6a74-e318" name="Change Coven" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
-              <characteristics>
-                <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">When you choose an Tzeentch army, you can give it a Change Coven keyword from the list below. All TZEENTCH units in your army gain that keyword, and you can use the extra abilities listed for that Change Coven on the page indicated.
-• ETERNAL CONFLAGRATION (pg 78)
-• HOSTS DUPLICITOUS (pg 79)
-• HOSTS ARCANUM (pg 80)
-• CULT OF THE TRANSIENT FORM (pg 81)
-• PYROFANE CULT (pg 82)
-• GUILD OF SUMMONERS (pg 83)
-If a model already has a Change Coven keyword on its warscroll, it cannot gain another one. This does not preclude you from including the unit in your army.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
           <selectionEntries>
-            <selectionEntry id="4ffa-1d6a-7ad2-7998" name="The Eternal Conflagration" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="e747-5328-6851-d294" name="Twisters of Materiality" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
-                  <characteristics>
-                    <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">Improve the Rend characteristic of friendly ETERNAL CONFLAGRATION units’ Warpflame, Billowing Warpflame and Magical Flames missile weapons by 1.</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="bb1c-9479-2d1c-08ef" name="Infernos of Mutation" hidden="false" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
-                  <characteristics>
-                    <characteristic name="Command Ability Details" typeId="1b71-4c83-4e8c-093f">You can use this command ability in the shooting phase. If you do so, pick 1 friendly ETERNAL CONFLAGRATION DAEMON unit wholly within 12&quot; of a friendly ETERNAL CONFLAGRATION DAEMON HERO. If the unmodified hit roll for any attack made by that unit’s Warpflame, Billowing Warpflame or Magical Flames missile weapons is 6, subtract 2 from the Bravery characteristic of the target unit until the end of that battle round. A unit cannot benefit from this command ability more than once per turn.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="points" value="0.0"/>
-              </costs>
+            <selectionEntry id="fc74-0a78-9bc1-a509" name="The Unbound Flux" hidden="true" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="fe45-cde3-b75b-49dd" type="max"/>
+              </constraints>
             </selectionEntry>
-            <selectionEntry id="1066-7d84-ca07-469d" name="The Hosts Duplicitous" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="8d33-5251-45dd-0c43" name="Ranks of Mischievous Mirages" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
-                  <characteristics>
-                    <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">Enemy units within 3&quot; of a HOSTS DUPLICITOUS unit cannot retreat.</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="58e9-6f78-45b6-eef1" name="Impossible to Anticipate" hidden="false" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
-                  <characteristics>
-                    <characteristic name="Command Ability Details" typeId="1b71-4c83-4e8c-093f">You can use this command ability once per battle, immediately after a friendly HOSTS DUPLICITOUS HORRORS OF TZEENTCH unit is destroyed. If you do so, roll a dice. On a 5+, a new unit identical to the one that was destroyed is added to your army. Set up the new unit wholly within 12&quot; of a friendly HOSTS DUPLICITOUS HERO and more than 9&quot; from any enemy units.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="points" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="b8b9-01ca-3359-997c" name="The Guild of Summoners" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="853b-3ee0-a03f-b619" name="Scions of the Exiled" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
-                  <characteristics>
-                    <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">If your army has the GUILD OF SUMMONERS keyword, your Fate Points can only be used to summon LORD OF CHANGE units. Instead of a Fate Point cost of 30, a GUILD OF SUMMONERS LORD OF CHANGE costs 9 Fate Points to summon the first time, 18 Fate Points the second time, and 30 Fate Points each time thereafter for the rest of the battle. </characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="b805-ebcf-b552-7a92" name="The Guild of Summoners" hidden="false" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
-                  <characteristics>
-                    <characteristic name="Command Ability Details" typeId="1b71-4c83-4e8c-093f">You can use this command ability in your hero phase. If you do so, pick a friendly GUILD OF SUMMONERS WIZARD wholly within 9&quot; of a friendly GUILD OF SUMMONERS HERO or wholly within 18&quot; of a friendly GUILD OF SUMMONERS HERO that is a general. Add 1 to casting rolls for that WIZARD until the end of 
-that phase. A unit cannot benefit from this command ability more than once per turn.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="points" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="ac6a-64ed-c892-dc34" name="The Pyrofane Cult" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="a6ac-4cdd-0359-8e7f" name="Immolate" hidden="false" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
-                  <characteristics>
-                    <characteristic name="Command Ability Details" typeId="1b71-4c83-4e8c-093f">You can use this command ability in your shooting phase. If you do so, pick 1 friendly PYROFANE CULT KAIRIC ACOLYTE unit wholly within 12&quot; of a friendly PYROFANE CULT HERO. You can re-roll wound rolls for attacks made by that unit until the end of that phase.</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="3e38-e09c-338a-da87" name="Arrows of Tzeentch" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
-                  <characteristics>
-                    <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">Add 1 to hit rolls for attacks made with Sorcerous Bolts by friendly PYROFANE CULT KAIRIC ACOLYTE units. In addition, at the end of your shooting phase, roll a dice for each enemy unit that suffered any wounds inflicted by attacks made with Sorcerous Bolts by friendly PYROFANE CULT units in that phase. On a 5+, that unit suffers D3 mortal wounds.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="points" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="8c5b-ee46-f149-487f" name="The Cult of the Transient Form" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="00c1-800c-fa12-dafd" name="The Change-gift" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
-                  <characteristics>
-                    <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">Roll a dice each time a friendly CULT OF THE TRANSIENT FORM KAIRIC ACOLYTE model is slain in the combat phase. On a 2-5, before removing that model from play, that model can fight. On a 6, before removing that model from play, you can add 1 TZAANGOR model to an existing TZAANGOR unit in your army. If you do so, set up that TZAANGOR model within 1&quot; of a friendly TZAANGOR unit that is within 9&quot; of the slain model. The model can only be set up within 3&quot; of an enemy unit if the friendly TZAANGOR unit was within 3&quot; of that enemy unit before any models were added.</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="592b-43b5-b4e3-797e" name="Fate of Transmutation" hidden="false" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
-                  <characteristics>
-                    <characteristic name="Command Ability Details" typeId="1b71-4c83-4e8c-093f">You can use this command ability in your hero phase. If you do so, pick 1 CULT OF THE TRANSIENT FORM KAIRIC ACOLYTE unit wholly within 12&quot; of a friendly CULT OF THE TRANSIENT FORM HERO. Until your next hero phase, each time a KAIRIC ACOLYTE model from that unit is slain, add 1 to the dice roll made for that unit’s Change-gift ability.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="points" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="992b-5e1b-2640-9b3c" name="The Hosts Arcanum" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="a8d3-9de4-c0da-1d74" name="Thieves of All Things Arcane" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
-                  <characteristics>
-                    <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">Once per turn, in the first, third and fifth battle rounds, when a friendly HOSTS ARCANUM WIZARD attempts to unbind a spell, the spell is automatically unbound (do not roll 2D6).</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="b00e-7885-6f65-d58a" name="Entourage of Sky-sharks" hidden="false" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
-                  <characteristics>
-                    <characteristic name="Command Ability Details" typeId="1b71-4c83-4e8c-093f">You can use this command ability in your hero phase. If you do so, pick 1 friendly HOSTS ARCANUM SCREAMERS OF TZEENTCH unit wholly within 12&quot; of a friendly HOSTS ARCANUM HERO. Until your next hero phase, add 1 to save rolls for attacks that target that unit. In addition, until your next hero phase, improve the Rend characteristic of that unit’s Lamprey Bite by 1. A unit cannot benefit from the effects of this ability more than once per turn.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="points" value="0.0"/>
-              </costs>
+            <selectionEntry id="c35e-4aca-258f-a2ec" name="The Cult of a Thousand Eyes" hidden="true" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d36c-f077-ec42-a4bb" type="max"/>
+              </constraints>
             </selectionEntry>
           </selectionEntries>
+          <entryLinks>
+            <entryLink id="b400-02e8-b932-ab82" name="Change Coven" hidden="false" collective="false" import="true" targetId="63b3-2be1-b734-99e8" type="selectionEntryGroup"/>
+          </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
@@ -1586,8 +1501,13 @@ In addition, if the unmodified casting roll for a spell attempted by the caster 
       </profiles>
       <categoryLinks>
         <categoryLink id="dc8a-0156-45d1-9bc3" name="ENDLESS SPELL" hidden="false" targetId="31f4-2067-3ade-e6f8" primary="false"/>
-        <categoryLink id="9bb2-4002-5f5c-5097" name="New CategoryLink" hidden="false" targetId="aeb3-e51f-7f02-619e" primary="true"/>
+        <categoryLink id="40df-2a60-6039-c255" name="New CategoryLink" hidden="false" targetId="eecb-ed66-d474-9ddd" primary="true"/>
       </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="a620-1f6e-e451-6d30" name="Legion of Chaos Ascendant" hidden="false" collective="false" import="true" type="upgrade">
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
@@ -2835,7 +2755,7 @@ Kneel: Subtract 1 from save rolls for attacks that target that unit until your n
     <selectionEntryGroup id="6ef7-1ab0-9923-7fee" name="Hosts of Slaanesh" hidden="false" collective="false" import="true">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7da0-57c0-f951-d456" type="min"/>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1fb8-9ead-19d5-7a24" type="max"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1fb8-9ead-19d5-7a24" type="max"/>
       </constraints>
       <selectionEntries>
         <selectionEntry id="e211-0580-4d0d-40eb" name="Invaders Host" hidden="false" collective="false" import="true" type="upgrade">
@@ -2856,6 +2776,23 @@ Kneel: Subtract 1 from save rolls for attacks that target that unit until your n
               </characteristics>
             </profile>
           </profiles>
+          <selectionEntries>
+            <selectionEntry id="74e1-5ea0-baa9-f679" name="Lurid Haze" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9af2-476c-5578-f72c" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="fe37-1c42-041c-f647" name="Billowing Mists" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
+                  <characteristics>
+                    <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">After set up is complete but before the first battle round begins, you can remove D3 friendly LURID HAZE INVADERS HOST units from the battlefield and say that they are set up in ambush as reserve units (any set-up restrictions in teh battleplan being used still apply). If you do so, at the end of your first movement phase, you must set up those friendly LURID HAZE INVADERS HOST units on the battlefield, wholly within 6&quot; of the battlefield edge and more than 9&quot; from any enemy units.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
@@ -2878,6 +2815,23 @@ Kneel: Subtract 1 from save rolls for attacks that target that unit until your n
               </characteristics>
             </profile>
           </profiles>
+          <selectionEntries>
+            <selectionEntry id="9fa1-78df-25e6-6878" name="Faultless Blades" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0c87-5865-aedf-37e2" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="768d-ae1e-9103-5c28" name="Send Me Your Best" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
+                  <characteristics>
+                    <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">After set up is complete but before the first battle round begins, you can remove D3 friendly LURID HAZE INVADERS HOST units from the battlefield and say that they are set up in ambush as reserve units (any set-up restrictions in teh battleplan being used still apply). If you do so, at the end of your first movement phase, you must set up those friendly LURID HAZE INVADERS HOST units on the battlefield, wholly within 6&quot; of the battlefield edge and more than 9&quot; from any enemy units.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
@@ -5610,6 +5564,11 @@ Nightmare Chasm: At the start of each hero phase, roll a dice for this terrain f
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
+        <selectionEntry id="cdce-2487-f9bc-1000" name="Knights of the Empty Throne" hidden="false" collective="false" import="true" type="upgrade">
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
     <selectionEntryGroup id="f019-57cf-f8db-bb16" name="Traits: Change Coven" hidden="false" collective="false" import="true">
@@ -5630,7 +5589,7 @@ Nightmare Chasm: At the start of each hero phase, roll a dice for this terrain f
               <conditionGroups>
                 <conditionGroup type="and">
                   <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4ffa-1d6a-7ad2-7998" type="equalTo"/>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4f59-c00f-5ede-3bc8" type="equalTo"/>
                     <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="088b-3a27-03f7-8249" type="notInstanceOf"/>
                   </conditions>
                 </conditionGroup>
@@ -5638,7 +5597,7 @@ Nightmare Chasm: At the start of each hero phase, roll a dice for this terrain f
             </modifier>
             <modifier type="set" field="hidden" value="true">
               <conditions>
-                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4ffa-1d6a-7ad2-7998" type="equalTo"/>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4f59-c00f-5ede-3bc8" type="equalTo"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -5663,7 +5622,7 @@ Nightmare Chasm: At the start of each hero phase, roll a dice for this terrain f
               <conditionGroups>
                 <conditionGroup type="and">
                   <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8c5b-ee46-f149-487f" type="equalTo"/>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bc34-aabb-2d0a-c10d" type="equalTo"/>
                     <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="088b-3a27-03f7-8249" type="notInstanceOf"/>
                   </conditions>
                 </conditionGroup>
@@ -5671,7 +5630,7 @@ Nightmare Chasm: At the start of each hero phase, roll a dice for this terrain f
             </modifier>
             <modifier type="set" field="hidden" value="true">
               <conditions>
-                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8c5b-ee46-f149-487f" type="equalTo"/>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="bc34-aabb-2d0a-c10d" type="equalTo"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -5696,7 +5655,7 @@ Nightmare Chasm: At the start of each hero phase, roll a dice for this terrain f
               <conditionGroups>
                 <conditionGroup type="and">
                   <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="992b-5e1b-2640-9b3c" type="equalTo"/>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="eef5-beb7-6cfe-f96d" type="equalTo"/>
                     <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="088b-3a27-03f7-8249" type="notInstanceOf"/>
                   </conditions>
                 </conditionGroup>
@@ -5704,7 +5663,7 @@ Nightmare Chasm: At the start of each hero phase, roll a dice for this terrain f
             </modifier>
             <modifier type="set" field="hidden" value="true">
               <conditions>
-                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="992b-5e1b-2640-9b3c" type="equalTo"/>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="eef5-beb7-6cfe-f96d" type="equalTo"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -5729,7 +5688,7 @@ Nightmare Chasm: At the start of each hero phase, roll a dice for this terrain f
               <conditionGroups>
                 <conditionGroup type="and">
                   <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1066-7d84-ca07-469d" type="equalTo"/>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="49b9-7e9a-c8a9-ce15" type="equalTo"/>
                     <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="088b-3a27-03f7-8249" type="notInstanceOf"/>
                   </conditions>
                 </conditionGroup>
@@ -5739,7 +5698,7 @@ Nightmare Chasm: At the start of each hero phase, roll a dice for this terrain f
               <conditionGroups>
                 <conditionGroup type="or">
                   <conditions>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1066-7d84-ca07-469d" type="equalTo"/>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="49b9-7e9a-c8a9-ce15" type="equalTo"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -5766,7 +5725,7 @@ Nightmare Chasm: At the start of each hero phase, roll a dice for this terrain f
               <conditionGroups>
                 <conditionGroup type="and">
                   <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ac6a-64ed-c892-dc34" type="equalTo"/>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="aed8-9ce6-8dfd-3a68" type="equalTo"/>
                     <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="088b-3a27-03f7-8249" type="notInstanceOf"/>
                   </conditions>
                 </conditionGroup>
@@ -5774,7 +5733,7 @@ Nightmare Chasm: At the start of each hero phase, roll a dice for this terrain f
             </modifier>
             <modifier type="set" field="hidden" value="true">
               <conditions>
-                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="ac6a-64ed-c892-dc34" type="equalTo"/>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="aed8-9ce6-8dfd-3a68" type="equalTo"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -5799,7 +5758,7 @@ Nightmare Chasm: At the start of each hero phase, roll a dice for this terrain f
               <conditionGroups>
                 <conditionGroup type="and">
                   <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b8b9-01ca-3359-997c" type="equalTo"/>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9d9b-4cec-07d6-628f" type="equalTo"/>
                     <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="088b-3a27-03f7-8249" type="notInstanceOf"/>
                   </conditions>
                 </conditionGroup>
@@ -5807,7 +5766,7 @@ Nightmare Chasm: At the start of each hero phase, roll a dice for this terrain f
             </modifier>
             <modifier type="set" field="hidden" value="true">
               <conditions>
-                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="b8b9-01ca-3359-997c" type="equalTo"/>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="9d9b-4cec-07d6-628f" type="equalTo"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -5844,12 +5803,12 @@ Nightmare Chasm: At the start of each hero phase, roll a dice for this terrain f
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
-                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1066-7d84-ca07-469d" type="equalTo"/>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="49b9-7e9a-c8a9-ce15" type="equalTo"/>
               </conditions>
             </modifier>
             <modifier type="set" field="3dad-0412-e541-80e2" value="1.0">
               <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="1066-7d84-ca07-469d" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="49b9-7e9a-c8a9-ce15" type="equalTo"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -5875,12 +5834,12 @@ Nightmare Chasm: At the start of each hero phase, roll a dice for this terrain f
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
-                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8c5b-ee46-f149-487f" type="equalTo"/>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bc34-aabb-2d0a-c10d" type="equalTo"/>
               </conditions>
             </modifier>
             <modifier type="set" field="9a9a-bc47-df2f-863e" value="1.0">
               <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8c5b-ee46-f149-487f" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="bc34-aabb-2d0a-c10d" type="equalTo"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -5906,12 +5865,12 @@ Nightmare Chasm: At the start of each hero phase, roll a dice for this terrain f
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
-                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="992b-5e1b-2640-9b3c" type="equalTo"/>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="eef5-beb7-6cfe-f96d" type="equalTo"/>
               </conditions>
             </modifier>
             <modifier type="set" field="b35e-93be-4412-62b3" value="1.0">
               <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="992b-5e1b-2640-9b3c" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="eef5-beb7-6cfe-f96d" type="equalTo"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -5937,12 +5896,12 @@ Nightmare Chasm: At the start of each hero phase, roll a dice for this terrain f
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
-                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4ffa-1d6a-7ad2-7998" type="equalTo"/>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4f59-c00f-5ede-3bc8" type="equalTo"/>
               </conditions>
             </modifier>
             <modifier type="set" field="a17f-56c1-adb6-0848" value="1.0">
               <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4ffa-1d6a-7ad2-7998" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4f59-c00f-5ede-3bc8" type="equalTo"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -5968,12 +5927,12 @@ Nightmare Chasm: At the start of each hero phase, roll a dice for this terrain f
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
-                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ac6a-64ed-c892-dc34" type="equalTo"/>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="aed8-9ce6-8dfd-3a68" type="equalTo"/>
               </conditions>
             </modifier>
             <modifier type="set" field="0699-84db-1701-5f2a" value="1.0">
               <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="ac6a-64ed-c892-dc34" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="aed8-9ce6-8dfd-3a68" type="equalTo"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -5999,12 +5958,12 @@ Nightmare Chasm: At the start of each hero phase, roll a dice for this terrain f
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
-                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b8b9-01ca-3359-997c" type="equalTo"/>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9d9b-4cec-07d6-628f" type="equalTo"/>
               </conditions>
             </modifier>
             <modifier type="set" field="18bb-c813-e58d-2df4" value="1.0">
               <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b8b9-01ca-3359-997c" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9d9b-4cec-07d6-628f" type="equalTo"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -6022,6 +5981,130 @@ Nightmare Chasm: At the start of each hero phase, roll a dice for this terrain f
           <categoryLinks>
             <categoryLink id="7fea-49d3-fa88-cddc" name="Artefact" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
           </categoryLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="63b3-2be1-b734-99e8" name="Change Coven" hidden="false" collective="false" import="true">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="64b3-c081-3925-c540" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="dd51-8785-133d-4257" name="Change Coven" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
+          <characteristics>
+            <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">When you choose an Tzeentch army, you can give it a Change Coven keyword from the list below. All TZEENTCH units in your army gain that keyword, and you can use the extra abilities listed for that Change Coven on the page indicated.
+• ETERNAL CONFLAGRATION (pg 78)
+• HOSTS DUPLICITOUS (pg 79)
+• HOSTS ARCANUM (pg 80)
+• CULT OF THE TRANSIENT FORM (pg 81)
+• PYROFANE CULT (pg 82)
+• GUILD OF SUMMONERS (pg 83)
+If a model already has a Change Coven keyword on its warscroll, it cannot gain another one. This does not preclude you from including the unit in your army.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <selectionEntries>
+        <selectionEntry id="4f59-c00f-5ede-3bc8" name="The Eternal Conflagration" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="f7a5-25e5-ccb4-8372" name="Twisters of Materiality" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
+              <characteristics>
+                <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">Improve the Rend characteristic of friendly ETERNAL CONFLAGRATION units’ Warpflame, Billowing Warpflame and Magical Flames missile weapons by 1.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="a647-96a5-9ed0-146a" name="Infernos of Mutation" hidden="false" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
+              <characteristics>
+                <characteristic name="Command Ability Details" typeId="1b71-4c83-4e8c-093f">You can use this command ability in the shooting phase. If you do so, pick 1 friendly ETERNAL CONFLAGRATION DAEMON unit wholly within 12&quot; of a friendly ETERNAL CONFLAGRATION DAEMON HERO. If the unmodified hit roll for any attack made by that unit’s Warpflame, Billowing Warpflame or Magical Flames missile weapons is 6, subtract 2 from the Bravery characteristic of the target unit until the end of that battle round. A unit cannot benefit from this command ability more than once per turn.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="49b9-7e9a-c8a9-ce15" name="The Hosts Duplicitous" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="1796-9747-27ad-deeb" name="Ranks of Mischievous Mirages" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
+              <characteristics>
+                <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">Enemy units within 3&quot; of a HOSTS DUPLICITOUS unit cannot retreat.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="a194-9eca-2775-f247" name="Impossible to Anticipate" hidden="false" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
+              <characteristics>
+                <characteristic name="Command Ability Details" typeId="1b71-4c83-4e8c-093f">You can use this command ability once per battle, immediately after a friendly HOSTS DUPLICITOUS HORRORS OF TZEENTCH unit is destroyed. If you do so, roll a dice. On a 5+, a new unit identical to the one that was destroyed is added to your army. Set up the new unit wholly within 12&quot; of a friendly HOSTS DUPLICITOUS HERO and more than 9&quot; from any enemy units.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="9d9b-4cec-07d6-628f" name="The Guild of Summoners" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="f626-0ac2-75d7-fbec" name="Scions of the Exiled" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
+              <characteristics>
+                <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">If your army has the GUILD OF SUMMONERS keyword, your Fate Points can only be used to summon LORD OF CHANGE units. Instead of a Fate Point cost of 30, a GUILD OF SUMMONERS LORD OF CHANGE costs 9 Fate Points to summon the first time, 18 Fate Points the second time, and 30 Fate Points each time thereafter for the rest of the battle. </characteristic>
+              </characteristics>
+            </profile>
+            <profile id="14dd-daf4-64ab-54a6" name="The Guild of Summoners" hidden="false" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
+              <characteristics>
+                <characteristic name="Command Ability Details" typeId="1b71-4c83-4e8c-093f">You can use this command ability in your hero phase. If you do so, pick a friendly GUILD OF SUMMONERS WIZARD wholly within 9&quot; of a friendly GUILD OF SUMMONERS HERO or wholly within 18&quot; of a friendly GUILD OF SUMMONERS HERO that is a general. Add 1 to casting rolls for that WIZARD until the end of 
+that phase. A unit cannot benefit from this command ability more than once per turn.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="aed8-9ce6-8dfd-3a68" name="The Pyrofane Cult" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="8867-f2aa-cacb-0843" name="Immolate" hidden="false" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
+              <characteristics>
+                <characteristic name="Command Ability Details" typeId="1b71-4c83-4e8c-093f">You can use this command ability in your shooting phase. If you do so, pick 1 friendly PYROFANE CULT KAIRIC ACOLYTE unit wholly within 12&quot; of a friendly PYROFANE CULT HERO. You can re-roll wound rolls for attacks made by that unit until the end of that phase.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="3fe9-c2dd-74ca-03ce" name="Arrows of Tzeentch" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
+              <characteristics>
+                <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">Add 1 to hit rolls for attacks made with Sorcerous Bolts by friendly PYROFANE CULT KAIRIC ACOLYTE units. In addition, at the end of your shooting phase, roll a dice for each enemy unit that suffered any wounds inflicted by attacks made with Sorcerous Bolts by friendly PYROFANE CULT units in that phase. On a 5+, that unit suffers D3 mortal wounds.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="bc34-aabb-2d0a-c10d" name="The Cult of the Transient Form" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="160f-f406-0cb0-68a9" name="The Change-gift" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
+              <characteristics>
+                <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">Roll a dice each time a friendly CULT OF THE TRANSIENT FORM KAIRIC ACOLYTE model is slain in the combat phase. On a 2-5, before removing that model from play, that model can fight. On a 6, before removing that model from play, you can add 1 TZAANGOR model to an existing TZAANGOR unit in your army. If you do so, set up that TZAANGOR model within 1&quot; of a friendly TZAANGOR unit that is within 9&quot; of the slain model. The model can only be set up within 3&quot; of an enemy unit if the friendly TZAANGOR unit was within 3&quot; of that enemy unit before any models were added.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="ecc3-63f0-4951-fb1a" name="Fate of Transmutation" hidden="false" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
+              <characteristics>
+                <characteristic name="Command Ability Details" typeId="1b71-4c83-4e8c-093f">You can use this command ability in your hero phase. If you do so, pick 1 CULT OF THE TRANSIENT FORM KAIRIC ACOLYTE unit wholly within 12&quot; of a friendly CULT OF THE TRANSIENT FORM HERO. Until your next hero phase, each time a KAIRIC ACOLYTE model from that unit is slain, add 1 to the dice roll made for that unit’s Change-gift ability.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="eef5-beb7-6cfe-f96d" name="The Hosts Arcanum" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="d225-4caa-33ac-6a47" name="Thieves of All Things Arcane" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
+              <characteristics>
+                <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">Once per turn, in the first, third and fifth battle rounds, when a friendly HOSTS ARCANUM WIZARD attempts to unbind a spell, the spell is automatically unbound (do not roll 2D6).</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="0792-53cb-0982-f328" name="Entourage of Sky-sharks" hidden="false" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
+              <characteristics>
+                <characteristic name="Command Ability Details" typeId="1b71-4c83-4e8c-093f">You can use this command ability in your hero phase. If you do so, pick 1 friendly HOSTS ARCANUM SCREAMERS OF TZEENTCH unit wholly within 12&quot; of a friendly HOSTS ARCANUM HERO. Until your next hero phase, add 1 to save rolls for attacks that target that unit. In addition, until your next hero phase, improve the Rend characteristic of that unit’s Lamprey Bite by 1. A unit cannot benefit from the effects of this ability more than once per turn.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
