@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="55" battleScribeVersion="2.03" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="56" battleScribeVersion="2.03" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <publications>
     <publication id="e51d-b1a3-pubEC" name="The General&apos;s Handbook"/>
     <publication id="e51d-b1a3-pubEQ" name="Core Rules"/>
@@ -1804,6 +1804,9 @@ to set up the WIZARD, then the WIZARD is slain.</description>
           <categoryLinks>
             <categoryLink id="3fac-3a94-439e-059f" name="General" hidden="false" targetId="b745-17c4-8fbf-8b04" primary="false"/>
           </categoryLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <costs>
@@ -4889,6 +4892,24 @@ to set up the WIZARD, then the WIZARD is slain.</description>
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick an enemy unit within 12&quot; of the caster that is visible to them. That unit suffers D3 mortal wounds. If that unit is a HERO or MONSTER, you can make a normal move with that unit as if it had a Move characteristic of 4&quot;.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="e236-f0fc-8bb0-ecb4" name="Battle: The Eightpoints" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="3c29-7e19-781b-def8" name="Stoke Rage" page="" hidden="false" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
+              <characteristics>
+                <characteristic name="Command Ability Details" typeId="1b71-4c83-4e8c-093f">You can use this command ability when you pick a predatory endless spell to move. If you do so, pick 1 predatory endless psell within 12&quot; of a friendly WIZARD. Add D6&quot; to the movement range on that predatory endless spell&apos;s warscroll until the end of the battle round.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="b9a0-e9bc-9406-06c9" name="Marked Quarry" page="" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+              <characteristics>
+                <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
+                <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick 1 enemy unit within 18&quot; of the caster and visible to them. Until the start of your next hero phase, Roaming Monsters units must make any charge moves or normal moves (excluding retreat moves) towards that unit and any shooting attacks made by Roaming Monsters units must target that unit, even if that unit is not the closest unit to the Roaming Monsters unit.</characteristic>
               </characteristics>
             </profile>
           </profiles>
