@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="56" battleScribeVersion="2.03" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="57" battleScribeVersion="2.03" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <publications>
     <publication id="e51d-b1a3-pubEC" name="The General&apos;s Handbook"/>
     <publication id="e51d-b1a3-pubEQ" name="Core Rules"/>
@@ -4901,7 +4901,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
         </selectionEntry>
         <selectionEntry id="e236-f0fc-8bb0-ecb4" name="Battle: The Eightpoints" hidden="false" collective="false" import="true" type="upgrade">
           <profiles>
-            <profile id="3c29-7e19-781b-def8" name="Stoke Rage" page="" hidden="false" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
+            <profile id="3c29-7e19-781b-def8" name="Forced by the Aether" page="" hidden="false" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
               <characteristics>
                 <characteristic name="Command Ability Details" typeId="1b71-4c83-4e8c-093f">You can use this command ability when you pick a predatory endless spell to move. If you do so, pick 1 predatory endless psell within 12&quot; of a friendly WIZARD. Add D6&quot; to the movement range on that predatory endless spell&apos;s warscroll until the end of the battle round.</characteristic>
               </characteristics>
