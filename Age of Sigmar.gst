@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="57" battleScribeVersion="2.03" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="58" battleScribeVersion="2.03" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <publications>
     <publication id="e51d-b1a3-pubEC" name="The General&apos;s Handbook"/>
     <publication id="e51d-b1a3-pubEQ" name="Core Rules"/>
@@ -1745,7 +1745,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
             <characteristic name="Move" typeId="8655-6213-2824-1752">4&quot;</characteristic>
             <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">8</characteristic>
             <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">10</characteristic>
-            <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">4&quot;</characteristic>
+            <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">4+</characteristic>
           </characteristics>
         </profile>
         <profile id="6903-a8c0-cb34-28a6" name="Unstoppable Battle Fury" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
