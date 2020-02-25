@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="522a-d5b0-4c7e-321d" name="Order - Cities of Sigmar" revision="17" battleScribeVersion="2.03" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="25" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="522a-d5b0-4c7e-321d" name="Order - Cities of Sigmar" revision="18" battleScribeVersion="2.03" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="25" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="deec-d475-pubN65537" name="Grand Alliance: Order"/>
     <publication id="e440-9199-1072-a7a0" name="Cities of Sigmar Battletome"/>
@@ -286,7 +286,7 @@
           <modifiers>
             <modifier type="increment" field="e07a-8193-2b4d-f3ae" value="1.0">
               <repeats>
-                <repeat field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cccb-89cd-393f-5839" repeats="1" roundUp="false"/>
+                <repeat field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="cccb-89cd-393f-5839" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
@@ -296,9 +296,9 @@
         </categoryLink>
         <categoryLink id="5ff9-a6f1-2d64-1edd" name="SYLVANETH" hidden="false" targetId="de6f-3fcb-09b2-a59e" primary="false">
           <modifiers>
-            <modifier type="increment" field="6056-22cb-9592-8b31" value="1.0">
+            <modifier type="increment" field="943a-11bb-9439-5959" value="1.0">
               <repeats>
-                <repeat field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cccb-89cd-393f-5839" repeats="1" roundUp="false"/>
+                <repeat field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="cccb-89cd-393f-5839" repeats="1" roundUp="false"/>
               </repeats>
               <conditions>
                 <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9814-af33-d747-6185" type="equalTo"/>
@@ -306,7 +306,7 @@
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6056-22cb-9592-8b31" type="max"/>
+            <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="943a-11bb-9439-5959" type="max"/>
           </constraints>
         </categoryLink>
         <categoryLink id="f044-a157-4e18-453d" name="KHARADRON OVERLORDS" hidden="false" targetId="2654-58fb-a46f-b28d" primary="false">
@@ -530,15 +530,6 @@
       </modifiers>
     </entryLink>
     <entryLink id="33ef-bd0f-422f-70fc" name="Endrinmaster" hidden="false" collective="false" import="true" targetId="b35b-ad7f-1673-0c71" type="selectionEntry">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="11e1-564a-b824-ac65" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-    </entryLink>
-    <entryLink id="7933-d09b-d334-18bc" name="Drillbill" hidden="false" collective="false" import="true" targetId="6d4e-5472-bcd5-7c43" type="selectionEntry">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditions>
@@ -1338,7 +1329,7 @@
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="87f8-d0f2-e2c7-0668" name="Allegiance" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="87f8-d0f2-e2c7-0668" name="Allegiance" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
         <modifier type="set" field="06ec-3221-cc77-09c5" value="0.0">
           <conditions>
@@ -2350,9 +2341,32 @@ You can choose 1 additional friendly ANVILGARD DRAGON, ANVILGARD KHARIBDYSS or A
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
+        <selectionEntry id="fe29-1d66-afed-a78c" name="General" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b78c-c342-c8aa-aa45" type="instanceOf"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="62e4-370f-3318-cdbd" type="instanceOf"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="78f3-8a59-699a-61e8" type="instanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="793e-286b-5e08-9cc7" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="419a-8210-3e30-e891" name="New CategoryLink" hidden="false" targetId="b745-17c4-8fbf-8b04" primary="false"/>
+          </categoryLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink id="77cb-744e-15bd-47f7" name="General" hidden="false" collective="false" import="true" targetId="d618-803c-36f8-0a3a" type="selectionEntry"/>
         <entryLink id="bf2e-7f90-ae02-a649" name="Command Traits" hidden="false" collective="false" import="true" targetId="6a88-d7b5-6546-bea3" type="selectionEntryGroup"/>
         <entryLink id="0db5-7cd7-cefa-6fa4" name="Artefacts" hidden="false" collective="false" import="true" targetId="a00c-408d-babb-46bf" type="selectionEntryGroup"/>
         <entryLink id="81ea-80eb-4cbe-2e15" name="General&apos;s Adjunct" hidden="false" collective="false" import="true" targetId="4ec5-902a-f5af-5cc6" type="selectionEntry"/>
@@ -2607,7 +2621,7 @@ You can choose 1 additional friendly ANVILGARD DRAGON, ANVILGARD KHARIBDYSS or A
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="77cb-744e-15bd-47f7" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fe29-1d66-afed-a78c" type="equalTo"/>
                 <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5b2f-302f-2c13-6c55" type="equalTo"/>
               </conditions>
             </conditionGroup>
@@ -2767,7 +2781,7 @@ You can choose 1 additional friendly ANVILGARD DRAGON, ANVILGARD KHARIBDYSS or A
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="77cb-744e-15bd-47f7" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fe29-1d66-afed-a78c" type="equalTo"/>
                 <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5b2f-302f-2c13-6c55" type="equalTo"/>
               </conditions>
             </conditionGroup>
@@ -3762,7 +3776,7 @@ You can choose 1 additional friendly ANVILGARD DRAGON, ANVILGARD KHARIBDYSS or A
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="77cb-744e-15bd-47f7" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fe29-1d66-afed-a78c" type="equalTo"/>
                 <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1d1c-6293-dfdb-1b9f" type="equalTo"/>
                 <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ccd7-d678-30e1-2e26" type="equalTo"/>
                 <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2131-fb28-e411-de37" type="equalTo"/>
