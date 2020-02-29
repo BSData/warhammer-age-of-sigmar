@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="750c-157c-3186-61d3" name="Destruction - Gloomspite Gitz" revision="19" battleScribeVersion="2.03" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="46" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="750c-157c-3186-61d3" name="Destruction - Gloomspite Gitz" revision="20" battleScribeVersion="2.03" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="46" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="3323-8984-c803-feb5" name="Gloomspite Errata/Points, July 2019"/>
   </publications>
@@ -4226,17 +4226,6 @@
             <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">6+</characteristic>
           </characteristics>
         </profile>
-        <profile id="3199-05c2-f53b-7c18" name="Barbed Net" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
-          <characteristics>
-            <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
-            <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">2&quot;</characteristic>
-            <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">3</characteristic>
-            <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
-            <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">5+</characteristic>
-            <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
-            <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
-          </characteristics>
-        </profile>
         <profile id="12ff-9884-3cf4-0d2c" name="Backstabbing Mob" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
             <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Add 1 to wound rolls for attacks made with melee weapons by this unit while it has at least 15 models. Add 2 to the wound rolls made with melee weapons by this unit instead while it has at least 30 models. </characteristic>
@@ -4245,11 +4234,6 @@
         <profile id="8c2f-815a-2c10-7044" name="Moon Shields" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
             <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Add 1 to save rolls for attacks that target this unit while it has at least 10 models with Moon Shields.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="eddf-ed87-dd7d-07fc" name="Netters" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Subtract 1 from hit rolls for attacks made by enemy models while they are within 2&quot; of any friendly models with a Barbed Net.</characteristic>
           </characteristics>
         </profile>
         <profile id="f142-d277-ff4e-a3b9" name="Moonclan Boss" hidden="false" typeId="8b8c-5816-cbdb-9763" typeName="Unit Leader">
@@ -4284,121 +4268,113 @@
         </selectionEntry>
         <selectionEntry id="67d1-4084-739e-e146" name="Gong Basher" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
-            <modifier type="set" field="6e47-7fe4-6ef0-0594" value="2">
-              <conditions>
-                <condition field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9379-5c13-bfd0-98f8" type="equalTo"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="6e47-7fe4-6ef0-0594" value="3">
-              <conditions>
-                <condition field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9379-5c13-bfd0-98f8" type="equalTo"/>
-              </conditions>
+            <modifier type="increment" field="6e47-7fe4-6ef0-0594" value="1.0">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9379-5c13-bfd0-98f8" repeats="1" roundUp="false"/>
+              </repeats>
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6e47-7fe4-6ef0-0594" type="max"/>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6e47-7fe4-6ef0-0594" type="max"/>
           </constraints>
-          <rules>
-            <rule id="9c3e-a141-b771-8087" name="Gong Basher" hidden="false">
-              <description>1 in every 20 models in this unit can be a Gong Basher. Add 2 to run rolls for a unit that includes any Gong Bashers.</description>
-            </rule>
-          </rules>
+          <infoLinks>
+            <infoLink id="5305-439c-4270-41dc" name="Gong Basher" hidden="false" targetId="52d6-740a-35fb-ea0d" type="profile"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="261e-83df-236c-7e6b" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="b6ba-f9c8-815d-0bc6" name="x3 Barbed Net" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
-            <modifier type="set" field="7b20-e33a-f62f-4e95" value="2">
-              <conditions>
-                <condition field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9379-5c13-bfd0-98f8" type="equalTo"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="7b20-e33a-f62f-4e95" value="3">
-              <conditions>
-                <condition field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9379-5c13-bfd0-98f8" type="equalTo"/>
-              </conditions>
+            <modifier type="increment" field="3f90-d44d-6cfe-90bb" value="1.0">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9379-5c13-bfd0-98f8" repeats="1" roundUp="false"/>
+              </repeats>
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7b20-e33a-f62f-4e95" type="max"/>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3f90-d44d-6cfe-90bb" type="max"/>
           </constraints>
-          <rules>
-            <rule id="8f00-594e-dd2f-63ad" name="Standard Bearer" hidden="false">
-              <description>1 in every 20 models in this unit can either be a Moonclan Flag Bearer or a Bad Moon Icon Bearer. Add 1 to the Bravery characteristic of a unit that includes any Moonclan Flag Bearers. Add 1 to save rolls for attacks made with missile weapons that target a unit that includes any Bad Moon Icon Bearers.</description>
-            </rule>
-          </rules>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="1e47-11ba-f39f-54ba" name="Stabba" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9078-8f21-8c4c-b89e" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5ed3-4335-1742-c967" type="min"/>
-          </constraints>
-          <profiles>
-            <profile id="3577-e4a3-4a0d-e93b" name="Stabba" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
-              <characteristics>
-                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
-                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
-                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">1</characteristic>
-                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
-                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">4+</characteristic>
-                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
-                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="b923-2056-cb35-65d5" name="Pokin&apos; Spear" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e564-3057-2aaf-098d" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4f43-5df2-9b08-bf00" type="min"/>
-          </constraints>
-          <profiles>
-            <profile id="b8fa-2e36-46ed-d335" name="Pokin&apos; Spear" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
-              <characteristics>
-                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
-                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">2&quot;</characteristic>
-                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">1</characteristic>
-                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">5+</characteristic>
-                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">4+</characteristic>
-                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
-                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="b6ba-f9c8-815d-0bc6" name="Barbed Net" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3f90-d44d-6cfe-90bb" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c45e-b3c8-25a8-e299" type="min"/>
-          </constraints>
-          <profiles>
-            <profile id="d8c3-5d5a-0855-da10" name="Barbed Net" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
-              <characteristics>
-                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
-                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">2&quot;</characteristic>
-                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">3</characteristic>
-                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
-                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">5+</characteristic>
-                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
-                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
+          <infoLinks>
+            <infoLink id="0576-9cef-df5c-8999" name="Netters" hidden="false" targetId="521f-3831-fde3-1891" type="profile"/>
+            <infoLink id="0978-6665-4a9c-a255" name="Barbed Net" hidden="false" targetId="4ab6-9aab-5be6-6c51" type="profile"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="3a6f-1d9d-cd2f-4204" name="Weapon Option" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a7ae-61b7-1667-41ec" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9165-19ac-f3f6-46d1" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="923b-d5d2-5ab9-3a12" name="Stabba" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="45c5-6aea-7291-0cb3" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="76a6-191d-b5c9-fa81" name="Stabba" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+                  <characteristics>
+                    <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                    <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
+                    <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">1</characteristic>
+                    <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
+                    <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">4+</characteristic>
+                    <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
+                    <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="ee63-4205-f623-1c65" name="Pokin&apos; Spear" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6500-9c9e-e04f-e0aa" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="a1bb-388b-af65-6a69" name="Pokin&apos; Spear" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+                  <characteristics>
+                    <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                    <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">2&quot;</characteristic>
+                    <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">1</characteristic>
+                    <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">5+</characteristic>
+                    <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">4+</characteristic>
+                    <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
+                    <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="ffd3-0c3d-d28a-5826" name="Standard Bearer Option" hidden="false" collective="false" import="true">
+          <modifiers>
+            <modifier type="increment" field="45b0-dca3-2a0e-154f" value="1.0">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9379-5c13-bfd0-98f8" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="45b0-dca3-2a0e-154f" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="2dab-abab-242d-c5fb" name="Standard Bearer" hidden="false" targetId="b67d-49c7-e0ef-7951" type="profile"/>
+          </infoLinks>
+          <selectionEntries>
+            <selectionEntry id="bba3-bc22-22d5-1364" name="Bad Moon Icon" hidden="false" collective="false" import="true" type="upgrade"/>
+            <selectionEntry id="e2df-d361-170c-b345" name="Moon Clan Flag" hidden="false" collective="false" import="true" type="upgrade"/>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
@@ -4410,25 +4386,9 @@
             <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Add 1 to wound rolls for attacks made with melee weapons by this unit while it has at least 15 models. Add 2 to the wound rolls made with melee weapons by this unit instead while it has at least 30 models. </characteristic>
           </characteristics>
         </profile>
-        <profile id="60cb-b17c-1a63-f1e8" name="Barbed Net" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
-          <characteristics>
-            <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
-            <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">2&quot;</characteristic>
-            <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">3</characteristic>
-            <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
-            <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">5+</characteristic>
-            <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
-            <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
-          </characteristics>
-        </profile>
         <profile id="0167-fb84-3a56-8d87" name="Moon Shields" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
             <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Add 1 to save rolls for attacks that target this unit while it has at least 10 models with Moon Shields.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="1f14-39fd-6c85-f8d6" name="Netters" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Subtract 1 from hit rolls for attacks made by enemy models while they are within 2&quot; of any friendly models with a Barbed Net.</characteristic>
           </characteristics>
         </profile>
         <profile id="c506-a8fb-8c61-7a98" name="Shootas" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
@@ -4464,50 +4424,18 @@
         </selectionEntry>
         <selectionEntry id="a1eb-233e-ac15-6b01" name="Gong Basher" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
-            <modifier type="set" field="6483-544c-bfb0-25e5" value="2">
-              <conditions>
-                <condition field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="11ba-3041-0d9a-e4c1" type="equalTo"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="6483-544c-bfb0-25e5" value="3">
-              <conditions>
-                <condition field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="11ba-3041-0d9a-e4c1" type="equalTo"/>
-              </conditions>
+            <modifier type="increment" field="6483-544c-bfb0-25e5" value="1.0">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="11ba-3041-0d9a-e4c1" repeats="1" roundUp="false"/>
+              </repeats>
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6483-544c-bfb0-25e5" type="max"/>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6483-544c-bfb0-25e5" type="max"/>
           </constraints>
-          <rules>
-            <rule id="3734-557b-1de3-d960" name="Gong Basher" hidden="false">
-              <description>1 in every 20 models in this unit can be a Gong Basher. Add 2 to run rolls for a unit that includes any Gong Bashers.</description>
-            </rule>
-          </rules>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="f764-b2f8-e0c6-9bb6" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="80dd-0cea-f24f-8fe9" value="2">
-              <conditions>
-                <condition field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="11ba-3041-0d9a-e4c1" type="equalTo"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="80dd-0cea-f24f-8fe9" value="3">
-              <conditions>
-                <condition field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="11ba-3041-0d9a-e4c1" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="80dd-0cea-f24f-8fe9" type="max"/>
-          </constraints>
-          <rules>
-            <rule id="dd10-f186-ef4c-0956" name="Standard Bearer" hidden="false">
-              <description>1 in every 20 models in this unit can either be a Moonclan Flag Bearer or a Bad Moon Icon Bearer. Add 1 to the Bravery characteristic of a unit that includes any Moonclan Flag Bearers. Add 1 to save rolls for attacks made with missile weapons that target a unit that includes any Bad Moon Icon Bearers.</description>
-            </rule>
-          </rules>
+          <infoLinks>
+            <infoLink id="0d5c-6ab8-a0a6-ce26" name="Gong Basher" hidden="false" targetId="52d6-740a-35fb-ea0d" type="profile"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
@@ -4556,7 +4484,47 @@
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
+        <selectionEntry id="b5ae-5deb-fb34-c2cd" name="x3 Barbed Net" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="increment" field="d5c6-8b76-4cb2-f779" value="1.0">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="11ba-3041-0d9a-e4c1" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d5c6-8b76-4cb2-f779" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="9c29-7f62-f422-428c" name="Netters" hidden="false" targetId="521f-3831-fde3-1891" type="profile"/>
+            <infoLink id="3b6a-3156-e5a8-a7e1" name="Barbed Net" hidden="false" targetId="4ab6-9aab-5be6-6c51" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
       </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="ed8d-8cb7-e336-5944" name="Standard Bearer Option" hidden="false" collective="false" import="true">
+          <modifiers>
+            <modifier type="increment" field="2c79-8579-3e51-a617" value="1.0">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="11ba-3041-0d9a-e4c1" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2c79-8579-3e51-a617" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="2d2f-24f0-3b21-c86d" name="Standard Bearer" hidden="false" targetId="b67d-49c7-e0ef-7951" type="profile"/>
+          </infoLinks>
+          <selectionEntries>
+            <selectionEntry id="c9ae-39c3-2632-ed6d" name="Bad Moon Icon" hidden="false" collective="false" import="true" type="upgrade"/>
+            <selectionEntry id="debc-224d-cf02-8fa9" name="Moon Clan Flag" hidden="false" collective="false" import="true" type="upgrade"/>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
@@ -7513,6 +7481,32 @@
         <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">5</characteristic>
         <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
         <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+        <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
+        <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="52d6-740a-35fb-ea0d" name="Gong Basher" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+      <characteristics>
+        <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 in every 20 models in this unit can be a Gong Basher. Add 2 to run rolls for a unit that includes any Gong Bashers.</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="b67d-49c7-e0ef-7951" name="Standard Bearer" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+      <characteristics>
+        <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 in every 20 models in this unit can either be a Moonclan Flag Bearer or a Bad Moon Icon Bearer. Add 1 to the Bravery characteristic of a unit that includes any Moonclan Flag Bearers. Add 1 to save rolls for attacks made with missile weapons that target a unit that includes any Bad Moon Icon Bearers.</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="521f-3831-fde3-1891" name="Netters" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+      <characteristics>
+        <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Subtract 1 from hit rolls for attacks made by enemy models while they are within 2&quot; of any friendly models with a Barbed Net.</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="4ab6-9aab-5be6-6c51" name="Barbed Net" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+        <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">2&quot;</characteristic>
+        <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">3</characteristic>
+        <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
+        <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">5+</characteristic>
         <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
         <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
       </characteristics>
