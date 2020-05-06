@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="e0d8-b631-6934-ee34" name="Chaos - Slaves to Darkness Data" revision="21" battleScribeVersion="2.03" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="16" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="e0d8-b631-6934-ee34" name="Chaos - Slaves to Darkness Data" revision="22" battleScribeVersion="2.03" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="22" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="798b-2f60-pubN65537" name="Grand Alliance: Chaos"/>
     <publication id="798b-2f60-pubN85643" name="Forgeworld: Monstrous Arcanum"/>
@@ -1132,7 +1132,7 @@
       <modifiers>
         <modifier type="set-primary" field="category" value="e9f2-765a-b7b8-ce8e">
           <conditions>
-            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="812a-a8b3-7158-4adb" type="equalTo"/>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="812a-a8b3-7158-4adb" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -2167,13 +2167,6 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="b2a4-c572-6ab2-6b4e" name="Slaves to Darkness Daemon Prince" hidden="false" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="add" field="category" value="f22b-976f-fc38-366a">
-          <conditions>
-            <condition field="selections" scope="b2a4-c572-6ab2-6b4e" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7c8f-72be-1c3d-0d8d" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <profiles>
         <profile id="324c-c9bd-6385-df6c" name="Daemon Prince" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
           <characteristics>
@@ -2250,6 +2243,9 @@
                   </characteristics>
                 </profile>
               </profiles>
+              <categoryLinks>
+                <categoryLink id="390f-9789-e2d9-5a36" name="KHORNE" hidden="false" targetId="f22b-976f-fc38-366a" primary="false"/>
+              </categoryLinks>
               <costs>
                 <cost name="pts" typeId="points" value="0.0"/>
               </costs>
@@ -4681,80 +4677,6 @@ In addition, add 1 to the Damage characteristic of this model’s Rune-etched Ax
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="140.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="0927-637b-0094-312e" name="Be&apos;lakor" hidden="false" collective="false" import="true" type="unit">
-      <constraints>
-        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7661-c9e2-ad50-27af" type="max"/>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e133-fb72-cb9a-391a" type="max"/>
-      </constraints>
-      <profiles>
-        <profile id="64d9-90e3-cfbe-7e1c" name="Be&apos;lakor" hidden="false" typeId="f55d-ee3a-1597-110f" typeName="Magic">
-          <characteristics>
-            <characteristic name="Cast/Unbind" typeId="8294-f605-2c0f-8f92">2</characteristic>
-            <characteristic name="Spells Known" typeId="dc9c-47d3-6931-859c">Arcane Bolt, Mystic Shield, Enfeeble Foe</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="b957-e9b9-d855-d217" name="Blade of Shadows" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
-          <characteristics>
-            <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
-            <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
-            <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">6</characteristic>
-            <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
-            <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
-            <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
-            <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">2</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="7b76-e266-101e-647b" name="Shadow Form" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Ignore modifiers (positive or negative) when making save rolls for attacks that target this model.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="6188-e603-371f-2e95" name="The Dark Master" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">After set-up is complete but before the first battle round begins, secretly pick 1 enemy unit on the battlefield. Once per battle, at the start of the enemy hero phase, you can reveal which unit you picked.
-
-Until your next hero phase, your opponent must roll a dice each time that unit attempts to cast a spell, move, charge or attack with any weapons it is armed with. On a 1-4, that unit cannot do so. On a 5+, that unit can do so as normal.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="bb87-5466-d14e-b423" name="Lord of Torment" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If an enemy unit fails a battleshock test while it is within 10&quot; of this model, you can heal up to D3 wounds allocated to this model.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="b84b-3b61-3f88-4d08" name="Enfeeble Foe" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
-          <characteristics>
-            <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
-            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick 1 enemy unit within 18&quot; of the caster and visible to them. Subtract 1 from wound rolls for attacks made with melee weapons by that unit until your next hero phase.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="1c5c-04f5-dc2a-37ca" name="Be&apos;lakor" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
-          <characteristics>
-            <characteristic name="Move" typeId="8655-6213-2824-1752">12&quot;</characteristic>
-            <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">8</characteristic>
-            <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">10</characteristic>
-            <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">4+</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <infoLinks>
-        <infoLink id="d7f2-11a8-309c-5252" name="Fly" hidden="false" targetId="8e0c-cbe4-27be-8a30" type="profile"/>
-      </infoLinks>
-      <categoryLinks>
-        <categoryLink id="8afd-0cf8-825a-0883" name="New CategoryLink" hidden="false" targetId="7cdd-80ea-cbeb-8e16" primary="false"/>
-        <categoryLink id="b443-e305-8d44-3db2" name="New CategoryLink" hidden="false" targetId="1418-9a68-9f9e-e9a7" primary="false"/>
-        <categoryLink id="bcf8-29f4-ee62-0d94" name="New CategoryLink" hidden="false" targetId="4e0e-664d-51ea-0929" primary="false"/>
-        <categoryLink id="ebb7-a8d4-feca-f1cd" name="New CategoryLink" hidden="false" targetId="1959-9f6a-3056-913a" primary="false"/>
-        <categoryLink id="0b83-da7d-e287-4e6e" name="New CategoryLink" hidden="false" targetId="4f53-8230-2f02-9639" primary="false"/>
-        <categoryLink id="557a-f925-d7dd-2e58" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
-        <categoryLink id="e8e0-58a9-1c07-9689" name="DAEMON PRINCE" hidden="false" targetId="84ea-2e37-06de-d81e" primary="false"/>
-      </categoryLinks>
-      <entryLinks>
-        <entryLink id="542f-7cd4-e585-6b2e" name="General" hidden="false" collective="false" import="true" targetId="ef0e-df26-edb6-5ac7" type="selectionEntry"/>
-      </entryLinks>
-      <costs>
-        <cost name="pts" typeId="points" value="240.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="e738-e1c8-30a0-ef8c" name="Theddra Skull-Scryer" hidden="false" collective="false" import="true" type="unit">
