@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="59" battleScribeVersion="2.03" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="60" battleScribeVersion="2.03" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <publications>
     <publication id="e51d-b1a3-pubEC" name="The General&apos;s Handbook"/>
     <publication id="e51d-b1a3-pubEQ" name="Core Rules"/>
@@ -11,7 +11,7 @@
     <publication id="e51d-b1a3-pubEHOGM" name="Malign Sorcery"/>
   </publications>
   <costTypes>
-    <costType id="points" name="pts" defaultCostLimit="0.0"/>
+    <costType id="points" name="pts" defaultCostLimit="0.0" hidden="false"/>
   </costTypes>
   <profileTypes>
     <profileType id="1960-ca8e-67ce-2014" name="Unit">
@@ -2555,143 +2555,14 @@ to set up the WIZARD, then the WIZARD is slain.</description>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9a1d-788e-288d-9971" type="max"/>
       </constraints>
       <entryLinks>
-        <entryLink id="b698-c91c-04c4-4ec0" name="Weapons of Ghyran" hidden="false" collective="false" import="true" targetId="541f-8308-ce85-6f3d" type="selectionEntryGroup"/>
         <entryLink id="5b4c-2c28-bf39-b7fe" name="Relics of Ghyran" hidden="false" collective="false" import="true" targetId="692b-77fc-05c5-d070" type="selectionEntryGroup"/>
         <entryLink id="03c2-028c-05f3-7e1b" name="Relics of Ghur" hidden="false" collective="false" import="true" targetId="463d-7799-7dca-4724" type="selectionEntryGroup"/>
-        <entryLink id="c34e-037e-4770-d4fc" name="Weapons of Ghur" hidden="false" collective="false" import="true" targetId="9ef0-62f7-ba83-0dab" type="selectionEntryGroup"/>
         <entryLink id="ca16-6c24-a367-b23f" name="Relics of Aqshy" hidden="false" collective="false" import="true" targetId="dff7-19b4-9850-89a7" type="selectionEntryGroup"/>
-        <entryLink id="3e9e-cd54-55b9-b535" name="Weapons of Aqshy" hidden="false" collective="false" import="true" targetId="f4d9-1997-cea0-5804" type="selectionEntryGroup"/>
         <entryLink id="8ef1-c77e-a64f-32c9" name="Relics of Chamon" hidden="false" collective="false" import="true" targetId="302c-ef0b-a9d6-685e" type="selectionEntryGroup"/>
-        <entryLink id="96bb-c7ed-f76f-14fb" name="Weapons of Chamon" hidden="false" collective="false" import="true" targetId="b611-7315-706b-82ef" type="selectionEntryGroup"/>
-        <entryLink id="4aaf-139c-3837-ac1d" name="Weapons of Hysh" hidden="false" collective="false" import="true" targetId="b7ad-b3d0-d9c3-8cd6" type="selectionEntryGroup"/>
         <entryLink id="6266-f4be-74ac-9535" name="Relics of Hysh" hidden="false" collective="false" import="true" targetId="0823-7018-722c-3bcb" type="selectionEntryGroup"/>
         <entryLink id="d992-0fe3-4bcc-0506" name="Relics of Shyish" hidden="false" collective="false" import="true" targetId="f685-ff72-7c6d-d0f5" type="selectionEntryGroup"/>
-        <entryLink id="509c-7cf5-9abc-9903" name="Weapons of Shyish" hidden="false" collective="false" import="true" targetId="666d-dbde-1db1-c29c" type="selectionEntryGroup"/>
         <entryLink id="5e7a-a472-6882-6005" name="Relics of Ulgu" hidden="false" collective="false" import="true" targetId="158b-c95d-0272-ca62" type="selectionEntryGroup"/>
-        <entryLink id="b545-af79-b1d1-1721" name="Weapons of Ulgu" hidden="false" collective="false" import="true" targetId="f33b-19f2-d190-7659" type="selectionEntryGroup"/>
       </entryLinks>
-    </selectionEntryGroup>
-    <selectionEntryGroup id="541f-8308-ce85-6f3d" name="Weapons of Ghyran" hidden="false" collective="false" import="true">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2b64-08f8-641d-be66" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c719-1b09-bb28-6adf" type="max"/>
-      </constraints>
-      <selectionEntries>
-        <selectionEntry id="69f0-ec99-78e5-b06a" name="1. Entangling Blade" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5d8d-e8db-1240-e506" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="f306-24f5-fc80-aef9" name="Entangling Blade" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Pick one of the bearer’s melee weapons to be an Entangling Blade. If the bearer scores 1 or more hits on an enemy HERO or MONSTER with that weapon, subtract 1 from hit rolls for that enemy HERO or MONSTER until the end of the phase in which the hits were scored.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="f5fd-5e12-2e04-7052" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="54c8-4897-57f2-4500" name="6. Arboreal Stave" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2df3-57f8-b219-e14a" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="e387-e771-770f-df3f" name="Arboreal Stave" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">At the start of the combat phase, you can pick an enemy HERO within 3&quot; of the bearer that is visible to them and roll a dice. On a 5+ that HERO cannot make a pile-in move this combat phase.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="9731-0fce-ed92-f320" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="1c8a-477f-17b5-5520" name="5. Ghyrstrike" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4ca9-b4e2-30fa-550b" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="4afd-f2e6-b490-8661" name="Ghyrstrike" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Pick one of the bearer’s melee weapons to be Ghyrstrike. Add 1 to hit and wound rolls for this weapon.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="0fb9-e2ce-f945-e9af" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="bb2f-c070-85ff-60eb" name="4. The Sunderblade" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4644-d7bc-62a4-8755" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="0a70-7426-d0e2-f62c" name="The Sunderblade" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">In your shooting phase, roll a dice for each enemy unit within 9&quot; of the bearer. On a 6+ that unit suffers D3 mortal wounds.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="b468-a483-9e83-f7f3" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="1d7e-107a-1d2d-53c8" name="2. Jadewound Thorn" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2e04-fbf0-ebd9-51f2" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="8efc-9cae-f0f0-ee85" name="Jadewound Thorn" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Pick one of the bearer’s melee weapons to be the Jadewound Thorn. If the hit roll for that weapon is 6+ that attack inflicts 1 mortal wound in addition to its normal damage.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="3ac8-3abe-a5ed-cc17" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="72be-ec0c-894a-fc00" name="3. Blade of Hammerhal Ghyra" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6f79-a08c-e0c5-5f78" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="87eb-d74e-a1e9-06fa" name="Blade of Hammerhal Ghyra" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Pick one of the bearer’s melee weapons to be a Blade of Hammerhal Ghyra. Add 1 to the Attacks characteristic of this weapon.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="0ef1-b302-d4e1-8c7d" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
     </selectionEntryGroup>
     <selectionEntryGroup id="0d51-8ed8-dcf5-76a0" name="Realm of Origin" hidden="false" collective="false" import="true">
       <constraints>
@@ -2748,14 +2619,14 @@ to set up the WIZARD, then the WIZARD is slain.</description>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0a52-d7d8-ace3-3ce7" type="max"/>
       </constraints>
       <selectionEntries>
-        <selectionEntry id="7730-ae84-c481-cc6c" name="1. Hypersnare Seeds" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="7730-ae84-c481-cc6c" name="0. Everspring Diadem" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d6ce-6ea7-f5fe-f036" type="max"/>
           </constraints>
           <profiles>
-            <profile id="07f6-7fa7-96a2-ab12" name="Hypersnare Seeds" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
+            <profile id="07f6-7fa7-96a2-ab12" name="Everspring Diadem" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
               <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">At the end of your opponent’s shooting phase, pick an enemy unit within 8&quot; of the bearer that is visible to them and roll a dice. On a 5+ that unit may not charge in the subsequent charge phase.</characteristic>
+                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">In your hero phase, you can heal 1 wound allocated to the bearer.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -2858,128 +2729,6 @@ to set up the WIZARD, then the WIZARD is slain.</description>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
-    <selectionEntryGroup id="9ef0-62f7-ba83-0dab" name="Weapons of Ghur" hidden="false" collective="false" import="true">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4c81-5c75-b32a-c854" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a3d0-9bc8-6ff6-cded" type="max"/>
-      </constraints>
-      <selectionEntries>
-        <selectionEntry id="59f0-3391-2b67-5f6f" name="1. Stonehorn Blade" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="cf63-430b-8f5e-a4bb" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="5979-efc9-1495-26a1" name="Stonehorn Blade" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Pick one of the bearer’s melee weapons to be a Stonehorn Blade. Roll a dice at the end of any phase in which any wounds were inflicted by that weapon. On a 5+ you can pick an enemy unit within 3&quot; of the bearer. That unit suffers D3 mortal wounds.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="5768-641f-7562-8db0" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="82f7-06d7-505d-320c" name="6. Rockjaws" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="04ad-2173-dcf9-8033" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="1475-454d-4ebe-654e" name="Rockjaws" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">In your shooting phase, you can pick an enemy unit within 8&quot; of the bearer that is visible to them and roll a dice. On a 3+ that unit suffers D3 mortal wounds.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="ce82-b1db-6ee4-5a86" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="efd0-3f4d-7378-7685" name="5. Rageblade" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="77d7-2719-3825-ec96" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="bd7f-43a8-2330-ecc0" name="Rageblade" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Pick one of the bearer’s melee weapons to be a Rageblade. Add 1 to the attacks characteristic of that weapon.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="73f8-f3cd-ec49-446c" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="da04-d621-d130-6fe3" name="4. Blade of Carving" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="53a1-be5a-cc2b-52df" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="a085-d9fc-4c50-ef31" name="Blade of Carving" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Pick one of the bearer’s melee weapons to be a Blade of Carving. If a hit roll for an attack with this weapon is 6+ the wound roll for that attack is automatically successful.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="bed6-aa5a-1586-204a" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="f6fb-6bfa-ba52-33c7" name="2. Anraheir&apos;s Claw" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f5bb-1d41-ae77-67a4" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="6732-0f63-f666-6932" name="Anraheir&apos;s Claw" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Pick one of the bearer’s melee weapons to be Anraheirs’s Claw. If the wound roll for that weapon is 6+ add 2 to the Damage characteristic of that weapon for that attack.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="e6b1-5c26-c12d-88a8" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="aff9-0ce2-3166-5e59" name="3. Amberglaive" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="96d1-33fb-55f6-a0b9" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="7c3d-188b-a685-d7dd" name="Amberglaive" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Pick one of the bearer’s melee weapons to be an Amberglaive. Add 1&quot; to the Range characteristic of that weapon (to a maximum of 3&quot;). In addition, add 1 to hit rolls for that weapon.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="3e00-486c-b85d-c86e" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-    </selectionEntryGroup>
     <selectionEntryGroup id="463d-7799-7dca-4724" name="Relics of Ghur" hidden="false" collective="false" import="true">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
@@ -2992,109 +2741,19 @@ to set up the WIZARD, then the WIZARD is slain.</description>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5940-4140-d3d3-ab11" type="max"/>
       </constraints>
       <selectionEntries>
-        <selectionEntry id="66d3-8efa-52b7-22c2" name="1. Beastcaller&apos;s Bones" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="66d3-8efa-52b7-22c2" name="0. Predator&apos;s Torc" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f80a-af57-50cf-5e1d" type="max"/>
           </constraints>
           <profiles>
-            <profile id="73e1-9ac6-3ab2-9103" name="Beastcaller&apos;s Bones" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
+            <profile id="73e1-9ac6-3ab2-9103" name="Predator&apos;s Torc" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
               <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">At the start of the combat phase, roll a dice for each MONSTER within 3&quot; of the bearer. On a 5+ the monster being rolled for cannot attack this phase. If the monster is a mount, the rider may still attack with their own weapons as normal.</characteristic>
+                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">You can re-roll charge rolls for the bearer.</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <categoryLinks>
             <categoryLink id="04f6-1089-63b7-ebd1" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="b620-c40f-1d1c-0f1b" name="6. Tuskhelm" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5a8d-ceab-9559-733e" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="336b-2f8f-56b8-f5ff" name="Tuskhelm" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Roll a dice for each enemy unit within 1&quot; of the bearer after the bearer completes a charge move. On a 4+ the unit being rolled for suffers 1 mortal wound.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="ba58-c3f3-8631-9be6" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="618d-f9ee-ab56-a4e9" name="5. Shardfist Pelt" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3c23-d223-917e-6c4e" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="9adf-c38a-2a1b-2d13" name="Shardfist Pelt" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Each time you make a save roll of 6+ for the bearer in the combat phase, the attacking unit suffers 1 mortal wound after all of its attacks have been made.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="71a3-4a56-2a98-a55e" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="c5d7-e7c4-b337-6e7e" name="4. Gargant-bone Dice" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a87a-9f06-0158-e674" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="e127-3966-4632-879b" name="Gargant-bone Dice" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Once per battle, in your hero phase, you can declare that the bearer will roll their Gargant-bone Dice. If you do so, roll three dice. For each roll of a 5+ each enemy unit within 6&quot; of the bearer suffers D3 mortal wounds.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="68b7-13ce-c029-d1bf" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="de85-aed2-1790-61d5" name="2. Drakeforged Plate" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8cca-3474-bf8a-3528" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="0f5e-cd66-e51d-3710" name="Drakeforged Plate" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Re-roll save rolls of 1 for the bearer against attacks that have a random Damage characteristic.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="1a1b-1a52-f0f4-2024" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="4501-c14b-1eff-9f70" name="3. Gryph-feather Charm" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1dee-6d40-df13-c28e" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="bd37-7c2e-fe55-314e" name="Gryph-feather Charm" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Subtract 1 from hit rolls for attacks that target the bearer. In addition, add 1&quot; to the bearer’s Move characteristic.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="30b4-ec4a-4f03-92f2" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
           </categoryLinks>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
@@ -3114,353 +2773,19 @@ to set up the WIZARD, then the WIZARD is slain.</description>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="abf1-8434-c8fc-1e30" type="max"/>
       </constraints>
       <selectionEntries>
-        <selectionEntry id="eee1-fd9e-9a24-be79" name="1. Gildenbane" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="eee1-fd9e-9a24-be79" name="0. Plate of Perfect Protection" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9dc0-356e-ed39-b1c5" type="max"/>
           </constraints>
           <profiles>
-            <profile id="f1af-fc4b-0e18-82f1" name="Gildenbane" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
+            <profile id="f1af-fc4b-0e18-82f1" name="Plate of Perfect Protection" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
               <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">If an enemy model is the bearer of an artefact of power, they cannot use the rules for their artefact of power while they are within 3&quot; of the bearer of Gildenbane.</characteristic>
+                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">If a weapon used for an attack that targets the bearer has a Rend characteristic of -1, change the Rend characteristic for that attack to ‘-’.</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <categoryLinks>
             <categoryLink id="4737-67fb-147a-6260" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="1188-3b82-444f-9457" name="6. Alchemical Chain" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3516-d49f-2a49-1eba" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="8aac-bf2d-7064-bea6" name="Alchemical Chain" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">The bearer can attempt to unbind a single spell in each enemy hero phase in the same manner as a WIZARD . If the bearer is already a WIZARD , they can attempt to unbind 1 additional spell instead.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="7ea5-c85c-ed84-7ef4" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="1456-df51-b3d0-8ec5" name="5. Bejeweled Gauntlet" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3a64-51c1-30b8-16bf" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="6c8b-0efe-002c-ab0a" name="Bejeweled Gauntlet" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">At the end of the combat phase, pick an enemy unit within 1&quot; of the bearer and roll a dice. On a 3+ that unit suffers 1 mortal wound.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="18ac-f383-e580-eda3" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="67a6-2298-7df0-9ec1" name="4. Godwrought Helm" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e8bc-3159-ffef-5722" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="681d-11ee-2651-fc0c" name="Godwrought Helm" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Roll a dice each time you allocate a wound to the bearer. On a 6+ the wound is negated.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="65b9-51a3-8aba-333e" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="f715-2087-6630-b11e" name="2. Argent Armor" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ad1a-d53f-d829-3f08" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="daff-8374-2b48-a90f" name="Argent Armor" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Subtract 1 from hit rolls for attacks for melee weapons that target the bearer.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="62e6-932a-a488-9855" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="9c7b-05ba-1d3a-caff" name="3. Hydroxskin Cloak" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b32e-2ae8-af9a-0a2e" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="edc9-b33c-3caf-0e93" name="Hydroxskin Cloak" publicationId="e51d-b1a3-pubEFCFK" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">The bearer can fly. After the bearer has made a normal move, you can pick 1 unit that has any models that the bearer has passed across and roll a dice. On a 3+ that unit suffers D3 mortal wounds.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="ff2a-0965-856e-6e4e" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-    </selectionEntryGroup>
-    <selectionEntryGroup id="b611-7315-706b-82ef" name="Weapons of Chamon" hidden="false" collective="false" import="true">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e938-2bcb-c732-9572" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3157-7da8-f48f-d724" type="max"/>
-      </constraints>
-      <selectionEntries>
-        <selectionEntry id="af2e-9e84-098a-4219" name="1. Aiban&apos;s Hidden Blade" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="53c8-48d5-f4a9-3737" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="ec22-73f5-abca-9fee" name="Aiban&apos;s Hidden Blade" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Pick one of the bearer’s melee weapons to be Aiban’s Hidden Blade. If the hit roll for that weapon is 6+ add 1 to the Damage characteristic of that attack.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="d56d-101c-f3cc-ff72" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="2922-c584-6fa1-1c16" name="6. Argentine&apos;s Tooth" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5a91-11c8-c268-0ff1" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="1cd0-e539-5fe9-3c0f" name="Argentine&apos;s Tooth" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Pick one of the bearer’s melee weapons to be Argentine’s Tooth. Re-roll hit rolls of 1 for this weapon.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="464c-cc53-027f-253f" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="faa8-f0c4-277f-a544" name="5. Chamonite Darts" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d4d5-934d-7410-dca3" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="dac3-1f3f-5859-60ff" name="Chamonite Darts" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">In your shooting phase, you can pick an enemy unit within 8&quot; of the bearer and roll six dice. For each 6+ that enemy unit suffers 1 mortal wound.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="328a-8f53-c028-16a9" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="995a-e41e-8588-5b77" name="4. Crucible of Molten Silver" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5b67-5020-6474-8226" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="97d2-ab76-2365-b932" name="Crucible of Molten Silver" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Once per battle, in your shooting phase, pick a point on the battlefield within 9&quot; of the bearer that is visible to them and draw an imaginary straight line 1mm wide between that point and the closest part of the bearer. Each unit other than the bearer that has models passed across by this line suffers D3 mortal wounds.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="59aa-0460-3c7a-ad62" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="6910-46ba-6955-6476" name="2. Flowstone Blade" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a337-5148-0b5a-d20f" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="8f69-2c69-046d-e4d9" name="Flowstone Blade" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Pick one of the bearer’s melee weapons to be a Flowstone Blade. Each time you roll a hit roll of 6+ for this weapon, add 1 to the wound roll for that attack.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="9221-fb6e-5b27-e1fc" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="fbd5-a623-b866-a1cd" name="3. Rune Blade" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9de7-644a-9097-85a2" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="ac94-fe36-5248-e9db" name="Rune Blade" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Pick one of the bearer’s melee weapons to be a Rune Blade. That weapon has a Rend characteristic of -3.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="0657-4603-7b03-ab61" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-    </selectionEntryGroup>
-    <selectionEntryGroup id="f4d9-1997-cea0-5804" name="Weapons of Aqshy" hidden="false" collective="false" import="true">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="804d-fbe5-0759-58ce" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e3e7-5acd-c1e6-fd69" type="max"/>
-      </constraints>
-      <selectionEntries>
-        <selectionEntry id="8cb1-9a2d-bdbc-139f" name="1. Ruby Ring" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7948-5d93-5f5c-3d50" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="93d9-7128-bb82-235f" name="Ruby Ring" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">In your hero phase, you can pick the closest enemy unit within 18&quot; of the bearer and roll a dice. On a 5+ that unit suffers D3 mortal wounds. If two or more enemy units are equally close to the bearer, you can pick any of them.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="bd30-f8a1-f3a3-328f" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="58c5-5363-e6df-18a7" name="6. Exile Torch" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b873-a40d-66bf-800b" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="fee8-91fb-5c1a-3af6" name="Exile Torch" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">At the start of the combat phase, pick an enemy HERO within 3&quot; of the bearer and roll a dice. On a 6+ that HERO suffers 1 mortal wound and may not fight or be chosen as the target of an attack until the end of the turn.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="a2fe-2bac-9851-df40" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="3060-6f01-f57d-ea2e" name="5. Onyx Blade" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c3f5-34e3-6135-d2de" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="cb07-b23f-91f9-48a7" name="Onyx Blade" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Pick one of the bearer’s melee weapons to be an Onyx Blade. Add 1 to wound rolls for that weapon.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="7c01-24c8-7a22-c941" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="083a-22af-c049-0c9a" name="4. Purefire Brazier" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d569-06e0-0031-e678" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="5d56-f515-1091-90e8" name="Purefire Brazier" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">In your shooting phase, roll a dice for each enemy unit within 9&quot; of the bearer. On a 5+ that unit suffers 1 mortal wound.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="2c68-6671-d376-3d21" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="98ab-afd6-284a-e71f" name="2. Magmaforged Blade" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d294-9fe2-5efd-8832" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="fbdb-35e7-6e56-ee1c" name="Magmaforged Blade" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Pick one of the bearer’s melee weapons to be a Magmaforged Blade. If the wound roll for that weapon is 6+ that attack inflicts 1 mortal wound in addition to its normal damage.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="c70b-fd56-3806-f983" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="6c58-255e-26d4-7017" name="3. Magmadroth Blood Vials" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ce16-cc51-f797-fc89" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="14b4-4b1b-7b05-c9c5" name="Magmadroth Blood Vials" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">In your shooting phase, you can pick an enemy unit within 8&quot; of the bearer and roll a dice. On a 4+ that unit suffers 1 mortal wound.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="3c01-7ef7-9a4d-932d" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
           </categoryLinks>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
@@ -3480,109 +2805,19 @@ to set up the WIZARD, then the WIZARD is slain.</description>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9a2b-0c1a-55a2-1130" type="max"/>
       </constraints>
       <selectionEntries>
-        <selectionEntry id="c17a-4a8a-0041-6aa4" name="1. Essence of Vulcatrix" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="c17a-4a8a-0041-6aa4" name="0. Incandescent Rageblade" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b558-0ae0-a88e-a88d" type="max"/>
           </constraints>
           <profiles>
-            <profile id="3285-b445-7ff8-02eb" name="Essence of Vulcatrix" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
+            <profile id="3285-b445-7ff8-02eb" name="Incandescent Rageblade" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
               <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Once per battle, at the start of your hero phase, the bearer may drink the Essence of Vulcatrix. If they do so, roll a dice. On a 1, the bearer suffers D3 mortal wounds. On a 2+ add 1 to hit and wound rolls for the bearer until your next hero phase.</characteristic>
+                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Pick 1 of the bearer’s melee weapons. If the unmodified hit roll for an attack made by that weapon is 6, that attack scores 2 hits on the target instead of 1. Make a wound and save roll for each hit.</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <categoryLinks>
             <categoryLink id="db95-222f-4d46-46f2" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="5e6b-a904-d91c-5cd9" name="6. Cleansing Brooch" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="eccf-b2b8-03bc-dc64" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="3fb7-1565-42eb-b97f" name="Cleansing Brooch" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Once per battle, at the start of your hero phase, you may declare that the bearer will activate the brooch. If you do so, heal D3 wounds allocated to them.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="3fb4-bdcb-1130-4cbb" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="e304-52a2-d708-c8ed" name="5. Crown of Flames" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="cc61-0a36-9831-afa0" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="2bf3-ec82-8dd2-cc1f" name="Crown of Flames" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Add 1 to the Bravery characteristic of friendly units while they are wholly within 9&quot; of the bearer.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="855a-c456-6201-ec22" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="c2ec-ef72-e71e-14d3" name="4. Ignax&apos;s Scales" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="923b-53a1-4c44-e763" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="8bd6-b3bc-010b-bed5" name="Ignax&apos;s Scales" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Roll a dice each time you allocate a mortal wound to the bearer. On a 4+ the wound is negated.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="aa17-0292-3847-3dfe" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="2796-36b9-60fc-24f5" name="2. Thermalrider Cloak" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f3c1-1961-4182-32b8" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="ea0e-bc83-fe89-0e82" name="Thermalrider Cloak" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Add 4 to the bearer’s Movement characteristic. In addition, the bearer may fly.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="6f35-674d-3322-b4c2" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="cf45-f3d5-d8db-f702" name="3. Smouldering Helm" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f542-d148-4014-35b5" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="26e5-1179-3359-2812" name="Smouldering Helm" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Each time you make a successful save roll of 6+ for the bearer in the combat phase, the attacking unit suffers 1 mortal wound after all of its attacks have been made.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="01b4-5074-1cae-89f3" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
           </categoryLinks>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
@@ -3602,353 +2837,19 @@ to set up the WIZARD, then the WIZARD is slain.</description>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d5cf-8707-c545-4378" type="max"/>
       </constraints>
       <selectionEntries>
-        <selectionEntry id="6b68-0515-abda-2f10" name="1. Cronehair Fetish" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="6b68-0515-abda-2f10" name="0. Gravesand Brooch" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e4e7-b413-ab20-71ee" type="max"/>
           </constraints>
           <profiles>
-            <profile id="8a2a-4de2-c167-4df5" name="Cronehair Fetish" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
+            <profile id="8a2a-4de2-c167-4df5" name="Gravesand Brooch" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
               <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">You can add or subtract 1 from the result of any roll on the Shyish Realmscape Features table.</characteristic>
+                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">You can re-roll save rolls of 1 for attacks that target the bearer.</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <categoryLinks>
             <categoryLink id="ebda-446f-f171-020b" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="9329-b3ee-9346-c9f8" name="6. Goblet of Draining" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="32db-c91f-34ca-cf2b" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="4aeb-19ce-6f47-c88d" name="Goblet of Draining" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">If 1 or more wounds are inflicted on an enemy HERO by the bearer, roll a dice. On a 5+ that HERO suffers D3 mortal wounds.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="2ffc-d729-24c9-e55f" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="5202-af59-260c-df5a" name="5. The Ragged Cloak" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="cd3d-a3e5-402e-1f4b" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="c5e0-bf9f-2d10-bcd4" name="The Ragged Cloak" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Once per battle, at the start of your opponent’s shooting phase, you can declare that bearer will shroud themselves with the Ragged Cloak. If you do so, the bearer may not be chosen as the target of an attack until the end of the phase.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="a076-1b5c-2a4d-2207" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="5e4b-90f7-6a80-6ac2" name="4. Amethyst Blindmask" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a42a-d543-7398-6aa4" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="8fb6-5c3f-3567-f7fd" name="Amethyst Blindmask" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">If the bearer is slain, before removing the model, roll a dice for each enemy unit within 6&quot; of the bearer. On a 3+ that unit suffers 1 mortal wound.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="176e-92ff-41c3-495f" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="49a7-5b8c-27ca-ee12" name="2. Ethereal Amulet" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ae7a-c769-9010-9310" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="c780-531f-252f-5a02" name="Ethereal Amulet" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Ignore modifiers (positive or negative) when making save rolls for this model.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="b973-c4cd-2252-7fab" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="7df7-3cb3-327b-c146" name="3. Sepulchral Plate" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="80bc-615a-4652-6901" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="52b5-d07d-09f9-e305" name="Sepulchral Plate" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Roll a dice each time you allocate a wound to the bearer. On a 6+ the wound is negated.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="f880-6fca-e21d-4e85" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-    </selectionEntryGroup>
-    <selectionEntryGroup id="666d-dbde-1db1-c29c" name="Weapons of Shyish" hidden="false" collective="false" import="true">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="916b-8d03-321f-4845" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bca0-933d-8985-a3d1" type="max"/>
-      </constraints>
-      <selectionEntries>
-        <selectionEntry id="bbde-9daa-cdcd-4335" name="1. Blade of Endings" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="28f0-483d-e8ee-4315" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="c842-d02d-a8f6-a676" name="Blade of Endings" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Pick one of the bearer’s melee weapons to be a Blade of Endings. If the hit roll for that weapon is 6+ add 2 to the Damage characteristic of that attack.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="0ae1-79f0-6b78-d369" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="75c6-4c80-702f-bb3c" name="6. Splintertooth" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3722-e8b0-62f1-c62a" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="94d7-9348-e0d0-6957" name="Splintertooth" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">In your shooting phase, pick an enemy unit within 8&quot; of the bearer and roll three dice. If two dice have the same roll, that enemy unit suffers D3 mortal wounds. If all three dice have the same roll, that enemy unit suffers D6 mortal wounds instead.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="a442-83ec-8b02-015e" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="6f88-548f-0fc1-3a08" name="5. Wraithbow" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="849c-cf96-7783-4fa3" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="f786-d277-8f65-aca1" name="Wraithbow" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">In your shooting phase, pick an enemy unit within 18&quot; of the bearer and roll six dice. For each 6+ that enemy unit suffers 1 mortal wound.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="9b2b-f089-f9ba-bc8e" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="86c2-d74e-9264-40c4" name="4. Sliver of Decrepitude" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="aabb-d75f-6baa-692d" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="fc9e-5278-ce47-398d" name="Sliver of Decrepitude" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Pick one of the bearer’s melee weapons to be a Sliver of Decrepitude. Allocate wounds inflicted by that weapon before allocating wounds inflicted by any other attacks made by the bearer. If 1 or more wounds by that weapon are inflicted on an enemy HERO or MONSTER , subtract 2&quot; from that HERO or MONSTER ’s Move characteristic for the rest of the battle.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="c682-05b3-5f75-703f" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="1002-e26a-a6a2-9f8c" name="2. Banshee Blade" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="06f1-ef91-b955-bf2f" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="f03a-98cd-4056-e1ce" name="Banshee Blade" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Pick one of the bearer’s melee weapons to be a Banshee Blade. Each time you roll a hit roll of 6+ for this weapon, roll 2D6. If the roll is equal to or more than the target’s Bravery characteristic, that attack inflicts D3 mortal wounds in addition to its normal damage.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="a852-5395-19cc-9467" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="d73f-b922-f27d-6d81" name="3. Lifebane" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8702-02cc-eda1-d0fa" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="537a-251e-b855-960b" name="Lifebane" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Pick one of the bearer’s melee weapons to be Lifebane. Add 1 to wound rolls for this weapon.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="d374-ad95-da8c-5358" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-    </selectionEntryGroup>
-    <selectionEntryGroup id="f33b-19f2-d190-7659" name="Weapons of Ulgu" hidden="false" collective="false" import="true">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="689f-c36d-3382-5eca" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="eb80-35de-3725-ec5a" type="max"/>
-      </constraints>
-      <selectionEntries>
-        <selectionEntry id="3b97-d4bb-f1ed-9b53" name="1. Miasmatic Blade" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="40f8-9a63-59a7-81ad" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="c013-997e-c57b-0567" name="Miasmatic Blade" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Pick one of the bearer’s melee weapons to be a Miasmatic Blade. Subtract 1 from hit rolls for attacks that target the bearer.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="2f54-6dd6-83ab-8c94" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="503a-423c-b819-0463" name="6. Sword of Judgement" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0a6f-4fb0-8c72-e199" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="9c5c-9a42-9b6e-b026" name="Sword of Judgement" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Pick one of the bearer’s melee weapons to be a Sword of Judgement. If the hit roll for an attack with that weapon against a HERO or MONSTER is 6+, that attack inflicts D6 mortal wounds and the attack sequence ends (do not make a wound or save roll).</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="b174-dc18-82c0-27bd" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="e6f8-0cdc-df85-fd8a" name="5. Dimensional Blade" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="cc65-1f01-0530-d9cb" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="9671-85c4-632c-b37c" name="Dimensional Blade" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Pick one of the bearer’s melee weapons to be a Dimensional Blade. Change the Rend characteristic of this weapon to -3.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="6fbf-c592-d819-468a" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="4607-16be-833e-c760" name="4. Blade of Secrets" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d35a-d4cf-c376-4db3" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="1408-0bfe-b262-29a0" name="Blade of Secrets" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Pick one of the bearer’s melee weapons to be a Blade of Secrets. Allocate wounds inflicted by that weapon before allocating wounds inflicted by any other attacks made by the bearer. If 1 or more wounds are inflicted on an enemy WIZARD by that weapon, pick one spell that WIZARD knows. That WIZARD may not attempt to cast that spell again during that battle.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="0866-e5be-458a-b20e" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="7b75-945d-f1ee-28af" name="2. Blade of the Thirteen Dominions" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="104f-1d3d-e5de-7ce9" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="211b-014f-0519-3057" name="Blade of the Thirteen Dominions" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Pick one of the bearer’s melee weapons to be a Blade of the Thirteen Dominions. Allocate wounds inflicted by that weapon before allocating wounds inflicted by any other attacks made by the bearer. If 1 or more wounds are inflicted on an enemy unit by that weapon, subtract 1 from hit rolls for attacks made by that unit until the end of the phase.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="2c38-919e-56e4-2a59" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="2a9a-55aa-0422-eabf" name="3. Blade of Folded Shadow" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b6bc-f64f-e52f-1c6a" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="cc98-df0e-8937-08cf" name="Blade of Folded Shadow" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Pick one of the bearer’s melee weapons to be a Blade of Folded Shadows. Add 1 to hit rolls for this weapon.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="e088-786f-2646-9c3a" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
           </categoryLinks>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
@@ -3968,109 +2869,19 @@ to set up the WIZARD, then the WIZARD is slain.</description>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e82f-9be2-4b51-34ea" type="max"/>
       </constraints>
       <selectionEntries>
-        <selectionEntry id="37a9-a1d5-b66f-fb9e" name="1. Spellmirror" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="37a9-a1d5-b66f-fb9e" name="0. Trickster&apos;s Foil" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1b8f-5a62-0312-2c50" type="max"/>
           </constraints>
           <profiles>
-            <profile id="b5ec-7501-6226-de38" name="Spellmirror" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
+            <profile id="b5ec-7501-6226-de38" name="Trickster&apos;s Foil" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
               <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">If a friendly unit within 6&quot; of the bearer is affected by a spell, you can roll a dice. On a 5+ that unit is not affected by the spell. On a 1 the Spellmirror may not be used for the rest of the battle.</characteristic>
+                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">You can re-roll wound rolls of 1 for attacks made with a melee weapon by the bearer.</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <categoryLinks>
             <categoryLink id="4b6e-1c5f-de06-99e2" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="fd17-d428-7cc8-0c87" name="6. Talisman of the Watcher" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f45d-b9e4-878a-d641" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="d17f-c2f2-b06b-e153" name="Talisman of the Watcher" publicationId="e51d-b1a3-pubETJDK" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">If the bearer is not within 3&quot; of an enemy unit at the start of the combat phase, pick a friendly unit within 9&quot; of the bearer. You can re-roll save rolls of 1 for that unit until the end of that phase.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="d117-b24e-e1b5-4b5e" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="7e05-cd53-def8-b5a2" name="5. Betrayer&apos;s Crown" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8658-708c-2c8f-d114" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="03b7-b8e8-9cd0-04f2" name="Betrayer&apos;s Crown" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Once per battle, at the start of the combat phase, pick an enemy unit within 3&quot; of the bearer that has two or more models. Roll a dice for each model in that enemy unit. For each 5+ that enemy unit suffers 1 mortal wound.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="8097-0f41-9513-fec9" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="e23f-4a06-14f5-f374" name="4. Doppelganger Cloak" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="73f4-9623-bf27-6e0f" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="7da8-f3cc-2a76-58ac" name="Doppelganger Cloak" publicationId="e51d-b1a3-pubETJDK" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Once per battle, at the start of the combat phase, you can say that the bearer will put on the cloak. If you do so, the bearer cannot be chosen as the target of attacks made with melee weapons unless the bearer has made any attacks earlier in that phase.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="00be-caae-274c-b9d5" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="2aed-d3ae-5042-05a6" name="2. Trickster&apos;s Helm" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="195f-2405-c56f-14b3" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="f5cb-68c4-4298-578d" name="Trickster&apos;s Helm" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Re-roll successful casting rolls for enemy WIZARDS while they are within 8&quot; of the bearer.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="ba2a-34f3-b216-551f" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="c658-8a97-884c-f03d" name="3. Wristbands of Illusion" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="76ea-e727-dc73-5706" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="ac19-7456-e50e-e378" name="Wristbands of Illusion" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Roll a dice each time you allocate a wound to the bearer. On a 6+ the wound is negated.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="ace7-e143-5a58-89c5" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
           </categoryLinks>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
@@ -4090,231 +2901,19 @@ to set up the WIZARD, then the WIZARD is slain.</description>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3706-a482-187c-1677" type="max"/>
       </constraints>
       <selectionEntries>
-        <selectionEntry id="aca2-8b74-8482-75ab" name="1. Atherquartz Brooch" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="aca2-8b74-8482-75ab" name="0. Syari Trueblade" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2867-20b7-9e06-73f1" type="max"/>
           </constraints>
           <profiles>
-            <profile id="6509-98f3-7470-cf89" name="Atherquartz Brooch" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
+            <profile id="6509-98f3-7470-cf89" name="Syari Trueblade" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
               <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Each time you spend a command point, roll a dice. On a 5+ you receive 1 command point.</characteristic>
+                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">You can re-roll hit rolls of 1 for attacks made with a melee weapon by the bearer.</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <categoryLinks>
             <categoryLink id="0d62-7744-121c-f538" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="11cc-f63e-bf15-ce1e" name="6. Sash of the Ten Paradises" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6fe7-29a8-88f4-39c0" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="535b-e357-2fa2-64d2" name="Sash of the Ten Paradises" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Add 2&quot; to the bearer’s Move characteristic.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="feb0-1e21-9a2a-dfaf" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="056e-659f-8866-c36e" name="5. Guardian&apos;s Coronet" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b6e2-8cd0-5c27-d633" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="c510-7073-87cb-e034" name="Guardian&apos;s Coronet" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Once per battle, at the start of your hero phase, the bearer can call upon the guardian spirits. If they do so, until your next hero phase, roll a dice each time you allocate a wound to the bearer. On a 4+ the wound is negated.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="33f7-b4d3-85a6-dc53" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="7b85-1d3a-a8ef-710f" name="4. Lightshard" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="efde-839b-e586-88b1" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="d99f-8005-1a6e-1c64" name="Lightshard" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">If the bearer is slain, before removing the model, roll a dice for each enemy unit within 6&quot; of them. On a 3+ that unit suffers 1 mortal wound.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="202a-af05-4d1f-2a79" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="bb14-f48b-91ca-089e" name="2. Lens of Refraction" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="dbce-b3dc-1775-f2c9" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="04d2-fb64-23c3-6aa9" name="Lens of Refraction" publicationId="e51d-b1a3-pubEFCFK" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Once per battle round, the first time a friendly unit within 6&quot; of the bearer suffers any mortal wounds inflicted by a spell or endless spell, roll a D3 and reduce the number of mortal wounds suffered by the roll.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="1430-9e56-d54d-8c82" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="2d9b-887b-232e-3955" name="3. Mirrored Curiass" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="69a3-788a-6fc9-64ba" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="d743-5950-4bec-bf00" name="Mirrored Curiass" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Roll a dice each time you allocate a mortal wound to the bearer. On a 5+ the wound is negated. On a 6+ you can also pick an enemy unit within 6&quot; of the bearer. That unit suffers 1 mortal wound.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="699a-622a-95f8-3b82" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-    </selectionEntryGroup>
-    <selectionEntryGroup id="b7ad-b3d0-d9c3-8cd6" name="Weapons of Hysh" hidden="false" collective="false" import="true">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="52b1-a41c-c680-c537" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5986-6cc3-20c9-07ab" type="max"/>
-      </constraints>
-      <selectionEntries>
-        <selectionEntry id="44cd-7d35-8aa2-fe5b" name="1. Blade of Symmetry" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1f24-a08d-53e4-6e1b" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="3d5f-f193-f463-5b95" name="Blade of Symmetry" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Pick one of the bearer’s melee weapons to be a Blade of Symmetry. Add 1 to the Damage characteristic of that weapon.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="736c-7ee1-f94d-4bc9" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="f2d1-04f9-6b07-c53c" name="6. Prism Amyntok" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1943-3fb2-31af-d68d" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="33f0-ffe3-8a05-b0d7" name="Prism Amyntok" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">In your shooting phase, you can pick an enemy unit within 8&quot; of the bearer and roll four dice. For each 6+ that unit suffers 1 mortal wound.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="97a3-a302-e3d5-ee1e" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="4e65-81f7-0865-a385" name="5. Crystalline Blade" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4e4c-f4c4-62c5-4f86" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="dbdc-638f-1b85-d78b" name="Crystalline Blade" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Pick one of the bearer’s melee weapons to be a Crystalline Blade. Add 1 to wound rolls for this weapon.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="04f1-c7b0-b566-f515" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="ccd0-e22d-6c13-2c01" name="4. Sunblade" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a589-9e3e-a4fc-081b" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="e5c1-8bd0-bde5-1e27" name="Sunblade" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Pick one of the bearer’s melee weapons to be a Sunblade. Allocate wounds inflicted by that weapon before allocating wounds inflicted by any other attacks made by the bearer. If 1 or more wounds are inflicted on an enemy HERO or MONSTER by that weapon, subtract 1 from hit rolls for that enemy HERO or MONSTER until the end of the phase.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="4a9e-4ecd-1301-0345" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="2c10-8afb-5484-0a53" name="2. Gleaming Blade" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="243a-1a34-3ac4-2843" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="ada3-9c56-e746-9935" name="Gleaming Blade" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Pick one of the bearer’s melee weapons to be a Gleaming Blade. Allocate wounds inflicted by that weapon before allocating wounds inflicted by any other attacks made by the bearer. If 1 or more wounds are inflicted on an enemy unit by that weapon, heal 1 wound allocated to the bearer.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="385e-17bb-b37a-1659" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="bb40-99c1-db7f-4eaa" name="3. Luminary Rod" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="055f-28b6-4b0c-fe5e" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="62d4-4ab1-2fdb-6758" name="Luminary Rod" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Once per battle, pick a point on the battlefield within 9&quot; of the bearer that is visible to them and draw an imaginary straight line 1mm wide between that point and the closest part of the bearer. Each unit other than the bearer that has models passed across by this line suffers D3 mortal wounds.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="f59c-e8e3-55f8-71c2" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
           </categoryLinks>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
@@ -4492,6 +3091,17 @@ to set up the WIZARD, then the WIZARD is slain.</description>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, subtract 1 from hit rolls for attacks that target the caster until your next hero phase.</characteristic>
               </characteristics>
             </profile>
+            <profile id="dd37-3af5-59da-0460" name="Blazing Fervour" hidden="false" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
+              <characteristics>
+                <characteristic name="Command Ability Details" typeId="1b71-4c83-4e8c-093f">You can use this command ability at the start of your hero phase. If you do so, pick 1 friendly unit wholly within 12&quot; of a friendly HERO. Add 1 to run and charge rolls made for that unit until your next hero phase. The same unit cannot benefit from this command ability more than once per phase.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="8167-42da-2a70-e92d" name="Fireball" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+              <characteristics>
+                <characteristic name="Casting Value" typeId="2508-b604-1258-a920">5</characteristic>
+                <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">Pick 1 enemy unit within 18&quot; of the caster and visible to them. If that enemy unit has 1 model, it suffers 1 mortal wound; if it has 2-9 models, it suffers D3 mortal wounds; and if it has 10 or more models, it suffers D6 mortal wounds.</characteristic>
+              </characteristics>
+            </profile>
           </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
@@ -4533,6 +3143,17 @@ to set up the WIZARD, then the WIZARD is slain.</description>
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick an enemy unit within 18&quot; of the caster that is visible to them and roll 3 dice. For each roll that is greater than that unit’s Wounds characteristic, 1 model from that unit is slain.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="8c26-6a80-39f4-0c78" name="Metamorphic Warding" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+              <characteristics>
+                <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
+                <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">Pick 1 friendly unit wholly within 12&quot; of the caster and visible to them. Add 1 to save rolls for attacks that target that unit until the start of your next hero phase.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="cc1c-db29-68c6-37fe" name="Living Blades" hidden="false" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
+              <characteristics>
+                <characteristic name="Command Ability Details" typeId="1b71-4c83-4e8c-093f">You can use this command ability in the combat phase. If you do so, pick 1 friendly unit wholly within 12&quot; of a friendly HERO. Until your next hero phase, add 1 to hit rolls for attacks made with melee weapons by that unit if it made a charge move in the same turn.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -4578,6 +3199,17 @@ to set up the WIZARD, then the WIZARD is slain.</description>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick a friendly HERO within 12&quot; of the caster that is visible to them. Re-roll failed charge rolls and hit rolls for that HERO until your next hero phase.</characteristic>
               </characteristics>
             </profile>
+            <profile id="de06-9b86-b46c-fc89" name="Wildform" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+              <characteristics>
+                <characteristic name="Casting Value" typeId="2508-b604-1258-a920">5</characteristic>
+                <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">Pick 1 friendly unit within 12&quot; of the caster and visible to them. Add 2 to run and charge rolls made for that unit until the start of your next hero phase.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="d0c5-3e4d-3912-fc57" name="Feral Roar" hidden="false" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
+              <characteristics>
+                <characteristic name="Command Ability Details" typeId="1b71-4c83-4e8c-093f">You can use this command ability in your hero phase. If you do so, pick 1 friendly MONSTER wholly within 12&quot; of a friendly HERO. Until the end of the battle round, when you look up a value on that model’s damage table, that MONSTER is treated as if it has suffered 0 wounds.</characteristic>
+              </characteristics>
+            </profile>
           </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
@@ -4619,6 +3251,17 @@ to set up the WIZARD, then the WIZARD is slain.</description>
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick a point on the battlefield within 12&quot; of the caster that is visible to them and draw an imaginary straight line 1mm wide between that point and the closest part of the caster. Each unit other than the caster that has models passed across by this line suffers D3 mortal wounds.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="464d-7fd7-9d89-4aa7" name="Shield of Thorns" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+              <characteristics>
+                <characteristic name="Casting Value" typeId="2508-b604-1258-a920">5</characteristic>
+                <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">Pick 1 friendly unit wholly within 18&quot; of the caster and visible to them. Until your next hero phase, any enemy unit that finishes a charge move within 3&quot; of that unit suffers D3 mortal wounds. The same friendly unit cannot be picked as the target of this spell more than once per turn.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="6086-be12-d4fc-a2fe" name="Command the Land" hidden="false" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
+              <characteristics>
+                <characteristic name="Command Ability Details" typeId="1b71-4c83-4e8c-093f">You can use this command ability at the end of your hero phase. If you do so, 1 friendly HERO can attempt to cast Shield of Thorns, even if they are not a WIZARD and even if the spell has already been attempted in the same hero phase. If that HERO is a WIZARD, using this command ability allows them to attempt to cast Shield of Thorns in addition to any other spells they have already attempted to cast and even if Shield of Thorns has been attempted in the same hero phase.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -4664,6 +3307,17 @@ to set up the WIZARD, then the WIZARD is slain.</description>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick 1 enemy unit within 12&quot; of the caster that is visible to them. Your opponent must remove that unit from the battlefield and then set it up again, anywhere on the battlefield more than 24&quot; from the caster and more than 9&quot; from any other models from the caster’s army.</characteristic>
               </characteristics>
             </profile>
+            <profile id="cdf3-631b-c682-1186" name="Purity of Defence" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+              <characteristics>
+                <characteristic name="Casting Value" typeId="2508-b604-1258-a920">5</characteristic>
+                <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">Pick 1 friendly unit wholly within 12&quot; of the caster and visible to them. You can re-roll save rolls of 1 for attacks that target that unit until the start of you next hero phase.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="218c-008e-493b-3271" name="All-seeing Enlightenment" hidden="false" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
+              <characteristics>
+                <characteristic name="Command Ability Details" typeId="1b71-4c83-4e8c-093f">You can use this command ability in your hero phase. If you do so, pick 1 friendly unit wholly within 12&quot; of a friendly HERO. Do not apply the cover modifier to save rolls for attacks made by that unit until the start of your next hero phase.</characteristic>
+              </characteristics>
+            </profile>
           </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
@@ -4707,6 +3361,17 @@ to set up the WIZARD, then the WIZARD is slain.</description>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, add 1 to hit rolls for attacks made by the caster until your next hero phase.</characteristic>
               </characteristics>
             </profile>
+            <profile id="3e70-5fd5-a646-c79d" name="Ripples of the Necroquake" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+              <characteristics>
+                <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
+                <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">Until the end of that phase, add 1 to casting rolls made for friendly WIZARDS if the casting roll is for an endless spell.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="dd3b-2d39-577b-1206" name="Amethyst Aura" hidden="false" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
+              <characteristics>
+                <characteristic name="Command Ability Details" typeId="1b71-4c83-4e8c-093f">You can use this command ability in your hero phase. If you do so, pick 1 friendly unit wholly within 12&quot; of a friendly HERO. Until the end of that battle round, roll a dice each time you allocate a wound or mortal wound to that unit. On a 6, that wound or mortal wound is negated.</characteristic>
+              </characteristics>
+            </profile>
           </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
@@ -4748,6 +3413,17 @@ to set up the WIZARD, then the WIZARD is slain.</description>
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick an enemy unit within 12&quot; of the caster that is visible to them. That unit suffers D3 mortal wounds. If that unit is a HERO or MONSTER, you can make a normal move with that unit as if it had a Move characteristic of 4&quot;.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="20a5-392f-1f80-5996" name="Judgement of Shadow" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+              <characteristics>
+                <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
+                <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">Pick 1 enemy unit within 12&quot; of the caster that is visible to them and roll 7 dice. For each roll that is less than that unit’s unmodified Save characteristic, that unit suffers 1 mortal wound. If the target has an unmodified Save characteristic of ‘-’, it suffers 1 mortal wound for each 2+ instead.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="aa60-bbe1-9992-402f" name="On Me!" hidden="false" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
+              <characteristics>
+                <characteristic name="Command Ability Details" typeId="1b71-4c83-4e8c-093f">You can use this command ability once per battle, at the end of your movement phase. If you do so, pick 1 friendly unit wholly within 18&quot; of a friendly HERO. Remove that unit from the battlefield and then set it up again wholly within 6&quot; of that friendly HERO and more than 9&quot; from any enemy units.</characteristic>
               </characteristics>
             </profile>
           </profiles>
