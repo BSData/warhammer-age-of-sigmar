@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="60" battleScribeVersion="2.03" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="61" battleScribeVersion="2.03" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <publications>
     <publication id="e51d-b1a3-pubEC" name="The General&apos;s Handbook"/>
     <publication id="e51d-b1a3-pubEQ" name="Core Rules"/>
@@ -1403,7 +1403,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
         <categoryLink id="c390-75ad-8a01-32d9" name="SHYISH" hidden="false" targetId="2cc9-0867-b2e3-da55" primary="false"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="80.0"/>
+        <cost name="pts" typeId="points" value="100.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="ec18-8377-8f6b-2591" name="Endless Spell: Soulsnare Shackles" hidden="false" collective="false" import="true" type="upgrade">
@@ -1591,7 +1591,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
         <categoryLink id="f92e-b88f-0d9c-f932" name="STORMVAULT" hidden="false" targetId="798c-6e4e-1793-2fd9" primary="false"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="100.0"/>
+        <cost name="pts" typeId="points" value="90.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="24c2-fff5-f17c-3d07" name="Gotrek Gurnisson" hidden="false" collective="false" import="true" type="unit">
