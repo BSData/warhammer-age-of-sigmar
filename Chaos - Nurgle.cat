@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="6894-a70d-7327-b3c3" name="Chaos - Nurgle" revision="49" battleScribeVersion="2.03" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="59" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="6894-a70d-7327-b3c3" name="Chaos - Nurgle" revision="50" battleScribeVersion="2.03" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="59" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="6894-a70d-pubN65537" name="Chaos Battletome: Maggotkin of Nurgle"/>
     <publication id="6894-a70d-pubN78755" name="Compendium: Tamurkhan&apos;s Horde"/>
@@ -714,7 +714,7 @@
         <entryLink id="86ee-c644-9f15-9727" name="Lores of Nurgle" hidden="false" collective="false" import="true" targetId="98af-9a06-6b8b-4712" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="420.0"/>
+        <cost name="pts" typeId="points" value="380.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="857a-93de-02d0-ee3b" name="Morbidex Twiceborn" publicationId="6894-a70d-pubN65537" page="97" hidden="false" collective="false" import="true" type="unit">
@@ -1174,24 +1174,14 @@
     </selectionEntry>
     <selectionEntry id="836e-91bb-9065-5b5c" name="Putrid Blightkings" publicationId="6894-a70d-pubN65537" page="102" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
-        <modifier type="decrement" field="points" value="160">
-          <conditions>
-            <condition field="selections" scope="836e-91bb-9065-5b5c" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="13d4-a001-17b5-05b4" type="greaterThan"/>
-          </conditions>
-        </modifier>
-        <modifier type="increment" field="points" value="160">
-          <repeats>
-            <repeat field="selections" scope="836e-91bb-9065-5b5c" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="13d4-a001-17b5-05b4" repeats="1" roundUp="false"/>
-          </repeats>
-        </modifier>
-        <modifier type="decrement" field="points" value="60">
-          <conditions>
-            <condition field="selections" scope="836e-91bb-9065-5b5c" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="13d4-a001-17b5-05b4" type="equalTo"/>
-          </conditions>
-        </modifier>
         <modifier type="set-primary" field="category" value="065e-fda7-fd27-1f40">
           <conditions>
             <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="78f3-8a59-699a-61e8" type="instanceOf"/>
+          </conditions>
+        </modifier>
+        <modifier type="decrement" field="points" value="60.0">
+          <conditions>
+            <condition field="selections" scope="836e-91bb-9065-5b5c" value="4.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -1234,7 +1224,7 @@
             <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6cdc-61c6-7f48-bb42" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="pts" typeId="points" value="140.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="7657-f0c1-8ad0-908a" name="Icon Bearer" hidden="false" collective="false" import="true" type="upgrade">
