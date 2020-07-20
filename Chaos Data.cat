@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="0339-0157-6910-d29c" name="Chaos Data" revision="42" battleScribeVersion="2.03" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="61" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="0339-0157-6910-d29c" name="Chaos Data" revision="43" battleScribeVersion="2.03" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="61" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="c9b2-1fe6-pubN65537" name="Battletome: Beasts of Chaos"/>
     <publication id="c9b2-1fe6-pubN83353" name="1"/>
@@ -1078,8 +1078,9 @@ Summoned units must be set up wholly within 12&quot; of a friendly TZEENTCH HERO
         <profile id="9397-642e-5559-6fcc" name="Book of Profane Secrets" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
             <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Once per battle, at the start of your hero phase, you can say that this model will use its Book of Profane Secrets. If you do so, you can summon 1 unit from the following list to the battlefield and add it to your army, but the number of spells that this model can attempt to cast in that phase is reduced by 1. The summoned unit must be set up wholly within 9&quot; of this model and more than 9&quot; from any enemy units.
+
 Choose 1 unit from the following list:
-• 10 Pink Horrors
+• 5 Horrors of Tzeentch
 • 10 Bloodletters
 • 10 Plaguebearers
 • 10 Daemonettes
@@ -1184,8 +1185,9 @@ Choose 1 unit from the following list:
         <profile id="d2bb-f68f-c87d-cde6" name="Book of Profane Secrets" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
             <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Once per battle, at the start of your hero phase, you can say this model will use its Book of Profane Secrets. If you do so, you can summon 1 unit from the list below to the battlefield, and add it to your army, but the number of spells that this model can attempt to cast in that phase is reduced by 1. The summoned unit must be set up wholly within 9&quot; of this model and more than 9&quot; from any enemy units.
+
 Choose 1 unit from the following list:
-• 10 Pink Horrors
+• 5 Horrors of Tzeentch
 • 10 Bloodletters
 • 10 Plaguebearers
 • 10 Daemonettes
@@ -1560,7 +1562,7 @@ In addition, if the unmodified casting roll for a spell attempted by the caster 
 KHORNE HERO: 10 Bloodletters
 NURGLE HERO: 10 Plaguebearers
 SLAANESH HERO: 10 Daemonettes
-TZEENTCH HERO: 10 Horrors of Tzeentch. 
+TZEENTCH HERO: 5 Horrors of Tzeentch. 
 
 The summoned unit must be set up wholly within 12&quot; of that CHAOS ASCENDANT DAEMON HERO  and more than 9&quot; from any enemy units. 
 
@@ -5273,7 +5275,7 @@ In addition, before you allocate a wound or mortal wound to BE&apos;LAKOR, pick 
         <entryLink id="ecf1-8b3b-97e1-7042" name="Spell Lores" hidden="false" collective="false" import="true" targetId="a331-0f40-50c9-37e3" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="120.0"/>
+        <cost name="pts" typeId="points" value="140.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="8d33-371b-71d9-ae31" name="The Blue Scribes" hidden="false" collective="false" import="true" type="unit">
@@ -5814,9 +5816,15 @@ Note that this ability only allows you to replace a single dice roll. For 2D6 ro
     <selectionEntry id="16fa-c9dc-0b3c-fc42" name="Horrors of Tzeentch" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
         <modifier type="set-primary" field="category" value="065e-fda7-fd27-1f40">
-          <conditions>
-            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="78f3-8a59-699a-61e8" type="instanceOf"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="78f3-8a59-699a-61e8" type="instanceOf"/>
+                <condition field="selections" scope="16fa-c9dc-0b3c-fc42" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9e4e-4870-875c-a2c6" type="greaterThan"/>
+                <condition field="selections" scope="16fa-c9dc-0b3c-fc42" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0534-c5a1-4d72-bc17" type="greaterThan"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <profiles>
@@ -5991,7 +5999,7 @@ Set up the additional models one at a time within 1&quot; of the position that t
           <selectionEntries>
             <selectionEntry id="031a-329a-c6f5-faef" name="10 Pink Horrors" hidden="false" collective="false" import="true" type="model">
               <costs>
-                <cost name="pts" typeId="points" value="200.0"/>
+                <cost name="pts" typeId="points" value="220.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="0534-c5a1-4d72-bc17" name="10 Blue Horrors" hidden="false" collective="false" import="true" type="model">
@@ -6210,7 +6218,7 @@ Set up the additional models one at a time within 1&quot; of the position that t
             <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3b5f-76f4-a46f-0d33" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="120.0"/>
+            <cost name="pts" typeId="points" value="140.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="5bd1-79c9-bef2-63a4" name="Flaming Maw" hidden="false" collective="false" import="true" type="upgrade">
