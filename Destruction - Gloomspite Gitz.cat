@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="750c-157c-3186-61d3" name="Destruction - Gloomspite Gitz" revision="25" battleScribeVersion="2.03" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="61" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="750c-157c-3186-61d3" name="Destruction - Gloomspite Gitz" revision="26" battleScribeVersion="2.03" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="62" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="3323-8984-c803-feb5" name="Gloomspite Errata/Points, July 2019"/>
+    <publication id="0dee-8846-061a-5504" name="White Dwarf - Issue 455" shortName="White Dwarf" publisher="Issue 455" publicationDate="August 2020"/>
   </publications>
   <profileTypes>
     <profileType id="2a8e-0fcd-1727-325b" name="Wound Track Manglers">
@@ -75,6 +76,7 @@
     <categoryEntry id="930d-b87d-0db6-2b35" name="MOONCLAN WIZARD" hidden="false"/>
     <categoryEntry id="93bb-0e9a-301c-169c" name="ALEGUZZLER" hidden="false"/>
     <categoryEntry id="262c-6f7d-9222-f2f7" name="RIPPA&apos;S SNARLFANGS" hidden="false"/>
+    <categoryEntry id="5c14-5b8a-d2a6-bbf5" name="JAWS OF MORK" hidden="false"/>
   </categoryEntries>
   <entryLinks>
     <entryLink id="d894-1877-e48a-d85d" name="Madcap Shaman" hidden="false" collective="false" import="true" targetId="4456-155d-685b-bd18" type="selectionEntry"/>
@@ -469,6 +471,16 @@
       </modifiers>
       <categoryLinks>
         <categoryLink id="f548-10a2-cfe3-8a54" name="Other" hidden="false" targetId="065e-fda7-fd27-1f40" primary="true"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="fc38-9723-768d-c340" name="Battalion: Moon-jumper Stampede" hidden="false" collective="false" import="true" targetId="9470-dcb4-f996-0f8d" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="11fd-ac5e-deed-1305" name="Battalion" hidden="false" targetId="be17-6bbd-b857-3f43" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="5111-d89b-be56-8cff" name="Super Battalion: Moon-bitter Squigalanche" hidden="false" collective="false" import="true" targetId="4d4d-3de5-da33-a195" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="ec09-4027-beb5-47e6" name="Battalion" hidden="false" targetId="be17-6bbd-b857-3f43" primary="false"/>
       </categoryLinks>
     </entryLink>
   </entryLinks>
@@ -5371,8 +5383,37 @@
           </characteristics>
         </profile>
         <profile id="0aac-8fee-5397-2b8f" name="Moonclan Lairs" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="73c7-ebc5-d625-8ed5" type="equalTo"/>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="ed19-e955-1653-b94d" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
           <characteristics>
             <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the end of each of your turns, you can pick 1 friendly STABBAS or SHOOTAS unit that has been destroyed. If you do so, roll a dice. On a 4+ a new replacement unit with half of the models from the unit that was destroyed (rounding fractions up) is added to your army. You must set up the replacement unit wholly within 12&quot; of a friendly BAD MOON LOONSHRINE, and mode than 3&quot; from any enemy units. Each destroyed unit can only be replaced once – replacement units cannot themselves be replaced. </characteristic>
+          </characteristics>
+        </profile>
+        <profile id="f04e-b944-1c47-4032" name="Swarms of Lair Lurkers" hidden="true" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="73c7-ebc5-d625-8ed5" type="equalTo"/>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="ed19-e955-1653-b94d" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the end of each of your turns, you can pick 1 friendly SQUIG HERD, SQUIG HOPPERS or BOINGROT BOUNDERZ unit that has been destroyed.  If you do so, roll a dice.  On a 4+, a new replacement unit with half the number of models from the unit that was destroyed (rounding fractions up) is added to your army.  You must set up the replacement unit wholly within 12&quot; of a friendly BAD MOON LOONSHRINE and more than 3&quot; from any enemy units.  Each destroyed unit can only be replaced once - replacement units cannot themselves be replaced.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -5453,6 +5494,24 @@
                   <costs>
                     <cost name="pts" typeId="points" value="0.0"/>
                   </costs>
+                </selectionEntry>
+                <selectionEntry id="73c7-ebc5-d625-8ed5" name="Jaws of Mork" hidden="false" collective="false" import="true" type="upgrade">
+                  <constraints>
+                    <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="fef3-4f20-807b-1320" type="max"/>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="43cf-fffb-5882-7035" type="max"/>
+                  </constraints>
+                  <profiles>
+                    <profile id="8ce1-cd58-281b-f199" name="Running Riot" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
+                      <characteristics>
+                        <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">You can re-roll the roll that determines the Move characteristic of friendly SQUIG units.</characteristic>
+                      </characteristics>
+                    </profile>
+                    <profile id="13eb-d245-158d-2bd4" name="Get Some Loonshrine Down &apos;Em!" hidden="false" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
+                      <characteristics>
+                        <characteristic name="Command Ability Details" typeId="1b71-4c83-4e8c-093f">You can use this command ability at the start of any phase.  If you do so, pick 1 friendly JAWS OF MORK MANGLER SQUIGS model.   Until the end of that phase, use the top row on that model&apos;s damage table, regardless of how many wounds it has suffered.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
                 </selectionEntry>
               </selectionEntries>
               <costs>
@@ -6453,6 +6512,103 @@
         <cost name="pts" typeId="points" value="80.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="9470-dcb4-f996-0f8d" name="Battalion: Moon-jumper Stampede" publicationId="0dee-8846-061a-5504" page="25" hidden="false" collective="false" import="true" type="unit">
+      <profiles>
+        <profile id="64d2-7203-3b41-eb53" name="Crushing Gobs" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
+          <characteristics>
+            <characteristic name="Battalion Ability Details" typeId="08e0-9ead-1dbe-c801">Add 1 to the Damage characteristic of Fang-filled Gob, Massive Fang-filled Gob and Huge Fang-filled Gobs weapons used by unit from this battalion if they made a charge move in the same turn.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="75de-53d1-0b46-3dfc" name="New CategoryLink" hidden="false" targetId="be17-6bbd-b857-3f43" primary="true"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="386a-54d7-54e2-70a4" name="1. Jaws of Mork Squig Hoppers or Boingrot Bounders (2-3 in any combination)" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="af0a-13cf-4fc7-1187" type="min"/>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cd03-29b6-82fb-a424" type="max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="a280-8818-0263-1e49" name="Boingrot Bounders" hidden="false" collective="false" import="true" targetId="ff2e-4400-dbde-d4c4" type="selectionEntry"/>
+            <entryLink id="2292-72ce-23a5-dc5b" name="Squig Hoppers" hidden="false" collective="false" import="true" targetId="73c2-8a55-9faa-bb56" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="3bef-87a3-eb24-1b06" name="2. Jaws of Mork Mangler Squigs" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6b45-be4f-111e-50b1" type="max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="c0d9-c13b-aaa5-8147" name="Loonboss on Mangler Squigs" hidden="false" collective="false" import="true" targetId="6a0d-90f0-a499-dfbb" type="selectionEntry"/>
+            <entryLink id="cdaf-2e90-d81c-7de4" name="Mangler Squigs" hidden="false" collective="false" import="true" targetId="ebf9-d4df-0661-726d" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="points" value="140.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="4d4d-3de5-da33-a195" name="Super Battalion: Moon-bitter Squigalanche" publicationId="0dee-8846-061a-5504" page="25" hidden="false" collective="false" import="true" type="unit">
+      <profiles>
+        <profile id="1dec-095e-b64e-ce12" name="Overbounding Loonatics" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
+          <characteristics>
+            <characteristic name="Battalion Ability Details" typeId="08e0-9ead-1dbe-c801">After armies have been set up but before the first battle round begins, up to D3 units from this battalion can move up to 6&quot;.  If both players can move units after armies have been set up, the players must roll off, and the winner chooses who moves their unit first.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="04e3-5223-593b-0968" name="New CategoryLink" hidden="false" targetId="be17-6bbd-b857-3f43" primary="true"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="9087-5c46-a4ef-826a" name="1. Jaws of Mork Loonboss on Mangler Squigs or Loonboss on Giant Cave Squig" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6716-c3e6-5120-2d36" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e938-7ca0-af4d-2277" type="max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="2f20-4815-5c79-7343" name="Loonboss on Mangler Squigs" hidden="false" collective="false" import="true" targetId="6a0d-90f0-a499-dfbb" type="selectionEntry"/>
+            <entryLink id="8f25-dfd7-9753-deed" name="Loonboss on Giant Cave Squig" hidden="false" collective="false" import="true" targetId="8616-ec44-afd5-57d3" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="e2c7-245c-a3b5-9e73" name="2. Jaws of Mork Loonbosses on Giant Cave Squigs (0-3)" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8449-9585-b975-0ce5" type="max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="608a-2c8a-4a57-2894" name="Loonboss on Giant Cave Squig" hidden="false" collective="false" import="true" targetId="8616-ec44-afd5-57d3" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="e70c-cc6e-1bf2-a891" name="3. Moon-jumper Stampedes (1+)" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9e70-57c5-9466-4edb" type="min"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="1a47-1830-3221-d5e2" name="Battalion: Moon-jumper Stampede" hidden="false" collective="false" import="true" targetId="9470-dcb4-f996-0f8d" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="ed08-003d-35dc-9e14" name="4. Jaws of Mork Mangler Squigs (1-3)" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0b1d-ceec-376a-be9d" type="min"/>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9313-d072-5681-f14c" type="max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="8aed-35a4-d86d-7635" name="Loonboss on Mangler Squigs" hidden="false" collective="false" import="true" targetId="6a0d-90f0-a499-dfbb" type="selectionEntry"/>
+            <entryLink id="8139-0ccb-fab2-0b80" name="Mangler Squigs" hidden="false" collective="false" import="true" targetId="ebf9-d4df-0661-726d" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="ec55-67d1-05d9-701d" name="5. Jaws of Mork Squig Herd units (0-2)" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c9b9-5ee4-b28d-502a" type="max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="33d6-6877-7a7c-96c3" name="Squig Herd" hidden="false" collective="false" import="true" targetId="d7f2-6558-9c0f-89bc" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="points" value="90.0"/>
+      </costs>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="ef6a-94ec-582f-be56" name="Artefacts" hidden="false" collective="false" import="true">
@@ -6467,6 +6623,38 @@
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e0c3-5320-45a3-b5d0" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b8fb-4111-bd64-27f5" type="max"/>
       </constraints>
+      <selectionEntries>
+        <selectionEntry id="4549-cc6c-91ae-a006" name="Syari Screamersquig" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="73c7-ebc5-d625-8ed5" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="eb26-3c1b-f1f3-2479" value="1.0">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="73c7-ebc5-d625-8ed5" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="35a7-e022-9430-9ec3" value="1.0">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="73c7-ebc5-d625-8ed5" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="eb26-3c1b-f1f3-2479" type="min"/>
+            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="35a7-e022-9430-9ec3" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="4a80-99b6-f3dd-c7fd" name="Syari Screamersquig" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
+              <characteristics>
+                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">At the start of the combat phase, you can pick 1 enemy HERO within 3&quot; of the bearer.  If you do so, until your next hero phase, add 1 to hit rolls for attacks made with melee weapons by the bearer that target that HERO.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
       <entryLinks>
         <entryLink id="760d-cbe4-ed71-37e5" name="Artefacts of Destruction" hidden="false" collective="false" import="true" targetId="ca3c-6bfc-07f1-2953" type="selectionEntryGroup">
           <modifiers>
@@ -6523,6 +6711,38 @@
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c93f-5721-1850-5d21" type="max"/>
       </constraints>
+      <selectionEntries>
+        <selectionEntry id="258d-1274-f60e-f712" name="Envoy of the Overbounder" publicationId="0dee-8846-061a-5504" page="24" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="73c7-ebc5-d625-8ed5" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="3528-0c09-7ea0-25ac" value="1.0">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="73c7-ebc5-d625-8ed5" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="d024-1d5d-bbf8-f73c" value="1.0">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="73c7-ebc5-d625-8ed5" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="3528-0c09-7ea0-25ac" type="min"/>
+            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="d024-1d5d-bbf8-f73c" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="3a08-a7f2-bcb9-a475" name="Envoy of the Overbounder" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
+              <characteristics>
+                <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">You can re-roll failed battleshock tests for friendly JAWS OF MORK units wholly within 12&quot; of this general.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="6eed-3cba-2a72-3cd9" name="Blessings of the Bad Moon" hidden="false" collective="false" import="true">
           <modifiers>
