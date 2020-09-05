@@ -1416,6 +1416,9 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="0dc6-6a02-43e3-a594" name="Endless Spell: Hyshian Twinstones" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="e44f-dd33-b2b3-b161" type="max"/>
+      </constraints>
       <categoryLinks>
         <categoryLink id="322e-0742-083b-752f" name="New CategoryLink" hidden="false" targetId="eecb-ed66-d474-9ddd" primary="true"/>
       </categoryLinks>
@@ -1424,6 +1427,9 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="773b-c642-24f0-a5ab" name="Endless Spell: Rune of Petrification" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="3fe9-4bee-1de7-8b7c" type="max"/>
+      </constraints>
       <categoryLinks>
         <categoryLink id="dfc2-c751-610e-5012" name="New CategoryLink" hidden="false" targetId="eecb-ed66-d474-9ddd" primary="true"/>
       </categoryLinks>
@@ -1432,6 +1438,22 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="1d95-fe64-3b7c-90c3" name="Endless Spell: Sanctum of Amyntok" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="efc0-5bca-7037-9e53" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="9b1e-adf0-b983-d9b5" name="Summon Sanctum of Amyntok" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+          <characteristics>
+            <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
+            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">Only LUMINETH REALM-LORDS WIZARDS can attempt to cast this spell.  If successfully cast, set up 1 Sanctum of Amyntok model wholly within 3&quot; of the caster and more than 3&quot; from any other units.  Then, set up the second and third Sanctum of Amyntok models so that the tip of each model is touching the tip of a different model from the same endless spell, with each model more than 3&quot; from any other units and with the caster inside the ring.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="259c-363e-e7ed-f018" name="Sigil of Yngra" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Subtract 1 from hit rolls and add 1 to save rolls for attacks that target this model.  In addition, at the end of the combat phase, if this model was targeted by any enemy attacks during that phase, roll a dice for each enemy unit within 3&quot; of this model.  On a 1-3, nothing happens.  On a 4-5, that enemy unit suffers 1 mortal wound.  On a 6, that enemy unit suffers D3 mortal wounds.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
       <categoryLinks>
         <categoryLink id="58fd-2f73-e73d-0016" name="New CategoryLink" hidden="false" targetId="eecb-ed66-d474-9ddd" primary="true"/>
       </categoryLinks>
@@ -1679,12 +1701,84 @@
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8f77-6206-2ea9-1b6c" type="max"/>
       </constraints>
       <selectionEntries>
-        <selectionEntry id="0e65-35c6-31b1-5710" name="1. Speed of Hysh" hidden="false" collective="false" import="true" type="upgrade"/>
-        <selectionEntry id="be59-acd1-6ce4-13af" name="2. Solar Flare" hidden="false" collective="false" import="true" type="upgrade"/>
-        <selectionEntry id="fbdb-f3d2-416a-6caa" name="3. L.. Light" hidden="false" collective="false" import="true" type="upgrade"/>
-        <selectionEntry id="f891-bead-6778-d6d2" name="4. Ethereal Blessing" hidden="false" collective="false" import="true" type="upgrade"/>
-        <selectionEntry id="9461-6757-2869-3f12" name="5. Total Eclipse" hidden="false" collective="false" import="true" type="upgrade"/>
-        <selectionEntry id="880f-027c-6223-a9b9" name="6. Protection of Hysh" hidden="false" collective="false" import="true" type="upgrade"/>
+        <selectionEntry id="0e65-35c6-31b1-5710" name="1. Speed of Hysh" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="ea72-2616-5f1f-f60d" name="Speed of Hysh" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+              <characteristics>
+                <characteristic name="Casting Value" typeId="2508-b604-1258-a920">5</characteristic>
+                <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick 1 friendly LUMINETH REALM-LORDS unit wholly within 18&quot; of the caster and visible to them.  Double the Move characteristic of that unit until your next hero phase.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="be59-acd1-6ce4-13af" name="2. Solar Flare" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="a40a-c3ad-2f4a-9c3b" name="Solar Flare" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+              <characteristics>
+                <characteristic name="Casting Value" typeId="2508-b604-1258-a920">8</characteristic>
+                <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick a point on the battlefield within 10&quot; of the caster and visible to them.  If there is an endless spell at that point, it is dispelled, and if there is a unit at that point, roll a number of dice equal to the number of models in that unit.  For each 6+, that unit suffers 1 mortal wound.  In addition, until your next hero phase, subtract 2 from casting, dispelling and unbinding rolls for WIZARDS within 12&quot; of that point.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="fbdb-f3d2-416a-6caa" name="3. Lambent Light" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="b01c-e132-913e-3a22" name="Lambent Light" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+              <characteristics>
+                <characteristic name="Casting Value" typeId="2508-b604-1258-a920">5</characteristic>
+                <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick 1 enemy unit within 18&quot; of the caster and visible to them.  Until your next hero phase, you can re-roll hit rolls for attacks made with missile weapons that target that unit.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="f891-bead-6778-d6d2" name="4. Ethereal Blessing" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="1104-78b6-9d6c-3ac4" name="Ethereal Blessing" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+              <characteristics>
+                <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
+                <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick 1 friendly LUMINETH REALM-LORDS unit wholly within 18&quot; of the caster and visible to them.  Until your next hero phase, ignore modifiers (positive or negative) when making save rolls for attacks that target that unit.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="9461-6757-2869-3f12" name="5. Total Eclipse" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="9f97-2dd2-7ed1-5051" name="Total Eclipse" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+              <characteristics>
+                <characteristic name="Casting Value" typeId="2508-b604-1258-a920">8</characteristic>
+                <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, until your next hero phase, your opponent must spend 2 command points to use a command ability instead of 1.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="880f-027c-6223-a9b9" name="6. Protection of Hysh" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="e296-4a6e-fa96-70f2" name="Protection of Hysh" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+              <characteristics>
+                <characteristic name="Casting Value" typeId="2508-b604-1258-a920">8</characteristic>
+                <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, until your next hero phase, roll a dice each time you allocate a wound or mortal wound to a friendly unit wholly within 9&quot; of the caster.  On a 5+ that wound or mortal wound is negated.  This spell cannot be cast in the same hero phase as Protection of Teclis.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
     <selectionEntryGroup id="721e-b833-8e7d-f99e" name="Lore of the High Peaks" hidden="false" collective="false" import="true">
@@ -1699,12 +1793,136 @@
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8433-1ab8-8fe3-c906" type="max"/>
       </constraints>
       <selectionEntries>
-        <selectionEntry id="11b6-47ea-1e8f-5713" name="1. Unyielding Calm" hidden="false" collective="false" import="true" type="upgrade"/>
-        <selectionEntry id="cb95-c80b-26a2-0b19" name="2. Crippling Vertigo" hidden="false" collective="false" import="true" type="upgrade"/>
-        <selectionEntry id="c8c5-00f1-7186-538b" name="3. Voice of the Mountains" hidden="false" collective="false" import="true" type="upgrade"/>
-        <selectionEntry id="e2cc-8fa7-bb04-2204" name="4. Living Fissures" hidden="false" collective="false" import="true" type="upgrade"/>
-        <selectionEntry id="b70a-4680-946d-3135" name="5. Entomb" hidden="false" collective="false" import="true" type="upgrade"/>
-        <selectionEntry id="e9ad-72b4-079f-4322" name="6. Assault of Stone" hidden="false" collective="false" import="true" type="upgrade"/>
+        <selectionEntry id="11b6-47ea-1e8f-5713" name="1. Unyielding Calm" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="63ac-1453-b9ec-2a6e" name="Unyielding Calm" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+              <characteristics>
+                <characteristic name="Casting Value" typeId="2508-b604-1258-a920">4</characteristic>
+                <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick 1 friendly LUMINETH REALM-LORDS unit wholly within 18&quot; of the caster.  Until your next hero phase, do not take battleshock tests for that unit.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="cb95-c80b-26a2-0b19" name="2. Crippling Vertigo" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="0914-1abf-dc5e-9917" name="Crippling Vertigo" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+              <characteristics>
+                <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
+                <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick 1 enemy unit wholly within 18&quot; of the caster and visible to them.  Until your next hero phase, roll 2D6 before that unit makes a normal move, a charge move or a pile-in move.  If the roll is greater than that unit&apos;s Bravery characteristic, it cannot make the move.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="c8c5-00f1-7186-538b" name="3. Voice of the Mountains" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="fcb9-ed8a-d3cd-96c2" name="Voice of the Mountains" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+              <characteristics>
+                <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
+                <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, until the end of that turn, subtract 2 from the Bravery characteristic of enemy units.  Then, until your next hero phase, subtract 1 from the Bravery characteristic of enemy units instead.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="e2cc-8fa7-bb04-2204" name="4. Living Fissures" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="346a-0640-09d5-9590" name="Living Fissures" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+              <characteristics>
+                <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
+                <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick 1 point on the battlefield within 9&quot; of the caster that is visible to them and draw an imaginary straight line 1mm wide between that point and the closest part of the caster&apos;s base.  Roll a dice for each unit that has models passed across by this line.  On a 2+, that unit suffers D3 mortal wounds.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="b70a-4680-946d-3135" name="5. Entomb" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="709e-b91f-905c-de7b" name="Entomb" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+              <characteristics>
+                <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
+                <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick 1 enemy model within 18&quot; of the caster and visible to them, and roll a dice. If the roll is greater than that model&apos;s Wounds characteristic, that model is slain.  If the roll is a 6 but is not greater than that model&apos;s Wounds characteristic, that models suffers D6 mortal wounds.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="e9ad-72b4-079f-4322" name="6. Assault of Stone" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="a62d-0233-5040-df1e" name="Assault of Stone" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+              <characteristics>
+                <characteristic name="Casting Value" typeId="2508-b604-1258-a920">8</characteristic>
+                <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick 1 enemy unit wholly within 24&quot; of the caster and visible to them, and roll a number of dice equal to the casting roll.  For each roll that is less than that unit&apos;s Save characteristic, that unit suffers 1 mortal wound.  Rolls of 1 or 2 always fail to inflict a mortal wound on the target.   A Save characteristic of &apos;-&apos; counts as a 6 for the purposes of this rule.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="0dcb-5fca-9284-2f6c" name="Artefacts Placeholder" hidden="false" collective="false" import="true">
+      <selectionEntries>
+        <selectionEntry id="8c02-5a84-11d7-3439" name="0. Mountain&apos;s Gift" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="db25-f39b-b013-21e7" name="0. Mountain&apos;s Gift" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
+              <characteristics>
+                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Pick 1 of the bearer&apos;s melee weapons.  Once per phase, you can add 1 to the damage inflicted by 1 attack made with that weapon.  In addition, roll a dice each time you allocate a wound or mortal wound to the bearer.  On a 6, that wound or mortal wound is negated.  In addition, each time the bearer is affected by a spell or endless spell, you can roll a dice.  On a 5+, ignore the effects of that spell on the bearer.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="7752-d073-5cf6-bc1e" name="0. Simulacra Amulet" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="ce3a-416d-b70f-400c" name="0. Simulacra Amulet" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
+              <characteristics>
+                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">The first time the bearer is slain, before removing them from the battlefield, roll a dice.  On a 1-3, the bearer is slain.   On a 4-6, the bearer is not slain, all wounds allocated to them are healed and any wounds that currently remain to be allocated to them are negated.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="3c0f-e1b5-f031-f531" name="0. Blade of Leaping Gold" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="4564-d0da-5d80-0b2d" name="0. Blade of Leaping Gold" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
+              <characteristics>
+                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Pick 1 of the bearer&apos;s melee weapons.  Add 3 to the attacks characteristic of that weapon.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="3b38-b2f3-14ba-1615" name="0. Phoenix Stone" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="9b1b-2ad2-067d-e5db" name="0. Phoenix Stone" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
+              <characteristics>
+                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">If a friendly LUMINETH REALM-LORDS HERO is slain within 12&quot; of the bearer, before removing that model from play, roll a dice.  On a 6, that model is not slain, all wounds allocated to it are healed and any wounds that currently remain to be allocated to it or its unit are negated.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
