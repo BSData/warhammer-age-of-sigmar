@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="388b-16d3-8182-d6c0" name="Order - Daughters of Khaine" revision="38" battleScribeVersion="2.03" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="61" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="388b-16d3-8182-d6c0" name="Order - Daughters of Khaine" revision="39" battleScribeVersion="2.03" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="62" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="388b-16d3-pubN65537" name="Order Battletome: Daughters of Khaine"/>
     <publication id="388b-16d3-pubN69838" name="Order Official FAQs and errata, Version 1.4"/>
@@ -41,6 +41,9 @@
     <categoryEntry id="3c38-fb2d-7daf-7059" name="KHINERAI HARPIES" hidden="false"/>
     <categoryEntry id="c588-ff12-edfe-6390" name="KHINERAI HEARTRENDERS" hidden="false"/>
     <categoryEntry id="6a11-8737-d848-a87a" name="KHINERAI LIFETAKERS" hidden="false"/>
+    <categoryEntry id="ae6c-d934-169b-8cde" name="MORGWAETH THE BLOODIED" hidden="false"/>
+    <categoryEntry id="bdf7-54a0-28a8-ff59" name="THE BLADE-COVEN" hidden="false"/>
+    <categoryEntry id="3c71-230c-aaa7-b35c" name="HAGG NAR" hidden="false"/>
   </categoryEntries>
   <entryLinks>
     <entryLink id="7a3b-e742-323f-b2e8" name="Avatar of Khaine" hidden="false" collective="false" import="true" targetId="4948-910d-f0dd-f32a" type="selectionEntry">
@@ -159,7 +162,17 @@
         <categoryLink id="2de8-352d-7f03-56b1" name="New CategoryLink" hidden="false" targetId="065e-fda7-fd27-1f40" primary="false"/>
       </categoryLinks>
     </entryLink>
-    <entryLink id="416a-cc68-2bb2-c615" name="Morathi, The Shadow Queen" hidden="false" collective="false" import="true" targetId="bdce-0543-c674-6843" type="selectionEntry"/>
+    <entryLink id="416a-cc68-2bb2-c615" name="Morathi, the Shadow Queen" hidden="false" collective="false" import="true" targetId="bdce-0543-c674-6843" type="selectionEntry"/>
+    <entryLink id="3c0e-cd6c-6e6d-e691" name="Morgwaeth the Bloodied" hidden="false" collective="false" import="true" targetId="61d4-0417-b59e-a6a2" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="9516-545c-399e-4481" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="4510-a907-a68c-ceb6" name="The Blade-Coven" hidden="false" collective="false" import="true" targetId="6ded-b4ea-f86a-5ace" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="03fd-0535-5569-e324" name="New CategoryLink" hidden="false" targetId="065e-fda7-fd27-1f40" primary="true"/>
+      </categoryLinks>
+    </entryLink>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="8a66-cfb1-6e7e-9f11" name="General" hidden="false" collective="false" import="true" type="upgrade">
@@ -2813,6 +2826,169 @@ If Morathi was your general in her High Oracle of Khaine form, she remains your 
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
+    </selectionEntry>
+    <selectionEntry id="61d4-0417-b59e-a6a2" name="Morgwaeth the Bloodied" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="61a8-798b-503c-6b9a" value="1.0">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6ded-b4ea-f86a-5ace" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ec5a-d32b-4b5b-9809" type="max"/>
+        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="61a8-798b-503c-6b9a" type="min"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d9e0-9a8f-4cd2-faf2" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="8cb9-fe41-c0fa-8585" name="Morgwaeth the Bloodied" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
+          <characteristics>
+            <characteristic name="Move" typeId="8655-6213-2824-1752">6&quot;</characteristic>
+            <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">5</characteristic>
+            <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">8</characteristic>
+            <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">5+</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="6f4a-b9ce-e93d-80d4" name="Priestess of Khaine" hidden="false" targetId="86cb-6da9-fa1c-dc55" type="profile"/>
+        <infoLink id="ba4d-fb54-9fd3-29c2" name="Rune of Khaine" hidden="false" targetId="b4c9-317f-5159-479c" type="profile"/>
+        <infoLink id="d737-0bfb-1261-ccc8" name="Touch of Death" hidden="false" targetId="f6fe-99bd-011b-d52e" type="profile"/>
+        <infoLink id="d700-2998-99f2-cb79" name="Witchbrew" hidden="false" targetId="07c6-84c1-ada4-e2c6" type="profile"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="1c95-ed72-960d-5243" name="AELF" hidden="false" targetId="7fe9-bc03-2c82-0a00" primary="false"/>
+        <categoryLink id="6872-01ed-f7d1-e2a2" name="DAUGHTERS OF KHAINE" hidden="false" targetId="9efd-7c5d-dc14-2302" primary="false"/>
+        <categoryLink id="bbe1-2844-d2eb-9771" name="HAG QUEEN" hidden="false" targetId="f867-cd3a-f083-dd8d" primary="false"/>
+        <categoryLink id="d36a-dbca-78ee-a0ca" name="HERO" hidden="false" targetId="4e0e-664d-51ea-0929" primary="false"/>
+        <categoryLink id="b960-b85d-b03e-1c29" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
+        <categoryLink id="5893-65a1-81a3-dadf" name="MORGWAETH THE BLOODIED" hidden="false" targetId="ae6c-d934-169b-8cde" primary="false"/>
+        <categoryLink id="fa8d-a6ac-a141-3fd9" name="ORDER" hidden="false" targetId="b970-b3bf-e1a4-a6fc" primary="false"/>
+        <categoryLink id="7d35-9eaa-86ca-8903" name="PRIEST" hidden="false" targetId="e8a5-e4c1-3d11-e7dd" primary="false"/>
+        <categoryLink id="23d3-c0f0-7ae4-3a42" name="HAGG NAR" hidden="false" targetId="3c71-230c-aaa7-b35c" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="e057-6c95-ca94-e479" name="Glaive of Khaine" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1e91-fa63-0e61-0d96" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="faac-e07f-a4d5-518e" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="0616-3fae-940e-abff" name="Glaive of Khaine" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">2&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">3</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
+      <entryLinks>
+        <entryLink id="d020-c4fb-5839-d797" name="General" hidden="false" collective="false" import="true" targetId="8a66-cfb1-6e7e-9f11" type="selectionEntry"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="140.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="6ded-b4ea-f86a-5ace" name="The Blade-Coven" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="326e-0314-899a-73ec" value="1.0">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="61d4-0417-b59e-a6a2" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3194-d387-066f-ec89" type="max"/>
+        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="326e-0314-899a-73ec" type="min"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="21a8-fe23-40b9-bdf6" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="9c58-e16a-70e0-21f8" name="Heartseekers" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If the unmodified hit roll for an attack made with a Heartseeker Bow is 6, that attack inflicts 1 mortal wound on the target and the attack sequence ends (do not make a wound or save roll).</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="568c-6017-9d97-e82b" name="Daughters of the First Temple" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Roll a dice before you allocate a wound or mortal wound to a friendly Morgwaeth the Bloodied while she is within 3&quot; of this unit. On a 4+, that wound or mortal wound is allocated to this unit instead of Morgwaeth the Bloodied.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="5544-1ef5-833b-840b" name="The Blade-Coven" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
+          <characteristics>
+            <characteristic name="Move" typeId="8655-6213-2824-1752">6&quot;</characteristic>
+            <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">1</characteristic>
+            <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">7</characteristic>
+            <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">6+</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="e99e-d897-adf4-48ba" name="Kyrae" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Kyrae has a Wounds characteristic of 2.  Kyrae is armed with a Heartseeker Bow
+and Sacrificial Weapons.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="6f53-c149-19a4-7853" name="AELF" hidden="false" targetId="7fe9-bc03-2c82-0a00" primary="false"/>
+        <categoryLink id="050e-77bf-ca99-b7be" name="DAUGHTERS OF KHAINE" hidden="false" targetId="9efd-7c5d-dc14-2302" primary="false"/>
+        <categoryLink id="6790-9847-59b8-7db5" name="HAGG NAR" hidden="false" targetId="3c71-230c-aaa7-b35c" primary="false"/>
+        <categoryLink id="486b-d67a-0bae-824f" name="MELUSAI" hidden="false" targetId="d629-2bcb-a36c-ae19" primary="false"/>
+        <categoryLink id="fcef-48de-5ba7-9736" name="ORDER" hidden="false" targetId="b970-b3bf-e1a4-a6fc" primary="false"/>
+        <categoryLink id="a5ed-f2e2-c4d7-9b4b" name="Other" hidden="false" targetId="065e-fda7-fd27-1f40" primary="false"/>
+        <categoryLink id="7631-9592-91f4-beed" name="THE BLADE-COVEN" hidden="false" targetId="bdf7-54a0-28a8-ff59" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="82fe-c6fa-792b-0f25" name="Heartseeker Bow" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9b46-1605-b859-7c9d" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e089-54f9-fdbe-d425" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="c085-2727-e7f1-1b15" name="Heartseeker Bow" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Missile</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">24&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">1</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="468e-841e-fbb3-9939" name="Sacrificial Weapons" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e799-f2e3-fb2e-4dae" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="21e7-f7ab-e6a1-42dd" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="d28f-3da1-2673-f97e" name="Sacrificial Weapons" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">3</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">4+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
