@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="5419-b58f-5a39-0bfe" name="Destruction - Orruk Warclans" revision="12" battleScribeVersion="2.03" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="61" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="5419-b58f-5a39-0bfe" name="Destruction - Orruk Warclans" revision="13" battleScribeVersion="2.03" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="62" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="7e25-33bb-pubN65537" name="Destruction Battletome: Bonesplitterz"/>
     <publication id="7e25-33bb-pubN82863" name="Age of Sigmar: The Rules"/>
@@ -64,6 +64,8 @@
     <categoryEntry id="ef1e-4f71-6a42-d189" name="GORDRAKK" hidden="false"/>
     <categoryEntry id="043f-174a-6b6a-bbb1" name="Gore Gruntas" hidden="false"/>
     <categoryEntry id="94d9-92a8-fced-0685" name="BONESPLITTERZ WIZARD" hidden="false"/>
+    <categoryEntry id="df61-2051-c86c-36ea" name="MORGOK&apos;S KRUSHAS" hidden="false"/>
+    <categoryEntry id="881a-2aaf-5ebd-5fbf" name="IRONSUNZ" hidden="false"/>
   </categoryEntries>
   <entryLinks>
     <entryLink id="fc4d-9292-0908-041e" name="Allegiance" hidden="false" collective="false" import="true" targetId="9dbb-2d1a-12d8-7faf" type="selectionEntry">
@@ -147,6 +149,7 @@
     <entryLink id="4852-e420-aca8-9c30" name="Battalion: Da Bossfist" hidden="false" collective="false" import="true" targetId="ed5f-cc0f-eb0d-39f4" type="selectionEntry"/>
     <entryLink id="689f-db5c-dcf9-400e" name="Battalion: Weirdfist" hidden="false" collective="false" import="true" targetId="2900-8eba-305f-e9c5" type="selectionEntry"/>
     <entryLink id="4e55-5520-7ed4-fa5f" name="Super Battalion: Dakkbad&apos;s Brawl" hidden="false" collective="false" import="true" targetId="8485-cbbb-d20f-a8cb" type="selectionEntry"/>
+    <entryLink id="f393-63d9-78cb-6ff3" name="Morgok&apos;s Krushas" hidden="false" collective="false" import="true" targetId="ee9f-ef41-ff84-1f74" type="selectionEntry"/>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="9dbb-2d1a-12d8-7faf" name="Allegiance" hidden="false" collective="false" import="true" type="upgrade">
@@ -4051,6 +4054,113 @@ In addition, add 1 to hit rolls and wound rolls for attacks made with this unitâ
       </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="points" value="120.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="ee9f-ef41-ff84-1f74" name="Morgok&apos;s Krushas" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="33cb-28e3-cf3d-7f21" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1ef7-e01b-f909-6add" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="260f-30bd-7cb5-c42c" name="Morgok&apos;s Krushas" page="115" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
+          <characteristics>
+            <characteristic name="Move" typeId="8655-6213-2824-1752">4&quot;</characteristic>
+            <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">3</characteristic>
+            <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">6</characteristic>
+            <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">4+</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="03db-3e87-8341-16f2" name="Duff Up da Big Thing" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Add 1 to the hit rolls for attacks made by this unit that target a unit with a Wounds characteristic of 4+</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="e435-7793-f5ef-5404" name="Beastbashas" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">The first time an enemy MONSTER is destroyed by an attack made by this unit, add 1 to wound rolls for attacks made by this unit for the rest of the battle. </characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="2d91-efba-b358-f8d6" name="New CategoryLink" hidden="false" targetId="d963-a5fb-c348-2371" primary="false"/>
+        <categoryLink id="f297-4c24-17a4-9c65" name="New CategoryLink" hidden="false" targetId="f643-013c-7718-007d" primary="false"/>
+        <categoryLink id="fabb-7722-1b5d-5d3e" name="New CategoryLink" hidden="false" targetId="157e-e19c-bc6e-6d49" primary="false"/>
+        <categoryLink id="705a-b151-dc5d-9dbc" name="New CategoryLink" hidden="false" targetId="065e-fda7-fd27-1f40" primary="true"/>
+        <categoryLink id="ce57-701f-d5ce-9568" name="Brute" hidden="false" targetId="2187-d5fb-d16f-646c" primary="false"/>
+        <categoryLink id="6002-1d22-9a24-243e" name="MORGOK&apos;S KRUSHAS" hidden="false" targetId="df61-2051-c86c-36ea" primary="false"/>
+        <categoryLink id="cec9-5ff6-a0f1-6cf8" name="IRONSUNZ" hidden="false" targetId="881a-2aaf-5ebd-5fbf" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="8c39-dc3e-43e4-0e38" name="Krusha Weapons (Morgok)" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="442d-b781-bd86-85aa" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7eb3-6547-b75d-dd4d" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="ac09-4796-d3b6-63d9" name="Krusha Weapons (Morgok)" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">5</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry id="d173-3bf9-ec76-ce5b" name="Krusha Weapons (Thugg)" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a185-949a-807c-b738" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f1de-1d8b-431b-f498" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="bb97-2646-912b-c716" name="Krusha Weapons (Thugg)" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">4</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry id="f46e-ffc4-fd6b-f300" name="Gore-Basha (&apos;Ardskull)" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="881b-a063-8a60-0d24" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0f39-f6be-409d-217e" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="1c5c-6794-ffe8-b347" name="Gore-Basha (&apos;Ardskull)" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">2&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">3</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">2</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
+      <costs>
+        <cost name="pts" typeId="points" value="90.0"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>
