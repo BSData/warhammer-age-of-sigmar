@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="62" battleScribeVersion="2.03" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="63" battleScribeVersion="2.03" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <publications>
     <publication id="e51d-b1a3-pubEC" name="The General&apos;s Handbook"/>
     <publication id="e51d-b1a3-pubEQ" name="Core Rules"/>
@@ -656,7 +656,7 @@
         <categoryLink id="c58f-6e74-d605-fe50" name="New CategoryLink" hidden="false" targetId="eecb-ed66-d474-9ddd" primary="true"/>
       </categoryLinks>
     </entryLink>
-    <entryLink id="4095-992e-ecb5-f3e7" name="Chronomatic Cogs" hidden="false" collective="false" import="true" targetId="4a8c-091f-84b5-47aa" type="selectionEntry">
+    <entryLink id="4095-992e-ecb5-f3e7" name="Chronomantic Cogs" hidden="false" collective="false" import="true" targetId="4a8c-091f-84b5-47aa" type="selectionEntry">
       <categoryLinks>
         <categoryLink id="344d-c0f8-1f3d-3bee" name="New CategoryLink" hidden="false" targetId="eecb-ed66-d474-9ddd" primary="true"/>
       </categoryLinks>
@@ -721,17 +721,17 @@
         <categoryLink id="56ee-27fa-24d6-b548" name="Malign Sorcery" hidden="false" targetId="eecb-ed66-d474-9ddd" primary="true"/>
       </categoryLinks>
     </entryLink>
-    <entryLink id="432a-de1d-1d97-f4f2" name="Suffocating﻿﻿ Gravetide﻿" hidden="false" collective="false" import="true" targetId="d6de-646a-4dcc-e37d" type="selectionEntry">
+    <entryLink id="432a-de1d-1d97-f4f2" name="Suffocating Gravetide" hidden="false" collective="false" import="true" targetId="d6de-646a-4dcc-e37d" type="selectionEntry">
       <categoryLinks>
         <categoryLink id="8dca-2e27-a312-1002" name="New CategoryLink" hidden="false" targetId="eecb-ed66-d474-9ddd" primary="true"/>
       </categoryLinks>
     </entryLink>
-    <entryLink id="3b5f-6153-8453-ecae" name="The B﻿urning Head﻿﻿﻿" hidden="false" collective="false" import="true" targetId="3ad9-857b-32ff-e44e" type="selectionEntry">
+    <entryLink id="3b5f-6153-8453-ecae" name="The Burning Head" hidden="false" collective="false" import="true" targetId="3ad9-857b-32ff-e44e" type="selectionEntry">
       <categoryLinks>
         <categoryLink id="a795-b9f6-5518-72bc" name="New CategoryLink" hidden="false" targetId="eecb-ed66-d474-9ddd" primary="true"/>
       </categoryLinks>
     </entryLink>
-    <entryLink id="5094-7652-a4bc-244c" name="Endless Spell: Umbral Sp﻿ellporta﻿l﻿﻿" hidden="false" collective="false" import="true" targetId="d2dc-7e1a-c2e7-4cff" type="selectionEntry">
+    <entryLink id="5094-7652-a4bc-244c" name="Endless Spell: Umbral Spellportal" hidden="false" collective="false" import="true" targetId="d2dc-7e1a-c2e7-4cff" type="selectionEntry">
       <categoryLinks>
         <categoryLink id="f865-805f-d0d2-56bb" name="New CategoryLink" hidden="false" targetId="eecb-ed66-d474-9ddd" primary="true"/>
       </categoryLinks>
@@ -920,12 +920,12 @@ to set up the WIZARD, then the WIZARD is slain.</description>
         <cost name="pts" typeId="points" value="40.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="4a8c-091f-84b5-47aa" name="Endless Spell: Chronomatic Cogs" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="4a8c-091f-84b5-47aa" name="Endless Spell: Chronomantic Cogs" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="437a-85d6-7962-09c8" type="max"/>
       </constraints>
       <profiles>
-        <profile id="9590-acdc-1b4e-0963" name="Summon Chronomatic Cogs" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+        <profile id="9590-acdc-1b4e-0963" name="Summon Chronomantic Cogs" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
           <characteristics>
             <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
             <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, set up a Chronomantic Cogs model wholly within 12&quot; of the caster. </characteristic>
@@ -1003,7 +1003,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
         </profile>
         <profile id="c00d-5d8c-b48a-92d0" name="Tendrils of Shadow and Light" publicationId="e51d-b1a3-pubEFCFK" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">After the Shadow Geminid model has moved, each unit that has any models it passed across suffers D3 mortal wounds. In addition, subtract 1 (to a minimum of 1) from the Attacks characteristic of melee weapons used by each unit that has any models it passed across until the end of the battle round. A unit is not affected by the Shadow Geminid model if it has been passed across by the Light Geminid model earlier in the same battle round. After the Light Geminid model has moved, each unit that has any models it passed across suffers D3 mortal wounds. In addition, subtract 1 from hit rolls for each unit that has any models it passed across until the end of the battle round. A unit is not affected by the Light Geminid model if it has been passed across by the Shadow Geminind model earlier in the same battle round (a unit can be affected by one or other of the models each battle round, but not both).</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">After the Shadow Geminid model has moved, each unit that has any models it passed across suffers D3 mortal wounds. In addition, subtract 1 (to a minimum of 1) from the Attacks characteristic of melee weapons used by each unit that has any models it passed across until the end of the battle round. A unit is not affected by the Shadow Geminid model if it has been passed across by the Light Geminid model earlier in the same battle round. After the Light Geminid model has moved, each unit that has any models it passed across suffers D3 mortal wounds. In addition, subtract 1 from hit rolls for each unit that has any models it passed across until the end of the battle round. A unit is not affected by the Light Geminid model if it has been passed across by the Shadow Geminid model earlier in the same battle round (a unit can be affected by one or other of the models each battle round, but not both).</characteristic>
           </characteristics>
         </profile>
         <profile id="13d9-73c9-ffcc-5cfb" name="Empowered by Hysh" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
@@ -1134,7 +1134,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
             <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">A Malevolent Maelstrom is a predatory endless spell. It can move up to 8&quot; and can fly.</characteristic>
           </characteristics>
         </profile>
-        <profile id="abb3-1c3a-812b-214c" name="Devourerer of Sorcery and Souls" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+        <profile id="abb3-1c3a-812b-214c" name="Devourer of Sorcery and Souls" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
             <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If a WIZARD successfully casts a spell within 12&quot; of a Malevolent Maelstrom, and that spell is not unbound, the Malevolent Maelstrom will attempt to steal the energies of the spell. Make an additional unbinding roll for that spell. If this unbinding roll is successful, the spell is unbound and 1 energy point is allocated to this model.  In addition, 1 energy point is allocated to this model for each unit destroyed within 6&quot; of this model. </characteristic>
           </characteristics>
@@ -1536,12 +1536,12 @@ to set up the WIZARD, then the WIZARD is slain.</description>
         <cost name="pts" typeId="points" value="30.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="d2dc-7e1a-c2e7-4cff" name="Endless Spell: Umbral Sp﻿ellporta﻿l﻿﻿" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="d2dc-7e1a-c2e7-4cff" name="Endless Spell: Umbral Spellportal" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="339b-832b-1f41-84f3" type="max"/>
       </constraints>
       <profiles>
-        <profile id="c3e6-0504-1147-d44a" name="Summon Umbral Sp﻿ellporta﻿l﻿﻿" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+        <profile id="c3e6-0504-1147-d44a" name="Summon Umbral Spellportal" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
           <characteristics>
             <characteristic name="Casting Value" typeId="2508-b604-1258-a920">5</characteristic>
             <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, set up the first Umbral Spellportal model wholly within 12&quot; of the caster, and then set up the second Umbral Spellportal model wholly within 18&quot; of the first.</characteristic>
@@ -1756,7 +1756,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
           <profiles>
             <profile id="3276-e79f-0eb4-8955" name="Tomb Blade" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
               <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Pick one of the bearer’s melee weapons. For each wound roll of 6+ you make for this weapon, you can heal 1 wound that has been allocated to a friendly DEATHmodel within 6&quot; of the bearer.</characteristic>
+                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Pick one of the bearer’s melee weapons. For each wound roll of 6+ you make for this weapon, you can heal 1 wound that has been allocated to a friendly DEATH model within 6&quot; of the bearer.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -2029,7 +2029,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
           <profiles>
             <profile id="abd9-cb56-8363-375f" name="Wild Fury" publicationId="e51d-b1a3-pubEQOCI" page="156" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
               <characteristics>
-                <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">When this General is picked to fight, pick one of their melee weapons. Add 1 to the attach characterisict of that melee weapon for the fight. While 3 or more wounds are allocated to this general, instread add 2 to the Attacks characteristic of that melee weapon for that fight.</characteristic>
+                <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">When this General is picked to fight, pick one of their melee weapons. Add 1 to the attach characteristic of that melee weapon for the fight. While 3 or more wounds are allocated to this general, instead add 2 to the Attacks characteristic of that melee weapon for that fight.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -2120,7 +2120,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
           <profiles>
             <profile id="264c-5601-8894-49c6" name="Lord of War" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
               <characteristics>
-                <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">In your hero phase, pick a friendly CHAOSunit within 3&quot; of this general and roll a dice. On a 4+ you can add 1 to hit rolls for the unit you picked until your next hero phase.</characteristic>
+                <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">In your hero phase, pick a friendly CHAOS unit within 3&quot; of this general and roll a dice. On a 4+ you can add 1 to hit rolls for the unit you picked until your next hero phase.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -3436,7 +3436,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
           <profiles>
             <profile id="3c29-7e19-781b-def8" name="Forced by the Aether" page="" hidden="false" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
               <characteristics>
-                <characteristic name="Command Ability Details" typeId="1b71-4c83-4e8c-093f">You can use this command ability when you pick a predatory endless spell to move. If you do so, pick 1 predatory endless psell within 12&quot; of a friendly WIZARD. Add D6&quot; to the movement range on that predatory endless spell&apos;s warscroll until the end of the battle round.</characteristic>
+                <characteristic name="Command Ability Details" typeId="1b71-4c83-4e8c-093f">You can use this command ability when you pick a predatory endless spell to move. If you do so, pick 1 predatory endless spell within 12&quot; of a friendly WIZARD. Add D6&quot; to the movement range on that predatory endless spell&apos;s warscroll until the end of the battle round.</characteristic>
               </characteristics>
             </profile>
             <profile id="b9a0-e9bc-9406-06c9" name="Marked Quarry" page="" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
