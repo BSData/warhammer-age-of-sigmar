@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="522a-d5b0-4c7e-321d" name="Order - Cities of Sigmar" revision="30" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="63" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="522a-d5b0-4c7e-321d" name="Order - Cities of Sigmar" revision="30" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="64" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="deec-d475-pubN65537" name="Grand Alliance: Order"/>
     <publication id="e440-9199-1072-a7a0" name="Cities of Sigmar Battletome"/>
@@ -69,6 +69,7 @@
     <categoryEntry id="f78e-3730-9323-b832" name="SPELLWEAVER" hidden="false"/>
     <categoryEntry id="a83c-f6d2-31f5-765c" name="WILDWOOD RANGERS" hidden="false"/>
     <categoryEntry id="f12b-14b1-eff9-c3cc" name="WILD RIDERS" hidden="false"/>
+    <categoryEntry id="46d3-dc7e-9ee4-6212" name="SCOURGE PRIVATEERS" hidden="false"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry id="0db5-b074-ea11-2661" name="Cities of Sigmar Pitched Battle" hidden="true">
@@ -286,8 +287,11 @@
           <modifiers>
             <modifier type="increment" field="e07a-8193-2b4d-f3ae" value="1.0">
               <repeats>
-                <repeat field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="cccb-89cd-393f-5839" repeats="1" roundUp="false"/>
+                <repeat field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cccb-89cd-393f-5839" repeats="1" roundUp="false"/>
               </repeats>
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
+              </conditions>
             </modifier>
           </modifiers>
           <constraints>
@@ -324,6 +328,21 @@
             <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1b55-0c66-b2fe-c821" type="max"/>
           </constraints>
         </categoryLink>
+        <categoryLink id="79ff-86b2-aa69-35d2" name="IDONETH DEEPKIN" hidden="false" targetId="6ec4-4931-4d7f-006b" primary="false">
+          <modifiers>
+            <modifier type="increment" field="8266-3e0a-e265-4f4b" value="1.0">
+              <repeats>
+                <repeat field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cccb-89cd-393f-5839" repeats="1" roundUp="false"/>
+              </repeats>
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8266-3e0a-e265-4f4b" type="max"/>
+          </constraints>
+        </categoryLink>
       </categoryLinks>
     </forceEntry>
   </forceEntries>
@@ -331,7 +350,15 @@
     <entryLink id="d1b4-4124-e5f1-ddf5" name="Luminark of Hysh" hidden="false" collective="false" import="true" targetId="c2cb-f59d-ec38-10c8" type="selectionEntry"/>
     <entryLink id="48f8-0cd0-c224-e202" name="Freeguild General" hidden="false" collective="false" import="true" targetId="aada-2a08-7231-2d0e" type="selectionEntry"/>
     <entryLink id="e1ec-efa7-67c0-03bc" name="Freeguild General on Griffon" hidden="false" collective="false" import="true" targetId="f97b-a868-659a-a9e5" type="selectionEntry"/>
-    <entryLink id="fda5-33e1-17e6-3b70" name="Decimators" hidden="false" collective="false" import="true" targetId="5330-8a21-c53d-7aa3" type="selectionEntry"/>
+    <entryLink id="fda5-33e1-17e6-3b70" name="Decimators" hidden="false" collective="false" import="true" targetId="5330-8a21-c53d-7aa3" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
     <entryLink id="aa5e-44f7-bed0-8d70" name="Demigryph Knights" hidden="false" collective="false" import="true" targetId="997f-3956-6049-cc04" type="selectionEntry"/>
     <entryLink id="5261-f6e9-39cd-854b" name="Freeguild Greatswords" hidden="false" collective="false" import="true" targetId="2285-8b6d-cc95-1dac" type="selectionEntry"/>
     <entryLink id="6d30-660e-b258-674c" name="Freeguild Guard" hidden="false" collective="false" import="true" targetId="ce08-26df-f117-e698" type="selectionEntry"/>
@@ -371,7 +398,15 @@
     <entryLink id="9d65-4982-3f04-f9cf" name="Drakespawn Knights" hidden="false" collective="false" import="true" targetId="a923-90e2-11c3-bd73" type="selectionEntry"/>
     <entryLink id="d442-536b-9e4e-f3af" name="Drakespawn Chariots" hidden="false" collective="false" import="true" targetId="82b3-0356-222a-f320" type="selectionEntry"/>
     <entryLink id="51fc-549b-8b55-1c9b" name="Flamespyre Phoenix" hidden="false" collective="false" import="true" targetId="e3c5-c528-43c9-426a" type="selectionEntry"/>
-    <entryLink id="fc5e-759e-0fca-6979" name="Shadow Warriors" hidden="false" collective="false" import="true" targetId="d4d5-d1ff-3cbc-018e" type="selectionEntry"/>
+    <entryLink id="fc5e-759e-0fca-6979" name="Shadow Warriors" hidden="false" collective="false" import="true" targetId="d4d5-d1ff-3cbc-018e" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
     <entryLink id="2a60-b2cf-c86f-06b1" name="Wild Riders" hidden="false" collective="false" import="true" targetId="6497-3006-d73e-1485" type="selectionEntry"/>
     <entryLink id="19e1-fcd6-52a3-011c" name="Wildwood Rangers" hidden="false" collective="false" import="true" targetId="add1-1bd1-a0ee-e3b0" type="selectionEntry"/>
     <entryLink id="a8f6-bdb0-fed7-52c9" name="Sisters of the Thorn" hidden="false" collective="false" import="true" targetId="6a57-62b4-8b99-ece0" type="selectionEntry"/>
@@ -391,32 +426,216 @@
     <entryLink id="2c17-3d88-c236-3f6f" name="Battalion: Charrwind Beasthunters" hidden="false" collective="false" import="true" targetId="4be6-1ea4-2951-80af" type="selectionEntry"/>
     <entryLink id="9dab-f2a5-a8cd-a035" name="Battalion: Hammerhalian Lancers" hidden="false" collective="false" import="true" targetId="045e-b385-6cd3-91bc" type="selectionEntry"/>
     <entryLink id="7923-c9c0-7ace-1c8b" name="Battlemage" hidden="false" collective="false" import="true" targetId="e803-f69f-40ca-f348" type="selectionEntry"/>
-    <entryLink id="dbef-05d8-fa4b-ae26" name="Lord-Exorcist" hidden="false" collective="false" import="true" targetId="b92f-b04d-3339-5cd9" type="selectionEntry"/>
+    <entryLink id="dbef-05d8-fa4b-ae26" name="Lord-Exorcist" hidden="false" collective="false" import="true" targetId="b92f-b04d-3339-5cd9" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
     <entryLink id="a423-ab88-ee7d-cff3" name="Steam Tank with Commander" hidden="false" collective="false" import="true" targetId="906e-3ce2-c77a-daef" type="selectionEntry"/>
     <entryLink id="9532-1ce7-4509-43b1" name="Phoenix Guard" hidden="false" collective="false" import="true" targetId="e7a3-2bf4-8920-6fc1" type="selectionEntry"/>
     <entryLink id="0694-d504-9ef1-351c" name="Dark Riders" hidden="false" collective="false" import="true" targetId="11b9-fb1d-b5cd-cc7e" type="selectionEntry"/>
-    <entryLink id="3ab9-226a-f97e-9b08" name="Lord-Celestant on Stardrake" hidden="false" collective="false" import="true" targetId="19ca-60d5-c3b7-9444" type="selectionEntry"/>
-    <entryLink id="2cbd-22e3-612c-e89e" name="Knight-Questor" hidden="false" collective="false" import="true" targetId="3c95-3545-4b34-4221" type="selectionEntry"/>
-    <entryLink id="4bbd-1aaa-7051-f6f5" name="Lord-Celestant on Dracoth" hidden="false" collective="false" import="true" targetId="5232-9953-1b83-0097" type="selectionEntry"/>
-    <entryLink id="908f-38fb-33b9-3ec3" name="Knight-Azyros" hidden="false" collective="false" import="true" targetId="afac-5154-99ae-ee3c" type="selectionEntry"/>
-    <entryLink id="9205-3cf6-c2a7-874c" name="Gavriel Sureheart" hidden="false" collective="false" import="true" targetId="722a-0a7a-212c-da4c" type="selectionEntry"/>
-    <entryLink id="b20f-2823-d97c-dc7e" name="Fulminators" hidden="false" collective="false" import="true" targetId="fed1-2388-810f-3ae7" type="selectionEntry"/>
-    <entryLink id="020a-568e-b98e-c174" name="Evocators on Celestial Dracolines" hidden="false" collective="false" import="true" targetId="8800-4822-2349-f731" type="selectionEntry"/>
-    <entryLink id="0f8a-6bc8-db50-7d42" name="Evocators" hidden="false" collective="false" import="true" targetId="6427-4f9f-abde-dc0b" type="selectionEntry"/>
-    <entryLink id="0443-d213-8978-be4c" name="Errant-Questor" hidden="false" collective="false" import="true" targetId="530a-e1c9-444c-bc70" type="selectionEntry"/>
-    <entryLink id="4556-2676-43f6-0014" name="Judicators" hidden="false" collective="false" import="true" targetId="993b-d238-93ba-a4f2" type="selectionEntry"/>
-    <entryLink id="e623-fa3e-78d6-43f1" name="Concussors" hidden="false" collective="false" import="true" targetId="a106-3d7e-be4d-bf3b" type="selectionEntry"/>
-    <entryLink id="5358-c669-a38c-dd7e" name="Celestar Ballista" hidden="false" collective="false" import="true" targetId="70bf-9177-9d10-bc5f" type="selectionEntry"/>
+    <entryLink id="3ab9-226a-f97e-9b08" name="Lord-Celestant on Stardrake" hidden="false" collective="false" import="true" targetId="19ca-60d5-c3b7-9444" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink id="2cbd-22e3-612c-e89e" name="Knight-Questor" hidden="false" collective="false" import="true" targetId="3c95-3545-4b34-4221" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink id="4bbd-1aaa-7051-f6f5" name="Lord-Celestant on Dracoth" hidden="false" collective="false" import="true" targetId="5232-9953-1b83-0097" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink id="908f-38fb-33b9-3ec3" name="Knight-Azyros" hidden="false" collective="false" import="true" targetId="afac-5154-99ae-ee3c" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink id="9205-3cf6-c2a7-874c" name="Gavriel Sureheart" hidden="false" collective="false" import="true" targetId="722a-0a7a-212c-da4c" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink id="b20f-2823-d97c-dc7e" name="Fulminators" hidden="false" collective="false" import="true" targetId="fed1-2388-810f-3ae7" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink id="020a-568e-b98e-c174" name="Evocators on Celestial Dracolines" hidden="false" collective="false" import="true" targetId="8800-4822-2349-f731" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink id="0f8a-6bc8-db50-7d42" name="Evocators" hidden="false" collective="false" import="true" targetId="6427-4f9f-abde-dc0b" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink id="0443-d213-8978-be4c" name="Errant-Questor" hidden="false" collective="false" import="true" targetId="530a-e1c9-444c-bc70" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink id="4556-2676-43f6-0014" name="Judicators" hidden="false" collective="false" import="true" targetId="993b-d238-93ba-a4f2" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink id="e623-fa3e-78d6-43f1" name="Concussors" hidden="false" collective="false" import="true" targetId="a106-3d7e-be4d-bf3b" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink id="5358-c669-a38c-dd7e" name="Celestar Ballista" hidden="false" collective="false" import="true" targetId="70bf-9177-9d10-bc5f" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
     <entryLink id="fa72-d022-a93a-9b23" name="Drakesworn Templar" hidden="false" collective="false" import="true" targetId="1090-dc26-d603-1103" type="selectionEntry"/>
-    <entryLink id="ea77-6cc4-864f-314e" name="Knight-Incantor" hidden="false" collective="false" import="true" targetId="7a4b-b062-14f2-65db" type="selectionEntry"/>
-    <entryLink id="6ab4-808d-4f7f-f673" name="Knight-Heraldor" hidden="false" collective="false" import="true" targetId="3c2d-c00c-722b-36d2" type="selectionEntry"/>
-    <entryLink id="dde3-02b4-a24c-16f2" name="Celestant-Prime, Hammer of Sigmar" hidden="false" collective="false" import="true" targetId="4827-4147-67c2-16f7" type="selectionEntry"/>
-    <entryLink id="71af-9d66-e7d6-0ca6" name="Desolators" hidden="false" collective="false" import="true" targetId="c97b-8f8b-99d4-71ed" type="selectionEntry"/>
-    <entryLink id="ae3c-54ee-03ea-666c" name="Castigators" hidden="false" collective="false" import="true" targetId="623f-7949-6fb7-fd62" type="selectionEntry"/>
-    <entryLink id="f53d-411f-fac9-8af5" name="Averon Stormsire" hidden="false" collective="false" import="true" targetId="aff4-016f-04b6-cf66" type="selectionEntry"/>
-    <entryLink id="071d-634a-cd93-d735" name="Aventis Firestrike, Magister of Hammerhal" hidden="false" collective="false" import="true" targetId="c346-0cbf-16de-8230" type="selectionEntry"/>
-    <entryLink id="3c05-2b98-d87f-2f15" name="Gryph-Hounds" hidden="false" collective="false" import="true" targetId="d79a-14b4-5f86-76d2" type="selectionEntry"/>
-    <entryLink id="f18c-4f74-b2dd-2d98" name="Astreia Solbright" hidden="false" collective="false" import="true" targetId="0bd3-8d56-f1d3-23ea" type="selectionEntry"/>
+    <entryLink id="ea77-6cc4-864f-314e" name="Knight-Incantor" hidden="false" collective="false" import="true" targetId="7a4b-b062-14f2-65db" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink id="6ab4-808d-4f7f-f673" name="Knight-Heraldor" hidden="false" collective="false" import="true" targetId="3c2d-c00c-722b-36d2" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink id="dde3-02b4-a24c-16f2" name="Celestant-Prime, Hammer of Sigmar" hidden="false" collective="false" import="true" targetId="4827-4147-67c2-16f7" type="selectionEntry">
+      <entryLinks>
+        <entryLink id="2f3c-40cb-fd0c-57a7" name="Celestar Ballista" hidden="false" collective="false" import="true" targetId="70bf-9177-9d10-bc5f" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="71af-9d66-e7d6-0ca6" name="Desolators" hidden="false" collective="false" import="true" targetId="c97b-8f8b-99d4-71ed" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink id="ae3c-54ee-03ea-666c" name="Castigators" hidden="false" collective="false" import="true" targetId="623f-7949-6fb7-fd62" type="selectionEntry">
+      <entryLinks>
+        <entryLink id="231e-bb25-669d-2c4d" name="Celestar Ballista" hidden="false" collective="false" import="true" targetId="70bf-9177-9d10-bc5f" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="f53d-411f-fac9-8af5" name="Averon Stormsire" hidden="false" collective="false" import="true" targetId="aff4-016f-04b6-cf66" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink id="071d-634a-cd93-d735" name="Aventis Firestrike, Magister of Hammerhal" hidden="false" collective="false" import="true" targetId="c346-0cbf-16de-8230" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink id="3c05-2b98-d87f-2f15" name="Gryph-Hounds" hidden="false" collective="false" import="true" targetId="d79a-14b4-5f86-76d2" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink id="f18c-4f74-b2dd-2d98" name="Astreia Solbright" hidden="false" collective="false" import="true" targetId="0bd3-8d56-f1d3-23ea" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
     <entryLink id="c9c7-b906-47d6-ac32" name="Arkanaut Admiral" hidden="false" collective="false" import="true" targetId="44ad-2801-441f-6b44" type="selectionEntry">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
@@ -426,28 +645,129 @@
         </modifier>
       </modifiers>
     </entryLink>
-    <entryLink id="7049-faea-33ee-5e44" name="Lord-Celestant" hidden="false" collective="false" import="true" targetId="425f-9d59-b2f6-b5f0" type="selectionEntry"/>
-    <entryLink id="4350-4cc6-872b-f944" name="Knight-Zephyros" hidden="false" collective="false" import="true" targetId="40dd-3878-4b37-f96e" type="selectionEntry"/>
-    <entryLink id="350e-71bd-c203-8330" name="Lord-Castellant" hidden="false" collective="false" import="true" targetId="15e7-d7b5-5bed-3c54" type="selectionEntry"/>
-    <entryLink id="9946-6b27-24d8-4a6b" name="Lord-Arcanum on Celestial Dracoline" hidden="false" collective="false" import="true" targetId="8568-5b1b-179d-e1c5" type="selectionEntry"/>
-    <entryLink id="202d-b4dd-6262-140a" name="Lord-Arcanum on Tauralon" hidden="false" collective="false" import="true" targetId="6f87-6fec-658e-d582" type="selectionEntry"/>
-    <entryLink id="9f57-468c-25c5-c238" name="Lord-Aquilor" hidden="false" collective="false" import="true" targetId="a352-bb91-9133-a58d" type="selectionEntry"/>
-    <entryLink id="4625-53e0-1906-13ca" name="Lord-Arcanum" hidden="false" collective="false" import="true" targetId="f069-8a02-0d59-83be" type="selectionEntry"/>
-    <entryLink id="a397-f581-a890-db17" name="Liberators" hidden="false" collective="false" import="true" targetId="5b8e-b5ee-8df3-9f2f" type="selectionEntry"/>
+    <entryLink id="7049-faea-33ee-5e44" name="Lord-Celestant" hidden="false" collective="false" import="true" targetId="425f-9d59-b2f6-b5f0" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink id="4350-4cc6-872b-f944" name="Knight-Zephyros" hidden="false" collective="false" import="true" targetId="40dd-3878-4b37-f96e" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink id="350e-71bd-c203-8330" name="Lord-Castellant" hidden="false" collective="false" import="true" targetId="15e7-d7b5-5bed-3c54" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink id="9946-6b27-24d8-4a6b" name="Lord-Arcanum on Celestial Dracoline" hidden="false" collective="false" import="true" targetId="8568-5b1b-179d-e1c5" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink id="202d-b4dd-6262-140a" name="Lord-Arcanum on Tauralon" hidden="false" collective="false" import="true" targetId="6f87-6fec-658e-d582" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink id="9f57-468c-25c5-c238" name="Lord-Aquilor" hidden="false" collective="false" import="true" targetId="a352-bb91-9133-a58d" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink id="4625-53e0-1906-13ca" name="Lord-Arcanum" hidden="false" collective="false" import="true" targetId="f069-8a02-0d59-83be" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink id="a397-f581-a890-db17" name="Liberators" hidden="false" collective="false" import="true" targetId="5b8e-b5ee-8df3-9f2f" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
     <entryLink id="491e-8b76-60e0-cc21" name="Anointed" hidden="false" collective="false" import="true" targetId="6992-73c4-c062-3eab" type="selectionEntry"/>
-    <entryLink id="8ff6-e09d-b42c-a433" name="Knight-Vexillor" hidden="false" collective="false" import="true" targetId="9320-740f-eb76-c07b" type="selectionEntry"/>
-    <entryLink id="ee56-4b17-3b75-3ee6" name="Knight-Venator" hidden="false" collective="false" import="true" targetId="aeb5-ae52-567b-5f8c" type="selectionEntry"/>
+    <entryLink id="8ff6-e09d-b42c-a433" name="Knight-Vexillor" hidden="false" collective="false" import="true" targetId="9320-740f-eb76-c07b" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink id="ee56-4b17-3b75-3ee6" name="Knight-Venator" hidden="false" collective="false" import="true" targetId="aeb5-ae52-567b-5f8c" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
     <entryLink id="9e2b-3841-2903-3090" name="Lord-Ordinator" hidden="false" collective="false" import="true" targetId="c924-f509-4a7f-1735" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <categoryLinks>
         <categoryLink id="f9ff-999c-ee36-acb5" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
       </categoryLinks>
     </entryLink>
     <entryLink id="ac7f-6ba3-dbeb-0239" name="Lord-Relictor" hidden="false" collective="false" import="true" targetId="ce64-88a6-ce56-0940" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <categoryLinks>
         <categoryLink id="8613-4db3-57db-6f55" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
       </categoryLinks>
     </entryLink>
     <entryLink id="d04e-aba8-ba82-ceaf" name="Lord-Veritant" hidden="false" collective="false" import="true" targetId="7132-5dde-398e-d8a0" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <categoryLinks>
         <categoryLink id="3b18-f47a-e48f-edb0" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
       </categoryLinks>
@@ -458,32 +778,141 @@
       </categoryLinks>
     </entryLink>
     <entryLink id="1615-41c9-afe8-e15b" name="Prosecutors" hidden="false" collective="false" import="true" targetId="432b-fe7d-867c-7e7d" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <categoryLinks>
         <categoryLink id="57d4-7a30-ef6a-e50c" hidden="false" targetId="065e-fda7-fd27-1f40" primary="true"/>
       </categoryLinks>
     </entryLink>
     <entryLink id="d3d5-5f91-86ea-a47d" name="Protectors" hidden="false" collective="false" import="true" targetId="5858-a948-c65e-b3b7" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <categoryLinks>
         <categoryLink id="a0ff-16d1-a64b-1676" hidden="false" targetId="065e-fda7-fd27-1f40" primary="true"/>
       </categoryLinks>
     </entryLink>
     <entryLink id="baf1-711c-f528-3a13" name="Retributors" hidden="false" collective="false" import="true" targetId="20ee-5f80-e899-a31b" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <categoryLinks>
         <categoryLink id="5668-02a8-fc20-155e" hidden="false" targetId="065e-fda7-fd27-1f40" primary="true"/>
       </categoryLinks>
     </entryLink>
-    <entryLink id="688d-6d0b-701c-d282" name="Sequitors" hidden="false" collective="false" import="true" targetId="29da-7c0d-155b-f63a" type="selectionEntry"/>
-    <entryLink id="8c35-fd69-f064-caed" name="Steelheart&apos;s Champions" hidden="false" collective="false" import="true" targetId="b8d3-7d4a-8689-ab16" type="selectionEntry"/>
-    <entryLink id="5ce3-44e1-5d17-f963" name="Stormsire&apos;s Cursebreakers" hidden="false" collective="false" import="true" targetId="d804-282f-96b2-4d98" type="selectionEntry"/>
-    <entryLink id="de58-9f73-0de6-3394" name="Tempestors" hidden="false" collective="false" import="true" targetId="4115-b86d-bbd9-69ab" type="selectionEntry"/>
-    <entryLink id="9fb1-dcac-f068-1c52" name="The Farstriders" hidden="false" collective="false" import="true" targetId="384d-78bf-f7a0-887d" type="selectionEntry"/>
-    <entryLink id="2450-ea94-c6db-d8fe" name="Vandus Hammerhand" hidden="false" collective="false" import="true" targetId="66fb-5872-a345-2ad5" type="selectionEntry"/>
-    <entryLink id="495c-9056-3b7c-c956" name="Vanguard-Hunters" hidden="false" collective="false" import="true" targetId="a304-f6e3-9750-fae8" type="selectionEntry"/>
-    <entryLink id="0edf-d7be-5e5b-58e7" name="Vanguard-Raptors with Hurricane Crossbows" hidden="false" collective="false" import="true" targetId="f013-a130-757f-6fbd" type="selectionEntry"/>
-    <entryLink id="75df-b478-0bbf-3747" name="Vanguard-Palladors" hidden="false" collective="false" import="true" targetId="495f-0703-ade1-f179" type="selectionEntry"/>
-    <entryLink id="42d1-1320-0c15-07d3" name="Vanguard-Raptors with Longstrike Crossbows" hidden="false" collective="false" import="true" targetId="5a5d-a64b-6f2e-0ed9" type="selectionEntry"/>
+    <entryLink id="688d-6d0b-701c-d282" name="Sequitors" hidden="false" collective="false" import="true" targetId="29da-7c0d-155b-f63a" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink id="8c35-fd69-f064-caed" name="Steelheart&apos;s Champions" hidden="false" collective="false" import="true" targetId="b8d3-7d4a-8689-ab16" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink id="5ce3-44e1-5d17-f963" name="Stormsire&apos;s Cursebreakers" hidden="false" collective="false" import="true" targetId="d804-282f-96b2-4d98" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink id="de58-9f73-0de6-3394" name="Tempestors" hidden="false" collective="false" import="true" targetId="4115-b86d-bbd9-69ab" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink id="9fb1-dcac-f068-1c52" name="The Farstriders" hidden="false" collective="false" import="true" targetId="384d-78bf-f7a0-887d" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink id="2450-ea94-c6db-d8fe" name="Vandus Hammerhand" hidden="false" collective="false" import="true" targetId="66fb-5872-a345-2ad5" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink id="495c-9056-3b7c-c956" name="Vanguard-Hunters" hidden="false" collective="false" import="true" targetId="a304-f6e3-9750-fae8" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink id="0edf-d7be-5e5b-58e7" name="Vanguard-Raptors with Hurricane Crossbows" hidden="false" collective="false" import="true" targetId="f013-a130-757f-6fbd" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink id="75df-b478-0bbf-3747" name="Vanguard-Palladors" hidden="false" collective="false" import="true" targetId="495f-0703-ade1-f179" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink id="42d1-1320-0c15-07d3" name="Vanguard-Raptors with Longstrike Crossbows" hidden="false" collective="false" import="true" targetId="5a5d-a64b-6f2e-0ed9" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
     <entryLink id="97d2-1b8e-1a52-edda" name="Celestial Hurricanum" hidden="false" collective="false" import="true" targetId="9329-90d0-1c0a-eb4b" type="selectionEntry"/>
-    <entryLink id="7144-7385-d80d-4002" name="Aetherwings" hidden="false" collective="false" import="true" targetId="8940-6351-56bb-6cbf" type="selectionEntry"/>
+    <entryLink id="7144-7385-d80d-4002" name="Aetherwings" hidden="false" collective="false" import="true" targetId="8940-6351-56bb-6cbf" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
     <entryLink id="a2b5-e110-1374-c73e" name="Thundrik&apos;s Profiteers" hidden="false" collective="false" import="true" targetId="128e-d958-e7d6-7cbc" type="selectionEntry">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
@@ -710,6 +1139,145 @@
       </modifiers>
     </entryLink>
     <entryLink id="f011-16d2-0b24-d33a" name="Bundo Whalebiter - Kraken-Eater Mercenary" hidden="false" collective="false" import="true" targetId="efae-6133-d899-a7e4" type="selectionEntry"/>
+    <entryLink id="80ee-6b51-03c5-bf8f" name="Avatar of Khaine" hidden="false" collective="false" import="true" targetId="4948-910d-f0dd-f32a" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="bd3e-2912-e81e-0ff2" name="New CategoryLink" hidden="false" targetId="fa0c-9044-2568-fa02" primary="true"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="04b0-84b4-e36e-6438" name="Sisters of Slaughter" hidden="false" collective="false" import="true" targetId="6a14-bc6f-d3a8-90a2" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink id="3b65-bef5-c7d3-7736" name="Witch Aelves" hidden="false" collective="false" import="true" targetId="e673-ea43-c706-a583" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink id="b516-3e43-1e91-8067" name="Bloodwrack Medusa" hidden="false" collective="false" import="true" targetId="c1d9-d2b4-029b-1cc1" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink id="9785-2b58-4336-020f" name="Hag Queen" hidden="false" collective="false" import="true" targetId="0abd-8e03-d1e3-b397" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink id="c475-acd4-7131-f515" name="Hag Queen on Cauldron of Blood" hidden="false" collective="false" import="true" targetId="34f3-cbdc-e72b-dcc0" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink id="e49c-5cb4-1eed-ef83" name="Slaughter Queen" hidden="false" collective="false" import="true" targetId="5c4e-0d13-14c8-feca" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink id="3e80-e592-ef7c-7271" name="Slaughter Queen on Cauldron of Blood" hidden="false" collective="false" import="true" targetId="ee79-3333-83d2-3cf5" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink id="e484-66d6-e8ec-e878" name="Bloodwrack Shrine" hidden="false" collective="false" import="true" targetId="7dc5-b0a6-2b72-b632" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink id="b2d0-7e90-1400-3f06" name="Doomfire Warlocks" hidden="false" collective="false" import="true" targetId="af3b-efe1-dd4a-74d0" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink id="5226-9f75-3d5e-f241" name="Blood Sisters" hidden="false" collective="false" import="true" targetId="425b-17fa-651b-1b53" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink id="990e-69e6-9c10-3695" name="Blood Stalkers" hidden="false" collective="false" import="true" targetId="ffec-e491-3479-7e31" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink id="1e9f-9bc7-7437-62cf" name="Khinerai Heartrenders" hidden="false" collective="false" import="true" targetId="2a53-8755-3ca6-9c41" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink id="2255-5d40-eab7-3c21" name="Khinerai Lifetakers" hidden="false" collective="false" import="true" targetId="20ff-4b24-573b-ec17" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink id="68a7-03ae-9e61-90b3" name="Morathi, High Oracle of Khaine" hidden="false" collective="false" import="true" targetId="5bf8-1b4c-e39a-7431" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink id="7baa-71fe-f6e6-dee2" name="Battalion: Kraeth&apos;s Shadowhost" hidden="false" collective="false" import="true" targetId="9ae1-008e-4f50-d0e0" type="selectionEntry"/>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="d618-803c-36f8-0a3a" name="General" hidden="false" collective="false" import="true" type="upgrade">
@@ -735,6 +1303,13 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="9865-28bf-ab8f-c3bf" name="Kharibdyss" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <modifierGroups>
         <modifierGroup>
           <conditions>
@@ -950,6 +1525,7 @@
       </profiles>
       <categoryLinks>
         <categoryLink id="50b2-d93c-b37b-6537" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
+        <categoryLink id="f045-47a5-89b0-5cbc" name="SCOURGE PRIVATEERS" hidden="false" targetId="46d3-dc7e-9ee4-6212" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="29f7-96a5-57ab-13be" name="Black Ark Cutlass" hidden="false" collective="false" import="true" type="upgrade">
@@ -1066,6 +1642,7 @@
         <categoryLink id="9033-cfb6-ac14-8ddb" name="AELF" hidden="false" targetId="7fe9-bc03-2c82-0a00" primary="false"/>
         <categoryLink id="a35f-dff7-3669-35d2" name="CITIES OF SIGMAR" hidden="false" targetId="cccb-89cd-393f-5839" primary="false"/>
         <categoryLink id="0a53-407c-bc35-3952" name="New CategoryLink" hidden="false" targetId="065e-fda7-fd27-1f40" primary="true"/>
+        <categoryLink id="56f9-76e4-2604-28c7" name="SCOURGE PRIVATEERS" hidden="false" targetId="46d3-dc7e-9ee4-6212" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="8b70-d38e-1e61-d8ed" name="10 Black Ark Corsairs" hidden="false" collective="false" import="true" type="model">
@@ -1236,6 +1813,7 @@
       </profiles>
       <categoryLinks>
         <categoryLink id="3ab0-5ca1-a7b5-e568" name="New CategoryLink" hidden="false" targetId="065e-fda7-fd27-1f40" primary="true"/>
+        <categoryLink id="bbc9-6769-61be-841d" name="SCOURGE PRIVATEERS" hidden="false" targetId="46d3-dc7e-9ee4-6212" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="db37-b9f6-6378-a246" name="Scourgerunner Chariot" hidden="false" collective="false" import="true" type="model">
@@ -1376,6 +1954,13 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="e3c5-c528-43c9-426a" name="Flamespyre Phoenix" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <modifierGroups>
         <modifierGroup>
           <conditions>
@@ -1575,6 +2160,13 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="6992-73c4-c062-3eab" name="Anointed" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="bf3d-367e-2f4b-0871" name="Anointed" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
           <characteristics>
@@ -1676,6 +2268,11 @@
               </conditions>
             </conditionGroup>
           </conditionGroups>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
+          </conditions>
         </modifier>
       </modifiers>
       <profiles>
@@ -1798,6 +2395,13 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="7f72-8f77-b2f8-06a5" name="Frostheart Phoenix" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <modifierGroups>
         <modifierGroup>
           <conditions>
@@ -2003,6 +2607,13 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="aada-2a08-7231-2d0e" name="Freeguild General" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="87b1-64ff-852c-2ed6" name="Hold the Line!" publicationId="e440-9199-1072-a7a0" hidden="false" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
           <characteristics>
@@ -2092,6 +2703,13 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="f97b-a868-659a-a9e5" name="Freeguild General on Griffon" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="1648-0ca4-ef2d-54e5" name="Rousing Battle Cry" hidden="false" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
           <characteristics>
@@ -2341,6 +2959,11 @@
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <profiles>
         <profile id="3300-5513-1f4c-7000" name="Preceptor" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
@@ -2512,6 +3135,11 @@
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <profiles>
         <profile id="d805-4201-4deb-58cc" name="Freeguild Greatswords" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
@@ -2637,6 +3265,11 @@
         <modifier type="set-primary" field="category" value="065e-fda7-fd27-1f40">
           <conditions>
             <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="78f3-8a59-699a-61e8" type="instanceOf"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -2816,6 +3449,11 @@
         <modifier type="set-primary" field="category" value="e9f2-765a-b7b8-ce8e">
           <conditions>
             <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8b11-d94b-f5bc-520f" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -3022,6 +3660,11 @@
             <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8b11-d94b-f5bc-520f" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <profiles>
         <profile id="93b8-345b-8a74-548a" name="Freeguild Pistoliers" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
@@ -3184,6 +3827,11 @@
         <modifier type="set-primary" field="category" value="065e-fda7-fd27-1f40">
           <conditions>
             <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="78f3-8a59-699a-61e8" type="instanceOf"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -3397,6 +4045,11 @@
             <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="78f3-8a59-699a-61e8" type="instanceOf"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <profiles>
         <profile id="0a16-3981-aebd-c05e" name="Freeguild Crossbowmen" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
@@ -3544,6 +4197,11 @@
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <profiles>
         <profile id="aac8-ccea-fa50-242c" name="Flagellants" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
@@ -3639,6 +4297,13 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="e803-f69f-40ca-f348" name="Battlemage" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="6ac8-5c03-5bee-89e2" name="Battlemage" hidden="false" typeId="f55d-ee3a-1597-110f" typeName="Magic">
           <characteristics>
@@ -3858,6 +4523,13 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="6e22-8a2b-42e3-af27" name="Battlemage on Griffon" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="5334-0487-16be-0e54" name="Battlemage on Griffon" hidden="false" typeId="f55d-ee3a-1597-110f" typeName="Magic">
           <characteristics>
@@ -4056,6 +4728,13 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="c2cb-f59d-ec38-10c8" name="Luminark of Hysh" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <modifierGroups>
         <modifierGroup>
           <conditions>
@@ -4315,6 +4994,13 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="9329-90d0-1c0a-eb4b" name="Celestial Hurricanum" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <modifierGroups>
         <modifierGroup>
           <conditions>
@@ -4808,7 +5494,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="4268-f215-3ab9-51cc" name="Command Traits" hidden="false" collective="false" import="true" targetId="59ea-9242-251d-adc4" type="selectionEntryGroup"/>
+        <entryLink id="4268-f215-3ab9-51cc" name="Command Traits" hidden="false" collective="false" import="true" targetId="4748-d6ce-df60-ae7d" type="selectionEntryGroup"/>
         <entryLink id="6f27-ef34-684a-9dae" name="Artefacts" hidden="false" collective="false" import="true" targetId="9a8b-a529-4a2d-239c" type="selectionEntryGroup"/>
         <entryLink id="ff78-6d0e-283b-8eee" name="Spell Lores" hidden="false" collective="false" import="true" targetId="b094-0ec4-692a-78ec" type="selectionEntryGroup"/>
         <entryLink id="bc1f-6e09-b1b4-7ba4" name="Drakeblood Curses" hidden="false" collective="false" import="true" targetId="50ce-7da6-117d-6c00" type="selectionEntryGroup"/>
@@ -5552,6 +6238,13 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="8f6e-0a44-254f-8047" name="Warden King" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="c91b-0709-e50c-40d9" name="Warden King" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
           <characteristics>
@@ -5619,6 +6312,13 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="2cf2-a837-e64e-b829" name="Runelord" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="56bb-8836-8c7f-5640" name="Runelord" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
           <characteristics>
@@ -5741,6 +6441,11 @@
         <modifier type="set-primary" field="category" value="065e-fda7-fd27-1f40">
           <conditions>
             <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="78f3-8a59-699a-61e8" type="instanceOf"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -5933,6 +6638,11 @@
               </conditions>
             </conditionGroup>
           </conditionGroups>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
+          </conditions>
         </modifier>
       </modifiers>
       <profiles>
@@ -6151,6 +6861,11 @@
             <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="78f3-8a59-699a-61e8" type="instanceOf"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <profiles>
         <profile id="349f-80c7-b6f6-9721" name="Ironbreakers" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
@@ -6340,6 +7055,11 @@
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <profiles>
         <profile id="08bc-e1ef-a109-f1d1" name="Hammerers" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
@@ -6461,6 +7181,13 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="9c43-1531-41d6-c546" name="Cogsmith" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="0ce7-0d3c-ead4-b997" name="Cogsmith" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
           <characteristics>
@@ -6607,6 +7334,13 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="55d2-b491-881d-ab72" name="Gyrocopters" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="ccc1-4299-c6f4-f0b5" name="Gyrocopters" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
           <characteristics>
@@ -6729,6 +7463,13 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="f261-829d-6711-4ea3" name="Gyrobombers" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="0df4-37f6-8398-6b13" name="Gyrobombers" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
           <characteristics>
@@ -6822,6 +7563,13 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="b81e-3d25-eedb-91c1" name="Steam Tank" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <modifierGroups>
         <modifierGroup>
           <conditions>
@@ -6999,6 +7747,13 @@ If the roll is equal to or greater than the number of wounds currently allocated
       </costs>
     </selectionEntry>
     <selectionEntry id="cb80-204f-a4cc-99ce" name="Helblaster Volley Gun" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="0f50-8e58-8cd4-f47c" name="Helblaster Volley Gun" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
           <characteristics>
@@ -7113,6 +7868,13 @@ The Volley Gun and its crew are treated as a single model, using the characteris
       </costs>
     </selectionEntry>
     <selectionEntry id="6a7a-6562-0a20-e34d" name="Helstorm Rocket Battery" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="382c-296d-17cd-4b36" name="Helstorm Rocket Battery" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
           <characteristics>
@@ -7519,6 +8281,13 @@ The Rocket Battery and its crew are treated as a single model, using the charact
       </costs>
     </selectionEntry>
     <selectionEntry id="48f0-e54b-c47b-15fd" name="War Hydra" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <modifierGroups>
         <modifierGroup>
           <conditions>
@@ -8671,6 +9440,13 @@ The Rocket Battery and its crew are treated as a single model, using the charact
       </costs>
     </selectionEntry>
     <selectionEntry id="8140-0d8a-3292-e45c" name="Nomad Prince" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="3510-9f28-1715-ea81" name="Nomad Prince" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
           <characteristics>
@@ -8760,6 +9536,11 @@ The Rocket Battery and its crew are treated as a single model, using the charact
         <modifier type="set-primary" field="category" value="065e-fda7-fd27-1f40">
           <conditions>
             <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="78f3-8a59-699a-61e8" type="instanceOf"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -8889,6 +9670,11 @@ The Rocket Battery and its crew are treated as a single model, using the charact
             <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="87ff-9776-b132-cf88" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <profiles>
         <profile id="4420-5304-8024-b0de" name="Wildwood Rangers" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
@@ -9004,6 +9790,11 @@ The Rocket Battery and its crew are treated as a single model, using the charact
             <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="87ff-9776-b132-cf88" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <profiles>
         <profile id="45b4-3b86-9543-be54" name="Wild Riders" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
@@ -9022,6 +9813,7 @@ The Rocket Battery and its crew are treated as a single model, using the charact
       </profiles>
       <categoryLinks>
         <categoryLink id="2c78-1ec0-3696-1d6d" name="New CategoryLink" hidden="false" targetId="065e-fda7-fd27-1f40" primary="true"/>
+        <categoryLink id="9dc9-7a07-015b-c46d" name="WANDERERS" hidden="false" targetId="9085-6734-ca06-e1e3" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="1b27-51d1-b57c-4259" name="5 Wild Riders" hidden="false" collective="false" import="true" type="model">
@@ -9122,6 +9914,11 @@ The Rocket Battery and its crew are treated as a single model, using the charact
         <modifier type="set-primary" field="category" value="e9f2-765a-b7b8-ce8e">
           <conditions>
             <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="87ff-9776-b132-cf88" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -9237,6 +10034,11 @@ The Rocket Battery and its crew are treated as a single model, using the charact
         <modifier type="set-primary" field="category" value="e9f2-765a-b7b8-ce8e">
           <conditions>
             <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="87ff-9776-b132-cf88" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -9397,63 +10199,14 @@ In addition, until that unit moves, if the unmodified save roll for an attack ma
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="abe9-e261-3c00-6852" name="Honoured Retinue" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="906e-3ce2-c77a-daef" name="Steam Tank with Commander" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="aae4-4776-bf05-481b" type="equalTo"/>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="ccd7-d678-30e1-2e26" type="equalTo"/>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="0e12-40c2-cf92-5bc2" type="equalTo"/>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="1d1c-6293-dfdb-1b9f" type="equalTo"/>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="800e-e2f0-9b2b-7535" type="equalTo"/>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="5b2f-302f-2c13-6c55" type="equalTo"/>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="cc93-36fd-cabd-cced" type="equalTo"/>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="ec34-58e6-db73-143d" type="equalTo"/>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="9095-93c5-3c66-4739" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
+          </conditions>
         </modifier>
       </modifiers>
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="79c5-0a2f-4d72-2c4c" type="max"/>
-        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3e7a-2ff6-54f4-48e1" type="max"/>
-      </constraints>
-      <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="4ec5-902a-f5af-5cc6" name="General&apos;s Adjutant" hidden="true" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="hidden" value="false">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="aae4-4776-bf05-481b" type="equalTo"/>
-                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ccd7-d678-30e1-2e26" type="equalTo"/>
-                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0e12-40c2-cf92-5bc2" type="equalTo"/>
-                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1d1c-6293-dfdb-1b9f" type="equalTo"/>
-                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="800e-e2f0-9b2b-7535" type="equalTo"/>
-                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5b2f-302f-2c13-6c55" type="equalTo"/>
-                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cc93-36fd-cabd-cced" type="equalTo"/>
-                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ec34-58e6-db73-143d" type="equalTo"/>
-                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9095-93c5-3c66-4739" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8922-ed3d-290a-15f3" type="max"/>
-        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f7a3-418e-bbf6-1a01" type="max"/>
-      </constraints>
-      <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="906e-3ce2-c77a-daef" name="Steam Tank with Commander" hidden="false" collective="false" import="true" type="unit">
       <profiles>
         <profile id="42fe-eeb9-01ca-eb76" name="Steam Tank" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
           <characteristics>
@@ -9734,9 +10487,127 @@ If the roll is equal to or greater than the number of wounds currently allocated
         <cost name="pts" typeId="points" value="230.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="9ae1-008e-4f50-d0e0" name="Battalion: Kraeth&apos;s Shadowhost" hidden="true" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5219-3f1f-611c-210a" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <profiles>
+        <profile id="ab5c-0d6a-ab71-f90f" name="Subjugated" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
+          <characteristics>
+            <characteristic name="Battalion Ability Details" typeId="08e0-9ead-1dbe-c801">In your hero phase, if the SORCERESS from this battalion is on the battlefield, you can declare she will compel her minions to attack savagely. If you do so, until your next hero phase, add 1 to the Attacks characteristic of weapons used by DREADSPEARS and DARKSHARDS units from this battalion, but subtract 1 from save rolls for attacks that target those units.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="5b4c-e4ae-0455-af8a" name="New CategoryLink" hidden="false" targetId="be17-6bbd-b857-3f43" primary="true"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="a5d6-7515-cab4-33c1" name="1 Dreadspears" hidden="false" collective="false" import="true" defaultSelectionEntryId="0d1e-3fda-1031-2818">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d19e-ec8e-81e9-4104" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="94b0-e531-0a8f-94f0" type="max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="0d1e-3fda-1031-2818" name="Dreadspears" hidden="false" collective="false" import="true" targetId="de75-f86b-1d95-7043" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="8333-b90f-8f38-6cfe" name="1 Drusa Kraeth" hidden="false" collective="false" import="true" defaultSelectionEntryId="1aff-0099-cbdc-bdd5">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="497a-e47d-d62e-6c2f" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3621-2d48-01d4-d5c5" type="max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="1aff-0099-cbdc-bdd5" name="Sorceress on Black Dragon" hidden="false" collective="false" import="true" targetId="dcad-577b-ccd1-7412" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="name" value="Drusa Kraeth (Sorceress on Black Dragon)"/>
+              </modifiers>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="26e8-3d68-11c0-19fb" name="1 Darkshards" hidden="false" collective="false" import="true" defaultSelectionEntryId="e704-f2b1-f8ae-6b2c">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="39d3-f138-66e1-89f8" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="378b-fda0-dde6-4634" type="max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="e704-f2b1-f8ae-6b2c" name="Darkshards" hidden="false" collective="false" import="true" targetId="35f4-2d7e-bbbf-6beb" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="points" value="160.0"/>
+      </costs>
+    </selectionEntry>
   </sharedSelectionEntries>
+  <sharedSelectionEntryGroups>
+    <selectionEntryGroup id="4748-d6ce-df60-ae7d" name="Command Traits" hidden="false" collective="false" import="true">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b745-17c4-8fbf-8b04" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <selectionEntries>
+        <selectionEntry id="67d7-5e6f-364a-3e13" name="The Whisperers" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9ae1-008e-4f50-d0e0" type="notInstanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" field="1a42-ed75-93f4-e57e" value="1.0">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9ae1-008e-4f50-d0e0" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="957e-00e7-a4f6-bc46" type="max"/>
+            <constraint field="selections" scope="parent" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1a42-ed75-93f4-e57e" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="d5af-c1ca-1a45-c59c" name="The Whisperers" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
+              <characteristics>
+                <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">At the start of the first hero phase of the first battle round, you receive 1 extra command point.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <entryLinks>
+        <entryLink id="05f5-4b9f-ae11-2502" name="Cities of Sigmar Command Traits" hidden="false" collective="false" import="true" targetId="732b-3a70-492f-6727" type="selectionEntryGroup"/>
+        <entryLink id="ee22-02a8-8b60-152b" name="Order Command Traits" hidden="false" collective="false" import="true" targetId="50aa-000b-1848-15c3" type="selectionEntryGroup">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a021-1368-a301-7177" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
+      </entryLinks>
+    </selectionEntryGroup>
+  </sharedSelectionEntryGroups>
   <catalogueLinks>
     <catalogueLink id="22e0-2a9a-1fc7-b22e" name="Order - Kharadron Overlords - Data" targetId="3981-271d-5871-845b" type="catalogue" importRootEntries="true"/>
+    <catalogueLink id="22e0-2a5B-1fc7-b22e" name="Order - Daughters of Khaine" targetId="388b-16d3-8182-d6c0" type="catalogue" importRootEntries="false"/>
     <catalogueLink id="9f18-49b4-4322-487b" name="Order - Stormcast Eternals - Data" targetId="82b4-f6e1-3e37-5ea1" type="catalogue" importRootEntries="true"/>
     <catalogueLink id="0d03-03c0-3de1-50fc" name="Order - Sylvaneth - Data" targetId="ab8b-39f3-ebc0-e9ab" type="catalogue" importRootEntries="true"/>
     <catalogueLink id="1cea-3f8f-52d0-f110" name="Destruction - Sons of Behemat" targetId="f904-b52f-810a-e446" type="catalogue" importRootEntries="true"/>
