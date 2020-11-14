@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="1d4c-207e-6a42-ac7d" name="Order Data" revision="3" battleScribeVersion="2.03" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="63" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="1d4c-207e-6a42-ac7d" name="Order Data" revision="4" battleScribeVersion="2.03" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="63" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="4bb2-2339-a79f-51d7" name="Battletome: Cities of Sigmar "/>
     <publication id="6c99-1e0f-3bc1-11ae" name="Battletome: Stormcast Eternals (2nd Edition)"/>
@@ -29,6 +29,7 @@
     <categoryEntry id="22b4-12da-5c5c-761d" name="LORD-VERITANT" hidden="false"/>
     <categoryEntry id="15ad-02bf-49e0-0027" name="LORD-CASTELLANT" hidden="false"/>
     <categoryEntry id="4c30-74f5-b679-8785" name="KNIGHT-AZYROS" hidden="false"/>
+    <categoryEntry id="e4e2-6076-dafa-ec2c" name="6_under_wounds" hidden="true"/>
   </categoryEntries>
   <sharedSelectionEntries>
     <selectionEntry id="d43d-da9f-4261-e201" name="Allegiance: Cities of Sigmar" hidden="false" collective="false" import="true" type="upgrade">
@@ -680,6 +681,62 @@ You can choose 1 additional friendly ANVILGARD DRAGON, ANVILGARD KHARIBDYSS or A
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="cb24-5c4a-8232-6c5b" name="Honoured Retinue" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e4e2-6076-dafa-ec2c" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cfc8-fe99-c118-9005" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2b95-b1e1-8141-ecd0" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="2ab9-aeb0-a49d-d551" name="Wise Council" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
+          <characteristics>
+            <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">At the start of your hero phase, if your general is within 3&quot; of their adjutant, roll a dice. On a 4+, you receive 1 extra command point.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="65e4-9e34-5cf6-2bec" name="General&apos;s Adjutant" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e4e2-6076-dafa-ec2c" type="equalTo"/>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b745-17c4-8fbf-8b04" type="equalTo"/>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d43d-da9f-4261-e201" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5281-e9e8-5a1f-1f40" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2c59-0919-0e55-77ba" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="4c2c-c28c-cc81-8ab9" name="Loyal Shields" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
+          <characteristics>
+            <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">Roll a dice before you allocate a wound or mortal wound to your general while they are within 3&quot; of their retinue. On a 4+, that wound or mortal wound is allocated to the retinue instead of the general.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
