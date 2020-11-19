@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="f747-e79f-844e-360d" name="Order - Collegiate Arcane" revision="12" battleScribeVersion="2.03" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="f747-e79f-844e-360d" name="Order - Collegiate Arcane" revision="13" battleScribeVersion="2.03" authorName="https://gitter.im/BSData/warhammer-age-of-sigmar" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="64" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="f747-e79f-pubN65537" name="Grand Alliance: Order"/>
   </publications>
@@ -125,9 +125,16 @@
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="8171-f17c-d43c-5e0b" name="Allegiance" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="minInForce" value="0.0">
+          <conditions>
+            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="78f3-8a59-699a-61e8" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
-        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="minInForce" type="min"/>
-        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="maxInForce" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="minInForce" type="min"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="maxInForce" type="max"/>
       </constraints>
       <selectionEntryGroups>
         <selectionEntryGroup id="0223-6a64-1b41-04e1" name="Allegiance" hidden="false" collective="false" import="true" defaultSelectionEntryId="d51d-dec8-f7a7-351d">
