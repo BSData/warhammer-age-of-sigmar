@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="0339-0157-6910-d29c" name="Chaos Data" revision="54" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="64" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="0339-0157-6910-d29c" name="Chaos Data" revision="55" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="64" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="c9b2-1fe6-pubN65537" name="Battletome: Beasts of Chaos"/>
     <publication id="c9b2-1fe6-pubN83353" name="1"/>
@@ -1441,13 +1441,6 @@ If you do not set up a SLAVES TO DARKNESS DAEMON PRINCE, you can heal up to D3 w
       </costs>
     </selectionEntry>
     <selectionEntry id="d281-23dc-af26-0a1e" name="Endless Spell: Burning Sigil of Tzeentch" hidden="false" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="065f-c64d-3eb7-79d2" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="47f4-c302-3725-f0c6" type="max"/>
       </constraints>
@@ -1484,13 +1477,6 @@ D6 Effect
       </costs>
     </selectionEntry>
     <selectionEntry id="3a98-b7f1-8075-b157" name="Endless Spell: Daemonic Simulacrum" hidden="false" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="065f-c64d-3eb7-79d2" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7879-f6a5-2d0d-90aa" type="max"/>
       </constraints>
@@ -1529,13 +1515,6 @@ D6 Effect
       </costs>
     </selectionEntry>
     <selectionEntry id="3e8b-070f-9f8f-2b96" name="Endless Spell: Tome of Eyes" hidden="false" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="065f-c64d-3eb7-79d2" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ca60-2b40-7a67-0485" type="max"/>
       </constraints>
@@ -10915,9 +10894,14 @@ that phase. A unit cannot benefit from this command ability more than once per t
     <selectionEntryGroup id="79dc-a292-43f4-d01f" name="Wrath of the Everchosen Command Traits" hidden="false" collective="false" import="true">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="2890-73a3-1898-f20a" type="equalTo"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="05f1-2e32-3985-14da" type="equalTo"/>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2890-73a3-1898-f20a" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -11292,9 +11276,14 @@ that phase. A unit cannot benefit from this command ability more than once per t
     <selectionEntryGroup id="002d-5827-c449-3647" name="Wrath of the Everchosen Artefacts" hidden="false" collective="false" import="true">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2890-73a3-1898-f20a" type="equalTo"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="05f1-2e32-3985-14da" type="equalTo"/>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2890-73a3-1898-f20a" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -16571,9 +16560,14 @@ Kneel: Subtract 1 from save rolls for attacks that target that unit until your n
         <selectionEntryGroup id="17a1-1ea0-58aa-870f" name="Lore of the Damned" hidden="true" collective="false" import="true">
           <modifiers>
             <modifier type="set" field="hidden" value="false">
-              <conditions>
-                <condition field="selections" scope="ancestor" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4ba7-618a-4e30-2e0c" type="instanceOf"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4ba7-618a-4e30-2e0c" type="instanceOf"/>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="812a-a8b3-7158-4adb" type="greaterThan"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
           <constraints>
