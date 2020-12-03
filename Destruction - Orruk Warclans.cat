@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="5419-b58f-5a39-0bfe" name="Destruction - Orruk Warclans" revision="17" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="64" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="5419-b58f-5a39-0bfe" name="Destruction - Orruk Warclans" revision="17" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="65" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="7e25-33bb-pubN65537" name="Destruction Battletome: Bonesplitterz"/>
     <publication id="7e25-33bb-pubN82863" name="Age of Sigmar: The Rules"/>
@@ -156,15 +156,8 @@
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="9dbb-2d1a-12d8-7faf" name="Allegiance" hidden="false" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="9d79-362f-c799-0867" value="0.0">
-          <conditions>
-            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="78f3-8a59-699a-61e8" type="instanceOf"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d421-381f-d0bc-749c" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d421-381f-d0bc-749c" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9d79-362f-c799-0867" type="min"/>
       </constraints>
       <categoryLinks>
@@ -2355,9 +2348,11 @@ If the mortal wounds inflicted by this modelâ€™s Massively Destructive Bulk mean
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink id="0163-1568-24b6-c647" name="General" hidden="false" collective="false" import="true" targetId="2782-06bf-a7cc-86b6" type="selectionEntry"/>
-        <entryLink id="c770-1196-4680-b6f1" name="Artefacts" hidden="false" collective="false" import="true" targetId="281b-c7b4-5e59-c155" type="selectionEntryGroup"/>
-        <entryLink id="af24-c9eb-0979-3f50" name="Command Traits" hidden="false" collective="false" import="true" targetId="7919-8973-c0b9-afc5" type="selectionEntryGroup"/>
+        <entryLink id="0163-1568-24b6-c647" name="General" hidden="false" collective="false" import="true" targetId="2782-06bf-a7cc-86b6" type="selectionEntry">
+          <categoryLinks>
+            <categoryLink id="decd-663d-6f5a-e60d" name="Unique General" hidden="false" targetId="fe3f-d230-7e2c-fba2" primary="false"/>
+          </categoryLinks>
+        </entryLink>
         <entryLink id="41d5-950e-abd4-e23b" name="Ironjawz Mount Traits" hidden="false" collective="false" import="true" targetId="0307-2418-9dbc-7b2f" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
@@ -5244,9 +5239,14 @@ In addition, add 1 to hit rolls and wound rolls for attacks made with this unitâ
         <selectionEntry id="aae9-2f8d-8061-0299" name="0. Right Fist of Dakkbad" hidden="true" collective="false" import="true" type="upgrade">
           <modifiers>
             <modifier type="set" field="a354-7a2d-24fb-f2b6" value="1.0">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="eef6-4cd5-66a5-a5fb" type="equalTo"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="fe3f-d230-7e2c-fba2" type="equalTo"/>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="eef6-4cd5-66a5-a5fb" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
             <modifier type="set" field="hidden" value="false">
               <conditionGroups>
@@ -5277,9 +5277,14 @@ In addition, add 1 to hit rolls and wound rolls for attacks made with this unitâ
         <selectionEntry id="9eac-03ea-c9ec-f9f4" name="0. Checked Out" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
             <modifier type="set" field="ee80-b852-898f-b917" value="1.0">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="106b-3df1-006f-1b47" type="equalTo"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="fe3f-d230-7e2c-fba2" type="equalTo"/>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="106b-3df1-006f-1b47" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
             <modifier type="set" field="hidden" value="true">
               <conditions>
@@ -5305,9 +5310,14 @@ In addition, add 1 to hit rolls and wound rolls for attacks made with this unitâ
         <selectionEntry id="ff63-7e19-b2a2-1143" name="0. Get Da Realmgate" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
             <modifier type="set" field="0c6b-af74-6f54-b73b" value="1.0">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="be7c-ed66-5895-6473" type="equalTo"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="fe3f-d230-7e2c-fba2" type="equalTo"/>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="be7c-ed66-5895-6473" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
             <modifier type="set" field="hidden" value="true">
               <conditions>
@@ -5574,9 +5584,14 @@ In addition, add 1 to hit rolls and wound rolls for attacks made with this unitâ
         <selectionEntry id="b50d-3224-bdd6-2c5a" name="0. A Right Monster" hidden="true" collective="false" import="true" type="upgrade">
           <modifiers>
             <modifier type="set" field="2612-a2d6-a130-2e3c" value="1.0">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="9e65-9af8-84b8-1148" type="equalTo"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="fe3f-d230-7e2c-fba2" type="equalTo"/>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="9e65-9af8-84b8-1148" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
             <modifier type="set" field="hidden" value="false">
               <conditionGroups>
@@ -5607,9 +5622,14 @@ In addition, add 1 to hit rolls and wound rolls for attacks made with this unitâ
         <selectionEntry id="40b4-db0f-b8ed-bed3" name="0. Pure-bread War Boar" hidden="true" collective="false" import="true" type="upgrade">
           <modifiers>
             <modifier type="set" field="c102-ba7c-8f0e-718b" value="1.0">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="18c0-ed54-52bc-0de2" type="equalTo"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="fe3f-d230-7e2c-fba2" type="equalTo"/>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="18c0-ed54-52bc-0de2" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
             <modifier type="set" field="hidden" value="false">
               <conditionGroups>
@@ -5640,9 +5660,14 @@ In addition, add 1 to hit rolls and wound rolls for attacks made with this unitâ
         <selectionEntry id="aa88-e3a3-a4b0-1eee" name="0. Fireball" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
             <modifier type="set" field="1b73-1388-df2f-e1cb" value="1.0">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="115b-bd71-6506-80ec" type="equalTo"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="fe3f-d230-7e2c-fba2" type="equalTo"/>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="115b-bd71-6506-80ec" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
             <modifier type="set" field="hidden" value="true">
               <conditions>
