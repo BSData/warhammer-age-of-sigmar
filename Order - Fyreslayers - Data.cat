@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="81cf-7df5-86e6-b78f" name="Order - Fyreslayers - Data" revision="46" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="64" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="81cf-7df5-86e6-b78f" name="Order - Fyreslayers - Data" revision="47" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="65" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="e67a-06d2-pubN65537" name="Order Battletome: Fyreslayers"/>
     <publication id="e67a-06d2-pubN69594" name="Battletome: Fyreslayers Errata, July 2018"/>
@@ -2370,9 +2370,11 @@
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink id="1b5a-195a-e7fe-ce96" name="General" hidden="false" collective="false" import="true" targetId="292c-59dc-7ac8-2383" type="selectionEntry"/>
-        <entryLink id="8441-b1a6-a6cf-8eca" name="Artefacts" hidden="false" collective="false" import="true" targetId="75d8-d2b2-772b-e9f0" type="selectionEntryGroup"/>
-        <entryLink id="f394-80fd-1986-f0bf" name="Command Traits" hidden="false" collective="false" import="true" targetId="8db2-e52d-b376-b998" type="selectionEntryGroup"/>
+        <entryLink id="1b5a-195a-e7fe-ce96" name="General" hidden="false" collective="false" import="true" targetId="292c-59dc-7ac8-2383" type="selectionEntry">
+          <categoryLinks>
+            <categoryLink id="45a0-3635-8e51-0306" name="Unique General" hidden="false" targetId="fe3f-d230-7e2c-fba2" primary="false"/>
+          </categoryLinks>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="150.0"/>
@@ -3910,6 +3912,7 @@
                     <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="6171-3137-0d61-9057" type="equalTo"/>
                     <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7865-28af-94ee-6685" type="equalTo"/>
                     <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4e0e-664d-51ea-0929" type="atLeast"/>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="fe3f-d230-7e2c-fba2" type="equalTo"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -3938,9 +3941,14 @@
         <selectionEntry id="9ae4-39c3-061e-fd07" name="0. Battle-scarred Veteran" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
             <modifier type="set" field="a93b-7d88-4239-bc3d" value="1.0">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="36c2-a62f-8269-3258" type="equalTo"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="fe3f-d230-7e2c-fba2" type="equalTo"/>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="36c2-a62f-8269-3258" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
             <modifier type="set" field="hidden" value="true">
               <conditions>
@@ -3966,9 +3974,14 @@
         <selectionEntry id="db94-5897-73a6-7f0c" name="0. Warrior Indominate" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
             <modifier type="set" field="03e0-628b-e9ee-7c15" value="1.0">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="cd97-6ad4-a58c-1ad2" type="equalTo"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="cd97-6ad4-a58c-1ad2" type="equalTo"/>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="fe3f-d230-7e2c-fba2" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
             <modifier type="set" field="hidden" value="true">
               <conditions>
@@ -3994,9 +4007,14 @@
         <selectionEntry id="eb35-6a68-2def-ac61" name="0. Explosive Charge" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
             <modifier type="set" field="f38f-d602-6d0b-893e" value="1.0">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="9f82-189a-71f2-b6ba" type="equalTo"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="fe3f-d230-7e2c-fba2" type="equalTo"/>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="9f82-189a-71f2-b6ba" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
             <modifier type="set" field="hidden" value="true">
               <conditions>

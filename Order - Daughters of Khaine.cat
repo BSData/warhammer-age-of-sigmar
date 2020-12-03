@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="388b-16d3-8182-d6c0" name="Order - Daughters of Khaine" revision="48" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="64" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="388b-16d3-8182-d6c0" name="Order - Daughters of Khaine" revision="48" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="65" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="388b-16d3-pubN65537" name="Order Battletome: Daughters of Khaine"/>
     <publication id="388b-16d3-pubN69838" name="Order Official FAQs and errata, Version 1.4"/>
@@ -182,7 +182,6 @@
         <categoryLink id="590e-2218-7e68-6c99" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
       </categoryLinks>
     </entryLink>
-    <entryLink id="2332-0ad5-334e-e708" name="Melusai Ironscale" hidden="false" collective="false" import="true" targetId="1aae-be93-318a-023e" type="selectionEntry"/>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="8a66-cfb1-6e7e-9f11" name="General" hidden="false" collective="false" import="true" type="upgrade">
@@ -1446,6 +1445,7 @@ wounds. On a 4+, it suffers D6 mortal wounds.</characteristic>
           </constraints>
           <categoryLinks>
             <categoryLink id="1a70-b84d-acb2-7641" name="New CategoryLink" hidden="false" targetId="b745-17c4-8fbf-8b04" primary="false"/>
+            <categoryLink id="af47-d3dc-9cd2-b5ed" name="Unique General" hidden="false" targetId="fe3f-d230-7e2c-fba2" primary="false"/>
           </categoryLinks>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
@@ -2880,6 +2880,30 @@ Wounds allocated to this model cannot be healed</characteristic>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
+        <selectionEntry id="ac2b-a9ef-f626-293d" name="General" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="78f3-8a59-699a-61e8" type="instanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="10c7-299a-5549-043e" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="32e5-69a9-e2d2-deb9" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="750b-8765-a5b2-87c0" name="New CategoryLink" hidden="false" targetId="b745-17c4-8fbf-8b04" primary="false"/>
+            <categoryLink id="29fb-f554-f14b-18be" name="Unique General" hidden="false" targetId="fe3f-d230-7e2c-fba2" primary="false"/>
+          </categoryLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
       </selectionEntries>
       <costs>
         <cost name="pts" typeId="points" value="390.0"/>
@@ -2950,7 +2974,11 @@ Wounds allocated to this model cannot be healed</characteristic>
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink id="d020-c4fb-5839-d797" name="General" hidden="false" collective="false" import="true" targetId="8a66-cfb1-6e7e-9f11" type="selectionEntry"/>
+        <entryLink id="d020-c4fb-5839-d797" name="General" hidden="false" collective="false" import="true" targetId="8a66-cfb1-6e7e-9f11" type="selectionEntry">
+          <categoryLinks>
+            <categoryLink id="645d-10b9-ef05-927d" name="Unique General" hidden="false" targetId="fe3f-d230-7e2c-fba2" primary="false"/>
+          </categoryLinks>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="140.0"/>
@@ -3234,7 +3262,7 @@ and Sacrificial Weapons.</characteristic>
         <entryLink id="cd5f-deab-6d45-b479" name="Artefacts" hidden="false" collective="false" import="true" targetId="f9fb-eb62-86d7-1a2b" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="140.0"/>
+        <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="1a8c-32ef-182c-75d9" name="Battalion: Scáthcoven" publicationId="1b21-9526-2c4d-4176" page="97" hidden="false" collective="false" import="true" type="upgrade">
@@ -3469,9 +3497,14 @@ and Sacrificial Weapons.</characteristic>
               </conditions>
             </modifier>
             <modifier type="set" field="df77-05e9-c301-f138" value="1.0">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fafe-5100-312d-c298" type="equalTo"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="fe3f-d230-7e2c-fba2" type="equalTo"/>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fafe-5100-312d-c298" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
           <constraints>
@@ -3497,13 +3530,18 @@ and Sacrificial Weapons.</characteristic>
               </conditions>
             </modifier>
             <modifier type="set" field="fbbb-159c-1a9d-cbb1" value="1.0">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d02d-e093-7534-53a4" type="equalTo"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="fe3f-d230-7e2c-fba2" type="equalTo"/>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d02d-e093-7534-53a4" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="fbbb-159c-1a9d-cbb1" type="min"/>
+            <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="fbbb-159c-1a9d-cbb1" type="min"/>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ce7a-9aa0-9c17-d07a" type="max"/>
           </constraints>
           <profiles>
@@ -3525,9 +3563,14 @@ and Sacrificial Weapons.</characteristic>
               </conditions>
             </modifier>
             <modifier type="set" field="2abc-4ac2-ade3-0734" value="1.0">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8f46-3ba8-ceda-a21a" type="equalTo"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="fe3f-d230-7e2c-fba2" type="equalTo"/>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8f46-3ba8-ceda-a21a" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
           <constraints>
