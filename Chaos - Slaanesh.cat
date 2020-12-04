@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="357e-20c6-ad3a-d55d" name="Chaos - Slaanesh" revision="48" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="65" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="357e-20c6-ad3a-d55d" name="Chaos - Slaanesh" revision="49" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="65" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="357e-20c6-pubN65537" name="Grand Alliance Chaos"/>
     <publication id="357e-20c6-pubN71272" name="Grand Alliance: Chaos - Official Errata, December 2018"/>
@@ -287,6 +287,7 @@
     </entryLink>
     <entryLink id="b482-18d7-6cfc-c1b3" name="Battalion: Pleasurebound Warband" hidden="false" collective="false" import="true" targetId="071d-a9cb-814e-6e7c" type="selectionEntry"/>
     <entryLink id="bd9b-4008-64fc-dc2d" name="One-Eyed Grunnock - Warstompa Mercenary" hidden="false" collective="false" import="true" targetId="40c7-4bb8-cfd9-7319" type="selectionEntry"/>
+    <entryLink id="cdc4-0363-e895-48fa" name="Lord of Pain" hidden="false" collective="false" import="true" targetId="701d-6e8c-b491-1ede" type="selectionEntry"/>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="94c0-356a-842c-e0e4" name="Allegiance" hidden="false" collective="false" import="true" type="upgrade">
@@ -1472,6 +1473,65 @@ If that HERO has an artefact of power, they can sacrifice that instead of suffer
       </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="points" value="100.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="701d-6e8c-b491-1ede" name="Lord of Pain" hidden="false" collective="false" import="true" type="unit">
+      <profiles>
+        <profile id="2dc4-eaf8-a208-7c9e" name="Lord of Pain" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
+          <characteristics>
+            <characteristic name="Move" typeId="8655-6213-2824-1752">6&quot;</characteristic>
+            <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">5</characteristic>
+            <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">7</characteristic>
+            <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">4+</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="67ed-0b54-fefb-c386" name="Share the Pain" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Roll a dice each time you allocate a wound or mortal wound to this model. On a 5+, that wound or mortal wound is negated. In addition, if a wound or mortal wound is negated by this ability in the combat phase, the attacking unit suffers 1 mortal wound after all of its attacks have been resolved.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="5487-e2bb-94ad-e4a2" name="Paragon of Depravity" hidden="false" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
+          <characteristics>
+            <characteristic name="Command Ability Details" typeId="1b71-4c83-4e8c-093f">You can use this command ability in the combat phase. If you do so, pick 1 friendly HEDONITE MORTAL unit wholly within 12&quot; of this model. You can re-roll hit rolls for attacks made by that unit in that phase.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="9da0-4679-4ea3-7c13" name="CHAOS" hidden="false" targetId="7cdd-80ea-cbeb-8e16" primary="false"/>
+        <categoryLink id="5d86-6d02-5a79-f321" name="MORTAL" hidden="false" targetId="a934-6d15-9932-b7ea" primary="false"/>
+        <categoryLink id="46ee-2678-86e4-f455" name="SLAANESH" hidden="false" targetId="3963-2e99-aa63-c65e" primary="false"/>
+        <categoryLink id="efe3-fc34-eb3c-6e97" name="HEDONITE" hidden="false" targetId="e0f7-4620-9328-d15a" primary="false"/>
+        <categoryLink id="0960-1b71-1bd9-49cd" name="HERO" hidden="false" targetId="4e0e-664d-51ea-0929" primary="false"/>
+        <categoryLink id="44fb-f670-5b00-5538" name="Leader" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="b845-f940-cd37-d626" name="Soulpiercer Mace" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1486-bf96-d3ea-2aff" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="88d2-d4eb-f0ad-5d42" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="5227-99b0-bb41-4b2a" name="Soulpiercer Mace" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">2&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">5</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">2</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
+      <entryLinks>
+        <entryLink id="715e-fa88-dec0-79e1" name="General" hidden="false" collective="false" import="true" targetId="6e39-0b25-0e5e-8605" type="selectionEntry"/>
+        <entryLink id="acc3-d863-7f0d-ea2d" name="Artefacts" hidden="false" collective="false" import="true" targetId="c70c-2dcd-13c3-790c" type="selectionEntryGroup"/>
+        <entryLink id="75b2-bee2-bdaa-1336" name="Command Traits" hidden="false" collective="false" import="true" targetId="fd91-b686-14f6-581f" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="120.0"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>
