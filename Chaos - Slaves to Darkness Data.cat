@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="e0d8-b631-6934-ee34" name="Chaos - Slaves to Darkness Data" revision="32" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="65" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="e0d8-b631-6934-ee34" name="Chaos - Slaves to Darkness Data" revision="33" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="65" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="798b-2f60-pubN65537" name="Grand Alliance: Chaos"/>
     <publication id="798b-2f60-pubN85643" name="Forgeworld: Monstrous Arcanum"/>
@@ -6966,13 +6966,14 @@ In addition, add 1 to the Damage characteristic of this model’s Rune-etched Ax
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
-    <selectionEntryGroup id="8b24-9365-3403-e1bf" name="Command Traits" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="8b24-9365-3403-e1bf" name="Command Traits" hidden="true" collective="false" import="true">
       <modifiers>
-        <modifier type="set" field="hidden" value="true">
+        <modifier type="set" field="hidden" value="false">
           <conditionGroups>
-            <conditionGroup type="and">
+            <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b745-17c4-8fbf-8b04" type="equalTo"/>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b745-17c4-8fbf-8b04" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0415-097a-581f-9a51" type="equalTo"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -7028,10 +7029,17 @@ In addition, add 1 to the Damage characteristic of this model’s Rune-etched Ax
         <entryLink id="a25a-17b9-5fc2-28a1" name="Slaanesh Command Traits" hidden="false" collective="false" import="true" targetId="d0b9-c0f9-e8fd-5a28" type="selectionEntryGroup"/>
         <entryLink id="9ed5-49ab-c3d6-34f5" name="Tzeentch Command Traits" hidden="false" collective="false" import="true" targetId="8681-139d-eaa3-804f" type="selectionEntryGroup"/>
         <entryLink id="521e-5201-a437-c53c" name="Slaves to Darkness Command Traits" hidden="false" collective="false" import="true" targetId="0436-d8ea-a95c-ada4" type="selectionEntryGroup"/>
-        <entryLink id="c295-9dff-46a2-2009" name="Traits: Wrath of the Everchosen" hidden="false" collective="false" import="true" targetId="79dc-a292-43f4-d01f" type="selectionEntryGroup"/>
+        <entryLink id="c295-9dff-46a2-2009" name="Wrath of the Everchosen Command Traits" hidden="false" collective="false" import="true" targetId="79dc-a292-43f4-d01f" type="selectionEntryGroup"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="8772-4947-7126-37dd" name="Artefacts" hidden="false" collective="false" import="true">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="78f3-8a59-699a-61e8" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8df1-b708-28fa-5ff0" type="max"/>
       </constraints>
