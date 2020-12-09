@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="0339-0157-6910-d29c" name="Chaos Data" revision="58" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="65" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="0339-0157-6910-d29c" name="Chaos Data" revision="59" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="65" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="c9b2-1fe6-pubN65537" name="Battletome: Beasts of Chaos"/>
     <publication id="c9b2-1fe6-pubN83353" name="1"/>
@@ -10468,13 +10468,14 @@ For example, if you rolled one 6 for a HERO, that HERO would suffer 1 x 1 = 1 mo
         <entryLink id="50f5-df24-d52b-e747" name="Slaves to Darkness Lores" hidden="false" collective="false" import="true" targetId="1663-b604-58c7-ddc0" type="selectionEntryGroup"/>
       </entryLinks>
     </selectionEntryGroup>
-    <selectionEntryGroup id="8858-313d-8d88-b325" name="Command Traits" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="8858-313d-8d88-b325" name="Command Traits" hidden="true" collective="false" import="true">
       <modifiers>
-        <modifier type="set" field="hidden" value="true">
+        <modifier type="set" field="hidden" value="false">
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b745-17c4-8fbf-8b04" type="equalTo"/>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b745-17c4-8fbf-8b04" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0415-097a-581f-9a51" type="equalTo"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -10500,6 +10501,13 @@ For example, if you rolled one 6 for a HERO, that HERO would suffer 1 x 1 = 1 mo
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="2318-18aa-14a5-446b" name="Artefacts" hidden="false" collective="false" import="true">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="78f3-8a59-699a-61e8" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7366-7386-21f4-bbd9" type="max"/>
       </constraints>
@@ -15569,9 +15577,14 @@ that phase. A unit cannot benefit from this command ability more than once per t
         <selectionEntryGroup id="13ef-fa60-dbb6-33d6" name="Ruinous Overlords" hidden="false" collective="false" import="true">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0415-097a-581f-9a51" type="equalTo"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0415-097a-581f-9a51" type="equalTo"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="84ea-2e37-06de-d81e" type="instanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
           <constraints>
@@ -15579,6 +15592,9 @@ that phase. A unit cannot benefit from this command ability more than once per t
           </constraints>
           <selectionEntries>
             <selectionEntry id="ddda-f19a-8500-9b9c" name="1. Bolstered by Hate" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7592-0e1a-dddc-08c4" type="max"/>
+              </constraints>
               <profiles>
                 <profile id="6779-e0e1-8f27-0e2a" name="Bolstered by Hate" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
                   <characteristics>
@@ -15591,6 +15607,9 @@ that phase. A unit cannot benefit from this command ability more than once per t
               </costs>
             </selectionEntry>
             <selectionEntry id="ac70-4894-2ab9-f877" name="2. Unquestioned Resolve" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="90a7-f941-0133-d5e0" type="max"/>
+              </constraints>
               <profiles>
                 <profile id="d1e9-815d-5986-1618" name="Unquestioned Resolve" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
                   <characteristics>
@@ -15603,6 +15622,9 @@ that phase. A unit cannot benefit from this command ability more than once per t
               </costs>
             </selectionEntry>
             <selectionEntry id="1738-4fa0-e9cf-6d38" name="3. Favoured of the Pantheon" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ec20-364f-62f9-e1ae" type="max"/>
+              </constraints>
               <profiles>
                 <profile id="4d6d-c146-d3ca-ea34" name="Favoured of the Pantheon" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
                   <characteristics>
@@ -15615,6 +15637,9 @@ that phase. A unit cannot benefit from this command ability more than once per t
               </costs>
             </selectionEntry>
             <selectionEntry id="b6db-5865-974f-6b62" name="4. Eternal Vendetta" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="51a0-edef-d263-08ee" type="max"/>
+              </constraints>
               <profiles>
                 <profile id="41f3-317d-8d9a-5923" name="Eternal Vendetta" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
                   <characteristics>
@@ -15627,6 +15652,9 @@ that phase. A unit cannot benefit from this command ability more than once per t
               </costs>
             </selectionEntry>
             <selectionEntry id="42fd-6560-50ca-66a8" name="5. Flames of Spite" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ea87-4fae-4201-585a" type="max"/>
+              </constraints>
               <profiles>
                 <profile id="bf2c-959f-7aef-a6d0" name="Flames of Spite" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
                   <characteristics>
@@ -15639,6 +15667,9 @@ that phase. A unit cannot benefit from this command ability more than once per t
               </costs>
             </selectionEntry>
             <selectionEntry id="de12-aa0a-08eb-8451" name="6. Master of Deception" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6bb7-e628-4d38-2a87" type="max"/>
+              </constraints>
               <profiles>
                 <profile id="1647-1757-ccbb-4f5e" name="Master of Deception" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
                   <characteristics>
