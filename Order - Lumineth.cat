@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="3a4f-b93a-26ba-a2d1" name="Order - Lumineth" revision="21" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="65" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="3a4f-b93a-26ba-a2d1" name="Order - Lumineth" revision="22" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="65" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="695b-f18a-c0a9-6bf4" name="Order Battletome - Lumineth Realm-Lords"/>
   </publications>
@@ -49,6 +49,8 @@
     <categoryEntry id="bafc-071c-012f-0d3d" name="HYSHIAN TWINSTONES" hidden="false"/>
     <categoryEntry id="83c1-8804-4d58-a1cb" name="SANCTUM OF AMYNTOK" hidden="false"/>
     <categoryEntry id="ce3d-41e2-06ab-1a6d" name="RUNE OF PETRIFICATION" hidden="false"/>
+    <categoryEntry id="39fb-c777-d340-b5fb" name="MYARI LIGHTCALLER" hidden="false"/>
+    <categoryEntry id="fd85-72ff-ccef-78f4" name="MYARI&apos;S PURIFIERS" hidden="false"/>
   </categoryEntries>
   <entryLinks>
     <entryLink id="2249-c919-580f-d2b3" name="Vanari Auralan Wardens" hidden="false" collective="false" import="true" targetId="3b53-dbf5-8f73-b10d" type="selectionEntry">
@@ -177,6 +179,16 @@
     <entryLink id="0fe5-bdd7-28dc-985c" name="Vanari Dawnriders" hidden="false" collective="false" import="true" targetId="3747-0abb-f1c7-a143" type="selectionEntry">
       <categoryLinks>
         <categoryLink id="3d80-bd73-2d4a-c487" name="New CategoryLink" hidden="false" targetId="e9f2-765a-b7b8-ce8e" primary="true"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="b997-83ab-5ac1-470f" name="Myari Lightcaller" hidden="false" collective="false" import="true" targetId="33f2-9e1b-9fb9-c53b" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="93c3-5788-261d-5473" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="7da9-a4ca-7f5a-55c3" name="Myari&apos;s Purifiers" hidden="false" collective="false" import="true" targetId="6b7b-144c-ae86-bafe" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="7636-4bc1-3e24-823d" name="New CategoryLink" hidden="false" targetId="065e-fda7-fd27-1f40" primary="true"/>
       </categoryLinks>
     </entryLink>
   </entryLinks>
@@ -2256,6 +2268,235 @@
       <costs>
         <cost name="pts" typeId="points" value="360.0"/>
       </costs>
+    </selectionEntry>
+    <selectionEntry id="33f2-9e1b-9fb9-c53b" name="Myari Lightcaller" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="7614-34e5-147a-dc7a" value="1.0">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6b7b-144c-ae86-bafe" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7614-34e5-147a-dc7a" type="min"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="809a-cc7e-dcaa-40f4" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a77f-bb5b-5d46-e772" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="66ed-03f6-2528-ea9f" name="Myari Lightcaller" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
+          <characteristics>
+            <characteristic name="Move" typeId="8655-6213-2824-1752">6&quot;</characteristic>
+            <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">5</characteristic>
+            <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">8</characteristic>
+            <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">5+</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="d779-9906-1c9d-1db4" name="Magic" hidden="false" typeId="f55d-ee3a-1597-110f" typeName="Magic">
+          <characteristics>
+            <characteristic name="Cast/Unbind" typeId="8294-f605-2c0f-8f92">1/1</characteristic>
+            <characteristic name="Spells Known" typeId="dc9c-47d3-6931-859c">Arcane Bolt, Mystic Shield, Dazzling Light</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="b2ce-cac6-8950-dd58" name="Dazzling Light" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+          <characteristics>
+            <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
+            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, until your next hero phase, subtract 1 from hit rolls for attacks that target the caster and subtract 1 from hit rolls for attacks made with missile weapons that target other friendly units wholly within 6&quot; of the caster.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="1d4a-95c8-35d9-8ff0" name="Scryowl Familiar" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Add 1 to casting, unbinding and dispelling rolls for this model. In addition, at the start of your hero phase and at the start of your shooting phase, you can pick 1 enemy unit within 24&quot; of this model that is not visible to this model. That enemy unit is visible to this model until the end of that phase.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="d490-4828-fce5-abd7" name="Arcane Bolt" hidden="false" targetId="ae02-a84f-a903-1ff8" type="profile"/>
+        <infoLink id="37b5-288f-502d-c336" name="Mystic Shield" hidden="false" targetId="b41f-f1ce-7aa5-4f81" type="profile"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="d248-a772-2099-2895" name="AELF" hidden="false" targetId="a5b9-bc50-8b42-8152" primary="false"/>
+        <categoryLink id="15d8-95b4-2b7b-550f" name="HERO" hidden="false" targetId="4e0e-664d-51ea-0929" primary="false"/>
+        <categoryLink id="a6f8-a631-c373-a0ee" name="LUMINETH REALM-LORDS" hidden="false" targetId="a64e-c067-e836-3c21" primary="false"/>
+        <categoryLink id="417f-d832-9fa7-a7e3" name="MYARI LIGHTCALLER" hidden="false" targetId="39fb-c777-d340-b5fb" primary="false"/>
+        <categoryLink id="d395-4a13-6b6d-de79" name="ORDER" hidden="false" targetId="b970-b3bf-e1a4-a6fc" primary="false"/>
+        <categoryLink id="db5d-d448-11bf-e1d0" name="SCINARI" hidden="false" targetId="d2e2-9363-65a6-64ee" primary="false"/>
+        <categoryLink id="703d-abce-daa3-e795" name="WIZARD" hidden="false" targetId="4f53-8230-2f02-9639" primary="false"/>
+        <categoryLink id="9ffb-872d-9173-c687" name="YMETRICA" hidden="false" targetId="8763-eded-33b0-405d" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="d1e9-7139-6f52-08cc" name="Searing Beams" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1410-faee-614e-0815" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5b25-40ab-a290-f76e" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="1634-c4d7-151c-c4c7" name="Searing Beams" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Missile</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">18&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">3</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-2</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry id="728c-027a-0b2f-1225" name="Staff of Enlightenment" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="22e1-21b5-b345-b5bf" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b862-53e7-347a-793d" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="5886-9d12-6a5c-b6d5" name="Staff of Enlightenment" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">3</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">D3</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
+      <entryLinks>
+        <entryLink id="3322-07ad-6e41-4518" name="General" hidden="false" collective="false" import="true" targetId="ad2a-0c5e-e657-4141" type="selectionEntry">
+          <categoryLinks>
+            <categoryLink id="b7ff-de8d-9c6d-b0ad" name="Unique General" hidden="false" targetId="fe3f-d230-7e2c-fba2" primary="false"/>
+          </categoryLinks>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="220.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="6b7b-144c-ae86-bafe" name="Myari&apos;s Purifiers" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="d84c-b29c-b803-6d4a" value="1.0">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="33f2-9e1b-9fb9-c53b" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d84c-b29c-b803-6d4a" type="min"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="145c-e0e3-d417-d974" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6063-a76a-e8bf-7529" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="419d-c4a0-b740-6264" name="Crushing Blow" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If the unmodified hit roll for an attack made with this unit&apos;s Stone Mallet is 6, add 1 to the damage inflicted if that attack is successful.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="4763-da69-1993-b042" name="Guardians" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Roll a dice before you allocate a wound or mortal wound to a friendly MYARI LIGHTCALLER within 3&quot; of this unit. On a 2+, you must allocate that wound or mortal wound to this unit instead.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="8ec7-fe46-1f41-82ce" name="Sunmetal Weapons" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If the unmodifi ed hit roll for an attack made with this unit&apos;s Sunmetal Greatsword or Auralan Bow is 6, that attack infl icts 1 mortal wound on the target and the attack sequence ends (do not make a wound or save roll).</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="5347-e024-56b7-cbe8" name="Myari&apos;s Purifiers" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
+          <characteristics>
+            <characteristic name="Move" typeId="8655-6213-2824-1752">6&quot;</characteristic>
+            <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">2</characteristic>
+            <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">7</characteristic>
+            <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">4+</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="c012-5fe3-0f83-79e6" name="AELF" hidden="false" targetId="a5b9-bc50-8b42-8152" primary="false"/>
+        <categoryLink id="4e75-e274-329d-c6a4" name="LUMINETH REALM-LORDS" hidden="false" targetId="a64e-c067-e836-3c21" primary="false"/>
+        <categoryLink id="0a7d-dff5-ecec-6c92" name="MYARI&apos;S PURIFIERS" hidden="false" targetId="fd85-72ff-ccef-78f4" primary="false"/>
+        <categoryLink id="169e-fe55-ee47-2ed2" name="ORDER" hidden="false" targetId="b970-b3bf-e1a4-a6fc" primary="false"/>
+        <categoryLink id="dfa7-6841-3402-8713" name="YMETRICA" hidden="false" targetId="8763-eded-33b0-405d" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="d119-e913-87cb-c9b2" name="Auralan Bow" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1f37-7ab2-a33c-9d83" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3275-937e-e49b-2364" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="72d2-8041-cc76-e595" name="Auralan Bow" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Missile</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">18&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">2</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">4+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry id="cdd0-2649-609a-fa6c" name="Stone Mallet" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1855-919b-ec4f-de70" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1a66-0ea5-e436-10d9" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="03a5-c960-6eed-395b" name="Stone Mallet" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">3</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry id="c97d-0351-4ead-ff85" name="Sunmetal Greatsword" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d022-1d83-abca-1820" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="72c2-09fd-bb99-a1f0" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="d3fb-2e7d-3ecf-0c39" name="Sunmetal Greatsword" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">2</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">2+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">2+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry id="2db9-c8f5-0000-bcb9" name="Vanari Dagger" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9a1d-d773-309b-b1e8" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="edf3-0612-a8ca-8200" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="444d-0586-7f94-4c58" name="Vanari Dagger" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">1</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">4+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
