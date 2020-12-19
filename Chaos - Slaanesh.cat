@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="357e-20c6-ad3a-d55d" name="Chaos - Slaanesh" revision="51" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="65" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="357e-20c6-ad3a-d55d" name="Chaos - Slaanesh" revision="53" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="65" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="357e-20c6-pubN65537" name="Grand Alliance Chaos"/>
     <publication id="357e-20c6-pubN71272" name="Grand Alliance: Chaos - Official Errata, December 2018"/>
@@ -758,13 +758,6 @@ If that HERO has an artefact of power, they can sacrifice that instead of suffer
       </costs>
     </selectionEntry>
     <selectionEntry id="3dce-5daf-85d8-f891" name="Hellstriders with Hellscourges" hidden="false" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="set-primary" field="category" value="e9f2-765a-b7b8-ce8e">
-          <conditions>
-            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="d7d9-b723-6fdb-51cb" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <profiles>
         <profile id="9d59-8edd-7036-a729" name="Hellstriders" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
           <characteristics>
@@ -774,9 +767,9 @@ If that HERO has an artefact of power, they can sacrifice that instead of suffer
             <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">4+</characteristic>
           </characteristics>
         </profile>
-        <profile id="1a47-5eb0-eb2a-1563" name="Soul Hunters" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+        <profile id="1a47-5eb0-eb2a-1563" name="Hooked Tendrils" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If any enemy models were slain by wounds inflicted by this unit’s attacks in the combat phase, add 1 to the Attacks characteristic of this unit’s melee weapons in the next combat phase. </characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">In the combat phase, if this unit made a charge move in the same t urn, subtract 1 from hit rolls for attacks that target this unit made by enemy models within 3&quot; of this unit until the end of that phase.</characteristic>
           </characteristics>
         </profile>
         <profile id="31dc-8f36-e2c9-eb7e" name="Icon and Standard Bearers" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
@@ -794,12 +787,19 @@ If that HERO has an artefact of power, they can sacrifice that instead of suffer
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="b158-9ba1-3142-ea05" name="5 Hellstriders" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="3043-ba8e-fe58-8bf6" value="1.0">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="253f-f7f4-842d-9a4c" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="bf01-cd87-494e-8eb8" type="min"/>
             <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3043-ba8e-fe58-8bf6" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="110.0"/>
+            <cost name="pts" typeId="points" value="100.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="6055-1695-45b6-025b" name="Hornblower" hidden="false" collective="false" import="true" type="upgrade">
@@ -912,13 +912,6 @@ If that HERO has an artefact of power, they can sacrifice that instead of suffer
       </costs>
     </selectionEntry>
     <selectionEntry id="a1d4-33d6-3cea-eb56" name="Hellstriders with Claw-spears" hidden="false" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="set-primary" field="category" value="e9f2-765a-b7b8-ce8e">
-          <conditions>
-            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="d7d9-b723-6fdb-51cb" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <profiles>
         <profile id="d065-ff48-6410-45f6" name="Hellstriders" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
           <characteristics>
@@ -928,9 +921,9 @@ If that HERO has an artefact of power, they can sacrifice that instead of suffer
             <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">4+</characteristic>
           </characteristics>
         </profile>
-        <profile id="85a0-16eb-16a1-b107" name="Soul Hunters" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+        <profile id="85a0-16eb-16a1-b107" name="Piercing Strike" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If any enemy models were slain by wounds inflicted by this unit’s attacks in the combat phase, add 1 to the Attacks characteristic of this unit’s melee weapons in the next combat phase. </characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Add 1 to the Damage characteristic of this unit&apos;s Claw-spears if it made a charge move in the same turn.</characteristic>
           </characteristics>
         </profile>
         <profile id="c3f9-995a-1225-c353" name="Icon and Standard Bearers" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
@@ -948,12 +941,19 @@ If that HERO has an artefact of power, they can sacrifice that instead of suffer
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="89e4-51e9-48c0-0861" name="5 Hellstriders" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="bf7b-0435-8bfe-a429" value="1.0">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="253f-f7f4-842d-9a4c" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d2e6-846f-4bf8-24f8" type="min"/>
             <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="bf7b-0435-8bfe-a429" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="110.0"/>
+            <cost name="pts" typeId="points" value="100.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="d445-6ae5-47f8-a465" name="Hornblower" hidden="false" collective="false" import="true" type="upgrade">
@@ -1685,7 +1685,7 @@ If that HERO has an artefact of power, they can sacrifice that instead of suffer
         <cost name="pts" typeId="points" value="120.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="253f-f7f4-842d-9a4c" name="Battalion: Gestharx&apos;s Cavalcade (OPEN PLAY)" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="253f-f7f4-842d-9a4c" name="Battalion: Gestharx&apos;s Cavalcade" hidden="false" collective="false" import="true" type="upgrade">
       <profiles>
         <profile id="1b10-7c04-9eae-4aec" name="Unyielding Seekers" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
           <characteristics>
@@ -1740,6 +1740,9 @@ If that HERO has an artefact of power, they can sacrifice that instead of suffer
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="points" value="140.0"/>
+      </costs>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
