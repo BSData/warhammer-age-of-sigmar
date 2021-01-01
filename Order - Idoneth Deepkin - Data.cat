@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="b713-a274-2a46-fe02" name="Order - Idoneth Deepkin - Data" revision="33" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="65" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="b713-a274-2a46-fe02" name="Order - Idoneth Deepkin - Data" revision="35" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="65" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="0d25-2712-pubN65537" name="Order Battletome: Idoneth Deepkin"/>
     <publication id="0d25-2712-pubN70885" name="GHB 2018 Errata, June 2018"/>
@@ -622,7 +622,8 @@
         <profile id="71a6-b170-4bfd-c94f" name="Tsunami of Terror" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
           <characteristics>
             <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
-            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick 1 friendly IDONETH DEEPKIN unit, or 1 enemy unit, within 12&quot; of the caster and visible to them. If you picked a friendly IDONETH DEEPKIN unit, heal up to D3 wounds allocated to that unit. If you picked an enemy unit, that unit suffers D3 mortal wounds.</characteristic>
+            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick up to D6 enemy units within 12&quot; of the caster and visible to them. Until
+your next hero phase, subtract 1 from hit rolls for attacks made by those units, and subtract 1 from the Bravery characteristic of those units.</characteristic>
           </characteristics>
         </profile>
         <profile id="7937-0633-c06d-47fc" name="Dormant Energies" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
@@ -662,6 +663,7 @@
         <categoryLink id="b3e2-ea5d-2235-6237" name="New CategoryLink" hidden="false" targetId="b970-b3bf-e1a4-a6fc" primary="false"/>
         <categoryLink id="4909-d374-4086-cd0d" name="New CategoryLink" hidden="false" targetId="4f53-8230-2f02-9639" primary="false"/>
         <categoryLink id="da3d-2146-63e2-cab8" name="New CategoryLink" hidden="false" targetId="6ec4-4931-4d7f-006b" primary="false"/>
+        <categoryLink id="bcd9-690c-b289-2382" name="AELF" hidden="false" targetId="7fe9-bc03-2c82-0a00" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="eec9-b5c6-54d2-2bc7" name="Psi-trident" hidden="false" collective="false" import="true" type="upgrade">
@@ -730,6 +732,28 @@
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
+        <selectionEntry id="f969-7876-2ec5-07b5" name="Sharp Fangs" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="917f-9347-d105-bcab" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ceac-c338-367d-8ee3" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="3581-9770-ab07-d74e" name="Sharp Fangs" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">3&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">2D6</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">4+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
       </selectionEntries>
       <entryLinks>
         <entryLink id="27ac-794d-b2ee-8d54" name="Stormshoal" hidden="false" collective="false" import="true" targetId="fd47-67fa-0f30-b7eb" type="selectionEntry">
@@ -749,17 +773,6 @@
     </selectionEntry>
     <selectionEntry id="fd47-67fa-0f30-b7eb" name="Stormshoal" hidden="false" collective="false" import="true" type="upgrade">
       <profiles>
-        <profile id="1b39-5fb6-bc25-ead7" name="Stormshoal&apos;s Sharp Fangs" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
-          <characteristics>
-            <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
-            <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">3&quot;</characteristic>
-            <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">2D6</characteristic>
-            <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
-            <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">4+</characteristic>
-            <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
-            <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
-          </characteristics>
-        </profile>
         <profile id="6958-f443-6e6b-3c5e" name="Stormshoal" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
             <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Roll a dice each time you allocate a wound or mortal wound to this model. On a 5+, that wound or mortal wound is negated.</characteristic>
@@ -788,7 +801,7 @@ This model can retreat and still charge later in the same turn.</characteristic>
         </profile>
         <profile id="a6a6-b03f-8e71-dad2" name="Pulled into the depths" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the start of the combat phase, you can pick an enemy Hero with a Wounds characteristic of less than 8 that is within 3&quot; of this model. Subtract 1 from hit rolls for that Hero for the rest of that combat phase.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the start of the combat phase, you can pick 1 enemy HERO with a Wounds characteristic of 8 or less that is within 3&quot; of this model. Add 1 to hit rolls for attacks made by this model that target that HERO in that phase.</characteristic>
           </characteristics>
         </profile>
         <profile id="9d64-a7c7-f46f-b249" name="Eidolon of Mathlann: Aspect of the Storm" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
@@ -809,6 +822,7 @@ This model can retreat and still charge later in the same turn.</characteristic>
         <categoryLink id="257b-49fe-aedc-f68c" name="New CategoryLink" hidden="false" targetId="b970-b3bf-e1a4-a6fc" primary="false"/>
         <categoryLink id="4f45-7230-52a7-de6a" name="New CategoryLink" hidden="false" targetId="81ea-0a9d-661c-3b06" primary="false"/>
         <categoryLink id="763d-ac66-0a1b-7ca4" name="New CategoryLink" hidden="false" targetId="6ec4-4931-4d7f-006b" primary="false"/>
+        <categoryLink id="cd77-d703-5361-5c2a" name="AELF" hidden="false" targetId="7fe9-bc03-2c82-0a00" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="40b1-e32e-a6f5-3b2e" name="Crulhook" hidden="false" collective="false" import="true" type="upgrade">
@@ -848,6 +862,28 @@ This model can retreat and still charge later in the same turn.</characteristic>
                 <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">2+</characteristic>
                 <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-2</characteristic>
                 <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">2</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="332a-9be3-9463-313c" name="Sharp Fangs" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ba6e-c311-deb0-e9d9" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="be77-1dff-9ac8-2ed0" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="a9d0-a620-d1b1-7235" name="Sharp Fangs" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">3&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">2D6</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">4+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -1567,9 +1603,9 @@ This model can retreat and still charge later in the same turn.</characteristic>
             <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Add 1 to the Attacks characteristic of this unit’s Ferocious Bites if it is within 3&quot; of any enemy models that have any wounds allocated to them or it is within 3&quot; of any enemy units that have had any models slain in that turn.</characteristic>
           </characteristics>
         </profile>
-        <profile id="bb8d-b6a2-3a4f-16a6" name="Entangled" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
+        <profile id="bb8d-b6a2-3a4f-16a6" name="Entangled" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Battalion Ability Details" typeId="08e0-9ead-1dbe-c801">A unit that has been hit by any attacks made with a Retarius Net Launcher cannot make pile-in moves in the same turn.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">A unit that has been hit by any attacks made with a Retarius Net Launcher cannot make pile-in moves in the same turn.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1582,6 +1618,7 @@ This model can retreat and still charge later in the same turn.</characteristic>
         <categoryLink id="d23a-100f-c2d1-3741" name="New CategoryLink" hidden="false" targetId="1959-9f6a-3056-913a" primary="false"/>
         <categoryLink id="1572-c8e6-5974-184e" name="New CategoryLink" hidden="false" targetId="b970-b3bf-e1a4-a6fc" primary="false"/>
         <categoryLink id="d9d6-ac7f-f665-86f1" name="New CategoryLink" hidden="false" targetId="6ec4-4931-4d7f-006b" primary="false"/>
+        <categoryLink id="00e8-f84f-d632-1cbb" name="AELF" hidden="false" targetId="7fe9-bc03-2c82-0a00" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="d2c4-848a-eb35-3ace" name="Barbed Hooks and Blades" hidden="false" collective="false" import="true" type="upgrade">
@@ -1606,13 +1643,13 @@ This model can retreat and still charge later in the same turn.</characteristic>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="3d3e-eded-8aa8-7780" name="Allopex&apos;s Ferocious Bite" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="3d3e-eded-8aa8-7780" name="Ferocious Bite" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1122-fbef-23d5-d020" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f500-ee22-a21b-93d0" type="max"/>
           </constraints>
           <profiles>
-            <profile id="22f3-6e75-0140-00ff" name="Allopex&apos;s Ferocious Bite" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+            <profile id="22f3-6e75-0140-00ff" name="Ferocious Bite" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
               <characteristics>
                 <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
                 <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
@@ -1688,36 +1725,6 @@ This model can retreat and still charge later in the same turn.</characteristic>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="5e7e-0ed0-bf70-0cf7" name="Razorshell Harpoon Launcher" hidden="false" collective="false" import="true" type="upgrade">
-      <profiles>
-        <profile id="32eb-f4ed-7b61-64b8" name="Razorshell Harpoon Launcher" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
-          <modifiers>
-            <modifier type="set" field="0bd7-bded-a0e0-19a0" value="6">
-              <conditions>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8655-c77a-3e2c-77c2" type="instanceOf"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="0bd7-bded-a0e0-19a0" value="3">
-              <conditions>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c354-2c53-977f-52c9" type="instanceOf"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <characteristics>
-            <characteristic name="Type" typeId="655c-362e-a663-3e50">Missile</characteristic>
-            <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">24&quot;</characteristic>
-            <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">3</characteristic>
-            <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
-            <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
-            <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
-            <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
-      </costs>
-    </selectionEntry>
     <selectionEntry id="1925-b9c1-5230-f036" name="Akhelian Leviadon" publicationId="0d25-2712-pubN70885" hidden="false" collective="false" import="true" type="unit">
       <profiles>
         <profile id="42c4-0d16-8223-b350" name="Jaws of Death" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
@@ -1738,6 +1745,11 @@ This model can retreat and still charge later in the same turn.</characteristic>
             <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">*</characteristic>
           </characteristics>
         </profile>
+        <profile id="8db7-fe39-42bf-42cd" name="Crushing Charge" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Roll a dice for each enemy unit within 1&quot; of this model after this model finishes a charge move. On a 2+, that enemy unit suffers D3 mortal wounds. If that enemy unit has a Wounds characteristic of 1, it suffers D6 mortal wounds instead of D3 mortal wounds.</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
       <infoLinks>
         <infoLink id="7102-c705-176f-773d" name="Fly" hidden="false" targetId="8e0c-cbe4-27be-8a30" type="profile"/>
@@ -1748,6 +1760,7 @@ This model can retreat and still charge later in the same turn.</characteristic>
         <categoryLink id="eaa3-8346-cb22-93f1" name="New CategoryLink" hidden="false" targetId="1959-9f6a-3056-913a" primary="false"/>
         <categoryLink id="0cc2-e2ad-643b-f1e3" name="New CategoryLink" hidden="false" targetId="b970-b3bf-e1a4-a6fc" primary="false"/>
         <categoryLink id="2919-469c-3a8c-988c" name="New CategoryLink" hidden="false" targetId="6ec4-4931-4d7f-006b" primary="false"/>
+        <categoryLink id="8d99-8dce-6573-64ef" name="AELF" hidden="false" targetId="7fe9-bc03-2c82-0a00" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="846b-2799-cf31-39ec" name="Wound Track Leviadon" hidden="false" collective="false" import="true" type="upgrade">
@@ -1789,13 +1802,13 @@ This model can retreat and still charge later in the same turn.</characteristic>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="2d69-e9ba-3e1b-c502" name="Leviadon&apos;s Crushing Jaws" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="2d69-e9ba-3e1b-c502" name="Crushing Jaws" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2147-5d4d-940b-d56f" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="af8d-056c-eebb-18dc" type="max"/>
           </constraints>
           <profiles>
-            <profile id="74dd-22ea-aa6c-4c12" name="Leviadon&apos;s Crushing Jaws" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+            <profile id="74dd-22ea-aa6c-4c12" name="Crushing Jaws" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
               <characteristics>
                 <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
                 <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
@@ -1811,18 +1824,18 @@ This model can retreat and still charge later in the same turn.</characteristic>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="df05-010f-33a3-6370" name="Leviadon&apos;s Massive Scythed Fins" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="df05-010f-33a3-6370" name="Massive Scythed Fins" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3de8-4420-0b67-931b" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d642-2970-0b14-4f0a" type="max"/>
           </constraints>
           <profiles>
-            <profile id="f922-c2ce-027c-e969" name="Leviadon&apos;s Massive Scythed Fins" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+            <profile id="f922-c2ce-027c-e969" name="Massive Scythed Fins" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
               <characteristics>
                 <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
                 <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">2&quot;</characteristic>
                 <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">4</characteristic>
-                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">2+</characteristic>
                 <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
                 <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
                 <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">*</characteristic>
@@ -1856,15 +1869,19 @@ This model can retreat and still charge later in the same turn.</characteristic>
           </costs>
         </selectionEntry>
         <selectionEntry id="1ac8-ba65-f035-edf1" name="Razorshell Harpoon Launcher" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9044-0ca7-a35f-f5cc" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a87e-5e24-61db-2bc8" type="max"/>
+          </constraints>
           <profiles>
             <profile id="a041-4019-2c8a-0cb6" name="Razorshell Harpoon Launcher" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
               <characteristics>
                 <characteristic name="Type" typeId="655c-362e-a663-3e50">Missile</characteristic>
                 <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">24&quot;</characteristic>
-                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">6</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">8</characteristic>
                 <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
                 <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
-                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
                 <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
               </characteristics>
             </profile>
@@ -1875,12 +1892,6 @@ This model can retreat and still charge later in the same turn.</characteristic>
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink id="a4a7-93ea-d3e1-c42b" name="Razorshell Harpoon Launcher" hidden="false" collective="false" import="true" targetId="5e7e-0ed0-bf70-0cf7" type="selectionEntry">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f38e-66cb-cb7a-500a" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="136b-dd14-98a7-3316" type="max"/>
-          </constraints>
-        </entryLink>
         <entryLink id="bc88-8702-77d7-31e2" name="Leviadon Mount Traits" hidden="false" collective="false" import="true" targetId="8e75-de2e-d64c-88a8" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
