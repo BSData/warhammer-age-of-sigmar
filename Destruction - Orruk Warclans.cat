@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="5419-b58f-5a39-0bfe" name="Destruction - Orruk Warclans" revision="18" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="65" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="5419-b58f-5a39-0bfe" name="Destruction - Orruk Warclans" revision="19" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="65" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="7e25-33bb-pubN65537" name="Destruction Battletome: Bonesplitterz"/>
     <publication id="7e25-33bb-pubN82863" name="Age of Sigmar: The Rules"/>
@@ -153,6 +153,18 @@
     <entryLink id="bc64-0b1c-2a1c-cf9c" name="Bundo Whalebiter - Kraken-Eater Mercenary" hidden="false" collective="false" import="true" targetId="efae-6133-d899-a7e4" type="selectionEntry"/>
     <entryLink id="d9fb-5eda-1fe6-b2fe" name="Big Drogg Fort-Kicka - Gatebreaker Mercenary" hidden="false" collective="false" import="true" targetId="8c3b-e825-efb0-25bd" type="selectionEntry"/>
     <entryLink id="83cf-6550-060b-e94e" name="One-Eyed Grunnock - Warstompa Mercenary" hidden="false" collective="false" import="true" targetId="40c7-4bb8-cfd9-7319" type="selectionEntry"/>
+    <entryLink id="ab7a-641e-35fc-5d04" name="Battalion: Smasha Boyz (Open Play)" hidden="false" collective="false" import="true" targetId="30c6-f1e0-5501-efbe" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="ca54-0d07-72c2-d26f" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="650d-2415-1d37-9c42" name="New CategoryLink" hidden="false" targetId="be17-6bbd-b857-3f43" primary="true"/>
+      </categoryLinks>
+    </entryLink>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="9dbb-2d1a-12d8-7faf" name="Allegiance" hidden="false" collective="false" import="true" type="upgrade">
@@ -4171,6 +4183,52 @@ In addition, add 1 to hit rolls and wound rolls for attacks made with this unitâ
       <costs>
         <cost name="pts" typeId="points" value="90.0"/>
       </costs>
+    </selectionEntry>
+    <selectionEntry id="30c6-f1e0-5501-efbe" name="Battalion: Smasha Boyz (Open Play)" hidden="false" collective="false" import="true" type="upgrade">
+      <profiles>
+        <profile id="4270-d445-31d4-b27e" name="Smash &apos;em" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
+          <characteristics>
+            <characteristic name="Battalion Ability Details" typeId="08e0-9ead-1dbe-c801">You can add 1 to all hit rolls made for Smasha Boyz units in the combat phase whilst they are within 10&quot; of thier Warchanter.  Note that if the Warchanter also uses his Frenzy of Violence ability on a Smasha Boyz unit, you would add 2 to their hit rolls instead!</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="463c-827a-2172-ed41" name="1. Orruk Warchanter" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ba0a-2266-6d45-1a2e" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7549-32f7-d025-c58b" type="max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="32c4-7a6b-10d7-26cc" name="Orruk Warchanter" hidden="false" collective="false" import="true" targetId="fd0a-af12-54bd-01f0" type="selectionEntry">
+              <categoryLinks>
+                <categoryLink id="1707-5276-b664-5603" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="false"/>
+              </categoryLinks>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="9fe5-37ed-9aca-6882" name="2. 1 unit of Orruk Ardboys" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8509-419f-a1ea-6ad1" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9907-14b0-116d-158f" type="max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="0078-f4ec-26e6-f91a" name="Orruk Ardboys" hidden="false" collective="false" import="true" targetId="e935-25ea-f690-d33e" type="selectionEntry">
+              <categoryLinks>
+                <categoryLink id="88fd-2fb7-9968-16d6" name="New CategoryLink" hidden="false" targetId="e9f2-765a-b7b8-ce8e" primary="false"/>
+              </categoryLinks>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="8f40-cec4-1e85-0dcb" name="3. 1 unit Orruk Gore-gruntas" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9edb-c4de-c16c-ee67" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d441-80e3-90da-b5d0" type="max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="7531-723d-971f-4f6f" name="Orruk Gore-Gruntas" hidden="false" collective="false" import="true" targetId="1461-8d7a-4107-d6b1" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
