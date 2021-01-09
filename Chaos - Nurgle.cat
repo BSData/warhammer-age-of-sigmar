@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="6894-a70d-7327-b3c3" name="Chaos - Nurgle" revision="59" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="65" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="6894-a70d-7327-b3c3" name="Chaos - Nurgle" revision="61" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="65" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="6894-a70d-pubN65537" name="Chaos Battletome: Maggotkin of Nurgle"/>
     <publication id="6894-a70d-pubN78755" name="Compendium: Tamurkhan&apos;s Horde"/>
@@ -423,6 +423,18 @@
     <entryLink id="dc13-052a-bdb1-8ffd" name="The Wurmspat" hidden="false" collective="false" import="true" targetId="493b-ff80-f461-ff03" type="selectionEntry"/>
     <entryLink id="653e-d2a4-1cac-7f69" name="Fecula Flyblown" hidden="false" collective="false" import="true" targetId="84e0-0f45-4ffd-0732" type="selectionEntry"/>
     <entryLink id="0f50-3ef4-68a4-02b4" name="One-Eyed Grunnock - Warstompa Mercenary" hidden="false" collective="false" import="true" targetId="40c7-4bb8-cfd9-7319" type="selectionEntry"/>
+    <entryLink id="600a-2188-91b3-72cb" name="Battalion: Glugurous&apos; Plagueband (Open Play)" hidden="false" collective="false" import="true" targetId="00a5-77d5-79eb-c247" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="ca54-0d07-72c2-d26f" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="f645-0726-8cfd-33d1" name="New CategoryLink" hidden="false" targetId="be17-6bbd-b857-3f43" primary="true"/>
+      </categoryLinks>
+    </entryLink>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="ba97-4abb-1ec1-657f" name="Bloab Rotspawned" publicationId="6894-a70d-pubN65537" page="96" hidden="false" collective="false" import="true" type="unit">
@@ -3018,6 +3030,70 @@
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="00a5-77d5-79eb-c247" name="Battalion: Glugurous&apos; Plagueband (Open Play)" hidden="false" collective="false" import="true" type="upgrade">
+      <profiles>
+        <profile id="90f1-1000-c036-6de1" name="Impossible Resillence" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
+          <characteristics>
+            <characteristic name="Battalion Ability Details" typeId="08e0-9ead-1dbe-c801">In each of your hero phases, you can return one slain model to each unit from the Plagueband that is within 7&quot; of the battalion&apos;s Herald of Nurgle.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="b575-61bf-45ba-9fcc" name="1 unit of Plague Drones" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3f46-8b1c-e883-ee7f" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1349-95a6-79e2-2cb9" type="min"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="e948-7094-08af-b3ef" name="Plague Drones" hidden="false" collective="false" import="true" targetId="792a-edaf-d1db-1715" type="selectionEntry">
+              <categoryLinks>
+                <categoryLink id="1ae2-d184-e03c-32a1" name="Other" hidden="false" targetId="065e-fda7-fd27-1f40" primary="false"/>
+              </categoryLinks>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="bdff-f089-ba05-ff0a" name="1 unit of Plaguebearers" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6a79-4116-67b8-7853" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="396b-648d-9b86-f71b" type="min"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="6908-481c-d905-6b8f" name="Plaguebearers" hidden="false" collective="false" import="true" targetId="1e14-a40c-8467-4b61" type="selectionEntry">
+              <categoryLinks>
+                <categoryLink id="a46a-d413-ec36-25e4" name="Battleline" hidden="false" targetId="e9f2-765a-b7b8-ce8e" primary="false"/>
+              </categoryLinks>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="19a0-e7b9-2e6c-8998" name="1 unit of Nurglings" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cbf7-8779-4e43-ab3e" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="52d5-2d0d-b0fb-5f24" type="min"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="0117-6f82-0c25-cc4a" name="Nurglings" hidden="false" collective="false" import="true" targetId="ad70-44cd-aa27-73dc" type="selectionEntry">
+              <categoryLinks>
+                <categoryLink id="3401-acb5-bf73-9dd8" name="Other" hidden="false" targetId="065e-fda7-fd27-1f40" primary="false"/>
+              </categoryLinks>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="d548-c471-3b7b-d4f3" name="1 Herald of Nurgle" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6858-280a-63dd-a0c0" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e1af-ad4c-1d78-91d7" type="max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="0617-7a2a-e4cd-bc53" name="Poxbringer, Herald of Nurgle" hidden="false" collective="false" import="true" targetId="1d89-9b37-5081-fa4b" type="selectionEntry"/>
+            <entryLink id="c94f-94f0-6933-9fd9" name="Sloppity Bilepiper, Herald of Nurgle" hidden="false" collective="false" import="true" targetId="5d72-3fee-87a4-716a" type="selectionEntry"/>
+            <entryLink id="9e4f-d441-4fb2-e213" name="Spoilpox Scrivener, Herald of Nurgle" hidden="false" collective="false" import="true" targetId="3af8-f299-d611-c091" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
