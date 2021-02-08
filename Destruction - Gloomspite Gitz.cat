@@ -82,6 +82,7 @@
     <categoryEntry id="18a7-c690-9884-8935" name="FELLWATER" hidden="false"/>
     <categoryEntry id="8299-55bf-2261-9ed8" name="ROCKGUT" hidden="false"/>
     <categoryEntry id="15d5-aefb-1618-87b2" name="MADCAP SHAMAN" hidden="false"/>
+    <categoryEntry id="2967-dd61-dd15-d0ad" name="SCUTTLEBOSS" hidden="false"/>
   </categoryEntries>
   <entryLinks>
     <entryLink id="d894-1877-e48a-d85d" name="Madcap Shaman" hidden="false" collective="false" import="true" targetId="4456-155d-685b-bd18" type="selectionEntry">
@@ -1649,7 +1650,7 @@
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="5598-b0b7-b976-5d72" name="General - Spiderfang " hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="5598-b0b7-b976-5d72" name="General - Spiderfang Webspinner" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditions>
@@ -2533,6 +2534,7 @@
         <categoryLink id="4997-467e-fa75-a327" name="GROT" hidden="false" targetId="ef9c-701b-aad2-4e19" primary="false"/>
         <categoryLink id="eed6-4892-b6a7-833f" name="GLOOMSPITE GITZ" hidden="false" targetId="19e1-59e0-e5c6-2e94" primary="false"/>
         <categoryLink id="c1cd-3e9d-745a-5ebc" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
+        <categoryLink id="18e0-122e-2b79-4889" name="SCUTTLEBOSS" hidden="false" targetId="2967-dd61-dd15-d0ad" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="93c8-6e8d-e657-885b" name="Gigantic Fangs" hidden="false" collective="false" import="true" type="upgrade">
@@ -5609,6 +5611,7 @@
                     <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="e404-398e-c044-e29a" type="equalTo"/>
                     <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5598-b0b7-b976-5d72" type="equalTo"/>
                     <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="d4f6-4bfd-6eab-b1a2" type="equalTo"/>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="de64-d6d7-9205-8d55" type="equalTo"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -5657,9 +5660,10 @@ At the end of each of your turns, you can pick 1 friendly SQUIG HERD, SQUIG HOPP
           <modifiers>
             <modifier type="set" field="hidden" value="false">
               <conditionGroups>
-                <conditionGroup type="and">
+                <conditionGroup type="or">
                   <conditions>
                     <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5598-b0b7-b976-5d72" type="equalTo"/>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="de64-d6d7-9205-8d55" type="equalTo"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -7085,6 +7089,22 @@ At the end of each of your turns, you can pick 1 friendly SQUIG HERD, SQUIG HOPP
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="de64-d6d7-9205-8d55" name="General - Spiderfang Scuttleboss" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="78f3-8a59-699a-61e8" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="95ca-5d3c-b463-fc88" type="max"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="aa3c-c301-7ea3-b334" type="max"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="ef6a-94ec-582f-be56" name="Artefacts" hidden="false" collective="false" import="true">
@@ -7099,45 +7119,8 @@ At the end of each of your turns, you can pick 1 friendly SQUIG HERD, SQUIG HOPP
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e0c3-5320-45a3-b5d0" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b8fb-4111-bd64-27f5" type="max"/>
       </constraints>
-      <selectionEntries>
-        <selectionEntry id="4549-cc6c-91ae-a006" name="Syari Screamersquig" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="e623-c44c-8ce4-b443" type="equalTo"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" field="eb26-3c1b-f1f3-2479" value="1.0">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="e623-c44c-8ce4-b443" type="equalTo"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="35a7-e022-9430-9ec3" value="1.0">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="e623-c44c-8ce4-b443" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="eb26-3c1b-f1f3-2479" type="min"/>
-            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="35a7-e022-9430-9ec3" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="4a80-99b6-f3dd-c7fd" name="Syari Screamersquig" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">At the start of the combat phase, you can pick 1 enemy HERO within 3&quot; of the bearer.  If you do so, until your next hero phase, add 1 to hit rolls for attacks made with melee weapons by the bearer that target that HERO.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="79d7-cc1a-3dec-a6c7" name="Aetherquartz-studded Hide" hidden="false" collective="false" import="true" type="upgrade">
+      <selectionEntryGroups>
+        <selectionEntryGroup id="eb11-8f8f-0c60-1396" name="Glogg&apos;s Megamob" hidden="false" collective="false" import="true">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditionGroups>
@@ -7149,44 +7132,57 @@ At the end of each of your turns, you can pick 1 friendly SQUIG HERD, SQUIG HOPP
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="set" field="e11f-c359-9bf5-4478" value="1.0">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="bdfa-9a12-78a9-6ab5" type="equalTo"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="cbcb-a7f2-361f-4708" value="1.0">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="bdfa-9a12-78a9-6ab5" type="equalTo"/>
-              </conditions>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="39c7-5654-0899-8e4f" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="1cb1-1cbf-6f51-2cc2" name="Aetherquartz-studded Hide" hidden="false" collective="false" import="true" type="upgrade">
+              <profiles>
+                <profile id="4217-7382-2b82-125d" name="Aetherquartz-studded Hide" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
+                  <characteristics>
+                    <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Roll a dice each time you allocate a mortal wound to the bearer.   On a 5+, that mortal wound is negated.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="a338-58b1-9109-2238" name="Jawz of Mork" hidden="false" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="e623-c44c-8ce4-b443" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="e11f-c359-9bf5-4478" type="min"/>
-            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="cbcb-a7f2-361f-4708" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="04ba-4586-ce60-43f1" type="max"/>
           </constraints>
-          <profiles>
-            <profile id="483f-6d72-8a82-116a" name="Aetherquartz-studded Hide" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Roll a dice each time you allocate a mortal wound to the bearer.   On a 5+, that mortal wound is negated.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="6a1b-bdc6-33bf-3410" name="Shyishan Spider-sigils" hidden="false" collective="false" import="true" type="upgrade">
+          <selectionEntries>
+            <selectionEntry id="7b4c-eb6f-2c9f-31ae" name="Syari Screamersquig" hidden="false" collective="false" import="true" type="upgrade">
+              <profiles>
+                <profile id="962f-e230-2035-9812" name="Syari Screamersquig" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
+                  <characteristics>
+                    <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">At the start of the combat phase, you can pick 1 enemy HERO within 3&quot; of the bearer.  If you do so, until your next hero phase, add 1 to hit rolls for attacks made with melee weapons by the bearer that target that HERO.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="b7b5-e196-cd5d-b39e" name="Grimscuttle Tribe" hidden="false" collective="false" import="true">
           <modifiers>
-            <modifier type="set" field="3d54-0294-8067-ab4e" value="1.0">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="fcbf-324e-1b44-0e90" type="equalTo"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="f447-4c8d-322f-ce01" value="1.0">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="fcbf-324e-1b44-0e90" type="equalTo"/>
-              </conditions>
-            </modifier>
             <modifier type="set" field="hidden" value="true">
               <conditionGroups>
                 <conditionGroup type="or">
@@ -7199,21 +7195,24 @@ At the end of each of your turns, you can pick 1 friendly SQUIG HERD, SQUIG HOPP
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="f447-4c8d-322f-ce01" type="min"/>
-            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="3d54-0294-8067-ab4e" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ef8a-dcb3-be78-6610" type="max"/>
           </constraints>
-          <profiles>
-            <profile id="ab76-cc2b-ad57-86b6" name="Shyishan Spider-sigils" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Subtract 1 from the Bravery characteristic of enemy units while they are within 6&quot; of the bearer.  In addition, add 1 to the Bravery characteristic of friendly GRIMSCUTTLE SPIDERFANG units while they are wholly within 12&quot; of the bearer.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
+          <selectionEntries>
+            <selectionEntry id="7f41-cdb3-bbe9-02cf" name="Shyishan Spider-sigils" hidden="false" collective="false" import="true" type="upgrade">
+              <profiles>
+                <profile id="5a5a-e87f-95e0-4ffd" name="Shyishan Spider-sigils" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
+                  <characteristics>
+                    <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Subtract 1 from the Bravery characteristic of enemy units while they are within 6&quot; of the bearer.  In addition, add 1 to the Bravery characteristic of friendly GRIMSCUTTLE SPIDERFANG units while they are wholly within 12&quot; of the bearer.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
       <entryLinks>
         <entryLink id="760d-cbe4-ed71-37e5" name="Artefacts of Destruction" hidden="false" collective="false" import="true" targetId="ca3c-6bfc-07f1-2953" type="selectionEntryGroup">
           <modifiers>
@@ -7270,132 +7269,6 @@ At the end of each of your turns, you can pick 1 friendly SQUIG HERD, SQUIG HOPP
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c93f-5721-1850-5d21" type="max"/>
       </constraints>
-      <selectionEntries>
-        <selectionEntry id="258d-1274-f60e-f712" name="Envoy of the Overbounder" publicationId="0dee-8846-061a-5504" page="24" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="e623-c44c-8ce4-b443" type="equalTo"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" field="3528-0c09-7ea0-25ac" value="1.0">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="e623-c44c-8ce4-b443" type="equalTo"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" field="d024-1d5d-bbf8-f73c" value="1.0">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="e623-c44c-8ce4-b443" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="3528-0c09-7ea0-25ac" type="min"/>
-            <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="d024-1d5d-bbf8-f73c" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="3a08-a7f2-bcb9-a475" name="Envoy of the Overbounder" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
-              <characteristics>
-                <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">You can re-roll failed battleshock tests for friendly JAWS OF MORK units wholly within 12&quot; of this general.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="7e6f-259e-152c-a17c" name="Shepherd of Idiotic Destruction" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="e2cd-e6b4-d6ca-490e" value="1.0">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="bdfa-9a12-78a9-6ab5" type="equalTo"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" field="c1a8-3740-5f90-6b26" value="1.0">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="bdfa-9a12-78a9-6ab5" type="equalTo"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="hidden" value="true">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="bdfa-9a12-78a9-6ab5" type="equalTo"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="e2cd-e6b4-d6ca-490e" type="min"/>
-            <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="c1a8-3740-5f90-6b26" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="b647-08a1-1080-ef78" name="Shepherd of Idiotic Destruction" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
-              <characteristics>
-                <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">If this general is part of your army and on the battlefield at the start of your hero phase, roll a dice.  On a 4+, you receive 1 extra command point.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="2a40-893f-38bc-6f38" name="Prophet of da Spider Gad" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="b324-2901-7442-9754" value="1.0">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="fcbf-324e-1b44-0e90" type="equalTo"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" field="hidden" value="true">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="fcbf-324e-1b44-0e90" type="equalTo"/>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8cec-0027-cf89-9ab2" type="notInstanceOf"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" field="5aef-a918-d146-0ed8" value="1.0">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="fcbf-324e-1b44-0e90" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="b324-2901-7442-9754" type="min"/>
-            <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="5aef-a918-d146-0ed8" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="151d-8b81-c6e6-c74b" name="Prophet of da Spider Gad" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
-              <characteristics>
-                <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">Once per battle in the combat phase, you can say that this general will unleash their battle cry.  If you do so, friendly GRIMSCUTTLE SPIDERFANG models are treated as being affected by the light of the Bad Moon until the end of that phase.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="6eed-3cba-2a72-3cd9" name="Blessings of the Bad Moon" hidden="false" collective="false" import="true">
           <modifiers>
@@ -7678,7 +7551,7 @@ At the end of each of your turns, you can pick 1 friendly SQUIG HERD, SQUIG HOPP
               <conditionGroups>
                 <conditionGroup type="or">
                   <conditions>
-                    <condition field="selections" scope="ancestor" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0039-839c-c04f-5451" type="notInstanceOf"/>
+                    <condition field="selections" scope="ancestor" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2967-dd61-dd15-d0ad" type="notInstanceOf"/>
                     <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f8e3-641a-7a46-2f84" type="equalTo"/>
                   </conditions>
                 </conditionGroup>
@@ -7763,6 +7636,138 @@ At the end of each of your turns, you can pick 1 friendly SQUIG HERD, SQUIG HOPP
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
+        <selectionEntryGroup id="fcb5-5331-2019-5e00" name="Jaws of Mork" hidden="false" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="e623-c44c-8ce4-b443" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7466-a5c4-bf24-7c0f" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="8765-7b70-0fb4-7cfa" name="Envoy of the Overbounder" publicationId="0dee-8846-061a-5504" page="24" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="426a-909b-0496-9f7e" value="0.0">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="fe3f-d230-7e2c-fba2" type="equalTo"/>
+                        <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="a338-58b1-9109-2238" type="equalTo"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="426a-909b-0496-9f7e" type="min"/>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="13d1-1aaf-a677-ba5b" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="d397-1694-a62d-2ae0" name="Envoy of the Overbounder" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
+                  <characteristics>
+                    <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">You can re-roll failed battleshock tests for friendly JAWS OF MORK units wholly within 12&quot; of this general.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="33d0-4c21-d62c-4667" name="Grimscuttle Tribe" hidden="false" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="fcbf-324e-1b44-0e90" type="equalTo"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8cec-0027-cf89-9ab2" type="notInstanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="79b7-96b7-b8f9-53c2" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="98c7-2578-8fd7-7701" name="Prophet of da Spider Gad" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="c484-a6c0-38c8-ff67" value="1.0">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5598-b0b7-b976-5d72" type="equalTo"/>
+                        <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="fcbf-324e-1b44-0e90" type="equalTo"/>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="fe3f-d230-7e2c-fba2" type="equalTo"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="c484-a6c0-38c8-ff67" type="min"/>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="bf18-f1d9-cc4e-fd26" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="c547-314a-cf10-1720" name="Prophet of da Spider Gad" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
+                  <characteristics>
+                    <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">Once per battle in the combat phase, you can say that this general will unleash their battle cry.  If you do so, friendly GRIMSCUTTLE SPIDERFANG models are treated as being affected by the light of the Bad Moon until the end of that phase.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="8220-e069-0ed2-f4d3" name="Glogg&apos;s Megamob" hidden="false" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="bdfa-9a12-78a9-6ab5" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fe28-be63-bbd5-b5c0" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="d378-10d7-4f85-464a" name="Shepherd of Idiotic Destruction" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="b6d1-1e8e-dc8f-fcc2" value="1.0">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="fe3f-d230-7e2c-fba2" type="equalTo"/>
+                        <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="bdfa-9a12-78a9-6ab5" type="equalTo"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="b6d1-1e8e-dc8f-fcc2" type="min"/>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="c943-c8fa-5c25-a055" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="a698-d8c0-1b07-f54d" name="Shepherd of Idiotic Destruction" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
+                  <characteristics>
+                    <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">If this general is part of your army and on the battlefield at the start of your hero phase, roll a dice.  On a 4+, you receive 1 extra command point.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
         <entryLink id="a834-f6ac-66d4-43e7" name="Destruction Command Traits" hidden="false" collective="false" import="true" targetId="1319-8f5e-1ff1-08c9" type="selectionEntryGroup">
@@ -7804,14 +7809,14 @@ At the end of each of your turns, you can pick 1 friendly SQUIG HERD, SQUIG HOPP
             </modifier>
           </modifiers>
         </entryLink>
-        <entryLink id="92e7-cec4-5313-b83e" name="General - Spiderfang " hidden="false" collective="false" import="true" targetId="5598-b0b7-b976-5d72" type="selectionEntry">
+        <entryLink id="92e7-cec4-5313-b83e" name="General - Spiderfang Webspinner" hidden="false" collective="false" import="true" targetId="5598-b0b7-b976-5d72" type="selectionEntry">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditionGroups>
                 <conditionGroup type="or">
                   <conditions>
                     <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f8e3-641a-7a46-2f84" type="equalTo"/>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0039-839c-c04f-5451" type="notInstanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8cec-0027-cf89-9ab2" type="notInstanceOf"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -7895,6 +7900,20 @@ At the end of each of your turns, you can pick 1 friendly SQUIG HERD, SQUIG HOPP
                     <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f8e3-641a-7a46-2f84" type="equalTo"/>
                     <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="be2b-5e91-b381-5671" type="notInstanceOf"/>
                     <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b98e-fa5a-4d20-1b47" type="instanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </entryLink>
+        <entryLink id="5762-982a-8b9d-c233" name="General - Spiderfang Scuttleboss" hidden="false" collective="false" import="true" targetId="de64-d6d7-9205-8d55" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f8e3-641a-7a46-2f84" type="equalTo"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2967-dd61-dd15-d0ad" type="notInstanceOf"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
