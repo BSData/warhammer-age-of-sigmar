@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="0339-0157-6910-d29c" name="Chaos Data" revision="68" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="66" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="0339-0157-6910-d29c" name="Chaos Data" revision="69" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="67" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="c9b2-1fe6-pubN65537" name="Battletome: Beasts of Chaos"/>
     <publication id="c9b2-1fe6-pubN83353" name="1"/>
@@ -230,6 +230,8 @@
     <categoryEntry id="bbc8-3154-75f0-f8e2" name="UNDIVIDED" hidden="false"/>
     <categoryEntry id="635b-b8a4-d5ce-1a2d" name="BLOODBOUND" hidden="false"/>
     <categoryEntry id="2890-73a3-1898-f20a" name="Wrath of the Everchosen" hidden="false"/>
+    <categoryEntry id="5242-c640-1b5a-74d4" name="BEASTS OF NURGLE" hidden="false"/>
+    <categoryEntry id="16a2-be4e-d7a3-2fdc" name="Broken Realms" hidden="false"/>
   </categoryEntries>
   <sharedSelectionEntries>
     <selectionEntry id="1982-d915-63a1-b8fb" name="1. Arch-Slaughterer" hidden="false" collective="false" import="true" type="upgrade">
@@ -3459,12 +3461,23 @@ In addition, before you allocate a wound or mortal wound to BE&apos;LAKOR, pick 
         <profile id="5ba0-e2d9-9f98-f380" name="Beasts of Nurgle" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
           <characteristics>
             <characteristic name="Move" typeId="8655-6213-2824-1752">5&quot;</characteristic>
-            <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">7</characteristic>
+            <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">8</characteristic>
             <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">10</characteristic>
             <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">5+</characteristic>
           </characteristics>
         </profile>
-        <profile id="98ba-fe21-a2a1-1088" name="Claws and Tentacles" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+        <profile id="98ba-fe21-a2a1-1088" name="Clawed Limbs and Fanged Maw" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+            <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
+            <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">4</characteristic>
+            <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
+            <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+            <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
+            <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">2</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="c83a-2452-32cb-c576" name="Tentacles and Slobbering Tongue" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
           <characteristics>
             <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
             <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
@@ -3475,30 +3488,19 @@ In addition, before you allocate a wound or mortal wound to BE&apos;LAKOR, pick 
             <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
           </characteristics>
         </profile>
-        <profile id="c83a-2452-32cb-c576" name="Slobbering Tongue" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
-          <characteristics>
-            <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
-            <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">2&quot;</characteristic>
-            <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">1</characteristic>
-            <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
-            <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
-            <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
-            <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">D3</characteristic>
-          </characteristics>
-        </profile>
         <profile id="deed-2b72-7f03-55c7" name="Acidic Slime Trail" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Roll a dice for each enemy unit that is within 3&quot; of this unit immediately before this unit makes a retreat move. On a 4+ that enemy unit suffers D3 mortal wounds.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Before this unit makes a retreat move, roll a dice for each enemy unit within 3&quot; of this unit. On a 4+, that unit suffers D3 mortal wounds.</characteristic>
           </characteristics>
         </profile>
         <profile id="1717-1f72-8b95-2617" name="Attention Seekers" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This unit can charge in the same turn in which it ran or retreated.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This unit can run and/or retreat and still charge later in the same turn. In addition, when this unit retreats, it can pass across other models in the same manner as a model that can fly.</characteristic>
           </characteristics>
         </profile>
-        <profile id="9a14-8be4-2171-9ca2" name="Locus of Virulence" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+        <profile id="9a14-8be4-2171-9ca2" name="Pestilent Battering Ram" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Add 1 to the Damage characteristics of this unit’s weapons while it is within 7&quot; of a friendly NURGLE DAEMON HERO.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">After a model from this unit finishes a charge move, roll a dice for each enemy unit within 1&quot; of that model. On a 2+, that unit suffers D3 mortal wounds. If this unit has more than 1 model, roll to determine if mortal wounds are inflicted after each model finishes its charge move, but do not allocate the mortal wounds until all of the models in the unit have finished their charge moves.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -3510,6 +3512,7 @@ In addition, before you allocate a wound or mortal wound to BE&apos;LAKOR, pick 
         <categoryLink id="716e-3a99-6916-8835" name="New CategoryLink" hidden="false" targetId="1418-9a68-9f9e-e9a7" primary="false"/>
         <categoryLink id="a2eb-ddd5-cd61-cf0e" name="New CategoryLink" hidden="false" targetId="dd77-19a5-28eb-cbec" primary="false"/>
         <categoryLink id="180a-ab98-852e-7d08" name="New CategoryLink" hidden="false" targetId="065e-fda7-fd27-1f40" primary="true"/>
+        <categoryLink id="a6ed-1ec7-8a94-5585" name="BEASTS OF NURGLE" hidden="false" targetId="5242-c640-1b5a-74d4" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="149a-675e-01c2-82be" name="Beast of Nurgle" hidden="false" collective="false" import="true" type="model">
@@ -3518,7 +3521,7 @@ In addition, before you allocate a wound or mortal wound to BE&apos;LAKOR, pick 
             <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="bdec-ecd1-79ca-b244" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="70.0"/>
+            <cost name="pts" typeId="points" value="120.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -4967,10 +4970,26 @@ In addition, before you allocate a wound or mortal wound to BE&apos;LAKOR, pick 
             <characteristic name="Move" typeId="8655-6213-2824-1752">4&quot;</characteristic>
             <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">5</characteristic>
             <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">10</characteristic>
-            <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">4+</characteristic>
+            <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">5+</characteristic>
           </characteristics>
         </profile>
-        <profile id="2f6a-f698-45c7-463d" name="Marotter" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+        <profile id="8315-edab-fad6-68ba" name="Disease of Mirth" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Add 1 to the Bravery characteristic of friendly NURGLE DAEMON units while they are wholly within 14&quot; of any friendly SLOPPITY BILEPIPERS.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="2102-2b2d-a5d1-7de7" name="Jolly Gutpipes" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the start of the combat phase, you can say that this model will play a revolting tune. If you do so, pick 1 of the following tunes. The effect of that tune lasts until the end of that phase. A unit cannot benefit from a tune more than once per phase. If a unit is affected by 2 or more different tunes, noen of those tunes have an effect on that unit in that phase. 
+
+A Stabbing We Will Go!: Add 1 to the Attacks characteristic of melee weapons used by friendly NURGLE DAEMON units that are wholly within 14&quot; of any friendly SLOPPITY BILEPIPERS playing this tune. 
+
+Early One Evening My Pustule Was Seeping: If the unmodified hit roll for an attack made by a friendly NURGLE DAEMON unit wholly within 14&quot; of any friendly SLOPPITY BILEPIPERS playing this tune is 6, that attack inflicts 1 mortal wound on the target in addition to any normal damage. 
+
+My Love Is Like a Ripe, Ripe Fart: Enemy models within 3&quot; of a friendly NURGLE DAEMON unit that is wholly within 14&quot; of any friendly SLOPPITY BILEPIPERS playing this tune cannot finish pile in moves closer to a model from that unit than they were at the start of the move.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="303c-d85d-15af-0625" name="Marotter" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
           <characteristics>
             <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
             <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
@@ -4979,16 +4998,6 @@ In addition, before you allocate a wound or mortal wound to BE&apos;LAKOR, pick 
             <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
             <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
             <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">2</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="8315-edab-fad6-68ba" name="Disease of Mirth" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Add 1 to the Bravery characteristic of friendly NURGLE DAEMON units while they are within 7&quot; of any Sloppity Bilepipers. In addition, subtract 1 from the Bravery characteristics of enemy units while they are within 7&quot; of any Sloppity Bilepipers.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="2102-2b2d-a5d1-7de7" name="Jolly Gutpipes" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Re-roll failed charge rolls and hit rolls of 1 for friendly Nurglings and GREAT UNCLEAN ONE units while they are within 7&quot; of any Sloppity Bilepipers.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -5003,13 +5012,41 @@ In addition, before you allocate a wound or mortal wound to BE&apos;LAKOR, pick 
         <categoryLink id="41ea-25de-85b0-5e72" name="New CategoryLink" hidden="false" targetId="b7ab-d500-894f-ed85" primary="false"/>
         <categoryLink id="5a08-a20f-a5b0-fd60" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
       </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="6749-2170-66f5-d5de" name="General" hidden="true" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2912-c08a-e604-be52" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7b48-1ef1-6618-e4e4" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="738c-5eab-c1a2-d322" name="New CategoryLink" hidden="false" targetId="b745-17c4-8fbf-8b04" primary="false"/>
+          </categoryLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
       <entryLinks>
-        <entryLink id="d959-ee56-3623-dfdf" name="General" hidden="false" collective="false" import="true" targetId="a43e-ee01-c76d-d3a7" type="selectionEntry"/>
         <entryLink id="0478-63ec-f524-1ba4" name="Artefacts" hidden="false" collective="false" import="true" targetId="2318-18aa-14a5-446b" type="selectionEntryGroup"/>
         <entryLink id="12e0-1697-9735-c24a" name="Command Traits" hidden="false" collective="false" import="true" targetId="8858-313d-8d88-b325" type="selectionEntryGroup"/>
+        <entryLink id="ec23-8d95-fbb2-f3cc" name="General" hidden="false" collective="false" import="true" targetId="a43e-ee01-c76d-d3a7" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2912-c08a-e604-be52" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="90.0"/>
+        <cost name="pts" typeId="points" value="150.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="3af8-f299-d611-c091" name="Spoilpox Scrivener, Herald of Nurgle" publicationId="6894-a70d-pubN65537" page="89" hidden="false" collective="false" import="true" type="unit">
@@ -5019,7 +5056,7 @@ In addition, before you allocate a wound or mortal wound to BE&apos;LAKOR, pick 
             <characteristic name="Move" typeId="8655-6213-2824-1752">4&quot;</characteristic>
             <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">5</characteristic>
             <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">10</characteristic>
-            <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">4+</characteristic>
+            <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">5+</characteristic>
           </characteristics>
         </profile>
         <profile id="4e3f-199d-0291-0233" name="Disgusting Sneeze" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
@@ -5027,7 +5064,7 @@ In addition, before you allocate a wound or mortal wound to BE&apos;LAKOR, pick 
             <characteristic name="Type" typeId="655c-362e-a663-3e50">Missile</characteristic>
             <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">6&quot;</characteristic>
             <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">D6</characteristic>
-            <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+            <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">2+</characteristic>
             <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">4+</characteristic>
             <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
             <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
@@ -5039,14 +5076,20 @@ In addition, before you allocate a wound or mortal wound to BE&apos;LAKOR, pick 
             <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">2&quot;</characteristic>
             <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">2</characteristic>
             <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
-            <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">4+</characteristic>
+            <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
             <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
             <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">2</characteristic>
           </characteristics>
         </profile>
         <profile id="f877-162c-8638-c7ec" name="Keep Counting, I’m Watching You" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
           <characteristics>
-            <characteristic name="Battalion Ability Details" typeId="08e0-9ead-1dbe-c801">Re-roll dice rolls of 1 when making charge rolls for friendly Plaguebearers units while they are within 7&quot; of this model. In addition, re-roll hit rolls of 1 for friendly Plaguebearers units while they are within 7&quot; of this model.</characteristic>
+            <characteristic name="Battalion Ability Details" typeId="08e0-9ead-1dbe-c801">At the start of the combat phase, you can say that this model will call for 1 count. If you do so, pick 1 friendly PLAGUEBEARER unit wholly within 14&quot; of this model and pick 1 of the following counts for that unit to carry out. The effect of that count lasts until the end of that phase. A unti cannot carry out more than 1 count per phase.
+
+Tally of Blows: Add 1 to the Attacks characteristic of melee weapons used by a unit carrying out this count. 
+
+Studied Lacerations: Improve the Rend characteristic of melee weapons used by a unit carrying out this count by 1.\
+
+Recorded Stamina: Add 1 to save rolls for attacks that targeta a unit carrying out this count.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -5067,7 +5110,7 @@ In addition, before you allocate a wound or mortal wound to BE&apos;LAKOR, pick 
         <entryLink id="6b88-5ca1-96f2-b283" name="Artefacts" hidden="false" collective="false" import="true" targetId="2318-18aa-14a5-446b" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="90.0"/>
+        <cost name="pts" typeId="points" value="140.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="cb2e-40a0-e549-0c05" name="Daemon Plague Toads of Nurgle" page="4" hidden="false" collective="false" import="true" type="unit">
@@ -10163,6 +10206,85 @@ For example, if you rolled one 6 for a HERO, that HERO would suffer 1 x 1 = 1 mo
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="2c01-5c88-ed20-eac9" name="Battalion: Invidian Plaguehost" publicationId="c611-9443-93f3-10e5" page="95" hidden="false" collective="false" import="true" type="upgrade">
+      <profiles>
+        <profile id="cf3a-fba1-c1a9-4a42" name="Bulwark of Flesh" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
+          <characteristics>
+            <characteristic name="Battalion Ability Details" typeId="08e0-9ead-1dbe-c801">The first time a Plaguebearers unit from this battalion is destroye, a new Plaguebearers unit with 10 models is added to your army. Set up the unit wholly within your territory, wholly within 6&quot; of the edge of the battlefield, and more than 9&quot; from any enemy units.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="3910-f274-f629-d724" name="Rude Limericks" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
+          <characteristics>
+            <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">Add 1 to the Bravery characteristic of NURGLE DAEMON units from this battalion while they are wholly within 14&quot; of the SLOPPITY BILEPIPER from the same battalion (in addition to the modifier from the Disease of Mirth ability).</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="f2ee-9793-ab6b-071c" name="New CategoryLink" hidden="false" targetId="be17-6bbd-b857-3f43" primary="true"/>
+        <categoryLink id="7d65-2afe-d001-e17b" name="Broken Realms" hidden="false" targetId="16a2-be4e-d7a3-2fdc" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="8c29-34fe-8910-5573" name="Invidian Plaguehost" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0c2d-58a6-25d0-b3b1" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4138-d004-7adc-dfc1" type="min"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="120.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="2912-c08a-e604-be52" name="1 Sloppity Bilepiper (Gortle Pulpskull)" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0959-3673-2536-6ca4" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8ee2-87a3-24c2-3816" type="min"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="6467-fa24-a881-7e74" name="Sloppity Bilepiper, Herald of Nurgle" hidden="false" collective="false" import="true" targetId="5d72-3fee-87a4-716a" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="name" value="Gortle Pulpskull"/>
+              </modifiers>
+              <categoryLinks>
+                <categoryLink id="b392-0240-4317-0fe1" name="Leader" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="false"/>
+              </categoryLinks>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="65dd-fcf5-b61c-9cf7" name="1 Spoilpox Scrivener (Noddrack the Snitch)" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5774-b57d-7e3f-1942" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0350-0930-bfd4-862c" type="min"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="1f7e-316e-0ee2-0c86" name="Spoilpox Scrivener, Herald of Nurgle" hidden="false" collective="false" import="true" targetId="3af8-f299-d611-c091" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="name" value="Noddrack the Snitch"/>
+              </modifiers>
+              <categoryLinks>
+                <categoryLink id="b106-48ad-39da-8e1e" name="Other" hidden="false" targetId="065e-fda7-fd27-1f40" primary="false"/>
+              </categoryLinks>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="fac1-83b1-a40b-4c71" name="2 units of Plaguebearers" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5f68-e332-34d1-f8e7" type="max"/>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8ffa-3a81-06a0-8586" type="min"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="c252-c5ff-f5c8-9550" name="Plaguebearers" hidden="false" collective="false" import="true" targetId="1e14-a40c-8467-4b61" type="selectionEntry">
+              <categoryLinks>
+                <categoryLink id="ea51-fdd5-d63e-29cd" name="Other" hidden="false" targetId="065e-fda7-fd27-1f40" primary="false"/>
+              </categoryLinks>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="e7ff-4d02-bb3b-4151" name="Blood Blessings of Khorne" hidden="false" collective="false" import="true">
@@ -10548,6 +10670,7 @@ For example, if you rolled one 6 for a HERO, that HERO would suffer 1 x 1 = 1 mo
         <entryLink id="46ad-c07e-e908-5b10" name="Wrath of the Everchosen Command Traits" hidden="false" collective="false" import="true" targetId="79dc-a292-43f4-d01f" type="selectionEntryGroup"/>
         <entryLink id="c3b5-cea2-175b-ba60" name="Legion of Chaos Ascendant Command Traits" hidden="false" collective="false" import="true" targetId="50f2-6ad6-d3be-d934" type="selectionEntryGroup"/>
         <entryLink id="44bf-7143-c139-0f46" name="Tzeentch Command Traits" hidden="false" collective="false" import="true" targetId="8681-139d-eaa3-804f" type="selectionEntryGroup"/>
+        <entryLink id="7a52-609f-a3bf-a4bf" name="Broken Realms Command Traits" hidden="false" collective="false" import="true" targetId="7009-82f1-8eba-a4af" type="selectionEntryGroup"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="2318-18aa-14a5-446b" name="Artefacts" hidden="false" collective="false" import="true">
@@ -16799,6 +16922,54 @@ Kneel: Subtract 1 from save rolls for attacks that target that unit until your n
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="7009-82f1-8eba-a4af" name="Broken Realms Command Traits" hidden="false" collective="false" import="true">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="16a2-be4e-d7a3-2fdc" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="283c-7640-776c-ecbf" type="max"/>
+      </constraints>
+      <selectionEntries>
+        <selectionEntry id="72aa-c3c0-915f-0c73" name="Rude Limerick" publicationId="c611-9443-93f3-10e5" page="95" hidden="true" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="6749-2170-66f5-d5de" type="atLeast"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2912-c08a-e604-be52" type="instanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" field="2d74-61b8-00b4-46b7" value="1.0">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2912-c08a-e604-be52" type="instanceOf"/>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="6749-2170-66f5-d5de" type="atLeast"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2d74-61b8-00b4-46b7" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="7649-0ea2-a362-7b20" name="Rude Limericks" page="" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
+              <characteristics>
+                <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">Add 1 to the Bravery characteristic of NURGLE DAEMON units from this battalion while they are wholly within 14&quot; of the SLOPPITY BILEPIPER from the same battalion (in addition to the modifier from the Disease of Mirth ability).</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <sharedProfiles>
