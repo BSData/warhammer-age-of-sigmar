@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="b3c2-9aff-8664-1d07" name="Death - Ossiarch Bonereapers" revision="15" battleScribeVersion="2.03" authorName="TigerWraith" authorContact="TigerWraith#5618 on Discord" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="65" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="b3c2-9aff-8664-1d07" name="Death - Ossiarch Bonereapers" revision="16" battleScribeVersion="2.03" authorName="TigerWraith" authorContact="TigerWraith#5618 on Discord" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="68" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="cb62-7d89-9fa6-76ad" name="Battletome: Ossiarch Bonereapers"/>
   </publications>
@@ -340,6 +340,11 @@
     <entryLink id="ee93-df71-1f02-bdab" name="Battalion: Vokmortian&apos;s Retinue" hidden="false" collective="false" import="true" targetId="455d-2f9f-538f-46aa" type="selectionEntry">
       <categoryLinks>
         <categoryLink id="2053-141b-56c5-36fd" name="New CategoryLink" hidden="false" targetId="be17-6bbd-b857-3f43" primary="true"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="d622-3bf1-6862-1344" name="Battalion: Horrek&apos;s Dreadlance" hidden="false" collective="false" import="true" targetId="3f28-a2ed-3411-fcd3" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="4dd2-41ab-ce26-64b9" name="New CategoryLink" hidden="false" targetId="be17-6bbd-b857-3f43" primary="true"/>
       </categoryLinks>
     </entryLink>
   </entryLinks>
@@ -2939,6 +2944,67 @@ Precision Aspect: Improve the Rend and Damage characteristics of this unit’s m
       </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="points" value="100.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="3f28-a2ed-3411-fcd3" name="Battalion: Horrek&apos;s Dreadlance" hidden="false" collective="false" import="true" type="upgrade">
+      <profiles>
+        <profile id="48a1-9b63-446c-4c9d" name="Organisation" hidden="false" typeId="75e0-a332-e4f5-bf36" typeName="Battalion Organisation">
+          <characteristics>
+            <characteristic name="Required" typeId="eb5f-e9d2-e457-bff5">The Liege-Kavalos from this battalion is a unique named character.  All units from this battalion must have the STALLIARCH LORDS keyword.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="9ccf-80b6-a78c-66e7" name="Relentless Attackers" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
+          <characteristics>
+            <characteristic name="Battalion Ability Details" typeId="08e0-9ead-1dbe-c801">Each time you pick a unit from this battalion when you use the Rally Back command ability (see Battletome: Ossiarch Bonereapers), roll a dice.   On a 4+, you recieve 1 relentless discipline point.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="dda8-21cd-8c20-01c5" name="2 Kavalos Deathriders units" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5a2c-dc52-edd2-4eaf" type="min"/>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="18ca-eee9-3ee6-b071" type="max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="267d-2e2c-5b27-73ab" name="Kavalos Deathriders" hidden="false" collective="false" import="true" targetId="67a7-9ab1-b14d-4542" type="selectionEntry">
+              <categoryLinks>
+                <categoryLink id="a118-edaf-d137-bfca" name="Battleline" hidden="false" targetId="e9f2-765a-b7b8-ce8e" primary="false"/>
+              </categoryLinks>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="8bb9-8d2b-6c2d-0910" name="1. 1 Liege-Kavalos (Horrek Venzal)" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b89b-93f4-f98e-3508" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="37dd-b0e8-68fc-8265" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="9d3c-063e-25e0-650a" name="Twisted Challenge" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
+              <characteristics>
+                <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">A STALLIARCH LORDS general must have this command trait instead of one listed on page 74.
+
+At the start of the combat phase, you can pick 1 enemy HERO within 3&quot; of this general. Until the end of that phase, add 1 to hit rolls for attacks made by this general that target that enemy HERO, but subtract 1 from hit rolls for attacks made by this general that target any other unit.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="04de-37f5-b2e9-85d7" name="Nadir-bound Mount" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
+              <characteristics>
+                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">The first STALLIARCH LORDS LIEGE to receive an artefact of power must be given a Nadir-bound Mount.
+
+You can roll D3 additional dice when this LIEGE uses their Unstoppable Charge ability.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <entryLinks>
+            <entryLink id="66b8-bf1e-7aa7-9a9f" name="Liege-Kavalos" hidden="false" collective="false" import="true" targetId="23d1-96dc-7497-7497" type="selectionEntry">
+              <categoryLinks>
+                <categoryLink id="b76c-1575-41de-d98c" name="Leader" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="false"/>
+              </categoryLinks>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="points" value="120.0"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>
