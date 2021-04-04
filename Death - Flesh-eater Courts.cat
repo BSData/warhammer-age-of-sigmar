@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="6d29-cde4-372b-08d3" name="Death - Flesh-eater Courts" revision="35" battleScribeVersion="2.03" authorName="https://discord.gg/4MSsD7" authorContact="" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="66" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="6d29-cde4-372b-08d3" name="Death - Flesh-eater Courts" revision="36" battleScribeVersion="2.03" authorName="https://discord.gg/4MSsD7" authorContact="" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="68" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="6d29-cde4-pubN65537" name="Battletome: Flesh-eater Courts 2019"/>
     <publication id="6d29-cde4-pubN65555" name="Battletome: Flesh-eater Courts"/>
@@ -536,6 +536,22 @@
       </categoryLinks>
     </entryLink>
     <entryLink id="1ccf-b025-1656-1ef0" name="Big Drogg Fort-Kicka - Gatebreaker Mercenary" hidden="false" collective="false" import="true" targetId="8c3b-e825-efb0-25bd" type="selectionEntry"/>
+    <entryLink id="5fe6-4159-cf72-1dfc" name="Battalion: Mortevell&apos;s Helcourt" hidden="false" collective="false" import="true" targetId="3baa-9a5c-36cc-1369" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="78f3-8a59-699a-61e8" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="7259-fae0-101d-1494" name="New CategoryLink" hidden="false" targetId="be17-6bbd-b857-3f43" primary="true"/>
+      </categoryLinks>
+    </entryLink>
   </entryLinks>
   <rules>
     <rule id="1b49-484e-bc30-aa58" name="Muster Abilities" publicationId="6d29-cde4-pubN65555" page="75" hidden="false">
@@ -3701,6 +3717,146 @@
       </selectionEntries>
       <costs>
         <cost name="pts" typeId="points" value="120.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="3baa-9a5c-36cc-1369" name="Battalion: Mortevell&apos;s Helcourt" hidden="false" collective="false" import="true" type="upgrade">
+      <profiles>
+        <profile id="7235-1e23-71c7-c644" name="Organisation" hidden="false" typeId="823d-e366-580b-9b07" typeName="Battalion Organization">
+          <characteristics>
+            <characteristic name="Required" typeId="bc6e-e731-eed7-c384">The Abhorrant Archregent from this battalion is a unique named character.  All units from this battalion must have the HOLLOWMOURNE keyword.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="e62e-e9a0-cc11-8270" name="Religious Fervour" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
+          <characteristics>
+            <characteristic name="Battalion Ability Details" typeId="08e0-9ead-1dbe-c801">Do not take battleshock tests for units from this battalion that are wholly within 12&quot; of the ABHORRANT ARCHREGENT from the same battalion.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="9b1b-ba1d-547a-a4fb" name="1. 1 Abhorrant Archregent" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="020c-a819-ff94-11fe" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="763b-096a-59ff-c957" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="43bb-3b40-893d-32a3" name="The Bright Emporer" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
+              <characteristics>
+                <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">Once per battle, this general can use the Ravenous Crusaders command ability (see Battletome: Flesh-eater Courts) without a command point being spent.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <entryLinks>
+            <entryLink id="af78-ba23-73d8-274e" name="Abhorrant Archregent" hidden="false" collective="false" import="true" targetId="e7cb-d62d-6411-53fd" type="selectionEntry">
+              <categoryLinks>
+                <categoryLink id="0b85-1639-fd06-176a" name="Leader" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="false"/>
+              </categoryLinks>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="7639-4299-c24b-3bdb" name="2. 1 Crypt Horrors unit" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="746b-a179-6044-a838" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b4b1-9151-8e6d-daf3" type="max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="9fed-add0-bb50-db9f" name="Crypt Horrors" hidden="false" collective="false" import="true" targetId="69e7-2a2c-7334-f453" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="705f-02ae-f4f5-987a" type="equalTo"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="78f3-8a59-699a-61e8" type="notInstanceOf"/>
+                          </conditions>
+                        </conditionGroup>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f8a6-24be-1ca5-8242" type="equalTo"/>
+                            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c6db-68c4-dfd6-58c0" type="equalTo"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <categoryLinks>
+                <categoryLink id="29ca-a61f-e369-e430" name="New CategoryLink" hidden="false" targetId="065e-fda7-fd27-1f40" primary="false"/>
+              </categoryLinks>
+            </entryLink>
+            <entryLink id="0ee4-ecd6-b317-ab38" name="Crypt Horrors" hidden="false" collective="false" import="true" targetId="69e7-2a2c-7334-f453" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="705f-02ae-f4f5-987a" type="equalTo"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f8a6-24be-1ca5-8242" type="equalTo"/>
+                            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c6db-68c4-dfd6-58c0" type="equalTo"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <categoryLinks>
+                <categoryLink id="34f7-6790-b192-f863" name="New CategoryLink" hidden="false" targetId="e9f2-765a-b7b8-ce8e" primary="false"/>
+              </categoryLinks>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="ef3c-0ce9-6886-e200" name="3. 1 Crypt Ghouls unit" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e73f-8ce8-f9bf-f01d" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4269-1d98-0b50-4737" type="max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="a651-66d7-1579-4e9d" name="Crypt Ghouls" hidden="false" collective="false" import="true" targetId="631c-0dae-5912-196d" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="78f3-8a59-699a-61e8" type="instanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <categoryLinks>
+                <categoryLink id="9620-54d9-822d-7f00" name="New CategoryLink" hidden="false" targetId="e9f2-765a-b7b8-ce8e" primary="false"/>
+              </categoryLinks>
+            </entryLink>
+            <entryLink id="69ff-8b51-6ee6-f142" name="Crypt Ghouls" hidden="false" collective="false" import="true" targetId="631c-0dae-5912-196d" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="78f3-8a59-699a-61e8" type="notInstanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <categoryLinks>
+                <categoryLink id="baf9-fb43-5ca5-45ba" name="Other" hidden="false" targetId="065e-fda7-fd27-1f40" primary="false"/>
+              </categoryLinks>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="points" value="100.0"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>
