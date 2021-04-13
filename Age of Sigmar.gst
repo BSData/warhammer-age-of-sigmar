@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="68" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="69" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <publications>
     <publication id="e51d-b1a3-pubEC" name="The General&apos;s Handbook"/>
     <publication id="e51d-b1a3-pubEQ" name="Core Rules"/>
@@ -11,6 +11,7 @@
     <publication id="e51d-b1a3-pubEHOGM" name="Malign Sorcery"/>
     <publication id="1b21-9526-2c4d-4176" name="Broken Realms: Morathi"/>
     <publication id="c611-9443-93f3-10e5" name="Broken Realms: Teclis"/>
+    <publication id="ff85-f62a-3b88-2684" name="Cursed City Warscrolls"/>
   </publications>
   <costTypes>
     <costType id="points" name="pts" defaultCostLimit="0.0" hidden="false"/>
