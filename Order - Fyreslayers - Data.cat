@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="81cf-7df5-86e6-b78f" name="Order - Fyreslayers - Data" revision="48" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="65" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="81cf-7df5-86e6-b78f" name="Order - Fyreslayers - Data" revision="49" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="70" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="e67a-06d2-pubN65537" name="Order Battletome: Fyreslayers"/>
     <publication id="e67a-06d2-pubN69594" name="Battletome: Fyreslayers Errata, July 2018"/>
@@ -1855,12 +1855,14 @@
         </profile>
         <profile id="75e3-6f44-05db-acd1" name="Runic Power" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Add 1 to the Damage characteristic of this model’s melee weapons if it has 1 wound allocated to it. Add 2 to the Damage characteristic of this model’s melee weapons instead if it has 2 or more wounds allocated to it. </characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Add 1 to the Damage characteristic of this model’s melee weapons if it has 1 wound allocated to it. Add 2 to the Damage characteristic of this model’s melee weapons instead if it has 2 or more wounds allocated to it or when it fights when it is slain (see Oathbound).</characteristic>
           </characteristics>
         </profile>
         <profile id="52a1-3267-e9f7-24a7" name="Oathbound" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the start of the first battle round, pick 1 enemy unit that this model has sworn to destroy. At the end of the combat phase, if this model is within 3&quot; of that unit, this model can make a pile-in move and then attack with all the melee weapons it is armed with.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the start of the first battle round, pick 1 enemyunit for this model to swear to destroy. At the end of the combat phase, if this model is within 3&quot; of that unit and has fought no more than once in that phase, this model can fight but can only target that unit. 
+
+In addition, in the combat phase, if this model is slain while it is within 3&quot; of the unit it has sworn to destroy and has fought no more than once in that phase, this model can fight before it is removed from play.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1907,7 +1909,7 @@
                 <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
                 <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">3</characteristic>
                 <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
-                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">4+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
                 <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
                 <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
               </characteristics>
@@ -1923,7 +1925,7 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3e21-47eb-f300-1a4e" type="min"/>
           </constraints>
           <infoLinks>
-            <infoLink id="cf92-67dd-4bc1-6c60" name="Fyresteel Throwing Axe (Hero)" hidden="false" targetId="cc01-4fcb-b49f-d334" type="profile"/>
+            <infoLink id="bcac-bad4-f20a-9d8a" name="Fyresteel Throwing Axe (Improved)" hidden="false" targetId="ed9d-d267-5b0a-b619" type="profile"/>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
@@ -1934,7 +1936,7 @@
         <entryLink id="c175-155f-14a4-94bd" name="Artefacts" hidden="false" collective="false" import="true" targetId="75d8-d2b2-772b-e9f0" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="100.0"/>
+        <cost name="pts" typeId="points" value="90.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="0520-eb44-5bea-94d3" name="Grimwrath Berzerker" hidden="false" collective="false" import="true" type="unit">
@@ -1947,19 +1949,32 @@
             <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">4&quot;</characteristic>
           </characteristics>
         </profile>
-        <profile id="d0ea-82fb-9ec0-d3fc" name="Unstoppable Berzerker" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Roll a dice each time you allocate a wound or mortal wound to this model. Add 1 to the roll if there are any enemy units within 3&quot; of this model. On a 6+ that wound or mortal wound is negated.</characteristic>
-          </characteristics>
-        </profile>
         <profile id="3dc7-6170-1dbd-7dff" name="Dead, But Not Defeated" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If this model is slain, before it is removed from play, it can make a pile-in move and then attack with all of the melee weapons it is armed with.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If this model is slain in the combat phase and has fought no more than once in that phase, it can fight before it is removed from play.</characteristic>
           </characteristics>
         </profile>
         <profile id="6704-b7e8-162a-78e7" name="Battle Fury" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the end of the combat phase, if this model is within 3&quot; of an enemy unit, roll a dice. On a 2+ make a pile in move with this model, and then attack with all the melee weapons this model is armed with.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the end of the combat phase, if this model is within 3&quot; of an enemy unit and has fought no more than once in that phase, roll a dice. On a 2+, this model can fight.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="7507-f753-9323-2989" name="Grimwrath Oath" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the start of the first battle round, you can pick 1 of the following oaths for this model to swear. The rule for that oath applies until the end of the battle. If your army includes more than 1 model with this ability, you cannot pick the same oath more than once.
+
+‘I will cut down the priests of Grimnir’s enemies!’: Add 1 to hit and wound rolls for attacks made by this model and add 1 to the damage inflicted by those attacks if the target is a PRIEST that does not have the FYRESLAYERS keyword.
+
+&apos;I will guard them with my life!’: When you pick this oath, pick 1 friendly FYRESLAYERS HERO other than this model that does not have the MAGMADROTH keyword. If that HERO is within 3&quot; of this model and not within 3&quot; of a friendly AURIC HEARTHGUARD unit, roll a dice before you allocate that wound or mortal wound to that HERO. On a 2+, that wound or mortal wound is allocated to this model instead. In addition, add 1 to hit rolls for attacks made by this model while it is within 3&quot; of that HERO.
+
+&apos;I will let nothing stand in my way!’: This model can run and still charge in the same turn. In addition, you can re-roll run and charge rolls for this model.
+
+‘I will prove Grimnir’s might to our allies!’: Add 1 to hit and wound rolls for attacks made by this model while this model is within 12&quot; of a friendly allied unit (including this model if this model is itself taken as an allied unit).
+
+‘I will not be stopped!’: Roll a dice each time you allocate a wound or mortal wound to this model. Add 1 to the roll if there are any enemy units within 3&quot; of this model. On a 6+, that wound or mortal wound is negated.
+
+‘I will strike hard and true in Grimnir’s name!’: If the unmodified hit roll for an attack made by this model is 6, that attack inflicts 1 mortal wound on the target in addition to any normal damage.
+</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -2000,7 +2015,7 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7581-eb83-bca9-7621" type="min"/>
           </constraints>
           <infoLinks>
-            <infoLink id="3355-4ccd-b70d-8181" name="Fyresteel Throwing Axe (Hero)" hidden="false" targetId="cc01-4fcb-b49f-d334" type="profile"/>
+            <infoLink id="f9bf-e54c-d5e4-3696" name="Fyresteel Throwing Axe (Improved)" hidden="false" targetId="ed9d-d267-5b0a-b619" type="profile"/>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
@@ -2011,7 +2026,7 @@
         <entryLink id="f6bb-29b7-fa36-e483" name="Artefacts" hidden="false" collective="false" import="true" targetId="75d8-d2b2-772b-e9f0" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="100.0"/>
+        <cost name="pts" typeId="points" value="110.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="3973-d948-c464-bddc" name="Hearthguard Berzerkers" hidden="false" collective="false" import="true" type="unit">
@@ -3124,6 +3139,9 @@
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
@@ -4293,6 +4311,17 @@
     <profile id="8f44-b010-1b84-4b6d" name="Bladed Slingshields" page="" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
       <characteristics>
         <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">After a unit armed with Bladed Slingshields makes a charge move, pick 1 enemy unit and roll a dice for each model from the charging unit within 8&quot; of that enemy unit. For each 6, the enemy unit suffers 1 mortal wound. In addition, add 1 to save rolls for attacks made with melee weapons that target a unit armed with Bladed Slingshields if the target unit did not make a charge move in the same turn.</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="ed9d-d267-5b0a-b619" name="Fyresteel Throwing Axe (Improved)" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Type" typeId="655c-362e-a663-3e50">Missile</characteristic>
+        <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">8&quot;</characteristic>
+        <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">1</characteristic>
+        <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
+        <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">4+</characteristic>
+        <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
+        <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
