@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="82b4-f6e1-3e37-5ea1" name="Order - Stormcast Eternals - Data" revision="71" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="70" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="82b4-f6e1-3e37-5ea1" name="Order - Stormcast Eternals - Data" revision="72" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="70" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="ed04-877b-pubN65537" name="Order Battletome: Stormcast Eternals (2nd Edition)"/>
     <publication id="ed04-877b-pubN71576" name="Battletome: Stormcast Eternals (2nd Edition)"/>
@@ -3520,9 +3520,14 @@
                   </conditions>
                 </modifier>
                 <modifier type="set" field="8899-af8a-382d-6c9d" value="1.0">
-                  <conditions>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c1ef-6f34-aa74-ce5b" type="instanceOf"/>
-                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c1ef-6f34-aa74-ce5b" type="instanceOf"/>
+                        <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b745-17c4-8fbf-8b04" type="greaterThan"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
                 </modifier>
               </modifiers>
               <constraints>
