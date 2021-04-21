@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="0339-0157-6910-d29c" name="Chaos Data" revision="70" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="68" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="0339-0157-6910-d29c" name="Chaos Data" revision="71" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="71" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="c9b2-1fe6-pubN65537" name="Battletome: Beasts of Chaos"/>
     <publication id="c9b2-1fe6-pubN83353" name="1"/>
@@ -165,6 +165,13 @@
         <characteristicType id="ef46-addc-e89a-6c90" name="Noxious Bile"/>
         <characteristicType id="f774-d87b-5e3e-e8e7" name="Plague Flail"/>
         <characteristicType id="626c-1aec-b08d-54a6" name="Massive Bilesword"/>
+      </characteristicTypes>
+    </profileType>
+    <profileType id="f00f-f36b-507f-b55a" name="Be&apos;lakor Wounds">
+      <characteristicTypes>
+        <characteristicType id="1d1a-cae2-e634-081e" name="Move"/>
+        <characteristicType id="c685-8fe9-517b-c229" name="Blade of Shadows"/>
+        <characteristicType id="2be2-b64e-601e-b29b" name="Spearing Tail"/>
       </characteristicTypes>
     </profileType>
   </profileTypes>
@@ -1573,65 +1580,42 @@ In addition, if the unmodified casting roll for a spell attempted by the caster 
         <cost name="pts" typeId="points" value="40.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="a620-1f6e-e451-6d30" name="Allegiance: Legion of Chaos Ascendant" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="a620-1f6e-e451-6d30" name="Allegiance: Legion of the First Prince" publicationId="9ba2-cdb6-f9ce-98d0" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="94d3-7110-de2b-0110" type="max"/>
+      </constraints>
       <profiles>
-        <profile id="f611-ccf8-0c24-c5f7" name="Infernal Realmwalkers" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
+        <profile id="0414-5b23-947a-0ecf" name="First-Damned Prince" publicationId="9ba2-cdb6-f9ce-98d0" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
           <characteristics>
-            <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">You can roll a dice for each time you allocate a wound or mortal wound to a friendly CHAOS ASCENDANT DAEMON unit. On a 6+, that wound or mortal wound is negated.</characteristic>
+            <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">You can re-roll hit rolls for attacks made by BE&apos;LAKOR while he is within 18&quot; of at least 1 friendly unit from each of the following warscrolls: Bloodletters, Horrors of Tzeentch, Plaguebearers, Daemonettes.
+
+In addition, before you allocate a wound or mortal wound to BE&apos;LAKOR, pick 1 friendly unit within 9&quot; of him from one of the following warscrolls and roll a dice: Bloodletters, Horrors of Tzeentch, Plaguebearers, Daemonettes. On a 4+, that wound or mortal wound is allocated to that unit instead. </characteristic>
           </characteristics>
         </profile>
-        <profile id="7bf4-5d7c-ce0b-5745" name="Unyielding Legions" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
+        <profile id="4257-259c-12af-d241" name="Infernal Realmwalkers" publicationId="9ba2-cdb6-f9ce-98d0" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
           <characteristics>
-            <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">At the end of the movement phase, you can pick 1 friendly CHAOS ASCENDANT DAEMON HERO that is on the battlefield and roll 3D6. On a 10+, you can summon 1 of the following units to the battlefield and add it to your army. The unit that you can summon is determined by the HERO&apos;s keyword as shown:
+            <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">You can roll a dice each time you allocate a wound or mortal wound to a friendly LEGION OF THE FIRST PRINCE unit. On a 6+, that wound or mortal wound is negated.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="281c-05c1-853a-4dde" name="The Cursed Skies" publicationId="9ba2-cdb6-f9ce-98d0" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
+          <characteristics>
+            <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">At the end of the battleshock phase, if BE&apos;LAKOR is your general and on the battlefield, roll a dice for each friendly unit on the battlefield from the following warscrolls: Bloodletters, Horrors of Tzeentch, Plaguebearers, Daemonettes. On a 3+, you can return D3 slain models to that unit, but if it is a HORROR unit, you can only return 1 model to that unit.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="e00a-b759-88eb-36e8" name="Unyielding Legions" publicationId="9ba2-cdb6-f9ce-98d0" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
+          <characteristics>
+            <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">At the end of your movement phase, you can pick 1 friendly LEGION OF THE FIRST PRINCE HERO that is on the battlefield and roll 3D6. On a 10+, you can summon 1 of the following units to the battlefield and add it to your army. The unit that you can summon is determined by the HERO&apos;s keyword as shown: 
 
-KHORNE HERO: 10 Bloodletters
-NURGLE HERO: 10 Plaguebearers
-SLAANESH HERO: 10 Daemonettes
-TZEENTCH HERO: 5 Horrors of Tzeentch. 
+KHORNE: 10 Bloodletters
+TZEENTCH: 5 Horrors of Tzeentch
+NURGLE: 10 Plaguebearers
+SLAANESH: 10 Daemonettes
+BE&apos;LAKOR: Choose any 1o fo the above units or a unit of 6 Furies. 
 
-The summoned unit must be set up wholly within 12&quot; of that CHAOS ASCENDANT DAEMON HERO  and more than 9&quot; from any enemy units. 
-
-If the unmodified roll included any doubles, that CHAOS ASCENDANT DAEMON HERO suffers 1 mortal wound. If the unmodified roll was a triple, that CHAOS ASCENDANT DAEMON HERO suffers D3 mortal wounds instead.</characteristic>
+The summoned unit must be set up wholly within 12&quot; of the HEORO  you picked and more than 9&quot; away from any enemy units. If the unmodified roll included a double, that HERO suffers 1 mortal wound. If the unmodified roll was a triple, that HERO suffers D3 mortal wounds instead.</characteristic>
           </characteristics>
         </profile>
       </profiles>
-      <categoryLinks>
-        <categoryLink id="df1c-2604-8c5b-8f0d" name="Wrath of the Everchosen" hidden="false" targetId="2890-73a3-1898-f20a" primary="false"/>
-      </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="e9cb-949c-f336-5d4c" name="Subfaction" hidden="false" collective="false" import="true">
-          <selectionEntries>
-            <selectionEntry id="05f1-2e32-3985-14da" name="Legion of the First Prince" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="be29-08d1-7bff-9605" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="37b1-a990-09b8-59ee" name="First-Damned Prince" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
-                  <characteristics>
-                    <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">You can re-roll hit and wound rolls for attacks made by BE&apos;LAKOR while he is within 8&quot; of at least 1 of each of the following friendly LEGION OF THE FIRST PRINCE units: BLOODLETTERS, PLAGUEBEARERS, DAEMONETTES, and HORRORS OF TZEENTCH.
-
-In addition, before you allocate a wound or mortal wound to BE&apos;LAKOR, pick 1 friendly LEGION OF THE FIRST PRINCE BLOODLETTERS, PLAGUEBEARERS, DAEMONETTES, or HORRORS OF TZEENTCH unit within 8&quot; of him an droll a dice. On a 4+, that wound or mortal wound is allocated to that unit instead.</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="be87-b8f5-68dd-7dd6" name="The Shadow Legion" hidden="false" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
-                  <characteristics>
-                    <characteristic name="Command Ability Details" typeId="1b71-4c83-4e8c-093f">You can use this command ability once per turn at the end of the battleshock phase if BE&apos;LAKOR is your general and on the battlefield. If you do so, roll a dice for each friendly LEGION OF THE FIRST PRINCE BLOODLETTERS, PLAGUEBEARERS, DAEMONETTES, or HORRORS OF TZEENTCH unit on the battlefield. On a 3+, you can return D3 slain models to that unit. </characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="be56-0e4e-2016-06f2" name="The Master&apos;s Command" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
-                  <characteristics>
-                    <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
-                    <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">Pick 1 friendly LEGION OF THE FIRST PRINCE BLOODLETTERS, PLAGUEBEARERS, DAEMONETTES, or HORRORS OF TZEENTCH unit wholly within 12&quot; of the caster and visible to them. Until the start of your next hero phase when a model from that unit is slain by a melee attack then can fight before removed from play.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="points" value="0.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
@@ -6434,9 +6418,13 @@ Set up the additional models one at a time within 1&quot; of the position that t
         <selectionEntry id="1000-3d44-5099-78b2" name="General" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="78f3-8a59-699a-61e8" type="instanceOf"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="78f3-8a59-699a-61e8" type="instanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
           <constraints>
@@ -6543,13 +6531,52 @@ Set up the additional models one at a time within 1&quot; of the position that t
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
+        <selectionEntry id="2496-536b-0c9b-b4ec" name="Tzeentch&apos;s Firestorm" hidden="true" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="07c8-18e8-2bc4-bc6e" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9122-55f5-5565-6113" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="4a51-4882-a6d3-edca" name="Tzeentch&apos;s Firestorm" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+              <characteristics>
+                <characteristic name="Casting Value" typeId="2508-b604-1258-a920">9</characteristic>
+                <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick 1 enemy unit within 18&quot; of the caster that is visible to them, and roll 9 dice. For each 6, that unit suffers D3 mortal wounds.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
       </selectionEntries>
       <entryLinks>
         <entryLink id="0ad1-0de8-0189-fddc" name="Arcane Bolt" hidden="false" collective="false" import="true" targetId="869c-168d-eba5-eacf" type="selectionEntry"/>
         <entryLink id="0b97-932d-bf2a-4974" name="Mystic Shield" hidden="false" collective="false" import="true" targetId="5fdd-6634-f9f8-068a" type="selectionEntry"/>
-        <entryLink id="ccd9-6a6f-9fe5-a6ab" name="Artefacts" hidden="false" collective="false" import="true" targetId="2318-18aa-14a5-446b" type="selectionEntryGroup"/>
+        <entryLink id="ccd9-6a6f-9fe5-a6ab" name="Artefacts" hidden="false" collective="false" import="true" targetId="2318-18aa-14a5-446b" type="selectionEntryGroup">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="07c8-18e8-2bc4-bc6e" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
         <entryLink id="952c-d7c6-3931-9612" name="Spell Lores" hidden="false" collective="false" import="true" targetId="a331-0f40-50c9-37e3" type="selectionEntryGroup"/>
-        <entryLink id="14fd-ecdd-d400-e415" name="Command Traits" hidden="false" collective="false" import="true" targetId="8858-313d-8d88-b325" type="selectionEntryGroup"/>
+        <entryLink id="14fd-ecdd-d400-e415" name="Command Traits" hidden="false" collective="false" import="true" targetId="8858-313d-8d88-b325" type="selectionEntryGroup">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="07c8-18e8-2bc4-bc6e" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="140.0"/>
@@ -9309,98 +9336,6 @@ In addition, this model can attempt to dispel 1 endless spell at the start of yo
         <cost name="pts" typeId="points" value="250.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="87a1-5392-edb1-4080" name="Be&apos;lakor" hidden="false" collective="false" import="true" type="unit">
-      <constraints>
-        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5cf6-0f74-e67e-9d98" type="max"/>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bb34-cb34-1b63-a26a" type="max"/>
-      </constraints>
-      <profiles>
-        <profile id="5084-bc73-a6bc-69c1" name="Be&apos;lakor" hidden="false" typeId="f55d-ee3a-1597-110f" typeName="Magic">
-          <characteristics>
-            <characteristic name="Cast/Unbind" typeId="8294-f605-2c0f-8f92">2</characteristic>
-            <characteristic name="Spells Known" typeId="dc9c-47d3-6931-859c">Arcane Bolt, Mystic Shield, Enfeeble Foe</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="0855-5d90-257c-fede" name="Blade of Shadows" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
-          <characteristics>
-            <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
-            <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
-            <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">6</characteristic>
-            <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
-            <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
-            <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
-            <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">2</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="1367-3865-1564-ed31" name="Shadow Form" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Ignore modifiers (positive or negative) when making save rolls for attacks that target this model.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="7bfc-a568-58e1-5e43" name="The Dark Master" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">After set-up is complete but before the first battle round begins, secretly pick 1 enemy unit on the battlefield. Once per battle, at the start of the enemy hero phase, you can reveal which unit you picked.
-
-Until your next hero phase, your opponent must roll a dice each time that unit attempts to cast a spell, move, charge or attack with any weapons it is armed with. On a 1-4, that unit cannot do so. On a 5+, that unit can do so as normal.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="17bc-d13d-e812-6632" name="Lord of Torment" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If an enemy unit fails a battleshock test while it is within 10&quot; of this model, you can heal up to D3 wounds allocated to this model.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="8d5f-2ce9-5adb-7c09" name="Enfeeble Foe" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
-          <characteristics>
-            <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
-            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick 1 enemy unit within 18&quot; of the caster and visible to them. Subtract 1 from wound rolls for attacks made with melee weapons by that unit until your next hero phase.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="5cb1-9a88-f91e-7670" name="Be&apos;lakor" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
-          <characteristics>
-            <characteristic name="Move" typeId="8655-6213-2824-1752">12&quot;</characteristic>
-            <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">8</characteristic>
-            <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">10</characteristic>
-            <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">4+</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="516d-93e7-fd9b-f55d" name="Aura of Chaos Undivided" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="812a-a8b3-7158-4adb" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Do not take battleshock tests for friendly SLAVES TO DARKNESS UNDIVIDED units wholly within 12&quot; of this model. In addition, if this model is a general, roll a dice each time you allocate a wound or mortal wound to a friendly SLAVES TO DARKNESS UNDIVIDED unit wholly within 12&quot; of this model. On a 6, that wound or mortal wound is negated.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <infoLinks>
-        <infoLink id="6ac9-c825-d580-ded6" name="Fly" hidden="false" targetId="8e0c-cbe4-27be-8a30" type="profile"/>
-      </infoLinks>
-      <categoryLinks>
-        <categoryLink id="bddf-f603-f1b9-e9b4" name="New CategoryLink" hidden="false" targetId="7cdd-80ea-cbeb-8e16" primary="false"/>
-        <categoryLink id="8334-fbf1-ea9c-c9f7" name="New CategoryLink" hidden="false" targetId="1418-9a68-9f9e-e9a7" primary="false"/>
-        <categoryLink id="911b-83fd-6317-9474" name="New CategoryLink" hidden="false" targetId="4e0e-664d-51ea-0929" primary="false"/>
-        <categoryLink id="8fbf-673e-2e8b-43bc" name="New CategoryLink" hidden="false" targetId="4f53-8230-2f02-9639" primary="false"/>
-        <categoryLink id="990e-8e5e-f4e3-7991" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
-        <categoryLink id="fb8f-da4a-61e1-b40b" name="DAEMON PRINCE" hidden="false" targetId="84ea-2e37-06de-d81e" primary="false"/>
-        <categoryLink id="4ecd-d584-fcd5-efcb" name="SLAVES TO DARKNESS" hidden="false" targetId="4ba7-618a-4e30-2e0c" primary="false"/>
-        <categoryLink id="1069-1907-8d4d-2466" name="UNDIVIDED" hidden="false" targetId="bbc8-3154-75f0-f8e2" primary="false"/>
-      </categoryLinks>
-      <entryLinks>
-        <entryLink id="f1d5-ef50-80fb-a20a" name="General" hidden="false" collective="false" import="true" targetId="a43e-ee01-c76d-d3a7" type="selectionEntry">
-          <categoryLinks>
-            <categoryLink id="d063-d590-cf6c-3408" name="Unique General" hidden="false" targetId="fe3f-d230-7e2c-fba2" primary="false"/>
-          </categoryLinks>
-        </entryLink>
-        <entryLink id="6f72-ea0d-e493-4b95" name="Spell Lores" hidden="false" collective="false" import="true" targetId="a331-0f40-50c9-37e3" type="selectionEntryGroup"/>
-      </entryLinks>
-      <costs>
-        <cost name="pts" typeId="points" value="240.0"/>
-      </costs>
-    </selectionEntry>
     <selectionEntry id="8320-a16d-0fc0-16ec" name="Slaves to Darkness Daemon Prince" hidden="false" collective="false" import="true" type="unit">
       <profiles>
         <profile id="e8ca-6cd9-1645-cd29" name="Daemon Prince" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
@@ -10245,12 +10180,12 @@ For example, if you rolled one 6 for a HERO, that HERO would suffer 1 x 1 = 1 mo
     </selectionEntry>
     <selectionEntry id="2c01-5c88-ed20-eac9" name="Battalion: Invidian Plaguehost" publicationId="c611-9443-93f3-10e5" page="95" hidden="false" collective="false" import="true" type="upgrade">
       <profiles>
-        <profile id="cf3a-fba1-c1a9-4a42" name="Bulwark of Flesh" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
+        <profile id="cf3a-fba1-c1a9-4a42" name="Bulwark of Flesh" publicationId="c611-9443-93f3-10e5" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
           <characteristics>
-            <characteristic name="Battalion Ability Details" typeId="08e0-9ead-1dbe-c801">The first time a Plaguebearers unit from this battalion is destroye, a new Plaguebearers unit with 10 models is added to your army. Set up the unit wholly within your territory, wholly within 6&quot; of the edge of the battlefield, and more than 9&quot; from any enemy units.</characteristic>
+            <characteristic name="Battalion Ability Details" typeId="08e0-9ead-1dbe-c801">The first time a Plaguebearers unit from this battalion is destroyed, a new Plaguebearers unit with 10 models is added to your army. Set up the unit wholly within your territory, wholly within 6&quot; of the edge of the battlefield, and more than 9&quot; from any enemy units.</characteristic>
           </characteristics>
         </profile>
-        <profile id="3910-f274-f629-d724" name="Rude Limericks" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
+        <profile id="3910-f274-f629-d724" name="Rude Limericks" publicationId="c611-9443-93f3-10e5" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
           <characteristics>
             <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">Add 1 to the Bravery characteristic of NURGLE DAEMON units from this battalion while they are wholly within 14&quot; of the SLOPPITY BILEPIPER from the same battalion (in addition to the modifier from the Disease of Mirth ability).</characteristic>
           </characteristics>
@@ -10313,6 +10248,282 @@ For example, if you rolled one 6 for a HERO, that HERO would suffer 1 x 1 = 1 mo
             <entryLink id="c252-c5ff-f5c8-9550" name="Plaguebearers" hidden="false" collective="false" import="true" targetId="1e14-a40c-8467-4b61" type="selectionEntry">
               <categoryLinks>
                 <categoryLink id="ea51-fdd5-d63e-29cd" name="Other" hidden="false" targetId="065e-fda7-fd27-1f40" primary="false"/>
+              </categoryLinks>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="87a1-5392-edb1-4080" name="Be&apos;lakor" publicationId="9ba2-cdb6-f9ce-98d0" hidden="false" collective="false" import="true" type="unit">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9292-8aaf-aa0e-0d95" type="max"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="aac0-2e6b-2d6c-ae2b" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="e735-68f8-079a-21e3" name="Be&apos;lakor" hidden="false" typeId="f55d-ee3a-1597-110f" typeName="Magic">
+          <characteristics>
+            <characteristic name="Cast/Unbind" typeId="8294-f605-2c0f-8f92">2</characteristic>
+            <characteristic name="Spells Known" typeId="dc9c-47d3-6931-859c">Arcane Bolt, Mystic Shield, Enfeeble Foe</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="c664-82a7-3af8-bb6a" name="Blade of Shadows" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+            <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">2&quot;</characteristic>
+            <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">*</characteristic>
+            <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+            <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+            <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-2</characteristic>
+            <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">2</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="b217-71e6-f774-c11c" name="Shadow Form" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Ignore modifiers (positive or negative) when making save rolls for attacks that target this model.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="8df9-358f-e1d0-761a" name="The Dark Master" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Once per battle, at the start of the enemy hero phase, you can pick 1 enemy unit on the battlefield. Until your next hero phase, at the start of each phase (including the phase in which the unit was picked), you can roll a dice for that unit. On a 3+, that unit cannot move, shoot, fight, use command abilities, chant prayers, attempt to cast spells, attempt to dispel endless spells or attempt to unbind spells in that phase.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="f9c4-60a8-4e05-ba40" name="Lord of Torment" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If an enemy unit fails a battleshock test while it is within 12&quot; of this model, you can heal up to D3 wounds allocated to this model.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="cbb5-3d54-172c-fd2e" name="Enfeeble Foe" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+          <characteristics>
+            <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
+            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick 1 enemy unit within 18&quot; of the caster and visible to them. Subtract 1 from wound rolls for attacks made with melee weapons by that unit until your next hero phase.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="5f86-5b1c-b8f0-b4fb" name="Be&apos;lakor" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
+          <characteristics>
+            <characteristic name="Move" typeId="8655-6213-2824-1752">*&quot;</characteristic>
+            <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">14</characteristic>
+            <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">10</characteristic>
+            <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">4+</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="75e6-6823-53a3-e576" name="Aura of Chaos Undivided" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="812a-a8b3-7158-4adb" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Do not take battleshock tests for friendly SLAVES TO DARKNESS UNDIVIDED units wholly within 12&quot; of this model. In addition, if this model is a general, roll a dice each time you allocate a wound or mortal wound to a friendly SLAVES TO DARKNESS UNDIVIDED unit wholly within 12&quot; of this model. On a 6, that wound or mortal wound is negated.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="48c1-38a7-af93-76b8" name="Fly" hidden="false" targetId="8e0c-cbe4-27be-8a30" type="profile"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="adc6-ab2a-e40c-a1fd" name="New CategoryLink" hidden="false" targetId="7cdd-80ea-cbeb-8e16" primary="false"/>
+        <categoryLink id="2aa3-2d92-5ccd-eff8" name="New CategoryLink" hidden="false" targetId="1418-9a68-9f9e-e9a7" primary="false"/>
+        <categoryLink id="89cc-7f35-dc30-8cfb" name="New CategoryLink" hidden="false" targetId="4e0e-664d-51ea-0929" primary="false"/>
+        <categoryLink id="1b97-90e7-32a4-d2ec" name="New CategoryLink" hidden="false" targetId="4f53-8230-2f02-9639" primary="false"/>
+        <categoryLink id="71f7-356c-8402-2809" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
+        <categoryLink id="25f4-85eb-8abc-d994" name="DAEMON PRINCE" hidden="false" targetId="84ea-2e37-06de-d81e" primary="false"/>
+        <categoryLink id="70bd-3607-ae6c-a364" name="SLAVES TO DARKNESS" hidden="false" targetId="4ba7-618a-4e30-2e0c" primary="false"/>
+        <categoryLink id="f7cb-8da4-70a2-aed1" name="UNDIVIDED" hidden="false" targetId="bbc8-3154-75f0-f8e2" primary="false"/>
+        <categoryLink id="1a45-a387-fe8b-c3b9" name="MONSTER" hidden="false" targetId="1959-9f6a-3056-913a" primary="false"/>
+        <categoryLink id="ef1b-db79-cd1d-41aa" name="Behemoth" hidden="false" targetId="fa0c-9044-2568-fa02" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="bf9c-c9f6-86e9-1d5c" name="Blade of Shadows" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="73e2-681b-7577-a329" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="026e-67c8-0975-5452" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="5823-3831-3673-f33a" name="Blade of Shadows" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">2&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">*</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-2</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">2</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="1901-7b6c-8688-b6ca" name="Fell Claw" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a625-904e-1245-6b13" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2a9d-4779-4b37-d687" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="ba8e-e935-6353-9eeb" name="Fell Claw" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">1</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">2</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="936c-ce21-c3a0-44b3" name="Spearing Tail" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="086e-07c0-775d-c6f4" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a7f7-a70d-3435-c676" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="3dd7-015f-6705-8945" name="Spearing Tail" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">3&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">1</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">2+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">*</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-3</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">2</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="d725-46ac-74aa-a29d" name="Wound Track" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2f58-e28b-e235-a20b" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8f7d-82bf-ed73-8221" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="4813-7590-0078-678a" name="00-03" hidden="false" typeId="f00f-f36b-507f-b55a" typeName="Be&apos;lakor Wounds">
+              <characteristics>
+                <characteristic name="Move" typeId="1d1a-cae2-e634-081e">14&quot;</characteristic>
+                <characteristic name="Blade of Shadows" typeId="c685-8fe9-517b-c229">8</characteristic>
+                <characteristic name="Spearing Tail" typeId="2be2-b64e-601e-b29b">1+</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="7081-0f35-7733-fea4" name="04-06" hidden="false" typeId="f00f-f36b-507f-b55a" typeName="Be&apos;lakor Wounds">
+              <characteristics>
+                <characteristic name="Move" typeId="1d1a-cae2-e634-081e">12&quot;</characteristic>
+                <characteristic name="Blade of Shadows" typeId="c685-8fe9-517b-c229">7</characteristic>
+                <characteristic name="Spearing Tail" typeId="2be2-b64e-601e-b29b">2+</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="649d-4b65-26af-9c9c" name="07-08" hidden="false" typeId="f00f-f36b-507f-b55a" typeName="Be&apos;lakor Wounds">
+              <characteristics>
+                <characteristic name="Move" typeId="1d1a-cae2-e634-081e">10&quot;</characteristic>
+                <characteristic name="Blade of Shadows" typeId="c685-8fe9-517b-c229">6</characteristic>
+                <characteristic name="Spearing Tail" typeId="2be2-b64e-601e-b29b">3+</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="bd77-4593-a185-8356" name="09-10" hidden="false" typeId="f00f-f36b-507f-b55a" typeName="Be&apos;lakor Wounds">
+              <characteristics>
+                <characteristic name="Move" typeId="1d1a-cae2-e634-081e">8&quot;</characteristic>
+                <characteristic name="Blade of Shadows" typeId="c685-8fe9-517b-c229">5</characteristic>
+                <characteristic name="Spearing Tail" typeId="2be2-b64e-601e-b29b">4+</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="eedb-f370-1dc3-e1ad" name="11+" hidden="false" typeId="f00f-f36b-507f-b55a" typeName="Be&apos;lakor Wounds">
+              <characteristics>
+                <characteristic name="Move" typeId="1d1a-cae2-e634-081e">6&quot;</characteristic>
+                <characteristic name="Blade of Shadows" typeId="c685-8fe9-517b-c229">4</characteristic>
+                <characteristic name="Spearing Tail" typeId="2be2-b64e-601e-b29b">5+</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <entryLinks>
+        <entryLink id="baf2-c879-54e3-95b6" name="General" hidden="false" collective="false" import="true" targetId="a43e-ee01-c76d-d3a7" type="selectionEntry">
+          <categoryLinks>
+            <categoryLink id="c98f-425e-882d-596e" name="Unique General" hidden="false" targetId="fe3f-d230-7e2c-fba2" primary="false"/>
+          </categoryLinks>
+        </entryLink>
+        <entryLink id="9ce4-7c14-b9c7-f535" name="Spell Lores" hidden="false" collective="false" import="true" targetId="a331-0f40-50c9-37e3" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="380.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="d832-129f-f529-c32a" name="Battalion: Atra&apos;zan&apos;s Blazing Cavalcade" publicationId="9ba2-cdb6-f9ce-98d0" page="" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4f59-c00f-5ede-3bc8" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <profiles>
+        <profile id="46f0-212d-6961-a144" name="Gleeful Immolation" publicationId="9ba2-cdb6-f9ce-98d0" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
+          <characteristics>
+            <characteristic name="Battalion Ability Details" typeId="08e0-9ead-1dbe-c801">Add 1 to the Attacks characteristic of melee weapons used by units from this battalion that made a charge move in the same turn. If you intend to complete the Reckless Abandon agenda from Battletome: Disciples of Tzeentch, you cannot pick units from this battalion to complete that agenda.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="fb67-9e16-234e-c587" name="The Open Infernus" publicationId="9ba2-cdb6-f9ce-98d0" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
+          <characteristics>
+            <characteristic name="Battalion Ability Details" typeId="08e0-9ead-1dbe-c801">Atra&apos;zan the Immolator knows the Tzeentch&apos;s Firestorm spell from the Lore of Change in Battletome: Disciples of Tzeentch in addition to any other spells he knows, and you can add 2 to the casting roll when he attempts to cast that spell.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="361c-0902-b2f6-b5d1" name="New CategoryLink" hidden="false" targetId="be17-6bbd-b857-3f43" primary="true"/>
+        <categoryLink id="9dea-6f36-3115-1cc6" name="Broken Realms" hidden="false" targetId="16a2-be4e-d7a3-2fdc" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="c9b3-e190-c6c8-fd58" name="Atra&apos;zan&apos;s Blazing Cavalcade" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="42ee-7ec4-92cf-e60a" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d66b-f91f-0e96-963c" type="min"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="150.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="07c8-18e8-2bc4-bc6e" name="1 Fateskimmer on Burning Chariot (Atra&apos;zan the Immolator)" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f79c-f241-b3c8-c282" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c8b6-66da-fbce-c574" type="min"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="5618-dbe7-6356-6e85" name="Fateskimmer, Herald of Tzeentch on Burning Chariot" hidden="false" collective="false" import="true" targetId="23d2-8dc5-15ad-0d77" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="name" value="Atra&apos;zan the Immolator"/>
+              </modifiers>
+              <categoryLinks>
+                <categoryLink id="e604-82b1-d81e-152c" name="Leader" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="false"/>
+              </categoryLinks>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="068a-1978-69ed-5912" name="1-3 Horrors of Tzeentch units with a combined model count of no more than 30 models" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="39e8-01f2-e1d0-d2a1" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e4ef-0620-0522-f4fc" type="min"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="abe6-2a96-436a-3e67" name="Horrors of Tzeentch" hidden="false" collective="false" import="true" targetId="16fa-c9dc-0b3c-fc42" type="selectionEntry">
+              <categoryLinks>
+                <categoryLink id="32f1-b9b6-c0dd-29d0" name="Other" hidden="false" targetId="065e-fda7-fd27-1f40" primary="false"/>
               </categoryLinks>
             </entryLink>
           </entryLinks>
@@ -11160,7 +11371,6 @@ that phase. A unit cannot benefit from this command ability more than once per t
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="05f1-2e32-3985-14da" type="equalTo"/>
                 <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2890-73a3-1898-f20a" type="equalTo"/>
               </conditions>
             </conditionGroup>
@@ -11542,7 +11752,6 @@ that phase. A unit cannot benefit from this command ability more than once per t
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="05f1-2e32-3985-14da" type="equalTo"/>
                 <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2890-73a3-1898-f20a" type="equalTo"/>
               </conditions>
             </conditionGroup>
@@ -14217,7 +14426,7 @@ that phase. A unit cannot benefit from this command ability more than once per t
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntryGroup>
-    <selectionEntryGroup id="f390-6a2f-4dd3-a0b0" name="Legion of Chaos Ascendant Artefacts" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="f390-6a2f-4dd3-a0b0" name="Legion of the First Prince Artefacts" hidden="false" collective="false" import="true">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditions>
@@ -16447,7 +16656,7 @@ that phase. A unit cannot benefit from this command ability more than once per t
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntryGroup>
-    <selectionEntryGroup id="50f2-6ad6-d3be-d934" name="Legion of Chaos Ascendant Command Traits" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="50f2-6ad6-d3be-d934" name="Legion of the First Prince Command Traits" hidden="false" collective="false" import="true">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditions>
@@ -16456,7 +16665,7 @@ that phase. A unit cannot benefit from this command ability more than once per t
         </modifier>
       </modifiers>
       <selectionEntryGroups>
-        <selectionEntryGroup id="3989-bb3e-b80d-41e3" name="Scions of the Ruinous Powers" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="f30f-699e-58ff-c89e" name="Scions of the Ruinous Powers" hidden="false" collective="false" import="true">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditionGroups>
@@ -16470,14 +16679,14 @@ that phase. A unit cannot benefit from this command ability more than once per t
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="215e-28ab-455b-681e" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="155c-91a5-0326-aa59" type="max"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="8755-06d5-6dd3-a4bf" name="1. Primordial Commander" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="ad4c-cf3f-f669-144d" name="1. Primordial Commander" hidden="false" collective="false" import="true" type="upgrade">
               <profiles>
-                <profile id="0eed-3f60-bbfb-bdbe" name="Primordial Commander" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
+                <profile id="d122-7064-3d50-5669" name="Primordial Commander" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
                   <characteristics>
-                    <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">If you pick this general to summon a sect of daemons for the Unyielding Legions battle trait, add 1 to the roll. </characteristic>
+                    <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">If you pick this general to summon a unit using the Undying Legions battle trait, add 1 to the roll.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -16485,11 +16694,11 @@ that phase. A unit cannot benefit from this command ability more than once per t
                 <cost name="pts" typeId="points" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="cf77-1507-b449-9139" name="2. Ruinous Aura" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="79a5-4f6b-800d-bf1b" name="2. Ruinous Aura" hidden="false" collective="false" import="true" type="upgrade">
               <profiles>
-                <profile id="bec6-0453-d513-c190" name="Ruinous Aura" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
+                <profile id="062c-78c9-230d-0658" name="Ruinous Aura" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
                   <characteristics>
-                    <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">Add 1 to rolls for the Infernal Realmwalkers battle trait made for friendly CHAOS ASCENDANT DAEMON units wholly within 8&quot; of this general.</characteristic>
+                    <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">Add 1 to rolls for the Infernal Realmwalkers battle trait made for friendly LEGION OF THE FIRST PRINCE units wholly within 8&quot; of this general.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -16497,11 +16706,11 @@ that phase. A unit cannot benefit from this command ability more than once per t
                 <cost name="pts" typeId="points" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="56bb-2d67-6d15-a7e4" name="3. Infernal Charge" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="44e0-24c1-10e7-1126" name="3. Infernal Charge" hidden="false" collective="false" import="true" type="upgrade">
               <profiles>
-                <profile id="a965-8a0d-e55f-f00b" name="Infernal Charge" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
+                <profile id="c634-39cc-e40a-8b89" name="Infernal Charge" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
                   <characteristics>
-                    <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">You can re-roll charge rolls made for friendly CHAOS ASCENDANT DAEMON units wholly within 12&quot; of this general.</characteristic>
+                    <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">You can re-roll charge rolls made for friendly LEGION OF THE FIRST PRINCE units wholly within 12&quot; of this general.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -16513,7 +16722,7 @@ that phase. A unit cannot benefit from this command ability more than once per t
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntryGroup>
-    <selectionEntryGroup id="47e7-2e6f-009b-e33e" name="Legion of Chaos Ascendant Lores" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="47e7-2e6f-009b-e33e" name="Legion of the First Prince Lores" hidden="false" collective="false" import="true">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditions>
@@ -16538,38 +16747,12 @@ that phase. A unit cannot benefit from this command ability more than once per t
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="296d-ff89-b4ab-60bd" type="max"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="bf19-d62f-6a0e-a5fc" name="1. Bolt of Ruin" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="f2bf-9d8a-e0ea-2ad1" name="1. The Master&apos;s Command" hidden="false" collective="false" import="true" type="upgrade">
               <profiles>
-                <profile id="e5e0-5413-6825-591b" name="Bolt of Ruin" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+                <profile id="3a01-9f38-d41f-e2ac" name="The Master&apos;s Command" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
                   <characteristics>
                     <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
-                    <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick 1 enemy unit within 18&quot; of the caster that is visible to them and roll a dice. If the roll is lower than the number of models in that unit, that unit suffers D3 mortal wounds.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="points" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="2123-7663-19d9-85f8" name="2. Echo of Hatred" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="521e-9a3d-8afd-3bfa" name="Echo of Hatred" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
-                  <characteristics>
-                    <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
-                    <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">Pick 1 friendly CHAOS ASCENDANT DAEMON unit wholly within 12&quot; of the caster and visible to them. Until the end of the battle round, if a model from that unit is slain by an attack made with a melee weapon, that model can fight before it is removed from play. </characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="points" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="778f-7e4e-29c4-c670" name="3. Spirit Gouge" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="dd39-b8bf-ed57-854e" name="Spirit Gouge" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
-                  <characteristics>
-                    <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
-                    <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">Pick 1 enemy unit within 12&quot; of the caster and visible to them. If that unit has the DEATH keyword, you can re-roll hit and wound rolls for attacks made with melee weapons by friendly CHAOS ASCENDANT DAEMON units that target that unit until your next hero phase.</characteristic>
+                    <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">Pick 1 friendly LEGION OF THE FIRST PRINCE unit wholly within 12&quot; of the caster and visible to them. Until the end of the battle round, if a model from that unit is slain by an attack made with a melee weapon, that model can fight before it is removed from play.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
