@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="70" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="71" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <publications>
     <publication id="e51d-b1a3-pubEC" name="The General&apos;s Handbook"/>
     <publication id="e51d-b1a3-pubEQ" name="Core Rules"/>
@@ -784,6 +784,37 @@
         </modifier>
       </modifiers>
       <description>You can use this command ability after you make a charge roll for a friendly unit that is within 6&quot; of a friendly HERO, or 12&quot; of a friendly HERO that is a general. If you do so, re-roll the charge roll.</description>
+    </rule>
+    <rule id="7cec-f96f-69c7-ccd3" name="All-out Attack" hidden="false">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b745-17c4-8fbf-8b04" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <description>You can use this command ability at the start of the combat phase. If you do so, pick 1 friendly unit wholly within 12&quot; of a friendly HERO, or wholly within 18&quot; of a friendly HERO that is a general. You can re-roll hit rolls of 1 for attacks made by that unit until the end of that phase.</description>
+    </rule>
+    <rule id="7621-3d17-f407-25f6" name="All-out Defence" hidden="false">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b745-17c4-8fbf-8b04" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <description>You can use this command ability at the start of the combat phase. If you do so, pick 1 friendly unit that is wholly within 12&quot; of a friendly HERO, or wholly within 18&quot; of a friendly HERO that is a general. You can re-roll save rolls of 1 for attacks that target that unit until the end of that phase.
+</description>
+    </rule>
+    <rule id="9c56-8e19-2ac6-fb30" name="Volley Fire" hidden="false">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b745-17c4-8fbf-8b04" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <description>You can use this command ability at the start of your shooting phase. If you do so, pick 1 friendly unit that is wholly within 12&quot; of a friendly HERO, or wholly within 18&quot; of a friendly HERO that is a general. You can re-roll hit rolls of 1 for attacks made by that unit until the end of that phase.</description>
     </rule>
   </rules>
   <sharedSelectionEntries>
