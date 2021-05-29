@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="0339-0157-6910-d29c" name="Chaos Data" revision="71" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="71" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="0339-0157-6910-d29c" name="Chaos Data" revision="73" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="74" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="c9b2-1fe6-pubN65537" name="Battletome: Beasts of Chaos"/>
     <publication id="c9b2-1fe6-pubN83353" name="1"/>
@@ -7435,9 +7435,25 @@ Set up the additional models one at a time within 1&quot; of the position that t
       </selectionEntries>
       <entryLinks>
         <entryLink id="7d3f-d5c3-49e3-41e1" name="General" hidden="false" collective="false" import="true" targetId="a43e-ee01-c76d-d3a7" type="selectionEntry"/>
-        <entryLink id="4b49-1fa5-07c8-4b62" name="Command Traits" hidden="false" collective="false" import="true" targetId="8858-313d-8d88-b325" type="selectionEntryGroup"/>
+        <entryLink id="4b49-1fa5-07c8-4b62" name="Command Traits" hidden="false" collective="false" import="true" targetId="8858-313d-8d88-b325" type="selectionEntryGroup">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bcaf-a981-ed8c-daf8" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
         <entryLink id="44b7-bc66-b955-9eff" name="Spell Lores" hidden="false" collective="false" import="true" targetId="a331-0f40-50c9-37e3" type="selectionEntryGroup"/>
-        <entryLink id="cacc-eb86-f08e-f9ae" name="Artefacts" hidden="false" collective="false" import="true" targetId="2318-18aa-14a5-446b" type="selectionEntryGroup"/>
+        <entryLink id="cacc-eb86-f08e-f9ae" name="Artefacts" hidden="false" collective="false" import="true" targetId="2318-18aa-14a5-446b" type="selectionEntryGroup">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bcaf-a981-ed8c-daf8" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="210.0"/>
@@ -10531,6 +10547,272 @@ For example, if you rolled one 6 for a HERO, that HERO would suffer 1 x 1 = 1 mo
       </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="d612-7fa0-fc43-3391" name="Dexcessa , Talon of Slaanesh" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8e39-b708-e18a-5a2d" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="cca4-6cae-d179-3cde" name="Fleeting Dance of Death" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This model can run or retreat and still charge later in the same turn.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="9b5c-e057-2e16-4b46" name="Dexcessa " hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
+          <characteristics>
+            <characteristic name="Move" typeId="8655-6213-2824-1752">12&quot;</characteristic>
+            <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">10</characteristic>
+            <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">10</characteristic>
+            <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">4+</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="f448-7aa2-cd61-ab3a" name="Joyous Battle Fury" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">After this model has fought for the first time, at the start of each battle round, add 1 to the Attacks characteristics of this model&apos;s weapons for the rest of the battle. This effect is cumulative. </characteristic>
+          </characteristics>
+        </profile>
+        <profile id="b428-4cee-fb75-1bd3" name="Mesmerising Lepidoptera" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Subtract 1 from hit rolls for attacks that target this model.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="2e2f-6c3c-09b3-b733" name="Sceptre of Slaanesh" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Do not take battleshock tests for friendly SLAANESH DAEMON units wholly within 12&quot; of this model.
+
+In addition, once per turn, this model can issue a command to a friendly SLAANESH DAEMON unit without a command point being spent.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="c301-4766-3d1e-0639" name="Fly" hidden="false" targetId="8e0c-cbe4-27be-8a30" type="profile"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="9022-b5ae-1497-db4a" name="DAEMON" hidden="false" targetId="1418-9a68-9f9e-e9a7" primary="false"/>
+        <categoryLink id="5007-3e4b-347b-82ab" name="CHAOS" hidden="false" targetId="7cdd-80ea-cbeb-8e16" primary="false"/>
+        <categoryLink id="c3b4-f9d2-7ede-c17d" name="SLAANESH" hidden="false" targetId="3963-2e99-aa63-c65e" primary="false"/>
+        <categoryLink id="bd41-6269-2ea1-0832" name="HEDONITE" hidden="false" targetId="e0f7-4620-9328-d15a" primary="false"/>
+        <categoryLink id="7279-fc12-6df3-10b4" name="MONSTER" hidden="false" targetId="1959-9f6a-3056-913a" primary="false"/>
+        <categoryLink id="fac5-c9b7-fd37-310a" name="HERO" hidden="false" targetId="4e0e-664d-51ea-0929" primary="false"/>
+        <categoryLink id="1e97-e2af-847e-b030" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
+        <categoryLink id="7ce5-9529-5e3d-9482" name="Behemoth" hidden="false" targetId="fa0c-9044-2568-fa02" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="91ce-69b3-4888-77d3" name="Scourge of Slaanesh" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="95d5-0d21-daaf-801c" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d2b5-752f-6a3d-602f" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="9e43-598e-4b10-6e82" name="Scourge of Slaanesh" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">3&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">4</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">2+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">2</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="8327-179b-bdd1-1f2d" name="Impaling Talons" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fcb8-2050-a6e1-6268" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c2e2-2c56-9e0b-60ce" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="c324-48a1-81d7-54a9" name="Impaling Talons" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">2</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-2</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">2</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <entryLinks>
+        <entryLink id="1e45-aace-a013-95fc" name="General" hidden="false" collective="false" import="true" targetId="a43e-ee01-c76d-d3a7" type="selectionEntry"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="23d8-b4ea-ae9f-898e" name="Synessa, Voice of Slaanesh" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f063-cc42-5cc8-8c9c" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="3c06-a573-b067-3eb5" name="The Voice of Slaanesh" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If this model issues a command to 1 friendly unit, that friendly unit can be anywhere on the battlefield as long as it is visible to this model (the range of the command ability does not apply). If this model issues a command to more than 1 friendly unit, 1 of those friendly units can be anywhere on the battlefield as long as it is visible to this model (the range of the command ability still applies to the other units). 
+
+In addition, if this model successfully casts Whispers of Doubt (see right) or Pavane of Slaanesh (see Battletome: Hedonites of Slaanesh), the HERO affected by the spell can be anywhere on the battlefield as long as that HERO is visible to this model (the range of the spell does not apply).</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="1f44-11e5-5c42-8b26" name="Synessa" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
+          <characteristics>
+            <characteristic name="Move" typeId="8655-6213-2824-1752">12&quot;</characteristic>
+            <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">9</characteristic>
+            <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">10</characteristic>
+            <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">4+</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="e62e-ae8d-c7b5-3fff" name="Mesmerising Lepidoptera" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Subtract 1 from hit rolls for attacks that target this model.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="90f7-8de5-cedc-b9bc" name="Synessa" hidden="false" typeId="f55d-ee3a-1597-110f" typeName="Magic">
+          <characteristics>
+            <characteristic name="Cast/Unbind" typeId="8294-f605-2c0f-8f92">1/1</characteristic>
+            <characteristic name="Spells Known" typeId="dc9c-47d3-6931-859c">Arcane Bolt, Mystic Shield, Whispers of Doubt, all spells from Lore of Slaanesh, Forbidden Sorceries of Slaanesh, and Lore of Pain and Pleasure. </characteristic>
+          </characteristics>
+        </profile>
+        <profile id="f240-faf3-bb84-b628" name="Whispers of Doubt" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+          <characteristics>
+            <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
+            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick 1 enemy HERO within 3&quot; of the caster and visible to them, and roll 3D6. If the roll is equal to or greater than that HERO’s Bravery characteristic, add 1 to hit rolls for attacks that target that HERO until your next hero phase.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="e4a5-1dfc-4994-5740" name="Fly" hidden="false" targetId="8e0c-cbe4-27be-8a30" type="profile"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="b77d-04ec-1af9-502a" name="DAEMON" hidden="false" targetId="1418-9a68-9f9e-e9a7" primary="false"/>
+        <categoryLink id="afbd-3fcf-b608-72c1" name="CHAOS" hidden="false" targetId="7cdd-80ea-cbeb-8e16" primary="false"/>
+        <categoryLink id="9e34-f10e-4979-3abb" name="SLAANESH" hidden="false" targetId="3963-2e99-aa63-c65e" primary="false"/>
+        <categoryLink id="c02a-57a3-10ca-e12d" name="HEDONITE" hidden="false" targetId="e0f7-4620-9328-d15a" primary="false"/>
+        <categoryLink id="cecc-dccb-91b8-0acf" name="MONSTER" hidden="false" targetId="1959-9f6a-3056-913a" primary="false"/>
+        <categoryLink id="a448-c92f-6024-dabd" name="HERO" hidden="false" targetId="4e0e-664d-51ea-0929" primary="false"/>
+        <categoryLink id="4507-58e8-6c81-a099" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
+        <categoryLink id="aa0b-e6eb-bc3c-2023" name="Behemoth" hidden="false" targetId="fa0c-9044-2568-fa02" primary="false"/>
+        <categoryLink id="176a-75fa-ed03-0d1d" name="WIZARD" hidden="false" targetId="4f53-8230-2f02-9639" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="a0d8-9b12-a66b-e1ea" name="Staff of Slaanesh" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0804-9c34-2eba-3449" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2589-57f0-d66e-2227" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="87dc-3600-8462-0dda" name="Staff of Slaanesh" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Missile</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">18&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">1</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">See Below</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc"/>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707"/>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70"/>
+              </characteristics>
+            </profile>
+            <profile id="7c45-4211-855d-e56d" name="Staff of Slaanesh" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+              <characteristics>
+                <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Do not pick a target or use the attack sequence for an attack made with this model’s Staff of Slaanesh. Instead, pick 1 enemy unit within range of this model’s Staff of Slaanesh and visible to them. The opposing player must roll a dice for that unit.
+
+If the roll is less than that unit’s Save characteristic but not a 6, that unit suffers D6 mortal wounds. If the roll is equal to or greater than that unit’s Save characteristic but not a 6, that unit suffers D3 mortal wounds. On a 6, nothing happens.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="045f-a3ba-da8f-3a91" name="Impaling Talons" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="88da-52d0-e301-3d44" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="534d-8ba3-70ef-eda1" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="f548-72ca-75c3-1c41" name="Impaling Talons" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">2</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-2</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">2</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <entryLinks>
+        <entryLink id="7d42-6503-2ac5-e799" name="Spell Lores" hidden="false" collective="false" import="true" targetId="a331-0f40-50c9-37e3" type="selectionEntryGroup"/>
+        <entryLink id="9629-f73a-2f82-6453" name="General" hidden="false" collective="false" import="true" targetId="a43e-ee01-c76d-d3a7" type="selectionEntry"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="0f5b-8139-1084-45a5" name="Battalion: The Exquisite Pursuit" hidden="false" collective="false" import="true" type="upgrade">
+      <profiles>
+        <profile id="cd36-fbef-7e83-7f82" name="The Mirror of Twisted Truths" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
+          <characteristics>
+            <characteristic name="Battalion Ability Details" typeId="08e0-9ead-1dbe-c801">In your shooting phase, you can either pick 1 enemy unit that is within 3&quot; of Luxion and Vresca or pick 1 enemy unit that is within 12&quot; of the Luxion and Vresca and more than 3&quot; from any other units in  your army. Roll a dice for each model in that unit. If that unit has a Wounds characteristic of 1, for aeach 6, that unit suffers 1 mortal wound. If the unit has a Wounds characteristic of more than 1, for each 6, that unit suffers D3 mortal wounds.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="53cc-89a2-a02a-7320" name="New CategoryLink" hidden="false" targetId="be17-6bbd-b857-3f43" primary="true"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="bcaf-a981-ed8c-daf8" name="1 Contorted Epitome (Luxion and Vresca)" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2360-387a-f2ca-a600" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8653-d43a-8780-1988" type="max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="40d6-d1d1-2e4c-1828" name="The Contorted Epitome" hidden="false" collective="false" import="true" targetId="5d36-f3de-11c5-d9aa" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="name" value="Luxion and Vresca"/>
+              </modifiers>
+              <categoryLinks>
+                <categoryLink id="48f1-b94c-355b-f106" name="Leader" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="false"/>
+              </categoryLinks>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="b11b-baf0-cddc-1314" name="1 Fiends Unit" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2774-fc73-0fe5-11f7" type="min"/>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="43eb-8cd4-7e9b-d0ac" type="max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="b9d0-a83d-4bbe-fe86" name="Fiends" hidden="false" collective="false" import="true" targetId="c90b-f419-dd3d-ed81" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="d118-2380-35f9-a0a3" name="1 Seekers Unit" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9d0b-03d7-41a0-4a03" type="min"/>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="02b9-a475-c29a-31e1" type="max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="e66c-4bc3-b85a-389e" name="Seekers" hidden="false" collective="false" import="true" targetId="85d4-3780-74c0-74c8" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="points" value="120.0"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>
@@ -16283,12 +16565,17 @@ that phase. A unit cannot benefit from this command ability more than once per t
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntryGroup>
-    <selectionEntryGroup id="ab79-6137-894b-132e" name="Slaanesh Lores" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="ab79-6137-894b-132e" name="Slaanesh Lores" hidden="true" collective="false" import="true">
       <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d7d9-b723-6fdb-51cb" type="equalTo"/>
-          </conditions>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="23d8-b4ea-ae9f-898e" type="instanceOf"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d7d9-b723-6fdb-51cb" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <selectionEntryGroups>
@@ -16296,14 +16583,26 @@ that phase. A unit cannot benefit from this command ability more than once per t
           <modifiers>
             <modifier type="set" field="hidden" value="false">
               <conditionGroups>
-                <conditionGroup type="and">
+                <conditionGroup type="or">
                   <conditions>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1418-9a68-9f9e-e9a7" type="instanceOf"/>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3963-2e99-aa63-c65e" type="instanceOf"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d7d9-b723-6fdb-51cb" type="equalTo"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="23d8-b4ea-ae9f-898e" type="instanceOf"/>
                   </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1418-9a68-9f9e-e9a7" type="instanceOf"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3963-2e99-aa63-c65e" type="instanceOf"/>
+                        <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d7d9-b723-6fdb-51cb" type="equalTo"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
                 </conditionGroup>
               </conditionGroups>
+            </modifier>
+            <modifier type="set" field="c397-8282-4705-a71b" value="6.0">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="23d8-b4ea-ae9f-898e" type="instanceOf"/>
+              </conditions>
             </modifier>
           </modifiers>
           <constraints>
@@ -16311,6 +16610,9 @@ that phase. A unit cannot benefit from this command ability more than once per t
           </constraints>
           <selectionEntries>
             <selectionEntry id="a8c8-8d96-0480-edd8" name="6. Born of Damnation" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dcfe-95f1-b5eb-04a3" type="max"/>
+              </constraints>
               <profiles>
                 <profile id="980f-1055-31ff-3552" name="Born of Damnation" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
                   <characteristics>
@@ -16324,6 +16626,9 @@ that phase. A unit cannot benefit from this command ability more than once per t
               </costs>
             </selectionEntry>
             <selectionEntry id="bc2a-bbae-35de-4202" name="5. Phantasmagoria" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7ca9-2fe8-32c2-d1e3" type="max"/>
+              </constraints>
               <profiles>
                 <profile id="44ea-15ff-426e-d898" name="Phantasmagoria" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
                   <characteristics>
@@ -16337,6 +16642,9 @@ that phase. A unit cannot benefit from this command ability more than once per t
               </costs>
             </selectionEntry>
             <selectionEntry id="3d71-9f9b-6655-7e4a" name="4. Soulslice Shards" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="08cf-03a8-8752-bd81" type="max"/>
+              </constraints>
               <profiles>
                 <profile id="66ba-c3da-cc35-4bb8" name="Soulslice Shards" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
                   <characteristics>
@@ -16350,6 +16658,9 @@ that phase. A unit cannot benefit from this command ability more than once per t
               </costs>
             </selectionEntry>
             <selectionEntry id="41f1-386f-7bce-dc2b" name="3. Hysterical Frenzy" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="31ac-ce63-bc40-b30b" type="max"/>
+              </constraints>
               <profiles>
                 <profile id="0f2d-b149-ec8d-a7d0" name="Hysterical Frenzy" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
                   <characteristics>
@@ -16363,6 +16674,9 @@ that phase. A unit cannot benefit from this command ability more than once per t
               </costs>
             </selectionEntry>
             <selectionEntry id="b786-6fb4-7d01-41db" name="2. Pavane of Slaanesh" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3d2d-bd6c-09aa-a56d" type="max"/>
+              </constraints>
               <profiles>
                 <profile id="eaf3-6c5b-932e-39db" name="Pavane of Slaanesh" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
                   <characteristics>
@@ -16376,6 +16690,9 @@ that phase. A unit cannot benefit from this command ability more than once per t
               </costs>
             </selectionEntry>
             <selectionEntry id="c3a9-6d02-225a-1bda" name="1. Lash of Slaanesh" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="32b0-27cd-525f-2d8f" type="max"/>
+              </constraints>
               <profiles>
                 <profile id="ef7a-c4f6-6309-fbc9" name="Lash of Slaanesh" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
                   <characteristics>
@@ -16394,21 +16711,33 @@ that phase. A unit cannot benefit from this command ability more than once per t
           <modifiers>
             <modifier type="set" field="hidden" value="false">
               <conditionGroups>
-                <conditionGroup type="and">
+                <conditionGroup type="or">
                   <conditions>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a934-6d15-9932-b7ea" type="instanceOf"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d7d9-b723-6fdb-51cb" type="equalTo"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="23d8-b4ea-ae9f-898e" type="instanceOf"/>
                   </conditions>
                   <conditionGroups>
-                    <conditionGroup type="or">
+                    <conditionGroup type="and">
                       <conditions>
-                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4ba7-618a-4e30-2e0c" type="instanceOf"/>
-                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3963-2e99-aa63-c65e" type="instanceOf"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a934-6d15-9932-b7ea" type="instanceOf"/>
+                        <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d7d9-b723-6fdb-51cb" type="equalTo"/>
                       </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4ba7-618a-4e30-2e0c" type="instanceOf"/>
+                            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3963-2e99-aa63-c65e" type="instanceOf"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
                     </conditionGroup>
                   </conditionGroups>
                 </conditionGroup>
               </conditionGroups>
+            </modifier>
+            <modifier type="set" field="7c28-4dd5-5de3-c3a3" value="3.0">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="23d8-b4ea-ae9f-898e" type="instanceOf"/>
+              </conditions>
             </modifier>
           </modifiers>
           <constraints>
@@ -16416,6 +16745,9 @@ that phase. A unit cannot benefit from this command ability more than once per t
           </constraints>
           <selectionEntries>
             <selectionEntry id="b555-0baf-5800-130e" name="1. Battle Rapture" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5d6e-0cb0-bda7-ac6d" type="max"/>
+              </constraints>
               <profiles>
                 <profile id="d82d-e1ae-ad4a-4974" name="Battle Rapture" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
                   <characteristics>
@@ -16429,6 +16761,9 @@ that phase. A unit cannot benefit from this command ability more than once per t
               </costs>
             </selectionEntry>
             <selectionEntry id="f8a1-37e9-f226-da37" name="3. Dark Delusions" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1aa1-911b-e774-6b1c" type="max"/>
+              </constraints>
               <profiles>
                 <profile id="5aff-9749-e2c5-bb07" name="Dark Delusions" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
                   <characteristics>
@@ -16442,6 +16777,9 @@ that phase. A unit cannot benefit from this command ability more than once per t
               </costs>
             </selectionEntry>
             <selectionEntry id="a448-4aa4-1c1d-e043" name="2. Judgement of Excess" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7870-9f6b-0526-4065" type="max"/>
+              </constraints>
               <profiles>
                 <profile id="5b1a-736b-b834-b2b5" name="Judgement of Excess" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
                   <characteristics>
@@ -16460,14 +16798,26 @@ that phase. A unit cannot benefit from this command ability more than once per t
           <modifiers>
             <modifier type="set" field="hidden" value="false">
               <conditionGroups>
-                <conditionGroup type="and">
+                <conditionGroup type="or">
                   <conditions>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2ff5-b7a1-655a-1655" type="instanceOf"/>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3963-2e99-aa63-c65e" type="instanceOf"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d7d9-b723-6fdb-51cb" type="equalTo"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="23d8-b4ea-ae9f-898e" type="instanceOf"/>
                   </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2ff5-b7a1-655a-1655" type="instanceOf"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3963-2e99-aa63-c65e" type="instanceOf"/>
+                        <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d7d9-b723-6fdb-51cb" type="equalTo"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
                 </conditionGroup>
               </conditionGroups>
+            </modifier>
+            <modifier type="set" field="33b2-53d4-b0b5-0cc4" value="3.0">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="23d8-b4ea-ae9f-898e" type="instanceOf"/>
+              </conditions>
             </modifier>
           </modifiers>
           <constraints>
@@ -16475,6 +16825,9 @@ that phase. A unit cannot benefit from this command ability more than once per t
           </constraints>
           <selectionEntries>
             <selectionEntry id="f345-9f57-eefa-8d22" name="1. Paths of the Dark Prince" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fcf4-1de3-0bbf-3a59" type="max"/>
+              </constraints>
               <profiles>
                 <profile id="4f4a-02b6-f99a-4519" name="Paths of the Dark Prince" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
                   <characteristics>
@@ -16491,6 +16844,9 @@ that phase. A unit cannot benefit from this command ability more than once per t
               </costs>
             </selectionEntry>
             <selectionEntry id="8687-f87e-6ff0-4d10" name="2. Progeny of Damnation" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9eff-2bea-ab9a-3111" type="max"/>
+              </constraints>
               <profiles>
                 <profile id="2a7b-1e58-922d-bd47" name="Progeny of Damnation" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
                   <characteristics>
@@ -16504,6 +16860,9 @@ that phase. A unit cannot benefit from this command ability more than once per t
               </costs>
             </selectionEntry>
             <selectionEntry id="2dfe-60b2-db4b-3b9a" name="3. Slothful Stupor" page="" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dc58-a5b6-8020-4a0c" type="max"/>
+              </constraints>
               <profiles>
                 <profile id="af55-84ea-1060-892d" name="Slothful Stupor" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
                   <characteristics>
