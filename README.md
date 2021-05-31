@@ -1,18 +1,18 @@
-Warhammer Age of Sigmar 2018 Edition
+Warhammer Age of Sigmar v2.0 (2018 Edition)
 ============================
 
 [![GitHub release](https://img.shields.io/github/release/BSData/warhammer-age-of-sigmar.svg?style=flat-square)](https://github.com/BSData/warhammer-age-of-sigmar/releases/latest)
 ![Github commits (since latest release)](https://img.shields.io/github/commits-since/BSData/warhammer-age-of-sigmar/latest.svg?style=flat-square)
-[![AppVeyor master branch](https://img.shields.io/appveyor/ci/BSData/warhammer-age-of-sigmar/master.svg?style=flat-square)](https://ci.appveyor.com/project/BSData/warhammer-age-of-sigmar)
-[![Gitter](https://img.shields.io/gitter/room/BSData/warhammer-age-of-sigmar.svg?style=flat-square)](https://gitter.im/BSData/warhammer-age-of-sigmar)
+[![GitHub contributors](https://img.shields.io/github/contributors/BSData/warhammer-age-of-sigmar.svg?style=flat-square)](https://github.com/BSData/warhammer-age-of-sigmar/graphs/contributors)
+[![Chat on Discord](https://img.shields.io/discord/558412685981777922?style=popout-square)](https://www.bsdata.net/contact)
 
 ## Important ##
 [Important]: #important
 
 **The Battlescribe data editor can cause problems when merging updates. Because of this, and also to avoid duplicated effort where multiple people are working on the same files, please join us on Gitter before you commit changes to the files.**
 
-**UPDATE -July 16, 2018:**
-The Catalogs have been updated to support Matched Play points and FAQ's for the June 2018 AoS v2.0 release and the 2018 GHB. Core support for Endless Spells, Realms of Origin and Points Lists with no validation for battle-role or points have been added in the new **\***Pitched Battle***\** Profile
+**UPDATE AoS 2.0:**
+The Catalogs have been updated to support Matched Play points and FAQ's for AoS v2.0 release. Core support for Endless Spells, Realms of Origin and Points Lists with no validation for battle-role or points have been added in the new **\***Pitched Battle***\** Profile
 
 #### Contents ####
 [Contents]: #contents
@@ -49,9 +49,10 @@ The Catalogs have been updated to support Matched Play points and FAQ's for the 
 
 * __I'd just like to contact you.__
 
-  Then join us on the Warhammer Age of Sigmar Gitter!  
- [![Join the chat at Gitter](https://badges.gitter.im/BSData/warhammer-age-of-sigmar.svg)](https://gitter.im/BSData/warhammer-age-of-sigmar?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
- 
+  Then join us on Discord!
+
+  [![Chat on Discord](https://img.shields.io/discord/558412685981777922?style=popout-square)](https://www.bsdata.net/contact)
+
   _Otherwise, the easiest way is through issues mentioned above. We are a community and that's the only place we all have access to. We don't have any group e-mail. So if you want to stay anonymous, contact us by reporting bug on Appspot (point 1 above)._
 
 [Report it on Appspot]: http://battlescribedata.appspot.com/#/repo/warhammer-age-of-sigmar
