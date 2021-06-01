@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="1d4c-207e-6a42-ac7d" name="Order Data" revision="14" battleScribeVersion="2.03" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="74" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="1d4c-207e-6a42-ac7d" name="Order Data" revision="15" battleScribeVersion="2.03" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="74" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="4bb2-2339-a79f-51d7" name="Battletome: Cities of Sigmar "/>
     <publication id="6c99-1e0f-3bc1-11ae" name="Battletome: Stormcast Eternals (2nd Edition)"/>
@@ -392,6 +392,25 @@ You can choose 1 additional friendly ANVILGARD DRAGON, ANVILGARD KHARIBDYSS or A
               <costs>
                 <cost name="pts" typeId="points" value="0.0"/>
               </costs>
+            </selectionEntry>
+            <selectionEntry id="dfd3-c381-477e-5a4d" name="Excelsis" hidden="false" collective="false" import="true" type="upgrade">
+              <profiles>
+                <profile id="2906-f261-bd74-c3b4" name="The Coast of Tusks" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
+                  <characteristics>
+                    <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">An Excelsis army must be from Ghur.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="f72f-a796-8b69-d172" name="Gift of Prophecy" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
+                  <characteristics>
+                    <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">Once per phase, when you pick a friendly unit to shoot or fight, you can say that the attack has been prophecied.  If you do so, roll a dice.  On a 1, subtract 1 from hit rolls for attacks made by that unit in that phase.  On a 2-6, add 1 to hit rolls for attacks made by that unit in that phase.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="d678-f81c-46f2-1b59" name="Riposte" hidden="false" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
+                  <characteristics>
+                    <characteristic name="Command Ability Details" typeId="1b71-4c83-4e8c-093f">You can use this command ability at the start of the combat phase.  If you do so, pick 1 friendly EXCELSIS unit wholly within 12&quot; of a friendly EXCELSIS HERO.  If the unmodified save roll for an attack that targets that unit is that combat phase is 6, the attacking unit suffers 1 mortal wound after all of its attacks have been resolved.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -1894,6 +1913,47 @@ If the bearer has a Wounds characteristic of 7 or more, while they are in cover,
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
+        <selectionEntryGroup id="78ad-9b6f-eead-5a41" name="Secret Heirlooms" hidden="false" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="dfd3-c381-477e-5a4d" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="76b4-8b3f-919a-c481" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="3fc8-5082-a54c-ce69" name="1. Glimmering" hidden="false" collective="false" import="true" type="upgrade">
+              <profiles>
+                <profile id="d414-526a-7744-7417" name="Glimmering" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
+                  <characteristics>
+                    <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Once per battle, before you make a hit or wound roll for an attack made by the bearer, a save roll for an attack that targets the bearer, or a run or charge roll for the bearer, you can say that you will foretell the result of the roll.  If you do so, you must choose the result of the roll.  The result chosen for a D6 roll must be a whole number from 1 to 6, and the result chosen for a 2D6 roll must be a whole number from 2 to 12.  The result cannot be re-rolled, but any modifiers are applied to it as normal.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry id="ae03-7db8-ae96-b4a4" name="2. Rockjaws" hidden="false" collective="false" import="true" type="upgrade">
+              <profiles>
+                <profile id="5268-3220-e6d6-bdcf" name="Rockjaws" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
+                  <characteristics>
+                    <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">In your shoot phase, you can pick 1 enemy unit within 8&quot; of the bearer that is visible to them and roll a dice.  On a 3+, that unit suffers D3 mortal wounds.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry id="54e5-dbdb-c58f-b0a7" name="3. Gryph-feather Charm" hidden="false" collective="false" import="true" type="upgrade">
+              <profiles>
+                <profile id="5e36-f09a-c2fe-aba7" name="Gryph-feather Charm" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
+                  <characteristics>
+                    <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Subtract 1 from hit rolls for attacks that target the bearer.  In addition, add 1&quot; to the bearer&apos;s Move characteristic.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
         <entryLink id="bf74-042d-edfb-07a1" name="Artefacts of the Luminaries" hidden="false" collective="false" import="true" targetId="3062-9be9-0988-5866" type="selectionEntryGroup"/>
@@ -2428,6 +2488,47 @@ If the bearer has a Wounds characteristic of 7 or more, while they are in cover,
               <costs>
                 <cost name="pts" typeId="points" value="0.0"/>
               </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="3c89-5c7e-a378-014a" name="Masters of Intrigue" hidden="false" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="dfd3-c381-477e-5a4d" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="976d-e99e-c1d1-2603" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="9e1c-ce70-35cf-ede4" name="1. Cunning Foe" hidden="false" collective="false" import="true" type="upgrade">
+              <profiles>
+                <profile id="91c4-7cba-3080-e363" name="Cunning Foe" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
+                  <characteristics>
+                    <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">This general can retreat and still charge in the same turn.  If they do so, until the of the turn, add 1 to hit rolls for attacks made by this general and subtract 1 from hit rolls for attacks that target them.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry id="0456-7a7e-721f-fb66" name="2. In the Right Place" hidden="false" collective="false" import="true" type="upgrade">
+              <profiles>
+                <profile id="4990-ac40-152b-ec29" name="In the Right Place" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
+                  <characteristics>
+                    <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">At the start of the first battle round, you can pick D3 friendly units and set them up again.  Any restrictions in the set up instructions for the battleplan being used still apply.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry id="96a4-3212-0459-5a14" name="3. Darkest Secrets" hidden="false" collective="false" import="true" type="upgrade">
+              <profiles>
+                <profile id="8008-9f7a-17da-7b98" name="Darkest Secrets" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
+                  <characteristics>
+                    <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">At the start of the combat phase, you can pick 1 enemy HERO within 3&quot; of this general.  That HERO cannot use command abilities until the next combat phase (any already used still apply).</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -5436,6 +5537,50 @@ On a 6+ that wound or mortal wound is negated.</characteristic>
               <costs>
                 <cost name="pts" typeId="points" value="0.0"/>
               </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="1f7d-9dfd-36e3-955c" name="Lore of the Ghurish Heartlands" hidden="false" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="dfd3-c381-477e-5a4d" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1bb6-1372-dae7-5dfb" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="31e6-d836-5527-702e" name="1. The Amber Spear" hidden="false" collective="false" import="true" type="upgrade">
+              <profiles>
+                <profile id="9f42-831c-511a-ee55" name="The Amber Spear" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+                  <characteristics>
+                    <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
+                    <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick a point on the battlefield within 12&quot; of the caster that is visible to them and draw an imaginary straight line 1mm wide between that point and the closest point on the caster&apos;s base.  Each unit other than the caster that has any models passed across by this line suffers 1 mortal wound.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry id="8b51-2fe8-047f-db07" name="2. Flock of Doom" hidden="false" collective="false" import="true" type="upgrade">
+              <profiles>
+                <profile id="1664-fd74-c54b-a280" name="Flock of Doom" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+                  <characteristics>
+                    <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
+                    <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick 1 enemy unit within 18&quot; of the caster that is visible to them and roll 12 dice.  For each 6, the enemy unit suffers 1 mortal wound.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry id="deeb-95c3-cf53-0fc5" name="3. Cower" hidden="false" collective="false" import="true" type="upgrade">
+              <profiles>
+                <profile id="e4a4-5fe0-147f-c760" name="Cower" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+                  <characteristics>
+                    <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
+                    <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick 1 enemy MONSTER within 12&quot; of the caster that is visible to them and roll 2D6.  If the roll is higher than that MONSTER&apos;s Bravery characteristic, that MONSTER cannot make a charge move in your opponent&apos;s next turn.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
