@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="74" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="75" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <publications>
     <publication id="e51d-b1a3-pubEC" name="The General&apos;s Handbook"/>
     <publication id="e51d-b1a3-pubEQ" name="Core Rules"/>
@@ -241,6 +241,7 @@
     <categoryEntry id="c8b9-d6b2-34c8-79e5" name="VYRKOS DYNASTY" hidden="false"/>
     <categoryEntry id="0186-42c3-5ef0-d964" name="KASTELAI DYNASTY" hidden="false"/>
     <categoryEntry id="d8da-21d5-cdf8-709f" name="AVENGORII DYNASTY" hidden="false"/>
+    <categoryEntry id="1109-7ce6-b7a3-3a0c" name="Reinforced" hidden="false"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry id="36b7-ee1e-0855-f23f" name="**Pitched Battle**" hidden="false">
@@ -459,6 +460,28 @@
           </constraints>
         </categoryLink>
         <categoryLink id="9716-7416-c989-9575" name="Scenery" hidden="false" targetId="bc8a-9257-1601-6d62" primary="false"/>
+        <categoryLink id="442e-56f4-7889-b3cf" name="Reinforced" hidden="false" targetId="1109-7ce6-b7a3-3a0c" primary="false">
+          <modifiers>
+            <modifier type="set" field="7e0d-1a56-2ffd-ee5b" value="2.0">
+              <conditions>
+                <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fd9f-428a-177d-c765" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="7e0d-1a56-2ffd-ee5b" value="4.0">
+              <conditions>
+                <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6330-7561-7a32-0851" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="7e0d-1a56-2ffd-ee5b" value="5.0">
+              <conditions>
+                <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1e63-0b49-ac04-321f" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="roster" value="-1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="7e0d-1a56-2ffd-ee5b" type="max"/>
+          </constraints>
+        </categoryLink>
       </categoryLinks>
     </forceEntry>
     <forceEntry id="af42-5af7-420c-7ab6" name="Meeting Engagement - Spearhead" hidden="true">
@@ -1716,6 +1739,17 @@ to set up the WIZARD, then the WIZARD is slain.</description>
       </selectionEntries>
       <costs>
         <cost name="pts" typeId="points" value="520.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="0a8d-cde8-fba1-6c0d" name="Reinforced" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="95f2-6885-756f-9ea5" type="max"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink id="1846-954e-1531-04c8" name="Reinforced" hidden="false" targetId="1109-7ce6-b7a3-3a0c" primary="false"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>
