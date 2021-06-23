@@ -2322,7 +2322,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
             <characteristic name="Required" typeId="eb5f-e9d2-e457-bff5">1 Commander
 0-2 Sub-commanders
 2-5 Troops
-1 Monster or Artillery</characteristic>
+0-1 Monster or Artillery</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -2374,9 +2374,45 @@ to set up the WIZARD, then the WIZARD is slain.</description>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="c064-0ddb-52cf-5fb9" name="Bless" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5d02-c1ed-393e-0f07" type="min"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="01ae-725b-4ed6-2d24" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="94e0-55f9-2614-422c" name="Bless" hidden="false" typeId="eed7-4131-0a52-0668" typeName="Prayer">
+          <characteristics>
+            <characteristic name="Answer Value" typeId="276a-ab7e-145d-3ffc">4</characteristic>
+            <characteristic name="Range" typeId="fd81-4e98-28ac-092a">12&quot;</characteristic>
+            <characteristic name="Description" typeId="0746-6cfb-5e15-53cb">Pick 1 friendly unit wholly within range and visible to the chanter. Until the start of your next hero phase, that unit has a ward of 6+.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="be59-6ab9-bf9f-9434" name="Smite" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="acc3-a5db-a5ad-0a6f" type="min"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="380c-a5ee-a8be-d310" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="0ee5-7306-2656-5019" name="Smite" hidden="false" typeId="eed7-4131-0a52-0668" typeName="Prayer">
+          <characteristics>
+            <characteristic name="Answer Value" typeId="276a-ab7e-145d-3ffc">2</characteristic>
+            <characteristic name="Range" typeId="fd81-4e98-28ac-092a">48&quot;</characteristic>
+            <characteristic name="Description" typeId="0746-6cfb-5e15-53cb">Pick 1 enemy Priest within range and visible to the chanter. That enemy Priest suffers 1 mortal wound. If the chanting roll was 6 or more, that enemy Priest suffers D3 mortal wounds instead of 1.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
-    <selectionEntryGroup id="e02e-6203-a19f-c021" name="Artefacts of Death" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="e02e-6203-a19f-c021" name="Artefacts of Death" hidden="true" collective="false" import="true">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d817-47b4-70da-dc76" type="max"/>
       </constraints>
@@ -2491,7 +2527,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
-    <selectionEntryGroup id="74cc-aa8c-c476-db29" name="Death Command Traits" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="74cc-aa8c-c476-db29" name="Death Command Traits" hidden="true" collective="false" import="true">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6812-2b77-e282-18ad" type="max"/>
       </constraints>
@@ -2585,7 +2621,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
-    <selectionEntryGroup id="ca3c-6bfc-07f1-2953" name="Artefacts of Destruction" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="ca3c-6bfc-07f1-2953" name="Artefacts of Destruction" hidden="true" collective="false" import="true">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="811a-5a80-4e1a-78b7" type="max"/>
       </constraints>
@@ -2700,7 +2736,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
-    <selectionEntryGroup id="1319-8f5e-1ff1-08c9" name="Destruction Command Traits" publicationId="e51d-b1a3-pubEQOCI" page="156" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="1319-8f5e-1ff1-08c9" name="Destruction Command Traits" publicationId="e51d-b1a3-pubEQOCI" page="156" hidden="true" collective="false" import="true">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="effb-aa38-5e89-7631" type="max"/>
       </constraints>
@@ -2779,7 +2815,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
-    <selectionEntryGroup id="f179-9104-3d7f-1ea1" name="Chaos Command Traits" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="f179-9104-3d7f-1ea1" name="Chaos Command Traits" hidden="true" collective="false" import="true">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e106-91bb-bef8-c7e9" type="max"/>
       </constraints>
@@ -2858,7 +2894,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
-    <selectionEntryGroup id="50aa-000b-1848-15c3" name="Order Command Traits" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="50aa-000b-1848-15c3" name="Order Command Traits" hidden="true" collective="false" import="true">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bbe9-9893-608b-3dde" type="max"/>
       </constraints>
@@ -2937,7 +2973,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
-    <selectionEntryGroup id="19d0-4499-b76e-96c1" name="Artefacts of Order" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="19d0-4499-b76e-96c1" name="Artefacts of Order" hidden="true" collective="false" import="true">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="485d-10a9-17b5-6459" type="max"/>
       </constraints>
@@ -3052,7 +3088,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
-    <selectionEntryGroup id="3c13-922a-683d-7de7" name="Artefacts of Chaos" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="3c13-922a-683d-7de7" name="Artefacts of Chaos" hidden="true" collective="false" import="true">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="180e-001b-6cfa-238a" type="max"/>
       </constraints>
@@ -3711,7 +3747,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
-    <selectionEntryGroup id="c0f9-cbae-79d2-3d07" name="Malign Portents Artefacts - Mortal Slaanesh" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="c0f9-cbae-79d2-3d07" name="Malign Portents Artefacts - Mortal Slaanesh" hidden="true" collective="false" import="true">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditionGroups>
@@ -4233,13 +4269,8 @@ to set up the WIZARD, then the WIZARD is slain.</description>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a12d-9c74-fec4-7616" type="max"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="c2d2-9d75-d2dc-4298" name="Alpha-Beast Pack - Monster" hidden="true" collective="false" import="true" type="upgrade">
+            <selectionEntry id="c2d2-9d75-d2dc-4298" name="Alpha-Beast Pack - 2-3 Monsters" hidden="true" collective="false" import="true" type="upgrade">
               <modifiers>
-                <modifier type="set" field="4ebb-e699-adb7-5974" value="2.0">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="af2c-42ac-d610-4a10" type="greaterThan"/>
-                  </conditions>
-                </modifier>
                 <modifier type="set" field="hidden" value="false">
                   <conditionGroups>
                     <conditionGroup type="and">
@@ -4251,9 +4282,19 @@ to set up the WIZARD, then the WIZARD is slain.</description>
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
+                <modifier type="increment" field="4ebb-e699-adb7-5974" value="2.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="af2c-42ac-d610-4a10" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="increment" field="4039-8bfd-e452-d775" value="3.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="af2c-42ac-d610-4a10" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
               </modifiers>
               <constraints>
-                <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4039-8bfd-e452-d775" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4039-8bfd-e452-d775" type="max"/>
                 <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4ebb-e699-adb7-5974" type="min"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6e76-2b42-337e-7de0" type="max"/>
               </constraints>
@@ -4275,13 +4316,8 @@ to set up the WIZARD, then the WIZARD is slain.</description>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="15f9-ef16-b666-7b9b" type="max"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="6ebd-6208-beb7-f347" name="Battle Regiment - Commander" hidden="true" collective="false" import="true" type="upgrade">
+            <selectionEntry id="6ebd-6208-beb7-f347" name="Battle Regiment - 1 Commander" hidden="true" collective="false" import="true" type="upgrade">
               <modifiers>
-                <modifier type="set" field="d0ea-613d-f6da-6ebd" value="1.0">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="1878-56e2-2862-8da5" type="greaterThan"/>
-                  </conditions>
-                </modifier>
                 <modifier type="set" field="hidden" value="false">
                   <conditionGroups>
                     <conditionGroup type="and">
@@ -4292,9 +4328,19 @@ to set up the WIZARD, then the WIZARD is slain.</description>
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
+                <modifier type="increment" field="d1bb-a7ff-163f-ebe3" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="1878-56e2-2862-8da5" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="increment" field="d0ea-613d-f6da-6ebd" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="1878-56e2-2862-8da5" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
               </modifiers>
               <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d1bb-a7ff-163f-ebe3" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d1bb-a7ff-163f-ebe3" type="max"/>
                 <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d0ea-613d-f6da-6ebd" type="min"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="27a3-5616-eb46-4798" type="max"/>
               </constraints>
@@ -4302,7 +4348,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
                 <cost name="pts" typeId="points" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="d495-9999-6da5-0fc8" name="Battle Regiment - Monster or Artillery" hidden="true" collective="false" import="true" type="upgrade">
+            <selectionEntry id="d495-9999-6da5-0fc8" name="Battle Regiment - 0-1 Monster or Artillery" hidden="true" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="set" field="hidden" value="false">
                   <conditionGroups>
@@ -4321,16 +4367,21 @@ to set up the WIZARD, then the WIZARD is slain.</description>
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
+                <modifier type="increment" field="2503-6395-ff23-d16f" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="1878-56e2-2862-8da5" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
               </modifiers>
               <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2503-6395-ff23-d16f" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2503-6395-ff23-d16f" type="max"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="bd68-0e92-19f7-7ea5" type="max"/>
               </constraints>
               <costs>
                 <cost name="pts" typeId="points" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="499a-198a-453a-3b6e" name="Battle Regiment - Sub-Commander" hidden="true" collective="false" import="true" type="upgrade">
+            <selectionEntry id="499a-198a-453a-3b6e" name="Battle Regiment - 0-2 Sub-Commander" hidden="true" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="set" field="hidden" value="false">
                   <conditionGroups>
@@ -4342,22 +4393,22 @@ to set up the WIZARD, then the WIZARD is slain.</description>
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
+                <modifier type="increment" field="ebc4-e49c-a595-cc8e" value="2.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="1878-56e2-2862-8da5" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
               </modifiers>
               <constraints>
-                <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ebc4-e49c-a595-cc8e" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ebc4-e49c-a595-cc8e" type="max"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="602b-d6b8-e306-8c24" type="max"/>
               </constraints>
               <costs>
                 <cost name="pts" typeId="points" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="4df0-9610-3fc2-96df" name="Battle Regiment - Troops" hidden="true" collective="false" import="true" type="upgrade">
+            <selectionEntry id="4df0-9610-3fc2-96df" name="Battle Regiment - 2-5 Troops" hidden="true" collective="false" import="true" type="upgrade">
               <modifiers>
-                <modifier type="set" field="baef-88fb-2a9c-fca7" value="2.0">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="1878-56e2-2862-8da5" type="greaterThan"/>
-                  </conditions>
-                </modifier>
                 <modifier type="set" field="hidden" value="false">
                   <conditionGroups>
                     <conditionGroup type="and">
@@ -4370,9 +4421,19 @@ to set up the WIZARD, then the WIZARD is slain.</description>
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
+                <modifier type="increment" field="7927-f6da-e667-3499" value="5.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="1878-56e2-2862-8da5" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="increment" field="baef-88fb-2a9c-fca7" value="2.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="1878-56e2-2862-8da5" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
               </modifiers>
               <constraints>
-                <constraint field="selections" scope="roster" value="5.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7927-f6da-e667-3499" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7927-f6da-e667-3499" type="max"/>
                 <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="baef-88fb-2a9c-fca7" type="min"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="66d8-1f0e-1f41-c470" type="max"/>
               </constraints>
@@ -4394,13 +4455,8 @@ to set up the WIZARD, then the WIZARD is slain.</description>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6eef-e4a2-3c85-721d" type="max"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="5c44-fc8f-2c7e-dcea" name="Command Entourage - Commander" hidden="true" collective="false" import="true" type="upgrade">
+            <selectionEntry id="5c44-fc8f-2c7e-dcea" name="Command Entourage - 1 Commander" hidden="true" collective="false" import="true" type="upgrade">
               <modifiers>
-                <modifier type="set" field="d65e-a22e-42ca-9323" value="1.0">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="7f89-26d0-ff93-83fe" type="greaterThan"/>
-                  </conditions>
-                </modifier>
                 <modifier type="set" field="hidden" value="false">
                   <conditionGroups>
                     <conditionGroup type="and">
@@ -4411,9 +4467,19 @@ to set up the WIZARD, then the WIZARD is slain.</description>
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
+                <modifier type="increment" field="9494-57ad-66d5-8d10" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="7f89-26d0-ff93-83fe" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="increment" field="d65e-a22e-42ca-9323" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="7f89-26d0-ff93-83fe" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
               </modifiers>
               <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9494-57ad-66d5-8d10" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9494-57ad-66d5-8d10" type="max"/>
                 <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d65e-a22e-42ca-9323" type="min"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="00ab-4d38-d74e-f80e" type="max"/>
               </constraints>
@@ -4421,7 +4487,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
                 <cost name="pts" typeId="points" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="7174-fb53-6fd6-cec9" name="Command Entourage - Sub-Commander" hidden="true" collective="false" import="true" type="upgrade">
+            <selectionEntry id="7174-fb53-6fd6-cec9" name="Command Entourage - 2-3 Sub-Commanders" hidden="true" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="set" field="hidden" value="false">
                   <conditionGroups>
@@ -4433,14 +4499,19 @@ to set up the WIZARD, then the WIZARD is slain.</description>
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
-                <modifier type="set" field="1f0b-c2c1-41e6-31e8" value="2.0">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="7f89-26d0-ff93-83fe" type="greaterThan"/>
-                  </conditions>
+                <modifier type="increment" field="1f0b-c2c1-41e6-31e8" value="2.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="7f89-26d0-ff93-83fe" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="increment" field="9726-eb33-7666-f030" value="3.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="7f89-26d0-ff93-83fe" repeats="1" roundUp="false"/>
+                  </repeats>
                 </modifier>
               </modifiers>
               <constraints>
-                <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9726-eb33-7666-f030" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9726-eb33-7666-f030" type="max"/>
                 <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1f0b-c2c1-41e6-31e8" type="min"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2989-4502-9e29-7fcd" type="max"/>
               </constraints>
@@ -4462,7 +4533,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c8af-288d-b349-1651" type="max"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="da76-3cc5-bd73-1a14" name="Grand Battery - Artillery" hidden="true" collective="false" import="true" type="upgrade">
+            <selectionEntry id="da76-3cc5-bd73-1a14" name="Grand Battery - 2-3 Artillery" hidden="true" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="set" field="hidden" value="false">
                   <conditionGroups>
@@ -4474,14 +4545,19 @@ to set up the WIZARD, then the WIZARD is slain.</description>
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
-                <modifier type="set" field="8d01-4776-a91f-563d" value="2.0">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="be2d-ba53-4ebc-f035" type="greaterThan"/>
-                  </conditions>
+                <modifier type="increment" field="8d01-4776-a91f-563d" value="2.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="49a3-5845-b4df-11f3" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="increment" field="c61b-6a25-ff31-b259" value="3.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="49a3-5845-b4df-11f3" repeats="1" roundUp="false"/>
+                  </repeats>
                 </modifier>
               </modifiers>
               <constraints>
-                <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c61b-6a25-ff31-b259" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c61b-6a25-ff31-b259" type="max"/>
                 <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8d01-4776-a91f-563d" type="min"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3f86-546f-6fe9-da54" type="max"/>
               </constraints>
@@ -4489,7 +4565,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
                 <cost name="pts" typeId="points" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="509e-6936-d617-933a" name="Grand Battery - Sub-commander" hidden="true" collective="false" import="true" type="upgrade">
+            <selectionEntry id="509e-6936-d617-933a" name="Grand Battery - 1 Sub-commander" hidden="true" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="set" field="hidden" value="false">
                   <conditionGroups>
@@ -4501,14 +4577,19 @@ to set up the WIZARD, then the WIZARD is slain.</description>
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
-                <modifier type="set" field="a633-e8ed-e3cb-f804" value="1.0">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="be2d-ba53-4ebc-f035" type="greaterThan"/>
-                  </conditions>
+                <modifier type="increment" field="a633-e8ed-e3cb-f804" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="be2d-ba53-4ebc-f035" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="increment" field="4bbc-9813-dca5-980b" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="be2d-ba53-4ebc-f035" repeats="1" roundUp="false"/>
+                  </repeats>
                 </modifier>
               </modifiers>
               <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4bbc-9813-dca5-980b" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4bbc-9813-dca5-980b" type="max"/>
                 <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a633-e8ed-e3cb-f804" type="min"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="bf71-de95-94ab-60c9" type="max"/>
               </constraints>
@@ -4530,12 +4611,12 @@ to set up the WIZARD, then the WIZARD is slain.</description>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="da39-d5ea-a10c-5f91" type="max"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="f700-30b4-2a37-c1f8" name="Hunters of the Heartlands - Troops" hidden="true" collective="false" import="true" type="upgrade">
+            <selectionEntry id="f700-30b4-2a37-c1f8" name="Hunters of the Heartlands - 2-3 Troops" hidden="true" collective="false" import="true" type="upgrade">
               <modifiers>
-                <modifier type="set" field="82a4-58ee-ea26-b0a9" value="2.0">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="49a3-5845-b4df-11f3" type="greaterThan"/>
-                  </conditions>
+                <modifier type="increment" field="11a6-7f0f-e073-d16d" value="3.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="49a3-5845-b4df-11f3" repeats="1" roundUp="false"/>
+                  </repeats>
                 </modifier>
                 <modifier type="set" field="hidden" value="false">
                   <conditionGroups>
@@ -4549,9 +4630,14 @@ to set up the WIZARD, then the WIZARD is slain.</description>
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
+                <modifier type="increment" field="82a4-58ee-ea26-b0a9" value="2.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="49a3-5845-b4df-11f3" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
               </modifiers>
               <constraints>
-                <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="11a6-7f0f-e073-d16d" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="11a6-7f0f-e073-d16d" type="max"/>
                 <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="82a4-58ee-ea26-b0a9" type="min"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8109-b74d-45ba-ca81" type="max"/>
               </constraints>
@@ -4573,12 +4659,12 @@ to set up the WIZARD, then the WIZARD is slain.</description>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="85ec-66e8-727a-544e" type="max"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="ffc8-4f2d-90c7-f14b" name="Vanguard - Troops" hidden="true" collective="false" import="true" type="upgrade">
+            <selectionEntry id="ffc8-4f2d-90c7-f14b" name="Vanguard - 1-3 Troops" hidden="true" collective="false" import="true" type="upgrade">
               <modifiers>
-                <modifier type="set" field="fb5c-1a47-5379-eaf2" value="1.0">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="bbed-22cb-b649-6938" type="greaterThan"/>
-                  </conditions>
+                <modifier type="increment" field="fb5c-1a47-5379-eaf2" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="bbed-22cb-b649-6938" repeats="1" roundUp="false"/>
+                  </repeats>
                 </modifier>
                 <modifier type="set" field="hidden" value="false">
                   <conditionGroups>
@@ -4592,9 +4678,14 @@ to set up the WIZARD, then the WIZARD is slain.</description>
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
+                <modifier type="increment" field="6107-7270-70d6-0b8c" value="3.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="bbed-22cb-b649-6938" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
               </modifiers>
               <constraints>
-                <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6107-7270-70d6-0b8c" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6107-7270-70d6-0b8c" type="max"/>
                 <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="fb5c-1a47-5379-eaf2" type="min"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="53b8-ee3b-6c8c-a71f" type="max"/>
               </constraints>
@@ -4602,12 +4693,12 @@ to set up the WIZARD, then the WIZARD is slain.</description>
                 <cost name="pts" typeId="points" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="2836-5c19-a748-8dfb" name="Vanguard - Sub Commander" hidden="true" collective="false" import="true" type="upgrade">
+            <selectionEntry id="2836-5c19-a748-8dfb" name="Vanguard - 1 Sub Commander" hidden="true" collective="false" import="true" type="upgrade">
               <modifiers>
-                <modifier type="set" field="7475-34f3-65d7-b181" value="1.0">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="bbed-22cb-b649-6938" type="greaterThan"/>
-                  </conditions>
+                <modifier type="increment" field="7475-34f3-65d7-b181" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="bbed-22cb-b649-6938" repeats="1" roundUp="false"/>
+                  </repeats>
                 </modifier>
                 <modifier type="set" field="hidden" value="false">
                   <conditionGroups>
@@ -4620,9 +4711,14 @@ to set up the WIZARD, then the WIZARD is slain.</description>
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
+                <modifier type="increment" field="9401-038f-55eb-342a" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="bbed-22cb-b649-6938" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
               </modifiers>
               <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9401-038f-55eb-342a" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9401-038f-55eb-342a" type="max"/>
                 <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7475-34f3-65d7-b181" type="min"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e6f6-1aa1-a81d-4075" type="max"/>
               </constraints>
@@ -4644,12 +4740,12 @@ to set up the WIZARD, then the WIZARD is slain.</description>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c2df-adaa-6880-797c" type="max"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="1246-8f90-e127-ea01" name="Warlord - Troops" hidden="true" collective="false" import="true" type="upgrade">
+            <selectionEntry id="1246-8f90-e127-ea01" name="Warlord - 1-2 Troops" hidden="true" collective="false" import="true" type="upgrade">
               <modifiers>
-                <modifier type="set" field="ddcf-49eb-bd3e-16ad" value="1.0">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5e7f-ccbb-a180-2e8b" type="greaterThan"/>
-                  </conditions>
+                <modifier type="increment" field="ddcf-49eb-bd3e-16ad" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5e7f-ccbb-a180-2e8b" repeats="1" roundUp="false"/>
+                  </repeats>
                 </modifier>
                 <modifier type="set" field="hidden" value="false">
                   <conditionGroups>
@@ -4663,9 +4759,14 @@ to set up the WIZARD, then the WIZARD is slain.</description>
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
+                <modifier type="increment" field="ae21-2a81-9cde-f748" value="2.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5e7f-ccbb-a180-2e8b" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
               </modifiers>
               <constraints>
-                <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ae21-2a81-9cde-f748" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ae21-2a81-9cde-f748" type="max"/>
                 <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ddcf-49eb-bd3e-16ad" type="min"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1b44-2b8d-90da-ec27" type="max"/>
               </constraints>
@@ -4673,13 +4774,8 @@ to set up the WIZARD, then the WIZARD is slain.</description>
                 <cost name="pts" typeId="points" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="a531-b832-8674-7a0b" name="Warlord - Sub-Commander" hidden="true" collective="false" import="true" type="upgrade">
+            <selectionEntry id="a531-b832-8674-7a0b" name="Warlord - 2-4 Sub-Commanders" hidden="true" collective="false" import="true" type="upgrade">
               <modifiers>
-                <modifier type="set" field="759c-a974-2baa-ae3a" value="2.0">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5e7f-ccbb-a180-2e8b" type="greaterThan"/>
-                  </conditions>
-                </modifier>
                 <modifier type="set" field="hidden" value="false">
                   <conditionGroups>
                     <conditionGroup type="and">
@@ -4690,9 +4786,19 @@ to set up the WIZARD, then the WIZARD is slain.</description>
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
+                <modifier type="increment" field="c239-cab0-0a44-4b9a" value="4.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5e7f-ccbb-a180-2e8b" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="increment" field="759c-a974-2baa-ae3a" value="2.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5e7f-ccbb-a180-2e8b" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
               </modifiers>
               <constraints>
-                <constraint field="selections" scope="roster" value="4.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c239-cab0-0a44-4b9a" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c239-cab0-0a44-4b9a" type="max"/>
                 <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="759c-a974-2baa-ae3a" type="min"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a64b-0fe7-cecc-d066" type="max"/>
               </constraints>
@@ -4700,13 +4806,8 @@ to set up the WIZARD, then the WIZARD is slain.</description>
                 <cost name="pts" typeId="points" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="a248-92c9-88d3-fe44" name="Warlord - Commander" hidden="true" collective="false" import="true" type="upgrade">
+            <selectionEntry id="a248-92c9-88d3-fe44" name="Warlord - 1-2 Commanders" hidden="true" collective="false" import="true" type="upgrade">
               <modifiers>
-                <modifier type="set" field="51ff-fa60-13ac-170d" value="1.0">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5e7f-ccbb-a180-2e8b" type="greaterThan"/>
-                  </conditions>
-                </modifier>
                 <modifier type="set" field="hidden" value="false">
                   <conditionGroups>
                     <conditionGroup type="and">
@@ -4717,9 +4818,19 @@ to set up the WIZARD, then the WIZARD is slain.</description>
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
+                <modifier type="increment" field="54fa-989d-a145-650d" value="2.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5e7f-ccbb-a180-2e8b" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="increment" field="51ff-fa60-13ac-170d" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5e7f-ccbb-a180-2e8b" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
               </modifiers>
               <constraints>
-                <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="54fa-989d-a145-650d" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="54fa-989d-a145-650d" type="max"/>
                 <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="51ff-fa60-13ac-170d" type="min"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3d57-aab0-da30-7d4f" type="max"/>
               </constraints>
@@ -4741,12 +4852,12 @@ to set up the WIZARD, then the WIZARD is slain.</description>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9c2d-b419-5321-a994" type="max"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="adb4-bf01-9f23-b801" name="Linebreaker - Commander" hidden="true" collective="false" import="true" type="upgrade">
+            <selectionEntry id="adb4-bf01-9f23-b801" name="Linebreaker - 1-2 Commanders" hidden="true" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="set" field="7f04-f83d-5314-beca" value="1.0">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="fa77-b2b2-8b0c-22e2" type="greaterThan"/>
-                  </conditions>
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="fa77-b2b2-8b0c-22e2" repeats="1" roundUp="false"/>
+                  </repeats>
                 </modifier>
                 <modifier type="set" field="hidden" value="false">
                   <conditionGroups>
@@ -4758,9 +4869,14 @@ to set up the WIZARD, then the WIZARD is slain.</description>
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
+                <modifier type="set" field="eb2b-22a8-1e34-2f4f" value="2.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="fa77-b2b2-8b0c-22e2" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
               </modifiers>
               <constraints>
-                <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="eb2b-22a8-1e34-2f4f" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="eb2b-22a8-1e34-2f4f" type="max"/>
                 <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7f04-f83d-5314-beca" type="min"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a3cf-0cb9-2df4-2490" type="max"/>
               </constraints>
@@ -4768,12 +4884,12 @@ to set up the WIZARD, then the WIZARD is slain.</description>
                 <cost name="pts" typeId="points" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="fbfa-468d-1fa3-26de" name="Linebreaker - Monster" hidden="true" collective="false" import="true" type="upgrade">
+            <selectionEntry id="fbfa-468d-1fa3-26de" name="Linebreaker - 2-3 Monsters" hidden="true" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="set" field="fea2-f20a-9deb-7b8d" value="2.0">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="fa77-b2b2-8b0c-22e2" type="greaterThan"/>
-                  </conditions>
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="fa77-b2b2-8b0c-22e2" repeats="1" roundUp="false"/>
+                  </repeats>
                 </modifier>
                 <modifier type="set" field="hidden" value="false">
                   <conditionGroups>
@@ -4786,9 +4902,14 @@ to set up the WIZARD, then the WIZARD is slain.</description>
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
+                <modifier type="set" field="60d7-2737-b6d8-d69f" value="3.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="fa77-b2b2-8b0c-22e2" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
               </modifiers>
               <constraints>
-                <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="60d7-2737-b6d8-d69f" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="60d7-2737-b6d8-d69f" type="max"/>
                 <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="fea2-f20a-9deb-7b8d" type="min"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9d84-fb9e-1e87-2260" type="max"/>
               </constraints>
@@ -5087,15 +5208,15 @@ to set up the WIZARD, then the WIZARD is slain.</description>
     <profile id="ae02-a84f-a903-1ff8" name="Arcane Bolt" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
       <characteristics>
         <characteristic name="Casting Value" typeId="2508-b604-1258-a920">5</characteristic>
-        <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick an enemy unit within 18&quot; of the caster that is visible to them. That unit suffers 1 mortal wound. If the casting roll was 10 or more, the unit suffers D3 mortal wounds instead.</characteristic>
-        <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
+        <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">12&quot;</characteristic>
+        <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, at the start of any 1 phase before your next hero phase, you can pick 1 enemy unit within range and visible to the caster. That unit suffers 1 mortal wound. If that unit is within 3&quot; of the caster, it suffers D3 mortal wounds instead of 1.</characteristic>
       </characteristics>
     </profile>
     <profile id="b41f-f1ce-7aa5-4f81" name="Mystic Shield" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
       <characteristics>
-        <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
-        <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick a friendly unit within 18&quot; of the caster that is visible to them. Re-roll save rolls of 1 for that unit until your next hero phase.</characteristic>
-        <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
+        <characteristic name="Casting Value" typeId="2508-b604-1258-a920">5</characteristic>
+        <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">12&quot;</characteristic>
+        <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick 1 friendly unit wholly within range and visible to the caster. Add 1 to save rolls for attacks that target that unit until your next hero phase.</characteristic>
       </characteristics>
     </profile>
     <profile id="8e0c-cbe4-27be-8a30" name="Fly" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
