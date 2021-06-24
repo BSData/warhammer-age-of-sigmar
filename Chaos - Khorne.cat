@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="cac4-1eec-d548-b34d" name="Chaos - Khorne" revision="62" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="77" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="cac4-1eec-d548-b34d" name="Chaos - Khorne" revision="63" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="78" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="cac4-1eec-pubN65537" name="Chaos Battletome: Blades of Khorne"/>
     <publication id="cac4-1eec-pubN105675" name="Grand Alliance: Chaos"/>
@@ -665,6 +665,13 @@
             <characteristic name="Battalion Ability Details" typeId="08e0-9ead-1dbe-c801">Add 1 to wound rolls for attacks made by units from this battalion that targets a HERO.</characteristic>
           </characteristics>
         </profile>
+        <profile id="6209-d4ea-35ca-9341" name="Battalion: Blood Hunt" hidden="false" typeId="75e0-a332-e4f5-bf36" typeName="Battalion Organisation">
+          <characteristics>
+            <characteristic name="Required" typeId="eb5f-e9d2-e457-bff5">1 Wrath of Khorne Bloodthirster
+1 Karanak
+3-8 Bloodcrushers or Flesh Hounds</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
       <categoryLinks>
         <categoryLink id="42a9-5c18-0a63-5923" name="New CategoryLink" hidden="false" targetId="be17-6bbd-b857-3f43" primary="true"/>
@@ -680,41 +687,6 @@
           </costs>
         </selectionEntry>
       </selectionEntries>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="61e9-1ef2-ddca-4df8" name="Karanak " hidden="false" collective="false" import="true" defaultSelectionEntryId="f0aa-650b-ddb9-cfaf">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="48af-6a79-8828-9f6f" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8d71-35bf-cdfb-52ef" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="f0aa-650b-ddb9-cfaf" name="Karanak" hidden="false" collective="false" import="true" targetId="c84a-8f7d-b40d-098b" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="6790-a3ca-0a2c-cd74" name="3-8 units in any combination" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="8.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="908c-90c4-1366-ce0a" type="max"/>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ab15-2933-ff7d-a9cd" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="bae2-ddd2-6971-96a3" name="Bloodcrushers" hidden="false" collective="false" import="true" targetId="41fb-f03e-b188-fdbd" type="selectionEntry"/>
-            <entryLink id="330b-b244-b0ab-e6c5" name="Flesh Hounds" hidden="false" collective="false" import="true" targetId="689f-60c4-e598-6550" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="bf01-d88c-ef4f-e0b0" name="1 Wrath of Khorne Bloodthirster" hidden="false" collective="false" import="true" defaultSelectionEntryId="2266-9cf6-b247-3d20">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="42ad-1f82-89c2-a717" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="418f-5e06-59f0-8666" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="2266-9cf6-b247-3d20" name="Wrath of Khorne Bloodthirster" hidden="false" collective="false" import="true" targetId="749a-2957-a8c5-8455" type="selectionEntry">
-              <categoryLinks>
-                <categoryLink id="bd88-701b-1032-7b14" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
-                <categoryLink id="14e0-ed3f-fbb4-d7d5" name="New CategoryLink" hidden="false" targetId="fa0c-9044-2568-fa02" primary="false"/>
-              </categoryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
@@ -769,13 +741,6 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="9361-fa26-31b7-4a10" name="Blood Warriors" hidden="false" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="set-primary" field="category" value="065e-fda7-fd27-1f40">
-          <conditions>
-            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="78f3-8a59-699a-61e8" type="instanceOf"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <profiles>
         <profile id="49e4-3721-a679-6056" name="Blood Warrior" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
           <characteristics>
@@ -908,8 +873,10 @@
         <entryLink id="caed-6721-ab0c-fe39" name="Reinforced" hidden="false" collective="false" import="true" targetId="0a8d-cde8-fba1-6c0d" type="selectionEntry">
           <modifiers>
             <modifier type="set" field="95f2-6885-756f-9ea5" value="2.0"/>
-            <modifier type="set" field="points" value="210.0"/>
           </modifiers>
+          <costs>
+            <cost name="pts" typeId="points" value="210.0"/>
+          </costs>
         </entryLink>
         <entryLink id="2ea2-12d5-9a2c-e7ac" name="Battalions" hidden="false" collective="false" import="true" targetId="671a-89e2-447c-95cb" type="selectionEntryGroup"/>
       </entryLinks>
@@ -1223,13 +1190,6 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="78be-9de2-98c0-1b84" name="Bloodreavers" hidden="false" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="set-primary" field="category" value="065e-fda7-fd27-1f40">
-          <conditions>
-            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="78f3-8a59-699a-61e8" type="instanceOf"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <modifierGroups>
         <modifierGroup>
           <conditions>
@@ -3636,23 +3596,23 @@
         </profile>
         <profile id="b55d-5a3f-24ed-eb34" name="-" hidden="false" typeId="eed7-4131-0a52-0668" typeName="Prayer">
           <characteristics>
-            <characteristic name="Description" typeId="0746-6cfb-5e15-53cb">In your hero phase, this model can chant one of the following prayers. If he does so, pick one of the prayers and then make a prayer roll by rolling a dice. On a 1, this model suffers D3 mortal wounds and the prayer is not answered. On a 2-3 the prayer is not answered. On a 4+ the prayer is answered.</characteristic>
             <characteristic name="Answer Value" typeId="276a-ab7e-145d-3ffc"/>
             <characteristic name="Range" typeId="fd81-4e98-28ac-092a"/>
+            <characteristic name="Description" typeId="0746-6cfb-5e15-53cb">In your hero phase, this model can chant one of the following prayers. If he does so, pick one of the prayers and then make a prayer roll by rolling a dice. On a 1, this model suffers D3 mortal wounds and the prayer is not answered. On a 2-3 the prayer is not answered. On a 4+ the prayer is answered.</characteristic>
           </characteristics>
         </profile>
         <profile id="4520-5aaa-f377-260c" name="Blood Boil" hidden="false" typeId="eed7-4131-0a52-0668" typeName="Prayer">
           <characteristics>
-            <characteristic name="Description" typeId="0746-6cfb-5e15-53cb">If this prayer is answered, pick 1 enemy unit within 16&quot; of the model chanting this prayer. That unit suffers D6 mortal wounds.</characteristic>
             <characteristic name="Answer Value" typeId="276a-ab7e-145d-3ffc"/>
             <characteristic name="Range" typeId="fd81-4e98-28ac-092a"/>
+            <characteristic name="Description" typeId="0746-6cfb-5e15-53cb">If this prayer is answered, pick 1 enemy unit within 16&quot; of the model chanting this prayer. That unit suffers D6 mortal wounds.</characteristic>
           </characteristics>
         </profile>
         <profile id="3574-3580-c0e6-1846" name="Blood Bind" hidden="false" typeId="eed7-4131-0a52-0668" typeName="Prayer">
           <characteristics>
-            <characteristic name="Description" typeId="0746-6cfb-5e15-53cb">If this prayer is answered, pick 1 enemy unit within 16&quot; of the model chanting this prayer and not within 3&quot; of any friendly units. Your opponent must move that unit a number of inches equal to the prayer roll. The first model to be moved from that unit must finish the move as close as possible to the closest unit from the chanting model&apos;s army. Any remaining models in that unit must finish their move within 1&quot; of a model from their unit that has already been moved, and as close as possible to the closest unit from the chanting model&apos;s army.</characteristic>
             <characteristic name="Answer Value" typeId="276a-ab7e-145d-3ffc"/>
             <characteristic name="Range" typeId="fd81-4e98-28ac-092a"/>
+            <characteristic name="Description" typeId="0746-6cfb-5e15-53cb">If this prayer is answered, pick 1 enemy unit within 16&quot; of the model chanting this prayer and not within 3&quot; of any friendly units. Your opponent must move that unit a number of inches equal to the prayer roll. The first model to be moved from that unit must finish the move as close as possible to the closest unit from the chanting model&apos;s army. Any remaining models in that unit must finish their move within 1&quot; of a model from their unit that has already been moved, and as close as possible to the closest unit from the chanting model&apos;s army.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -3736,6 +3696,8 @@
         <entryLink id="36f6-56ed-f98a-0837" name="Artefacts" hidden="false" collective="false" import="true" targetId="0740-e91a-e615-4ac9" type="selectionEntryGroup"/>
         <entryLink id="45ad-88ca-004e-5aea" name="Command Traits" hidden="false" collective="false" import="true" targetId="0879-c394-8274-958b" type="selectionEntryGroup"/>
         <entryLink id="d8bc-3f0e-e6ad-8f28" name="Battalions" hidden="false" collective="false" import="true" targetId="671a-89e2-447c-95cb" type="selectionEntryGroup"/>
+        <entryLink id="1306-6265-5192-562c" name="Bless" hidden="false" collective="false" import="true" targetId="c064-0ddb-52cf-5fb9" type="selectionEntry"/>
+        <entryLink id="d984-d179-8c33-e31d" name="Smite" hidden="false" collective="false" import="true" targetId="be59-6ab9-bf9f-9434" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="110.0"/>
@@ -3962,18 +3924,8 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1ed7-6b7c-3485-c313" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1e05-803f-acb1-26a4" type="min"/>
           </constraints>
-          <selectionEntries>
-            <selectionEntry id="a517-75f1-f3e4-1599" name="Chaos" hidden="false" collective="false" import="true" type="upgrade">
-              <infoLinks>
-                <infoLink id="02ed-0a70-9603-cee8" name="Unbridled Malice" hidden="false" targetId="6884-967e-0150-274e" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
           <entryLinks>
-            <entryLink id="76d7-b2c4-7d22-15a2" name="Khorne" hidden="false" collective="false" import="true" targetId="b541-3b22-08bb-d772" type="selectionEntry"/>
+            <entryLink id="76d7-b2c4-7d22-15a2" name="Allegiance: Khorne" hidden="false" collective="false" import="true" targetId="b541-3b22-08bb-d772" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -5690,7 +5642,7 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e1c4-0d11-7b6d-cc95" type="max"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="322d-c30a-6a18-bf93" name="Gore Pilgrims - Blood Warriors" hidden="true" collective="false" import="true" type="upgrade">
+            <selectionEntry id="322d-c30a-6a18-bf93" name="Gore Pilgrims - 1-2 Blood Warriors" hidden="true" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="set" field="2d79-ab53-0cb4-d245" value="1.0">
                   <conditions>
@@ -5717,7 +5669,7 @@
                 <cost name="pts" typeId="points" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="a562-d15f-4ea9-d5e8" name="Gore Pilgrims - Bloodreavers" hidden="true" collective="false" import="true" type="upgrade">
+            <selectionEntry id="a562-d15f-4ea9-d5e8" name="Gore Pilgrims - 1-2 Bloodreavers" hidden="true" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="set" field="bb41-b224-8491-c9a4" value="1.0">
                   <conditions>
@@ -5744,7 +5696,7 @@
                 <cost name="pts" typeId="points" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="6f9f-b185-dc78-30ef" name="Gore Pilgrims - Bloodsecrator" hidden="true" collective="false" import="true" type="upgrade">
+            <selectionEntry id="6f9f-b185-dc78-30ef" name="Gore Pilgrims - 1 Bloodsecrator" hidden="true" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="set" field="c5ed-c399-2e08-877b" value="1.0">
                   <conditions>
@@ -5771,7 +5723,7 @@
                 <cost name="pts" typeId="points" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="e393-9f6b-aaf1-fe9f" name="Gore Pilgrims - Slaughterpriest" hidden="true" collective="false" import="true" type="upgrade">
+            <selectionEntry id="e393-9f6b-aaf1-fe9f" name="Gore Pilgrims - 2-3 Slaughterpriests" hidden="true" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="set" field="5fe7-0f8c-75d2-e140" value="1.0">
                   <conditions>
@@ -5809,7 +5761,7 @@
             </modifier>
           </modifiers>
           <selectionEntries>
-            <selectionEntry id="220a-ecc3-0c88-956d" name="Gorechosen - Exalted Deathbringer" hidden="true" collective="false" import="true" type="upgrade">
+            <selectionEntry id="220a-ecc3-0c88-956d" name="Gorechosen - 1 Exalted Deathbringer" hidden="true" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="set" field="0909-2aa7-b1be-d516" value="1.0">
                   <conditions>
@@ -5836,7 +5788,7 @@
                 <cost name="pts" typeId="points" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="d204-4293-1588-f910" name="Gorechosen - Additional Leader" hidden="true" collective="false" import="true" type="upgrade">
+            <selectionEntry id="d204-4293-1588-f910" name="Gorechosen - 7 Additional Leaders" hidden="true" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="set" field="a070-49be-4cc7-fd5d" value="7.0">
                   <conditions>
@@ -5885,7 +5837,7 @@
             </modifier>
           </modifiers>
           <selectionEntries>
-            <selectionEntry id="bbe3-a2a1-2353-c219" name="Slaughterborn - Blood Warriors" hidden="true" collective="false" import="true" type="upgrade">
+            <selectionEntry id="bbe3-a2a1-2353-c219" name="Slaughterborn - 1-3 Blood Warriors" hidden="true" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="set" field="7dd5-a58e-e0c5-1c63" value="1.0">
                   <conditions>
@@ -5912,7 +5864,7 @@
                 <cost name="pts" typeId="points" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="e83f-9cc9-03d9-8eaf" name="Slaughterborn - Skullreapers" hidden="true" collective="false" import="true" type="upgrade">
+            <selectionEntry id="e83f-9cc9-03d9-8eaf" name="Slaughterborn - 2-4 Skullreapers" hidden="true" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="set" field="440e-f0c8-afe3-47ef" value="2.0">
                   <conditions>
@@ -5939,7 +5891,7 @@
                 <cost name="pts" typeId="points" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="9993-cf26-4fd0-9233" name="Slaughterborn - Exalted Deathbringer" hidden="true" collective="false" import="true" type="upgrade">
+            <selectionEntry id="9993-cf26-4fd0-9233" name="Slaughterborn - 1 Exalted Deathbringer" hidden="true" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="set" field="01c4-abc9-a8bb-9b32" value="1.0">
                   <conditions>
@@ -5977,7 +5929,7 @@
             </modifier>
           </modifiers>
           <selectionEntries>
-            <selectionEntry id="5bb1-e3b8-f1bb-4700" name="Bloodforged - Blood Warriors" hidden="true" collective="false" import="true" type="upgrade">
+            <selectionEntry id="5bb1-e3b8-f1bb-4700" name="Bloodforged - 1-3 Blood Warriors" hidden="true" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="set" field="57b6-2eda-8694-f5da" value="1.0">
                   <conditions>
@@ -6004,7 +5956,7 @@
                 <cost name="pts" typeId="points" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="2b9f-e731-8d3c-9cc0" name="Bloodforged - Wrathmongers" hidden="true" collective="false" import="true" type="upgrade">
+            <selectionEntry id="2b9f-e731-8d3c-9cc0" name="Bloodforged - 2-4 Wrathmongers" hidden="true" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="set" field="79b6-4764-92b8-7b80" value="2.0">
                   <conditions>
@@ -6031,7 +5983,7 @@
                 <cost name="pts" typeId="points" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="7099-f2ce-e6d2-3e80" name="Bloodforged - Skullgrinder" hidden="true" collective="false" import="true" type="upgrade">
+            <selectionEntry id="7099-f2ce-e6d2-3e80" name="Bloodforged - 1 Skullgrinder" hidden="true" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="set" field="6149-7a45-cdbb-7209" value="1.0">
                   <conditions>
@@ -6053,6 +6005,251 @@
                 <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="75ad-4df7-a82a-6716" type="max"/>
                 <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6149-7a45-cdbb-7209" type="min"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f9c5-57a3-e5b2-66ee" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="4ecd-d67a-a400-8117" name="Blood Hunt" hidden="true" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="cb7a-2a30-c407-d701" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <selectionEntries>
+            <selectionEntry id="db94-952d-6735-33c7" name="Blood Hunt - Karanak" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="c3aa-ead2-4a0c-e9ae" value="1.0">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="cb7a-2a30-c407-d701" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="cb7a-2a30-c407-d701" type="greaterThan"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c84a-8f7d-b40d-098b" type="instanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="c3aa-ead2-4a0c-e9ae" type="min"/>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="23b1-517c-1100-5270" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="3c7b-e3c6-85af-d608" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="05d5-0926-8963-f024" name="Blood Hunt - 3-8 Bloodcrushers or Flesh Hounds" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="c6db-c500-4674-ff60" value="3.0">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="cb7a-2a30-c407-d701" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="cb7a-2a30-c407-d701" type="greaterThan"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="689f-60c4-e598-6550" type="instanceOf"/>
+                            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="41fb-f03e-b188-fdbd" type="instanceOf"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="c6db-c500-4674-ff60" type="min"/>
+                <constraint field="selections" scope="roster" value="8.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="2143-b726-efed-8207" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="77e6-a8af-aff6-36f3" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="8af5-c365-41ee-b54f" name="Blood Hunt - 1 Wrath of Khorne Bloodthirster" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="973b-29c5-f170-086c" value="1.0">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="cb7a-2a30-c407-d701" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="cb7a-2a30-c407-d701" type="greaterThan"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="749a-2957-a8c5-8455" type="instanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="973b-29c5-f170-086c" type="min"/>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="a865-02b5-0bc9-a938" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="3268-7446-39e3-b416" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="d81d-c393-0be4-859d" name="Bloodmad Warband" hidden="true" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="a584-3218-b0cd-294f" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <selectionEntries>
+            <selectionEntry id="0ce9-56d0-04c4-fa32" name="Bloodmad Warband - 1 Skullreapers" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="22f7-e711-8b34-dca4" value="1.0">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="a584-3218-b0cd-294f" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="a584-3218-b0cd-294f" type="greaterThan"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="be0c-d1b0-5f46-48c4" type="instanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="22f7-e711-8b34-dca4" type="min"/>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="4992-79f1-fa3c-9c8a" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="afee-f696-be6b-70a9" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="e428-576a-a696-e228" name="Bloodmad Warband - 1 Bloodsecrator" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="d2a4-43be-f6ed-0ad0" value="1.0">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="cb7a-2a30-c407-d701" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="cb7a-2a30-c407-d701" type="greaterThan"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="56be-4ba7-aa8b-81d6" type="instanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="d2a4-43be-f6ed-0ad0" type="min"/>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="74a9-649d-bfda-435f" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="0634-9607-3552-bfe9" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="e795-e38d-ff36-2964" name="Bloodmad Warband - 1 Aspiring Deathbringer" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="fa74-7a9d-bbd4-f42c" value="1.0">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="a584-3218-b0cd-294f" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="a584-3218-b0cd-294f" type="greaterThan"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c098-9c13-471b-7fc8" type="instanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="fa74-7a9d-bbd4-f42c" type="min"/>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="9109-66a7-3b43-0694" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="cc6b-d8c7-a127-2fe2" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="5188-d77f-6ade-228f" name="Bloodmad Warband - 1-2 Bloodreavers" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="767a-b802-e61a-bb9b" value="1.0">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="a584-3218-b0cd-294f" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="a584-3218-b0cd-294f" type="greaterThan"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="78be-9de2-98c0-1b84" type="instanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="767a-b802-e61a-bb9b" type="min"/>
+                <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="c128-8332-8831-af57" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="b737-09fa-accf-81b2" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="6c3a-a82b-eba6-77d9" name="Bloodmad Warband - 3 Blood Warriors" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="e807-97d2-9461-e22a" value="3.0">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="a584-3218-b0cd-294f" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="a584-3218-b0cd-294f" type="greaterThan"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9361-fa26-31b7-4a10" type="instanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="e807-97d2-9461-e22a" type="min"/>
+                <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="ca97-e28a-1ef5-5b91" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="7ee5-e788-e83f-fd29" type="max"/>
               </constraints>
               <costs>
                 <cost name="pts" typeId="points" value="0.0"/>
