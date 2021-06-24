@@ -1352,29 +1352,19 @@
       <profiles>
         <profile id="b2ad-28b6-8c19-2bd7" name="Summon Aethervoid Pendulum" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
           <characteristics>
-            <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
-            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, set up an Aethervoid Pendulum model wholly within 6&quot; of the caster so that it points lengthways in the direction you wish it to move.</characteristic>
-            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
+            <characteristic name="Casting Value" typeId="2508-b604-1258-a920">5</characteristic>
+            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">6&quot;</characteristic>
+            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, set up the endless spell wholly within range of the caster. When this endless spell is set up, pivot the model so that the tip of the pendulum blade is pointing in the direction in which the endless spell is to be moved.</characteristic>
           </characteristics>
         </profile>
         <profile id="21f3-0955-0b5b-632a" name="Predatory" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">An Aethervoid Pendulum is a predatory endless spell. It can move up to 8&quot; and can fly. </characteristic>
-          </characteristics>
-        </profile>
-        <profile id="a0f5-049e-5f6b-92f7" name="Slicing Into Reality" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">When this model is set up, the player who set it up can immediately make a move with it.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This endless spell is a predatory endless spell. It can move up to 8&quot; and can fly. When this endless spell is moved, it must move in a straight line in the direction in which the tip of the pendulum blade is pointing.</characteristic>
           </characteristics>
         </profile>
         <profile id="75ab-d1f9-8312-4930" name="Scything Blade" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">After this model has moved, each unit that has any models it passed across, and each other unit that is within 1&quot; of it at the end of its move, suffers D6 mortal wounds. </characteristic>
-          </characteristics>
-        </profile>
-        <profile id="2577-0a57-fc04-cbb1" name="Unstoppable Mechanism" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Whenever you set up an Aethervoid Pendulum, you must place it lengthways in the direction you wish it to move. Whenever it moves, move it in a straight line in that direction.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">After this endless spell has moved, roll a dice for each unit that has any models it passed across and for each other unit that is within 1&quot; of it at the end of its move. On a 2+, that unit suffers D3 mortal wounds.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1441,14 +1431,20 @@ to set up the WIZARD, then the WIZARD is slain.</description>
       <profiles>
         <profile id="9590-acdc-1b4e-0963" name="Summon Chronomantic Cogs" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
           <characteristics>
-            <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
-            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, set up a Chronomantic Cogs model wholly within 12&quot; of the caster. </characteristic>
-            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
+            <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
+            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">6&quot;</characteristic>
+            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, set up the endless spell wholly within range of the caster.</characteristic>
           </characteristics>
         </profile>
         <profile id="4fe0-7a89-9044-9495" name="Mechanisms of Time" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">In their controlling player’s hero phase, a single Wizard within 9&quot; of this model may manipulate the cogs to increase or decrease the flow of time. They may do this in the same phase as the Chronomantic Cogs are set up. If they do so, choose one of the effects opposite. The effect lasts until their next hero phase, or until an enemy Wizard chooses to manipulate the cogs.  Speed Up Time: Add 2&quot; to the Move characteristic of all units on the battlefield. In addition, add 2 to charge rolls for all units on the battlefield.  Slow Down Time: The wizard manipulating the cogs can cast 1 additional spell in this hero phase. In addition, re-roll failed save rolls for that wizard.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">When this endless spell is set up, the commanding player must decide if it is increasing or decreasing the flow of time. 
+
+If it is increasing the flow of time, add 1 to charge rolls for units wholly within 18&quot; of this endless spell. 
+
+If it is decreasing the flow of time, WIZARDS can attempt to cast 1 extra spell in their commanding player&apos;s hero phase while they are within 6&quot; of this endless spell. 
+
+At the start of the hero phase, if there is a friendly WIZARD within 6&quot; of this endless spell, the player whose turn is taking place can change whether this endless spell is increasing or decreasing the flow of time.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1469,23 +1465,18 @@ to set up the WIZARD, then the WIZARD is slain.</description>
         <profile id="e8c0-ded6-d453-a796" name="Summon Emerald Lifeswarm" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
           <characteristics>
             <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
-            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, set up an Emerald Lifeswarm model wholly within 15&quot; of the caster. </characteristic>
-            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
+            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">6&quot;</characteristic>
+            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, set up the endless spell wholly within range of the caster.</characteristic>
           </characteristics>
         </profile>
         <profile id="6183-1ed2-30a1-468a" name="Predatory" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">An Emerald Lifeswarm is a predatory endless spell. Emerald Lifeswarms can move up to 10&quot; and can fly.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This endless spell is a predatory endless spell. It can move up to 8&quot; and can fly.</characteristic>
           </characteristics>
         </profile>
         <profile id="1ee9-f13f-669c-33d7" name="Bounteous Healing" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">After this model is set up or after it has moved, pick 1 unit within 1&quot; of it. You can either heal D3 wounds that have been allocated to that unit or, if no wounds are currently allocated to the unit, you may return a number of slain models to it that have a combined Wounds characteristic equal to or less than the roll of a D3. </characteristic>
-          </characteristics>
-        </profile>
-        <profile id="ffac-9035-e86e-fceb" name="Empowered by Ghyran" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If your battle is taking place in the Realm of Life, roll a D6 to determine the number of wounds healed or wounds worth of slain models returned by the Emerald Lifeswarm’s Bounteous Healing ability. </characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">After this endless spell is set up and after it has moved, the commanding player can pick 1 unit within 1&quot; of it. They can heal up to D3 mortal wounds allocated to that unit or, if no wounds are allocated to it, they can return a number of slain models to that unit that have a combined Wounds characteristic of D3 or less.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1508,34 +1499,19 @@ to set up the WIZARD, then the WIZARD is slain.</description>
       <profiles>
         <profile id="048c-412c-c308-90f9" name="Summon Geminids of Uhl-Gyish" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
           <characteristics>
-            <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
-            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, set up both models within 6&quot; of each other and both wholly within 18&quot; of the caster. You must then nominate one model to be the Light Geminid and the other to be the Shadow Geminid.</characteristic>
-            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
-          </characteristics>
-        </profile>
-        <profile id="8b3d-a71a-02e8-e999" name="Unleashed" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">When this model is set up, the player who set it up can immediately make a move with it. </characteristic>
+            <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
+            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">9&quot;</characteristic>
+            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, set up the parts of the endless spell within 6&quot; of each other and wholly within range of the caster.</characteristic>
           </characteristics>
         </profile>
         <profile id="c00d-5d8c-b48a-92d0" name="Tendrils of Shadow and Light" publicationId="e51d-b1a3-pubEFCFK" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">After the Shadow Geminid model has moved, each unit that has any models it passed across suffers D3 mortal wounds. In addition, subtract 1 (to a minimum of 1) from the Attacks characteristic of melee weapons used by each unit that has any models it passed across until the end of the battle round. A unit is not affected by the Shadow Geminid model if it has been passed across by the Light Geminid model earlier in the same battle round. After the Light Geminid model has moved, each unit that has any models it passed across suffers D3 mortal wounds. In addition, subtract 1 from hit rolls for each unit that has any models it passed across until the end of the battle round. A unit is not affected by the Light Geminid model if it has been passed across by the Shadow Geminid model earlier in the same battle round (a unit can be affected by one or other of the models each battle round, but not both).</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="13d9-73c9-ffcc-5cfb" name="Empowered by Hysh" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If your battle is taking place in the Realm of Light, you can re-roll the dice to determine the number of mortal wounds suffered by a unit that has any models passed across by the Light Geminid.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="5842-43e3-814d-ff9f" name="Empowered by Ulgu" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If your battle is taking place in the Realm of Shadow, you can re-roll the dice to determine the number of mortal wounds suffered by a unit that has any models passed across by the Shadow Geminid.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">After this endless spell has moved, roll a dice for each unit that has any models it passed across and for each other unit that is within 1&quot; of it at the end of its move. On a 2+, that unit suffers 1 mortal wound. In addition, if a mortal wound caused by this ability is allocated to a unit, that unit cannot issue or receive commands until the start of the next combat phase.</characteristic>
           </characteristics>
         </profile>
         <profile id="634a-99d6-067a-57e1" name="Predatory" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Geminids of Uhl-Gysh is a predatory endless spell. They can move up to 8&quot; and can fly. When you move this endless spell, the second model must finish its move within 6&quot; of the first. If this is impossible, this spell is dispelled. </characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This endless spell is a predatory endless spell. It can be moved up to 8&quot; and can fly. The parts of this endless spell must remain within 6&quot; of each other.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1560,23 +1536,18 @@ to set up the WIZARD, then the WIZARD is slain.</description>
         <profile id="1fb0-73e9-129c-891c" name="Summon Horrorghast" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
           <characteristics>
             <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
-            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, set up a Horrorghast model wholly within 12&quot; of the caster.</characteristic>
-            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
+            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">12&quot;</characteristic>
+            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, set up the endless spell wholly within range of the caster.</characteristic>
           </characteristics>
         </profile>
         <profile id="ea2b-6e1d-a138-8396" name="Prey on Fear" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Subtract 1 from the Bravery characteristic of units while they are within 12&quot; of this model. Subtract 2 instead from the Bravery characteristic of units while they are within 6&quot; of this model.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="9346-aa17-cae4-7273" name="Empowered by Shyish" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If your battle is taking place in the Realm of Death, this model can move up to 12&quot; instead of up to 9&quot;.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Units wholly within 12&quot; of this endless spell cannot receive commands in the battleshock phase. In addition, if a unit fails a battleshock test wholly within 12&quot; of this endless spell, add D3 to the number of models that flee.</characteristic>
           </characteristics>
         </profile>
         <profile id="e908-33ca-d3e1-dbcb" name="Predatory" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">A Horrorghast is a predatory endless spell. It can move up to 9&quot; and can fly. </characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This endless spell is a predatory endless spell. It can move up to 8&quot; and can fly.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1600,28 +1571,18 @@ to set up the WIZARD, then the WIZARD is slain.</description>
         <profile id="801d-6be1-0510-970e" name="Summon Lauchon the Soulseeker" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
           <characteristics>
             <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
-            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, set up a Lauchon the Soulseeker model wholly within 12&quot; of the caster.</characteristic>
-            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
-          </characteristics>
-        </profile>
-        <profile id="203f-cce0-0c04-21cc" name="Navigate Deathly Tides" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">When this model is set up, the player who set it up can immediately make a move with it.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="a466-232b-e51d-b504" name="Empowered by Shyish" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If your battle is taking place in the Realm of Death, this model can move up to 18&quot; instead of up to 12&quot;.</characteristic>
+            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">6&quot;</characteristic>
+            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, set up the endless spell wholly within range of the caster.</characteristic>
           </characteristics>
         </profile>
         <profile id="227e-905e-a8a2-360c" name="Soul Price" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Before a player makes a move with this model, that player can pick a friendly unit wholly within 3&quot; of this model. Remove that unit and place it to one side. After this model has moved, set that unit up again wholly within 3&quot; of this model and more than 9&quot; from any enemy units. Once that unit has been set up, 1 model from that unit is immediately slain.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Before the commanding player moves this endless spell, they can pick 1 friendly WIZARD wholly within 3&quot; of this endless spell. Remove that WIZARD from the battlefield. After this endless spell has moved, set that WIZARD up again wholly within 3&quot; of this endless spell and more than 9&quot; away from all enemy units. After that WIZARD has been set up, it suffers 1 mortal wound. That WIZARD canont make a normal move or run in the following movement phase.</characteristic>
           </characteristics>
         </profile>
         <profile id="bcbf-2a21-bf34-e39c" name="Predatory" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Lauchon the Soulseeker is a predatory endless spell. It can move up to 12&quot; and can fly. </characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This endless spell is a predatory endless spell. It can move up to 18&quot; and can fly.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1644,29 +1605,21 @@ to set up the WIZARD, then the WIZARD is slain.</description>
       <profiles>
         <profile id="e2a0-be45-7c5a-1d9c" name="Summon Malevolent Maelstrom" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
           <characteristics>
-            <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
-            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, set up a Malevolent Maelstrom model wholly within 18&quot; of the caster.</characteristic>
-            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
+            <characteristic name="Casting Value" typeId="2508-b604-1258-a920">5</characteristic>
+            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">6&quot;</characteristic>
+            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, set up the endless spell wholly within range of the caster.</characteristic>
           </characteristics>
         </profile>
         <profile id="af8c-d343-e2c2-d9e6" name="Predatory" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">A Malevolent Maelstrom is a predatory endless spell. It can move up to 8&quot; and can fly.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="abb3-1c3a-812b-214c" name="Devourer of Sorcery and Souls" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If a WIZARD successfully casts a spell within 12&quot; of a Malevolent Maelstrom, and that spell is not unbound, the Malevolent Maelstrom will attempt to steal the energies of the spell. Make an additional unbinding roll for that spell. If this unbinding roll is successful, the spell is unbound and 1 energy point is allocated to this model.  In addition, 1 energy point is allocated to this model for each unit destroyed within 6&quot; of this model. </characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This endless spell is a predatory endless spell. It can be moved up to 8&quot; and can fly.</characteristic>
           </characteristics>
         </profile>
         <profile id="4eff-d80f-28d3-c7fb" name="Morbid Detonation" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the end of each battle round, roll a dice for each Malevolent Maelstrom and add the number of energy points allocated to that model to the roll. On a 7+ that Malevolent Maelstrom explodes. Each unit within 3D6&quot; of the model that exploded suffers D3 mortal wounds. The model that exploded is then dispelled.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="5226-8299-4978-2ab2" name="Empowered by Shyish" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If your battle is taking place in the Realm of Death, allocate 1 additional energy point to this model at the start of each battle round.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">When this endless spell is set up, place a D6 beside it with the &apos;1&apos; facing up. Each time a spell is successfully cast by a unit within 12&quot; of this endless spell and not unbound, after the effects of the spell have been resolved, increase the value of the dice beside this endless spell by 1 (to a maximum of 6). In addition, each time a model is slain within 12&quot; of this endless spell, increase the value of the dice beside this endless spell by 1 (to a maximum of 6). 
+
+At th eend of the combat phase, if this endless spell is on the battlefield, roll a dice and add the value of the dice beside this endless spell to the roll. On a 10+, each unit within 12&quot; of this endless spell suffers D3 mortal wounds. Then, this endless spell is removed from play.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1690,23 +1643,13 @@ to set up the WIZARD, then the WIZARD is slain.</description>
         <profile id="34d7-8e3b-b9ac-04ca" name="Summon Prismatic Palisade" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
           <characteristics>
             <characteristic name="Casting Value" typeId="2508-b604-1258-a920">5</characteristic>
-            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, set up a Prismatic Palisade model wholly within 18&quot; of the caster.</characteristic>
-            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
+            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">6&quot;</characteristic>
+            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, set up the endless spell wholly within range of the caster. </characteristic>
           </characteristics>
         </profile>
         <profile id="73bc-6abe-4c52-6d23" name="Blinding Light" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the start of each turn, roll a dice for each unit within 6&quot; of this model. On a 5+ subtract 1 from hit rolls for attacks made by that unit until the end of the turn.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="5bb4-5949-0d90-e76f" name="Dazzling Brilliance" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">A model cannot see another model if an imaginary straight line, 1mm wide, drawn from the centre of its base to the centre of the other model’s base passes over this model.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="2038-0249-055a-7b7c" name="Empowered by Hysh" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If your battle is taking place in the Realm of Light, add 1 to rolls made to determine if a unit is affected by this model’s Blinding Light ability.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Visibility between 2 models is blocked if a straight line drawn between the closest of the 2 models passes across this endless spell.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1727,33 +1670,20 @@ to set up the WIZARD, then the WIZARD is slain.</description>
         <profile id="8677-969c-7c16-007d" name="Summon Purple Sun of Shyish" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
           <characteristics>
             <characteristic name="Casting Value" typeId="2508-b604-1258-a920">8</characteristic>
-            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, set up a Purple Sun of Shyish model wholly within 6&quot; of the caster.</characteristic>
-            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
+            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">6&quot;</characteristic>
+            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, set up the endles spell wholly within range of the caster.</characteristic>
           </characteristics>
         </profile>
         <profile id="9a94-5efa-6797-25e6" name="Predatory" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">The Purple Sun of Shyish is a predatory endless spell. It can move up to 9&quot; and can fly. </characteristic>
-          </characteristics>
-        </profile>
-        <profile id="376e-119b-d822-4395" name="Swirling Death" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">When this model is set up, the player who set it up can immediately make a move with it.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This endless spell is a predatory endless spell. It can be moved up to 8&quot; and can fly.</characteristic>
           </characteristics>
         </profile>
         <profile id="2e18-4510-9f25-b7cb" name="End Given Form" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">After this model has moved, each unit that has any models it passed across, and each other unit that is within 1&quot; of it at the end of its move, is subjected to the Purple Sun’s baleful energies. For each unit subjected to the baleful energies, roll a number of dice equal to the number of models in that unit. For each 6+ one model in that unit is slain. If the unit has Wounds characteristic of 6 or more, it suffers 2D6 mortal wounds instead.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="ea13-5990-3792-14cb" name="Visage of Xereus" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Subtract 1 from the Bravery characteristic of all units while they are within 6&quot; of this model.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="eb5c-ce49-e22f-6df3" name="Empowered by Shyish" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If your battle is taking place in the Realm of Death, this model can move 12&quot; instead of 9&quot;. </characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the end of the hero phase, before determining control of predatory endless spells, roll a dice for this endless spell. On a 5+, this endless spell becomes wild for the rest of the battle (do not roll for it again).
+
+After this endless spell has moved, roll a dice for each unit that has any models it passed across and for each other unit that is within 1&quot; of it at the end of its move. On a 1, nothing happens. On a 2-5, that unit suffers D3 mortal wounds. On a 6, that unit suffers D6 mortal wounds.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1777,28 +1707,18 @@ to set up the WIZARD, then the WIZARD is slain.</description>
         <profile id="b191-e4f0-c10b-2543" name="Summon Quicksilver Swords" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
           <characteristics>
             <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
-            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, set up a Quicksilver Swords model wholly within 10&quot; of the caster.</characteristic>
-            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
+            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">6&quot;</characteristic>
+            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, set up the endless spell wholly within range of the caster.</characteristic>
           </characteristics>
         </profile>
         <profile id="035d-bc7f-cc14-3cc0" name="Predatory" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Quicksilver Swords is a predatory endless spell. It can move up to 8&quot; and can fly.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="0f8f-9119-6422-7799" name="Volley of Blades" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">When this model is set up, the player who set it up can immediately make a move with it.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This endless spell is a predatory endless spell. It can move up to 8&quot; and can fly. </characteristic>
           </characteristics>
         </profile>
         <profile id="c023-e731-5488-7bf0" name="Dancing Blades" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">After this model has moved, you can pick 1 unit within 6&quot; of it and roll 12 dice. For each roll of 6+ that unit suffers 1 mortal wound. If the unit being rolled for is a CHAOS unit, it suffers 1 mortal wound for each roll of 5+ instead.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="ead7-9952-e01f-b3b3" name="Empowered by Chamon" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If your battle is taking place in the Realm of Metal, you can roll 15 dice for this model’s Dancing Blades ability instead of 12.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">After this endless spell has moved, the commanding player can pick 1 unit that has any models it passed across and roll 12 dice. For each 6, that unit suffers 1 mortal wound. In addition, ward rolls cannot be made for mortal wounds caused by this ability.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1821,29 +1741,19 @@ to set up the WIZARD, then the WIZARD is slain.</description>
       <profiles>
         <profile id="8123-c8c4-8bc6-cf0f" name="Summon Ravenak&apos;s Gnashing Jaws" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
           <characteristics>
-            <characteristic name="Casting Value" typeId="2508-b604-1258-a920">8</characteristic>
-            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, set up a Ravenak’s Gnashing Jaws model wholly within 6&quot; of the caster.</characteristic>
-            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
+            <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
+            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">6&quot;</characteristic>
+            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, set up the endless spell wholly within range of the caster.</characteristic>
           </characteristics>
         </profile>
         <profile id="0222-5edd-ad18-48a4" name="Predatory" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Ravenak’s Gnashing Jaws is a predatory endless spell. It can move up to 12&quot; and can fly.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="983f-75f4-4a12-f26b" name="Endless Appetite" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">When this model is set up, the player who set it up can immediately make a move with it. </characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This endless spell is a predatory endless spell. It can be moved up to 3D6&quot; and can fly.</characteristic>
           </characteristics>
         </profile>
         <profile id="2237-adf9-c281-2916" name="Ravening Hunger" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">After this model has moved, each unit that has any models it passed across, and each other unit that is within 1&quot; of it at the end of its move, suffers D3 mortal wounds. In addition, subtract 1 from the Bravery characteristic of each unit that each unit that has any models it passed across until the end of the battle round.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="d633-25a6-2f08-6116" name="Empowered by Ghur" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If your battle is taking place in the Realm of Beasts, this model can move up to D6+12&quot; instead of 12&quot;.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">After this endless spell has moved, the commanding player can pick 1 unit that has any models it passed across and roll a number of dice equal to the roll that was made for the move. For each 6, that unit suffers 1 mortal wound.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1867,23 +1777,18 @@ to set up the WIZARD, then the WIZARD is slain.</description>
         <profile id="6b93-3b5f-92bd-87df" name="Summon Shards of Valagharr" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
           <characteristics>
             <characteristic name="Casting Value" typeId="2508-b604-1258-a920">5</characteristic>
-            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, set up the first Shards of Valagharr model wholly within 6&quot; of the caster, and then set up the second Shards of Valagharr model wholly within 12&quot; of the first.</characteristic>
-            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
+            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">18&quot;</characteristic>
+            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, set up the parts of this spell wholly within 12&quot; of each other and wholly within range of the caster.</characteristic>
           </characteristics>
         </profile>
         <profile id="01e5-7b2f-ac0e-5ec3" name="Ensnaring Soul-drain" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the start of the movement phase, draw an imaginary straight line 1mm wide between the closest parts of the bases of the two Shards of Valagharr models from this endless spell. Each unit passed across by this line is ensnared until the end of that turn. Halve the Move characteristic of a unit that is ensnared. In addition, subtract 1 from hit rolls for attacks made by units that are ensnared.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">After this endless spell has moved, draw a straight line between the closest points of each part of this endless spell. Each unit that has any models passed across by this line is ensnared until the end of that turn. Halve the Move characteristic of a unit that is ensnared. In addition, a unit that is ensnared cannot fly.</characteristic>
           </characteristics>
         </profile>
-        <profile id="77e0-b51d-00d4-aa72" name="Twilight Translocation" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+        <profile id="f367-732d-b49b-a521" name="Predatory" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the start of the battle round, after determining who has the first turn, the players must roll off. The winner can remove one Shards of Valagharr model from this endless spell from the battlefield and set it up again anywhere on the battlefield wholly within 12&quot; of the other Shards of Valagharr model from this endless spell.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="fac8-201d-3681-0dac" name="Empowered by Shyish" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If your battle is taking place in the Realm of Death, the first Shards of Valagharr model can be set up wholly within 12&quot; of the caster, instead of 6&quot;.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This endless spell is a predatory endless spell. To move this endless spell, remove 1 of its parts from the battlefield and set it up again wholly within 12&quot; of its other part.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1904,23 +1809,15 @@ to set up the WIZARD, then the WIZARD is slain.</description>
         <profile id="8bc3-efdf-b033-2e24" name="Summon Soulscream Bridge" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
           <characteristics>
             <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
-            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, set up the first Soulscream Bridge model wholly within 6&quot; of the caster, and then set up the second Soulscream Bridge model wholly within 12&quot; of the first.</characteristic>
-            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
+            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">18&quot;</characteristic>
+            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, set up the parts of the endless spell wholly within range of the caster.</characteristic>
           </characteristics>
         </profile>
         <profile id="3cd2-74a2-532b-25a5" name="Deathly Passage" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the start of your movement phase, friendly units wholly within 6&quot; of one Soulscream Bridge model from this endless spell can travel across the Soulscream Bridge. If they do so, remove that unit from the battlefield and set it up again wholly within 6&quot; of the other Soulscream Bridge model from this endless spell, more than 9&quot; from any enemy units. That unit cannot make a normal move that phase. </characteristic>
-          </characteristics>
-        </profile>
-        <profile id="eb78-8010-9568-2703" name="Nightmarish Construct" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Subtract 1 from the Bravery characteristic of enemy units while they are within 6&quot; of a Soulscream Bridge model. This ability has no effect on DEATH units.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="01c1-54ee-b341-4681" name="Empowered by Shyish" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If your battle is taking place in the Realm of Death, the second Soulscream Bridge model can be set up wholly within 24&quot; of the first, instead of within 12&quot; of the first.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the start of the movement phase, the layer whose turn is taking place can remove 1 friendly unit that is wholly within 6&quot; of a part of this endless spell from the battlefield and set it up again wholly within 6&quot; of the other part of this endless spell and more than 9&quot; away from all enemy units. 
+
+A unit cannot be removed and set up again in this way more than once per phase. A unit removed and set up again in this way cannot make a normal move or run in the same phase.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1940,19 +1837,14 @@ to set up the WIZARD, then the WIZARD is slain.</description>
       <profiles>
         <profile id="f12d-a1e0-5270-2892" name="Summon Soulsnare Shackles" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
           <characteristics>
-            <characteristic name="Casting Value" typeId="2508-b604-1258-a920">5</characteristic>
-            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, set up a Soulsnare Shackles model wholly within 12&quot; of the caster, then set up the second and third Soulsnare Shackles models wholly within 6&quot; of the first.</characteristic>
-            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
+            <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
+            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">12&quot;</characteristic>
+            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, set up the parts of the endless spell wholly within 3&quot; of each other and wholly within range of the caster.</characteristic>
           </characteristics>
         </profile>
         <profile id="0df7-ad58-26dc-d044" name="Bound for the Great Oubliette" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the start of the movement phase, roll a dice for each unit within 6&quot; of any Soulsnare Shackles models. On a 3+ halve the move characteristic of that unit until the end of that phase. On a 6 that unit also suffers D3 mortal wounds. </characteristic>
-          </characteristics>
-        </profile>
-        <profile id="33a8-200f-b7a1-472b" name="Empowered by Shyish" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If your battle is taking place in the Realm of Death, the second and third Soulsnare Shackles models can be set up wholly within 9&quot; of the first, instead of 6&quot;.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Units within 6&quot; of this endless spell cannot run or attempt to charge. In addition, at the start of the movement phase, roll a dice for each unit within 6&quot; of this endless spell. On a 6, that unit suffers D3 mortal wounds.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1973,33 +1865,18 @@ to set up the WIZARD, then the WIZARD is slain.</description>
         <profile id="09f9-9e4f-449d-b8f2" name="Summon Suffocating﻿﻿ Gravetide﻿" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
           <characteristics>
             <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
-            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, set up a Suffocating Gravetide model wholly within 4&quot; of the caster. </characteristic>
-            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
-          </characteristics>
-        </profile>
-        <profile id="2bc2-6e1b-9c63-97c5" name="Necrotic Tide" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">When this model is set up, the player who set it up can immediately make a move with it. </characteristic>
+            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">6&quot;</characteristic>
+            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, set up the endless spell wholly within range of the caster.</characteristic>
           </characteristics>
         </profile>
         <profile id="9421-3b1a-c93b-4ecc" name="Pulled to the Grave" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">After this model has moved, each unit that has any models it passed across suffers D3 mortal wounds. In addition, subtract 1 from the Bravery characteristic of each unit that has any models it passed across until the end of the battle round.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="5c60-1bf5-7aab-1539" name="Rolling Barricade" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">When a missile weapon targets a unit that has all of its models within 1&quot; of this model, the target unit receives the benefit of cover if the attacking unit is closer to this model than it is to the target unit. </characteristic>
-          </characteristics>
-        </profile>
-        <profile id="4846-a1b3-6a09-82f7" name="Empowered by Shyish" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If your battle is taking place in the Realm of Death, this model can move up to 12&quot; instead of 8&quot;.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">After this endless spell has moved, for each unit that has any models it passed across, roll a number of dice equal to the number of models in that unit. For each 6, that unit suffers 1 mortal wound.</characteristic>
           </characteristics>
         </profile>
         <profile id="3a60-d81a-79c4-dee0" name="Predatory" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">A Suffocating Gravetide is a predatory endless spell. It can move up to 8&quot; and can fly. </characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This endless spell is a predatory endless spell. It can be moved up to 8&quot; and can fly.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -2023,33 +1900,18 @@ to set up the WIZARD, then the WIZARD is slain.</description>
         <profile id="d37a-5a1b-11ad-fb89" name="Summon B﻿urning Head﻿﻿﻿" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
           <characteristics>
             <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
-            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, set up a Burning Head model wholly within 3&quot; of the caster.</characteristic>
-            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
+            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">6&quot;</characteristic>
+            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, set up the endless spell wholly within range of the caster.</characteristic>
           </characteristics>
         </profile>
         <profile id="c2a1-0a2c-f5ce-467b" name="Predatory" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">The Burning Head is a predatory endless spell. It can move up to 9&quot; and can fly.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="7de4-5c93-a18e-9d5f" name="Fiery Missile" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">When this model is set up, the player who set it up can immediately make a move with it. </characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This endless spell is a predatory endless spell. It can be moved up to 8&quot; and can fly.</characteristic>
           </characteristics>
         </profile>
         <profile id="c7f4-81b1-042a-8e6e" name="Flaming Skull" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">After this model has moved, each unit that has any models it passed across, and each other unit that is within 1&quot; of it at the end of its move, suffers D3 mortal wounds. </characteristic>
-          </characteristics>
-        </profile>
-        <profile id="637c-9ac5-610d-9f17" name="Wrathful Aura" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Re-roll hit rolls of 1 for attacks made by units while they are wholly within 9&quot; of this model. </characteristic>
-          </characteristics>
-        </profile>
-        <profile id="6171-ca22-0e67-91db" name="Empowered by Aqshy" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If your battle is taking place in the Realm of Fire, add 1 to the number of mortal wounds inflicted by the Flaming Skull ability.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">After this endless spell has moved, if any units are within 1&quot; of it, roll a dice for each unit within 1&quot; of this endless spell. ON a 2+, that unit suffers D3 mortal wounds. Then, this endless spell is removed from play.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -2073,18 +1935,15 @@ to set up the WIZARD, then the WIZARD is slain.</description>
         <profile id="c3e6-0504-1147-d44a" name="Summon Umbral Spellportal" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
           <characteristics>
             <characteristic name="Casting Value" typeId="2508-b604-1258-a920">5</characteristic>
-            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, set up the first Umbral Spellportal model wholly within 12&quot; of the caster, and then set up the second Umbral Spellportal model wholly within 18&quot; of the first.</characteristic>
-            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
+            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">18&quot;</characteristic>
+            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, set up the parts of the endless spell wholly within range of the caster.</characteristic>
           </characteristics>
         </profile>
         <profile id="0a1a-1532-0887-c5d7" name="Arcane Passage" publicationId="e51d-b1a3-pubEFCFK" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If a Wizard successfully casts a spell while they are within 1&quot; of an Umbral Spellportal model, the range and visibility of the spell can be measured from the other Umbral Spellportal model from this endless spell. After the range and visibility for a spell has been measured from an Umbral Spellportal, you cannot use the Arcane Passage ability again for that Umbral Spellportal in that phase. If a predatory endless spell finishes a move within 6&quot; of an Umbral Spellportal model, remove it from the battlefield and set it up again anywhere within 6&quot; of the other Umbral Spellportal model from this endless spell. After an endless spell finishes a move within 6&quot; of an Umbral Spellportal and is set up again, it cannot move again in that phase, and you cannot use the Arcane Passage ability again for that Umbral Spellportal in that phase.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="f61c-06bd-bd2e-6ce5" name="Empowered by Ulgu" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If your battle is taking place in the Realm of Shadow, the second Umbral Spellportal model can be set up anywhere on the battlefield, instead of within 18&quot; of the first.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Once per turn, if a WIZARD successfully casts a spell within 1&quot; of this endless spell, the range, visibility, and effect of that spell can be measured from this endless spell instead of the caster.
+
+In addition, once per turn, when a predatory endless spell within 6&quot; of this endless spell is picked to move, the commanding player of that predatory endless spell can remove it from the battlefield and set it up again within 6&quot; of the other part of this endless spell. A predatory endless spell set up in this manner does not count as having moved, but it cannot be picked to move again in the same phase.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -3682,7 +3541,14 @@ to set up the WIZARD, then the WIZARD is slain.</description>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7c4e-1234-f943-d70f" type="min"/>
       </constraints>
       <selectionEntries>
-        <selectionEntry id="e860-9b1e-36bd-a54f" name="0750 Points" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="e860-9b1e-36bd-a54f" name="0750 Points" hidden="true" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f5c9-2d9a-2ffb-edd5" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2a41-d48b-8500-7a1a" type="max"/>
           </constraints>
@@ -3704,7 +3570,14 @@ to set up the WIZARD, then the WIZARD is slain.</description>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="ef67-15fb-487c-397a" name="3000 Points - Warhost" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="ef67-15fb-487c-397a" name="3000 Points - Warhost" hidden="true" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f5c9-2d9a-2ffb-edd5" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="94c1-18a9-d27c-23df" type="max"/>
           </constraints>
@@ -3734,7 +3607,14 @@ to set up the WIZARD, then the WIZARD is slain.</description>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="a3cc-3b86-4778-0b11" name="1500 Points" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="a3cc-3b86-4778-0b11" name="1500 Points" hidden="true" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f5c9-2d9a-2ffb-edd5" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3615-edd8-56d4-27ca" type="max"/>
           </constraints>
