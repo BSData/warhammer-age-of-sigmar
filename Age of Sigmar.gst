@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="78" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="80" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <publications>
     <publication id="e51d-b1a3-pubEC" name="The General&apos;s Handbook"/>
     <publication id="e51d-b1a3-pubEQ" name="Core Rules"/>
@@ -123,7 +123,7 @@
       <modifiers>
         <modifier type="increment" field="459e-bc05-f498-6753" value="1.0">
           <repeats>
-            <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="be17-6bbd-b857-3f43" repeats="1" roundUp="false"/>
+            <repeat field="selections" scope="roster" value="9.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="be17-6bbd-b857-3f43" repeats="1" roundUp="false"/>
           </repeats>
         </modifier>
         <modifier type="increment" field="459e-bc05-f498-6753" value="2.0">
@@ -248,6 +248,7 @@
     <categoryEntry id="1109-7ce6-b7a3-3a0c" name="Reinforced" hidden="false"/>
     <categoryEntry id="6575-7d6c-ce4d-ada4" name="Core Battalion" hidden="false"/>
     <categoryEntry id="a8ed-ca35-24e0-cf2e" name="9 or less wounds Leader" hidden="false"/>
+    <categoryEntry id="787f-7260-bb51-08c8" name="Legends" hidden="false"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry id="36b7-ee1e-0855-f23f" name="**Pitched Battle**" hidden="false">
@@ -579,6 +580,11 @@
           </modifiers>
           <constraints>
             <constraint field="selections" scope="roster" value="-1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="4a9f-649f-737b-9508" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="2e72-bf7c-f588-8170" name="Legends" hidden="false" targetId="787f-7260-bb51-08c8" primary="false">
+          <constraints>
+            <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="5f6d-d0d9-2a3d-95d4" type="max"/>
           </constraints>
         </categoryLink>
       </categoryLinks>
@@ -2271,791 +2277,6 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
-    <selectionEntryGroup id="e02e-6203-a19f-c021" name="Artefacts of Death" hidden="true" collective="false" import="true">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d817-47b4-70da-dc76" type="max"/>
-      </constraints>
-      <selectionEntries>
-        <selectionEntry id="00cd-f865-5445-e410" name="1. Cursed Book" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ae99-e895-08b5-bf60" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="5865-fb09-7643-0772" name="Cursed Book" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">You and your opponent must subtract 1 from hit rolls made for units within 3&quot; of the bearer, unless the unit has the DEATH keyword.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="b1ea-11ea-2990-b9d1" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="0722-70d0-8a75-b05d" name="2. Cloak of Mists and Shadows" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8e73-d153-8a05-e403" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="6d33-b575-b1b1-3d40" name="Cloak of Mists and Shadows" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">At the start of any combat phase, the bearer can use this cloak. If it does so, remove the bearer from the battlefield, and then set it up anywhere on the battlefield within 12&quot; of its original location and more than 3&quot; from any enemy models. If this is impossible, this model remains in its current location.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="d96c-b586-00b6-2deb" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="d40d-6292-3309-f03b" name="3. Blade of Dark Summons" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="819a-782f-5496-9885" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="cf43-0de1-7c17-8d94" name="Blade of Dark Summons" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Once per battle, in your hero phase, you can set up a SUMMONABLE DEATH unit wholly within 12&quot; of the bearer and more than 3&quot; from any enemy models, and add it to your army. The models in the unit must have a combined Wounds characteristic of no more than a 2D6 roll.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="601b-b6f0-94d1-cd3a" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="385e-f5fc-d761-9e79" name="4. Black Amulet" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1464-64f1-8374-3f0c" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="9d60-be5a-3bf0-9eea" name="Black Amulet" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Once per battle, in your hero phase, the bearer can use this amulet. If it does so, pick an enemy unit within 12&quot; of the bearer. Inflict a number of mortal wounds equal to the number of the current battle round on the unit you picked.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="827d-a112-0f50-e58f" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="2326-95d1-92c4-1776" name="5. Tomb Blade" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7ebe-39a0-aeb6-7d08" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="3276-e79f-0eb4-8955" name="Tomb Blade" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Pick one of the bearer’s melee weapons. For each wound roll of 6+ you make for this weapon, you can heal 1 wound that has been allocated to a friendly DEATH model within 6&quot; of the bearer.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="fce5-ffa8-6118-a04a" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="2eab-a296-749d-9137" name="6. Ring of Immortality" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="68ac-70ca-db4f-c7a0" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="b51f-e0a9-e729-7d56" name="Ring of Immortality" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">The first time the bearer is slain, before removing them from the battlefield, roll a dice. On a 3+ the bearer is not slain and D3 wounds allocated to them are healed (any excess damage is negated). Then, remove the bearer from the battlefield and set them up again within 18&quot; of their original location and more than 3&quot; from any enemy models.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="1c34-cb7a-bfb7-bab0" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-    </selectionEntryGroup>
-    <selectionEntryGroup id="74cc-aa8c-c476-db29" name="Death Command Traits" hidden="true" collective="false" import="true">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6812-2b77-e282-18ad" type="max"/>
-      </constraints>
-      <selectionEntries>
-        <selectionEntry id="ecc1-7f9c-db58-a2d3" name="1. Ruler of the Night" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3661-8fdb-f699-ab10" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="0764-cc0b-794f-7edb" name="Ruler of the Night" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
-              <characteristics>
-                <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">Friendly DEATH units are affected by the Deathless Minions battle trait if they are within 12&quot; of this general rather than only 6&quot;.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="3fc2-a119-b371-27ac" name="2. Predator of the Shadows" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d8a9-1fbd-c1f7-b05d" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="741d-e927-a84a-a2f3" name="Predator of the Shadows" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
-              <characteristics>
-                <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">Add 1 to hit and wound rolls for this general if they are in cover.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="83d0-b10b-7b0f-bb84" name="3. Death Incarnate" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="490b-eaec-c34e-521e" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="9055-f2ef-067f-738e" name="Death Incarnate" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
-              <characteristics>
-                <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">In your hero phase, pick an enemy unit within 3&quot; of this general and roll 2D6. If the roll equals or exceeds the enemy unit’s Bravery characteristic, inflict D3 mortal wounds on the unit.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="8ab1-ca9e-3373-5b0c" name="4. Master of the Black Arts" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f5dd-14b0-8eea-2b0c" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="20c8-5780-7f3e-ded5" name="Master of the Black Arts" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
-              <characteristics>
-                <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">This general is a WIZARD who knows the Arcane Bolt and Mystic Shield spells. If this general is already a wizard, add 1 to all of their casting and unbinding rolls instead.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="053b-e6bd-cc34-d050" name="5. Red Fury" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="45ca-69ba-36a1-ecfa" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="dcaf-3a22-b916-c683" name="Red Fury" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
-              <characteristics>
-                <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">The first time this general is picked to fight in each combat phase, roll a dice at the end of that fight. On a 5+ they can immediately fight again.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="10c5-32f0-ca6f-7e7c" name="6. Supernatural Horror" hidden="false" collective="false" import="true" type="upgrade">
-          <profiles>
-            <profile id="7c4d-ae2f-91a1-4769" name="Supernatural Horror" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
-              <characteristics>
-                <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">In the battleshock phase, double the number of models that flee from enemy units while they are within 12&quot; of this general.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-    </selectionEntryGroup>
-    <selectionEntryGroup id="ca3c-6bfc-07f1-2953" name="Artefacts of Destruction" hidden="true" collective="false" import="true">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="811a-5a80-4e1a-78b7" type="max"/>
-      </constraints>
-      <selectionEntries>
-        <selectionEntry id="0214-b6fa-c58d-2123" name="1. Hammerblade" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="57b0-0dc0-4f80-7fe9" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="3c81-80a2-a7fe-6433" name="Hammerblade" publicationId="e51d-b1a3-pubE5LCI" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Pick one melee weapon that this model can use. Instead of attacking normally with that weapon, you can roll a dice for each model within 3&quot; of the bearer (apart from the bearer). On a roll of 5 or 6, 1 mortal wound is inflicted on that model&apos;s unit.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="05a1-082d-0c9f-b63d" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="11ee-4b6d-7d08-dd98" name="2. Battered Talisman" publicationId="e51d-b1a3-pubEQOCI" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="addc-60fb-ee24-bcfb" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="8f53-5df2-f0c3-3733" name="Battered Talisman" publicationId="e51d-b1a3-pubEQOCI" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Roll a dice each time you allocate a mortal wound to the bearer. On a 5+, the mortal wound is negated.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="1498-8111-b71e-2c79" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="e734-c953-e710-a42a" name="3. Rockeye" publicationId="e51d-b1a3-pubEQOCI" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5099-38d5-7540-a044" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="9a86-99f2-1f5e-6f23" name="Rockeye" publicationId="e51d-b1a3-pubEQOCI" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">In your hero phase, pick an enemy unit within 12&quot; of this bearer. Until your next hero phase, add 1 to hit rolls made by the bearer when they target the unit you picked.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="4963-8263-9449-d0b7" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="b111-9840-cc58-ca44" name="4. Bellowing Blade" publicationId="e51d-b1a3-pubEQOCI" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5e0e-d321-e948-0878" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="c24f-4f2e-f512-ecf9" name="Bellowing Blade" publicationId="e51d-b1a3-pubEQOCI" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">When the bearer is picked to fight, you can re-roll one failed wound roll for bearers attacks in that fight for each enemy HERO that was within 12&quot; of the bearer when they were picked to fight.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="0943-73b6-1080-7b58" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="3cdf-ca0c-9c35-0727" name="5. Collar of Domination" publicationId="e51d-b1a3-pubEQOCI" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e351-213d-edf0-2ef5" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="0994-850a-5408-afb3" name="Collar of Domination" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">At the start of the enemy movement phase, pick an enemy MONSTER within 3&quot; of the bearer and roll 2D6. If the roll is equal to or greater than the enemy MONSTER’s Bravery characteristic, it must retreat in that movement phase.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="c10f-514d-7ead-ea4f" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="40a6-edd2-8f4c-bcbc" name="6. Battle Brew" publicationId="e51d-b1a3-pubEQOCI" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d399-9741-b80c-5a52" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="c11d-9966-5de8-6dad" name="Battle Brew" publicationId="e51d-b1a3-pubEQOCI" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Once per battle, in your hero phase, you can declare that bearer will take either one or two swigs of Battle Brew. If the bearer takes one swig, add 1 to all hit and wound rolls for the bearer until your next hero phase. If the bearer takes two swigs, add 2 to all hit and wound rolls for the model until your next hero phase, but you must allocate D6 mortal wounds to the earer at the end of the turn in which they drank the brew.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="fa96-9d2b-0053-d3cd" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-    </selectionEntryGroup>
-    <selectionEntryGroup id="1319-8f5e-1ff1-08c9" name="Destruction Command Traits" publicationId="e51d-b1a3-pubEQOCI" page="156" hidden="true" collective="false" import="true">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="effb-aa38-5e89-7631" type="max"/>
-      </constraints>
-      <selectionEntries>
-        <selectionEntry id="dace-f335-0d87-3b0d" name="1. Nothing Left Standing" publicationId="e51d-b1a3-pubEQOCI" page="156" hidden="false" collective="false" import="true" type="upgrade">
-          <profiles>
-            <profile id="bcd1-9176-4492-23ec" name="Nothing Left Standing" publicationId="e51d-b1a3-pubEQOCI" page="156" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
-              <characteristics>
-                <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">In your hero phase, pick a terrain feature that is within 6&quot; of your general and at least 5 other friendly DESTRUCTION models. That terrain feature no longer gives cover to models that are in or on it.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="b456-2252-df66-a511" name="2. Might is Right" publicationId="e51d-b1a3-pubE5LCI" page="" hidden="false" collective="false" import="true" type="upgrade">
-          <profiles>
-            <profile id="7e70-bb8b-13b3-bb52" name="Might is Right" publicationId="e51d-b1a3-pubEQOCI" page="156" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
-              <characteristics>
-                <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">Add 1 to the wound rolls made for the general’s melee weapons.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="33e4-5c70-c48b-9472" name="3. Wild Fury" publicationId="e51d-b1a3-pubEQOCI" page="156" hidden="false" collective="false" import="true" type="upgrade">
-          <profiles>
-            <profile id="abd9-cb56-8363-375f" name="Wild Fury" publicationId="e51d-b1a3-pubEQOCI" page="156" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
-              <characteristics>
-                <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">When this General is picked to fight, pick one of their melee weapons. Add 1 to the attach characteristic of that melee weapon for the fight. While 3 or more wounds are allocated to this general, instead add 2 to the Attacks characteristic of that melee weapon for that fight.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="6b78-5f06-40c7-eab6" name="4. Bellowing Tyrant" publicationId="e51d-b1a3-pubEQOCI" page="156" hidden="false" collective="false" import="true" type="upgrade">
-          <profiles>
-            <profile id="e6c7-5519-f527-355c" name="Bellowing Tyrant" publicationId="e51d-b1a3-pubE5LCI" page="" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
-              <characteristics>
-                <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">In your hero phase, pick a friendly DESTRUCTION unit within 6&quot; of the general in your hero phase. Until your next hero phase, add 1 to charge and run rolls for the unit, and use the general’s Bravery characteristic for the unit instead of its own.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="e5b1-baeb-ed1b-e3f3" name="5. Big and Brutish" publicationId="e51d-b1a3-pubEQOCI" page="156" hidden="false" collective="false" import="true" type="upgrade">
-          <profiles>
-            <profile id="1851-80dd-639c-fce5" name="Big and Brutish" publicationId="e51d-b1a3-pubEQOCI" page="156" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
-              <characteristics>
-                <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">Add 1 to the general’s Wounds characteristic.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="fdf2-ddc3-5dd8-f6e6" name="6. Ravager" publicationId="e51d-b1a3-pubEQOCI" page="156" hidden="false" collective="false" import="true" type="upgrade">
-          <profiles>
-            <profile id="6c53-2a68-0348-adc4" name="Ravager" publicationId="e51d-b1a3-pubE5LCI" page="" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
-              <characteristics>
-                <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">Add 3 to the Rampaging Destroyers dice roll (see battle traits) for the general instead of 2.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-    </selectionEntryGroup>
-    <selectionEntryGroup id="f179-9104-3d7f-1ea1" name="Chaos Command Traits" hidden="true" collective="false" import="true">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e106-91bb-bef8-c7e9" type="max"/>
-      </constraints>
-      <selectionEntries>
-        <selectionEntry id="5584-75b3-7445-e2cf" name="1. Dark Avenger" hidden="false" collective="false" import="true" type="upgrade">
-          <profiles>
-            <profile id="d11e-4267-ecf7-1094" name="Dark Avenger" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
-              <characteristics>
-                <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">Add 1 to hit rolls for this general’s melee weapons if the target unit has the ORDER keyword.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="aa8d-2468-307b-7223" name="2. Spiteful Duelist" hidden="false" collective="false" import="true" type="upgrade">
-          <profiles>
-            <profile id="9c75-4d0a-1a86-b59d" name="Spiteful Duelist" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
-              <characteristics>
-                <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">Each time this general is picked to fight, you can re-roll one wound roll for one of their attacks in that fight.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="2ed5-ce10-22f2-9b67" name="3. Cunning Deceiver" hidden="false" collective="false" import="true" type="upgrade">
-          <profiles>
-            <profile id="babc-4418-2091-f9c2" name="Cunning Deceiver" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
-              <characteristics>
-                <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">Roll a dice at the start of each of your hero phases as long as this general has not been slain. On a 5+ you receive 1 extra command point.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="ce7b-5079-8e73-49df" name="4. Lord of War" hidden="false" collective="false" import="true" type="upgrade">
-          <profiles>
-            <profile id="264c-5601-8894-49c6" name="Lord of War" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
-              <characteristics>
-                <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">In your hero phase, pick a friendly CHAOS unit within 3&quot; of this general and roll a dice. On a 4+ you can add 1 to hit rolls for the unit you picked until your next hero phase.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="100a-f21d-30bd-0e9a" name="5. Terrifying Presence" hidden="false" collective="false" import="true" type="upgrade">
-          <profiles>
-            <profile id="5b4b-6ac6-d235-c9da" name="Terrifying Presence" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
-              <characteristics>
-                <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">Subtract 1 from the Bravery characteristic of enemy units while they are within 3&quot; of this general.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="3f5f-faca-cb53-7d82" name="6. Great Destroyer" hidden="false" collective="false" import="true" type="upgrade">
-          <profiles>
-            <profile id="617b-164a-a339-55ae" name="Great Destroyer" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
-              <characteristics>
-                <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">Add 1 to Unbridled Malice dice rolls (see battle trait) for units while they are within 12&quot; of this general.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-    </selectionEntryGroup>
-    <selectionEntryGroup id="50aa-000b-1848-15c3" name="Order Command Traits" hidden="true" collective="false" import="true">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bbe9-9893-608b-3dde" type="max"/>
-      </constraints>
-      <selectionEntries>
-        <selectionEntry id="b044-526f-fd89-213a" name="1. Strategic Genius" hidden="false" collective="false" import="true" type="upgrade">
-          <profiles>
-            <profile id="2f4a-1ff3-4b8c-b752" name="Strategic Genius" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
-              <characteristics>
-                <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">At the start of the first battle round, you receive 1 extra command point.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="e366-464a-ed9e-3071" name="2. Inspiring" hidden="false" collective="false" import="true" type="upgrade">
-          <profiles>
-            <profile id="f14b-13a5-16f7-d8f3" name="Inspiring" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
-              <characteristics>
-                <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">Friendly ORDER units do not have to take battleshock tests while they are within 6&quot; of this general.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="0bfc-2753-ba37-63ec" name="3. Dauntless" hidden="false" collective="false" import="true" type="upgrade">
-          <profiles>
-            <profile id="3b26-c45b-9b90-ff4f" name="Dauntless" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
-              <characteristics>
-                <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">You can re-roll charge rolls for this general.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="cda1-69d4-81a2-af6f" name="4. Tenacious" hidden="false" collective="false" import="true" type="upgrade">
-          <profiles>
-            <profile id="d599-6a50-2186-f4c7" name="Tenacious" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
-              <characteristics>
-                <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">Add 1 to this general’s Wounds characteristic.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="e6ce-6770-a355-3db5" name="5. Legendary Fighter" hidden="false" collective="false" import="true" type="upgrade">
-          <profiles>
-            <profile id="3413-3555-3979-858b" name="Legendary Fighter" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
-              <characteristics>
-                <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">When this general is selected to fight, add 1 to the Attacks characteristic of one of their melee weapons for that fight.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="0d9f-944c-3eb5-5e54" name="6. Master of Defence" hidden="false" collective="false" import="true" type="upgrade">
-          <profiles>
-            <profile id="c089-92fd-691d-89eb" name="Master of Defence" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
-              <characteristics>
-                <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">Each tim you allocate a wound or mortal wound to this general, roll a dice. On a 6+ the wound is negated.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-    </selectionEntryGroup>
-    <selectionEntryGroup id="19d0-4499-b76e-96c1" name="Artefacts of Order" hidden="true" collective="false" import="true">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="485d-10a9-17b5-6459" type="max"/>
-      </constraints>
-      <selectionEntries>
-        <selectionEntry id="a2ad-302a-716f-ebae" name="1. Quicksilver Potion" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3cf7-199a-bbff-9614" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="64fc-7c64-bad6-8fa0" name="Quicksilver Potion" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Once per battle, at the start of a combat phase, you can use this potion. If you do so, in that combat phase, the bearer (and its mount, if it has one) fights immediately, instead of fighting later in the combat phase.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="0d47-e56d-64f2-b4f1" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="ad0e-8cce-201d-2119" name="2. Obstinate Blade" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="755e-658f-d4d2-11e5" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="ed09-eabc-e937-3cb5" name="Obstinate Blade" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Pick one of the bearer&apos;s melee weapons. Improve the Rend characteristic of the weapon by 1.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="fb80-ae0a-b51c-92be" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="8939-398d-2875-695e" name="3. Relic Blade" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="40b1-e51e-5040-26a8" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="eadc-c311-18a7-b983" name="Relic Blade" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Pick one of the bearer&apos;s melee weapons. Increase the Damage characteristic of that weapon by 1.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="f4ac-61c7-417e-f15a" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="595f-756d-7d05-2336" name="4. Hoarfrost" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="84fa-17d8-4e96-cf1f" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="a04c-51b5-a962-711c" name="Hoarfrost" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Pick one of the bearer&apos;s melee weapons. If an enemy model is allocated any wounds from this weapon and is not slain, subtract 1 from that model&apos;s hit rolls for the rest of the battle.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="a495-ef60-434a-906a" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="0c59-5080-ae42-7599" name="5. Talisman of Blinding Light" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4f88-3ae2-0d77-73ac" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="161e-9efa-2b0a-fefe" name="Talisman of Blinding Light" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Once per battle, at the start of a combat phase, you can use this amulet. If you do so, in that combat phase, subtract 1 from hit rolls made for attacks that target the bearer.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="467a-e5a8-4779-e5e2" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="3ad1-6df0-b131-e5f5" name="6. Phoenix Stone" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c9b2-1ef9-0dfc-f1c6" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="e580-f2ca-4ef6-85b6" name="Phoenix Stone" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">In each hero phase, you can heal 1 wound that has been allocated to the bearer.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="0d25-bdc4-faf0-7e71" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-    </selectionEntryGroup>
-    <selectionEntryGroup id="3c13-922a-683d-7de7" name="Artefacts of Chaos" hidden="true" collective="false" import="true">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="180e-001b-6cfa-238a" type="max"/>
-      </constraints>
-      <selectionEntries>
-        <selectionEntry id="f703-969e-2701-396f" name="1. Daemonic Weapon" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="87b9-a2a3-ef6e-2f7d" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="c526-fe9d-86ef-39f9" name="Daemonic Weapon" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Pick one of the bearer’s melee weapons. Each time you roll a wound roll of 6+ for that weapon, that attack inflicts 1 mortal wound in addition to its normal damage.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="d8a8-4ff4-d670-0782" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="bce7-28e0-79ca-8ec1" name="2. Chaos Runeblade" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="04b9-bd63-8e03-b108" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="0043-fadd-e00b-8ebc" name="Chaos Runeblade" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Pick one of the bearer’s melee weapons. Increase the Attacks characteristic of that weapon by 1.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="ce33-8f9d-3b55-f545" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="8a25-2b31-1228-58ed" name="3. Beguiling Gem" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0959-900b-7900-7438" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="057d-22fb-6708-f98f" name="Beguiling Gem" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Once per battle, at the start of the combat phase, you can pick one enemy model within 3&quot; of the bearer. Subtract 1 from hit rolls made for that model in that phase.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="d192-ec68-a611-41a9" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="4048-8842-13f8-6487" name="4. Chaos Talisman" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="675a-b8d6-59f5-114f" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="f0fd-58df-77bf-7a88" name="Chaos Talisman" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Roll a dice each time you allocate a wound or mortal wound to the bearer. On a 6+, the wound is negated. Add 1 to the roll if the wound was inflicted by a model with the ORDER keyword.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="fe47-4784-c4b7-6d39" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="99a8-19b8-c4fc-5b82" name="5. Favour of the Gods" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b7ed-39dd-49f5-9397" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="d726-c6db-121c-8a13" name="Favour of the Gods" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Add 1 to the Wounds characteristic of the bearer.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="b9dd-e27b-f206-d911" name="6. Crown of Conquest" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b303-544d-589b-0409" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="fe7c-fded-1e2c-6c81" name="Crown of Conquest" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Friendly CHAOS units do not have to take battleshock tests while they are within 6&quot; of the bearer.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-    </selectionEntryGroup>
     <selectionEntryGroup id="9e00-edd6-ffdf-3f9c" name="Blood Blessings of Khorne" hidden="false" collective="false" import="true">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
@@ -3155,7 +2376,7 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
-    <selectionEntryGroup id="37b0-af21-630c-d8af" name="Realm Artefacts of Power" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="37b0-af21-630c-d8af" name="Realm Artefacts of Power" hidden="true" collective="false" import="true">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditions>
@@ -3620,50 +2841,6 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
           </constraints>
           <categoryLinks>
             <categoryLink id="36e4-a878-23ff-7d3d" name="New CategoryLink" hidden="false" targetId="fd9f-428a-177d-c765" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-    </selectionEntryGroup>
-    <selectionEntryGroup id="c0f9-cbae-79d2-3d07" name="Malign Portents Artefacts - Mortal Slaanesh" hidden="true" collective="false" import="true">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a934-6d15-9932-b7ea" type="notInstanceOf"/>
-              </conditions>
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3963-2e99-aa63-c65e" type="notEqualTo"/>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3963-2e99-aa63-c65e" type="notInstanceOf"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="31d8-cd17-9573-a7ee" type="max"/>
-      </constraints>
-      <selectionEntries>
-        <selectionEntry id="6320-47ca-5cc8-d1d3" name="The Realmwalker Greaves" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5688-0639-323c-01a7" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="fdda-9094-6d6a-d9de" name="The Realmwalker Greaves" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-              <characteristics>
-                <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">[...] The bearer can fly. In addition, if the bearer’s Move characteristic is less than 12″, treat it as being 12″.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="b380-b165-2821-38b0" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
           </categoryLinks>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
@@ -4883,6 +4060,9 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
               </characteristics>
             </profile>
           </profiles>
+          <categoryLinks>
+            <categoryLink id="fce5-853d-8977-a649" name="Artefact" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
+          </categoryLinks>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
@@ -4898,6 +4078,9 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
               </characteristics>
             </profile>
           </profiles>
+          <categoryLinks>
+            <categoryLink id="1e19-e5bd-256b-ae23" name="Artefact" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
+          </categoryLinks>
           <entryLinks>
             <entryLink id="ab32-92a5-4fb0-d7ab" name="Arcane Bolt" hidden="false" collective="false" import="true" targetId="869c-168d-eba5-eacf" type="selectionEntry"/>
             <entryLink id="d517-3088-f1c5-c28e" name="Mystic Shield" hidden="false" collective="false" import="true" targetId="5fdd-6634-f9f8-068a" type="selectionEntry"/>
@@ -4917,6 +4100,9 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
               </characteristics>
             </profile>
           </profiles>
+          <categoryLinks>
+            <categoryLink id="f911-f0e9-1d2a-03f0" name="Artefact" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
+          </categoryLinks>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
@@ -4932,6 +4118,9 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
               </characteristics>
             </profile>
           </profiles>
+          <categoryLinks>
+            <categoryLink id="b183-16e5-8d0d-024f" name="Artefact" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
+          </categoryLinks>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
