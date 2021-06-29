@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="388b-16d3-8182-d6c0" name="Order - Daughters of Khaine" revision="65" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="77" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="388b-16d3-8182-d6c0" name="Order - Daughters of Khaine" revision="66" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="80" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="388b-16d3-pubN65537" name="Order Battletome: Daughters of Khaine (2018)"/>
     <publication id="388b-16d3-pubN69838" name="Order Official FAQs and errata, Version 1.4"/>
@@ -1381,6 +1381,7 @@ If the Shadow Queen is slain, after her model is removed from play, this model i
         <categoryLink id="beb4-cfb3-6634-3a56" name="New CategoryLink" hidden="false" targetId="b970-b3bf-e1a4-a6fc" primary="false"/>
         <categoryLink id="dcbe-c289-2a64-7a24" name="MORATHI-KHAINE" hidden="false" targetId="5a8a-d824-e0f2-8b51" primary="false"/>
         <categoryLink id="79fe-70f2-dfea-90d2" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
+        <categoryLink id="bf15-3b47-3511-4cd0" name="9 or less wounds Leader" hidden="false" targetId="a8ed-ca35-24e0-cf2e" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="344f-e813-49d7-a290" name="Bladed Wings" hidden="false" collective="false" import="true" type="upgrade">
@@ -1573,7 +1574,15 @@ If the Shadow Queen is slain, after her model is removed from play, this model i
         <entryLink id="730c-03a9-25fe-78a1" name="Standard Bearer" hidden="false" collective="false" import="true" targetId="69aa-fb63-0f59-289b" type="selectionEntry"/>
         <entryLink id="3c20-4a36-01f9-6e5f" name="Reinforced" hidden="false" collective="false" import="true" targetId="0a8d-cde8-fba1-6c0d" type="selectionEntry">
           <modifiers>
-            <modifier type="set" field="95f2-6885-756f-9ea5" value="2.0"/>
+            <modifier type="set" field="95f2-6885-756f-9ea5" value="2.0">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="78f3-8a59-699a-61e8" type="notInstanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
           </modifiers>
           <costs>
             <cost name="pts" typeId="points" value="95.0"/>
@@ -1778,7 +1787,15 @@ If the Shadow Queen is slain, after her model is removed from play, this model i
         <entryLink id="5f61-a9a1-d5ed-162a" name="Standard Bearer" hidden="false" collective="false" import="true" targetId="69aa-fb63-0f59-289b" type="selectionEntry"/>
         <entryLink id="fead-8ef8-e402-d177" name="Reinforced" hidden="false" collective="false" import="true" targetId="0a8d-cde8-fba1-6c0d" type="selectionEntry">
           <modifiers>
-            <modifier type="set" field="95f2-6885-756f-9ea5" value="2.0"/>
+            <modifier type="set" field="95f2-6885-756f-9ea5" value="2.0">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="78f3-8a59-699a-61e8" type="notInstanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
           </modifiers>
           <costs>
             <cost name="pts" typeId="points" value="95.0"/>
@@ -2253,6 +2270,26 @@ If the Shadow Queen is slain, after her model is removed from play, this model i
       </selectionEntries>
       <entryLinks>
         <entryLink id="73e4-80ca-7e9b-0f30" name="Reinforced" hidden="false" collective="false" import="true" targetId="0a8d-cde8-fba1-6c0d" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="95f2-6885-756f-9ea5" value="2.0">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="259d-0477-c9f8-2947" type="greaterThan"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="fdc4-ac64-aaf9-3885" type="greaterThan"/>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="ff0e-d611-c843-0ccd" type="greaterThan"/>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="7592-822c-4601-27e0" type="greaterThan"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
           <costs>
             <cost name="pts" typeId="points" value="95.0"/>
           </costs>
@@ -2390,7 +2427,24 @@ If the Shadow Queen is slain, after her model is removed from play, this model i
       <entryLinks>
         <entryLink id="2793-a0fb-72b1-5f8a" name="Reinforced" hidden="false" collective="false" import="true" targetId="0a8d-cde8-fba1-6c0d" type="selectionEntry">
           <modifiers>
-            <modifier type="set" field="95f2-6885-756f-9ea5" value="2.0"/>
+            <modifier type="set" field="95f2-6885-756f-9ea5" value="2.0">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="259d-0477-c9f8-2947" type="greaterThan"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="fdc4-ac64-aaf9-3885" type="greaterThan"/>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="ff0e-d611-c843-0ccd" type="greaterThan"/>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="7592-822c-4601-27e0" type="greaterThan"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
           </modifiers>
           <costs>
             <cost name="pts" typeId="points" value="95.0"/>
@@ -4338,15 +4392,6 @@ DAUGHTERS OF KHAINE PRIEST.</characteristic>
             </modifier>
           </modifiers>
         </entryLink>
-        <entryLink id="1d9c-30bf-116f-f549" name="Artefacts of Order" hidden="false" collective="false" import="true" targetId="19d0-4499-b76e-96c1" type="selectionEntryGroup">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="583f-f03b-2624-4567" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </entryLink>
         <entryLink id="8bec-f722-a57a-ef83" name="Realm Artefacts of Power" hidden="false" collective="false" import="true" targetId="37b0-af21-630c-d8af" type="selectionEntryGroup"/>
         <entryLink id="565c-f60a-3960-5131" name="Universal Artefacts of Power" hidden="false" collective="false" import="true" targetId="11c4-fd82-92a7-de8a" type="selectionEntryGroup"/>
       </entryLinks>
@@ -4905,15 +4950,6 @@ DAUGHTERS OF KHAINE PRIEST.</characteristic>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ca9e-cd42-7e29-20d1" type="max"/>
       </constraints>
       <entryLinks>
-        <entryLink id="b372-24ea-e825-cbf8" name="Order Command Traits" hidden="false" collective="false" import="true" targetId="50aa-000b-1848-15c3" type="selectionEntryGroup">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="583f-f03b-2624-4567" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </entryLink>
         <entryLink id="4c39-059c-9fd8-e430" name="Daughters of Khaine Command Traits" hidden="false" collective="false" import="true" targetId="efcd-89d0-5707-f14a" type="selectionEntryGroup">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
