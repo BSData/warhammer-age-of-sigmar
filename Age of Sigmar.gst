@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="80" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="81" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <publications>
     <publication id="e51d-b1a3-pubEC" name="The General&apos;s Handbook"/>
     <publication id="e51d-b1a3-pubEQ" name="Core Rules"/>
@@ -100,6 +100,11 @@
     <profileType id="75e0-a332-e4f5-bf36" name="Battalion Organisation">
       <characteristicTypes>
         <characteristicType id="eb5f-e9d2-e457-bff5" name="Required"/>
+      </characteristicTypes>
+    </profileType>
+    <profileType id="9c01-ec20-32c1-0948" name="Grand Strategy">
+      <characteristicTypes>
+        <characteristicType id="53c8-cc18-16d1-e890" name="Description"/>
       </characteristicTypes>
     </profileType>
   </profileTypes>
@@ -1228,6 +1233,11 @@
     <entryLink id="eb9a-ad10-f507-1b3a" name="Core Battalion: Battle Regiment" hidden="false" collective="false" import="true" targetId="1878-56e2-2862-8da5" type="selectionEntry"/>
     <entryLink id="da26-f2b9-ea3b-b117" name="Core Battalion: Command Entourage" hidden="false" collective="false" import="true" targetId="7f89-26d0-ff93-83fe" type="selectionEntry"/>
     <entryLink id="49ae-7ee3-101e-5204" name="Core Battalion: Grand Battery" hidden="false" collective="false" import="true" targetId="be2d-ba53-4ebc-f035" type="selectionEntry"/>
+    <entryLink id="753f-721e-6781-3bdf" name="Grand Strategy" hidden="false" collective="false" import="true" targetId="f5ad-d831-b4c5-2195" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="e864-b552-811d-240f" name="New CategoryLink" hidden="false" targetId="1974-3f49-7f0b-8422" primary="true"/>
+      </categoryLinks>
+    </entryLink>
   </entryLinks>
   <rules>
     <rule id="a954-6cfc-59ca-674e" name="Inspiring Presence" publicationId="e51d-b1a3-pubEQ" page="3" hidden="false">
@@ -2275,6 +2285,18 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="f5ad-d831-b4c5-2195" name="Grand Strategy" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4470-06b9-d56a-66db" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="473c-fec2-7fa5-00e4" type="min"/>
+      </constraints>
+      <entryLinks>
+        <entryLink id="a86f-5501-ef94-94ba" name="Grand Strategy" hidden="false" collective="false" import="true" targetId="1e64-bcdc-3709-7ec7" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="9e00-edd6-ffdf-3f9c" name="Blood Blessings of Khorne" hidden="false" collective="false" import="true">
@@ -2397,7 +2419,7 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
         <entryLink id="5e7a-a472-6882-6005" name="Relics of Ulgu" hidden="false" collective="false" import="true" targetId="158b-c95d-0272-ca62" type="selectionEntryGroup"/>
       </entryLinks>
     </selectionEntryGroup>
-    <selectionEntryGroup id="0d51-8ed8-dcf5-76a0" name="Realm of Origin" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="0d51-8ed8-dcf5-76a0" name="Realm of Origin" hidden="true" collective="false" import="true">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f8f1-eb73-a419-b92e" type="max"/>
         <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0476-58c6-f5ef-f2f3" type="min"/>
@@ -2440,7 +2462,7 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
-    <selectionEntryGroup id="692b-77fc-05c5-d070" name="Relics of Ghyran" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="692b-77fc-05c5-d070" name="Relics of Ghyran" hidden="true" collective="false" import="true">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditions>
@@ -2562,7 +2584,7 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
-    <selectionEntryGroup id="463d-7799-7dca-4724" name="Relics of Ghur" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="463d-7799-7dca-4724" name="Relics of Ghur" hidden="true" collective="false" import="true">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditions>
@@ -2594,7 +2616,7 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
-    <selectionEntryGroup id="302c-ef0b-a9d6-685e" name="Relics of Chamon" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="302c-ef0b-a9d6-685e" name="Relics of Chamon" hidden="true" collective="false" import="true">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditions>
@@ -2626,7 +2648,7 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
-    <selectionEntryGroup id="dff7-19b4-9850-89a7" name="Relics of Aqshy" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="dff7-19b4-9850-89a7" name="Relics of Aqshy" hidden="true" collective="false" import="true">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditions>
@@ -2658,7 +2680,7 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
-    <selectionEntryGroup id="f685-ff72-7c6d-d0f5" name="Relics of Shyish" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="f685-ff72-7c6d-d0f5" name="Relics of Shyish" hidden="true" collective="false" import="true">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditions>
@@ -2690,7 +2712,7 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
-    <selectionEntryGroup id="158b-c95d-0272-ca62" name="Relics of Ulgu" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="158b-c95d-0272-ca62" name="Relics of Ulgu" hidden="true" collective="false" import="true">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditions>
@@ -2722,7 +2744,7 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
-    <selectionEntryGroup id="0823-7018-722c-3bcb" name="Relics of Hysh" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="0823-7018-722c-3bcb" name="Relics of Hysh" hidden="true" collective="false" import="true">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditions>
@@ -4264,6 +4286,88 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="1e64-bcdc-3709-7ec7" name="Grand Strategy" hidden="false" collective="false" import="true">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="bc5c-6f2c-d51b-a351" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a4d6-8abe-6aac-42e9" type="min"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4717-1d01-b0b2-9a58" type="max"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3050-d56e-a99c-e380" type="min"/>
+      </constraints>
+      <selectionEntries>
+        <selectionEntry id="a409-36d2-41d9-a72f" name="Hold the Line" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="4fb4-1f59-e825-f56f" name="Hold the Line" hidden="false" typeId="9c01-ec20-32c1-0948" typeName="Grand Strategy">
+              <characteristics>
+                <characteristic name="Description" typeId="53c8-cc18-16d1-e890">When the battle ends,  you complete this grand strategy if there are any Battleline units from your starting army on the battlefield.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry id="1dbe-00f3-42f4-b04e" name="Vendetta" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="d2bd-7f2d-40b6-a15a" name="Vendetta" hidden="false" typeId="9c01-ec20-32c1-0948" typeName="Grand Strategy">
+              <characteristics>
+                <characteristic name="Description" typeId="53c8-cc18-16d1-e890">When the battle ends,  you complete this grand strategy if the model chosen to be your opponent&apos;s general has been slain and the model chosen to be your general has not been slain.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry id="a35f-513d-9f57-e941" name="Dominating Presence" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="6fac-7f75-a8e8-f292" name="Dominating Presence" hidden="false" typeId="9c01-ec20-32c1-0948" typeName="Grand Strategy">
+              <characteristics>
+                <characteristic name="Description" typeId="53c8-cc18-16d1-e890">When the battle ends,  you complete this grand strategy if there are more units from your starting army on the battlefield than there are units from your opponent&apos;s starting army on the battlefield.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry id="8e7f-3814-4b8a-ef1f" name="Beast Master" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="8a2f-52ff-e81f-e3bc" name="Beast Master" hidden="false" typeId="9c01-ec20-32c1-0948" typeName="Grand Strategy">
+              <characteristics>
+                <characteristic name="Description" typeId="53c8-cc18-16d1-e890">When the battle ends,  you complete this grand strategy if there are any MONSTERS from your starting army on the battlefield.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry id="14f2-5c1f-5abb-15de" name="Prized Sorcery" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="1774-98a0-c401-d161" name="Prized Sorcery" hidden="false" typeId="9c01-ec20-32c1-0948" typeName="Grand Strategy">
+              <characteristics>
+                <characteristic name="Description" typeId="53c8-cc18-16d1-e890">When the battle ends,  you complete this grand strategy if there are any WIZARDS from your starting army on the battlefield.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry id="beb8-5f44-3575-b445" name="Pillars of Belief" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="6383-a7f2-eaef-03dd" name="Pillars of Belief" hidden="false" typeId="9c01-ec20-32c1-0948" typeName="Grand Strategy">
+              <characteristics>
+                <characteristic name="Description" typeId="53c8-cc18-16d1-e890">When the battle ends,  you complete this grand strategy if there are any PRIESTS from your starting army on the battlefield.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry id="13b2-13a9-40f1-6d75" name="Predator&apos;s Domain" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="9706-5930-ef0a-dbcd" name="Predator&apos;s Domain" hidden="false" typeId="9c01-ec20-32c1-0948" typeName="Grand Strategy">
+              <characteristics>
+                <characteristic name="Description" typeId="53c8-cc18-16d1-e890">When the battle ends,  you complete this grand strategy if you control more terrain features than your opponent.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry id="8b9d-0de1-0ee1-4d92" name="Sever the Head" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="dc8d-1188-4015-5ee0" name="Sever the Head" hidden="false" typeId="9c01-ec20-32c1-0948" typeName="Grand Strategy">
+              <characteristics>
+                <characteristic name="Description" typeId="53c8-cc18-16d1-e890">When the battle ends,  you complete this grand strategy if there are no HEROES from your opponent&apos;s starting army on the battlefield.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
