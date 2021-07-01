@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="3721-70d4-3f5f-4609" name="Order - Seraphon" revision="65" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="80" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="3721-70d4-3f5f-4609" name="Order - Seraphon" revision="69" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="81" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <readme>To some they are the uncompromising, unfeeling vengeance of the heavens. To others they are a race of bloodthirsty reptilian monsters marching forth from the steaming jungles to bring death to those who would intrude upon their sacred grounds. Yet the Seraphon are both these things, and more besides. They are the true children of Azyr, filled with the light of the stars, and they fight to enact a cosmic plan that spans all of creation.
 
 To create a Seraphon force, first choose your allegiance. If you choose to align with the Seraphon, then choose your force type and constellation. These effect your unit choices and available relics of power.</readme>
@@ -104,18 +104,17 @@ To create a Seraphon force, first choose your allegiance. If you choose to align
     <categoryEntry id="ac6f-bb7a-14d4-33bd" name="DRACOTHION&apos;S TAIL" hidden="false"/>
     <categoryEntry id="07dd-34bf-f327-8e83" name="FANGS OF SOTEK" hidden="false"/>
     <categoryEntry id="3f68-596d-4abd-d26c" name="BOUND" hidden="false"/>
+    <categoryEntry id="dd2c-990c-a9c4-d578" name="KIXI-TAKA" hidden="false"/>
+    <categoryEntry id="0561-b4fb-eaca-340a" name="KLAQ-TROK" hidden="false"/>
+    <categoryEntry id="0a89-8912-8976-2c47" name="STARBLOOD STALKERS" hidden="false"/>
   </categoryEntries>
   <entryLinks>
     <entryLink id="7332-f387-438b-852c" name="Allegiance" hidden="false" collective="false" import="true" targetId="9392-2a0a-99ca-28fe" type="selectionEntry">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="78f3-8a59-699a-61e8" type="instanceOf"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
+          <conditions>
+            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="78f3-8a59-699a-61e8" type="instanceOf"/>
+          </conditions>
         </modifier>
       </modifiers>
       <categoryLinks>
@@ -594,12 +593,34 @@ To create a Seraphon force, first choose your allegiance. If you choose to align
         <categoryLink id="12e7-dd21-1870-17f1" name="New CategoryLink" hidden="false" targetId="eecb-ed66-d474-9ddd" primary="true"/>
       </categoryLinks>
     </entryLink>
+    <entryLink id="2280-f541-7c38-2cce" name="Kixi-taka the Diviner" hidden="false" collective="false" import="true" targetId="74a3-5520-876a-9090" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="b846-0b5f-ed62-fc88" name="Leader" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="8a9e-d278-5012-8845" name="Klaq-trok" hidden="false" collective="false" import="true" targetId="3f66-6fa5-075a-4a62" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="44e7-77da-cf34-ce98" name="Leader" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="91aa-f9d5-6099-207d" name="Starblood Stalkers" hidden="false" collective="false" import="true" targetId="b040-79c3-bd43-9cd0" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="67ee-4357-7933-71d8" name="New CategoryLink" hidden="false" targetId="065e-fda7-fd27-1f40" primary="true"/>
+      </categoryLinks>
+    </entryLink>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="9392-2a0a-99ca-28fe" name="Allegiance" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="minInForce" value="0.0">
+          <conditions>
+            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="78f3-8a59-699a-61e8" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
-        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="minInForce" type="min"/>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="maxInForce" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="minInForce" type="min"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="maxInForce" type="max"/>
       </constraints>
       <selectionEntryGroups>
         <selectionEntryGroup id="dcab-3034-f776-022e" name="Allegiance" hidden="false" collective="false" import="true" defaultSelectionEntryId="2769-f63b-fc02-fd64">
@@ -7533,6 +7554,298 @@ to set up the WIZARD, then the WIZARD is slain.</description>
       <costs>
         <cost name="pts" typeId="points" value="40.0"/>
       </costs>
+    </selectionEntry>
+    <selectionEntry id="74a3-5520-876a-9090" name="Kixi-taka the Diviner" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="e5a5-7a48-3ac6-7677" value="1.0">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3f66-6fa5-075a-4a62" type="greaterThan"/>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b040-79c3-bd43-9cd0" type="greaterThan"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b8bf-052f-73d6-af9c" type="max"/>
+        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e5a5-7a48-3ac6-7677" type="min"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7774-44d8-2b8d-1527" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="0999-fe12-30a4-0066" name="Kixi-taka the Diviner" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
+          <characteristics>
+            <characteristic name="Move" typeId="8655-6213-2824-1752">8&quot;</characteristic>
+            <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">5</characteristic>
+            <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">6</characteristic>
+            <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">5+</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="8e14-312f-37ad-c001" name="Star-stone Staff" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">In your hero phase, you can pick 1 friendly SKINK unit wholly within 12&quot; of this model and roll a dice. Add 1 to the roll if the unit you pick is STARBLOOD STALKERS. On a 3+, until your next hero phase, that unit can run and still shoot and/or charge in the same turn, and you can add 1 to save rolls for attacks that target that unit. A unit cannot benefit from this ability more than once per phase.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="b771-a8fe-b821-92a8" name="Herald of the Cold Ones" hidden="false" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
+          <characteristics>
+            <characteristic name="Command Ability Details" typeId="1b71-4c83-4e8c-093f">You can use this command ability in your hero phase. If you do so, pick 1 friendly SKINK unit wholly within 18&quot; of this model. If the unit you pick is STARBLOOD STALKERS, you can use this command ability without a command point being spent. Until your next hero phase, you can add 1 to hit rolls for attacks made by that unit. A unit cannot benefit from this command ability more than once per phase.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="2e13-78be-e8fe-a4db" name="9 or less wounds Leader" hidden="false" targetId="a8ed-ca35-24e0-cf2e" primary="false"/>
+        <categoryLink id="f25d-590b-d136-4b6e" name="ORDER" hidden="false" targetId="b970-b3bf-e1a4-a6fc" primary="false"/>
+        <categoryLink id="2052-0336-252e-d192" name="SERAPHON" hidden="false" targetId="461d-c7cb-74f1-84e8" primary="false"/>
+        <categoryLink id="155a-cd80-d381-494b" name="COALESCED" hidden="false" targetId="4f39-af56-dd87-529d" primary="false"/>
+        <categoryLink id="b853-fb6c-8e1a-3348" name="THUNDER LIZARD" hidden="false" targetId="3176-a76e-ba7a-eb6e" primary="false"/>
+        <categoryLink id="2581-3217-90ad-6c05" name="SKINK" hidden="false" targetId="23b5-63b2-a761-9206" primary="false"/>
+        <categoryLink id="c5b0-2ca4-cbc4-180e" name="HERO" hidden="false" targetId="4e0e-664d-51ea-0929" primary="false"/>
+        <categoryLink id="0c0e-01d6-9e21-df6a" name="PRIEST" hidden="false" targetId="e8a5-e4c1-3d11-e7dd" primary="false"/>
+        <categoryLink id="22c8-01d4-40be-7bff" name="KIXI-TAKA" hidden="false" targetId="dd2c-990c-a9c4-d578" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="675e-da74-d850-9f78" name="Starbolt" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f88a-40e6-59c6-f3f4" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2d6a-01da-5e98-7016" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="0fe3-8396-d7d7-a304" name="Starbolt" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Missile</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">18&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">2</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry id="4589-b5c9-94e9-d048" name="Star-stone Staff" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2c4a-1baa-fbd7-7a8e" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4a8c-2a06-a773-2e27" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="46fc-0b39-7f40-3034" name="Star-stone Staff" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">1</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">4+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">D3</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
+      <entryLinks>
+        <entryLink id="7614-d95b-f195-e580" name="General" hidden="false" collective="false" import="true" targetId="fbb4-b093-95c1-960d" type="selectionEntry">
+          <categoryLinks>
+            <categoryLink id="5f08-6691-fe6c-d356" name="Unique General" hidden="false" targetId="fe3f-d230-7e2c-fba2" primary="false"/>
+          </categoryLinks>
+        </entryLink>
+        <entryLink id="6812-5dc3-c2b2-9f80" name="Battalions" hidden="false" collective="false" import="true" targetId="dcde-52e3-fae3-3e14" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="225.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="3f66-6fa5-075a-4a62" name="Klaq-trok" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="82ae-8292-6937-234d" value="1.0">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b040-79c3-bd43-9cd0" type="greaterThan"/>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="74a3-5520-876a-9090" type="greaterThan"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9904-f500-02eb-3d42" type="max"/>
+        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="82ae-8292-6937-234d" type="min"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="af97-172a-06d4-b8aa" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="7a97-4a2b-9a85-28a3" name="Klaq-trok" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
+          <characteristics>
+            <characteristic name="Move" typeId="8655-6213-2824-1752">6&quot;</characteristic>
+            <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">7</characteristic>
+            <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">8</characteristic>
+            <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">4+</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="9f8f-ab2b-200f-0ec4" name="Bolstering Presence" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Friendly STARBLOOD STALKERS units have a Bravery characteristic of 8 while they are wholly within 9&quot; of this model.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="4228-4306-b530-1d43" name="Cold Ferocity" hidden="false" targetId="4e35-2e87-dd52-d448" type="profile"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="c70d-77e2-b089-95a5" name="9 or less wounds Leader" hidden="false" targetId="a8ed-ca35-24e0-cf2e" primary="false"/>
+        <categoryLink id="71aa-d82b-6a25-6b70" name="ORDER" hidden="false" targetId="b970-b3bf-e1a4-a6fc" primary="false"/>
+        <categoryLink id="579c-6102-aac4-393d" name="SERAPHON" hidden="false" targetId="461d-c7cb-74f1-84e8" primary="false"/>
+        <categoryLink id="ec67-f8e5-f81e-4dec" name="COALESCED" hidden="false" targetId="4f39-af56-dd87-529d" primary="false"/>
+        <categoryLink id="e21e-cd8a-2454-ee50" name="THUNDER LIZARD" hidden="false" targetId="3176-a76e-ba7a-eb6e" primary="false"/>
+        <categoryLink id="da10-bd3c-3212-e4ce" name="SAURUS" hidden="false" targetId="8ed5-c845-09e2-7ebd" primary="false"/>
+        <categoryLink id="2e18-46bc-7cb5-5ae5" name="HERO" hidden="false" targetId="4e0e-664d-51ea-0929" primary="false"/>
+        <categoryLink id="47ba-5723-827f-3dfa" name="OLDBLOOD" hidden="false" targetId="5480-5806-43c4-b74e" primary="false"/>
+        <categoryLink id="6275-1cba-4294-c767" name="KLAQ-TROK" hidden="false" targetId="0561-b4fb-eaca-340a" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="5b2e-e648-6d11-5117" name="Celestite Warblade" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7380-2287-614b-b4b7" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b559-5607-b35b-1baf" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="b189-9034-6779-ad88" name="Celestite Warblade" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">5</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry id="66bc-c4be-4164-5931" name="Fearsome Jaws" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ee15-e6f6-b100-da35" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c4f2-ab60-cea0-d661" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="ccb5-9857-2c06-4a20" name="Fearsome Jaws" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">1</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntry>
+    <selectionEntry id="b040-79c3-bd43-9cd0" name="Starblood Stalkers" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="ecc6-80ca-4a4f-2486" value="1.0">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3f66-6fa5-075a-4a62" type="greaterThan"/>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="74a3-5520-876a-9090" type="greaterThan"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="fce7-d08c-0d33-f8e0" type="max"/>
+        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ecc6-80ca-4a4f-2486" type="min"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b40b-3c0f-4ce2-04df" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="17df-98db-12d3-89d9" name="Starblood Stalkers" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
+          <characteristics>
+            <characteristic name="Move" typeId="8655-6213-2824-1752">8&quot;</characteristic>
+            <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">1</characteristic>
+            <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">5</characteristic>
+            <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">6+</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="a426-65e1-a535-ab80" name="Chameleon Ambush" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Instead of setting up this unit, KIXI-TAKA and KLAQ-TROK on the battlefield, you can place them to one side and say that they are hiding as reserve units. If you do so, at the end of any of your movement phases, you can set up this unit, KIXI-TAKA and KLAQ-TROK on the battlefield more than 9&quot; from any enemy units and wholly within 9&quot; of each other.
+
+Any reserve units that are in hiding and not on the battlefield at the start of the fourth battle round are slain.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="6c67-18e3-5e61-9263" name="Star-venom" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If the unmodified hit roll for an attack made with a Dartpipe is 6, that attack inflicts 1 mortal wound on the target and the attack sequence ends (do not make a wound or save roll).</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="d126-bd0f-bc67-0d44" name="ORDER" hidden="false" targetId="b970-b3bf-e1a4-a6fc" primary="false"/>
+        <categoryLink id="e213-3eae-ea3e-c043" name="SERAPHON" hidden="false" targetId="461d-c7cb-74f1-84e8" primary="false"/>
+        <categoryLink id="eac7-ecdc-c3c8-a3ef" name="COALESCED" hidden="false" targetId="4f39-af56-dd87-529d" primary="false"/>
+        <categoryLink id="096b-2e3d-b91a-59a7" name="THUNDER LIZARD" hidden="false" targetId="3176-a76e-ba7a-eb6e" primary="false"/>
+        <categoryLink id="04ce-62eb-1b25-66a8" name="SKINK" hidden="false" targetId="23b5-63b2-a761-9206" primary="false"/>
+        <categoryLink id="61ca-447e-9e95-4007" name="STARBLOOD STALKERS" hidden="false" targetId="0a89-8912-8976-2c47" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="bd77-e53a-f78e-79ba" name="Dartpipe" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c94f-0eb9-d538-6a1a" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="63db-5a47-13f9-a887" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="e6bb-1a74-a3b6-680c" name="Dartpipe" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Missile</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">16&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">2</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">4+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
+      <entryLinks>
+        <entryLink id="6915-b733-3688-6072" name="Celestite Dagger" hidden="false" collective="false" import="true" targetId="c487-c9a1-fd8b-9ac5" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c716-23db-1195-b6e3" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="df79-95c1-9525-7faa" type="max"/>
+          </constraints>
+        </entryLink>
+        <entryLink id="ec16-3aa2-127c-1eb2" name="Meteoric Javelins" hidden="false" collective="false" import="true" targetId="78de-d2ac-e83f-323b" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2eb8-e8c8-c9a9-7613" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="470a-eb36-222e-529c" type="min"/>
+          </constraints>
+        </entryLink>
+        <entryLink id="6f03-ba8e-6879-d90e" name="Star-buckler" hidden="false" collective="false" import="true" targetId="b0a1-e613-303d-8c70" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c077-c0d2-da5e-b2e2" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e9e3-eddf-8d16-9ba4" type="max"/>
+          </constraints>
+        </entryLink>
+        <entryLink id="c616-9108-a36e-f334" name="Boltspitter" hidden="false" collective="false" import="true" targetId="779d-bd5a-01c8-029e" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9a48-e767-cc02-6e28" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fb23-8121-d2fe-f834" type="max"/>
+          </constraints>
+        </entryLink>
+        <entryLink id="a2b2-d79f-89e4-7517" name="Moonstone Club" hidden="false" collective="false" import="true" targetId="0166-0aa6-04dd-9c0d" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="aa41-9e37-87f7-9f8d" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6b5d-d449-87b9-b316" type="max"/>
+          </constraints>
+        </entryLink>
+        <entryLink id="dea7-598b-840d-22c8" name="Battalions" hidden="false" collective="false" import="true" targetId="dcde-52e3-fae3-3e14" type="selectionEntryGroup"/>
+      </entryLinks>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
