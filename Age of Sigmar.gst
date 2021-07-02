@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="82" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="83" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <publications>
     <publication id="e51d-b1a3-pubEC" name="The General&apos;s Handbook"/>
     <publication id="e51d-b1a3-pubEQ" name="Core Rules"/>
@@ -253,6 +253,7 @@
     <categoryEntry id="6575-7d6c-ce4d-ada4" name="Core Battalion" hidden="false"/>
     <categoryEntry id="a8ed-ca35-24e0-cf2e" name="9 or less wounds Leader" hidden="false"/>
     <categoryEntry id="787f-7260-bb51-08c8" name="Legends" hidden="false"/>
+    <categoryEntry id="fa69-cc30-064b-f0ce" name="Allegiance KO" hidden="true"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry id="36b7-ee1e-0855-f23f" name="**Pitched Battle**" hidden="false">
@@ -2368,6 +2369,23 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="c965-0f85-d28c-ea2a" name="Extra Enhancement: Mount Trait" hidden="false" collective="false" import="true" type="upgrade">
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="7aa8-a1e1-a0b8-fd18" name="Extra Enhancement: Great Endrinworks" hidden="true" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fa69-cc30-064b-f0ce" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="37b0-af21-630c-d8af" name="Realm Artefacts of Power" hidden="true" collective="false" import="true">
@@ -4039,7 +4057,8 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
       <selectionEntries>
         <selectionEntry id="cd0c-54a6-f84a-cfa2" name="Amulet of Destiny" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="93c1-d725-3f42-20bb" type="max"/>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="93c1-d725-3f42-20bb" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1ac5-16ba-eb84-45c9" type="max"/>
           </constraints>
           <profiles>
             <profile id="63bd-a638-e5b4-d163" name="Amulet of Destiny" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
@@ -4058,6 +4077,7 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
         <selectionEntry id="9918-5a46-2468-35e2" name="Arcane Tome" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8714-d72f-f140-1e6b" type="max"/>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4694-7715-75cf-9e75" type="max"/>
           </constraints>
           <profiles>
             <profile id="2867-2484-1105-673a" name="Arcane Tome" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
@@ -4080,6 +4100,7 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
         <selectionEntry id="3e7b-7aed-c958-d38b" name="Vial of Mantivore Venom" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="03a0-981f-ce14-01f6" type="max"/>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="47fa-42b4-cc1b-a204" type="max"/>
           </constraints>
           <profiles>
             <profile id="21e5-7e64-7395-2564" name="Vial of Mantivore Venom" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
@@ -4098,6 +4119,7 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
         <selectionEntry id="16d4-a47b-1291-1b4f" name="Seed of Rebirth" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d70e-b951-77b0-f0d7" type="max"/>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="561a-9b50-fb47-ef50" type="max"/>
           </constraints>
           <profiles>
             <profile id="366b-ec29-81e2-981d" name="Seed of Rebirth" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
