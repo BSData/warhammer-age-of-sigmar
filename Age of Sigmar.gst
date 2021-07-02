@@ -107,6 +107,11 @@
         <characteristicType id="53c8-cc18-16d1-e890" name="Description"/>
       </characteristicTypes>
     </profileType>
+    <profileType id="6bf0-7801-561f-cc28" name="Special Rules">
+      <characteristicTypes>
+        <characteristicType id="82bd-2ffd-8589-576c" name="Description"/>
+      </characteristicTypes>
+    </profileType>
   </profileTypes>
   <categoryEntries>
     <categoryEntry id="6c6b-e787-f9b8-a510" name="Leader" hidden="false"/>
@@ -2870,7 +2875,7 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3277-c810-a600-3a73" type="max"/>
       </constraints>
       <selectionEntries>
-        <selectionEntry id="ba2b-ec63-fa08-88ef" name="Battle: Aqshy" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="ba2b-ec63-fa08-88ef" name="Battle: Aqshy" hidden="true" collective="false" import="true" type="upgrade">
           <profiles>
             <profile id="dbea-58cc-3513-1868" name="Stoke Rage" publicationId="e51d-b1a3-pubEKHGM" page="75" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
@@ -2931,7 +2936,7 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="ed53-d347-e94c-2431" name="Battle: Chamon" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="ed53-d347-e94c-2431" name="Battle: Chamon" hidden="true" collective="false" import="true" type="upgrade">
           <profiles>
             <profile id="2c42-d061-a087-9527" name="Rain of Lead" publicationId="e51d-b1a3-pubEHOGM" page="74" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
@@ -2994,58 +2999,26 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
         </selectionEntry>
         <selectionEntry id="afb2-6845-cd03-2596" name="Battle: Ghur" hidden="false" collective="false" import="true" type="upgrade">
           <profiles>
-            <profile id="4980-8f82-01df-d8c1" name="The Amber Spear" publicationId="e51d-b1a3-pubEHOGM" page="73" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
-              <characteristics>
-                <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
-                <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick a point on the battlefield within 12&quot; of the caster that is visible to them and draw an imaginary straight line 1mm wide between that point and the closest part of the caster. Each unit other than the caster that has models passed across by this line suffers 1 mortal wound.</characteristic>
-                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
-              </characteristics>
-            </profile>
-            <profile id="47d2-8fe8-a1cd-fcd4" name="Bestial Spirit" publicationId="e51d-b1a3-pubEKHGM" page="73" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
-              <characteristics>
-                <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
-                <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick an enemy unit within 18&quot; of the caster that is visible to them. That unit suffers D3 mortal wounds. In addition, if the unit suffers 3 mortal wounds from this spell, subtract 1 from its Bravery characteristic until your next hero phase.</characteristic>
-                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
-              </characteristics>
-            </profile>
-            <profile id="b570-a87b-a5d6-4314" name="Flock of Doom" publicationId="e51d-b1a3-pubEKHGM" page="73" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
-              <characteristics>
-                <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
-                <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick an enemy unit within 18&quot; of the caster that is visible to them and roll 12 dice. For each 6+ that enemy unit suffers 1 mortal wound.</characteristic>
-                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
-              </characteristics>
-            </profile>
-            <profile id="c34f-e0f3-8aa6-27b2" name="Impenetrable Hide" publicationId="e51d-b1a3-pubEKHGM" page="73" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
-              <characteristics>
-                <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
-                <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, you can re-roll failed save rolls for the caster until the start of your next hero phase.</characteristic>
-                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
-              </characteristics>
-            </profile>
-            <profile id="796c-59cd-7791-1fb9" name="Cower" publicationId="e51d-b1a3-pubEKHGM" page="73" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
-              <characteristics>
-                <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
-                <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick an enemy MONSTER within 12&quot; of the caster that is visible to them and roll 2D6. If the result is higher than that MONSTER ’s Bravery characteristic, it cannot make a charge move in your opponent’s next turn.</characteristic>
-                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
-              </characteristics>
-            </profile>
-            <profile id="130c-f54d-8df0-2a75" name="Primal Hunter" publicationId="e51d-b1a3-pubEKHGM" page="73" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
-              <characteristics>
-                <characteristic name="Casting Value" typeId="2508-b604-1258-a920">8</characteristic>
-                <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick a friendly HERO within 12&quot; of the caster that is visible to them. Re-roll failed charge rolls and hit rolls for that HERO until your next hero phase.</characteristic>
-                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
-              </characteristics>
-            </profile>
-            <profile id="de06-9b86-b46c-fc89" name="Wildform" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+            <profile id="de06-9b86-b46c-fc89" name="Metamorphosis" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">5</characteristic>
-                <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">Pick 1 friendly unit within 12&quot; of the caster and visible to them. Add 2 to run and charge rolls made for that unit until the start of your next hero phase.</characteristic>
-                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
+                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">12&quot;</characteristic>
+                <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick 1 friendly HERO that is not a MONSTER and that is within range and visible to the caster. That HERO gains the MONSTER keyword until your next hero phase.</characteristic>
               </characteristics>
             </profile>
             <profile id="d0c5-3e4d-3912-fc57" name="Feral Roar" hidden="false" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
               <characteristics>
-                <characteristic name="Command Ability Details" typeId="1b71-4c83-4e8c-093f">You can use this command ability in your hero phase. If you do so, pick 1 friendly MONSTER wholly within 12&quot; of a friendly HERO. Until the end of the battle round, when you look up a value on that model’s damage table, that MONSTER is treated as if it has suffered 0 wounds.</characteristic>
+                <characteristic name="Command Ability Details" typeId="1b71-4c83-4e8c-093f">You can use this command ability at the start of the combat phase. The unit that receives the command must be a MONSTER. Until the end of that phase, when you look up a value on that unit&apos;s damage table, it is treated as if it has suffered 0 wounds.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="a4c5-7b58-71e5-351c" name="Predators and Prey" hidden="false" typeId="6bf0-7801-561f-cc28" typeName="Special Rules">
+              <characteristics>
+                <characteristic name="Description" typeId="82bd-2ffd-8589-576c">Once per battle round, you score 1 additional victory point if any enemy MONSTERS were slain in that battle round. </characteristic>
+              </characteristics>
+            </profile>
+            <profile id="66b3-3b35-e060-5d92" name="Seismic Shift" hidden="false" typeId="6bf0-7801-561f-cc28" typeName="Special Rules">
+              <characteristics>
+                <characteristic name="Description" typeId="82bd-2ffd-8589-576c">At the start of the third battle round, after the players roll off to determine who has the first turn, the player taking the second turn in that battle round can pick 1 objective marker on the battlefield and remove it from play.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -3053,7 +3026,7 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="286a-bfe7-f725-ca75" name="Battle: Ghyran" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="286a-bfe7-f725-ca75" name="Battle: Ghyran" hidden="true" collective="false" import="true" type="upgrade">
           <profiles>
             <profile id="bf34-4284-e813-d06a" name="Whipvines" publicationId="e51d-b1a3-pubEKHGM" page="72" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
@@ -3114,7 +3087,7 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="632b-73ed-9385-2491" name="Battle: Hysh" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="632b-73ed-9385-2491" name="Battle: Hysh" hidden="true" collective="false" import="true" type="upgrade">
           <profiles>
             <profile id="6a62-fd42-aa4d-5e6a" name="Exorcising Beam" publicationId="e51d-b1a3-pubEKHGM" page="78" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
@@ -3175,7 +3148,7 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="098f-0986-2570-bece" name="Battle: Shyish" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="098f-0986-2570-bece" name="Battle: Shyish" hidden="true" collective="false" import="true" type="upgrade">
           <profiles>
             <profile id="6e51-da62-4ca8-04ad" name="Word of Ending" publicationId="e51d-b1a3-pubEKHGM" page="76" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
@@ -3236,7 +3209,7 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="3923-b6b9-c500-1062" name="Battle: Ulgu" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="3923-b6b9-c500-1062" name="Battle: Ulgu" hidden="true" collective="false" import="true" type="upgrade">
           <profiles>
             <profile id="7b58-9346-d870-903a" name="Labyrinth of Sorrows" publicationId="e51d-b1a3-pubEKHGM" page="77" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
@@ -3297,7 +3270,7 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="e236-f0fc-8bb0-ecb4" name="Battle: The Eightpoints" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="e236-f0fc-8bb0-ecb4" name="Battle: The Eightpoints" hidden="true" collective="false" import="true" type="upgrade">
           <profiles>
             <profile id="3c29-7e19-781b-def8" name="Forced by the Aether" page="" hidden="false" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
               <characteristics>
