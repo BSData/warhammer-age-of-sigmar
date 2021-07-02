@@ -2151,6 +2151,8 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
             <entryLink id="8918-2bde-83ee-96bf" name="Extra Enhancement: Prayer Scriptures" hidden="false" collective="false" import="true" targetId="24e6-c9b0-8d0d-02a2" type="selectionEntry"/>
             <entryLink id="90f3-60a6-7401-e19f" name="Extra Enhancement: Spell Lores" hidden="false" collective="false" import="true" targetId="bdb0-7f20-53ff-f804" type="selectionEntry"/>
             <entryLink id="5998-d094-6bbf-a939" name="Extra Enhancement: Triumphs" hidden="false" collective="false" import="true" targetId="4f32-1179-8b4c-61e0" type="selectionEntry"/>
+            <entryLink id="8a6c-639e-b09a-3afa" name="Extra Enhancement: Great Endrinworks" hidden="false" collective="false" import="true" targetId="7aa8-a1e1-a0b8-fd18" type="selectionEntry"/>
+            <entryLink id="0c2f-1e0b-bada-6030" name="Extra Enhancement: Mount Trait" hidden="false" collective="false" import="true" targetId="c965-0f85-d28c-ea2a" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -2294,6 +2296,8 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
             <entryLink id="74ea-6922-38b1-33c8" name="Extra Enhancement: Prayer Scriptures" hidden="false" collective="false" import="true" targetId="24e6-c9b0-8d0d-02a2" type="selectionEntry"/>
             <entryLink id="25ea-3128-5a14-2d2a" name="Extra Enhancement: Spell Lores" hidden="false" collective="false" import="true" targetId="bdb0-7f20-53ff-f804" type="selectionEntry"/>
             <entryLink id="f2d7-4b82-890c-26fa" name="Extra Enhancement: Triumphs" hidden="false" collective="false" import="true" targetId="4f32-1179-8b4c-61e0" type="selectionEntry"/>
+            <entryLink id="c542-f3b0-970a-02c3" name="Extra Enhancement: Great Endrinworks" hidden="false" collective="false" import="true" targetId="7aa8-a1e1-a0b8-fd18" type="selectionEntry"/>
+            <entryLink id="267a-d344-1f81-4ccd" name="Extra Enhancement: Mount Trait" hidden="false" collective="false" import="true" targetId="c965-0f85-d28c-ea2a" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
