@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="cac4-1eec-d548-b34d" name="Chaos - Khorne" revision="63" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="81" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="cac4-1eec-d548-b34d" name="Chaos - Khorne" revision="64" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="82" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="cac4-1eec-pubN65537" name="Chaos Battletome: Blades of Khorne"/>
     <publication id="cac4-1eec-pubN105675" name="Grand Alliance: Chaos"/>
@@ -3955,16 +3955,16 @@
         </profile>
         <profile id="4520-5aaa-f377-260c" name="Blood Boil" hidden="false" typeId="eed7-4131-0a52-0668" typeName="Prayer">
           <characteristics>
-            <characteristic name="Answer Value" typeId="276a-ab7e-145d-3ffc"/>
-            <characteristic name="Range" typeId="fd81-4e98-28ac-092a"/>
-            <characteristic name="Description" typeId="0746-6cfb-5e15-53cb">If this prayer is answered, pick 1 enemy unit within 16&quot; of the model chanting this prayer. That unit suffers D6 mortal wounds.</characteristic>
+            <characteristic name="Answer Value" typeId="276a-ab7e-145d-3ffc">4</characteristic>
+            <characteristic name="Range" typeId="fd81-4e98-28ac-092a">16&quot;</characteristic>
+            <characteristic name="Description" typeId="0746-6cfb-5e15-53cb">If answered, pick 1 enemy unit within range of the chanter that is visible to them. That unit suffers D6 mortal wounds.</characteristic>
           </characteristics>
         </profile>
         <profile id="3574-3580-c0e6-1846" name="Blood Bind" hidden="false" typeId="eed7-4131-0a52-0668" typeName="Prayer">
           <characteristics>
-            <characteristic name="Answer Value" typeId="276a-ab7e-145d-3ffc"/>
-            <characteristic name="Range" typeId="fd81-4e98-28ac-092a"/>
-            <characteristic name="Description" typeId="0746-6cfb-5e15-53cb">If this prayer is answered, pick 1 enemy unit within 16&quot; of the model chanting this prayer and not within 3&quot; of any friendly units. Your opponent must move that unit a number of inches equal to the prayer roll. The first model to be moved from that unit must finish the move as close as possible to the closest unit from the chanting model&apos;s army. Any remaining models in that unit must finish their move within 1&quot; of a model from their unit that has already been moved, and as close as possible to the closest unit from the chanting model&apos;s army.</characteristic>
+            <characteristic name="Answer Value" typeId="276a-ab7e-145d-3ffc">4</characteristic>
+            <characteristic name="Range" typeId="fd81-4e98-28ac-092a">16&quot;</characteristic>
+            <characteristic name="Description" typeId="0746-6cfb-5e15-53cb">If answered, pick 1 enemy unit within range of the chanter that is visible to them and more than 3&quot; from all friendly units. Your opponent must move that unit a number of inches equal to the chanting roll. The first model to be moved from that unit must finish the move as close as possible to the closest unit in your army (it can finish the move within 3&quot; of units in your army). Any remaining models in that unit must finish their move in unit coherency and as close as possible to the closest unit from your army.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -6616,6 +6616,13 @@
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="d577-6d76-7308-c8ae" name="Prayers" hidden="false" collective="false" import="true">
+      <modifiers>
+        <modifier type="increment" field="51a5-a1bc-2105-c228" value="1.0">
+          <repeats>
+            <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="24e6-c9b0-8d0d-02a2" repeats="1" roundUp="false"/>
+          </repeats>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="51a5-a1bc-2105-c228" type="max"/>
       </constraints>
