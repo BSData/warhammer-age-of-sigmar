@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="f904-b52f-810a-e446" name="Destruction - Sons of Behemat" revision="14" battleScribeVersion="2.03" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="80" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="f904-b52f-810a-e446" name="Destruction - Sons of Behemat" revision="15" battleScribeVersion="2.03" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="82" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="2cc2-ea66-5ff1-2f18" name="Sons of Behemat"/>
   </publications>
@@ -2118,6 +2118,9 @@ In addition, at the end of the combat phase, you can pick 1 terrain feature with
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3869-a075-e6b0-6802" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b74c-0d48-dd5a-8573" type="min"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="9fe1-9bad-2b26-17f0" name="&apos;Eadbutt" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -2317,14 +2320,14 @@ In addition, at the end of the combat phase, you can pick 1 terrain feature with
     <selectionEntryGroup id="401e-9402-30de-3518" name="Artefacts" hidden="false" collective="false" import="true">
       <modifiers>
         <modifier type="increment" field="31ce-3e6f-1615-0bd3" value="1.0">
-          <repeats>
-            <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="be17-6bbd-b857-3f43" repeats="1" roundUp="false"/>
-          </repeats>
-        </modifier>
-        <modifier type="increment" field="31ce-3e6f-1615-0bd3" value="1.0">
           <conditions>
             <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5451-4c37-a402-bbde" type="equalTo"/>
           </conditions>
+        </modifier>
+        <modifier type="increment" field="31ce-3e6f-1615-0bd3" value="1.0">
+          <repeats>
+            <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a8b-93fa-e1b9-4102" repeats="1" roundUp="false"/>
+          </repeats>
         </modifier>
       </modifiers>
       <constraints>
@@ -2964,6 +2967,16 @@ In addition, at the end of the combat phase, you can pick 1 terrain feature with
       </selectionEntries>
     </selectionEntryGroup>
     <selectionEntryGroup id="62c7-e5ef-527a-845a" name="Spell Lores" hidden="false" collective="false" import="true">
+      <modifiers>
+        <modifier type="increment" field="ec71-63c4-3cf3-f28d" value="1.0">
+          <repeats>
+            <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="25ea-3128-5a14-2d2a" repeats="1" roundUp="false"/>
+          </repeats>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ec71-63c4-3cf3-f28d" type="max"/>
+      </constraints>
       <entryLinks>
         <entryLink id="aded-bd66-deb4-46f8" name="Universal Spell Lore" hidden="false" collective="false" import="true" targetId="20c3-23a0-9d79-b491" type="selectionEntryGroup"/>
       </entryLinks>
