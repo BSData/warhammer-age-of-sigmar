@@ -2263,26 +2263,37 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
               <infoLinks>
                 <infoLink id="73c3-8ca7-a3d5-1f04" name="Magnificent" hidden="false" targetId="d0be-bf37-cc83-f87b" type="profile"/>
               </infoLinks>
-              <selectionEntryGroups>
-                <selectionEntryGroup id="922e-a87b-47fc-1877" name="Extra Enhancement" hidden="false" collective="false" import="true">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e413-3f28-6e8c-a55d" type="max"/>
-                  </constraints>
-                  <entryLinks>
-                    <entryLink id="031b-5ab2-9156-92d3" name="Extra Enhancement: Artefacts of Power" hidden="false" collective="false" import="true" targetId="2a8b-93fa-e1b9-4102" type="selectionEntry"/>
-                    <entryLink id="61c5-d5a9-f0f4-7708" name="Extra Enhancement: Prayer Scriptures" hidden="false" collective="false" import="true" targetId="24e6-c9b0-8d0d-02a2" type="selectionEntry"/>
-                    <entryLink id="573c-50bd-a6b8-19f3" name="Extra Enhancement: Spell Lores" hidden="false" collective="false" import="true" targetId="bdb0-7f20-53ff-f804" type="selectionEntry"/>
-                    <entryLink id="5d57-031b-a3f1-9b8e" name="Extra Enhancement: Triumphs" hidden="false" collective="false" import="true" targetId="4f32-1179-8b4c-61e0" type="selectionEntry"/>
-                  </entryLinks>
-                </selectionEntryGroup>
-              </selectionEntryGroups>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
             </selectionEntry>
             <selectionEntry id="b5e7-afda-fa83-f319" name="Strategist" hidden="false" collective="false" import="true" type="upgrade">
               <infoLinks>
                 <infoLink id="62ab-09d3-ca6b-cfa1" name="Strategist" hidden="false" targetId="d430-efbb-5f30-d60a" type="profile"/>
               </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
             </selectionEntry>
           </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="bda7-5686-e981-d60a" name="Extra Enhancement" hidden="true" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="aa19-403b-157f-fab0" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d6b2-5aaf-c291-eef9" type="max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="beaa-00a1-5780-e79e" name="Extra Enhancement: Artefacts of Power" hidden="false" collective="false" import="true" targetId="2a8b-93fa-e1b9-4102" type="selectionEntry"/>
+            <entryLink id="74ea-6922-38b1-33c8" name="Extra Enhancement: Prayer Scriptures" hidden="false" collective="false" import="true" targetId="24e6-c9b0-8d0d-02a2" type="selectionEntry"/>
+            <entryLink id="25ea-3128-5a14-2d2a" name="Extra Enhancement: Spell Lores" hidden="false" collective="false" import="true" targetId="bdb0-7f20-53ff-f804" type="selectionEntry"/>
+            <entryLink id="f2d7-4b82-890c-26fa" name="Extra Enhancement: Triumphs" hidden="false" collective="false" import="true" targetId="4f32-1179-8b4c-61e0" type="selectionEntry"/>
+          </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
@@ -2337,10 +2348,26 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="2a8b-93fa-e1b9-4102" name="Extra Enhancement: Artefacts of Power" hidden="false" collective="false" import="true" type="upgrade"/>
-    <selectionEntry id="bdb0-7f20-53ff-f804" name="Extra Enhancement: Spell Lores" hidden="false" collective="false" import="true" type="upgrade"/>
-    <selectionEntry id="24e6-c9b0-8d0d-02a2" name="Extra Enhancement: Prayer Scriptures" hidden="false" collective="false" import="true" type="upgrade"/>
-    <selectionEntry id="4f32-1179-8b4c-61e0" name="Extra Enhancement: Triumphs" hidden="false" collective="false" import="true" type="upgrade"/>
+    <selectionEntry id="2a8b-93fa-e1b9-4102" name="Extra Enhancement: Artefacts of Power" hidden="false" collective="false" import="true" type="upgrade">
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="bdb0-7f20-53ff-f804" name="Extra Enhancement: Spell Lores" hidden="false" collective="false" import="true" type="upgrade">
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="24e6-c9b0-8d0d-02a2" name="Extra Enhancement: Prayer Scriptures" hidden="false" collective="false" import="true" type="upgrade">
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="4f32-1179-8b4c-61e0" name="Extra Enhancement: Triumphs" hidden="false" collective="false" import="true" type="upgrade">
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="37b0-af21-630c-d8af" name="Realm Artefacts of Power" hidden="true" collective="false" import="true">
@@ -3951,9 +3978,6 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="20c3-23a0-9d79-b491" name="Universal Spell Lore" hidden="false" collective="false" import="true">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f418-af45-7813-d4b6" type="max"/>
-      </constraints>
       <selectionEntries>
         <selectionEntry id="f869-6511-2f30-69fa" name="Flaming Weapon" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -4012,9 +4036,6 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
       </selectionEntries>
     </selectionEntryGroup>
     <selectionEntryGroup id="11c4-fd82-92a7-de8a" name="Universal Artefacts of Power" hidden="false" collective="false" import="true">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3941-6e04-89e9-9dd2" type="max"/>
-      </constraints>
       <selectionEntries>
         <selectionEntry id="cd0c-54a6-f84a-cfa2" name="Amulet of Destiny" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -4177,9 +4198,6 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
       </selectionEntries>
     </selectionEntryGroup>
     <selectionEntryGroup id="3674-103c-35c9-85a6" name="Universal Prayer Scripture" hidden="false" collective="false" import="true">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="119d-1d21-adfc-98d2" type="max"/>
-      </constraints>
       <selectionEntries>
         <selectionEntry id="2440-fbad-c331-1f36" name="Guidance" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
