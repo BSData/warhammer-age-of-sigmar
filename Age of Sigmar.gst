@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="81" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="82" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <publications>
     <publication id="e51d-b1a3-pubEC" name="The General&apos;s Handbook"/>
     <publication id="e51d-b1a3-pubEQ" name="Core Rules"/>
@@ -128,7 +128,7 @@
       <modifiers>
         <modifier type="increment" field="459e-bc05-f498-6753" value="1.0">
           <repeats>
-            <repeat field="selections" scope="roster" value="9.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="be17-6bbd-b857-3f43" repeats="1" roundUp="false"/>
+            <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a8b-93fa-e1b9-4102" repeats="1" roundUp="false"/>
           </repeats>
         </modifier>
         <modifier type="increment" field="459e-bc05-f498-6753" value="2.0">
@@ -187,7 +187,6 @@
     <categoryEntry id="1422-e165-b7d0-b2d9" name="OGOR" hidden="false"/>
     <categoryEntry id="c91f-5c40-bec0-1a93" name="DRAGON" hidden="false"/>
     <categoryEntry id="6ec4-4931-4d7f-006b" name="IDONETH DEEPKIN" hidden="false"/>
-    <categoryEntry id="be2f-aa63-6d82-e2fc" name="Allegiance: Khorne" hidden="false"/>
     <categoryEntry id="1974-3f49-7f0b-8422" name="Game Options" hidden="false"/>
     <categoryEntry id="fd9f-428a-177d-c765" name="Vanguard" hidden="false"/>
     <categoryEntry id="6330-7561-7a32-0851" name="Battlehost" hidden="false"/>
@@ -2141,6 +2140,19 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
       <categoryLinks>
         <categoryLink id="4184-9079-e321-829b" name="New CategoryLink" hidden="false" targetId="6575-7d6c-ce4d-ada4" primary="true"/>
       </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="47a8-e23b-b58c-e028" name="Extra Enhancement" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="78a6-4e95-9852-85be" type="max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="b0f7-453b-bc34-f5e2" name="Extra Enhancement: Artefacts of Power" hidden="false" collective="false" import="true" targetId="2a8b-93fa-e1b9-4102" type="selectionEntry"/>
+            <entryLink id="8918-2bde-83ee-96bf" name="Extra Enhancement: Prayer Scriptures" hidden="false" collective="false" import="true" targetId="24e6-c9b0-8d0d-02a2" type="selectionEntry"/>
+            <entryLink id="90f3-60a6-7401-e19f" name="Extra Enhancement: Spell Lores" hidden="false" collective="false" import="true" targetId="bdb0-7f20-53ff-f804" type="selectionEntry"/>
+            <entryLink id="5998-d094-6bbf-a939" name="Extra Enhancement: Triumphs" hidden="false" collective="false" import="true" targetId="4f32-1179-8b4c-61e0" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
@@ -2238,13 +2250,41 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
           </characteristics>
         </profile>
       </profiles>
-      <infoLinks>
-        <infoLink id="1820-6610-5aa1-4c2d" name="Magnificent" hidden="false" targetId="d0be-bf37-cc83-f87b" type="profile"/>
-        <infoLink id="797e-4dda-4658-0107" name="Strategist" hidden="false" targetId="d430-efbb-5f30-d60a" type="profile"/>
-      </infoLinks>
       <categoryLinks>
         <categoryLink id="9b92-97ef-3eb8-f46a" name="New CategoryLink" hidden="false" targetId="6575-7d6c-ce4d-ada4" primary="true"/>
       </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="9fb6-ed98-80fe-2cf0" name="Core Battalion Ability" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d631-2760-86c8-9aec" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="aa19-403b-157f-fab0" name="Magnificent" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="73c3-8ca7-a3d5-1f04" name="Magnificent" hidden="false" targetId="d0be-bf37-cc83-f87b" type="profile"/>
+              </infoLinks>
+              <selectionEntryGroups>
+                <selectionEntryGroup id="922e-a87b-47fc-1877" name="Extra Enhancement" hidden="false" collective="false" import="true">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e413-3f28-6e8c-a55d" type="max"/>
+                  </constraints>
+                  <entryLinks>
+                    <entryLink id="031b-5ab2-9156-92d3" name="Extra Enhancement: Artefacts of Power" hidden="false" collective="false" import="true" targetId="2a8b-93fa-e1b9-4102" type="selectionEntry"/>
+                    <entryLink id="61c5-d5a9-f0f4-7708" name="Extra Enhancement: Prayer Scriptures" hidden="false" collective="false" import="true" targetId="24e6-c9b0-8d0d-02a2" type="selectionEntry"/>
+                    <entryLink id="573c-50bd-a6b8-19f3" name="Extra Enhancement: Spell Lores" hidden="false" collective="false" import="true" targetId="bdb0-7f20-53ff-f804" type="selectionEntry"/>
+                    <entryLink id="5d57-031b-a3f1-9b8e" name="Extra Enhancement: Triumphs" hidden="false" collective="false" import="true" targetId="4f32-1179-8b4c-61e0" type="selectionEntry"/>
+                  </entryLinks>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+            </selectionEntry>
+            <selectionEntry id="b5e7-afda-fa83-f319" name="Strategist" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="62ab-09d3-ca6b-cfa1" name="Strategist" hidden="false" targetId="d430-efbb-5f30-d60a" type="profile"/>
+              </infoLinks>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
@@ -2297,107 +2337,12 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="2a8b-93fa-e1b9-4102" name="Extra Enhancement: Artefacts of Power" hidden="false" collective="false" import="true" type="upgrade"/>
+    <selectionEntry id="bdb0-7f20-53ff-f804" name="Extra Enhancement: Spell Lores" hidden="false" collective="false" import="true" type="upgrade"/>
+    <selectionEntry id="24e6-c9b0-8d0d-02a2" name="Extra Enhancement: Prayer Scriptures" hidden="false" collective="false" import="true" type="upgrade"/>
+    <selectionEntry id="4f32-1179-8b4c-61e0" name="Extra Enhancement: Triumphs" hidden="false" collective="false" import="true" type="upgrade"/>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
-    <selectionEntryGroup id="9e00-edd6-ffdf-3f9c" name="Blood Blessings of Khorne" hidden="false" collective="false" import="true">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="be2f-aa63-6d82-e2fc" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b0cb-e9db-f470-d51b" type="min"/>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4dc8-1655-2d7e-f7c2" type="max"/>
-      </constraints>
-      <selectionEntries>
-        <selectionEntry id="3da0-3ef8-866e-3ab5" name="1. Bronzed Flesh" hidden="false" collective="false" import="true" type="upgrade">
-          <profiles>
-            <profile id="409a-1a19-61fc-ebab" name="Bronzed Flesh" hidden="false" typeId="eed7-4131-0a52-0668" typeName="Prayer">
-              <characteristics>
-                <characteristic name="Description" typeId="0746-6cfb-5e15-53cb">If this prayer is successful, pick either the PRIEST or a KHORNE unit from your army that is within 16&quot; of the PRIEST and which is visible to them. You can add 1 to the save rolls for the unit you picked until the start of your next hero phase.</characteristic>
-                <characteristic name="Answer Value" typeId="276a-ab7e-145d-3ffc"/>
-                <characteristic name="Range" typeId="fd81-4e98-28ac-092a"/>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="23fd-8b31-0d59-0674" name="2. Blood Sacrifice" hidden="false" collective="false" import="true" type="upgrade">
-          <profiles>
-            <profile id="933a-c947-9fb0-e0a6" name="Blood Sacrifice" hidden="false" typeId="eed7-4131-0a52-0668" typeName="Prayer">
-              <characteristics>
-                <characteristic name="Description" typeId="0746-6cfb-5e15-53cb">If this prayer is successful, pick either the PRIEST or a KHORNE unit from your army that is within 3&quot; of the PRIEST. The unit you picked immediately suffers D3 mortal wounds, but you gain 1 Blood Tithe point.</characteristic>
-                <characteristic name="Answer Value" typeId="276a-ab7e-145d-3ffc"/>
-                <characteristic name="Range" typeId="fd81-4e98-28ac-092a"/>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="a089-13dc-617b-2eab" name="3. Resanguination" hidden="false" collective="false" import="true" type="upgrade">
-          <profiles>
-            <profile id="bb1e-a8e5-4e0f-1fe6" name="Resanguination" hidden="false" typeId="eed7-4131-0a52-0668" typeName="Prayer">
-              <characteristics>
-                <characteristic name="Description" typeId="0746-6cfb-5e15-53cb">If this prayer is successful, pick either the PRIEST or a KHORNE HERO from your army that is within 16&quot; of the PRIEST and which is visible to them. The model you picked immediately heals D3 wounds lost earlier in the battle.</characteristic>
-                <characteristic name="Answer Value" typeId="276a-ab7e-145d-3ffc"/>
-                <characteristic name="Range" typeId="fd81-4e98-28ac-092a"/>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="d9d0-8915-d319-7a99" name="4. Brazen Fury" hidden="false" collective="false" import="true" type="upgrade">
-          <profiles>
-            <profile id="a821-00f5-c6fc-2645" name="Brazen Fury" hidden="false" typeId="eed7-4131-0a52-0668" typeName="Prayer">
-              <characteristics>
-                <characteristic name="Description" typeId="0746-6cfb-5e15-53cb">If this prayer is successful, pick a KHORNE unit from your army that is within 16&quot; of the PRIEST and which is visible to them. The unit that you picked does not have t take battleshock tests until your next hero phase.</characteristic>
-                <characteristic name="Answer Value" typeId="276a-ab7e-145d-3ffc"/>
-                <characteristic name="Range" typeId="fd81-4e98-28ac-092a"/>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="e5ab-1394-46b7-55df" name="5. Killing Frenzy" hidden="false" collective="false" import="true" type="upgrade">
-          <profiles>
-            <profile id="4cd3-aaf5-0845-37e4" name="Killing Frenzy" hidden="false" typeId="eed7-4131-0a52-0668" typeName="Prayer">
-              <characteristics>
-                <characteristic name="Description" typeId="0746-6cfb-5e15-53cb">If this prayer is successful, pick either the PRIEST or a KHORNE unit from your army that is within 16&quot; of the PRIEST and which is visible to them. Add 1 to the hit rolls of the unit you picked until your next hero phase.</characteristic>
-                <characteristic name="Answer Value" typeId="276a-ab7e-145d-3ffc"/>
-                <characteristic name="Range" typeId="fd81-4e98-28ac-092a"/>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="e9ec-b172-d5a2-81b0" name="6. Magebane Hex" hidden="false" collective="false" import="true" type="upgrade">
-          <profiles>
-            <profile id="ffb7-f9aa-a104-73af" name="Magebane Hex" hidden="false" typeId="eed7-4131-0a52-0668" typeName="Prayer">
-              <characteristics>
-                <characteristic name="Description" typeId="0746-6cfb-5e15-53cb">If this prayer is successful, then until your next hero phase, the PRIEST can attempt to unbind one additional spell in each enemy hero phase in the same manner as a wizard.</characteristic>
-                <characteristic name="Answer Value" typeId="276a-ab7e-145d-3ffc"/>
-                <characteristic name="Range" typeId="fd81-4e98-28ac-092a"/>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-    </selectionEntryGroup>
     <selectionEntryGroup id="37b0-af21-630c-d8af" name="Realm Artefacts of Power" hidden="true" collective="false" import="true">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
