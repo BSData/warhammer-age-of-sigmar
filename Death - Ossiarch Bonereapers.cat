@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="b3c2-9aff-8664-1d07" name="Death - Ossiarch Bonereapers" revision="19" battleScribeVersion="2.03" authorName="TigerWraith" authorContact="TigerWraith#5618 on Discord" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="78" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="b3c2-9aff-8664-1d07" name="Death - Ossiarch Bonereapers" revision="20" battleScribeVersion="2.03" authorName="TigerWraith" authorContact="TigerWraith#5618 on Discord" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="81" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="cb62-7d89-9fa6-76ad" name="Battletome: Ossiarch Bonereapers"/>
   </publications>
@@ -66,6 +66,8 @@
     <categoryEntry id="d357-860a-e9cd-5a0f" name="SOULSTEALER CARRION" hidden="false"/>
     <categoryEntry id="32a4-57c7-6e06-47a1" name="BONE-TITHE SHRIEKER" hidden="false"/>
     <categoryEntry id="3989-7a63-611a-831d" name="KATAKROSIAN DEATHGLAIVE" hidden="false"/>
+    <categoryEntry id="463d-38b6-d1f8-3061" name="MIR KAINAN" hidden="false"/>
+    <categoryEntry id="02ae-a534-1d37-bacc" name="KAINAN&apos;S REAPERS" hidden="false"/>
   </categoryEntries>
   <entryLinks>
     <entryLink id="60f9-e9e7-9284-3de3" name="Katakros, Mortarch of the Necropolis" hidden="false" collective="false" import="true" targetId="5f00-f498-a38e-fd3f" type="selectionEntry">
@@ -339,6 +341,16 @@
     <entryLink id="d622-3bf1-6862-1344" name="Battalion: Horrek&apos;s Dreadlance" hidden="false" collective="false" import="true" targetId="3f28-a2ed-3411-fcd3" type="selectionEntry">
       <categoryLinks>
         <categoryLink id="4dd2-41ab-ce26-64b9" name="New CategoryLink" hidden="false" targetId="be17-6bbd-b857-3f43" primary="true"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="9f7d-d054-4d8d-370c" name="Mir Kainan" hidden="false" collective="false" import="true" targetId="266e-f55f-294b-4fcf" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="7f61-ac02-6f69-890d" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="4015-0f53-4a37-c86a" name="Kainan&apos;s Reapers" hidden="false" collective="false" import="true" targetId="1e56-7da9-6592-8cbb" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="a58e-2812-37a1-65c6" name="New CategoryLink" hidden="false" targetId="065e-fda7-fd27-1f40" primary="true"/>
       </categoryLinks>
     </entryLink>
   </entryLinks>
@@ -3015,6 +3027,237 @@ You can roll D3 additional dice when this LIEGE uses their Unstoppable Charge ab
       <costs>
         <cost name="pts" typeId="points" value="120.0"/>
       </costs>
+    </selectionEntry>
+    <selectionEntry id="266e-f55f-294b-4fcf" name="Mir Kainan" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="8b91-016b-8d66-054b" value="1.0">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="1e56-7da9-6592-8cbb" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e346-49a1-a455-7e92" type="max"/>
+        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8b91-016b-8d66-054b" type="min"/>
+      </constraints>
+      <profiles>
+        <profile id="4589-5f2d-6301-694c" name="Mir Kainan" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
+          <characteristics>
+            <characteristic name="Move" typeId="8655-6213-2824-1752">5&quot;</characteristic>
+            <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">6</characteristic>
+            <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">10</characteristic>
+            <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">4+</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="cbda-023a-a409-1beb" name="Executioner&apos;s Strike" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If the unmodified hit roll for an attack made with a Soulreaper Axe is 6, that attack inflicts D3+1 mortal wounds on the target and the attack sequence ends (do not make a wound or save roll).</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="c703-2a20-d369-db70" name="Magic" hidden="false" typeId="f55d-ee3a-1597-110f" typeName="Magic">
+          <characteristics>
+            <characteristic name="Cast/Unbind" typeId="8294-f605-2c0f-8f92">1/1</characteristic>
+            <characteristic name="Spells Known" typeId="dc9c-47d3-6931-859c">Arcane Bolt, Mystic Shield</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="e7dd-0af6-593d-a140" name="Mystic Shield" hidden="false" targetId="b41f-f1ce-7aa5-4f81" type="profile"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="2246-2824-ba0f-42a4" name="9 or less wounds Leader" hidden="false" targetId="a8ed-ca35-24e0-cf2e" primary="false"/>
+        <categoryLink id="360f-f1af-e8db-e3ee" name="DEATH" hidden="false" targetId="6cdf-dd4f-0e91-e9c4" primary="false"/>
+        <categoryLink id="2077-bd31-a009-95d5" name="OSSIARCH BONEREAPERS" hidden="false" targetId="5a33-4bd9-f08b-c2f7" primary="false"/>
+        <categoryLink id="0631-2e5e-84d4-5a2a" name="MORTIS PRAETORIANS" hidden="false" targetId="d3ef-4794-dca3-91fe" primary="false"/>
+        <categoryLink id="26c0-6a2c-f358-9889" name="MORTISAN" hidden="false" targetId="c0a2-7436-d3b1-fbc4" primary="false"/>
+        <categoryLink id="0a2b-1092-e54d-1f1a" name="HERO" hidden="false" targetId="4e0e-664d-51ea-0929" primary="false"/>
+        <categoryLink id="e1e6-8200-7a4e-c781" name="WIZARD" hidden="false" targetId="4f53-8230-2f02-9639" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="c33c-d6c5-4e50-62d4" name="Soulreaper Axe" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6cc6-5b4b-4772-d710" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e3db-a53d-af75-cf9d" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="99ef-ae56-a669-2a8a" name="Soulreaper Axe" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">4</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-2</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">2</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
+      <entryLinks>
+        <entryLink id="97c8-b896-ee33-8907" name="Arcane Bolt" hidden="false" collective="false" import="true" targetId="869c-168d-eba5-eacf" type="selectionEntry"/>
+        <entryLink id="cf95-0a11-7be7-5915" name="General" hidden="false" collective="false" import="true" targetId="5422-78b3-c57b-5f40" type="selectionEntry"/>
+        <entryLink id="5b94-bac3-f55c-2a86" name="Lore of the Mortisans" hidden="false" collective="false" import="true" targetId="4dc8-30c8-8840-a6ed" type="selectionEntryGroup"/>
+        <entryLink id="4074-cdd1-76c5-b824" name="Battalions" hidden="false" collective="false" import="true" targetId="4baa-4d7c-a4a3-3939" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="190.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="1e56-7da9-6592-8cbb" name="Kainan&apos;s Reapers" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="e92b-2161-dd37-8f30" value="1.0">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="266e-f55f-294b-4fcf" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e92b-2161-dd37-8f30" type="min"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7fc0-e63f-23c5-9322" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="64ee-1fdf-db69-7462" name="Kainan&apos;s Reapers" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
+          <characteristics>
+            <characteristic name="Move" typeId="8655-6213-2824-1752">4&quot;</characteristic>
+            <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">1</characteristic>
+            <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">10</characteristic>
+            <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">4+</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="796d-cb4b-ea6e-a50b" name="Nadirite Shields" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">You can re-roll save rolls for this unit while this unit includes 2 models with Shields.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="ad49-814e-7791-2ed3" name="Nadirite Weapons" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If the unmodified hit roll for an attack made with a Nadirite weapon is 6, that attack scores 2 hits on the target instead of 1. Make a wound and save roll for each hit.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="6ec0-0379-f98d-48e9" name="DEATH" hidden="false" targetId="6cdf-dd4f-0e91-e9c4" primary="false"/>
+        <categoryLink id="6538-6e4f-7bb0-a282" name="OSSIARCH BONEREAPERS" hidden="false" targetId="5a33-4bd9-f08b-c2f7" primary="false"/>
+        <categoryLink id="f4da-9e54-9739-ba14" name="MORTIS PRAETORIANS" hidden="false" targetId="d3ef-4794-dca3-91fe" primary="false"/>
+        <categoryLink id="e987-61d9-3f46-ab3b" name="KAINAN&apos;S REAPERS" hidden="false" targetId="02ae-a534-1d37-bacc" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="960d-2f19-e725-1235" name="Nadirite Bow" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="99ae-686c-ca3d-e70a" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c542-ee85-1d3e-1f8b" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="44dc-c679-b743-92ea" name="Nadirite Bow" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Missile</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">18&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">1</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">4+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry id="cf2e-63f6-3422-2e5b" name="Nadirite Blade" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cc1a-b96f-39d7-81d8" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0f00-82b8-4bd3-0761" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="f4a3-5482-111e-3d99" name="Nadirite Blade" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">3</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">4+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry id="a01e-c86f-ddc0-adc7" name="Nadirite Halberd" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7895-78aa-afb5-c171" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bacc-ff0d-f785-d7f8" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="9456-af5c-baf7-2e5c" name="Nadirite Halberd" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">2&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">2</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry id="8a94-a9ef-6158-dd74" name="Nadirite Club" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f398-50fd-b2df-d33c" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a371-4652-ebcd-3d11" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="1aa9-4e48-cec2-4076" name="Nadirite Club" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">2</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">4+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-2</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry id="0421-b760-2bd2-294c" name="Nadirite Dagger" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8611-e807-9a84-ccc4" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4545-2e6e-1f22-da7d" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="3fbd-dce7-06f6-2743" name="Nadirite Dagger" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">1</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">4+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry id="2e08-a039-8e7e-c123" name="Soulcleaver Greatblade" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="961b-1948-6f7f-50ee" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="688f-6037-8671-14a2" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="f704-c142-8e4c-9e23" name="Soulcleaver Greatblade" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">2</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
