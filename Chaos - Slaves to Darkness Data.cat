@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="e0d8-b631-6934-ee34" name="Chaos - Slaves to Darkness Data" revision="45" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="80" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="e0d8-b631-6934-ee34" name="Chaos - Slaves to Darkness Data" revision="46" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="81" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="798b-2f60-pubN65537" name="Grand Alliance: Chaos"/>
     <publication id="798b-2f60-pubN85643" name="Forgeworld: Monstrous Arcanum"/>
@@ -66,6 +66,7 @@
     <categoryEntry id="8d3e-fc64-803a-9c71" name="IDOLATOR LORD" hidden="false"/>
     <categoryEntry id="4ff1-770a-19f1-ec73" name="RAVAGERS" hidden="false"/>
     <categoryEntry id="52bf-703f-13a8-ae6f" name="SCIONS OF THE FLAME" hidden="false"/>
+    <categoryEntry id="afd1-921b-48a5-0741" name="Primary: STD" hidden="false"/>
   </categoryEntries>
   <sharedSelectionEntries>
     <selectionEntry id="8bc4-05d4-ff31-086b" name="Chaos Chariots" hidden="false" collective="false" import="true" type="unit">
@@ -74,6 +75,16 @@
           <conditions>
             <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="812a-a8b3-7158-4adb" type="equalTo"/>
           </conditions>
+        </modifier>
+        <modifier type="add" field="category" value="6cfb-e3ec-d110-80ae">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <profiles>
@@ -89,7 +100,7 @@
         </profile>
         <profile id="8fef-ae05-9db5-ade9" name="Exalted Charioteer" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">‘If this unit has 2 or more models, 1 model in this unit can be an Exalted Charioteer. Add 1 to hit rolls for attacks made with that model’s melee weapons (excluding those of its mount).</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If this unit has 2 or more models, 1 model in this unit can be an Exalted Charioteer. Add 1 to hit rolls for attacks made with that model’s melee weapons (excluding those of its mount).</characteristic>
           </characteristics>
         </profile>
         <profile id="745f-bf5b-ee24-898a" name="Chaos Chariot" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
@@ -315,6 +326,18 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="7117-c074-dd10-883d" name="Chaos Chosen" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="add" field="category" value="6cfb-e3ec-d110-80ae">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="605f-9d5f-715e-bbbe" name="Chaos Chosen" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
           <characteristics>
@@ -423,6 +446,18 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="44d4-5116-6301-5c92" name="Gorebeast Chariots" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="add" field="category" value="6cfb-e3ec-d110-80ae">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="5378-a71f-b901-59ac" name="Explosive Brutality" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
@@ -436,7 +471,7 @@
         </profile>
         <profile id="f797-a33f-ea01-c627" name="Exalted Charioteer" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">‘If this unit has 2 or more models, 1 model in this unit can be an Exalted Charioteer. Add 1 to hit rolls for attacks made with that model’s melee weapons (excluding those of its mount).</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If this unit has 2 or more models, 1 model in this unit can be an Exalted Charioteer. Add 1 to hit rolls for attacks made with that model’s melee weapons (excluding those of its mount).</characteristic>
           </characteristics>
         </profile>
         <profile id="e1bb-207a-008a-9f43" name="Chaos Gorebeast Chariot" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
@@ -570,6 +605,18 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="e432-9436-085d-4c93" name="Chaos Knights" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="add" field="category" value="6cfb-e3ec-d110-80ae">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="6a19-9bad-60d7-d5c1" name="Chaos Knights" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
           <characteristics>
@@ -765,6 +812,18 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="ae9b-b9fe-18ba-2f9a" name="Chaos Lord on Daemonic Mount" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="add" field="category" value="6cfb-e3ec-d110-80ae">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="14ec-7920-9c2c-ec1d" name="Chaos Lord on Daemonic Mount" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
           <characteristics>
@@ -896,6 +955,18 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="3303-cef0-2064-a5f5" name="Chaos Lord on Manticore" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="add" field="category" value="6cfb-e3ec-d110-80ae">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="7334-4dda-c417-3fe0" name="Chaos Lord on Manticore" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
           <characteristics>
@@ -1153,6 +1224,18 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="ce01-c0f8-2c4b-fddc" name="Chaos Marauder Horsemen" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="add" field="category" value="6cfb-e3ec-d110-80ae">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="29a7-6532-3227-11ac" name="Chaos Marauder Horsemen" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
           <characteristics>
@@ -1371,6 +1454,16 @@
             <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="78f3-8a59-699a-61e8" type="instanceOf"/>
           </conditions>
         </modifier>
+        <modifier type="add" field="category" value="6cfb-e3ec-d110-80ae">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <profiles>
         <profile id="8d86-7f7b-2965-429d" name="Chaos Marauders" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
@@ -1513,6 +1606,23 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="1080-2582-0880-dd78" name="Chaos Sorcerer Lord" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="add" field="category" value="6cfb-e3ec-d110-80ae">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="b541-3b22-08bb-d772" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="faf8-5a9c-1185-2393" name="Chaos Sorcerer Lord" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
           <characteristics>
@@ -1530,7 +1640,7 @@
         </profile>
         <profile id="ad4c-95c8-2863-232d" name="Oracular Visions" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">In your hero phase, you can pick 1 friendly MORTAL SLAVES TO DARKNESS unit wholly within 12&quot; of this model. If you do so, you can re-roll save rolls for attacks that target that unit until your next hero phase.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">In your hero phase, you can pick 1 friendly MORTAL SLAVES TO DARKNESS unit wholly within 12&quot; of this unit. If you do so, add 1 to save rolls for attacks that target that unit until your next hero phase.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1624,6 +1734,23 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="c132-1271-a655-1e16" name="Chaos Sorcerer Lord on Manticore" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="add" field="category" value="6cfb-e3ec-d110-80ae">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="b541-3b22-08bb-d772" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="0deb-bf71-e192-76cf" name="Chaos Sorcerer Lord on Manticore" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
           <characteristics>
@@ -1803,6 +1930,18 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="494c-81bb-bb30-3d33" name="Chaos Spawn" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="add" field="category" value="6cfb-e3ec-d110-80ae">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="83da-dcf6-6212-3eab" name="Writhing Tentacles" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
@@ -1870,6 +2009,16 @@
             <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="78f3-8a59-699a-61e8" type="instanceOf"/>
           </conditions>
         </modifier>
+        <modifier type="add" field="category" value="6cfb-e3ec-d110-80ae">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <profiles>
         <profile id="1ed6-e722-0ddd-b7b8" name="Chaos Warriors" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
@@ -1882,7 +2031,7 @@
         </profile>
         <profile id="0be6-bbf4-b162-b6a0" name="Legions of Chaos" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">You can re-roll save rolls for attacks that target this unit while it has at least 10 models.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Add 1 to save rolls for attacks that target this unit while it has at least 10 models.</characteristic>
           </characteristics>
         </profile>
         <profile id="48a0-b5f0-5b7f-2cae" name="Aspiring Champion" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
@@ -2053,6 +2202,18 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="89b1-9d63-4211-96da" name="Chaos Warshrine" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="add" field="category" value="6cfb-e3ec-d110-80ae">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="5b6d-45a1-dd89-36b4" name="Chaos Warshrine" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
           <characteristics>
@@ -2069,52 +2230,42 @@
         </profile>
         <profile id="cf6c-0bd0-b083-35e7" name="Favour of Chaos" hidden="false" typeId="eed7-4131-0a52-0668" typeName="Prayer">
           <characteristics>
-            <characteristic name="Description" typeId="0746-6cfb-5e15-53cb">You can re-roll hit and wound rolls for attacks made by that unit until your next hero phase.
-
-In addition, if that unit has the UNDIVIDED keyword, you can re-roll charge rolls for that unit until your next hero phase.</characteristic>
-            <characteristic name="Answer Value" typeId="276a-ab7e-145d-3ffc"/>
-            <characteristic name="Range" typeId="fd81-4e98-28ac-092a"/>
+            <characteristic name="Answer Value" typeId="276a-ab7e-145d-3ffc">3</characteristic>
+            <characteristic name="Range" typeId="fd81-4e98-28ac-092a">18&quot;</characteristic>
+            <characteristic name="Description" typeId="0746-6cfb-5e15-53cb">If answered, pick 1 friendly SLAVES TO DARKNESS MORTAL unit wholly within range and visible to the chanter. You can re-roll hit and wound rolls for attacks made by that unit until your next hero phase. In addition, if that unit has the UNDIVIDED keyword, you can re-roll charge rolls for that unit until your next hero phase.</characteristic>
           </characteristics>
         </profile>
         <profile id="66b2-bdd4-89ff-dac1" name="Favour of Khorne" hidden="false" typeId="eed7-4131-0a52-0668" typeName="Prayer">
           <characteristics>
-            <characteristic name="Description" typeId="0746-6cfb-5e15-53cb">You can re-roll charge rolls for that unit until your next hero phase.
-
-In addition, if that unit has the KHORNE keyword, you can re-roll hit rolls for attacks made with melee weapons by that unit until your next hero phase.</characteristic>
-            <characteristic name="Answer Value" typeId="276a-ab7e-145d-3ffc"/>
-            <characteristic name="Range" typeId="fd81-4e98-28ac-092a"/>
+            <characteristic name="Answer Value" typeId="276a-ab7e-145d-3ffc">3</characteristic>
+            <characteristic name="Range" typeId="fd81-4e98-28ac-092a">18&quot;</characteristic>
+            <characteristic name="Description" typeId="0746-6cfb-5e15-53cb">If answered, pick 1 friendly SLAVES TO DARKNESS MORTAL  unit wholly within range and visible to the chanter. You can re-roll charge rolls for that unit until your next hero phase. In addition, if that unit has the KHORNE keyword, you can reroll hit rolls for attacks made with melee weapons by that unit until your next hero phase.</characteristic>
           </characteristics>
         </profile>
         <profile id="d641-3980-a7ae-00ac" name="Favour of Nurgle" hidden="false" typeId="eed7-4131-0a52-0668" typeName="Prayer">
           <characteristics>
-            <characteristic name="Description" typeId="0746-6cfb-5e15-53cb">You can re-roll wound rolls for attacks made with melee weapons by that unit until your next hero phase.
-
-In addition, if that unit has the NURGLE keyword, add 1 to save rolls for attacks that target that unit until your next hero phase.</characteristic>
-            <characteristic name="Answer Value" typeId="276a-ab7e-145d-3ffc"/>
-            <characteristic name="Range" typeId="fd81-4e98-28ac-092a"/>
+            <characteristic name="Answer Value" typeId="276a-ab7e-145d-3ffc">3</characteristic>
+            <characteristic name="Range" typeId="fd81-4e98-28ac-092a">18&quot;</characteristic>
+            <characteristic name="Description" typeId="0746-6cfb-5e15-53cb">If answered, pick 1 friendly SLAVES TO DARKNESS MORTAL unit wholly within range and visible to the chanter. You can re-roll wound rolls for attacks made with melee weapons by that unit until your next hero phase. In addition, if that unit has the NURGLE keyword, add 1 to save rolls for attacks that target that unit until your next hero phase.</characteristic>
           </characteristics>
         </profile>
         <profile id="e8e5-1160-59e2-55bf" name="Favour of Slaanesh" hidden="false" typeId="eed7-4131-0a52-0668" typeName="Prayer">
           <characteristics>
-            <characteristic name="Description" typeId="0746-6cfb-5e15-53cb">You can re-roll charge rolls for that unit until your next hero phase.
-
-In addition, if that unit has the SLAANESH keyword, do not take battleshock tests for that unit until your next hero phase.</characteristic>
-            <characteristic name="Answer Value" typeId="276a-ab7e-145d-3ffc"/>
-            <characteristic name="Range" typeId="fd81-4e98-28ac-092a"/>
+            <characteristic name="Answer Value" typeId="276a-ab7e-145d-3ffc">3</characteristic>
+            <characteristic name="Range" typeId="fd81-4e98-28ac-092a">18&quot;</characteristic>
+            <characteristic name="Description" typeId="0746-6cfb-5e15-53cb">If answered, pick 1 friendly SLAVES TO DARKNESS MORTAL unit wholly within range and visible to the chanter. You can re-roll charge rolls for that unit until your next hero phase. In addition, if that unit has the SLAANESH keyword, do not take battleshock tests for that unit until your next hero phase.</characteristic>
           </characteristics>
         </profile>
         <profile id="0679-cde1-ed61-366f" name="Favour of Tzeentch" hidden="false" typeId="eed7-4131-0a52-0668" typeName="Prayer">
           <characteristics>
-            <characteristic name="Description" typeId="0746-6cfb-5e15-53cb">You can re-roll save rolls for attacks that target that unit until your next hero phase.
-
-In addition, if that unit has the TZEENTCH keyword, until your next hero phase, each time that unit is affected by a spell or endless spell, you can roll a dice. If you do so, on a 4+, ignore the effects of that spell or endless spell on that unit.</characteristic>
-            <characteristic name="Answer Value" typeId="276a-ab7e-145d-3ffc"/>
-            <characteristic name="Range" typeId="fd81-4e98-28ac-092a"/>
+            <characteristic name="Answer Value" typeId="276a-ab7e-145d-3ffc">3</characteristic>
+            <characteristic name="Range" typeId="fd81-4e98-28ac-092a">18&quot;</characteristic>
+            <characteristic name="Description" typeId="0746-6cfb-5e15-53cb">If answered, pick 1 friendly SLAVES TO DARKNESS MORTAL unit wholly within range and visible to the chanter. You can add 1 to save rolls for attacks that target that unit until your next hero phase. In addition, if that unit has the TZEENTCH keyword, until your next hero phase, you can roll a dice each time that unit is affected by a spell or the abilities of an endless spell. If you do so, on a 4+, ignore the effect of that spell or the abilities of that endless spell on that unit.</characteristic>
           </characteristics>
         </profile>
         <profile id="ad0f-906d-2f44-c3c3" name="Protection of the Dark Gods" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Roll a dice each time you allocate a wound or mortal wound to a friendly Mortal Slaves to Darkness unit wholly within the range of any model with this ability as shown on the damage table above. On a 6, that wound or mortal wound is negated.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Friendly MORTAL SLAVES TO DARKNESS units that are wholly within range of this unit’s Protection of the Dark Gods ability, as shown on the damage table above, have a ward of 6+.</characteristic>
           </characteristics>
         </profile>
         <profile id="4411-8188-e5c5-3810" name="Chaos Warshrine" hidden="false" typeId="90d1-a434-348d-a861" typeName="Damage Table">
@@ -2234,6 +2385,18 @@ In addition, if that unit has the TZEENTCH keyword, until your next hero phase, 
       </costs>
     </selectionEntry>
     <selectionEntry id="b2a4-c572-6ab2-6b4e" name="Slaves to Darkness Daemon Prince" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="add" field="category" value="6cfb-e3ec-d110-80ae">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="324c-c9bd-6385-df6c" name="Daemon Prince" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
           <characteristics>
@@ -2434,6 +2597,18 @@ In addition, if that unit has the TZEENTCH keyword, until your next hero phase, 
       </costs>
     </selectionEntry>
     <selectionEntry id="559b-42f8-886d-3900" name="Darkoath Chieftain" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="add" field="category" value="6cfb-e3ec-d110-80ae">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="2fbe-68a2-fd80-aaf7" name="Deathblow" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
@@ -2524,6 +2699,18 @@ In addition, if that unit has the TZEENTCH keyword, until your next hero phase, 
       </costs>
     </selectionEntry>
     <selectionEntry id="817b-e028-2550-90ea" name="Darkoath Warqueen" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="add" field="category" value="6cfb-e3ec-d110-80ae">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="1818-cf25-3911-b78d" name="Darkoath Warqueen" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
           <characteristics>
@@ -2595,6 +2782,18 @@ In addition, add 1 to the Damage characteristic of this model’s Rune-etched Ax
       </costs>
     </selectionEntry>
     <selectionEntry id="69e5-b08e-9813-f378" name="Exalted Hero of Chaos" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="add" field="category" value="6cfb-e3ec-d110-80ae">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="17a1-f683-41fd-96d1" name="Exalted Hero of Chaos" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
           <characteristics>
@@ -2831,6 +3030,18 @@ In addition, add 1 to the Damage characteristic of this model’s Rune-etched Ax
       </costs>
     </selectionEntry>
     <selectionEntry id="1ccb-5743-64df-f027" name="Chaos Lord" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="add" field="category" value="6cfb-e3ec-d110-80ae">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="2764-a9bc-bd78-19e2" name="Chaos Lord" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
           <characteristics>
@@ -2981,6 +3192,18 @@ In addition, add 1 to the Damage characteristic of this model’s Rune-etched Ax
       </costs>
     </selectionEntry>
     <selectionEntry id="23e4-3184-435d-9681" name="Chaos War Mammoth" publicationId="798b-2f60-pubN85643" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="add" field="category" value="6cfb-e3ec-d110-80ae">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="90bd-979a-151c-590d" name="Chaos War Mammoth" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
           <characteristics>
@@ -3137,6 +3360,16 @@ In addition, add 1 to the Damage characteristic of this model’s Rune-etched Ax
             <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1dc4-ec25-d3df-f7d2" type="greaterThan"/>
           </conditions>
         </modifier>
+        <modifier type="add" field="category" value="6cfb-e3ec-d110-80ae">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0d77-170d-2d58-fddb" type="max"/>
@@ -3237,6 +3470,16 @@ In addition, add 1 to the Damage characteristic of this model’s Rune-etched Ax
             <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="689f-b7f7-e2ec-8a31" type="greaterThan"/>
           </conditions>
         </modifier>
+        <modifier type="add" field="category" value="6cfb-e3ec-d110-80ae">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="099a-ade9-e7d0-b6eb" type="max"/>
@@ -3306,6 +3549,18 @@ In addition, add 1 to the Damage characteristic of this model’s Rune-etched Ax
       </costs>
     </selectionEntry>
     <selectionEntry id="d092-4d5e-d7eb-434b" name="Slambo" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="add" field="category" value="6cfb-e3ec-d110-80ae">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="845e-d240-7cc3-e83d" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8249-affc-8bfe-57c7" type="max"/>
@@ -3404,6 +3659,16 @@ In addition, add 1 to the Damage characteristic of this model’s Rune-etched Ax
             <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="675a-c9ab-ab82-cc4d" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="add" field="category" value="6cfb-e3ec-d110-80ae">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <profiles>
         <profile id="a62f-a538-ea72-d6bf" name="The Unmade" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
@@ -3496,6 +3761,16 @@ In addition, add 1 to the Damage characteristic of this model’s Rune-etched Ax
             <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="675a-c9ab-ab82-cc4d" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="add" field="category" value="6cfb-e3ec-d110-80ae">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <profiles>
         <profile id="695a-c097-4829-1272" name="Splintered Fang" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
@@ -3586,6 +3861,16 @@ In addition, add 1 to the Damage characteristic of this model’s Rune-etched Ax
           <conditions>
             <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="675a-c9ab-ab82-cc4d" type="equalTo"/>
           </conditions>
+        </modifier>
+        <modifier type="add" field="category" value="6cfb-e3ec-d110-80ae">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <profiles>
@@ -3679,6 +3964,16 @@ In addition, add 1 to the Damage characteristic of this model’s Rune-etched Ax
             <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="675a-c9ab-ab82-cc4d" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="add" field="category" value="6cfb-e3ec-d110-80ae">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <profiles>
         <profile id="d43f-bd28-37f2-69f1" name="Cypher Lords" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
@@ -3771,6 +4066,16 @@ In addition, add 1 to the Damage characteristic of this model’s Rune-etched Ax
             <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="675a-c9ab-ab82-cc4d" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="add" field="category" value="6cfb-e3ec-d110-80ae">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <profiles>
         <profile id="d0ed-d94e-a7cf-cd97" name="Iron Golems" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
@@ -3820,7 +4125,7 @@ In addition, add 1 to the Damage characteristic of this model’s Rune-etched Ax
         </profile>
         <profile id="c139-612b-3b6b-eda4" name="Iron Resilience" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">You can re-roll save rolls for attacks that target this unit if this unit has not made a normal move in the same turn.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Add 1 to save rolls for attacks that target this unit if this unit has not made a normal move or been set up in the same turn.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -3868,6 +4173,16 @@ In addition, add 1 to the Damage characteristic of this model’s Rune-etched Ax
           <conditions>
             <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="675a-c9ab-ab82-cc4d" type="equalTo"/>
           </conditions>
+        </modifier>
+        <modifier type="add" field="category" value="6cfb-e3ec-d110-80ae">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <profiles>
@@ -3960,6 +4275,18 @@ In addition, add 1 to the Damage characteristic of this model’s Rune-etched Ax
       </costs>
     </selectionEntry>
     <selectionEntry id="3798-bff0-a2ec-7c8a" name="Furies" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="add" field="category" value="6cfb-e3ec-d110-80ae">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="292c-c78a-34cf-37b0" name="Furies" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
           <characteristics>
@@ -3971,7 +4298,7 @@ In addition, add 1 to the Damage characteristic of this model’s Rune-etched Ax
         </profile>
         <profile id="1327-43e7-a11e-6f13" name="Sneaky Little Devils" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">In the combat phase, when you pick this unit to fight, you can say it will cower instead of fighting. If you do so, this unit must make a normal move and must retreat.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">In the combat phase, when you pick this unit to fight, you can say it will cower instead of fighting. If you do so, this unit must retreat.</characteristic>
           </characteristics>
         </profile>
         <profile id="3fdf-66e2-d77c-8614" name="Razor-sharp Dagger and Claws" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
@@ -4025,6 +4352,16 @@ In addition, add 1 to the Damage characteristic of this model’s Rune-etched Ax
           <conditions>
             <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="675a-c9ab-ab82-cc4d" type="equalTo"/>
           </conditions>
+        </modifier>
+        <modifier type="add" field="category" value="6cfb-e3ec-d110-80ae">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <profiles>
@@ -4090,6 +4427,18 @@ In addition, add 1 to the Damage characteristic of this model’s Rune-etched Ax
       </costs>
     </selectionEntry>
     <selectionEntry id="ee9e-b8de-b25d-b6f1" name="Archaon the Everchosen" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="add" field="category" value="6cfb-e3ec-d110-80ae">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7076-9f3a-d472-7132" type="max"/>
       </constraints>
@@ -4196,6 +4545,11 @@ In addition, add 1 to the Damage characteristic of this model’s Rune-etched Ax
             <characteristic name="Command Ability Details" typeId="1b71-4c83-4e8c-093f">You can use this command ability when your opponent spends a command point. If you do so, roll a dice before resolving the effects of any command ability that command point is spent on. On a 1, this command ability has no effect. On a 2+, this model can use the By My Will command ability above without a command point being spent, even if it is not the hero phase and even if that command ability has already been used in the same turn.</characteristic>
           </characteristics>
         </profile>
+        <profile id="d8e5-96ce-3b64-4c96" name="Warmaster" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This unit can be included in a Blades of Khorne, Disciples of Tzeentch, Maggotkin of Nurgle or Hedonites of Slaanesh army. If it is, it is treated as a general even if it is not the model picked to be the army’s general, and you can still use the army’s allegiance abilities even if this unit is not from the army’s faction.</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
       <infoLinks>
         <infoLink id="55e9-7c7c-111d-ed91" name="Fly" hidden="false" targetId="8e0c-cbe4-27be-8a30" type="profile"/>
@@ -4235,7 +4589,7 @@ In addition, add 1 to the Damage characteristic of this model’s Rune-etched Ax
             </profile>
             <profile id="ab24-3408-9631-1579" name="The Slayer of Kings" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
               <characteristics>
-                <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Each time this model attacks, if the unmodified wound roll for 2 attacks that target the same enemy HERO with the Slayer of Kings is 6, that HERO is slain.</characteristic>
+                <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Each time this model fights, if the unmodified wound roll for 2 attacks that target the same enemy Hero with the Slayer of Kings is 6, that Hero is slain.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -4369,6 +4723,16 @@ In addition, add 1 to the Damage characteristic of this model’s Rune-etched Ax
             <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d322-fac6-4c50-2895" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="add" field="category" value="6cfb-e3ec-d110-80ae">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <profiles>
         <profile id="4b0e-802c-304f-321c" name="Relentless Killers" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
@@ -4437,9 +4801,21 @@ In addition, add 1 to the Damage characteristic of this model’s Rune-etched Ax
       </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="3011-6952-dd8a-7239" name="Weapon option" hidden="false" collective="false" import="true">
+          <modifiers>
+            <modifier type="increment" field="bca2-011c-e0c2-cb32" value="3.0">
+              <repeats>
+                <repeat field="selections" scope="d055-3a02-ab50-ca0d" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6e71-eed5-bbd0-d337" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+            <modifier type="increment" field="639a-e769-b480-8839" value="3.0">
+              <repeats>
+                <repeat field="selections" scope="d055-3a02-ab50-ca0d" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6e71-eed5-bbd0-d337" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bca2-011c-e0c2-cb32" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="639a-e769-b480-8839" type="min"/>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bca2-011c-e0c2-cb32" type="max"/>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="639a-e769-b480-8839" type="min"/>
           </constraints>
           <selectionEntries>
             <selectionEntry id="c542-45e9-ff10-1c59" name="Ensorcelled Weapon" hidden="false" collective="false" import="true" type="upgrade">
@@ -4681,6 +5057,18 @@ In addition, add 1 to the Damage characteristic of this model’s Rune-etched Ax
       </costs>
     </selectionEntry>
     <selectionEntry id="e6c9-c984-cd6f-33e3" name="Chaos Lord on Karkadrak" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="add" field="category" value="6cfb-e3ec-d110-80ae">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="0f6c-6760-2650-a435" name="Chaos Lord on Karkadrak" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
           <characteristics>
@@ -4840,6 +5228,18 @@ In addition, add 1 to the Damage characteristic of this model’s Rune-etched Ax
       </costs>
     </selectionEntry>
     <selectionEntry id="4647-1070-9de5-b23a" name="Ogroid Myrmidon" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="add" field="category" value="6cfb-e3ec-d110-80ae">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="6afd-1fae-ac14-6ff0" name="Ogroid Myrmidon" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
           <characteristics>
@@ -4949,6 +5349,16 @@ In addition, add 1 to the Damage characteristic of this model’s Rune-etched Ax
             <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d26f-42aa-117f-6bc9" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="add" field="category" value="6cfb-e3ec-d110-80ae">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3f62-8250-3c4d-4971" type="max"/>
@@ -5033,6 +5443,16 @@ In addition, add 1 to the Damage characteristic of this model’s Rune-etched Ax
           <conditions>
             <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e738-e1c8-30a0-ef8c" type="greaterThan"/>
           </conditions>
+        </modifier>
+        <modifier type="add" field="category" value="6cfb-e3ec-d110-80ae">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -5193,6 +5613,18 @@ In addition, add 1 to the Damage characteristic of this model’s Rune-etched Ax
       </costs>
     </selectionEntry>
     <selectionEntry id="93c9-fc5f-2ecd-8dab" name="Slaughterbrute" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="add" field="category" value="6cfb-e3ec-d110-80ae">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="e2a4-f341-81f0-a59a" name="Slaughterbrute" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
           <characteristics>
@@ -5354,6 +5786,18 @@ In addition, add 1 to the Damage characteristic of this model’s Rune-etched Ax
       </costs>
     </selectionEntry>
     <selectionEntry id="b579-a729-5575-6c5f" name="Mutalith Vortex Beast" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="add" field="category" value="6cfb-e3ec-d110-80ae">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="6f36-eb78-a943-82da" name="Mutalith Vortex Beast" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
           <characteristics>
@@ -5528,6 +5972,16 @@ In addition, add 1 to the Damage characteristic of this model’s Rune-etched Ax
             <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="675a-c9ab-ab82-cc4d" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="add" field="category" value="6cfb-e3ec-d110-80ae">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <profiles>
         <profile id="4b22-02fb-39b2-1de7" name="Spire Tyrants" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
@@ -5608,6 +6062,18 @@ In addition, add 1 to the Damage characteristic of this model’s Rune-etched Ax
       </costs>
     </selectionEntry>
     <selectionEntry id="7cca-bdb5-aad8-f427" name="Mindstealer Sphiranx" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="add" field="category" value="6cfb-e3ec-d110-80ae">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="3e45-b612-425d-cb52" name="Mindstealer Sphiranx" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
           <characteristics>
@@ -5692,6 +6158,18 @@ In addition, add 1 to the Damage characteristic of this model’s Rune-etched Ax
       </costs>
     </selectionEntry>
     <selectionEntry id="6610-2ae0-9201-1296" name="Fomoroid Crusher" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="add" field="category" value="6cfb-e3ec-d110-80ae">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="6a62-cfd2-5d18-3d72" name="Fomoroid Crusher" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
           <characteristics>
@@ -7031,6 +7509,16 @@ In addition, add 1 to the Damage characteristic of this model’s Rune-etched Ax
             <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="675a-c9ab-ab82-cc4d" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="add" field="category" value="6cfb-e3ec-d110-80ae">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <profiles>
         <profile id="7ff9-44b4-8b23-5858" name="Khagra&apos;s Ravagers" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
@@ -7162,6 +7650,16 @@ In addition, add 1 to the Damage characteristic of this model’s Rune-etched Ax
             <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="675a-c9ab-ab82-cc4d" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="add" field="category" value="6cfb-e3ec-d110-80ae">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <profiles>
         <profile id="8723-d6d3-2e39-33c0" name="Blazing Lord" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
@@ -7281,6 +7779,18 @@ In addition, add 1 to the Damage characteristic of this model’s Rune-etched Ax
       </costs>
     </selectionEntry>
     <selectionEntry id="c1f0-37b0-e9dd-d203" name="Gaunt Summoner on Disc of Tzeentch" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="add" field="category" value="6cfb-e3ec-d110-80ae">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="ceda-76e1-5538-ff02" name="Gaunt Summoner" hidden="false" typeId="f55d-ee3a-1597-110f" typeName="Magic">
           <characteristics>

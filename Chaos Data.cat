@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="0339-0157-6910-d29c" name="Chaos Data" revision="75" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="80" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="0339-0157-6910-d29c" name="Chaos Data" revision="76" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="81" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="c9b2-1fe6-pubN65537" name="Battletome: Beasts of Chaos"/>
     <publication id="c9b2-1fe6-pubN83353" name="1"/>
@@ -239,6 +239,19 @@
     <categoryEntry id="2890-73a3-1898-f20a" name="Wrath of the Everchosen" hidden="false"/>
     <categoryEntry id="5242-c640-1b5a-74d4" name="BEASTS OF NURGLE" hidden="false"/>
     <categoryEntry id="16a2-be4e-d7a3-2fdc" name="Broken Realms" hidden="false"/>
+    <categoryEntry id="6cfb-e3ec-d110-80ae" name="Coalition: STD" hidden="false">
+      <modifiers>
+        <modifier type="increment" field="8f7a-3254-9a47-811a" value="1.0">
+          <repeats>
+            <repeat field="selections" scope="roster" value="4.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="unit" repeats="2" roundUp="false"/>
+          </repeats>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="8f7a-3254-9a47-811a" type="max"/>
+      </constraints>
+    </categoryEntry>
+    <categoryEntry id="78d1-e419-c399-4f99" name="Core: Khorne" hidden="false"/>
   </categoryEntries>
   <sharedSelectionEntries>
     <selectionEntry id="1982-d915-63a1-b8fb" name="1. Arch-Slaughterer" hidden="false" collective="false" import="true" type="upgrade">
@@ -418,6 +431,11 @@ If you have any depravity points at th end of your movement phase, you can summo
         <profile id="1dcc-8d25-ec18-2575" name="(03) 3 Seeker Chariots" hidden="false" typeId="1fa2-590a-fcd4-f2a2" typeName="Depravity Point Table">
           <characteristics>
             <characteristic name="Cost" typeId="b198-e549-0614-9c8a">10</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="1ec3-b7ce-35d8-f8a2" name="Total Acquiescence" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
+          <characteristics>
+            <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">Any number of SLAANESH WIZARDS in a Hedonites of Slaanesh army that have the Acquiescence spell on their warscroll can use it in the same turn, but the same WIZARD cannot attempt to cast it more than once per turn.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -628,11 +646,6 @@ In addition, if you are fighting a Pitched Battle, you can include 1 additional 
         <profile id="4d08-bb08-5b1e-d416" name="Cycle of Corruption" publicationId="6894-a70d-pubN65537" page="59" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
           <characteristics>
             <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">Roll a dice at the start of the first battle round of any battle that includes any NURGLE armies, before rolling to see who has the first turn. Refer to the table to see which stage of the Cycle of Corruption is currently taking place - this applies to all NURGLE armies. The Cycle of Corruption moves on one step at the start of each new battle round. For example, if the roll on the Cycle of Corruption table was a 5, then Nauseous Revulsion would apply in the first battle round, Rampant Disease in the second, Corrupted Regrowth in the third, and so on. The rule for the current stage applies for the duration of the battle round.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="5d37-a3b4-7df8-c564" name="The Garden of Nurgle" page="60" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
-          <characteristics>
-            <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">After all other terrain features are set up, but before you choose a territory or set up your army, you can set up one Feculent Gnarlmaw (pg 103) anywhere on the battlefield that is more than 1&quot; from any other terrain feature. If both players can set up a Feculent Gnarlmaw, each player rolls a dice, rolling again in the case of a tie, and whoever rolls higher can choose the order in which the Feculent Gnarlmaws are set up.</characteristic>
           </characteristics>
         </profile>
         <profile id="db57-be7a-63c2-1bcf" name="Summon Daemons of Nurgle" page="61" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
@@ -1332,25 +1345,24 @@ If you do not set up a SLAVES TO DARKNESS DAEMON PRINCE, you can heal up to D3 w
       <profiles>
         <profile id="5ca4-1ba8-5d7e-a51a" name="Summon Burning Sigil of Tzeentch" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
           <characteristics>
-            <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
-            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">Only TZEENTCH WIZARDS can attempt to cast this spell. If successfully cast, set up 1 Burning Sigil of Tzeentch model wholly within 18&quot; of the caster.</characteristic>
-            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
+            <characteristic name="Casting Value" typeId="2508-b604-1258-a920">5</characteristic>
+            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">18&quot;</characteristic>
+            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, set up this endless spell wholly within range and visible to the caster, and more than 1&quot; from all models, other endless spells and invocations. Only DISCIPLES OF TZEENTCH WIZARDS can attempt to summon this endless spell.</characteristic>
           </characteristics>
         </profile>
         <profile id="9dea-4814-7b64-e8fb" name="Radiant Transmogrification" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the end of your movement phase, if the Burning Sigil of Tzeentch is on the battlefield, you must roll a dice on the following table:
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the end of their movement phase, if this endless spell is on the battlefield, the commanding player must roll a dice on the following table:
 
-D6 Effect
-1 Dismembered by Change: Pick 1 unit within 12&quot; of this model and visible to it. That unit suffers D3 mortal wounds. If any models were slain by this spell, before removing the first slain model, you can add 1 Tzeentch Chaos Spawn to your army and set it up within 3&quot; of the slain model’s unit.
+1 Dismembered by Change: Pick 1 unit within 9&quot; of this endless spell and visible to it, and roll a dice. On a 4+, that unit suffers D3 mortal wounds. If any models are slain by those mortal wounds, before removing the first slain model, you can add 1 TZEENTCH CHAOS SPAWN to your army and set it up within 3&quot; of the slain model’s unit.
 
-2 Crippling Appendages: Pick 1 unit within 12&quot; of this model and visible to it. Halve the Move characteristic of that unit until the start of your next hero phase.
+2 Crippling Appendages: Pick 1 unit within 9&quot; of this endless spell and visible to it. Halve the Move characteristic of that unit until the start of your next hero phase. 
 
-3-4 Mutative Flux: Pick 1 unit within 12&quot; of this model and visible to it. That unit can move D6&quot; even if it ran in the same turn.
+3-4 Mutative Flux: Pick 1 unit within 9&quot; of this endless spell and visible to it. That unit can move D6&quot; even if it ran in the same turn.
 
-5 Spawning Limbs: Pick 1 unit within 12&quot; of this model and visible to it. Add 1 to the Attacks characteristic of that unit’s melee weapons until the start of your next hero phase.
+5 Spawning Limbs: Pick 1 unit within 9&quot; of this endless spell and visible to it. Add 1 to the Attacks characteristic of that unit’s melee weapons until the start of your next hero phase.
 
-6 Shifting Aura: Pick 1 unit within 12&quot; of this model and visible to it. Subtract 1 from hit rolls for attacks that target that unit until the start of your next hero phase.</characteristic>
+6 Shifting Aura: Pick 1 unit within 12&quot; of this endless spell and visible to it. Subtract 1 from hit rolls for attacks that target that unit until the start of your next hero phase. </characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1370,23 +1382,18 @@ D6 Effect
         <profile id="8409-bec3-5831-2d08" name="Summon Daemonic Simulacrum" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
           <characteristics>
             <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
-            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">Only TZEENTCH WIZARDS can attempt to cast this spell. If successfully cast, set up 1 Daemonic Simulacrum model wholly within 12&quot; of the caster.</characteristic>
-            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
+            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">12&quot;</characteristic>
+            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, set up this endless spell wholly within range and visible to the caster, and more than 1&quot; from all models, other endless spells and invocations. Only DISCIPLES OF TZEENTCH WIZARDS can attempt to summon this endless spell.</characteristic>
           </characteristics>
         </profile>
         <profile id="a289-2e9f-ae13-0d36" name="Snapping Jaws" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">After this model has moved, roll 9 dice for the closest other unit within 6&quot;. If more than 1 other unit is equally close, the player that moved this model can choose which unit to roll 9 dice for. For each 5+, that unit suffers 1 mortal wound. If that unit is a WIZARD, that unit suffers 1 mortal wound for each 4+ instead.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="dcb5-cdba-4fb2-3c3a" name="Twisting Mirage" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">When this model is set up, the player who set it up can immediately make a move with it.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">After this endless spell has moved, roll 9 dice for the closest unit within 6&quot; of it. If more than 1 such unit is equally close, the commanding player can choose which unit to roll for. For each 5+, that unit suffers 1 mortal wound. If that unit is a WIZARD, it suffers 1 mortal wound for each 4+ instead.</characteristic>
           </characteristics>
         </profile>
         <profile id="c6f5-96b9-85ff-64f6" name="Predatory" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">A Daemonic Simulacrum is a predatory endless spell. It can move up to 9&quot; and can fly.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This endless spell is a predatory endless spell. It can move up to 9&quot; and can fly.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1408,25 +1415,28 @@ D6 Effect
       <profiles>
         <profile id="d790-c75c-1030-4757" name="Summon Tome of Eyes" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
           <characteristics>
-            <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
-            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">Only TZEENTCH WIZARDS can attempt to cast this spell. If successfully cast, set up 1 Tome of Eyes model within 1&quot; of the caster.
+            <characteristic name="Casting Value" typeId="2508-b604-1258-a920">5</characteristic>
+            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">1&quot;</characteristic>
+            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, set up this endless spell within range and visible to the caster, and more than 1&quot; from all other models, other endless spells and invocations. Only DISCIPLES OF TZEENTCH WIZARDS can attempt to summon this endless spell.
 
-As long as the Tome of Eyes is on the battlefield, the caster and the Tome of Eyes are treated as being a single model from the caster’s army that uses the caster’s warscroll as well as the Endless Spells rules. The Tome of Eyes must remain within 1&quot; of the caster. If the caster is slain, then the Tome of Eyes is immediately dispelled and removed from play along with the caster</characteristic>
-            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
+A WIZARD in a garrison cannot attempt to summon this endless spell, and if this endless spell is summoned, the WIZARD that summoned it cannot join a garrison until this endless spell has been removed from play</characteristic>
           </characteristics>
         </profile>
         <profile id="8aad-f010-89ae-2848" name="The Parchment Curse" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
           <characteristics>
             <characteristic name="Casting Value" typeId="2508-b604-1258-a920">8</characteristic>
-            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">Only the caster of the Tome of Eyes can attempt to cast this spell. If successfully cast, pick 1 enemy unit within 18&quot; of the caster that is visible to them and roll a dice. On a 3+, that unit suffers D3 mortal wounds. In addition, for each model that is slain by mortal wounds inflicted by this spell, subtract 1 from the Bravery characteristic of that unit for the rest of the battle.</characteristic>
-            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
+            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">18&quot;</characteristic>
+            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick 1 enemy unit within range and visible to the caster, and roll a dice. On a 3+, that unit suffers D3 mortal wounds. In addition, for each model slain by those mortal wounds, subtract 1 from the Bravery characteristic of that model’s unit (to a minimum of 1) for the rest of the battle.</characteristic>
           </characteristics>
         </profile>
         <profile id="85a2-be67-d9b5-2ce9" name="Transfixed by Countless Eyes" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If the Tome of Eyes is on the battlefield, you can re-roll casting rolls for the caster. 
-
-In addition, if the unmodified casting roll for a spell attempted by the caster is a 2 or a 12, the spell is automatically cast (regardless of the result) and cannot be unbound. However, the caster suffers D3 mortal wounds after the effects of that spell have been resolved.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">You can re-roll casting rolls for the model that summoned this endless spell while this endless spell is on the battlefield.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="3cd1-b529-38df-32f0" name="Linked" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">After the model that summoned this endless spell has moved, remove this endless spell from the battlefield and set it up again within 1&quot; of that model and more than 1&quot; from all other models, other endless spells and invocations. If the model that summoned this endless spell is removed from play, then this endless spell is removed from play. </characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -2401,7 +2411,7 @@ The summoned unit must be set up wholly within 12&quot; of the HEORO  you picked
         </profile>
         <profile id="ac7a-6311-9562-24f0" name="Cloak of Skulls" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">You can re-roll save rolls for attacks that target this model.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Add 1 to save rolls for attacks that target this unit.</characteristic>
           </characteristics>
         </profile>
         <profile id="d1a3-29b0-6120-1427" name="Heroes&apos; Bane" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
@@ -2801,11 +2811,6 @@ The summoned unit must be set up wholly within 12&quot; of the HEORO  you picked
             <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If any wounds are inflicted by this model&apos;s Gnashing Maw and not negated, you can heal up to D3 wounds allocated to this model.</characteristic>
           </characteristics>
         </profile>
-        <profile id="2b18-3b13-166a-98b8" name="The Blood Throne" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">When this model uses the At the Double, Forward to Victory, or Inspiring Presence command ability, the ability has a range of 12&quot; even if this model is not a general.</characteristic>
-          </characteristics>
-        </profile>
       </profiles>
       <categoryLinks>
         <categoryLink id="f0b0-01be-96aa-963f" name="New CategoryLink" hidden="false" targetId="7cdd-80ea-cbeb-8e16" primary="false"/>
@@ -2815,6 +2820,7 @@ The summoned unit must be set up wholly within 12&quot; of the HEORO  you picked
         <categoryLink id="1365-0d68-d61e-a48a" name="New CategoryLink" hidden="false" targetId="4e0e-664d-51ea-0929" primary="false"/>
         <categoryLink id="5046-77c2-28cc-f200" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
         <categoryLink id="d8e0-a2b0-a115-fd12" name="10 or less wounds Leader" hidden="false" targetId="a8ed-ca35-24e0-cf2e" primary="false"/>
+        <categoryLink id="3a47-45b4-5fb6-a360" name="TOTEM" hidden="false" targetId="3504-ea8e-28ec-5150" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="8e4e-c50f-d391-278b" name="Blade of Blood" hidden="false" collective="false" import="true" type="upgrade">
@@ -4471,12 +4477,12 @@ The summoned unit must be set up wholly within 12&quot; of the HEORO  you picked
         </profile>
         <profile id="4a3b-3a50-9dfa-4e75" name="Cloud of Flies" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Subtract 1 from the hit rolls of attacks that target this unit in the shooting phase. If this unit contains 20 or more models, subtract 2 from the hit rolls of attacks that target this unit in the shooting phase, and 1 from the hit rolls of attacks that target this unit in the combat phase instead.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Subtract 1 from hit rolls for attacks that target this unit while it has at least 10 models.</characteristic>
           </characteristics>
         </profile>
         <profile id="7ee8-cf14-8c34-c3f3" name="Locus of Fecundity" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Re-roll save rolls of 1 for this unit while it is within 7&quot; of a friendly NURGLE DAEMON HERO.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Add 1 to save rolls for attacks that target this unit while it is within 7&quot; of a friendly NURGLE DAEMON HERO.</characteristic>
           </characteristics>
         </profile>
         <profile id="6256-8fc9-fdf8-8cf8" name="Plaguesword" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
@@ -4803,8 +4809,8 @@ The summoned unit must be set up wholly within 12&quot; of the HEORO  you picked
         <profile id="5b5a-f0af-6ced-f06e" name="Deluge of Nurgle" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
           <characteristics>
             <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
-            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, roll 7 dice. For each roll that equals or beats the Deluge of Nurgle value shown on the damage table above, you can pick an enemy unit that is visible to the caster. That unit suffers D3 mortal wounds. If more than one roll inflicts mortal wounds, you must pick a different enemy unit to suffer each set of mortal wounds.</characteristic>
             <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
+            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, roll 7 dice. For each roll that equals or beats the Deluge of Nurgle value shown on the damage table above, you can pick an enemy unit that is visible to the caster. That unit suffers D3 mortal wounds. If more than one roll causes mortal wounds, you must pick a different enemy unit to suffer each set of mortal wounds.</characteristic>
           </characteristics>
         </profile>
         <profile id="2d71-f8e4-c93a-7265" name="Rotigus" hidden="false" typeId="f55d-ee3a-1597-110f" typeName="Magic">
@@ -5964,7 +5970,9 @@ Note that this ability only allows you to replace a single dice roll. For 2D6 ro
 
 Each time an Iridescent Horror or Pink Horror model from a friendly unit with this ability is slain, you can add 2 Blue Horror models to that unit after removing the slain model. Each time a Blue Horror model from a friendly unit with this ability is slain, you can add 1 Brimstone Horrors model to that unit after removing the slain model.
 
-Set up the additional models one at a time within 1&quot; of the position that the slain model had occupied. The additional models can only be set up within 3&quot; of an enemy unit if the position that the slain model had occupied or any other models from the slain model’s unit are within 3&quot; of that enemy unit. If you cannot set up the additional models in this way, they are removed from play (they do not count as being slain).</characteristic>
+Set up the additional models one at a time within 1&quot; of the position that the slain model had occupied. The additional models can only be set up within 3&quot; of an enemy unit if the position that the slain model had occupied or any other models from the slain model’s unit are within 3&quot; of that enemy unit. If you cannot set up the additional models in this way, they are removed from play (they do not count as being slain).
+
+Iridescent Horrors, Pink Horrors and Blue Horrors that flee cannot Split and Split Again. This ability allows the number of models in this unit to exceed its maximum size.</characteristic>
           </characteristics>
         </profile>
         <profile id="b35a-4eca-1630-0dba" name="Petty Vengeance" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
@@ -6320,17 +6328,12 @@ Set up the additional models one at a time within 1&quot; of the position that t
         </profile>
         <profile id="f281-8bef-12c1-2b17" name="Capricious Warpflame" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Add 1 to hit rolls for attacks made by this unit if the target unit has 10 or more models. Add 2 to hit rolls instead of 1 if the target unit has 20 or more models.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Add 1 to hit rolls for attacks made by this unit if the target unit has 10 or more models.</characteristic>
           </characteristics>
         </profile>
         <profile id="262a-e2ef-86c1-ef3b" name="Touched by Fire" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
             <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Roll a dice each time you allocate a wound or mortal wound to this unit that was inflicted by a melee weapon. On a 5+, the attacking unit suffers 1 mortal wound.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="bc4c-0f10-f48a-1915" name="Guided by Billowing Flames" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Add 1 to hit rolls for attacks made with this unit’s Warpflame while it is wholly within 9&quot; of any friendly EXALTED FLAMERS.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -6645,7 +6648,7 @@ Set up the additional models one at a time within 1&quot; of the position that t
         </profile>
         <profile id="75f8-a06f-250e-a982" name="Hovering Disc of Tzeentch" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Add 2 to save rolls for attacks made with melee weapons that target this model unless the attacking unit is a MONSTER or can fly.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Add 1 to save rolls for attacks made with melee weapons that target this unit unless the attacking unit is a Monster or can fly.</characteristic>
           </characteristics>
         </profile>
         <profile id="24b4-12b5-1483-e653" name="Lord of Fate" hidden="false" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
@@ -6864,7 +6867,7 @@ Set up the additional models one at a time within 1&quot; of the position that t
       <profiles>
         <profile id="8725-d153-40b0-658f" name="Capricious Warpflame" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Add 1 to hit rolls for attacks made by this unit if the target unit has 10 or more models. Add 2 to hit rolls instead of 1 if the target unit has 20 or more models.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Add 1 to hit rolls for attacks made by this unit if the target unit has 10 or more models.</characteristic>
           </characteristics>
         </profile>
         <profile id="c8ee-9f5a-ea4b-9ca0" name="Exalted Flamers of Tzeentch" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
@@ -6878,6 +6881,11 @@ Set up the additional models one at a time within 1&quot; of the position that t
         <profile id="b13f-00be-f7d2-25c2" name="Touched by Fire" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
             <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Roll a dice each time you allocate a wound or mortal wound to this unit that was inflicted by a melee weapon. On a 5+, the attacking unit suffers 1 mortal wound.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="b969-d512-36e9-2d95" name="Elite" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Models in this unit can issue commands to their own unit.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -6895,7 +6903,7 @@ Set up the additional models one at a time within 1&quot; of the position that t
         <selectionEntry id="113a-e56a-3279-238d" name="Exalted Flamer" hidden="false" collective="false" import="true" type="model">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="138e-146c-bb18-7b69" type="min"/>
-            <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7eb7-85a8-0c45-cb1f" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7eb7-85a8-0c45-cb1f" type="max"/>
           </constraints>
           <costs>
             <cost name="pts" typeId="points" value="140.0"/>
@@ -7100,7 +7108,7 @@ Set up the additional models one at a time within 1&quot; of the position that t
       <profiles>
         <profile id="e755-f4c4-f630-2415" name="Capricious Warpflame" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Add 1 to hit rolls for attacks made by this unit if the target unit has 10 or more models. Add 2 to hit rolls instead of 1 if the target unit has 20 or more models.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Add 1 to hit rolls for attacks made by this unit if the target unit has 10 or more models.</characteristic>
           </characteristics>
         </profile>
         <profile id="ab79-03d1-ff1c-1588" name="Sky-sharks" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
@@ -7140,7 +7148,7 @@ Set up the additional models one at a time within 1&quot; of the position that t
         <selectionEntry id="98d3-7efd-228e-e5a2" name="Burning Chariot" hidden="false" collective="false" import="true" type="model">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8383-d4f7-9d41-53b1" type="min"/>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="68ae-6d84-5e4c-255d" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="68ae-6d84-5e4c-255d" type="max"/>
           </constraints>
           <costs>
             <cost name="pts" typeId="points" value="185.0"/>
@@ -7559,7 +7567,7 @@ Set up the additional models one at a time within 1&quot; of the position that t
         <profile id="6a2f-6bd2-6e67-6146" name="Subvert" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
           <characteristics>
             <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
-            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">You can pick 1 enemy HERO within 18&quot; of the caster that is visible to them. That HERO cannot use any command abilities until your next hero phase.</characteristic>
+            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">You can pick 1 enemy HERO within 18&quot; of the caster that is visible to them. Until your next hero phase, that HERO cannot issue or receive commands.</characteristic>
             <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
           </characteristics>
         </profile>
@@ -7692,9 +7700,9 @@ Set up the additional models one at a time within 1&quot; of the position that t
         </profile>
         <profile id="cb87-d535-8a60-4d0b" name="Refine Senses" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
           <characteristics>
-            <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
-            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">Until your next hero phase, you can re-roll hit rolls for attacks made by the caster that target a HERO, and you can re-roll save rolls for attacks made by HEROES that target the caster.</characteristic>
+            <characteristic name="Casting Value" typeId="2508-b604-1258-a920">4</characteristic>
             <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
+            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, until your next hero phase, you can add 1 to hit rolls for attacks made by the caster that target a HERO, and you can add 1 to save rolls for attacks made by HEROES that target the caster.</characteristic>
           </characteristics>
         </profile>
         <profile id="b4c9-1547-660d-10b9" name="Irresistible Challenge" hidden="false" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
@@ -10049,29 +10057,24 @@ In addition, this model can attempt to dispel 1 endless spell at the start of yo
       <profiles>
         <profile id="1672-0145-693f-6e3b" name="Summon Darkfire Daemonrift" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
           <characteristics>
-            <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
-            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">Only SLAVES TO DARKNESS WIZARDS can attempt to cast this spell. If successfully cast, set up a Darkfire Daemonrift model wholly within 9&quot; of the caster.</characteristic>
-            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
-          </characteristics>
-        </profile>
-        <profile id="0f66-1f5e-c7db-bef2" name="Reality Screams" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">When this model is set up, the player who set it up can immediately make a move with it.</characteristic>
+            <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
+            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">9&quot;</characteristic>
+            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, set up this endless spell wholly within range and visible to the caster, and more than 1&quot; from all models, other endless spells and invocations. Only SLAVES TO DARKNESS WIZARDS can attempt to summon this endless spell.</characteristic>
           </characteristics>
         </profile>
         <profile id="ce49-83e0-6654-bcdb" name="Billowing Energies" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">After this model has moved, each unit that has any models it passed across, and each other unit that is within 1&quot; of it at the end of its move, suffers D3 mortal wounds.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">After this endless spell has moved, roll a dice for each unit that has any models it passed across and for each other unit within 1&quot; of it at the end of its move. On a 2+, that unit suffers D3 mortal wounds.</characteristic>
           </characteristics>
         </profile>
         <profile id="ea24-4880-248e-4755" name="Fuelled by Sorcery" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Add 1 to the number of mortal wounds inflicted by this endless spell for each WIZARD and each other ENDLESS SPELL within 12&quot; of this model after it has moved.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Add 1 to the number of mortal wounds caused by this endless spell for each other endless spell within 12&quot; of this endless spell after it has moved.</characteristic>
           </characteristics>
         </profile>
         <profile id="fef5-f635-8cd4-0f2d" name="Predatory" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">A Darkfire Daemonrift is a predatory endless spell. It can move up to 12&quot; and can fly.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This endless spell is a predatory endless spell. It can move up to 9&quot; and can fly.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -10094,13 +10097,13 @@ In addition, this model can attempt to dispel 1 endless spell at the start of yo
         <profile id="9933-9173-1653-463a" name="Summon Eightfold Doom-Sigil" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
           <characteristics>
             <characteristic name="Casting Value" typeId="2508-b604-1258-a920">5</characteristic>
-            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">Only SLAVES TO DARKNESS WIZARDS can attempt to cast this spell. If successfully cast, set up an Eightfold Doom-Sigil model wholly within 12&quot; of the caster.</characteristic>
-            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
+            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">6&quot;</characteristic>
+            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, set up this endless spell wholly within range and visible to the caster, and more than 1&quot; from all models, other endless spells and invocations. Only SLAVES TO DARKNESS WIZARDS can attempt to summon this endless spell.</characteristic>
           </characteristics>
         </profile>
         <profile id="d440-6601-eb14-091f" name="Empowered by Atrocity" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Keep track of the number of models that are slain within 12&quot; of this model each turn. At the end of each turn, roll a dice for each model that was slain within 12&quot; of this model during that turn. For each 3+, the player whose turn is taking place must pick 1 SLAVES TO DARKNESS unit wholly within 18&quot; of this model. Add 1 to the Attacks characteristic of that unit’s melee weapons (excluding those of mounts) until that player’s next hero phase. A unit cannot benefit from this ability more than once per turn.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Keep track of the number of models that are slain within 12&quot; of this endless spell each turn. At the end of each turn, roll a dice for each model that was slain within 12&quot; of this endless spell during that turn. For each 3+, the player whose turn is taking place must pick 1 SLAVES TO DARKNESS unit wholly within 18&quot; of this endless spell. Add 1 to the Attacks characteristic of that unit’s melee weapons (excluding those of its mounts) until that player’s next hero phase. A unit cannot benefit from this ability more than once per turn.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -10120,30 +10123,18 @@ In addition, this model can attempt to dispel 1 endless spell at the start of yo
         <profile id="c275-76eb-638f-19f5" name="Summon Realmscourge Rupture" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
           <characteristics>
             <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
-            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">Only SLAVES TO DARKNESS WIZARDS can attempt to cast this spell. If successfully cast, set up a Realmscourge Rupture model wholly within 9&quot; of the caster.</characteristic>
-            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
+            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">9&quot;</characteristic>
+            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, set up this endless spell wholly within range and visible to the caster, and more than 1&quot; from all models, other endless spells and invocations. Only SLAVES TO DARKNESS WIZARDS can attempt to summon this endless spell.</characteristic>
           </characteristics>
         </profile>
         <profile id="64bd-21e6-0665-e821" name="Debilitating Shockwave" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">After this model has moved, each unit that has any models it passed across, and each other unit that is within 1&quot; of it at the end of its move, suffers D3 mortal wounds.
-
-In addition, until the end of the battle round, halve the Move characteristic of each unit that has any models it passed across, and each other unit that is within 1&quot; of it at the end of its move.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="7c2d-17f2-167c-f583" name="Oncoming Annihilation" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">When this model is set up, the player who set it up can immediately make a move with it.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="2837-373d-5f51-b018" name="Tide of Ruin" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Whenever you set up a Realmscourge Rupture, you must place it widthways in the direction you wish it to move. Whenever it moves, move it in a straight line in that direction (it cannot move backwards).</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">After this endless spell has moved, roll a dice for each unit that has any models it passed across and for each other unit within 1&quot; of it at the end of its move. On a 2+, that unit suffers D3 mortal wounds and its Move characteristic is halved until the end of the battle round.</characteristic>
           </characteristics>
         </profile>
         <profile id="2a45-3782-388c-bc53" name="Predatory" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">A Realmscourge Rupture is a predatory endless spell. It can move up to 9&quot; and can fly.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This endless spell is a predatory endless spell. It can be moved up to 9&quot; and can fly. When this endless spell is moved, it must move in a straight line in the direction in which its spikes are pointing.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -10163,29 +10154,23 @@ In addition, until the end of the battle round, halve the Move characteristic of
         <profile id="4205-1397-42f1-1055" name="Summon Dreadful Visage" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
           <characteristics>
             <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
-            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">Only CHAOS SLAANESH WIZARDS can attempt to cast this spell. If successfully cast, set up 1 Dreadful Visage model wholly within 12&quot; of the caster.</characteristic>
-            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
-          </characteristics>
-        </profile>
-        <profile id="d9ad-f169-8d94-d3a6" name="Swooping Horror" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">When this model is set up, the player who set it up can immediately make a move with it.</characteristic>
+            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">12&quot;</characteristic>
+            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, set up this endless spell wholly within range and visible to the caster, and more than 1&quot; from all models, other endless spells and invocations. Only HEDONITES OF SLAANESH WIZARDS can attempt to summon this endless spell.</characteristic>
           </characteristics>
         </profile>
         <profile id="b641-8fa9-882d-b4d9" name="Predatory" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">A Dreadful Visage is a predatory endless spell. It can move up to 8&quot; and can fly.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This endless spell is a predatory endless spell. It can move up to 8&quot; and can fly.</characteristic>
           </characteristics>
         </profile>
         <profile id="b821-fddf-90c5-1df9" name="Terrifying Entity" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Subtract 1 from the Bravery characteristic of units while they are within 12&quot; of this model. Add 1 to the Bravery characteristic of CHAOS SLAANESH units while they are within 12&quot; of this model instead of subtracting 1.
-</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Subtract 1 from the Bravery characteristic of units while they are within 12&quot; of this endless spell. Add 1 to the Bravery characteristic of SLAANESH units while they are within 12&quot; of this endless spell instead of subtracting 1.</characteristic>
           </characteristics>
         </profile>
         <profile id="5040-8810-a4ae-9730" name="Flensing Tongues" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">After this model has moved, roll 6 dice for the closest unit within 6&quot;. If more than 1 unit is equally close, the player that moved this model can choose which unit to roll the 6 dice for. That unit suffers 1 mortal wound for each roll of 4+.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">After this endless spell has moved, roll 6 dice for the closest unit within 6&quot; of it. If more than 1 such unit is equally close the commanding player can choose which unit to roll for. For each 4+, that unit suffers 1 mortal wound. If a unit suffers any mortal wounds from this ability that are not negated, the strike-last effect applies to that unit until the end of the following combat phase.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -10205,25 +10190,18 @@ In addition, until the end of the battle round, halve the Move characteristic of
         <profile id="2097-5257-b989-70bc" name="Summon Mesmerising Mirror" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
           <characteristics>
             <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
-            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">Only CHAOS SLAANESH WIZARDS can attempt to cast this spell. If successfully cast, set up 1 Mesmerising Mirror model wholly within 18&quot; of the caster.</characteristic>
-            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
+            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">18&quot;</characteristic>
+            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, set up this endless spell wholly within range and visible to the caster, and more than 1&quot; from all models, other endless spells and invocations. Only HEDONITES OF SLAANESH WIZARDS can attempt to summon this endless spell.</characteristic>
           </characteristics>
         </profile>
         <profile id="ce4f-3512-0975-081f" name="Irresistible Lure" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If a unit starts a move within 12&quot; of this model, it suffers D3 mortal wounds unless it finishes the move closer to this model than it was before the move was made. This ability has no effect on CHAOS SLAANESH units.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If a unit starts a normal move, run or retreat within 12&quot; of this endless spell, it suffers D3 mortal wounds unless it finishes that move closer to this endless. This ability has no effect on SLAANESH units.</characteristic>
           </characteristics>
         </profile>
-        <profile id="2128-be33-9974-f333" name="Predatory" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+        <profile id="0ee7-3308-da6a-9d2c" name="Gaze Not into its Depths" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">A Mesmerising Mirror is a predatory endless spell. It can move up to 6&quot; and can fly.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="0ee7-3308-da6a-9d2c" name="Terrifying Entity" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">After this model is set up, and after this model has moved, roll 6 dice for each HERO within 6&quot; of this model (roll separately for each Hero). For each 6, that HERO suffers a number of mortal wounds equal to the number of 6s that were rolled for that HERO. 
-
-For example, if you rolled one 6 for a HERO, that HERO would suffer 1 x 1 = 1 mortal wound. If you rolled two 6s, that HERO would suffer 2 x 2 = 4 mortal wounds, if you rolled three 6s, that HERO would suffer 3 x 3 = 9 mortal wounds, and so on. This ability has no effect on CHAOS SLAANESH HEROES.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the end of the movement phase, roll 6 dice for each Hero within 6&quot; of this endless spell (roll separately for each Hero). For each 6, that HERO suffers a number of mortal wounds equal to the number of 6s that were rolled for that HERO. This ability has no effect on SLAANESH HEROES.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -10242,24 +10220,19 @@ For example, if you rolled one 6 for a HERO, that HERO would suffer 1 x 1 = 1 mo
       <profiles>
         <profile id="57ef-223a-07b9-3d03" name="Summon Wheels of Excruciation" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
           <characteristics>
-            <characteristic name="Casting Value" typeId="2508-b604-1258-a920">5</characteristic>
-            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">Only CHAOS SLAANESH WIZARDS can attempt to cast this spell. If successfully cast, set up 1 Wheels of Excruciation model wholly within 6&quot; of the caster.</characteristic>
-            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
-          </characteristics>
-        </profile>
-        <profile id="de1b-e715-b38d-3668" name="Swirling Death" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">When this model is set up, the player who set it up can immediately make a move with it.</characteristic>
+            <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
+            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">6&quot;</characteristic>
+            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, set up this endless spell wholly within range and visible to the caster, and more than 1&quot; from all models, other endless spells and invocations. Only HEDONITES OF SLAANESH WIZARDS can attempt to summon this endless spell.</characteristic>
           </characteristics>
         </profile>
         <profile id="1531-af13-139d-9816" name="Predatory" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Wheels of Excruciation is a predatory endless spell. It can move up to 12&quot; and can fly.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This endless spell is a predatory endless spell. It can move up to 8&quot; and can fly.</characteristic>
           </characteristics>
         </profile>
         <profile id="67fc-a50e-424b-1053" name="Exquisite Agony" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">After this model has moved, roll 6 dice for each unit that has any models that this model passed across. That unit suffers 1 mortal wound for each roll that is less than that unit’s unmodified Save characteristic.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">After this endless spell has moved, roll 6 dice for each unit that has any models it passed across. That unit suffers 1 mortal wound for each roll that is less than that unit’s unmodified Save characteristic. This ability has no effect on SLAANESH units.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -10994,9 +10967,9 @@ If the roll is less than that unit’s Save characteristic but not a 6, that uni
           <profiles>
             <profile id="8e9f-24a1-2013-0ee8" name="Bronzed Flesh" hidden="false" typeId="eed7-4131-0a52-0668" typeName="Prayer">
               <characteristics>
-                <characteristic name="Answer Value" typeId="276a-ab7e-145d-3ffc"/>
-                <characteristic name="Range" typeId="fd81-4e98-28ac-092a"/>
-                <characteristic name="Description" typeId="0746-6cfb-5e15-53cb">At the start of your hero phase, 1 friendly model that knows this prayer can  chant it. If they do so, make a prayer roll by rolling a dice. On a 1, the model chanting this prayer suffers 1 mortal wound and the prayer is not answered. On a 2-3, the prayer is not answered. On a 4+ the prayer is answered. If this prayer is answered, pick 1 friendly KHORNE unit wholly within 16&quot; of the model chanting this prayer and visible to them. Add 1 to save rolls for that unit until the start of your next hero phase.</characteristic>
+                <characteristic name="Answer Value" typeId="276a-ab7e-145d-3ffc">4</characteristic>
+                <characteristic name="Range" typeId="fd81-4e98-28ac-092a">16&quot;</characteristic>
+                <characteristic name="Description" typeId="0746-6cfb-5e15-53cb">If answered, pick 1 friendly Khorne unit wholly within range of the chanter that is visible to them. Add 1 to save rolls for attacks that target that unit until the start of your next hero phase.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -11008,9 +10981,9 @@ If the roll is less than that unit’s Save characteristic but not a 6, that uni
           <profiles>
             <profile id="cc70-c724-39b1-6dc5" name="Blood Sacrifice" hidden="false" typeId="eed7-4131-0a52-0668" typeName="Prayer">
               <characteristics>
-                <characteristic name="Answer Value" typeId="276a-ab7e-145d-3ffc"/>
-                <characteristic name="Range" typeId="fd81-4e98-28ac-092a"/>
-                <characteristic name="Description" typeId="0746-6cfb-5e15-53cb">At the start of your hero phase, 1 friendly model that knows this prayer can chant it. If they do so, make a prayer roll by rolling a dice. On a 1, the model chanting this prayer suffers 1 mortal wound and the prayer is not answered. On a 2-3, the prayer is not answered. On a 4+ the prayer is answered. If this prayer is answered, pick a KHORNE unit wholly within 8&quot; of the model chanting this prayer. That unit suffers D3 mortal wounds and you receive 1 Blood Tithe point.</characteristic>
+                <characteristic name="Answer Value" typeId="276a-ab7e-145d-3ffc">4</characteristic>
+                <characteristic name="Range" typeId="fd81-4e98-28ac-092a">8&quot;</characteristic>
+                <characteristic name="Description" typeId="0746-6cfb-5e15-53cb">If answered, pick 1 friendly Khorne unit wholly within range of the chanter that is visible to them. That unit suffers D3 mortal wounds and you receive 1 Blood Tithe point.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -11022,9 +10995,9 @@ If the roll is less than that unit’s Save characteristic but not a 6, that uni
           <profiles>
             <profile id="3c29-2f68-e31e-cfb5" name="Resanguination" hidden="false" typeId="eed7-4131-0a52-0668" typeName="Prayer">
               <characteristics>
-                <characteristic name="Answer Value" typeId="276a-ab7e-145d-3ffc"/>
-                <characteristic name="Range" typeId="fd81-4e98-28ac-092a"/>
-                <characteristic name="Description" typeId="0746-6cfb-5e15-53cb">At the start of your hero phase, 1 friendly model that knows this prayer can chant it. If they do so, make a prayer roll by rolling a dice. On a 1, the model chanting this prayer suffers 1 mortal wound and the prayer is not answered. On a 2-3, the prayer is not answered. On a 4+ the prayer is answered. If this prayer is answered, pick a friendly KHORNE HERO wholly within 16&quot; of the model chanting this prayer and visible to them. You can heal up to D3 wounds allocated to that unit.</characteristic>
+                <characteristic name="Answer Value" typeId="276a-ab7e-145d-3ffc">4</characteristic>
+                <characteristic name="Range" typeId="fd81-4e98-28ac-092a">16&quot;</characteristic>
+                <characteristic name="Description" typeId="0746-6cfb-5e15-53cb">If answered, pick 1 friendly Khorne unit wholly within range of the chanter that is visible to them. You can heal up to D3 wounds allocated to that unit.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -11036,9 +11009,9 @@ If the roll is less than that unit’s Save characteristic but not a 6, that uni
           <profiles>
             <profile id="18d5-7b07-318f-cc9c" name="Brazen Fury" hidden="false" typeId="eed7-4131-0a52-0668" typeName="Prayer">
               <characteristics>
-                <characteristic name="Answer Value" typeId="276a-ab7e-145d-3ffc"/>
-                <characteristic name="Range" typeId="fd81-4e98-28ac-092a"/>
-                <characteristic name="Description" typeId="0746-6cfb-5e15-53cb">At the start of your hero phase, 1 friendly model that knows this prayer can chant it. If they do so, make a prayer roll by rolling a dice. On a 1, the model chanting this prayer suffers 1 mortal wound and the prayer is not answered. On a 2-3, the prayer is not answered. On a 4+ the prayer is answered. If this prayer is successful, pick a KHORNE unit from your army that is within 16&quot; of the PRIEST and which is visible to them. The unit that you picked does not have to take battleshock tests until your next hero phase.</characteristic>
+                <characteristic name="Answer Value" typeId="276a-ab7e-145d-3ffc">4</characteristic>
+                <characteristic name="Range" typeId="fd81-4e98-28ac-092a">16&quot;</characteristic>
+                <characteristic name="Description" typeId="0746-6cfb-5e15-53cb">If answered, pick 1 friendly Khorne unit wholly within range of the chanter that is visible to them. Do not take battleshock tests for that unit until the start of your next hero phase.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -11050,9 +11023,9 @@ If the roll is less than that unit’s Save characteristic but not a 6, that uni
           <profiles>
             <profile id="265e-e32e-1394-3845" name="Killing Frenzy" hidden="false" typeId="eed7-4131-0a52-0668" typeName="Prayer">
               <characteristics>
-                <characteristic name="Answer Value" typeId="276a-ab7e-145d-3ffc"/>
-                <characteristic name="Range" typeId="fd81-4e98-28ac-092a"/>
-                <characteristic name="Description" typeId="0746-6cfb-5e15-53cb">At the start of your hero phase, 1 friendly model that knows this prayer can chant it. If they do so, make a prayer roll by rolling a dice. On a 1, the model chanting this prayer suffers 1 mortal wound and the prayer is not answered. On a 2-3, the prayer is not answered. On a 4+ the prayer is answered. If this prayer is successful, pick either the PRIEST or a KHORNE unit from your army that is within 16&quot; of the PRIEST and which is visible to them. Add 1 to the hit rolls of the unit you picked until your next hero phase.</characteristic>
+                <characteristic name="Answer Value" typeId="276a-ab7e-145d-3ffc">4</characteristic>
+                <characteristic name="Range" typeId="fd81-4e98-28ac-092a">16&quot;</characteristic>
+                <characteristic name="Description" typeId="0746-6cfb-5e15-53cb">If answered, pick 1 friendly Khorne unit wholly within range of the chanter that is visible to them. Add 1 to hit rolls for attacks made by that unit until the start of your next hero phase.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -11060,13 +11033,13 @@ If the roll is less than that unit’s Save characteristic but not a 6, that uni
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="f279-1d2c-c0fb-f9ee" name="6. Magebane Hex" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="f279-1d2c-c0fb-f9ee" name="6. Spellbane Hex" hidden="false" collective="false" import="true" type="upgrade">
           <profiles>
-            <profile id="eef1-6400-2fff-f2d3" name="Magebane Hex" hidden="false" typeId="eed7-4131-0a52-0668" typeName="Prayer">
+            <profile id="eef1-6400-2fff-f2d3" name="Spellbane Hex" hidden="false" typeId="eed7-4131-0a52-0668" typeName="Prayer">
               <characteristics>
-                <characteristic name="Answer Value" typeId="276a-ab7e-145d-3ffc"/>
-                <characteristic name="Range" typeId="fd81-4e98-28ac-092a"/>
-                <characteristic name="Description" typeId="0746-6cfb-5e15-53cb">At the start of your hero phase, 1 friendly model that knows this prayer can chant it. If they do so, make a prayer roll by rolling a dice. On a 1, the model chanting this prayer suffers 1 mortal wound and the prayer is not answered. On a 2-3, the prayer is not answered. On a 4+ the prayer is answered. If this prayer is successful, then until your next hero phase, the PRIEST can attempt to unbind one additional spell in each enemy hero phase in the same manner as a wizard.</characteristic>
+                <characteristic name="Answer Value" typeId="276a-ab7e-145d-3ffc">4</characteristic>
+                <characteristic name="Range" typeId="fd81-4e98-28ac-092a">16&quot;</characteristic>
+                <characteristic name="Description" typeId="0746-6cfb-5e15-53cb">If answered, you can pick 1 endless spell within range of the chanter. That endless spell is dispelled.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -11172,7 +11145,9 @@ If the roll is less than that unit’s Save characteristic but not a 6, that uni
           <profiles>
             <profile id="82f0-146e-74b5-3321" name="Figureheads of the Dark Prince" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
               <characteristics>
-                <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">Your army can have up to 3 generals instead of 1. Only 1 of the generals can have a command trait, but all 3 are considered to be a general for the purposes of using command abilities. However, none of your generals can use a command trait or command ability while they are within 12&quot; of any of your other generals. In addition, each time 1 of your generals is slain for the first time, you receive 1 command point.</characteristic>
+                <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">Your army can have up to 3 generals instead of 1. Only 1 of the generals can have a command trait, but all 3 are considered to be a general for the purposes of using command abilities. However, none of your generals can use a command trait or command ability while they are within 12&quot; of any of your other generals. In addition, each time 1 of your generals is slain for the first time, you receive 1 command point.
+
+You receive the command point for having a general on the battlefield at the start of the hero phase if 1 or more of these generals are on the battlefield (you still only receive 1 command point if you have 2 or more generals on the battlefield). You receive the +2 modifier to the Heroic Leadership heroic action only if all of the generals have been slain.</characteristic>
               </characteristics>
             </profile>
             <profile id="e6c3-5bc7-f549-7d16" name="Escalating Havoc" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
@@ -11318,7 +11293,7 @@ If the roll is less than that unit’s Save characteristic but not a 6, that uni
             </profile>
             <profile id="b431-57bb-108d-f01c" name="Deadly Symbiosis" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
               <characteristics>
-                <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">Add 1 to the number of depravity points you receive in the battleshock phase if a friendly SYLL&apos;ESSKE is on the battlefield and is within 6&quot; of at least 1 other friendly SYLL&apos;ESSKAN HOST DAEMON unit and at least 1 friendly SYLL&apos;ESSKAN HOST MORTAL unit.</characteristic>
+                <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">‘Add 1 to the number of depravity points you receive in the battleshock phase if a friendly SYLL&apos;ESSKE is on the battlefield and is within 6&quot; of at least 1 other friendly SYLL&apos;ESSKAN HOST DAEMON unit and at least 1 friendly SYLL&apos;ESSKAN HOST MORTAL unit.</characteristic>
               </characteristics>
             </profile>
             <profile id="4c22-9275-859b-fadf" name="Syll&apos;esskan Host" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
@@ -11435,7 +11410,7 @@ At the start of your hero phase, you can pick 1 friendly RAVAGERS HERO (excludin
             </profile>
             <profile id="95de-99e4-b8cc-6bbd" name="Dark Prophecy" hidden="false" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
               <characteristics>
-                <characteristic name="Command Ability Details" typeId="1b71-4c83-4e8c-093f">You can use this command ability once per turn at the start of your hero phase if ARCHAON is your general and on the battlefield. If you do so, roll a dice and keep the result hidden from your opponent beneath an opaque container, such as a cup. At the start of the next battle round, before players determine who has the first turn, you must reveal the result. On a 1-3 your opponent must take the first turn of that battle round. On a 4-6 you must take the first turn of that battle round.</characteristic>
+                <characteristic name="Command Ability Details" typeId="1b71-4c83-4e8c-093f">You can use this command ability once per turn at the start of your hero phase if Archaon is on the battlefield. If you do so, roll a dice and keep the result hidden from your opponent beneath an opaque container, such as a cup. At the start of the next battle round, before players determine who has the first turn, you must reveal the result. On a 1-3 your opponent must take the first turn of that battle round. On a 4-6 you must take the first turn of that battle round.</characteristic>
               </characteristics>
             </profile>
             <profile id="2010-ea9e-d9f9-9495" name="Eight Circles of the Varanguard" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
@@ -11724,7 +11699,7 @@ If a model already has a Change Coven keyword on its warscroll, it cannot gain a
             </profile>
             <profile id="a194-9eca-2775-f247" name="Impossible to Anticipate" hidden="false" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
               <characteristics>
-                <characteristic name="Command Ability Details" typeId="1b71-4c83-4e8c-093f">You can use this command ability once per battle, immediately after a friendly HOSTS DUPLICITOUS HORRORS OF TZEENTCH unit is destroyed. If you do so, roll a dice. On a 5+, a new unit identical to the one that was destroyed is added to your army. Set up the new unit wholly within 12&quot; of a friendly HOSTS DUPLICITOUS HERO and more than 9&quot; from any enemy units.</characteristic>
+                <characteristic name="Command Ability Details" typeId="1b71-4c83-4e8c-093f">You can use this command ability once per battle after a friendly HOSTS DUPLICITOUS HORRORS OF TZEENTCH unit is destroyed. If you do so, roll a dice. On a 5+, add a new HOSTS DUPLICITOUS HORRORS OF TZEENTCH unit with 10 models to your army. Set up the new unit wholly within 12&quot; of a friendly HOSTS DUPLICITOUS HERO and more than 9&quot; from all enemy units.’</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -11771,7 +11746,7 @@ that phase. A unit cannot benefit from this command ability more than once per t
           <profiles>
             <profile id="160f-f406-0cb0-68a9" name="The Change-gift" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
               <characteristics>
-                <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">Roll a dice each time a friendly CULT OF THE TRANSIENT FORM KAIRIC ACOLYTE model is slain in the combat phase. On a 2-5, before removing that model from play, that model can fight. On a 6, before removing that model from play, you can add 1 TZAANGOR model to an existing TZAANGOR unit in your army. If you do so, set up that TZAANGOR model within 1&quot; of a friendly TZAANGOR unit that is within 9&quot; of the slain model. The model can only be set up within 3&quot; of an enemy unit if the friendly TZAANGOR unit was within 3&quot; of that enemy unit before any models were added.</characteristic>
+                <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">Roll a dice each time a friendly CULT OF THE TRANSIENT FORM KAIRIC ACOLYTE model is slain in the combat phase. On a 2-5, before removing that model from play, that model can fight. On a 6, before removing that model from play, you can add 1 model to a friendly TZAANGORS unit within 9&quot; of the slain model. The new model can only be set up within 3&quot; of an enemy unit if the unit to which it is added is within 3&quot; of that enemy unit.</characteristic>
               </characteristics>
             </profile>
             <profile id="ecc3-63f0-4951-fb1a" name="Fate of Transmutation" hidden="false" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
@@ -14072,7 +14047,7 @@ that phase. A unit cannot benefit from this command ability more than once per t
               <profiles>
                 <profile id="db37-ed18-e4a0-7549" name="Paradoxical Shield" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
                   <characteristics>
-                    <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Add 2 to save rolls for attacks that target the bearer. However, you must re-roll any successful save rolls made for the bearer.</characteristic>
+                    <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Ignore modifiers (positive and negative) when making save rolls for attacks that target the bearer. However, you must re-roll successful save rolls for attacks that target the bearer.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -17034,8 +17009,8 @@ that phase. A unit cannot benefit from this command ability more than once per t
                 <profile id="af55-84ea-1060-892d" name="Slothful Stupor" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
                   <characteristics>
                     <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
-                    <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">Pick 1 enemy HERO within 12&quot; of the caster that is visible to them. Until your next hero phase, that HERO cannot use command abilities, and cannot run or attempt to charge. </characteristic>
                     <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
+                    <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">Pick 1 enemy HERO within 12&quot; of the caster that is visible to them. Until your next hero phase, that HEROcannot issue or receive commands and cannot run or attempt a charge.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -17744,6 +17719,71 @@ Kneel: Subtract 1 from save rolls for attacks that target that unit until your n
       <entryLinks>
         <entryLink id="54d7-d108-1b01-dec6" name="Core Battalions" hidden="false" collective="false" import="true" targetId="b275-810f-adfc-156b" type="selectionEntryGroup"/>
       </entryLinks>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="50da-deca-b92f-8995" name="Coalition" hidden="false" collective="false" import="true">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <selectionEntries>
+        <selectionEntry id="f518-9215-6a92-0074" name="Coalition: Beasts of Chaos" hidden="false" collective="false" import="true" type="upgrade">
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="687a-3d5a-fb0e-e2ea" name="Coalition: Slaves to Darkness" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="increment" field="94eb-2f3a-17c8-27df" value="2.0">
+              <repeats>
+                <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+            <modifier type="set" field="5cb7-2821-4ef7-b4fb" value="1.0">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" field="hidden" value="false">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4ba7-618a-4e30-2e0c" type="instanceOf"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5cb7-2821-4ef7-b4fb" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="99df-0960-f21e-17a8" type="max"/>
+            <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="94eb-2f3a-17c8-27df" type="max"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <sharedProfiles>
