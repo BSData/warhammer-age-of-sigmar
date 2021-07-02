@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="de06-0235-6a96-193b" name="Chaos - Skaven - Data" revision="24" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://gitter.im/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="79" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="de06-0235-6a96-193b" name="Chaos - Skaven - Data" revision="25" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://gitter.im/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="81" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="bcc4-c671-pubd1e1" name="Chaos Battletome: Skaven"/>
     <publication id="bcc4-c671-pubd1e6847" name="Forgeworld: Monstrous Arcanum"/>
@@ -105,6 +105,18 @@
     <categoryEntry id="c198-5254-88be-9298" name="GNAWHOLE" hidden="false"/>
     <categoryEntry id="fa82-5fdb-6243-958a" name="STORMFIENDS MOULDER" hidden="false"/>
     <categoryEntry id="0dff-2ca0-f235-f2e1" name="STORMFIENDS SKRYRE" hidden="false"/>
+    <categoryEntry id="b29e-7f2f-e37e-7197" name="Coalition: Skaven Pestilens" hidden="false">
+      <modifiers>
+        <modifier type="increment" field="da6b-47f0-4785-2374" value="1.0">
+          <repeats>
+            <repeat field="selections" scope="roster" value="4.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="unit" repeats="1" roundUp="false"/>
+          </repeats>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="da6b-47f0-4785-2374" type="max"/>
+      </constraints>
+    </categoryEntry>
   </categoryEntries>
   <sharedSelectionEntries>
     <selectionEntry id="aca2-1d43-0220-2465" name="Skritch Spiteclaw" publicationId="bcc4-c671-pubd1e1" page="118" hidden="false" collective="false" import="true" type="unit">
@@ -1975,6 +1987,16 @@ Knowledge of the Warrior: Add 1 to hit rolls for attacks made by this model.</ch
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="add" field="category" value="b29e-7f2f-e37e-7197">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <profiles>
         <profile id="d3e0-2f76-e590-883d" name="Plague Censer Bearers" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
@@ -2088,6 +2110,18 @@ Knowledge of the Warrior: Add 1 to hit rolls for attacks made by this model.</ch
       </costs>
     </selectionEntry>
     <selectionEntry id="92a9-a243-a1df-ca15" name="Plague Priest on Plague Furnace" publicationId="e316-99a9-2860-3a7c" page="" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="add" field="category" value="b29e-7f2f-e37e-7197">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="5ed5-01f4-bf78-6a13" name="Plague Furnace" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
           <characteristics>
@@ -2242,16 +2276,16 @@ Knowledge of the Warrior: Add 1 to hit rolls for attacks made by this model.</ch
             </profile>
             <profile id="0c34-7df2-71c8-4940" name="Rabid-rabid!" hidden="false" typeId="eed7-4131-0a52-0668" typeName="Prayer">
               <characteristics>
-                <characteristic name="Description" typeId="0746-6cfb-5e15-53cb">If this prayer is answered, pick 1 friendly CLANS PESTILENS unit wholly within 13&quot; of this model. Add 1 to the Attacks characteristic of melee weapons used by that unit until your next hero phase. You cannot pick the same unit to be affected by this prayer more than once per hero phase.</characteristic>
-                <characteristic name="Answer Value" typeId="276a-ab7e-145d-3ffc"/>
-                <characteristic name="Range" typeId="fd81-4e98-28ac-092a"/>
+                <characteristic name="Answer Value" typeId="276a-ab7e-145d-3ffc">3</characteristic>
+                <characteristic name="Range" typeId="fd81-4e98-28ac-092a">13&quot;</characteristic>
+                <characteristic name="Description" typeId="0746-6cfb-5e15-53cb">If answered, pick 1 friendly CLANS PESTILENS unit wholly within range and visible to the chanter. Add 1 to the Attacks characteristic of melee weapons used by that unit until the start of your next hero phase.</characteristic>
               </characteristics>
             </profile>
             <profile id="bfc7-a112-05ff-7bc5" name="Filth-filth!" hidden="false" typeId="eed7-4131-0a52-0668" typeName="Prayer">
               <characteristics>
-                <characteristic name="Description" typeId="0746-6cfb-5e15-53cb">If this prayer is answered, pick 1 friendly CLANS PESTILENS unit wholly within 13&quot; of this model. You can re-roll wound rolls for attacks made by that unit until your next hero phase.</characteristic>
-                <characteristic name="Answer Value" typeId="276a-ab7e-145d-3ffc"/>
-                <characteristic name="Range" typeId="fd81-4e98-28ac-092a"/>
+                <characteristic name="Answer Value" typeId="276a-ab7e-145d-3ffc">3</characteristic>
+                <characteristic name="Range" typeId="fd81-4e98-28ac-092a">13&quot;</characteristic>
+                <characteristic name="Description" typeId="0746-6cfb-5e15-53cb">If answered, pick 1 friendly CLANS PESTILENS unit wholly within range and visible to the chanter. Add 1 to wound rolls for attack made by that unit until the start of your next hero phase.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -2313,6 +2347,7 @@ Knowledge of the Warrior: Add 1 to hit rolls for attacks made by this model.</ch
       </selectionEntries>
       <entryLinks>
         <entryLink id="faa7-01f7-2f0a-1f56" name="Battalions" hidden="false" collective="false" import="true" targetId="286a-2838-49be-5968" type="selectionEntryGroup"/>
+        <entryLink id="fd8f-5c4e-65e4-628d" name="Prayers" hidden="false" collective="false" import="true" targetId="ff40-9e7b-b23e-68e1" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="245.0"/>
@@ -2346,6 +2381,16 @@ Knowledge of the Warrior: Add 1 to hit rolls for attacks made by this model.</ch
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="add" field="category" value="b29e-7f2f-e37e-7197">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <profiles>
         <profile id="3292-f3ef-e3c5-2f6b" name="Plague Monk" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
@@ -2364,6 +2409,11 @@ Knowledge of the Warrior: Add 1 to hit rolls for attacks made by this model.</ch
         <profile id="dcbb-0914-e042-5477" name="Foetid Weapons" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
             <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If the unmodified wound roll for an attack made with a melee weapon by this unit is 6, that attack succeeds twice instead of once. Make a save roll for each success.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="b89a-1bf1-4d4d-5db4" name="Book of Woes" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">In your hero phase, you can pick 1 enemy unit within 13&quot; of this unit’s Bringer-of-the-Word and roll a dice. On a 1-3, nothing happens. On a 4-5, that unit suffers 1 mortal wound. On a 6, that unit suffers D3 mortal wounds. This ability has no effect on Nurgle units.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -2462,26 +2512,6 @@ Knowledge of the Warrior: Add 1 to hit rolls for attacks made by this model.</ch
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup id="f7b1-9cb8-dc6f-3496" name="Bringer-of-the-Word Weapon Choice" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="25ed-65e3-ca79-7db3" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9582-1293-4d14-17b8" type="max"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="39c7-e893-fb13-6280" name="Foetid Blade and Book of Woes" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="ec17-874b-54f8-10e6" name="Book of Woes" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-                  <characteristics>
-                    <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">In your hero phase, you can pick 1 enemy unit within 13&quot; of this unit’s Bringer-of-the-Word and roll a dice. On a 1-3, nothing happens. On a 4-5, that unit suffers 1 mortal wound. On a 6, that unit suffers D3 mortal wounds. This ability has no effect on Nurgle units.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="points" value="0.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
         <entryLink id="3a91-6464-16f7-0e08" name="Reinforced" hidden="false" collective="false" import="true" targetId="0a8d-cde8-fba1-6c0d" type="selectionEntry">
@@ -2521,6 +2551,18 @@ Knowledge of the Warrior: Add 1 to hit rolls for attacks made by this model.</ch
       </costs>
     </selectionEntry>
     <selectionEntry id="8d7d-46a4-7a4b-28a8" name="Plague Priest" publicationId="bcc4-c671-pubd1e1" page="114" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="add" field="category" value="b29e-7f2f-e37e-7197">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="7a5b-d9d8-6b7c-6df0" name="Plague Priest" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
           <characteristics>
@@ -2537,16 +2579,16 @@ Knowledge of the Warrior: Add 1 to hit rolls for attacks made by this model.</ch
         </profile>
         <profile id="ccb4-a808-39f1-40bb" name="Disease-disease!" hidden="false" typeId="eed7-4131-0a52-0668" typeName="Prayer">
           <characteristics>
-            <characteristic name="Description" typeId="0746-6cfb-5e15-53cb">If this prayer is answered, pick 1 enemy unit within 13&quot; of this model, and roll 1 dice for each model in that unit. For each 6, that unit suffers 1 mortal wound. This prayer has no effect on CLANS PESTILENS unit.</characteristic>
-            <characteristic name="Answer Value" typeId="276a-ab7e-145d-3ffc"/>
-            <characteristic name="Range" typeId="fd81-4e98-28ac-092a"/>
+            <characteristic name="Answer Value" typeId="276a-ab7e-145d-3ffc">3</characteristic>
+            <characteristic name="Range" typeId="fd81-4e98-28ac-092a">13&quot;</characteristic>
+            <characteristic name="Description" typeId="0746-6cfb-5e15-53cb">If answered, pick 1 enemy unit within range and is visible to the chanter. Roll 1 dice for each model in that unit. For each 6, that unit suffers 1 mortal wound. This prayer has no effect on CLANS PESTILENS units.</characteristic>
           </characteristics>
         </profile>
         <profile id="ab96-d300-4e93-6604" name="Pestilence-pestilence!" hidden="false" typeId="eed7-4131-0a52-0668" typeName="Prayer">
           <characteristics>
-            <characteristic name="Description" typeId="0746-6cfb-5e15-53cb">If this prayer is answered, pick a point on the battlefield that is within 13&quot; of this model. Roll a dice for each unit within 3&quot; of that point. On 4+ that unit suffers D3 mortal wounds. This prayer has no effect on CLANS PESTILENS units.</characteristic>
-            <characteristic name="Answer Value" typeId="276a-ab7e-145d-3ffc"/>
-            <characteristic name="Range" typeId="fd81-4e98-28ac-092a"/>
+            <characteristic name="Answer Value" typeId="276a-ab7e-145d-3ffc">3</characteristic>
+            <characteristic name="Range" typeId="fd81-4e98-28ac-092a">13&quot;</characteristic>
+            <characteristic name="Description" typeId="0746-6cfb-5e15-53cb">If answered, pick a point on the battlefield within range and visible to the chanter. Roll a dice for each unit within 3&quot; of that point. On a 4+, that unit suffers D3 mortal wounds. This prayer has no effect on CLANS PESTILENS units.</characteristic>
           </characteristics>
         </profile>
         <profile id="a61d-8ae8-bc75-060b" name="Plague Prayers" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
@@ -2622,12 +2664,25 @@ Knowledge of the Warrior: Add 1 to hit rolls for attacks made by this model.</ch
         <entryLink id="b90b-4d6b-c436-e54b" name="Artefacts" hidden="false" collective="false" import="true" targetId="01be-261c-a6e1-68d6" type="selectionEntryGroup"/>
         <entryLink id="1b7e-b23d-5206-9ddc" name="Command Traits" hidden="false" collective="false" import="true" targetId="d469-f2fa-07d9-bd12" type="selectionEntryGroup"/>
         <entryLink id="cd26-1884-74c0-63ed" name="Battalions" hidden="false" collective="false" import="true" targetId="286a-2838-49be-5968" type="selectionEntryGroup"/>
+        <entryLink id="c08f-dd4b-3b4c-9681" name="Prayers" hidden="false" collective="false" import="true" targetId="ff40-9e7b-b23e-68e1" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="85.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="b200-bf68-a22d-efe6" name="Plagueclaw" publicationId="bcc4-c671-pubd1e1" page="114" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="add" field="category" value="b29e-7f2f-e37e-7197">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="c8be-0fce-a742-91d0" name="Plagueclaw" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
           <characteristics>
@@ -4125,6 +4180,18 @@ Knowledge of the Warrior: Add 1 to hit rolls for attacks made by this model.</ch
       </costs>
     </selectionEntry>
     <selectionEntry id="0afb-be63-f27c-0b71" name="Verminlord Corruptor" publicationId="e316-99a9-2860-3a7c" page="" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="add" field="category" value="b29e-7f2f-e37e-7197">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="b56f-8bc8-bbc6-bf48" name="Verminlord Corruptor" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
           <characteristics>
@@ -4624,7 +4691,7 @@ Knowledge of the Warrior: Add 1 to hit rolls for attacks made by this model.</ch
         </profile>
         <profile id="c69c-2632-3566-cde7" name="Scry-orb" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">You can re-roll save rolls for attacks that target this model. In addition, once per battle, in your shooting phase, you can pick 1 enemy unit within 13&quot; of this model and visible to them. That unit suffers D6 mortal wounds, but you cannot use this ability to re-roll save rolls for this model for the rest of the battle.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Add 1 to save rolls for attacks that target this model.</characteristic>
           </characteristics>
         </profile>
         <profile id="6c6e-cc88-a9b7-1f1c" name="Verminlord Warpseer" hidden="false" typeId="f55d-ee3a-1597-110f" typeName="Magic">
@@ -4688,7 +4755,7 @@ Knowledge of the Warrior: Add 1 to hit rolls for attacks made by this model.</ch
         </profile>
         <profile id="73b7-11c5-42c7-bc32" name="The Great Manipulators" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If this model is on the battlefield at the start of your hero phase, roll a dice. On a 3+, you receive 1 extra command point. On a 6 you receive D3 extra command points instead of 1.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the start of your hero phase, if any friendly models with this ability are on the battlefield, roll 1 dice. On a 3+, you receive 1 command point.</characteristic>
           </characteristics>
         </profile>
         <profile id="eab3-7a08-170b-84bd" name="Protection of the Horned Rat" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
@@ -5084,12 +5151,12 @@ Knowledge of the Warrior: Add 1 to hit rolls for attacks made by this model.</ch
             <characteristic name="Move" typeId="8655-6213-2824-1752">6&quot;</characteristic>
             <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">2</characteristic>
             <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">4</characteristic>
-            <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">6+</characteristic>
+            <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">5+</characteristic>
           </characteristics>
         </profile>
         <profile id="3f32-8245-cef4-1237" name="Pavise" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">You can re-roll hit rolls for attacks made with this unit’s Warplock Jezzails if this unit has not made a move in the same turn. In addition, add 2 to save rolls for attacks made with missile weapons that target this unit.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">You can re-roll hit rolls for attacks made with this unit’s Warplock Jezzails if this unit has not made a move in the same turn. In addition, add 1 to save rolls for attacks made with missile weapons that target this unit.</characteristic>
           </characteristics>
         </profile>
         <profile id="463d-14bf-3fea-9f2f" name="Warpstone Snipers" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
@@ -5330,7 +5397,7 @@ Knowledge of the Warrior: Add 1 to hit rolls for attacks made by this model.</ch
                 </profile>
                 <profile id="ad5a-a233-5980-b252" name="Strength In Numbers" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
                   <characteristics>
-                    <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">When a SKAVENTIDE unit takes a battleshock test, add 2 to its Bravery characteristic instead of 1 for every 10 models in the unit.</characteristic>
+                    <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">When a Skaventide unit takes a battleshock test, subtract 1 from the battleshock roll for every 10 models that are in the unit.</characteristic>
                   </characteristics>
                 </profile>
                 <profile id="17bc-618c-5f5f-7b6a" name="Masterclan - Skilled Manipulators" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
@@ -5360,7 +5427,7 @@ Knowledge of the Warrior: Add 1 to hit rolls for attacks made by this model.</ch
                 </profile>
                 <profile id="8498-3020-facc-bf5d" name="Pestilens - Echoes of the Great Plagues" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
                   <characteristics>
-                    <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">If the unmodified prayer roll for a prayer chanted by a friendly CLANS PESTILENS PRIEST is 6, you can pick 1 of the following Great Plagues to manifest (in addition to the effect of the prayer). Each Great Plague can only manifest once per battle, and no more than one Great Plague can manifest in the same turn. Bubonic Blightplague: If this Great Plague manifests, pick the nearest enemy unit within 13&quot; of the PRIEST chanting the prayer. That unit is infected with the Bubonic Blightplague. If several enemy units are equally close, you can pick which is infected. The infected unit suffers D6 mortal wounds. If the infected unit is destroyed by these mortal wounds, you can pick another enemy unit within 6&quot; of the last model to be slain from the infected unit. The new unit is infected and suffers D3 mortal wounds. If the second unit is also destroyed, then another enemy unit within 6&quot; of the last model to be slain suffers D3 mortal wounds, and so on until a unit is not destroyed by the disease or there are no other enemy units within 6&quot; when a unit is destroyed. Crimsonweal Curse: If this Great Plague manifests, pick the nearest enemy unit within 13&quot; of the PRIEST chanting the prayer. That unit is infected with the Crimsonweal Curse. If several enemy units are equally close, you can pick which is infected. The infected unit suffers 1 mortal wound. In addition, at the start of each of your hero phases, the infected unit, and each enemy unit within 1&quot; of the infected unit, suffers 1 mortal wound. Redmaw Plague: If this Great Plague manifests, pick the nearest enemy HERO within 13&quot; of the PRIEST chanting the prayer. That HERO is infected with the Redmaw Plague. If several enemy HEROES are equally close, you can pick which is infected. If a HERO infected with the Redmaw Plague is within 3&quot; of any other models from its own army at the start of any combat phase, and is not within 3&quot; of any models from your army, then you can treat that HERO as a friendly model until the end of that combat phase. The Neverplague: If this Great Plague manifests, you can re-roll prayer rolls for friendly CLANS PESTILENS PRIESTS for the rest of the battle. Undulant Scourge: If this Great Plague manifests, pick the nearest enemy unit within 13&quot; of the PRIEST chanting the prayer, and roll 1 dice for each model in that unit. If several enemy units are equally close, you can pick which of those units to roll dice for. For each 5+ that unit suffers 1 mortal wound.</characteristic>
+                    <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">If the unmodified chanting roll for a prayer chanted by a friendly CLANS PESTILENS PRIEST is 6, you can pick 1 of the following Great Plagues to manifest (in addition to the effect of the prayer).</characteristic>
                   </characteristics>
                 </profile>
                 <profile id="97f1-b321-930a-f94e" name="Hidden Weapons Teams" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
@@ -7095,29 +7162,19 @@ Hidden WEAPON TEAM units are destroyed if the unit they are hiding in is destroy
       <profiles>
         <profile id="8b90-4782-e4a3-fd7d" name="Summon Vermintide" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
           <characteristics>
-            <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
-            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">Only SKAVENTIDE WIZARDS can attempt to cast this spell. If successfully cast, set up a Vermintide model wholly within 13&quot; of the caster.</characteristic>
-            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
+            <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
+            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">18&quot;</characteristic>
+            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, set up this endless spell wholly within range and visible to the caster, and more than 1&quot; from all models, other endless spells and invocations. Only SKAVENTIDE WIZARDS can attempt to summon this endless spell.</characteristic>
           </characteristics>
         </profile>
         <profile id="3b9f-a6a5-6a68-bbcf" name="Predatory" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Vermintide is a predatory endless spell. It can move up to 7&quot;.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This endless spell is a predatory endless spell. It can move up to 7&quot;.</characteristic>
           </characteristics>
         </profile>
         <profile id="429a-8a41-756b-cb9b" name="Ravening Horde" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">After this model has moved, the player that moved it can pick 1 unit within 3&quot; of this model and roll 13 dice. For each 6, that unit suffers 1 mortal wound. In addition, roll 13 dice for each unit that finishes a normal move or a charge move within 3&quot; of this model. For each 6, that unit suffers 1 mortal wound.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="739f-2506-78be-1873" name="Voracious Hunger" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">When this model is set up, the player who set it up can immediately make a move with it.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="6f54-837e-6098-74cb" name="Ratkin" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">SKAVENTIDE units are not affected by the Ravening Horde ability. In addition, SKAVENTIDE models can move across this model in the same manner as a model that can fly.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">After this endless spell has moved, the commanding player can pick 1 unit within 3&quot; of this endless spell and roll 13 dice. For each 6, that unit suffers 1 mortal wound. In addition, roll 13 dice for each unit that finishes a normal move, run, retreat or charge move within 3&quot; of this endless spell. For each 6, that unit suffers 1 mortal wound.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -7138,18 +7195,18 @@ Hidden WEAPON TEAM units are destroyed if the unit they are hiding in is destroy
         <profile id="ced7-6f91-5cc7-a855" name="Summon Warp Lightning Vortex" publicationId="e316-99a9-2860-3a7c" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
           <characteristics>
             <characteristic name="Casting Value" typeId="2508-b604-1258-a920">8</characteristic>
-            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">Only SKAVENTIDE WIZARDS can attempt to cast this spell. If successfully cast, set up 1 Warp Lightning Vortex model wholly within 13&quot; of the caster, then set up the second and third Warp Lightning Vortex models exactly 7&quot; from the first model and exactly 7&quot; from each other (the models will form a triangle with each model exactly 7&quot; from the other two models).</characteristic>
-            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
+            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">13&quot;</characteristic>
+            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, set up 1 part of the endless spell wholly within range of the caster, then set up the second and third parts exactly 7&quot; from the first part and exactly 7&quot; from each other (the parts will form a triangle with each part exactly 7&quot; from the other two parts). All of the parts must be set up more than 1&quot; from all models, other endless spells and invocations. Only SKAVENTIDE WIZARDS can attempt to summon this endless spell.</characteristic>
           </characteristics>
         </profile>
         <profile id="09ef-a43d-71a5-cc50" name="Warp Lightning Bolts" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">When this model is set up, and at the end of each movement phase, roll 1 dice for each unit within 6&quot; of any of the models from this endless spell. Add 1 to the dice roll if that unit is within 6&quot; of two of the models from this endless spell. Add 2 to the dice roll instead of 1 if that unit is within 6&quot; of all three models from this endless spell. On a 4+ that unit suffers D3 mortal wounds. On an unmodified roll of 6, that unit suffers D6 mortal wounds instead of D3 mortal wounds.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">When this endless spell is set up and at the end of each movement phase, roll 1 dice for each unit within 6&quot; of this endless spell. Add 1 to the roll if that unit is within 6&quot; of 2 parts of this endless spell. Add 2 to the roll instead if that unit is within 6&quot; of all 3 parts of this endless spell. On a 4+, that unit suffers D3 mortal wounds. On an unmodified 6, that unit suffers D6 mortal wounds instead of D3 mortal wounds.</characteristic>
           </characteristics>
         </profile>
         <profile id="ff0a-cf2f-9553-7250" name="Warp Vortex" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Units cannot run or fly when they make a normal move that starts within 6&quot; of any models from this endless spell.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Units within 6&quot; of this endless spell cannot run. In addition, units cannot fly if they start the move within 6&quot; of this endless spell.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -7169,24 +7226,24 @@ Hidden WEAPON TEAM units are destroyed if the unit they are hiding in is destroy
       <profiles>
         <profile id="fe7e-280f-52dc-5cae" name="Apocalyptic Doom" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Roll 3D6 after this model is set up or finishes a move. On a roll of 13, each unit within 13&quot; of this model suffers D3 mortal wounds. This model is then dispelled.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Roll 3D6 after this endless spell finishes a move. On a roll of 13, each unit within 13&quot; of this endless spell suffers D3 mortal wounds, and then this endless spell is removed from play.</characteristic>
           </characteristics>
         </profile>
         <profile id="1aa4-3164-3f0c-b11c" name="Boldness or Despair" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Do not take battleshock tests for SKAVENTIDE units while they are within 13&quot; of this model. Subtract 1 from the Bravery characteristic of any other units while they are within 13&quot; of this model.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Do not take battleshock tests for SKAVENTIDE units while they are wholly within 13&quot; of this endless spell. Subtract 1 from the Bravery characteristic of other units while they are within 13&quot; of this endless spell.</characteristic>
           </characteristics>
         </profile>
         <profile id="4a70-51cb-a89a-b0ea" name="Summon Bell of Doom" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
           <characteristics>
             <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
-            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">Only SKAVENTIDE WIZARDS can attempt to cast this spell. If successfully cast, set up a Bell of Doom model wholly within 13&quot; of the caster.</characteristic>
-            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
+            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">13&quot;</characteristic>
+            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, set up this endless spell wholly within range and visible to the caster, and more than 1&quot; from all models, other endless spells and invocations. Only SKAVENTIDE WIZARDS can attempt to summon this endless spell.</characteristic>
           </characteristics>
         </profile>
         <profile id="d4c8-b1e0-8022-bad5" name="Predatory" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Bell of Doom is a predatory endless spell. It can move up to 13&quot; and can fly.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This endless spell is a predatory endless spell. It can move up to 2D6&quot; and can fly.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -7206,12 +7263,14 @@ Hidden WEAPON TEAM units are destroyed if the unit they are hiding in is destroy
       <profiles>
         <profile id="7965-b90c-7b7e-849c" name="Tunnels Through Reality" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the start of your movement phase, you can use 1 GNAWHOLE to transport 1 friendly SKAVENTIDE unit. In order to do so, that unit must be wholly within 6&quot; of the GNAWHOLE, and a friendly SKAVENTIDE HERO must be within 6&quot; of the GNAWHOLE. If this is the case, remove the SKAVENTIDE unit from the battlefield and then set it up wholly within 6&quot; of another GNAWHOLE and more than 9&quot; from any enemy models. This counts as that unit’s move for that movement phase.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the end of your movement phase, if there is a friendly SKAVENTIDE HERO within 6&quot; of this terrain feature, you can pick 1 friendly SKAVENTIDE unit within 6&quot; of this terrain feature, remove that unit from the battlefield and set it up wholly within 6&quot; of a different Gnawhole in your army and more than 9&quot; from all enemy models. You can only transport up to 1 friendly unit in this way per battle round, regardless of the number of Gnawholes in your army.</characteristic>
           </characteristics>
         </profile>
         <profile id="78ee-929a-3dde-a512" name="Aura of the Horned Rat" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">SKAVENTIDE units treat this terrain feature as having the Arcane scenery rule. Other units treat this terrain feature as having the Deadly scenery rule. In addition, you can add 1 to the dice that determines if a prayer is answered if the prayer is chanted by a friendly SKAVENTIDE PRIEST within 1&quot; of a GNAWHOLE. Arcane: Add 1 to casting and unbinding rolls for WIZARDS while they are within 1&quot; of any Arcane terrain features. Deadly: Roll a dice for each unit that finishes a normal move or charge move within 1&quot; of any Deadly terrain features. On a 1, that unit suffers D3 mortal wounds.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Add 1 to chanting rolls for friendly SKAVENTIDE PRIESTS within 1&quot; of this terrain feature, and add 1 to casting, dispelling and unbinding rolls for friendly SKAVENTIDE WIZARDS within 1&quot; of this terrain feature. 
+
+Roll a dice for each enemy unit that finishes a normal move, run, retreat or charge move within 1&quot; of this terrain feature. On a 6, that unit suffers D3 mortal wounds.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -8784,7 +8843,7 @@ Hidden WEAPON TEAM units are destroyed if the unit they are hiding in is destroy
           <profiles>
             <profile id="2248-d3e0-31d6-5ce3" name="Liber Bubonicus" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
               <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">The bearer can use the Plague Prayers ability from the Plague Priest warscroll. If the bearer is a PLAGUE PRIEST, then it can use the Plague Prayers ability twice in your hero phase.</characteristic>
+                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">‘The bearer becomes a PRIEST. If the bearer is already a PRIEST, you can re-roll chanting rolls for the bearer.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -8856,7 +8915,7 @@ Hidden WEAPON TEAM units are destroyed if the unit they are hiding in is destroy
           <profiles>
             <profile id="a742-552b-ff35-3dc4" name="Master of Rot and Ruin" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
               <characteristics>
-                <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">You can re-roll the dice that determines if a prayer chanted by this general is answered.</characteristic>
+                <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">You can re-roll chanting rolls for this general.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -9069,6 +9128,14 @@ Hidden WEAPON TEAM units are destroyed if the unit they are hiding in is destroy
     <selectionEntryGroup id="286a-2838-49be-5968" name="Battalions" hidden="false" collective="false" import="true">
       <entryLinks>
         <entryLink id="5863-aec8-8ba1-f1af" name="Core Battalions" hidden="false" collective="false" import="true" targetId="b275-810f-adfc-156b" type="selectionEntryGroup"/>
+      </entryLinks>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="ff40-9e7b-b23e-68e1" name="Prayers" hidden="false" collective="false" import="true">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bed8-30c8-a55d-14c1" type="max"/>
+      </constraints>
+      <entryLinks>
+        <entryLink id="866e-f3db-eb25-739d" name="Universal Prayer Scripture" hidden="false" collective="false" import="true" targetId="3674-103c-35c9-85a6" type="selectionEntryGroup"/>
       </entryLinks>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
