@@ -1955,7 +1955,7 @@ A unit cannot be removed and set up again in this way more than once per phase. 
             <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, set up the parts of the endless spell wholly within range of the caster.</characteristic>
           </characteristics>
         </profile>
-        <profile id="0a1a-1532-0887-c5d7" name="Arcane Passage" publicationId="e51d-b1a3-pubEFCFK" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+        <profile id="0a1a-1532-0887-c5d7" name="Arcane Passage" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
             <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Once per turn, if a WIZARD successfully casts a spell within 1&quot; of this endless spell, the range, visibility, and effect of that spell can be measured from this endless spell instead of the caster.
 
