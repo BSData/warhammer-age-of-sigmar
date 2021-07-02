@@ -4305,6 +4305,9 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
               </characteristics>
             </profile>
           </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="1dbe-00f3-42f4-b04e" name="Vendetta" hidden="false" collective="false" import="true" type="upgrade">
           <profiles>
@@ -4314,6 +4317,9 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
               </characteristics>
             </profile>
           </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="a35f-513d-9f57-e941" name="Dominating Presence" hidden="false" collective="false" import="true" type="upgrade">
           <profiles>
@@ -4323,6 +4329,9 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
               </characteristics>
             </profile>
           </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="8e7f-3814-4b8a-ef1f" name="Beast Master" hidden="false" collective="false" import="true" type="upgrade">
           <profiles>
@@ -4332,6 +4341,9 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
               </characteristics>
             </profile>
           </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="14f2-5c1f-5abb-15de" name="Prized Sorcery" hidden="false" collective="false" import="true" type="upgrade">
           <profiles>
@@ -4341,6 +4353,9 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
               </characteristics>
             </profile>
           </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="beb8-5f44-3575-b445" name="Pillars of Belief" hidden="false" collective="false" import="true" type="upgrade">
           <profiles>
@@ -4350,6 +4365,9 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
               </characteristics>
             </profile>
           </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="13b2-13a9-40f1-6d75" name="Predator&apos;s Domain" hidden="false" collective="false" import="true" type="upgrade">
           <profiles>
@@ -4359,6 +4377,9 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
               </characteristics>
             </profile>
           </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="8b9d-0de1-0ee1-4d92" name="Sever the Head" hidden="false" collective="false" import="true" type="upgrade">
           <profiles>
@@ -4368,6 +4389,9 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
               </characteristics>
             </profile>
           </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
