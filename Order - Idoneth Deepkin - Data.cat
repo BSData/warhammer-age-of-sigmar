@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="b713-a274-2a46-fe02" name="Order - Idoneth Deepkin - Data" revision="38" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="80" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="b713-a274-2a46-fe02" name="Order - Idoneth Deepkin - Data" revision="41" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="81" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="0d25-2712-pubN65537" name="Order Battletome: Idoneth Deepkin"/>
     <publication id="0d25-2712-pubN70885" name="GHB 2018 Errata, June 2018"/>
@@ -61,6 +61,8 @@
     <categoryEntry id="af9f-f5e0-1ae5-9c03" name="DRYAD" hidden="false"/>
     <categoryEntry id="d068-980d-1c72-ce5d" name="TREELORD ANCIENT" hidden="false"/>
     <categoryEntry id="4fc4-6477-589d-8faf" name="BRANCHWYCH" hidden="false"/>
+    <categoryEntry id="1d48-f95f-3dbd-95c4" name="ELATHAIN ILL-FATED" hidden="false"/>
+    <categoryEntry id="38c6-f2ff-618f-807b" name="ELATHAIN&apos;S SOULRAID" hidden="false"/>
   </categoryEntries>
   <sharedSelectionEntries>
     <selectionEntry id="e2ee-2634-4e4c-6340" name="Allegiance" hidden="false" collective="false" import="true" type="upgrade">
@@ -2810,6 +2812,265 @@ This model can retreat and still charge later in the same turn.</characteristic>
           </characteristics>
         </profile>
       </profiles>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="abc7-cd82-3325-82da" name="Elathain Ill-fated" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="cfb9-edf9-a799-08b5" value="1.0">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="77c0-e295-68a6-dcad" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3d2b-f5c5-c610-bd58" type="max"/>
+        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="cfb9-edf9-a799-08b5" type="min"/>
+      </constraints>
+      <profiles>
+        <profile id="0cc6-017e-9cfb-78a9" name="Elathain Ill-fated" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
+          <characteristics>
+            <characteristic name="Move" typeId="8655-6213-2824-1752">6&quot;</characteristic>
+            <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">5</characteristic>
+            <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">8</characteristic>
+            <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">4+</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="1762-6fd8-7165-2ff9" name="Soulnet" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the start of the combat phase, pick 1 enemy HERO within 3&quot; of this model and roll a dice. Subtract 2 from the roll if that HERO is a MONSTER. On a 4+, you can re-roll hit rolls for attacks made with this model’s Talúnsickle and Soulnet that target that HERO in that combat phase</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="6bd1-1a0e-c5b3-c668" name="Envenomed Bite" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If the unmodified hit roll for an attack made with an Envenomed Bite is 6, that attack inflicts 1 mortal wound on the target and the attack sequence ends (do not make a wound or save roll).</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="d2fc-2641-a387-6ff7" name="Lurelight" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the end of your battleshock phase, pick 1 friendly NAMARTI unit wholly within 12&quot; of this model, or pick a friendly ELATHAIN’S SOULRAD unit in which Tammael has been slain that is wholly within 12&quot; of this model. If you picked a NAMARTI unit, roll a D3. Add 1 to the roll for each enemy model that was slain by wounds inflicted by this model’s Talúnsickle and Soulnet in the combat phase of the same turn, then return a number of slain models to that unit up to the value of the roll. If you picked ELATHAIN’S SOULRAD, return Tammael to that unit.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="df90-9f1a-85fc-2b4e" name="ORDER" hidden="false" targetId="b970-b3bf-e1a4-a6fc" primary="false"/>
+        <categoryLink id="3015-533d-2ec2-6cb1" name="AELF" hidden="false" targetId="7fe9-bc03-2c82-0a00" primary="false"/>
+        <categoryLink id="a0d1-ce1e-7f7e-cbe9" name="IDONETH DEEPKIN" hidden="false" targetId="6ec4-4931-4d7f-006b" primary="false"/>
+        <categoryLink id="8cc6-71ba-8a90-8782" name="IONRACH" hidden="false" targetId="7d6b-20c2-e209-d69e" primary="false"/>
+        <categoryLink id="70c2-613b-72e2-4afd" name="ISHARANN" hidden="false" targetId="d297-61a8-974f-1e19" primary="false"/>
+        <categoryLink id="fae7-8988-2d30-0cf8" name="HERO" hidden="false" targetId="4e0e-664d-51ea-0929" primary="false"/>
+        <categoryLink id="2ca4-b30a-d675-5f88" name="SOULRENDER" hidden="false" targetId="67e8-3fec-ae2e-387a" primary="false"/>
+        <categoryLink id="597c-e36d-5977-7635" name="ELATHAIN ILL-FATED" hidden="false" targetId="1d48-f95f-3dbd-95c4" primary="false"/>
+        <categoryLink id="8984-635f-3f61-850f" name="9 or less wounds Leader" hidden="false" targetId="a8ed-ca35-24e0-cf2e" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="82e8-f163-1f6c-4be6" name="Talunsickle and Soulnet" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4c37-b0db-ea6e-59f3" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4ca7-b30c-cdc6-f97d" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="79f0-391a-9219-166d" name="Talunsickle and Soulnet" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">2&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">2</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">2</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="3f8d-9e64-a60d-456f" name="Envenomed Bite" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="52d8-1e92-a2bc-4101" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="68b5-0a3e-8a89-4f9c" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="a087-a1e1-cbb0-962f" name="Envenomed Bite" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">3&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">4</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">4+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <entryLinks>
+        <entryLink id="5d20-f451-44d7-e22f" name="Battalions" hidden="false" collective="false" import="true" targetId="5666-66dd-34a9-6beb" type="selectionEntryGroup"/>
+        <entryLink id="98aa-fcc7-6c74-cb7e" name=" General" hidden="false" collective="false" import="true" targetId="e67f-735c-9874-ba8c" type="selectionEntryGroup">
+          <categoryLinks>
+            <categoryLink id="09ff-f37a-79fd-0fe4" name="Unique General" hidden="false" targetId="fe3f-d230-7e2c-fba2" primary="false"/>
+          </categoryLinks>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="145.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="77c0-e295-68a6-dcad" name="Elathain&apos;s Soulraid" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="c16f-c7ba-d048-2b46" value="1.0">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="abc7-cd82-3325-82da" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6cba-ed39-fc31-a00c" type="max"/>
+        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c16f-c7ba-d048-2b46" type="min"/>
+      </constraints>
+      <profiles>
+        <profile id="f0fb-aa84-5920-70f4" name="Elathain&apos;s Soulraid" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
+          <characteristics>
+            <characteristic name="Move" typeId="8655-6213-2824-1752">6&quot;</characteristic>
+            <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">1</characteristic>
+            <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">6</characteristic>
+            <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">5+</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="6ffb-5406-2d87-5c38" name="Fuirann&apos;s Shield" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Roll a dice each time you allocate a wound or mortal wound to Fuirann. On a 6, that wound or mortal wound is negated.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="cfa5-2f17-e77f-20e0" name="ORDER" hidden="false" targetId="b970-b3bf-e1a4-a6fc" primary="false"/>
+        <categoryLink id="d52e-cdf3-207e-c904" name="AELF" hidden="false" targetId="7fe9-bc03-2c82-0a00" primary="false"/>
+        <categoryLink id="48ce-8403-0c52-4b3a" name="IDONETH DEEPKIN" hidden="false" targetId="6ec4-4931-4d7f-006b" primary="false"/>
+        <categoryLink id="1f9e-0e95-5ab6-12ba" name="IONRACH" hidden="false" targetId="7d6b-20c2-e209-d69e" primary="false"/>
+        <categoryLink id="12e7-17f3-df92-e9a2" name="ELATHAIN&apos;S SOULRAID" hidden="false" targetId="38c6-f2ff-618f-807b" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="78b7-2745-ea5b-f4fb" name="Riptide Harpoon" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ddee-6f37-623a-3cbd" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a57c-adc8-2d20-b7c6" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="5a03-dd6e-42fe-f641" name="Riptide Harpoon" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Missile</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">9&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">1</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">2</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="7352-31a9-0b53-fc03" name="Helsabre" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bf54-01fb-aacc-6d95" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4be6-4d89-e358-904f" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="5aaf-352e-ec29-930a" name="Helsabre" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">3</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="5748-c823-d526-b32e" name="Riptide Harpoon (Melee)" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="621c-31ed-10ca-87bf" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="208d-3f51-baad-245f" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="d274-8fcf-afdd-5eaa" name="Riptide Harpoon (Melee)" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">2&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">1</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">2</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="6f18-ea29-d3c4-6b9b" name="Crushing Claws" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d59f-9864-1fe7-4ea0" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="17fa-7b76-c96d-5b70" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="1095-842c-bcab-e412" name="Crushing Claws" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">2</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">2+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="dbfc-4631-7fb9-490b" name="Nasty Bite" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5d4c-87e5-c0fc-1791" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a02b-a5bf-28a1-ec1e" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="0202-bf19-a36b-0c4a" name="Nasty Bite" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">4</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">5+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <entryLinks>
+        <entryLink id="2dd5-974d-e904-bd36" name="Battalions" hidden="false" collective="false" import="true" targetId="5666-66dd-34a9-6beb" type="selectionEntryGroup"/>
+      </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
