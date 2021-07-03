@@ -3947,6 +3947,9 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
       </selectionEntries>
     </selectionEntryGroup>
     <selectionEntryGroup id="11c4-fd82-92a7-de8a" name="Universal Artefacts of Power" hidden="false" collective="false" import="true">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0911-0b34-1e54-49a7" type="max"/>
+      </constraints>
       <selectionEntries>
         <selectionEntry id="cd0c-54a6-f84a-cfa2" name="Amulet of Destiny" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
