@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="a990-882b-7e62-27e9" name="Chaos - Beasts of Chaos - Data" revision="34" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="74" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="a990-882b-7e62-27e9" name="Chaos - Beasts of Chaos - Data" revision="40" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="84" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="c9b2-1fe6-pubN65537" name="Battletome: Beasts of Chaos"/>
     <publication id="c9b2-1fe6-pubN83353" name="1"/>
@@ -58,6 +58,18 @@
     <categoryEntry id="01c3-a8a3-0323-85aa" name="TZAANGOR ENLIGHTENED" hidden="false"/>
     <categoryEntry id="bd0e-f2ff-1677-8b2e" name="TZAANGORS" hidden="false"/>
     <categoryEntry id="ade4-b2f0-af54-5333" name="ALLHERD" hidden="false"/>
+    <categoryEntry id="a93c-3cf0-28d6-cc29" name="Coalition: BoC" hidden="false">
+      <modifiers>
+        <modifier type="increment" field="809e-607c-7643-2e1c" value="1.0">
+          <repeats>
+            <repeat field="selections" scope="roster" value="4.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="unit" repeats="1" roundUp="false"/>
+          </repeats>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="809e-607c-7643-2e1c" type="max"/>
+      </constraints>
+    </categoryEntry>
   </categoryEntries>
   <sharedSelectionEntries>
     <selectionEntry id="9a9a-7579-ec51-6d76" name="General" hidden="false" collective="false" import="true" type="upgrade">
@@ -66,6 +78,9 @@
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="24d6-500b-7e3f-1470" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="78f3-8a59-699a-61e8" type="instanceOf"/>
               </conditions>
             </conditionGroup>
@@ -85,9 +100,16 @@
     <selectionEntry id="04c9-810f-2f9a-91d2" name="Allegiance" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
         <modifier type="set" field="07bf-32cd-f7fb-63d1" value="0.0">
-          <conditions>
-            <condition field="selections" scope="ancestor" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="78f3-8a59-699a-61e8" type="instanceOf"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="24d6-500b-7e3f-1470" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="78f3-8a59-699a-61e8" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -278,9 +300,6 @@ Then, roll a dice for each enemy unit within 1&quot; of any friendly THUNDERSCOR
                           </characteristics>
                         </profile>
                       </profiles>
-                      <categoryLinks>
-                        <categoryLink id="3b0b-d9f0-aa76-c656" name="New CategoryLink" hidden="false" targetId="be2f-aa63-6d82-e2fc" primary="false"/>
-                      </categoryLinks>
                       <costs>
                         <cost name="pts" typeId="points" value="0.0"/>
                       </costs>
@@ -340,6 +359,18 @@ Then, roll a dice for each enemy unit within 1&quot; of any friendly THUNDERSCOR
       </costs>
     </selectionEntry>
     <selectionEntry id="0ab8-4ac7-3a61-0cd4" name="Beastlord" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="add" field="category" value="a93c-3cf0-28d6-cc29">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="2092-548a-2680-cb71" name="Grisly Trophy" hidden="false" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
           <characteristics>
@@ -372,6 +403,8 @@ Then, roll a dice for each enemy unit within 1&quot; of any friendly THUNDERSCOR
         <categoryLink id="d086-4c45-41a6-f828" name="CHAOS" hidden="false" targetId="7cdd-80ea-cbeb-8e16" primary="false"/>
         <categoryLink id="ad6b-7c9e-00e8-f75c" name="BEASTS OF CHAOS" hidden="false" targetId="2c4b-6186-2939-7f2b" primary="false"/>
         <categoryLink id="4ef6-3136-f37e-daf5" name="BRAYHERD" hidden="false" targetId="812f-790a-4f66-0476" primary="false"/>
+        <categoryLink id="85f4-1e28-e791-dbe0" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
+        <categoryLink id="7fc0-088a-5b9c-9306" name="9 or less wounds Leader" hidden="false" targetId="a8ed-ca35-24e0-cf2e" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="d27b-6a39-606d-f79c" name="Paired Man-ripper Axes" hidden="false" collective="false" import="true" type="upgrade">
@@ -428,6 +461,18 @@ Then, roll a dice for each enemy unit within 1&quot; of any friendly THUNDERSCOR
       </costs>
     </selectionEntry>
     <selectionEntry id="5645-9e3f-0298-de9d" name="Great Bray-shaman" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="add" field="category" value="a93c-3cf0-28d6-cc29">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="03d7-4080-7c5f-96d0" name="Great Bray-shaman" hidden="false" typeId="f55d-ee3a-1597-110f" typeName="Magic">
           <characteristics>
@@ -474,6 +519,8 @@ Then, roll a dice for each enemy unit within 1&quot; of any friendly THUNDERSCOR
         <categoryLink id="8de8-8538-a23b-2890" name="BRAYHERD" hidden="false" targetId="812f-790a-4f66-0476" primary="false"/>
         <categoryLink id="e8be-05c8-116d-a389" name="GREAT BRAY-SHAMAN" hidden="false" targetId="16b0-d1d2-6e48-f877" primary="false"/>
         <categoryLink id="da84-8263-1777-8b3b" name="CHAOS" hidden="false" targetId="7cdd-80ea-cbeb-8e16" primary="false"/>
+        <categoryLink id="1bf5-8055-c2df-41dc" name="9 or less wounds Leader" hidden="false" targetId="a8ed-ca35-24e0-cf2e" primary="false"/>
+        <categoryLink id="2f6c-2dfb-9c81-80b3" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="6506-49a9-5ff3-909c" name="Devolve" hidden="false" collective="false" import="true" type="upgrade">
@@ -485,6 +532,7 @@ Then, roll a dice for each enemy unit within 1&quot; of any friendly THUNDERSCOR
             <profile id="d087-09d9-ed03-390c" name="Devolve" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
+                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick an enemy unit within 18&quot; of the caster that is visible to them and not within 3&quot; of any friendly units. Your opponent must move that unit up to 2D6&quot; so that each model in the unit ends its move as close as possible to a model from the friendly unit that was closest to it at the start of the move.</characteristic>
               </characteristics>
             </profile>
@@ -597,10 +645,15 @@ Then, roll a dice for each enemy unit within 1&quot; of any friendly THUNDERSCOR
     </selectionEntry>
     <selectionEntry id="3cd6-d61a-3181-b862" name="Gors" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
-        <modifier type="set" field="points" value="200.0">
-          <conditions>
-            <condition field="selections" scope="3cd6-d61a-3181-b862" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="38c3-d18e-538f-8246" type="equalTo"/>
-          </conditions>
+        <modifier type="add" field="category" value="a93c-3cf0-28d6-cc29">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <profiles>
@@ -632,19 +685,12 @@ Then, roll a dice for each enemy unit within 1&quot; of any friendly THUNDERSCOR
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="38c3-d18e-538f-8246" name="10 Gors" hidden="false" collective="false" import="true" type="model">
-          <modifiers>
-            <modifier type="set" field="points" value="0.0">
-              <conditions>
-                <condition field="selections" scope="3cd6-d61a-3181-b862" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="38c3-d18e-538f-8246" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5a26-20aa-127b-3c85" type="min"/>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f8af-065b-2814-3fcc" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f8af-065b-2814-3fcc" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="70.0"/>
+            <cost name="pts" typeId="points" value="75.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -707,12 +753,32 @@ Then, roll a dice for each enemy unit within 1&quot; of any friendly THUNDERSCOR
       <entryLinks>
         <entryLink id="639b-d061-68e0-cc18" name="Banner bearers" hidden="false" collective="false" import="true" targetId="b3d6-e53c-4e7f-24ec" type="selectionEntry"/>
         <entryLink id="2f5b-42e8-a7ed-deb8" name="Brayhorns" hidden="false" collective="false" import="true" targetId="0943-049c-b67c-9a2e" type="selectionEntry"/>
+        <entryLink id="ec20-7a15-6313-eaf2" name="Reinforced" hidden="false" collective="false" import="true" targetId="0a8d-cde8-fba1-6c0d" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="95f2-6885-756f-9ea5" value="2.0"/>
+          </modifiers>
+          <costs>
+            <cost name="pts" typeId="points" value="75.0"/>
+          </costs>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="860f-3974-14a3-3237" name="Ungors" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="add" field="category" value="a93c-3cf0-28d6-cc29">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="0bf4-b826-6692-2289" name="Ungors" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
           <characteristics>
@@ -747,19 +813,12 @@ Then, roll a dice for each enemy unit within 1&quot; of any friendly THUNDERSCOR
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="e395-1d08-a391-74f1" name="10 Ungors" hidden="false" collective="false" import="true" type="model">
-          <modifiers>
-            <modifier type="decrement" field="points" value="10">
-              <conditions>
-                <condition field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="19b2-b197-71bb-6fd0" type="min"/>
-            <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b064-6680-904e-db4f" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b064-6680-904e-db4f" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="60.0"/>
+            <cost name="pts" typeId="points" value="70.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -812,12 +871,32 @@ Then, roll a dice for each enemy unit within 1&quot; of any friendly THUNDERSCOR
       <entryLinks>
         <entryLink id="3643-0765-a0ec-da19" name="Banner bearers" hidden="false" collective="false" import="true" targetId="b3d6-e53c-4e7f-24ec" type="selectionEntry"/>
         <entryLink id="9bb9-e8b9-bc12-3841" name="Brayhorns" hidden="false" collective="false" import="true" targetId="0943-049c-b67c-9a2e" type="selectionEntry"/>
+        <entryLink id="41cb-f22b-dbd0-39b9" name="Reinforced" hidden="false" collective="false" import="true" targetId="0a8d-cde8-fba1-6c0d" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="95f2-6885-756f-9ea5" value="2.0"/>
+          </modifiers>
+          <costs>
+            <cost name="pts" typeId="points" value="70.0"/>
+          </costs>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="6a9e-4be2-9c76-a1f1" name="Ungor Raiders" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="add" field="category" value="a93c-3cf0-28d6-cc29">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="4c53-4039-f3cb-7d9a" name="Ungor Raiders" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
           <characteristics>
@@ -854,10 +933,10 @@ Then, roll a dice for each enemy unit within 1&quot; of any friendly THUNDERSCOR
         <selectionEntry id="8442-e558-3eb1-9452" name="10 Ungor Raiders" hidden="false" collective="false" import="true" type="model">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3f7c-ec33-89c7-976c" type="min"/>
-            <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5fe9-a787-81ad-da49" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5fe9-a787-81ad-da49" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="80.0"/>
+            <cost name="pts" typeId="points" value="90.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="b995-9286-eba4-a5fc" name="Raider Bow" hidden="false" collective="false" import="true" type="upgrade">
@@ -922,6 +1001,11 @@ Then, roll a dice for each enemy unit within 1&quot; of any friendly THUNDERSCOR
       </selectionEntries>
       <entryLinks>
         <entryLink id="5ba6-f955-0e3c-87fa" name="Banner bearers" hidden="false" collective="false" import="true" targetId="b3d6-e53c-4e7f-24ec" type="selectionEntry"/>
+        <entryLink id="59b6-d20d-3524-4c61" name="Reinforced" hidden="false" collective="false" import="true" targetId="0a8d-cde8-fba1-6c0d" type="selectionEntry">
+          <costs>
+            <cost name="pts" typeId="points" value="90.0"/>
+          </costs>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
@@ -944,6 +1028,16 @@ Then, roll a dice for each enemy unit within 1&quot; of any friendly THUNDERSCOR
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="add" field="category" value="a93c-3cf0-28d6-cc29">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
+              </conditions>
             </conditionGroup>
           </conditionGroups>
         </modifier>
@@ -983,19 +1077,12 @@ Then, roll a dice for each enemy unit within 1&quot; of any friendly THUNDERSCOR
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="9239-5b24-6231-5290" name="10 Bestigors" hidden="false" collective="false" import="true" type="model">
-          <modifiers>
-            <modifier type="decrement" field="points" value="20">
-              <conditions>
-                <condition field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="beeb-8014-5138-ac8e" type="min"/>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="64ac-32e4-a6a4-3b03" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="64ac-32e4-a6a4-3b03" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="120.0"/>
+            <cost name="pts" typeId="points" value="135.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="6d94-e513-33dd-5f91" name="Despoiler Axe" hidden="false" collective="false" import="true" type="upgrade">
@@ -1024,12 +1111,49 @@ Then, roll a dice for each enemy unit within 1&quot; of any friendly THUNDERSCOR
       <entryLinks>
         <entryLink id="396b-9e62-f3cf-f6dc" name="Banner bearers" hidden="false" collective="false" import="true" targetId="b3d6-e53c-4e7f-24ec" type="selectionEntry"/>
         <entryLink id="8556-c1bc-d75c-96b9" name="Brayhorns" hidden="false" collective="false" import="true" targetId="0943-049c-b67c-9a2e" type="selectionEntry"/>
+        <entryLink id="b151-c0de-ae2e-9809" name="Reinforced" hidden="false" collective="false" import="true" targetId="0a8d-cde8-fba1-6c0d" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="95f2-6885-756f-9ea5" value="2.0">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1378-5154-1483-85b9" type="equalTo"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9da2-eaec-87e2-25dc" type="greaterThan"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8d6e-7279-ad7d-ef2c" type="greaterThan"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fb06-0452-5a9f-6457" type="greaterThan"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <costs>
+            <cost name="pts" typeId="points" value="135.0"/>
+          </costs>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="26a3-0409-c61a-641b" name="Tuskgor Chariots" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="add" field="category" value="a93c-3cf0-28d6-cc29">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="27b9-38c5-c848-9dae" name="Tuskgor Charge" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
@@ -1046,16 +1170,9 @@ Then, roll a dice for each enemy unit within 1&quot; of any friendly THUNDERSCOR
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="93ea-2b3d-5d0b-434f" name="Tuskgor Chariot" hidden="false" collective="false" import="true" type="model">
-          <modifiers>
-            <modifier type="set" field="points" value="50.0">
-              <conditions>
-                <condition field="selections" scope="26a3-0409-c61a-641b" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="93ea-2b3d-5d0b-434f" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="44e1-df8b-523f-33e3" type="min"/>
-            <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8ec5-5259-906f-47ae" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8ec5-5259-906f-47ae" type="max"/>
           </constraints>
           <profiles>
             <profile id="0d50-d947-90b9-208c" name="Despoiler Axe" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
@@ -1106,15 +1223,34 @@ Then, roll a dice for each enemy unit within 1&quot; of any friendly THUNDERSCOR
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="points" value="60.0"/>
+            <cost name="pts" typeId="points" value="65.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <entryLinks>
+        <entryLink id="8e89-33cc-d6cd-eb9f" name="Reinforced" hidden="false" collective="false" import="true" targetId="0a8d-cde8-fba1-6c0d" type="selectionEntry">
+          <costs>
+            <cost name="pts" typeId="points" value="65.0"/>
+          </costs>
+        </entryLink>
+      </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="d705-0e86-4132-7af8" name="Doombull" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="add" field="category" value="a93c-3cf0-28d6-cc29">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="4904-dc99-7db5-9aeb" name="Slaughterer&apos;s Call" hidden="false" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
           <characteristics>
@@ -1142,6 +1278,8 @@ Then, roll a dice for each enemy unit within 1&quot; of any friendly THUNDERSCOR
         <categoryLink id="fff8-b91e-26b0-aa36" name="DOOMBULL" hidden="false" targetId="dcec-7da2-0ccd-ca86" primary="false"/>
         <categoryLink id="54fe-41f2-7b81-5a05" name="HERO" hidden="false" targetId="4e0e-664d-51ea-0929" primary="false"/>
         <categoryLink id="ff10-af4f-34e2-c920" name="WARHERD" hidden="false" targetId="d809-dc0b-17c2-c7ac" primary="false"/>
+        <categoryLink id="84dc-30d4-d74f-eedb" name="9 or less wounds Leader" hidden="false" targetId="a8ed-ca35-24e0-cf2e" primary="false"/>
+        <categoryLink id="d51a-6c07-4a98-b2f4" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="d153-2d30-afc3-b6be" name="Slaughterer&apos;s Axe" hidden="false" collective="false" import="true" type="upgrade">
@@ -1216,10 +1354,22 @@ Then, roll a dice for each enemy unit within 1&quot; of any friendly THUNDERSCOR
         <entryLink id="2b9b-54ab-d4b9-943b" name="Artefacts" hidden="false" collective="false" import="true" targetId="f1d8-fbad-26b3-1504" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="100.0"/>
+        <cost name="pts" typeId="points" value="115.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="a400-2e81-dba4-82e4" name="Cygor" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="add" field="category" value="a93c-3cf0-28d6-cc29">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="43f4-6011-ef92-00a5" name="Cygor" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
           <characteristics>
@@ -1423,6 +1573,7 @@ Then, roll a dice for each enemy unit within 1&quot; of any friendly THUNDERSCOR
         <categoryLink id="2f66-51ff-23dd-d727" name="CHAOS" hidden="false" targetId="7cdd-80ea-cbeb-8e16" primary="false"/>
         <categoryLink id="ae47-13e1-6548-8f78" name="GHORGON" hidden="false" targetId="d58d-ffaa-6d24-1a5e" primary="false"/>
         <categoryLink id="d941-833d-5856-492c" name="WARHERD" hidden="false" targetId="d809-dc0b-17c2-c7ac" primary="false"/>
+        <categoryLink id="91b3-32fc-4d09-07a4" name="New CategoryLink" hidden="false" targetId="fa0c-9044-2568-fa02" primary="true"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="339d-7452-e114-f13f" name="Butchering Blades" hidden="false" collective="false" import="true" type="upgrade">
@@ -1471,10 +1622,22 @@ Then, roll a dice for each enemy unit within 1&quot; of any friendly THUNDERSCOR
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="points" value="160.0"/>
+        <cost name="pts" typeId="points" value="170.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="3975-c1f2-7a13-beb5" name="Chaos Warhounds" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="add" field="category" value="a93c-3cf0-28d6-cc29">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="1c53-7882-04a2-db69" name="Outrunners of Chaos" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
@@ -1489,7 +1652,7 @@ Then, roll a dice for each enemy unit within 1&quot; of any friendly THUNDERSCOR
         <categoryLink id="bdbc-244c-5921-0899" name="MONSTERS OF CHAOS" hidden="false" targetId="4d26-d95f-9bcd-aeff" primary="false"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="2ed9-881b-645a-dd6f" name="10 Chaos Warhounds" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="2ed9-881b-645a-dd6f" name="10 Chaos Warhounds" hidden="false" collective="false" import="true" type="model">
           <modifiers>
             <modifier type="decrement" field="points" value="10">
               <conditions>
@@ -1499,7 +1662,7 @@ Then, roll a dice for each enemy unit within 1&quot; of any friendly THUNDERSCOR
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4d98-eed2-5cdc-6a04" type="min"/>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="312b-198e-be46-135c" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="312b-198e-be46-135c" type="max"/>
           </constraints>
           <profiles>
             <profile id="c443-da81-baa1-7482" name="Chaos Warhound" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
@@ -1527,11 +1690,30 @@ Then, roll a dice for each enemy unit within 1&quot; of any friendly THUNDERSCOR
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <entryLinks>
+        <entryLink id="1c7d-c20a-2c92-6cba" name="Reinforced" hidden="false" collective="false" import="true" targetId="0a8d-cde8-fba1-6c0d" type="selectionEntry">
+          <costs>
+            <cost name="pts" typeId="points" value="80.0"/>
+          </costs>
+        </entryLink>
+      </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="a015-0d76-0edf-013c" name="Jabberslythe" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="add" field="category" value="a93c-3cf0-28d6-cc29">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="76db-56d2-2719-fc02" name="Jabberslythe" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
           <characteristics>
@@ -1563,6 +1745,7 @@ In addition, each time an enemy unit within 3&quot; of any units in your army wi
         <categoryLink id="7816-7278-44bc-2fab" name="BEASTS OF CHAOS" hidden="false" targetId="2c4b-6186-2939-7f2b" primary="false"/>
         <categoryLink id="1173-3cb5-e7da-6704" name="MONSTERS OF CHAOS" hidden="false" targetId="4d26-d95f-9bcd-aeff" primary="false"/>
         <categoryLink id="db14-d47b-2128-abcd" name="COCKATRICE" hidden="false" targetId="e2f4-9429-13a3-c681" primary="false"/>
+        <categoryLink id="9c08-052a-f9e6-48c8" name="New CategoryLink" hidden="false" targetId="fa0c-9044-2568-fa02" primary="true"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="b8d6-99d2-7f95-c1ee" name="Slythey Tongue" hidden="false" collective="false" import="true" type="upgrade">
@@ -1637,6 +1820,18 @@ In addition, each time an enemy unit within 3&quot; of any units in your army wi
       </costs>
     </selectionEntry>
     <selectionEntry id="ce40-4ad1-7abd-c37f" name="Cockatrice" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="add" field="category" value="a93c-3cf0-28d6-cc29">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="702a-b381-4d94-255c" name="Cockatrice" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
           <characteristics>
@@ -1737,10 +1932,22 @@ In addition, each time an enemy unit within 3&quot; of any units in your army wi
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="points" value="90.0"/>
+        <cost name="pts" typeId="points" value="95.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="463c-335b-796c-ffb2" name="Chaos Spawn" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="add" field="category" value="a93c-3cf0-28d6-cc29">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="edc5-f3f3-76dd-4124" name="Writhing Tentacles" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
@@ -1767,7 +1974,7 @@ In addition, each time an enemy unit within 3&quot; of any units in your army wi
         <selectionEntry id="2e40-daea-d412-4342" name="Chaos Spawn" hidden="false" collective="false" import="true" type="model">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4770-3729-e0d2-be7a" type="min"/>
-            <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9fbe-c367-d28e-5e6f" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9fbe-c367-d28e-5e6f" type="max"/>
           </constraints>
           <selectionEntries>
             <selectionEntry id="bb93-e59f-6c16-a057" name="Freakish Mutations" hidden="false" collective="false" import="true" type="upgrade">
@@ -1794,18 +2001,35 @@ In addition, each time an enemy unit within 3&quot; of any units in your army wi
             </selectionEntry>
           </selectionEntries>
           <costs>
-            <cost name="pts" typeId="points" value="50.0"/>
+            <cost name="pts" typeId="points" value="55.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
         <entryLink id="bc44-f10f-0073-7384" name="Mark of Chaos" hidden="false" collective="false" import="true" targetId="7016-ae89-f6cf-e026" type="selectionEntryGroup"/>
+        <entryLink id="5a3a-b772-a596-1760" name="Reinforced" hidden="false" collective="false" import="true" targetId="0a8d-cde8-fba1-6c0d" type="selectionEntry">
+          <costs>
+            <cost name="pts" typeId="points" value="55.0"/>
+          </costs>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="68ec-303a-bfaa-f759" name="Chimera" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="add" field="category" value="a93c-3cf0-28d6-cc29">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="1c06-44d9-d00b-2836" name="Vicious Charge" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
@@ -1830,6 +2054,7 @@ In addition, each time an enemy unit within 3&quot; of any units in your army wi
         <categoryLink id="e5f7-6dbf-6815-e184" name="BEASTS OF CHAOS" hidden="false" targetId="2c4b-6186-2939-7f2b" primary="false"/>
         <categoryLink id="6fcb-4abe-ae3d-bcfa" name="CHIMERA" hidden="false" targetId="248f-83c5-8cea-6ac2" primary="false"/>
         <categoryLink id="b85c-1d54-9341-73f0" name="MONSTERS OF CHAOS" hidden="false" targetId="4d26-d95f-9bcd-aeff" primary="false"/>
+        <categoryLink id="b7c0-a234-2cc7-2635" name="New CategoryLink" hidden="false" targetId="fa0c-9044-2568-fa02" primary="true"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="702c-e772-9e92-835f" name="Draconic Head&apos;s Fiery Breath" hidden="false" collective="false" import="true" type="upgrade">
@@ -1999,6 +2224,18 @@ In addition, each time an enemy unit within 3&quot; of any units in your army wi
       </costs>
     </selectionEntry>
     <selectionEntry id="e5c2-d8df-2527-dc3d" name="Chaos Gargant" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="add" field="category" value="a93c-3cf0-28d6-cc29">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="c383-6299-513f-bfa5" name="Chaos Gargant" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
           <characteristics>
@@ -2071,6 +2308,7 @@ In addition, each time an enemy unit within 3&quot; of any units in your army wi
         <categoryLink id="6a61-c6db-50e4-2a87" name="CHAOS GARGANT" hidden="false" targetId="7fd3-01d8-3a52-8de5" primary="false"/>
         <categoryLink id="83a7-e86c-a85f-100d" name="GARGANT" hidden="false" targetId="c2ae-c785-1e40-0891" primary="false"/>
         <categoryLink id="8ab7-383a-597b-8b35" name="MONSTERS OF CHAOS" hidden="false" targetId="4d26-d95f-9bcd-aeff" primary="false"/>
+        <categoryLink id="e541-c772-83d9-0b35" name="New CategoryLink" hidden="false" targetId="fa0c-9044-2568-fa02" primary="true"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="9b26-b68f-4d5e-3c29" name="Massive Club" hidden="false" collective="false" import="true" type="upgrade">
@@ -2141,7 +2379,7 @@ In addition, each time an enemy unit within 3&quot; of any units in your army wi
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="points" value="170.0"/>
+        <cost name="pts" typeId="points" value="180.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="f6f6-dd85-23f1-45dd" name="Bullgors" hidden="false" collective="false" import="true" type="unit">
@@ -2152,6 +2390,16 @@ In addition, each time an enemy unit within 3&quot; of any units in your army wi
               <conditions>
                 <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1378-5154-1483-85b9" type="equalTo"/>
                 <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3d86-4ca7-c6bd-2867" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="add" field="category" value="a93c-3cf0-28d6-cc29">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -2188,10 +2436,10 @@ In addition, each time an enemy unit within 3&quot; of any units in your army wi
         <selectionEntry id="6758-ff60-1d3a-308c" name="3 Bullgors" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7eca-5c76-005c-42ba" type="min"/>
-            <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b3b8-df03-a98f-c476" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b3b8-df03-a98f-c476" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="140.0"/>
+            <cost name="pts" typeId="points" value="155.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="d977-7daf-6550-cc7c" name="Warherd Banner Bearer" hidden="false" collective="false" import="true" type="upgrade">
@@ -2330,11 +2578,42 @@ In addition, each time an enemy unit within 3&quot; of any units in your army wi
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="9089-e69e-a2db-eb3f" name="Reinforced" hidden="false" collective="false" import="true" targetId="0a8d-cde8-fba1-6c0d" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="95f2-6885-756f-9ea5" value="2.0">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1378-5154-1483-85b9" type="equalTo"/>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3d86-4ca7-c6bd-2867" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <costs>
+            <cost name="pts" typeId="points" value="155.0"/>
+          </costs>
+        </entryLink>
+      </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="f427-1a9c-c749-a639" name="Dragon Ogor Shaggoth" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="add" field="category" value="a93c-3cf0-28d6-cc29">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="08cb-77d9-19bc-2cd9" name="Dragon Ogor Shaggoth" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
           <characteristics>
@@ -2352,6 +2631,7 @@ In addition, each time an enemy unit within 3&quot; of any units in your army wi
         <profile id="ad07-5064-dff9-565c" name="Summon Lightning" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
           <characteristics>
             <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
+            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
             <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick a friendly THUNDERSCORN unit wholly within 20&quot; of the caster and visible to them. You can heal D3 wounds allocated to that unit. In addition, you can re-roll failed wound rolls for attacks made by that unit until your next hero phase.</characteristic>
           </characteristics>
         </profile>
@@ -2471,7 +2751,7 @@ In addition, each time an enemy unit within 3&quot; of any units in your army wi
         <entryLink id="4aeb-723f-4f52-a4a5" name="Spell Lores" hidden="false" collective="false" import="true" targetId="55d3-fe2c-594d-4e2b" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="170.0"/>
+        <cost name="pts" typeId="points" value="185.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="6bec-d4e0-72ef-77e0" name="Dragon Ogors" hidden="false" collective="false" import="true" type="unit">
@@ -2480,8 +2760,17 @@ In addition, each time an enemy unit within 3&quot; of any units in your army wi
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1378-5154-1483-85b9" type="equalTo"/>
                 <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2c47-4f13-c440-c8f1" type="greaterThan"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="add" field="category" value="a93c-3cf0-28d6-cc29">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -2510,13 +2799,13 @@ In addition, each time an enemy unit within 3&quot; of any units in your army wi
         <categoryLink id="2d7d-0de1-0539-988b" name="New CategoryLink" hidden="false" targetId="065e-fda7-fd27-1f40" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="0ef5-cd0e-298b-c141" name="3 Dragon Ogors" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="0ef5-cd0e-298b-c141" name="3 Dragon Ogors" hidden="false" collective="false" import="true" type="model">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0027-ea36-b777-0028" type="min"/>
-            <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9cd6-4be4-5df8-d324" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9cd6-4be4-5df8-d324" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="130.0"/>
+            <cost name="pts" typeId="points" value="150.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="c50b-7992-04c5-da5a" name="Raking Foreclaws" hidden="false" collective="false" import="true" type="upgrade">
@@ -2615,11 +2904,41 @@ In addition, each time an enemy unit within 3&quot; of any units in your army wi
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="099c-6b41-bdba-1657" name="Reinforced" hidden="false" collective="false" import="true" targetId="0a8d-cde8-fba1-6c0d" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="95f2-6885-756f-9ea5" value="2.0">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2c47-4f13-c440-c8f1" type="greaterThan"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <costs>
+            <cost name="pts" typeId="points" value="150.0"/>
+          </costs>
+        </entryLink>
+      </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="a1a7-0dfc-a40b-d680" name="Centigors" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="add" field="category" value="a93c-3cf0-28d6-cc29">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="5a69-8dc1-993a-d119" name="Centigors" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
           <characteristics>
@@ -2650,15 +2969,16 @@ In addition, each time an enemy unit within 3&quot; of any units in your army wi
         <categoryLink id="47ca-3c09-566f-69c6" name="BEASTS OF CHAOS" hidden="false" targetId="2c4b-6186-2939-7f2b" primary="false"/>
         <categoryLink id="cb8e-5c81-da51-6f3e" name="CENTIGOR" hidden="false" targetId="2087-1476-7590-473b" primary="false"/>
         <categoryLink id="5791-4dbe-3fd4-34bf" name="BRAYHERD" hidden="false" targetId="812f-790a-4f66-0476" primary="false"/>
+        <categoryLink id="676b-b4cf-21a7-ca49" name="New CategoryLink" hidden="false" targetId="065e-fda7-fd27-1f40" primary="true"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="8f40-d36b-8bc7-098d" name="5 Centigors" hidden="false" collective="false" import="true" type="model">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3ab8-b201-efed-2f25" type="min"/>
-            <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5baa-f10d-7172-9b4a" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5baa-f10d-7172-9b4a" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="80.0"/>
+            <cost name="pts" typeId="points" value="90.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="c9d3-0f3f-d0ae-1970" name="Centigor Spear" hidden="false" collective="false" import="true" type="upgrade">
@@ -2741,11 +3061,30 @@ In addition, each time an enemy unit within 3&quot; of any units in your army wi
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <entryLinks>
+        <entryLink id="9108-d775-5a53-a578" name="Reinforced" hidden="false" collective="false" import="true" targetId="0a8d-cde8-fba1-6c0d" type="selectionEntry">
+          <costs>
+            <cost name="pts" typeId="points" value="90.0"/>
+          </costs>
+        </entryLink>
+      </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="1a00-d6c9-99da-daf5" name="Razorgors" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="add" field="category" value="a93c-3cf0-28d6-cc29">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="6b8c-b447-c6fc-93ed" name="Uncontrollable Stampede" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
@@ -2763,7 +3102,7 @@ In addition, each time an enemy unit within 3&quot; of any units in your army wi
         <selectionEntry id="fa4f-f74c-367a-d88b" name="Razorgor" hidden="false" collective="false" import="true" type="model">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d80b-c8dd-5ffb-5c11" type="min"/>
-            <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3100-892a-5c31-1d7a" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3100-892a-5c31-1d7a" type="max"/>
           </constraints>
           <profiles>
             <profile id="ce03-83c0-5371-2806" name="Razorgor" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
@@ -2787,15 +3126,34 @@ In addition, each time an enemy unit within 3&quot; of any units in your army wi
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="points" value="50.0"/>
+            <cost name="pts" typeId="points" value="55.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <entryLinks>
+        <entryLink id="3fef-1945-5c57-d02e" name="Reinforced" hidden="false" collective="false" import="true" targetId="0a8d-cde8-fba1-6c0d" type="selectionEntry">
+          <costs>
+            <cost name="pts" typeId="points" value="55.0"/>
+          </costs>
+        </entryLink>
+      </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="7aeb-7e4a-3ec8-90c5" name="Tzaangor Skyfires" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="add" field="category" value="a93c-3cf0-28d6-cc29">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="72cd-5fcf-ea14-4d47" name="Guided by the Future" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
@@ -2837,10 +3195,10 @@ In addition, each time an enemy unit within 3&quot; of any units in your army wi
         <selectionEntry id="cb3f-ef10-65b6-c7ab" name="3 Tzaangor Skyfires" hidden="false" collective="false" import="true" type="model">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3747-708f-22eb-c77e" type="min"/>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="bd6b-d5b1-503f-f0bd" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="bd6b-d5b1-503f-f0bd" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="200.0"/>
+            <cost name="pts" typeId="points" value="195.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="3b79-d4a2-268c-8af0" name="Teeth and Horns" hidden="false" collective="false" import="true" type="upgrade">
@@ -2932,11 +3290,30 @@ In addition, each time an enemy unit within 3&quot; of any units in your army wi
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <entryLinks>
+        <entryLink id="356f-6141-ee1e-436c" name="Reinforced" hidden="false" collective="false" import="true" targetId="0a8d-cde8-fba1-6c0d" type="selectionEntry">
+          <costs>
+            <cost name="pts" typeId="points" value="195.0"/>
+          </costs>
+        </entryLink>
+      </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="cad5-c0e6-cbf2-99fb" name="Tzaangor Shaman" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="add" field="category" value="a93c-3cf0-28d6-cc29">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="3ceb-2893-b245-a13d" name="Tzaangor Shaman" hidden="false" typeId="f55d-ee3a-1597-110f" typeName="Magic">
           <characteristics>
@@ -2952,6 +3329,7 @@ In addition, each time an enemy unit within 3&quot; of any units in your army wi
         <profile id="b2aa-f4a0-1a35-c673" name="Boon of Mutation" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
           <characteristics>
             <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
+            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
             <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick an enemy unit within 18&quot; of the caster and visible to them. That unit suffers D3 mortal wounds. For each model that is slain by mortal wounds inflicted by this spell, you can add 1 TZAANGOR model to an existing TZAANGOR unit in your army. If you do so, set up that TZAANGOR model within 1&quot; of a friendly TZAANGOR unit that is within 12&quot; of the caster. The model can only be set up within 3&quot; of an enemy unit if the friendly unit was within 3&quot; of that enemy unit before any models were added.</characteristic>
           </characteristics>
         </profile>
@@ -2987,6 +3365,8 @@ In addition, each time an enemy unit within 3&quot; of any units in your army wi
         <categoryLink id="210c-f884-687f-003c" name="BEASTS OF CHAOS" hidden="false" targetId="2c4b-6186-2939-7f2b" primary="false"/>
         <categoryLink id="709f-f1a6-fb37-bf30" name="GOR" hidden="false" targetId="b04f-e687-f85d-0b36" primary="false"/>
         <categoryLink id="830c-322a-1cc6-66d5" name="TZAANGOR SHAMAN" hidden="false" targetId="cb6b-150d-1eda-84a7" primary="false"/>
+        <categoryLink id="b3cf-7ee3-ae8f-71f9" name="9 or less wounds Leader" hidden="false" targetId="a8ed-ca35-24e0-cf2e" primary="false"/>
+        <categoryLink id="023b-ccbb-1ea9-b3f0" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="45bb-ddc0-906a-9315" name="Ritual Dagger" hidden="false" collective="false" import="true" type="upgrade">
@@ -3086,10 +3466,22 @@ In addition, each time an enemy unit within 3&quot; of any units in your army wi
         <entryLink id="d11e-f670-2922-4cec" name="Spell Lores" hidden="false" collective="false" import="true" targetId="55d3-fe2c-594d-4e2b" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="150.0"/>
+        <cost name="pts" typeId="points" value="135.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="15ed-b222-83e4-0ada" name="Tzaangor Enlightened" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="add" field="category" value="a93c-3cf0-28d6-cc29">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="a6fc-375c-e913-d859" name="Tzaangor Enlightened" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
           <characteristics>
@@ -3129,10 +3521,10 @@ In addition, each time an enemy unit within 3&quot; of any units in your army wi
         <selectionEntry id="2f7f-ffec-497e-4523" name="3 Tzaangor Enlightened" hidden="false" collective="false" import="true" type="model">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7779-f6fb-9689-749d" type="min"/>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="cdd2-2005-5ff3-e9bb" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="cdd2-2005-5ff3-e9bb" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="100.0"/>
+            <cost name="pts" typeId="points" value="95.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="7d7c-0973-53a7-ecc0" name="Tzeenchian Spear" hidden="false" collective="false" import="true" type="upgrade">
@@ -3180,6 +3572,13 @@ In addition, each time an enemy unit within 3&quot; of any units in your army wi
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <entryLinks>
+        <entryLink id="5019-3980-3ab3-4099" name="Reinforced" hidden="false" collective="false" import="true" targetId="0a8d-cde8-fba1-6c0d" type="selectionEntry">
+          <costs>
+            <cost name="pts" typeId="points" value="95.0"/>
+          </costs>
+        </entryLink>
+      </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
@@ -3200,6 +3599,16 @@ In addition, each time an enemy unit within 3&quot; of any units in your army wi
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="add" field="category" value="a93c-3cf0-28d6-cc29">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
+              </conditions>
             </conditionGroup>
           </conditionGroups>
         </modifier>
@@ -3286,10 +3695,10 @@ In addition, each time an enemy unit within 3&quot; of any units in your army wi
         <selectionEntry id="d79d-6ffa-7e45-3000" name="10 Tzaangors" hidden="false" collective="false" import="true" type="model">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c664-b552-3c9a-f4de" type="min"/>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e69d-750f-1f61-03a7" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e69d-750f-1f61-03a7" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="180.0"/>
+            <cost name="pts" typeId="points" value="175.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="3c49-ce05-959f-e3e1" name="Tzaangor Mutant" hidden="false" collective="false" import="true" type="upgrade">
@@ -3414,6 +3823,20 @@ In addition, each time an enemy unit within 3&quot; of any units in your army wi
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="92df-b3ca-a12e-f573" name="Reinforced" hidden="false" collective="false" import="true" targetId="0a8d-cde8-fba1-6c0d" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="95f2-6885-756f-9ea5" value="2.0">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a9d5-dd1c-0c21-9dd3" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <costs>
+            <cost name="pts" typeId="points" value="175.0"/>
+          </costs>
+        </entryLink>
+      </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
@@ -4390,17 +4813,18 @@ In addition, each time an enemy unit within 3&quot; of any units in your army wi
         <profile id="ef2d-7693-9f24-673e" name="Summon Ravening Direflock" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
           <characteristics>
             <characteristic name="Casting Value" typeId="2508-b604-1258-a920">5</characteristic>
-            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">Only BEASTS OF CHAOS WIZARDS can attempt to cast this spell. If successfully cast, set up a Ravening Direflock model wholly within 12&quot; of the caster and more than 3&quot; from any units, then set up the second and third Ravening Direflock models wholly within 6&quot; of the first and more than 3&quot; from any units.</characteristic>
+            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">12&quot;</characteristic>
+            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, set up the parts of the endless spell within 3&quot; of each other, wholly within range and visible to the caster, and more than 1&quot; from all models, other endless spells and invocations. Only BEASTS OF CHAOS WIZARDS can attempt to summon this endless spell.</characteristic>
           </characteristics>
         </profile>
-        <profile id="5958-5d4e-7197-fdeb" name="Malevolent Intentions" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+        <profile id="5958-5d4e-7197-fdeb" name="Harbingers of Dark Omens" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Subtract 2 from the Bravery characteristic of units while they are within 6&quot; of any Ravening Direflock models. BEASTS OF CHAOS units are not affected by this ability.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Models cannot issue the Inspiring Presence or Rally command while they are within 12&quot; of this endless spell. This ability has no effect on BEASTS OF CHAOS models.</characteristic>
           </characteristics>
         </profile>
-        <profile id="9851-5e3b-2006-7850" name="Moon of Ill Omen" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+        <profile id="9851-5e3b-2006-7850" name="Black-souled Cowardice" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If a unit finishes a move within 1&quot; of a Ravening Direflock model, remove that Ravening Direflock model from the battlefield. The player whose turn is taking place must set it up again exactly 3D6&quot; from its previous location and more than 3&quot; from any units, and then set up the two remaining Ravening Direflock models wholly within 6&quot; of the first model and more than 3&quot; from any units.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If a unit finishes a move within 1&quot; of this endless spell, remove this endless spell from the battlefield. At the end of that phase, the player whose turn is taking place must set up the parts of the endless spell anywhere on the battlefield, within 3&quot; of each other and more than 1&quot; from all models, other endless spells and invocations.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -4408,30 +4832,26 @@ In addition, each time an enemy unit within 3&quot; of any units in your army wi
         <categoryLink id="71c8-8558-9b9f-2769" name="ENDLESS SPELL" hidden="false" targetId="31f4-2067-3ade-e6f8" primary="false"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="30.0"/>
+        <cost name="pts" typeId="points" value="50.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="ced1-4557-660d-4219" name="Endless Spell: Wildfire Taurus" hidden="false" collective="false" import="true" type="upgrade">
       <profiles>
         <profile id="5777-5512-6b05-4127" name="Predatory" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">The Wildfire Taurus is a predatory endless spell. It can move up to 12&quot; and can fly</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This endless spell is a predatory endless spell. It can move up to 12&quot; and can fly</characteristic>
           </characteristics>
         </profile>
         <profile id="facd-4317-60f1-7414" name="Summon Wildfire Taurus" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
           <characteristics>
-            <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
-            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">Only BEASTS OF CHAOS WIZARDS can attempt to cast this spell. If successfully cast, set up a Wildfire Taurus model wholly within 12&quot; of the caster.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="39ac-3389-9223-608f" name="Raging Stampede" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">When this model is set up, the player who set it up can immediately make a move with it.</characteristic>
+            <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
+            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">6&quot;</characteristic>
+            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, set up this endless spell wholly within range and visible to the caster, and more than 1&quot; from all models, other endless spells and invocations. Only BEASTS OF CHAOS WIZARDS can attempt to summon this endless spell.</characteristic>
           </characteristics>
         </profile>
         <profile id="5b11-5f7e-9d44-3edc" name="Whirlwind of Destruction" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">After this model has moved, each unit that it moved over, and each other unit that is within 1&quot; of it at the end of its move, suffers D3 mortal wounds. If a unit has 10 or more models it suffers D6 mortal wounds instead. If this spell inflicts any wounds on a unit, that unit fights at the end of the next combat phase, after the players have picked any other units to fight in that phase.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">After this endless spell has moved, roll a dice for each unit that has any models it passed across and each other unit that is within 1&quot; of it at the end of its move. On a 2+, that unit suffers D3 mortal wounds. In addition, the strike-last effect applies to units that are within 3&quot; of this endless spell.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -4439,7 +4859,7 @@ In addition, each time an enemy unit within 3&quot; of any units in your army wi
         <categoryLink id="9567-207a-d4b5-8422" name="ENDLESS SPELL" hidden="false" targetId="31f4-2067-3ade-e6f8" primary="false"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="80.0"/>
+        <cost name="pts" typeId="points" value="110.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="b9b7-48f9-740e-f1d4" name="Endless Spell: Doomblast Dirgehorn" hidden="false" collective="false" import="true" type="upgrade">
@@ -4447,17 +4867,15 @@ In addition, each time an enemy unit within 3&quot; of any units in your army wi
         <profile id="8d0e-52cd-4467-6f47" name="Summon Doomblast Dirgehorn" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
           <characteristics>
             <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
-            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">Only BEASTS OF CHAOS WIZARDS can attempt to cast this spell. If successfully cast, set up a Doomblast Dirgehorn model wholly within 12&quot; of the caster</characteristic>
+            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">12&quot;</characteristic>
+            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, set up this endless spell wholly within range and visible to the caster, and more than 1&quot; from all models, other endless spells and invocations. Only BEASTS OF CHAOS WIZARDS can attempt to summon this endless spell.</characteristic>
           </characteristics>
         </profile>
         <profile id="c1f4-5c36-9a58-8b24" name="Booming Cacophony" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Subtract 1 from hit rolls for attacks made by units within 3&quot; of this model. BEASTS OF CHAOS models are not affected by this ability</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="8275-cd7b-ccdd-a26f" name="Rising Discord" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the start of each battle round after this model is set up, add 3&quot; to the range of this model’s Booming Cacophony ability. If this model is dispelled, the next time it is set up on the battlefield, the range of this ability starts at 3&quot;.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">After this endless spell is set up, its range is 3&quot;. At the start of each subsequent battle round, its range is increased by 3&quot;.
+
+Subtract 1 from hit rolls for attacks made by units within range of any endless spells with this ability. This ability has no effect on hit rolls for attacks made by BEASTS OF CHAOS units.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -4465,19 +4883,26 @@ In addition, each time an enemy unit within 3&quot; of any units in your army wi
         <categoryLink id="806e-34a4-9b60-2843" name="ENDLESS SPELL" hidden="false" targetId="31f4-2067-3ade-e6f8" primary="false"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="50.0"/>
+        <cost name="pts" typeId="points" value="45.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="8cf5-dd47-5d68-51a9" name="Herdstone" hidden="false" collective="false" import="true" type="upgrade">
       <profiles>
         <profile id="122e-2809-4f14-2384" name="Entropic Lodestone" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Subtract 1 from save rolls for attacks that target units within 6&quot; of this terrain feature. At the start of each battle round after the first, add 6&quot; to the range of this ability. BEASTS OF CHAOS units are not affected by this ability.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">After this terrain feature is set up, its range is 6&quot;. At the start of each battle round after the first, its range is increased by 6&quot;.
+
+Subtract 1 from save rolls for attacks that target units within range of this terrain feature. This scenery rule has no effect on save rolls for attacks that target BEASTS OF CHAOS units.</characteristic>
           </characteristics>
         </profile>
         <profile id="d44b-949b-c56e-0a49" name="Locus of Savagery" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">BEASTS OF CHAOS units wholly within 6&quot; of this terrain feature do not take battleshock tests. At the start of each battle round after the first, add 6&quot; to the range of this ability</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Do not take battleshock tests for BEASTS OF CHAOS units wholly within range of this terrain feature (see the ‘Entropic Lodestone’ scenery rule).</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="a321-05ad-5efa-507c" name="Impassable" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">You cannot move a model over this terrain feature unless it can fly, and you cannot move a model onto this terrain feature or set up a model on this terrain feature (even if it can fly).</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -4500,6 +4925,18 @@ In addition, each time an enemy unit within 3&quot; of any units in your army wi
       </costs>
     </selectionEntry>
     <selectionEntry id="7fba-f6f3-688b-1092" name="Tzaangor Enlightened on Discs of Tzeentch" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="add" field="category" value="a93c-3cf0-28d6-cc29">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="134c-a59c-9fbd-b209" name="Tzaangor Enlightened on Discs of Tzeentch" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
           <characteristics>
@@ -4542,7 +4979,7 @@ In addition, each time an enemy unit within 3&quot; of any units in your army wi
         <selectionEntry id="ef05-28f5-709c-3c0c" name="3 Tzaangor Enlightened on Discs of Tzeentch" hidden="false" collective="false" import="true" type="model">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1ab6-7ca0-dcaa-2b88" type="min"/>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="386a-b83e-9b2f-748d" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="386a-b83e-9b2f-748d" type="max"/>
           </constraints>
           <costs>
             <cost name="pts" typeId="points" value="180.0"/>
@@ -4615,6 +5052,13 @@ In addition, each time an enemy unit within 3&quot; of any units in your army wi
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <entryLinks>
+        <entryLink id="0f55-45b3-64e7-fa5a" name="Reinforced" hidden="false" collective="false" import="true" targetId="0a8d-cde8-fba1-6c0d" type="selectionEntry">
+          <costs>
+            <cost name="pts" typeId="points" value="180.0"/>
+          </costs>
+        </entryLink>
+      </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
@@ -4625,6 +5069,16 @@ In addition, each time an enemy unit within 3&quot; of any units in your army wi
           <conditions>
             <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e14c-d299-aa07-0bcf" type="equalTo"/>
           </conditions>
+        </modifier>
+        <modifier type="add" field="category" value="a93c-3cf0-28d6-cc29">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -4661,6 +5115,7 @@ In addition, each time an enemy unit within 3&quot; of any units in your army wi
         <categoryLink id="870b-e322-ee6b-e629" name="GREAT BRAY-SHAMAN" hidden="false" targetId="16b0-d1d2-6e48-f877" primary="false"/>
         <categoryLink id="cb28-91dd-4a7c-212e" name="CHAOS" hidden="false" targetId="7cdd-80ea-cbeb-8e16" primary="false"/>
         <categoryLink id="edbd-44d1-2d0e-c53e" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
+        <categoryLink id="eae0-f4cd-434e-cff2" name="9 or less wounds Leader" hidden="false" targetId="a8ed-ca35-24e0-cf2e" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="93d3-1e6f-e8d7-bc49" name="Savage Bolt" hidden="false" collective="false" import="true" type="upgrade">
@@ -4672,6 +5127,7 @@ In addition, each time an enemy unit within 3&quot; of any units in your army wi
             <profile id="936f-c64c-8018-bbfb" name="Savage Bolt" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
+                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick 1 enemy unit within 18&quot; of the caster that is visible to them. That unit suffers D3 mortal wounds. In addition, until the end of your next combat phase, add 1 to hit rolls for attacks made with melee weapons that target that unit.</characteristic>
               </characteristics>
             </profile>
@@ -4733,7 +5189,7 @@ In addition, each time an enemy unit within 3&quot; of any units in your army wi
         <entryLink id="b286-e355-c8d1-b979" name="Spell Lores" hidden="false" collective="false" import="true" targetId="55d3-fe2c-594d-4e2b" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="140.0"/>
+        <cost name="pts" typeId="points" value="150.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="e14c-d299-aa07-0bcf" name="Grashrak&apos;s Despoilers" hidden="false" collective="false" import="true" type="unit">
@@ -4742,6 +5198,16 @@ In addition, each time an enemy unit within 3&quot; of any units in your army wi
           <conditions>
             <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f76a-f671-565a-7552" type="equalTo"/>
           </conditions>
+        </modifier>
+        <modifier type="add" field="category" value="a93c-3cf0-28d6-cc29">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -4950,98 +5416,6 @@ In addition, each time an enemy unit within 3&quot; of any units in your army wi
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="8d39-217e-4bbd-e732" name="Slaangor Fiendbloods" hidden="false" collective="false" import="true" type="unit">
-      <profiles>
-        <profile id="ba64-fac4-43a9-3fe5" name="Obsessive Violence" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the end of the combat phase, pick 1 enemy unit within 3&quot; of this unit and roll a dice for each model in this unit. For each 4+, that enemy unit suffers 1 mortal wound.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="8db7-5a0c-b672-6cc8" name="Slaughter At Any Cost" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Add 1 to the Attacks characteristic of this unit’s melee weapons if it made a charge move in the same turn.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="e8e8-aafd-9235-84dd" name="Slaangor Fiendbloods" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
-          <characteristics>
-            <characteristic name="Move" typeId="8655-6213-2824-1752">8&quot;</characteristic>
-            <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">3</characteristic>
-            <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">6</characteristic>
-            <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">5+</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <categoryLinks>
-        <categoryLink id="9d61-5b63-aa9d-374f" name="New CategoryLink" hidden="false" targetId="7cdd-80ea-cbeb-8e16" primary="false"/>
-        <categoryLink id="2447-0752-e223-7359" name="BEASTS OF CHAOS" hidden="false" targetId="2c4b-6186-2939-7f2b" primary="false"/>
-        <categoryLink id="6677-8f9b-3e58-4a3f" name="New CategoryLink" hidden="false" targetId="065e-fda7-fd27-1f40" primary="true"/>
-        <categoryLink id="b78d-5e98-5d2a-4714" name="HEDONITE" hidden="false" targetId="e0f7-4620-9328-d15a" primary="false"/>
-        <categoryLink id="4a01-9be1-16d6-06b9" name="SLAANESH" hidden="false" targetId="3963-2e99-aa63-c65e" primary="false"/>
-        <categoryLink id="6a25-60f7-380e-07e9" name="MORTAL" hidden="false" targetId="a934-6d15-9932-b7ea" primary="false"/>
-      </categoryLinks>
-      <selectionEntries>
-        <selectionEntry id="dacf-67e8-739a-1345" name="3 Slaangor Fiendbloods" hidden="false" collective="false" import="true" type="model">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f103-6af3-66cd-8c66" type="min"/>
-            <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9c84-f7ae-2166-d50a" type="max"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="points" value="140.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="d793-0f33-e46d-15a9" name="Slake-Horn" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2c70-9b41-9b03-361c" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="8125-456c-506c-a7fe" name="Slake-Horn" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-              <characteristics>
-                <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 model in this unit can be a Slake-Horn. That model is armed with a Razorsharp Claw and Gilded Weapon.</characteristic>
-              </characteristics>
-            </profile>
-            <profile id="0e09-bee6-0f70-7ae3" name="Gilded Weapon" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
-              <characteristics>
-                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
-                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
-                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">2</characteristic>
-                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
-                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
-                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
-                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">2</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="6f57-b8ce-1dd7-a058" name="Razor-sharp Claw(s)" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2446-096a-7c25-582b" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7a93-e960-ce68-1c39" type="min"/>
-          </constraints>
-          <profiles>
-            <profile id="87b5-b1b8-118f-128d" name="Razor-sharp Claw(s)" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
-              <characteristics>
-                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
-                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">2&quot;</characteristic>
-                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">3</characteristic>
-                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
-                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
-                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
-                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-      <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
-      </costs>
-    </selectionEntry>
     <selectionEntry id="91ce-9545-b0e8-c92f" name="Battalion: The Butcher-Herd" publicationId="7ca7-0a01-0c6c-9b61" hidden="false" collective="false" import="true" type="upgrade">
       <profiles>
         <profile id="b6ab-4271-0f61-aa51" name="Ghorraghan&apos;s Skull-staff" publicationId="7ca7-0a01-0c6c-9b61" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
@@ -5135,17 +5509,8 @@ In addition, each time an enemy unit within 3&quot; of any units in your army wi
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5662-d1bb-8f17-85f5" type="max"/>
       </constraints>
       <entryLinks>
-        <entryLink id="a629-6cb9-79f7-1ae7" name="Artefacts of Chaos" hidden="false" collective="false" import="true" targetId="3c13-922a-683d-7de7" type="selectionEntryGroup">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a509-a616-4749-8806" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </entryLink>
         <entryLink id="bd75-9fe8-dc30-a67f" name="Realm Artefacts of Power" hidden="false" collective="false" import="true" targetId="37b0-af21-630c-d8af" type="selectionEntryGroup"/>
-        <entryLink id="f295-4a81-a9a7-25c4" name="Spoils of the " hidden="false" collective="false" import="true" targetId="3837-3dd0-a884-2da3" type="selectionEntryGroup">
+        <entryLink id="f295-4a81-a9a7-25c4" name="Artefacts: Spoils of the Thunderscorn" hidden="false" collective="false" import="true" targetId="3837-3dd0-a884-2da3" type="selectionEntryGroup">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditionGroups>
@@ -5187,12 +5552,13 @@ In addition, each time an enemy unit within 3&quot; of any units in your army wi
             </modifier>
           </modifiers>
         </entryLink>
-        <entryLink id="298a-a243-21e6-c286" name="Greatfray Artefacts" hidden="false" collective="false" import="true" targetId="6023-29c4-ba61-ff34" type="selectionEntryGroup"/>
+        <entryLink id="298a-a243-21e6-c286" name="Artefacts: Greatfray" hidden="false" collective="false" import="true" targetId="6023-29c4-ba61-ff34" type="selectionEntryGroup"/>
         <entryLink id="0ddc-7f45-242c-6036" name="Nurgle Artefacts" hidden="false" collective="false" import="true" targetId="e742-fcb8-c852-fdc4" type="selectionEntryGroup"/>
         <entryLink id="56e9-633d-fd13-4e69" name="Khorne Artefacts" hidden="false" collective="false" import="true" targetId="afe2-b6cd-86f6-9ada" type="selectionEntryGroup"/>
         <entryLink id="b46e-9037-dce1-541c" name="Slaanesh Artefacts" hidden="false" collective="false" import="true" targetId="6685-5f59-3ca6-6b9c" type="selectionEntryGroup"/>
         <entryLink id="5127-d448-52f0-ac5f" name="Tzeentch Artefacts" hidden="false" collective="false" import="true" targetId="651e-a6aa-28cb-2f73" type="selectionEntryGroup"/>
         <entryLink id="f08f-8587-7b14-c5b2" name="Artefacts: Wrath of the Everchosen" hidden="false" collective="false" import="true" targetId="002d-5827-c449-3647" type="selectionEntryGroup"/>
+        <entryLink id="1c29-f706-7581-7153" name="Universal Artefacts of Power" hidden="false" collective="false" import="true" targetId="11c4-fd82-92a7-de8a" type="selectionEntryGroup"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="cbff-8503-320a-ce0d" name="Command Traits" hidden="false" collective="false" import="true">
@@ -5207,15 +5573,7 @@ In addition, each time an enemy unit within 3&quot; of any units in your army wi
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d56c-69d5-1279-8a0d" type="max"/>
       </constraints>
       <entryLinks>
-        <entryLink id="435b-cac0-4e04-263e" name="Chaos Command Traits" hidden="false" collective="false" import="true" targetId="f179-9104-3d7f-1ea1" type="selectionEntryGroup">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a509-a616-4749-8806" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </entryLink>
+        <entryLink id="435b-cac0-4e04-263e" name="Universal Command Traits" hidden="false" collective="false" import="true" targetId="b6b8-914a-dfca-18ee" type="selectionEntryGroup"/>
         <entryLink id="d15a-c876-972a-b936" name="Traits: Brayherd Alphabeast" hidden="false" collective="false" import="true" targetId="b162-6623-76e5-578d" type="selectionEntryGroup">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
@@ -5329,6 +5687,13 @@ In addition, each time an enemy unit within 3&quot; of any units in your army wi
       </selectionEntries>
     </selectionEntryGroup>
     <selectionEntryGroup id="55d3-fe2c-594d-4e2b" name="Spell Lores" hidden="false" collective="false" import="true">
+      <modifiers>
+        <modifier type="increment" field="ba25-1998-602c-d43f" value="1.0">
+          <repeats>
+            <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bdb0-7f20-53ff-f804" repeats="1" roundUp="false"/>
+          </repeats>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ba25-1998-602c-d43f" type="max"/>
         <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4ef7-32af-e125-415f" type="min"/>
@@ -5827,17 +6192,26 @@ In addition, each time an enemy unit within 3&quot; of any units in your army wi
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="increment" field="1fce-5dd0-8427-467f" value="1.0">
+          <repeats>
+            <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bdb0-7f20-53ff-f804" repeats="1" roundUp="false"/>
+          </repeats>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1fce-5dd0-8427-467f" type="max"/>
       </constraints>
       <selectionEntries>
         <selectionEntry id="aa33-419c-d822-9665" name="1. Viletide" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c987-2ea3-c20e-d3a7" type="max"/>
+          </constraints>
           <profiles>
             <profile id="a6c6-13bb-3d88-7214" name="Viletide" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick an enemy unit within 12&quot; of the caster that is visible to them. That unit suffers D3 mortal wounds. If the unit is within 6&quot; of the caster, it suffers D6 mortal wounds instead.</characteristic>
+                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
               </characteristics>
             </profile>
           </profiles>
@@ -5846,11 +6220,15 @@ In addition, each time an enemy unit within 3&quot; of any units in your army wi
           </costs>
         </selectionEntry>
         <selectionEntry id="3c35-9fba-b299-6779" name="3. Savage Dominion" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ea1c-9cae-a0d7-1f72" type="max"/>
+          </constraints>
           <profiles>
             <profile id="0421-bc23-2da5-9564" name="Savage Dominion" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">5</characteristic>
-                <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick an enemy MONSTER unit that is a single model within 18&quot; of the caster and visible to them, and roll 2D6. If the roll is equal to or greater than that model’s Bravery characteristic, it immediately moves 3&quot; towards the closest model. You can then pick a unit within 1&quot; of that MONSTER and roll a number of dice equal to the MONSTER’s Wounds characteristic. For each 4+, that unit suffers 1 mortal wound.</characteristic>
+                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">18&quot;</characteristic>
+                <characteristic name="Description" typeId="76ff-781d-b8e6-5f27"> If successfully cast, pick 1 enemy Monster that is within range and visible to the caster, and roll 2D6. If the roll is equal to or greater than that Monster’s Bravery characteristic, pick 1 other enemy unit within 3&quot; of that Monster and roll a number of dice equal to that Monster’s Wounds characteristic. For each 4+, that enemy unit suffers 1 mortal wound.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -5859,11 +6237,15 @@ In addition, each time an enemy unit within 3&quot; of any units in your army wi
           </costs>
         </selectionEntry>
         <selectionEntry id="9d5a-0abe-cfe9-d880" name="2. Vicious Stranglethorns" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8afc-c1be-4ff9-9aad" type="max"/>
+          </constraints>
           <profiles>
             <profile id="ff01-c6fd-4737-cca3" name="Vicious Stranglethorns" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick a terrain feature wholly within 24&quot; of the caster that is visible to them. Each enemy unit within 3&quot; of that terrain feature suffers D3 mortal wounds.</characteristic>
+                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
               </characteristics>
             </profile>
           </profiles>
@@ -5872,11 +6254,15 @@ In addition, each time an enemy unit within 3&quot; of any units in your army wi
           </costs>
         </selectionEntry>
         <selectionEntry id="b754-c3d6-1e0b-e53e" name="4. Tendrils of Atrophy" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="41a8-8f9f-2fad-0fac" type="max"/>
+          </constraints>
           <profiles>
             <profile id="52e3-4d18-3c18-acf0" name="Tendrils of Atrophy" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick an enemy unit within 12&quot; of the caster that is visible to them. Until your next hero phase, subtract 1 from save rolls for attacks that target that unit.</characteristic>
+                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
               </characteristics>
             </profile>
           </profiles>
@@ -5885,11 +6271,15 @@ In addition, each time an enemy unit within 3&quot; of any units in your army wi
           </costs>
         </selectionEntry>
         <selectionEntry id="80a3-8a97-4793-e596" name="5. Wild Rampage" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7955-6a71-0c8a-2a37" type="max"/>
+          </constraints>
           <profiles>
             <profile id="d851-6235-6594-c7bf" name="Wild Rampage" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick a friendly unit within 12&quot; of the caster that is visible to them. Until your next hero phase, you can re-roll failed wound rolls for attacks with melee weapons made by this unit. However, subtract 1 from save rolls for attacks that target this unit.</characteristic>
+                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
               </characteristics>
             </profile>
           </profiles>
@@ -5898,11 +6288,15 @@ In addition, each time an enemy unit within 3&quot; of any units in your army wi
           </costs>
         </selectionEntry>
         <selectionEntry id="9644-bfae-fbab-7392" name="6. Titanic Fury" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1bad-8257-e8fb-3bad" type="max"/>
+          </constraints>
           <profiles>
             <profile id="648b-7797-8e34-c355" name="Titanic Fury" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick a friendly BEASTS OF CHAOS MONSTER within 12&quot; of the caster that is visible to them. Until your next hero phase, add 1 to the Attacks characteristic of that MONSTER’s melee weapons.</characteristic>
+                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
               </characteristics>
             </profile>
           </profiles>
@@ -5924,17 +6318,26 @@ In addition, each time an enemy unit within 3&quot; of any units in your army wi
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="increment" field="aef1-7451-058e-0d02" value="1.0">
+          <repeats>
+            <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bdb0-7f20-53ff-f804" repeats="1" roundUp="false"/>
+          </repeats>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="aef1-7451-058e-0d02" type="max"/>
       </constraints>
       <selectionEntries>
         <selectionEntry id="75ee-8576-b474-da27" name="3. Sundering Blades" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="763a-807a-beb4-865b" type="max"/>
+          </constraints>
           <profiles>
             <profile id="189c-c35d-88da-1644" name="Sundering Blades" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick a friendly unit wholly within 18&quot; of the caster that is visible to them. Until your next hero phase, improve the Rend characteristic of that unit’s melee weapons by 1.</characteristic>
+                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
               </characteristics>
             </profile>
           </profiles>
@@ -5943,11 +6346,15 @@ In addition, each time an enemy unit within 3&quot; of any units in your army wi
           </costs>
         </selectionEntry>
         <selectionEntry id="3c99-9555-798b-e0bc" name="2. Hailstorm" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c5bb-5750-a9e3-16a2" type="max"/>
+          </constraints>
           <profiles>
             <profile id="3ae2-7c29-fcac-977c" name="Hailstorm" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick an enemy unit within 21&quot; of the caster that is visible to them. Until your next hero phase, halve the Move characteristic of, and run and charge rolls for, that unit.</characteristic>
+                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
               </characteristics>
             </profile>
           </profiles>
@@ -5956,11 +6363,15 @@ In addition, each time an enemy unit within 3&quot; of any units in your army wi
           </costs>
         </selectionEntry>
         <selectionEntry id="0150-2532-c4e2-d454" name="1. Thunderwave" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="429b-bebd-73d7-b132" type="max"/>
+          </constraints>
           <profiles>
             <profile id="0ad6-8845-444a-cef0" name="Thunderwave" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, each unit within 3&quot; of the caster suffers D3 mortal wounds. THUNDERSCORN units are not affected by this spell.</characteristic>
+                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
               </characteristics>
             </profile>
           </profiles>

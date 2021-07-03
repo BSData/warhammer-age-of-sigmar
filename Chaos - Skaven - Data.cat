@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="de06-0235-6a96-193b" name="Chaos - Skaven - Data" revision="22" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://gitter.im/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="74" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="de06-0235-6a96-193b" name="Chaos - Skaven - Data" revision="27" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://gitter.im/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="84" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="bcc4-c671-pubd1e1" name="Chaos Battletome: Skaven"/>
     <publication id="bcc4-c671-pubd1e6847" name="Forgeworld: Monstrous Arcanum"/>
@@ -105,6 +105,18 @@
     <categoryEntry id="c198-5254-88be-9298" name="GNAWHOLE" hidden="false"/>
     <categoryEntry id="fa82-5fdb-6243-958a" name="STORMFIENDS MOULDER" hidden="false"/>
     <categoryEntry id="0dff-2ca0-f235-f2e1" name="STORMFIENDS SKRYRE" hidden="false"/>
+    <categoryEntry id="b29e-7f2f-e37e-7197" name="Coalition: Skaven Pestilens" hidden="false">
+      <modifiers>
+        <modifier type="increment" field="da6b-47f0-4785-2374" value="1.0">
+          <repeats>
+            <repeat field="selections" scope="roster" value="4.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="unit" repeats="1" roundUp="false"/>
+          </repeats>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="da6b-47f0-4785-2374" type="max"/>
+      </constraints>
+    </categoryEntry>
   </categoryEntries>
   <sharedSelectionEntries>
     <selectionEntry id="aca2-1d43-0220-2465" name="Skritch Spiteclaw" publicationId="bcc4-c671-pubd1e1" page="118" hidden="false" collective="false" import="true" type="unit">
@@ -147,6 +159,8 @@
         <categoryLink id="bf18-6f1a-b3ee-d80b" name="CLANS VERMINOUS" hidden="false" targetId="3058-1b6c-3bc2-746d" primary="false"/>
         <categoryLink id="ad67-f855-7b70-9749" name="CLAWLORD" hidden="false" targetId="6c31-d5f5-4a7e-638e" primary="false"/>
         <categoryLink id="6e80-b9d6-4e4e-0c02" name="SKAVENTIDE" hidden="false" targetId="5ed5-bfa0-f1f7-8b61" primary="false"/>
+        <categoryLink id="b4e0-55dc-e102-7e77" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
+        <categoryLink id="d5ac-c3b3-7b7d-f262" name="10 or less wounds Leader" hidden="false" targetId="a8ed-ca35-24e0-cf2e" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="2614-6624-4d87-ffe0" name="Wicked Halberd" hidden="false" collective="false" import="true" type="upgrade">
@@ -178,9 +192,10 @@
             <categoryLink id="99f2-fd09-6329-8941" name="Unique General" hidden="false" targetId="fe3f-d230-7e2c-fba2" primary="false"/>
           </categoryLinks>
         </entryLink>
+        <entryLink id="49a5-33f1-7098-b19a" name="Battalions" hidden="false" collective="false" import="true" targetId="286a-2838-49be-5968" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="140.0"/>
+        <cost name="pts" typeId="points" value="120.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="c71b-c7bd-77ca-12b9" name="General" hidden="false" collective="false" import="true" type="upgrade">
@@ -189,6 +204,9 @@
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="24d6-500b-7e3f-1470" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="78f3-8a59-699a-61e8" type="instanceOf"/>
               </conditions>
             </conditionGroup>
@@ -244,6 +262,7 @@
         <categoryLink id="e829-c5ed-9354-85d1" name="SKAVEN" hidden="false" targetId="8f8a-7c29-799e-ace9" primary="false"/>
         <categoryLink id="6a31-db44-b5fc-8710" name="SKAVENTIDE" hidden="false" targetId="5ed5-bfa0-f1f7-8b61" primary="false"/>
         <categoryLink id="e7c4-d515-4bd5-61ca" name="SPITECLAW&apos;S SWARM" hidden="false" targetId="6443-6964-73d4-c58a" primary="false"/>
+        <categoryLink id="6e97-2f7e-2c54-afdd" name="New CategoryLink" hidden="false" targetId="065e-fda7-fd27-1f40" primary="true"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="8f4c-f136-f703-1c66" name="Krrk the Almost-trusted" hidden="false" collective="false" import="true" type="upgrade">
@@ -379,6 +398,9 @@
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <entryLinks>
+        <entryLink id="61e6-5c54-632f-c3f4" name="Battalions" hidden="false" collective="false" import="true" targetId="286a-2838-49be-5968" type="selectionEntryGroup"/>
+      </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
@@ -414,6 +436,8 @@
         <categoryLink id="989b-0ba1-433c-4635" name="CLANS SKYRE" hidden="false" targetId="5e5d-af59-6ea5-832c" primary="false"/>
         <categoryLink id="458b-288d-9439-d6e1" name="SKAVENTIDE" hidden="false" targetId="5ed5-bfa0-f1f7-8b61" primary="false"/>
         <categoryLink id="756d-d18b-5dfc-c3e0" name="WARLOCK ENGINEER" hidden="false" targetId="9319-f73a-ef27-fd21" primary="false"/>
+        <categoryLink id="b5a4-7bae-bd98-bc3e" name="10 or less wounds Leader" hidden="false" targetId="a8ed-ca35-24e0-cf2e" primary="false"/>
+        <categoryLink id="6a91-9e5d-c51c-f804" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="d577-751f-577a-e7b3" name="Warpfire Gauntlet" hidden="false" collective="false" import="true" type="upgrade">
@@ -485,6 +509,7 @@
             <profile id="cfec-fb08-b3ad-63b3" name="Warp Lighting Storm" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
+                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick up to D3 enemy units within 13&quot; of the caster and visible to them. Those units each suffer D3 mortal wounds. Before making the casting roll, you can say that this model will use its warp-power accumulator to augment the spell. If you do so and the casting attempt is successful and not unbound, the spell inflicts D6 mortal wounds on each of those units instead of D3. However, if you do so and the casting attempt fails or is unbound,this model suffers D3xD6 mortal wounds.</characteristic>
               </characteristics>
             </profile>
@@ -501,9 +526,10 @@
         <entryLink id="32e8-74d5-7821-b7b8" name="Artefacts" hidden="false" collective="false" import="true" targetId="01be-261c-a6e1-68d6" type="selectionEntryGroup"/>
         <entryLink id="96b3-024a-cc1b-49e3" name="Command Traits" hidden="false" collective="false" import="true" targetId="d469-f2fa-07d9-bd12" type="selectionEntryGroup"/>
         <entryLink id="6836-5239-f544-a7a5" name="Lore of Warpvolt Galvanism (Clans Skyre)" hidden="false" collective="false" import="true" targetId="0bb6-f967-1481-802f" type="selectionEntryGroup"/>
+        <entryLink id="5aac-120f-e32e-2b39" name="Battalions" hidden="false" collective="false" import="true" targetId="286a-2838-49be-5968" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="160.0"/>
+        <cost name="pts" typeId="points" value="175.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="6b0c-69a9-54bf-1ba8" name="Brood Horror" publicationId="bcc4-c671-pubd1e6847" hidden="false" collective="false" import="true" type="unit">
@@ -576,23 +602,14 @@
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <entryLinks>
+        <entryLink id="ade6-0dad-12e9-f9f4" name="Battalions" hidden="false" collective="false" import="true" targetId="286a-2838-49be-5968" type="selectionEntryGroup"/>
+      </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="160.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="ff51-5dac-313e-b769" name="Clanrats" publicationId="bcc4-c671-pubd1e1" page="119" hidden="false" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="set" field="points" value="200.0">
-          <conditions>
-            <condition field="selections" scope="ff51-5dac-313e-b769" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6748-9377-38f3-2237" type="equalTo"/>
-          </conditions>
-        </modifier>
-        <modifier type="set-primary" field="category" value="065e-fda7-fd27-1f40">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="78f3-8a59-699a-61e8" type="instanceOf"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <profiles>
         <profile id="96b2-337e-5aca-094a" name="Clanrats" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
           <characteristics>
@@ -617,13 +634,13 @@
         <categoryLink id="dac4-8455-2b75-7a23" name="New CategoryLink" hidden="false" targetId="e9f2-765a-b7b8-ce8e" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="6748-9377-38f3-2237" name="20 Clanrats" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="6748-9377-38f3-2237" name="20 Clanrats" hidden="false" collective="false" import="true" type="model">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2b56-7a46-5f0f-1904" type="min"/>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7be6-b636-738c-63a6" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7be6-b636-738c-63a6" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="pts" typeId="points" value="130.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="0310-abdc-ac78-9bc0" name="Clanshields" hidden="false" collective="false" import="true" type="upgrade">
@@ -726,8 +743,19 @@
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="1604-63ec-7045-0ce4" name="Reinforced" hidden="false" collective="false" import="true" targetId="0a8d-cde8-fba1-6c0d" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="95f2-6885-756f-9ea5" value="2.0"/>
+          </modifiers>
+          <costs>
+            <cost name="pts" typeId="points" value="145.0"/>
+          </costs>
+        </entryLink>
+        <entryLink id="e1dd-9c7d-4bae-bdf3" name="Battalions" hidden="false" collective="false" import="true" targetId="286a-2838-49be-5968" type="selectionEntryGroup"/>
+      </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="120.0"/>
+        <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="b6ac-b9aa-a40c-1320" name="Doom-flayer" publicationId="bcc4-c671-pubd1e1" page="113" hidden="false" collective="false" import="true" type="unit">
@@ -805,6 +833,9 @@
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <entryLinks>
+        <entryLink id="1c3c-3cf5-536b-f05f" name="Battalions" hidden="false" collective="false" import="true" targetId="286a-2838-49be-5968" type="selectionEntryGroup"/>
+      </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="60.0"/>
       </costs>
@@ -837,6 +868,7 @@
         <categoryLink id="c4b0-2d55-84cf-d8cb" name="New CategoryLink" hidden="false" targetId="daf2-1375-17be-1174" primary="false"/>
         <categoryLink id="5af7-9842-4c07-e780" name="CLANS SKYRE" hidden="false" targetId="5e5d-af59-6ea5-832c" primary="false"/>
         <categoryLink id="2c18-a89c-ac05-98fb" name="SKAVENTIDE" hidden="false" targetId="5ed5-bfa0-f1f7-8b61" primary="false"/>
+        <categoryLink id="eb49-3f1b-8f22-48df" name="New CategoryLink" hidden="false" targetId="fa0c-9044-2568-fa02" primary="true"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="9290-5097-4a9c-8c40" name="Warp Bolts" hidden="false" collective="false" import="true" type="upgrade">
@@ -911,8 +943,11 @@
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <entryLinks>
+        <entryLink id="1f86-8ea8-4087-2cd0" name="Battalions" hidden="false" collective="false" import="true" targetId="286a-2838-49be-5968" type="selectionEntryGroup"/>
+      </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="150.0"/>
+        <cost name="pts" typeId="points" value="165.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="2434-ca8e-36d2-4af0" name="Giant Rats" publicationId="bcc4-c671-pubd1e1" page="123" hidden="false" collective="false" import="true" type="unit">
@@ -975,19 +1010,12 @@
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="f3fc-e3bd-95bd-f5f7" name="10 Giant Rats" hidden="false" collective="false" import="true" type="model">
-          <modifiers>
-            <modifier type="decrement" field="points" value="10">
-              <conditions>
-                <condition field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f3fc-e3bd-95bd-f5f7" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3022-1a80-0078-2cdb" type="min"/>
-            <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="dba9-4f6d-f943-8b6d" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="dba9-4f6d-f943-8b6d" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="60.0"/>
+            <cost name="pts" typeId="points" value="40.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="f702-eaac-bbef-c24d" name="Vicious Teeth" hidden="false" collective="false" import="true" type="upgrade">
@@ -1013,6 +1041,45 @@
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <entryLinks>
+        <entryLink id="7d98-4ed9-c155-65a9" name="Reinforced" hidden="false" collective="false" import="true" targetId="0a8d-cde8-fba1-6c0d" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="95f2-6885-756f-9ea5" value="2.0">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1ebc-adcb-d870-3ea6" type="greaterThan"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3478-7e3a-da0b-2d36" type="greaterThan"/>
+                            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="49f5-6781-e150-eb5f" type="equalTo"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9a0b-8f23-d27c-491a" type="equalTo"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5e5d-af59-6ea5-832c" type="equalTo"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3058-1b6c-3bc2-746d" type="equalTo"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1c25-073b-6d5f-cec3" type="equalTo"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <costs>
+            <cost name="pts" typeId="points" value="40.0"/>
+          </costs>
+        </entryLink>
+        <entryLink id="78c5-797d-b09b-b846" name="Battalions" hidden="false" collective="false" import="true" targetId="286a-2838-49be-5968" type="selectionEntryGroup"/>
+      </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
@@ -1046,8 +1113,9 @@
         <categoryLink id="5d30-b331-4457-4c46" name="New CategoryLink" hidden="false" targetId="4e0e-664d-51ea-0929" primary="false"/>
         <categoryLink id="72cb-2a44-7705-553e" name="New CategoryLink" hidden="false" targetId="4f53-8230-2f02-9639" primary="false"/>
         <categoryLink id="4178-84d8-8ccb-ae81" name="New CategoryLink" hidden="false" targetId="9389-678f-3e93-2ebd" primary="false"/>
-        <categoryLink id="267d-6cf8-aa52-a0a2" name="Leader" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="false"/>
+        <categoryLink id="267d-6cf8-aa52-a0a2" name="Leader" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
         <categoryLink id="c571-5022-8bc2-04e5" name="SKAVENTIDE" hidden="false" targetId="5ed5-bfa0-f1f7-8b61" primary="false"/>
+        <categoryLink id="34c8-e638-d66e-421c" name="10 or less wounds Leader" hidden="false" targetId="a8ed-ca35-24e0-cf2e" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="7f5e-b244-71ec-27ee" name="Warpstone Staff" hidden="false" collective="false" import="true" type="upgrade">
@@ -1081,6 +1149,7 @@
             <profile id="5893-19ee-b645-f70d" name="Wither" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
+                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick 1 enemy unit within 13&quot; of the caster and visible to them, and roll 2D6. If the roll is greater than that unit’s Wounds characteristic, that unit suffers D3 mortal wounds. In addition, if the roll is greater than that unit’s Wounds characteristic, subtract 1 from hit rolls for attacks made with melee weapons by that unit until your next hero phase.</characteristic>
               </characteristics>
             </profile>
@@ -1097,6 +1166,7 @@
         <entryLink id="2f6a-c65b-7b48-8764" name="Artefacts" hidden="false" collective="false" import="true" targetId="01be-261c-a6e1-68d6" type="selectionEntryGroup"/>
         <entryLink id="9ea6-9e51-f43b-50df" name="Command Traits" hidden="false" collective="false" import="true" targetId="d469-f2fa-07d9-bd12" type="selectionEntryGroup"/>
         <entryLink id="52ba-5182-6e24-e665" name="Lore of Ruin (Grey Seer)" hidden="false" collective="false" import="true" targetId="4f40-bd85-82d2-3b53" type="selectionEntryGroup"/>
+        <entryLink id="4bd1-8841-4d7e-72fa" name="Battalions" hidden="false" collective="false" import="true" targetId="286a-2838-49be-5968" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="140.0"/>
@@ -1172,19 +1242,12 @@
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="7e77-e544-e498-0b52" name="5 Gutter Runners" hidden="false" collective="false" import="true" type="model">
-          <modifiers>
-            <modifier type="decrement" field="points" value="10">
-              <conditions>
-                <condition field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7e77-e544-e498-0b52" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="df02-0092-7d25-16c4" type="min"/>
-            <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7dac-33e5-c8a5-b205" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7dac-33e5-c8a5-b205" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="60.0"/>
+            <cost name="pts" typeId="points" value="65.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="be28-f2fa-0195-56b5" name="Eshin Throwing Stars" hidden="false" collective="false" import="true" type="upgrade">
@@ -1232,6 +1295,45 @@
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <entryLinks>
+        <entryLink id="b3fd-95a1-64cf-9d0f" name="Reinforced" hidden="false" collective="false" import="true" targetId="0a8d-cde8-fba1-6c0d" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="95f2-6885-756f-9ea5" value="2.0">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="230d-5573-4086-e687" type="greaterThan"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3478-7e3a-da0b-2d36" type="greaterThan"/>
+                            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="49f5-6781-e150-eb5f" type="equalTo"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5e5d-af59-6ea5-832c" type="equalTo"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="07f3-a813-9aea-eff4" type="equalTo"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3058-1b6c-3bc2-746d" type="equalTo"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1c25-073b-6d5f-cec3" type="equalTo"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <costs>
+            <cost name="pts" typeId="points" value="65.0"/>
+          </costs>
+        </entryLink>
+        <entryLink id="8271-5f26-f19e-a3d2" name="Battalions" hidden="false" collective="false" import="true" targetId="286a-2838-49be-5968" type="selectionEntryGroup"/>
+      </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
@@ -1331,6 +1433,7 @@
         <categoryLink id="460c-65a3-8644-307b" name="New CategoryLink" hidden="false" targetId="4081-bd99-2ccc-03bb" primary="false"/>
         <categoryLink id="2b75-e0c0-ceaa-12e4" name="CLANS MOULDER" hidden="false" targetId="07f3-a813-9aea-eff4" primary="false"/>
         <categoryLink id="5726-8385-a5ca-69cc" name="FIGHTING BEAST" hidden="false" targetId="15a7-9973-d20d-8127" primary="false"/>
+        <categoryLink id="b159-6e90-8159-0ec5" name="New CategoryLink" hidden="false" targetId="fa0c-9044-2568-fa02" primary="true"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="7f32-fe57-708c-e014" name="Gnashing Teeth" hidden="false" collective="false" import="true" type="upgrade">
@@ -1422,9 +1525,10 @@
       </selectionEntries>
       <entryLinks>
         <entryLink id="43bb-7f7a-472d-71aa" name="Clan Moulder Mutations" hidden="false" collective="false" import="true" targetId="0047-9dee-92ff-5edd" type="selectionEntryGroup"/>
+        <entryLink id="c88f-9d01-7f6d-f919" name="Battalions" hidden="false" collective="false" import="true" targetId="286a-2838-49be-5968" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="220.0"/>
+        <cost name="pts" typeId="points" value="240.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="9113-2b30-d50d-71d8" name="Doom Glaive" hidden="false" collective="false" import="true" type="upgrade">
@@ -1501,7 +1605,19 @@
         </profile>
         <profile id="1726-736e-9777-166d" name="The Thirteen-headed One" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the start of your hero phase, pick 1 one of the following areas of knowledge for this model to draw upon. The rule for that area of knowledge applies to this model until your next hero phase. You cannot pick the same area of knowledge more than once per battle.  Knowledge of the Arcane: Add 1 to casting, dispelling and unbinding rolls for this model.  Knowledge of Fleshcrafting: Heal D3 wounds allocated to this model when you pick this area of knowledge.   Knowledge of Plague-brewing: If the unmodified hit roll for an attack made with this model’s Plaguereaper is 6, that attack inflicts 1 mortal wound on the target in addition to any normal damage.   Knowledge of Shadowslinking: Subtract 1 from hit rolls for attacks that target this model. Knowledge of Warp-tech: This model’s Doom Glaive has a Rend characteristic of -3 instead of -1.   Knowledge of the Warrior: Add 1 to hit rolls for attacks made by this model.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the start of your hero phase, pick 1 one of the following areas of knowledge for this model to draw upon. The rule for that area of knowledge applies to this model until your next hero phase. You cannot pick the same area of knowledge more than once per battle.  
+
+Knowledge of the Arcane: Add 1 to casting, dispelling and unbinding rolls for this model. 
+
+Knowledge of Fleshcrafting: Heal D3 wounds allocated to this model when you pick this area of knowledge. 
+
+Knowledge of Plague-brewing: If the unmodified hit roll for an attack made with this model’s Plaguereaper is 6, that attack inflicts 1 mortal wound on the target in addition to any normal damage. 
+
+Knowledge of Shadowslinking: Subtract 1 from hit rolls for attacks that target this model. 
+
+Knowledge of Warp-tech: This model’s Doom Glaive has a Rend characteristic of -3 instead of -1.
+
+Knowledge of the Warrior: Add 1 to hit rolls for attacks made by this model.</characteristic>
           </characteristics>
         </profile>
         <profile id="cf2b-7717-5b96-aef4" name="Lord Skreech Verminking" hidden="false" typeId="f55d-ee3a-1597-110f" typeName="Magic">
@@ -1563,6 +1679,16 @@
             <characteristic name="Variable 4" typeId="ad26-bf56-95c4-80f1">4</characteristic>
           </characteristics>
         </profile>
+        <profile id="dd55-54c3-b697-6397" name="Protection of the Horned Rat" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Roll a dice each time you allocate a wound or mortal wound to this model. On a 5+ that wound or mortal wound is negated.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="d6e3-cbc5-b8a0-0d9f" name="Terrifying" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Subtract 1 from the Bravery characteristic of enemy units while they are within 3&quot; of any models with this ability.</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
       <categoryLinks>
         <categoryLink id="9f41-9ea5-2e93-66a5" name="New CategoryLink" hidden="false" targetId="7cdd-80ea-cbeb-8e16" primary="false"/>
@@ -1574,6 +1700,8 @@
         <categoryLink id="8f3c-5af8-712d-cad0" name="New CategoryLink" hidden="false" targetId="38f1-f8fd-e4dc-6f60" primary="false"/>
         <categoryLink id="ace1-5e72-e6f7-0668" name="New CategoryLink" hidden="false" targetId="c3d0-d29c-5790-1fe9" primary="false"/>
         <categoryLink id="af46-4954-21f1-5184" name="SKAVENTIDE" hidden="false" targetId="5ed5-bfa0-f1f7-8b61" primary="false"/>
+        <categoryLink id="0884-6e50-bdae-c457" name="Behemoth" hidden="false" targetId="fa0c-9044-2568-fa02" primary="false"/>
+        <categoryLink id="d2a1-ac61-2a78-0907" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="1dde-fcda-60d9-dda9" name="The Dreaded Thirteenth Spell" hidden="false" collective="false" import="true" type="upgrade">
@@ -1585,6 +1713,7 @@
             <profile id="1d88-bddc-2107-754f" name="The Dreaded Thirteenth Spell" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">8</characteristic>
+                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick 1 enemy unit within 13&quot; of the caster and visible to them, and roll 13 dice. For each 4+ that unit suffers 1 mortal wound. You can then summon 1 unit of Clanrats to the battlefield, and add it to your army. The summoned unit can have up to 1 model for each mortal wound that was inflicted by this spell. The summoned unit must be set up wholly within 13&quot; of the caster and more than 9&quot; from any enemy units. The summoned unit cannot move in the following movement phase.</characteristic>
               </characteristics>
             </profile>
@@ -1647,9 +1776,10 @@
             <categoryLink id="58e8-5110-9ba1-461e" name="Unique General" hidden="false" targetId="fe3f-d230-7e2c-fba2" primary="false"/>
           </categoryLinks>
         </entryLink>
+        <entryLink id="b53d-a99f-ed53-d81a" name="Battalions" hidden="false" collective="false" import="true" targetId="286a-2838-49be-5968" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="320.0"/>
+        <cost name="pts" typeId="points" value="330.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="1175-a790-812e-7206" name="Night Runners" publicationId="bcc4-c671-pubd1e1" page="124" hidden="false" collective="false" import="true" type="unit">
@@ -1728,19 +1858,12 @@
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="2406-bc83-6b87-3101" name="10 Night Runners" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="decrement" field="points" value="10">
-              <conditions>
-                <condition field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2406-bc83-6b87-3101" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7f57-09c4-efbe-4dee" type="min"/>
-            <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="82fb-3337-0ee8-bec8" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="82fb-3337-0ee8-bec8" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="80.0"/>
+            <cost name="pts" typeId="points" value="85.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="0d36-0d61-d18f-417b" name="Eshin Throwing Weapons" hidden="false" collective="false" import="true" type="upgrade">
@@ -1788,6 +1911,46 @@
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <entryLinks>
+        <entryLink id="0efc-687a-48b2-5ee0" name="Reinforced" hidden="false" collective="false" import="true" targetId="0a8d-cde8-fba1-6c0d" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="95f2-6885-756f-9ea5" value="2.0">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="230d-5573-4086-e687" type="greaterThan"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3478-7e3a-da0b-2d36" type="greaterThan"/>
+                            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="49f5-6781-e150-eb5f" type="equalTo"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="07f3-a813-9aea-eff4" type="equalTo"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5e5d-af59-6ea5-832c" type="equalTo"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3058-1b6c-3bc2-746d" type="equalTo"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1c25-073b-6d5f-cec3" type="equalTo"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fa82-5fdb-6243-958a" type="equalTo"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <costs>
+            <cost name="pts" typeId="points" value="85.0"/>
+          </costs>
+        </entryLink>
+        <entryLink id="2332-1cfc-8f06-827e" name="Battalions" hidden="false" collective="false" import="true" targetId="286a-2838-49be-5968" type="selectionEntryGroup"/>
+      </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
@@ -1824,6 +1987,16 @@
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="add" field="category" value="b29e-7f2f-e37e-7197">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
+              </conditions>
             </conditionGroup>
           </conditionGroups>
         </modifier>
@@ -1866,10 +2039,10 @@
         <selectionEntry id="665a-b1b0-7940-2f64" name="5 Plague Censer Bearers" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="be3c-87c0-56fa-ded1" type="min"/>
-            <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="cac8-9842-391c-a558" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="cac8-9842-391c-a558" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="60.0"/>
+            <cost name="pts" typeId="points" value="65.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="ffc0-fcbc-eb01-4711" name="Plague Censers" hidden="false" collective="false" import="true" type="upgrade">
@@ -1895,11 +2068,63 @@
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <entryLinks>
+        <entryLink id="7663-8e31-de35-f606" name="Reinforced" hidden="false" collective="false" import="true" targetId="0a8d-cde8-fba1-6c0d" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="95f2-6885-756f-9ea5" value="2.0">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="113c-cd67-094e-5195" type="greaterThan"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3478-7e3a-da0b-2d36" type="greaterThan"/>
+                            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="49f5-6781-e150-eb5f" type="equalTo"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="07f3-a813-9aea-eff4" type="equalTo"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5e5d-af59-6ea5-832c" type="equalTo"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3058-1b6c-3bc2-746d" type="equalTo"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9a0b-8f23-d27c-491a" type="equalTo"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fa82-5fdb-6243-958a" type="equalTo"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <costs>
+            <cost name="pts" typeId="points" value="65.0"/>
+          </costs>
+        </entryLink>
+        <entryLink id="a7eb-c42e-319b-03af" name="Battalions" hidden="false" collective="false" import="true" targetId="286a-2838-49be-5968" type="selectionEntryGroup"/>
+      </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="92a9-a243-a1df-ca15" name="Plague Priest on Plague Furnace" publicationId="e316-99a9-2860-3a7c" page="" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="add" field="category" value="b29e-7f2f-e37e-7197">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="5ed5-01f4-bf78-6a13" name="Plague Furnace" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
           <characteristics>
@@ -2054,12 +2279,16 @@
             </profile>
             <profile id="0c34-7df2-71c8-4940" name="Rabid-rabid!" hidden="false" typeId="eed7-4131-0a52-0668" typeName="Prayer">
               <characteristics>
-                <characteristic name="Description" typeId="0746-6cfb-5e15-53cb">If this prayer is answered, pick 1 friendly CLANS PESTILENS unit wholly within 13&quot; of this model. Add 1 to the Attacks characteristic of melee weapons used by that unit until your next hero phase. You cannot pick the same unit to be affected by this prayer more than once per hero phase.</characteristic>
+                <characteristic name="Answer Value" typeId="276a-ab7e-145d-3ffc">3</characteristic>
+                <characteristic name="Range" typeId="fd81-4e98-28ac-092a">13&quot;</characteristic>
+                <characteristic name="Description" typeId="0746-6cfb-5e15-53cb">If answered, pick 1 friendly CLANS PESTILENS unit wholly within range and visible to the chanter. Add 1 to the Attacks characteristic of melee weapons used by that unit until the start of your next hero phase.</characteristic>
               </characteristics>
             </profile>
             <profile id="bfc7-a112-05ff-7bc5" name="Filth-filth!" hidden="false" typeId="eed7-4131-0a52-0668" typeName="Prayer">
               <characteristics>
-                <characteristic name="Description" typeId="0746-6cfb-5e15-53cb">If this prayer is answered, pick 1 friendly CLANS PESTILENS unit wholly within 13&quot; of this model. You can re-roll wound rolls for attacks made by that unit until your next hero phase.</characteristic>
+                <characteristic name="Answer Value" typeId="276a-ab7e-145d-3ffc">3</characteristic>
+                <characteristic name="Range" typeId="fd81-4e98-28ac-092a">13&quot;</characteristic>
+                <characteristic name="Description" typeId="0746-6cfb-5e15-53cb">If answered, pick 1 friendly CLANS PESTILENS unit wholly within range and visible to the chanter. Add 1 to wound rolls for attack made by that unit until the start of your next hero phase.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -2119,8 +2348,14 @@
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <entryLinks>
+        <entryLink id="faa7-01f7-2f0a-1f56" name="Battalions" hidden="false" collective="false" import="true" targetId="286a-2838-49be-5968" type="selectionEntryGroup"/>
+        <entryLink id="fd8f-5c4e-65e4-628d" name="Prayers" hidden="false" collective="false" import="true" targetId="ff40-9e7b-b23e-68e1" type="selectionEntryGroup"/>
+        <entryLink id="ae8f-2376-41a1-942d" name="Bless" hidden="false" collective="false" import="true" targetId="c064-0ddb-52cf-5fb9" type="selectionEntry"/>
+        <entryLink id="4e3f-f1ae-2dba-cfe0" name="Smite" hidden="false" collective="false" import="true" targetId="be59-6ab9-bf9f-9434" type="selectionEntry"/>
+      </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="200.0"/>
+        <cost name="pts" typeId="points" value="245.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="23db-8084-a4b7-750c" name="Plague Monks" publicationId="bcc4-c671-pubd1e1" page="116" hidden="false" collective="false" import="true" type="unit">
@@ -2151,6 +2386,16 @@
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="add" field="category" value="b29e-7f2f-e37e-7197">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <profiles>
         <profile id="3292-f3ef-e3c5-2f6b" name="Plague Monk" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
@@ -2171,6 +2416,11 @@
             <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If the unmodified wound roll for an attack made with a melee weapon by this unit is 6, that attack succeeds twice instead of once. Make a save roll for each success.</characteristic>
           </characteristics>
         </profile>
+        <profile id="b89a-1bf1-4d4d-5db4" name="Book of Woes" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">In your hero phase, you can pick 1 enemy unit within 13&quot; of this unit’s Bringer-of-the-Word and roll a dice. On a 1-3, nothing happens. On a 4-5, that unit suffers 1 mortal wound. On a 6, that unit suffers D3 mortal wounds. This ability has no effect on Nurgle units.</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
       <categoryLinks>
         <categoryLink id="2683-d29b-fa0a-a51f" name="New CategoryLink" hidden="false" targetId="7cdd-80ea-cbeb-8e16" primary="false"/>
@@ -2183,19 +2433,12 @@
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="30ba-9d00-8003-dc57" name="10 Plague Monks" hidden="false" collective="false" import="true" type="model">
-          <modifiers>
-            <modifier type="decrement" field="points" value="10.0">
-              <conditions>
-                <condition field="selections" scope="23db-8084-a4b7-750c" value="4.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="30ba-9d00-8003-dc57" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a1db-fd39-2f9a-7e74" type="min"/>
-            <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="bbc9-4a7c-6594-0ea8" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="bbc9-4a7c-6594-0ea8" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="80.0"/>
+            <cost name="pts" typeId="points" value="85.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="aff5-54e4-050e-8757" name="Standard Bearers" hidden="false" collective="false" import="true" type="upgrade">
@@ -2274,32 +2517,57 @@
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup id="f7b1-9cb8-dc6f-3496" name="Bringer-of-the-Word Weapon Choice" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="25ed-65e3-ca79-7db3" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9582-1293-4d14-17b8" type="max"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="39c7-e893-fb13-6280" name="Foetid Blade and Book of Woes" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="ec17-874b-54f8-10e6" name="Book of Woes" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-                  <characteristics>
-                    <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">In your hero phase, you can pick 1 enemy unit within 13&quot; of this unit’s Bringer-of-the-Word and roll a dice. On a 1-3, nothing happens. On a 4-5, that unit suffers 1 mortal wound. On a 6, that unit suffers D3 mortal wounds. This ability has no effect on Nurgle units.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="points" value="0.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
       </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="3a91-6464-16f7-0e08" name="Reinforced" hidden="false" collective="false" import="true" targetId="0a8d-cde8-fba1-6c0d" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="95f2-6885-756f-9ea5" value="2.0">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="113c-cd67-094e-5195" type="greaterThan"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3478-7e3a-da0b-2d36" type="greaterThan"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="07f3-a813-9aea-eff4" type="equalTo"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5e5d-af59-6ea5-832c" type="equalTo"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3058-1b6c-3bc2-746d" type="equalTo"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9a0b-8f23-d27c-491a" type="equalTo"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fa82-5fdb-6243-958a" type="equalTo"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <costs>
+            <cost name="pts" typeId="points" value="85.0"/>
+          </costs>
+        </entryLink>
+        <entryLink id="343c-6852-5432-944c" name="Battalions" hidden="false" collective="false" import="true" targetId="286a-2838-49be-5968" type="selectionEntryGroup"/>
+      </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="8d7d-46a4-7a4b-28a8" name="Plague Priest" publicationId="bcc4-c671-pubd1e1" page="114" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="add" field="category" value="b29e-7f2f-e37e-7197">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="7a5b-d9d8-6b7c-6df0" name="Plague Priest" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
           <characteristics>
@@ -2316,12 +2584,16 @@
         </profile>
         <profile id="ccb4-a808-39f1-40bb" name="Disease-disease!" hidden="false" typeId="eed7-4131-0a52-0668" typeName="Prayer">
           <characteristics>
-            <characteristic name="Description" typeId="0746-6cfb-5e15-53cb">If this prayer is answered, pick 1 enemy unit within 13&quot; of this model, and roll 1 dice for each model in that unit. For each 6, that unit suffers 1 mortal wound. This prayer has no effect on CLANS PESTILENS unit.</characteristic>
+            <characteristic name="Answer Value" typeId="276a-ab7e-145d-3ffc">3</characteristic>
+            <characteristic name="Range" typeId="fd81-4e98-28ac-092a">13&quot;</characteristic>
+            <characteristic name="Description" typeId="0746-6cfb-5e15-53cb">If answered, pick 1 enemy unit within range and is visible to the chanter. Roll 1 dice for each model in that unit. For each 6, that unit suffers 1 mortal wound. This prayer has no effect on CLANS PESTILENS units.</characteristic>
           </characteristics>
         </profile>
         <profile id="ab96-d300-4e93-6604" name="Pestilence-pestilence!" hidden="false" typeId="eed7-4131-0a52-0668" typeName="Prayer">
           <characteristics>
-            <characteristic name="Description" typeId="0746-6cfb-5e15-53cb">If this prayer is answered, pick a point on the battlefield that is within 13&quot; of this model. Roll a dice for each unit within 3&quot; of that point. On 4+ that unit suffers D3 mortal wounds. This prayer has no effect on CLANS PESTILENS units.</characteristic>
+            <characteristic name="Answer Value" typeId="276a-ab7e-145d-3ffc">3</characteristic>
+            <characteristic name="Range" typeId="fd81-4e98-28ac-092a">13&quot;</characteristic>
+            <characteristic name="Description" typeId="0746-6cfb-5e15-53cb">If answered, pick a point on the battlefield within range and visible to the chanter. Roll a dice for each unit within 3&quot; of that point. On a 4+, that unit suffers D3 mortal wounds. This prayer has no effect on CLANS PESTILENS units.</characteristic>
           </characteristics>
         </profile>
         <profile id="a61d-8ae8-bc75-060b" name="Plague Prayers" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
@@ -2344,6 +2616,7 @@
         <categoryLink id="e78f-7edf-e593-3d0e" name="New CategoryLink" hidden="false" targetId="774f-ffa8-46bc-3f97" primary="false"/>
         <categoryLink id="39c0-72aa-c9c2-8076" name="CLANS PESTILENS" hidden="false" targetId="1c25-073b-6d5f-cec3" primary="false"/>
         <categoryLink id="f184-4658-2c66-71ce" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
+        <categoryLink id="0592-9012-1cb2-4193" name="10 or less wounds Leader" hidden="false" targetId="a8ed-ca35-24e0-cf2e" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="b52f-a903-c2cd-cc96" name="Plague Censer" hidden="false" collective="false" import="true" type="upgrade">
@@ -2395,12 +2668,28 @@
         <entryLink id="42ad-3247-b3d9-e1f2" name="General - Clans Pestilens" hidden="false" collective="false" import="true" targetId="113c-cd67-094e-5195" type="selectionEntry"/>
         <entryLink id="b90b-4d6b-c436-e54b" name="Artefacts" hidden="false" collective="false" import="true" targetId="01be-261c-a6e1-68d6" type="selectionEntryGroup"/>
         <entryLink id="1b7e-b23d-5206-9ddc" name="Command Traits" hidden="false" collective="false" import="true" targetId="d469-f2fa-07d9-bd12" type="selectionEntryGroup"/>
+        <entryLink id="cd26-1884-74c0-63ed" name="Battalions" hidden="false" collective="false" import="true" targetId="286a-2838-49be-5968" type="selectionEntryGroup"/>
+        <entryLink id="c08f-dd4b-3b4c-9681" name="Prayers" hidden="false" collective="false" import="true" targetId="ff40-9e7b-b23e-68e1" type="selectionEntryGroup"/>
+        <entryLink id="7965-ea9b-9a3b-39b4" name="Bless" hidden="false" collective="false" import="true" targetId="c064-0ddb-52cf-5fb9" type="selectionEntry"/>
+        <entryLink id="ce86-7040-9ac6-136e" name="Smite" hidden="false" collective="false" import="true" targetId="be59-6ab9-bf9f-9434" type="selectionEntry"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="80.0"/>
+        <cost name="pts" typeId="points" value="85.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="b200-bf68-a22d-efe6" name="Plagueclaw" publicationId="bcc4-c671-pubd1e1" page="114" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="add" field="category" value="b29e-7f2f-e37e-7197">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="c8be-0fce-a742-91d0" name="Plagueclaw" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
           <characteristics>
@@ -2477,8 +2766,11 @@
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <entryLinks>
+        <entryLink id="814f-138c-0ce5-992a" name="Battalions" hidden="false" collective="false" import="true" targetId="286a-2838-49be-5968" type="selectionEntryGroup"/>
+      </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="150.0"/>
+        <cost name="pts" typeId="points" value="160.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="082e-175f-0ccd-15c2" name="Prehensile Tails" hidden="false" collective="false" import="true" type="upgrade">
@@ -2564,13 +2856,13 @@
         <categoryLink id="d4de-0793-cca4-2d9b" name="New CategoryLink" hidden="false" targetId="065e-fda7-fd27-1f40" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="ca82-45e9-5486-4dff" name="2 Rat Ogors" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="ca82-45e9-5486-4dff" name="2 Rat Ogors" hidden="false" collective="false" import="true" type="model">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b956-27d8-2715-8575" type="min"/>
-            <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1438-f972-2400-ab2a" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1438-f972-2400-ab2a" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="90.0"/>
+            <cost name="pts" typeId="points" value="95.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="a217-b481-97f6-189f" name="Warpfire Guns" hidden="false" collective="false" import="true" type="upgrade">
@@ -2627,6 +2919,43 @@
       </selectionEntries>
       <entryLinks>
         <entryLink id="d2e0-bf07-b937-23ba" name="Clan Moulder Mutations" hidden="false" collective="false" import="true" targetId="0047-9dee-92ff-5edd" type="selectionEntryGroup"/>
+        <entryLink id="7e10-b36f-f245-2336" name="Reinforced" hidden="false" collective="false" import="true" targetId="0a8d-cde8-fba1-6c0d" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="95f2-6885-756f-9ea5" value="2.0">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1ebc-adcb-d870-3ea6" type="greaterThan"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3478-7e3a-da0b-2d36" type="greaterThan"/>
+                            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="49f5-6781-e150-eb5f" type="equalTo"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9a0b-8f23-d27c-491a" type="equalTo"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3058-1b6c-3bc2-746d" type="equalTo"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1c25-073b-6d5f-cec3" type="equalTo"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5e5d-af59-6ea5-832c" type="equalTo"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <costs>
+            <cost name="pts" typeId="points" value="95.0"/>
+          </costs>
+        </entryLink>
+        <entryLink id="6813-cc60-f680-1d8e" name="Battalions" hidden="false" collective="false" import="true" targetId="286a-2838-49be-5968" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
@@ -2654,12 +2983,13 @@
         <categoryLink id="3305-2d39-4a2f-d018" name="CLANS MOULDER" hidden="false" targetId="07f3-a813-9aea-eff4" primary="false"/>
         <categoryLink id="133a-50f0-6bf7-58bd" name="PACK" hidden="false" targetId="2ac2-2071-3708-8cd0" primary="false"/>
         <categoryLink id="0648-17fc-9b0a-2f38" name="SKAVENTIDE" hidden="false" targetId="5ed5-bfa0-f1f7-8b61" primary="false"/>
+        <categoryLink id="bd9c-8c9b-2e37-2e5f" name="New CategoryLink" hidden="false" targetId="065e-fda7-fd27-1f40" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="eea4-b539-65e0-aede" name="2 Rat Swarms" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="eea4-b539-65e0-aede" name="2 Rat Swarms" hidden="false" collective="false" import="true" type="model">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="eb37-4c64-4c58-b481" type="min"/>
-            <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e842-b322-bf09-8e72" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e842-b322-bf09-8e72" type="max"/>
           </constraints>
           <costs>
             <cost name="pts" typeId="points" value="60.0"/>
@@ -2688,6 +3018,14 @@
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <entryLinks>
+        <entryLink id="800a-98ac-8bb8-9432" name="Reinforced" hidden="false" collective="false" import="true" targetId="0a8d-cde8-fba1-6c0d" type="selectionEntry">
+          <costs>
+            <cost name="pts" typeId="points" value="60.0"/>
+          </costs>
+        </entryLink>
+        <entryLink id="116d-b78e-03d7-355f" name="Battalions" hidden="false" collective="false" import="true" targetId="286a-2838-49be-5968" type="selectionEntryGroup"/>
+      </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
@@ -2763,7 +3101,7 @@
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="points" value="60.0"/>
+        <cost name="pts" typeId="points" value="65.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="fae5-92d3-1574-e761" name="Grey Seer on Screaming Bell" publicationId="e316-99a9-2860-3a7c" page="" hidden="false" collective="false" import="true" type="unit">
@@ -2902,6 +3240,7 @@
             <profile id="34bc-e88a-3557-e3f0" name="Cracks Call" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
+                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick 1 enemy unit within 18&quot; of the caster and visible to them, and roll 2D6. If the roll is greater than that unit’s Move characteristic, that unit suffers a number of mortal wounds equal to the difference between its Move characteristic and the roll. This spell has no effect on units that can fly.</characteristic>
               </characteristics>
             </profile>
@@ -3000,18 +3339,14 @@
         <entryLink id="767a-2511-44c9-c50d" name="Command Traits" hidden="false" collective="false" import="true" targetId="d469-f2fa-07d9-bd12" type="selectionEntryGroup"/>
         <entryLink id="c50e-fa68-a2ed-dc05" name="Artefacts" hidden="false" collective="false" import="true" targetId="01be-261c-a6e1-68d6" type="selectionEntryGroup"/>
         <entryLink id="50c4-7fe4-54a1-9830" name="Lore of Ruin (Grey Seer)" hidden="false" collective="false" import="true" targetId="4f40-bd85-82d2-3b53" type="selectionEntryGroup"/>
+        <entryLink id="a363-26d6-0bd5-0df8" name="Battalions" hidden="false" collective="false" import="true" targetId="286a-2838-49be-5968" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="240.0"/>
+        <cost name="pts" typeId="points" value="265.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="c1d1-fc15-9135-142b" name="Skryre Acolytes" publicationId="bcc4-c671-pubd1e1" page="109" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
-        <modifier type="set" field="points" value="200.0">
-          <conditions>
-            <condition field="selections" scope="c1d1-fc15-9135-142b" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2fd3-c35d-85c5-aab3" type="equalTo"/>
-          </conditions>
-        </modifier>
         <modifier type="set-primary" field="category" value="e9f2-765a-b7b8-ce8e">
           <conditionGroups>
             <conditionGroup type="and">
@@ -3075,19 +3410,12 @@
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="2fd3-c35d-85c5-aab3" name="5 Acolytes" hidden="false" collective="false" import="true" type="model">
-          <modifiers>
-            <modifier type="set" field="points" value="0.0">
-              <conditions>
-                <condition field="selections" scope="c1d1-fc15-9135-142b" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2fd3-c35d-85c5-aab3" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6012-84b7-604d-cc35" type="min"/>
-            <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6c20-6161-30aa-b52c" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6c20-6161-30aa-b52c" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="60.0"/>
+            <cost name="pts" typeId="points" value="65.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="b594-6212-b703-6882" name="Rusty Knife" hidden="false" collective="false" import="true" type="upgrade">
@@ -3135,6 +3463,45 @@
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <entryLinks>
+        <entryLink id="c641-d2cf-57b9-2752" name="Reinforced" hidden="false" collective="false" import="true" targetId="0a8d-cde8-fba1-6c0d" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="95f2-6885-756f-9ea5" value="2.0">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="103a-ea19-f285-ca41" type="greaterThan"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3478-7e3a-da0b-2d36" type="greaterThan"/>
+                            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="49f5-6781-e150-eb5f" type="equalTo"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9a0b-8f23-d27c-491a" type="equalTo"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="07f3-a813-9aea-eff4" type="equalTo"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3058-1b6c-3bc2-746d" type="equalTo"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1c25-073b-6d5f-cec3" type="equalTo"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <costs>
+            <cost name="pts" typeId="points" value="65.0"/>
+          </costs>
+        </entryLink>
+        <entryLink id="89fb-817b-873d-ad71" name="Battalions" hidden="false" collective="false" import="true" targetId="286a-2838-49be-5968" type="selectionEntryGroup"/>
+      </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
@@ -3186,7 +3553,7 @@
       <selectionEntries>
         <selectionEntry id="99fc-4808-65c4-5c8e" name="3 Stormfiends" hidden="false" collective="false" import="true" type="model">
           <constraints>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="64ac-60f2-000c-7d46" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="64ac-60f2-000c-7d46" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c9ed-3718-70ad-27a1" type="min"/>
           </constraints>
           <profiles>
@@ -3200,7 +3567,7 @@
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="points" value="260.0"/>
+            <cost name="pts" typeId="points" value="315.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -3399,6 +3766,45 @@
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="8b7f-dadb-ed3f-b8c2" name="Reinforced" hidden="false" collective="false" import="true" targetId="0a8d-cde8-fba1-6c0d" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="95f2-6885-756f-9ea5" value="2.0">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="103a-ea19-f285-ca41" type="greaterThan"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3478-7e3a-da0b-2d36" type="greaterThan"/>
+                            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="49f5-6781-e150-eb5f" type="equalTo"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9a0b-8f23-d27c-491a" type="equalTo"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="07f3-a813-9aea-eff4" type="equalTo"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3058-1b6c-3bc2-746d" type="equalTo"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1c25-073b-6d5f-cec3" type="equalTo"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <costs>
+            <cost name="pts" typeId="points" value="315.0"/>
+          </costs>
+        </entryLink>
+        <entryLink id="e5de-be29-7eb6-33fc" name="Battalions" hidden="false" collective="false" import="true" targetId="286a-2838-49be-5968" type="selectionEntryGroup"/>
+      </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
@@ -3447,7 +3853,7 @@
             <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5877-a41f-9693-d9d3" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="100.0"/>
+            <cost name="pts" typeId="points" value="110.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="f68c-6727-492c-4a78" name="Rusty Halberds" hidden="false" collective="false" import="true" type="upgrade">
@@ -3526,6 +3932,17 @@
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <entryLinks>
+        <entryLink id="4657-4020-1317-5508" name="Reinforced" hidden="false" collective="false" import="true" targetId="0a8d-cde8-fba1-6c0d" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="95f2-6885-756f-9ea5" value="2.0"/>
+          </modifiers>
+          <costs>
+            <cost name="pts" typeId="points" value="110.0"/>
+          </costs>
+        </entryLink>
+        <entryLink id="85f8-b2d2-2375-e34b" name="Battalions" hidden="false" collective="false" import="true" targetId="286a-2838-49be-5968" type="selectionEntryGroup"/>
+      </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
@@ -3639,6 +4056,7 @@
             <profile id="07b7-aaa3-c90b-92f0" name="Madness" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">8</characteristic>
+                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick 1 enemy HERO within 3&quot; of the caster and visible to them, and roll a number of dice equal to the combined value of the Attacks characteristics of all melee weapons that HERO is armed with. For each 5+ you can inflict 1 mortal wound on 1 enemy unit within 3&quot; of that HERO (you can choose different units to suffer the mortal wounds if you wish).</characteristic>
               </characteristics>
             </profile>
@@ -3762,12 +4180,25 @@
           </categoryLinks>
         </entryLink>
         <entryLink id="d63a-ac9c-c609-b80c" name="Spell Lores" hidden="false" collective="false" import="true" targetId="4b53-bbff-8558-f42c" type="selectionEntryGroup"/>
+        <entryLink id="9a7f-394c-8868-3cbb" name="Battalions" hidden="false" collective="false" import="true" targetId="286a-2838-49be-5968" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="390.0"/>
+        <cost name="pts" typeId="points" value="405.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="0afb-be63-f27c-0b71" name="Verminlord Corruptor" publicationId="e316-99a9-2860-3a7c" page="" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="add" field="category" value="b29e-7f2f-e37e-7197">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="b56f-8bc8-bbc6-bf48" name="Verminlord Corruptor" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
           <characteristics>
@@ -3904,6 +4335,7 @@
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick 1 enemy unit within 13&quot; of the caster and roll 1 dice for each model in that unit. For each 4+ that unit suffers1 mortal wound.</characteristic>
+                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
               </characteristics>
             </profile>
           </profiles>
@@ -3920,9 +4352,10 @@
         <entryLink id="8ac0-86cc-e86e-ddaf" name="Artefacts" hidden="false" collective="false" import="true" targetId="01be-261c-a6e1-68d6" type="selectionEntryGroup"/>
         <entryLink id="c9f1-cac7-c037-c572" name="Command Traits" hidden="false" collective="false" import="true" targetId="d469-f2fa-07d9-bd12" type="selectionEntryGroup"/>
         <entryLink id="84bd-5706-092c-3d5f" name="Spell Lores" hidden="false" collective="false" import="true" targetId="4b53-bbff-8558-f42c" type="selectionEntryGroup"/>
+        <entryLink id="568b-a73d-0901-d027" name="Battalions" hidden="false" collective="false" import="true" targetId="286a-2838-49be-5968" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="280.0"/>
+        <cost name="pts" typeId="points" value="285.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="2704-6a04-1a1f-05a0" name="Verminlord Deceiver" publicationId="bcc4-c671-pubd1e1" page="101" hidden="false" collective="false" import="true" type="unit">
@@ -4082,6 +4515,7 @@
             <profile id="78ae-954d-c59f-9a2a" name="Dreaded Skitterleap" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
+                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick 1 friendly SKAVENTIDE HERO with a Wounds characteristic of 12 or less that is within 26&quot; of the caster and visible to them. Remove that HERO from the battlefield and then set it up again anywhere on the battlefield more than 6&quot; from any enemy units. That HERO may not move in the following movement phase</characteristic>
               </characteristics>
             </profile>
@@ -4098,9 +4532,10 @@
         <entryLink id="5fe1-5eb0-07d5-90a1" name="General - Clans Eshin" hidden="false" collective="false" import="true" targetId="230d-5573-4086-e687" type="selectionEntry"/>
         <entryLink id="998a-1b90-04cd-98c4" name="Artefacts" hidden="false" collective="false" import="true" targetId="01be-261c-a6e1-68d6" type="selectionEntryGroup"/>
         <entryLink id="453d-dccb-5b68-4a16" name="Command Traits" hidden="false" collective="false" import="true" targetId="d469-f2fa-07d9-bd12" type="selectionEntryGroup"/>
+        <entryLink id="14e8-04fa-a3cd-6626" name="Battalions" hidden="false" collective="false" import="true" targetId="286a-2838-49be-5968" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="320.0"/>
+        <cost name="pts" typeId="points" value="345.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="25a7-52de-a434-2624" name="Verminlord Warbringer" publicationId="e316-99a9-2860-3a7c" page="" hidden="false" collective="false" import="true" type="unit">
@@ -4190,6 +4625,7 @@
         <profile id="597d-607c-567e-ff91" name="Dreaded Death Frenzy" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
           <characteristics>
             <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
+            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
             <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick up to D3 friendly SKAVENTIDE units wholly within 13&quot; of the caster and visible to them. Until your next hero phase, when a model from any of those units is slain, before it is removed from play, it can make a pile-in move and then attack with all of the melee weapons it is armed with.</characteristic>
           </characteristics>
         </profile>
@@ -4244,9 +4680,10 @@
         <entryLink id="567e-741b-dda9-07ed" name="General - Clans Verminous" hidden="false" collective="false" import="true" targetId="b60e-1aa4-96da-a83b" type="selectionEntry"/>
         <entryLink id="cb79-8c4c-93e6-9c7a" name="Artefacts" hidden="false" collective="false" import="true" targetId="01be-261c-a6e1-68d6" type="selectionEntryGroup"/>
         <entryLink id="f608-4b66-852a-61d5" name="Command Traits" hidden="false" collective="false" import="true" targetId="d469-f2fa-07d9-bd12" type="selectionEntryGroup"/>
+        <entryLink id="93a6-fdc5-d64f-362b" name="Battalions" hidden="false" collective="false" import="true" targetId="286a-2838-49be-5968" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="280.0"/>
+        <cost name="pts" typeId="points" value="305.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="afcf-0ce4-791c-c63f" name="Verminlord Warpseer" publicationId="e316-99a9-2860-3a7c" page="104" hidden="false" collective="false" import="true" type="unit">
@@ -4261,7 +4698,7 @@
         </profile>
         <profile id="c69c-2632-3566-cde7" name="Scry-orb" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">You can re-roll save rolls for attacks that target this model. In addition, once per battle, in your shooting phase, you can pick 1 enemy unit within 13&quot; of this model and visible to them. That unit suffers D6 mortal wounds, but you cannot use this ability to re-roll save rolls for this model for the rest of the battle.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Add 1 to save rolls for attacks that target this model.</characteristic>
           </characteristics>
         </profile>
         <profile id="6c6e-cc88-a9b7-1f1c" name="Verminlord Warpseer" hidden="false" typeId="f55d-ee3a-1597-110f" typeName="Magic">
@@ -4325,7 +4762,7 @@
         </profile>
         <profile id="73b7-11c5-42c7-bc32" name="The Great Manipulators" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If this model is on the battlefield at the start of your hero phase, roll a dice. On a 3+, you receive 1 extra command point. On a 6 you receive D3 extra command points instead of 1.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the start of your hero phase, if any friendly models with this ability are on the battlefield, roll 1 dice. On a 3+, you receive 1 command point.</characteristic>
           </characteristics>
         </profile>
         <profile id="eab3-7a08-170b-84bd" name="Protection of the Horned Rat" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
@@ -4353,7 +4790,7 @@
         <categoryLink id="aa09-2a8a-19ad-0d2f" name="Behemoth" hidden="false" targetId="fa0c-9044-2568-fa02" primary="false"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="24c1-775c-ec39-5a1f" name="Howling Warpgale" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="24c1-775c-ec39-5a1f" name="Dreaded Warpgale" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="aaee-9a55-87c7-c16d" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b069-83a9-973d-c941" type="min"/>
@@ -4362,6 +4799,7 @@
             <profile id="d815-9dc4-a01a-c853" name="Dreaded Warpgale" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">8</characteristic>
+                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">Dreaded Warpgale has a casting value of 8. If successfully cast, pick 1 enemy unit within 26&quot; of the caster and visible to them. That unit suffers D6 mortal wounds, and run and charge rolls for that unit are halved until your next hero phase. If that unit can fly, it cannot fly until your next hero phase (in addition to having its run and charge rolls halved).</characteristic>
               </characteristics>
             </profile>
@@ -4379,9 +4817,10 @@
         <entryLink id="1104-838c-7ee1-156c" name="General - Masterclan" hidden="false" collective="false" import="true" targetId="3478-7e3a-da0b-2d36" type="selectionEntry"/>
         <entryLink id="09a5-6cf7-9eaa-4e35" name="Artefacts" hidden="false" collective="false" import="true" targetId="01be-261c-a6e1-68d6" type="selectionEntryGroup"/>
         <entryLink id="2fac-22d4-f7b3-bee2" name="Command Traits" hidden="false" collective="false" import="true" targetId="d469-f2fa-07d9-bd12" type="selectionEntryGroup"/>
+        <entryLink id="6c0b-3594-6bec-7547" name="Battalions" hidden="false" collective="false" import="true" targetId="286a-2838-49be-5968" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="320.0"/>
+        <cost name="pts" typeId="points" value="335.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="5315-8497-a6fc-0f79" name="Warlock Engineer" publicationId="bcc4-c671-pubd1e1" page="107" hidden="false" collective="false" import="true" type="unit">
@@ -4414,6 +4853,8 @@
         <categoryLink id="7c8c-4a9b-e6a3-a692" name="New CategoryLink" hidden="false" targetId="9319-f73a-ef27-fd21" primary="false"/>
         <categoryLink id="22f0-ff7a-2404-21a7" name="CLANS SKYRE" hidden="false" targetId="5e5d-af59-6ea5-832c" primary="false"/>
         <categoryLink id="d12d-d171-0ce5-d9be" name="SKAVENTIDE" hidden="false" targetId="5ed5-bfa0-f1f7-8b61" primary="false"/>
+        <categoryLink id="9c80-1aa4-c95e-f05c" name="10 or less wounds Leader" hidden="false" targetId="a8ed-ca35-24e0-cf2e" primary="false"/>
+        <categoryLink id="789c-6b3c-88f4-5a84" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="3845-8836-0ee7-9f49" name="Warp Lightning" hidden="false" collective="false" import="true" type="upgrade">
@@ -4425,6 +4866,7 @@
             <profile id="776f-7394-151e-6a89" name="Warp Lightning" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">5</characteristic>
+                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick 1 enemy unit within 13&quot; of the caster and visible to them. That unit suffers D3 mortal wounds. Before making the casting roll, you can say that this model will use its warp-power accumulator to augment the spell. If you do so and the casting attempt is successful and not unbound, the spell inflicts D6 mortal wounds instead of D3. However, if you do so and the casting attempt fails or is unbound, this model suffers D6 mortal wounds.</characteristic>
               </characteristics>
             </profile>
@@ -4483,9 +4925,10 @@
         <entryLink id="829a-146b-4693-3072" name="Artefacts" hidden="false" collective="false" import="true" targetId="01be-261c-a6e1-68d6" type="selectionEntryGroup"/>
         <entryLink id="dd65-6256-b7e4-b058" name="Command Traits" hidden="false" collective="false" import="true" targetId="d469-f2fa-07d9-bd12" type="selectionEntryGroup"/>
         <entryLink id="69c1-c3bb-6f57-6a46" name="Lore of Warpvolt Galvanism (Clans Skyre)" hidden="false" collective="false" import="true" targetId="0bb6-f967-1481-802f" type="selectionEntryGroup"/>
+        <entryLink id="435f-725c-7b69-76bb" name="Battalions" hidden="false" collective="false" import="true" targetId="286a-2838-49be-5968" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="110.0"/>
+        <cost name="pts" typeId="points" value="125.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="7e9c-c40a-d0cf-353e" name="Warp Lightning Cannon" publicationId="bcc4-c671-pubd1e1" page="109" hidden="false" collective="false" import="true" type="unit">
@@ -4511,6 +4954,7 @@
         <categoryLink id="76ad-0b33-e8b0-eb97" name="New CategoryLink" hidden="false" targetId="c3f8-b6ef-ad20-d699" primary="false"/>
         <categoryLink id="4274-fd88-988f-eed1" name="CLANS SKYRE" hidden="false" targetId="5e5d-af59-6ea5-832c" primary="false"/>
         <categoryLink id="90ad-6c27-3c50-7706" name="SKAVENTIDE" hidden="false" targetId="5ed5-bfa0-f1f7-8b61" primary="false"/>
+        <categoryLink id="4719-fcd4-40c6-f5a3" name="New CategoryLink" hidden="false" targetId="1d26-07fc-6a66-d73e" primary="true"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="1409-2f1a-2654-597b" name="Warp Lightning Cannon" hidden="false" collective="false" import="true" type="upgrade">
@@ -4563,8 +5007,11 @@
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <entryLinks>
+        <entryLink id="ddb7-38f8-d6f3-3694" name="Battalions" hidden="false" collective="false" import="true" targetId="286a-2838-49be-5968" type="selectionEntryGroup"/>
+      </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="180.0"/>
+        <cost name="pts" typeId="points" value="185.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="ead3-f485-89ac-c233" name="Warp-grinder" publicationId="bcc4-c671-pubd1e1" page="113" hidden="false" collective="false" import="true" type="unit">
@@ -4611,12 +5058,15 @@
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="points" value="80.0"/>
+            <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <entryLinks>
+        <entryLink id="ac93-0b5f-ed17-6b89" name="Battalions" hidden="false" collective="false" import="true" targetId="286a-2838-49be-5968" type="selectionEntryGroup"/>
+      </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="75.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="792c-1cdb-5d52-4d78" name="Warpfire Thrower" publicationId="bcc4-c671-pubd1e1" page="112" hidden="false" collective="false" import="true" type="unit">
@@ -4694,6 +5144,9 @@
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <entryLinks>
+        <entryLink id="a9c7-e31b-c60d-9376" name="Battalions" hidden="false" collective="false" import="true" targetId="286a-2838-49be-5968" type="selectionEntryGroup"/>
+      </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="70.0"/>
       </costs>
@@ -4705,12 +5158,12 @@
             <characteristic name="Move" typeId="8655-6213-2824-1752">6&quot;</characteristic>
             <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">2</characteristic>
             <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">4</characteristic>
-            <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">6+</characteristic>
+            <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">5+</characteristic>
           </characteristics>
         </profile>
         <profile id="3f32-8245-cef4-1237" name="Pavise" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">You can re-roll hit rolls for attacks made with this unit’s Warplock Jezzails if this unit has not made a move in the same turn. In addition, add 2 to save rolls for attacks made with missile weapons that target this unit.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">You can re-roll hit rolls for attacks made with this unit’s Warplock Jezzails if this unit has not made a move in the same turn. In addition, add 1 to save rolls for attacks made with missile weapons that target this unit.</characteristic>
           </characteristics>
         </profile>
         <profile id="463d-14bf-3fea-9f2f" name="Warpstone Snipers" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
@@ -4725,15 +5178,16 @@
         <categoryLink id="8216-7b7e-8256-85c2" name="New CategoryLink" hidden="false" targetId="48af-dc62-85ea-3635" primary="false"/>
         <categoryLink id="4d38-c41e-2afd-2dd8" name="CLANS SKYRE" hidden="false" targetId="5e5d-af59-6ea5-832c" primary="false"/>
         <categoryLink id="ff81-a10c-8eff-16c7" name="SKAVENTIDE" hidden="false" targetId="5ed5-bfa0-f1f7-8b61" primary="false"/>
+        <categoryLink id="d5c3-c150-4917-6172" name="New CategoryLink" hidden="false" targetId="1d26-07fc-6a66-d73e" primary="true"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="e08a-f521-ca17-b291" name="3 Warplock Jezzails" hidden="false" collective="false" import="true" type="model">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="568a-4617-1246-b26b" type="min"/>
-            <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0833-4744-38f1-54ef" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0833-4744-38f1-54ef" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="140.0"/>
+            <cost name="pts" typeId="points" value="145.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="2719-65b9-5158-3395" name="Warplock Jezzails" hidden="false" collective="false" import="true" type="upgrade">
@@ -4781,6 +5235,14 @@
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <entryLinks>
+        <entryLink id="294c-4d26-48c5-bb9e" name="Reinforced" hidden="false" collective="false" import="true" targetId="0a8d-cde8-fba1-6c0d" type="selectionEntry">
+          <costs>
+            <cost name="pts" typeId="points" value="145.0"/>
+          </costs>
+        </entryLink>
+        <entryLink id="22a6-2911-d1c5-c355" name="Battalions" hidden="false" collective="false" import="true" targetId="286a-2838-49be-5968" type="selectionEntryGroup"/>
+      </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
@@ -4882,26 +5344,41 @@
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="0a8a-2e49-415f-1e9a" name="3 Packmasters" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="0a8a-2e49-415f-1e9a" name="3 Packmasters" hidden="false" collective="false" import="true" type="model">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7a95-853d-8bcf-d596" type="min"/>
-            <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e4e9-779f-1ce2-f09b" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e4e9-779f-1ce2-f09b" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="pts" typeId="points" value="60.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <entryLinks>
+        <entryLink id="4d92-209d-b4f5-37a3" name="Reinforced" hidden="false" collective="false" import="true" targetId="0a8d-cde8-fba1-6c0d" type="selectionEntry">
+          <costs>
+            <cost name="pts" typeId="points" value="60.0"/>
+          </costs>
+        </entryLink>
+        <entryLink id="5f8f-1781-bc69-7d6a" name="Battalions" hidden="false" collective="false" import="true" targetId="286a-2838-49be-5968" type="selectionEntryGroup"/>
+      </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="60.0"/>
+        <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="1970-afa5-15ba-fb90" name="Allegiance" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
         <modifier type="set" field="4ef7-c551-0415-33eb" value="0.0">
-          <conditions>
-            <condition field="selections" scope="ancestor" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="78f3-8a59-699a-61e8" type="instanceOf"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="24d6-500b-7e3f-1470" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="78f3-8a59-699a-61e8" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -4934,7 +5411,7 @@
                 </profile>
                 <profile id="ad5a-a233-5980-b252" name="Strength In Numbers" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
                   <characteristics>
-                    <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">When a SKAVENTIDE unit takes a battleshock test, add 2 to its Bravery characteristic instead of 1 for every 10 models in the unit.</characteristic>
+                    <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">When a Skaventide unit takes a battleshock test, subtract 1 from the battleshock roll for every 10 models that are in the unit.</characteristic>
                   </characteristics>
                 </profile>
                 <profile id="17bc-618c-5f5f-7b6a" name="Masterclan - Skilled Manipulators" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
@@ -4964,7 +5441,7 @@
                 </profile>
                 <profile id="8498-3020-facc-bf5d" name="Pestilens - Echoes of the Great Plagues" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
                   <characteristics>
-                    <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">If the unmodified prayer roll for a prayer chanted by a friendly CLANS PESTILENS PRIEST is 6, you can pick 1 of the following Great Plagues to manifest (in addition to the effect of the prayer). Each Great Plague can only manifest once per battle, and no more than one Great Plague can manifest in the same turn. Bubonic Blightplague: If this Great Plague manifests, pick the nearest enemy unit within 13&quot; of the PRIEST chanting the prayer. That unit is infected with the Bubonic Blightplague. If several enemy units are equally close, you can pick which is infected. The infected unit suffers D6 mortal wounds. If the infected unit is destroyed by these mortal wounds, you can pick another enemy unit within 6&quot; of the last model to be slain from the infected unit. The new unit is infected and suffers D3 mortal wounds. If the second unit is also destroyed, then another enemy unit within 6&quot; of the last model to be slain suffers D3 mortal wounds, and so on until a unit is not destroyed by the disease or there are no other enemy units within 6&quot; when a unit is destroyed. Crimsonweal Curse: If this Great Plague manifests, pick the nearest enemy unit within 13&quot; of the PRIEST chanting the prayer. That unit is infected with the Crimsonweal Curse. If several enemy units are equally close, you can pick which is infected. The infected unit suffers 1 mortal wound. In addition, at the start of each of your hero phases, the infected unit, and each enemy unit within 1&quot; of the infected unit, suffers 1 mortal wound. Redmaw Plague: If this Great Plague manifests, pick the nearest enemy HERO within 13&quot; of the PRIEST chanting the prayer. That HERO is infected with the Redmaw Plague. If several enemy HEROES are equally close, you can pick which is infected. If a HERO infected with the Redmaw Plague is within 3&quot; of any other models from its own army at the start of any combat phase, and is not within 3&quot; of any models from your army, then you can treat that HERO as a friendly model until the end of that combat phase. The Neverplague: If this Great Plague manifests, you can re-roll prayer rolls for friendly CLANS PESTILENS PRIESTS for the rest of the battle. Undulant Scourge: If this Great Plague manifests, pick the nearest enemy unit within 13&quot; of the PRIEST chanting the prayer, and roll 1 dice for each model in that unit. If several enemy units are equally close, you can pick which of those units to roll dice for. For each 5+ that unit suffers 1 mortal wound.</characteristic>
+                    <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">If the unmodified chanting roll for a prayer chanted by a friendly CLANS PESTILENS PRIEST is 6, you can pick 1 of the following Great Plagues to manifest (in addition to the effect of the prayer).</characteristic>
                   </characteristics>
                 </profile>
                 <profile id="97f1-b321-930a-f94e" name="Hidden Weapons Teams" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
@@ -4979,11 +5456,6 @@ Hidden WEAPON TEAM units are destroyed if the unit they are hiding in is destroy
                   </characteristics>
                 </profile>
               </profiles>
-              <costs>
-                <cost name="pts" typeId="points" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="9c8d-f25a-384b-d05b" name="Allegiance: *CHAOS*" hidden="false" collective="false" import="true" type="upgrade">
               <costs>
                 <cost name="pts" typeId="points" value="0.0"/>
               </costs>
@@ -5067,6 +5539,7 @@ Hidden WEAPON TEAM units are destroyed if the unit they are hiding in is destroy
         <profile id="1874-7b7b-c792-fd58" name="Splinter-screech" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
           <characteristics>
             <characteristic name="Casting Value" typeId="2508-b604-1258-a920">5</characteristic>
+            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
             <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick 1 enemy model within 12&quot; of the caster, and roll a dice. If the roll is equal to or greater than that model’s Wounds characteristic, it is slain.</characteristic>
           </characteristics>
         </profile>
@@ -5125,6 +5598,7 @@ Hidden WEAPON TEAM units are destroyed if the unit they are hiding in is destroy
         <entryLink id="eeda-834c-e190-af49" name="General - Masterclan" hidden="false" collective="false" import="true" targetId="3478-7e3a-da0b-2d36" type="selectionEntry"/>
         <entryLink id="9a4b-d85f-dedd-817f" name="Artefacts" hidden="false" collective="false" import="true" targetId="01be-261c-a6e1-68d6" type="selectionEntryGroup"/>
         <entryLink id="0b82-eeee-87b3-496c" name="Command Traits" hidden="false" collective="false" import="true" targetId="d469-f2fa-07d9-bd12" type="selectionEntryGroup"/>
+        <entryLink id="0a80-19dd-c7ec-2cd1" name="Battalions" hidden="false" collective="false" import="true" targetId="286a-2838-49be-5968" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="270.0"/>
@@ -5770,6 +6244,7 @@ Hidden WEAPON TEAM units are destroyed if the unit they are hiding in is destroy
         <categoryLink id="9e28-16b4-35d4-d22b" name="HERO" hidden="false" targetId="4e0e-664d-51ea-0929" primary="false"/>
         <categoryLink id="65dc-69a9-23be-0d55" name="SKAVEN" hidden="false" targetId="8f8a-7c29-799e-ace9" primary="false"/>
         <categoryLink id="e178-7eec-3577-5605" name="SKAVENTIDE" hidden="false" targetId="5ed5-bfa0-f1f7-8b61" primary="false"/>
+        <categoryLink id="c536-9d1a-7540-109c" name="10 or less wounds Leader" hidden="false" targetId="a8ed-ca35-24e0-cf2e" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="b471-6265-6267-3f54" name="Warpforged Blade" hidden="false" collective="false" import="true" type="upgrade">
@@ -5799,9 +6274,10 @@ Hidden WEAPON TEAM units are destroyed if the unit they are hiding in is destroy
         <entryLink id="331d-85a1-4227-5e34" name="General - Clans Verminous" hidden="false" collective="false" import="true" targetId="b60e-1aa4-96da-a83b" type="selectionEntry"/>
         <entryLink id="7202-ce12-593b-fc78" name="Artefacts" hidden="false" collective="false" import="true" targetId="01be-261c-a6e1-68d6" type="selectionEntryGroup"/>
         <entryLink id="0825-9fdd-dd49-30ed" name="Command Traits" hidden="false" collective="false" import="true" targetId="d469-f2fa-07d9-bd12" type="selectionEntryGroup"/>
+        <entryLink id="ebb1-3934-2461-b287" name="Battalions" hidden="false" collective="false" import="true" targetId="286a-2838-49be-5968" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="100.0"/>
+        <cost name="pts" typeId="points" value="105.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="d595-7c6e-e4d6-b37e" name="Deathmaster" publicationId="bcc4-c671-pubd1e1" page="123" hidden="false" collective="false" import="true" type="unit">
@@ -5832,6 +6308,7 @@ Hidden WEAPON TEAM units are destroyed if the unit they are hiding in is destroy
         <categoryLink id="5912-9135-9bdb-4b7c" name="HERO" hidden="false" targetId="4e0e-664d-51ea-0929" primary="false"/>
         <categoryLink id="4664-2b16-de26-3819" name="SKAVEN" hidden="false" targetId="8f8a-7c29-799e-ace9" primary="false"/>
         <categoryLink id="433a-8dcd-9ab8-bd7c" name="SKAVENTIDE" hidden="false" targetId="5ed5-bfa0-f1f7-8b61" primary="false"/>
+        <categoryLink id="bf49-2f98-51b5-1a30" name="10 or less wounds Leader" hidden="false" targetId="a8ed-ca35-24e0-cf2e" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="ebbf-ade4-389e-5f42" name="Eshin Throwing Stars" hidden="false" collective="false" import="true" type="upgrade">
@@ -5912,9 +6389,10 @@ Hidden WEAPON TEAM units are destroyed if the unit they are hiding in is destroy
         <entryLink id="7ef9-af0f-9799-c054" name="General - Clans Eshin" hidden="false" collective="false" import="true" targetId="230d-5573-4086-e687" type="selectionEntry"/>
         <entryLink id="7a86-2912-bc39-a4aa" name="Artefacts" hidden="false" collective="false" import="true" targetId="01be-261c-a6e1-68d6" type="selectionEntryGroup"/>
         <entryLink id="c30a-5072-cd73-47e6" name="Command Traits" hidden="false" collective="false" import="true" targetId="d469-f2fa-07d9-bd12" type="selectionEntryGroup"/>
+        <entryLink id="a95a-6a8d-f5a1-4353" name="Battalions" hidden="false" collective="false" import="true" targetId="286a-2838-49be-5968" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="100.0"/>
+        <cost name="pts" typeId="points" value="115.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="876b-6949-face-f2c6" name="Master Moulder" publicationId="bcc4-c671-pubd1e1" page="120" hidden="false" collective="false" import="true" type="unit">
@@ -5950,6 +6428,8 @@ Hidden WEAPON TEAM units are destroyed if the unit they are hiding in is destroy
         <categoryLink id="1138-6efc-8e89-6c02" name="MASTER MOULDER" hidden="false" targetId="af93-3eab-d118-5898" primary="false"/>
         <categoryLink id="e1b3-ff7f-1eee-294f" name="SKAVEN" hidden="false" targetId="8f8a-7c29-799e-ace9" primary="false"/>
         <categoryLink id="57f9-217f-c51c-0aaf" name="SKAVENTIDE" hidden="false" targetId="5ed5-bfa0-f1f7-8b61" primary="false"/>
+        <categoryLink id="e90e-66c9-2405-76c4" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
+        <categoryLink id="bb53-85db-67fb-d705" name="10 or less wounds Leader" hidden="false" targetId="a8ed-ca35-24e0-cf2e" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="f6f0-d018-4374-fd55" name="Warpstone-tipped Lash" hidden="false" collective="false" import="true" type="upgrade">
@@ -6001,9 +6481,10 @@ Hidden WEAPON TEAM units are destroyed if the unit they are hiding in is destroy
         <entryLink id="2208-d188-0dc2-22e6" name="General - Clans Moulder" hidden="false" collective="false" import="true" targetId="1ebc-adcb-d870-3ea6" type="selectionEntry"/>
         <entryLink id="3fea-d70a-0579-d3d2" name="Artefacts" hidden="false" collective="false" import="true" targetId="01be-261c-a6e1-68d6" type="selectionEntryGroup"/>
         <entryLink id="1503-29e7-ef25-15e7" name="Command Traits" hidden="false" collective="false" import="true" targetId="d469-f2fa-07d9-bd12" type="selectionEntryGroup"/>
+        <entryLink id="0c6c-2126-3672-f670" name="Battalions" hidden="false" collective="false" import="true" targetId="286a-2838-49be-5968" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="100.0"/>
+        <cost name="pts" typeId="points" value="95.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="97a1-244f-df12-d3ef" name="Warlock Bombardier" publicationId="bcc4-c671-pubd1e1" page="107" hidden="false" collective="false" import="true" type="unit">
@@ -6030,6 +6511,7 @@ Hidden WEAPON TEAM units are destroyed if the unit they are hiding in is destroy
         <profile id="1ddb-1bd2-7773-5d66" name="Warp Lightning" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
           <characteristics>
             <characteristic name="Casting Value" typeId="2508-b604-1258-a920">5</characteristic>
+            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
             <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick 1 enemy unit within 13&quot; of the caster and visible to them. That unit suffers D3 mortal wounds. Before making the casting roll, you can say that this model will use its warp-power accumulator to augment the spell. If you do so and the casting attempt is successful and not unbound, the spell inflicts D6 mortal wounds instead of D3. However, if you do so and the casting attempt fails or is unbound, this model suffers D6 mortal wounds.</characteristic>
           </characteristics>
         </profile>
@@ -6044,6 +6526,7 @@ Hidden WEAPON TEAM units are destroyed if the unit they are hiding in is destroy
         <categoryLink id="24fc-f4c8-c702-9aa2" name="WARLOCK ENGINEER" hidden="false" targetId="9319-f73a-ef27-fd21" primary="false"/>
         <categoryLink id="7399-692d-ca44-f291" name="WIZARD" hidden="false" targetId="4f53-8230-2f02-9639" primary="false"/>
         <categoryLink id="03bc-450a-9793-0963" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
+        <categoryLink id="c634-3b88-9731-aa22" name="10 or less wounds Leader" hidden="false" targetId="a8ed-ca35-24e0-cf2e" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="f7de-a232-fb79-9d43" name="Doomrocket" hidden="false" collective="false" import="true" type="upgrade">
@@ -6112,9 +6595,10 @@ Hidden WEAPON TEAM units are destroyed if the unit they are hiding in is destroy
           </modifiers>
         </entryLink>
         <entryLink id="cd5e-c05d-2af0-0691" name="Lore of Warpvolt Galvanism (Clans Skyre)" hidden="false" collective="false" import="true" targetId="0bb6-f967-1481-802f" type="selectionEntryGroup"/>
+        <entryLink id="6b12-743c-53b4-86e1" name="Battalions" hidden="false" collective="false" import="true" targetId="286a-2838-49be-5968" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="120.0"/>
+        <cost name="pts" typeId="points" value="125.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="270e-1f4b-8572-8124" name="Battalion: Fleshmeld Menagerie" publicationId="bcc4-c671-pubd1e1" page="97" hidden="false" collective="false" import="true" type="upgrade">
@@ -6272,6 +6756,7 @@ Hidden WEAPON TEAM units are destroyed if the unit they are hiding in is destroy
         <categoryLink id="8b39-77f9-eda3-a56c" name="CLANS VERMINOUS" hidden="false" targetId="3058-1b6c-3bc2-746d" primary="false"/>
         <categoryLink id="8b85-3477-4ddc-7226" name="CLAWLORD" hidden="false" targetId="6c31-d5f5-4a7e-638e" primary="false"/>
         <categoryLink id="7d3a-b460-157f-944a" name="SKAVENTIDE" hidden="false" targetId="5ed5-bfa0-f1f7-8b61" primary="false"/>
+        <categoryLink id="0b8b-f0b4-0ca3-bebe" name="10 or less wounds Leader" hidden="false" targetId="a8ed-ca35-24e0-cf2e" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="c02b-5e9d-0558-03a0" name="Warpforged Blade" hidden="false" collective="false" import="true" type="upgrade">
@@ -6356,6 +6841,7 @@ Hidden WEAPON TEAM units are destroyed if the unit they are hiding in is destroy
         <entryLink id="2b3e-c914-3244-1f26" name="General" hidden="false" collective="false" import="true" targetId="c71b-c7bd-77ca-12b9" type="selectionEntry"/>
         <entryLink id="04c6-8c75-fa7c-eabf" name="Artefacts" hidden="false" collective="false" import="true" targetId="01be-261c-a6e1-68d6" type="selectionEntryGroup"/>
         <entryLink id="73dd-4eb6-bb2a-7602" name="Command Traits" hidden="false" collective="false" import="true" targetId="d469-f2fa-07d9-bd12" type="selectionEntryGroup"/>
+        <entryLink id="ff9f-ab1e-110b-7a65" name="Battalions" hidden="false" collective="false" import="true" targetId="286a-2838-49be-5968" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="160.0"/>
@@ -6423,6 +6909,9 @@ Hidden WEAPON TEAM units are destroyed if the unit they are hiding in is destroy
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <entryLinks>
+        <entryLink id="9ba3-aca2-8723-14a8" name="Battalions" hidden="false" collective="false" import="true" targetId="286a-2838-49be-5968" type="selectionEntryGroup"/>
+      </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
@@ -6454,6 +6943,7 @@ Hidden WEAPON TEAM units are destroyed if the unit they are hiding in is destroy
         <categoryLink id="cee4-af71-1974-6a7c" name="New CategoryLink" hidden="false" targetId="4e0e-664d-51ea-0929" primary="false"/>
         <categoryLink id="72a8-49a5-6446-7ff4" name="New CategoryLink" hidden="false" targetId="3504-ea8e-28ec-5150" primary="false"/>
         <categoryLink id="cccb-183e-4761-9ece" name="New CategoryLink" hidden="false" targetId="3e2c-e138-fe91-95ea" primary="false"/>
+        <categoryLink id="1518-2d14-6339-269f" name="10 or less wounds Leader" hidden="false" targetId="a8ed-ca35-24e0-cf2e" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="02b3-7f4f-e94c-4899" name="Jagged Blade" hidden="false" collective="false" import="true" type="upgrade">
@@ -6483,6 +6973,7 @@ Hidden WEAPON TEAM units are destroyed if the unit they are hiding in is destroy
         <entryLink id="00c2-b558-ebd7-c687" name="General" hidden="false" collective="false" import="true" targetId="c71b-c7bd-77ca-12b9" type="selectionEntry"/>
         <entryLink id="28b6-6e6a-f740-950d" name="Artefacts" hidden="false" collective="false" import="true" targetId="01be-261c-a6e1-68d6" type="selectionEntryGroup"/>
         <entryLink id="f0ac-532b-c737-c173" name="Command Traits" hidden="false" collective="false" import="true" targetId="d469-f2fa-07d9-bd12" type="selectionEntryGroup"/>
+        <entryLink id="a7a6-3ae8-75b9-ece7" name="Battalions" hidden="false" collective="false" import="true" targetId="286a-2838-49be-5968" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="140.0"/>
@@ -6626,6 +7117,9 @@ Hidden WEAPON TEAM units are destroyed if the unit they are hiding in is destroy
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="9c32-66b1-75ef-468c" name="Battalions" hidden="false" collective="false" import="true" targetId="286a-2838-49be-5968" type="selectionEntryGroup"/>
+      </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="140.0"/>
       </costs>
@@ -6682,28 +7176,19 @@ Hidden WEAPON TEAM units are destroyed if the unit they are hiding in is destroy
       <profiles>
         <profile id="8b90-4782-e4a3-fd7d" name="Summon Vermintide" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
           <characteristics>
-            <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
-            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">Only SKAVENTIDE WIZARDS can attempt to cast this spell. If successfully cast, set up a Vermintide model wholly within 13&quot; of the caster.</characteristic>
+            <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
+            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">18&quot;</characteristic>
+            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, set up this endless spell wholly within range and visible to the caster, and more than 1&quot; from all models, other endless spells and invocations. Only SKAVENTIDE WIZARDS can attempt to summon this endless spell.</characteristic>
           </characteristics>
         </profile>
         <profile id="3b9f-a6a5-6a68-bbcf" name="Predatory" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Vermintide is a predatory endless spell. It can move up to 7&quot;.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This endless spell is a predatory endless spell. It can move up to 7&quot;.</characteristic>
           </characteristics>
         </profile>
         <profile id="429a-8a41-756b-cb9b" name="Ravening Horde" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">After this model has moved, the player that moved it can pick 1 unit within 3&quot; of this model and roll 13 dice. For each 6, that unit suffers 1 mortal wound. In addition, roll 13 dice for each unit that finishes a normal move or a charge move within 3&quot; of this model. For each 6, that unit suffers 1 mortal wound.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="739f-2506-78be-1873" name="Voracious Hunger" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">When this model is set up, the player who set it up can immediately make a move with it.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="6f54-837e-6098-74cb" name="Ratkin" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">SKAVENTIDE units are not affected by the Ravening Horde ability. In addition, SKAVENTIDE models can move across this model in the same manner as a model that can fly.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">After this endless spell has moved, the commanding player can pick 1 unit within 3&quot; of this endless spell and roll 13 dice. For each 6, that unit suffers 1 mortal wound. In addition, roll 13 dice for each unit that finishes a normal move, run, retreat or charge move within 3&quot; of this endless spell. For each 6, that unit suffers 1 mortal wound.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -6713,7 +7198,7 @@ Hidden WEAPON TEAM units are destroyed if the unit they are hiding in is destroy
         <categoryLink id="bd92-b902-d7f9-36de" name="New CategoryLink" hidden="false" targetId="eecb-ed66-d474-9ddd" primary="true"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="40.0"/>
+        <cost name="pts" typeId="points" value="80.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="7c5e-cf5a-0321-fa94" name="Endless Spell: Warp Lightning Vortex" publicationId="bcc4-c671-pubd1e1" page="125" hidden="false" collective="false" import="true" type="upgrade">
@@ -6724,17 +7209,18 @@ Hidden WEAPON TEAM units are destroyed if the unit they are hiding in is destroy
         <profile id="ced7-6f91-5cc7-a855" name="Summon Warp Lightning Vortex" publicationId="e316-99a9-2860-3a7c" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
           <characteristics>
             <characteristic name="Casting Value" typeId="2508-b604-1258-a920">8</characteristic>
-            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">Only SKAVENTIDE WIZARDS can attempt to cast this spell. If successfully cast, set up 1 Warp Lightning Vortex model wholly within 13&quot; of the caster, then set up the second and third Warp Lightning Vortex models exactly 7&quot; from the first model and exactly 7&quot; from each other (the models will form a triangle with each model exactly 7&quot; from the other two models).</characteristic>
+            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">13&quot;</characteristic>
+            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, set up 1 part of the endless spell wholly within range of the caster, then set up the second and third parts exactly 7&quot; from the first part and exactly 7&quot; from each other (the parts will form a triangle with each part exactly 7&quot; from the other two parts). All of the parts must be set up more than 1&quot; from all models, other endless spells and invocations. Only SKAVENTIDE WIZARDS can attempt to summon this endless spell.</characteristic>
           </characteristics>
         </profile>
         <profile id="09ef-a43d-71a5-cc50" name="Warp Lightning Bolts" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">When this model is set up, and at the end of each movement phase, roll 1 dice for each unit within 6&quot; of any of the models from this endless spell. Add 1 to the dice roll if that unit is within 6&quot; of two of the models from this endless spell. Add 2 to the dice roll instead of 1 if that unit is within 6&quot; of all three models from this endless spell. On a 4+ that unit suffers D3 mortal wounds. On an unmodified roll of 6, that unit suffers D6 mortal wounds instead of D3 mortal wounds.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">When this endless spell is set up and at the end of each movement phase, roll 1 dice for each unit within 6&quot; of this endless spell. Add 1 to the roll if that unit is within 6&quot; of 2 parts of this endless spell. Add 2 to the roll instead if that unit is within 6&quot; of all 3 parts of this endless spell. On a 4+, that unit suffers D3 mortal wounds. On an unmodified 6, that unit suffers D6 mortal wounds instead of D3 mortal wounds.</characteristic>
           </characteristics>
         </profile>
         <profile id="ff0a-cf2f-9553-7250" name="Warp Vortex" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Units cannot run or fly when they make a normal move that starts within 6&quot; of any models from this endless spell.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Units within 6&quot; of this endless spell cannot run. In addition, units cannot fly if they start the move within 6&quot; of this endless spell.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -6744,7 +7230,7 @@ Hidden WEAPON TEAM units are destroyed if the unit they are hiding in is destroy
         <categoryLink id="ca07-c612-061e-44db" name="New CategoryLink" hidden="false" targetId="eecb-ed66-d474-9ddd" primary="true"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="80.0"/>
+        <cost name="pts" typeId="points" value="90.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="4fe6-46f9-96bb-8673" name="Endless Spell: Bell of Doom" publicationId="bcc4-c671-pubd1e1" page="126" hidden="false" collective="false" import="true" type="upgrade">
@@ -6754,23 +7240,24 @@ Hidden WEAPON TEAM units are destroyed if the unit they are hiding in is destroy
       <profiles>
         <profile id="fe7e-280f-52dc-5cae" name="Apocalyptic Doom" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Roll 3D6 after this model is set up or finishes a move. On a roll of 13, each unit within 13&quot; of this model suffers D3 mortal wounds. This model is then dispelled.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Roll 3D6 after this endless spell finishes a move. On a roll of 13, each unit within 13&quot; of this endless spell suffers D3 mortal wounds, and then this endless spell is removed from play.</characteristic>
           </characteristics>
         </profile>
         <profile id="1aa4-3164-3f0c-b11c" name="Boldness or Despair" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Do not take battleshock tests for SKAVENTIDE units while they are within 13&quot; of this model. Subtract 1 from the Bravery characteristic of any other units while they are within 13&quot; of this model.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Do not take battleshock tests for SKAVENTIDE units while they are wholly within 13&quot; of this endless spell. Subtract 1 from the Bravery characteristic of other units while they are within 13&quot; of this endless spell.</characteristic>
           </characteristics>
         </profile>
         <profile id="4a70-51cb-a89a-b0ea" name="Summon Bell of Doom" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
           <characteristics>
             <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
-            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">Only SKAVENTIDE WIZARDS can attempt to cast this spell. If successfully cast, set up a Bell of Doom model wholly within 13&quot; of the caster.</characteristic>
+            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">13&quot;</characteristic>
+            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, set up this endless spell wholly within range and visible to the caster, and more than 1&quot; from all models, other endless spells and invocations. Only SKAVENTIDE WIZARDS can attempt to summon this endless spell.</characteristic>
           </characteristics>
         </profile>
         <profile id="d4c8-b1e0-8022-bad5" name="Predatory" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Bell of Doom is a predatory endless spell. It can move up to 13&quot; and can fly.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This endless spell is a predatory endless spell. It can move up to 2D6&quot; and can fly.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -6783,19 +7270,21 @@ Hidden WEAPON TEAM units are destroyed if the unit they are hiding in is destroy
         <categoryLink id="c6b5-c5fb-8379-2d4b" name="New CategoryLink" hidden="false" targetId="eecb-ed66-d474-9ddd" primary="true"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="40.0"/>
+        <cost name="pts" typeId="points" value="85.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="0c02-a4d0-df8f-6135" name="Gnawhole" publicationId="bcc4-c671-pubd1e1" page="81" hidden="false" collective="false" import="true" type="unit">
       <profiles>
         <profile id="7965-b90c-7b7e-849c" name="Tunnels Through Reality" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the start of your movement phase, you can use 1 GNAWHOLE to transport 1 friendly SKAVENTIDE unit. In order to do so, that unit must be wholly within 6&quot; of the GNAWHOLE, and a friendly SKAVENTIDE HERO must be within 6&quot; of the GNAWHOLE. If this is the case, remove the SKAVENTIDE unit from the battlefield and then set it up wholly within 6&quot; of another GNAWHOLE and more than 9&quot; from any enemy models. This counts as that unit’s move for that movement phase.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the end of your movement phase, if there is a friendly SKAVENTIDE HERO within 6&quot; of this terrain feature, you can pick 1 friendly SKAVENTIDE unit within 6&quot; of this terrain feature, remove that unit from the battlefield and set it up wholly within 6&quot; of a different Gnawhole in your army and more than 9&quot; from all enemy models. You can only transport up to 1 friendly unit in this way per battle round, regardless of the number of Gnawholes in your army.</characteristic>
           </characteristics>
         </profile>
         <profile id="78ee-929a-3dde-a512" name="Aura of the Horned Rat" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">SKAVENTIDE units treat this terrain feature as having the Arcane scenery rule. Other units treat this terrain feature as having the Deadly scenery rule. In addition, you can add 1 to the dice that determines if a prayer is answered if the prayer is chanted by a friendly SKAVENTIDE PRIEST within 1&quot; of a GNAWHOLE. Arcane: Add 1 to casting and unbinding rolls for WIZARDS while they are within 1&quot; of any Arcane terrain features. Deadly: Roll a dice for each unit that finishes a normal move or charge move within 1&quot; of any Deadly terrain features. On a 1, that unit suffers D3 mortal wounds.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Add 1 to chanting rolls for friendly SKAVENTIDE PRIESTS within 1&quot; of this terrain feature, and add 1 to casting, dispelling and unbinding rolls for friendly SKAVENTIDE WIZARDS within 1&quot; of this terrain feature. 
+
+Roll a dice for each enemy unit that finishes a normal move, run, retreat or charge move within 1&quot; of this terrain feature. On a 6, that unit suffers D3 mortal wounds.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -6814,6 +7303,9 @@ Hidden WEAPON TEAM units are destroyed if the unit they are hiding in is destroy
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="24d6-500b-7e3f-1470" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="78f3-8a59-699a-61e8" type="instanceOf"/>
               </conditions>
             </conditionGroup>
@@ -6837,6 +7329,9 @@ Hidden WEAPON TEAM units are destroyed if the unit they are hiding in is destroy
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="24d6-500b-7e3f-1470" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="78f3-8a59-699a-61e8" type="instanceOf"/>
               </conditions>
             </conditionGroup>
@@ -6860,6 +7355,9 @@ Hidden WEAPON TEAM units are destroyed if the unit they are hiding in is destroy
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="24d6-500b-7e3f-1470" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="78f3-8a59-699a-61e8" type="instanceOf"/>
               </conditions>
             </conditionGroup>
@@ -6883,6 +7381,9 @@ Hidden WEAPON TEAM units are destroyed if the unit they are hiding in is destroy
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="24d6-500b-7e3f-1470" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="78f3-8a59-699a-61e8" type="instanceOf"/>
               </conditions>
             </conditionGroup>
@@ -6906,6 +7407,9 @@ Hidden WEAPON TEAM units are destroyed if the unit they are hiding in is destroy
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="24d6-500b-7e3f-1470" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="78f3-8a59-699a-61e8" type="instanceOf"/>
               </conditions>
             </conditionGroup>
@@ -6929,6 +7433,9 @@ Hidden WEAPON TEAM units are destroyed if the unit they are hiding in is destroy
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="24d6-500b-7e3f-1470" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="78f3-8a59-699a-61e8" type="instanceOf"/>
               </conditions>
             </conditionGroup>
@@ -7083,15 +7590,7 @@ Hidden WEAPON TEAM units are destroyed if the unit they are hiding in is destroy
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="911b-8115-09c6-fe41" type="max"/>
       </constraints>
       <entryLinks>
-        <entryLink id="d22d-d98d-5ef6-d8bf" name="Artefacts of Chaos" hidden="false" collective="false" import="true" targetId="3c13-922a-683d-7de7" type="selectionEntryGroup">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9c8d-f25a-384b-d05b" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </entryLink>
+        <entryLink id="d22d-d98d-5ef6-d8bf" name="Universal Artefacts of Power" hidden="false" collective="false" import="true" targetId="11c4-fd82-92a7-de8a" type="selectionEntryGroup"/>
         <entryLink id="2f63-fe92-879b-12c9" name="Artefacts: Dark Inventions (Clans Skyre)" hidden="false" collective="false" import="true" targetId="efab-3aa6-899f-97e9" type="selectionEntryGroup"/>
         <entryLink id="43cb-f73c-5187-a21a" name="Realm Artefacts of Power" hidden="false" collective="false" import="true" targetId="37b0-af21-630c-d8af" type="selectionEntryGroup"/>
         <entryLink id="9dbb-c4ed-0dfe-634b" name="Monstous Arcana (Clans Moulder)" hidden="false" collective="false" import="true" targetId="de3e-5a08-a0e6-c281" type="selectionEntryGroup"/>
@@ -7119,15 +7618,7 @@ Hidden WEAPON TEAM units are destroyed if the unit they are hiding in is destroy
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="afcb-f0c3-d8dd-0cf8" type="max"/>
       </constraints>
       <entryLinks>
-        <entryLink id="3239-f9fd-ee74-0b40" name="Chaos Command Traits" hidden="false" collective="false" import="true" targetId="f179-9104-3d7f-1ea1" type="selectionEntryGroup">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9c8d-f25a-384b-d05b" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </entryLink>
+        <entryLink id="3239-f9fd-ee74-0b40" name="Universal Command Traits" hidden="false" collective="false" import="true" targetId="b6b8-914a-dfca-18ee" type="selectionEntryGroup"/>
         <entryLink id="2247-4160-3b32-b6ee" name="Skaven Skryre Command Traits" hidden="false" collective="false" import="true" targetId="034f-34fa-0750-85ff" type="selectionEntryGroup"/>
         <entryLink id="c16e-ee7d-fb2c-58e3" name="Cunning Machinations (Masterclan)" hidden="false" collective="false" import="true" targetId="9599-473c-3ea8-be1f" type="selectionEntryGroup"/>
         <entryLink id="bcde-51e8-e252-b50a" name="Traits: Fleshmasteries (Clans Moulder)" hidden="false" collective="false" import="true" targetId="666e-e6b9-dacf-74f8" type="selectionEntryGroup"/>
@@ -8114,6 +8605,13 @@ Hidden WEAPON TEAM units are destroyed if the unit they are hiding in is destroy
       </selectionEntries>
     </selectionEntryGroup>
     <selectionEntryGroup id="4b53-bbff-8558-f42c" name="Spell Lores" hidden="false" collective="false" import="true">
+      <modifiers>
+        <modifier type="increment" field="224b-ccf9-8591-36f3" value="1.0">
+          <repeats>
+            <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bdb0-7f20-53ff-f804" repeats="1" roundUp="false"/>
+          </repeats>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="224b-ccf9-8591-36f3" type="max"/>
       </constraints>
@@ -8121,6 +8619,7 @@ Hidden WEAPON TEAM units are destroyed if the unit they are hiding in is destroy
         <entryLink id="4458-3232-aab1-f8d4" name="Lore of Ruin (Grey Seer)" hidden="false" collective="false" import="true" targetId="4f40-bd85-82d2-3b53" type="selectionEntryGroup"/>
         <entryLink id="5772-9ce9-493d-2ccf" name="Lore of Warpvolt Galvanism (Clans Skyre)" hidden="false" collective="false" import="true" targetId="0bb6-f967-1481-802f" type="selectionEntryGroup"/>
         <entryLink id="e0c1-9426-130e-dfe2" name="Nurgle Lores" hidden="false" collective="false" import="true" targetId="f346-5bce-c5a3-be3a" type="selectionEntryGroup"/>
+        <entryLink id="7abf-6cf6-c038-d2a5" name="Universal Spell Lore" hidden="false" collective="false" import="true" targetId="20c3-23a0-9d79-b491" type="selectionEntryGroup"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="4f40-bd85-82d2-3b53" name="Lore of Ruin (Grey Seer)" hidden="false" collective="false" import="true">
@@ -8135,17 +8634,26 @@ Hidden WEAPON TEAM units are destroyed if the unit they are hiding in is destroy
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="increment" field="e3c2-6458-f386-3199" value="1.0">
+          <repeats>
+            <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bdb0-7f20-53ff-f804" repeats="1" roundUp="false"/>
+          </repeats>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e3c2-6458-f386-3199" type="max"/>
       </constraints>
       <selectionEntries>
         <selectionEntry id="8bc5-1a1d-9393-e371" name="1. Scorch" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d10c-b58b-b115-1a3b" type="max"/>
+          </constraints>
           <profiles>
             <profile id="1b3d-08be-b5fc-84d2" name="Scorch" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">5</characteristic>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick 1 enemy unit within 13&quot; of the caster and visible to them, and roll a number of dice equal to the casting roll. For each6, that unit suffers 1 mortal wound.</characteristic>
+                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
               </characteristics>
             </profile>
           </profiles>
@@ -8154,11 +8662,15 @@ Hidden WEAPON TEAM units are destroyed if the unit they are hiding in is destroy
           </costs>
         </selectionEntry>
         <selectionEntry id="9de4-0ccf-3fce-1bfa" name="2. Splinter" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5e81-548e-fa8b-976d" type="max"/>
+          </constraints>
           <profiles>
             <profile id="2a86-92de-8c25-2d71" name="Splinter" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick 1 enemy model within 6&quot; of the caster, and roll a dice. If the roll is greater than that model’s Wounds characteristic, it is slain.</characteristic>
+                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
               </characteristics>
             </profile>
           </profiles>
@@ -8167,11 +8679,15 @@ Hidden WEAPON TEAM units are destroyed if the unit they are hiding in is destroy
           </costs>
         </selectionEntry>
         <selectionEntry id="fad4-13ec-bba1-d29f" name="3. Skitterleap" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4c0e-f86f-9fec-8ea7" type="max"/>
+          </constraints>
           <profiles>
             <profile id="ef37-c26f-1cf7-4f1b" name="Skitterleap" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick 1 friendly SKAVENTIDE HERO with a Wounds characteristic of 12 or less, that is within 13&quot; of the caster and visible to them. Remove that HERO from the battlefield and then set it up again anywhere on the battlefield more than 9&quot; from any enemy units. That HERO may not move in the following movement phase.</characteristic>
+                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
               </characteristics>
             </profile>
           </profiles>
@@ -8180,11 +8696,15 @@ Hidden WEAPON TEAM units are destroyed if the unit they are hiding in is destroy
           </costs>
         </selectionEntry>
         <selectionEntry id="c330-76de-85b2-17ad" name="4. Plague" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="65af-bb2a-0a98-abbc" type="max"/>
+          </constraints>
           <profiles>
             <profile id="f877-3ea9-2f13-7316" name="Plague" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick 1 enemy unit within 13&quot; of the caster and roll 1 dice for each model in that unit. For each 5+, that unit suffers 1 mortal wound.</characteristic>
+                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
               </characteristics>
             </profile>
           </profiles>
@@ -8193,11 +8713,15 @@ Hidden WEAPON TEAM units are destroyed if the unit they are hiding in is destroy
           </costs>
         </selectionEntry>
         <selectionEntry id="bc6d-8ebb-39cd-9a15" name="5. Death Frenzy" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a934-2416-1034-fda5" type="max"/>
+          </constraints>
           <profiles>
             <profile id="a633-ae7c-cfca-643c" name="Death Frenzy" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick 1 friendly SKAVENTIDE unit that is not a HERO, which is wholly within 13&quot; of the caster and visible to them. Until your next hero phase, when a model from that unit is slain, before it is removed from play, it can make a pile-in move and then attack with all of the melee weapons it is armed with.</characteristic>
+                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
               </characteristics>
             </profile>
           </profiles>
@@ -8206,11 +8730,15 @@ Hidden WEAPON TEAM units are destroyed if the unit they are hiding in is destroy
           </costs>
         </selectionEntry>
         <selectionEntry id="67de-c8bb-4126-0a72" name="6. Warpgale" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2401-5eaf-0a38-0e61" type="max"/>
+          </constraints>
           <profiles>
             <profile id="0d39-b62f-d34d-9812" name="Warpgale" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">8</characteristic>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick 1 enemy unit within 26&quot; of the caster and visible to them. That unit suffers D3 mortal wounds, and any run or charge rolls for that unit are halved until your next hero phase. If that unit can fly, it cannot fly until your next hero phase (in addition to having its run and charge rolls halved).</characteristic>
+                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
               </characteristics>
             </profile>
           </profiles>
@@ -8232,17 +8760,26 @@ Hidden WEAPON TEAM units are destroyed if the unit they are hiding in is destroy
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="increment" field="48d4-1302-4211-d6ba" value="1.0">
+          <repeats>
+            <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bdb0-7f20-53ff-f804" repeats="1" roundUp="false"/>
+          </repeats>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="48d4-1302-4211-d6ba" type="max"/>
       </constraints>
       <selectionEntries>
         <selectionEntry id="f6f6-81eb-2709-4a6c" name="1. More-more-more Warp Power!" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="382d-3776-c58a-7f49" type="max"/>
+          </constraints>
           <profiles>
             <profile id="e3f6-7eb9-4973-bd8b" name="More-more-more Warp Power!" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick 1 friendly CLANS SKRYRE unit wholly within 12&quot; of the caster and visible to them. You can re-roll hit and wound rolls for that unit until your next hero phase. However, at the end of your next hero phase, that unit suffers D3 mortal wounds.</characteristic>
+                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
               </characteristics>
             </profile>
           </profiles>
@@ -8251,11 +8788,15 @@ Hidden WEAPON TEAM units are destroyed if the unit they are hiding in is destroy
           </costs>
         </selectionEntry>
         <selectionEntry id="9adb-fef5-bee1-fc5b" name="2. Chain Warp Lightning" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f1e2-95f4-5cd6-5e39" type="max"/>
+          </constraints>
           <profiles>
             <profile id="b92f-cb91-4e24-d8a3" name="Chain Warp Lightning" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick up to D6 different enemy units within 18&quot; of the caster. Each of those units suffers 1 mortal wound.</characteristic>
+                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
               </characteristics>
             </profile>
           </profiles>
@@ -8264,11 +8805,15 @@ Hidden WEAPON TEAM units are destroyed if the unit they are hiding in is destroy
           </costs>
         </selectionEntry>
         <selectionEntry id="3721-d4a3-915a-a1d2" name="3. Warp Lightning Shield" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0b43-bc17-9161-44fe" type="max"/>
+          </constraints>
           <profiles>
             <profile id="f3d7-27fa-d6ac-252a" name="Warp Lightning Shield" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, until your next hero phase, the first 3 wounds allocated to the caster in each phase are negated. If a fourth wound is allocated to the caster in the same phase, then the caster suffers D6 mortal wounds and this spell is unbound (the first 3 wounds allocated in that phase are still negated).</characteristic>
+                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
               </characteristics>
             </profile>
           </profiles>
@@ -8374,7 +8919,7 @@ Hidden WEAPON TEAM units are destroyed if the unit they are hiding in is destroy
           <profiles>
             <profile id="2248-d3e0-31d6-5ce3" name="Liber Bubonicus" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
               <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">The bearer can use the Plague Prayers ability from the Plague Priest warscroll. If the bearer is a PLAGUE PRIEST, then it can use the Plague Prayers ability twice in your hero phase.</characteristic>
+                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">‘The bearer becomes a PRIEST. If the bearer is already a PRIEST, you can re-roll chanting rolls for the bearer.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -8446,7 +8991,7 @@ Hidden WEAPON TEAM units are destroyed if the unit they are hiding in is destroy
           <profiles>
             <profile id="a742-552b-ff35-3dc4" name="Master of Rot and Ruin" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
               <characteristics>
-                <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">You can re-roll the dice that determines if a prayer chanted by this general is answered.</characteristic>
+                <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">You can re-roll chanting rolls for this general.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -8655,6 +9200,19 @@ Hidden WEAPON TEAM units are destroyed if the unit they are hiding in is destroy
           </costs>
         </selectionEntry>
       </selectionEntries>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="286a-2838-49be-5968" name="Battalions" hidden="false" collective="false" import="true">
+      <entryLinks>
+        <entryLink id="5863-aec8-8ba1-f1af" name="Core Battalions" hidden="false" collective="false" import="true" targetId="b275-810f-adfc-156b" type="selectionEntryGroup"/>
+      </entryLinks>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="ff40-9e7b-b23e-68e1" name="Prayers" hidden="false" collective="false" import="true">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bed8-30c8-a55d-14c1" type="max"/>
+      </constraints>
+      <entryLinks>
+        <entryLink id="866e-f3db-eb25-739d" name="Universal Prayer Scripture" hidden="false" collective="false" import="true" targetId="3674-103c-35c9-85a6" type="selectionEntryGroup"/>
+      </entryLinks>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <sharedProfiles>

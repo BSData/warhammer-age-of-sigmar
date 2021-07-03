@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="74" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="84" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <publications>
     <publication id="e51d-b1a3-pubEC" name="The General&apos;s Handbook"/>
     <publication id="e51d-b1a3-pubEQ" name="Core Rules"/>
@@ -14,6 +14,7 @@
     <publication id="ff85-f62a-3b88-2684" name="Cursed City Warscrolls"/>
     <publication id="9ba2-cdb6-f9ce-98d0" name="Broken Realms: Be&apos;lakor"/>
     <publication id="7ca7-0a01-0c6c-9b61" name="Broken Realms: Kragnos"/>
+    <publication id="e434-aae2-8d86-e264" name="General&apos;s Handbook 2021"/>
   </publications>
   <costTypes>
     <costType id="points" name="pts" defaultCostLimit="0.0" hidden="false"/>
@@ -55,6 +56,7 @@
     <profileType id="2e81-5e22-c6e1-73cb" name="Spell">
       <characteristicTypes>
         <characteristicType id="2508-b604-1258-a920" name="Casting Value"/>
+        <characteristicType id="5b5c-1fd1-4c0f-5705" name="Range"/>
         <characteristicType id="76ff-781d-b8e6-5f27" name="Description"/>
       </characteristicTypes>
     </profileType>
@@ -90,12 +92,24 @@
     </profileType>
     <profileType id="eed7-4131-0a52-0668" name="Prayer">
       <characteristicTypes>
+        <characteristicType id="276a-ab7e-145d-3ffc" name="Answer Value"/>
+        <characteristicType id="fd81-4e98-28ac-092a" name="Range"/>
         <characteristicType id="0746-6cfb-5e15-53cb" name="Description"/>
       </characteristicTypes>
     </profileType>
     <profileType id="75e0-a332-e4f5-bf36" name="Battalion Organisation">
       <characteristicTypes>
         <characteristicType id="eb5f-e9d2-e457-bff5" name="Required"/>
+      </characteristicTypes>
+    </profileType>
+    <profileType id="9c01-ec20-32c1-0948" name="Grand Strategy">
+      <characteristicTypes>
+        <characteristicType id="53c8-cc18-16d1-e890" name="Description"/>
+      </characteristicTypes>
+    </profileType>
+    <profileType id="6bf0-7801-561f-cc28" name="Special Rules">
+      <characteristicTypes>
+        <characteristicType id="82bd-2ffd-8589-576c" name="Description"/>
       </characteristicTypes>
     </profileType>
   </profileTypes>
@@ -119,7 +133,7 @@
       <modifiers>
         <modifier type="increment" field="459e-bc05-f498-6753" value="1.0">
           <repeats>
-            <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="be17-6bbd-b857-3f43" repeats="1" roundUp="false"/>
+            <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a8b-93fa-e1b9-4102" repeats="1" roundUp="false"/>
           </repeats>
         </modifier>
         <modifier type="increment" field="459e-bc05-f498-6753" value="2.0">
@@ -178,7 +192,6 @@
     <categoryEntry id="1422-e165-b7d0-b2d9" name="OGOR" hidden="false"/>
     <categoryEntry id="c91f-5c40-bec0-1a93" name="DRAGON" hidden="false"/>
     <categoryEntry id="6ec4-4931-4d7f-006b" name="IDONETH DEEPKIN" hidden="false"/>
-    <categoryEntry id="be2f-aa63-6d82-e2fc" name="Allegiance: Khorne" hidden="false"/>
     <categoryEntry id="1974-3f49-7f0b-8422" name="Game Options" hidden="false"/>
     <categoryEntry id="fd9f-428a-177d-c765" name="Vanguard" hidden="false"/>
     <categoryEntry id="6330-7561-7a32-0851" name="Battlehost" hidden="false"/>
@@ -241,6 +254,11 @@
     <categoryEntry id="c8b9-d6b2-34c8-79e5" name="VYRKOS DYNASTY" hidden="false"/>
     <categoryEntry id="0186-42c3-5ef0-d964" name="KASTELAI DYNASTY" hidden="false"/>
     <categoryEntry id="d8da-21d5-cdf8-709f" name="AVENGORII DYNASTY" hidden="false"/>
+    <categoryEntry id="1109-7ce6-b7a3-3a0c" name="Reinforced" hidden="false"/>
+    <categoryEntry id="6575-7d6c-ce4d-ada4" name="Core Battalion" hidden="false"/>
+    <categoryEntry id="a8ed-ca35-24e0-cf2e" name="9 or less wounds Leader" hidden="false"/>
+    <categoryEntry id="787f-7260-bb51-08c8" name="Legends" hidden="false"/>
+    <categoryEntry id="fa69-cc30-064b-f0ce" name="Allegiance KO" hidden="true"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry id="36b7-ee1e-0855-f23f" name="**Pitched Battle**" hidden="false">
@@ -250,7 +268,7 @@
             <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fd9f-428a-177d-c765" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="set" field="e8e3-9adc-3526-c6d6" value="2000">
+        <modifier type="set" field="e8e3-9adc-3526-c6d6" value="2000.0">
           <conditions>
             <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6330-7561-7a32-0851" type="equalTo"/>
           </conditions>
@@ -275,7 +293,7 @@
             <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1e63-0b49-ac04-321f" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="decrement" field="e8e3-9adc-3526-c6d6" value="250">
+        <modifier type="decrement" field="e8e3-9adc-3526-c6d6" value="250.0">
           <conditions>
             <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="aa3a-742d-9e34-e701" type="equalTo"/>
           </conditions>
@@ -290,7 +308,7 @@
             <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6a86-ed1f-1db7-6f7c" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="increment" field="e8e3-9adc-3526-c6d6" value="250">
+        <modifier type="increment" field="e8e3-9adc-3526-c6d6" value="250.0">
           <conditions>
             <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4c1d-7a55-fa32-d2be" type="equalTo"/>
           </conditions>
@@ -302,24 +320,34 @@
       <forceEntries>
         <forceEntry id="78f3-8a59-699a-61e8" name="Allies" hidden="false">
           <modifiers>
-            <modifier type="set" field="94dd-25fb-4a00-e373" value="500.0">
+            <modifier type="set" field="94dd-25fb-4a00-e373" value="100.0">
               <conditions>
-                <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1e63-0b49-ac04-321f" type="equalTo"/>
+                <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e860-9b1e-36bd-a54f" type="equalTo"/>
               </conditions>
             </modifier>
             <modifier type="set" field="94dd-25fb-4a00-e373" value="400.0">
               <conditions>
-                <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6330-7561-7a32-0851" type="equalTo"/>
+                <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cea8-e4b2-c44f-c7b4" type="equalTo"/>
               </conditions>
             </modifier>
             <modifier type="set" field="94dd-25fb-4a00-e373" value="200.0">
               <conditions>
-                <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fd9f-428a-177d-c765" type="equalTo"/>
+                <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e9fc-6b3a-1b9a-e807" type="equalTo"/>
               </conditions>
             </modifier>
             <modifier type="set" field="94dd-25fb-4a00-e373" value="520.0">
               <conditions>
                 <condition field="selections" scope="78f3-8a59-699a-61e8" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="24c2-fff5-f17c-3d07" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="94dd-25fb-4a00-e373" value="300.0">
+              <conditions>
+                <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a3cc-3b86-4778-0b11" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="94dd-25fb-4a00-e373" value="600.0">
+              <conditions>
+                <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ef67-15fb-487c-397a" type="equalTo"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -331,60 +359,82 @@
             <categoryLink id="7054-f9e4-5cb2-39b6" name="Behemoth" hidden="false" targetId="fa0c-9044-2568-fa02" primary="false"/>
             <categoryLink id="6e3f-492a-d37a-bdaf" name="Leader" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="false"/>
             <categoryLink id="31f4-75e9-931e-3484" name="Other" hidden="false" targetId="065e-fda7-fd27-1f40" primary="false"/>
-            <categoryLink id="f8f6-1315-7c9b-9598" name="Battalion" hidden="false" targetId="be17-6bbd-b857-3f43" primary="false"/>
+            <categoryLink id="d3cc-55f0-f813-9628" name="Battleline" hidden="false" targetId="e9f2-765a-b7b8-ce8e" primary="false"/>
+          </categoryLinks>
+        </forceEntry>
+        <forceEntry id="5c1d-d0be-e5cf-9fe3" name="Coalition" hidden="false">
+          <constraints>
+            <constraint field="points" scope="roster" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" id="bbd8-9f4d-0917-fc9e" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="3ee5-3153-dbac-67a4" name="Artillery" hidden="false" targetId="1d26-07fc-6a66-d73e" primary="false"/>
+            <categoryLink id="0d6b-4fdf-b862-a4d7" name="Behemoth" hidden="false" targetId="fa0c-9044-2568-fa02" primary="false"/>
+            <categoryLink id="0ba6-5529-aee7-8c1a" name="Leader" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="false"/>
+            <categoryLink id="7592-9965-7971-62ca" name="Other" hidden="false" targetId="065e-fda7-fd27-1f40" primary="false"/>
+            <categoryLink id="b542-faf4-7088-143c" name="Battleline" hidden="false" targetId="e9f2-765a-b7b8-ce8e" primary="false"/>
           </categoryLinks>
         </forceEntry>
       </forceEntries>
       <categoryLinks>
+        <categoryLink id="1ed5-bf3f-f2cf-99b0" name="Core Battalion" hidden="false" targetId="6575-7d6c-ce4d-ada4" primary="false"/>
         <categoryLink id="da17-2e5a-0e3e-7cda" name="Leader" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="false">
           <modifiers>
-            <modifier type="set" field="ba85-6aef-72d4-ebc4" value="4">
+            <modifier type="set" field="ba85-6aef-72d4-ebc4" value="4.0">
               <conditions>
-                <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fd9f-428a-177d-c765" type="equalTo"/>
+                <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a3cc-3b86-4778-0b11" type="equalTo"/>
               </conditions>
             </modifier>
-            <modifier type="set" field="ba85-6aef-72d4-ebc4" value="6">
+            <modifier type="set" field="ba85-6aef-72d4-ebc4" value="6.0">
               <conditions>
-                <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6330-7561-7a32-0851" type="equalTo"/>
+                <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cea8-e4b2-c44f-c7b4" type="equalTo"/>
               </conditions>
             </modifier>
-            <modifier type="set" field="ba85-6aef-72d4-ebc4" value="8">
+            <modifier type="set" field="ba85-6aef-72d4-ebc4" value="8.0">
               <conditions>
-                <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1e63-0b49-ac04-321f" type="equalTo"/>
+                <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ef67-15fb-487c-397a" type="equalTo"/>
               </conditions>
             </modifier>
-            <modifier type="set" field="5c22-cda7-10c7-da36" value="1">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6330-7561-7a32-0851" type="equalTo"/>
-                    <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1e63-0b49-ac04-321f" type="equalTo"/>
-                    <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fd9f-428a-177d-c765" type="equalTo"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
+            <modifier type="set" field="ba85-6aef-72d4-ebc4" value="2.0">
+              <conditions>
+                <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e860-9b1e-36bd-a54f" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="ba85-6aef-72d4-ebc4" value="3.0">
+              <conditions>
+                <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e9fc-6b3a-1b9a-e807" type="equalTo"/>
+              </conditions>
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="5c22-cda7-10c7-da36" type="min"/>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="5c22-cda7-10c7-da36" type="min"/>
             <constraint field="selections" scope="roster" value="-1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="ba85-6aef-72d4-ebc4" type="max"/>
           </constraints>
         </categoryLink>
         <categoryLink id="9483-c7a6-8a0b-4ab3" name="Behemoth" hidden="false" targetId="fa0c-9044-2568-fa02" primary="false">
           <modifiers>
-            <modifier type="set" field="e7b6-33e8-13db-8935" value="2">
+            <modifier type="set" field="e7b6-33e8-13db-8935" value="3.0">
               <conditions>
-                <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fd9f-428a-177d-c765" type="equalTo"/>
+                <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a3cc-3b86-4778-0b11" type="equalTo"/>
               </conditions>
             </modifier>
-            <modifier type="set" field="e7b6-33e8-13db-8935" value="4">
+            <modifier type="set" field="e7b6-33e8-13db-8935" value="4.0">
               <conditions>
-                <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6330-7561-7a32-0851" type="equalTo"/>
+                <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cea8-e4b2-c44f-c7b4" type="equalTo"/>
               </conditions>
             </modifier>
-            <modifier type="set" field="e7b6-33e8-13db-8935" value="5">
+            <modifier type="set" field="e7b6-33e8-13db-8935" value="6.0">
               <conditions>
-                <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1e63-0b49-ac04-321f" type="equalTo"/>
+                <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ef67-15fb-487c-397a" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="e7b6-33e8-13db-8935" value="2.0">
+              <conditions>
+                <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e9fc-6b3a-1b9a-e807" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="e7b6-33e8-13db-8935" value="1.0">
+              <conditions>
+                <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e860-9b1e-36bd-a54f" type="equalTo"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -392,52 +442,73 @@
             <constraint field="selections" scope="roster" value="-1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="e7b6-33e8-13db-8935" type="max"/>
           </constraints>
         </categoryLink>
-        <categoryLink id="3c3f-f6ef-cc1f-8186" name="Artillery" hidden="false" targetId="1d26-07fc-6a66-d73e" primary="false">
-          <modifiers>
-            <modifier type="set" field="0247-cd5a-628b-8b0d" value="5">
-              <conditions>
-                <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1e63-0b49-ac04-321f" type="equalTo"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="0247-cd5a-628b-8b0d" value="2">
-              <conditions>
-                <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fd9f-428a-177d-c765" type="equalTo"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="0247-cd5a-628b-8b0d" value="4">
-              <conditions>
-                <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6330-7561-7a32-0851" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="roster" value="-1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="0247-cd5a-628b-8b0d" type="max"/>
-          </constraints>
-        </categoryLink>
         <categoryLink id="63aa-6681-a0ff-0d99" name="Battleline" hidden="false" targetId="e9f2-765a-b7b8-ce8e" primary="false">
           <modifiers>
-            <modifier type="set" field="73c7-ba20-18e8-8b37" value="2">
+            <modifier type="set" field="da2f-a61d-bdd3-ad70" value="2.0">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a3cc-3b86-4778-0b11" type="equalTo"/>
+                    <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e9fc-6b3a-1b9a-e807" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" field="da2f-a61d-bdd3-ad70" value="1.0">
               <conditions>
-                <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fd9f-428a-177d-c765" type="equalTo"/>
+                <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e860-9b1e-36bd-a54f" type="equalTo"/>
               </conditions>
             </modifier>
-            <modifier type="set" field="73c7-ba20-18e8-8b37" value="4">
+            <modifier type="set" field="da2f-a61d-bdd3-ad70" value="3.0">
               <conditions>
-                <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1e63-0b49-ac04-321f" type="equalTo"/>
+                <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cea8-e4b2-c44f-c7b4" type="equalTo"/>
               </conditions>
             </modifier>
-            <modifier type="set" field="73c7-ba20-18e8-8b37" value="3">
+            <modifier type="set" field="da2f-a61d-bdd3-ad70" value="4.0">
               <conditions>
-                <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6330-7561-7a32-0851" type="equalTo"/>
+                <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ef67-15fb-487c-397a" type="equalTo"/>
               </conditions>
             </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="73c7-ba20-18e8-8b37" type="min"/>
+            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="da2f-a61d-bdd3-ad70" type="min"/>
           </constraints>
         </categoryLink>
         <categoryLink id="5156-dc6f-149b-1a5e" name="Other" hidden="false" targetId="065e-fda7-fd27-1f40" primary="false"/>
-        <categoryLink id="bc41-5536-8011-4348" name="Battalion" hidden="false" targetId="be17-6bbd-b857-3f43" primary="false"/>
+        <categoryLink id="8261-be9d-8cf0-8854" name="Artillery" hidden="false" targetId="1d26-07fc-6a66-d73e" primary="false">
+          <modifiers>
+            <modifier type="set" field="b11e-00d2-9fc6-a919" value="3.0">
+              <conditions>
+                <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a3cc-3b86-4778-0b11" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="b11e-00d2-9fc6-a919" value="4.0">
+              <conditions>
+                <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cea8-e4b2-c44f-c7b4" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="b11e-00d2-9fc6-a919" value="6.0">
+              <conditions>
+                <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ef67-15fb-487c-397a" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="b11e-00d2-9fc6-a919" value="2.0">
+              <conditions>
+                <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e9fc-6b3a-1b9a-e807" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="b11e-00d2-9fc6-a919" value="1.0">
+              <conditions>
+                <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e860-9b1e-36bd-a54f" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="roster" value="-1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="b11e-00d2-9fc6-a919" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="9716-7416-c989-9575" name="Scenery" hidden="false" targetId="bc8a-9257-1601-6d62" primary="false"/>
         <categoryLink id="fadd-b7fa-31f8-4fb3" name="General" hidden="false" targetId="b745-17c4-8fbf-8b04" primary="false"/>
         <categoryLink id="f81e-6d6a-67b4-db13" name="Artefact" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
         <categoryLink id="f631-f98a-5c53-05bb" name="Allegiance" hidden="false" targetId="87e8-c095-f059-5f7b" primary="false">
@@ -451,14 +522,81 @@
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" id="7025-70e4-7ad4-407a" type="max"/>
           </constraints>
         </categoryLink>
-        <categoryLink id="f0b1-06e5-134a-1cd1" name="Malign Sorcery" hidden="false" targetId="eecb-ed66-d474-9ddd" primary="false"/>
+        <categoryLink id="f0b1-06e5-134a-1cd1" name="Malign Sorcery" hidden="false" targetId="eecb-ed66-d474-9ddd" primary="false">
+          <modifiers>
+            <modifier type="set" field="190c-01a5-34be-b8f5" value="3.0">
+              <conditions>
+                <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cea8-e4b2-c44f-c7b4" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="190c-01a5-34be-b8f5" value="4.0">
+              <conditions>
+                <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ef67-15fb-487c-397a" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="190c-01a5-34be-b8f5" value="1.0">
+              <conditions>
+                <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e860-9b1e-36bd-a54f" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="190c-01a5-34be-b8f5" value="2.0">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e9fc-6b3a-1b9a-e807" type="equalTo"/>
+                    <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a3cc-3b86-4778-0b11" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="roster" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="190c-01a5-34be-b8f5" type="max"/>
+          </constraints>
+        </categoryLink>
         <categoryLink id="4f35-ed38-e2f8-b024" name="Command Points" hidden="false" targetId="8be8-3ccd-be93-b55e" primary="false"/>
         <categoryLink id="3e68-25b0-23a7-10a3" name="Realm of Battle" hidden="false" targetId="5e28-c4f1-4a92-b75c" primary="false">
           <constraints>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" id="13f0-17b9-371a-c147" type="max"/>
           </constraints>
         </categoryLink>
-        <categoryLink id="9716-7416-c989-9575" name="Scenery" hidden="false" targetId="bc8a-9257-1601-6d62" primary="false"/>
+        <categoryLink id="51d9-209a-fd1c-1882" name="Reinforced" hidden="false" targetId="1109-7ce6-b7a3-3a0c" primary="false">
+          <modifiers>
+            <modifier type="set" field="4a9f-649f-737b-9508" value="3.0">
+              <conditions>
+                <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a3cc-3b86-4778-0b11" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="4a9f-649f-737b-9508" value="4.0">
+              <conditions>
+                <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cea8-e4b2-c44f-c7b4" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="4a9f-649f-737b-9508" value="6.0">
+              <conditions>
+                <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ef67-15fb-487c-397a" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="4a9f-649f-737b-9508" value="2.0">
+              <conditions>
+                <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e9fc-6b3a-1b9a-e807" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="4a9f-649f-737b-9508" value="1.0">
+              <conditions>
+                <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e860-9b1e-36bd-a54f" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="roster" value="-1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="4a9f-649f-737b-9508" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="2e72-bf7c-f588-8170" name="Legends" hidden="false" targetId="787f-7260-bb51-08c8" primary="false">
+          <constraints>
+            <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="5f6d-d0d9-2a3d-95d4" type="max"/>
+          </constraints>
+        </categoryLink>
       </categoryLinks>
     </forceEntry>
     <forceEntry id="af42-5af7-420c-7ab6" name="Meeting Engagement - Spearhead" hidden="true">
@@ -570,29 +708,342 @@
         </categoryLink>
       </categoryLinks>
     </forceEntry>
+    <forceEntry id="f5c9-2d9a-2ffb-edd5" name="**Narrative Battle**" hidden="false">
+      <modifiers>
+        <modifier type="set" field="61e3-aee8-3022-84cc" value="1000.0">
+          <conditions>
+            <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fd9f-428a-177d-c765" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="61e3-aee8-3022-84cc" value="2000.0">
+          <conditions>
+            <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6330-7561-7a32-0851" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="61e3-aee8-3022-84cc" value="2500.0">
+          <conditions>
+            <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1e63-0b49-ac04-321f" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="append" field="name" value="1,000">
+          <conditions>
+            <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fd9f-428a-177d-c765" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="append" field="name" value="2,000">
+          <conditions>
+            <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6330-7561-7a32-0851" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="append" field="name" value="2,500">
+          <conditions>
+            <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1e63-0b49-ac04-321f" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="decrement" field="61e3-aee8-3022-84cc" value="250.0">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="aa3a-742d-9e34-e701" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="increment" field="61e3-aee8-3022-84cc" value="500.0">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="45c9-0873-d072-007a" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="decrement" field="61e3-aee8-3022-84cc" value="500.0">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6a86-ed1f-1db7-6f7c" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="increment" field="61e3-aee8-3022-84cc" value="250.0">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4c1d-7a55-fa32-d2be" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="points" scope="roster" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" id="61e3-aee8-3022-84cc" type="max"/>
+      </constraints>
+      <forceEntries>
+        <forceEntry id="24d6-500b-7e3f-1470" name="Allies" hidden="false">
+          <modifiers>
+            <modifier type="set" field="4783-9a05-8cfe-7af2" value="100.0">
+              <conditions>
+                <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e860-9b1e-36bd-a54f" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="4783-9a05-8cfe-7af2" value="400.0">
+              <conditions>
+                <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cea8-e4b2-c44f-c7b4" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="4783-9a05-8cfe-7af2" value="200.0">
+              <conditions>
+                <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e9fc-6b3a-1b9a-e807" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="4783-9a05-8cfe-7af2" value="520.0">
+              <conditions>
+                <condition field="selections" scope="78f3-8a59-699a-61e8" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="24c2-fff5-f17c-3d07" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="4783-9a05-8cfe-7af2" value="300.0">
+              <conditions>
+                <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a3cc-3b86-4778-0b11" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="4783-9a05-8cfe-7af2" value="600.0">
+              <conditions>
+                <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ef67-15fb-487c-397a" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="points" scope="roster" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" id="4783-9a05-8cfe-7af2" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="60b4-01f3-f160-ad1a" name="Artillery" hidden="false" targetId="1d26-07fc-6a66-d73e" primary="false"/>
+            <categoryLink id="d48b-a53c-3512-9dcf" name="Behemoth" hidden="false" targetId="fa0c-9044-2568-fa02" primary="false"/>
+            <categoryLink id="2ed0-d331-e4c5-4914" name="Leader" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="false"/>
+            <categoryLink id="8aab-cfce-b694-957f" name="Other" hidden="false" targetId="065e-fda7-fd27-1f40" primary="false"/>
+            <categoryLink id="244e-223d-855d-9163" name="Battleline" hidden="false" targetId="e9f2-765a-b7b8-ce8e" primary="false"/>
+          </categoryLinks>
+        </forceEntry>
+        <forceEntry id="88f2-a5fd-1371-927b" name="Coalition" hidden="false">
+          <constraints>
+            <constraint field="points" scope="roster" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" id="9dca-7844-199c-f349" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="c98a-9205-637c-878f" name="Artillery" hidden="false" targetId="1d26-07fc-6a66-d73e" primary="false"/>
+            <categoryLink id="b40e-5291-6f4f-94d0" name="Behemoth" hidden="false" targetId="fa0c-9044-2568-fa02" primary="false"/>
+            <categoryLink id="366d-acf5-cab2-c3aa" name="Leader" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="false"/>
+            <categoryLink id="8a6d-e3ca-ceda-6e9b" name="Other" hidden="false" targetId="065e-fda7-fd27-1f40" primary="false"/>
+            <categoryLink id="7c06-69a5-4a41-312b" name="Battleline" hidden="false" targetId="e9f2-765a-b7b8-ce8e" primary="false"/>
+          </categoryLinks>
+        </forceEntry>
+      </forceEntries>
+      <categoryLinks>
+        <categoryLink id="29cb-50df-73b1-2367" name="Core Battalion" hidden="false" targetId="6575-7d6c-ce4d-ada4" primary="false"/>
+        <categoryLink id="bada-c148-5752-afd4" name="Leader" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="false">
+          <modifiers>
+            <modifier type="set" field="7b96-3e4e-ceb5-d59a" value="4.0">
+              <conditions>
+                <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a3cc-3b86-4778-0b11" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="7b96-3e4e-ceb5-d59a" value="6.0">
+              <conditions>
+                <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cea8-e4b2-c44f-c7b4" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="7b96-3e4e-ceb5-d59a" value="8.0">
+              <conditions>
+                <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ef67-15fb-487c-397a" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="7b96-3e4e-ceb5-d59a" value="2.0">
+              <conditions>
+                <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e860-9b1e-36bd-a54f" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="7b96-3e4e-ceb5-d59a" value="3.0">
+              <conditions>
+                <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e9fc-6b3a-1b9a-e807" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="b99e-cecb-f212-10d6" type="min"/>
+            <constraint field="selections" scope="roster" value="-1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="7b96-3e4e-ceb5-d59a" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="0e59-cf77-2269-2086" name="Behemoth" hidden="false" targetId="fa0c-9044-2568-fa02" primary="false">
+          <modifiers>
+            <modifier type="set" field="932f-5f96-d0f4-e1e1" value="3.0">
+              <conditions>
+                <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a3cc-3b86-4778-0b11" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="932f-5f96-d0f4-e1e1" value="4.0">
+              <conditions>
+                <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cea8-e4b2-c44f-c7b4" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="932f-5f96-d0f4-e1e1" value="6.0">
+              <conditions>
+                <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ef67-15fb-487c-397a" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="932f-5f96-d0f4-e1e1" value="2.0">
+              <conditions>
+                <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e9fc-6b3a-1b9a-e807" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="932f-5f96-d0f4-e1e1" value="1.0">
+              <conditions>
+                <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e860-9b1e-36bd-a54f" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="roster" value="-1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="932f-5f96-d0f4-e1e1" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="330f-1d63-22db-138b" name="Battleline" hidden="false" targetId="e9f2-765a-b7b8-ce8e" primary="false">
+          <modifiers>
+            <modifier type="set" field="f6ea-531c-4e71-d5f1" value="2.0">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a3cc-3b86-4778-0b11" type="equalTo"/>
+                    <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e9fc-6b3a-1b9a-e807" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" field="f6ea-531c-4e71-d5f1" value="1.0">
+              <conditions>
+                <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e860-9b1e-36bd-a54f" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="f6ea-531c-4e71-d5f1" value="3.0">
+              <conditions>
+                <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cea8-e4b2-c44f-c7b4" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="f6ea-531c-4e71-d5f1" value="4.0">
+              <conditions>
+                <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ef67-15fb-487c-397a" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="f6ea-531c-4e71-d5f1" type="min"/>
+            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ca4e-5ee6-bfd1-5dbd" type="min"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="da74-f4b5-8f87-74ab" name="Other" hidden="false" targetId="065e-fda7-fd27-1f40" primary="false"/>
+        <categoryLink id="e071-fb26-1c9f-2988" name="Artillery" hidden="false" targetId="1d26-07fc-6a66-d73e" primary="false">
+          <modifiers>
+            <modifier type="set" field="d470-527e-d0df-62cc" value="3.0">
+              <conditions>
+                <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a3cc-3b86-4778-0b11" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="d470-527e-d0df-62cc" value="4.0">
+              <conditions>
+                <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cea8-e4b2-c44f-c7b4" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="d470-527e-d0df-62cc" value="6.0">
+              <conditions>
+                <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ef67-15fb-487c-397a" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="d470-527e-d0df-62cc" value="2.0">
+              <conditions>
+                <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e9fc-6b3a-1b9a-e807" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="d470-527e-d0df-62cc" value="1.0">
+              <conditions>
+                <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e860-9b1e-36bd-a54f" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="roster" value="-1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="d470-527e-d0df-62cc" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="0feb-c421-c585-c821" name="Scenery" hidden="false" targetId="bc8a-9257-1601-6d62" primary="false"/>
+        <categoryLink id="3016-b5fd-206b-c03b" name="General" hidden="false" targetId="b745-17c4-8fbf-8b04" primary="false"/>
+        <categoryLink id="a653-1a5a-6cad-a54a" name="Artefact" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
+        <categoryLink id="04c2-5635-03bc-5a43" name="Allegiance" hidden="false" targetId="87e8-c095-f059-5f7b" primary="false">
+          <constraints>
+            <constraint field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cf27-780d-73f3-d119" type="min"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="26a8-6424-149e-05ae" name="Game Options" hidden="false" targetId="1974-3f49-7f0b-8422" primary="false"/>
+        <categoryLink id="a79c-7300-0d87-555b" name="Realm of Origin" hidden="false" targetId="5c6d-5384-bcb1-b474" primary="false">
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" id="85f1-1859-ad2f-c712" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="84e0-4d4e-2db8-d793" name="Malign Sorcery" hidden="false" targetId="eecb-ed66-d474-9ddd" primary="false">
+          <modifiers>
+            <modifier type="set" field="1c03-c5b5-f0ec-2ede" value="3.0">
+              <conditions>
+                <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cea8-e4b2-c44f-c7b4" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="1c03-c5b5-f0ec-2ede" value="4.0">
+              <conditions>
+                <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ef67-15fb-487c-397a" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="1c03-c5b5-f0ec-2ede" value="1.0">
+              <conditions>
+                <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e860-9b1e-36bd-a54f" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="1c03-c5b5-f0ec-2ede" value="2.0">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e9fc-6b3a-1b9a-e807" type="equalTo"/>
+                    <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a3cc-3b86-4778-0b11" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="roster" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="1c03-c5b5-f0ec-2ede" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="a4b0-1ebb-c083-7ba6" name="Command Points" hidden="false" targetId="8be8-3ccd-be93-b55e" primary="false"/>
+        <categoryLink id="18bb-ba77-fc53-b5ee" name="Realm of Battle" hidden="false" targetId="5e28-c4f1-4a92-b75c" primary="false">
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" id="f62d-797b-95b3-96b7" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="9bcc-e61a-c922-f6af" name="Reinforced" hidden="false" targetId="1109-7ce6-b7a3-3a0c" primary="false">
+          <modifiers>
+            <modifier type="set" field="a736-2e7e-3ea1-84c4" value="3.0">
+              <conditions>
+                <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a3cc-3b86-4778-0b11" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="a736-2e7e-3ea1-84c4" value="4.0">
+              <conditions>
+                <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cea8-e4b2-c44f-c7b4" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="a736-2e7e-3ea1-84c4" value="6.0">
+              <conditions>
+                <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ef67-15fb-487c-397a" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="a736-2e7e-3ea1-84c4" value="2.0">
+              <conditions>
+                <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e9fc-6b3a-1b9a-e807" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="a736-2e7e-3ea1-84c4" value="1.0">
+              <conditions>
+                <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e860-9b1e-36bd-a54f" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="roster" value="-1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="a736-2e7e-3ea1-84c4" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="e8a1-cfc5-6150-561a" name="Battalion" hidden="false" targetId="be17-6bbd-b857-3f43" primary="false"/>
+      </categoryLinks>
+    </forceEntry>
   </forceEntries>
   <selectionEntries>
-    <selectionEntry id="745a-d2c9-a076-2d70" name="Purchased Command Points" hidden="false" collective="false" import="true" type="upgrade">
-      <constraints>
-        <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="584d-611d-064d-0a33" type="min"/>
-      </constraints>
-      <categoryLinks>
-        <categoryLink id="d882-d72a-6391-a6be" name="New CategoryLink" hidden="false" targetId="8be8-3ccd-be93-b55e" primary="true"/>
-      </categoryLinks>
-      <selectionEntries>
-        <selectionEntry id="967b-d3ad-e0b5-e6c9" name="1 Command Point" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7126-cd45-a30a-dbb3" type="max"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="points" value="50.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-      <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
-      </costs>
-    </selectionEntry>
     <selectionEntry id="19fe-0099-8319-6fdf" name="Points Variation" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="79ec-1682-d07c-0d5a" type="max"/>
@@ -758,70 +1209,20 @@
         <categoryLink id="f07b-c3d4-19b5-7fea" name="New CategoryLink" hidden="false" targetId="bc8a-9257-1601-6d62" primary="true"/>
       </categoryLinks>
     </entryLink>
+    <entryLink id="b45a-89af-a431-ac85" name="Core Battalion: Linebreaker" hidden="false" collective="false" import="true" targetId="fa77-b2b2-8b0c-22e2" type="selectionEntry"/>
+    <entryLink id="c6a3-1019-9879-23fe" name="Core Battalion: Vanguard" hidden="false" collective="false" import="true" targetId="bbed-22cb-b649-6938" type="selectionEntry"/>
+    <entryLink id="e4a3-3f03-7047-8174" name="Core Battalion: Warlord" hidden="false" collective="false" import="true" targetId="5e7f-ccbb-a180-2e8b" type="selectionEntry"/>
+    <entryLink id="e6ce-389f-c52f-d8d0" name="Core Battalion: Alpha-Beast Pack" hidden="false" collective="false" import="true" targetId="af2c-42ac-d610-4a10" type="selectionEntry"/>
+    <entryLink id="615e-f56e-8ea0-adc6" name="Core Battalion: Hunters of the Heartlands" hidden="false" collective="false" import="true" targetId="49a3-5845-b4df-11f3" type="selectionEntry"/>
+    <entryLink id="eb9a-ad10-f507-1b3a" name="Core Battalion: Battle Regiment" hidden="false" collective="false" import="true" targetId="1878-56e2-2862-8da5" type="selectionEntry"/>
+    <entryLink id="da26-f2b9-ea3b-b117" name="Core Battalion: Command Entourage" hidden="false" collective="false" import="true" targetId="7f89-26d0-ff93-83fe" type="selectionEntry"/>
+    <entryLink id="49ae-7ee3-101e-5204" name="Core Battalion: Grand Battery" hidden="false" collective="false" import="true" targetId="be2d-ba53-4ebc-f035" type="selectionEntry"/>
+    <entryLink id="753f-721e-6781-3bdf" name="Grand Strategy" hidden="false" collective="false" import="true" targetId="f5ad-d831-b4c5-2195" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="e864-b552-811d-240f" name="New CategoryLink" hidden="false" targetId="1974-3f49-7f0b-8422" primary="true"/>
+      </categoryLinks>
+    </entryLink>
   </entryLinks>
-  <rules>
-    <rule id="a954-6cfc-59ca-674e" name="Inspiring Presence" publicationId="e51d-b1a3-pubEQ" page="3" hidden="false">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b745-17c4-8fbf-8b04" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <description>You can use this command ability at the start of the battleshock phase. If you do so, pick a friendly unit that is within 6&quot; of friendly HERO, or 12&quot; of a friendly HERO that is a general. That unit does not have to take battleshock tests in that phase.</description>
-    </rule>
-    <rule id="3f48-3925-7123-3392" name="At the Double" publicationId="e51d-b1a3-pubEQ" page="3" hidden="false">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b745-17c4-8fbf-8b04" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <description>You can use this command ability after you make a run roll for a friendly unit that is within 6&quot; of a friendly HERO, or 12&quot; of a friendly HERO that is a general. If you do so, the run roll is treated as being a 6.</description>
-    </rule>
-    <rule id="c157-62a0-2514-c4f4" name="Forward to Victory" publicationId="e51d-b1a3-pubEQ" page="3" hidden="false">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b745-17c4-8fbf-8b04" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <description>You can use this command ability after you make a charge roll for a friendly unit that is within 6&quot; of a friendly HERO, or 12&quot; of a friendly HERO that is a general. If you do so, re-roll the charge roll.</description>
-    </rule>
-    <rule id="7cec-f96f-69c7-ccd3" name="All-out Attack" hidden="false">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b745-17c4-8fbf-8b04" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <description>You can use this command ability at the start of the combat phase. If you do so, pick 1 friendly unit wholly within 12&quot; of a friendly HERO, or wholly within 18&quot; of a friendly HERO that is a general. You can re-roll hit rolls of 1 for attacks made by that unit until the end of that phase.</description>
-    </rule>
-    <rule id="7621-3d17-f407-25f6" name="All-out Defence" hidden="false">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b745-17c4-8fbf-8b04" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <description>You can use this command ability at the start of the combat phase. If you do so, pick 1 friendly unit that is wholly within 12&quot; of a friendly HERO, or wholly within 18&quot; of a friendly HERO that is a general. You can re-roll save rolls of 1 for attacks that target that unit until the end of that phase.
-</description>
-    </rule>
-    <rule id="9c56-8e19-2ac6-fb30" name="Volley Fire" hidden="false">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b745-17c4-8fbf-8b04" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <description>You can use this command ability at the start of your shooting phase. If you do so, pick 1 friendly unit that is wholly within 12&quot; of a friendly HERO, or wholly within 18&quot; of a friendly HERO that is a general. You can re-roll hit rolls of 1 for attacks made by that unit until the end of that phase.</description>
-    </rule>
-  </rules>
   <sharedSelectionEntries>
     <selectionEntry id="869c-168d-eba5-eacf" name="Arcane Bolt" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -864,7 +1265,7 @@
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4fb0-e1a3-236a-4e95" type="min"/>
       </constraints>
       <entryLinks>
-        <entryLink id="39f6-88b3-177e-2535" name="Game Type (GAME TYPE MUST BE IDENTICAL FOR ALL FORCES)" hidden="false" collective="false" import="true" targetId="5927-9c5a-8b20-8f37" type="selectionEntryGroup"/>
+        <entryLink id="39f6-88b3-177e-2535" name="Game Type" hidden="false" collective="false" import="true" targetId="5927-9c5a-8b20-8f37" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
@@ -888,28 +1289,19 @@
       <profiles>
         <profile id="b2ad-28b6-8c19-2bd7" name="Summon Aethervoid Pendulum" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
           <characteristics>
-            <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
-            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, set up an Aethervoid Pendulum model wholly within 6&quot; of the caster so that it points lengthways in the direction you wish it to move.</characteristic>
+            <characteristic name="Casting Value" typeId="2508-b604-1258-a920">5</characteristic>
+            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">6&quot;</characteristic>
+            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, set up the endless spell wholly within range of the caster. When this endless spell is set up, pivot the model so that the tip of the pendulum blade is pointing in the direction in which the endless spell is to be moved.</characteristic>
           </characteristics>
         </profile>
         <profile id="21f3-0955-0b5b-632a" name="Predatory" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">An Aethervoid Pendulum is a predatory endless spell. It can move up to 8&quot; and can fly. </characteristic>
-          </characteristics>
-        </profile>
-        <profile id="a0f5-049e-5f6b-92f7" name="Slicing Into Reality" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">When this model is set up, the player who set it up can immediately make a move with it.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This endless spell is a predatory endless spell. It can move up to 8&quot; and can fly. When this endless spell is moved, it must move in a straight line in the direction in which the tip of the pendulum blade is pointing.</characteristic>
           </characteristics>
         </profile>
         <profile id="75ab-d1f9-8312-4930" name="Scything Blade" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">After this model has moved, each unit that has any models it passed across, and each other unit that is within 1&quot; of it at the end of its move, suffers D6 mortal wounds. </characteristic>
-          </characteristics>
-        </profile>
-        <profile id="2577-0a57-fc04-cbb1" name="Unstoppable Mechanism" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Whenever you set up an Aethervoid Pendulum, you must place it lengthways in the direction you wish it to move. Whenever it moves, move it in a straight line in that direction.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">After this endless spell has moved, roll a dice for each unit that has any models it passed across and for each other unit that is within 1&quot; of it at the end of its move. On a 2+, that unit suffers D3 mortal wounds.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -921,10 +1313,10 @@
         <categoryLink id="bd9a-3f79-0b5f-7f8f" name="AETHERVOID PENDULUM" hidden="false" targetId="5647-b7a8-9716-1d17" primary="false"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="50.0"/>
+        <cost name="pts" typeId="points" value="65.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="98b9-64b2-7123-b7a2" name="Endless Spell: Balewind Vortex" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="98b9-64b2-7123-b7a2" name="Endless Spell: Balewind Vortex" hidden="true" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8106-c203-2ed0-e575" type="max"/>
       </constraints>
@@ -933,6 +1325,7 @@
           <characteristics>
             <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
             <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">WIZARDS with a Wounds characteristic of 9 or more, that are part of a unit of two or more models, or that are already on a Balewind Vortex, cannot attempt to cast this spell. In addition, Morathi-Khaine cannot attempt to cast this spell. If successfully cast, set up a Balewind Vortex model within 1&quot; of the caster and more than 3&quot; from any enemy models, and then place the caster on the upper platform.</characteristic>
+            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
           </characteristics>
         </profile>
         <profile id="1ef7-6e77-e5be-458b" name="Against the Aetheric Wind" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
@@ -975,13 +1368,20 @@ to set up the WIZARD, then the WIZARD is slain.</description>
       <profiles>
         <profile id="9590-acdc-1b4e-0963" name="Summon Chronomantic Cogs" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
           <characteristics>
-            <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
-            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, set up a Chronomantic Cogs model wholly within 12&quot; of the caster. </characteristic>
+            <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
+            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">6&quot;</characteristic>
+            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, set up the endless spell wholly within range of the caster.</characteristic>
           </characteristics>
         </profile>
         <profile id="4fe0-7a89-9044-9495" name="Mechanisms of Time" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">In their controlling player’s hero phase, a single Wizard within 9&quot; of this model may manipulate the cogs to increase or decrease the flow of time. They may do this in the same phase as the Chronomantic Cogs are set up. If they do so, choose one of the effects opposite. The effect lasts until their next hero phase, or until an enemy Wizard chooses to manipulate the cogs.  Speed Up Time: Add 2&quot; to the Move characteristic of all units on the battlefield. In addition, add 2 to charge rolls for all units on the battlefield.  Slow Down Time: The wizard manipulating the cogs can cast 1 additional spell in this hero phase. In addition, re-roll failed save rolls for that wizard.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">When this endless spell is set up, the commanding player must decide if it is increasing or decreasing the flow of time. 
+
+If it is increasing the flow of time, add 1 to charge rolls for units wholly within 18&quot; of this endless spell. 
+
+If it is decreasing the flow of time, WIZARDS can attempt to cast 1 extra spell in their commanding player&apos;s hero phase while they are within 6&quot; of this endless spell. 
+
+At the start of the hero phase, if there is a friendly WIZARD within 6&quot; of this endless spell, the player whose turn is taking place can change whether this endless spell is increasing or decreasing the flow of time.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -991,7 +1391,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
         <categoryLink id="c22f-fc01-e217-f01d" name="CHRONOMANTIC COGS" hidden="false" targetId="1619-fea5-de7e-8a67" primary="false"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="80.0"/>
+        <cost name="pts" typeId="points" value="45.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="ec28-3ec9-f2fa-82e5" name="Endless Spell: Emerald Lifeswarm" hidden="false" collective="false" import="true" type="upgrade">
@@ -1002,22 +1402,18 @@ to set up the WIZARD, then the WIZARD is slain.</description>
         <profile id="e8c0-ded6-d453-a796" name="Summon Emerald Lifeswarm" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
           <characteristics>
             <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
-            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, set up an Emerald Lifeswarm model wholly within 15&quot; of the caster. </characteristic>
+            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">6&quot;</characteristic>
+            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, set up the endless spell wholly within range of the caster.</characteristic>
           </characteristics>
         </profile>
         <profile id="6183-1ed2-30a1-468a" name="Predatory" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">An Emerald Lifeswarm is a predatory endless spell. Emerald Lifeswarms can move up to 10&quot; and can fly.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This endless spell is a predatory endless spell. It can move up to 8&quot; and can fly.</characteristic>
           </characteristics>
         </profile>
         <profile id="1ee9-f13f-669c-33d7" name="Bounteous Healing" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">After this model is set up or after it has moved, pick 1 unit within 1&quot; of it. You can either heal D3 wounds that have been allocated to that unit or, if no wounds are currently allocated to the unit, you may return a number of slain models to it that have a combined Wounds characteristic equal to or less than the roll of a D3. </characteristic>
-          </characteristics>
-        </profile>
-        <profile id="ffac-9035-e86e-fceb" name="Empowered by Ghyran" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If your battle is taking place in the Realm of Life, roll a D6 to determine the number of wounds healed or wounds worth of slain models returned by the Emerald Lifeswarm’s Bounteous Healing ability. </characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">After this endless spell is set up and after it has moved, the commanding player can pick 1 unit within 1&quot; of it. They can heal up to D3 mortal wounds allocated to that unit or, if no wounds are allocated to it, they can return a number of slain models to that unit that have a combined Wounds characteristic of D3 or less.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1030,7 +1426,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
         <categoryLink id="50fa-7469-e5cc-8169" name="GHYRAN" hidden="false" targetId="0b26-9340-45cf-07ee" primary="false"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="50.0"/>
+        <cost name="pts" typeId="points" value="60.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="1ce8-9373-9c22-75a0" name="Endless Spell: Geminids of Uhl-Gyish" hidden="false" collective="false" import="true" type="upgrade">
@@ -1040,33 +1436,19 @@ to set up the WIZARD, then the WIZARD is slain.</description>
       <profiles>
         <profile id="048c-412c-c308-90f9" name="Summon Geminids of Uhl-Gyish" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
           <characteristics>
-            <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
-            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, set up both models within 6&quot; of each other and both wholly within 18&quot; of the caster. You must then nominate one model to be the Light Geminid and the other to be the Shadow Geminid.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="8b3d-a71a-02e8-e999" name="Unleashed" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">When this model is set up, the player who set it up can immediately make a move with it. </characteristic>
+            <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
+            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">9&quot;</characteristic>
+            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, set up the parts of the endless spell within 6&quot; of each other and wholly within range of the caster.</characteristic>
           </characteristics>
         </profile>
         <profile id="c00d-5d8c-b48a-92d0" name="Tendrils of Shadow and Light" publicationId="e51d-b1a3-pubEFCFK" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">After the Shadow Geminid model has moved, each unit that has any models it passed across suffers D3 mortal wounds. In addition, subtract 1 (to a minimum of 1) from the Attacks characteristic of melee weapons used by each unit that has any models it passed across until the end of the battle round. A unit is not affected by the Shadow Geminid model if it has been passed across by the Light Geminid model earlier in the same battle round. After the Light Geminid model has moved, each unit that has any models it passed across suffers D3 mortal wounds. In addition, subtract 1 from hit rolls for each unit that has any models it passed across until the end of the battle round. A unit is not affected by the Light Geminid model if it has been passed across by the Shadow Geminid model earlier in the same battle round (a unit can be affected by one or other of the models each battle round, but not both).</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="13d9-73c9-ffcc-5cfb" name="Empowered by Hysh" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If your battle is taking place in the Realm of Light, you can re-roll the dice to determine the number of mortal wounds suffered by a unit that has any models passed across by the Light Geminid.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="5842-43e3-814d-ff9f" name="Empowered by Ulgu" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If your battle is taking place in the Realm of Shadow, you can re-roll the dice to determine the number of mortal wounds suffered by a unit that has any models passed across by the Shadow Geminid.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">After this endless spell has moved, roll a dice for each unit that has any models it passed across and for each other unit that is within 1&quot; of it at the end of its move. On a 2+, that unit suffers 1 mortal wound. In addition, if a mortal wound caused by this ability is allocated to a unit, that unit cannot issue or receive commands until the start of the next combat phase.</characteristic>
           </characteristics>
         </profile>
         <profile id="634a-99d6-067a-57e1" name="Predatory" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Geminids of Uhl-Gysh is a predatory endless spell. They can move up to 8&quot; and can fly. When you move this endless spell, the second model must finish its move within 6&quot; of the first. If this is impossible, this spell is dispelled. </characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This endless spell is a predatory endless spell. It can be moved up to 8&quot; and can fly. The parts of this endless spell must remain within 6&quot; of each other.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1080,7 +1462,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
         <categoryLink id="6e8c-7f5e-3e2e-fc43" name="ULGU" hidden="false" targetId="3f66-cb68-8afb-ce99" primary="false"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="60.0"/>
+        <cost name="pts" typeId="points" value="80.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="befc-365b-06f8-5575" name="Endless Spell: Horrorghast" hidden="false" collective="false" import="true" type="upgrade">
@@ -1091,22 +1473,18 @@ to set up the WIZARD, then the WIZARD is slain.</description>
         <profile id="1fb0-73e9-129c-891c" name="Summon Horrorghast" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
           <characteristics>
             <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
-            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, set up a Horrorghast model wholly within 12&quot; of the caster.</characteristic>
+            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">12&quot;</characteristic>
+            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, set up the endless spell wholly within range of the caster.</characteristic>
           </characteristics>
         </profile>
         <profile id="ea2b-6e1d-a138-8396" name="Prey on Fear" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Subtract 1 from the Bravery characteristic of units while they are within 12&quot; of this model. Subtract 2 instead from the Bravery characteristic of units while they are within 6&quot; of this model.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="9346-aa17-cae4-7273" name="Empowered by Shyish" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If your battle is taking place in the Realm of Death, this model can move up to 12&quot; instead of up to 9&quot;.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Units wholly within 12&quot; of this endless spell cannot receive commands in the battleshock phase. In addition, if a unit fails a battleshock test wholly within 12&quot; of this endless spell, add D3 to the number of models that flee.</characteristic>
           </characteristics>
         </profile>
         <profile id="e908-33ca-d3e1-dbcb" name="Predatory" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">A Horrorghast is a predatory endless spell. It can move up to 9&quot; and can fly. </characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This endless spell is a predatory endless spell. It can move up to 8&quot; and can fly.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1119,7 +1497,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
         <categoryLink id="66e7-40f4-73ab-dd04" name="SHYISH" hidden="false" targetId="2cc9-0867-b2e3-da55" primary="false"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="60.0"/>
+        <cost name="pts" typeId="points" value="65.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="1f68-29ac-db98-ff85" name="Endless Spell: Lauchon the Soulseeker" hidden="false" collective="false" import="true" type="upgrade">
@@ -1130,27 +1508,18 @@ to set up the WIZARD, then the WIZARD is slain.</description>
         <profile id="801d-6be1-0510-970e" name="Summon Lauchon the Soulseeker" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
           <characteristics>
             <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
-            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, set up a Lauchon the Soulseeker model wholly within 12&quot; of the caster.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="203f-cce0-0c04-21cc" name="Navigate Deathly Tides" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">When this model is set up, the player who set it up can immediately make a move with it.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="a466-232b-e51d-b504" name="Empowered by Shyish" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If your battle is taking place in the Realm of Death, this model can move up to 18&quot; instead of up to 12&quot;.</characteristic>
+            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">6&quot;</characteristic>
+            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, set up the endless spell wholly within range of the caster.</characteristic>
           </characteristics>
         </profile>
         <profile id="227e-905e-a8a2-360c" name="Soul Price" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Before a player makes a move with this model, that player can pick a friendly unit wholly within 3&quot; of this model. Remove that unit and place it to one side. After this model has moved, set that unit up again wholly within 3&quot; of this model and more than 9&quot; from any enemy units. Once that unit has been set up, 1 model from that unit is immediately slain.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Before the commanding player moves this endless spell, they can pick 1 friendly WIZARD wholly within 3&quot; of this endless spell. Remove that WIZARD from the battlefield. After this endless spell has moved, set that WIZARD up again wholly within 3&quot; of this endless spell and more than 9&quot; away from all enemy units. After that WIZARD has been set up, it suffers 1 mortal wound. That WIZARD canont make a normal move or run in the following movement phase.</characteristic>
           </characteristics>
         </profile>
         <profile id="bcbf-2a21-bf34-e39c" name="Predatory" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Lauchon the Soulseeker is a predatory endless spell. It can move up to 12&quot; and can fly. </characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This endless spell is a predatory endless spell. It can move up to 18&quot; and can fly.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1163,7 +1532,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
         <categoryLink id="5d52-d94b-a444-45b1" name="SHYISH" hidden="false" targetId="2cc9-0867-b2e3-da55" primary="false"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="60.0"/>
+        <cost name="pts" typeId="points" value="55.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="37a1-b025-6723-3fe1" name="Endless Spell: Malevolent Maelstrom" hidden="false" collective="false" import="true" type="upgrade">
@@ -1173,28 +1542,21 @@ to set up the WIZARD, then the WIZARD is slain.</description>
       <profiles>
         <profile id="e2a0-be45-7c5a-1d9c" name="Summon Malevolent Maelstrom" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
           <characteristics>
-            <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
-            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, set up a Malevolent Maelstrom model wholly within 18&quot; of the caster.</characteristic>
+            <characteristic name="Casting Value" typeId="2508-b604-1258-a920">5</characteristic>
+            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">6&quot;</characteristic>
+            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, set up the endless spell wholly within range of the caster.</characteristic>
           </characteristics>
         </profile>
         <profile id="af8c-d343-e2c2-d9e6" name="Predatory" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">A Malevolent Maelstrom is a predatory endless spell. It can move up to 8&quot; and can fly.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="abb3-1c3a-812b-214c" name="Devourer of Sorcery and Souls" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If a WIZARD successfully casts a spell within 12&quot; of a Malevolent Maelstrom, and that spell is not unbound, the Malevolent Maelstrom will attempt to steal the energies of the spell. Make an additional unbinding roll for that spell. If this unbinding roll is successful, the spell is unbound and 1 energy point is allocated to this model.  In addition, 1 energy point is allocated to this model for each unit destroyed within 6&quot; of this model. </characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This endless spell is a predatory endless spell. It can be moved up to 8&quot; and can fly.</characteristic>
           </characteristics>
         </profile>
         <profile id="4eff-d80f-28d3-c7fb" name="Morbid Detonation" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the end of each battle round, roll a dice for each Malevolent Maelstrom and add the number of energy points allocated to that model to the roll. On a 7+ that Malevolent Maelstrom explodes. Each unit within 3D6&quot; of the model that exploded suffers D3 mortal wounds. The model that exploded is then dispelled.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="5226-8299-4978-2ab2" name="Empowered by Shyish" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If your battle is taking place in the Realm of Death, allocate 1 additional energy point to this model at the start of each battle round.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">When this endless spell is set up, place a D6 beside it with the &apos;1&apos; facing up. Each time a spell is successfully cast by a unit within 12&quot; of this endless spell and not unbound, after the effects of the spell have been resolved, increase the value of the dice beside this endless spell by 1 (to a maximum of 6). In addition, each time a model is slain within 12&quot; of this endless spell, increase the value of the dice beside this endless spell by 1 (to a maximum of 6). 
+
+At th eend of the combat phase, if this endless spell is on the battlefield, roll a dice and add the value of the dice beside this endless spell to the roll. On a 10+, each unit within 12&quot; of this endless spell suffers D3 mortal wounds. Then, this endless spell is removed from play.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1207,7 +1569,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
         <categoryLink id="8e0f-7122-1605-3505" name="SHYISH" hidden="false" targetId="2cc9-0867-b2e3-da55" primary="false"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="10.0"/>
+        <cost name="pts" typeId="points" value="65.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="7ae1-8e71-327d-0893" name="Endless Spell: Prismatic Palisade" hidden="false" collective="false" import="true" type="upgrade">
@@ -1218,22 +1580,13 @@ to set up the WIZARD, then the WIZARD is slain.</description>
         <profile id="34d7-8e3b-b9ac-04ca" name="Summon Prismatic Palisade" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
           <characteristics>
             <characteristic name="Casting Value" typeId="2508-b604-1258-a920">5</characteristic>
-            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, set up a Prismatic Palisade model wholly within 18&quot; of the caster.</characteristic>
+            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">6&quot;</characteristic>
+            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, set up the endless spell wholly within range of the caster. </characteristic>
           </characteristics>
         </profile>
         <profile id="73bc-6abe-4c52-6d23" name="Blinding Light" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the start of each turn, roll a dice for each unit within 6&quot; of this model. On a 5+ subtract 1 from hit rolls for attacks made by that unit until the end of the turn.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="5bb4-5949-0d90-e76f" name="Dazzling Brilliance" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">A model cannot see another model if an imaginary straight line, 1mm wide, drawn from the centre of its base to the centre of the other model’s base passes over this model.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="2038-0249-055a-7b7c" name="Empowered by Hysh" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If your battle is taking place in the Realm of Light, add 1 to rolls made to determine if a unit is affected by this model’s Blinding Light ability.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Visibility between 2 models is blocked if a straight line drawn between the closest of the 2 models passes across this endless spell.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1243,7 +1596,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
         <categoryLink id="9d46-498d-22f1-9b94" name="PRISMATIC PALISADE" hidden="false" targetId="316f-32e5-0c7c-72af" primary="false"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="30.0"/>
+        <cost name="pts" typeId="points" value="40.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="6e7b-ce3f-9348-58e1" name="Endless Spell: Purple Sun of Shyish" hidden="false" collective="false" import="true" type="upgrade">
@@ -1254,32 +1607,20 @@ to set up the WIZARD, then the WIZARD is slain.</description>
         <profile id="8677-969c-7c16-007d" name="Summon Purple Sun of Shyish" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
           <characteristics>
             <characteristic name="Casting Value" typeId="2508-b604-1258-a920">8</characteristic>
-            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, set up a Purple Sun of Shyish model wholly within 6&quot; of the caster.</characteristic>
+            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">6&quot;</characteristic>
+            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, set up the endles spell wholly within range of the caster.</characteristic>
           </characteristics>
         </profile>
         <profile id="9a94-5efa-6797-25e6" name="Predatory" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">The Purple Sun of Shyish is a predatory endless spell. It can move up to 9&quot; and can fly. </characteristic>
-          </characteristics>
-        </profile>
-        <profile id="376e-119b-d822-4395" name="Swirling Death" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">When this model is set up, the player who set it up can immediately make a move with it.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This endless spell is a predatory endless spell. It can be moved up to 8&quot; and can fly.</characteristic>
           </characteristics>
         </profile>
         <profile id="2e18-4510-9f25-b7cb" name="End Given Form" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">After this model has moved, each unit that has any models it passed across, and each other unit that is within 1&quot; of it at the end of its move, is subjected to the Purple Sun’s baleful energies. For each unit subjected to the baleful energies, roll a number of dice equal to the number of models in that unit. For each 6+ one model in that unit is slain. If the unit has Wounds characteristic of 6 or more, it suffers 2D6 mortal wounds instead.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="ea13-5990-3792-14cb" name="Visage of Xereus" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Subtract 1 from the Bravery characteristic of all units while they are within 6&quot; of this model.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="eb5c-ce49-e22f-6df3" name="Empowered by Shyish" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If your battle is taking place in the Realm of Death, this model can move 12&quot; instead of 9&quot;. </characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the end of the hero phase, before determining control of predatory endless spells, roll a dice for this endless spell. On a 5+, this endless spell becomes wild for the rest of the battle (do not roll for it again).
+
+After this endless spell has moved, roll a dice for each unit that has any models it passed across and for each other unit that is within 1&quot; of it at the end of its move. On a 1, nothing happens. On a 2-5, that unit suffers D3 mortal wounds. On a 6, that unit suffers D6 mortal wounds.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1292,7 +1633,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
         <categoryLink id="3a3c-213b-2d2d-10f2" name="SHYISH" hidden="false" targetId="2cc9-0867-b2e3-da55" primary="false"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="50.0"/>
+        <cost name="pts" typeId="points" value="70.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="bc18-4df9-1a28-2df9" name="Endless Spell: Quicksilver Swords" hidden="false" collective="false" import="true" type="upgrade">
@@ -1303,27 +1644,18 @@ to set up the WIZARD, then the WIZARD is slain.</description>
         <profile id="b191-e4f0-c10b-2543" name="Summon Quicksilver Swords" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
           <characteristics>
             <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
-            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, set up a Quicksilver Swords model wholly within 10&quot; of the caster.</characteristic>
+            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">6&quot;</characteristic>
+            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, set up the endless spell wholly within range of the caster.</characteristic>
           </characteristics>
         </profile>
         <profile id="035d-bc7f-cc14-3cc0" name="Predatory" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Quicksilver Swords is a predatory endless spell. It can move up to 8&quot; and can fly.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="0f8f-9119-6422-7799" name="Volley of Blades" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">When this model is set up, the player who set it up can immediately make a move with it.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This endless spell is a predatory endless spell. It can move up to 8&quot; and can fly. </characteristic>
           </characteristics>
         </profile>
         <profile id="c023-e731-5488-7bf0" name="Dancing Blades" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">After this model has moved, you can pick 1 unit within 6&quot; of it and roll 12 dice. For each roll of 6+ that unit suffers 1 mortal wound. If the unit being rolled for is a CHAOS unit, it suffers 1 mortal wound for each roll of 5+ instead.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="ead7-9952-e01f-b3b3" name="Empowered by Chamon" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If your battle is taking place in the Realm of Metal, you can roll 15 dice for this model’s Dancing Blades ability instead of 12.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">After this endless spell has moved, the commanding player can pick 1 unit that has any models it passed across and roll 12 dice. For each 6, that unit suffers 1 mortal wound. In addition, ward rolls cannot be made for mortal wounds caused by this ability.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1336,7 +1668,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
         <categoryLink id="29f1-5754-fb05-5361" name="QUICKSILVER SWORDS" hidden="false" targetId="65dc-260f-90f3-8a5a" primary="false"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="30.0"/>
+        <cost name="pts" typeId="points" value="90.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="a99d-b987-6fa6-96f6" name="Endless Spell: Ravenak&apos;s Gnashing Jaws" hidden="false" collective="false" import="true" type="upgrade">
@@ -1346,28 +1678,19 @@ to set up the WIZARD, then the WIZARD is slain.</description>
       <profiles>
         <profile id="8123-c8c4-8bc6-cf0f" name="Summon Ravenak&apos;s Gnashing Jaws" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
           <characteristics>
-            <characteristic name="Casting Value" typeId="2508-b604-1258-a920">8</characteristic>
-            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, set up a Ravenak’s Gnashing Jaws model wholly within 6&quot; of the caster.</characteristic>
+            <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
+            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">6&quot;</characteristic>
+            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, set up the endless spell wholly within range of the caster.</characteristic>
           </characteristics>
         </profile>
         <profile id="0222-5edd-ad18-48a4" name="Predatory" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Ravenak’s Gnashing Jaws is a predatory endless spell. It can move up to 12&quot; and can fly.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="983f-75f4-4a12-f26b" name="Endless Appetite" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">When this model is set up, the player who set it up can immediately make a move with it. </characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This endless spell is a predatory endless spell. It can be moved up to 3D6&quot; and can fly.</characteristic>
           </characteristics>
         </profile>
         <profile id="2237-adf9-c281-2916" name="Ravening Hunger" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">After this model has moved, each unit that has any models it passed across, and each other unit that is within 1&quot; of it at the end of its move, suffers D3 mortal wounds. In addition, subtract 1 from the Bravery characteristic of each unit that each unit that has any models it passed across until the end of the battle round.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="d633-25a6-2f08-6116" name="Empowered by Ghur" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If your battle is taking place in the Realm of Beasts, this model can move up to D6+12&quot; instead of 12&quot;.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">After this endless spell has moved, the commanding player can pick 1 unit that has any models it passed across and roll a number of dice equal to the roll that was made for the move. For each 6, that unit suffers 1 mortal wound.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1380,7 +1703,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
         <categoryLink id="8064-0362-4e5d-1ed0" name="RAVENAK&apos;S GNASHING JAWS" hidden="false" targetId="8b8e-c0b7-d668-19f2" primary="false"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="30.0"/>
+        <cost name="pts" typeId="points" value="55.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="58a3-4afb-62c5-dd39" name="Endless Spell: Shards of Valagharr" hidden="false" collective="false" import="true" type="upgrade">
@@ -1391,22 +1714,18 @@ to set up the WIZARD, then the WIZARD is slain.</description>
         <profile id="6b93-3b5f-92bd-87df" name="Summon Shards of Valagharr" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
           <characteristics>
             <characteristic name="Casting Value" typeId="2508-b604-1258-a920">5</characteristic>
-            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, set up the first Shards of Valagharr model wholly within 6&quot; of the caster, and then set up the second Shards of Valagharr model wholly within 12&quot; of the first.</characteristic>
+            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">18&quot;</characteristic>
+            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, set up the parts of this spell wholly within 12&quot; of each other and wholly within range of the caster.</characteristic>
           </characteristics>
         </profile>
         <profile id="01e5-7b2f-ac0e-5ec3" name="Ensnaring Soul-drain" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the start of the movement phase, draw an imaginary straight line 1mm wide between the closest parts of the bases of the two Shards of Valagharr models from this endless spell. Each unit passed across by this line is ensnared until the end of that turn. Halve the Move characteristic of a unit that is ensnared. In addition, subtract 1 from hit rolls for attacks made by units that are ensnared.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">After this endless spell has moved, draw a straight line between the closest points of each part of this endless spell. Each unit that has any models passed across by this line is ensnared until the end of that turn. Halve the Move characteristic of a unit that is ensnared. In addition, a unit that is ensnared cannot fly.</characteristic>
           </characteristics>
         </profile>
-        <profile id="77e0-b51d-00d4-aa72" name="Twilight Translocation" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+        <profile id="f367-732d-b49b-a521" name="Predatory" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the start of the battle round, after determining who has the first turn, the players must roll off. The winner can remove one Shards of Valagharr model from this endless spell from the battlefield and set it up again anywhere on the battlefield wholly within 12&quot; of the other Shards of Valagharr model from this endless spell.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="fac8-201d-3681-0dac" name="Empowered by Shyish" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If your battle is taking place in the Realm of Death, the first Shards of Valagharr model can be set up wholly within 12&quot; of the caster, instead of 6&quot;.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This endless spell is a predatory endless spell. To move this endless spell, remove 1 of its parts from the battlefield and set it up again wholly within 12&quot; of its other part.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1416,7 +1735,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
         <categoryLink id="430e-40d4-1072-bd3a" name="SHARDS OF VALAGHARR" hidden="false" targetId="cff6-06c5-3294-b74b" primary="false"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="40.0"/>
+        <cost name="pts" typeId="points" value="70.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="98da-d52f-7608-3034" name="Endless Spell: Soulscream Bridge" hidden="false" collective="false" import="true" type="upgrade">
@@ -1427,22 +1746,15 @@ to set up the WIZARD, then the WIZARD is slain.</description>
         <profile id="8bc3-efdf-b033-2e24" name="Summon Soulscream Bridge" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
           <characteristics>
             <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
-            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, set up the first Soulscream Bridge model wholly within 6&quot; of the caster, and then set up the second Soulscream Bridge model wholly within 12&quot; of the first.</characteristic>
+            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">18&quot;</characteristic>
+            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, set up the parts of the endless spell wholly within range of the caster.</characteristic>
           </characteristics>
         </profile>
         <profile id="3cd2-74a2-532b-25a5" name="Deathly Passage" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the start of your movement phase, friendly units wholly within 6&quot; of one Soulscream Bridge model from this endless spell can travel across the Soulscream Bridge. If they do so, remove that unit from the battlefield and set it up again wholly within 6&quot; of the other Soulscream Bridge model from this endless spell, more than 9&quot; from any enemy units. That unit cannot make a normal move that phase. </characteristic>
-          </characteristics>
-        </profile>
-        <profile id="eb78-8010-9568-2703" name="Nightmarish Construct" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Subtract 1 from the Bravery characteristic of enemy units while they are within 6&quot; of a Soulscream Bridge model. This ability has no effect on DEATH units.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="01c1-54ee-b341-4681" name="Empowered by Shyish" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If your battle is taking place in the Realm of Death, the second Soulscream Bridge model can be set up wholly within 24&quot; of the first, instead of within 12&quot; of the first.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the start of the movement phase, the layer whose turn is taking place can remove 1 friendly unit that is wholly within 6&quot; of a part of this endless spell from the battlefield and set it up again wholly within 6&quot; of the other part of this endless spell and more than 9&quot; away from all enemy units. 
+
+A unit cannot be removed and set up again in this way more than once per phase. A unit removed and set up again in this way cannot make a normal move or run in the same phase.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1452,7 +1764,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
         <categoryLink id="c390-75ad-8a01-32d9" name="SHYISH" hidden="false" targetId="2cc9-0867-b2e3-da55" primary="false"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="100.0"/>
+        <cost name="pts" typeId="points" value="70.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="ec18-8377-8f6b-2591" name="Endless Spell: Soulsnare Shackles" hidden="false" collective="false" import="true" type="upgrade">
@@ -1462,18 +1774,14 @@ to set up the WIZARD, then the WIZARD is slain.</description>
       <profiles>
         <profile id="f12d-a1e0-5270-2892" name="Summon Soulsnare Shackles" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
           <characteristics>
-            <characteristic name="Casting Value" typeId="2508-b604-1258-a920">5</characteristic>
-            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, set up a Soulsnare Shackles model wholly within 12&quot; of the caster, then set up the second and third Soulsnare Shackles models wholly within 6&quot; of the first.</characteristic>
+            <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
+            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">12&quot;</characteristic>
+            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, set up the parts of the endless spell wholly within 3&quot; of each other and wholly within range of the caster.</characteristic>
           </characteristics>
         </profile>
         <profile id="0df7-ad58-26dc-d044" name="Bound for the Great Oubliette" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the start of the movement phase, roll a dice for each unit within 6&quot; of any Soulsnare Shackles models. On a 3+ halve the move characteristic of that unit until the end of that phase. On a 6 that unit also suffers D3 mortal wounds. </characteristic>
-          </characteristics>
-        </profile>
-        <profile id="33a8-200f-b7a1-472b" name="Empowered by Shyish" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If your battle is taking place in the Realm of Death, the second and third Soulsnare Shackles models can be set up wholly within 9&quot; of the first, instead of 6&quot;.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Units within 6&quot; of this endless spell cannot run or attempt to charge. In addition, at the start of the movement phase, roll a dice for each unit within 6&quot; of this endless spell. On a 6, that unit suffers D3 mortal wounds.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1483,7 +1791,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
         <categoryLink id="b32d-20d2-77e4-2013" name="SOULSNARE SHACKLES" hidden="false" targetId="4949-2041-939a-baa6" primary="false"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="40.0"/>
+        <cost name="pts" typeId="points" value="65.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="d6de-646a-4dcc-e37d" name="Endless Spell: Suffocating﻿﻿ Gravetide﻿" hidden="false" collective="false" import="true" type="upgrade">
@@ -1494,32 +1802,18 @@ to set up the WIZARD, then the WIZARD is slain.</description>
         <profile id="09f9-9e4f-449d-b8f2" name="Summon Suffocating﻿﻿ Gravetide﻿" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
           <characteristics>
             <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
-            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, set up a Suffocating Gravetide model wholly within 4&quot; of the caster. </characteristic>
-          </characteristics>
-        </profile>
-        <profile id="2bc2-6e1b-9c63-97c5" name="Necrotic Tide" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">When this model is set up, the player who set it up can immediately make a move with it. </characteristic>
+            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">6&quot;</characteristic>
+            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, set up the endless spell wholly within range of the caster.</characteristic>
           </characteristics>
         </profile>
         <profile id="9421-3b1a-c93b-4ecc" name="Pulled to the Grave" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">After this model has moved, each unit that has any models it passed across suffers D3 mortal wounds. In addition, subtract 1 from the Bravery characteristic of each unit that has any models it passed across until the end of the battle round.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="5c60-1bf5-7aab-1539" name="Rolling Barricade" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">When a missile weapon targets a unit that has all of its models within 1&quot; of this model, the target unit receives the benefit of cover if the attacking unit is closer to this model than it is to the target unit. </characteristic>
-          </characteristics>
-        </profile>
-        <profile id="4846-a1b3-6a09-82f7" name="Empowered by Shyish" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If your battle is taking place in the Realm of Death, this model can move up to 12&quot; instead of 8&quot;.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">After this endless spell has moved, for each unit that has any models it passed across, roll a number of dice equal to the number of models in that unit. For each 6, that unit suffers 1 mortal wound.</characteristic>
           </characteristics>
         </profile>
         <profile id="3a60-d81a-79c4-dee0" name="Predatory" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">A Suffocating Gravetide is a predatory endless spell. It can move up to 8&quot; and can fly. </characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This endless spell is a predatory endless spell. It can be moved up to 8&quot; and can fly.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1532,7 +1826,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
         <categoryLink id="7c7b-031f-df94-fe46" name="SUFFOCATING GRAVETIDE" hidden="false" targetId="8e84-834f-0c7d-0d45" primary="false"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="20.0"/>
+        <cost name="pts" typeId="points" value="50.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="3ad9-857b-32ff-e44e" name="Endless Spell: The B﻿urning Head﻿﻿﻿" hidden="false" collective="false" import="true" type="upgrade">
@@ -1543,32 +1837,18 @@ to set up the WIZARD, then the WIZARD is slain.</description>
         <profile id="d37a-5a1b-11ad-fb89" name="Summon B﻿urning Head﻿﻿﻿" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
           <characteristics>
             <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
-            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, set up a Burning Head model wholly within 3&quot; of the caster.</characteristic>
+            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">6&quot;</characteristic>
+            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, set up the endless spell wholly within range of the caster.</characteristic>
           </characteristics>
         </profile>
         <profile id="c2a1-0a2c-f5ce-467b" name="Predatory" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">The Burning Head is a predatory endless spell. It can move up to 9&quot; and can fly.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="7de4-5c93-a18e-9d5f" name="Fiery Missile" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">When this model is set up, the player who set it up can immediately make a move with it. </characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This endless spell is a predatory endless spell. It can be moved up to 8&quot; and can fly.</characteristic>
           </characteristics>
         </profile>
         <profile id="c7f4-81b1-042a-8e6e" name="Flaming Skull" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">After this model has moved, each unit that has any models it passed across, and each other unit that is within 1&quot; of it at the end of its move, suffers D3 mortal wounds. </characteristic>
-          </characteristics>
-        </profile>
-        <profile id="637c-9ac5-610d-9f17" name="Wrathful Aura" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Re-roll hit rolls of 1 for attacks made by units while they are wholly within 9&quot; of this model. </characteristic>
-          </characteristics>
-        </profile>
-        <profile id="6171-ca22-0e67-91db" name="Empowered by Aqshy" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If your battle is taking place in the Realm of Fire, add 1 to the number of mortal wounds inflicted by the Flaming Skull ability.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">After this endless spell has moved, if any units are within 1&quot; of it, roll a dice for each unit within 1&quot; of this endless spell. ON a 2+, that unit suffers D3 mortal wounds. Then, this endless spell is removed from play.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1581,7 +1861,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
         <categoryLink id="ec33-7fb2-331b-c7cb" name="THE BURNING HEAD" hidden="false" targetId="3115-9f9c-85db-1d63" primary="false"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="30.0"/>
+        <cost name="pts" typeId="points" value="20.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="d2dc-7e1a-c2e7-4cff" name="Endless Spell: Umbral Spellportal" hidden="false" collective="false" import="true" type="upgrade">
@@ -1592,17 +1872,15 @@ to set up the WIZARD, then the WIZARD is slain.</description>
         <profile id="c3e6-0504-1147-d44a" name="Summon Umbral Spellportal" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
           <characteristics>
             <characteristic name="Casting Value" typeId="2508-b604-1258-a920">5</characteristic>
-            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, set up the first Umbral Spellportal model wholly within 12&quot; of the caster, and then set up the second Umbral Spellportal model wholly within 18&quot; of the first.</characteristic>
+            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">18&quot;</characteristic>
+            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, set up the parts of the endless spell wholly within range of the caster.</characteristic>
           </characteristics>
         </profile>
-        <profile id="0a1a-1532-0887-c5d7" name="Arcane Passage" publicationId="e51d-b1a3-pubEFCFK" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+        <profile id="0a1a-1532-0887-c5d7" name="Arcane Passage" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If a Wizard successfully casts a spell while they are within 1&quot; of an Umbral Spellportal model, the range and visibility of the spell can be measured from the other Umbral Spellportal model from this endless spell. After the range and visibility for a spell has been measured from an Umbral Spellportal, you cannot use the Arcane Passage ability again for that Umbral Spellportal in that phase. If a predatory endless spell finishes a move within 6&quot; of an Umbral Spellportal model, remove it from the battlefield and set it up again anywhere within 6&quot; of the other Umbral Spellportal model from this endless spell. After an endless spell finishes a move within 6&quot; of an Umbral Spellportal and is set up again, it cannot move again in that phase, and you cannot use the Arcane Passage ability again for that Umbral Spellportal in that phase.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="f61c-06bd-bd2e-6ce5" name="Empowered by Ulgu" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If your battle is taking place in the Realm of Shadow, the second Umbral Spellportal model can be set up anywhere on the battlefield, instead of within 18&quot; of the first.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Once per turn, if a WIZARD successfully casts a spell within 1&quot; of this endless spell, the range, visibility, and effect of that spell can be measured from this endless spell instead of the caster.
+
+In addition, once per turn, when a predatory endless spell within 6&quot; of this endless spell is picked to move, the commanding player of that predatory endless spell can remove it from the battlefield and set it up again within 6&quot; of the other part of this endless spell. A predatory endless spell set up in this manner does not count as having moved, but it cannot be picked to move again in the same phase.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1718,881 +1996,324 @@ to set up the WIZARD, then the WIZARD is slain.</description>
         <cost name="pts" typeId="points" value="520.0"/>
       </costs>
     </selectionEntry>
-  </sharedSelectionEntries>
-  <sharedSelectionEntryGroups>
-    <selectionEntryGroup id="e02e-6203-a19f-c021" name="Artefacts of Death" hidden="false" collective="false" import="true">
+    <selectionEntry id="0a8d-cde8-fba1-6c0d" name="Reinforced" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d817-47b4-70da-dc76" type="max"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="95f2-6885-756f-9ea5" type="max"/>
       </constraints>
-      <selectionEntries>
-        <selectionEntry id="00cd-f865-5445-e410" name="1. Cursed Book" hidden="false" collective="false" import="true" type="upgrade">
+      <categoryLinks>
+        <categoryLink id="1846-954e-1531-04c8" name="Reinforced" hidden="false" targetId="1109-7ce6-b7a3-3a0c" primary="false"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="fa77-b2b2-8b0c-22e2" name="Core Battalion: Linebreaker" hidden="false" collective="false" import="true" type="upgrade">
+      <profiles>
+        <profile id="8d01-6c00-6216-551c" name="Core Battalion: Linebreaker" hidden="false" typeId="75e0-a332-e4f5-bf36" typeName="Battalion Organisation">
+          <characteristics>
+            <characteristic name="Required" typeId="eb5f-e9d2-e457-bff5">1 Commander
+2-3 Monsters</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="280b-104d-a610-c5e2" name="Expert" hidden="false" targetId="e670-c851-388f-3f54" type="profile"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="f6e9-9d12-5a3b-b9b2" name="New CategoryLink" hidden="false" targetId="6575-7d6c-ce4d-ada4" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="bbed-22cb-b649-6938" name="Core Battalion: Vanguard" hidden="false" collective="false" import="true" type="upgrade">
+      <profiles>
+        <profile id="5479-7111-d32f-1183" name="Core Battalion: Vanguard" hidden="false" typeId="75e0-a332-e4f5-bf36" typeName="Battalion Organisation">
+          <characteristics>
+            <characteristic name="Required" typeId="eb5f-e9d2-e457-bff5">1 Sub-commander
+1-3 Troops</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="0751-9f2d-c034-e08d" name="Swift" hidden="false" targetId="dec1-bec2-f318-91e6" type="profile"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="cf59-6233-29f3-62c7" name="New CategoryLink" hidden="false" targetId="6575-7d6c-ce4d-ada4" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="5e7f-ccbb-a180-2e8b" name="Core Battalion: Warlord" hidden="false" collective="false" import="true" type="upgrade">
+      <profiles>
+        <profile id="2407-2b9f-4b78-02cb" name="Core Battalion: Warlord" hidden="false" typeId="75e0-a332-e4f5-bf36" typeName="Battalion Organisation">
+          <characteristics>
+            <characteristic name="Required" typeId="eb5f-e9d2-e457-bff5">1-2 Commanders
+2-4 Sub-commanders
+1-2 Troops</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="fbfb-9e5b-cdb4-18a5" name="Strategist" hidden="false" targetId="d430-efbb-5f30-d60a" type="profile"/>
+        <infoLink id="adc6-4ab0-41b4-d133" name="Magnificent" hidden="false" targetId="d0be-bf37-cc83-f87b" type="profile"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="4184-9079-e321-829b" name="New CategoryLink" hidden="false" targetId="6575-7d6c-ce4d-ada4" primary="true"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="47a8-e23b-b58c-e028" name="Extra Enhancement" hidden="false" collective="false" import="true">
           <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ae99-e895-08b5-bf60" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="78a6-4e95-9852-85be" type="max"/>
           </constraints>
-          <profiles>
-            <profile id="5865-fb09-7643-0772" name="Cursed Book" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">You and your opponent must subtract 1 from hit rolls made for units within 3&quot; of the bearer, unless the unit has the DEATH keyword.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="b1ea-11ea-2990-b9d1" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="0722-70d0-8a75-b05d" name="2. Cloak of Mists and Shadows" hidden="false" collective="false" import="true" type="upgrade">
+          <entryLinks>
+            <entryLink id="b0f7-453b-bc34-f5e2" name="Extra Enhancement: Artefacts of Power" hidden="false" collective="false" import="true" targetId="2a8b-93fa-e1b9-4102" type="selectionEntry"/>
+            <entryLink id="8918-2bde-83ee-96bf" name="Extra Enhancement: Prayer Scriptures" hidden="false" collective="false" import="true" targetId="24e6-c9b0-8d0d-02a2" type="selectionEntry"/>
+            <entryLink id="90f3-60a6-7401-e19f" name="Extra Enhancement: Spell Lores" hidden="false" collective="false" import="true" targetId="bdb0-7f20-53ff-f804" type="selectionEntry"/>
+            <entryLink id="5998-d094-6bbf-a939" name="Extra Enhancement: Triumphs" hidden="false" collective="false" import="true" targetId="4f32-1179-8b4c-61e0" type="selectionEntry"/>
+            <entryLink id="8a6c-639e-b09a-3afa" name="Extra Enhancement: Great Endrinworks" hidden="false" collective="false" import="true" targetId="7aa8-a1e1-a0b8-fd18" type="selectionEntry"/>
+            <entryLink id="0c2f-1e0b-bada-6030" name="Extra Enhancement: Mount Trait" hidden="false" collective="false" import="true" targetId="c965-0f85-d28c-ea2a" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="af2c-42ac-d610-4a10" name="Core Battalion: Alpha-Beast Pack" publicationId="e434-aae2-8d86-e264" hidden="false" collective="false" import="true" type="upgrade">
+      <profiles>
+        <profile id="4929-a4e9-9630-afa6" name="Scent Tracking" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
+          <characteristics>
+            <characteristic name="Battalion Ability Details" typeId="08e0-9ead-1dbe-c801">After armies have been set up but before the first battle round begins,  you can make a normal move of up to D6&quot; with each unit in this battalion.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="392f-3dc6-2ef3-4115" name="Core Battalion: Alpha-Beast Pack" hidden="false" typeId="75e0-a332-e4f5-bf36" typeName="Battalion Organisation">
+          <characteristics>
+            <characteristic name="Required" typeId="eb5f-e9d2-e457-bff5">2-3 Monsters</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="b776-6e85-0afc-8cde" name="New CategoryLink" hidden="false" targetId="6575-7d6c-ce4d-ada4" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="49a3-5845-b4df-11f3" name="Core Battalion: Hunters of the Heartlands" publicationId="e434-aae2-8d86-e264" hidden="false" collective="false" import="true" type="upgrade">
+      <profiles>
+        <profile id="2046-2f7f-2027-2ef5" name="Scent Tracking" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
+          <characteristics>
+            <characteristic name="Battalion Ability Details" typeId="08e0-9ead-1dbe-c801">After armies have been set up but before the first battle round begins,  you can make a normal move of up to D6&quot; with each unit in this battalion.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="e4f6-92c3-da75-3268" name="Core Battalion: Hunters of the Heartlands" hidden="false" typeId="75e0-a332-e4f5-bf36" typeName="Battalion Organisation">
+          <characteristics>
+            <characteristic name="Required" typeId="eb5f-e9d2-e457-bff5">2-3 Troops</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="5153-8a74-6ace-3f5b" name="New CategoryLink" hidden="false" targetId="6575-7d6c-ce4d-ada4" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="1878-56e2-2862-8da5" name="Core Battalion: Battle Regiment" hidden="false" collective="false" import="true" type="upgrade">
+      <profiles>
+        <profile id="a631-4a5b-a333-79b2" name="Unified" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
+          <characteristics>
+            <characteristic name="Battalion Ability Details" typeId="08e0-9ead-1dbe-c801">One-drop Deployment (see 26.2.1).</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="367e-fa52-1a3d-0684" name="Core Battalion: Battle Regiment" hidden="false" typeId="75e0-a332-e4f5-bf36" typeName="Battalion Organisation">
+          <characteristics>
+            <characteristic name="Required" typeId="eb5f-e9d2-e457-bff5">1 Commander
+0-2 Sub-commanders
+2-5 Troops
+0-1 Monster or Artillery</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="6ff0-a8ac-7d3c-e003" name="New CategoryLink" hidden="false" targetId="6575-7d6c-ce4d-ada4" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="be2d-ba53-4ebc-f035" name="Core Battalion: Grand Battery" hidden="false" collective="false" import="true" type="upgrade">
+      <profiles>
+        <profile id="4f5f-16f7-b751-40d0" name="Scent Tracking" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
+          <characteristics>
+            <characteristic name="Battalion Ability Details" typeId="08e0-9ead-1dbe-c801">After armies have been set up but before the first battle round begins,  you can make a normal move of up to D6&quot; with each unit in this battalion.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="4722-dddc-3192-37b5" name="Core Battalion: Grand Battery" hidden="false" typeId="75e0-a332-e4f5-bf36" typeName="Battalion Organisation">
+          <characteristics>
+            <characteristic name="Required" typeId="eb5f-e9d2-e457-bff5">1 Sub-commander
+2-3 Artillery</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="0efb-0e4b-97ac-0f8c" name="New CategoryLink" hidden="false" targetId="6575-7d6c-ce4d-ada4" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="7f89-26d0-ff93-83fe" name="Core Battalion: Command Entourage" hidden="false" collective="false" import="true" type="upgrade">
+      <profiles>
+        <profile id="a75d-7d5f-d4f0-d381" name="Core Battalion: Command Entourage" hidden="false" typeId="75e0-a332-e4f5-bf36" typeName="Battalion Organisation">
+          <characteristics>
+            <characteristic name="Required" typeId="eb5f-e9d2-e457-bff5">1 Commander
+2-3 Sub-commanders</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="9b92-97ef-3eb8-f46a" name="New CategoryLink" hidden="false" targetId="6575-7d6c-ce4d-ada4" primary="true"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="9fb6-ed98-80fe-2cf0" name="Core Battalion Ability" hidden="false" collective="false" import="true">
           <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8e73-d153-8a05-e403" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d631-2760-86c8-9aec" type="max"/>
           </constraints>
-          <profiles>
-            <profile id="6d33-b575-b1b1-3d40" name="Cloak of Mists and Shadows" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">At the start of any combat phase, the bearer can use this cloak. If it does so, remove the bearer from the battlefield, and then set it up anywhere on the battlefield within 12&quot; of its original location and more than 3&quot; from any enemy models. If this is impossible, this model remains in its current location.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="d96c-b586-00b6-2deb" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="d40d-6292-3309-f03b" name="3. Blade of Dark Summons" hidden="false" collective="false" import="true" type="upgrade">
+          <selectionEntries>
+            <selectionEntry id="aa19-403b-157f-fab0" name="Magnificent" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="73c3-8ca7-a3d5-1f04" name="Magnificent" hidden="false" targetId="d0be-bf37-cc83-f87b" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="b5e7-afda-fa83-f319" name="Strategist" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="62ab-09d3-ca6b-cfa1" name="Strategist" hidden="false" targetId="d430-efbb-5f30-d60a" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="bda7-5686-e981-d60a" name="Extra Enhancement" hidden="true" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="aa19-403b-157f-fab0" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="819a-782f-5496-9885" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d6b2-5aaf-c291-eef9" type="max"/>
           </constraints>
-          <profiles>
-            <profile id="cf43-0de1-7c17-8d94" name="Blade of Dark Summons" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Once per battle, in your hero phase, you can set up a SUMMONABLE DEATH unit wholly within 12&quot; of the bearer and more than 3&quot; from any enemy models, and add it to your army. The models in the unit must have a combined Wounds characteristic of no more than a 2D6 roll.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="601b-b6f0-94d1-cd3a" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="385e-f5fc-d761-9e79" name="4. Black Amulet" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1464-64f1-8374-3f0c" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="9d60-be5a-3bf0-9eea" name="Black Amulet" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Once per battle, in your hero phase, the bearer can use this amulet. If it does so, pick an enemy unit within 12&quot; of the bearer. Inflict a number of mortal wounds equal to the number of the current battle round on the unit you picked.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="827d-a112-0f50-e58f" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="2326-95d1-92c4-1776" name="5. Tomb Blade" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7ebe-39a0-aeb6-7d08" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="3276-e79f-0eb4-8955" name="Tomb Blade" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Pick one of the bearer’s melee weapons. For each wound roll of 6+ you make for this weapon, you can heal 1 wound that has been allocated to a friendly DEATH model within 6&quot; of the bearer.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="fce5-ffa8-6118-a04a" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="2eab-a296-749d-9137" name="6. Ring of Immortality" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="68ac-70ca-db4f-c7a0" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="b51f-e0a9-e729-7d56" name="Ring of Immortality" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">The first time the bearer is slain, before removing them from the battlefield, roll a dice. On a 3+ the bearer is not slain and D3 wounds allocated to them are healed (any excess damage is negated). Then, remove the bearer from the battlefield and set them up again within 18&quot; of their original location and more than 3&quot; from any enemy models.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="1c34-cb7a-bfb7-bab0" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-    </selectionEntryGroup>
-    <selectionEntryGroup id="74cc-aa8c-c476-db29" name="Death Command Traits" hidden="false" collective="false" import="true">
+          <entryLinks>
+            <entryLink id="beaa-00a1-5780-e79e" name="Extra Enhancement: Artefacts of Power" hidden="false" collective="false" import="true" targetId="2a8b-93fa-e1b9-4102" type="selectionEntry"/>
+            <entryLink id="74ea-6922-38b1-33c8" name="Extra Enhancement: Prayer Scriptures" hidden="false" collective="false" import="true" targetId="24e6-c9b0-8d0d-02a2" type="selectionEntry"/>
+            <entryLink id="25ea-3128-5a14-2d2a" name="Extra Enhancement: Spell Lores" hidden="false" collective="false" import="true" targetId="bdb0-7f20-53ff-f804" type="selectionEntry"/>
+            <entryLink id="f2d7-4b82-890c-26fa" name="Extra Enhancement: Triumphs" hidden="false" collective="false" import="true" targetId="4f32-1179-8b4c-61e0" type="selectionEntry"/>
+            <entryLink id="c542-f3b0-970a-02c3" name="Extra Enhancement: Great Endrinworks" hidden="false" collective="false" import="true" targetId="7aa8-a1e1-a0b8-fd18" type="selectionEntry"/>
+            <entryLink id="267a-d344-1f81-4ccd" name="Extra Enhancement: Mount Trait" hidden="false" collective="false" import="true" targetId="c965-0f85-d28c-ea2a" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="c064-0ddb-52cf-5fb9" name="Bless" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6812-2b77-e282-18ad" type="max"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5d02-c1ed-393e-0f07" type="min"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="01ae-725b-4ed6-2d24" type="max"/>
       </constraints>
-      <selectionEntries>
-        <selectionEntry id="ecc1-7f9c-db58-a2d3" name="1. Ruler of the Night" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3661-8fdb-f699-ab10" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="0764-cc0b-794f-7edb" name="Ruler of the Night" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
-              <characteristics>
-                <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">Friendly DEATH units are affected by the Deathless Minions battle trait if they are within 12&quot; of this general rather than only 6&quot;.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="3fc2-a119-b371-27ac" name="2. Predator of the Shadows" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d8a9-1fbd-c1f7-b05d" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="741d-e927-a84a-a2f3" name="Predator of the Shadows" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
-              <characteristics>
-                <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">Add 1 to hit and wound rolls for this general if they are in cover.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="83d0-b10b-7b0f-bb84" name="3. Death Incarnate" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="490b-eaec-c34e-521e" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="9055-f2ef-067f-738e" name="Death Incarnate" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
-              <characteristics>
-                <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">In your hero phase, pick an enemy unit within 3&quot; of this general and roll 2D6. If the roll equals or exceeds the enemy unit’s Bravery characteristic, inflict D3 mortal wounds on the unit.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="8ab1-ca9e-3373-5b0c" name="4. Master of the Black Arts" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f5dd-14b0-8eea-2b0c" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="20c8-5780-7f3e-ded5" name="Master of the Black Arts" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
-              <characteristics>
-                <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">This general is a WIZARD who knows the Arcane Bolt and Mystic Shield spells. If this general is already a wizard, add 1 to all of their casting and unbinding rolls instead.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="053b-e6bd-cc34-d050" name="5. Red Fury" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="45ca-69ba-36a1-ecfa" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="dcaf-3a22-b916-c683" name="Red Fury" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
-              <characteristics>
-                <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">The first time this general is picked to fight in each combat phase, roll a dice at the end of that fight. On a 5+ they can immediately fight again.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="10c5-32f0-ca6f-7e7c" name="6. Supernatural Horror" hidden="false" collective="false" import="true" type="upgrade">
-          <profiles>
-            <profile id="7c4d-ae2f-91a1-4769" name="Supernatural Horror" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
-              <characteristics>
-                <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">In the battleshock phase, double the number of models that flee from enemy units while they are within 12&quot; of this general.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-    </selectionEntryGroup>
-    <selectionEntryGroup id="ca3c-6bfc-07f1-2953" name="Artefacts of Destruction" hidden="false" collective="false" import="true">
+      <profiles>
+        <profile id="94e0-55f9-2614-422c" name="Bless" hidden="false" typeId="eed7-4131-0a52-0668" typeName="Prayer">
+          <characteristics>
+            <characteristic name="Answer Value" typeId="276a-ab7e-145d-3ffc">4</characteristic>
+            <characteristic name="Range" typeId="fd81-4e98-28ac-092a">12&quot;</characteristic>
+            <characteristic name="Description" typeId="0746-6cfb-5e15-53cb">Pick 1 friendly unit wholly within range and visible to the chanter. Until the start of your next hero phase, that unit has a ward of 6+.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="be59-6ab9-bf9f-9434" name="Smite" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="811a-5a80-4e1a-78b7" type="max"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="acc3-a5db-a5ad-0a6f" type="min"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="380c-a5ee-a8be-d310" type="max"/>
       </constraints>
-      <selectionEntries>
-        <selectionEntry id="0214-b6fa-c58d-2123" name="1. Hammerblade" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="57b0-0dc0-4f80-7fe9" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="3c81-80a2-a7fe-6433" name="Hammerblade" publicationId="e51d-b1a3-pubE5LCI" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Pick one melee weapon that this model can use. Instead of attacking normally with that weapon, you can roll a dice for each model within 3&quot; of the bearer (apart from the bearer). On a roll of 5 or 6, 1 mortal wound is inflicted on that model&apos;s unit.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="05a1-082d-0c9f-b63d" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="11ee-4b6d-7d08-dd98" name="2. Battered Talisman" publicationId="e51d-b1a3-pubEQOCI" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="addc-60fb-ee24-bcfb" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="8f53-5df2-f0c3-3733" name="Battered Talisman" publicationId="e51d-b1a3-pubEQOCI" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Roll a dice each time you allocate a mortal wound to the bearer. On a 5+, the mortal wound is negated.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="1498-8111-b71e-2c79" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="e734-c953-e710-a42a" name="3. Rockeye" publicationId="e51d-b1a3-pubEQOCI" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5099-38d5-7540-a044" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="9a86-99f2-1f5e-6f23" name="Rockeye" publicationId="e51d-b1a3-pubEQOCI" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">In your hero phase, pick an enemy unit within 12&quot; of this bearer. Until your next hero phase, add 1 to hit rolls made by the bearer when they target the unit you picked.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="4963-8263-9449-d0b7" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="b111-9840-cc58-ca44" name="4. Bellowing Blade" publicationId="e51d-b1a3-pubEQOCI" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5e0e-d321-e948-0878" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="c24f-4f2e-f512-ecf9" name="Bellowing Blade" publicationId="e51d-b1a3-pubEQOCI" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">When the bearer is picked to fight, you can re-roll one failed wound roll for bearers attacks in that fight for each enemy HERO that was within 12&quot; of the bearer when they were picked to fight.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="0943-73b6-1080-7b58" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="3cdf-ca0c-9c35-0727" name="5. Collar of Domination" publicationId="e51d-b1a3-pubEQOCI" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e351-213d-edf0-2ef5" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="0994-850a-5408-afb3" name="Collar of Domination" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">At the start of the enemy movement phase, pick an enemy MONSTER within 3&quot; of the bearer and roll 2D6. If the roll is equal to or greater than the enemy MONSTER’s Bravery characteristic, it must retreat in that movement phase.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="c10f-514d-7ead-ea4f" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="40a6-edd2-8f4c-bcbc" name="6. Battle Brew" publicationId="e51d-b1a3-pubEQOCI" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d399-9741-b80c-5a52" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="c11d-9966-5de8-6dad" name="Battle Brew" publicationId="e51d-b1a3-pubEQOCI" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Once per battle, in your hero phase, you can declare that bearer will take either one or two swigs of Battle Brew. If the bearer takes one swig, add 1 to all hit and wound rolls for the bearer until your next hero phase. If the bearer takes two swigs, add 2 to all hit and wound rolls for the model until your next hero phase, but you must allocate D6 mortal wounds to the earer at the end of the turn in which they drank the brew.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="fa96-9d2b-0053-d3cd" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-    </selectionEntryGroup>
-    <selectionEntryGroup id="1319-8f5e-1ff1-08c9" name="Destruction Command Traits" publicationId="e51d-b1a3-pubEQOCI" page="156" hidden="false" collective="false" import="true">
+      <profiles>
+        <profile id="0ee5-7306-2656-5019" name="Smite" hidden="false" typeId="eed7-4131-0a52-0668" typeName="Prayer">
+          <characteristics>
+            <characteristic name="Answer Value" typeId="276a-ab7e-145d-3ffc">2</characteristic>
+            <characteristic name="Range" typeId="fd81-4e98-28ac-092a">48&quot;</characteristic>
+            <characteristic name="Description" typeId="0746-6cfb-5e15-53cb">Pick 1 enemy Priest within range and visible to the chanter. That enemy Priest suffers 1 mortal wound. If the chanting roll was 6 or more, that enemy Priest suffers D3 mortal wounds instead of 1.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="f5ad-d831-b4c5-2195" name="Grand Strategy" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="effb-aa38-5e89-7631" type="max"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4470-06b9-d56a-66db" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="473c-fec2-7fa5-00e4" type="min"/>
       </constraints>
-      <selectionEntries>
-        <selectionEntry id="dace-f335-0d87-3b0d" name="1. Nothing Left Standing" publicationId="e51d-b1a3-pubEQOCI" page="156" hidden="false" collective="false" import="true" type="upgrade">
-          <profiles>
-            <profile id="bcd1-9176-4492-23ec" name="Nothing Left Standing" publicationId="e51d-b1a3-pubEQOCI" page="156" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
-              <characteristics>
-                <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">In your hero phase, pick a terrain feature that is within 6&quot; of your general and at least 5 other friendly DESTRUCTION models. That terrain feature no longer gives cover to models that are in or on it.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="b456-2252-df66-a511" name="2. Might is Right" publicationId="e51d-b1a3-pubE5LCI" page="" hidden="false" collective="false" import="true" type="upgrade">
-          <profiles>
-            <profile id="7e70-bb8b-13b3-bb52" name="Might is Right" publicationId="e51d-b1a3-pubEQOCI" page="156" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
-              <characteristics>
-                <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">Add 1 to the wound rolls made for the general’s melee weapons.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="33e4-5c70-c48b-9472" name="3. Wild Fury" publicationId="e51d-b1a3-pubEQOCI" page="156" hidden="false" collective="false" import="true" type="upgrade">
-          <profiles>
-            <profile id="abd9-cb56-8363-375f" name="Wild Fury" publicationId="e51d-b1a3-pubEQOCI" page="156" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
-              <characteristics>
-                <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">When this General is picked to fight, pick one of their melee weapons. Add 1 to the attach characteristic of that melee weapon for the fight. While 3 or more wounds are allocated to this general, instead add 2 to the Attacks characteristic of that melee weapon for that fight.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="6b78-5f06-40c7-eab6" name="4. Bellowing Tyrant" publicationId="e51d-b1a3-pubEQOCI" page="156" hidden="false" collective="false" import="true" type="upgrade">
-          <profiles>
-            <profile id="e6c7-5519-f527-355c" name="Bellowing Tyrant" publicationId="e51d-b1a3-pubE5LCI" page="" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
-              <characteristics>
-                <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">In your hero phase, pick a friendly DESTRUCTION unit within 6&quot; of the general in your hero phase. Until your next hero phase, add 1 to charge and run rolls for the unit, and use the general’s Bravery characteristic for the unit instead of its own.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="e5b1-baeb-ed1b-e3f3" name="5. Big and Brutish" publicationId="e51d-b1a3-pubEQOCI" page="156" hidden="false" collective="false" import="true" type="upgrade">
-          <profiles>
-            <profile id="1851-80dd-639c-fce5" name="Big and Brutish" publicationId="e51d-b1a3-pubEQOCI" page="156" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
-              <characteristics>
-                <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">Add 1 to the general’s Wounds characteristic.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="fdf2-ddc3-5dd8-f6e6" name="6. Ravager" publicationId="e51d-b1a3-pubEQOCI" page="156" hidden="false" collective="false" import="true" type="upgrade">
-          <profiles>
-            <profile id="6c53-2a68-0348-adc4" name="Ravager" publicationId="e51d-b1a3-pubE5LCI" page="" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
-              <characteristics>
-                <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">Add 3 to the Rampaging Destroyers dice roll (see battle traits) for the general instead of 2.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-    </selectionEntryGroup>
-    <selectionEntryGroup id="f179-9104-3d7f-1ea1" name="Chaos Command Traits" hidden="false" collective="false" import="true">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e106-91bb-bef8-c7e9" type="max"/>
-      </constraints>
-      <selectionEntries>
-        <selectionEntry id="5584-75b3-7445-e2cf" name="1. Dark Avenger" hidden="false" collective="false" import="true" type="upgrade">
-          <profiles>
-            <profile id="d11e-4267-ecf7-1094" name="Dark Avenger" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
-              <characteristics>
-                <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">Add 1 to hit rolls for this general’s melee weapons if the target unit has the ORDER keyword.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="aa8d-2468-307b-7223" name="2. Spiteful Duelist" hidden="false" collective="false" import="true" type="upgrade">
-          <profiles>
-            <profile id="9c75-4d0a-1a86-b59d" name="Spiteful Duelist" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
-              <characteristics>
-                <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">Each time this general is picked to fight, you can re-roll one wound roll for one of their attacks in that fight.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="2ed5-ce10-22f2-9b67" name="3. Cunning Deceiver" hidden="false" collective="false" import="true" type="upgrade">
-          <profiles>
-            <profile id="babc-4418-2091-f9c2" name="Cunning Deceiver" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
-              <characteristics>
-                <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">Roll a dice at the start of each of your hero phases as long as this general has not been slain. On a 5+ you receive 1 extra command point.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="ce7b-5079-8e73-49df" name="4. Lord of War" hidden="false" collective="false" import="true" type="upgrade">
-          <profiles>
-            <profile id="264c-5601-8894-49c6" name="Lord of War" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
-              <characteristics>
-                <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">In your hero phase, pick a friendly CHAOS unit within 3&quot; of this general and roll a dice. On a 4+ you can add 1 to hit rolls for the unit you picked until your next hero phase.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="100a-f21d-30bd-0e9a" name="5. Terrifying Presence" hidden="false" collective="false" import="true" type="upgrade">
-          <profiles>
-            <profile id="5b4b-6ac6-d235-c9da" name="Terrifying Presence" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
-              <characteristics>
-                <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">Subtract 1 from the Bravery characteristic of enemy units while they are within 3&quot; of this general.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="3f5f-faca-cb53-7d82" name="6. Great Destroyer" hidden="false" collective="false" import="true" type="upgrade">
-          <profiles>
-            <profile id="617b-164a-a339-55ae" name="Great Destroyer" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
-              <characteristics>
-                <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">Add 1 to Unbridled Malice dice rolls (see battle trait) for units while they are within 12&quot; of this general.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-    </selectionEntryGroup>
-    <selectionEntryGroup id="50aa-000b-1848-15c3" name="Order Command Traits" hidden="false" collective="false" import="true">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bbe9-9893-608b-3dde" type="max"/>
-      </constraints>
-      <selectionEntries>
-        <selectionEntry id="b044-526f-fd89-213a" name="1. Strategic Genius" hidden="false" collective="false" import="true" type="upgrade">
-          <profiles>
-            <profile id="2f4a-1ff3-4b8c-b752" name="Strategic Genius" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
-              <characteristics>
-                <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">At the start of the first battle round, you receive 1 extra command point.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="e366-464a-ed9e-3071" name="2. Inspiring" hidden="false" collective="false" import="true" type="upgrade">
-          <profiles>
-            <profile id="f14b-13a5-16f7-d8f3" name="Inspiring" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
-              <characteristics>
-                <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">Friendly ORDER units do not have to take battleshock tests while they are within 6&quot; of this general.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="0bfc-2753-ba37-63ec" name="3. Dauntless" hidden="false" collective="false" import="true" type="upgrade">
-          <profiles>
-            <profile id="3b26-c45b-9b90-ff4f" name="Dauntless" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
-              <characteristics>
-                <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">You can re-roll charge rolls for this general.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="cda1-69d4-81a2-af6f" name="4. Tenacious" hidden="false" collective="false" import="true" type="upgrade">
-          <profiles>
-            <profile id="d599-6a50-2186-f4c7" name="Tenacious" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
-              <characteristics>
-                <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">Add 1 to this general’s Wounds characteristic.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="e6ce-6770-a355-3db5" name="5. Legendary Fighter" hidden="false" collective="false" import="true" type="upgrade">
-          <profiles>
-            <profile id="3413-3555-3979-858b" name="Legendary Fighter" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
-              <characteristics>
-                <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">When this general is selected to fight, add 1 to the Attacks characteristic of one of their melee weapons for that fight.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="0d9f-944c-3eb5-5e54" name="6. Master of Defence" hidden="false" collective="false" import="true" type="upgrade">
-          <profiles>
-            <profile id="c089-92fd-691d-89eb" name="Master of Defence" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
-              <characteristics>
-                <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">Each tim you allocate a wound or mortal wound to this general, roll a dice. On a 6+ the wound is negated.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-    </selectionEntryGroup>
-    <selectionEntryGroup id="19d0-4499-b76e-96c1" name="Artefacts of Order" hidden="false" collective="false" import="true">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="485d-10a9-17b5-6459" type="max"/>
-      </constraints>
-      <selectionEntries>
-        <selectionEntry id="a2ad-302a-716f-ebae" name="1. Quicksilver Potion" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3cf7-199a-bbff-9614" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="64fc-7c64-bad6-8fa0" name="Quicksilver Potion" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Once per battle, at the start of a combat phase, you can use this potion. If you do so, in that combat phase, the bearer (and its mount, if it has one) fights immediately, instead of fighting later in the combat phase.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="0d47-e56d-64f2-b4f1" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="ad0e-8cce-201d-2119" name="2. Obstinate Blade" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="755e-658f-d4d2-11e5" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="ed09-eabc-e937-3cb5" name="Obstinate Blade" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Pick one of the bearer&apos;s melee weapons. Improve the Rend characteristic of the weapon by 1.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="fb80-ae0a-b51c-92be" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="8939-398d-2875-695e" name="3. Relic Blade" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="40b1-e51e-5040-26a8" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="eadc-c311-18a7-b983" name="Relic Blade" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Pick one of the bearer&apos;s melee weapons. Increase the Damage characteristic of that weapon by 1.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="f4ac-61c7-417e-f15a" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="595f-756d-7d05-2336" name="4. Hoarfrost" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="84fa-17d8-4e96-cf1f" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="a04c-51b5-a962-711c" name="Hoarfrost" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Pick one of the bearer&apos;s melee weapons. If an enemy model is allocated any wounds from this weapon and is not slain, subtract 1 from that model&apos;s hit rolls for the rest of the battle.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="a495-ef60-434a-906a" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="0c59-5080-ae42-7599" name="5. Talisman of Blinding Light" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4f88-3ae2-0d77-73ac" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="161e-9efa-2b0a-fefe" name="Talisman of Blinding Light" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Once per battle, at the start of a combat phase, you can use this amulet. If you do so, in that combat phase, subtract 1 from hit rolls made for attacks that target the bearer.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="467a-e5a8-4779-e5e2" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="3ad1-6df0-b131-e5f5" name="6. Phoenix Stone" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c9b2-1ef9-0dfc-f1c6" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="e580-f2ca-4ef6-85b6" name="Phoenix Stone" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">In each hero phase, you can heal 1 wound that has been allocated to the bearer.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="0d25-bdc4-faf0-7e71" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-    </selectionEntryGroup>
-    <selectionEntryGroup id="3c13-922a-683d-7de7" name="Artefacts of Chaos" hidden="false" collective="false" import="true">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="180e-001b-6cfa-238a" type="max"/>
-      </constraints>
-      <selectionEntries>
-        <selectionEntry id="f703-969e-2701-396f" name="1. Daemonic Weapon" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="87b9-a2a3-ef6e-2f7d" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="c526-fe9d-86ef-39f9" name="Daemonic Weapon" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Pick one of the bearer’s melee weapons. Each time you roll a wound roll of 6+ for that weapon, that attack inflicts 1 mortal wound in addition to its normal damage.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="d8a8-4ff4-d670-0782" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="bce7-28e0-79ca-8ec1" name="2. Chaos Runeblade" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="04b9-bd63-8e03-b108" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="0043-fadd-e00b-8ebc" name="Chaos Runeblade" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Pick one of the bearer’s melee weapons. Increase the Attacks characteristic of that weapon by 1.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="ce33-8f9d-3b55-f545" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="8a25-2b31-1228-58ed" name="3. Beguiling Gem" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0959-900b-7900-7438" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="057d-22fb-6708-f98f" name="Beguiling Gem" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Once per battle, at the start of the combat phase, you can pick one enemy model within 3&quot; of the bearer. Subtract 1 from hit rolls made for that model in that phase.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="d192-ec68-a611-41a9" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="4048-8842-13f8-6487" name="4. Chaos Talisman" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="675a-b8d6-59f5-114f" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="f0fd-58df-77bf-7a88" name="Chaos Talisman" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Roll a dice each time you allocate a wound or mortal wound to the bearer. On a 6+, the wound is negated. Add 1 to the roll if the wound was inflicted by a model with the ORDER keyword.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="fe47-4784-c4b7-6d39" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="99a8-19b8-c4fc-5b82" name="5. Favour of the Gods" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b7ed-39dd-49f5-9397" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="d726-c6db-121c-8a13" name="Favour of the Gods" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Add 1 to the Wounds characteristic of the bearer.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="b9dd-e27b-f206-d911" name="6. Crown of Conquest" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b303-544d-589b-0409" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="fe7c-fded-1e2c-6c81" name="Crown of Conquest" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Friendly CHAOS units do not have to take battleshock tests while they are within 6&quot; of the bearer.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-    </selectionEntryGroup>
-    <selectionEntryGroup id="9e00-edd6-ffdf-3f9c" name="Blood Blessings of Khorne" hidden="false" collective="false" import="true">
+      <entryLinks>
+        <entryLink id="a86f-5501-ef94-94ba" name="Grand Strategy" hidden="false" collective="false" import="true" targetId="1e64-bcdc-3709-7ec7" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="2a8b-93fa-e1b9-4102" name="Extra Enhancement: Artefacts of Power" hidden="false" collective="false" import="true" type="upgrade">
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="bdb0-7f20-53ff-f804" name="Extra Enhancement: Spell Lores" hidden="false" collective="false" import="true" type="upgrade">
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="24e6-c9b0-8d0d-02a2" name="Extra Enhancement: Prayer Scriptures" hidden="false" collective="false" import="true" type="upgrade">
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="4f32-1179-8b4c-61e0" name="Extra Enhancement: Triumphs" hidden="false" collective="false" import="true" type="upgrade">
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="c965-0f85-d28c-ea2a" name="Extra Enhancement: Mount Trait" hidden="false" collective="false" import="true" type="upgrade">
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="7aa8-a1e1-a0b8-fd18" name="Extra Enhancement: Great Endrinworks" hidden="true" collective="false" import="true" type="upgrade">
       <modifiers>
-        <modifier type="set" field="hidden" value="true">
+        <modifier type="set" field="hidden" value="false">
           <conditions>
-            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="be2f-aa63-6d82-e2fc" type="equalTo"/>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fa69-cc30-064b-f0ce" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b0cb-e9db-f470-d51b" type="min"/>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4dc8-1655-2d7e-f7c2" type="max"/>
-      </constraints>
-      <selectionEntries>
-        <selectionEntry id="3da0-3ef8-866e-3ab5" name="1. Bronzed Flesh" hidden="false" collective="false" import="true" type="upgrade">
-          <profiles>
-            <profile id="409a-1a19-61fc-ebab" name="Bronzed Flesh" hidden="false" typeId="eed7-4131-0a52-0668" typeName="Prayer">
-              <characteristics>
-                <characteristic name="Description" typeId="0746-6cfb-5e15-53cb">If this prayer is successful, pick either the PRIEST or a KHORNE unit from your army that is within 16&quot; of the PRIEST and which is visible to them. You can add 1 to the save rolls for the unit you picked until the start of your next hero phase.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="23fd-8b31-0d59-0674" name="2. Blood Sacrifice" hidden="false" collective="false" import="true" type="upgrade">
-          <profiles>
-            <profile id="933a-c947-9fb0-e0a6" name="Blood Sacrifice" hidden="false" typeId="eed7-4131-0a52-0668" typeName="Prayer">
-              <characteristics>
-                <characteristic name="Description" typeId="0746-6cfb-5e15-53cb">If this prayer is successful, pick either the PRIEST or a KHORNE unit from your army that is within 3&quot; of the PRIEST. The unit you picked immediately suffers D3 mortal wounds, but you gain 1 Blood Tithe point.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="a089-13dc-617b-2eab" name="3. Resanguination" hidden="false" collective="false" import="true" type="upgrade">
-          <profiles>
-            <profile id="bb1e-a8e5-4e0f-1fe6" name="Resanguination" hidden="false" typeId="eed7-4131-0a52-0668" typeName="Prayer">
-              <characteristics>
-                <characteristic name="Description" typeId="0746-6cfb-5e15-53cb">If this prayer is successful, pick either the PRIEST or a KHORNE HERO from your army that is within 16&quot; of the PRIEST and which is visible to them. The model you picked immediately heals D3 wounds lost earlier in the battle.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="d9d0-8915-d319-7a99" name="4. Brazen Fury" hidden="false" collective="false" import="true" type="upgrade">
-          <profiles>
-            <profile id="a821-00f5-c6fc-2645" name="Brazen Fury" hidden="false" typeId="eed7-4131-0a52-0668" typeName="Prayer">
-              <characteristics>
-                <characteristic name="Description" typeId="0746-6cfb-5e15-53cb">If this prayer is successful, pick a KHORNE unit from your army that is within 16&quot; of the PRIEST and which is visible to them. The unit that you picked does not have t take battleshock tests until your next hero phase.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="e5ab-1394-46b7-55df" name="5. Killing Frenzy" hidden="false" collective="false" import="true" type="upgrade">
-          <profiles>
-            <profile id="4cd3-aaf5-0845-37e4" name="Killing Frenzy" hidden="false" typeId="eed7-4131-0a52-0668" typeName="Prayer">
-              <characteristics>
-                <characteristic name="Description" typeId="0746-6cfb-5e15-53cb">If this prayer is successful, pick either the PRIEST or a KHORNE unit from your army that is within 16&quot; of the PRIEST and which is visible to them. Add 1 to the hit rolls of the unit you picked until your next hero phase.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="e9ec-b172-d5a2-81b0" name="6. Magebane Hex" hidden="false" collective="false" import="true" type="upgrade">
-          <profiles>
-            <profile id="ffb7-f9aa-a104-73af" name="Magebane Hex" hidden="false" typeId="eed7-4131-0a52-0668" typeName="Prayer">
-              <characteristics>
-                <characteristic name="Description" typeId="0746-6cfb-5e15-53cb">If this prayer is successful, then until your next hero phase, the PRIEST can attempt to unbind one additional spell in each enemy hero phase in the same manner as a wizard.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-    </selectionEntryGroup>
-    <selectionEntryGroup id="37b0-af21-630c-d8af" name="Realm Artefacts of Power" hidden="false" collective="false" import="true">
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+  </sharedSelectionEntries>
+  <sharedSelectionEntryGroups>
+    <selectionEntryGroup id="37b0-af21-630c-d8af" name="Realm Artefacts of Power" hidden="true" collective="false" import="true">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditions>
@@ -2613,7 +2334,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
         <entryLink id="5e7a-a472-6882-6005" name="Relics of Ulgu" hidden="false" collective="false" import="true" targetId="158b-c95d-0272-ca62" type="selectionEntryGroup"/>
       </entryLinks>
     </selectionEntryGroup>
-    <selectionEntryGroup id="0d51-8ed8-dcf5-76a0" name="Realm of Origin" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="0d51-8ed8-dcf5-76a0" name="Realm of Origin" hidden="true" collective="false" import="true">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f8f1-eb73-a419-b92e" type="max"/>
         <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0476-58c6-f5ef-f2f3" type="min"/>
@@ -2656,7 +2377,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
-    <selectionEntryGroup id="692b-77fc-05c5-d070" name="Relics of Ghyran" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="692b-77fc-05c5-d070" name="Relics of Ghyran" hidden="true" collective="false" import="true">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditions>
@@ -2778,7 +2499,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
-    <selectionEntryGroup id="463d-7799-7dca-4724" name="Relics of Ghur" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="463d-7799-7dca-4724" name="Relics of Ghur" hidden="true" collective="false" import="true">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditions>
@@ -2810,7 +2531,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
-    <selectionEntryGroup id="302c-ef0b-a9d6-685e" name="Relics of Chamon" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="302c-ef0b-a9d6-685e" name="Relics of Chamon" hidden="true" collective="false" import="true">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditions>
@@ -2842,7 +2563,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
-    <selectionEntryGroup id="dff7-19b4-9850-89a7" name="Relics of Aqshy" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="dff7-19b4-9850-89a7" name="Relics of Aqshy" hidden="true" collective="false" import="true">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditions>
@@ -2874,7 +2595,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
-    <selectionEntryGroup id="f685-ff72-7c6d-d0f5" name="Relics of Shyish" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="f685-ff72-7c6d-d0f5" name="Relics of Shyish" hidden="true" collective="false" import="true">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditions>
@@ -2906,7 +2627,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
-    <selectionEntryGroup id="158b-c95d-0272-ca62" name="Relics of Ulgu" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="158b-c95d-0272-ca62" name="Relics of Ulgu" hidden="true" collective="false" import="true">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditions>
@@ -2938,7 +2659,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
-    <selectionEntryGroup id="0823-7018-722c-3bcb" name="Relics of Hysh" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="0823-7018-722c-3bcb" name="Relics of Hysh" hidden="true" collective="false" import="true">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditions>
@@ -2970,23 +2691,20 @@ to set up the WIZARD, then the WIZARD is slain.</description>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
-    <selectionEntryGroup id="5927-9c5a-8b20-8f37" name="Game Type (ALL GAME TYPES MUST MATCH)" hidden="false" collective="false" import="true" defaultSelectionEntryId="cea8-e4b2-c44f-c7b4">
+    <selectionEntryGroup id="5927-9c5a-8b20-8f37" name="Game Type" hidden="false" collective="false" import="true" defaultSelectionEntryId="cea8-e4b2-c44f-c7b4">
       <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9f24-8ab9-ab48-5541" type="max"/>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a938-c780-2a0f-86ec" type="min"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9f24-8ab9-ab48-5541" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a938-c780-2a0f-86ec" type="min"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="88f3-f430-ad97-af5e" type="max"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7c4e-1234-f943-d70f" type="min"/>
       </constraints>
       <selectionEntries>
-        <selectionEntry id="e860-9b1e-36bd-a54f" name="1000 Points - Vanguard" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="e860-9b1e-36bd-a54f" name="0750 Points" hidden="true" collective="false" import="true" type="upgrade">
           <modifiers>
-            <modifier type="set" field="2a41-d48b-8500-7a1a" value="0.0">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cea8-e4b2-c44f-c7b4" type="greaterThan"/>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ef67-15fb-487c-397a" type="greaterThan"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f5c9-2d9a-2ffb-edd5" type="instanceOf"/>
+              </conditions>
             </modifier>
           </modifiers>
           <constraints>
@@ -3000,18 +2718,6 @@ to set up the WIZARD, then the WIZARD is slain.</description>
           </costs>
         </selectionEntry>
         <selectionEntry id="cea8-e4b2-c44f-c7b4" name="2000 Points - Battlehost" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="c95c-2781-073b-887d" value="0.0">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e860-9b1e-36bd-a54f" type="greaterThan"/>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ef67-15fb-487c-397a" type="greaterThan"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c95c-2781-073b-887d" type="max"/>
           </constraints>
@@ -3022,17 +2728,12 @@ to set up the WIZARD, then the WIZARD is slain.</description>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="ef67-15fb-487c-397a" name="2500 Points - Warhost" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="ef67-15fb-487c-397a" name="3000 Points - Warhost" hidden="true" collective="false" import="true" type="upgrade">
           <modifiers>
-            <modifier type="set" field="94c1-18a9-d27c-23df" value="0.0">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cea8-e4b2-c44f-c7b4" type="greaterThan"/>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e860-9b1e-36bd-a54f" type="greaterThan"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f5c9-2d9a-2ffb-edd5" type="instanceOf"/>
+              </conditions>
             </modifier>
           </modifiers>
           <constraints>
@@ -3046,49 +2747,37 @@ to set up the WIZARD, then the WIZARD is slain.</description>
           </costs>
         </selectionEntry>
         <selectionEntry id="ca54-0d07-72c2-d26f" name="No Points or Battlerole Validation (Open)" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="49ca-40d6-2e3d-42bb" type="max"/>
+          </constraints>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-      </selectionEntries>
-    </selectionEntryGroup>
-    <selectionEntryGroup id="c0f9-cbae-79d2-3d07" name="Malign Portents Artefacts - Mortal Slaanesh" hidden="false" collective="false" import="true">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a934-6d15-9932-b7ea" type="notInstanceOf"/>
-              </conditions>
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3963-2e99-aa63-c65e" type="notEqualTo"/>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3963-2e99-aa63-c65e" type="notInstanceOf"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="31d8-cd17-9573-a7ee" type="max"/>
-      </constraints>
-      <selectionEntries>
-        <selectionEntry id="6320-47ca-5cc8-d1d3" name="The Realmwalker Greaves" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="e9fc-6b3a-1b9a-e807" name="1000 Points - Vanguard" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5688-0639-323c-01a7" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6240-07cb-e2a7-b9eb" type="max"/>
           </constraints>
-          <profiles>
-            <profile id="fdda-9094-6d6a-d9de" name="The Realmwalker Greaves" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-              <characteristics>
-                <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">[...] The bearer can fly. In addition, if the bearer’s Move characteristic is less than 12″, treat it as being 12″.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
           <categoryLinks>
-            <categoryLink id="b380-b165-2821-38b0" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
+            <categoryLink id="edfd-6c90-1706-e0cf" name="New CategoryLink" hidden="false" targetId="fd9f-428a-177d-c765" primary="false"/>
+          </categoryLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="a3cc-3b86-4778-0b11" name="1500 Points" hidden="true" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f5c9-2d9a-2ffb-edd5" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3615-edd8-56d4-27ca" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="36e4-a878-23ff-7d3d" name="New CategoryLink" hidden="false" targetId="fd9f-428a-177d-c765" primary="false"/>
           </categoryLinks>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
@@ -3102,42 +2791,48 @@ to set up the WIZARD, then the WIZARD is slain.</description>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3277-c810-a600-3a73" type="max"/>
       </constraints>
       <selectionEntries>
-        <selectionEntry id="ba2b-ec63-fa08-88ef" name="Battle: Aqshy" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="ba2b-ec63-fa08-88ef" name="Battle: Aqshy" hidden="true" collective="false" import="true" type="upgrade">
           <profiles>
             <profile id="dbea-58cc-3513-1868" name="Stoke Rage" publicationId="e51d-b1a3-pubEKHGM" page="75" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick a friendly unit within 12&quot; of the caster that is visible to them. Add 1 to wound rolls and charge rolls for that unit until your next hero phase.</characteristic>
+                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
               </characteristics>
             </profile>
             <profile id="c833-e77e-7d86-96fe" name="Inferno Blades" publicationId="e51d-b1a3-pubEKHGM" page="75" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick a friendly unit within 12&quot; of the caster. Add 1 to the Damage characteristic of melee weapons used by that unit until your next hero phase.</characteristic>
+                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
               </characteristics>
             </profile>
             <profile id="da41-8a88-bda1-7c5f" name="Fiery Blast" publicationId="e51d-b1a3-pubEKHGM" page="75" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick a point on the battlefield within 18&quot; of the caster that is visible to them. Roll a dice for each unit (friend or foe) within 3&quot; of this point. On a 4+ that unit suffers D3 mortal wounds.</characteristic>
+                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
               </characteristics>
             </profile>
             <profile id="297e-c1cf-ad98-4df9" name="Glare of Vulcatrix" publicationId="e51d-b1a3-pubEKHGM" page="75" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">8</characteristic>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick an enemy unit within 9&quot; of the caster that is visible to them. Roll a dice; if the result is higher than the unit’s Wounds characteristic, a model from that unit is slain.</characteristic>
+                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
               </characteristics>
             </profile>
             <profile id="5312-c3ec-1d59-ed83" name="Parch" publicationId="e51d-b1a3-pubEKHGM" page="75" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick an enemy unit within 18&quot; of the caster. That unit must halve its Move characteristic until your next hero phase. In addition, roll a dice each time that unit completes a charge move until your next hero phase. On a 5+ the unit suffers D3 mortal wounds.</characteristic>
+                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
               </characteristics>
             </profile>
             <profile id="b054-6b9d-5733-a302" name="Incandescent Form" publicationId="e51d-b1a3-pubEKHGM" page="75" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, subtract 1 from hit rolls for attacks that target the caster until your next hero phase.</characteristic>
+                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
               </characteristics>
             </profile>
             <profile id="dd37-3af5-59da-0460" name="Blazing Fervour" hidden="false" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
@@ -3149,6 +2844,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">5</characteristic>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">Pick 1 enemy unit within 18&quot; of the caster and visible to them. If that enemy unit has 1 model, it suffers 1 mortal wound; if it has 2-9 models, it suffers D3 mortal wounds; and if it has 10 or more models, it suffers D6 mortal wounds.</characteristic>
+                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
               </characteristics>
             </profile>
           </profiles>
@@ -3156,48 +2852,55 @@ to set up the WIZARD, then the WIZARD is slain.</description>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="ed53-d347-e94c-2431" name="Battle: Chamon" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="ed53-d347-e94c-2431" name="Battle: Chamon" hidden="true" collective="false" import="true" type="upgrade">
           <profiles>
             <profile id="2c42-d061-a087-9527" name="Rain of Lead" publicationId="e51d-b1a3-pubEHOGM" page="74" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick an enemy unit within 18&quot; of the caster that is visible to them. That unit suffers D3 mortal wounds. In addition, subtract 1&quot; from that unit’s Move characteristic until your next hero phase.</characteristic>
+                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
               </characteristics>
             </profile>
             <profile id="0f74-a77d-dd05-d038" name="Curse of Rust" publicationId="e51d-b1a3-pubEKHGM" page="74" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick an enemy unit within 12&quot; of the caster that is visible to them. Subtract 1 from hit rolls and save rolls for that unit until your next hero phase.</characteristic>
+                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
               </characteristics>
             </profile>
             <profile id="ed1d-11ec-1a8d-004a" name="Molten Gaze" publicationId="e51d-b1a3-pubEKHGM" page="74" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick a point on the battlefield within 12&quot; of the caster that is visible to them and draw an imaginary straight line 1mm wide between that point and the closest part of the caster. Each unit other than the caster that has models passed across by this line suffers 1 mortal wound.</characteristic>
+                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
               </characteristics>
             </profile>
             <profile id="1617-a762-c075-2410" name="Rule of Burning Iron" publicationId="e51d-b1a3-pubEKHGM" page="74" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">8</characteristic>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick an enemy unit within 12&quot; of the caster that is visible to them. Roll a dice for each model in that unit. For each 6+ that unit suffers 1 mortal wound.</characteristic>
+                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
               </characteristics>
             </profile>
             <profile id="3784-d44d-177e-60e3" name="Glittering Robe" publicationId="e51d-b1a3-pubEKHGM" page="74" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, re-roll save rolls of 1 for the caster until your next hero phase.</characteristic>
+                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
               </characteristics>
             </profile>
             <profile id="02b9-131b-e438-e1da" name="Transmutation" publicationId="e51d-b1a3-pubEKHGM" page="74" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick an enemy unit within 18&quot; of the caster that is visible to them and roll 3 dice. For each roll that is greater than that unit’s Wounds characteristic, 1 model from that unit is slain.</characteristic>
+                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
               </characteristics>
             </profile>
             <profile id="8c26-6a80-39f4-0c78" name="Metamorphic Warding" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">Pick 1 friendly unit wholly within 12&quot; of the caster and visible to them. Add 1 to save rolls for attacks that target that unit until the start of your next hero phase.</characteristic>
+                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
               </characteristics>
             </profile>
             <profile id="cc1c-db29-68c6-37fe" name="Living Blades" hidden="false" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
@@ -3212,51 +2915,26 @@ to set up the WIZARD, then the WIZARD is slain.</description>
         </selectionEntry>
         <selectionEntry id="afb2-6845-cd03-2596" name="Battle: Ghur" hidden="false" collective="false" import="true" type="upgrade">
           <profiles>
-            <profile id="4980-8f82-01df-d8c1" name="The Amber Spear" publicationId="e51d-b1a3-pubEHOGM" page="73" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
-              <characteristics>
-                <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
-                <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick a point on the battlefield within 12&quot; of the caster that is visible to them and draw an imaginary straight line 1mm wide between that point and the closest part of the caster. Each unit other than the caster that has models passed across by this line suffers 1 mortal wound.</characteristic>
-              </characteristics>
-            </profile>
-            <profile id="47d2-8fe8-a1cd-fcd4" name="Bestial Spirit" publicationId="e51d-b1a3-pubEKHGM" page="73" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
-              <characteristics>
-                <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
-                <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick an enemy unit within 18&quot; of the caster that is visible to them. That unit suffers D3 mortal wounds. In addition, if the unit suffers 3 mortal wounds from this spell, subtract 1 from its Bravery characteristic until your next hero phase.</characteristic>
-              </characteristics>
-            </profile>
-            <profile id="b570-a87b-a5d6-4314" name="Flock of Doom" publicationId="e51d-b1a3-pubEKHGM" page="73" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
-              <characteristics>
-                <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
-                <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick an enemy unit within 18&quot; of the caster that is visible to them and roll 12 dice. For each 6+ that enemy unit suffers 1 mortal wound.</characteristic>
-              </characteristics>
-            </profile>
-            <profile id="c34f-e0f3-8aa6-27b2" name="Impenetrable Hide" publicationId="e51d-b1a3-pubEKHGM" page="73" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
-              <characteristics>
-                <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
-                <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, you can re-roll failed save rolls for the caster until the start of your next hero phase.</characteristic>
-              </characteristics>
-            </profile>
-            <profile id="796c-59cd-7791-1fb9" name="Cower" publicationId="e51d-b1a3-pubEKHGM" page="73" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
-              <characteristics>
-                <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
-                <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick an enemy MONSTER within 12&quot; of the caster that is visible to them and roll 2D6. If the result is higher than that MONSTER ’s Bravery characteristic, it cannot make a charge move in your opponent’s next turn.</characteristic>
-              </characteristics>
-            </profile>
-            <profile id="130c-f54d-8df0-2a75" name="Primal Hunter" publicationId="e51d-b1a3-pubEKHGM" page="73" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
-              <characteristics>
-                <characteristic name="Casting Value" typeId="2508-b604-1258-a920">8</characteristic>
-                <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick a friendly HERO within 12&quot; of the caster that is visible to them. Re-roll failed charge rolls and hit rolls for that HERO until your next hero phase.</characteristic>
-              </characteristics>
-            </profile>
-            <profile id="de06-9b86-b46c-fc89" name="Wildform" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+            <profile id="de06-9b86-b46c-fc89" name="Metamorphosis" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">5</characteristic>
-                <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">Pick 1 friendly unit within 12&quot; of the caster and visible to them. Add 2 to run and charge rolls made for that unit until the start of your next hero phase.</characteristic>
+                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">12&quot;</characteristic>
+                <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick 1 friendly HERO that is not a MONSTER and that is within range and visible to the caster. That HERO gains the MONSTER keyword until your next hero phase.</characteristic>
               </characteristics>
             </profile>
             <profile id="d0c5-3e4d-3912-fc57" name="Feral Roar" hidden="false" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
               <characteristics>
-                <characteristic name="Command Ability Details" typeId="1b71-4c83-4e8c-093f">You can use this command ability in your hero phase. If you do so, pick 1 friendly MONSTER wholly within 12&quot; of a friendly HERO. Until the end of the battle round, when you look up a value on that model’s damage table, that MONSTER is treated as if it has suffered 0 wounds.</characteristic>
+                <characteristic name="Command Ability Details" typeId="1b71-4c83-4e8c-093f">You can use this command ability at the start of the combat phase. The unit that receives the command must be a MONSTER. Until the end of that phase, when you look up a value on that unit&apos;s damage table, it is treated as if it has suffered 0 wounds.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="a4c5-7b58-71e5-351c" name="Predators and Prey" hidden="false" typeId="6bf0-7801-561f-cc28" typeName="Special Rules">
+              <characteristics>
+                <characteristic name="Description" typeId="82bd-2ffd-8589-576c">Once per battle round, you score 1 additional victory point if any enemy MONSTERS were slain in that battle round. </characteristic>
+              </characteristics>
+            </profile>
+            <profile id="66b3-3b35-e060-5d92" name="Seismic Shift" hidden="false" typeId="6bf0-7801-561f-cc28" typeName="Special Rules">
+              <characteristics>
+                <characteristic name="Description" typeId="82bd-2ffd-8589-576c">At the start of the third battle round, after the players roll off to determine who has the first turn, the player taking the second turn in that battle round can pick 1 objective marker on the battlefield and remove it from play.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -3264,48 +2942,55 @@ to set up the WIZARD, then the WIZARD is slain.</description>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="286a-bfe7-f725-ca75" name="Battle: Ghyran" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="286a-bfe7-f725-ca75" name="Battle: Ghyran" hidden="true" collective="false" import="true" type="upgrade">
           <profiles>
             <profile id="bf34-4284-e813-d06a" name="Whipvines" publicationId="e51d-b1a3-pubEKHGM" page="72" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">5</characteristic>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick a point on the battlefield within 18&quot; of the caster that is visible to them. Roll a dice for each enemy unit within 3&quot; of this point. On a 4+ the unit being rolled for suffers 1 mortal wound.</characteristic>
+                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
               </characteristics>
             </profile>
             <profile id="981d-92e1-a330-a142" name="Mirrorpool" publicationId="e51d-b1a3-pubETJDK" page="72; 1" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, remove the caster from the battlefield and set them up again anywhere within 18&quot; of their previous position, more than 9&quot; from any enemy models. It may not move in the subsequent movement phase.</characteristic>
+                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
               </characteristics>
             </profile>
             <profile id="8ead-e4d4-d566-1cad" name="Realmblood" publicationId="e51d-b1a3-pubEKHGM" page="72" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, heal D3 wounds allocated to the caster.</characteristic>
+                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
               </characteristics>
             </profile>
             <profile id="ad7d-da4d-95bf-85d7" name="Briarstorm" publicationId="e51d-b1a3-pubEKHGM" page="72" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick a point on the battlefield within 18&quot; of the caster. Until your next hero phase, any unit that finishes a move within 3&quot; of that point suffers D3 mortal wounds.</characteristic>
+                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
               </characteristics>
             </profile>
             <profile id="c6ac-bacc-b44a-ee43" name="Flesh to Stone" publicationId="e51d-b1a3-pubEKHGM" page="72" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, re-roll successful wound rolls for attacks that target the caster until your next hero phase.</characteristic>
+                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
               </characteristics>
             </profile>
             <profile id="f1e2-5c25-57d9-2a96" name="Sicklewind" publicationId="e51d-b1a3-pubEKHGM" page="72" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick a point on the battlefield within 12&quot; of the caster that is visible to them and draw an imaginary straight line 1mm wide between that point and the closest part of the caster. Each unit other than the caster that has models passed across by this line suffers D3 mortal wounds.</characteristic>
+                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
               </characteristics>
             </profile>
             <profile id="464d-7fd7-9d89-4aa7" name="Shield of Thorns" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">5</characteristic>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">Pick 1 friendly unit wholly within 18&quot; of the caster and visible to them. Until your next hero phase, any enemy unit that finishes a charge move within 3&quot; of that unit suffers D3 mortal wounds. The same friendly unit cannot be picked as the target of this spell more than once per turn.</characteristic>
+                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
               </characteristics>
             </profile>
             <profile id="6086-be12-d4fc-a2fe" name="Command the Land" hidden="false" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
@@ -3318,48 +3003,55 @@ to set up the WIZARD, then the WIZARD is slain.</description>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="632b-73ed-9385-2491" name="Battle: Hysh" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="632b-73ed-9385-2491" name="Battle: Hysh" hidden="true" collective="false" import="true" type="upgrade">
           <profiles>
             <profile id="6a62-fd42-aa4d-5e6a" name="Exorcising Beam" publicationId="e51d-b1a3-pubEKHGM" page="78" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick an enemy unit within 12&quot; of the caster that is visible to them. That unit suffers D3 mortal wounds. If the enemy unit is a DAEMON or DEATH unit, it suffers D6 mortal wounds instead.</characteristic>
+                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
               </characteristics>
             </profile>
             <profile id="bf05-2d97-bcc4-15f5" name="Light of Battle" publicationId="e51d-b1a3-pubEKHGM" page="78" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">5</characteristic>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick a friendly unit within 18&quot; of the caster. Do not take battleshock tests for that unit until your next hero phase.</characteristic>
+                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
               </characteristics>
             </profile>
             <profile id="1106-ad78-0b0e-c029" name="Vengeful Illumination" publicationId="e51d-b1a3-pubEKHGM" page="78" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick an enemy unit within 18&quot; of the caster that is visible to them. Add 1 to hit rolls for attacks made with missile weapons that target that unit until your next hero phase.</characteristic>
+                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
               </characteristics>
             </profile>
             <profile id="42b6-a83b-993f-08c1" name="Aetheric Net" publicationId="e51d-b1a3-pubEKHGM" page="78" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick a point on the battlefield within 18&quot; of the caster. Roll a dice for each unit (friend or foe) within 3&quot; of that point. On a 4+ that unit suffers 1 mortal wound, and its Move characteristic is halved until your next hero phase.</characteristic>
+                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
               </characteristics>
             </profile>
             <profile id="b132-e233-e288-8114" name="Healing Glow" publicationId="e51d-b1a3-pubEKHGM" page="78" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick a friendly unit within 6&quot; of the caster that is visible to them. Heal D3 wounds allocated to that unit.</characteristic>
+                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
               </characteristics>
             </profile>
             <profile id="777d-7786-4576-16e8" name="Banishment" publicationId="e51d-b1a3-pubEFCFK" page="78" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">8</characteristic>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick 1 enemy unit within 12&quot; of the caster that is visible to them. Your opponent must remove that unit from the battlefield and then set it up again, anywhere on the battlefield more than 24&quot; from the caster and more than 9&quot; from any other models from the caster’s army.</characteristic>
+                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
               </characteristics>
             </profile>
             <profile id="cdf3-631b-c682-1186" name="Purity of Defence" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">5</characteristic>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">Pick 1 friendly unit wholly within 12&quot; of the caster and visible to them. You can re-roll save rolls of 1 for attacks that target that unit until the start of you next hero phase.</characteristic>
+                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
               </characteristics>
             </profile>
             <profile id="218c-008e-493b-3271" name="All-seeing Enlightenment" hidden="false" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
@@ -3372,48 +3064,55 @@ to set up the WIZARD, then the WIZARD is slain.</description>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="098f-0986-2570-bece" name="Battle: Shyish" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="098f-0986-2570-bece" name="Battle: Shyish" hidden="true" collective="false" import="true" type="upgrade">
           <profiles>
             <profile id="6e51-da62-4ca8-04ad" name="Word of Ending" publicationId="e51d-b1a3-pubEKHGM" page="76" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick an enemy HERO within 12&quot; of the caster that is visible to them and roll a dice. If the result is more than the number of wounds allocated to that model, it suffers D3 mortal wounds.</characteristic>
+                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
               </characteristics>
             </profile>
             <profile id="80ae-e158-1210-7d7c" name="Night&apos;s Touch" publicationId="e51d-b1a3-pubEKHGM" page="76" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">8</characteristic>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick a friendly unit within 6&quot; of the caster that is visible to them. Ignore modifiers (positive and negative) when making save rolls for that unit until your next hero phase.</characteristic>
+                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
               </characteristics>
             </profile>
             <profile id="80b8-a2bc-5bf4-8b4d" name="Soulshroud" publicationId="e51d-b1a3-pubEKHGM" page="76" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick a friendly unit within 12&quot; of the caster that is visible to them. That unit is not affected by other spells until your next hero phase.</characteristic>
+                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
               </characteristics>
             </profile>
             <profile id="7ae9-bda5-9bee-9446" name="Unnatural Darkness" publicationId="e51d-b1a3-pubEKHGM" page="76" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick a friendly unit within 12&quot; of the caster that is visible to them. Subtract 1 from hit rolls for attacks that target that unit until your next hero phase.</characteristic>
+                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
               </characteristics>
             </profile>
             <profile id="4f5e-3629-2e27-f24b" name="Soulflay" publicationId="e51d-b1a3-pubEKHGM" page="76" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick an enemy HERO within 12&quot; of the caster that is visible to them. That unit suffers D3 mortal wounds. In addition, if the unit suffers 3 mortal wounds from this spell, subtract 2 from its Bravery characteristic until your next hero phase.</characteristic>
+                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
               </characteristics>
             </profile>
             <profile id="19ff-bb06-bb69-7dd5" name="Ethereal Guide" publicationId="e51d-b1a3-pubEKHGM" page="76" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, add 1 to hit rolls for attacks made by the caster until your next hero phase.</characteristic>
+                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
               </characteristics>
             </profile>
             <profile id="3e70-5fd5-a646-c79d" name="Ripples of the Necroquake" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">Until the end of that phase, add 1 to casting rolls made for friendly WIZARDS if the casting roll is for an endless spell.</characteristic>
+                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
               </characteristics>
             </profile>
             <profile id="dd3b-2d39-577b-1206" name="Amethyst Aura" hidden="false" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
@@ -3426,48 +3125,55 @@ to set up the WIZARD, then the WIZARD is slain.</description>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="3923-b6b9-c500-1062" name="Battle: Ulgu" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="3923-b6b9-c500-1062" name="Battle: Ulgu" hidden="true" collective="false" import="true" type="upgrade">
           <profiles>
             <profile id="7b58-9346-d870-903a" name="Labyrinth of Sorrows" publicationId="e51d-b1a3-pubEKHGM" page="77" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">5</characteristic>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick an enemy unit within 12&quot; of the caster that is visible to them. Halve the Move characteristic of that unit until your next hero phase.</characteristic>
+                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
               </characteristics>
             </profile>
             <profile id="b468-8c05-4668-3d4c" name="Crown of Asphyxiation" publicationId="e51d-b1a3-pubEKHGM" page="77" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, roll a dice for each enemy unit within 3&quot; of the caster. On a 4+ that unit suffers 1 mortal wound.</characteristic>
+                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
               </characteristics>
             </profile>
             <profile id="5483-9381-e6dd-60c6" name="The Enfeebling" publicationId="e51d-b1a3-pubEKHGM" page="77" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick an enemy unit within 12&quot; of the caster. Re-roll failed wound rolls for attacks that target this unit until your next hero phase.</characteristic>
+                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
               </characteristics>
             </profile>
             <profile id="6a2d-6e7c-c48b-10bb" name="Phantasmal Guardian" publicationId="e51d-b1a3-pubEKHGM" page="77" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, roll a dice each time you allocate a wound or mortal wound to the caster until your next hero phase. On a 5+ the wound is negated.</characteristic>
+                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
               </characteristics>
             </profile>
             <profile id="9abb-8076-099a-4563" name="Bridge of Shadows" publicationId="e51d-b1a3-pubEKHGM" page="77" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick a friendly unit wholly within 12&quot; of the caster and remove it from the battlefield. Set it up anywhere on the battlefield that is wholly within 24&quot; of the caster and more than 9&quot; from any enemy models. It may not move in the subsequent movement phase.</characteristic>
+                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
               </characteristics>
             </profile>
             <profile id="1078-c3cd-bed1-ea1c" name="Aetheric Tendrils" publicationId="e51d-b1a3-pubEKHGM" page="77" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick an enemy unit within 12&quot; of the caster that is visible to them. That unit suffers D3 mortal wounds. If that unit is a HERO or MONSTER, you can make a normal move with that unit as if it had a Move characteristic of 4&quot;.</characteristic>
+                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
               </characteristics>
             </profile>
             <profile id="20a5-392f-1f80-5996" name="Judgement of Shadow" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">Pick 1 enemy unit within 12&quot; of the caster that is visible to them and roll 7 dice. For each roll that is less than that unit’s unmodified Save characteristic, that unit suffers 1 mortal wound. If the target has an unmodified Save characteristic of ‘-’, it suffers 1 mortal wound for each 2+ instead.</characteristic>
+                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
               </characteristics>
             </profile>
             <profile id="aa60-bbe1-9992-402f" name="On Me!" hidden="false" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
@@ -3480,7 +3186,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="e236-f0fc-8bb0-ecb4" name="Battle: The Eightpoints" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="e236-f0fc-8bb0-ecb4" name="Battle: The Eightpoints" hidden="true" collective="false" import="true" type="upgrade">
           <profiles>
             <profile id="3c29-7e19-781b-def8" name="Forced by the Aether" page="" hidden="false" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
               <characteristics>
@@ -3491,6 +3197,1076 @@ to set up the WIZARD, then the WIZARD is slain.</description>
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
                 <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick 1 enemy unit within 18&quot; of the caster and visible to them. Until the start of your next hero phase, Roaming Monsters units must make any charge moves or normal moves (excluding retreat moves) towards that unit and any shooting attacks made by Roaming Monsters units must target that unit, even if that unit is not the closest unit to the Roaming Monsters unit.</characteristic>
+                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="b275-810f-adfc-156b" name="Core Battalions" hidden="true" collective="false" import="true">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6575-7d6c-ce4d-ada4" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e0a6-e39d-ee45-330f" type="max"/>
+      </constraints>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="9f53-9054-93f1-d54d" name="Alpha-Beast Pack" hidden="true" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="af2c-42ac-d610-4a10" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a12d-9c74-fec4-7616" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="c2d2-9d75-d2dc-4298" name="Alpha-Beast Pack - 2-3 Monsters" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6c6b-e787-f9b8-a510" type="notInstanceOf"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fa0c-9044-2568-fa02" type="instanceOf"/>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="af2c-42ac-d610-4a10" type="greaterThan"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="increment" field="4ebb-e699-adb7-5974" value="2.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="af2c-42ac-d610-4a10" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="increment" field="4039-8bfd-e452-d775" value="3.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="af2c-42ac-d610-4a10" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4039-8bfd-e452-d775" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4ebb-e699-adb7-5974" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6e76-2b42-337e-7de0" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="ae0b-b64b-5064-0103" name="Battle Regiment" hidden="true" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="1878-56e2-2862-8da5" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="15f9-ef16-b666-7b9b" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="6ebd-6208-beb7-f347" name="Battle Regiment - 1 Commander" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="1878-56e2-2862-8da5" type="greaterThan"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6c6b-e787-f9b8-a510" type="instanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="increment" field="d1bb-a7ff-163f-ebe3" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="1878-56e2-2862-8da5" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="increment" field="d0ea-613d-f6da-6ebd" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="1878-56e2-2862-8da5" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d1bb-a7ff-163f-ebe3" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d0ea-613d-f6da-6ebd" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="27a3-5616-eb46-4798" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="d495-9999-6da5-0fc8" name="Battle Regiment - 0-1 Monster or Artillery" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="1878-56e2-2862-8da5" type="greaterThan"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fa0c-9044-2568-fa02" type="instanceOf"/>
+                            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1d26-07fc-6a66-d73e" type="instanceOf"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="increment" field="2503-6395-ff23-d16f" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="1878-56e2-2862-8da5" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2503-6395-ff23-d16f" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="bd68-0e92-19f7-7ea5" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="499a-198a-453a-3b6e" name="Battle Regiment - 0-2 Sub-Commander" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="1878-56e2-2862-8da5" type="greaterThan"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a8ed-ca35-24e0-cf2e" type="instanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="increment" field="ebc4-e49c-a595-cc8e" value="2.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="1878-56e2-2862-8da5" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ebc4-e49c-a595-cc8e" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="602b-d6b8-e306-8c24" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="4df0-9610-3fc2-96df" name="Battle Regiment - 2-5 Troops" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fa0c-9044-2568-fa02" type="notInstanceOf"/>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="1878-56e2-2862-8da5" type="greaterThan"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1d26-07fc-6a66-d73e" type="notInstanceOf"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6c6b-e787-f9b8-a510" type="notInstanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="increment" field="7927-f6da-e667-3499" value="5.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="1878-56e2-2862-8da5" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="increment" field="baef-88fb-2a9c-fca7" value="2.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="1878-56e2-2862-8da5" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7927-f6da-e667-3499" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="baef-88fb-2a9c-fca7" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="66d8-1f0e-1f41-c470" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="b13d-2445-78ca-fba8" name="Command Entourage" hidden="true" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="7f89-26d0-ff93-83fe" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6eef-e4a2-3c85-721d" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="5c44-fc8f-2c7e-dcea" name="Command Entourage - 1 Commander" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="7f89-26d0-ff93-83fe" type="greaterThan"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6c6b-e787-f9b8-a510" type="instanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="increment" field="9494-57ad-66d5-8d10" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="7f89-26d0-ff93-83fe" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="increment" field="d65e-a22e-42ca-9323" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="7f89-26d0-ff93-83fe" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9494-57ad-66d5-8d10" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d65e-a22e-42ca-9323" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="00ab-4d38-d74e-f80e" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="7174-fb53-6fd6-cec9" name="Command Entourage - 2-3 Sub-Commanders" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="7f89-26d0-ff93-83fe" type="greaterThan"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a8ed-ca35-24e0-cf2e" type="instanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="increment" field="1f0b-c2c1-41e6-31e8" value="2.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="7f89-26d0-ff93-83fe" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="increment" field="9726-eb33-7666-f030" value="3.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="7f89-26d0-ff93-83fe" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9726-eb33-7666-f030" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1f0b-c2c1-41e6-31e8" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2989-4502-9e29-7fcd" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="d167-3f1f-df40-b54f" name="Grand Battery" hidden="true" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="be2d-ba53-4ebc-f035" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c8af-288d-b349-1651" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="da76-3cc5-bd73-1a14" name="Grand Battery - 2-3 Artillery" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="be2d-ba53-4ebc-f035" type="greaterThan"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1d26-07fc-6a66-d73e" type="instanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="increment" field="8d01-4776-a91f-563d" value="2.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="49a3-5845-b4df-11f3" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="increment" field="c61b-6a25-ff31-b259" value="3.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="49a3-5845-b4df-11f3" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c61b-6a25-ff31-b259" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8d01-4776-a91f-563d" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3f86-546f-6fe9-da54" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="509e-6936-d617-933a" name="Grand Battery - 1 Sub-commander" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="be2d-ba53-4ebc-f035" type="greaterThan"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a8ed-ca35-24e0-cf2e" type="instanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="increment" field="a633-e8ed-e3cb-f804" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="be2d-ba53-4ebc-f035" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="increment" field="4bbc-9813-dca5-980b" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="be2d-ba53-4ebc-f035" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4bbc-9813-dca5-980b" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a633-e8ed-e3cb-f804" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="bf71-de95-94ab-60c9" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="2ca4-909d-960a-3de1" name="Hunters of the Heartlands" hidden="true" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="49a3-5845-b4df-11f3" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="da39-d5ea-a10c-5f91" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="f700-30b4-2a37-c1f8" name="Hunters of the Heartlands - 2-3 Troops" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="11a6-7f0f-e073-d16d" value="3.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="49a3-5845-b4df-11f3" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fa0c-9044-2568-fa02" type="notInstanceOf"/>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="49a3-5845-b4df-11f3" type="greaterThan"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1d26-07fc-6a66-d73e" type="notInstanceOf"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6c6b-e787-f9b8-a510" type="notInstanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="increment" field="82a4-58ee-ea26-b0a9" value="2.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="49a3-5845-b4df-11f3" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="11a6-7f0f-e073-d16d" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="82a4-58ee-ea26-b0a9" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8109-b74d-45ba-ca81" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="830b-32e8-df08-6289" name="Vanguard" hidden="true" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="bbed-22cb-b649-6938" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="85ec-66e8-727a-544e" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="ffc8-4f2d-90c7-f14b" name="Vanguard - 1-3 Troops" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="fb5c-1a47-5379-eaf2" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="bbed-22cb-b649-6938" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fa0c-9044-2568-fa02" type="notInstanceOf"/>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="bbed-22cb-b649-6938" type="greaterThan"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1d26-07fc-6a66-d73e" type="notInstanceOf"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6c6b-e787-f9b8-a510" type="notInstanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="increment" field="6107-7270-70d6-0b8c" value="3.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="bbed-22cb-b649-6938" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6107-7270-70d6-0b8c" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="fb5c-1a47-5379-eaf2" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="53b8-ee3b-6c8c-a71f" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="2836-5c19-a748-8dfb" name="Vanguard - 1 Sub Commander" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="7475-34f3-65d7-b181" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="bbed-22cb-b649-6938" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6c6b-e787-f9b8-a510" type="instanceOf"/>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="bbed-22cb-b649-6938" type="greaterThan"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a8ed-ca35-24e0-cf2e" type="instanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="increment" field="9401-038f-55eb-342a" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="bbed-22cb-b649-6938" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9401-038f-55eb-342a" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7475-34f3-65d7-b181" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e6f6-1aa1-a81d-4075" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="5c50-e40d-2c81-ae58" name="Warlord" hidden="true" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5e7f-ccbb-a180-2e8b" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c2df-adaa-6880-797c" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="1246-8f90-e127-ea01" name="Warlord - 1-2 Troops" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="ddcf-49eb-bd3e-16ad" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5e7f-ccbb-a180-2e8b" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fa0c-9044-2568-fa02" type="notInstanceOf"/>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5e7f-ccbb-a180-2e8b" type="greaterThan"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1d26-07fc-6a66-d73e" type="notInstanceOf"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6c6b-e787-f9b8-a510" type="notInstanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="increment" field="ae21-2a81-9cde-f748" value="2.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5e7f-ccbb-a180-2e8b" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ae21-2a81-9cde-f748" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ddcf-49eb-bd3e-16ad" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1b44-2b8d-90da-ec27" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="a531-b832-8674-7a0b" name="Warlord - 2-4 Sub-Commanders" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5e7f-ccbb-a180-2e8b" type="greaterThan"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a8ed-ca35-24e0-cf2e" type="instanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="increment" field="c239-cab0-0a44-4b9a" value="4.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5e7f-ccbb-a180-2e8b" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="increment" field="759c-a974-2baa-ae3a" value="2.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5e7f-ccbb-a180-2e8b" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c239-cab0-0a44-4b9a" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="759c-a974-2baa-ae3a" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a64b-0fe7-cecc-d066" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="a248-92c9-88d3-fe44" name="Warlord - 1-2 Commanders" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5e7f-ccbb-a180-2e8b" type="greaterThan"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6c6b-e787-f9b8-a510" type="instanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="increment" field="54fa-989d-a145-650d" value="2.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5e7f-ccbb-a180-2e8b" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="increment" field="51ff-fa60-13ac-170d" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5e7f-ccbb-a180-2e8b" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="54fa-989d-a145-650d" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="51ff-fa60-13ac-170d" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3d57-aab0-da30-7d4f" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="0220-44b3-51bf-e352" name="Linebreaker" hidden="true" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="fa77-b2b2-8b0c-22e2" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9c2d-b419-5321-a994" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="adb4-bf01-9f23-b801" name="Linebreaker - 1-2 Commanders" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="7f04-f83d-5314-beca" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="fa77-b2b2-8b0c-22e2" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6c6b-e787-f9b8-a510" type="instanceOf"/>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="fa77-b2b2-8b0c-22e2" type="greaterThan"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="set" field="eb2b-22a8-1e34-2f4f" value="2.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="fa77-b2b2-8b0c-22e2" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="eb2b-22a8-1e34-2f4f" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7f04-f83d-5314-beca" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a3cf-0cb9-2df4-2490" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="fbfa-468d-1fa3-26de" name="Linebreaker - 2-3 Monsters" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="fea2-f20a-9deb-7b8d" value="2.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="fa77-b2b2-8b0c-22e2" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6c6b-e787-f9b8-a510" type="notInstanceOf"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fa0c-9044-2568-fa02" type="instanceOf"/>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="fa77-b2b2-8b0c-22e2" type="greaterThan"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="set" field="60d7-2737-b6d8-d69f" value="3.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="fa77-b2b2-8b0c-22e2" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="60d7-2737-b6d8-d69f" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="fea2-f20a-9deb-7b8d" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9d84-fb9e-1e87-2260" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="6138-3410-520c-bd01" name="Battalions" hidden="false" collective="false" import="true">
+      <entryLinks>
+        <entryLink id="e4aa-c117-7de8-aa43" name="Core Battalions" hidden="false" collective="false" import="true" targetId="b275-810f-adfc-156b" type="selectionEntryGroup"/>
+      </entryLinks>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="20c3-23a0-9d79-b491" name="Universal Spell Lore" hidden="false" collective="false" import="true">
+      <selectionEntries>
+        <selectionEntry id="f869-6511-2f30-69fa" name="Flaming Weapon" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6338-7fa0-9a48-d548" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="5843-0224-bdff-1caf" name="Flaming Weapon" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+              <characteristics>
+                <characteristic name="Casting Value" typeId="2508-b604-1258-a920">4</characteristic>
+                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
+                <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">Pick 1 of the caster&apos;s melee weapons. Add 1 to Damage characteristic of that weapon until your next hero phase.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="77f4-f997-dcde-7ffc" name="Levitate" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8278-f4e2-2316-176a" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="dc67-49ca-75f6-2cc4" name="Levitate" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+              <characteristics>
+                <characteristic name="Casting Value" typeId="2508-b604-1258-a920">8</characteristic>
+                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">18&quot;</characteristic>
+                <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">Pick 1 friendly unit wholly within range and visible to the caster. That unit can fly until your next hero phase.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="3db5-745d-09d7-d6b6" name="Fly" hidden="false" targetId="8e0c-cbe4-27be-8a30" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="2da2-7656-0bc6-4a3d" name="Ghost-mist" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1571-c084-6f45-121a" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="13ac-ddea-7c68-0db4" name="Ghost-mist" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+              <characteristics>
+                <characteristic name="Casting Value" typeId="2508-b604-1258-a920">5</characteristic>
+                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">6&quot;</characteristic>
+                <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">Pick 1 terrain feature within range and visible to the caster. Until your next hero phase, visibility between 2 models is blocked if a straight line 1mm wide drawn between the closest points of the 2 models passes across more than 3&quot; of that terrain feature. This effect does not block visibility to or from models with a Wounds characteristic of 10 or more.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="11c4-fd82-92a7-de8a" name="Universal Artefacts of Power" hidden="false" collective="false" import="true">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0911-0b34-1e54-49a7" type="max"/>
+      </constraints>
+      <selectionEntries>
+        <selectionEntry id="cd0c-54a6-f84a-cfa2" name="Amulet of Destiny" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="93c1-d725-3f42-20bb" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1ac5-16ba-eb84-45c9" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="63bd-a638-e5b4-d163" name="Amulet of Destiny" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
+              <characteristics>
+                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">The bearer has a ward of 5+.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <categoryLinks>
+            <categoryLink id="fce5-853d-8977-a649" name="Artefact" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
+          </categoryLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="9918-5a46-2468-35e2" name="Arcane Tome" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8714-d72f-f140-1e6b" type="max"/>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4694-7715-75cf-9e75" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="2867-2484-1105-673a" name="Arcane Tome" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
+              <characteristics>
+                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">The bearer becomes a WIZARD that knows the Arcane Bolt and Mystic Shield spells. They can attempt to cast 1 spell in your hero phase and attempt to unbind 1 spell in the enemy hero phase. If the bearer is already a Wizard, they can attempt to cast 1 additional spell instead.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <categoryLinks>
+            <categoryLink id="1e19-e5bd-256b-ae23" name="Artefact" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
+          </categoryLinks>
+          <entryLinks>
+            <entryLink id="ab32-92a5-4fb0-d7ab" name="Arcane Bolt" hidden="false" collective="false" import="true" targetId="869c-168d-eba5-eacf" type="selectionEntry"/>
+            <entryLink id="d517-3088-f1c5-c28e" name="Mystic Shield" hidden="false" collective="false" import="true" targetId="5fdd-6634-f9f8-068a" type="selectionEntry"/>
+          </entryLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="3e7b-7aed-c958-d38b" name="Vial of Mantivore Venom" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="03a0-981f-ce14-01f6" type="max"/>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="47fa-42b4-cc1b-a204" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="21e5-7e64-7395-2564" name="Vial of Mantivore Venom" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
+              <characteristics>
+                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Pick 1 of the bearer&apos;s melee weapons. Add 1 to wound rolls for attacks made with that weapon.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <categoryLinks>
+            <categoryLink id="f911-f0e9-1d2a-03f0" name="Artefact" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
+          </categoryLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="16d4-a47b-1291-1b4f" name="Seed of Rebirth" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d70e-b951-77b0-f0d7" type="max"/>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="561a-9b50-fb47-ef50" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="366b-ec29-81e2-981d" name="Seed of Rebirth" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
+              <characteristics>
+                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">You can re-roll heroic recovery rolls for the bearer.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <categoryLinks>
+            <categoryLink id="b183-16e5-8d0d-024f" name="Artefact" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
+          </categoryLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="b6b8-914a-dfca-18ee" name="Universal Command Traits" hidden="false" collective="false" import="true">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8a3d-c56d-94d8-ad9b" type="max"/>
+      </constraints>
+      <selectionEntries>
+        <selectionEntry id="589c-0e38-9558-7659" name="Battle-lust" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f09c-8d4b-c32b-e631" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="b221-0e6a-6c15-dce1" name="Battle-lust" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
+              <characteristics>
+                <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">You can re-roll run rolls and charge rolls for this general.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="3cb0-3862-b75f-2ee7" name="Heroic Stature" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c267-0a5e-64a8-15ae" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="1030-31b5-4dec-a534" name="Heroic Stature" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
+              <characteristics>
+                <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">Add 1 to this general&apos;s Wounds characteristic.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="6605-572d-c6d5-b3c4" name="Skilled Leader" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0f80-d108-c378-370b" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="55e5-9651-53bf-c620" name="Skilled Leader" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
+              <characteristics>
+                <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">If this general is on the battlefield at the start of your hero phase, roll a dice. On a 5+, you receive 1 extra command point.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="6d31-4450-8ba4-2983" name="High Priest" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bb52-c0de-b89f-129d" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="0a63-5959-f468-2ae8" name="High Priest" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
+              <characteristics>
+                <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">You can re-roll chanting rolls for this general.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="949c-ae4b-898d-d906" name="Master of Magic" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c927-82b3-b6a2-5d8f" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="20c8-a468-ac4f-fbdc" name="Master of Magic" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
+              <characteristics>
+                <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">Once per hero phase, you can re-roll 1 casting roll, dispelling roll, or unbinding roll for this general.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="3674-103c-35c9-85a6" name="Universal Prayer Scripture" hidden="false" collective="false" import="true">
+      <selectionEntries>
+        <selectionEntry id="2440-fbad-c331-1f36" name="Guidance" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="becb-04af-56ff-9363" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="fca4-6fc4-1ab5-3fcd" name="Guidance" hidden="false" typeId="eed7-4131-0a52-0668" typeName="Prayer">
+              <characteristics>
+                <characteristic name="Answer Value" typeId="276a-ab7e-145d-3ffc">5</characteristic>
+                <characteristic name="Range" typeId="fd81-4e98-28ac-092a"/>
+                <characteristic name="Description" typeId="0746-6cfb-5e15-53cb">You receive 1 command point.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="59cd-d077-e00d-31cf" name="Curse" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a821-6280-ff65-cd20" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="2663-03ae-5884-f483" name="Curse" hidden="false" typeId="eed7-4131-0a52-0668" typeName="Prayer">
+              <characteristics>
+                <characteristic name="Answer Value" typeId="276a-ab7e-145d-3ffc">4</characteristic>
+                <characteristic name="Range" typeId="fd81-4e98-28ac-092a">9&quot;</characteristic>
+                <characteristic name="Description" typeId="0746-6cfb-5e15-53cb">Pick 1 enemy unit within range and visible to the chanter. Until your next hero phase, if the unmodified hit roll for an attack that targets that unit is 6, that unit suffers 1 mortal wound in addition to any normal damage.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="461b-0d1f-e544-9faf" name="Heal" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c69d-b9e3-94cd-a184" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="a32e-9ee0-df87-ef6a" name="Heal" hidden="false" typeId="eed7-4131-0a52-0668" typeName="Prayer">
+              <characteristics>
+                <characteristic name="Answer Value" typeId="276a-ab7e-145d-3ffc">3</characteristic>
+                <characteristic name="Range" typeId="fd81-4e98-28ac-092a">12&quot;</characteristic>
+                <characteristic name="Description" typeId="0746-6cfb-5e15-53cb">Pick 1 friendly model within range and visible to the chanter. You can heal up to D3 wounds allocated to that model.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="1e64-bcdc-3709-7ec7" name="Grand Strategy" hidden="false" collective="false" import="true">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="bc5c-6f2c-d51b-a351" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a4d6-8abe-6aac-42e9" type="min"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4717-1d01-b0b2-9a58" type="max"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3050-d56e-a99c-e380" type="min"/>
+      </constraints>
+      <selectionEntries>
+        <selectionEntry id="a409-36d2-41d9-a72f" name="Hold the Line" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="4fb4-1f59-e825-f56f" name="Hold the Line" hidden="false" typeId="9c01-ec20-32c1-0948" typeName="Grand Strategy">
+              <characteristics>
+                <characteristic name="Description" typeId="53c8-cc18-16d1-e890">When the battle ends,  you complete this grand strategy if there are any Battleline units from your starting army on the battlefield.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="1dbe-00f3-42f4-b04e" name="Vendetta" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="d2bd-7f2d-40b6-a15a" name="Vendetta" hidden="false" typeId="9c01-ec20-32c1-0948" typeName="Grand Strategy">
+              <characteristics>
+                <characteristic name="Description" typeId="53c8-cc18-16d1-e890">When the battle ends,  you complete this grand strategy if the model chosen to be your opponent&apos;s general has been slain and the model chosen to be your general has not been slain.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="a35f-513d-9f57-e941" name="Dominating Presence" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="6fac-7f75-a8e8-f292" name="Dominating Presence" hidden="false" typeId="9c01-ec20-32c1-0948" typeName="Grand Strategy">
+              <characteristics>
+                <characteristic name="Description" typeId="53c8-cc18-16d1-e890">When the battle ends,  you complete this grand strategy if there are more units from your starting army on the battlefield than there are units from your opponent&apos;s starting army on the battlefield.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="8e7f-3814-4b8a-ef1f" name="Beast Master" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="8a2f-52ff-e81f-e3bc" name="Beast Master" hidden="false" typeId="9c01-ec20-32c1-0948" typeName="Grand Strategy">
+              <characteristics>
+                <characteristic name="Description" typeId="53c8-cc18-16d1-e890">When the battle ends,  you complete this grand strategy if there are any MONSTERS from your starting army on the battlefield.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="14f2-5c1f-5abb-15de" name="Prized Sorcery" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="1774-98a0-c401-d161" name="Prized Sorcery" hidden="false" typeId="9c01-ec20-32c1-0948" typeName="Grand Strategy">
+              <characteristics>
+                <characteristic name="Description" typeId="53c8-cc18-16d1-e890">When the battle ends,  you complete this grand strategy if there are any WIZARDS from your starting army on the battlefield.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="beb8-5f44-3575-b445" name="Pillars of Belief" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="6383-a7f2-eaef-03dd" name="Pillars of Belief" hidden="false" typeId="9c01-ec20-32c1-0948" typeName="Grand Strategy">
+              <characteristics>
+                <characteristic name="Description" typeId="53c8-cc18-16d1-e890">When the battle ends,  you complete this grand strategy if there are any PRIESTS from your starting army on the battlefield.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="13b2-13a9-40f1-6d75" name="Predator&apos;s Domain" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="9706-5930-ef0a-dbcd" name="Predator&apos;s Domain" hidden="false" typeId="9c01-ec20-32c1-0948" typeName="Grand Strategy">
+              <characteristics>
+                <characteristic name="Description" typeId="53c8-cc18-16d1-e890">When the battle ends,  you complete this grand strategy if you control more terrain features than your opponent.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="8b9d-0de1-0ee1-4d92" name="Sever the Head" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="dc8d-1188-4015-5ee0" name="Sever the Head" hidden="false" typeId="9c01-ec20-32c1-0948" typeName="Grand Strategy">
+              <characteristics>
+                <characteristic name="Description" typeId="53c8-cc18-16d1-e890">When the battle ends,  you complete this grand strategy if there are no HEROES from your opponent&apos;s starting army on the battlefield.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -3501,22 +4277,19 @@ to set up the WIZARD, then the WIZARD is slain.</description>
       </selectionEntries>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
-  <sharedRules>
-    <rule id="4571-8f36-98ca-2d16" name="Rampaging Destroyers" publicationId="e51d-b1a3-pubEQOCI" page="156" hidden="false">
-      <description>Roll a dice in your hero phase for your general and each DESTRUCTION HERO in your army. Add 2 to the roll for the general. On a roll of 6 or more, pick a friendly DESTRUCTION unit within 6&quot; of the general or HERO being rolled for. That unit can immediately move 6&quot; if it is more than 12&quot; from the enemy, can immediately pile in if it is within 3&quot; of the enemy, or can immediately declare a charge in any other circumstances. It cannot run when it makes the move, but can move, charge or pile in again later in the same turn.</description>
-    </rule>
-  </sharedRules>
   <sharedProfiles>
     <profile id="ae02-a84f-a903-1ff8" name="Arcane Bolt" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
       <characteristics>
         <characteristic name="Casting Value" typeId="2508-b604-1258-a920">5</characteristic>
-        <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick an enemy unit within 18&quot; of the caster that is visible to them. That unit suffers 1 mortal wound. If the casting roll was 10 or more, the unit suffers D3 mortal wounds instead.</characteristic>
+        <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">12&quot;</characteristic>
+        <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, at the start of any 1 phase before your next hero phase, you can pick 1 enemy unit within range and visible to the caster. That unit suffers 1 mortal wound. If that unit is within 3&quot; of the caster, it suffers D3 mortal wounds instead of 1.</characteristic>
       </characteristics>
     </profile>
     <profile id="b41f-f1ce-7aa5-4f81" name="Mystic Shield" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
       <characteristics>
-        <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
-        <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick a friendly unit within 18&quot; of the caster that is visible to them. Re-roll save rolls of 1 for that unit until your next hero phase.</characteristic>
+        <characteristic name="Casting Value" typeId="2508-b604-1258-a920">5</characteristic>
+        <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">12&quot;</characteristic>
+        <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick 1 friendly unit wholly within range and visible to the caster. Add 1 to save rolls for attacks that target that unit until your next hero phase.</characteristic>
       </characteristics>
     </profile>
     <profile id="8e0c-cbe4-27be-8a30" name="Fly" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
@@ -3532,6 +4305,26 @@ to set up the WIZARD, then the WIZARD is slain.</description>
     <profile id="d2d8-2ac6-109a-256f" name="Deathless Minions (GA:Death)" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
       <characteristics>
         <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">Each time you allocate a wound or mortal wound to a friendly DEATH model within 6&quot; of your general or a friendly DEATH HERO, roll a dice. On a 6+ the wound is negated.</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="e670-c851-388f-3f54" name="Expert" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
+      <characteristics>
+        <characteristic name="Battalion Ability Details" typeId="08e0-9ead-1dbe-c801">Once per battle, 1 unit from this battalion can receive the All-out Attack or All-out Defence command without the command being issued and without a command point being spent.</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="d430-efbb-5f30-d60a" name="Strategist" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
+      <characteristics>
+        <characteristic name="Battalion Ability Details" typeId="08e0-9ead-1dbe-c801">Once per battle, when you receive command points at the start of your hero phase, you can receive 1 extra command point.</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="dec1-bec2-f318-91e6" name="Swift" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
+      <characteristics>
+        <characteristic name="Battalion Ability Details" typeId="08e0-9ead-1dbe-c801">Once per battle, 1 unit from this battalion can receive the At the Double or Forward to Victory command without the command being issued and without a command point being spent.</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="d0be-bf37-cc83-f87b" name="Magnificent" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
+      <characteristics>
+        <characteristic name="Battalion Ability Details" typeId="08e0-9ead-1dbe-c801">When you pick enhancements for your army (see 27.3), you can pick 1 extra enhancement.</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>

@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="81cf-7df5-86e6-b78f" name="Order - Fyreslayers - Data" revision="49" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="70" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="81cf-7df5-86e6-b78f" name="Order - Fyreslayers - Data" revision="52" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="81" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="e67a-06d2-pubN65537" name="Order Battletome: Fyreslayers"/>
     <publication id="e67a-06d2-pubN69594" name="Battletome: Fyreslayers Errata, July 2018"/>
     <publication id="68d3-0b6a-3775-07d9" name="Battletome: Fyreslayers Official Errata, May 2019"/>
     <publication id="9cbd-6717-1de9-c57a" name="White Dwarf - June 2019"/>
+    <publication id="271d-c3fa-142d-5ea5" name="Battletome: Fyreslayers Errata, July 2021"/>
   </publications>
   <profileTypes>
     <profileType id="84c1-a205-4de9-2105" name="Ur-Gold Rune">
@@ -164,9 +165,9 @@
                             <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">HERMDAR units wholly within enemy territory or wholly within 12&quot; of an objective do not take battleshock tests.</characteristic>
                           </characteristics>
                         </profile>
-                        <profile id="01c9-dbe0-fa1b-d862" name="Skull-breakers and Oath-takers" hidden="false" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
+                        <profile id="01c9-dbe0-fa1b-d862" name="Skull-breakers and Oath-takers" publicationId="271d-c3fa-142d-5ea5" page="1" hidden="false" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
                           <characteristics>
-                            <characteristic name="Command Ability Details" typeId="1b71-4c83-4e8c-093f">You can use this command ability at the start of the combat phase.  Pick 1 friendly HERMDAR VULKITE BERZERKERS unit or 1 friendly HERMDAR HEARTHGUARD BERZERKERS unit wholly within 12&quot; of a HERMDAR HERO.  That unit fights at the start of that combat phase, before the players pick any other units to fight with in that combat phase.</characteristic>
+                            <characteristic name="Command Ability Details" typeId="1b71-4c83-4e8c-093f">You can use this command ability at the start of the combat phase. Pick 1 friendly HERMDAR VULKITE BERZERKERS unit or 1 friendly HERMDAR HEARTHGUARD BERZERKERS unit wholly within 12&quot; of a friendly HERMDAR HERO. The strike-first effect applies to that unit in that phase.</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
@@ -271,19 +272,12 @@
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="1b98-d13e-3461-998c" name="5 Auric Hearthguards" hidden="false" collective="false" import="true" type="model">
-          <modifiers>
-            <modifier type="set" field="points" value="100">
-              <conditions>
-                <condition field="selections" scope="parent" value="6.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="minSelections" type="min"/>
-            <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="120.0"/>
+            <cost name="pts" typeId="points" value="125.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="7964-ff38-1619-e2a8" name="Magmapike" hidden="false" collective="false" import="true" type="upgrade">
@@ -348,6 +342,32 @@
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <entryLinks>
+        <entryLink id="033a-9bdd-71c8-ecc0" name="Reinforced" hidden="false" collective="false" import="true" targetId="0a8d-cde8-fba1-6c0d" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="95f2-6885-756f-9ea5" value="2.0">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="94c9-6cd1-da31-5c7e" type="greaterThan"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a089-15db-b9ac-fc2f" type="greaterThan"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <costs>
+            <cost name="pts" typeId="points" value="125.0"/>
+          </costs>
+        </entryLink>
+        <entryLink id="0e08-2c74-b26c-dd4b" name="Battalions" hidden="false" collective="false" import="true" targetId="bfd7-5a8f-8c70-70d2" type="selectionEntryGroup"/>
+      </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
@@ -375,6 +395,7 @@
         <categoryLink id="1d66-8915-ae19-7beb" name="New CategoryLink" hidden="false" targetId="4ec3-efa9-35ba-d55f" primary="false"/>
         <categoryLink id="c7e5-be47-fd04-e4a7" name="New CategoryLink" hidden="false" targetId="b970-b3bf-e1a4-a6fc" primary="false"/>
         <categoryLink id="6eec-04d9-97b0-7fb4" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
+        <categoryLink id="2e67-8a44-bf94-27df" name="9 or less wounds Leader" hidden="false" targetId="a8ed-ca35-24e0-cf2e" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="bc39-a830-aaee-f739" name="General" hidden="false" collective="false" import="true" type="upgrade">
@@ -437,6 +458,7 @@
       <entryLinks>
         <entryLink id="0d7d-beb3-da5d-3bde" name="Artefacts" hidden="false" collective="false" import="true" targetId="75d8-d2b2-772b-e9f0" type="selectionEntryGroup"/>
         <entryLink id="5448-ff93-18cc-7106" name="Command Traits" hidden="false" collective="false" import="true" targetId="8db2-e52d-b376-b998" type="selectionEntryGroup"/>
+        <entryLink id="f1ca-8d35-815e-b4cf" name="Battalions" hidden="false" collective="false" import="true" targetId="bfd7-5a8f-8c70-70d2" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="100.0"/>
@@ -663,9 +685,10 @@
         <entryLink id="219f-2edd-c56e-30d8" name="Artefacts" hidden="false" collective="false" import="true" targetId="75d8-d2b2-772b-e9f0" type="selectionEntryGroup"/>
         <entryLink id="277d-2084-6ef2-5d64" name="Command Traits" hidden="false" collective="false" import="true" targetId="8db2-e52d-b376-b998" type="selectionEntryGroup"/>
         <entryLink id="9042-56e7-8966-4912" name="Magmadroth Traits" hidden="false" collective="false" import="true" targetId="3886-2846-4e7d-dd6a" type="selectionEntryGroup"/>
+        <entryLink id="5e7d-7fe6-63d2-25a6" name="Battalions" hidden="false" collective="false" import="true" targetId="bfd7-5a8f-8c70-70d2" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="270.0"/>
+        <cost name="pts" typeId="points" value="285.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="c0aa-7e29-3be9-8fa5" name="Auric Runemaster" hidden="false" collective="false" import="true" type="unit">
@@ -683,9 +706,11 @@
             <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">In your hero phase, you can pick 1 enemy unit within 12&quot; of this model and roll 2 dice. If you roll at least one 6, for the rest of the battle, you can re-roll hit rolls of 1 for attacks made by friendly FYRESLAYERS units that target that unit. If you roll two or more 6s, for the rest of the battle, you can re-roll hit and wound rolls of 1 for attacks made by friendly FYRESLAYERS units that target that unit instead.</characteristic>
           </characteristics>
         </profile>
-        <profile id="8808-2ecd-5150-87d3" name="Volcano&apos;s Call" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+        <profile id="8808-2ecd-5150-87d3" name="Volcano&apos;s Call" publicationId="271d-c3fa-142d-5ea5" page="2" hidden="false" typeId="eed7-4131-0a52-0668" typeName="Prayer">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the start of your hero phase, this model can chant this prayer. If they do so, make a prayer roll by rolling a dice. On a 1-2, the prayer is not answered. On a 3+ the prayer is answered. If this prayer is answered, pick a terrain feature within 18&quot; of this model. Roll a dice for each model within 1&quot; of that terrain feature. For each roll of a 6, that model’s unit suffers 1 mortal wound. In addition, until your next hero phase, that terrain feature has the ‘Deadly’ scenery rule in addition to any other scenery rules it may have.</characteristic>
+            <characteristic name="Answer Value" typeId="276a-ab7e-145d-3ffc">3</characteristic>
+            <characteristic name="Range" typeId="fd81-4e98-28ac-092a">18&quot;</characteristic>
+            <characteristic name="Description" typeId="0746-6cfb-5e15-53cb">If answered, pick 1 terrain feature wholly within range and visible to the chanter. Roll a dice for each model within 1&quot; of that terrain feature. For each 6, that model’s unit suffers 1 mortal wound.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -697,6 +722,7 @@
         <categoryLink id="300f-0c31-b3b0-67e7" name="New CategoryLink" hidden="false" targetId="4ec3-efa9-35ba-d55f" primary="false"/>
         <categoryLink id="25fc-d7ad-4cc5-d9c0" name="New CategoryLink" hidden="false" targetId="b970-b3bf-e1a4-a6fc" primary="false"/>
         <categoryLink id="e8f7-c813-c32c-e6d7" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
+        <categoryLink id="f9e3-202a-3cc1-af07" name="9 or less wounds Leader" hidden="false" targetId="a8ed-ca35-24e0-cf2e" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="a089-15db-b9ac-fc2f" name="General" hidden="false" collective="false" import="true" type="upgrade">
@@ -781,10 +807,11 @@
       <entryLinks>
         <entryLink id="12dc-e624-27d4-13f5" name="Artefacts" hidden="false" collective="false" import="true" targetId="75d8-d2b2-772b-e9f0" type="selectionEntryGroup"/>
         <entryLink id="e921-44d4-36c8-6129" name="Command Traits" hidden="false" collective="false" import="true" targetId="8db2-e52d-b376-b998" type="selectionEntryGroup"/>
-        <entryLink id="deaa-cc85-19db-958b" name="Zharrgrim Blessing" hidden="false" collective="false" import="true" targetId="3182-7f5b-0313-de75" type="selectionEntryGroup"/>
+        <entryLink id="deaa-cc85-19db-958b" name="Prayers" hidden="false" collective="false" import="true" targetId="70ee-92db-57b3-d6e0" type="selectionEntryGroup"/>
+        <entryLink id="86c2-29a7-3c66-5347" name="Battalions" hidden="false" collective="false" import="true" targetId="bfd7-5a8f-8c70-70d2" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="120.0"/>
+        <cost name="pts" typeId="points" value="115.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="79fb-4a68-797b-95ed" name="Auric Runesmiter" hidden="false" collective="false" import="true" type="unit">
@@ -797,9 +824,11 @@
             <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">5+</characteristic>
           </characteristics>
         </profile>
-        <profile id="b94e-526f-3963-6285" name="Runic Empowerment" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+        <profile id="b94e-526f-3963-6285" name="Runic Empowerment" publicationId="271d-c3fa-142d-5ea5" page="2" hidden="false" typeId="eed7-4131-0a52-0668" typeName="Prayer">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the start of your hero phase, this model can chant this prayer. If they do so, make a prayer roll by rolling a dice. On a 1-2, the prayer is not answered. On a 3+ the prayer is answered. If this prayer is answered, pick a friendly FYRESLAYERS unit wholly within 12&quot; of this model, or wholly within 18&quot; of this model if this model is armed with a Forge Key. You can re-roll wound rolls for attacks made by that unit until the start of your next hero phase.</characteristic>
+            <characteristic name="Answer Value" typeId="276a-ab7e-145d-3ffc">3</characteristic>
+            <characteristic name="Range" typeId="fd81-4e98-28ac-092a">12&quot;</characteristic>
+            <characteristic name="Description" typeId="0746-6cfb-5e15-53cb">If the chanter carries a Forge Key, this prayer has a range of 18&quot; instead.   If answered, pick 1 friendly FYRESLAYERS unit wholly within range and visible to the chanter. Add 1 to wound rolls for attacks made by that unit until the start of your next hero phase.</characteristic>
           </characteristics>
         </profile>
         <profile id="9f89-983a-288f-94fc" name="Magmic Tunnelling" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
@@ -816,6 +845,7 @@
         <categoryLink id="080e-9859-0d0e-9c00" name="New CategoryLink" hidden="false" targetId="4ec3-efa9-35ba-d55f" primary="false"/>
         <categoryLink id="67c4-33f2-9870-21b5" name="New CategoryLink" hidden="false" targetId="b970-b3bf-e1a4-a6fc" primary="false"/>
         <categoryLink id="2119-b77c-db5e-af9f" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
+        <categoryLink id="82f7-06b5-939f-a406" name="9 or less wounds Leader" hidden="false" targetId="a8ed-ca35-24e0-cf2e" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="ba19-48b7-c394-3143" name="Latch-axe" hidden="false" collective="false" import="true" type="upgrade">
@@ -903,7 +933,8 @@
         <entryLink id="f64c-c9ab-c927-bd82" name="General" hidden="false" collective="false" import="true" targetId="292c-59dc-7ac8-2383" type="selectionEntry"/>
         <entryLink id="c071-aa96-97fd-3998" name="Artefacts" hidden="false" collective="false" import="true" targetId="75d8-d2b2-772b-e9f0" type="selectionEntryGroup"/>
         <entryLink id="55c8-68a4-9e33-e49c" name="Command Traits" hidden="false" collective="false" import="true" targetId="8db2-e52d-b376-b998" type="selectionEntryGroup"/>
-        <entryLink id="f4c4-8f90-a314-f7f2" name="Zharrgrim Blessing" hidden="false" collective="false" import="true" targetId="3182-7f5b-0313-de75" type="selectionEntryGroup"/>
+        <entryLink id="f4c4-8f90-a314-f7f2" name="Prayers" hidden="false" collective="false" import="true" targetId="70ee-92db-57b3-d6e0" type="selectionEntryGroup"/>
+        <entryLink id="6e70-4aa3-5615-fb6c" name="Battalions" hidden="false" collective="false" import="true" targetId="bfd7-5a8f-8c70-70d2" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="120.0"/>
@@ -982,9 +1013,11 @@
             <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Roll a dice each time a wound is allocated to this model that was inflicted by a melee weapon. On a 4+ the attacking unit suffers 1 mortal wound.</characteristic>
           </characteristics>
         </profile>
-        <profile id="c987-ed04-ae48-a63c" name="Runic Empowerment" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+        <profile id="c987-ed04-ae48-a63c" name="Runic Empowerment" publicationId="271d-c3fa-142d-5ea5" page="2" hidden="false" typeId="eed7-4131-0a52-0668" typeName="Prayer">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the start of your hero phase, this model can chant this prayer. If they do so, make a prayer roll by rolling a dice. On a 1-2, the prayer is not answered. On a 3+ the prayer is answered. If this prayer is answered, pick a friendly FYRESLAYERS unit wholly within 12&quot; of this model, or wholly within 18&quot; of this model if this model is armed with a Forge Key. You can re-roll wound rolls for attacks made by that unit until the start of your next hero phase.</characteristic>
+            <characteristic name="Answer Value" typeId="276a-ab7e-145d-3ffc">3</characteristic>
+            <characteristic name="Range" typeId="fd81-4e98-28ac-092a">12</characteristic>
+            <characteristic name="Description" typeId="0746-6cfb-5e15-53cb">If the chanter carries a Forge Key, this prayer has a range of 18&quot; instead. If answered, pick 1 friendly FYRESLAYERS unit wholly within range and visible to the chanter. Add 1 to wound rolls for attacks made by that unit until the start of your next hero phase.</characteristic>
           </characteristics>
         </profile>
         <profile id="2d3e-df0c-e3eb-2c45" name="Grand Ritual of Awakening" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
@@ -1157,10 +1190,11 @@
         <entryLink id="f28b-2ec4-22ee-15ce" name="Artefacts" hidden="false" collective="false" import="true" targetId="75d8-d2b2-772b-e9f0" type="selectionEntryGroup"/>
         <entryLink id="f525-652b-0571-f63a" name="Command Traits" hidden="false" collective="false" import="true" targetId="8db2-e52d-b376-b998" type="selectionEntryGroup"/>
         <entryLink id="dfa3-857b-5a3a-0e05" name="Magmadroth Traits" hidden="false" collective="false" import="true" targetId="3886-2846-4e7d-dd6a" type="selectionEntryGroup"/>
-        <entryLink id="f913-8956-80cb-982f" name="Zharrgrim Blessing" hidden="false" collective="false" import="true" targetId="3182-7f5b-0313-de75" type="selectionEntryGroup"/>
+        <entryLink id="f913-8956-80cb-982f" name="Prayers" hidden="false" collective="false" import="true" targetId="70ee-92db-57b3-d6e0" type="selectionEntryGroup"/>
+        <entryLink id="2b22-2a63-b6d0-10c8" name="Battalions" hidden="false" collective="false" import="true" targetId="bfd7-5a8f-8c70-70d2" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="250.0"/>
+        <cost name="pts" typeId="points" value="275.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="54ed-538a-5a83-cbaa" name="Auric Runeson" hidden="false" collective="false" import="true" type="unit">
@@ -1191,6 +1225,7 @@
         <categoryLink id="d6af-3002-e3c0-fe0e" name="New CategoryLink" hidden="false" targetId="4ec3-efa9-35ba-d55f" primary="false"/>
         <categoryLink id="2b51-6d8f-1825-baf7" name="New CategoryLink" hidden="false" targetId="b970-b3bf-e1a4-a6fc" primary="false"/>
         <categoryLink id="a8ad-d846-7058-93bf" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
+        <categoryLink id="f3d1-4d13-a022-7e67" name="9 or less wounds Leader" hidden="false" targetId="a8ed-ca35-24e0-cf2e" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="c4cc-8624-7a84-9f5c" name="Fyresteel Throwing Axe" hidden="false" collective="false" import="true" type="upgrade">
@@ -1278,9 +1313,10 @@
         <entryLink id="706a-e371-91dd-894d" name="General" hidden="false" collective="false" import="true" targetId="292c-59dc-7ac8-2383" type="selectionEntry"/>
         <entryLink id="c7c2-71eb-24f2-7c3b" name="Artefacts" hidden="false" collective="false" import="true" targetId="75d8-d2b2-772b-e9f0" type="selectionEntryGroup"/>
         <entryLink id="2c1a-ba96-7550-f50e" name="Command Traits" hidden="false" collective="false" import="true" targetId="8db2-e52d-b376-b998" type="selectionEntryGroup"/>
+        <entryLink id="b15c-ed6c-0795-9d0d" name="Battalions" hidden="false" collective="false" import="true" targetId="bfd7-5a8f-8c70-70d2" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="100.0"/>
+        <cost name="pts" typeId="points" value="90.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="6dae-8546-4e7f-f420" name="Auric Runeson on Magmadroth" hidden="false" collective="false" import="true" type="unit">
@@ -1530,9 +1566,10 @@
         <entryLink id="ee44-e73e-8232-2db4" name="Artefacts" hidden="false" collective="false" import="true" targetId="75d8-d2b2-772b-e9f0" type="selectionEntryGroup"/>
         <entryLink id="8c68-c575-da64-b012" name="Command Traits" hidden="false" collective="false" import="true" targetId="8db2-e52d-b376-b998" type="selectionEntryGroup"/>
         <entryLink id="bd21-f5ff-b496-1bb9" name="Magmadroth Traits" hidden="false" collective="false" import="true" targetId="3886-2846-4e7d-dd6a" type="selectionEntryGroup"/>
+        <entryLink id="837a-c84d-5e4f-5a3c" name="Battalions" hidden="false" collective="false" import="true" targetId="bfd7-5a8f-8c70-70d2" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="230.0"/>
+        <cost name="pts" typeId="points" value="240.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="4745-50ef-230b-cd0f" name="Battalion: Forge Brethren" hidden="false" collective="false" import="true" type="upgrade">
@@ -1778,7 +1815,7 @@
             <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">4+</characteristic>
           </characteristics>
         </profile>
-        <profile id="9b5f-391e-f6db-8691" name="Icon of Grimnir" publicationId="68d3-0b6a-3775-07d9" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+        <profile id="9b5f-391e-f6db-8691" name="Icon of Grimnir" publicationId="271d-c3fa-142d-5ea5" page="2" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
             <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">In your hero phase, you can say that this model is raising its icon of Grimnir. If it does so, add 1 to save rolls for attacks that target friendly FYRESLAYERS units wholly within 12&quot; of this model until the start of your next hero phase. However, if you do so, until the start of your next hero phase, friendly FYRESLAYERS units wholly within 12&quot; of this model cannot retreat.  A unit cannot benefit from this ability more than once per phase.</characteristic>
           </characteristics>
@@ -1797,6 +1834,7 @@
         <categoryLink id="3eb9-f332-6d2a-a91d" name="New CategoryLink" hidden="false" targetId="4ec3-efa9-35ba-d55f" primary="false"/>
         <categoryLink id="930d-0010-b597-46a5" name="New CategoryLink" hidden="false" targetId="b970-b3bf-e1a4-a6fc" primary="false"/>
         <categoryLink id="2c07-53fe-0cc4-b7b9" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
+        <categoryLink id="b43f-de8c-9ab6-1814" name="9 or less wounds Leader" hidden="false" targetId="a8ed-ca35-24e0-cf2e" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="050f-a99e-22ce-ac24" name="Ancestral Battle-axe" hidden="false" collective="false" import="true" type="upgrade">
@@ -1838,9 +1876,10 @@
         <entryLink id="6af1-dad9-c048-6fa3" name="General" hidden="false" collective="false" import="true" targetId="292c-59dc-7ac8-2383" type="selectionEntry"/>
         <entryLink id="3beb-00ca-039a-3de8" name="Artefacts" hidden="false" collective="false" import="true" targetId="75d8-d2b2-772b-e9f0" type="selectionEntryGroup"/>
         <entryLink id="a6b4-fe87-bc3d-b59e" name="Command Traits" hidden="false" collective="false" import="true" targetId="8db2-e52d-b376-b998" type="selectionEntryGroup"/>
+        <entryLink id="4c9c-4c29-09e3-1030" name="Battalions" hidden="false" collective="false" import="true" targetId="bfd7-5a8f-8c70-70d2" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="140.0"/>
+        <cost name="pts" typeId="points" value="125.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="5480-a1cb-81b1-45c7" name="Doomseeker" hidden="false" collective="false" import="true" type="upgrade">
@@ -1934,9 +1973,10 @@ In addition, in the combat phase, if this model is slain while it is within 3&qu
       </selectionEntries>
       <entryLinks>
         <entryLink id="c175-155f-14a4-94bd" name="Artefacts" hidden="false" collective="false" import="true" targetId="75d8-d2b2-772b-e9f0" type="selectionEntryGroup"/>
+        <entryLink id="008d-e7b3-4dfc-63e6" name="Battalions" hidden="false" collective="false" import="true" targetId="bfd7-5a8f-8c70-70d2" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="90.0"/>
+        <cost name="pts" typeId="points" value="95.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="0520-eb44-5bea-94d3" name="Grimwrath Berzerker" hidden="false" collective="false" import="true" type="unit">
@@ -2024,9 +2064,10 @@ In addition, in the combat phase, if this model is slain while it is within 3&qu
       </selectionEntries>
       <entryLinks>
         <entryLink id="f6bb-29b7-fa36-e483" name="Artefacts" hidden="false" collective="false" import="true" targetId="75d8-d2b2-772b-e9f0" type="selectionEntryGroup"/>
+        <entryLink id="e234-fcd1-fc7f-bbd3" name="Battalions" hidden="false" collective="false" import="true" targetId="bfd7-5a8f-8c70-70d2" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="110.0"/>
+        <cost name="pts" typeId="points" value="120.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="3973-d948-c464-bddc" name="Hearthguard Berzerkers" hidden="false" collective="false" import="true" type="unit">
@@ -2078,19 +2119,12 @@ In addition, in the combat phase, if this model is slain while it is within 3&qu
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="b1d0-e370-cb9b-eeca" name="5 Hearthguard Berzerkers" hidden="false" collective="false" import="true" type="model">
-          <modifiers>
-            <modifier type="set" field="points" value="100.0">
-              <conditions>
-                <condition field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="minSelections" type="min"/>
-            <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="120.0"/>
+            <cost name="pts" typeId="points" value="125.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="dc4e-f428-6b47-d65f" name="Fyresteel Throwing Axe" hidden="false" collective="false" import="true" type="upgrade">
@@ -2163,6 +2197,33 @@ In addition, in the combat phase, if this model is slain while it is within 3&qu
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="1bb9-3a17-b1e3-42c8" name="Reinforced" hidden="false" collective="false" import="true" targetId="0a8d-cde8-fba1-6c0d" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="95f2-6885-756f-9ea5" value="2.0">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="94c9-6cd1-da31-5c7e" type="greaterThan"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0ab0-6e07-ea9d-aed9" type="greaterThan"/>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bc39-a830-aaee-f739" type="greaterThan"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <costs>
+            <cost name="pts" typeId="points" value="125.0"/>
+          </costs>
+        </entryLink>
+        <entryLink id="1f1d-71c9-449a-c080" name="Battalions" hidden="false" collective="false" import="true" targetId="bfd7-5a8f-8c70-70d2" type="selectionEntryGroup"/>
+      </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
@@ -2204,10 +2265,10 @@ In addition, in the combat phase, if this model is slain while it is within 3&qu
         <selectionEntry id="5cd4-7e3c-e940-22a6" name="10 Vulkite Berzerkers" hidden="false" collective="false" import="true" type="model">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="minSelections" type="min"/>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="140.0"/>
+            <cost name="pts" typeId="points" value="160.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="40e9-9966-5df9-4a03" name="Fyresteel Throwing Axe" hidden="false" collective="false" import="true" type="upgrade">
@@ -2287,6 +2348,17 @@ In addition, in the combat phase, if this model is slain while it is within 3&qu
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="5686-71a7-a667-1d73" name="Reinforced" hidden="false" collective="false" import="true" targetId="0a8d-cde8-fba1-6c0d" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="95f2-6885-756f-9ea5" value="2.0"/>
+          </modifiers>
+          <costs>
+            <cost name="pts" typeId="points" value="125.0"/>
+          </costs>
+        </entryLink>
+        <entryLink id="4a32-61b3-0864-35f9" name="Battalions" hidden="false" collective="false" import="true" targetId="bfd7-5a8f-8c70-70d2" type="selectionEntryGroup"/>
+      </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
@@ -2359,6 +2431,7 @@ In addition, in the combat phase, if this model is slain while it is within 3&qu
         <categoryLink id="4f51-ac88-3786-9d0c" name="New CategoryLink" hidden="false" targetId="b970-b3bf-e1a4-a6fc" primary="false"/>
         <categoryLink id="a5cb-2f6e-76a8-25fd" name="VOSTARG" hidden="false" targetId="c34d-acb9-a4d9-74be" primary="false"/>
         <categoryLink id="dc68-5fee-1dfb-8747" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
+        <categoryLink id="c14b-03f8-6f44-1254" name="9 or less wounds Leader" hidden="false" targetId="a8ed-ca35-24e0-cf2e" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="032e-f634-e4c1-2a4c" name="Latchkey Grandaxe" hidden="false" collective="false" import="true" type="upgrade">
@@ -2390,6 +2463,7 @@ In addition, in the combat phase, if this model is slain while it is within 3&qu
             <categoryLink id="45a0-3635-8e51-0306" name="Unique General" hidden="false" targetId="fe3f-d230-7e2c-fba2" primary="false"/>
           </categoryLinks>
         </entryLink>
+        <entryLink id="f4b2-05b3-3a1d-ca5c" name="Battalions" hidden="false" collective="false" import="true" targetId="bfd7-5a8f-8c70-70d2" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="150.0"/>
@@ -2492,20 +2566,33 @@ In addition, in the combat phase, if this model is slain while it is within 3&qu
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <entryLinks>
+        <entryLink id="1b80-e2ed-473e-45f9" name="Battalions" hidden="false" collective="false" import="true" targetId="bfd7-5a8f-8c70-70d2" type="selectionEntryGroup"/>
+      </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="50.0"/>
+        <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="9a34-4e73-b5a5-7b71" name="Magmic Battleforge" hidden="false" collective="false" import="true" type="upgrade">
       <profiles>
-        <profile id="57e8-4665-a13a-acf7" name="Molten Blessing" publicationId="68d3-0b6a-3775-07d9" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+        <profile id="57e8-4665-a13a-acf7" name="Molten Blessing" publicationId="271d-c3fa-142d-5ea5" page="4" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the start of your hero phase, 1 friendly FYRESLAYERS PRIEST within 6&quot; of a Magmic Battleforge can control its magmic energies. If they do so, until the end of that phase, add 1 to prayer rolls for friendly FYRESLAYERS PRIESTS while they are within 18&quot; of that Magmic Battleforge. You cannot use the Molten Blessing ability and the Spending the Forge ability for the same Magmic Battleforge in the same phase.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the start of your hero phase, you can pick 1 friendly FYRESLAYERS PRIEST within 6&quot; of this terrain feature to control its magmic energies. If you do so, until the end of that phase, add 1 to chanting rolls for friendly FYRESLAYERS PRIESTS within 18&quot; of this terrain feature. You cannot use this terrain feature’s Molten Blessing ability and its Spending the Forge ability in the same phase.</characteristic>
           </characteristics>
         </profile>
-        <profile id="5ac9-7370-2224-5514" name="Spending the Forge" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+        <profile id="5ac9-7370-2224-5514" name="Spending the Forge" publicationId="271d-c3fa-142d-5ea5" page="4" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Once per battle, at the start of your hero phase, 1 friendly FYRESLAYERS PRIEST within 6&quot; of a Magmic Battleforge can spend all of the forge’s energy instead of using its Molten Blessing ability. If they do so, until the start of your next hero phase, you can re-roll save rolls of 1 for friendly FYRESLAYERS units on the battlefield. However, for the rest of the battle, FYRESLAYERS PRIESTS can no longer use this Magmic Battleforge’s Molten Blessing ability.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Once per battle, at the start of your hero phase, instead of using this terrain feature’s Molten Blessing ability, you can pick 1 friendly FYRESLAYERS PRIEST within 6&quot; of this terrain feature to spend all of its energy. If you do so, until the start of your next hero phase, friendly FYRESLAYERS units on the battlefield have a ward of 6+. However, for the rest of the battle, FYRESLAYERS PRIESTS can no longer use this terrain feature’s Molten Blessing ability.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="5c69-fa9b-c458-5819" name="Set-Up" publicationId="271d-c3fa-142d-5ea5" page="4" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">After territories are determined, you can set up this faction terrain feature wholly within your territory and more than 3&quot; from all objectives and other terrain features. If both players can set up faction terrain features at the same time, they must roll off and the winner chooses who sets up their faction terrain features first.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="8299-41a5-704a-826b" name="Impassable" publicationId="271d-c3fa-142d-5ea5" page="4" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">You cannot move a model over this terrain feature unless it can fly, and you cannot move a model onto this terrain feature or set up a model on this terrain feature (even if it can fly).</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -2524,25 +2611,22 @@ In addition, in the combat phase, if this model is slain while it is within 3&qu
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="1074-4626-a9f5-09ca" type="max"/>
       </constraints>
       <profiles>
-        <profile id="03b0-ce84-c197-d5e1" name="Summon Molten Infernoth" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+        <profile id="03b0-ce84-c197-d5e1" name="Summoning" publicationId="271d-c3fa-142d-5ea5" page="4" hidden="false" typeId="eed7-4131-0a52-0668" typeName="Prayer">
           <characteristics>
-            <characteristic name="Casting Value" typeId="2508-b604-1258-a920">3+</characteristic>
-            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">At the start of your hero phase, 1 friendly FYRESLAYERS PRIEST can attempt to perform this magmic invocation. If they do so, make an invocation roll by rolling a dice. On a 3+ the invocation roll is successful. If the invocation roll is successful, set up this model wholly within 12&quot; of that FYRESLAYERS PRIEST.</characteristic>
+            <characteristic name="Answer Value" typeId="276a-ab7e-145d-3ffc">4</characteristic>
+            <characteristic name="Range" typeId="fd81-4e98-28ac-092a">12&quot;</characteristic>
+            <characteristic name="Description" typeId="0746-6cfb-5e15-53cb">If answered, set up the invocation wholly within range and visible to the chanter, and more than 1&quot; from all models,
+terrain features, other invocations and endless spells.</characteristic>
           </characteristics>
         </profile>
-        <profile id="0cf0-4802-4d3a-7f2f" name="Burning Tide" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+        <profile id="0cf0-4802-4d3a-7f2f" name="Burning Tide" publicationId="271d-c3fa-142d-5ea5" page="4" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">When this magmic invocation is set up, the player who set it up can immediately make a move with it. In addition, at the start of each of their subsequent hero phases, the player who set this magmic invocation up can make a move with it if it is still on the battlefield. When you move this magmic invocation, it can move up to 2D6&quot;.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">After this invocation is set up and at the start of each of their hero phases, the commanding player can move this invocation as if it were a model with a Move characteristic of 2D6&quot;.</characteristic>
           </characteristics>
         </profile>
-        <profile id="26f0-4f0f-d413-0530" name="Erupting Inferno" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+        <profile id="26f0-4f0f-d413-0530" name="Erupting Inferno" publicationId="271d-c3fa-142d-5ea5" page="4" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">After this model has moved, roll 12 dice for each unit that is within 3&quot; of it at the end of its move. For each 6, that unit suffers 1 mortal wound. FYRESLAYERS units are not affected by this ability.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="7c2b-c61a-4c41-0936" name="Fiery Wrath of Vulcatrix" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Add 1 to the Bravery characteristic of FYRESLAYERS units while they are wholly within 18&quot; of this model.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">After this invocation has moved, the commanding player rolls 12 dice for each unit within 3&quot; of it. For each 6, that unit suffers 1 mortal wound. If the roll to determine how far this invocation could move in this phase was a double, that unit suffers D3 mortal wounds for each 6 instead of 1 and this invocation is removed from play at the end of the phase. FYRESLAYERS units are not affected by this ability.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -2560,25 +2644,22 @@ In addition, in the combat phase, if this model is slain while it is within 3&qu
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="967e-c30c-0931-a17b" type="max"/>
       </constraints>
       <profiles>
-        <profile id="bf7b-0e30-b3b0-305e" name="Summon Runic Fyrewall" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+        <profile id="bf7b-0e30-b3b0-305e" name="Summoning" publicationId="271d-c3fa-142d-5ea5" page="3" hidden="false" typeId="eed7-4131-0a52-0668" typeName="Prayer">
           <characteristics>
-            <characteristic name="Casting Value" typeId="2508-b604-1258-a920">3+</characteristic>
-            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">At the start of your hero phase, 1 friendly FYRESLAYERS PRIEST can attempt to perform this magmic invocation. If they do so, make an invocation roll by rolling a dice. On a 3+ the invocation roll is successful. If the invocation roll is successful, set up this model wholly within 18&quot; of that FYRESLAYERS PRIEST.</characteristic>
+            <characteristic name="Answer Value" typeId="276a-ab7e-145d-3ffc">3</characteristic>
+            <characteristic name="Range" typeId="fd81-4e98-28ac-092a">18&quot;</characteristic>
+            <characteristic name="Description" typeId="0746-6cfb-5e15-53cb">If answered, set up the invocation wholly within range and visible to the chanter, and more than 1&quot; from all models,
+terrain features, other invocations and endless spells.</characteristic>
           </characteristics>
         </profile>
-        <profile id="2eab-08d3-e553-3e5c" name="Roaring Rune-fire" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+        <profile id="2eab-08d3-e553-3e5c" name="Roaring Rune-fire" publicationId="271d-c3fa-142d-5ea5" page="3" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">A model cannot see another model if an imaginary straight line, 1mm wide, drawn from the centre of its base to the centre of the other model’s base passes within 1&quot; of this model.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Models cannot move across or through this invocation unless they have the Magmadroth keyword or can fly</characteristic>
           </characteristics>
         </profile>
-        <profile id="42dd-8ad0-572e-2594" name="Awakened Runes" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+        <profile id="42dd-8ad0-572e-2594" name="Awakened Runes" publicationId="271d-c3fa-142d-5ea5" page="3" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Re-roll save rolls of 1 for attacks that target FYRESLAYERS units wholly within 12&quot; of this model.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="f468-e143-91ad-1995" name="Impervious to Heat" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">MAGMADROTHS can pass across this model in the same manner as a model that can fly.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the start of each phase, the commanding player can pick 1 FYRESLAYERS unit wholly within 12&quot; of this invocation to draw upon its power. If they do so, the commanding player rolls a dice. On a 1-5, that unit has a ward of 6+ until the end of the phase. On a 6, that unit has a ward of 4+ until the end of the phase and this invocation is removed from play at the end of the phase.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -2588,7 +2669,7 @@ In addition, in the combat phase, if this model is slain while it is within 3&qu
         <categoryLink id="3169-0b1b-04e1-3d27" name="New CategoryLink" hidden="false" targetId="eecb-ed66-d474-9ddd" primary="true"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="40.0"/>
+        <cost name="pts" typeId="points" value="75.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="09c6-5753-f3b3-c56c" name="Magmic Invocation: Zharrgron Flame Splitter" hidden="false" collective="false" import="true" type="upgrade">
@@ -2596,15 +2677,18 @@ In addition, in the combat phase, if this model is slain while it is within 3&qu
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="2039-bff7-fc94-d116" type="max"/>
       </constraints>
       <profiles>
-        <profile id="eaf0-2cee-671b-b41e" name="Summon Zharrgron Flame Splitter" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+        <profile id="eaf0-2cee-671b-b41e" name="Summoning" publicationId="271d-c3fa-142d-5ea5" page="3" hidden="false" typeId="eed7-4131-0a52-0668" typeName="Prayer">
           <characteristics>
-            <characteristic name="Casting Value" typeId="2508-b604-1258-a920">3+</characteristic>
-            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">At the start of your hero phase, 1 friendly FYRESLAYERS PRIEST can attempt to perform this magmic invocation. If they do so, make an invocation roll by rolling a dice. On a 3+ the invocation roll is successful. If the invocation roll is successful, set up this model wholly within 6&quot; of that FYRESLAYERS PRIEST.</characteristic>
+            <characteristic name="Answer Value" typeId="276a-ab7e-145d-3ffc">3</characteristic>
+            <characteristic name="Range" typeId="fd81-4e98-28ac-092a">6&quot;</characteristic>
+            <characteristic name="Description" typeId="0746-6cfb-5e15-53cb">If answered, set up the invocation wholly within range and visible to the chanter, and more than 1&quot; from all models, terrain features, other invocations and endless spells.</characteristic>
           </characteristics>
         </profile>
-        <profile id="2032-4bfd-ad2a-273b" name="Magma Blast" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+        <profile id="2032-4bfd-ad2a-273b" name="Magma Blast" publicationId="271d-c3fa-142d-5ea5" page="3" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the start of your shooting phase, if there is a friendly FYRESLAYERS PRIEST within 6&quot; of this model, you can pick an enemy unit within 24&quot; of this model and roll 12 dice. Add 1 to the roll if there are 10 or more models in the unit. Add 2 to the roll instead if there are 20 or more models in the unit. For each 6+, the unit suffers 1 mortal wound. </characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the start of the commanding player’s shooting phase, if there are any friendly FYRESLAYER PRIESTS within 6&quot; of this invocation, the commanding player can pick 1 enemy unit within 24&quot; of this invocation and roll 12 dice. Add 1 to the roll if that unit has 10 or more models. Add 2 to the roll instead if that unit has 20 or more models. For each 6+, that unit suffers 1 mortal wound.
+
+If the commanding player rolls 4 or more unmodified 6s, after the mortal wounds have been allocated to that unit, this invocation is removed from play.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -3075,6 +3159,7 @@ In addition, in the combat phase, if this model is slain while it is within 3&qu
       </selectionEntries>
       <entryLinks>
         <entryLink id="1b90-3942-ff65-70a8" name="Magmadroth Traits" hidden="false" collective="false" import="true" targetId="3886-2846-4e7d-dd6a" type="selectionEntryGroup"/>
+        <entryLink id="0275-ff85-024c-0c42" name="Battalions" hidden="false" collective="false" import="true" targetId="bfd7-5a8f-8c70-70d2" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="300.0"/>
@@ -3159,16 +3244,8 @@ In addition, in the combat phase, if this model is slain while it is within 3&qu
             </modifier>
           </modifiers>
         </entryLink>
-        <entryLink id="1a9c-1481-46d2-49ef" name="Artefacts of Order" hidden="false" collective="false" import="true" targetId="19d0-4499-b76e-96c1" type="selectionEntryGroup">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="22a9-7d52-14e2-eeab" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </entryLink>
         <entryLink id="a133-d14f-b6ed-4c5a" name="Realm Artefacts of Power" hidden="false" collective="false" import="true" targetId="37b0-af21-630c-d8af" type="selectionEntryGroup"/>
+        <entryLink id="663e-db05-000f-fedd" name="Universal Artefacts of Power" hidden="false" collective="false" import="true" targetId="11c4-fd82-92a7-de8a" type="selectionEntryGroup"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="8db2-e52d-b376-b998" name="Command Traits" hidden="false" collective="false" import="true">
@@ -3192,15 +3269,7 @@ In addition, in the combat phase, if this model is slain while it is within 3&qu
             </modifier>
           </modifiers>
         </entryLink>
-        <entryLink id="f6c5-14fd-0eea-e4d5" name="Order Command Traits" hidden="false" collective="false" import="true" targetId="50aa-000b-1848-15c3" type="selectionEntryGroup">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="22a9-7d52-14e2-eeab" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </entryLink>
+        <entryLink id="0dd7-3dc0-62c5-798c" name="Universal Command Traits" hidden="false" collective="false" import="true" targetId="b6b8-914a-dfca-18ee" type="selectionEntryGroup"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="af4d-33e5-4e65-e160" name="FYRESLAYER Command Traits" hidden="false" collective="false" import="true">
@@ -3377,9 +3446,9 @@ In addition, in the combat phase, if this model is slain while it is within 3&qu
         </selectionEntry>
         <selectionEntry id="cf1a-8638-6bb1-187e" name="4. Blood of the Berzerker" hidden="false" collective="false" import="true" type="upgrade">
           <profiles>
-            <profile id="8179-16e1-1e64-838d" name="Blood of the Berzerker" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
+            <profile id="8179-16e1-1e64-838d" name="Blood of the Berzerker" publicationId="271d-c3fa-142d-5ea5" page="1" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
               <characteristics>
-                <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">Once per battle in the combat phase, after this general has fought in that phase for the first time, if they are within 3&quot; of an enemy unit, they can immediately make a pile in move and then attack with all of the melee weapons they are armed with for a second time.</characteristic>
+                <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">Once per battle in the combat phase, after this general has fought in that phase for the first time, if they are within 3&quot; of an enemy unit, they and their mount (if they have one) can immediately fight for a second time.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -3798,9 +3867,9 @@ In addition, in the combat phase, if this model is slain while it is within 3&qu
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9209-cce1-8f77-aa3c" type="max"/>
           </constraints>
           <profiles>
-            <profile id="88ac-ac5e-a159-2cc2" name="Emberstone Rune" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
+            <profile id="88ac-ac5e-a159-2cc2" name="Emberstone Rune" publicationId="271d-c3fa-142d-5ea5" page="1" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
               <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Add 1 to invocation rolls made for the bearer.</characteristic>
+                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Add 1 to chanting rolls for prayers chanted by the bearer that summon an invocation</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -3902,23 +3971,13 @@ In addition, in the combat phase, if this model is slain while it is within 3&qu
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b5e3-6697-7eac-056e" type="max"/>
       </constraints>
       <selectionEntries>
-        <selectionEntry id="6eb4-562c-6367-06e9" name="1. Molten Infusion" hidden="false" collective="false" import="true" type="upgrade">
-          <profiles>
-            <profile id="f980-166b-c80d-c43a" name="Molten Infusion" hidden="false" typeId="eed7-4131-0a52-0668" typeName="Prayer">
-              <characteristics>
-                <characteristic name="Description" typeId="0746-6cfb-5e15-53cb">At the start of your hero phase, 1 friendly model that knows this prayer can chant it.  If they do so, make a prayer roll by rolling a dice.  On a 1-2 the prayer is not answered.  On a 3+ the prayer is answered.  If this prayer is answered, pick a magmic invocation model within 12&quot; of this PRIEST.  At the end of this battle round, do not make a temperamental nature roll for that magmic invocation.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
         <selectionEntry id="2f49-2f05-d6b0-a083" name="2. Searing Heat" hidden="false" collective="false" import="true" type="upgrade">
           <profiles>
-            <profile id="3abe-d88a-5ddd-05d4" name="Searing Heat" hidden="false" typeId="eed7-4131-0a52-0668" typeName="Prayer">
+            <profile id="3abe-d88a-5ddd-05d4" name="Searing Heat" publicationId="271d-c3fa-142d-5ea5" page="1" hidden="false" typeId="eed7-4131-0a52-0668" typeName="Prayer">
               <characteristics>
-                <characteristic name="Description" typeId="0746-6cfb-5e15-53cb">At the start of your hero phase, 1 friendly model that knows this prayer can chant it.  If they do so, make a prayer roll by rolling a dice.  On a 1-2, the prayer is not answered.  On a 3+ the prayer is answered.  If this prayer is answered, pick an enemy unit within 18&quot; of this PRIEST.  Subtract 1 from hit rolls for attacks made by that unit until the start of your next hero phase.</characteristic>
+                <characteristic name="Description" typeId="0746-6cfb-5e15-53cb">If answered, pick 1 enemy unit within range and visible to the chanter. Subtract 1 from hit rolls for attacks made by that unit until the start of your next hero phase.</characteristic>
+                <characteristic name="Answer Value" typeId="276a-ab7e-145d-3ffc">3</characteristic>
+                <characteristic name="Range" typeId="fd81-4e98-28ac-092a">18&quot;</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -3928,9 +3987,11 @@ In addition, in the combat phase, if this model is slain while it is within 3&qu
         </selectionEntry>
         <selectionEntry id="2fad-afaf-0e87-4475" name="3. Prayer of Ash" hidden="false" collective="false" import="true" type="upgrade">
           <profiles>
-            <profile id="aeea-5c61-5b55-d68c" name="Prayer of Ash" hidden="false" typeId="eed7-4131-0a52-0668" typeName="Prayer">
+            <profile id="aeea-5c61-5b55-d68c" name="Prayer of Ash" publicationId="271d-c3fa-142d-5ea5" page="1" hidden="false" typeId="eed7-4131-0a52-0668" typeName="Prayer">
               <characteristics>
-                <characteristic name="Description" typeId="0746-6cfb-5e15-53cb">At the start of your hero phase, 1 friendly model that knows this prayer can chant it.  If they do so, make a prayer roll by rolling a dice.  On a 1-3, the prayer is not answered.  On a 4+ the prayer is answered.  If this prayer is answered, pick a friendly unit wholly within 18&quot; of this PRIEST.  Add 1 to save rolls for attacks that target that unit until the start of your next hero phase.</characteristic>
+                <characteristic name="Description" typeId="0746-6cfb-5e15-53cb">If answered, pick 1 friendly FYRESLAYERS unit wholly within range and visible to the chanter. Add 1 to save rolls for attacks that target that unit until the start of your next hero phase.</characteristic>
+                <characteristic name="Answer Value" typeId="276a-ab7e-145d-3ffc">4</characteristic>
+                <characteristic name="Range" typeId="fd81-4e98-28ac-092a">18&quot;</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -3942,7 +4003,9 @@ In addition, in the combat phase, if this model is slain while it is within 3&qu
           <profiles>
             <profile id="73f8-b56b-d948-3f53" name="Ember Storm" hidden="false" typeId="eed7-4131-0a52-0668" typeName="Prayer">
               <characteristics>
-                <characteristic name="Description" typeId="0746-6cfb-5e15-53cb">At the start of your hero phase, 1 friendly model that knows this prayer can chant it.  If they do so, make a prayer roll by rolling a dice.  On a 1-2, the prayer is not answered.  On a 3+ the prayer is answered.  If this prayer is answered, pick a friendly unit of VULKITE BERZERKERS or HEARTHGUARD BERZERKERS wholly within 18&quot; of this PRIEST.  That unit can run and still charge later in that turn.</characteristic>
+                <characteristic name="Description" typeId="0746-6cfb-5e15-53cb">If answered, pick 1 friendly VULKITE BERZERKERS or HEARTHGUARD BERZERKERS unit wholly within range and visible to the chanter. That unit can run and still charge later in that turn.</characteristic>
+                <characteristic name="Answer Value" typeId="276a-ab7e-145d-3ffc">3</characteristic>
+                <characteristic name="Range" typeId="fd81-4e98-28ac-092a">18&quot;</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -3952,9 +4015,11 @@ In addition, in the combat phase, if this model is slain while it is within 3&qu
         </selectionEntry>
         <selectionEntry id="f320-73c8-c06c-e060" name="5. Prayer of Grimnir&apos;s Fury" hidden="false" collective="false" import="true" type="upgrade">
           <profiles>
-            <profile id="97d4-fbcd-a0f0-1727" name="Prayer of Grimnir&apos;s Fury" hidden="false" typeId="eed7-4131-0a52-0668" typeName="Prayer">
+            <profile id="97d4-fbcd-a0f0-1727" name="Prayer of Grimnir&apos;s Fury" publicationId="271d-c3fa-142d-5ea5" page="1" hidden="false" typeId="eed7-4131-0a52-0668" typeName="Prayer">
               <characteristics>
-                <characteristic name="Description" typeId="0746-6cfb-5e15-53cb">At the start of your hero phase, 1 friendly model that knows this prayer can chant it.  If they do so, make a prayer roll by rolling a dice.  On a 1-2, the prayer is not answered.  On a 3+ the prayer is answered.  If this prayer is answered, pick a friendly HERO that is not mounted on a MAGMADROTH and is within 3&quot; of an enemy unit and within 12&quot; of this PRIEST.   Make a pile-in move with that HERO, and then attack with all of the melee weapons that HERO is armed with.</characteristic>
+                <characteristic name="Description" typeId="0746-6cfb-5e15-53cb">If answered, pick 1 friendly FYRESLAYERS HERO that does not have a mount, is within range and visible to the chanter, and is within 3&quot; of an enemy unit. That HERO can fight.</characteristic>
+                <characteristic name="Answer Value" typeId="276a-ab7e-145d-3ffc">3</characteristic>
+                <characteristic name="Range" typeId="fd81-4e98-28ac-092a">12&quot;</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -3964,9 +4029,11 @@ In addition, in the combat phase, if this model is slain while it is within 3&qu
         </selectionEntry>
         <selectionEntry id="5150-9962-ada6-2981" name="6. Gilded Claws" hidden="false" collective="false" import="true" type="upgrade">
           <profiles>
-            <profile id="4d8e-f5fd-1603-4009" name="Gilded Claws" hidden="false" typeId="eed7-4131-0a52-0668" typeName="Prayer">
+            <profile id="4d8e-f5fd-1603-4009" name="Gilded Claws" publicationId="271d-c3fa-142d-5ea5" page="1" hidden="false" typeId="eed7-4131-0a52-0668" typeName="Prayer">
               <characteristics>
-                <characteristic name="Description" typeId="0746-6cfb-5e15-53cb">At the start of your hero phase, 1 friendly model that knows this prayer can chant it.  If they do so, make a prayer roll by rolling a dice.  On a 1-2, the prayer is not answered.  On a 3+ the prayer is answered.  If this prayer is answered, pick a friendly MAGMADROTH wholly within 12&quot; of this PRIEST.  You can re-roll wound rolls for attacks made with that unit&apos;s Claws and Horns until the start of your next hero phase.</characteristic>
+                <characteristic name="Description" typeId="0746-6cfb-5e15-53cb">If answered, pick 1 friendly MAGMADROTH unit within range and visible to the chanter. Add 1 to wound rolls for attacks made by that unit with its Claws and Horns until the start of your next hero phase.</characteristic>
+                <characteristic name="Answer Value" typeId="276a-ab7e-145d-3ffc">3</characteristic>
+                <characteristic name="Range" typeId="fd81-4e98-28ac-092a">12&quot;</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -4257,6 +4324,21 @@ In addition, in the combat phase, if this model is slain while it is within 3&qu
           </costs>
         </selectionEntry>
       </selectionEntries>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="bfd7-5a8f-8c70-70d2" name="Battalions" hidden="false" collective="false" import="true">
+      <entryLinks>
+        <entryLink id="f463-567e-a63d-2764" name="Core Battalions" hidden="false" collective="false" import="true" targetId="b275-810f-adfc-156b" type="selectionEntryGroup"/>
+      </entryLinks>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="70ee-92db-57b3-d6e0" name="Prayers" hidden="false" collective="false" import="true">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ec4d-1996-e491-f1f2" type="min"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="df27-2015-4497-45f7" type="max"/>
+      </constraints>
+      <entryLinks>
+        <entryLink id="afdd-fcca-79f7-325f" name="Zharrgrim Blessing" hidden="false" collective="false" import="true" targetId="3182-7f5b-0313-de75" type="selectionEntryGroup"/>
+        <entryLink id="dfdd-9f3a-76d8-9f0d" name="Universal Prayer Scripture" hidden="false" collective="false" import="true" targetId="3674-103c-35c9-85a6" type="selectionEntryGroup"/>
+      </entryLinks>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <sharedProfiles>

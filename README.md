@@ -1,4 +1,4 @@
-Warhammer Age of Sigmar v2.0 (2018 Edition)
+Warhammer Age of Sigmar v3.0 (2021 Edition)
 ============================
 
 [![GitHub release](https://img.shields.io/github/release/BSData/warhammer-age-of-sigmar.svg?style=flat-square)](https://github.com/BSData/warhammer-age-of-sigmar/releases/latest)
@@ -9,10 +9,17 @@ Warhammer Age of Sigmar v2.0 (2018 Edition)
 ## Important ##
 [Important]: #important
 
-**The Battlescribe data editor can cause problems when merging updates. Because of this, and also to avoid duplicated effort where multiple people are working on the same files, please join us on Gitter before you commit changes to the files.**
+**The Battlescribe data editor can cause problems when merging updates. Because of this, and also to avoid duplicated 
+effort where multiple people are working on the same files, please join us on Gitter before you commit changes to the files.**
 
-**UPDATE AoS 2.0:**
-The Catalogs have been updated to support Matched Play points and FAQ's for AoS v2.0 release. Core support for Endless Spells, Realms of Origin and Points Lists with no validation for battle-role or points have been added in the new **\***Pitched Battle***\** Profile
+**UPDATE AoS 3.0:**
+The Catalogs have been updated to support Matched Play points and FAQ's for AoS v3.0 release. 
+The **\***Pitched Battle***\** Profile supports matched play and includes the new Core Battalions.
+The new **\***Narrative Battle***\** Profile supports play with warscroll Battalions.  This is where you'll find all the previous
+edition Battalion warscrolls.
+
+The changes for AoS 3.0 are significant and undoubtedly some things are broken, missing or just plain wrong.  Please file a bug
+for errors, omissions per the bug reporting documented below. 
 
 #### Contents ####
 [Contents]: #contents
