@@ -1363,6 +1363,15 @@ Then, roll a dice for each enemy unit within 1&quot; of any friendly THUNDERSCOR
         <entryLink id="7259-a5ba-3b39-9aa5" name="Command Traits" hidden="false" collective="false" import="true" targetId="cbff-8503-320a-ce0d" type="selectionEntryGroup"/>
         <entryLink id="2b9b-54ab-d4b9-943b" name="Artefacts" hidden="false" collective="false" import="true" targetId="f1d8-fbad-26b3-1504" type="selectionEntryGroup"/>
         <entryLink id="fa5e-e06c-e6cb-a4be" name="Battalions" hidden="false" collective="false" import="true" targetId="3b62-f8ce-35a9-eb15" type="selectionEntryGroup"/>
+        <entryLink id="6752-8d04-a342-6b28" name="Spell Lores" hidden="true" collective="false" import="true" targetId="55d3-fe2c-594d-4e2b" type="selectionEntryGroup">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9918-5a46-2468-35e2" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="115.0"/>
@@ -5738,6 +5747,16 @@ Subtract 1 from save rolls for attacks that target units within range of this te
             <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bdb0-7f20-53ff-f804" repeats="1" roundUp="false"/>
           </repeats>
         </modifier>
+        <modifier type="increment" field="ba25-1998-602c-d43f" value="1.0">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4f53-8230-2f02-9639" type="instanceOf"/>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9918-5a46-2468-35e2" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ba25-1998-602c-d43f" type="max"/>
@@ -5749,6 +5768,7 @@ Subtract 1 from save rolls for attacks that target units within range of this te
         <entryLink id="d4be-6b4c-ee7f-e403" name="Nurgle Lores" hidden="false" collective="false" import="true" targetId="f346-5bce-c5a3-be3a" type="selectionEntryGroup"/>
         <entryLink id="6f03-e864-93ac-a1d1" name="Slaanesh Lores" hidden="false" collective="false" import="true" targetId="ab79-6137-894b-132e" type="selectionEntryGroup"/>
         <entryLink id="2956-9fac-fb33-e264" name="Tzeentch Lores" hidden="false" collective="false" import="true" targetId="f625-8758-5623-0092" type="selectionEntryGroup"/>
+        <entryLink id="c022-1f79-f026-ae27" name="Universal Spell Lore" hidden="false" collective="false" import="true" targetId="20c3-23a0-9d79-b491" type="selectionEntryGroup"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="b162-6623-76e5-578d" name="Traits: Brayherd Alphabeast" hidden="false" collective="false" import="true">
