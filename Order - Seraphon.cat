@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="3721-70d4-3f5f-4609" name="Order - Seraphon" revision="74" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="84" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="3721-70d4-3f5f-4609" name="Order - Seraphon" revision="75" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="84" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <readme>To some they are the uncompromising, unfeeling vengeance of the heavens. To others they are a race of bloodthirsty reptilian monsters marching forth from the steaming jungles to bring death to those who would intrude upon their sacred grounds. Yet the Seraphon are both these things, and more besides. They are the true children of Azyr, filled with the light of the stars, and they fight to enact a cosmic plan that spans all of creation.
 
 To create a Seraphon force, first choose your allegiance. If you choose to align with the Seraphon, then choose your force type and constellation. These effect your unit choices and available relics of power.</readme>
@@ -609,9 +609,16 @@ To create a Seraphon force, first choose your allegiance. If you choose to align
     <selectionEntry id="9392-2a0a-99ca-28fe" name="Allegiance" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
         <modifier type="set" field="minInForce" value="0.0">
-          <conditions>
-            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="78f3-8a59-699a-61e8" type="instanceOf"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="24d6-500b-7e3f-1470" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="78f3-8a59-699a-61e8" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -1467,7 +1474,10 @@ At the end of your movement phase, you can set up one or more of the reserve uni
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="78f3-8a59-699a-61e8" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="24d6-500b-7e3f-1470" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="78f3-8a59-699a-61e8" type="instanceOf"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -7554,6 +7564,11 @@ Any reserve units that are in hiding and not on the battlefield at the start of 
               </conditions>
             </conditionGroup>
           </conditionGroups>
+        </modifier>
+        <modifier type="increment" field="5170-9a88-3a47-b39e" value="1.0">
+          <repeats>
+            <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bdb0-7f20-53ff-f804" repeats="1" roundUp="false"/>
+          </repeats>
         </modifier>
       </modifiers>
       <constraints>
