@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="ab8b-39f3-ebc0-e9ab" name="Order - Sylvaneth - Data" revision="62" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="84" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="ab8b-39f3-ebc0-e9ab" name="Order - Sylvaneth - Data" revision="64" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="84" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="bf19-727d-pubN65537" name="Order Battletome: Sylvaneth"/>
     <publication id="bf19-727d-pubN68286" name="Battletome: Sylvaneth Errata, July 2018"/>
@@ -310,9 +310,16 @@ The summoned unit is added to your army, and must be set up wholly within 9&quot
     <selectionEntry id="6892-294f-1dab-882a" name="Allegiance" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
         <modifier type="set" field="f73e-9efe-7514-097a" value="0.0">
-          <conditions>
-            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="78f3-8a59-699a-61e8" type="instanceOf"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="24d6-500b-7e3f-1470" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="78f3-8a59-699a-61e8" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -1321,6 +1328,15 @@ The summoned unit is added to your army, and must be set up wholly within 9&quot
         <entryLink id="4e23-2e04-e5ab-6002" name="Artefacts" hidden="false" collective="false" import="true" targetId="9a8b-a529-4a2d-239c" type="selectionEntryGroup"/>
         <entryLink id="9006-48b1-85f4-a3a6" name="Command Traits" hidden="false" collective="false" import="true" targetId="59ea-9242-251d-adc4" type="selectionEntryGroup"/>
         <entryLink id="21fb-7518-c18c-c130" name="Battalions" hidden="false" collective="false" import="true" targetId="d014-2004-2d0f-2c6d" type="selectionEntryGroup"/>
+        <entryLink id="477e-ae1f-2bc8-7963" name="Spell Lores" hidden="true" collective="false" import="true" targetId="b094-0ec4-692a-78ec" type="selectionEntryGroup">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9918-5a46-2468-35e2" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="340.0"/>
@@ -1913,9 +1929,16 @@ The summoned unit is added to your army, and must be set up wholly within 9&quot
     <selectionEntry id="203c-cae0-53f6-9431" name="General" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="78f3-8a59-699a-61e8" type="instanceOf"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="24d6-500b-7e3f-1470" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="78f3-8a59-699a-61e8" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -2027,6 +2050,15 @@ The summoned unit is added to your army, and must be set up wholly within 9&quot
         <entryLink id="e998-2c09-b9f4-c9fd" name="Command Traits" hidden="false" collective="false" import="true" targetId="59ea-9242-251d-adc4" type="selectionEntryGroup"/>
         <entryLink id="07cf-aa86-9d30-f6b8" name="General&apos;s Adjutant" hidden="false" collective="false" import="true" targetId="65e4-9e34-5cf6-2bec" type="selectionEntry"/>
         <entryLink id="79eb-bbfb-6ef5-4721" name="Battalions" hidden="false" collective="false" import="true" targetId="d014-2004-2d0f-2c6d" type="selectionEntryGroup"/>
+        <entryLink id="4566-e0b4-c65f-5165" name="Spell Lores" hidden="true" collective="false" import="true" targetId="b094-0ec4-692a-78ec" type="selectionEntryGroup">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9918-5a46-2468-35e2" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="105.0"/>
