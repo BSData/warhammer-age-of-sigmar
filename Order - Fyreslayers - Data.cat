@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="81cf-7df5-86e6-b78f" name="Order - Fyreslayers - Data" revision="52" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="81" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="81cf-7df5-86e6-b78f" name="Order - Fyreslayers - Data" revision="53" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="84" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="e67a-06d2-pubN65537" name="Order Battletome: Fyreslayers"/>
     <publication id="e67a-06d2-pubN69594" name="Battletome: Fyreslayers Errata, July 2018"/>
@@ -41,9 +41,16 @@
     <selectionEntry id="8e35-cdef-4c7e-0a1c" name="Allegiance" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
         <modifier type="set" field="minInForce" value="0.0">
-          <conditions>
-            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="78f3-8a59-699a-61e8" type="instanceOf"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="24d6-500b-7e3f-1470" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="78f3-8a59-699a-61e8" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -2369,7 +2376,10 @@ In addition, in the combat phase, if this model is slain while it is within 3&qu
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="78f3-8a59-699a-61e8" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="24d6-500b-7e3f-1470" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="78f3-8a59-699a-61e8" type="instanceOf"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -3967,11 +3977,11 @@ If the commanding player rolls 4 or more unmodified 6s, after the mortal wounds 
           </conditions>
         </modifier>
       </modifiers>
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b5e3-6697-7eac-056e" type="max"/>
-      </constraints>
       <selectionEntries>
         <selectionEntry id="2f49-2f05-d6b0-a083" name="2. Searing Heat" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="49ec-0633-9a18-bb5f" type="max"/>
+          </constraints>
           <profiles>
             <profile id="3abe-d88a-5ddd-05d4" name="Searing Heat" publicationId="271d-c3fa-142d-5ea5" page="1" hidden="false" typeId="eed7-4131-0a52-0668" typeName="Prayer">
               <characteristics>
@@ -3986,6 +3996,9 @@ If the commanding player rolls 4 or more unmodified 6s, after the mortal wounds 
           </costs>
         </selectionEntry>
         <selectionEntry id="2fad-afaf-0e87-4475" name="3. Prayer of Ash" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1eb2-26de-30fc-541b" type="max"/>
+          </constraints>
           <profiles>
             <profile id="aeea-5c61-5b55-d68c" name="Prayer of Ash" publicationId="271d-c3fa-142d-5ea5" page="1" hidden="false" typeId="eed7-4131-0a52-0668" typeName="Prayer">
               <characteristics>
@@ -4000,6 +4013,9 @@ If the commanding player rolls 4 or more unmodified 6s, after the mortal wounds 
           </costs>
         </selectionEntry>
         <selectionEntry id="bd86-984e-f31d-6f33" name="4. Ember Storm" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c9a8-1b1b-e8b3-de9a" type="max"/>
+          </constraints>
           <profiles>
             <profile id="73f8-b56b-d948-3f53" name="Ember Storm" hidden="false" typeId="eed7-4131-0a52-0668" typeName="Prayer">
               <characteristics>
@@ -4014,6 +4030,9 @@ If the commanding player rolls 4 or more unmodified 6s, after the mortal wounds 
           </costs>
         </selectionEntry>
         <selectionEntry id="f320-73c8-c06c-e060" name="5. Prayer of Grimnir&apos;s Fury" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="194b-6055-b434-7368" type="max"/>
+          </constraints>
           <profiles>
             <profile id="97d4-fbcd-a0f0-1727" name="Prayer of Grimnir&apos;s Fury" publicationId="271d-c3fa-142d-5ea5" page="1" hidden="false" typeId="eed7-4131-0a52-0668" typeName="Prayer">
               <characteristics>
@@ -4028,6 +4047,9 @@ If the commanding player rolls 4 or more unmodified 6s, after the mortal wounds 
           </costs>
         </selectionEntry>
         <selectionEntry id="5150-9962-ada6-2981" name="6. Gilded Claws" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="faae-0f6f-13cd-e52c" type="max"/>
+          </constraints>
           <profiles>
             <profile id="4d8e-f5fd-1603-4009" name="Gilded Claws" publicationId="271d-c3fa-142d-5ea5" page="1" hidden="false" typeId="eed7-4131-0a52-0668" typeName="Prayer">
               <characteristics>
@@ -4331,8 +4353,14 @@ If the commanding player rolls 4 or more unmodified 6s, after the mortal wounds 
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="70ee-92db-57b3-d6e0" name="Prayers" hidden="false" collective="false" import="true">
+      <modifiers>
+        <modifier type="increment" field="df27-2015-4497-45f7" value="1.0">
+          <repeats>
+            <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="24e6-c9b0-8d0d-02a2" repeats="1" roundUp="false"/>
+          </repeats>
+        </modifier>
+      </modifiers>
       <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ec4d-1996-e491-f1f2" type="min"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="df27-2015-4497-45f7" type="max"/>
       </constraints>
       <entryLinks>
