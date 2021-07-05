@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="3981-271d-5871-845b" name="Order - Kharadron Overlords - Data" revision="28" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="85" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="3981-271d-5871-845b" name="Order - Kharadron Overlords - Data" revision="28" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="87" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="e23c-3deb-pubN65537" name="Order Battletome: Kharadron Overlords"/>
     <publication id="e23c-3deb-pubN66862" name="Order Official FAQs and errata, Version 1.4"/>
@@ -56,9 +56,28 @@
     <categoryEntry id="2745-024c-7e44-960f" name="MARINE" hidden="false"/>
     <categoryEntry id="107f-d5e2-65ef-2764" name="BARAK-NAR" hidden="false"/>
     <categoryEntry id="7469-c7bb-611a-c443" name="BARAK-MHORNAR" hidden="false"/>
+    <categoryEntry id="fdc4-053a-6279-bc9e" name="Coalition: KO" hidden="false">
+      <modifiers>
+        <modifier type="increment" field="a4fb-5503-aeb5-d6f3" value="1.0">
+          <repeats>
+            <repeat field="selections" scope="roster" value="4.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="unit" repeats="1" roundUp="false"/>
+          </repeats>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="a4fb-5503-aeb5-d6f3" type="max"/>
+      </constraints>
+    </categoryEntry>
   </categoryEntries>
   <sharedSelectionEntries>
     <selectionEntry id="129e-f84a-5017-ca90" name="Aether-Khemist" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="add" field="category" value="fdc4-053a-6279-bc9e">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8b11-d94b-f5bc-520f" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="2e83-3b67-430d-36db" name="Aether-Khemist" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
           <modifiers>
@@ -188,6 +207,13 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="68fb-1a1e-6c58-b1f5" name="Aetheric Navigator" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="add" field="category" value="fdc4-053a-6279-bc9e">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8b11-d94b-f5bc-520f" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="c9a1-bd1d-0517-80bb" name="Aetheric Navigator" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
           <modifiers>
@@ -305,10 +331,17 @@
         </entryLink>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="95.0"/>
+        <cost name="pts" typeId="points" value="100.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="44ad-2801-441f-6b44" name="Arkanaut Admiral" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="add" field="category" value="fdc4-053a-6279-bc9e">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8b11-d94b-f5bc-520f" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="70d5-4a18-40c2-2c83" name="Arkanaut Admiral" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
           <modifiers>
@@ -443,10 +476,17 @@ In addition, roll a dice before you allocate a wound or mortal wound to a friend
         </entryLink>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="125.0"/>
+        <cost name="pts" typeId="points" value="120.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="7d60-6000-c3d0-0a22" name="Arkanaut Company" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="add" field="category" value="fdc4-053a-6279-bc9e">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8b11-d94b-f5bc-520f" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="c30c-2c71-2392-bb49" name="Arkanaut Company" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
           <characteristics>
@@ -478,6 +518,18 @@ In addition, roll a dice before you allocate a wound or mortal wound to a friend
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="9a6d-82f3-49dc-e1c8" name="10 Arkanaut Company" hidden="false" collective="false" import="true" type="model">
+          <modifiers>
+            <modifier type="set" field="name" value="20 Arkanaut Company">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0a8d-cde8-fba1-6c0d" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="name" value="30 Arkanaut Company">
+              <conditions>
+                <condition field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0a8d-cde8-fba1-6c0d" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="87bf-5dc4-0cbd-a44c" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="48e2-f145-c62f-5167" type="max"/>
@@ -687,9 +739,6 @@ In addition, roll a dice before you allocate a wound or mortal wound to a friend
           <modifiers>
             <modifier type="set" field="95f2-6885-756f-9ea5" value="2.0"/>
           </modifiers>
-          <costs>
-            <cost name="pts" typeId="points" value="100.0"/>
-          </costs>
         </entryLink>
         <entryLink id="a6c2-29cb-e989-731d" name="Battalions" hidden="false" collective="false" import="true" targetId="ff18-f62e-a289-717c" type="selectionEntryGroup"/>
       </entryLinks>
@@ -702,6 +751,11 @@ In addition, roll a dice before you allocate a wound or mortal wound to a friend
         <modifier type="set-primary" field="category" value="e9f2-765a-b7b8-ce8e">
           <conditions>
             <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c05e-8228-e024-fc54" type="greaterThan"/>
+          </conditions>
+        </modifier>
+        <modifier type="add" field="category" value="fdc4-053a-6279-bc9e">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8b11-d94b-f5bc-520f" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -897,6 +951,13 @@ An attack made by a weapon that is in range of this model can target either this
       </costs>
     </selectionEntry>
     <selectionEntry id="fc3c-8879-dd3f-9e53" name="Arkanaut Ironclad" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="add" field="category" value="fdc4-053a-6279-bc9e">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8b11-d94b-f5bc-520f" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="6675-ede3-c683-9333" name="Arkanaut Ironclad" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
           <characteristics>
@@ -1389,6 +1450,13 @@ An attack made by a weapon that is in range of this model can target either this
       </costs>
     </selectionEntry>
     <selectionEntry id="dcd4-8e51-66c7-b222" name="Brokk Grungsson, Lord-Magnate of Barak-Nar" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="add" field="category" value="fdc4-053a-6279-bc9e">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8b11-d94b-f5bc-520f" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="33b9-2486-f405-b8ab" type="max"/>
       </constraints>
@@ -1521,6 +1589,13 @@ An attack made by a weapon that is in range of this model can target either this
       </costs>
     </selectionEntry>
     <selectionEntry id="b35b-ad7f-1673-0c71" name="Endrinmaster with Endrinharness" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="add" field="category" value="fdc4-053a-6279-bc9e">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8b11-d94b-f5bc-520f" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="caea-f43e-027c-8675" name="Endrinmaster with Endrinharness" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
           <modifiers>
@@ -1629,6 +1704,11 @@ An attack made by a weapon that is in range of this model can target either this
             <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1a87-84ca-7678-2d03" type="greaterThan"/>
           </conditions>
         </modifier>
+        <modifier type="add" field="category" value="fdc4-053a-6279-bc9e">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8b11-d94b-f5bc-520f" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <profiles>
         <profile id="1552-6ef3-09fe-f9b0" name="Endrinriggers" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
@@ -1668,6 +1748,16 @@ An attack made by a weapon that is in range of this model can target either this
             <modifier type="set" field="07c4-5a5e-8113-b4c8" value="1.0">
               <conditions>
                 <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0cb8-ad19-8612-9cd8" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="name" value="6 Endrinriggers">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0a8d-cde8-fba1-6c0d" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="name" value="9 Endrinriggers">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0a8d-cde8-fba1-6c0d" type="equalTo"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -1814,9 +1904,6 @@ An attack made by a weapon that is in range of this model can target either this
               </conditions>
             </modifier>
           </modifiers>
-          <costs>
-            <cost name="pts" typeId="points" value="120.0"/>
-          </costs>
         </entryLink>
         <entryLink id="b584-a431-f5e1-3bde" name="Battalions" hidden="false" collective="false" import="true" targetId="ff18-f62e-a289-717c" type="selectionEntryGroup"/>
       </entryLinks>
@@ -1829,6 +1916,11 @@ An attack made by a weapon that is in range of this model can target either this
         <modifier type="set-primary" field="category" value="e9f2-765a-b7b8-ce8e">
           <conditions>
             <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="483d-5d09-9a3e-b76c" type="greaterThan"/>
+          </conditions>
+        </modifier>
+        <modifier type="add" field="category" value="fdc4-053a-6279-bc9e">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8b11-d94b-f5bc-520f" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -1999,6 +2091,11 @@ An attack made by a weapon that is in range of this model can target either this
             <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a138-9b52-e8f2-984a" type="greaterThan"/>
           </conditions>
         </modifier>
+        <modifier type="add" field="category" value="fdc4-053a-6279-bc9e">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8b11-d94b-f5bc-520f" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <profiles>
         <profile id="b568-e50b-5326-93df" name="Grundstok Thunderers" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
@@ -2036,6 +2133,18 @@ An attack made by a weapon that is in range of this model can target either this
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="6296-7b1d-e42c-7019" name="5 Grundstok Thunderers" hidden="false" collective="false" import="true" type="model">
+          <modifiers>
+            <modifier type="set" field="name" value="15 Grundstok Thunderers">
+              <conditions>
+                <condition field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0a8d-cde8-fba1-6c0d" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="name" value="10 Grundstok Thunderers">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0a8d-cde8-fba1-6c0d" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3292-3f51-ec2b-121c" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="358b-2a9a-fbf7-373f" type="min"/>
@@ -2280,9 +2389,6 @@ An attack made by a weapon that is in range of this model can target either this
               </conditions>
             </modifier>
           </modifiers>
-          <costs>
-            <cost name="pts" typeId="points" value="135.0"/>
-          </costs>
         </entryLink>
         <entryLink id="04ba-918d-44eb-2771" name="Battalions" hidden="false" collective="false" import="true" targetId="ff18-f62e-a289-717c" type="selectionEntryGroup"/>
       </entryLinks>
@@ -2295,6 +2401,11 @@ An attack made by a weapon that is in range of this model can target either this
         <modifier type="set-primary" field="category" value="e9f2-765a-b7b8-ce8e">
           <conditions>
             <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1a87-84ca-7678-2d03" type="greaterThan"/>
+          </conditions>
+        </modifier>
+        <modifier type="add" field="category" value="fdc4-053a-6279-bc9e">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8b11-d94b-f5bc-520f" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -2338,9 +2449,14 @@ An attack made by a weapon that is in range of this model can target either this
       <selectionEntries>
         <selectionEntry id="14ed-44be-b20e-b599" name="3 Skywardens" hidden="false" collective="false" import="true" type="model">
           <modifiers>
-            <modifier type="set" field="2538-e140-81bd-3420" value="1.0">
+            <modifier type="set" field="name" value="9 Skywardens">
               <conditions>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0cb8-ad19-8612-9cd8" type="instanceOf"/>
+                <condition field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0a8d-cde8-fba1-6c0d" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="name" value="6 Skywardens">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0a8d-cde8-fba1-6c0d" type="equalTo"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -2486,9 +2602,6 @@ An attack made by a weapon that is in range of this model can target either this
               </conditions>
             </modifier>
           </modifiers>
-          <costs>
-            <cost name="pts" typeId="points" value="115.0"/>
-          </costs>
         </entryLink>
         <entryLink id="54af-43a4-5dd4-031c" name="Battalions" hidden="false" collective="false" import="true" targetId="ff18-f62e-a289-717c" type="selectionEntryGroup"/>
       </entryLinks>
@@ -3044,6 +3157,11 @@ Once per phase, you can say that 1 unit from your army that has any shares of ae
             <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="128e-d958-e7d6-7cbc" type="greaterThan"/>
           </conditions>
         </modifier>
+        <modifier type="add" field="category" value="fdc4-053a-6279-bc9e">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8b11-d94b-f5bc-520f" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="4035-0a4d-24c7-3769" type="max"/>
@@ -3120,6 +3238,11 @@ Once per phase, you can say that 1 unit from your army that has any shares of ae
         <modifier type="set" field="63dd-d40b-aa75-d41e" value="1.0">
           <conditions>
             <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="616d-36bf-1a46-641e" type="greaterThan"/>
+          </conditions>
+        </modifier>
+        <modifier type="add" field="category" value="fdc4-053a-6279-bc9e">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8b11-d94b-f5bc-520f" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -3324,6 +3447,11 @@ Once per phase, you can say that 1 unit from your army that has any shares of ae
         <modifier type="remove" field="category" value="a8ed-ca35-24e0-cf2e">
           <conditions>
             <condition field="selections" scope="81fb-5851-087f-131d" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="eefc-07f5-c5b9-93ec" type="greaterThan"/>
+          </conditions>
+        </modifier>
+        <modifier type="add" field="category" value="fdc4-053a-6279-bc9e">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8b11-d94b-f5bc-520f" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -3531,6 +3659,13 @@ Once per phase, you can say that 1 unit from your army that has any shares of ae
       </costs>
     </selectionEntry>
     <selectionEntry id="2c43-0228-cbb6-699f" name="Dagnai Holdenstock" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="add" field="category" value="fdc4-053a-6279-bc9e">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8b11-d94b-f5bc-520f" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="86d7-b3bd-51ae-ae56" type="max"/>
       </constraints>
