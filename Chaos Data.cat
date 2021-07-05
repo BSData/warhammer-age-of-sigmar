@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="0339-0157-6910-d29c" name="Chaos Data" revision="79" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="84" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="0339-0157-6910-d29c" name="Chaos Data" revision="81" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="87" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="c9b2-1fe6-pubN65537" name="Battletome: Beasts of Chaos"/>
     <publication id="c9b2-1fe6-pubN83353" name="1"/>
@@ -239,19 +239,9 @@
     <categoryEntry id="2890-73a3-1898-f20a" name="Wrath of the Everchosen" hidden="false"/>
     <categoryEntry id="5242-c640-1b5a-74d4" name="BEASTS OF NURGLE" hidden="false"/>
     <categoryEntry id="16a2-be4e-d7a3-2fdc" name="Broken Realms" hidden="false"/>
-    <categoryEntry id="6cfb-e3ec-d110-80ae" name="Coalition: STD" hidden="false">
-      <modifiers>
-        <modifier type="increment" field="8f7a-3254-9a47-811a" value="1.0">
-          <repeats>
-            <repeat field="selections" scope="roster" value="4.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="unit" repeats="2" roundUp="false"/>
-          </repeats>
-        </modifier>
-      </modifiers>
-      <constraints>
-        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="8f7a-3254-9a47-811a" type="max"/>
-      </constraints>
-    </categoryEntry>
+    <categoryEntry id="6cfb-e3ec-d110-80ae" name="Coalition: Slaves to Darkness" hidden="false"/>
     <categoryEntry id="78d1-e419-c399-4f99" name="Core: Khorne" hidden="false"/>
+    <categoryEntry id="7562-2b78-4fd6-5c23" name="Coalition: Beasts of Chaos" hidden="false"/>
   </categoryEntries>
   <sharedSelectionEntries>
     <selectionEntry id="1982-d915-63a1-b8fb" name="1. Arch-Slaughterer" hidden="false" collective="false" import="true" type="upgrade">
@@ -439,6 +429,10 @@ If you have any depravity points at th end of your movement phase, you can summo
           </characteristics>
         </profile>
       </profiles>
+      <categoryLinks>
+        <categoryLink id="328c-c232-86e3-2f19" name="Coalition: Beasts of Chaos" hidden="false" targetId="7562-2b78-4fd6-5c23" primary="false"/>
+        <categoryLink id="1d37-b360-d655-9302" name="Coalition: Slaves to Darkness" hidden="false" targetId="6cfb-e3ec-d110-80ae" primary="false"/>
+      </categoryLinks>
       <entryLinks>
         <entryLink id="98ab-c93a-fe10-bc5f" name="Hosts of Slaanesh" hidden="false" collective="false" import="true" targetId="6ef7-1ab0-9923-7fee" type="selectionEntryGroup"/>
       </entryLinks>
@@ -578,7 +572,22 @@ If you have any depravity points at th end of your movement phase, you can summo
             <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">You can re-roll hit rolls of 1 for attacks made by friendly KHORNE DAEMON units while they are wholly within 12&quot; of any friendly KHORNE DAEMON HEROES, or wholly within 16&quot; of any friendly KHORNE GREATER DAEMONS.</characteristic>
           </characteristics>
         </profile>
+        <profile id="0f5e-8ebf-65c3-f484" name="Legions of Chaos" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
+          <characteristics>
+            <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">A Blades of Khorne army can include coalition units (see below) as follows:
+
+- 2 in every 4 units in the army can be a coalition unit from the Slaves to Darkness faction that has the MARK OF CHAOS keyword. Those units must be given the KHORNE Mark of Chaos keyword.
+
+- 1 in every 4 units in the army can be a coalition unit from the Beasts of Chaos faction. Those units gain the KHORNE keyword.
+
+A Blades of Khorne army cannot include coalition units with the SLAANESH, TZEENTCH, or WIZARD keyword.</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
+      <categoryLinks>
+        <categoryLink id="6aa9-affa-fbe2-d034" name="Coalition: Beasts of Chaos" hidden="false" targetId="7562-2b78-4fd6-5c23" primary="false"/>
+        <categoryLink id="9226-0d75-b0c6-c242" name="Coalition: Slaves to Darkness" hidden="false" targetId="6cfb-e3ec-d110-80ae" primary="false"/>
+      </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="6952-1cfd-2fa3-73c8" name="Subfaction" hidden="false" collective="false" import="true">
           <constraints>
@@ -651,6 +660,10 @@ In addition, if you are fighting a Pitched Battle, you can include 1 additional 
           </characteristics>
         </profile>
       </profiles>
+      <categoryLinks>
+        <categoryLink id="df56-139e-96da-563d" name="Coalition: Beasts of Chaos" hidden="false" targetId="7562-2b78-4fd6-5c23" primary="false"/>
+        <categoryLink id="c443-8ff3-2667-625c" name="Coalition: Slaves to Darkness" hidden="false" targetId="6cfb-e3ec-d110-80ae" primary="false"/>
+      </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="edd5-8098-ce0b-c549" name="Additional Rules" hidden="false" collective="true" import="true">
           <selectionEntries>
@@ -1005,6 +1018,8 @@ Summoned units must be set up wholly within 12&quot; of a friendly TZEENTCH HERO
       </profiles>
       <categoryLinks>
         <categoryLink id="9ea4-da3a-bff7-dd6b" name="New CategoryLink" hidden="false" targetId="7d12-f4c5-3832-0f19" primary="false"/>
+        <categoryLink id="3376-3821-1a06-f6d7" name="Coalition: Beasts of Chaos" hidden="false" targetId="7562-2b78-4fd6-5c23" primary="false"/>
+        <categoryLink id="a723-0aac-a5c9-0067" name="Coalition: Slaves to Darkness" hidden="false" targetId="6cfb-e3ec-d110-80ae" primary="false"/>
       </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="fc77-30d7-0e58-194b" name="Subfaction" hidden="false" collective="false" import="true">
@@ -1785,6 +1800,18 @@ The summoned unit must be set up wholly within 12&quot; of the HEORO  you picked
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="9162-c5d7-60ce-8e78" name="10 Bloodletters" hidden="false" collective="false" import="true" type="model">
+          <modifiers>
+            <modifier type="set" field="name" value="30 Bloodletters">
+              <conditions>
+                <condition field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0a8d-cde8-fba1-6c0d" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="name" value="20 Bloodletters">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0a8d-cde8-fba1-6c0d" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7db3-9fef-ff7f-b606" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7e2e-8dc5-2f3a-df56" type="max"/>
@@ -1948,6 +1975,18 @@ The summoned unit must be set up wholly within 12&quot; of the HEORO  you picked
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="63d2-c254-d13e-84dd" name="3 Bloodcrushers" hidden="false" collective="false" import="true" type="model">
+          <modifiers>
+            <modifier type="set" field="name" value="6 Bloodcrushers">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0a8d-cde8-fba1-6c0d" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="name" value="9 Bloodcrushers">
+              <conditions>
+                <condition field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0a8d-cde8-fba1-6c0d" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="201b-ece8-10cf-f4be" type="min"/>
             <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3b60-0a57-12a1-61c7" type="max"/>
@@ -2508,6 +2547,13 @@ The summoned unit must be set up wholly within 12&quot; of the HEORO  you picked
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="d8ee-7b1c-7177-7c05" name="Skull Cannon" hidden="false" collective="false" import="true" type="model">
+          <modifiers>
+            <modifier type="set" field="name" value="2 Skull Cannons">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0a8d-cde8-fba1-6c0d" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3ebf-8e48-85ec-c74b" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c430-9a9b-c11e-41b4" type="max"/>
@@ -2639,6 +2685,18 @@ The summoned unit must be set up wholly within 12&quot; of the HEORO  you picked
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="1a63-137e-d857-102a" name="5 Flesh Hounds" hidden="false" collective="false" import="true" type="model">
+          <modifiers>
+            <modifier type="set" field="name" value="10 Flesh Hounds">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0a8d-cde8-fba1-6c0d" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="name" value="15 Flesh Hounds">
+              <conditions>
+                <condition field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0a8d-cde8-fba1-6c0d" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1e3e-e086-abc2-d473" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="dca5-c7fc-1319-1a6b" type="max"/>
@@ -3420,6 +3478,13 @@ The summoned unit must be set up wholly within 12&quot; of the HEORO  you picked
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="149a-675e-01c2-82be" name="Beast of Nurgle" hidden="false" collective="false" import="true" type="model">
+          <modifiers>
+            <modifier type="set" field="name" value="2 Beast of Nurgles">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0a8d-cde8-fba1-6c0d" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4815-1523-f19f-2e01" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="bdec-ecd1-79ca-b244" type="max"/>
@@ -4248,6 +4313,13 @@ The summoned unit must be set up wholly within 12&quot; of the HEORO  you picked
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="fa3b-6b2a-7117-4ae0" name="3 Nurglings" hidden="false" collective="false" import="true" type="model">
+          <modifiers>
+            <modifier type="set" field="name" value="6 Nurglings">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0a8d-cde8-fba1-6c0d" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1855-f3cf-5b26-9428" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0461-452c-3075-7fdc" type="max"/>
@@ -4359,6 +4431,13 @@ The summoned unit must be set up wholly within 12&quot; of the HEORO  you picked
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="bedf-6798-cd62-c4fb" name="3 Plague Drones" hidden="false" collective="false" import="true" type="model">
+          <modifiers>
+            <modifier type="set" field="name" value="6 Plague Drones">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0a8d-cde8-fba1-6c0d" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ed5d-b593-7f91-3482" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="34db-a635-7583-2c42" type="max"/>
@@ -4410,7 +4489,7 @@ The summoned unit must be set up wholly within 12&quot; of the HEORO  you picked
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="922f-b12d-0144-bd10" name="Plague Ogors" page="6" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="922f-b12d-0144-bd10" name="Plague Ogors" page="6" hidden="true" collective="false" import="true" type="unit">
       <modifiers>
         <modifier type="set-primary" field="category" value="e9f2-765a-b7b8-ce8e">
           <conditions>
@@ -4534,6 +4613,18 @@ The summoned unit must be set up wholly within 12&quot; of the HEORO  you picked
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="95ea-30a4-537e-5bc0" name="10 Plaguebearers" hidden="false" collective="false" import="true" type="model">
+          <modifiers>
+            <modifier type="set" field="name" value="30 Plaguebearers">
+              <conditions>
+                <condition field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0a8d-cde8-fba1-6c0d" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="name" value="20 Plaguebearers">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0a8d-cde8-fba1-6c0d" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="945b-7bdc-862e-bb11" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0d1e-246c-b85d-5eed" type="max"/>
@@ -4735,6 +4826,18 @@ The summoned unit must be set up wholly within 12&quot; of the HEORO  you picked
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="d345-7ebd-b3ae-1328" name="2 Pusgoyle Blightlords" hidden="false" collective="false" import="true" type="model">
+          <modifiers>
+            <modifier type="set" field="name" value="4 Pusgoyle Blightlords">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0a8d-cde8-fba1-6c0d" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="name" value="6 Pusgoyle Blightlords">
+              <conditions>
+                <condition field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0a8d-cde8-fba1-6c0d" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d4c2-ddb7-1cf5-798c" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ac3c-5522-1909-590b" type="max"/>
@@ -4747,12 +4850,12 @@ The summoned unit must be set up wholly within 12&quot; of the HEORO  you picked
           <modifiers>
             <modifier type="increment" field="2207-8104-cbc1-4d48" value="1.0">
               <repeats>
-                <repeat field="selections" scope="e865-c197-6ec3-b506" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0a8d-cde8-fba1-6c0d" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2207-8104-cbc1-4d48" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2207-8104-cbc1-4d48" type="max"/>
           </constraints>
           <profiles>
             <profile id="10e5-617e-4115-ad5d" name="Dolorous Tocsin" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
@@ -5137,7 +5240,7 @@ Recorded Stamina: Add 1 to save rolls for attacks that targeta a unit carrying o
         <cost name="pts" typeId="points" value="125.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="cb2e-40a0-e549-0c05" name="Daemon Plague Toads of Nurgle" page="4" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="cb2e-40a0-e549-0c05" name="Daemon Plague Toads of Nurgle" page="4" hidden="true" collective="false" import="true" type="unit">
       <modifiers>
         <modifier type="decrement" field="points" value="80.0">
           <conditions>
@@ -5220,7 +5323,7 @@ Recorded Stamina: Add 1 to save rolls for attacks that targeta a unit carrying o
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="71b3-bfaf-29ff-0d6f" name="Daemon Pox Riders of Nurgle" page="5" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="71b3-bfaf-29ff-0d6f" name="Daemon Pox Riders of Nurgle" page="5" hidden="true" collective="false" import="true" type="unit">
       <profiles>
         <profile id="5023-2779-c450-9fe8" name="Daemon Pox Riders of Nurgle" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
           <characteristics>
@@ -5545,6 +5648,18 @@ Recorded Stamina: Add 1 to save rolls for attacks that targeta a unit carrying o
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="0e68-184f-3d9c-6a1e" name="3 Screamers" hidden="false" collective="false" import="true" type="model">
+          <modifiers>
+            <modifier type="set" field="name" value="6 Screamers">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0a8d-cde8-fba1-6c0d" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="name" value="9 Screamers">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0a8d-cde8-fba1-6c0d" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="53aa-b51d-c8a1-88ff" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="73e7-303e-2c6a-0c99" type="max"/>
@@ -6146,16 +6261,46 @@ Iridescent Horrors, Pink Horrors and Blue Horrors that flee cannot Split and Spl
           </constraints>
           <selectionEntries>
             <selectionEntry id="031a-329a-c6f5-faef" name="10 Pink Horrors" hidden="false" collective="false" import="true" type="model">
+              <modifiers>
+                <modifier type="set" field="name" value="20 Pink Horrors">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0a8d-cde8-fba1-6c0d" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="031a-329a-c6f5-faef" type="equalTo"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" field="name" value="30 Pink Horrors">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0a8d-cde8-fba1-6c0d" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="031a-329a-c6f5-faef" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <costs>
                 <cost name="pts" typeId="points" value="215.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="0534-c5a1-4d72-bc17" name="10 Blue Horrors" hidden="false" collective="false" import="true" type="model">
+              <modifiers>
+                <modifier type="set" field="name" value="20 Blue Horrors">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0a8d-cde8-fba1-6c0d" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="031a-329a-c6f5-faef" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <costs>
                 <cost name="pts" typeId="points" value="140.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="9e4e-4870-875c-a2c6" name="10 Brimstone Horrors" hidden="false" collective="false" import="true" type="model">
+              <modifiers>
+                <modifier type="set" field="name" value="20 Brimstone Horrors">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0a8d-cde8-fba1-6c0d" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="031a-329a-c6f5-faef" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <costs>
                 <cost name="pts" typeId="points" value="115.0"/>
               </costs>
@@ -6392,6 +6537,13 @@ Iridescent Horrors, Pink Horrors and Blue Horrors that flee cannot Split and Spl
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="1f84-bd24-b10b-3f3b" name="3 Flamers" hidden="false" collective="false" import="true" type="model">
+          <modifiers>
+            <modifier type="set" field="name" value="6 Flamers">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0a8d-cde8-fba1-6c0d" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c7c7-3c09-adaa-91ea" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3b5f-76f4-a46f-0d33" type="max"/>
@@ -6959,6 +7111,13 @@ Iridescent Horrors, Pink Horrors and Blue Horrors that flee cannot Split and Spl
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="113a-e56a-3279-238d" name="Exalted Flamer" hidden="false" collective="false" import="true" type="model">
+          <modifiers>
+            <modifier type="set" field="name" value="2 Exalted Flamers">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0a8d-cde8-fba1-6c0d" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="138e-146c-bb18-7b69" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7eb7-85a8-0c45-cb1f" type="max"/>
@@ -7204,6 +7363,18 @@ Iridescent Horrors, Pink Horrors and Blue Horrors that flee cannot Split and Spl
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="98d3-7efd-228e-e5a2" name="Burning Chariot" hidden="false" collective="false" import="true" type="model">
+          <modifiers>
+            <modifier type="set" field="name" value="2 Burning Chariots">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0a8d-cde8-fba1-6c0d" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="name" value="3 Burning Chariots">
+              <conditions>
+                <condition field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0a8d-cde8-fba1-6c0d" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8383-d4f7-9d41-53b1" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="68ae-6d84-5e4c-255d" type="max"/>
@@ -8140,6 +8311,18 @@ Iridescent Horrors, Pink Horrors and Blue Horrors that flee cannot Split and Spl
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="5963-6860-5a69-3e78" name="Seeker Chariot" hidden="false" collective="false" import="true" type="model">
+          <modifiers>
+            <modifier type="set" field="name" value="2 Seeker Chariots">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0a8d-cde8-fba1-6c0d" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="name" value="3 Seeker Chariots">
+              <conditions>
+                <condition field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0a8d-cde8-fba1-6c0d" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d926-3e9a-10e8-7214" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b585-fe97-be2c-638f" type="max"/>
@@ -8743,6 +8926,13 @@ In addition, this model can attempt to dispel 1 endless spell at the start of yo
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="cc59-532c-b480-5e38" name="3 Fiends" hidden="false" collective="false" import="true" type="model">
+          <modifiers>
+            <modifier type="set" field="name" value="6 Fiends">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0a8d-cde8-fba1-6c0d" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d8bf-ae31-4b6c-2530" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a5df-8d86-93ba-19bc" type="max"/>
@@ -9121,6 +9311,18 @@ In addition, this model can attempt to dispel 1 endless spell at the start of yo
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="e42f-caa6-bd29-5cc6" name="10 Daemonettes" hidden="false" collective="false" import="true" type="model">
+          <modifiers>
+            <modifier type="set" field="name" value="30 Daemonettes">
+              <conditions>
+                <condition field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0a8d-cde8-fba1-6c0d" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="name" value="20 Daemonettes">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0a8d-cde8-fba1-6c0d" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="59bb-75d8-42e7-8e4c" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f0bf-83b6-28f1-7a66" type="max"/>

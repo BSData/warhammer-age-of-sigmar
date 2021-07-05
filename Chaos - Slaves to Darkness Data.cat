@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="e0d8-b631-6934-ee34" name="Chaos - Slaves to Darkness Data" revision="50" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="85" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="e0d8-b631-6934-ee34" name="Chaos - Slaves to Darkness Data" revision="52" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="87" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="798b-2f60-pubN65537" name="Grand Alliance: Chaos"/>
     <publication id="798b-2f60-pubN85643" name="Forgeworld: Monstrous Arcanum"/>
@@ -67,7 +67,22 @@
     <categoryEntry id="4ff1-770a-19f1-ec73" name="RAVAGERS" hidden="false"/>
     <categoryEntry id="52bf-703f-13a8-ae6f" name="SCIONS OF THE FLAME" hidden="false"/>
     <categoryEntry id="afd1-921b-48a5-0741" name="Primary: STD" hidden="false"/>
+    <categoryEntry id="624c-a3f1-ce3c-0169" name="Coalition: STD" hidden="false">
+      <modifiers>
+        <modifier type="increment" field="dc8b-7d38-8954-a2c0" value="1.0">
+          <repeats>
+            <repeat field="selections" scope="roster" value="4.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="unit" repeats="2" roundUp="false"/>
+          </repeats>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="dc8b-7d38-8954-a2c0" type="max"/>
+      </constraints>
+    </categoryEntry>
   </categoryEntries>
+  <entryLinks>
+    <entryLink id="e966-63a5-9315-6811" name="Coalition" hidden="false" collective="false" import="true" targetId="7638-d11c-8f73-264d" type="selectionEntry"/>
+  </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="8bc4-05d4-ff31-086b" name="Chaos Chariots" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
@@ -76,27 +91,10 @@
             <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="812a-a8b3-7158-4adb" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="add" field="category" value="6cfb-e3ec-d110-80ae">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b541-3b22-08bb-d772" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d7d9-b723-6fdb-51cb" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ff93-966b-c16d-8149" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="065f-c64d-3eb7-79d2" type="equalTo"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </conditionGroup>
-          </conditionGroups>
+        <modifier type="add" field="category" value="624c-a3f1-ce3c-0169">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="6cfb-e3ec-d110-80ae" type="greaterThan"/>
+          </conditions>
         </modifier>
       </modifiers>
       <profiles>
@@ -177,6 +175,18 @@
           </costs>
         </selectionEntry>
         <selectionEntry id="e969-6035-df98-cff5" name="1 Chaos Chariot" hidden="false" collective="false" import="true" type="model">
+          <modifiers>
+            <modifier type="set" field="name" value="3 Chaos Chariots">
+              <conditions>
+                <condition field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0a8d-cde8-fba1-6c0d" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="name" value="2 Chaos Chariots">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0a8d-cde8-fba1-6c0d" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6a02-0d44-722d-5a5d" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7ea3-19cc-6c22-db46" type="min"/>
@@ -346,27 +356,10 @@
     </selectionEntry>
     <selectionEntry id="7117-c074-dd10-883d" name="Chaos Chosen" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
-        <modifier type="add" field="category" value="6cfb-e3ec-d110-80ae">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b541-3b22-08bb-d772" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d7d9-b723-6fdb-51cb" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ff93-966b-c16d-8149" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="065f-c64d-3eb7-79d2" type="equalTo"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </conditionGroup>
-          </conditionGroups>
+        <modifier type="add" field="category" value="624c-a3f1-ce3c-0169">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="6cfb-e3ec-d110-80ae" type="greaterThan"/>
+          </conditions>
         </modifier>
       </modifiers>
       <profiles>
@@ -454,6 +447,18 @@
           </costs>
         </selectionEntry>
         <selectionEntry id="2601-5c92-dac9-1b68" name="5 Chaos Chosen" hidden="false" collective="false" import="true" type="model">
+          <modifiers>
+            <modifier type="set" field="name" value="10 Chaos Chosen">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0a8d-cde8-fba1-6c0d" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="name" value="15 Chaos Chosen">
+              <conditions>
+                <condition field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0a8d-cde8-fba1-6c0d" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="80d6-690d-707e-8058" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0e9a-5e76-8a61-50c9" type="min"/>
@@ -478,27 +483,10 @@
     </selectionEntry>
     <selectionEntry id="44d4-5116-6301-5c92" name="Gorebeast Chariots" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
-        <modifier type="add" field="category" value="6cfb-e3ec-d110-80ae">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b541-3b22-08bb-d772" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d7d9-b723-6fdb-51cb" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ff93-966b-c16d-8149" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="065f-c64d-3eb7-79d2" type="equalTo"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </conditionGroup>
-          </conditionGroups>
+        <modifier type="add" field="category" value="624c-a3f1-ce3c-0169">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="6cfb-e3ec-d110-80ae" type="greaterThan"/>
+          </conditions>
         </modifier>
       </modifiers>
       <profiles>
@@ -535,6 +523,13 @@
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="62ca-c787-cbf7-6cd2" name="1 Gorebeast Chariot" hidden="false" collective="false" import="true" type="model">
+          <modifiers>
+            <modifier type="set" field="name" value="2 Gorebeast Chariots">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0a8d-cde8-fba1-6c0d" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4919-f4f7-b3f1-f174" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="38ea-3ff9-411e-1760" type="max"/>
@@ -649,27 +644,10 @@
     </selectionEntry>
     <selectionEntry id="e432-9436-085d-4c93" name="Chaos Knights" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
-        <modifier type="add" field="category" value="6cfb-e3ec-d110-80ae">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b541-3b22-08bb-d772" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d7d9-b723-6fdb-51cb" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ff93-966b-c16d-8149" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="065f-c64d-3eb7-79d2" type="equalTo"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </conditionGroup>
-          </conditionGroups>
+        <modifier type="add" field="category" value="624c-a3f1-ce3c-0169">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="6cfb-e3ec-d110-80ae" type="greaterThan"/>
+          </conditions>
         </modifier>
       </modifiers>
       <profiles>
@@ -790,6 +768,18 @@
           </costs>
         </selectionEntry>
         <selectionEntry id="1939-537b-18b0-f4a9" name="5 Chaos Knights" hidden="false" collective="false" import="true" type="model">
+          <modifiers>
+            <modifier type="set" field="name" value="10 Chaos Knights">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0a8d-cde8-fba1-6c0d" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="name" value="10 Chaos Knights">
+              <conditions>
+                <condition field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0a8d-cde8-fba1-6c0d" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7b08-7989-837d-8238" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="db75-b6fc-366b-450a" type="min"/>
@@ -868,27 +858,10 @@
     </selectionEntry>
     <selectionEntry id="ae9b-b9fe-18ba-2f9a" name="Chaos Lord on Daemonic Mount" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
-        <modifier type="add" field="category" value="6cfb-e3ec-d110-80ae">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b541-3b22-08bb-d772" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d7d9-b723-6fdb-51cb" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ff93-966b-c16d-8149" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="065f-c64d-3eb7-79d2" type="equalTo"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </conditionGroup>
-          </conditionGroups>
+        <modifier type="add" field="category" value="624c-a3f1-ce3c-0169">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="6cfb-e3ec-d110-80ae" type="greaterThan"/>
+          </conditions>
         </modifier>
       </modifiers>
       <profiles>
@@ -1035,27 +1008,10 @@
     </selectionEntry>
     <selectionEntry id="3303-cef0-2064-a5f5" name="Chaos Lord on Manticore" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
-        <modifier type="add" field="category" value="6cfb-e3ec-d110-80ae">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b541-3b22-08bb-d772" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d7d9-b723-6fdb-51cb" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ff93-966b-c16d-8149" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="065f-c64d-3eb7-79d2" type="equalTo"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </conditionGroup>
-          </conditionGroups>
+        <modifier type="add" field="category" value="624c-a3f1-ce3c-0169">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="6cfb-e3ec-d110-80ae" type="greaterThan"/>
+          </conditions>
         </modifier>
       </modifiers>
       <profiles>
@@ -1325,27 +1281,10 @@
     </selectionEntry>
     <selectionEntry id="ce01-c0f8-2c4b-fddc" name="Chaos Marauder Horsemen" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
-        <modifier type="add" field="category" value="6cfb-e3ec-d110-80ae">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b541-3b22-08bb-d772" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d7d9-b723-6fdb-51cb" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ff93-966b-c16d-8149" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="065f-c64d-3eb7-79d2" type="equalTo"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </conditionGroup>
-          </conditionGroups>
+        <modifier type="add" field="category" value="624c-a3f1-ce3c-0169">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="6cfb-e3ec-d110-80ae" type="greaterThan"/>
+          </conditions>
         </modifier>
       </modifiers>
       <profiles>
@@ -1434,6 +1373,18 @@
           </costs>
         </selectionEntry>
         <selectionEntry id="e6a5-ea43-2f71-601a" name="5 Chaos Marauder Horsemen" hidden="false" collective="false" import="true" type="model">
+          <modifiers>
+            <modifier type="set" field="name" value="15 Chaos Marauder Horsemen">
+              <conditions>
+                <condition field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0a8d-cde8-fba1-6c0d" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="name" value="10 Chaos Marauder Horsemen">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0a8d-cde8-fba1-6c0d" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9031-dc44-0b48-b85d" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="88b3-ae1e-a3d9-e023" type="min"/>
@@ -1566,27 +1517,10 @@
             <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="78f3-8a59-699a-61e8" type="instanceOf"/>
           </conditions>
         </modifier>
-        <modifier type="add" field="category" value="6cfb-e3ec-d110-80ae">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b541-3b22-08bb-d772" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d7d9-b723-6fdb-51cb" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ff93-966b-c16d-8149" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="065f-c64d-3eb7-79d2" type="equalTo"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </conditionGroup>
-          </conditionGroups>
+        <modifier type="add" field="category" value="624c-a3f1-ce3c-0169">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="6cfb-e3ec-d110-80ae" type="greaterThan"/>
+          </conditions>
         </modifier>
       </modifiers>
       <profiles>
@@ -1653,6 +1587,18 @@
           </costs>
         </selectionEntry>
         <selectionEntry id="64e7-dc02-fced-3c0e" name="10 Chaos Marauders" hidden="false" collective="false" import="true" type="model">
+          <modifiers>
+            <modifier type="set" field="name" value="30 Chaos Marauders">
+              <conditions>
+                <condition field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0a8d-cde8-fba1-6c0d" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="name" value="20 Chaos Marauders">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0a8d-cde8-fba1-6c0d" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cb80-9ac8-1cd9-6807" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="98c9-cb31-b98e-767f" type="min"/>
@@ -1736,27 +1682,10 @@
             <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="b541-3b22-08bb-d772" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="add" field="category" value="6cfb-e3ec-d110-80ae">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b541-3b22-08bb-d772" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d7d9-b723-6fdb-51cb" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ff93-966b-c16d-8149" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="065f-c64d-3eb7-79d2" type="equalTo"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </conditionGroup>
-          </conditionGroups>
+        <modifier type="add" field="category" value="624c-a3f1-ce3c-0169">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="6cfb-e3ec-d110-80ae" type="greaterThan"/>
+          </conditions>
         </modifier>
       </modifiers>
       <profiles>
@@ -1876,27 +1805,10 @@
             <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="b541-3b22-08bb-d772" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="add" field="category" value="6cfb-e3ec-d110-80ae">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b541-3b22-08bb-d772" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d7d9-b723-6fdb-51cb" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ff93-966b-c16d-8149" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="065f-c64d-3eb7-79d2" type="equalTo"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </conditionGroup>
-          </conditionGroups>
+        <modifier type="add" field="category" value="624c-a3f1-ce3c-0169">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="6cfb-e3ec-d110-80ae" type="greaterThan"/>
+          </conditions>
         </modifier>
       </modifiers>
       <profiles>
@@ -2080,27 +1992,10 @@
     </selectionEntry>
     <selectionEntry id="494c-81bb-bb30-3d33" name="Chaos Spawn" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
-        <modifier type="add" field="category" value="6cfb-e3ec-d110-80ae">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b541-3b22-08bb-d772" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d7d9-b723-6fdb-51cb" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ff93-966b-c16d-8149" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="065f-c64d-3eb7-79d2" type="equalTo"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </conditionGroup>
-          </conditionGroups>
+        <modifier type="add" field="category" value="624c-a3f1-ce3c-0169">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="6cfb-e3ec-d110-80ae" type="greaterThan"/>
+          </conditions>
         </modifier>
       </modifiers>
       <profiles>
@@ -2170,27 +2065,10 @@
             <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="78f3-8a59-699a-61e8" type="instanceOf"/>
           </conditions>
         </modifier>
-        <modifier type="add" field="category" value="6cfb-e3ec-d110-80ae">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b541-3b22-08bb-d772" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d7d9-b723-6fdb-51cb" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ff93-966b-c16d-8149" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="065f-c64d-3eb7-79d2" type="equalTo"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </conditionGroup>
-          </conditionGroups>
+        <modifier type="add" field="category" value="624c-a3f1-ce3c-0169">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="6cfb-e3ec-d110-80ae" type="greaterThan"/>
+          </conditions>
         </modifier>
       </modifiers>
       <profiles>
@@ -2252,6 +2130,18 @@
           </costs>
         </selectionEntry>
         <selectionEntry id="bc70-2c3a-be3a-eed8" name="10 Chaos Warriors" hidden="false" collective="false" import="true" type="model">
+          <modifiers>
+            <modifier type="set" field="name" value="30 Chaos Warriors">
+              <conditions>
+                <condition field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0a8d-cde8-fba1-6c0d" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="name" value="20 Chaos Warriors">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0a8d-cde8-fba1-6c0d" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f224-70d9-c683-b513" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f699-caa9-d9c4-f60b" type="max"/>
@@ -2376,27 +2266,10 @@
     </selectionEntry>
     <selectionEntry id="89b1-9d63-4211-96da" name="Chaos Warshrine" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
-        <modifier type="add" field="category" value="6cfb-e3ec-d110-80ae">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b541-3b22-08bb-d772" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d7d9-b723-6fdb-51cb" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ff93-966b-c16d-8149" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="065f-c64d-3eb7-79d2" type="equalTo"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </conditionGroup>
-          </conditionGroups>
+        <modifier type="add" field="category" value="624c-a3f1-ce3c-0169">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="6cfb-e3ec-d110-80ae" type="greaterThan"/>
+          </conditions>
         </modifier>
       </modifiers>
       <profiles>
@@ -2571,27 +2444,10 @@
     </selectionEntry>
     <selectionEntry id="b2a4-c572-6ab2-6b4e" name="Slaves to Darkness Daemon Prince" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
-        <modifier type="add" field="category" value="6cfb-e3ec-d110-80ae">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b541-3b22-08bb-d772" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d7d9-b723-6fdb-51cb" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ff93-966b-c16d-8149" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="065f-c64d-3eb7-79d2" type="equalTo"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </conditionGroup>
-          </conditionGroups>
+        <modifier type="add" field="category" value="624c-a3f1-ce3c-0169">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="6cfb-e3ec-d110-80ae" type="greaterThan"/>
+          </conditions>
         </modifier>
       </modifiers>
       <profiles>
@@ -2804,27 +2660,10 @@
     </selectionEntry>
     <selectionEntry id="559b-42f8-886d-3900" name="Darkoath Chieftain" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
-        <modifier type="add" field="category" value="6cfb-e3ec-d110-80ae">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b541-3b22-08bb-d772" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d7d9-b723-6fdb-51cb" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ff93-966b-c16d-8149" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="065f-c64d-3eb7-79d2" type="equalTo"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </conditionGroup>
-          </conditionGroups>
+        <modifier type="add" field="category" value="624c-a3f1-ce3c-0169">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="6cfb-e3ec-d110-80ae" type="greaterThan"/>
+          </conditions>
         </modifier>
       </modifiers>
       <profiles>
@@ -2927,27 +2766,10 @@
     </selectionEntry>
     <selectionEntry id="817b-e028-2550-90ea" name="Darkoath Warqueen" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
-        <modifier type="add" field="category" value="6cfb-e3ec-d110-80ae">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b541-3b22-08bb-d772" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d7d9-b723-6fdb-51cb" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ff93-966b-c16d-8149" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="065f-c64d-3eb7-79d2" type="equalTo"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </conditionGroup>
-          </conditionGroups>
+        <modifier type="add" field="category" value="624c-a3f1-ce3c-0169">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="6cfb-e3ec-d110-80ae" type="greaterThan"/>
+          </conditions>
         </modifier>
       </modifiers>
       <profiles>
@@ -3031,27 +2853,10 @@ In addition, add 1 to the Damage characteristic of this model’s Rune-etched Ax
     </selectionEntry>
     <selectionEntry id="69e5-b08e-9813-f378" name="Exalted Hero of Chaos" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
-        <modifier type="add" field="category" value="6cfb-e3ec-d110-80ae">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b541-3b22-08bb-d772" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d7d9-b723-6fdb-51cb" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ff93-966b-c16d-8149" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="065f-c64d-3eb7-79d2" type="equalTo"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </conditionGroup>
-          </conditionGroups>
+        <modifier type="add" field="category" value="624c-a3f1-ce3c-0169">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="6cfb-e3ec-d110-80ae" type="greaterThan"/>
+          </conditions>
         </modifier>
       </modifiers>
       <profiles>
@@ -3300,27 +3105,10 @@ In addition, add 1 to the Damage characteristic of this model’s Rune-etched Ax
     </selectionEntry>
     <selectionEntry id="1ccb-5743-64df-f027" name="Chaos Lord" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
-        <modifier type="add" field="category" value="6cfb-e3ec-d110-80ae">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b541-3b22-08bb-d772" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d7d9-b723-6fdb-51cb" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ff93-966b-c16d-8149" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="065f-c64d-3eb7-79d2" type="equalTo"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </conditionGroup>
-          </conditionGroups>
+        <modifier type="add" field="category" value="624c-a3f1-ce3c-0169">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="6cfb-e3ec-d110-80ae" type="greaterThan"/>
+          </conditions>
         </modifier>
       </modifiers>
       <profiles>
@@ -3483,27 +3271,10 @@ In addition, add 1 to the Damage characteristic of this model’s Rune-etched Ax
     </selectionEntry>
     <selectionEntry id="23e4-3184-435d-9681" name="Chaos War Mammoth" publicationId="798b-2f60-pubN85643" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
-        <modifier type="add" field="category" value="6cfb-e3ec-d110-80ae">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b541-3b22-08bb-d772" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d7d9-b723-6fdb-51cb" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ff93-966b-c16d-8149" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="065f-c64d-3eb7-79d2" type="equalTo"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </conditionGroup>
-          </conditionGroups>
+        <modifier type="add" field="category" value="624c-a3f1-ce3c-0169">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="6cfb-e3ec-d110-80ae" type="greaterThan"/>
+          </conditions>
         </modifier>
       </modifiers>
       <profiles>
@@ -3657,32 +3428,20 @@ In addition, add 1 to the Damage characteristic of this model’s Rune-etched Ax
     </selectionEntry>
     <selectionEntry id="689f-b7f7-e2ec-8a31" name="Sayl the Faithless" publicationId="798b-2f60-pubN85643" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
-        <modifier type="set" field="9c96-4465-df04-a9d1" value="1">
+        <modifier type="set" field="9c96-4465-df04-a9d1" value="1.0">
           <conditions>
             <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1dc4-ec25-d3df-f7d2" type="greaterThan"/>
           </conditions>
         </modifier>
-        <modifier type="add" field="category" value="6cfb-e3ec-d110-80ae">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b541-3b22-08bb-d772" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d7d9-b723-6fdb-51cb" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ff93-966b-c16d-8149" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="065f-c64d-3eb7-79d2" type="equalTo"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </conditionGroup>
-          </conditionGroups>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="b541-3b22-08bb-d772" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="add" field="category" value="624c-a3f1-ce3c-0169">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="6cfb-e3ec-d110-80ae" type="greaterThan"/>
+          </conditions>
         </modifier>
       </modifiers>
       <constraints>
@@ -3772,6 +3531,7 @@ In addition, add 1 to the Damage characteristic of this model’s Rune-etched Ax
           </categoryLinks>
         </entryLink>
         <entryLink id="4a0f-5d2d-7784-d7d0" name="Battalions" hidden="false" collective="false" import="true" targetId="f862-da0a-22bb-e3c1" type="selectionEntryGroup"/>
+        <entryLink id="ca20-ae91-cb66-3208" name="Spell Lores" hidden="false" collective="false" import="true" targetId="a331-0f40-50c9-37e3" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="200.0"/>
@@ -3784,27 +3544,10 @@ In addition, add 1 to the Damage characteristic of this model’s Rune-etched Ax
             <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="689f-b7f7-e2ec-8a31" type="greaterThan"/>
           </conditions>
         </modifier>
-        <modifier type="add" field="category" value="6cfb-e3ec-d110-80ae">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b541-3b22-08bb-d772" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d7d9-b723-6fdb-51cb" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ff93-966b-c16d-8149" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="065f-c64d-3eb7-79d2" type="equalTo"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </conditionGroup>
-          </conditionGroups>
+        <modifier type="add" field="category" value="624c-a3f1-ce3c-0169">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="6cfb-e3ec-d110-80ae" type="greaterThan"/>
+          </conditions>
         </modifier>
       </modifiers>
       <constraints>
@@ -3876,27 +3619,10 @@ In addition, add 1 to the Damage characteristic of this model’s Rune-etched Ax
     </selectionEntry>
     <selectionEntry id="d092-4d5e-d7eb-434b" name="Slambo" hidden="true" collective="false" import="true" type="unit">
       <modifiers>
-        <modifier type="add" field="category" value="6cfb-e3ec-d110-80ae">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b541-3b22-08bb-d772" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d7d9-b723-6fdb-51cb" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ff93-966b-c16d-8149" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="065f-c64d-3eb7-79d2" type="equalTo"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </conditionGroup>
-          </conditionGroups>
+        <modifier type="add" field="category" value="624c-a3f1-ce3c-0169">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="6cfb-e3ec-d110-80ae" type="greaterThan"/>
+          </conditions>
         </modifier>
       </modifiers>
       <constraints>
@@ -3997,27 +3723,10 @@ In addition, add 1 to the Damage characteristic of this model’s Rune-etched Ax
             <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="675a-c9ab-ab82-cc4d" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="add" field="category" value="6cfb-e3ec-d110-80ae">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b541-3b22-08bb-d772" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d7d9-b723-6fdb-51cb" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ff93-966b-c16d-8149" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="065f-c64d-3eb7-79d2" type="equalTo"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </conditionGroup>
-          </conditionGroups>
+        <modifier type="add" field="category" value="624c-a3f1-ce3c-0169">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="6cfb-e3ec-d110-80ae" type="greaterThan"/>
+          </conditions>
         </modifier>
       </modifiers>
       <profiles>
@@ -4076,6 +3785,18 @@ In addition, add 1 to the Damage characteristic of this model’s Rune-etched Ax
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="d147-c7f4-37d4-e43e" name="9 Unmade" hidden="false" collective="false" import="true" type="model">
+          <modifiers>
+            <modifier type="set" field="name" value="18 Unmade">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0a8d-cde8-fba1-6c0d" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="name" value="27 Unmade">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0a8d-cde8-fba1-6c0d" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1a65-4d97-5631-5af6" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="77f7-e80b-b619-8e72" type="max"/>
@@ -4111,27 +3832,10 @@ In addition, add 1 to the Damage characteristic of this model’s Rune-etched Ax
             <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="675a-c9ab-ab82-cc4d" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="add" field="category" value="6cfb-e3ec-d110-80ae">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b541-3b22-08bb-d772" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d7d9-b723-6fdb-51cb" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ff93-966b-c16d-8149" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="065f-c64d-3eb7-79d2" type="equalTo"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </conditionGroup>
-          </conditionGroups>
+        <modifier type="add" field="category" value="624c-a3f1-ce3c-0169">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="6cfb-e3ec-d110-80ae" type="greaterThan"/>
+          </conditions>
         </modifier>
       </modifiers>
       <profiles>
@@ -4189,6 +3893,18 @@ In addition, add 1 to the Damage characteristic of this model’s Rune-etched Ax
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="468e-0c4b-1e30-38b6" name="10 Splintered Fang" hidden="false" collective="false" import="true" type="model">
+          <modifiers>
+            <modifier type="set" field="name" value="30 Splintered Fang">
+              <conditions>
+                <condition field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0a8d-cde8-fba1-6c0d" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="name" value="20 Splintered Fang">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0a8d-cde8-fba1-6c0d" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="13d4-d458-b67a-b580" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5227-8a6d-861f-6907" type="max"/>
@@ -4224,27 +3940,10 @@ In addition, add 1 to the Damage characteristic of this model’s Rune-etched Ax
             <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="675a-c9ab-ab82-cc4d" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="add" field="category" value="6cfb-e3ec-d110-80ae">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b541-3b22-08bb-d772" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d7d9-b723-6fdb-51cb" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ff93-966b-c16d-8149" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="065f-c64d-3eb7-79d2" type="equalTo"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </conditionGroup>
-          </conditionGroups>
+        <modifier type="add" field="category" value="624c-a3f1-ce3c-0169">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="6cfb-e3ec-d110-80ae" type="greaterThan"/>
+          </conditions>
         </modifier>
       </modifiers>
       <profiles>
@@ -4303,6 +4002,18 @@ In addition, add 1 to the Damage characteristic of this model’s Rune-etched Ax
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="2718-4bd9-1615-4795" name="9 Corvus Cabal" hidden="false" collective="false" import="true" type="model">
+          <modifiers>
+            <modifier type="set" field="name" value="27 Corvus Cabal">
+              <conditions>
+                <condition field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0a8d-cde8-fba1-6c0d" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="name" value="18 Corvus Cabal">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0a8d-cde8-fba1-6c0d" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7788-efd6-c4f3-ecc6" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8948-7614-5611-8164" type="max"/>
@@ -4338,27 +4049,10 @@ In addition, add 1 to the Damage characteristic of this model’s Rune-etched Ax
             <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="675a-c9ab-ab82-cc4d" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="add" field="category" value="6cfb-e3ec-d110-80ae">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b541-3b22-08bb-d772" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d7d9-b723-6fdb-51cb" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ff93-966b-c16d-8149" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="065f-c64d-3eb7-79d2" type="equalTo"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </conditionGroup>
-          </conditionGroups>
+        <modifier type="add" field="category" value="624c-a3f1-ce3c-0169">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="6cfb-e3ec-d110-80ae" type="greaterThan"/>
+          </conditions>
         </modifier>
       </modifiers>
       <profiles>
@@ -4417,6 +4111,18 @@ In addition, add 1 to the Damage characteristic of this model’s Rune-etched Ax
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="8140-7b9b-855a-4081" name="8 Cypher Lords" hidden="false" collective="false" import="true" type="model">
+          <modifiers>
+            <modifier type="set" field="name" value="16 Cypher Lords">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0a8d-cde8-fba1-6c0d" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="name" value="24 Cypher Lords">
+              <conditions>
+                <condition field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0a8d-cde8-fba1-6c0d" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="052a-aa8b-e9f8-4414" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5579-0e34-190a-e27c" type="max"/>
@@ -4452,27 +4158,10 @@ In addition, add 1 to the Damage characteristic of this model’s Rune-etched Ax
             <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="675a-c9ab-ab82-cc4d" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="add" field="category" value="6cfb-e3ec-d110-80ae">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b541-3b22-08bb-d772" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d7d9-b723-6fdb-51cb" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ff93-966b-c16d-8149" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="065f-c64d-3eb7-79d2" type="equalTo"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </conditionGroup>
-          </conditionGroups>
+        <modifier type="add" field="category" value="624c-a3f1-ce3c-0169">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="6cfb-e3ec-d110-80ae" type="greaterThan"/>
+          </conditions>
         </modifier>
       </modifiers>
       <profiles>
@@ -4537,6 +4226,18 @@ In addition, add 1 to the Damage characteristic of this model’s Rune-etched Ax
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="e2ef-c902-52f8-32bb" name="8 Iron Golems" hidden="false" collective="false" import="true" type="model">
+          <modifiers>
+            <modifier type="set" field="name" value="24 Iron Golems">
+              <conditions>
+                <condition field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0a8d-cde8-fba1-6c0d" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="name" value="16 Iron Golems">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0a8d-cde8-fba1-6c0d" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fd00-5418-8dd5-dfb7" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="111d-95fb-a0ff-3f12" type="max"/>
@@ -4572,27 +4273,10 @@ In addition, add 1 to the Damage characteristic of this model’s Rune-etched Ax
             <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="675a-c9ab-ab82-cc4d" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="add" field="category" value="6cfb-e3ec-d110-80ae">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b541-3b22-08bb-d772" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d7d9-b723-6fdb-51cb" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ff93-966b-c16d-8149" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="065f-c64d-3eb7-79d2" type="equalTo"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </conditionGroup>
-          </conditionGroups>
+        <modifier type="add" field="category" value="624c-a3f1-ce3c-0169">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="6cfb-e3ec-d110-80ae" type="greaterThan"/>
+          </conditions>
         </modifier>
       </modifiers>
       <profiles>
@@ -4656,6 +4340,18 @@ In addition, add 1 to the Damage characteristic of this model’s Rune-etched Ax
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="2bc5-998b-a5ca-9c6c" name="9 Untamed Beasts" hidden="false" collective="false" import="true" type="model">
+          <modifiers>
+            <modifier type="set" field="name" value="27 Untamed Beasts">
+              <conditions>
+                <condition field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0a8d-cde8-fba1-6c0d" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="name" value="18 Untamed Beasts">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0a8d-cde8-fba1-6c0d" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bfde-ee3c-7d7d-d2f4" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ffe5-4b4f-9e54-45b7" type="max"/>
@@ -4686,27 +4382,10 @@ In addition, add 1 to the Damage characteristic of this model’s Rune-etched Ax
     </selectionEntry>
     <selectionEntry id="3798-bff0-a2ec-7c8a" name="Furies" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
-        <modifier type="add" field="category" value="6cfb-e3ec-d110-80ae">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b541-3b22-08bb-d772" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d7d9-b723-6fdb-51cb" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ff93-966b-c16d-8149" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="065f-c64d-3eb7-79d2" type="equalTo"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </conditionGroup>
-          </conditionGroups>
+        <modifier type="add" field="category" value="624c-a3f1-ce3c-0169">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="6cfb-e3ec-d110-80ae" type="greaterThan"/>
+          </conditions>
         </modifier>
       </modifiers>
       <profiles>
@@ -4747,6 +4426,13 @@ In addition, add 1 to the Damage characteristic of this model’s Rune-etched Ax
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="3d94-8765-d3aa-36d3" name="6 Furies" hidden="false" collective="false" import="true" type="model">
+          <modifiers>
+            <modifier type="set" field="name" value="12 Furies">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0a8d-cde8-fba1-6c0d" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="65b6-ef5d-1c23-2f0c" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1528-13e7-3eee-4e9a" type="max"/>
@@ -4775,27 +4461,10 @@ In addition, add 1 to the Damage characteristic of this model’s Rune-etched Ax
             <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="675a-c9ab-ab82-cc4d" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="add" field="category" value="6cfb-e3ec-d110-80ae">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b541-3b22-08bb-d772" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d7d9-b723-6fdb-51cb" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ff93-966b-c16d-8149" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="065f-c64d-3eb7-79d2" type="equalTo"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </conditionGroup>
-          </conditionGroups>
+        <modifier type="add" field="category" value="624c-a3f1-ce3c-0169">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="6cfb-e3ec-d110-80ae" type="greaterThan"/>
+          </conditions>
         </modifier>
       </modifiers>
       <profiles>
@@ -4832,6 +4501,18 @@ In addition, add 1 to the Damage characteristic of this model’s Rune-etched Ax
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="35da-bf6f-ca4e-61f9" name="6 Raptoryx" hidden="false" collective="false" import="true" type="model">
+          <modifiers>
+            <modifier type="set" field="name" value="18 Raptoryx">
+              <conditions>
+                <condition field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0a8d-cde8-fba1-6c0d" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="name" value="12 Raptoryx">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0a8d-cde8-fba1-6c0d" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="96de-c30c-4cd1-c882" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c4b5-f62c-d411-8c7c" type="max"/>
@@ -4862,27 +4543,10 @@ In addition, add 1 to the Damage characteristic of this model’s Rune-etched Ax
     </selectionEntry>
     <selectionEntry id="ee9e-b8de-b25d-b6f1" name="Archaon the Everchosen" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
-        <modifier type="add" field="category" value="6cfb-e3ec-d110-80ae">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b541-3b22-08bb-d772" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d7d9-b723-6fdb-51cb" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ff93-966b-c16d-8149" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="065f-c64d-3eb7-79d2" type="equalTo"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </conditionGroup>
-          </conditionGroups>
+        <modifier type="add" field="category" value="624c-a3f1-ce3c-0169">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="6cfb-e3ec-d110-80ae" type="greaterThan"/>
+          </conditions>
         </modifier>
       </modifiers>
       <constraints>
@@ -5169,27 +4833,10 @@ In addition, add 1 to the Damage characteristic of this model’s Rune-etched Ax
             <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d322-fac6-4c50-2895" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="add" field="category" value="6cfb-e3ec-d110-80ae">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b541-3b22-08bb-d772" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d7d9-b723-6fdb-51cb" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ff93-966b-c16d-8149" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="065f-c64d-3eb7-79d2" type="equalTo"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </conditionGroup>
-          </conditionGroups>
+        <modifier type="add" field="category" value="624c-a3f1-ce3c-0169">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="6cfb-e3ec-d110-80ae" type="greaterThan"/>
+          </conditions>
         </modifier>
       </modifiers>
       <profiles>
@@ -5255,6 +4902,24 @@ In addition, add 1 to the Damage characteristic of this model’s Rune-etched Ax
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
+        </selectionEntry>
+        <selectionEntry id="45df-793c-0980-9d49" name="3 Varanguard" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="name" value="9 Varanguard">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0a8d-cde8-fba1-6c0d" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="name" value="6 Varanguard">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0a8d-cde8-fba1-6c0d" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="100b-c4ba-9fbd-a335" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="664f-568e-02e5-4609" type="max"/>
+          </constraints>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -5516,27 +5181,10 @@ In addition, add 1 to the Damage characteristic of this model’s Rune-etched Ax
     </selectionEntry>
     <selectionEntry id="e6c9-c984-cd6f-33e3" name="Chaos Lord on Karkadrak" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
-        <modifier type="add" field="category" value="6cfb-e3ec-d110-80ae">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b541-3b22-08bb-d772" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d7d9-b723-6fdb-51cb" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ff93-966b-c16d-8149" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="065f-c64d-3eb7-79d2" type="equalTo"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </conditionGroup>
-          </conditionGroups>
+        <modifier type="add" field="category" value="624c-a3f1-ce3c-0169">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="6cfb-e3ec-d110-80ae" type="greaterThan"/>
+          </conditions>
         </modifier>
       </modifiers>
       <profiles>
@@ -5708,27 +5356,10 @@ In addition, add 1 to the Damage characteristic of this model’s Rune-etched Ax
     </selectionEntry>
     <selectionEntry id="4647-1070-9de5-b23a" name="Ogroid Myrmidon" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
-        <modifier type="add" field="category" value="6cfb-e3ec-d110-80ae">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b541-3b22-08bb-d772" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d7d9-b723-6fdb-51cb" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ff93-966b-c16d-8149" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="065f-c64d-3eb7-79d2" type="equalTo"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </conditionGroup>
-          </conditionGroups>
+        <modifier type="add" field="category" value="624c-a3f1-ce3c-0169">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="6cfb-e3ec-d110-80ae" type="greaterThan"/>
+          </conditions>
         </modifier>
       </modifiers>
       <profiles>
@@ -5849,27 +5480,15 @@ In addition, add 1 to the Damage characteristic of this model’s Rune-etched Ax
             <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d26f-42aa-117f-6bc9" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="add" field="category" value="6cfb-e3ec-d110-80ae">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b541-3b22-08bb-d772" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d7d9-b723-6fdb-51cb" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ff93-966b-c16d-8149" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="065f-c64d-3eb7-79d2" type="equalTo"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </conditionGroup>
-          </conditionGroups>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="b541-3b22-08bb-d772" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="add" field="category" value="624c-a3f1-ce3c-0169">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="6cfb-e3ec-d110-80ae" type="greaterThan"/>
+          </conditions>
         </modifier>
       </modifiers>
       <constraints>
@@ -5956,27 +5575,15 @@ In addition, add 1 to the Damage characteristic of this model’s Rune-etched Ax
             <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e738-e1c8-30a0-ef8c" type="greaterThan"/>
           </conditions>
         </modifier>
-        <modifier type="add" field="category" value="6cfb-e3ec-d110-80ae">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b541-3b22-08bb-d772" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d7d9-b723-6fdb-51cb" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ff93-966b-c16d-8149" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="065f-c64d-3eb7-79d2" type="equalTo"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </conditionGroup>
-          </conditionGroups>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="b541-3b22-08bb-d772" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="add" field="category" value="624c-a3f1-ce3c-0169">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="6cfb-e3ec-d110-80ae" type="greaterThan"/>
+          </conditions>
         </modifier>
       </modifiers>
       <constraints>
@@ -6138,27 +5745,10 @@ In addition, add 1 to the Damage characteristic of this model’s Rune-etched Ax
     </selectionEntry>
     <selectionEntry id="93c9-fc5f-2ecd-8dab" name="Slaughterbrute" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
-        <modifier type="add" field="category" value="6cfb-e3ec-d110-80ae">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b541-3b22-08bb-d772" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d7d9-b723-6fdb-51cb" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ff93-966b-c16d-8149" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="065f-c64d-3eb7-79d2" type="equalTo"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </conditionGroup>
-          </conditionGroups>
+        <modifier type="add" field="category" value="624c-a3f1-ce3c-0169">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="6cfb-e3ec-d110-80ae" type="greaterThan"/>
+          </conditions>
         </modifier>
       </modifiers>
       <profiles>
@@ -6323,27 +5913,10 @@ In addition, add 1 to the Damage characteristic of this model’s Rune-etched Ax
     </selectionEntry>
     <selectionEntry id="b579-a729-5575-6c5f" name="Mutalith Vortex Beast" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
-        <modifier type="add" field="category" value="6cfb-e3ec-d110-80ae">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b541-3b22-08bb-d772" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d7d9-b723-6fdb-51cb" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ff93-966b-c16d-8149" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="065f-c64d-3eb7-79d2" type="equalTo"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </conditionGroup>
-          </conditionGroups>
+        <modifier type="add" field="category" value="624c-a3f1-ce3c-0169">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="6cfb-e3ec-d110-80ae" type="greaterThan"/>
+          </conditions>
         </modifier>
       </modifiers>
       <profiles>
@@ -6520,27 +6093,10 @@ In addition, add 1 to the Damage characteristic of this model’s Rune-etched Ax
             <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="675a-c9ab-ab82-cc4d" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="add" field="category" value="6cfb-e3ec-d110-80ae">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b541-3b22-08bb-d772" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d7d9-b723-6fdb-51cb" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ff93-966b-c16d-8149" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="065f-c64d-3eb7-79d2" type="equalTo"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </conditionGroup>
-          </conditionGroups>
+        <modifier type="add" field="category" value="624c-a3f1-ce3c-0169">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="6cfb-e3ec-d110-80ae" type="greaterThan"/>
+          </conditions>
         </modifier>
       </modifiers>
       <profiles>
@@ -6593,6 +6149,18 @@ In addition, add 1 to the Damage characteristic of this model’s Rune-etched Ax
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="1fd8-3eef-484e-9d0c" name="9 Spire Tyrants" hidden="false" collective="false" import="true" type="model">
+          <modifiers>
+            <modifier type="set" field="name" value="27 Spire Tyrants">
+              <conditions>
+                <condition field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0a8d-cde8-fba1-6c0d" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="name" value="18 Spire Tyrants">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0a8d-cde8-fba1-6c0d" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2b4e-d0ab-2597-1927" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2d70-1f08-1009-38be" type="max"/>
@@ -6623,27 +6191,10 @@ In addition, add 1 to the Damage characteristic of this model’s Rune-etched Ax
     </selectionEntry>
     <selectionEntry id="7cca-bdb5-aad8-f427" name="Mindstealer Sphiranx" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
-        <modifier type="add" field="category" value="6cfb-e3ec-d110-80ae">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b541-3b22-08bb-d772" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d7d9-b723-6fdb-51cb" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ff93-966b-c16d-8149" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="065f-c64d-3eb7-79d2" type="equalTo"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </conditionGroup>
-          </conditionGroups>
+        <modifier type="add" field="category" value="624c-a3f1-ce3c-0169">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="6cfb-e3ec-d110-80ae" type="greaterThan"/>
+          </conditions>
         </modifier>
       </modifiers>
       <profiles>
@@ -6731,27 +6282,10 @@ In addition, add 1 to the Damage characteristic of this model’s Rune-etched Ax
     </selectionEntry>
     <selectionEntry id="6610-2ae0-9201-1296" name="Fomoroid Crusher" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
-        <modifier type="add" field="category" value="6cfb-e3ec-d110-80ae">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b541-3b22-08bb-d772" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d7d9-b723-6fdb-51cb" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ff93-966b-c16d-8149" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="065f-c64d-3eb7-79d2" type="equalTo"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </conditionGroup>
-          </conditionGroups>
+        <modifier type="add" field="category" value="624c-a3f1-ce3c-0169">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="6cfb-e3ec-d110-80ae" type="greaterThan"/>
+          </conditions>
         </modifier>
       </modifiers>
       <profiles>
@@ -7210,27 +6744,10 @@ In addition, add 1 to the Damage characteristic of this model’s Rune-etched Ax
             <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="675a-c9ab-ab82-cc4d" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="add" field="category" value="6cfb-e3ec-d110-80ae">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b541-3b22-08bb-d772" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d7d9-b723-6fdb-51cb" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ff93-966b-c16d-8149" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="065f-c64d-3eb7-79d2" type="equalTo"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </conditionGroup>
-          </conditionGroups>
+        <modifier type="add" field="category" value="624c-a3f1-ce3c-0169">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="6cfb-e3ec-d110-80ae" type="greaterThan"/>
+          </conditions>
         </modifier>
       </modifiers>
       <constraints>
@@ -7666,27 +7183,10 @@ In addition, add 1 to the Damage characteristic of this model’s Rune-etched Ax
             <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="675a-c9ab-ab82-cc4d" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="add" field="category" value="6cfb-e3ec-d110-80ae">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b541-3b22-08bb-d772" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d7d9-b723-6fdb-51cb" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ff93-966b-c16d-8149" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="065f-c64d-3eb7-79d2" type="equalTo"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </conditionGroup>
-          </conditionGroups>
+        <modifier type="add" field="category" value="624c-a3f1-ce3c-0169">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="6cfb-e3ec-d110-80ae" type="greaterThan"/>
+          </conditions>
         </modifier>
       </modifiers>
       <constraints>
@@ -8161,27 +7661,10 @@ In addition, add 1 to the Damage characteristic of this model’s Rune-etched Ax
             <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="675a-c9ab-ab82-cc4d" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="add" field="category" value="6cfb-e3ec-d110-80ae">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b541-3b22-08bb-d772" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d7d9-b723-6fdb-51cb" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ff93-966b-c16d-8149" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="065f-c64d-3eb7-79d2" type="equalTo"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </conditionGroup>
-          </conditionGroups>
+        <modifier type="add" field="category" value="624c-a3f1-ce3c-0169">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="6cfb-e3ec-d110-80ae" type="greaterThan"/>
+          </conditions>
         </modifier>
       </modifiers>
       <profiles>
@@ -8314,27 +7797,10 @@ In addition, add 1 to the Damage characteristic of this model’s Rune-etched Ax
             <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="675a-c9ab-ab82-cc4d" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="add" field="category" value="6cfb-e3ec-d110-80ae">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b541-3b22-08bb-d772" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d7d9-b723-6fdb-51cb" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ff93-966b-c16d-8149" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="065f-c64d-3eb7-79d2" type="equalTo"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </conditionGroup>
-          </conditionGroups>
+        <modifier type="add" field="category" value="624c-a3f1-ce3c-0169">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="6cfb-e3ec-d110-80ae" type="greaterThan"/>
+          </conditions>
         </modifier>
       </modifiers>
       <profiles>
@@ -8426,6 +7892,18 @@ In addition, add 1 to the Damage characteristic of this model’s Rune-etched Ax
           </costs>
         </selectionEntry>
         <selectionEntry id="ed2b-3f95-e47e-3a04" name="8 Scions of the Flame" hidden="false" collective="false" import="true" type="model">
+          <modifiers>
+            <modifier type="set" field="name" value="16 Scions of the Flame">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0a8d-cde8-fba1-6c0d" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="name" value="24 Scions of the Flame">
+              <conditions>
+                <condition field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0a8d-cde8-fba1-6c0d" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="64d5-fbf2-fb8e-db0f" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f034-778f-0e95-4962" type="max"/>
@@ -8456,27 +7934,15 @@ In addition, add 1 to the Damage characteristic of this model’s Rune-etched Ax
     </selectionEntry>
     <selectionEntry id="c1f0-37b0-e9dd-d203" name="Gaunt Summoner on Disc of Tzeentch" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
-        <modifier type="add" field="category" value="6cfb-e3ec-d110-80ae">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b541-3b22-08bb-d772" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d7d9-b723-6fdb-51cb" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ff93-966b-c16d-8149" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="065f-c64d-3eb7-79d2" type="equalTo"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </conditionGroup>
-          </conditionGroups>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="b541-3b22-08bb-d772" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="add" field="category" value="624c-a3f1-ce3c-0169">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="6cfb-e3ec-d110-80ae" type="greaterThan"/>
+          </conditions>
         </modifier>
       </modifiers>
       <profiles>
@@ -8628,6 +8094,84 @@ Choose 1 unit from the following list:
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="230.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="7638-d11c-8f73-264d" name="Coalition" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="7694-8e84-eabd-8a16" value="1.0">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7694-8e84-eabd-8a16" type="min"/>
+      </constraints>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="8e76-0176-a8af-e5c4" name="Coalition" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8672-2ce0-a06a-52d7" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b98a-1e90-b98f-40cc" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="fead-263a-38bb-6d2d" name="Khorne" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b541-3b22-08bb-d772" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="e8fd-813a-7afc-c6a2" name="Nurgle" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ff93-966b-c16d-8149" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="be66-c299-0a54-aab7" name="Slaanesh" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d7d9-b723-6fdb-51cb" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="8edd-3aed-8a53-38c3" name="Tzeentch" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="065f-c64d-3eb7-79d2" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>
