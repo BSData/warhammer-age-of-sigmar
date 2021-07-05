@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="86" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="87" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <publications>
     <publication id="e51d-b1a3-pubEC" name="The General&apos;s Handbook"/>
     <publication id="e51d-b1a3-pubEQ" name="Core Rules"/>
@@ -2146,9 +2146,9 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
     </selectionEntry>
     <selectionEntry id="be2d-ba53-4ebc-f035" name="Core Battalion: Grand Battery" hidden="false" collective="false" import="true" type="upgrade">
       <profiles>
-        <profile id="4f5f-16f7-b751-40d0" name="Scent Tracking" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
+        <profile id="4f5f-16f7-b751-40d0" name="Slayers" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
           <characteristics>
-            <characteristic name="Battalion Ability Details" typeId="08e0-9ead-1dbe-c801">After armies have been set up but before the first battle round begins,  you can make a normal move of up to D6&quot; with each unit in this battalion.</characteristic>
+            <characteristic name="Battalion Ability Details" typeId="08e0-9ead-1dbe-c801">Once per battle, 1 unit from this battalion can receive the All-out Attack or Unleash Hell command without the command being issued and without a command point being spent.</characteristic>
           </characteristics>
         </profile>
         <profile id="4722-dddc-3192-37b5" name="Core Battalion: Grand Battery" hidden="false" typeId="75e0-a332-e4f5-bf36" typeName="Battalion Organisation">
