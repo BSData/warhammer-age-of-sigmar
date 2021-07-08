@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="87" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="88" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <publications>
     <publication id="e51d-b1a3-pubEC" name="The General&apos;s Handbook"/>
     <publication id="e51d-b1a3-pubEQ" name="Core Rules"/>
@@ -1514,7 +1514,7 @@ At the start of the hero phase, if there is a friendly WIZARD within 6&quot; of 
         </profile>
         <profile id="227e-905e-a8a2-360c" name="Soul Price" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Before the commanding player moves this endless spell, they can pick 1 friendly WIZARD wholly within 3&quot; of this endless spell. Remove that WIZARD from the battlefield. After this endless spell has moved, set that WIZARD up again wholly within 3&quot; of this endless spell and more than 9&quot; away from all enemy units. After that WIZARD has been set up, it suffers 1 mortal wound. That WIZARD canont make a normal move or run in the following movement phase.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Before the commanding player moves this endless spell, they can pick 1 friendly WIZARD wholly within 3&quot; of this endless spell. Remove that WIZARD from the battlefield. After this endless spell has moved, set that WIZARD up again wholly within 3&quot; of this endless spell and more than 9&quot; away from all enemy units. After that WIZARD has been set up, it suffers 1 mortal wound. That WIZARD cannot make a normal move or run in the following movement phase.</characteristic>
           </characteristics>
         </profile>
         <profile id="bcbf-2a21-bf34-e39c" name="Predatory" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
