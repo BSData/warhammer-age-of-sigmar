@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="90" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="91" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <publications>
     <publication id="e51d-b1a3-pubEC" name="The General&apos;s Handbook"/>
     <publication id="e51d-b1a3-pubEQ" name="Core Rules"/>
@@ -1272,7 +1272,14 @@
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="268a-c131-4914-7087" name="Realm of Origin" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="268a-c131-4914-7087" name="Realm of Origin" hidden="true" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f5c9-2d9a-2ffb-edd5" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8609-fea1-53ce-d735" type="max"/>
       </constraints>
@@ -2346,6 +2353,9 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
       <entryLinks>
         <entryLink id="fd66-3493-0404-02ef" name="Triumphs" hidden="false" collective="false" import="true" targetId="055f-7077-c87d-f9a8" type="selectionEntryGroup"/>
       </entryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
@@ -2370,7 +2380,7 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
         <entryLink id="5e7a-a472-6882-6005" name="Relics of Ulgu" hidden="false" collective="false" import="true" targetId="158b-c95d-0272-ca62" type="selectionEntryGroup"/>
       </entryLinks>
     </selectionEntryGroup>
-    <selectionEntryGroup id="0d51-8ed8-dcf5-76a0" name="Realm of Origin" hidden="true" collective="false" import="true">
+    <selectionEntryGroup id="0d51-8ed8-dcf5-76a0" name="Realm of Origin" hidden="false" collective="false" import="true">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f8f1-eb73-a419-b92e" type="max"/>
         <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0476-58c6-f5ef-f2f3" type="min"/>
@@ -2828,6 +2838,13 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
       </constraints>
       <selectionEntries>
         <selectionEntry id="ba2b-ec63-fa08-88ef" name="Battle: Aqshy" hidden="true" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f5c9-2d9a-2ffb-edd5" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <profiles>
             <profile id="dbea-58cc-3513-1868" name="Stoke Rage" publicationId="e51d-b1a3-pubEKHGM" page="75" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
@@ -2889,6 +2906,13 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
           </costs>
         </selectionEntry>
         <selectionEntry id="ed53-d347-e94c-2431" name="Battle: Chamon" hidden="true" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f5c9-2d9a-2ffb-edd5" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <profiles>
             <profile id="2c42-d061-a087-9527" name="Rain of Lead" publicationId="e51d-b1a3-pubEHOGM" page="74" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
@@ -2979,6 +3003,13 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
           </costs>
         </selectionEntry>
         <selectionEntry id="286a-bfe7-f725-ca75" name="Battle: Ghyran" hidden="true" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f5c9-2d9a-2ffb-edd5" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <profiles>
             <profile id="bf34-4284-e813-d06a" name="Whipvines" publicationId="e51d-b1a3-pubEKHGM" page="72" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
@@ -3040,6 +3071,13 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
           </costs>
         </selectionEntry>
         <selectionEntry id="632b-73ed-9385-2491" name="Battle: Hysh" hidden="true" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f5c9-2d9a-2ffb-edd5" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <profiles>
             <profile id="6a62-fd42-aa4d-5e6a" name="Exorcising Beam" publicationId="e51d-b1a3-pubEKHGM" page="78" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
@@ -3101,6 +3139,13 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
           </costs>
         </selectionEntry>
         <selectionEntry id="098f-0986-2570-bece" name="Battle: Shyish" hidden="true" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f5c9-2d9a-2ffb-edd5" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <profiles>
             <profile id="6e51-da62-4ca8-04ad" name="Word of Ending" publicationId="e51d-b1a3-pubEKHGM" page="76" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
@@ -3162,6 +3207,13 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
           </costs>
         </selectionEntry>
         <selectionEntry id="3923-b6b9-c500-1062" name="Battle: Ulgu" hidden="true" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f5c9-2d9a-2ffb-edd5" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <profiles>
             <profile id="7b58-9346-d870-903a" name="Labyrinth of Sorrows" publicationId="e51d-b1a3-pubEKHGM" page="77" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
               <characteristics>
@@ -3223,6 +3275,13 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
           </costs>
         </selectionEntry>
         <selectionEntry id="e236-f0fc-8bb0-ecb4" name="Battle: The Eightpoints" hidden="true" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f5c9-2d9a-2ffb-edd5" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <profiles>
             <profile id="3c29-7e19-781b-def8" name="Forced by the Aether" page="" hidden="false" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
               <characteristics>
@@ -4336,6 +4395,9 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
           <categoryLinks>
             <categoryLink id="8830-8530-d4f5-53aa" name="Triumph" hidden="false" targetId="b012-0d6d-2b38-b47c" primary="false"/>
           </categoryLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="32c4-0dbc-cf50-e74f" name="Inspired" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -4351,6 +4413,9 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
           <categoryLinks>
             <categoryLink id="47cc-2a13-4589-8fa5" name="Triumph" hidden="false" targetId="b012-0d6d-2b38-b47c" primary="false"/>
           </categoryLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="83d4-d086-8723-05cc" name="Indomitable" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -4366,6 +4431,9 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
           <categoryLinks>
             <categoryLink id="3cb9-3ffb-3c64-444f" name="Triumph" hidden="false" targetId="b012-0d6d-2b38-b47c" primary="false"/>
           </categoryLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
