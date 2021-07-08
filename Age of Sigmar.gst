@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="91" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="92" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <publications>
     <publication id="e51d-b1a3-pubEC" name="The General&apos;s Handbook"/>
     <publication id="e51d-b1a3-pubEQ" name="Core Rules"/>
@@ -1124,7 +1124,7 @@
   <entryLinks>
     <entryLink id="1a07-20e9-829c-2f2a" name="Realm of Origin" hidden="false" collective="false" import="true" targetId="268a-c131-4914-7087" type="selectionEntry">
       <categoryLinks>
-        <categoryLink id="c10b-5319-ef5d-0259" name="New CategoryLink" hidden="false" targetId="5c6d-5384-bcb1-b474" primary="true"/>
+        <categoryLink id="4720-afd0-c321-6466" name="New CategoryLink" hidden="false" targetId="1974-3f49-7f0b-8422" primary="true"/>
       </categoryLinks>
     </entryLink>
     <entryLink id="e12e-ffc5-6892-4795" name="Game Type" hidden="false" collective="false" import="true" targetId="a741-5681-7572-fa32" type="selectionEntry">
@@ -1134,7 +1134,7 @@
     </entryLink>
     <entryLink id="e116-d465-3e8e-864c" name="Realm of Battle" hidden="false" collective="false" import="true" targetId="35ce-f528-13ad-8cea" type="selectionEntry">
       <categoryLinks>
-        <categoryLink id="5552-cffb-c874-4e24" name="Realm of Battle" hidden="false" targetId="5e28-c4f1-4a92-b75c" primary="true"/>
+        <categoryLink id="4557-d2de-075e-8191" name="New CategoryLink" hidden="false" targetId="1974-3f49-7f0b-8422" primary="true"/>
       </categoryLinks>
     </entryLink>
     <entryLink id="28b7-9a3f-0f7b-c498" name="Endless Spell: Aethervoid Pendulum" hidden="false" collective="false" import="true" targetId="98c8-838b-2c8a-a9f7" type="selectionEntry">
