@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="89" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="90" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <publications>
     <publication id="e51d-b1a3-pubEC" name="The General&apos;s Handbook"/>
     <publication id="e51d-b1a3-pubEQ" name="Core Rules"/>
@@ -110,6 +110,11 @@
     <profileType id="6bf0-7801-561f-cc28" name="Special Rules">
       <characteristicTypes>
         <characteristicType id="82bd-2ffd-8589-576c" name="Description"/>
+      </characteristicTypes>
+    </profileType>
+    <profileType id="189e-e41d-0790-edc6" name="Triumph">
+      <characteristicTypes>
+        <characteristicType id="4484-dc59-92ec-5607" name="Description"/>
       </characteristicTypes>
     </profileType>
   </profileTypes>
@@ -265,6 +270,18 @@
     <categoryEntry id="787f-7260-bb51-08c8" name="Legends" hidden="false"/>
     <categoryEntry id="fa69-cc30-064b-f0ce" name="Allegiance KO" hidden="true"/>
     <categoryEntry id="7eab-14e8-d1c1-0117" name="Zainthar Kai" hidden="false"/>
+    <categoryEntry id="b012-0d6d-2b38-b47c" name="Triumph" hidden="false">
+      <modifiers>
+        <modifier type="increment" field="dabf-0d1e-7a5f-5e7b" value="1.0">
+          <repeats>
+            <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4f32-1179-8b4c-61e0" repeats="1" roundUp="false"/>
+          </repeats>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="dabf-0d1e-7a5f-5e7b" type="max"/>
+      </constraints>
+    </categoryEntry>
   </categoryEntries>
   <forceEntries>
     <forceEntry id="36b7-ee1e-0855-f23f" name="**Pitched Battle**" hidden="false">
@@ -1050,7 +1067,7 @@
     </forceEntry>
   </forceEntries>
   <selectionEntries>
-    <selectionEntry id="19fe-0099-8319-6fdf" name="Points Variation" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="19fe-0099-8319-6fdf" name="Points Variation" hidden="true" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="79ec-1682-d07c-0d5a" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="21a4-6280-03cc-4ccf" type="max"/>
@@ -1228,6 +1245,7 @@
         <categoryLink id="e864-b552-811d-240f" name="New CategoryLink" hidden="false" targetId="1974-3f49-7f0b-8422" primary="true"/>
       </categoryLinks>
     </entryLink>
+    <entryLink id="8da1-0246-3653-3c8c" name="Triumphs" hidden="false" collective="false" import="true" targetId="472e-6c0c-b6d5-b996" type="selectionEntry"/>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="869c-168d-eba5-eacf" name="Arcane Bolt" hidden="false" collective="false" import="true" type="upgrade">
@@ -2316,6 +2334,18 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
+    </selectionEntry>
+    <selectionEntry id="472e-6c0c-b6d5-b996" name="Triumphs" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3ea4-97c0-1e64-99ce" type="max"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="60bc-acfe-7796-bbcd" type="max"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink id="d4d9-de97-fa8c-b9c9" name="New CategoryLink" hidden="false" targetId="1974-3f49-7f0b-8422" primary="true"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="fd66-3493-0404-02ef" name="Triumphs" hidden="false" collective="false" import="true" targetId="055f-7077-c87d-f9a8" type="selectionEntryGroup"/>
+      </entryLinks>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
@@ -4279,6 +4309,63 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="055f-7077-c87d-f9a8" name="Triumphs" hidden="false" collective="false" import="true">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e5a4-883e-e670-08b8" type="max"/>
+      </constraints>
+      <entryLinks>
+        <entryLink id="e1b7-dfb6-e19d-05d9" name="Universal Triumphs" hidden="false" collective="false" import="true" targetId="5505-967d-b387-7aed" type="selectionEntryGroup"/>
+      </entryLinks>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="5505-967d-b387-7aed" name="Universal Triumphs" hidden="false" collective="false" import="true">
+      <selectionEntries>
+        <selectionEntry id="a4f2-e0c0-0226-720d" name="Bloodthirsty" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3b76-7c43-219e-20e0" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="5d52-a7b4-5081-1cfc" name="Bloodthirsty" hidden="false" typeId="189e-e41d-0790-edc6" typeName="Triumph">
+              <characteristics>
+                <characteristic name="Description" typeId="4484-dc59-92ec-5607">Once per battle, after you make a charge roll for a friendly unit, you can say that it is bloodthirsty. If you do so, you can re-roll that charge roll.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <categoryLinks>
+            <categoryLink id="8830-8530-d4f5-53aa" name="Triumph" hidden="false" targetId="b012-0d6d-2b38-b47c" primary="false"/>
+          </categoryLinks>
+        </selectionEntry>
+        <selectionEntry id="32c4-0dbc-cf50-e74f" name="Inspired" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="257a-91f1-70f7-6aa0" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="c0e5-11ba-e789-0942" name="Inspired" hidden="false" typeId="189e-e41d-0790-edc6" typeName="Triumph">
+              <characteristics>
+                <characteristic name="Description" typeId="4484-dc59-92ec-5607">Once per battle, after you pick a friendly unit to shoot or fight, you can say that it is inspired. If you do so, add 1 to wound rolls for attacks made by that unit until the end of that phase.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <categoryLinks>
+            <categoryLink id="47cc-2a13-4589-8fa5" name="Triumph" hidden="false" targetId="b012-0d6d-2b38-b47c" primary="false"/>
+          </categoryLinks>
+        </selectionEntry>
+        <selectionEntry id="83d4-d086-8723-05cc" name="Indomitable" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1d82-7f3b-3757-cbca" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="e1ab-64e4-d951-1e2a" name="Indomitable" hidden="false" typeId="189e-e41d-0790-edc6" typeName="Triumph">
+              <characteristics>
+                <characteristic name="Description" typeId="4484-dc59-92ec-5607">Once per battle, after you take a battleshock test for a friendly unit, you can say it is indomitable. If you do so, no models from that unit will flee in that battleshock phase.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <categoryLinks>
+            <categoryLink id="3cb9-3ffb-3c64-444f" name="Triumph" hidden="false" targetId="b012-0d6d-2b38-b47c" primary="false"/>
+          </categoryLinks>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
