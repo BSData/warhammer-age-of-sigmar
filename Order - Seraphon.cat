@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="3721-70d4-3f5f-4609" name="Order - Seraphon" revision="79" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="87" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="3721-70d4-3f5f-4609" name="Order - Seraphon" revision="80" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="87" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <readme>To some they are the uncompromising, unfeeling vengeance of the heavens. To others they are a race of bloodthirsty reptilian monsters marching forth from the steaming jungles to bring death to those who would intrude upon their sacred grounds. Yet the Seraphon are both these things, and more besides. They are the true children of Azyr, filled with the light of the stars, and they fight to enact a cosmic plan that spans all of creation.
 
 To create a Seraphon force, first choose your allegiance. If you choose to align with the Seraphon, then choose your force type and constellation. These effect your unit choices and available relics of power.</readme>
@@ -2014,6 +2014,13 @@ Any reserve units that are in hiding and not on the battlefield at the start of 
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="abbb-df05-3775-5f6e" name="Hunting Pack" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="name" value="2 Hunting Packs">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0a8d-cde8-fba1-6c0d" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5e4b-5dbc-a612-505e" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="13da-3f23-c353-3cf5" type="max"/>
@@ -2538,14 +2545,15 @@ Any reserve units that are in hiding and not on the battlefield at the start of 
         </selectionEntry>
         <selectionEntry id="2206-c598-9420-2fd6" name="Moon Hammer" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
-            <modifier type="increment" field="f571-ff22-9f47-cbb3" value="1.0">
-              <repeats>
-                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-              </repeats>
+            <modifier type="set" field="f571-ff22-9f47-cbb3" value="2.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0a8d-cde8-fba1-6c0d" type="equalTo"/>
+              </conditions>
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f571-ff22-9f47-cbb3" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f571-ff22-9f47-cbb3" type="max"/>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="24e1-d704-930e-d618" type="min"/>
           </constraints>
           <profiles>
             <profile id="4e7e-4a03-916b-ed89" name="Moon Hammer" publicationId="3721-70d4-pubN65537" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
