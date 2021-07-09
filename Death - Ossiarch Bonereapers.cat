@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="b3c2-9aff-8664-1d07" name="Death - Ossiarch Bonereapers" revision="31" battleScribeVersion="2.03" authorName="TigerWraith" authorContact="TigerWraith#5618 on Discord" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="88" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="b3c2-9aff-8664-1d07" name="Death - Ossiarch Bonereapers" revision="32" battleScribeVersion="2.03" authorName="TigerWraith" authorContact="TigerWraith#5618 on Discord" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="92" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="cb62-7d89-9fa6-76ad" name="Battletome: Ossiarch Bonereapers"/>
   </publications>
@@ -613,6 +613,9 @@ In addition, you cannot use the Expert, Slayers, Strategists or Swift battalion 
           </characteristics>
         </profile>
       </profiles>
+      <categoryLinks>
+        <categoryLink id="0b7c-eb01-44c1-9941" name="Allegiance OBR" hidden="false" targetId="f40d-1d71-6120-3cd1" primary="false"/>
+      </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="72ce-0fd2-4d5e-b414" name="Legion" hidden="false" collective="false" import="true">
           <constraints>
@@ -1014,12 +1017,17 @@ Punishment of Lethargy: Pick 1 enemy unit wholly within 18&quot; of this terrain
         <entryLink id="71a2-2399-8b08-ea12" name="Command Traits" hidden="false" collective="false" import="true" targetId="3bb4-6aaa-4a0e-f67b" type="selectionEntryGroup"/>
         <entryLink id="77d4-572e-88d3-aa71" name="Artefacts" hidden="false" collective="false" import="true" targetId="196e-6964-efa8-8d05" type="selectionEntryGroup"/>
         <entryLink id="8893-3d4d-289e-3b7d" name="Battalions" hidden="false" collective="false" import="true" targetId="4baa-4d7c-a4a3-3939" type="selectionEntryGroup"/>
-        <entryLink id="1452-f49d-1c76-0b14" name="Spell Lores" hidden="false" collective="false" import="true" targetId="27ff-6862-cc17-b275" type="selectionEntryGroup">
+        <entryLink id="1452-f49d-1c76-0b14" name="Spell Lores" hidden="true" collective="false" import="true" targetId="27ff-6862-cc17-b275" type="selectionEntryGroup">
           <modifiers>
             <modifier type="set" field="hidden" value="false">
-              <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9918-5a46-2468-35e2" type="equalTo"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9918-5a46-2468-35e2" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8f61-71e7-a58a-3216" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
         </entryLink>
@@ -3148,7 +3156,7 @@ You can roll D3 additional dice when this LIEGE uses their Unstoppable Charge ab
       <entryLinks>
         <entryLink id="97c8-b896-ee33-8907" name="Arcane Bolt" hidden="false" collective="false" import="true" targetId="869c-168d-eba5-eacf" type="selectionEntry"/>
         <entryLink id="cf95-0a11-7be7-5915" name="General" hidden="false" collective="false" import="true" targetId="5422-78b3-c57b-5f40" type="selectionEntry"/>
-        <entryLink id="5b94-bac3-f55c-2a86" name="Lore of the Mortisans" hidden="false" collective="false" import="true" targetId="4dc8-30c8-8840-a6ed" type="selectionEntryGroup"/>
+        <entryLink id="5b94-bac3-f55c-2a86" name="Spell Lores" hidden="false" collective="false" import="true" targetId="27ff-6862-cc17-b275" type="selectionEntryGroup"/>
         <entryLink id="4074-cdd1-76c5-b824" name="Battalions" hidden="false" collective="false" import="true" targetId="4baa-4d7c-a4a3-3939" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
@@ -3400,9 +3408,6 @@ You can roll D3 additional dice when this LIEGE uses their Unstoppable Charge ab
               </characteristics>
             </profile>
           </profiles>
-          <entryLinks>
-            <entryLink id="09b4-6255-c6e0-bc9d" name="Lore of the Mortisans" hidden="false" collective="false" import="true" targetId="4dc8-30c8-8840-a6ed" type="selectionEntryGroup"/>
-          </entryLinks>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
@@ -3810,76 +3815,6 @@ You can roll D3 additional dice when this LIEGE uses their Unstoppable Charge ab
               </characteristics>
             </profile>
           </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-    </selectionEntryGroup>
-    <selectionEntryGroup id="4dc8-30c8-8840-a6ed" name="Lore of the Mortisans" hidden="false" collective="false" import="true">
-      <selectionEntries>
-        <selectionEntry id="1b1a-3b3d-8dd5-887e" name="1. Arcane Command" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dd33-ad90-9c0d-66de" type="max"/>
-          </constraints>
-          <infoLinks>
-            <infoLink id="2003-2ebe-b775-e148" name="Arcane Command" hidden="false" targetId="c9b5-fb8b-d658-18b9" type="profile"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="ea10-0025-3481-4ccd" name="2. Empower Nadirite Weapons" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f5de-c31a-5108-c56a" type="max"/>
-          </constraints>
-          <infoLinks>
-            <infoLink id="6f16-d336-2314-f692" name="Empower Nadirite Weapons" hidden="false" targetId="5836-86f3-e447-30d0" type="profile"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="8219-bcec-fa9b-d013" name="3. Protection of Nagash" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f614-f9b5-26dd-2a98" type="max"/>
-          </constraints>
-          <infoLinks>
-            <infoLink id="f9bb-2f15-7162-6baf" name="Protection of Nagash" hidden="false" targetId="957f-d96d-fa7d-29ce" type="profile"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="d7a4-c463-b1d8-4492" name="4. Reinforce Battle-shields" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9ca0-5ecc-9077-fb41" type="max"/>
-          </constraints>
-          <infoLinks>
-            <infoLink id="07e7-71b3-7f08-d200" name="Reinforce Battle-shields" hidden="false" targetId="8ecf-2c24-01f4-91a8" type="profile"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="7794-4be6-1cfd-10a5" name="5. Drain Vitality" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9d77-79b4-9089-8a74" type="max"/>
-          </constraints>
-          <infoLinks>
-            <infoLink id="c162-04ee-9137-dc89" name="Drain Vitality" hidden="false" targetId="fbd9-a008-0497-d584" type="profile"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="c1c0-840b-550e-395b" name="6. Mortal Contract" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="41d4-226b-d553-8335" type="max"/>
-          </constraints>
-          <infoLinks>
-            <infoLink id="5928-9946-650c-2b96" name="Mortal Contract" hidden="false" targetId="3ff6-a32d-e21e-db9b" type="profile"/>
-          </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
@@ -4447,7 +4382,15 @@ You can roll D3 additional dice when this LIEGE uses their Unstoppable Charge ab
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="64ae-87cf-2c5b-860f" type="max"/>
       </constraints>
       <entryLinks>
-        <entryLink id="8889-e1e6-6f49-9dbb" name="Lore of the Mortisans" hidden="false" collective="false" import="true" targetId="4dc8-30c8-8840-a6ed" type="selectionEntryGroup"/>
+        <entryLink id="8889-e1e6-6f49-9dbb" name="Lore of the Mortisans" hidden="false" collective="false" import="true" targetId="c763-66aa-4380-db56" type="selectionEntryGroup">
+          <modifiers>
+            <modifier type="set" field="e936-d432-f2ef-a78f" value="1.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8f61-71e7-a58a-3216" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
         <entryLink id="b93d-bfde-24e2-545b" name="Universal Spell Lore" hidden="false" collective="false" import="true" targetId="20c3-23a0-9d79-b491" type="selectionEntryGroup"/>
       </entryLinks>
     </selectionEntryGroup>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="e37a-2f18-f168-6ed3" name="Death Data" revision="59" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="87" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="e37a-2f18-f168-6ed3" name="Death Data" revision="60" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="92" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="e320-d5ec-pubN65537" name="Battletome: Legions of Nagash and Battletome: Nighthaunt"/>
     <publication id="e320-d5ec-pubN65555" name="Battletome: Nighthaunt"/>
@@ -192,6 +192,7 @@
     <categoryEntry id="3c81-0b3b-f9c2-6346" name="LADY ANNIKA" hidden="false"/>
     <categoryEntry id="cd56-03d7-5677-9610" name="KRITZA" hidden="false"/>
     <categoryEntry id="fc63-23ce-ef98-c993" name="RADUKAR THE BEAST" hidden="false"/>
+    <categoryEntry id="f40d-1d71-6120-3cd1" name="Allegiance OBR" hidden="false"/>
   </categoryEntries>
   <sharedSelectionEntries>
     <selectionEntry id="7f4c-7d4b-6b8e-575b" name="Allegiance" hidden="false" collective="false" import="true" type="upgrade">
@@ -467,6 +468,7 @@
           </categoryLinks>
         </entryLink>
         <entryLink id="8b63-21f2-8e1e-5cbb" name="Battalions" hidden="false" collective="false" import="true" targetId="9df7-269b-fa20-74b2" type="selectionEntryGroup"/>
+        <entryLink id="6365-d6cf-4b53-8728" name="Spell Lores" hidden="false" collective="false" import="true" targetId="8417-93fc-9562-a748" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="360.0"/>
@@ -10541,7 +10543,6 @@ If the enemy had a Wounds characteristic of 2 or less:
       </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5bdb-45f2-1aef-6a82" type="max"/>
-        <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9fda-b772-7ba8-b4a4" type="min"/>
       </constraints>
       <infoLinks>
         <infoLink id="bb7b-9894-5c0d-f408" name="Endless Legions" hidden="false" targetId="327f-b655-f2de-3d3b" type="profile"/>
@@ -10649,7 +10650,7 @@ If the enemy had a Wounds characteristic of 2 or less:
             </modifier>
           </modifiers>
         </entryLink>
-        <entryLink id="0aa8-97e5-4f79-c8d6" name="Weapons of the Damned (Nighthaunt)" hidden="false" collective="false" import="true" targetId="93e1-80cd-e655-89d4" type="selectionEntryGroup">
+        <entryLink id="0aa8-97e5-4f79-c8d6" name="Artefacts: Weapons of the Damned" hidden="false" collective="false" import="true" targetId="93e1-80cd-e655-89d4" type="selectionEntryGroup">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
@@ -11161,12 +11162,12 @@ If the enemy had a Wounds characteristic of 2 or less:
     </selectionEntryGroup>
     <selectionEntryGroup id="8417-93fc-9562-a748" name="Spell Lores" hidden="false" collective="false" import="true">
       <modifiers>
-        <modifier type="set" field="0de4-62df-c1e8-cd50" value="3.0">
+        <modifier type="set" field="0de4-62df-c1e8-cd50" value="12.0">
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
                 <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7c0c-91b9-f052-24af" type="instanceOf"/>
-                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0758-0294-87aa-6054" type="greaterThan"/>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b72d-5ec7-bade-32e1" type="greaterThan"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -11186,6 +11187,23 @@ If the enemy had a Wounds characteristic of 2 or less:
             <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bdb0-7f20-53ff-f804" repeats="1" roundUp="false"/>
           </repeats>
         </modifier>
+        <modifier type="set" field="0de4-62df-c1e8-cd50" value="6.0">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f40d-1d71-6120-3cd1" type="greaterThan"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="00de-c50d-33b4-216e" type="instanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7c0c-91b9-f052-24af" type="instanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0de4-62df-c1e8-cd50" type="max"/>
@@ -11196,6 +11214,7 @@ If the enemy had a Wounds characteristic of 2 or less:
         <entryLink id="5e7c-ea70-5f5d-dfa6" name="Lore of the Deathmages" hidden="false" collective="false" import="true" targetId="17ec-0f53-8531-15b5" type="selectionEntryGroup"/>
         <entryLink id="791c-c6f7-aef6-76cd" name="Lore of the Vampires" hidden="false" collective="false" import="true" targetId="25a7-5ed4-85ee-938e" type="selectionEntryGroup"/>
         <entryLink id="942e-1c2b-ab67-3511" name="Universal Spell Lore" hidden="false" collective="false" import="true" targetId="20c3-23a0-9d79-b491" type="selectionEntryGroup"/>
+        <entryLink id="ed48-9a97-167d-e918" name="Lore of the Mortisans" hidden="false" collective="false" import="true" targetId="c763-66aa-4380-db56" type="selectionEntryGroup"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="21e2-bff5-c2ea-755f" name="Artefacts: Soulblight" hidden="false" collective="false" import="true">
@@ -12584,25 +12603,32 @@ If the bearer snuffs out the corpse candle in the combat phase, pick the bearer 
         <entryLink id="9959-4a64-02b8-c893" name="3. Balefire Blade" hidden="false" collective="false" import="true" targetId="afc8-8d6f-3a5e-ccea" type="selectionEntry"/>
       </entryLinks>
     </selectionEntryGroup>
-    <selectionEntryGroup id="17ec-0f53-8531-15b5" name="Lore of the Deathmages" publicationId="7a08-6611-3750-6469" page="85" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="17ec-0f53-8531-15b5" name="Lore of the Deathmages" publicationId="7a08-6611-3750-6469" page="85" hidden="true" collective="false" import="true">
       <modifiers>
-        <modifier type="set" field="hidden" value="true">
+        <modifier type="set" field="hidden" value="false">
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9b9d-ac6f-768a-123f" type="notInstanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a30c-a3cc-8d16-7290" type="notInstanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="75f5-9da1-acc8-eb33" type="notInstanceOf"/>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b72d-5ec7-bade-32e1" type="greaterThan"/>
               </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="75f5-9da1-acc8-eb33" type="instanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a30c-a3cc-8d16-7290" type="instanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9b9d-ac6f-768a-123f" type="instanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </conditionGroup>
           </conditionGroups>
         </modifier>
-        <modifier type="set" field="83a4-6b62-91f2-2ce0" value="3.0">
+        <modifier type="set" field="83a4-6b62-91f2-2ce0" value="6.0">
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
                 <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7c0c-91b9-f052-24af" type="instanceOf"/>
-                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0758-0294-87aa-6054" type="greaterThan"/>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b72d-5ec7-bade-32e1" type="greaterThan"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -12716,24 +12742,31 @@ If the bearer snuffs out the corpse candle in the combat phase, pick the bearer 
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
-    <selectionEntryGroup id="25a7-5ed4-85ee-938e" name="Lore of the Vampires" publicationId="7a08-6611-3750-6469" page="84" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="25a7-5ed4-85ee-938e" name="Lore of the Vampires" publicationId="7a08-6611-3750-6469" page="84" hidden="true" collective="false" import="true">
       <modifiers>
-        <modifier type="set" field="hidden" value="true">
+        <modifier type="set" field="hidden" value="false">
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d1e1-d80a-c667-b587" type="notInstanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a30c-a3cc-8d16-7290" type="notInstanceOf"/>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b72d-5ec7-bade-32e1" type="greaterThan"/>
               </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d1e1-d80a-c667-b587" type="instanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a30c-a3cc-8d16-7290" type="instanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </conditionGroup>
           </conditionGroups>
         </modifier>
-        <modifier type="set" field="4dfa-6569-dae1-e760" value="3.0">
+        <modifier type="set" field="4dfa-6569-dae1-e760" value="6.0">
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
                 <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7c0c-91b9-f052-24af" type="instanceOf"/>
-                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0758-0294-87aa-6054" type="greaterThan"/>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b72d-5ec7-bade-32e1" type="greaterThan"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -13603,6 +13636,143 @@ This general does not receive any further modification to this number for being 
       <entryLinks>
         <entryLink id="45bb-a2ee-f1c3-8973" name="Core Battalions" hidden="false" collective="false" import="true" targetId="b275-810f-adfc-156b" type="selectionEntryGroup"/>
       </entryLinks>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="c763-66aa-4380-db56" name="Lore of the Mortisans" hidden="true" collective="false" import="true">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="f40d-1d71-6120-3cd1" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" field="e936-d432-f2ef-a78f" value="6.0">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f40d-1d71-6120-3cd1" type="greaterThan"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="00de-c50d-33b4-216e" type="instanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7c0c-91b9-f052-24af" type="instanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e936-d432-f2ef-a78f" type="min"/>
+      </constraints>
+      <selectionEntries>
+        <selectionEntry id="8173-be94-b4ad-28a2" name="1. Arcane Command" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fed8-c532-dcb7-2089" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="51b4-708e-9f8a-ba9b" name="Arcane Command" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+              <characteristics>
+                <characteristic name="Casting Value" typeId="2508-b604-1258-a920">5</characteristic>
+                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">-</characteristic>
+                <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, you receive D3 relentless discipline points.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="bfd2-9f2f-bbdf-b5a3" name="2. Empower Nadirite Weapons" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2552-cf3f-58b7-4da9" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="4765-f4db-a116-6534" name="Empower Nadirite Weapons" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+              <characteristics>
+                <characteristic name="Casting Value" typeId="2508-b604-1258-a920">5</characteristic>
+                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">24&quot;</characteristic>
+                <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick 1 friendly OSSIARCH BONEREAPERS unit with the Nadirite Weapons ability that is wholly within 24&quot; of the caster and visible to them. Until the start of your next hero phase, that unit’s Nadirite Weapons ability causes 2 hits to be scored on an unmodified hit roll of 5+ instead of 6, or 4+ instead of 6 for a charging KAVALOS DEATHRIDERS unit attacking with Nadirite Spears.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="0cc7-646c-6202-1eb8" name="3. Protection of Nagash" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0a68-54bb-0663-e7aa" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="00c6-241e-45d5-1e75" name="Protection of Nagash" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+              <characteristics>
+                <characteristic name="Casting Value" typeId="2508-b604-1258-a920">5</characteristic>
+                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">-</characteristic>
+                <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, roll a dice each time a wound or mortal wound is allocated to the caster. On a 5+, that wound or mortal wound is negated. If any wounds or mortal wounds are allocated to the caster and not negated, and the caster is not slain, remove them from the battlefield after all of the wounds or mortal wounds have been allocated. Then, set them up anywhere on the battlefield more than 9&quot; from any enemy units. After setting up the model, this spell is unbound.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="e36e-6215-881a-2e11" name="4. Reinforce Battle-shields" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e0a3-9475-6bdd-c042" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="e354-cc84-8dc9-94fe" name="Reinforce Battle-shields" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+              <characteristics>
+                <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
+                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">24&quot;</characteristic>
+                <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick 1 friendly OSSIARCH BONEREAPERS unit armed with Shields or Nadirite Battle-shields that is wholly within 24&quot; of the caster and visible to them. Until the start of your next hero phase, roll a dice each time you allocate a mortal wound to that unit. On a 5+, that mortal wound is negated.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="77af-db85-d186-7fb9" name="5. Drain Vitality" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="46cd-7551-2888-9b90" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="8958-d811-c193-2477" name="Drain Vitality" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+              <characteristics>
+                <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
+                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">18&quot;</characteristic>
+                <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick 1 enemy unit within 18&quot; of the caster that is visible to them. Until your next hero phase, re-roll unmodified hit rolls of 6 for attacks made by that unit, and re-roll unmodified save rolls of 6 for attacks that target that unit.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="491a-4bfd-6d1a-2aca" name="6. Mortal Contract" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8184-42b9-096c-f8b9" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="b0f7-4a67-ca6f-11e7" name="Mortal Contract" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+              <characteristics>
+                <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
+                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">18&quot;</characteristic>
+                <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick 1 enemy unit within 18&quot; of the caster that is visible to them. For the rest of the battle, roll a dice at the end of each phase during which any attacks made by that unit inflicted any damage on a friendly OSSIARCH BONEREAPERS unit. On a 3+, that enemy unit suffers D3 mortal wounds. You cannot pick the same unit to be the target of this spell more than once per battle.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <sharedProfiles>
