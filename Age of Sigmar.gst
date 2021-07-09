@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="92" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="93" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <publications>
     <publication id="e51d-b1a3-pubEC" name="The General&apos;s Handbook"/>
     <publication id="e51d-b1a3-pubEQ" name="Core Rules"/>
@@ -2134,9 +2134,9 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
     </selectionEntry>
     <selectionEntry id="49a3-5845-b4df-11f3" name="Core Battalion: Hunters of the Heartlands" publicationId="e434-aae2-8d86-e264" hidden="false" collective="false" import="true" type="upgrade">
       <profiles>
-        <profile id="2046-2f7f-2027-2ef5" name="Scent Tracking" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
+        <profile id="2046-2f7f-2027-2ef5" name="Expert Underdogs" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
           <characteristics>
-            <characteristic name="Battalion Ability Details" typeId="08e0-9ead-1dbe-c801">After armies have been set up but before the first battle round begins,  you can make a normal move of up to D6&quot; with each unit in this battalion.</characteristic>
+            <characteristic name="Battalion Ability Details" typeId="08e0-9ead-1dbe-c801">Units from this battalion cannot be picked when your opponent carries out a monstrous rampage.</characteristic>
           </characteristics>
         </profile>
         <profile id="e4f6-92c3-da75-3268" name="Core Battalion: Hunters of the Heartlands" hidden="false" typeId="75e0-a332-e4f5-bf36" typeName="Battalion Organisation">
