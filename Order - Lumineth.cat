@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="3a4f-b93a-26ba-a2d1" name="Order - Lumineth" revision="49" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="89" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="3a4f-b93a-26ba-a2d1" name="Order - Lumineth" revision="50" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="93" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="695b-f18a-c0a9-6bf4" name="Order Battletome - Lumineth Realm-Lords"/>
     <publication id="98eb-b95a-7da9-94a4" name="Order Battletome - Lumineth Realm-Lords 2021"/>
@@ -4570,6 +4570,9 @@ In addition, once per battle at the start of any phase, you can say that this mo
           </conditionGroups>
         </modifier>
       </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1306-b89e-06b3-430d" type="min"/>
+      </constraints>
       <selectionEntries>
         <selectionEntry id="0e65-35c6-31b1-5710" name="1. Speed of Hysh" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -4695,6 +4698,9 @@ In addition, once per battle at the start of any phase, you can say that this mo
           </conditionGroups>
         </modifier>
       </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9b44-7411-8c37-2de1" type="min"/>
+      </constraints>
       <selectionEntries>
         <selectionEntry id="11b6-47ea-1e8f-5713" name="1. Unyielding Calm" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -5455,6 +5461,9 @@ In addition, once per battle at the start of any phase, you can say that this mo
           </conditionGroups>
         </modifier>
       </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4482-1eeb-5f90-180e" type="min"/>
+      </constraints>
       <selectionEntries>
         <selectionEntry id="7018-0b54-87ac-7fd8" name="1. Freezing Squall" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -5793,9 +5802,14 @@ If the spell directs the missiles, until your next hero phase, add 1 to hit roll
     <selectionEntryGroup id="3a17-eca0-d1c0-8fca" name="Spell Lores" hidden="false" collective="false" import="true">
       <modifiers>
         <modifier type="increment" field="158f-69d8-377e-b075" value="1.0">
-          <conditions>
-            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="6b1c-dfa1-b5c3-4d92" type="equalTo"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7bbb-5d1d-b91b-7dab" type="notInstanceOf"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="6b1c-dfa1-b5c3-4d92" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
         <modifier type="increment" field="158f-69d8-377e-b075" value="1.0">
           <repeats>
@@ -5808,20 +5822,50 @@ If the spell directs the missiles, until your next hero phase, add 1 to hit roll
               <conditions>
                 <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4f53-8230-2f02-9639" type="instanceOf"/>
                 <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9918-5a46-2468-35e2" type="equalTo"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7bbb-5d1d-b91b-7dab" type="notInstanceOf"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
+        </modifier>
+        <modifier type="set" field="158f-69d8-377e-b075" value="19.0">
+          <conditions>
+            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7bbb-5d1d-b91b-7dab" type="instanceOf"/>
+          </conditions>
         </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="158f-69d8-377e-b075" type="max"/>
       </constraints>
       <entryLinks>
-        <entryLink id="2a70-6062-826e-0272" name="Lore of Hysh" hidden="false" collective="false" import="true" targetId="73c1-448f-0be2-3bb7" type="selectionEntryGroup"/>
+        <entryLink id="2a70-6062-826e-0272" name="Lore of Hysh" hidden="false" collective="false" import="true" targetId="73c1-448f-0be2-3bb7" type="selectionEntryGroup">
+          <modifiers>
+            <modifier type="set" field="1306-b89e-06b3-430d" value="6.0">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7bbb-5d1d-b91b-7dab" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
         <entryLink id="8b4d-1333-3ac1-126b" name="Universal Spell Lore" hidden="false" collective="false" import="true" targetId="20c3-23a0-9d79-b491" type="selectionEntryGroup"/>
         <entryLink id="c8d1-83f4-7767-fde7" name="Lore of Zaitrec" hidden="false" collective="false" import="true" targetId="3197-a752-210c-127b" type="selectionEntryGroup"/>
-        <entryLink id="3155-77fa-77ea-5f4b" name="Lore of the High Peaks" hidden="false" collective="false" import="true" targetId="721e-b833-8e7d-f99e" type="selectionEntryGroup"/>
-        <entryLink id="d981-7956-2fdb-ff53" name="Lore of the Winds" hidden="false" collective="false" import="true" targetId="0fd6-9b3c-774b-f2ae" type="selectionEntryGroup"/>
+        <entryLink id="3155-77fa-77ea-5f4b" name="Lore of the High Peaks" hidden="false" collective="false" import="true" targetId="721e-b833-8e7d-f99e" type="selectionEntryGroup">
+          <modifiers>
+            <modifier type="set" field="9b44-7411-8c37-2de1" value="6.0">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7bbb-5d1d-b91b-7dab" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
+        <entryLink id="d981-7956-2fdb-ff53" name="Lore of the Winds" hidden="false" collective="false" import="true" targetId="0fd6-9b3c-774b-f2ae" type="selectionEntryGroup">
+          <modifiers>
+            <modifier type="set" field="4482-1eeb-5f90-180e" value="6.0">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7bbb-5d1d-b91b-7dab" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
       </entryLinks>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
