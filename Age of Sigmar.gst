@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="93" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="94" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <publications>
     <publication id="e51d-b1a3-pubEC" name="The General&apos;s Handbook"/>
     <publication id="e51d-b1a3-pubEQ" name="Core Rules"/>
@@ -133,7 +133,18 @@
     <categoryEntry id="1418-9a68-9f9e-e9a7" name="DAEMON" hidden="false"/>
     <categoryEntry id="3504-ea8e-28ec-5150" name="TOTEM" hidden="false"/>
     <categoryEntry id="e8a5-e4c1-3d11-e7dd" name="PRIEST" hidden="false"/>
-    <categoryEntry id="b745-17c4-8fbf-8b04" name="General" hidden="true"/>
+    <categoryEntry id="b745-17c4-8fbf-8b04" name="General" hidden="true">
+      <modifiers>
+        <modifier type="set" field="8bad-44a3-c257-0004" value="-1.0">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="87dc-a9ab-26cc-a607" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8bad-44a3-c257-0004" type="max"/>
+      </constraints>
+    </categoryEntry>
     <categoryEntry id="3564-4c26-10b4-d953" name="Artefact" hidden="false">
       <modifiers>
         <modifier type="increment" field="459e-bc05-f498-6753" value="1.0">
@@ -282,6 +293,7 @@
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="dabf-0d1e-7a5f-5e7b" type="max"/>
       </constraints>
     </categoryEntry>
+    <categoryEntry id="87dc-a9ab-26cc-a607" name="Multiple Generals" hidden="false"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry id="36b7-ee1e-0855-f23f" name="**Pitched Battle**" hidden="false">
