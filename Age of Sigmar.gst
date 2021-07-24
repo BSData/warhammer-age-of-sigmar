@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="96" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="97" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <publications>
     <publication id="e51d-b1a3-pubEC" name="The General&apos;s Handbook"/>
     <publication id="e51d-b1a3-pubEQ" name="Core Rules"/>
@@ -1591,6 +1591,34 @@
     </entryLink>
     <entryLink id="8da1-0246-3653-3c8c" name="Triumphs" hidden="false" collective="false" import="true" targetId="472e-6c0c-b6d5-b996" type="selectionEntry"/>
   </entryLinks>
+  <rules>
+    <rule id="bdc4-1b99-239c-5a23" name="Battle Tactics" hidden="false">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="36b7-ee1e-0855-f23f" type="notInstanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <description>
+Broken Ranks: When you reveal this battle tactic, pick 1 Battleline unit from your opponent’s starting army on the battlefield.  You complete this battle tactic if that unit is destroyed during this turn.  If that unit was destroyed by an attack made by a friendly MONSTER or an ability of a friendly MONSTER, score 1 additional victory point.
+
+Conquer: When you reveal this battle tactic, pick 1 objective marker on the battlefield that your opponent controls.  You complete this battle tactic if you control that objective marker at the end of this turn.
+
+Slay the Warlord: You complete this battle tactic if the model chosen to be your opponent’s general is slain during this turn.  If that model was destroyed by an attack made by a friendly MONSTER or an ability of a friendly MONSTER, score 1 additional victory point.
+
+Ferocious Advance:  When you reveal this battle tactic, pick 3 different units from your starting army on the battlefield.  You complete this battle tactic if all of the units you picked run in the following movement  phase and finish that run within 3” of each other.  If all 3 of those units are MONSTERS, score 1 additional victory point.
+
+Bring It Down!: When you reveal this battle tactic, pick 1 enemy MONSTER on the battlefield.  You complete this battle tactic if that unit is destroyed during this turn.  If that enemy MONSTER was destroyed by an attack made by a friendly MONSTER or an ability of a friendly MONSTER, score 1 additional victory point.
+
+Aggressive Expansion: When you reveal this battle tactic, pick 2 objective markers on the battlefield that are not wholly within your territory.  You complete this battle tactic if you control both objective markers at the end of this turn.
+
+Monstrous Takeover: When you reveal this battle tactic, pick 1 MONSTER from your starting army on the battlefield.  You complete this battle tactic if that MONSTER is contesting an objective marker that you control at the end of this turn, and that objective marker is not contested by an enemy MONSTER.
+
+Savage Spearhead: You complete this battle tactic if there are 2 or more units from your starting army wholly within your opponent’s territory at the end of this turn.  If 2 or more of those units are MONSTERS, score 1 additional victory point.
+</description>
+    </rule>
+  </rules>
   <sharedSelectionEntries>
     <selectionEntry id="869c-168d-eba5-eacf" name="Arcane Bolt" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
