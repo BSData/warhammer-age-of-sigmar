@@ -4810,6 +4810,13 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
       </selectionEntries>
     </selectionEntryGroup>
     <selectionEntryGroup id="055f-7077-c87d-f9a8" name="Triumphs" hidden="false" collective="false" import="true">
+      <modifiers>
+        <modifier type="increment" field="e5a4-883e-e670-08b8" value="1.0">
+          <repeats>
+            <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4f32-1179-8b4c-61e0" repeats="1" roundUp="false"/>
+          </repeats>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e5a4-883e-e670-08b8" type="max"/>
       </constraints>
