@@ -294,6 +294,7 @@
       </constraints>
     </categoryEntry>
     <categoryEntry id="87dc-a9ab-26cc-a607" name="Multiple Generals" hidden="false"/>
+    <categoryEntry id="92ad-3e07-41cc-ff59" name="Allied Battleline" hidden="false"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry id="36b7-ee1e-0855-f23f" name="**Pitched Battle GHB 2021**" hidden="false">
@@ -1172,7 +1173,7 @@
             <categoryLink id="e9c4-59b3-1cbc-cc04" name="Behemoth" hidden="false" targetId="fa0c-9044-2568-fa02" primary="false"/>
             <categoryLink id="5565-10d0-f219-44f4" name="Leader" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="false"/>
             <categoryLink id="c0ff-c052-e42c-ad56" name="Other" hidden="false" targetId="065e-fda7-fd27-1f40" primary="false"/>
-            <categoryLink id="9baf-3d9f-71ef-f70c" name="Battleline" hidden="false" targetId="e9f2-765a-b7b8-ce8e" primary="false"/>
+            <categoryLink id="9baf-3d9f-71ef-f70c" name="Allied Battleline" hidden="false" targetId="92ad-3e07-41cc-ff59" primary="false"/>
           </categoryLinks>
         </forceEntry>
         <forceEntry id="8c26-2422-34d3-31a5" name="Coalition" hidden="false">
@@ -1254,7 +1255,7 @@
         </categoryLink>
         <categoryLink id="e4e1-c43b-5a87-942e" name="Battleline" hidden="false" targetId="e9f2-765a-b7b8-ce8e" primary="false">
           <modifiers>
-            <modifier type="set" field="88a9-951c-d997-8788" value="2.0">
+            <modifier type="set" field="2a60-4b08-eba8-3197" value="2.0">
               <conditionGroups>
                 <conditionGroup type="or">
                   <conditions>
@@ -1264,17 +1265,17 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="set" field="88a9-951c-d997-8788" value="1.0">
+            <modifier type="set" field="2a60-4b08-eba8-3197" value="1.0">
               <conditions>
                 <condition field="selections" scope="3b40-f0c2-a6e6-01ff" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e860-9b1e-36bd-a54f" type="equalTo"/>
               </conditions>
             </modifier>
-            <modifier type="set" field="88a9-951c-d997-8788" value="3.0">
+            <modifier type="set" field="2a60-4b08-eba8-3197" value="3.0">
               <conditions>
                 <condition field="selections" scope="3b40-f0c2-a6e6-01ff" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cea8-e4b2-c44f-c7b4" type="equalTo"/>
               </conditions>
             </modifier>
-            <modifier type="set" field="88a9-951c-d997-8788" value="4.0">
+            <modifier type="set" field="2a60-4b08-eba8-3197" value="4.0">
               <conditions>
                 <condition field="selections" scope="3b40-f0c2-a6e6-01ff" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ef67-15fb-487c-397a" type="equalTo"/>
               </conditions>
