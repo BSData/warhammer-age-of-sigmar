@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="97" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="98" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <publications>
     <publication id="e51d-b1a3-pubEC" name="The General&apos;s Handbook"/>
     <publication id="e51d-b1a3-pubEQ" name="Core Rules"/>
@@ -1086,7 +1086,7 @@
             <condition field="selections" scope="3b40-f0c2-a6e6-01ff" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6330-7561-7a32-0851" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="set" field="58fc-6949-788a-42b5" value="2500.0">
+        <modifier type="set" field="58fc-6949-788a-42b5" value="3000.0">
           <conditions>
             <condition field="selections" scope="3b40-f0c2-a6e6-01ff" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1e63-0b49-ac04-321f" type="equalTo"/>
           </conditions>
@@ -1101,9 +1101,9 @@
             <condition field="selections" scope="3b40-f0c2-a6e6-01ff" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6330-7561-7a32-0851" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="append" field="name" value="2,500">
+        <modifier type="append" field="name" value="3,000">
           <conditions>
-            <condition field="selections" scope="3b40-f0c2-a6e6-01ff" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1e63-0b49-ac04-321f" type="equalTo"/>
+            <condition field="selections" scope="3b40-f0c2-a6e6-01ff" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ef67-15fb-487c-397a" type="equalTo"/>
           </conditions>
         </modifier>
         <modifier type="decrement" field="58fc-6949-788a-42b5" value="250.0">
@@ -1111,9 +1111,9 @@
             <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="aa3a-742d-9e34-e701" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="increment" field="58fc-6949-788a-42b5" value="500.0">
+        <modifier type="set" field="58fc-6949-788a-42b5" value="750.0">
           <conditions>
-            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="45c9-0873-d072-007a" type="equalTo"/>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e860-9b1e-36bd-a54f" type="equalTo"/>
           </conditions>
         </modifier>
         <modifier type="decrement" field="58fc-6949-788a-42b5" value="500.0">
@@ -1121,9 +1121,9 @@
             <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6a86-ed1f-1db7-6f7c" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="increment" field="58fc-6949-788a-42b5" value="250.0">
+        <modifier type="set" field="58fc-6949-788a-42b5" value="1500.0">
           <conditions>
-            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4c1d-7a55-fa32-d2be" type="equalTo"/>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a3cc-3b86-4778-0b11" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
