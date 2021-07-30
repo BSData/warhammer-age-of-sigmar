@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="6d29-cde4-372b-08d3" name="Death - Flesh-eater Courts" revision="47" battleScribeVersion="2.03" authorName="https://discord.gg/4MSsD7" authorContact="" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="94" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="6d29-cde4-372b-08d3" name="Death - Flesh-eater Courts" revision="48" battleScribeVersion="2.03" authorName="https://discord.gg/4MSsD7" authorContact="" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="98" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="6d29-cde4-pubN65537" name="Battletome: Flesh-eater Courts 2019"/>
     <publication id="6d29-cde4-pubN65555" name="Battletome: Flesh-eater Courts"/>
@@ -79,22 +79,7 @@
         <categoryLink id="005e-16a4-3a0a-aea3" name="New CategoryLink" hidden="false" targetId="87e8-c095-f059-5f7b" primary="true"/>
       </categoryLinks>
     </entryLink>
-    <entryLink id="f202-c960-472b-5361" name="Crypt Ghouls" hidden="false" collective="false" import="true" targetId="631c-0dae-5912-196d" type="selectionEntry">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="78f3-8a59-699a-61e8" type="instanceOf"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
-      <categoryLinks>
-        <categoryLink id="f202-c960-472b-5361-e9f2-765a-b7b8-ce8e" hidden="false" targetId="e9f2-765a-b7b8-ce8e" primary="true"/>
-      </categoryLinks>
-    </entryLink>
+    <entryLink id="f202-c960-472b-5361" name="Crypt Ghouls" hidden="false" collective="false" import="true" targetId="631c-0dae-5912-196d" type="selectionEntry"/>
     <entryLink id="f8ec-6015-c1a7-2fd3" name="Duke Crakmarrow" hidden="false" collective="false" import="true" targetId="3659-35fc-ee8b-0f3e" type="selectionEntry">
       <categoryLinks>
         <categoryLink id="f8ec-6015-c1a7-2fd3-6c6b-e787-f9b8-a510" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
@@ -380,22 +365,6 @@
       </modifiers>
       <categoryLinks>
         <categoryLink id="215c-87ae-6ac0-dab8-e9f2-765a-b7b8-ce8e" hidden="false" targetId="e9f2-765a-b7b8-ce8e" primary="true"/>
-      </categoryLinks>
-    </entryLink>
-    <entryLink id="b9d9-b4e3-09df-4f16" name="Crypt Ghouls" hidden="false" collective="false" import="true" targetId="631c-0dae-5912-196d" type="selectionEntry">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="78f3-8a59-699a-61e8" type="notInstanceOf"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
-      <categoryLinks>
-        <categoryLink id="b479-0bbf-9d50-e5cf" name="New CategoryLink" hidden="false" targetId="065e-fda7-fd27-1f40" primary="true"/>
       </categoryLinks>
     </entryLink>
     <entryLink id="46e3-0350-944a-55fa" name="Royal Terrorgheist" hidden="false" collective="false" import="true" targetId="5262-3ed0-9e65-e358" type="selectionEntry">
@@ -2458,6 +2427,18 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="631c-0dae-5912-196d" name="Crypt Ghouls" page="135" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="remove" field="category" value="e9f2-765a-b7b8-ce8e">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8af4-649e-9ee2-22ee" type="instanceOf"/>
+          </conditions>
+        </modifier>
+        <modifier type="set-primary" field="category" value="92ad-3e07-41cc-ff59">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8af4-649e-9ee2-22ee" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="acac-fe56-1bdf-3cf2" name="Boundless Ferocity" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
@@ -2489,6 +2470,7 @@
         <categoryLink id="c3fe-15fd-1d10-142a" name="New CategoryLink" hidden="false" targetId="6cdf-dd4f-0e91-e9c4" primary="false"/>
         <categoryLink id="1786-7726-2be7-dd51" name="New CategoryLink" hidden="false" targetId="6b35-0508-c6cc-6592" primary="false"/>
         <categoryLink id="1675-0d6e-f50b-13a2" name="SERFS" hidden="false" targetId="ee79-e29c-b47c-f2db" primary="false"/>
+        <categoryLink id="011c-6e86-774f-14d6" name="New CategoryLink" hidden="false" targetId="e9f2-765a-b7b8-ce8e" primary="true"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="3ce1-fdde-09b6-cbe7" name="10 Crypt Ghouls" hidden="false" collective="false" import="true" type="model">
