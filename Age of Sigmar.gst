@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="100" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="101" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <publications>
     <publication id="e51d-b1a3-pubEC" name="The General&apos;s Handbook"/>
     <publication id="e51d-b1a3-pubEQ" name="Core Rules"/>
@@ -124,7 +124,7 @@
     <categoryEntry id="1d26-07fc-6a66-d73e" name="Artillery" hidden="false"/>
     <categoryEntry id="e9f2-765a-b7b8-ce8e" name="Battleline" hidden="false"/>
     <categoryEntry id="065e-fda7-fd27-1f40" name="Other" hidden="false"/>
-    <categoryEntry id="be17-6bbd-b857-3f43" name="Battalion" hidden="false"/>
+    <categoryEntry id="be17-6bbd-b857-3f43" name="Warscroll Battalion" hidden="false"/>
     <categoryEntry id="f79c-e161-4ad3-876d" name="Allies" hidden="false"/>
     <categoryEntry id="4e0e-664d-51ea-0929" name="HERO" hidden="false"/>
     <categoryEntry id="1959-9f6a-3056-913a" name="MONSTER" hidden="false"/>
@@ -295,6 +295,7 @@
     </categoryEntry>
     <categoryEntry id="87dc-a9ab-26cc-a607" name="Multiple Generals" hidden="false"/>
     <categoryEntry id="92ad-3e07-41cc-ff59" name="Allied Battleline" hidden="false"/>
+    <categoryEntry id="3ecc-4c0d-d717-29bd" name="Battalion" hidden="false"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry id="36b7-ee1e-0855-f23f" name="**Pitched Battle GHB 2021**" hidden="false">
@@ -1072,7 +1073,7 @@
             <constraint field="selections" scope="roster" value="-1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="a736-2e7e-3ea1-84c4" type="max"/>
           </constraints>
         </categoryLink>
-        <categoryLink id="e8a1-cfc5-6150-561a" name="Battalion" hidden="false" targetId="be17-6bbd-b857-3f43" primary="false"/>
+        <categoryLink id="e8a1-cfc5-6150-561a" name="Warscroll Battalion" hidden="false" targetId="be17-6bbd-b857-3f43" primary="false"/>
       </categoryLinks>
     </forceEntry>
     <forceEntry id="3b40-f0c2-a6e6-01ff" name="**Contest of Generals**" hidden="false">
@@ -3816,6 +3817,7 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
                     <conditionGroup type="and">
                       <conditions>
                         <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="1878-56e2-2862-8da5" type="greaterThan"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6c6b-e787-f9b8-a510" type="notInstanceOf"/>
                       </conditions>
                       <conditionGroups>
                         <conditionGroup type="or">
