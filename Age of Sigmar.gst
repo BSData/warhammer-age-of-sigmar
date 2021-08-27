@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="103" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="104" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <publications>
     <publication id="e51d-b1a3-pubEC" name="The General&apos;s Handbook"/>
     <publication id="e51d-b1a3-pubEQ" name="Core Rules"/>
@@ -258,7 +258,7 @@
       </constraints>
     </categoryEntry>
     <categoryEntry id="2c4b-6186-2939-7f2b" name="BEASTS OF CHAOS" hidden="false"/>
-    <categoryEntry id="088b-3a27-03f7-8249" name="Named" hidden="false"/>
+    <categoryEntry id="088b-3a27-03f7-8249" name="Unique" hidden="false"/>
     <categoryEntry id="2ff5-b7a1-655a-1655" name="GREATER DAEMON" hidden="false"/>
     <categoryEntry id="1d34-b962-7c7b-f287" name="SOULSCREAM BRIDGE" hidden="false"/>
     <categoryEntry id="cff6-06c5-3294-b74b" name="SHARDS OF VALAGHARR" hidden="false"/>
@@ -4402,6 +4402,13 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="20c3-23a0-9d79-b491" name="Universal Spell Lore" hidden="false" collective="false" import="true">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="088b-3a27-03f7-8249" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <selectionEntries>
         <selectionEntry id="f869-6511-2f30-69fa" name="Flaming Weapon" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -4629,6 +4636,13 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
       </selectionEntries>
     </selectionEntryGroup>
     <selectionEntryGroup id="3674-103c-35c9-85a6" name="Universal Prayer Scripture" hidden="false" collective="false" import="true">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="088b-3a27-03f7-8249" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <selectionEntries>
         <selectionEntry id="2440-fbad-c331-1f36" name="Guidance" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -4946,6 +4960,11 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
     <profile id="d0be-bf37-cc83-f87b" name="Magnificent" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
       <characteristics>
         <characteristic name="Battalion Ability Details" typeId="08e0-9ead-1dbe-c801">When you pick enhancements for your army (see 27.3), you can pick 1 extra enhancement.</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="46ca-dc4f-b7a1-726d" name="Elite" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+      <characteristics>
+        <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Models in this unit can issue commands to their own unit.</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
