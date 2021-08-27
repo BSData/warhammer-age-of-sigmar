@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="104" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="105" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <publications>
     <publication id="e51d-b1a3-pubEC" name="The General&apos;s Handbook"/>
     <publication id="e51d-b1a3-pubEQ" name="Core Rules"/>
@@ -931,7 +931,7 @@
         </categoryLink>
         <categoryLink id="330f-1d63-22db-138b" name="Battleline" hidden="false" targetId="e9f2-765a-b7b8-ce8e" primary="false">
           <modifiers>
-            <modifier type="set" field="f6ea-531c-4e71-d5f1" value="2.0">
+            <modifier type="set" field="ca4e-5ee6-bfd1-5dbd" value="2.0">
               <conditionGroups>
                 <conditionGroup type="or">
                   <conditions>
@@ -941,17 +941,17 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="set" field="f6ea-531c-4e71-d5f1" value="1.0">
+            <modifier type="set" field="ca4e-5ee6-bfd1-5dbd" value="1.0">
               <conditions>
                 <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e860-9b1e-36bd-a54f" type="equalTo"/>
               </conditions>
             </modifier>
-            <modifier type="set" field="f6ea-531c-4e71-d5f1" value="3.0">
+            <modifier type="set" field="ca4e-5ee6-bfd1-5dbd" value="3.0">
               <conditions>
                 <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cea8-e4b2-c44f-c7b4" type="equalTo"/>
               </conditions>
             </modifier>
-            <modifier type="set" field="f6ea-531c-4e71-d5f1" value="4.0">
+            <modifier type="set" field="ca4e-5ee6-bfd1-5dbd" value="4.0">
               <conditions>
                 <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ef67-15fb-487c-397a" type="equalTo"/>
               </conditions>
@@ -1262,7 +1262,7 @@
         </categoryLink>
         <categoryLink id="e4e1-c43b-5a87-942e" name="Battleline" hidden="false" targetId="e9f2-765a-b7b8-ce8e" primary="false">
           <modifiers>
-            <modifier type="set" field="2a60-4b08-eba8-3197" value="2.0">
+            <modifier type="set" field="88a9-951c-d997-8788" value="2.0">
               <conditionGroups>
                 <conditionGroup type="or">
                   <conditions>
@@ -1272,17 +1272,17 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="set" field="2a60-4b08-eba8-3197" value="1.0">
+            <modifier type="set" field="88a9-951c-d997-8788" value="1.0">
               <conditions>
                 <condition field="selections" scope="3b40-f0c2-a6e6-01ff" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e860-9b1e-36bd-a54f" type="equalTo"/>
               </conditions>
             </modifier>
-            <modifier type="set" field="2a60-4b08-eba8-3197" value="3.0">
+            <modifier type="set" field="88a9-951c-d997-8788" value="3.0">
               <conditions>
                 <condition field="selections" scope="3b40-f0c2-a6e6-01ff" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cea8-e4b2-c44f-c7b4" type="equalTo"/>
               </conditions>
             </modifier>
-            <modifier type="set" field="2a60-4b08-eba8-3197" value="4.0">
+            <modifier type="set" field="88a9-951c-d997-8788" value="4.0">
               <conditions>
                 <condition field="selections" scope="3b40-f0c2-a6e6-01ff" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ef67-15fb-487c-397a" type="equalTo"/>
               </conditions>
