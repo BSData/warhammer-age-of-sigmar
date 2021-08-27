@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="a990-882b-7e62-27e9" name="Chaos - Beasts of Chaos - Data" revision="48" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="98" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="a990-882b-7e62-27e9" name="Chaos - Beasts of Chaos - Data" revision="49" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="105" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="c9b2-1fe6-pubN65537" name="Battletome: Beasts of Chaos"/>
     <publication id="c9b2-1fe6-pubN83353" name="1"/>
@@ -936,7 +936,7 @@ Then, roll a dice for each enemy unit within 1&quot; of any friendly THUNDERSCOR
         </profile>
         <profile id="a3ef-0c1c-f381-dd01" name="Baying Anger" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">You can re-roll hit rolls of 1 for Ungor Raiders in the shooting phase if the unit has 20 or more models, or re-roll hit rolls of 1 and 2 if it has 30 or more models.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Add 1 to wound rolls for shooting attacks made by this unit while it has 10 or more models.</characteristic>
           </characteristics>
         </profile>
         <profile id="bda8-4e36-3ad3-6fc8" name="Vile Invaders" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
@@ -2851,6 +2851,9 @@ In addition, each time an enemy unit within 3&quot; of any units in your army wi
           </characteristics>
         </profile>
       </profiles>
+      <infoLinks>
+        <infoLink id="9689-fe72-1112-ee00" name="Elite" hidden="false" targetId="46ca-dc4f-b7a1-726d" type="profile"/>
+      </infoLinks>
       <categoryLinks>
         <categoryLink id="3625-f97b-4439-f26d" name="New CategoryLink" hidden="false" targetId="7cdd-80ea-cbeb-8e16" primary="false"/>
         <categoryLink id="b442-68b1-a6ad-f470" name="BEASTS OF CHAOS" hidden="false" targetId="2c4b-6186-2939-7f2b" primary="false"/>
@@ -3240,7 +3243,27 @@ In addition, each time an enemy unit within 3&quot; of any units in your army wi
             <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="b541-3b22-08bb-d772" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="b4dc-0d5f-313e-1bc0" value="0.0">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="065f-c64d-3eb7-79d2" type="equalTo"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8c26-2422-34d3-31a5" type="equalTo"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
+      <constraints>
+        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b4dc-0d5f-313e-1bc0" type="max"/>
+      </constraints>
       <profiles>
         <profile id="72cd-5fcf-ea14-4d47" name="Guided by the Future" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
@@ -3408,7 +3431,27 @@ In addition, each time an enemy unit within 3&quot; of any units in your army wi
             <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="b541-3b22-08bb-d772" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="2d8f-f773-0c89-660f" value="0.0">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="065f-c64d-3eb7-79d2" type="equalTo"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8c26-2422-34d3-31a5" type="equalTo"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
+      <constraints>
+        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2d8f-f773-0c89-660f" type="max"/>
+      </constraints>
       <profiles>
         <profile id="3ceb-2893-b245-a13d" name="Tzaangor Shaman" hidden="false" typeId="f55d-ee3a-1597-110f" typeName="Magic">
           <characteristics>
@@ -3577,7 +3620,27 @@ In addition, each time an enemy unit within 3&quot; of any units in your army wi
             <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="b541-3b22-08bb-d772" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="7adf-342f-154c-ccea" value="0.0">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="065f-c64d-3eb7-79d2" type="equalTo"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8c26-2422-34d3-31a5" type="equalTo"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
+      <constraints>
+        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7adf-342f-154c-ccea" type="max"/>
+      </constraints>
       <profiles>
         <profile id="a6fc-375c-e913-d859" name="Tzaangor Enlightened" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
           <characteristics>
@@ -3713,7 +3776,27 @@ In addition, each time an enemy unit within 3&quot; of any units in your army wi
             <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="b541-3b22-08bb-d772" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="9c0b-2852-6f0d-4568" value="0.0">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="065f-c64d-3eb7-79d2" type="equalTo"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8c26-2422-34d3-31a5" type="equalTo"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
+      <constraints>
+        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9c0b-2852-6f0d-4568" type="max"/>
+      </constraints>
       <profiles>
         <profile id="c920-3ea2-789b-d815" name="Destined Mayhem" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
@@ -5051,7 +5134,27 @@ Subtract 1 from save rolls for attacks that target units within range of this te
             <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="b541-3b22-08bb-d772" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="044c-11f8-47fe-86b7" value="0.0">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="065f-c64d-3eb7-79d2" type="equalTo"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8c26-2422-34d3-31a5" type="equalTo"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
+      <constraints>
+        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="044c-11f8-47fe-86b7" type="max"/>
+      </constraints>
       <profiles>
         <profile id="134c-a59c-9fbd-b209" name="Tzaangor Enlightened on Discs of Tzeentch" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
           <characteristics>
