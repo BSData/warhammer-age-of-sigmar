@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="106" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="107" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <publications>
     <publication id="e51d-b1a3-pubEC" name="The General&apos;s Handbook"/>
     <publication id="e51d-b1a3-pubEQ" name="Core Rules"/>
@@ -16,6 +16,10 @@
     <publication id="7ca7-0a01-0c6c-9b61" name="Broken Realms: Kragnos"/>
     <publication id="e434-aae2-8d86-e264" name="General&apos;s Handbook 2021"/>
     <publication id="593b-5e83-0f16-c340" name="Monstrous Arcanum - July 2021"/>
+    <publication id="0b83-94a3-b3da-fb4e" name="Warhammer Legends: GA Chaos"/>
+    <publication id="ed1f-dca6-6c38-b4d5" name="Warhammer Legends: GA Death"/>
+    <publication id="bbd8-4b0e-5ec1-b7fc" name="Warhammer Legends: GA Destruction"/>
+    <publication id="744e-47b4-269f-a64f" name="Warhammer Legends: GA Order"/>
   </publications>
   <costTypes>
     <costType id="points" name="pts" defaultCostLimit="0.0" hidden="false"/>
@@ -1495,7 +1499,7 @@
         <categoryLink id="8ff7-043d-6044-8c48" name="Malign Sorcery" hidden="false" targetId="eecb-ed66-d474-9ddd" primary="true"/>
       </categoryLinks>
     </entryLink>
-    <entryLink id="1d24-610d-46d2-30bf" name="Balewind Vortex" hidden="false" collective="false" import="true" targetId="98b9-64b2-7123-b7a2" type="selectionEntry">
+    <entryLink id="1d24-610d-46d2-30bf" name="Endless Spell: Balewind Vortex [LEGENDS]" hidden="false" collective="false" import="true" targetId="98b9-64b2-7123-b7a2" type="selectionEntry">
       <categoryLinks>
         <categoryLink id="c58f-6e74-d605-fe50" name="New CategoryLink" hidden="false" targetId="eecb-ed66-d474-9ddd" primary="true"/>
       </categoryLinks>
@@ -1728,26 +1732,30 @@ Savage Spearhead: You complete this battle tactic if there are 2 or more units f
         <cost name="pts" typeId="points" value="65.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="98b9-64b2-7123-b7a2" name="Endless Spell: Balewind Vortex" hidden="true" collective="false" import="true" type="upgrade">
+    <selectionEntry id="98b9-64b2-7123-b7a2" name="Endless Spell: Balewind Vortex [LEGENDS]" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8106-c203-2ed0-e575" type="max"/>
       </constraints>
       <profiles>
         <profile id="6979-410e-f790-d43c" name="Summon Balewind Vortex" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
           <characteristics>
-            <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
-            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">WIZARDS with a Wounds characteristic of 9 or more, that are part of a unit of two or more models, or that are already on a Balewind Vortex, cannot attempt to cast this spell. In addition, Morathi-Khaine cannot attempt to cast this spell. If successfully cast, set up a Balewind Vortex model within 1&quot; of the caster and more than 3&quot; from any enemy models, and then place the caster on the upper platform.</characteristic>
-            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
+            <characteristic name="Casting Value" typeId="2508-b604-1258-a920">5</characteristic>
+            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">3&quot;</characteristic>
+            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">WIZARDS that are part of a garrison, or that have a Wounds characteristic of 8 or more, or that are Unique, or that are part of a unit that has 2 or more models, or that are already on top of an endless spell, cannot attempt to cast this spell. If successfully cast, set up the endless spell within range and visible to the caster, more than 3&quot; from all terrain features and more than 3&quot; from all enemy units. Then place the caster on top of the endless spell.
+
+A WIZARD on a Balewind Vortex cannot move. When measuring range to and from the WIZARD on the Balewind Vortex, the WIZARD and the Balewind Vortex are treated as a single model.
+
+If the caster attempts to dispel this endless spell, it is automatically dispelled (do not make a dispelling roll). If the caster is slain, this endless spell is dispelled. If this endless spell is dispelled and the caster has not been slain, before removing the endless spell from play, set up the caster wholly within 6&quot; of the endless spell and more than 3&quot; from all enemy units.</characteristic>
           </characteristics>
         </profile>
-        <profile id="1ef7-6e77-e5be-458b" name="Against the Aetheric Wind" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+        <profile id="1ef7-6e77-e5be-458b" name="Held Aloft" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Add 1 to save rolls for a WIZARD on a Balewind Vortex. </characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Subtract 1 from hit rolls for attacks that target a WIZARD on a Balewind Vortex.</characteristic>
           </characteristics>
         </profile>
-        <profile id="4fa2-0a57-2616-95cb" name="Arcane Invigoration" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+        <profile id="4fa2-0a57-2616-95cb" name="Arcane Enhancement" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">A WIZARD on a Balewind Vortex can attempt to cast an additional spell in each of their hero phases (including the turn in which the Summon Balewind Vortex spell was cast), and you can add 6&quot; to the range of any spells that the WIZARD casts.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Add 1 to casting, unbinding and dispelling rolls for WIZARD on a Balewind Vortex.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1770,7 +1778,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
         <categoryLink id="6fd4-dff6-47c4-10f8" name="BALEWIND VORTEX" hidden="false" targetId="0ac5-cc94-b7fe-7160" primary="false"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="40.0"/>
+        <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="4a8c-091f-84b5-47aa" name="Endless Spell: Chronomantic Cogs" hidden="false" collective="false" import="true" type="upgrade">
