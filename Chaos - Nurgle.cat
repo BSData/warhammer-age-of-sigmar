@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="6894-a70d-7327-b3c3" name="Chaos - Nurgle" revision="73" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="107" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="6894-a70d-7327-b3c3" name="Chaos - Nurgle" revision="73" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="108" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="6894-a70d-pubN65537" name="Chaos Battletome: Maggotkin of Nurgle"/>
-    <publication id="6894-a70d-pubN78755" name="LEGENDS: Tamurkhan&apos;s Horde"/>
-    <publication id="6894-a70d-pubN85775" name="Chaos Battletom: Maggotkin of Nurgle"/>
-    <publication id="6894-a70d-pubN88662" name="Compendium: Monstrous Arcanum"/>
+    <publication id="6894-a70d-pubN85775" name="Chaos Battletome: Maggotkin of Nurgle"/>
     <publication id="6894-a70d-pubN93566" name="Blightwar"/>
   </publications>
   <profileTypes>
@@ -2073,12 +2071,19 @@
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="e17f-d45e-f5e7-3d38" name="Tamurkhan the Maggot Lord [LEGENDS]" publicationId="6894-a70d-pubN78755" page="3" hidden="true" collective="false" import="true" type="unit">
+    <selectionEntry id="e17f-d45e-f5e7-3d38" name="Tamurkhan the Maggot Lord [LEGENDS]" publicationId="78aa-9f5e-4e07-07b5" page="3" hidden="true" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d9a6-1f44-9ebf-b5b0" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1d0f-03f7-bdbc-c66f" type="max"/>
       </constraints>
       <profiles>
-        <profile id="f2f2-f6a2-69ad-9428" name="Tamurkhan the Maggot Lord" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
+        <profile id="f2f2-f6a2-69ad-9428" name="Tamurkhan the Maggot Lord" publicationId="78aa-9f5e-4e07-07b5" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
           <characteristics>
             <characteristic name="Move" typeId="8655-6213-2824-1752">*</characteristic>
             <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">18</characteristic>
@@ -2093,56 +2098,12 @@
         </profile>
         <profile id="bb93-1747-a2eb-a485" name="Killer of Kings" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">You can re-roll hit rolls for attacks made with this model’s Black Cleaver that target a HERO.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Add 1 to hit rolls for attacks made with the Black Cleaver that target a HERO.</characteristic>
           </characteristics>
         </profile>
         <profile id="80de-8c61-bbef-5b08" name="Feast of the Maggot Lord" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If this model is slain, before this model is removed from play, you can pick 1 enemy HERO within 3&quot; of this model. That HERO suffers D3 mortal wounds. If that HERO is slain by these mortal wounds, this model is not slain, D6 wounds allocated to this model are healed, and any that remain to be allocated to it are negated. If that HERO is not slain by these mortal wounds, this model is removed from play.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="a864-def2-f0fb-ff01" name="Lashing Tongue" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
-          <characteristics>
-            <characteristic name="Type" typeId="655c-362e-a663-3e50">Missile</characteristic>
-            <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">14&quot;</characteristic>
-            <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">1</characteristic>
-            <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
-            <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">4+</characteristic>
-            <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
-            <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">D3</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="3c7c-1947-48fd-2ce7" name="The Black Cleaver" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
-          <characteristics>
-            <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
-            <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">2&quot;</characteristic>
-            <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">4</characteristic>
-            <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
-            <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
-            <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-2</characteristic>
-            <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">2</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="5220-e6a9-9194-d6fd" name="Crushing Jaws" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
-          <characteristics>
-            <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
-            <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">3&quot;</characteristic>
-            <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">2</characteristic>
-            <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">*</characteristic>
-            <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">2+</characteristic>
-            <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-3</characteristic>
-            <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">D3</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="bd7b-3985-b87f-f1a8" name="Befouled Bulk" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
-          <characteristics>
-            <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
-            <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">2&quot;</characteristic>
-            <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">*</characteristic>
-            <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
-            <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
-            <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
-            <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If the number of wounds allocated to this model equals it wounds characteristic, before it is slain, you can pick 1 enemy HERO within 3&quot; of this model. That enemy HERO suffers D3 mortal wounds. If that enemy HERO is not slain by those mortal wounds, then this model is slain. If that enemy HERO is slain by those mortal wounds, this model is not slain, any wounds and mortal wounds that remain to be allocated to this model are negated, and D6 wounds allocated to this model are healed.</characteristic>
           </characteristics>
         </profile>
         <profile id="3a89-604d-0d65-4477" name="WoundTable0" hidden="false" typeId="90d1-a434-348d-a861" typeName="Damage Table">
@@ -2155,7 +2116,7 @@
         </profile>
         <profile id="737f-a02d-57ba-f9e3" name="WoundTable1" hidden="false" typeId="90d1-a434-348d-a861" typeName="Damage Table">
           <characteristics>
-            <characteristic name="Variable 1" typeId="420a-645a-ab28-93a0">0-3</characteristic>
+            <characteristic name="Variable 1" typeId="420a-645a-ab28-93a0">0-7</characteristic>
             <characteristic name="Variable 2" typeId="4cdd-1e03-530f-0ff7">10&quot;</characteristic>
             <characteristic name="Variable 3" typeId="b1ea-56be-ba52-16e9">3+</characteristic>
             <characteristic name="Variable 4" typeId="ad26-bf56-95c4-80f1">12</characteristic>
@@ -2163,7 +2124,7 @@
         </profile>
         <profile id="a6a5-bded-09f7-2223" name="WoundTable2" hidden="false" typeId="90d1-a434-348d-a861" typeName="Damage Table">
           <characteristics>
-            <characteristic name="Variable 1" typeId="420a-645a-ab28-93a0">4-7</characteristic>
+            <characteristic name="Variable 1" typeId="420a-645a-ab28-93a0">08-10</characteristic>
             <characteristic name="Variable 2" typeId="4cdd-1e03-530f-0ff7">9&quot;</characteristic>
             <characteristic name="Variable 3" typeId="b1ea-56be-ba52-16e9">4+</characteristic>
             <characteristic name="Variable 4" typeId="ad26-bf56-95c4-80f1">10</characteristic>
@@ -2171,7 +2132,7 @@
         </profile>
         <profile id="28e4-f07d-6cfb-7733" name="WoundTable3" hidden="false" typeId="90d1-a434-348d-a861" typeName="Damage Table">
           <characteristics>
-            <characteristic name="Variable 1" typeId="420a-645a-ab28-93a0">8-10</characteristic>
+            <characteristic name="Variable 1" typeId="420a-645a-ab28-93a0">11-14</characteristic>
             <characteristic name="Variable 2" typeId="4cdd-1e03-530f-0ff7">8&quot;</characteristic>
             <characteristic name="Variable 3" typeId="b1ea-56be-ba52-16e9">4+</characteristic>
             <characteristic name="Variable 4" typeId="ad26-bf56-95c4-80f1">8</characteristic>
@@ -2179,23 +2140,15 @@
         </profile>
         <profile id="f704-40b6-0cf0-c391" name="WoundTable4" hidden="false" typeId="90d1-a434-348d-a861" typeName="Damage Table">
           <characteristics>
-            <characteristic name="Variable 1" typeId="420a-645a-ab28-93a0">11-14</characteristic>
+            <characteristic name="Variable 1" typeId="420a-645a-ab28-93a0">15+</characteristic>
             <characteristic name="Variable 2" typeId="4cdd-1e03-530f-0ff7">7&quot;</characteristic>
             <characteristic name="Variable 3" typeId="b1ea-56be-ba52-16e9">5+</characteristic>
             <characteristic name="Variable 4" typeId="ad26-bf56-95c4-80f1">6</characteristic>
           </characteristics>
         </profile>
-        <profile id="c19b-131a-cad3-96f4" name="WoundTable5" hidden="false" typeId="90d1-a434-348d-a861" typeName="Damage Table">
+        <profile id="044b-9d4d-6cab-16d5" name="Roar of Command" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Variable 1" typeId="420a-645a-ab28-93a0">15+</characteristic>
-            <characteristic name="Variable 2" typeId="4cdd-1e03-530f-0ff7">6&quot;</characteristic>
-            <characteristic name="Variable 3" typeId="b1ea-56be-ba52-16e9">6+</characteristic>
-            <characteristic name="Variable 4" typeId="ad26-bf56-95c4-80f1">4</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="044b-9d4d-6cab-16d5" name="Roar of Command" hidden="false" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
-          <characteristics>
-            <characteristic name="Command Ability Details" typeId="1b71-4c83-4e8c-093f">You can use this command ability at the start of your charge phase if this model is your general and is on the battlefield. If you do so, you can re-roll charge rolls for friendly TAMURKHAN&apos;S HORDE units while they are wholly within 28&quot; of this model in that charge phase.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Once per battle, when this model issues a command, when you can pick up to 3 friendly TAMURKHAN&apos;S HORDE units to receive the command instead of only 1 friendly unit.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -2208,7 +2161,100 @@
         <categoryLink id="4edb-5831-d211-08a6" name="New CategoryLink" hidden="false" targetId="d8ea-51a4-1e5d-801b" primary="false"/>
         <categoryLink id="4481-bb3c-9819-1bd1" name="New CategoryLink" hidden="false" targetId="c91f-5c40-bec0-1a93" primary="false"/>
         <categoryLink id="b1a3-2257-5240-0cc9" name="New CategoryLink" hidden="false" targetId="490d-2728-9e98-d428" primary="false"/>
+        <categoryLink id="0e5f-f578-43c0-d98d" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
+        <categoryLink id="a9fc-7bab-fe0d-9c0d" name="Behemoth" hidden="false" targetId="fa0c-9044-2568-fa02" primary="false"/>
+        <categoryLink id="2331-6550-5213-b624" name="Unique" hidden="false" targetId="088b-3a27-03f7-8249" primary="false"/>
       </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="135e-f9ca-f69f-bf01" name="Crushing Jaws" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4a53-f69f-86aa-ddc2" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="126b-dded-cf2c-f240" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="6a53-e908-a8f7-46dd" name="Crushing Jaws" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">3&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">2</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">*</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">2+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-3</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">D3</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="be55-7cc8-831c-9b28" name="Befouled Bulk" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0128-dee5-81a1-7775" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="52e8-3b11-5a0c-ad6b" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="4447-f461-4d86-358e" name="Befouled Bulk" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">2&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">*</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="0bd9-6003-c870-c2ed" name="Lashing Tongue" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="82d3-b66e-3113-5582" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d189-4348-2a83-92b0" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="3195-7144-903a-0563" name="Lashing Tongue" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Missile</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">14&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">3</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="508f-638a-ed03-3e3c" name="The Black Cleaver" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e4b4-eed8-8843-5478" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1ae7-17e1-2281-d35a" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="abe5-db99-e81c-8f2b" name="The Black Cleaver" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">2&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">4</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-2</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">2</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
       <entryLinks>
         <entryLink id="b3b4-e204-c8dd-05c6" name="General" hidden="false" collective="false" import="true" targetId="cb83-a378-d442-0e53" type="selectionEntry">
           <categoryLinks>
@@ -2218,15 +2264,15 @@
         <entryLink id="7f6f-7848-191c-dda8" name="Battalions" hidden="false" collective="false" import="true" targetId="61fa-3b34-1a80-2699" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="460.0"/>
+        <cost name="pts" typeId="points" value="450.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="4a59-0040-d9db-e1ca" name="Kayzk the Befouled [LEGENDS]" publicationId="6894-a70d-pubN78755" page="4" hidden="true" collective="false" import="true" type="unit">
+    <selectionEntry id="4a59-0040-d9db-e1ca" name="Kayzk the Befouled [LEGENDS]" publicationId="78aa-9f5e-4e07-07b5" page="" hidden="true" collective="false" import="true" type="unit">
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d317-56cc-a110-0896" type="max"/>
       </constraints>
       <profiles>
-        <profile id="1303-4643-0ead-f77e" name="Kayzk the Befouled" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
+        <profile id="1303-4643-0ead-f77e" name="Kayzk the Befouled" publicationId="78aa-9f5e-4e07-07b5" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
           <characteristics>
             <characteristic name="Move" typeId="8655-6213-2824-1752">7&quot;</characteristic>
             <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">7</characteristic>
@@ -2234,41 +2280,19 @@
             <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">3+</characteristic>
           </characteristics>
         </profile>
-        <profile id="5b7e-6ed0-6488-09b8" name="Noxious Blades" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
-          <characteristics>
-            <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
-            <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">2&quot;</characteristic>
-            <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">3</characteristic>
-            <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
-            <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
-            <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
-            <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">D3</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="37a4-1997-28ec-160c" name="Slavering Fangs" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
-          <characteristics>
-            <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
-            <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
-            <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">D6</characteristic>
-            <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
-            <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">4+</characteristic>
-            <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
-            <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
-          </characteristics>
-        </profile>
         <profile id="1e7b-6125-8594-8a1a" name="Corrupted Flesh" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Roll a dice each time you allocate a mortal wound to this model. On a 4+, that mortal wound is negated.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This unit has a ward of 5+.</characteristic>
           </characteristics>
         </profile>
         <profile id="610a-a962-557a-98f8" name="Noxious Blades" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If the unmodified hit roll for an attack with this model’s Noxious Blades is 6, that attack has a Damage characteristic of 3 instead of D3.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If the unmodified hit roll for an attack made with this model’s Noxious Blades is 6, the Damage characteristic of that weapon for that attack is 3 instead of D3.</characteristic>
           </characteristics>
         </profile>
         <profile id="834c-4819-ab45-7afa" name="Breath of the Plague Pit" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
           <characteristics>
-            <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">You can use this command ability at the start of the battleshock phase if this model is on the battlefield. If you do so, do not take battleshock tests for friendly NURGLE units while they are wholly within 14&quot; of this model in that battleshock phase.</characteristic>
+            <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">In the combat phase, after this model has fought in that phase for the first time, you can pick 1 friendly TAMURKHAN&apos;S HORDE unit that has not fought in that combat phase, that is within 3&quot; of an enemy unit and that is wholly within 12&quot; of this unit. That friendly unit fights immediately.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -2282,6 +2306,52 @@
         <categoryLink id="4aff-0a80-1e56-6939" name="10 or less wounds Leader" hidden="false" targetId="a8ed-ca35-24e0-cf2e" primary="false"/>
         <categoryLink id="7914-bf3f-1003-e40f" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
       </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="0c10-064a-988c-75af" name="Noxious Blades" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a732-e893-2699-3026" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9742-f7e4-30c1-b830" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="d6aa-3bee-af30-3cfd" name="Noxious Blades" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">2&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">3</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">D3</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="7ada-de25-6a6e-daa1" name="Slavering Fangs" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="80fa-9b2f-8e94-1b34" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d02b-99d9-f994-68d6" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="83b2-c044-4700-484d" name="Slavering Fangs" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">D6</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">4+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
       <entryLinks>
         <entryLink id="0401-2569-8972-d6ae" name="General" hidden="false" collective="false" import="true" targetId="cb83-a378-d442-0e53" type="selectionEntry">
           <categoryLinks>
@@ -2294,24 +2364,7 @@
         <cost name="pts" typeId="points" value="120.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="d0a3-8e1b-a66f-ae4a" name="Bile Troggoths [LEGENDS]" publicationId="6894-a70d-pubN78755" page="6" hidden="true" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="increment" field="points" value="180">
-          <repeats>
-            <repeat field="selections" scope="d0a3-8e1b-a66f-ae4a" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="cdbb-ddc6-a1c4-fff2" repeats="1" roundUp="false"/>
-          </repeats>
-        </modifier>
-        <modifier type="decrement" field="points" value="180">
-          <conditions>
-            <condition field="selections" scope="d0a3-8e1b-a66f-ae4a" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="cdbb-ddc6-a1c4-fff2" type="greaterThan"/>
-          </conditions>
-        </modifier>
-        <modifier type="decrement" field="points" value="80">
-          <conditions>
-            <condition field="selections" scope="d0a3-8e1b-a66f-ae4a" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="cdbb-ddc6-a1c4-fff2" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
+    <selectionEntry id="d0a3-8e1b-a66f-ae4a" name="Bile Troggoths [LEGENDS]" publicationId="78aa-9f5e-4e07-07b5" page="" hidden="true" collective="false" import="true" type="unit">
       <profiles>
         <profile id="a4f2-22a0-a08f-d29a" name="Bile Troggoths" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
           <characteristics>
@@ -2321,31 +2374,9 @@
             <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">4+</characteristic>
           </characteristics>
         </profile>
-        <profile id="f5cd-aeb0-3425-6cfd" name="Infected Vomit" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
-          <characteristics>
-            <characteristic name="Type" typeId="655c-362e-a663-3e50">Missile</characteristic>
-            <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">7&quot;</characteristic>
-            <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">1</characteristic>
-            <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
-            <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
-            <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-2</characteristic>
-            <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">D3</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="598b-01ed-c267-670c" name="Rusted Axes and Cleavers" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
-          <characteristics>
-            <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
-            <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">2&quot;</characteristic>
-            <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">3</characteristic>
-            <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
-            <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
-            <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
-            <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">2</characteristic>
-          </characteristics>
-        </profile>
         <profile id="ad5e-0fe4-6b6d-0c85" name="Infected Vomit" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If the unmodified hit roll for an attack made with this unit’s Infected Vomit is 6, that attacks inflicts 1 mortal wound on the target in addition to any normal damage.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If the unmodified hit roll for an attack made with this unit’s Infected Vomit is 6, that attacks causes 1 mortal wound to the target in addition to any damage it inflicts.</characteristic>
           </characteristics>
         </profile>
         <profile id="ed81-041d-e0f7-ad2f" name="Fecund Regeneration" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
@@ -2359,26 +2390,84 @@
         <categoryLink id="8eeb-eae5-4e6d-42d6" name="New CategoryLink" hidden="false" targetId="7cdd-80ea-cbeb-8e16" primary="false"/>
         <categoryLink id="21cb-d42d-af67-864f" name="New CategoryLink" hidden="false" targetId="dd77-19a5-28eb-cbec" primary="false"/>
         <categoryLink id="a162-4539-95ef-e470" name="New CategoryLink" hidden="false" targetId="be2b-5e91-b381-5671" primary="false"/>
+        <categoryLink id="4ce0-4d02-4afa-6fac" name="TAMURKHAN&apos;S HORDE" hidden="false" targetId="490d-2728-9e98-d428" primary="false"/>
+        <categoryLink id="7d0d-b507-6ba3-438e" name="New CategoryLink" hidden="false" targetId="065e-fda7-fd27-1f40" primary="true"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="cdbb-ddc6-a1c4-fff2" name="3 Bile Troggoths" hidden="false" collective="false" import="true" type="model">
+          <modifiers>
+            <modifier type="set" field="name" value="6 Bile Troggoths">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0a8d-cde8-fba1-6c0d" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d0b8-6d68-dde9-afeb" type="min"/>
-            <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7045-51cf-5bf6-bdd8" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7045-51cf-5bf6-bdd8" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="180.0"/>
+            <cost name="pts" typeId="points" value="195.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="2d1f-3062-6053-c69c" name="Infected Vomit" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8e43-a939-bdf6-fd09" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="dec1-4df2-5849-91d6" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="1c89-37f3-37c6-a33d" name="Infected Vomit" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Missile</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">7&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">1</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-2</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">D3</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="08e6-0d09-da79-88fc" name="Rusted Axes and Cleavers" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c171-f983-8452-55b6" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7048-6651-87df-7026" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="b95e-51a1-d9ee-2f5e" name="Rusted Axes and Cleavers" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">2&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">3</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">2</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
         <entryLink id="30b2-a1d9-865c-fd6b" name="Battalions" hidden="false" collective="false" import="true" targetId="61fa-3b34-1a80-2699" type="selectionEntryGroup"/>
+        <entryLink id="db06-dff6-c4a8-c325" name="Reinforced" hidden="false" collective="false" import="true" targetId="0a8d-cde8-fba1-6c0d" type="selectionEntry">
+          <costs>
+            <cost name="pts" typeId="points" value="195.0"/>
+          </costs>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="e2dc-66be-b715-6f9b" name="Battalion: Sons of the Maggot Lord" publicationId="6894-a70d-pubN78755" page="7" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="e2dc-66be-b715-6f9b" name="Battalion: Sons of the Maggot Lord" publicationId="78aa-9f5e-4e07-07b5" page="7" hidden="false" collective="false" import="true" type="upgrade">
       <profiles>
         <profile id="d8e4-7e80-e266-1a25" name="The Tide of Conquest" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
           <characteristics>
@@ -2442,7 +2531,7 @@
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="422b-a476-03f6-59bd" name="Battalion: Leaping Pox" publicationId="6894-a70d-pubN78755" page="7" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="422b-a476-03f6-59bd" name="Battalion: Leaping Pox" publicationId="78aa-9f5e-4e07-07b5" page="7" hidden="false" collective="false" import="true" type="upgrade">
       <profiles>
         <profile id="e9df-7648-d3d0-5b7a" name="Infectious!" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
           <characteristics>
