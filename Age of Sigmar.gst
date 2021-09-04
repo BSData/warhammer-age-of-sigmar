@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="109" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="110" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <publications>
     <publication id="e51d-b1a3-pubEC" name="The General&apos;s Handbook"/>
     <publication id="e51d-b1a3-pubEQ" name="Core Rules"/>
@@ -1804,7 +1804,7 @@ to set up the WIZARD, then the WIZARD is slain.</description>
 
 If it is increasing the flow of time, add 1 to charge rolls for units wholly within 18&quot; of this endless spell. 
 
-If it is decreasing the flow of time, WIZARDS can attempt to cast 1 extra spell in their commanding player&apos;s hero phase while they are within 6&quot; of this endless spell. 
+If it is decreasing the flow of time, if a player has any friendly Wizards within 6&quot; of this endless spell in their hero phase, they can pick 1 of those Wizards to attempt to cast 1 extra spell in that hero phase.
 
 At the start of the hero phase, if there is a friendly WIZARD within 6&quot; of this endless spell, the player whose turn is taking place can change whether this endless spell is increasing or decreasing the flow of time.</characteristic>
           </characteristics>
@@ -2303,7 +2303,7 @@ A unit cannot be removed and set up again in this way more than once per phase. 
         </profile>
         <profile id="0a1a-1532-0887-c5d7" name="Arcane Passage" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Once per turn, if a WIZARD successfully casts a spell within 1&quot; of this endless spell, the range, visibility, and effect of that spell can be measured from this endless spell instead of the caster.
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Once per turn, if a Wizard successfully casts a spell within 1&quot; of this endless spell, the range, visibility and effect of that spell can be measured from 1 part of this endless spell instead of the caster.
 
 In addition, once per turn, when a predatory endless spell within 6&quot; of this endless spell is picked to move, the commanding player of that predatory endless spell can remove it from the battlefield and set it up again within 6&quot; of the other part of this endless spell. A predatory endless spell set up in this manner does not count as having moved, but it cannot be picked to move again in the same phase.</characteristic>
           </characteristics>
