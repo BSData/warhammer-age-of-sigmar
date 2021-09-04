@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="108" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="109" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <publications>
     <publication id="e51d-b1a3-pubEC" name="The General&apos;s Handbook"/>
     <publication id="e51d-b1a3-pubEQ" name="Core Rules"/>
@@ -305,7 +305,6 @@
       </constraints>
     </categoryEntry>
     <categoryEntry id="87dc-a9ab-26cc-a607" name="Multiple Generals" hidden="false"/>
-    <categoryEntry id="92ad-3e07-41cc-ff59" name="Allied Battleline" hidden="false"/>
     <categoryEntry id="3ecc-4c0d-d717-29bd" name="Battalion" hidden="false"/>
     <categoryEntry id="8c29-7716-f92d-a1cd" name="Extra Artefact" hidden="true"/>
   </categoryEntries>
@@ -1186,7 +1185,12 @@
             <categoryLink id="e9c4-59b3-1cbc-cc04" name="Behemoth" hidden="false" targetId="fa0c-9044-2568-fa02" primary="false"/>
             <categoryLink id="5565-10d0-f219-44f4" name="Leader" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="false"/>
             <categoryLink id="c0ff-c052-e42c-ad56" name="Other" hidden="false" targetId="065e-fda7-fd27-1f40" primary="false"/>
-            <categoryLink id="9baf-3d9f-71ef-f70c" name="Allied Battleline" hidden="false" targetId="92ad-3e07-41cc-ff59" primary="false"/>
+            <categoryLink id="9baf-3d9f-71ef-f70c" name="Battleline" hidden="false" targetId="e9f2-765a-b7b8-ce8e" primary="false"/>
+            <categoryLink id="d9ec-f36c-d8b5-bad2" name="General" hidden="false" targetId="b745-17c4-8fbf-8b04" primary="false">
+              <constraints>
+                <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ba0a-9142-54d5-5e15" type="max"/>
+              </constraints>
+            </categoryLink>
           </categoryLinks>
         </forceEntry>
         <forceEntry id="8c26-2422-34d3-31a5" name="Coalition" hidden="false">
