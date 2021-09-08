@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="110" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="111" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <publications>
     <publication id="e51d-b1a3-pubEC" name="The General&apos;s Handbook"/>
     <publication id="e51d-b1a3-pubEQ" name="Core Rules"/>
@@ -307,6 +307,12 @@
     <categoryEntry id="87dc-a9ab-26cc-a607" name="Multiple Generals" hidden="false"/>
     <categoryEntry id="3ecc-4c0d-d717-29bd" name="Battalion" hidden="false"/>
     <categoryEntry id="8c29-7716-f92d-a1cd" name="Extra Artefact" hidden="true"/>
+    <categoryEntry id="5dff-3614-49fd-c3e4" name="Grand Strategy" hidden="false">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="008f-9c5f-c3e1-d9d1" type="min"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="abb4-aa6e-33ab-5371" type="max"/>
+      </constraints>
+    </categoryEntry>
   </categoryEntries>
   <forceEntries>
     <forceEntry id="36b7-ee1e-0855-f23f" name="**Pitched Battle GHB 2021**" hidden="false">
@@ -1602,11 +1608,6 @@
     <entryLink id="eb9a-ad10-f507-1b3a" name="Core Battalion: Battle Regiment" hidden="false" collective="false" import="true" targetId="1878-56e2-2862-8da5" type="selectionEntry"/>
     <entryLink id="da26-f2b9-ea3b-b117" name="Core Battalion: Command Entourage" hidden="false" collective="false" import="true" targetId="7f89-26d0-ff93-83fe" type="selectionEntry"/>
     <entryLink id="49ae-7ee3-101e-5204" name="Core Battalion: Grand Battery" hidden="false" collective="false" import="true" targetId="be2d-ba53-4ebc-f035" type="selectionEntry"/>
-    <entryLink id="753f-721e-6781-3bdf" name="Grand Strategy" hidden="false" collective="false" import="true" targetId="f5ad-d831-b4c5-2195" type="selectionEntry">
-      <categoryLinks>
-        <categoryLink id="e864-b552-811d-240f" name="New CategoryLink" hidden="false" targetId="1974-3f49-7f0b-8422" primary="true"/>
-      </categoryLinks>
-    </entryLink>
     <entryLink id="8da1-0246-3653-3c8c" name="Triumphs" hidden="false" collective="false" import="true" targetId="472e-6c0c-b6d5-b996" type="selectionEntry"/>
   </entryLinks>
   <rules>
@@ -2572,11 +2573,6 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
     </selectionEntry>
     <selectionEntry id="1878-56e2-2862-8da5" name="Core Battalion: Battle Regiment" hidden="false" collective="false" import="true" type="upgrade">
       <profiles>
-        <profile id="a631-4a5b-a333-79b2" name="Unified" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
-          <characteristics>
-            <characteristic name="Battalion Ability Details" typeId="08e0-9ead-1dbe-c801">One-drop Deployment (see 26.2.1).</characteristic>
-          </characteristics>
-        </profile>
         <profile id="367e-fa52-1a3d-0684" name="Core Battalion: Battle Regiment" hidden="false" typeId="75e0-a332-e4f5-bf36" typeName="Battalion Organisation">
           <characteristics>
             <characteristic name="Required" typeId="eb5f-e9d2-e457-bff5">1 Commander
@@ -2586,6 +2582,9 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
           </characteristics>
         </profile>
       </profiles>
+      <infoLinks>
+        <infoLink id="2dca-6135-9464-0728" name="Unified" hidden="false" targetId="9439-c5f6-945d-2d65" type="profile"/>
+      </infoLinks>
       <categoryLinks>
         <categoryLink id="6ff0-a8ac-7d3c-e003" name="New CategoryLink" hidden="false" targetId="6575-7d6c-ce4d-ada4" primary="true"/>
       </categoryLinks>
@@ -2595,11 +2594,6 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
     </selectionEntry>
     <selectionEntry id="be2d-ba53-4ebc-f035" name="Core Battalion: Grand Battery" hidden="false" collective="false" import="true" type="upgrade">
       <profiles>
-        <profile id="4f5f-16f7-b751-40d0" name="Slayers" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
-          <characteristics>
-            <characteristic name="Battalion Ability Details" typeId="08e0-9ead-1dbe-c801">Once per battle, 1 unit from this battalion can receive the All-out Attack or Unleash Hell command without the command being issued and without a command point being spent.</characteristic>
-          </characteristics>
-        </profile>
         <profile id="4722-dddc-3192-37b5" name="Core Battalion: Grand Battery" hidden="false" typeId="75e0-a332-e4f5-bf36" typeName="Battalion Organisation">
           <characteristics>
             <characteristic name="Required" typeId="eb5f-e9d2-e457-bff5">1 Sub-commander
@@ -2607,6 +2601,9 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
           </characteristics>
         </profile>
       </profiles>
+      <infoLinks>
+        <infoLink id="d314-e607-1e29-d5dc" name="Slayers" hidden="false" targetId="51bb-3683-715d-a20f" type="profile"/>
+      </infoLinks>
       <categoryLinks>
         <categoryLink id="0efb-0e4b-97ac-0f8c" name="New CategoryLink" hidden="false" targetId="6575-7d6c-ce4d-ada4" primary="true"/>
       </categoryLinks>
@@ -2631,46 +2628,15 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d631-2760-86c8-9aec" type="max"/>
           </constraints>
-          <selectionEntries>
-            <selectionEntry id="aa19-403b-157f-fab0" name="Magnificent" hidden="false" collective="false" import="true" type="upgrade">
-              <infoLinks>
-                <infoLink id="73c3-8ca7-a3d5-1f04" name="Magnificent" hidden="false" targetId="d0be-bf37-cc83-f87b" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="b5e7-afda-fa83-f319" name="Strategist" hidden="false" collective="false" import="true" type="upgrade">
-              <infoLinks>
-                <infoLink id="62ab-09d3-ca6b-cfa1" name="Strategist" hidden="false" targetId="d430-efbb-5f30-d60a" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="bda7-5686-e981-d60a" name="Extra Enhancement" hidden="true" collective="false" import="true">
-          <modifiers>
-            <modifier type="set" field="hidden" value="false">
-              <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="aa19-403b-157f-fab0" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d6b2-5aaf-c291-eef9" type="max"/>
-          </constraints>
           <entryLinks>
-            <entryLink id="beaa-00a1-5780-e79e" name="Extra Enhancement: Artefacts of Power" hidden="false" collective="false" import="true" targetId="2a8b-93fa-e1b9-4102" type="selectionEntry"/>
-            <entryLink id="74ea-6922-38b1-33c8" name="Extra Enhancement: Prayer Scriptures" hidden="false" collective="false" import="true" targetId="24e6-c9b0-8d0d-02a2" type="selectionEntry"/>
-            <entryLink id="25ea-3128-5a14-2d2a" name="Extra Enhancement: Spell Lores" hidden="false" collective="false" import="true" targetId="bdb0-7f20-53ff-f804" type="selectionEntry"/>
-            <entryLink id="f2d7-4b82-890c-26fa" name="Extra Enhancement: Triumphs" hidden="false" collective="false" import="true" targetId="4f32-1179-8b4c-61e0" type="selectionEntry"/>
-            <entryLink id="c542-f3b0-970a-02c3" name="Extra Enhancement: Great Endrinworks" hidden="false" collective="false" import="true" targetId="7aa8-a1e1-a0b8-fd18" type="selectionEntry"/>
-            <entryLink id="267a-d344-1f81-4ccd" name="Extra Enhancement: Mount Trait" hidden="false" collective="false" import="true" targetId="c965-0f85-d28c-ea2a" type="selectionEntry"/>
+            <entryLink id="ce4e-b4fb-65ba-1262" name="Magnificent" hidden="false" collective="false" import="true" targetId="cbc9-9155-49bd-c93f" type="selectionEntry"/>
+            <entryLink id="31eb-fbb7-d1b9-2e2e" name="Strategist" hidden="false" collective="false" import="true" targetId="ef4f-fbaf-d46b-430d" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="cfde-ae2c-2c7a-58ae" name="Extra Enhancement" hidden="false" collective="false" import="true" targetId="b031-edfb-1ca0-b233" type="selectionEntryGroup"/>
+      </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
@@ -2714,10 +2680,9 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
     <selectionEntry id="f5ad-d831-b4c5-2195" name="Grand Strategy" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4470-06b9-d56a-66db" type="max"/>
-        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="473c-fec2-7fa5-00e4" type="min"/>
       </constraints>
       <entryLinks>
-        <entryLink id="a86f-5501-ef94-94ba" name="Grand Strategy" hidden="false" collective="false" import="true" targetId="1e64-bcdc-3709-7ec7" type="selectionEntryGroup"/>
+        <entryLink id="a86f-5501-ef94-94ba" name="Universal Grand Strategy" hidden="false" collective="false" import="true" targetId="1e64-bcdc-3709-7ec7" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
@@ -2771,6 +2736,30 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
       <entryLinks>
         <entryLink id="fd66-3493-0404-02ef" name="Triumphs" hidden="false" collective="false" import="true" targetId="055f-7077-c87d-f9a8" type="selectionEntryGroup"/>
       </entryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="cbc9-9155-49bd-c93f" name="Magnificent" hidden="false" collective="false" import="true" type="upgrade">
+      <infoLinks>
+        <infoLink id="3748-508c-9c3e-0bcf" name="Magnificent" hidden="false" targetId="d0be-bf37-cc83-f87b" type="profile"/>
+      </infoLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="ef4f-fbaf-d46b-430d" name="Strategist" hidden="false" collective="false" import="true" type="upgrade">
+      <infoLinks>
+        <infoLink id="3dd6-cf08-df51-6c94" name="Strategist" hidden="false" targetId="d430-efbb-5f30-d60a" type="profile"/>
+      </infoLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="4b40-2b5f-d7f7-2e4b" name="Slayers" hidden="false" collective="false" import="true" type="upgrade">
+      <infoLinks>
+        <infoLink id="7010-0cb4-5eb1-8235" name="Slayers" hidden="false" targetId="51bb-3683-715d-a20f" type="profile"/>
+      </infoLinks>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
@@ -3727,7 +3716,7 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
-    <selectionEntryGroup id="b275-810f-adfc-156b" name="Core Battalions" hidden="true" collective="false" import="true">
+    <selectionEntryGroup id="b275-810f-adfc-156b" name="Universal Core Battalions" hidden="true" collective="false" import="true">
       <modifiers>
         <modifier type="set" field="hidden" value="false">
           <conditions>
@@ -4711,15 +4700,16 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
-    <selectionEntryGroup id="1e64-bcdc-3709-7ec7" name="Grand Strategy" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="1e64-bcdc-3709-7ec7" name="Universal Grand Strategy" hidden="false" collective="false" import="true">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="bc5c-6f2c-d51b-a351" type="max"/>
-        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a4d6-8abe-6aac-42e9" type="min"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4717-1d01-b0b2-9a58" type="max"/>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3050-d56e-a99c-e380" type="min"/>
       </constraints>
       <selectionEntries>
         <selectionEntry id="a409-36d2-41d9-a72f" name="Hold the Line" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f393-8699-1137-f7d2" type="max"/>
+          </constraints>
           <profiles>
             <profile id="4fb4-1f59-e825-f56f" name="Hold the Line" hidden="false" typeId="9c01-ec20-32c1-0948" typeName="Grand Strategy">
               <characteristics>
@@ -4727,11 +4717,17 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
               </characteristics>
             </profile>
           </profiles>
+          <categoryLinks>
+            <categoryLink id="8534-1492-baf8-21c2" name="Grand Strategy" hidden="false" targetId="5dff-3614-49fd-c3e4" primary="false"/>
+          </categoryLinks>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="1dbe-00f3-42f4-b04e" name="Vendetta" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3f32-e4f4-487c-f487" type="max"/>
+          </constraints>
           <profiles>
             <profile id="d2bd-7f2d-40b6-a15a" name="Vendetta" hidden="false" typeId="9c01-ec20-32c1-0948" typeName="Grand Strategy">
               <characteristics>
@@ -4739,6 +4735,9 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
               </characteristics>
             </profile>
           </profiles>
+          <categoryLinks>
+            <categoryLink id="38aa-3eb6-f0cf-b3fe" name="Grand Strategy" hidden="false" targetId="5dff-3614-49fd-c3e4" primary="false"/>
+          </categoryLinks>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
@@ -4751,6 +4750,9 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
               </conditions>
             </modifier>
           </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1e09-d7e5-8fd1-e894" type="max"/>
+          </constraints>
           <profiles>
             <profile id="6fac-7f75-a8e8-f292" name="Dominating Presence" hidden="false" typeId="9c01-ec20-32c1-0948" typeName="Grand Strategy">
               <characteristics>
@@ -4758,6 +4760,9 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
               </characteristics>
             </profile>
           </profiles>
+          <categoryLinks>
+            <categoryLink id="e722-d703-73e6-24e7" name="Grand Strategy" hidden="false" targetId="5dff-3614-49fd-c3e4" primary="false"/>
+          </categoryLinks>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
@@ -4770,6 +4775,9 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
               </conditions>
             </modifier>
           </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4ba1-a0f2-c856-6216" type="max"/>
+          </constraints>
           <profiles>
             <profile id="8a2f-52ff-e81f-e3bc" name="Beast Master" hidden="false" typeId="9c01-ec20-32c1-0948" typeName="Grand Strategy">
               <characteristics>
@@ -4777,6 +4785,9 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
               </characteristics>
             </profile>
           </profiles>
+          <categoryLinks>
+            <categoryLink id="5ca7-e81d-2148-de9c" name="Grand Strategy" hidden="false" targetId="5dff-3614-49fd-c3e4" primary="false"/>
+          </categoryLinks>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
@@ -4789,6 +4800,9 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
               </conditions>
             </modifier>
           </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3318-7553-48fd-0967" type="max"/>
+          </constraints>
           <profiles>
             <profile id="1774-98a0-c401-d161" name="Prized Sorcery" hidden="false" typeId="9c01-ec20-32c1-0948" typeName="Grand Strategy">
               <characteristics>
@@ -4796,6 +4810,9 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
               </characteristics>
             </profile>
           </profiles>
+          <categoryLinks>
+            <categoryLink id="f8e3-c615-f38a-1ac9" name="Grand Strategy" hidden="false" targetId="5dff-3614-49fd-c3e4" primary="false"/>
+          </categoryLinks>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
@@ -4808,6 +4825,9 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
               </conditions>
             </modifier>
           </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="218e-ec75-d410-988d" type="max"/>
+          </constraints>
           <profiles>
             <profile id="6383-a7f2-eaef-03dd" name="Pillars of Belief" hidden="false" typeId="9c01-ec20-32c1-0948" typeName="Grand Strategy">
               <characteristics>
@@ -4815,6 +4835,9 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
               </characteristics>
             </profile>
           </profiles>
+          <categoryLinks>
+            <categoryLink id="a185-bbd8-569b-c2df" name="Grand Strategy" hidden="false" targetId="5dff-3614-49fd-c3e4" primary="false"/>
+          </categoryLinks>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
@@ -4827,6 +4850,9 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
               </conditions>
             </modifier>
           </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8256-d95e-0210-da9f" type="max"/>
+          </constraints>
           <profiles>
             <profile id="9706-5930-ef0a-dbcd" name="Predator&apos;s Domain" hidden="false" typeId="9c01-ec20-32c1-0948" typeName="Grand Strategy">
               <characteristics>
@@ -4834,11 +4860,17 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
               </characteristics>
             </profile>
           </profiles>
+          <categoryLinks>
+            <categoryLink id="d31e-acd1-46fc-e11f" name="Grand Strategy" hidden="false" targetId="5dff-3614-49fd-c3e4" primary="false"/>
+          </categoryLinks>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="8b9d-0de1-0ee1-4d92" name="Sever the Head" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9a2c-73b9-bd2f-9ea8" type="max"/>
+          </constraints>
           <profiles>
             <profile id="dc8d-1188-4015-5ee0" name="Sever the Head" hidden="false" typeId="9c01-ec20-32c1-0948" typeName="Grand Strategy">
               <characteristics>
@@ -4846,6 +4878,9 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
               </characteristics>
             </profile>
           </profiles>
+          <categoryLinks>
+            <categoryLink id="6b7b-069a-f088-3ba9" name="Grand Strategy" hidden="false" targetId="5dff-3614-49fd-c3e4" primary="false"/>
+          </categoryLinks>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
@@ -4925,6 +4960,26 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
+    <selectionEntryGroup id="b031-edfb-1ca0-b233" name="Extra Enhancement" hidden="true" collective="false" import="true">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cbc9-9155-49bd-c93f" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="035b-f5ae-ffe0-dabd" type="max"/>
+      </constraints>
+      <entryLinks>
+        <entryLink id="faff-3318-cda6-f26c" name="Extra Enhancement: Artefacts of Power" hidden="false" collective="false" import="true" targetId="2a8b-93fa-e1b9-4102" type="selectionEntry"/>
+        <entryLink id="45c7-f072-4b42-f69f" name="Extra Enhancement: Prayer Scriptures" hidden="false" collective="false" import="true" targetId="24e6-c9b0-8d0d-02a2" type="selectionEntry"/>
+        <entryLink id="5e9e-9c97-c20f-7129" name="Extra Enhancement: Spell Lores" hidden="false" collective="false" import="true" targetId="bdb0-7f20-53ff-f804" type="selectionEntry"/>
+        <entryLink id="215d-7fef-fd53-a76b" name="Extra Enhancement: Triumphs" hidden="false" collective="false" import="true" targetId="4f32-1179-8b4c-61e0" type="selectionEntry"/>
+        <entryLink id="6ad8-fa43-7bff-87dd" name="Extra Enhancement: Great Endrinworks" hidden="false" collective="false" import="true" targetId="7aa8-a1e1-a0b8-fd18" type="selectionEntry"/>
+        <entryLink id="d869-71fd-244a-a68b" name="Extra Enhancement: Mount Trait" hidden="false" collective="false" import="true" targetId="c965-0f85-d28c-ea2a" type="selectionEntry"/>
+      </entryLinks>
+    </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <sharedProfiles>
     <profile id="ae02-a84f-a903-1ff8" name="Arcane Bolt" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
@@ -4979,6 +5034,16 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
     <profile id="46ca-dc4f-b7a1-726d" name="Elite" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
       <characteristics>
         <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Models in this unit can issue commands to their own unit.</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="9439-c5f6-945d-2d65" name="Unified" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
+      <characteristics>
+        <characteristic name="Battalion Ability Details" typeId="08e0-9ead-1dbe-c801">One-drop Deployment (see 26.2.1).</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="51bb-3683-715d-a20f" name="Slayers" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
+      <characteristics>
+        <characteristic name="Battalion Ability Details" typeId="08e0-9ead-1dbe-c801">Once per battle, 1 unit from this battalion can receive the All-out Attack or Unleash Hell command without the command being issued and without a command point being spent.</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
