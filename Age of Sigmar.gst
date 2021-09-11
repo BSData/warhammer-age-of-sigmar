@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="111" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="112" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <publications>
     <publication id="e51d-b1a3-pubEC" name="The General&apos;s Handbook"/>
     <publication id="e51d-b1a3-pubEQ" name="Core Rules"/>
@@ -121,6 +121,11 @@
     <profileType id="189e-e41d-0790-edc6" name="Triumph">
       <characteristicTypes>
         <characteristicType id="4484-dc59-92ec-5607" name="Description"/>
+      </characteristicTypes>
+    </profileType>
+    <profileType id="e6fe-61ec-3973-ad03" name="Mount Trait">
+      <characteristicTypes>
+        <characteristicType id="0603-faf4-fada-3cbf" name="Mount Trait Details"/>
       </characteristicTypes>
     </profileType>
   </profileTypes>
