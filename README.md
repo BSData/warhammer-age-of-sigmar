@@ -12,7 +12,7 @@ Warhammer Age of Sigmar v3.0 (2021 Edition)
 ## Important ##
 
 **The Battlescribe data editor can cause problems when merging updates. Because of this, and also to avoid duplicated 
-effort where multiple people are working on the same files, please join us on Gitter before you commit changes to the files.**
+effort where multiple people are working on the same files, please join us on Discord before you commit changes to the files.**
 
 **UPDATE AoS 3.0:**
 The Catalogs have been updated to support Matched Play points and FAQ's for AoS v3.0 release. 
