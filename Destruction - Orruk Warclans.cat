@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="5419-b58f-5a39-0bfe" name="Destruction - Orruk Warclans" revision="60" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="112" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="5419-b58f-5a39-0bfe" name="Destruction - Orruk Warclans" revision="62" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="112" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="7e25-33bb-pubN65537" name="Destruction Battletome: Bonesplitterz"/>
     <publication id="7e25-33bb-pubN82863" name="Age of Sigmar: The Rules"/>
@@ -227,7 +227,6 @@
                   </constraints>
                   <selectionEntries>
                     <selectionEntry id="0d4e-a67b-cef3-e980" name="Big Waaagh!" hidden="false" collective="false" import="true" type="upgrade">
-                      <comment></comment>
                       <constraints>
                         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3d4e-0f49-f5ab-bb16" type="max"/>
                       </constraints>
@@ -331,7 +330,6 @@
                       </costs>
                     </selectionEntry>
                     <selectionEntry id="c4c6-5921-532e-b75d" name="Bonesplitterz" hidden="false" collective="false" import="true" type="upgrade">
-                      <comment></comment>
                       <constraints>
                         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="be98-5c05-1382-c77f" type="max"/>
                       </constraints>
@@ -405,7 +403,6 @@
                       </costs>
                     </selectionEntry>
                     <selectionEntry id="3354-bd6d-8437-3fb1" name="Ironjawz" hidden="false" collective="false" import="true" type="upgrade">
-                      <comment></comment>
                       <constraints>
                         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3bc4-0fb9-33d6-0f72" type="max"/>
                       </constraints>
@@ -474,7 +471,6 @@
                       </costs>
                     </selectionEntry>
                     <selectionEntry id="acdc-f74e-153c-63e8" name="Kruleboyz" hidden="false" collective="false" import="true" type="upgrade">
-                      <comment></comment>
                       <constraints>
                         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fcef-7a01-bb94-d8e0" type="max"/>
                       </constraints>
@@ -7466,8 +7462,93 @@ If the bet if the first friendly unit to be destroyed during the battle, you can
           </conditions>
         </modifier>
       </modifiers>
-      <selectionEntries>
-        <selectionEntry id="5078-f8b9-6d3c-3cb4" name="Ironjawz Fist" hidden="true" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b926-ddde-e49c-cf27" type="max"/>
+      </constraints>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="3f26-0099-4a37-0208" name="Bonesplitterz Rukk" hidden="true" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="ffed-0a5f-55ff-c951" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7801-9620-22a3-a29f" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="ce00-3ffb-727e-e69a" name="Bonesplitterz Rukk - 1 Sub-commander" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="01f1-03ae-d19b-4d7b" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="ffed-0a5f-55ff-c951" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="increment" field="f5bd-4307-1ca6-a33a" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="ffed-0a5f-55ff-c951" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="ffed-0a5f-55ff-c951" type="greaterThan"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a8ed-ca35-24e0-cf2e" type="instanceOf"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9db3-55f3-706c-01bd" type="instanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="01f1-03ae-d19b-4d7b" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f5bd-4307-1ca6-a33a" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5607-210b-ffc3-562e" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="99e4-cbd5-41fc-9f9d" name="Bonesplitterz Rukk - 2-5 Troops" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="eecf-ce9a-4012-4e5b" value="2.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="ffed-0a5f-55ff-c951" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="increment" field="cae1-fa0a-ba77-bb41" value="5.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="ffed-0a5f-55ff-c951" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="ffed-0a5f-55ff-c951" type="greaterThan"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1d26-07fc-6a66-d73e" type="notInstanceOf"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6c6b-e787-f9b8-a510" type="notInstanceOf"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fa0c-9044-2568-fa02" type="notInstanceOf"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9db3-55f3-706c-01bd" type="instanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="cae1-fa0a-ba77-bb41" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="eecf-ce9a-4012-4e5b" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="bc89-e8ce-6a0f-34a2" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="5aa7-caab-45b8-53e5" name="Ironjawz Fist" hidden="true" collective="false" import="true">
           <modifiers>
             <modifier type="set" field="hidden" value="false">
               <conditions>
@@ -7476,17 +7557,17 @@ If the bet if the first friendly unit to be destroyed during the battle, you can
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1b74-6084-7637-98b9" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c5bd-e969-2581-ed84" type="max"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="c9ff-ece0-548a-e6c7" name="Ironjawz Fist - 2-5 Troops" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="893c-b491-d1f6-7293" name="Ironjawz Fist - 2-5 Troops" hidden="true" collective="false" import="true" type="upgrade">
               <modifiers>
-                <modifier type="increment" field="2d6f-5c31-8213-9d7b" value="2.0">
+                <modifier type="increment" field="a462-acad-0196-b1fd" value="2.0">
                   <repeats>
                     <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="bcc6-9e1b-abc7-3fde" repeats="1" roundUp="false"/>
                   </repeats>
                 </modifier>
-                <modifier type="increment" field="120a-538b-019f-b6f8" value="5.0">
+                <modifier type="increment" field="3c98-05a2-e0bd-e387" value="5.0">
                   <repeats>
                     <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="bcc6-9e1b-abc7-3fde" repeats="1" roundUp="false"/>
                   </repeats>
@@ -7506,20 +7587,17 @@ If the bet if the first friendly unit to be destroyed during the battle, you can
                 </modifier>
               </modifiers>
               <constraints>
-                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="120a-538b-019f-b6f8" type="max"/>
-                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2d6f-5c31-8213-9d7b" type="min"/>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6196-f3d7-489f-0e35" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3c98-05a2-e0bd-e387" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a462-acad-0196-b1fd" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="fe94-f41e-296e-5a00" type="max"/>
               </constraints>
               <costs>
                 <cost name="pts" typeId="points" value="0.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="6a5b-5f9c-cfbf-5ee0" name="Kruleboyz Finga" hidden="true" collective="false" import="true" type="upgrade">
+        </selectionEntryGroup>
+        <selectionEntryGroup id="58f5-d769-a809-130b" name="Kruleboyz Flinga" hidden="true" collective="false" import="true">
           <modifiers>
             <modifier type="set" field="hidden" value="false">
               <conditions>
@@ -7528,80 +7606,12 @@ If the bet if the first friendly unit to be destroyed during the battle, you can
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e962-515a-2603-81ab" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="71f6-7370-2a32-1f5d" type="max"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="8353-6df9-0407-f041" name="Kruleboyz Finga - 1 Sub-commander" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="8eab-acf1-38c5-2564" name="Kruleboyz Finga - 0-1 Hobgrot Slittaz" hidden="true" collective="false" import="true" type="upgrade">
               <modifiers>
-                <modifier type="increment" field="7a5b-4775-98d5-1b46" value="1.0">
-                  <repeats>
-                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="72c0-f87f-f804-5951" repeats="1" roundUp="false"/>
-                  </repeats>
-                </modifier>
-                <modifier type="increment" field="a37b-35c1-a77a-ddb6" value="1.0">
-                  <repeats>
-                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="72c0-f87f-f804-5951" repeats="1" roundUp="false"/>
-                  </repeats>
-                </modifier>
-                <modifier type="set" field="hidden" value="false">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="72c0-f87f-f804-5951" type="greaterThan"/>
-                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a8ed-ca35-24e0-cf2e" type="instanceOf"/>
-                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5a4b-79c9-6c07-8ca3" type="instanceOf"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a37b-35c1-a77a-ddb6" type="max"/>
-                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7a5b-4775-98d5-1b46" type="min"/>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5479-9460-7b3e-0a31" type="max"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="146f-420c-2cf7-95d1" name="Kruleboyz Finga - 2-3 Troops" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="increment" field="4f3d-db7f-aa36-9281" value="2.0">
-                  <repeats>
-                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="72c0-f87f-f804-5951" repeats="1" roundUp="false"/>
-                  </repeats>
-                </modifier>
-                <modifier type="increment" field="4997-7413-d1a6-de71" value="3.0">
-                  <repeats>
-                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="72c0-f87f-f804-5951" repeats="1" roundUp="false"/>
-                  </repeats>
-                </modifier>
-                <modifier type="set" field="hidden" value="false">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="72c0-f87f-f804-5951" type="greaterThan"/>
-                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1d26-07fc-6a66-d73e" type="notInstanceOf"/>
-                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6c6b-e787-f9b8-a510" type="notInstanceOf"/>
-                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fa0c-9044-2568-fa02" type="notInstanceOf"/>
-                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5a4b-79c9-6c07-8ca3" type="instanceOf"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4997-7413-d1a6-de71" type="max"/>
-                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4f3d-db7f-aa36-9281" type="min"/>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0050-b57b-95cc-eb11" type="max"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="1f9c-2a8f-326a-f69d" name="Kruleboyz Finga - 0-1 Hobgrot Slittaz" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="increment" field="8f2b-e763-209a-5de7" value="1.0">
+                <modifier type="increment" field="8509-bebc-f851-59f0" value="1.0">
                   <repeats>
                     <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="72c0-f87f-f804-5951" repeats="1" roundUp="false"/>
                   </repeats>
@@ -7618,105 +7628,85 @@ If the bet if the first friendly unit to be destroyed during the battle, you can
                 </modifier>
               </modifiers>
               <constraints>
-                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8f2b-e763-209a-5de7" type="max"/>
-                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="aacd-5f84-65e2-57b4" type="min"/>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b347-a161-9a27-355b" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8509-bebc-f851-59f0" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7f43-ffe5-566a-fe1f" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5dd3-b6f8-c488-30b6" type="max"/>
               </constraints>
               <costs>
                 <cost name="pts" typeId="points" value="0.0"/>
               </costs>
             </selectionEntry>
-          </selectionEntries>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="779f-9864-c809-2bda" name="Bonesplitterz Rukk" hidden="true" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="false">
-              <conditions>
-                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="ffed-0a5f-55ff-c951" type="greaterThan"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3f8b-cdd3-b2e4-2812" type="max"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="c698-b6fb-5721-e0fb" name="Bonesplitterz Rukk - 1 Sub-commander" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="27d3-cb8e-7533-62e7" name="Kruleboyz Finga - 1 Sub-commander" hidden="true" collective="false" import="true" type="upgrade">
               <modifiers>
-                <modifier type="increment" field="062f-1a87-187b-d4ce" value="1.0">
+                <modifier type="increment" field="e533-9378-5e9b-7802" value="1.0">
                   <repeats>
-                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="ffed-0a5f-55ff-c951" repeats="1" roundUp="false"/>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="72c0-f87f-f804-5951" repeats="1" roundUp="false"/>
                   </repeats>
                 </modifier>
-                <modifier type="increment" field="154d-a91e-c3d4-a913" value="1.0">
+                <modifier type="increment" field="5f1c-00ed-6386-ebdb" value="1.0">
                   <repeats>
-                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="ffed-0a5f-55ff-c951" repeats="1" roundUp="false"/>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="72c0-f87f-f804-5951" repeats="1" roundUp="false"/>
                   </repeats>
                 </modifier>
                 <modifier type="set" field="hidden" value="false">
                   <conditionGroups>
                     <conditionGroup type="and">
                       <conditions>
-                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="ffed-0a5f-55ff-c951" type="greaterThan"/>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="72c0-f87f-f804-5951" type="greaterThan"/>
                         <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a8ed-ca35-24e0-cf2e" type="instanceOf"/>
-                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9db3-55f3-706c-01bd" type="instanceOf"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5a4b-79c9-6c07-8ca3" type="instanceOf"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
               </modifiers>
               <constraints>
-                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="154d-a91e-c3d4-a913" type="max"/>
-                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="062f-1a87-187b-d4ce" type="min"/>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3ce4-5416-a6e5-a930" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5f1c-00ed-6386-ebdb" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e533-9378-5e9b-7802" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="21eb-6592-c715-1800" type="max"/>
               </constraints>
               <costs>
                 <cost name="pts" typeId="points" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="5afe-10bb-c3d0-e19e" name="Bonesplitterz Rukk - 2-5 Troops" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="6ac4-bf8a-8c3c-e2d6" name="Kruleboyz Finga - 2-3 Troops" hidden="true" collective="false" import="true" type="upgrade">
               <modifiers>
-                <modifier type="increment" field="2bbf-b816-71db-f46a" value="2.0">
+                <modifier type="increment" field="2924-e8f5-4031-1de0" value="2.0">
                   <repeats>
-                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="ffed-0a5f-55ff-c951" repeats="1" roundUp="false"/>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="72c0-f87f-f804-5951" repeats="1" roundUp="false"/>
                   </repeats>
                 </modifier>
-                <modifier type="increment" field="7fae-d14f-b0ee-9b9e" value="5.0">
+                <modifier type="increment" field="04df-3758-6d1f-ce9f" value="3.0">
                   <repeats>
-                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="ffed-0a5f-55ff-c951" repeats="1" roundUp="false"/>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="72c0-f87f-f804-5951" repeats="1" roundUp="false"/>
                   </repeats>
                 </modifier>
                 <modifier type="set" field="hidden" value="false">
                   <conditionGroups>
                     <conditionGroup type="and">
                       <conditions>
-                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="ffed-0a5f-55ff-c951" type="greaterThan"/>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="72c0-f87f-f804-5951" type="greaterThan"/>
                         <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1d26-07fc-6a66-d73e" type="notInstanceOf"/>
                         <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6c6b-e787-f9b8-a510" type="notInstanceOf"/>
                         <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fa0c-9044-2568-fa02" type="notInstanceOf"/>
-                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9db3-55f3-706c-01bd" type="instanceOf"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5a4b-79c9-6c07-8ca3" type="instanceOf"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
               </modifiers>
               <constraints>
-                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7fae-d14f-b0ee-9b9e" type="max"/>
-                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2bbf-b816-71db-f46a" type="min"/>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="faf9-60db-4393-d4a0" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="04df-3758-6d1f-ce9f" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2924-e8f5-4031-1de0" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="fd04-5c82-7e00-8502" type="max"/>
               </constraints>
               <costs>
                 <cost name="pts" typeId="points" value="0.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntryGroup>
     <selectionEntryGroup id="f083-1690-f5ef-f8f4" name="Orruk Grand Strategy" hidden="true" collective="false" import="true">
       <modifiers>
