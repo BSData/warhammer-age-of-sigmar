@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="113" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="114" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <publications>
     <publication id="e51d-b1a3-pubEC" name="The General&apos;s Handbook"/>
     <publication id="e51d-b1a3-pubEQ" name="Core Rules"/>
@@ -318,6 +318,7 @@
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="abb4-aa6e-33ab-5371" type="max"/>
       </constraints>
     </categoryEntry>
+    <categoryEntry id="dbef-7476-90e0-f480" name="Unique Enhancement" hidden="false"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry id="36b7-ee1e-0855-f23f" name="**Pitched Battle GHB 2021**" hidden="false">
@@ -2660,6 +2661,7 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="c893-b6c9-b1ff-dce5" name="Extra Enhancement: Unique Enhancement" hidden="false" collective="false" import="true" type="upgrade"/>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="37b0-af21-630c-d8af" name="Realm Artefacts of Power" hidden="true" collective="false" import="true">
@@ -4874,6 +4876,7 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
         <entryLink id="215d-7fef-fd53-a76b" name="Extra Enhancement: Triumphs" hidden="false" collective="false" import="true" targetId="4f32-1179-8b4c-61e0" type="selectionEntry"/>
         <entryLink id="6ad8-fa43-7bff-87dd" name="Extra Enhancement: Great Endrinworks" hidden="false" collective="false" import="true" targetId="7aa8-a1e1-a0b8-fd18" type="selectionEntry"/>
         <entryLink id="d869-71fd-244a-a68b" name="Extra Enhancement: Mount Trait" hidden="false" collective="false" import="true" targetId="c965-0f85-d28c-ea2a" type="selectionEntry"/>
+        <entryLink id="a200-5efa-d92c-db03" name="Extra Enhancement: Unique Enhancement" hidden="false" collective="false" import="true" targetId="c893-b6c9-b1ff-dce5" type="selectionEntry"/>
       </entryLinks>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
