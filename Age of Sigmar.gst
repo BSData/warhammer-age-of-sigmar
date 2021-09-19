@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="112" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="113" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <publications>
     <publication id="e51d-b1a3-pubEC" name="The General&apos;s Handbook"/>
     <publication id="e51d-b1a3-pubEQ" name="Core Rules"/>
@@ -651,115 +651,6 @@
         <categoryLink id="2e72-bf7c-f588-8170" name="Legends" hidden="false" targetId="787f-7260-bb51-08c8" primary="false">
           <constraints>
             <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="5f6d-d0d9-2a3d-95d4" type="max"/>
-          </constraints>
-        </categoryLink>
-      </categoryLinks>
-    </forceEntry>
-    <forceEntry id="af42-5af7-420c-7ab6" name="Meeting Engagement - Spearhead - GHB 2020" hidden="true">
-      <categoryLinks>
-        <categoryLink id="a779-9bae-d844-746e" name="Leader" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="false">
-          <constraints>
-            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="13bd-761b-1412-7ab3" type="min"/>
-            <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="1fd6-77bc-ae2f-558d" type="max"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink id="c208-0d8b-7a00-f45e" name="Battleline" hidden="false" targetId="e9f2-765a-b7b8-ce8e" primary="false">
-          <constraints>
-            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="ee5c-21f2-923a-5a45" type="min"/>
-            <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="558f-65a6-efed-67b9" type="max"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink id="0c40-fc0f-dc12-41ff" name="Behemoth" hidden="false" targetId="fa0c-9044-2568-fa02" primary="false">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true"/>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="cb64-cdda-2453-5a5b" type="min"/>
-            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="e3fb-fe86-e79a-4ba4" type="max"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink id="6206-aa1c-9374-288e" name="Other" hidden="false" targetId="065e-fda7-fd27-1f40" primary="false">
-          <constraints>
-            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="d9e0-2947-bd90-d408" type="min"/>
-            <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="8df5-8a13-6dfe-876f" type="max"/>
-          </constraints>
-        </categoryLink>
-      </categoryLinks>
-    </forceEntry>
-    <forceEntry id="cce4-bc9d-0c7e-74c3" name="Meeting Engagement - Main Body - GHB 2020" hidden="true">
-      <categoryLinks>
-        <categoryLink id="d8b0-937f-e675-3538" name="Leader" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="false">
-          <constraints>
-            <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="49e7-39fc-712c-6b08" type="min"/>
-            <constraint field="selections" scope="force" value="2.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="9ce6-1bcf-5e31-2890" type="max"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink id="86b6-86d5-fb18-9288" name="Battleline" hidden="false" targetId="e9f2-765a-b7b8-ce8e" primary="false">
-          <constraints>
-            <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="61ef-0b33-6c18-17ee" type="min"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink id="0fcb-e9ae-2065-8258" name="Behemoth" hidden="false" targetId="fa0c-9044-2568-fa02" primary="false">
-          <constraints>
-            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="2d76-2596-83fb-bfa6" type="min"/>
-            <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="5434-44d8-3a16-7b2a" type="max"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink id="d4f2-f448-86e4-38d6" name="Other" hidden="false" targetId="065e-fda7-fd27-1f40" primary="false">
-          <constraints>
-            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="5894-736b-3be1-5a94" type="min"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink id="f893-5b2f-eb0f-0a31" name="Allegiance" hidden="false" targetId="87e8-c095-f059-5f7b" primary="false">
-          <constraints>
-            <constraint field="selections" scope="cce4-bc9d-0c7e-74c3" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a84b-92b6-09fc-c9bb" type="min"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink id="3482-1176-7c83-8374" name="Command Points" hidden="false" targetId="8be8-3ccd-be93-b55e" primary="false"/>
-        <categoryLink id="c800-4d89-230a-a2e4" name="Game Options" hidden="false" targetId="1974-3f49-7f0b-8422" primary="false"/>
-        <categoryLink id="fcf3-8315-3d50-aede" name="Malign Sorcery" hidden="false" targetId="eecb-ed66-d474-9ddd" primary="false"/>
-        <categoryLink id="e7ee-4c42-6e86-db5a" name="Realm of Battle" hidden="false" targetId="5e28-c4f1-4a92-b75c" primary="false">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" id="8c2f-68f0-5136-3cf2" type="max"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink id="830b-65a1-c8d6-ca9e" name="Realm of Origin" hidden="false" targetId="5c6d-5384-bcb1-b474" primary="false">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" id="ad26-168d-8f48-46ed" type="max"/>
-          </constraints>
-        </categoryLink>
-      </categoryLinks>
-    </forceEntry>
-    <forceEntry id="57e3-99c7-6fc4-1cff" name="Meeting Engagement - Rearguard - GHB 2020" hidden="true">
-      <categoryLinks>
-        <categoryLink id="c29b-073e-cd0d-34f5" name="Leader" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="false">
-          <constraints>
-            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="bab3-3903-f18f-ab9b" type="min"/>
-            <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="2f01-a90a-6f9a-8ef1" type="max"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink id="1efe-8035-c9f8-80ae" name="Battleline" hidden="false" targetId="e9f2-765a-b7b8-ce8e" primary="false">
-          <constraints>
-            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="bbaa-b8ed-159a-3348" type="min"/>
-            <constraint field="selections" scope="force" value="2.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="1877-0e10-fd27-1a6e" type="max"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink id="e820-200e-1821-463f" name="Behemoth" hidden="false" targetId="fa0c-9044-2568-fa02" primary="false">
-          <constraints>
-            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="8570-cefa-30ba-7786" type="min"/>
-            <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="26b7-33a1-788c-039d" type="max"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink id="0b98-2a3e-36b0-688e" name="Other" hidden="false" targetId="065e-fda7-fd27-1f40" primary="false">
-          <constraints>
-            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="62ad-70aa-e62a-919b" type="min"/>
-            <constraint field="selections" scope="force" value="2.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="af1b-bef9-5bcd-da03" type="max"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink id="7024-6dc3-83b0-33c6" name="Artillery" hidden="false" targetId="1d26-07fc-6a66-d73e" primary="false">
-          <constraints>
-            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="7dfb-87e6-d14f-5aa4" type="min"/>
-            <constraint field="selections" scope="force" value="2.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="f26e-080f-27d8-4cb2" type="max"/>
           </constraints>
         </categoryLink>
       </categoryLinks>
