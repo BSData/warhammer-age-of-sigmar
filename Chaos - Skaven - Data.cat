@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="de06-0235-6a96-193b" name="Chaos - Skaven - Data" revision="46" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="109" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="de06-0235-6a96-193b" name="Chaos - Skaven - Data" revision="48" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="116" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="bcc4-c671-pubd1e1" name="Chaos Battletome: Skaven"/>
     <publication id="bcc4-c671-pubd1e30758" name="Warscroll Compendium: Skaven"/>
@@ -2494,16 +2494,6 @@ Knowledge of the Warrior: Add 1 to hit rolls for attacks made by this model.</ch
             <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">In your hero phase, you can pick 1 enemy unit within 13&quot; of this unit’s Bringer-of-the-Word and roll a dice. On a 1-3, nothing happens. On a 4-5, that unit suffers 1 mortal wound. On a 6, that unit suffers D3 mortal wounds. This ability has no effect on Nurgle units.</characteristic>
           </characteristics>
         </profile>
-        <profile id="72cf-af2d-eb4c-583a" name="Plague Harbingers" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 in every 20 models in this unit can either be a Doom Gong Bearer or a Bale-chime Bearer.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="69a5-4e54-4698-0371" name="Standard Bearers" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 in every 20 models in this unit can either be a Contagion Banner Bearer or an Icon of Pestilence Bearer.</characteristic>
-          </characteristics>
-        </profile>
       </profiles>
       <categoryLinks>
         <categoryLink id="2683-d29b-fa0a-a51f" name="New CategoryLink" hidden="false" targetId="7cdd-80ea-cbeb-8e16" primary="false"/>
@@ -2535,6 +2525,30 @@ Knowledge of the Warrior: Add 1 to hit rolls for attacks made by this model.</ch
           <costs>
             <cost name="pts" typeId="points" value="85.0"/>
           </costs>
+        </selectionEntry>
+        <selectionEntry id="1e66-7fda-3a31-3104" name="Plaque Harbingers" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5161-6aed-a85e-8e09" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="eb2d-1e09-4e1c-fe16" name="Plague Harbinger" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+              <characteristics>
+                <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 in every 10 models in this unit can be a Plague Harbinger. Add 1 to run and charge rolls for this unit while it includes any Plague Harbingers.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry id="64a6-f69a-2d03-901d" name="Standard Bearers" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="eeac-e561-161a-579f" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="9b6e-f2f2-f1c8-9742" name="Standard Bearer" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+              <characteristics>
+                <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 in every 10 models in this unit can either be a Standard Bearer. While this unit includes any Standard Bearers, each time a model from this unit is slain by an attack made with a melee weapon, before the model is removed from play, roll a dice. On a 6, pick 1 enemy unit within 3&quot; of the slain model.  That unit suffers 1 mortal wound.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -2573,94 +2587,6 @@ Knowledge of the Warrior: Add 1 to hit rolls for attacks made by this model.</ch
                     <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">4+</characteristic>
                     <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
                     <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="points" value="0.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="ff3c-45df-3110-c4ca" name="Standard Bearer Banners" hidden="false" collective="false" import="true">
-          <modifiers>
-            <modifier type="set" field="67c6-061a-ac2e-d29e" value="1.0">
-              <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0a8d-cde8-fba1-6c0d" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="67c6-061a-ac2e-d29e" type="max"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="5474-e2b8-2fbe-72b6" name="Icon of Pestilence" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c75c-df8e-ef8b-e815" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="eccf-8757-243d-476b" name="Icon of Pestilence" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-                  <characteristics>
-                    <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If the unmodified wound roll for an attack made with a melee weapon by a model from this unit is 6 while this unit includes any Icon of Pestilence Bearers, add 1 to the damage inflicted by that attack.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="points" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="6b15-71e7-9e27-e8fc" name="Contagion Banner" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6883-a025-cab7-2bd4" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="bced-d101-3eb8-4420" name="Contagion Banner" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-                  <characteristics>
-                    <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0"> Roll a dice each time a model from this unit is slain by an attack made with a melee weapon if this unit includes any Contagion Banner Bearers, before the slain model is removed. On a 6 the attacking unit suffers 1 mortal wound after all of its attacks have been resolved.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="points" value="0.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="4ac9-9124-64b1-8a97" name="Plague Harbinger Instruments" hidden="false" collective="false" import="true">
-          <modifiers>
-            <modifier type="set" field="9aab-015d-9bcd-87b9" value="1.0">
-              <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0a8d-cde8-fba1-6c0d" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9aab-015d-9bcd-87b9" type="max"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="35dc-5c4a-de93-208a" name="Doom Gong" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f85a-f676-20f9-0c96" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="6c82-8544-eff0-48ba" name="Doom Gong" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-                  <characteristics>
-                    <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Add 1 to run and charge rolls for this unit while it includes any Doom Gong Bearers.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="points" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="08ac-a752-35f1-d6b3" name="Bale Chime" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="04d2-3952-37c1-f64c" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="11c8-7d3a-9e1c-a05a" name="Bale Chime" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-                  <characteristics>
-                    <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If the unmodified hit roll for an attack made with a melee weapon by a model from this unit is 6 while this unit includes any Bale-chime Bearers, improve the Rend characteristic for that attack by 1.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
