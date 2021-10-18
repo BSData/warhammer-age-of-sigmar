@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="388b-16d3-8182-d6c0" name="Order - Daughters of Khaine" revision="89" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="116" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="388b-16d3-8182-d6c0" name="Order - Daughters of Khaine" revision="90" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="116" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="388b-16d3-pubN65537" name="Order Battletome: Daughters of Khaine (2018)"/>
     <publication id="388b-16d3-pubN69838" name="Order Official FAQs and errata, Version 1.4"/>
@@ -20,6 +20,13 @@
         <characteristicType id="9228-1798-8698-1f89" name="Move"/>
         <characteristicType id="4800-9094-bab1-751b" name="Goadstaves"/>
         <characteristicType id="02be-b1ab-e57e-8c56" name="Aura of Agony"/>
+      </characteristicTypes>
+    </profileType>
+    <profileType id="6b5e-bd54-86be-0ca1" name="Cauldron of Blood Wound Track">
+      <characteristicTypes>
+        <characteristicType id="6b9e-4092-76dd-0ac7" name="Move"/>
+        <characteristicType id="aedb-db30-14ec-1600" name="Sacrificial Knives"/>
+        <characteristicType id="e11a-25fd-f79e-7a8e" name="Bloodshield"/>
       </characteristicTypes>
     </profileType>
   </profileTypes>
@@ -1712,46 +1719,6 @@ If the Shadow Queen is slain, after her model is removed from play, this model i
             <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">5+</characteristic>
           </characteristics>
         </profile>
-        <profile id="1c93-ec90-1ad4-1761" name="WoundTable0" hidden="false" typeId="90d1-a434-348d-a861" typeName="Damage Table">
-          <characteristics>
-            <characteristic name="Variable 1" typeId="420a-645a-ab28-93a0">Wounds Suffered</characteristic>
-            <characteristic name="Variable 2" typeId="4cdd-1e03-530f-0ff7">Move</characteristic>
-            <characteristic name="Variable 3" typeId="b1ea-56be-ba52-16e9">Sacrificial Knives</characteristic>
-            <characteristic name="Variable 4" typeId="ad26-bf56-95c4-80f1">Bloodshield</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="1971-efec-ac67-7f69" name="WoundTable1" hidden="false" typeId="90d1-a434-348d-a861" typeName="Damage Table">
-          <characteristics>
-            <characteristic name="Variable 1" typeId="420a-645a-ab28-93a0">0-3</characteristic>
-            <characteristic name="Variable 2" typeId="4cdd-1e03-530f-0ff7">6&quot;</characteristic>
-            <characteristic name="Variable 3" typeId="b1ea-56be-ba52-16e9">8</characteristic>
-            <characteristic name="Variable 4" typeId="ad26-bf56-95c4-80f1">18&quot;</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="1dbf-c7c4-7cd5-a2a1" name="WoundTable2" hidden="false" typeId="90d1-a434-348d-a861" typeName="Damage Table">
-          <characteristics>
-            <characteristic name="Variable 1" typeId="420a-645a-ab28-93a0">4-6</characteristic>
-            <characteristic name="Variable 2" typeId="4cdd-1e03-530f-0ff7">5&quot;</characteristic>
-            <characteristic name="Variable 3" typeId="b1ea-56be-ba52-16e9">7</characteristic>
-            <characteristic name="Variable 4" typeId="ad26-bf56-95c4-80f1">14&quot;</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="67de-3cbb-f8e9-2b4f" name="WoundTable3" hidden="false" typeId="90d1-a434-348d-a861" typeName="Damage Table">
-          <characteristics>
-            <characteristic name="Variable 1" typeId="420a-645a-ab28-93a0">7-9</characteristic>
-            <characteristic name="Variable 2" typeId="4cdd-1e03-530f-0ff7">4&quot;</characteristic>
-            <characteristic name="Variable 3" typeId="b1ea-56be-ba52-16e9">6</characteristic>
-            <characteristic name="Variable 4" typeId="ad26-bf56-95c4-80f1">10&quot;</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="db51-764a-9b3e-a25a" name="WoundTable4" hidden="false" typeId="90d1-a434-348d-a861" typeName="Damage Table">
-          <characteristics>
-            <characteristic name="Variable 1" typeId="420a-645a-ab28-93a0">10+</characteristic>
-            <characteristic name="Variable 2" typeId="4cdd-1e03-530f-0ff7">3&quot;</characteristic>
-            <characteristic name="Variable 3" typeId="b1ea-56be-ba52-16e9">5</characteristic>
-            <characteristic name="Variable 4" typeId="ad26-bf56-95c4-80f1">6&quot;</characteristic>
-          </characteristics>
-        </profile>
       </profiles>
       <infoLinks>
         <infoLink id="ca3a-8b44-34de-289c" name="Witchbrew" hidden="false" targetId="07c6-84c1-ada4-e2c6" type="profile"/>
@@ -1846,6 +1813,42 @@ If the Shadow Queen is slain, after her model is removed from play, this model i
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
+        <selectionEntry id="11e8-eddd-17b5-e507" name="Wounds Suffered" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ee2a-3484-7326-3152" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0583-fc12-06b5-14a1" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="ce28-463b-8126-b2fa" name="00-03" hidden="false" typeId="6b5e-bd54-86be-0ca1" typeName="Cauldron of Blood Wound Track">
+              <characteristics>
+                <characteristic name="Move" typeId="6b9e-4092-76dd-0ac7">6&quot;</characteristic>
+                <characteristic name="Sacrificial Knives" typeId="aedb-db30-14ec-1600">8</characteristic>
+                <characteristic name="Bloodshield" typeId="e11a-25fd-f79e-7a8e">18&quot;</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="61eb-75dd-cf8a-c551" name="04-06" hidden="false" typeId="6b5e-bd54-86be-0ca1" typeName="Cauldron of Blood Wound Track">
+              <characteristics>
+                <characteristic name="Move" typeId="6b9e-4092-76dd-0ac7">5&quot;</characteristic>
+                <characteristic name="Sacrificial Knives" typeId="aedb-db30-14ec-1600">7</characteristic>
+                <characteristic name="Bloodshield" typeId="e11a-25fd-f79e-7a8e">14&quot;</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="2f4b-0987-cdfe-038b" name="07-09" hidden="false" typeId="6b5e-bd54-86be-0ca1" typeName="Cauldron of Blood Wound Track">
+              <characteristics>
+                <characteristic name="Move" typeId="6b9e-4092-76dd-0ac7">4&quot;</characteristic>
+                <characteristic name="Sacrificial Knives" typeId="aedb-db30-14ec-1600">6</characteristic>
+                <characteristic name="Bloodshield" typeId="e11a-25fd-f79e-7a8e">10&quot;</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="a547-a0ba-e8f6-2a82" name="10+" hidden="false" typeId="6b5e-bd54-86be-0ca1" typeName="Cauldron of Blood Wound Track">
+              <characteristics>
+                <characteristic name="Move" typeId="6b9e-4092-76dd-0ac7">3&quot;</characteristic>
+                <characteristic name="Sacrificial Knives" typeId="aedb-db30-14ec-1600">5</characteristic>
+                <characteristic name="Bloodshield" typeId="e11a-25fd-f79e-7a8e">6&quot;</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
       </selectionEntries>
       <entryLinks>
         <entryLink id="83f0-4a1f-b8eb-f1ef" name="General" hidden="false" collective="false" import="true" targetId="8a66-cfb1-6e7e-9f11" type="selectionEntry"/>
@@ -1912,46 +1915,6 @@ If the Shadow Queen is slain, after her model is removed from play, this model i
             <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">13</characteristic>
             <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">8</characteristic>
             <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">5+</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="4e65-090f-0290-c7a1" name="WoundTable0" hidden="false" typeId="90d1-a434-348d-a861" typeName="Damage Table">
-          <characteristics>
-            <characteristic name="Variable 1" typeId="420a-645a-ab28-93a0">Wounds Suffered</characteristic>
-            <characteristic name="Variable 2" typeId="4cdd-1e03-530f-0ff7">Move</characteristic>
-            <characteristic name="Variable 3" typeId="b1ea-56be-ba52-16e9">Sacrificial Knives</characteristic>
-            <characteristic name="Variable 4" typeId="ad26-bf56-95c4-80f1">Bloodshield</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="4a37-581b-1526-1c90" name="WoundTable1" hidden="false" typeId="90d1-a434-348d-a861" typeName="Damage Table">
-          <characteristics>
-            <characteristic name="Variable 1" typeId="420a-645a-ab28-93a0">0-3</characteristic>
-            <characteristic name="Variable 2" typeId="4cdd-1e03-530f-0ff7">6&quot;</characteristic>
-            <characteristic name="Variable 3" typeId="b1ea-56be-ba52-16e9">8</characteristic>
-            <characteristic name="Variable 4" typeId="ad26-bf56-95c4-80f1">18&quot;</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="91bf-b7a5-ede9-4f1c" name="WoundTable2" hidden="false" typeId="90d1-a434-348d-a861" typeName="Damage Table">
-          <characteristics>
-            <characteristic name="Variable 1" typeId="420a-645a-ab28-93a0">4-6</characteristic>
-            <characteristic name="Variable 2" typeId="4cdd-1e03-530f-0ff7">5&quot;</characteristic>
-            <characteristic name="Variable 3" typeId="b1ea-56be-ba52-16e9">7</characteristic>
-            <characteristic name="Variable 4" typeId="ad26-bf56-95c4-80f1">14&quot;</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="30e6-baf6-ed95-451c" name="WoundTable3" hidden="false" typeId="90d1-a434-348d-a861" typeName="Damage Table">
-          <characteristics>
-            <characteristic name="Variable 1" typeId="420a-645a-ab28-93a0">7-9</characteristic>
-            <characteristic name="Variable 2" typeId="4cdd-1e03-530f-0ff7">4&quot;</characteristic>
-            <characteristic name="Variable 3" typeId="b1ea-56be-ba52-16e9">6</characteristic>
-            <characteristic name="Variable 4" typeId="ad26-bf56-95c4-80f1">10&quot;</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="c2cb-48ce-2c26-971c" name="WoundTable4" hidden="false" typeId="90d1-a434-348d-a861" typeName="Damage Table">
-          <characteristics>
-            <characteristic name="Variable 1" typeId="420a-645a-ab28-93a0">10+</characteristic>
-            <characteristic name="Variable 2" typeId="4cdd-1e03-530f-0ff7">3&quot;</characteristic>
-            <characteristic name="Variable 3" typeId="b1ea-56be-ba52-16e9">5</characteristic>
-            <characteristic name="Variable 4" typeId="ad26-bf56-95c4-80f1">6&quot;</characteristic>
           </characteristics>
         </profile>
         <profile id="6429-c0c3-f2af-ea58" name="Pact of Blood" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
@@ -2085,6 +2048,42 @@ If the Shadow Queen is slain, after her model is removed from play, this model i
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
+        </selectionEntry>
+        <selectionEntry id="bf9d-82c8-49df-d147" name="Wounds Suffered" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0605-a789-9427-b6d6" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3b95-2dcb-1e43-aa62" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="86a4-7bb3-aae3-58b4" name="00-03" hidden="false" typeId="6b5e-bd54-86be-0ca1" typeName="Cauldron of Blood Wound Track">
+              <characteristics>
+                <characteristic name="Move" typeId="6b9e-4092-76dd-0ac7">6&quot;</characteristic>
+                <characteristic name="Sacrificial Knives" typeId="aedb-db30-14ec-1600">8</characteristic>
+                <characteristic name="Bloodshield" typeId="e11a-25fd-f79e-7a8e">18&quot;</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="1ca1-2077-ba2a-50a6" name="04-06" hidden="false" typeId="6b5e-bd54-86be-0ca1" typeName="Cauldron of Blood Wound Track">
+              <characteristics>
+                <characteristic name="Move" typeId="6b9e-4092-76dd-0ac7">5&quot;</characteristic>
+                <characteristic name="Sacrificial Knives" typeId="aedb-db30-14ec-1600">7</characteristic>
+                <characteristic name="Bloodshield" typeId="e11a-25fd-f79e-7a8e">14&quot;</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="83c4-3f38-b68d-6c8b" name="07-09" hidden="false" typeId="6b5e-bd54-86be-0ca1" typeName="Cauldron of Blood Wound Track">
+              <characteristics>
+                <characteristic name="Move" typeId="6b9e-4092-76dd-0ac7">4&quot;</characteristic>
+                <characteristic name="Sacrificial Knives" typeId="aedb-db30-14ec-1600">6</characteristic>
+                <characteristic name="Bloodshield" typeId="e11a-25fd-f79e-7a8e">10&quot;</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="c531-7e86-369d-7598" name="10+" hidden="false" typeId="6b5e-bd54-86be-0ca1" typeName="Cauldron of Blood Wound Track">
+              <characteristics>
+                <characteristic name="Move" typeId="6b9e-4092-76dd-0ac7">3&quot;</characteristic>
+                <characteristic name="Sacrificial Knives" typeId="aedb-db30-14ec-1600">5</characteristic>
+                <characteristic name="Bloodshield" typeId="e11a-25fd-f79e-7a8e">6&quot;</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
