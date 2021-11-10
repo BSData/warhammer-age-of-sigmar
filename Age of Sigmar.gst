@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="117" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="118" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <publications>
     <publication id="e51d-b1a3-pubEC" name="The General&apos;s Handbook"/>
     <publication id="e51d-b1a3-pubEQ" name="Core Rules"/>
@@ -126,6 +126,11 @@
     <profileType id="e6fe-61ec-3973-ad03" name="Mount Trait">
       <characteristicTypes>
         <characteristicType id="0603-faf4-fada-3cbf" name="Mount Trait Details"/>
+      </characteristicTypes>
+    </profileType>
+    <profileType id="eba0-4bf6-65fe-fdbc" name="Battle Tactic">
+      <characteristicTypes>
+        <characteristicType id="f882-48d5-21a4-1787" name="Description"/>
       </characteristicTypes>
     </profileType>
   </profileTypes>
@@ -1506,35 +1511,12 @@
     <entryLink id="da26-f2b9-ea3b-b117" name="Core Battalion: Command Entourage" hidden="false" collective="false" import="true" targetId="7f89-26d0-ff93-83fe" type="selectionEntry"/>
     <entryLink id="49ae-7ee3-101e-5204" name="Core Battalion: Grand Battery" hidden="false" collective="false" import="true" targetId="be2d-ba53-4ebc-f035" type="selectionEntry"/>
     <entryLink id="8da1-0246-3653-3c8c" name="Triumphs" hidden="false" collective="false" import="true" targetId="472e-6c0c-b6d5-b996" type="selectionEntry"/>
+    <entryLink id="255d-ce0f-7c15-7f7e" name="Battle Tactics" hidden="false" collective="false" import="true" targetId="a059-b97e-2ec6-51eb" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="b022-0116-e8fb-91ac" name="New CategoryLink" hidden="false" targetId="1974-3f49-7f0b-8422" primary="true"/>
+      </categoryLinks>
+    </entryLink>
   </entryLinks>
-  <rules>
-    <rule id="bdc4-1b99-239c-5a23" name="Battle Tactics" hidden="false">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="36b7-ee1e-0855-f23f" type="notInstanceOf"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <description>
-Broken Ranks: When you reveal this battle tactic, pick 1 Battleline unit from your opponent’s starting army on the battlefield.  You complete this battle tactic if that unit is destroyed during this turn.  If that unit was destroyed by an attack made by a friendly MONSTER or an ability of a friendly MONSTER, score 1 additional victory point.
-
-Conquer: When you reveal this battle tactic, pick 1 objective marker on the battlefield that your opponent controls.  You complete this battle tactic if you control that objective marker at the end of this turn.
-
-Slay the Warlord: You complete this battle tactic if the model chosen to be your opponent’s general is slain during this turn.  If that model was destroyed by an attack made by a friendly MONSTER or an ability of a friendly MONSTER, score 1 additional victory point.
-
-Ferocious Advance:  When you reveal this battle tactic, pick 3 different units from your starting army on the battlefield.  You complete this battle tactic if all of the units you picked run in the following movement  phase and finish that run within 3” of each other.  If all 3 of those units are MONSTERS, score 1 additional victory point.
-
-Bring It Down!: When you reveal this battle tactic, pick 1 enemy MONSTER on the battlefield.  You complete this battle tactic if that unit is destroyed during this turn.  If that enemy MONSTER was destroyed by an attack made by a friendly MONSTER or an ability of a friendly MONSTER, score 1 additional victory point.
-
-Aggressive Expansion: When you reveal this battle tactic, pick 2 objective markers on the battlefield that are not wholly within your territory.  You complete this battle tactic if you control both objective markers at the end of this turn.
-
-Monstrous Takeover: When you reveal this battle tactic, pick 1 MONSTER from your starting army on the battlefield.  You complete this battle tactic if that MONSTER is contesting an objective marker that you control at the end of this turn, and that objective marker is not contested by an enemy MONSTER.
-
-Savage Spearhead: You complete this battle tactic if there are 2 or more units from your starting army wholly within your opponent’s territory at the end of this turn.  If 2 or more of those units are MONSTERS, score 1 additional victory point.
-</description>
-    </rule>
-  </rules>
   <sharedSelectionEntries>
     <selectionEntry id="869c-168d-eba5-eacf" name="Arcane Bolt" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -2663,6 +2645,56 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
       </costs>
     </selectionEntry>
     <selectionEntry id="c893-b6c9-b1ff-dce5" name="Extra Enhancement: Unique Enhancement" hidden="false" collective="false" import="true" type="upgrade">
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="a059-b97e-2ec6-51eb" name="Battle Tactics" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9096-32e3-dd68-b294" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="0c50-71d2-dcc2-3bb5" name="Broken Ranks" hidden="false" typeId="eba0-4bf6-65fe-fdbc" typeName="Battle Tactic">
+          <characteristics>
+            <characteristic name="Description" typeId="f882-48d5-21a4-1787">When you reveal this battle tactic, pick 1 Battleline unit from your opponent’s starting army on the battlefield. You complete this battle tactic if that unit is destroyed during this turn. If that unit was destroyed by an attack made by a friendly MONSTER or an ability of a friendly MONSTER, score 1 additional victory point.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="4e95-6d58-8193-73a6" name="Conquer" hidden="false" typeId="eba0-4bf6-65fe-fdbc" typeName="Battle Tactic">
+          <characteristics>
+            <characteristic name="Description" typeId="f882-48d5-21a4-1787">When you reveal this battle tactic, pick 1 objective marker on the battlefield that your opponent controls. You complete this battle tactic if you control that objective marker at the end of this turn.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="da93-b26d-e354-51b5" name="Ferocious Advance" hidden="false" typeId="eba0-4bf6-65fe-fdbc" typeName="Battle Tactic">
+          <characteristics>
+            <characteristic name="Description" typeId="f882-48d5-21a4-1787">When you reveal this battle tactic, pick 3 different units from your starting army on the battlefield. You complete this battle tactic if all of the units you picked run in the following movement phase and finish that run within 3&quot; of each other. If all 3 of those units are MONSTERS, score 1 additional victory point.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="e44a-ef57-46e4-c6f4" name="Slay the Warlord" hidden="false" typeId="eba0-4bf6-65fe-fdbc" typeName="Battle Tactic">
+          <characteristics>
+            <characteristic name="Description" typeId="f882-48d5-21a4-1787">You complete this battle tactic if the model chosen to be your opponent’s general is slain during this turn. If that model was destroyed by an attack made by a friendly MONSTER or an ability of a friendly MONSTER, score 1 additional victory point.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="87b7-f2b9-28e7-4e7f" name="Bring It Down!" hidden="false" typeId="eba0-4bf6-65fe-fdbc" typeName="Battle Tactic">
+          <characteristics>
+            <characteristic name="Description" typeId="f882-48d5-21a4-1787">When you reveal this battle tactic, pick 1 enemy MONSTER on the battlefield. You complete this battle tactic if that unit is destroyed during this turn. If that enemy MONSTER was destroyed by an attack made by a friendly MONSTER or an ability of a friendly MONSTER, score 1 additional victory point.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="8c50-6965-1fba-3e1d" name="Aggressive Expansion" hidden="false" typeId="eba0-4bf6-65fe-fdbc" typeName="Battle Tactic">
+          <characteristics>
+            <characteristic name="Description" typeId="f882-48d5-21a4-1787">When you reveal this battle tactic, pick 2 objective markers on the battlefield that are not wholly within your territory. You complete this battle tactic if you control both objective markers at the end of this turn.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="c9a1-c5b9-4f1f-68ea" name="Monstrous Takeover" hidden="false" typeId="eba0-4bf6-65fe-fdbc" typeName="Battle Tactic">
+          <characteristics>
+            <characteristic name="Description" typeId="f882-48d5-21a4-1787">When you reveal this battle tactic, pick 1 MONSTER from your starting army on the battlefield. You complete this battle tactic if that MONSTER is contesting an objective marker that you control at the end of this turn, and that objective marker is not contested by an enemy MONSTER.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="eee8-d3ea-7281-c736" name="Savage Spearhead" hidden="false" typeId="eba0-4bf6-65fe-fdbc" typeName="Battle Tactic">
+          <characteristics>
+            <characteristic name="Description" typeId="f882-48d5-21a4-1787">You complete this battle tactic if there are 2 or more units from your starting army wholly within your opponent’s territory at the end of this turn. If 2 or more of those units are MONSTERS, score 1 additional victory point.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
@@ -4407,7 +4439,6 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
           </profiles>
           <categoryLinks>
             <categoryLink id="1e19-e5bd-256b-ae23" name="Artefact" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-            <categoryLink id="cd95-680b-7c19-0a5f" name="WIZARD" hidden="false" targetId="4f53-8230-2f02-9639" primary="false"/>
           </categoryLinks>
           <entryLinks>
             <entryLink id="ab32-92a5-4fb0-d7ab" name="Arcane Bolt" hidden="false" collective="false" import="true" targetId="869c-168d-eba5-eacf" type="selectionEntry"/>
