@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="6894-a70d-7327-b3c3" name="Chaos - Nurgle" revision="82" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="119" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="6894-a70d-7327-b3c3" name="Chaos - Nurgle" revision="83" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="119" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="6894-a70d-pubN65537" name="Chaos Battletome: Maggotkin of Nurgle"/>
     <publication id="6894-a70d-pubN85775" name="Chaos Battletome: Maggotkin of Nurgle"/>
@@ -221,7 +221,7 @@
         <categoryLink id="88bf-55a3-e699-7bd6" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
       </categoryLinks>
     </entryLink>
-    <entryLink id="b620-ce52-c907-a4c8" name="Sorcerer" hidden="false" collective="false" import="true" targetId="5b84-d8c3-3287-01eb" type="selectionEntry">
+    <entryLink id="b620-ce52-c907-a4c8" name="Rotbringer Sorcerer" hidden="false" collective="false" import="true" targetId="5b84-d8c3-3287-01eb" type="selectionEntry">
       <categoryLinks>
         <categoryLink id="d555-6c50-8eb8-7914" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
       </categoryLinks>
@@ -371,6 +371,12 @@
     </entryLink>
     <entryLink id="de8f-883c-e0a2-f318" name="Nurgle Core Battalion: Rotbringer Cyst" hidden="false" collective="false" import="true" targetId="d7aa-596e-dabc-3dae" type="selectionEntry"/>
     <entryLink id="fd03-678c-2a26-2cbf" name="Nurgle Core Battalion: Thrice Befoulment" hidden="false" collective="false" import="true" targetId="a971-3115-b0cb-7270" type="selectionEntry"/>
+    <entryLink id="0e3a-e8be-91c6-a52f" name="Rot Coven" hidden="false" collective="false" import="true" targetId="a0fc-1a6d-64a9-f326" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="f998-6e8c-0ca8-767b" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="7c60-e9ca-1859-1409" name="Pusgoyle Blightlord (single)" hidden="false" collective="false" import="true" targetId="a049-8edd-c067-cc50" type="selectionEntry"/>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="ba97-4abb-1ec1-657f" name="Bloab Rotspawned" publicationId="6894-a70d-pubN65537" page="" hidden="false" collective="false" import="true" type="unit">
@@ -2616,7 +2622,6 @@ Before attempting to cast this spell, you can say that thte caster will project 
         <categoryLink id="e410-ba91-5959-92cf" name="New CategoryLink" hidden="false" targetId="4e0e-664d-51ea-0929" primary="false"/>
         <categoryLink id="d6e2-0f02-f193-28a6" name="New CategoryLink" hidden="false" targetId="4f53-8230-2f02-9639" primary="false"/>
         <categoryLink id="8362-2c87-a5a4-60cc" name="10 or less wounds Leader" hidden="false" targetId="a8ed-ca35-24e0-cf2e" primary="false"/>
-        <categoryLink id="bf08-17eb-0906-da72" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
         <categoryLink id="9c64-5695-4587-aa30" name="ROTBRINGER SORCERER" hidden="false" targetId="815d-6a88-8129-a749" primary="false"/>
         <categoryLink id="1502-1cf6-3cfe-3255" name="MAGGOTKIN OF NURGLE" hidden="false" targetId="2963-8fea-92d4-474a" primary="false"/>
       </categoryLinks>
@@ -3066,6 +3071,29 @@ Before attempting to cast this spell, you can say that thte caster will project 
       </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="a0fc-1a6d-64a9-f326" name="Rot Coven" hidden="true" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1a45-e841-ac44-e825" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <entryLinks>
+        <entryLink id="b422-6580-b3cc-80f1" name="Rotbringer Sorcerer" hidden="false" collective="false" import="true" targetId="5b84-d8c3-3287-01eb" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="points" value="0.0"/>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4bb4-93fb-4ec7-74a7" type="max"/>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a84f-5d1f-4ffd-4348" type="min"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="450.0"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>
