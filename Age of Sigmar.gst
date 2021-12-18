@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="119" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="120" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <publications>
     <publication id="e51d-b1a3-pubEC" name="The General&apos;s Handbook"/>
     <publication id="e51d-b1a3-pubEQ" name="Core Rules"/>
@@ -2198,7 +2198,14 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
         <cost name="pts" typeId="points" value="70.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="8a3f-74ea-a98a-e1ee" name="Scenery: Penumbral Engine" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="8a3f-74ea-a98a-e1ee" name="Scenery: Penumbral Engine" hidden="true" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f5c9-2d9a-2ffb-edd5" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="31ad-a3d5-b5b3-b8d3" name="Repercussion of the Necroquake" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
@@ -2222,9 +2229,6 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
         <categoryLink id="26d0-dc30-848d-a8cc" name="SCENERY" hidden="false" targetId="8910-7c1d-6c74-37ff" primary="false"/>
         <categoryLink id="f92e-b88f-0d9c-f932" name="STORMVAULT" hidden="false" targetId="798c-6e4e-1793-2fd9" primary="false"/>
       </categoryLinks>
-      <costs>
-        <cost name="pts" typeId="points" value="90.0"/>
-      </costs>
     </selectionEntry>
     <selectionEntry id="24c2-fff5-f17c-3d07" name="Gotrek Gurnisson" hidden="false" collective="false" import="true" type="unit">
       <profiles>
