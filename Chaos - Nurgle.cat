@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="6894-a70d-7327-b3c3" name="Chaos - Nurgle" revision="90" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="119" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="6894-a70d-7327-b3c3" name="Chaos - Nurgle" revision="91" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="119" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="6894-a70d-pubN65537" name="Chaos Battletome: Maggotkin of Nurgle"/>
     <publication id="6894-a70d-pubN85775" name="Chaos Battletome: Maggotkin of Nurgle"/>
@@ -405,7 +405,7 @@
         </profile>
         <profile id="a889-32cc-123e-549c" name="Daemon-flies" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At thte start of the combat phase and the enemy shooting phase, roll a dice for each enemy unit within 7&quot; of this unit. On a 4+, that enemy unit suffers 1 mortal wound and subtract 1 from hit rolls made by that enemy unit in that phase. </characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the start of the combat phase and the enemy shooting phase, roll a dice for each enemy unit within 7&quot; of this unit. On a 4+, that enemy unit suffers 1 mortal wound and subtract 1 from hit rolls made by that enemy unit in that phase. </characteristic>
           </characteristics>
         </profile>
         <profile id="5490-e399-fefc-9168" name="Windspeaker Bells" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
@@ -1096,7 +1096,7 @@
         </profile>
         <profile id="e6c6-ce2e-e9c6-3446" name="Relentless Attackers" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the end of the combat phase, pick 1 enemy unit with a Wounds characteristic of 3 or less that is within 3&quot; of this model. Roll 1 dice for each model in this unit that is within 3&quot; of that enemy unit. For eaqch roll that exceeds that enemy unit&apos;s Wounds characteristic, that enemy unit suffers a mortal wound.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the end of the combat phase, pick 1 enemy unit with a Wounds characteristic of 3 or less that is within 3&quot; of this model. Roll 1 dice for each model in this unit that is within 3&quot; of that enemy unit. For each roll that exceeds that enemy unit&apos;s Wounds characteristic, that enemy unit suffers a mortal wound.</characteristic>
           </characteristics>
         </profile>
         <profile id="97ff-e3ab-716f-3ad0" name="Blighted Weapon" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
@@ -1227,28 +1227,8 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="dbc5-b841-1f30-f11c" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b5c6-0833-71eb-ed53" type="max"/>
           </constraints>
-          <selectionEntries>
-            <selectionEntry id="9c6f-4da5-c63a-ad48" name="Allegiance: *Chaos*" hidden="false" collective="false" import="true" type="upgrade">
-              <infoLinks>
-                <infoLink id="57d8-5ec9-2300-cdc9" name="Unbridled Malice" hidden="false" targetId="6884-967e-0150-274e" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
           <entryLinks>
-            <entryLink id="514a-9b03-9ad1-950f" name="Nurgle" hidden="false" collective="false" import="true" targetId="ff93-966b-c16d-8149" type="selectionEntry">
-              <profiles>
-                <profile id="9fcb-d72b-6dbd-0edc" name="Foul Regenesis" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
-                  <characteristics>
-                    <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
-                    <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">Pick a result from the Stage of Corruption - the Cycle of Corruption is immediately reset to the stage you picked. </characteristic>
-                    <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
-                  </characteristics>
-                </profile>
-              </profiles>
-            </entryLink>
+            <entryLink id="514a-9b03-9ad1-950f" name="Allegiance: Nurgle" hidden="false" collective="false" import="true" targetId="ff93-966b-c16d-8149" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -1946,6 +1926,16 @@ Before attempting to cast this spell, you can say that thte caster will project 
       </costs>
     </selectionEntry>
     <selectionEntry id="bebe-87ba-15a7-1ceb" name="Feculent Gnarlmaw" publicationId="6894-a70d-pubN65537" page="103" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="cfcb-8f0e-f33b-cd89" value="2.0">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="15f0-84fd-38a3-666a" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="cfcb-8f0e-f33b-cd89" type="max"/>
+      </constraints>
       <profiles>
         <profile id="d7ce-9275-19bd-e548" name="Encroaching Corruption" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
@@ -2191,12 +2181,12 @@ Before attempting to cast this spell, you can say that thte caster will project 
         </profile>
         <profile id="db0b-e693-ad78-77f2" name="Festering Bodyguards" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If a friendly FECULA FLYBLOWN is within 3&quot; of this unit, before you allocate a wound or mortal wound to her, instaed of making a ward roll for her, you can roll a dice. On a 4+, that wound is allocated to this unit instead and cannot be negated.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If a friendly FECULA FLYBLOWN is within 3&quot; of this unit, before you allocate a wound or mortal wound to her, instead of making a ward roll for her, you can roll a dice. On a 4+, that wound is allocated to this unit instead and cannot be negated.</characteristic>
           </characteristics>
         </profile>
         <profile id="5d01-8750-8888-3a7e" name="Relentless Attackers" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the end of the combat phase, pick 1 enemy unit with a Wounds characteristic of 3 or less that is within 3&quot; of this model. Roll 1 dice for each model in this unit that is within 3&quot; of that enemy unit. For eaqch roll that exceeds that enemy unit&apos;s Wounds characteristic, that enemy unit suffers a mortal wound.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the end of the combat phase, pick 1 enemy unit with a Wounds characteristic of 3 or less that is within 3&quot; of this model. Roll 1 dice for each model in this unit that is within 3&quot; of that enemy unit. For each roll that exceeds that enemy unit&apos;s Wounds characteristic, that enemy unit suffers a mortal wound.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -3460,13 +3450,6 @@ If this unit has more than 1 model, roll to determine if mortal wounds are infli
     <profile id="efe7-c20c-523a-58d0" name="Hulking Physique" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
       <characteristics>
         <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">Add 1 to wound rolls for your general in the combat phase.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="0b05-aad4-a76b-f2b9" name="Foul Regenesis" publicationId="6894-a70d-pubN85775" page="66" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
-      <characteristics>
-        <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
-        <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick a result from the Stage of Corruption table (pg 59) – the Cycle of Corruption is immediately reset to the stage you picked.</characteristic>
-        <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
       </characteristics>
     </profile>
     <profile id="e347-6c5c-af04-a9c3" name="Host of Nurglings" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
