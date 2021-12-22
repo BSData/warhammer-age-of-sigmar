@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="122" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="123" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <publications>
     <publication id="e51d-b1a3-pubEC" name="The General&apos;s Handbook"/>
     <publication id="e51d-b1a3-pubEQ" name="Core Rules"/>
@@ -21,6 +21,10 @@
     <publication id="bbd8-4b0e-5ec1-b7fc" name="Warhammer Legends: GA Destruction"/>
     <publication id="744e-47b4-269f-a64f" name="Warhammer Legends: GA Order"/>
     <publication id="dd94-71a7-8549-0d65" name="Warhammer Legends: Monstrous Arcanum"/>
+    <publication id="5074-e874-12d9-080b" name="New Publication" publicationDate="December 2021" publisherUrl="https://www.warhammer-community.com/wp-content/uploads/2021/12/XTPR7PzBSVcNAAOd.pdf">
+      <comment>Battlescroll: Gods &amp; Heroes - December 2021</comment>
+    </publication>
+    <publication id="6bd9-9ed8-1840-8dc4" name="Battlescroll: Gods &amp; Heroes - December 2021" publisherUrl="https://www.warhammer-community.com/wp-content/uploads/2021/12/XTPR7PzBSVcNAAOd.pdf"/>
   </publications>
   <costTypes>
     <costType id="points" name="pts" defaultCostLimit="0.0" hidden="false"/>
@@ -4419,7 +4423,7 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1ac5-16ba-eb84-45c9" type="max"/>
           </constraints>
           <profiles>
-            <profile id="63bd-a638-e5b4-d163" name="Amulet of Destiny" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
+            <profile id="63bd-a638-e5b4-d163" name="Amulet of Destiny" publicationId="6bd9-9ed8-1840-8dc4" page="1" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
               <characteristics>
                 <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">The bearer has a ward of 6+.</characteristic>
               </characteristics>
