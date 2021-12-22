@@ -4423,7 +4423,7 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1ac5-16ba-eb84-45c9" type="max"/>
           </constraints>
           <profiles>
-            <profile id="63bd-a638-e5b4-d163" name="Amulet of Destiny" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
+            <profile id="63bd-a638-e5b4-d163" name="Amulet of Destiny" publicationId="6bd9-9ed8-1840-8dc4" page="1" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
               <characteristics>
                 <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">The bearer has a ward of 6+.</characteristic>
               </characteristics>
