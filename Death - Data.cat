@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="e37a-2f18-f168-6ed3" name="Death Data" revision="90" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="120" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="e37a-2f18-f168-6ed3" name="Death Data" revision="92" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="122" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="e320-d5ec-pubN65537" name="Battletome: Legions of Nagash and Battletome: Nighthaunt"/>
     <publication id="e320-d5ec-pubN65555" name="Battletome: Nighthaunt"/>
@@ -2544,7 +2544,7 @@
         </profile>
         <profile id="d3b5-1340-ed46-56f6" name="Supreme Lord of the Undead" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If this unit is on the battlefield when you use an ability that returns slain model to a friendly Death unit, you can either re-roll the dice that determines the number of slain models returned to that unit or add 1 to the number of slain models that are returned to that unit.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If this unit is on the battlefield when you use an ability that returns slain model to a friendly DEATH unit, you can either re-roll the dice that determines the number of slain models returned to that unit or add 1 to the number of slain models that are returned to that unit.</characteristic>
           </characteristics>
         </profile>
         <profile id="74f9-f2e8-fbac-dded" name="Nagash, Supreme Lord of the Undead" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
@@ -2654,13 +2654,13 @@
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="77ff-6951-4756-59c5" name="Zeft-nebtar" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="77ff-6951-4756-59c5" name="Zefet-nebtar" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cce1-ac2e-c4cf-3703" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ee26-43f7-6a41-f9c0" type="max"/>
           </constraints>
           <profiles>
-            <profile id="2cf2-70ae-27f7-ac9e" name="Zeft-nebtar" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+            <profile id="2cf2-70ae-27f7-ac9e" name="Zefet-nebtar" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
               <characteristics>
                 <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
                 <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">2&quot;</characteristic>
@@ -2744,19 +2744,6 @@ caster for each mortal wound caused by this spell that is not negated.</characte
       </selectionEntries>
       <entryLinks>
         <entryLink id="a38f-9b99-f3d5-4f3f" name="Battalions" hidden="false" collective="false" import="true" targetId="9df7-269b-fa20-74b2" type="selectionEntryGroup"/>
-        <entryLink id="c30a-a9a9-e15e-cda3" name="Count As General" hidden="true" collective="false" import="true" targetId="3435-edb2-2aba-c520" type="selectionEntry">
-          <modifiers>
-            <modifier type="set" field="hidden" value="false">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b72d-5ec7-bade-32e1" type="greaterThan"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-        </entryLink>
         <entryLink id="09b1-c371-8ebc-8632" name="Nagash Spell Lore" hidden="false" collective="false" import="true" targetId="1381-6985-8b9b-0069" type="selectionEntry">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2ae4-e12f-3f5c-8ddd" type="min"/>
@@ -12791,15 +12778,9 @@ If the bearer snuffs out the corpse candle in the combat phase, pick the bearer 
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="51d3-f944-12ef-b951" type="max"/>
           </constraints>
-          <profiles>
-            <profile id="d979-280e-9dd5-69e0" name="Soul Cage" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
-              <characteristics>
-                <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
-                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">12&quot;</characteristic>
-                <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick an enemy unit within 12&quot; of the caster that is visible to them. Until the start of your next hero phase, that unit cannot retreat. In addition, until your next hero phase, the strike-last effect applies to that unit.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
+          <infoLinks>
+            <infoLink id="4200-3906-15f6-69cb" name="Soul Cage" hidden="false" targetId="1981-c54d-2d8f-06e3" type="profile"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
@@ -12808,15 +12789,9 @@ If the bearer snuffs out the corpse candle in the combat phase, pick the bearer 
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5b91-fce8-6365-3331" type="max"/>
           </constraints>
-          <profiles>
-            <profile id="949b-4293-c682-a532" name="Spectral Tether" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
-              <characteristics>
-                <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
-                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">12&quot;</characteristic>
-                <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick a friendly NIGHTHAUNT HERO within 12&quot; of the caster. Heal D3 wounds that have been allocated to that unit.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
+          <infoLinks>
+            <infoLink id="b3b6-b8f4-c814-d571" name="Spectral Tether" hidden="false" targetId="9cdd-2895-7b8a-9721" type="profile"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
@@ -12825,15 +12800,9 @@ If the bearer snuffs out the corpse candle in the combat phase, pick the bearer 
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2177-dcdf-897f-0658" type="max"/>
           </constraints>
-          <profiles>
-            <profile id="8cfe-fc78-eef0-7816" name="Shademist" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
-              <characteristics>
-                <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
-                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">12&quot;</characteristic>
-                <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick a friendly NIGHTHAUNT unit wholly within 12&quot; of the caster that is visible to them. Subtract 1 from wound rolls for attacks that target that unit until the start of your next hero phase.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
+          <infoLinks>
+            <infoLink id="bd9e-cc9c-75f3-3d7c" name="Shademist" hidden="false" targetId="f5b7-fe13-c80d-4434" type="profile"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
@@ -12842,15 +12811,9 @@ If the bearer snuffs out the corpse candle in the combat phase, pick the bearer 
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1290-ffe2-f529-4cfc" type="max"/>
           </constraints>
-          <profiles>
-            <profile id="93ad-4b94-cdc6-15ea" name="Reaping Scythe" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
-              <characteristics>
-                <characteristic name="Casting Value" typeId="2508-b604-1258-a920">4</characteristic>
-                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">-</characteristic>
-                <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick one of the caster&apos;s weapons. Until the start of your next hero phase, you can re-roll failed hit and wound rolls for attacks made with that weapon.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
+          <infoLinks>
+            <infoLink id="1b82-867f-a6c9-3263" name="Reaping Scythe" hidden="false" targetId="310b-85eb-deb2-2337" type="profile"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
@@ -12859,15 +12822,9 @@ If the bearer snuffs out the corpse candle in the combat phase, pick the bearer 
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="afd1-02d5-5a72-04b0" type="max"/>
           </constraints>
-          <profiles>
-            <profile id="0f5a-5088-9a67-aec9" name="Lifestealer" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
-              <characteristics>
-                <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
-                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">12&quot;</characteristic>
-                <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick an enemy unit within 12&quot; of the caster that is visible to them. That unit suffers D3 mortal wounds. Foe each mortal wound suffered by that enemy unit, you can heal 1 wound allocated to the caster.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
+          <infoLinks>
+            <infoLink id="b714-df4c-2a41-4753" name="Lifestealer" hidden="false" targetId="ca1c-1cf9-35fe-4a9c" type="profile"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
@@ -12876,15 +12833,9 @@ If the bearer snuffs out the corpse candle in the combat phase, pick the bearer 
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1e87-b852-27e2-f4a9" type="max"/>
           </constraints>
-          <profiles>
-            <profile id="0687-bbec-f15c-0aa3" name="Spirit Drain" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
-              <characteristics>
-                <characteristic name="Casting Value" typeId="2508-b604-1258-a920">4</characteristic>
-                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">18&quot;</characteristic>
-                <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick an enemy model within 18&quot; of the caster that is visible to them. Roll a number of dice equal to the model&apos;s Wounds characteristic. For each 6+ that model&apos;s unit suffers 1 mortal wound.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
+          <infoLinks>
+            <infoLink id="aa8c-c384-978a-78f4" name="Spirit Drain" hidden="false" targetId="ba4f-5793-20e0-5040" type="profile"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
@@ -14878,6 +14829,48 @@ Any number of SOULBLIGHT GRAVELORDS WIZARDS can attempt to cast Invigorating Aur
         <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
         <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">3&quot;</characteristic>
         <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, each enemy unit within 3&quot; of the caster suffers D3 mortal wounds. In addition, for each mortal wound inflicted by this spell and not negated, roll a dice.  For each 5+, you can heal 1 wound allocated to the caster.</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="1981-c54d-2d8f-06e3" name="Soul Cage" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+      <characteristics>
+        <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
+        <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">12&quot;</characteristic>
+        <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick an enemy unit within 12&quot; of the caster that is visible to them. Until the start of your next hero phase, that unit cannot retreat. In addition, until your next hero phase, the strike-last effect applies to that unit.</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="ba4f-5793-20e0-5040" name="Spirit Drain" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+      <characteristics>
+        <characteristic name="Casting Value" typeId="2508-b604-1258-a920">4</characteristic>
+        <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">18&quot;</characteristic>
+        <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick an enemy model within 18&quot; of the caster that is visible to them. Roll a number of dice equal to the model&apos;s Wounds characteristic. For each 6+ that model&apos;s unit suffers 1 mortal wound.</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="ca1c-1cf9-35fe-4a9c" name="Lifestealer" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+      <characteristics>
+        <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
+        <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">12&quot;</characteristic>
+        <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick an enemy unit within 12&quot; of the caster that is visible to them. That unit suffers D3 mortal wounds. Foe each mortal wound suffered by that enemy unit, you can heal 1 wound allocated to the caster.</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="310b-85eb-deb2-2337" name="Reaping Scythe" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+      <characteristics>
+        <characteristic name="Casting Value" typeId="2508-b604-1258-a920">4</characteristic>
+        <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">-</characteristic>
+        <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick one of the caster&apos;s weapons. Until the start of your next hero phase, you can re-roll failed hit and wound rolls for attacks made with that weapon.</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="f5b7-fe13-c80d-4434" name="Shademist" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+      <characteristics>
+        <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
+        <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">12&quot;</characteristic>
+        <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick a friendly NIGHTHAUNT unit wholly within 12&quot; of the caster that is visible to them. Subtract 1 from wound rolls for attacks that target that unit until the start of your next hero phase.</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="9cdd-2895-7b8a-9721" name="Spectral Tether" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+      <characteristics>
+        <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
+        <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">12&quot;</characteristic>
+        <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick a friendly NIGHTHAUNT HERO within 12&quot; of the caster. Heal D3 wounds that have been allocated to that unit.</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
