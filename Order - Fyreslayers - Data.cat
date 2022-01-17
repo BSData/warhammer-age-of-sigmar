@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="81cf-7df5-86e6-b78f" name="Order - Fyreslayers - Data" revision="69" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="120" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="81cf-7df5-86e6-b78f" name="Order - Fyreslayers - Data" revision="70" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="123" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="e67a-06d2-pubN65537" name="Order Battletome: Fyreslayers"/>
     <publication id="e67a-06d2-pubN69594" name="Battletome: Fyreslayers Errata, July 2018"/>
@@ -43,6 +43,7 @@
     <categoryEntry id="bd1d-439c-5b12-bf4c" name="MOLTEN INFERNOTH" hidden="false"/>
     <categoryEntry id="24f1-0987-a9c8-48a8" name="ZHARRGRON FLAME-SPITTER" hidden="false"/>
     <categoryEntry id="4b94-6bb2-6f57-3f3f" name="MAGMIC INVOCATION" hidden="false"/>
+    <categoryEntry id="adc5-5edd-3434-7fbf" name="AURIC FLAMEKEEPER" hidden="false"/>
   </categoryEntries>
   <sharedSelectionEntries>
     <selectionEntry id="8e35-cdef-4c7e-0a1c" name="Allegiance" hidden="false" collective="false" import="true" type="unit">
@@ -261,19 +262,14 @@
       <profiles>
         <profile id="afd0-613f-c3f8-31c9" name="Karl" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 model in this unit can be a Karl. Add 1 to the Attacks characteristic of that model’s Magmapike missile weapon. </characteristic>
-          </characteristics>
-        </profile>
-        <profile id="716c-e897-3f32-7fba" name="Sworn Protectors" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Roll a dice each time you allocate a wound or mortal wound to a friendly FYRESLAYERS HERO that is not mounted on a MAGMADROTH and is within 3&quot; of any friendly units with this ability. On a 4+ that wound or mortal wound is negated, and you must choose a friendly unit with this ability that is within 3&quot; to suffer 1 mortal wound after all wounds or mortal wounds have been allocated to that friendly HERO.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 model in this unit can be a Karl. Add 1 to the Attacks characteristic of that model’s Magmapike. </characteristic>
           </characteristics>
         </profile>
         <profile id="f481-1fa7-d70c-50b0" name="Auric Hearthguard" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
           <characteristics>
             <characteristic name="Move" typeId="8655-6213-2824-1752">4&quot;</characteristic>
             <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">2</characteristic>
-            <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">7</characteristic>
+            <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">8</characteristic>
             <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">5+</characteristic>
           </characteristics>
         </profile>
@@ -304,7 +300,7 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="125.0"/>
+            <cost name="pts" typeId="points" value="120.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="7964-ff38-1619-e2a8" name="Magmapike" hidden="false" collective="false" import="true" type="upgrade">
@@ -318,9 +314,9 @@
                 <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
                 <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
                 <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">1</characteristic>
-                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
                 <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
-                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
                 <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
               </characteristics>
             </profile>
@@ -348,7 +344,7 @@
             </profile>
             <profile id="acd8-fee9-bbd0-81ed" name="Molten Rockbolts" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
               <characteristics>
-                <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Add 1 to the Damage characteristic for attacks made by Magmapike missile weapons that target MONSTER. In addition, if any wounds are inflicted on a MONSTER by Magmapike missile weapons, roll a dice. On a 4+, until the end of that unit’s next turn, halve that unit’s Move characteristic and subtract 1 from hit rolls for attacks made by that unit. </characteristic>
+                <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If the unmodified hit roll for a shooting attack made with a Magmapike is 6, subtract 1&quot; from the target&apos;s Move characteristic until the end of your opponent&apos;s next turn.  This ability cannot reduce the target unit&apos;s Move characteristic below half.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -390,7 +386,7 @@
             </modifier>
           </modifiers>
           <costs>
-            <cost name="pts" typeId="points" value="125.0"/>
+            <cost name="pts" typeId="points" value="120.0"/>
           </costs>
         </entryLink>
         <entryLink id="0e08-2c74-b26c-dd4b" name="Battalions" hidden="false" collective="false" import="true" targetId="bfd7-5a8f-8c70-70d2" type="selectionEntryGroup"/>
@@ -2029,7 +2025,7 @@ In addition, in the combat phase, if this model is slain while it is within 3&qu
         </profile>
         <profile id="d167-8bdf-93bf-6055" name="Duty Unto Death" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Roll a dice each time you allocate a wound or mortal wound to this unit. Add 2 to the roll if there are any friendly FYRESLAYER HEROS within 10&quot; of this unit. On a 6+ that wound or mortal wound is negated. </characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This unit has a ward of 4+ if it is wholly within 9&quot; of any friendly FYRESLAYERS HEROES.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -2059,7 +2055,7 @@ In addition, in the combat phase, if this model is slain while it is within 3&qu
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="125.0"/>
+            <cost name="pts" typeId="points" value="135.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="dc4e-f428-6b47-d65f" name="Fyresteel Throwing Axe" hidden="false" collective="false" import="true" type="upgrade">
@@ -2154,7 +2150,7 @@ In addition, in the combat phase, if this model is slain while it is within 3&qu
             </modifier>
           </modifiers>
           <costs>
-            <cost name="pts" typeId="points" value="125.0"/>
+            <cost name="pts" typeId="points" value="135.0"/>
           </costs>
         </entryLink>
         <entryLink id="1f1d-71c9-449a-c080" name="Battalions" hidden="false" collective="false" import="true" targetId="bfd7-5a8f-8c70-70d2" type="selectionEntryGroup"/>
@@ -2163,7 +2159,7 @@ In addition, in the combat phase, if this model is slain while it is within 3&qu
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="5380-8f39-8882-eae7" name="Vulkite Berzerkers" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="5380-8f39-8882-eae7" name="Vulkite Berzerkers with Fyresteel Handaxes" hidden="false" collective="false" import="true" type="unit">
       <profiles>
         <profile id="cbcb-b0e8-43fb-a160" name="Vulkite Berzerkers" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
           <characteristics>
@@ -2180,12 +2176,17 @@ In addition, in the combat phase, if this model is slain while it is within 3&qu
         </profile>
         <profile id="2c14-3399-9080-8ea3" name="Berserk Fury" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Once per battle, at the start of the combat phase, you can choose to unleash this unit’s berserk fury. If you do so, until the end of that phase, if a model from this unit is slain, before that model is removed from play, that model can make a pile-in move and then attack with all of the melee weapons it is armed with.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Once per battle, at the start of the combat phase, you can say that this unit will unleash its beserk fury.  If you do so, until the end of that phase, if a model is this unit is slain, that model can fight before it is removed from play.</characteristic>
           </characteristics>
         </profile>
         <profile id="8a9a-0655-0985-925d" name="Horn of Grimnir" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
             <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 in every 5 models in this unit can have a Horn of Grimnir. Add 1 to charge rolls for units that include any Horns of Grimnir.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="7e97-f3de-9b3d-97b2" name="Whirlwind of Destruction" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Add 1 to the Attacks characteristic of this unit&apos;s melee weapons if this unit made a charge move in the same turn.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -2230,71 +2231,29 @@ In addition, in the combat phase, if this model is slain while it is within 3&qu
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-      </selectionEntries>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="b7d9-6ca6-0c9d-86aa" name="Weapon Options" hidden="false" collective="false" import="true">
+        <selectionEntry id="2a53-f257-c2c0-cc31" name="Fyresteel Handaxes" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="565b-8e1b-9b1e-968e" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2337-d2e6-bf93-176f" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c547-0577-e145-d33f" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f503-bbeb-d9b2-633b" type="min"/>
           </constraints>
-          <selectionEntries>
-            <selectionEntry id="9481-3d88-a3ba-c4cd" name="Fyresteel Handaxe" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9456-3cea-bcca-c39a" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="893d-3b7c-46df-21f7" name="Bladed Slingshields" hidden="false" targetId="8f44-b010-1b84-4b6d" type="profile"/>
-                <infoLink id="716a-85fb-09e4-5553" name="Fyresteel Handaxe" hidden="false" targetId="d9f9-9d7b-c429-2056" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="a604-f4ab-5971-e93d" name="Fyresteel War-pick" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f861-cbaa-c36e-85ac" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="2188-4ebd-5c51-de44" name="Fyresteel Warpick" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
-                    <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
-                    <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">2</characteristic>
-                    <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
-                    <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">4+</characteristic>
-                    <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
-                    <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink id="d1b9-06fa-7755-3dfa" name="Bladed Slingshields" hidden="false" targetId="8f44-b010-1b84-4b6d" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="d60c-c157-e6ac-6fc1" name="Paired Fyresteel Handaxe" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="05fc-e68f-4e5f-c857" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="3940-5338-3dac-2c8b" name="Fyresteel Handaxe" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-                  <characteristics>
-                    <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">You can re-roll hit rolls for attacks made with a pair of Fyresteel Handaxes.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink id="1367-ae8a-5c5e-e61e" name="Fyresteel Handaxe" hidden="false" targetId="d9f9-9d7b-c429-2056" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
+          <profiles>
+            <profile id="45d0-5c5d-b9db-45f7" name="Fyresteel Handaxes" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">2</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
       <entryLinks>
         <entryLink id="5686-71a7-a667-1d73" name="Reinforced" hidden="false" collective="false" import="true" targetId="0a8d-cde8-fba1-6c0d" type="selectionEntry">
           <modifiers>
@@ -3166,6 +3125,231 @@ If the commanding player rolls 4 or more unmodified 6s, after the mortal wounds 
           </characteristics>
         </profile>
       </profiles>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="a5ad-019d-6c5e-199e" name="Auric Flamekeeper" hidden="false" collective="false" import="true" type="unit">
+      <profiles>
+        <profile id="efbf-400d-3e71-cade" name="Auric Flamekeeper" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
+          <characteristics>
+            <characteristic name="Move" typeId="8655-6213-2824-1752">4&quot;</characteristic>
+            <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">5</characteristic>
+            <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">8</characteristic>
+            <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">4+</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="56d8-8766-1196-29cc" name="Masterflame Rune" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">When this unit is set up, place a D6 beside it with the 1 facing up.  Each time a friendly FYRESLAYERS model is slain within 12&quot; of this unit, increase the value of the dice beside this unit by 1 (to a maximum of 6).
+
+Once per turn, at the start of the combat phase, if the value of the dice beside this unit is 6, you can say that this unit will draw upon the power of the runes of their fallen brethren.  If you do so, pick 1 friendly AURIC HEARTHGUARD, HEARTHGUARD BEZERKERS or VULKITE BERZERKERS unit wholly within 12&quot; of this unit and apply 1 of the following effects to that unit.  Then, change the value of the dice beside this unit back to 1.  Each effect lasts until the end of that phase.
+
+  * Grimnir&apos;s Grit: That unit has a ward of 6+.
+  * Grimnir&apos;s Wrath: If a model in that unit is slain and that model has not fought in that phase, that model can fight before it is removed from play.
+  * Grimnir&apos;s Resolve: That unit can immediately attempt a charge.
+  * Grimnir&apos;s Vengeance: Add 1 to the Damage characteristic of that unit&apos;s melee weapons.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="f153-6988-5cd9-81a7" name="ORDER" hidden="false" targetId="b970-b3bf-e1a4-a6fc" primary="false"/>
+        <categoryLink id="122f-976a-e11e-0fc7" name="FYRESLAYERS" hidden="false" targetId="4ec3-efa9-35ba-d55f" primary="false"/>
+        <categoryLink id="1c2b-1c21-3b40-30f9" name="DUARDIN" hidden="false" targetId="945b-2f5e-58f0-75e2" primary="false"/>
+        <categoryLink id="c550-0053-fd87-4b97" name="HERO" hidden="false" targetId="4e0e-664d-51ea-0929" primary="false"/>
+        <categoryLink id="02d9-3aee-363a-5d42" name="TOTEM" hidden="false" targetId="3504-ea8e-28ec-5150" primary="false"/>
+        <categoryLink id="768b-b7bd-9cf9-28c3" name="AURIC FLAMEKEEPER" hidden="false" targetId="adc5-5edd-3434-7fbf" primary="false"/>
+        <categoryLink id="ccf9-3305-6002-10b1" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
+        <categoryLink id="e326-a340-0726-908a" name="9 or less wounds Leader" hidden="false" targetId="a8ed-ca35-24e0-cf2e" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="0800-aa16-9114-39ce" name="General" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="78f3-8a59-699a-61e8" type="instanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="42eb-5a37-dad7-cd91" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="70c4-bbe4-3519-8050" name="New CategoryLink" hidden="false" targetId="b745-17c4-8fbf-8b04" primary="false"/>
+          </categoryLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="9517-874f-0577-3500" name="Brazier Axe" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a6e7-355d-6e36-1348" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8ebb-721f-8af2-46f5" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="42f7-dcdc-389b-d5d0" name="Brazier Axe" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">4</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">2</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <entryLinks>
+        <entryLink id="f5fd-a017-3986-784b" name="Artefacts" hidden="false" collective="false" import="true" targetId="75d8-d2b2-772b-e9f0" type="selectionEntryGroup"/>
+        <entryLink id="5233-2771-a2df-e240" name="Battalions" hidden="false" collective="false" import="true" targetId="bfd7-5a8f-8c70-70d2" type="selectionEntryGroup"/>
+        <entryLink id="d3be-ef51-1bb5-b065" name="Command Traits" hidden="false" collective="false" import="true" targetId="8db2-e52d-b376-b998" type="selectionEntryGroup"/>
+        <entryLink id="c8c2-24b0-5906-541d" name="Spell Lores" hidden="true" collective="false" import="true" targetId="f46d-bd3a-0916-18a9" type="selectionEntryGroup">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9918-5a46-2468-35e2" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="80.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="ca23-fa8e-9458-873d" name="Vulkite Berzerkers with Bladed Slingshields" hidden="false" collective="false" import="true" type="unit">
+      <profiles>
+        <profile id="fe74-1466-ec66-3a37" name="Vulkite Berzerkers" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
+          <characteristics>
+            <characteristic name="Move" typeId="8655-6213-2824-1752">4&quot;</characteristic>
+            <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">2</characteristic>
+            <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">7</characteristic>
+            <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">5+</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="b34d-96ab-152b-a26c" name="Karl" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 model in this unit can be a Karl. Add 1 to the Attacks characteristic of that model’s melee weapons.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="fe48-4f26-9618-f4f4" name="Berserk Fury" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Once per battle, at the start of the combat phase, you can say that this unit will unleash its beserk fury.  If you do so, until the end of that phase, if a model is this unit is slain, that model can fight before it is removed from play.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="c0a6-4aae-ec62-9e30" name="Horn of Grimnir" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 in every 5 models in this unit can have a Horn of Grimnir. Add 1 to charge rolls for units that include any Horns of Grimnir.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="156d-5eb0-73e3-69b3" name="Bladed Slingshields" hidden="false" targetId="8f44-b010-1b84-4b6d" type="profile"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="0887-449b-4446-ecbd" name="New CategoryLink" hidden="false" targetId="945b-2f5e-58f0-75e2" primary="false"/>
+        <categoryLink id="cbb8-07b6-877c-99f9" name="New CategoryLink" hidden="false" targetId="57af-4591-5841-0c21" primary="false"/>
+        <categoryLink id="15df-f22a-a078-d7aa" name="New CategoryLink" hidden="false" targetId="4ec3-efa9-35ba-d55f" primary="false"/>
+        <categoryLink id="4b40-1dfa-cdf7-dbdc" name="New CategoryLink" hidden="false" targetId="b970-b3bf-e1a4-a6fc" primary="false"/>
+        <categoryLink id="f433-59ad-9998-d704" name="New CategoryLink" hidden="false" targetId="e9f2-765a-b7b8-ce8e" primary="true"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="1c73-d4f4-4919-da46" name="10 Vulkite Berzerkers" hidden="false" collective="false" import="true" type="model">
+          <modifiers>
+            <modifier type="set" field="name" value="20 Vulkite Berzerkers">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0a8d-cde8-fba1-6c0d" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="name" value="30 Vulkite Berzerkers">
+              <conditions>
+                <condition field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0a8d-cde8-fba1-6c0d" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="68d1-d211-2aa1-8db8" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="dd7e-a9ce-c36c-1d9a" type="max"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="170.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="ebda-4ca0-eb6b-7b73" name="Fyresteel Throwing Axe" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c83f-2abe-226b-c97f" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8b09-064c-b230-6dbc" type="min"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="0ca1-d13f-66e0-1ace" name="Fyresteel Throwing Axe (Unit)" hidden="false" targetId="7945-4fd8-4ae8-cd11" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="5656-fb77-1a74-e9a9" name="Weapon Options" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="820d-d043-f2fe-0c61" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d520-fc11-dc5f-6a03" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="27e5-86d8-6f2a-a239" name="Fyresteel Handaxe" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="66cd-6d0c-7dc4-2efc" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="1e1d-9b72-0c63-25ca" name="Fyresteel Handaxe" hidden="false" targetId="d9f9-9d7b-c429-2056" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="a685-4ac3-1227-0add" name="Fyresteel War-pick" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9a94-04a6-3f14-1fc6" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="b6b9-f85e-d6b0-23e2" name="Fyresteel Warpick" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+                  <characteristics>
+                    <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                    <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
+                    <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">1</characteristic>
+                    <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+                    <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">4+</characteristic>
+                    <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
+                    <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="e74a-e684-668b-3b7a" name="Reinforced" hidden="false" collective="false" import="true" targetId="0a8d-cde8-fba1-6c0d" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="95f2-6885-756f-9ea5" value="2.0"/>
+          </modifiers>
+          <costs>
+            <cost name="pts" typeId="points" value="170.0"/>
+          </costs>
+        </entryLink>
+        <entryLink id="d1a2-ac63-075c-8600" name="Battalions" hidden="false" collective="false" import="true" targetId="bfd7-5a8f-8c70-70d2" type="selectionEntryGroup"/>
+      </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
@@ -4378,8 +4562,8 @@ If the commanding player rolls 4 or more unmodified 6s, after the mortal wounds 
         <characteristic name="Type" typeId="655c-362e-a663-3e50">Missile</characteristic>
         <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">8&quot;</characteristic>
         <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">1</characteristic>
-        <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">5+</characteristic>
-        <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">5+</characteristic>
+        <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
+        <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">4+</characteristic>
         <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
         <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
       </characteristics>
@@ -4403,7 +4587,7 @@ If the commanding player rolls 4 or more unmodified 6s, after the mortal wounds 
       <characteristics>
         <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
         <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
-        <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">2</characteristic>
+        <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">1</characteristic>
         <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
         <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
         <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
@@ -4412,7 +4596,7 @@ If the commanding player rolls 4 or more unmodified 6s, after the mortal wounds 
     </profile>
     <profile id="8f44-b010-1b84-4b6d" name="Bladed Slingshields" page="" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
       <characteristics>
-        <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">After a unit armed with Bladed Slingshields makes a charge move, pick 1 enemy unit and roll a dice for each model from the charging unit within 8&quot; of that enemy unit. For each 6, the enemy unit suffers 1 mortal wound. In addition, add 1 to save rolls for attacks made with melee weapons that target a unit armed with Bladed Slingshields if the target unit did not make a charge move in the same turn.</characteristic>
+        <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">After this unit makes a charge move, you can pick 1 enemy unit within 1&quot; of this unit and roll 1 dice for each model in this unit.  For each 6, that enemy unit suffers 1 mortal wound.</characteristic>
       </characteristics>
     </profile>
     <profile id="ed9d-d267-5b0a-b619" name="Fyresteel Throwing Axe (Improved)" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">

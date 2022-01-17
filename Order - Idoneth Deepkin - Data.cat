@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="b713-a274-2a46-fe02" name="Order - Idoneth Deepkin - Data" revision="64" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="120" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="b713-a274-2a46-fe02" name="Order - Idoneth Deepkin - Data" revision="65" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="123" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="0d25-2712-pubN65537" name="Order Battletome: Idoneth Deepkin"/>
     <publication id="0d25-2712-pubN70885" name="GHB 2018 Errata, June 2018"/>
@@ -64,6 +64,7 @@
     <categoryEntry id="4fc4-6477-589d-8faf" name="BRANCHWYCH" hidden="false"/>
     <categoryEntry id="1d48-f95f-3dbd-95c4" name="ELATHAIN ILL-FATED" hidden="false"/>
     <categoryEntry id="38c6-f2ff-618f-807b" name="ELATHAIN&apos;S SOULRAID" hidden="false"/>
+    <categoryEntry id="8cf0-969f-59e6-9e5f" name="AKHELIAN THRALLMASTER" hidden="false"/>
   </categoryEntries>
   <sharedSelectionEntries>
     <selectionEntry id="e2ee-2634-4e4c-6340" name="Allegiance" hidden="false" collective="false" import="true" type="upgrade">
@@ -1102,9 +1103,14 @@ This model can retreat and still charge later in the same turn.</characteristic>
             <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">5+</characteristic>
           </characteristics>
         </profile>
-        <profile id="f5bc-1661-9a30-8d7f" name="Swift Tide" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+        <profile id="f5bc-1661-9a30-8d7f" name="Ripples of the Ethersea" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">You can re-roll run rolls for this unit.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Add 1 to hit rolls for attacks made with missile weapons by this unit if the target is within 9&quot; of the attacking model.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="d0de-c4d6-63da-7c50" name="Icon Bearer" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 model in this unit can be an Icon Bearer.  Add 1 to the Attacks characteristic of that model&apos;s melee weapons.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1134,7 +1140,7 @@ This model can retreat and still charge later in the same turn.</characteristic>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="be19-dca3-64f4-3e05" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="115.0"/>
+            <cost name="pts" typeId="points" value="170.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="62b8-a440-6a1b-d160" name="Keening Blade" hidden="false" collective="false" import="true" type="upgrade">
@@ -1147,9 +1153,9 @@ This model can retreat and still charge later in the same turn.</characteristic>
               <characteristics>
                 <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
                 <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
-                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">2</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">1</characteristic>
                 <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
-                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">4+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
                 <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
                 <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
               </characteristics>
@@ -1165,119 +1171,18 @@ This model can retreat and still charge later in the same turn.</characteristic>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="efb8-b043-69ea-92e5" type="max"/>
           </constraints>
           <profiles>
-            <profile id="9fd0-cbbd-35bc-a08b" name="Wisperbow: Aimed Fire" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+            <profile id="9fd0-cbbd-35bc-a08b" name="Wisperbow" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
               <characteristics>
                 <characteristic name="Type" typeId="655c-362e-a663-3e50">Missile</characteristic>
                 <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">18&quot;</characteristic>
-                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">1</characteristic>
-                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
-                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">4+</characteristic>
-                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">2</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
                 <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
               </characteristics>
             </profile>
-            <profile id="ec1c-6e74-2c06-637b" name="Wisperbow: Storm Fire" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
-              <characteristics>
-                <characteristic name="Type" typeId="655c-362e-a663-3e50">Missile</characteristic>
-                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">9&quot;</characteristic>
-                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">3</characteristic>
-                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
-                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">4+</characteristic>
-                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
-                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
-              </characteristics>
-            </profile>
-            <profile id="6fd6-2f49-caab-4e1f" name="Fluid Firing Style" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-              <characteristics>
-                <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Before attacking with a Whisperbow, choose either the Aimed Fire or Storm Fire missile weapon characteristics for that shooting attack.</characteristic>
-              </characteristics>
-            </profile>
           </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="17d5-de14-84be-0550" name="Icon Bearer" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="increment" field="f017-d793-d51b-18d2" value="1">
-              <repeats>
-                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2cce-8d6e-f3ff-9fd8" repeats="1" roundUp="false"/>
-              </repeats>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2fbe-28c9-3576-47a4" type="min"/>
-            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f017-d793-d51b-18d2" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="d311-7249-2973-47da" name="Icon Bearer - Namarti Reavers" publicationId="6737-0704-4a9d-8642" page="2" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
-              <characteristics>
-                <characteristic name="Battalion Ability Details" typeId="08e0-9ead-1dbe-c801">1 in every 10 models in this unit can be an Icon Bearer. You can re-roll battleshock tests for a unit of Namarti Reavers that includes any icon bearers.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <selectionEntries>
-            <selectionEntry id="63fe-9815-abfe-dc98" name="Keening Blade - Icon Bearer" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="08ab-8aa1-2daf-71fe" type="min"/>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f2a4-1176-9b64-ac7e" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="a3fb-a65c-7ec1-4faa" name="Keening Blade - Icon Bearer" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
-                    <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
-                    <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">3</characteristic>
-                    <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
-                    <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">4+</characteristic>
-                    <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
-                    <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="points" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="19d6-0964-3658-ffb8" name="Wisperbow" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c266-4312-ed5a-7836" type="min"/>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2b7b-f64f-a289-6cb0" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="0235-1465-b6ec-10e8" name="Wisperbow: Aimed Fire" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Type" typeId="655c-362e-a663-3e50">Missile</characteristic>
-                    <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">18&quot;</characteristic>
-                    <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">1</characteristic>
-                    <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
-                    <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">4+</characteristic>
-                    <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
-                    <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="0473-a88f-5921-5646" name="Wisperbow: Storm Fire" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Type" typeId="655c-362e-a663-3e50">Missile</characteristic>
-                    <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">9&quot;</characteristic>
-                    <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">3</characteristic>
-                    <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
-                    <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">4+</characteristic>
-                    <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
-                    <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="5d69-e63f-7c4b-236d" name="Fluid Firing Style" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-                  <characteristics>
-                    <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Before attacking with a Whisperbow, choose either the Aimed Fire or Storm Fire missile weapon characteristics for that shooting attack.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="points" value="0.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
@@ -1294,7 +1199,7 @@ This model can retreat and still charge later in the same turn.</characteristic>
             </modifier>
           </modifiers>
           <costs>
-            <cost name="pts" typeId="points" value="115.0"/>
+            <cost name="pts" typeId="points" value="170.0"/>
           </costs>
         </entryLink>
       </entryLinks>
@@ -1308,8 +1213,18 @@ This model can retreat and still charge later in the same turn.</characteristic>
           <characteristics>
             <characteristic name="Move" typeId="8655-6213-2824-1752">6&quot;</characteristic>
             <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">1</characteristic>
-            <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">6</characteristic>
+            <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">7</characteristic>
             <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">5+</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="910a-8ed6-6a1d-fe05" name="Icon Bearer" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 model in this unit can be an Icon Bearer.  Add 1 to the Attacks characteristic of that model&apos;s melee weapons.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="8f05-df31-5c17-eba8" name="Sweeping Blows" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Add 1 to the Attacks characteristic of this unit&apos;s Lanmari Blades if the target has a Wounds characteristic of 1.  Add 1 to the Damage characteristic instead if the target has a Wounds characteristic of 3 or more.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1339,7 +1254,7 @@ This model can retreat and still charge later in the same turn.</characteristic>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d892-343d-ac60-d9d1" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="120.0"/>
+            <cost name="pts" typeId="points" value="130.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="e06d-a31f-9f18-6bad" name="Lanmari Blade" hidden="false" collective="false" import="true" type="upgrade">
@@ -1351,7 +1266,7 @@ This model can retreat and still charge later in the same turn.</characteristic>
             <profile id="7703-9282-f9a2-0344" name="Lanmari Blade" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
               <characteristics>
                 <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
-                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">2&quot;</characteristic>
                 <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">2</characteristic>
                 <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
                 <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
@@ -1359,64 +1274,7 @@ This model can retreat and still charge later in the same turn.</characteristic>
                 <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
               </characteristics>
             </profile>
-            <profile id="9e26-7ba0-883b-63f1" name="Sweeping Blows" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-              <characteristics>
-                <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Add 1 to the Attacks characteristic of a Lanmari Blade if all of the attacks made with the weapon target enemy models with a Wounds characteristic of 1. Add 1 to the Damage characteristic instead if all of the attacks made with the weapon target enemy models with a Wounds characteristic of 4 or more.</characteristic>
-              </characteristics>
-            </profile>
           </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="8362-cecd-4e23-6749" name="Icon Bearer" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="increment" field="b4b4-f68f-4d0e-a96a" value="1">
-              <repeats>
-                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="883f-7dd2-f2f0-f085" repeats="1" roundUp="false"/>
-              </repeats>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="12e5-4ef5-8da7-3540" type="min"/>
-            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b4b4-f68f-4d0e-a96a" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="a600-f88f-ba85-4747" name="Icon Bearer - Namarti Thralls" publicationId="6737-0704-4a9d-8642" page="2" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
-              <characteristics>
-                <characteristic name="Battalion Ability Details" typeId="08e0-9ead-1dbe-c801">1 in every 10 models in this unit can be an Icon Bearer. You can re-roll battleshock tests for a unit of Namarti Thralls that includes any icon bearers.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <selectionEntries>
-            <selectionEntry id="26b5-5417-e66b-5c58" name="Lanmari Blade - Icon Bearer" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f783-14d4-4287-7d80" type="min"/>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0d9f-1bd8-6b05-93f8" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="3fe5-a76f-b5c6-0609" name="Lanmari Blade - Icon Bearer" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
-                    <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
-                    <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">3</characteristic>
-                    <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
-                    <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
-                    <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
-                    <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="5822-0839-c824-7761" name="Sweeping Blows" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-                  <characteristics>
-                    <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Add 1 to the Attacks characteristic of a Lanmari Blade if all of the attacks made with the weapon target enemy models with a Wounds characteristic of 1. Add 1 to the Damage characteristic instead if all of the attacks made with the weapon target enemy models with a Wounds characteristic of 4 or more.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="points" value="0.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
@@ -1429,7 +1287,7 @@ This model can retreat and still charge later in the same turn.</characteristic>
             <modifier type="set" field="95f2-6885-756f-9ea5" value="2.0"/>
           </modifiers>
           <costs>
-            <cost name="pts" typeId="points" value="120.0"/>
+            <cost name="pts" typeId="points" value="130.0"/>
           </costs>
         </entryLink>
       </entryLinks>
@@ -1701,7 +1559,7 @@ This model can retreat and still charge later in the same turn.</characteristic>
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink id="eede-2562-70c6-752b" name="General" hidden="false" collective="false" import="true" targetId="e67f-735c-9874-ba8c" type="selectionEntryGroup"/>
+        <entryLink id="eede-2562-70c6-752b" name=" General" hidden="false" collective="false" import="true" targetId="e67f-735c-9874-ba8c" type="selectionEntryGroup"/>
         <entryLink id="e7aa-7af2-5c37-edf5" name="Command Traits" hidden="false" collective="false" import="true" targetId="0879-c394-8274-958b" type="selectionEntryGroup"/>
         <entryLink id="bc11-ce88-bade-7f3c" name="Artefacts" hidden="false" collective="false" import="true" targetId="0740-e91a-e615-4ac9" type="selectionEntryGroup"/>
         <entryLink id="984f-51e9-bc5a-fcfe" name="Battalions" hidden="false" collective="false" import="true" targetId="5666-66dd-34a9-6beb" type="selectionEntryGroup"/>
@@ -1724,19 +1582,29 @@ This model can retreat and still charge later in the same turn.</characteristic>
         <profile id="15d8-ee4e-cea2-1f33" name="Akhelian Allopexes" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
           <characteristics>
             <characteristic name="Move" typeId="8655-6213-2824-1752">14&quot;</characteristic>
-            <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">8</characteristic>
+            <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">10</characteristic>
             <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">6</characteristic>
             <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">4+</characteristic>
           </characteristics>
         </profile>
         <profile id="ec41-7e31-1f14-ed06" name="Bloodthirsty Predators" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Add 1 to the Attacks characteristic of this unit’s Ferocious Bites if it is within 3&quot; of any enemy models that have any wounds allocated to them or it is within 3&quot; of any enemy units that have had any models slain in that turn.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Add 1 to the Attacks characteristic of this unit’s Ferocious Bites if it is within 6&quot; of any enemy models that have any wounds allocated to them or it is within 6&quot; of any enemy units that have had any models slain in that turn.</characteristic>
           </characteristics>
         </profile>
         <profile id="bb8d-b6a2-3a4f-16a6" name="Entangled" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">A unit that has been hit by any attacks made with a Retarius Net Launcher cannot make pile-in moves in the same turn.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If an attack made with this unit&apos;s Retarius Net Launchers scores a hit, the target unit cannot make pile-in moves that turn.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="cfe3-0a48-5a6e-ae8c" name="A Merciless Shiver" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If this unit has 2 or more models, it is coherent if each model is the unit is within 3&quot; horizontally of at least 1 other model in the unit instead of 1&quot;.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="b2af-8f9c-0713-c002" name="Alpha Allopex" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If this unit has 2 or more models, 1 model in this unit can be an Alpha Allopex.  Add 1 to the hit rolls for attacks made with that model&apos;s melee weapons.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1803,7 +1671,7 @@ This model can retreat and still charge later in the same turn.</characteristic>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="de75-e417-3fac-5661" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="125.0"/>
+            <cost name="pts" typeId="points" value="165.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -1842,7 +1710,7 @@ This model can retreat and still charge later in the same turn.</characteristic>
                     <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
                     <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
                     <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
-                    <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+                    <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">D3</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1857,7 +1725,7 @@ This model can retreat and still charge later in the same turn.</characteristic>
         <entryLink id="65a4-ca31-a6c3-9296" name="Battalions" hidden="false" collective="false" import="true" targetId="5666-66dd-34a9-6beb" type="selectionEntryGroup"/>
         <entryLink id="d963-122e-9303-f790" name="Reinforced" hidden="false" collective="false" import="true" targetId="0a8d-cde8-fba1-6c0d" type="selectionEntry">
           <costs>
-            <cost name="pts" typeId="points" value="125.0"/>
+            <cost name="pts" typeId="points" value="165.0"/>
           </costs>
         </entryLink>
       </entryLinks>
@@ -2161,7 +2029,6 @@ This model can retreat and still charge later in the same turn.</characteristic>
       </selectionEntries>
       <entryLinks>
         <entryLink id="aaff-d349-bb79-0080" name="Fangmora Eel Mount" hidden="false" collective="false" import="true" targetId="bd7d-409b-2a0f-faf5" type="selectionEntry"/>
-        <entryLink id="7878-c728-183a-3c4e" name="Standard Bearer (1 or more)" hidden="false" collective="false" import="true" targetId="1f8e-63c5-5e5e-6f93" type="selectionEntry"/>
         <entryLink id="3ac8-2084-967e-eb98" name="Musician (1 or more)" hidden="false" collective="false" import="true" targetId="3b8e-e354-d292-6b37" type="selectionEntry"/>
         <entryLink id="e2b9-44cf-f211-abb6" name="Battalions" hidden="false" collective="false" import="true" targetId="5666-66dd-34a9-6beb" type="selectionEntryGroup"/>
         <entryLink id="adb8-aed4-e7ba-7f80" name="Reinforced" hidden="false" collective="false" import="true" targetId="0a8d-cde8-fba1-6c0d" type="selectionEntry">
@@ -2353,7 +2220,6 @@ This model can retreat and still charge later in the same turn.</characteristic>
       <entryLinks>
         <entryLink id="b209-fdc2-0ba5-059e" name="Fangmora Eel Mount" hidden="false" collective="false" import="true" targetId="bd7d-409b-2a0f-faf5" type="selectionEntry"/>
         <entryLink id="c817-d8cc-0019-bfde" name="Musician (1 or more)" hidden="false" collective="false" import="true" targetId="3b8e-e354-d292-6b37" type="selectionEntry"/>
-        <entryLink id="a66a-84dd-a5ee-412a" name="Standard Bearer (1 or more)" hidden="false" collective="false" import="true" targetId="1f8e-63c5-5e5e-6f93" type="selectionEntry"/>
         <entryLink id="de98-66ea-fa58-a889" name="Battalions" hidden="false" collective="false" import="true" targetId="5666-66dd-34a9-6beb" type="selectionEntryGroup"/>
         <entryLink id="58af-89eb-7e8c-e701" name="Reinforced" hidden="false" collective="false" import="true" targetId="0a8d-cde8-fba1-6c0d" type="selectionEntry">
           <modifiers>
@@ -2808,21 +2674,6 @@ This faction terrain feature consists of 2 scenery pieces. When you set it up, y
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="1f8e-63c5-5e5e-6f93" name="Standard Bearer (1 or more)" hidden="false" collective="false" import="true" type="upgrade">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1141-3f34-b49a-80ca" type="max"/>
-      </constraints>
-      <profiles>
-        <profile id="1133-316e-6297-7bd7" name="Standard Bearer - Akhelian Guard" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">You can re-roll battleshock tests for this unit if it includes any standard bearers</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
-      </costs>
-    </selectionEntry>
     <selectionEntry id="3b8e-e354-d292-6b37" name="Musician (1 or more)" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7153-2f70-5ff4-972a" type="max"/>
@@ -3130,6 +2981,102 @@ This faction terrain feature consists of 2 scenery pieces. When you set it up, y
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="ed12-cca8-a7e4-7b10" name="Akhelian Thrallmaster" hidden="false" collective="false" import="true" type="unit">
+      <profiles>
+        <profile id="4402-844d-17a7-486a" name="Akhelian Thrallmaster" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
+          <characteristics>
+            <characteristic name="Move" typeId="8655-6213-2824-1752">6&quot;</characteristic>
+            <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">5</characteristic>
+            <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">7</characteristic>
+            <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">4+</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="e9e1-3efb-2648-679e" name="Akhelian Fighting Stance" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the start of the combat phase, you must pick 1 of the following fighting stances for this unit to use.  Each effect lasts until the end of that phase.
+  
+   * Way of the Depths: You can re-roll hit rolls of 1 for attacks made with melee weapons by this unit and friendly NAMARTI units wholly within 12&quot; of this unit.
+   * Ways of the Riptide: If the unmodified hit roll for an attack made with a melee weapon by this unit or a friendly NAMARTI unit wholly within 12&quot; of this unit is a 6, that attack scores 2 hits on the target instead of 1.  Make a wound and save roll for each hit.
+   * Way of the Vortex: Subtract 1 from wound rolls for attacks that target this unit and friendly NAMARTI units wholly within 12&quot; of this unit.
+</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="a60c-3df7-8dfb-2911" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
+        <categoryLink id="2c63-978f-5fc5-5b19" name="9 or less wounds Leader" hidden="false" targetId="a8ed-ca35-24e0-cf2e" primary="false"/>
+        <categoryLink id="8c4a-fbf7-0e1e-4473" name="ORDER" hidden="false" targetId="b970-b3bf-e1a4-a6fc" primary="false"/>
+        <categoryLink id="2f35-bbcb-3c42-e8c0" name="IDONETH DEEPKIN" hidden="false" targetId="6ec4-4931-4d7f-006b" primary="false"/>
+        <categoryLink id="8d2a-e477-b867-ed7c" name="AELF" hidden="false" targetId="7fe9-bc03-2c82-0a00" primary="false"/>
+        <categoryLink id="ebb1-c503-d812-c363" name="AKHELIAN" hidden="false" targetId="7308-657f-ed3f-68f4" primary="false"/>
+        <categoryLink id="acc3-8f56-4f93-d7e7" name="HERO" hidden="false" targetId="4e0e-664d-51ea-0929" primary="false"/>
+        <categoryLink id="305e-cc53-2908-3376" name="AKHELIAN THRALLMASTER" hidden="false" targetId="8cf0-969f-59e6-9e5f" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="4643-8d2f-f49c-bc4b" name="Esoteric Weapons" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c0cc-2e76-09dc-582a" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3299-0800-e6bb-6b8b" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="2eb6-863c-528c-57cc" name="Esoteric Weapons" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">5</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">2</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="4115-22df-2cc7-cb6c" name="Vicious Bite" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d028-a7c8-2b12-0d16" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9a66-9bbb-b2c8-bcfb" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="fd2e-4be1-b68e-159b" name="Vicious Bite" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">2</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">4+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <entryLinks>
+        <entryLink id="abe8-4d96-e6be-de96" name=" General" hidden="false" collective="false" import="true" targetId="e67f-735c-9874-ba8c" type="selectionEntryGroup"/>
+        <entryLink id="4335-5579-a47f-ee9f" name="Artefacts" hidden="false" collective="false" import="true" targetId="0740-e91a-e615-4ac9" type="selectionEntryGroup"/>
+        <entryLink id="a98b-57dd-59ca-3227" name="Battalions" hidden="false" collective="false" import="true" targetId="5666-66dd-34a9-6beb" type="selectionEntryGroup"/>
+        <entryLink id="a147-cd59-538d-77cb" name="Command Traits" hidden="false" collective="false" import="true" targetId="0879-c394-8274-958b" type="selectionEntryGroup"/>
+        <entryLink id="f56d-da73-2e96-54a6" name="Spell Lores" hidden="true" collective="false" import="true" targetId="ae84-c2fb-c58c-9d9b" type="selectionEntryGroup">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9918-5a46-2468-35e2" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="110.0"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>
