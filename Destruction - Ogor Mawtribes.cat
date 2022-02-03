@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="86c6-f50d-4d44-9d02" name="Destruction - Ogor Mawtribes" revision="52" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="120" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="86c6-f50d-4d44-9d02" name="Destruction - Ogor Mawtribes" revision="53" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="123" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="50c5-e039-pubN80915" name="Destruction Battletome: Ironjawz"/>
     <publication id="50c5-e039-pubN81384" name="Destruction Battletome: Ogor Mawtribes"/>
@@ -69,6 +69,7 @@
     <categoryEntry id="f821-d117-4388-9a2a" name="MANEATERS" hidden="false"/>
     <categoryEntry id="6798-ea7a-99dc-fe39" name="OGOR GLUTTONS" hidden="false"/>
     <categoryEntry id="eb3d-f5a2-722f-d44e" name="HROTHGORN&apos;S MANTRAPPERS" hidden="false"/>
+    <categoryEntry id="161c-afe3-8d1e-9075" name="BLACKPOWDER&apos;S BUCCANEERS" hidden="false"/>
   </categoryEntries>
   <entryLinks>
     <entryLink id="fc4d-9292-0908-041e" name="Allegiance" hidden="false" collective="false" import="true" targetId="9dbb-2d1a-12d8-7faf" type="selectionEntry">
@@ -571,6 +572,7 @@
       </categoryLinks>
     </entryLink>
     <entryLink id="f4d5-0e85-d20a-ee81" name="Grand Strategy" hidden="false" collective="false" import="true" targetId="498a-ac1b-47f2-125b" type="selectionEntry"/>
+    <entryLink id="4578-1148-0d85-ac00" name="Blackpowder&apos;s Buccaneers" hidden="false" collective="false" import="true" targetId="4b1b-e93c-0794-f6c0" type="selectionEntry"/>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="9dbb-2d1a-12d8-7faf" name="Allegiance" hidden="false" collective="false" import="true" type="upgrade">
@@ -5255,7 +5257,7 @@ In addition, if this spell is successfully cast, add 1 to save rolls for attacks
         <cost name="pts" typeId="points" value="120.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="1e4c-be9c-61ea-223d" name="Hrothgorn" hidden="false" collective="false" import="true" type="model">
+    <selectionEntry id="1e4c-be9c-61ea-223d" name="Hrothgorn" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
         <modifier type="set" field="5822-cd96-eb07-21ca" value="1.0">
           <conditions>
@@ -5596,6 +5598,142 @@ The first time a unit finishes a move within 1&quot; of the trapped terrain feat
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="4b1b-e93c-0794-f6c0" name="Blackpowder&apos;s Buccaneers" hidden="false" collective="false" import="true" type="unit">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="96f0-3e98-3b8c-144d" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="e6dc-0117-a3cc-abae" name="Blackpowder&apos;s Buccaneers" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
+          <characteristics>
+            <characteristic name="Move" typeId="8655-6213-2824-1752">5&quot;</characteristic>
+            <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">7</characteristic>
+            <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">8</characteristic>
+            <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">5+</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="9583-c69c-d209-de25" name="Legendary Looter" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the start of the combat phase, you can pick 1 enemy Hero with an artefact of power enhancement that is within 3&quot; of this unit, and roll 2D6.  Add 2 to the roll if Kagey has not been removed, and add 1 to the roll for each other minion that has not been removed.  If the roll is 12+, that enemy Hero cannot use that artefact of power for the rest of the battle.  If the artefact of power modified any of the bearer&apos;s characteristics or weapon characteristics, they return to their original values.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="4483-fc4b-484d-fad8" name="Gorlock&apos;s Minions" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Each time a wound or mortal wound is allocated to this model and not negated, you can choose to remove 1 minion.  If you do so, the wound or mortal wound is negated.  In addition, each minion confers an ability to this unit, as shown below.  If the minion is removed, that ability can no longer be used.
+
+Peggz: Add 1 to hit rolls for this unit.  In addition, if you choose to remove this minion when this unit suffers a wound or mortal wound, roll a dice.  On a 5+ this minion is not removed, but the wound or mortal wound is still negated.
+
+Kagey: See the Legendary Looter ability.
+
+Mange: After this unit fights, you can pick 1 enemy unit within 3&quot; of this model and roll a dice.  On a 5+ that enemy unit suffers 1 mortal wound.
+
+Shreek: In your shooting phase, you can pick 1 enemy unit within 18&quot; of this model and roll a dice.  On a 5+ that enemy unit suffers 1 mortal wound.
+</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="0c14-ecf9-f494-b8f0" name="DESTRUCTION" hidden="false" targetId="d963-a5fb-c348-2371" primary="false"/>
+        <categoryLink id="7549-b025-136d-406a" name="OGOR MAWTRIBES" hidden="false" targetId="2246-c381-2650-4ca2" primary="false"/>
+        <categoryLink id="9e43-ad5b-0256-7206" name="OGOR" hidden="false" targetId="1422-e165-b7d0-b2d9" primary="false"/>
+        <categoryLink id="d916-7615-a16c-7009" name="HERO" hidden="false" targetId="4e0e-664d-51ea-0929" primary="false"/>
+        <categoryLink id="076a-d6d1-9257-9899" name="MANEATERS" hidden="false" targetId="f821-d117-4388-9a2a" primary="false"/>
+        <categoryLink id="8eb7-2b95-2358-1808" name="BLACKPOWDER&apos;S BUCCANEERS" hidden="false" targetId="161c-afe3-8d1e-9075" primary="false"/>
+        <categoryLink id="a838-7bd0-f1c1-a136" name="Unique" hidden="false" targetId="088b-3a27-03f7-8249" primary="false"/>
+        <categoryLink id="ad5b-5369-238f-23b7" name="9 or less wounds Leader" hidden="false" targetId="a8ed-ca35-24e0-cf2e" primary="false"/>
+        <categoryLink id="155e-0b5e-45e4-c13b" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="452f-37c5-1348-b95e" name="Grunderbuss" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b35d-c451-cf05-c1cd" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="29ee-4133-9dbd-c972" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="33b8-8384-6d04-11ae" name="Grunderbuss" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Missile</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">12&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">2</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">D3</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry id="5f3a-a26a-0d2e-2a35" name="Great Cutlass" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ba04-0b14-e77f-4147" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="653d-6ebf-1ccb-6ac7" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="8df1-815f-76be-1ae4" name="Great Cutlass" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">2&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">4</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-2</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">2</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry id="d1f1-a057-8ee4-8380" name="Gulping Bite" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="612b-bab7-955f-4f45" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="25b3-b4a9-097d-398c" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="7828-0fca-58ce-d209" name="Gulping Bite" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">1</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry id="aa05-1235-76b0-cd1a" name="General" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="24d6-500b-7e3f-1470" type="instanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="78f3-8a59-699a-61e8" type="instanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ed67-c9e1-cb0f-949d" type="max"/>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c5d2-101a-f36a-9f40" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="2dce-3b19-e0ed-d39e" name="New CategoryLink" hidden="false" targetId="b745-17c4-8fbf-8b04" primary="false"/>
+          </categoryLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <entryLinks>
+        <entryLink id="b333-dc3c-ed6a-af82" name="Battalions" hidden="false" collective="false" import="true" targetId="c2fb-53c6-5c52-5750" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="105.0"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>
