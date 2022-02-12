@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="123" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="124" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <publications>
     <publication id="e51d-b1a3-pubEC" name="The General&apos;s Handbook"/>
     <publication id="e51d-b1a3-pubEQ" name="Core Rules"/>
@@ -135,6 +135,11 @@
     <profileType id="eba0-4bf6-65fe-fdbc" name="Battle Tactic">
       <characteristicTypes>
         <characteristicType id="f882-48d5-21a4-1787" name="Description"/>
+      </characteristicTypes>
+    </profileType>
+    <profileType id="84d9-7a5a-fe76-b740" name="Monstrous Rampage">
+      <characteristicTypes>
+        <characteristicType id="827b-962b-59a3-3b4d" name="Description"/>
       </characteristicTypes>
     </profileType>
   </profileTypes>
