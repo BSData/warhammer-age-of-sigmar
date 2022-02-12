@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="b3c2-9aff-8664-1d07" name="Death - Ossiarch Bonereapers" revision="48" battleScribeVersion="2.03" authorName="TigerWraith" authorContact="TigerWraith#5618 on Discord" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="122" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="b3c2-9aff-8664-1d07" name="Death - Ossiarch Bonereapers" revision="51" battleScribeVersion="2.03" authorName="TigerWraith" authorContact="TigerWraith#5618 on Discord" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="124" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="cb62-7d89-9fa6-76ad" name="Battletome: Ossiarch Bonereapers"/>
   </publications>
@@ -583,9 +583,19 @@ In addition, you cannot use the Expert, Slayers, Strategists or Swift battalion 
             <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">Do not take battleshock tests for friendly OSSIARCH BONEREAPERS units.</characteristic>
           </characteristics>
         </profile>
-        <profile id="e82a-1f03-63ab-46be" name="Unstoppable Advance" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
+        <profile id="e82a-1f03-63ab-46be" name="Unstoppable Advance" hidden="false" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
           <characteristics>
-            <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">You can use this command ability in your movement phase when you pick a friendly OSSIARCH BONEREAPERS unit to make a normal move, run or retreat. Add 3&quot; to that unit’s Move characteristic in that phase.</characteristic>
+            <characteristic name="Command Ability Details" typeId="1b71-4c83-4e8c-093f">You can use this command ability in your movement phase when you pick a friendly OSSIARCH BONEREAPERS unit to make a normal move, run or retreat. Add 3&quot; to that unit’s Move characteristic in that phase.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="d2d7-01eb-ead9-22d1" name="Reknit Constructs" hidden="false" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
+          <characteristics>
+            <characteristic name="Command Ability Details" typeId="1b71-4c83-4e8c-093f">You can use this Ossiarch command ability at the end of your movement phase.  The unit that receives the command must be a friendly OSSIARCH BONEREAPERS unit that remained stationary in that phase, and that is more than 3&quot; from all enemy units.  You can heal up to D3 wounds allocated to that unit or, if no wounds are allocated to it, you can return a number of slain models to that unit that have a combined Wounds characteristic of D3 or less.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="7bc7-0ce0-9923-1fa7" name="Unflinching Coordination" hidden="false" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
+          <characteristics>
+            <characteristic name="Command Ability Details" typeId="1b71-4c83-4e8c-093f">You can use this Ossiarch command ability in the combat phase after a friendly OSSIARCH BONEREAPERS HERO has fought for the first time in that phase.  The unit that issues the command must be a friendly OSSIARCH BONEREAPERS HERO that has already fought in that phase.  The unit that receives the command must be a friendly OSSIARCH BONEREAPERS unit that is not a HERO, that has not yet fought in that phase, and that is within 3&quot; of any enemy unit.  That unit can fight immediately.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -3332,7 +3342,7 @@ You can roll D3 additional dice when this LIEGE uses their Unstoppable Charge ab
     </selectionEntry>
     <selectionEntry id="d8b3-6277-b672-a953" name="Grand Strategy" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
-        <modifier type="set" field="05c9-ecf5-2491-65ac" value="0.0">
+        <modifier type="set" field="hidden" value="true">
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
@@ -3356,6 +3366,7 @@ You can roll D3 additional dice when this LIEGE uses their Unstoppable Charge ab
       </categoryLinks>
       <entryLinks>
         <entryLink id="864a-e125-cea0-67c7" name="Universal Grand Strategy" hidden="false" collective="false" import="true" targetId="1e64-bcdc-3709-7ec7" type="selectionEntryGroup"/>
+        <entryLink id="dcdf-92c2-7c4a-d927" name="Demands of the Tithe (Grand Strategy)" hidden="false" collective="false" import="true" targetId="925a-e81c-1aa5-4c4f" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
@@ -4489,6 +4500,39 @@ You can roll D3 additional dice when this LIEGE uses their Unstoppable Charge ab
         </entryLink>
         <entryLink id="b93d-bfde-24e2-545b" name="Universal Spell Lore" hidden="false" collective="false" import="true" targetId="20c3-23a0-9d79-b491" type="selectionEntryGroup"/>
       </entryLinks>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="925a-e81c-1aa5-4c4f" name="Demands of the Tithe (Grand Strategy)" hidden="true" collective="false" import="true">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4030-1d9b-ec45-bc4b" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="79d8-c6f7-6452-ee8a" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="63b1-18d9-da3a-72b7" type="max"/>
+      </constraints>
+      <selectionEntries>
+        <selectionEntry id="a491-06a4-7f6a-cec8" name="Unrelenting Efficiency" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="445b-ac3a-e697-c83d" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="c65f-8658-7728-dcdb" name="Unrelenting Efficiency" hidden="false" typeId="9c01-ec20-32c1-0948" typeName="Grand Strategy">
+              <characteristics>
+                <characteristic name="Description" typeId="53c8-cc18-16d1-e890">When the battle ends, you complete this grand strategy if any friendly MORTEK GUARD or KAVALOS DEATHRIDERS units from your starting army have the same number of models in that unit as they had at the start of the battle.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <categoryLinks>
+            <categoryLink id="3687-ed7d-c1cc-419c" name="Grand Strategy" hidden="false" targetId="5dff-3614-49fd-c3e4" primary="false"/>
+          </categoryLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <sharedProfiles>
