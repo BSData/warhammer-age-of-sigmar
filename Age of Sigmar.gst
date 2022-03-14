@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="125" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="126" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <publications>
     <publication id="e51d-b1a3-pubEC" name="The General&apos;s Handbook"/>
     <publication id="e51d-b1a3-pubEQ" name="Core Rules"/>
@@ -25,6 +25,7 @@
       <comment>Battlescroll: Gods &amp; Heroes - December 2021</comment>
     </publication>
     <publication id="6bd9-9ed8-1840-8dc4" name="Battlescroll: Gods &amp; Heroes - December 2021" publisherUrl="https://www.warhammer-community.com/wp-content/uploads/2021/12/XTPR7PzBSVcNAAOd.pdf"/>
+    <publication id="b7f9-e968-f5d8-b92b" name="Battlescroll: The Hunt"/>
   </publications>
   <costTypes>
     <costType id="points" name="pts" defaultCostLimit="0.0" hidden="false"/>
@@ -340,6 +341,8 @@
       </constraints>
     </categoryEntry>
     <categoryEntry id="dbef-7476-90e0-f480" name="Unique Enhancement" hidden="false"/>
+    <categoryEntry id="bd81-589f-386b-038d" name="Priority Target" publicationId="b7f9-e968-f5d8-b92b" hidden="false"/>
+    <categoryEntry id="74b1-b223-a366-572d" name="Prime Hunters" publicationId="b7f9-e968-f5d8-b92b" hidden="false"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry id="36b7-ee1e-0855-f23f" name="**Pitched Battle GHB 2021**" hidden="false">
