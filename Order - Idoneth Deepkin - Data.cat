@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="b713-a274-2a46-fe02" name="Order - Idoneth Deepkin - Data" revision="67" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="125" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="b713-a274-2a46-fe02" name="Order - Idoneth Deepkin - Data" revision="68" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="126" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="0d25-2712-pubN65537" name="Order Battletome: Idoneth Deepkin"/>
   </publications>
@@ -1522,7 +1522,7 @@ This unit can retreat and still charge in the same turn.</characteristic>
     </selectionEntry>
     <selectionEntry id="ae34-b407-ec32-9dc8" name="Akhelian Allopexes" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
-        <modifier type="add" field="category" value="e9f2-765a-b7b8-ce8e">
+        <modifier type="set-primary" field="category" value="e9f2-765a-b7b8-ce8e">
           <conditions>
             <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ecff-0f1b-c90f-b748" type="equalTo"/>
           </conditions>
@@ -1618,6 +1618,16 @@ This unit can retreat and still charge in the same turn.</characteristic>
         </selectionEntry>
         <selectionEntry id="2c12-0064-bfd1-63df" name="Akhelian Allopex" hidden="false" collective="false" import="true" type="model">
           <modifiers>
+            <modifier type="set" field="name" value="3 Akhelian Allopexes">
+              <conditions>
+                <condition field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0a8d-cde8-fba1-6c0d" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="points" value="0.0">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7fae-c1e4-166e-a9db" type="instanceOf"/>
+              </conditions>
+            </modifier>
             <modifier type="set" field="name" value="2 Akhelian Allopexes">
               <conditions>
                 <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0a8d-cde8-fba1-6c0d" type="equalTo"/>
@@ -1687,6 +1697,13 @@ This unit can retreat and still charge in the same turn.</characteristic>
       <entryLinks>
         <entryLink id="65a4-ca31-a6c3-9296" name="Battalions" hidden="false" collective="false" import="true" targetId="5666-66dd-34a9-6beb" type="selectionEntryGroup"/>
         <entryLink id="d963-122e-9303-f790" name="Reinforced" hidden="false" collective="false" import="true" targetId="0a8d-cde8-fba1-6c0d" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="95f2-6885-756f-9ea5" value="2.0">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ecff-0f1b-c90f-b748" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <costs>
             <cost name="pts" typeId="points" value="165.0"/>
           </costs>
@@ -2851,6 +2868,9 @@ This faction terrain feature consists of 2 scenery pieces. When you set it up, y
           </characteristics>
         </profile>
       </profiles>
+      <categoryLinks>
+        <categoryLink id="a571-451c-5054-8baa" name="Game Options" hidden="false" targetId="1974-3f49-7f0b-8422" primary="true"/>
+      </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
@@ -2859,15 +2879,23 @@ This faction terrain feature consists of 2 scenery pieces. When you set it up, y
       <modifiers>
         <modifier type="set" field="hidden" value="false">
           <conditions>
-            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ecff-0f1b-c90f-b748" type="equalTo"/>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ecff-0f1b-c90f-b748" type="atLeast"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="e12e-2c15-c90e-886a" value="-1.0">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ecff-0f1b-c90f-b748" type="atLeast"/>
           </conditions>
         </modifier>
       </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e12e-2c15-c90e-886a" type="max"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink id="353f-eabc-fbef-6de3" name="New CategoryLink" hidden="false" targetId="e9f2-765a-b7b8-ce8e" primary="true"/>
+      </categoryLinks>
       <entryLinks>
         <entryLink id="c3be-a15a-1e72-2696" name="Akhelian Allopexes" hidden="false" collective="false" import="true" targetId="ae34-b407-ec32-9dc8" type="selectionEntry">
-          <modifiers>
-            <modifier type="set" field="points" value="0.0"/>
-          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0184-4ace-c143-6c06" type="min"/>
             <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="147a-388c-228d-426f" type="max"/>
