@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="1d4c-207e-6a42-ac7d" name="Order Data" revision="39" battleScribeVersion="2.03" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="126" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="1d4c-207e-6a42-ac7d" name="Order Data" revision="40" battleScribeVersion="2.03" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="126" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="4bb2-2339-a79f-51d7" name="Battletome: Cities of Sigmar "/>
     <publication id="6c99-1e0f-3bc1-11ae" name="Battletome: Stormcast Eternals (2nd Edition)"/>
@@ -250,17 +250,6 @@ Rune of Unfaltering Aim: This prayer has an answer value of 2 and a range of 3&q
                     <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">An Anvilgard army must be from Aqshy.</characteristic>
                   </characteristics>
                 </profile>
-                <profile id="5d06-995c-8174-465f" name="Illicit Dealings" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
-                  <characteristics>
-                    <characteristic name="Battalion Ability Details" typeId="08e0-9ead-1dbe-c801">To have power and influence in Anvilgard, one must know the right people. In battle, the city’s commanders call upon these contacts to give them every advantage they can glean. When you choose an Anvilgard army, you can profit from one of the following benefits of illicit dealings:
-
-Black Market Bounty: 1 additional friendly ANVILGARD HERO can bear an artefact of power from the Anvilgard Artefacts of Power table.
-
-Dabblings in Sorcery: 1 additional friendly ANVILGARD DRAGON, ANVILGARD KHARIBDYSS or ANVILGARD WAR HYDRA can have a Drakeblood curse from the Drakeblood Curses table. 
-
-Hidden Agents: You receive D3 extra command points.</characteristic>
-                  </characteristics>
-                </profile>
                 <profile id="22bd-6b09-390e-5d29" name="Drakeblood Curses" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
                   <characteristics>
                     <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">If an Anvilgard army includes any DRAGONS, KHARIBDYSSES or WAR HYDRAS, 1 of those models has a Drakeblood curse. Choose which model will have the Drakeblood curse, then pick from or roll on the Drakeblood Curses table opposite.
@@ -274,6 +263,43 @@ You can choose 1 additional friendly ANVILGARD DRAGON, ANVILGARD KHARIBDYSS or A
                   </characteristics>
                 </profile>
               </profiles>
+              <selectionEntryGroups>
+                <selectionEntryGroup id="9756-1ccc-d637-5a26" name="Illicit Dealings" hidden="false" collective="false" import="true">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="51d0-f038-1cf1-fbc8" type="min"/>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e862-6f7d-5ec8-c88a" type="max"/>
+                  </constraints>
+                  <selectionEntries>
+                    <selectionEntry id="7b2a-da21-7866-25ef" name="Black Market Bounty" hidden="false" collective="false" import="true" type="upgrade">
+                      <profiles>
+                        <profile id="9f81-60e3-33bf-fcec" name="Black Market Bounty" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
+                          <characteristics>
+                            <characteristic name="Battalion Ability Details" typeId="08e0-9ead-1dbe-c801">1 additional friendly ANVILGARD HERO can bear an artefact of power from the Anvilgard Artefacts of Power.</characteristic>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                    </selectionEntry>
+                    <selectionEntry id="fb46-d604-a1b1-ac3f" name="Dabblings in Sorcery" hidden="false" collective="false" import="true" type="upgrade">
+                      <profiles>
+                        <profile id="58d3-6ceb-3766-1197" name="Dabblings in Sorcery" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
+                          <characteristics>
+                            <characteristic name="Battalion Ability Details" typeId="08e0-9ead-1dbe-c801">1 additional friendly ANVILGARD DRAGON, ANVILGARD KHARIBDYSS or ANVILGARD WAR HYDRA can have a Drakeblood curse from the Drakeblood Curses.</characteristic>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                    </selectionEntry>
+                    <selectionEntry id="d6b4-b20c-3313-768f" name="Hidden Agents" hidden="false" collective="false" import="true" type="upgrade">
+                      <profiles>
+                        <profile id="334b-285a-5b7d-b655" name="Hidden Agents" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
+                          <characteristics>
+                            <characteristic name="Battalion Ability Details" typeId="08e0-9ead-1dbe-c801">You receive D3 extra command points.</characteristic>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                    </selectionEntry>
+                  </selectionEntries>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
               <costs>
                 <cost name="pts" typeId="points" value="0.0"/>
               </costs>
@@ -1193,6 +1219,11 @@ You can choose 1 additional friendly ANVILGARD DRAGON, ANVILGARD KHARIBDYSS or A
         <modifier type="increment" field="a5f7-44b3-3d8d-dc44" value="1.0">
           <repeats>
             <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="be17-6bbd-b857-3f43" repeats="1" roundUp="false"/>
+          </repeats>
+        </modifier>
+        <modifier type="increment" field="a5f7-44b3-3d8d-dc44" value="1.0">
+          <repeats>
+            <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fb46-d604-a1b1-ac3f" repeats="1" roundUp="false"/>
           </repeats>
         </modifier>
       </modifiers>
