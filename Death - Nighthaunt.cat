@@ -5,6 +5,7 @@
   </publications>
   <categoryEntries>
     <categoryEntry id="2879-a068-ed06-a540" name="SCRIPTOR MORTIS" hidden="false"/>
+    <categoryEntry id="ec8c-b14e-63e3-33d7" name="Knight of Shrouds Artefact" hidden="false"/>
   </categoryEntries>
   <entryLinks>
     <entryLink id="d1ad-bba8-08e5-42da" name="Guardian of Souls with Nightmare Lantern" hidden="false" collective="false" import="true" targetId="9ec8-6677-8ec6-fc58" type="selectionEntry"/>
@@ -1691,7 +1692,11 @@ Before this endless spell is moved, the commanding player can pivot it on the ce
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink id="3b83-42a9-cf2f-a2c8" name="Artefacts" hidden="false" collective="false" import="true" targetId="a2c1-3fba-5acb-d560" type="selectionEntryGroup"/>
+        <entryLink id="3b83-42a9-cf2f-a2c8" name="Artefacts" hidden="false" collective="false" import="true" targetId="1ce7-4fd8-991f-3433" type="selectionEntryGroup">
+          <categoryLinks>
+            <categoryLink id="1eac-9441-0e4b-0fff" name="Knight of Shrouds Artefact" hidden="false" targetId="ec8c-b14e-63e3-33d7" primary="false"/>
+          </categoryLinks>
+        </entryLink>
         <entryLink id="c4db-1ffb-8e34-1fd1" name="Command Traits" hidden="false" collective="false" import="true" targetId="eda1-7945-4fea-a145" type="selectionEntryGroup">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
@@ -1707,7 +1712,6 @@ Before this endless spell is moved, the commanding player can pivot it on the ce
             </modifier>
           </modifiers>
         </entryLink>
-        <entryLink id="6a9f-e9c9-5837-424d" name="The Traitors Knight&apos;s Blade" hidden="false" collective="false" import="true" targetId="e2da-e050-1c0c-9e64" type="selectionEntry"/>
         <entryLink id="8234-9512-25d8-99f5" name="Battalions" hidden="false" collective="false" import="true" targetId="9df7-269b-fa20-74b2" type="selectionEntryGroup"/>
         <entryLink id="1153-52b8-1fe5-bdcc" name="Spell Lores" hidden="true" collective="false" import="true" targetId="8417-93fc-9562-a748" type="selectionEntryGroup">
           <modifiers>
@@ -2377,8 +2381,8 @@ A unit cannot be picked to be a judged soul more than once in the same battle. <
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink id="cfea-3a63-fab4-edc3" name="Artefacts" hidden="false" collective="false" import="true" targetId="a2c1-3fba-5acb-d560" type="selectionEntryGroup"/>
-        <entryLink id="ea3a-0e5d-2c2a-fd60" name="Command Traits" hidden="false" collective="false" import="true" targetId="eda1-7945-4fea-a145" type="selectionEntryGroup">
+        <entryLink id="cfea-3a63-fab4-edc3" name="Artefacts" hidden="false" collective="false" import="true" targetId="1ce7-4fd8-991f-3433" type="selectionEntryGroup"/>
+        <entryLink id="ea3a-0e5d-2c2a-fd60" name="Command Traits" hidden="false" collective="false" import="true" targetId="9380-d13f-4cb9-86da" type="selectionEntryGroup">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditionGroups>
@@ -4191,6 +4195,41 @@ If the bearer snuffs out the corpse candle in the combat phase, pick the bearer 
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
+        </selectionEntry>
+        <selectionEntry id="374f-1c8e-148a-2d6b" name="0. The Traitor Knight’s Blade" hidden="true" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="62f7-04dd-0ebd-bd4e" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="da2f-f80a-ae8e-d706" value="1.0">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="a39c-887e-9b4b-76f3" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="b396-b441-2ba0-1a1d" value="1.0">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="a39c-887e-9b4b-76f3" type="equalTo"/>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="ec8c-b14e-63e3-33d7" type="atLeast"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="da2f-f80a-ae8e-d706" type="max"/>
+            <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b396-b441-2ba0-1a1d" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="bd6d-f903-a862-2cfe" name="The Traitor Knight’s Blade" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+              <characteristics>
+                <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Add 1 to the Attacks characteristic of the bearer’s Sword of Stolen Hours.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
