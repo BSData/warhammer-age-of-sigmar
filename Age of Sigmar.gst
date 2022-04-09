@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="127" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="128" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <publications>
     <publication id="e51d-b1a3-pubEC" name="The General&apos;s Handbook"/>
     <publication id="e51d-b1a3-pubEQ" name="Core Rules"/>
@@ -21,11 +21,12 @@
     <publication id="bbd8-4b0e-5ec1-b7fc" name="Warhammer Legends: GA Destruction"/>
     <publication id="744e-47b4-269f-a64f" name="Warhammer Legends: GA Order"/>
     <publication id="dd94-71a7-8549-0d65" name="Warhammer Legends: Monstrous Arcanum"/>
-    <publication id="5074-e874-12d9-080b" name="New Publication" publicationDate="December 2021" publisherUrl="https://www.warhammer-community.com/wp-content/uploads/2021/12/XTPR7PzBSVcNAAOd.pdf">
+    <publication id="5074-e874-12d9-080b" name="Battlescroll: Gods &amp; Heroes - December 2021" publicationDate="December 2021" publisherUrl="https://www.warhammer-community.com/wp-content/uploads/2021/12/XTPR7PzBSVcNAAOd.pdf">
       <comment>Battlescroll: Gods &amp; Heroes - December 2021</comment>
     </publication>
     <publication id="6bd9-9ed8-1840-8dc4" name="Battlescroll: Gods &amp; Heroes - December 2021" publisherUrl="https://www.warhammer-community.com/wp-content/uploads/2021/12/XTPR7PzBSVcNAAOd.pdf"/>
     <publication id="b7f9-e968-f5d8-b92b" name="Battlescroll: The Hunt"/>
+    <publication id="e984-0732-33ea-1669" name="Season of War - Thondia"/>
   </publications>
   <costTypes>
     <costType id="points" name="pts" defaultCostLimit="0.0" hidden="false"/>
@@ -141,6 +142,20 @@
     <profileType id="84d9-7a5a-fe76-b740" name="Monstrous Rampage">
       <characteristicTypes>
         <characteristicType id="827b-962b-59a3-3b4d" name="Description"/>
+      </characteristicTypes>
+    </profileType>
+    <profileType id="2903-43e4-1107-d856" name="Incarnate">
+      <characteristicTypes>
+        <characteristicType id="08a5-f537-67c7-4e20" name="Move"/>
+        <characteristicType id="949b-f151-7f08-d860" name="Bravery"/>
+        <characteristicType id="95f5-baf3-05d6-04b2" name="Save"/>
+      </characteristicTypes>
+    </profileType>
+    <profileType id="c492-1585-f625-bbce" name="Incarnate State">
+      <characteristicTypes>
+        <characteristicType id="79ce-900f-e8fe-9c3d" name="State"/>
+        <characteristicType id="f5a2-60bf-7d68-c7bb" name="Level"/>
+        <characteristicType id="c4a5-38f6-3e66-de87" name="Domination Range"/>
       </characteristicTypes>
     </profileType>
   </profileTypes>
@@ -325,6 +340,8 @@
     <categoryEntry id="dbef-7476-90e0-f480" name="Unique Enhancement" hidden="false"/>
     <categoryEntry id="bd81-589f-386b-038d" name="Priority Target" publicationId="b7f9-e968-f5d8-b92b" hidden="false"/>
     <categoryEntry id="74b1-b223-a366-572d" name="Prime Hunters" publicationId="b7f9-e968-f5d8-b92b" hidden="false"/>
+    <categoryEntry id="a7c8-8a45-50a1-eb95" name="INCARNATE" hidden="false"/>
+    <categoryEntry id="73d2-3f60-289e-24fe" name="KRONDSPINE INCARNATE" hidden="false"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry id="36b7-ee1e-0855-f23f" name="**Pitched Battle GHB 2021**" hidden="false">
@@ -1427,6 +1444,7 @@
         <categoryLink id="b022-0116-e8fb-91ac" name="New CategoryLink" hidden="false" targetId="1974-3f49-7f0b-8422" primary="true"/>
       </categoryLinks>
     </entryLink>
+    <entryLink id="c958-5caf-b101-fdc6" name="Krondspine Incanate of Ghur" hidden="false" collective="false" import="true" targetId="0553-10ac-2bd9-01a5" type="selectionEntry"/>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="869c-168d-eba5-eacf" name="Arcane Bolt" hidden="false" collective="false" import="true" type="upgrade">
@@ -2000,6 +2018,144 @@
       </profiles>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="0553-10ac-2bd9-01a5" name="Krondspine Incanate of Ghur" publicationId="e984-0732-33ea-1669" hidden="false" collective="false" import="true" type="unit">
+      <profiles>
+        <profile id="ace5-a065-5a57-5b42" name="Krondspine Incanate of Ghur" hidden="false" typeId="2903-43e4-1107-d856" typeName="Incarnate">
+          <characteristics>
+            <characteristic name="Move" typeId="08a5-f537-67c7-4e20">12&quot;</characteristic>
+            <characteristic name="Bravery" typeId="949b-f151-7f08-d860">10</characteristic>
+            <characteristic name="Save" typeId="95f5-baf3-05d6-04b2">4+</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="d20b-a9d6-b204-51a4" name="Bonding" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This incarnate can only receive commands issued by the HERO it is bonded to. 
+
+If the All-Out Attack command is received by this incarnate, the command is also received by all friendly units that are wholly within domination range of this incarnate, that are within 3&quot; of an enemy unit, and that have not already received a command in that phase. 
+
+Add 1 to casting, dispelling and unbinding rolls for a WIZARD that is within domination range of an incarnate they are bonded to. 
+</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="64e9-8f8e-7219-c0f7" name="Empowerment" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If a MONSTER is slain by wounds inflicted by this incarnate&apos;s attacks, increase this incarnate&apos;s level by 1. </characteristic>
+          </characteristics>
+        </profile>
+        <profile id="db6f-6bb3-7cb5-dc32" name="Wild Form" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Add 1 to hit rolls for attacks made by this incarnate while it is in its wild form. This incarnate can run and still charge in the same turn while it is in its wild form. If this incarnate is in its wild form and is within 12&quot; of a  unit or an endless spell at the start of your charge phase, it must attempt a charge and must make a charge move if it is possible for it to do so. </characteristic>
+          </characteristics>
+        </profile>
+        <profile id="0c29-9e07-7375-55c2" name="Inflamed Savagery" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">The following effects apply to all units that are wholly iwthin domination range of this incarnate: 
+
+- The unit&apos;s commanding nplayer can re-roll run rolls and charge rolls for the unit. 
+- The unit cannot retreat.
+- If the unit is a WIZARD that is not bonded to this incarnate, subtract 1 from casting, dispelling, and unbinding rolls for that WIZARD. </characteristic>
+          </characteristics>
+        </profile>
+        <profile id="ba73-8afd-fc53-88d8" name="Arcane Predator" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">In your charge phase, if this incarnate is within 12&quot; of an endless spell that was summoned by an enemy WIZARD, it can attempt a chrage, and it can make a charge move as long as the charge move finishes within 1/2&quot; of an enemy model or endless spell that was summoned by an enemy WIZARD. 
+
+In addition, this incarnate can carry out the Devour Endless Spell monstrous rampage below instead of any other monstrous rampage it can carry out. </characteristic>
+          </characteristics>
+        </profile>
+        <profile id="e086-6c72-2f2d-828c" name="Devour Endless Spell" hidden="false" typeId="84d9-7a5a-fe76-b740" typeName="Monstrous Rampage">
+          <characteristics>
+            <characteristic name="Description" typeId="827b-962b-59a3-3b4d">Pick 1 endless spell that was summoned by an enemy WIZARD and that is within 3&quot; of this incarnate, and roll 2D6. Add this incarnate&apos;s level to the roll. If the roll is greater than the casting value of the spell used to summon that endless spell, that endless spell is dispelled and the level of this incarnate is increased by 1. On any other roll, the level of this incarnate is reduced by 1. </characteristic>
+          </characteristics>
+        </profile>
+        <profile id="797f-463e-1b6a-7d14" name="State 01" hidden="false" typeId="c492-1585-f625-bbce" typeName="Incarnate State">
+          <characteristics>
+            <characteristic name="State" typeId="79ce-900f-e8fe-9c3d">Empowered</characteristic>
+            <characteristic name="Level" typeId="f5a2-60bf-7d68-c7bb">3</characteristic>
+            <characteristic name="Domination Range" typeId="c4a5-38f6-3e66-de87">12&quot;</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="f884-f592-e418-a069" name="State 02" hidden="false" typeId="c492-1585-f625-bbce" typeName="Incarnate State">
+          <characteristics>
+            <characteristic name="State" typeId="79ce-900f-e8fe-9c3d">Primal</characteristic>
+            <characteristic name="Level" typeId="f5a2-60bf-7d68-c7bb">2</characteristic>
+            <characteristic name="Domination Range" typeId="c4a5-38f6-3e66-de87">10&quot;</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="f146-061b-e285-1822" name="State 03" hidden="false" typeId="c492-1585-f625-bbce" typeName="Incarnate State">
+          <characteristics>
+            <characteristic name="State" typeId="79ce-900f-e8fe-9c3d">Weakened</characteristic>
+            <characteristic name="Level" typeId="f5a2-60bf-7d68-c7bb">1</characteristic>
+            <characteristic name="Domination Range" typeId="c4a5-38f6-3e66-de87">8&quot;</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="618f-c467-fb1d-bc06" name="State 04" hidden="false" typeId="c492-1585-f625-bbce" typeName="Incarnate State">
+          <characteristics>
+            <characteristic name="State" typeId="79ce-900f-e8fe-9c3d">Abolished</characteristic>
+            <characteristic name="Level" typeId="f5a2-60bf-7d68-c7bb">0</characteristic>
+            <characteristic name="Domination Range" typeId="c4a5-38f6-3e66-de87"></characteristic>
+          </characteristics>
+        </profile>
+        <profile id="b963-2f3d-b2fd-1d0b" name="Melee Weapon Attacks *" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
+          <characteristics>
+            <characteristic name="Battalion Ability Details" typeId="08e0-9ead-1dbe-c801">Add incarnate&apos;s level to the Attacks characteristic</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="f515-3634-e254-f8b5" name="Fly" hidden="false" targetId="8e0c-cbe4-27be-8a30" type="profile"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="46b8-54a7-03c4-077a" name="New CategoryLink" hidden="false" targetId="fa0c-9044-2568-fa02" primary="true"/>
+        <categoryLink id="9536-ce10-bba5-cf56" name="INCARNATE" hidden="false" targetId="a7c8-8a45-50a1-eb95" primary="false"/>
+        <categoryLink id="a276-cc97-2dcc-2c69" name="GHUR" hidden="false" targetId="c33b-1c2d-83d9-53df" primary="false"/>
+        <categoryLink id="9721-e622-a183-e312" name="MONSTER" hidden="false" targetId="1959-9f6a-3056-913a" primary="false"/>
+        <categoryLink id="effc-24ea-5034-809a" name="KRONDSPINE INCARNATE" hidden="false" targetId="73d2-3f60-289e-24fe" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="3db4-29d7-4b58-7f25" name="Vicious Claws" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0ef3-e55d-7795-b948" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e402-57c2-80c4-9056" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="9850-b7e4-646a-f939" name="Vicious Claws" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">6*</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-2</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">2</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry id="a5ec-9fec-0925-7245" name="Tearing Fangs" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3aee-849c-2795-3346" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="97b7-30d0-5766-e071" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="25c3-8a48-0aab-d0c2" name="Tearing Fangs" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">2&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">1*</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">2+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-3</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">4</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
+      <costs>
+        <cost name="pts" typeId="points" value="400.0"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>
@@ -4215,6 +4371,38 @@
         <entryLink id="d869-71fd-244a-a68b" name="Extra Enhancement: Mount Trait" hidden="false" collective="false" import="true" targetId="c965-0f85-d28c-ea2a" type="selectionEntry"/>
         <entryLink id="a200-5efa-d92c-db03" name="Extra Enhancement: Unique Enhancement" hidden="false" collective="false" import="true" targetId="c893-b6c9-b1ff-dce5" type="selectionEntry"/>
       </entryLinks>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="c890-acbd-0c80-55c9" name="Incarnate Bonding" hidden="true" collective="false" import="true">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a7c8-8a45-50a1-eb95" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="96af-8a7e-60d7-6f22" type="max"/>
+      </constraints>
+      <selectionEntries>
+        <selectionEntry id="20c6-d58a-7919-e875" name="Krondspine Incarnate of Ghur" hidden="true" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="0268-d00b-8709-08a4" value="1.0">
+              <repeats>
+                <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="0553-10ac-2bd9-01a5" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0553-10ac-2bd9-01a5" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6059-cc4f-4bb9-9e36" type="max"/>
+            <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0268-d00b-8709-08a4" type="min"/>
+          </constraints>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <sharedProfiles>
