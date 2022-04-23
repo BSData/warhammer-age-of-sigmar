@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="388b-16d3-8182-d6c0" name="Order - Daughters of Khaine" revision="101" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="128" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="388b-16d3-8182-d6c0" name="Order - Daughters of Khaine" revision="102" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="128" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="388b-16d3-pubN65537" name="Order Battletome: Daughters of Khaine (2018)"/>
     <publication id="388b-16d3-pubN69838" name="Order Official FAQs and errata, Version 1.4"/>
@@ -67,6 +67,8 @@
     </categoryEntry>
     <categoryEntry id="9426-16b3-008c-a2f7" name="MELUSAI HERO" hidden="false"/>
     <categoryEntry id="9cf7-2670-a45b-7bde" name="HIGH GLADIATRIX" hidden="false"/>
+    <categoryEntry id="e371-4527-d86f-6674" name="SLYTHAEL SHADESTALKER" hidden="false"/>
+    <categoryEntry id="57cc-bf86-1cf1-dbb4" name="THE SHADEBORN" hidden="false"/>
   </categoryEntries>
   <entryLinks>
     <entryLink id="7a3b-e742-323f-b2e8" name="Avatar of Khaine" hidden="false" collective="false" import="true" targetId="4948-910d-f0dd-f32a" type="selectionEntry"/>
@@ -149,6 +151,8 @@
     <entryLink id="f692-4a69-532e-96c6" name="High Gladiatrix" hidden="false" collective="false" import="true" targetId="5140-26fb-f265-edcb" type="selectionEntry"/>
     <entryLink id="a6ff-62d9-ed21-2df5" name="Endless Spell: Bladewind" hidden="false" collective="false" import="true" targetId="d054-f9b0-3241-dd01" type="selectionEntry"/>
     <entryLink id="ced4-b6c6-f3ee-4107" name="Endless Spell: Bloodwrack Viper" hidden="false" collective="false" import="true" targetId="e3a2-db5f-2e2c-ac0e" type="selectionEntry"/>
+    <entryLink id="28fb-e294-7069-fea7" name="Slythael Shadestalker" hidden="false" collective="false" import="true" targetId="28fd-220c-90eb-2934" type="selectionEntry"/>
+    <entryLink id="6bd5-f1c2-6e3b-0f4e" name="The Shadeborn" hidden="false" collective="false" import="true" targetId="a79a-a1f7-3b8e-6fab" type="selectionEntry"/>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="8a66-cfb1-6e7e-9f11" name="General" hidden="false" collective="false" import="true" type="upgrade">
@@ -3537,11 +3541,6 @@ and Sacrificial Weapons.</characteristic>
             <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 model in this unit can be a Shroud Queen. A Shroud Queen is armed with Umbral Blades and Cursed Missiles. In addition, a Shroud Queen has a Wounds characteristic of 3.</characteristic>
           </characteristics>
         </profile>
-        <profile id="ea97-3357-1842-4ea6" name="Shadow Leap" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">In your movement phase, instead of making a normal move with this unit, you can say that it will shadow leap. If you do so, remove this unit from the battlefield and set it up again anywhere on the battlefield more than 9&quot; from any enemy units.</characteristic>
-          </characteristics>
-        </profile>
         <profile id="872b-74e1-eb09-10d7" name="Harness Shadows" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
             <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Subtract 1 from hit rolls for attacks made with melee weapons that target this unit.</characteristic>
@@ -3556,6 +3555,9 @@ and Sacrificial Weapons.</characteristic>
           </characteristics>
         </profile>
       </profiles>
+      <infoLinks>
+        <infoLink id="68dc-492d-264e-cbfa" name="Shadow Leap" hidden="false" targetId="b73f-1edc-842a-e629" type="profile"/>
+      </infoLinks>
       <categoryLinks>
         <categoryLink id="4264-6bed-c642-82ae" name="AELF" hidden="false" targetId="7fe9-bc03-2c82-0a00" primary="false"/>
         <categoryLink id="2c93-d1a0-9288-124f" name="DAUGHTERS OF KHAINE" hidden="false" targetId="9efd-7c5d-dc14-2302" primary="false"/>
@@ -3726,6 +3728,13 @@ and Sacrificial Weapons.</characteristic>
       </costs>
     </selectionEntry>
     <selectionEntry id="5140-26fb-f265-edcb" name="High Gladiatrix" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="add" field="category" value="269c-97ff-19c2-a0e7">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="9648-71b4-ba8a-1b88" name="High Gladiatrix" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
           <characteristics>
@@ -3825,6 +3834,196 @@ and Sacrificial Weapons.</characteristic>
       <costs>
         <cost name="pts" typeId="points" value="100.0"/>
       </costs>
+    </selectionEntry>
+    <selectionEntry id="28fd-220c-90eb-2934" name="Slythael Shadestalker" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="585a-1e49-20d4-1d81" value="1.0">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a79a-a1f7-3b8e-6fab" type="greaterThan"/>
+          </conditions>
+        </modifier>
+        <modifier type="add" field="category" value="269c-97ff-19c2-a0e7">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0fe0-24d9-8ae7-8f9b" type="max"/>
+        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="585a-1e49-20d4-1d81" type="min"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="50d6-b26b-7225-f4e7" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="3a04-1683-b0e8-d304" name="Slythael Shadestalker" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
+          <characteristics>
+            <characteristic name="Move" typeId="8655-6213-2824-1752">6&quot;</characteristic>
+            <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">5</characteristic>
+            <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">9</characteristic>
+            <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">4+</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="802d-e159-5927-db7f" name="Impenetrable Darkness" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">While this unit is more than 9&quot; from all enemy units, this unit and friendly THE SHADEBORN units wholly within 9&quot; of this unit have a ward of 4+.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="1f87-bbfd-fc56-fff6" name="Mask of Shadowed Mirrors" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the end of the charge phase, you can pick 1 enemy unit within 3&quot; of this unit and roll 2D6. If the score exceeds that enemy unit’s Bravery characteristic, that enemy unit cannot issue or receive commands until the end of the turn.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="0a03-70fd-2ae6-0eec" name="Shadow Leap" hidden="false" targetId="b73f-1edc-842a-e629" type="profile"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="08a2-4db8-e1f2-bb45" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
+        <categoryLink id="a661-7e72-3f40-5236" name="9 or less wounds Leader" hidden="false" targetId="a8ed-ca35-24e0-cf2e" primary="false"/>
+        <categoryLink id="58f2-8da0-d192-e66e" name="ORDER" hidden="false" targetId="b970-b3bf-e1a4-a6fc" primary="false"/>
+        <categoryLink id="1fac-9d3e-0ca2-1bc5" name="DAUGHTERS OF KHAINE" hidden="false" targetId="9efd-7c5d-dc14-2302" primary="false"/>
+        <categoryLink id="5c21-a29c-4bae-8e23" name="AELF" hidden="false" targetId="7fe9-bc03-2c82-0a00" primary="false"/>
+        <categoryLink id="db12-bde2-bab0-ff38" name="SLYTHAEL SHADESTALKER" hidden="false" targetId="e371-4527-d86f-6674" primary="false"/>
+        <categoryLink id="6218-ff53-522a-b620" name="HAGG NAR" hidden="false" targetId="3c71-230c-aaa7-b35c" primary="false"/>
+        <categoryLink id="607b-5cf6-420b-17a6" name="HERO" hidden="false" targetId="4e0e-664d-51ea-0929" primary="false"/>
+        <categoryLink id="fd8a-0d5e-d3ab-552b" name="KHAINITE SHADOWSTALKERS" hidden="false" targetId="c69d-372a-d0d9-dd8c" primary="false"/>
+        <categoryLink id="a82c-3a70-d450-05f6" name="Unique" hidden="false" targetId="088b-3a27-03f7-8249" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="64f8-acf6-e9dd-b1df" name="Shadowstone Staff" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b2f4-7f87-b16f-6b5e" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="50e3-70ea-ed3e-3562" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="0ed2-b389-95dd-7af4" name="Shadowstone Staff" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Missile</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">18&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">3</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry id="7a19-1628-da8f-1a5a" name="Shadowstone Sword and Umbral Blade" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7686-6239-c6ae-bf64" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a325-79a5-2834-f3f5" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="e5c9-e065-f550-c92b" name="Shadowstone Sword and Umbral Blade" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">3</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">3</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
+      <entryLinks>
+        <entryLink id="a60d-cc07-25a0-814f" name="General" hidden="false" collective="false" import="true" targetId="8a66-cfb1-6e7e-9f11" type="selectionEntry">
+          <categoryLinks>
+            <categoryLink id="fd03-ff2d-9967-f13e" name="Unique General" hidden="false" targetId="fe3f-d230-7e2c-fba2" primary="false"/>
+          </categoryLinks>
+        </entryLink>
+        <entryLink id="474d-56fa-ee42-1869" name="Battalions" hidden="false" collective="false" import="true" targetId="02b3-b822-778d-f61c" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="290.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="a79a-a1f7-3b8e-6fab" name="The Shadeborn" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="923c-eab4-6153-21d9" value="1.0">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="28fd-220c-90eb-2934" type="greaterThan"/>
+          </conditions>
+        </modifier>
+        <modifier type="add" field="category" value="269c-97ff-19c2-a0e7">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="650e-3284-29c4-fb3e" type="max"/>
+        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="923c-eab4-6153-21d9" type="min"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2c35-83c8-55db-2937" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="65a9-3e02-fea9-5cf5" name="The Shadeborn" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
+          <characteristics>
+            <characteristic name="Move" typeId="8655-6213-2824-1752">6&quot;</characteristic>
+            <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">2</characteristic>
+            <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">8</characteristic>
+            <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">4+</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="6f84-2bcd-3fa9-7e1a" name="Shadow Leap" hidden="false" targetId="b73f-1edc-842a-e629" type="profile"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="ed26-b3d4-4427-70ae" name="ORDER" hidden="false" targetId="b970-b3bf-e1a4-a6fc" primary="false"/>
+        <categoryLink id="6c99-5e48-9b0f-7f9c" name="New CategoryLink" hidden="false" targetId="065e-fda7-fd27-1f40" primary="true"/>
+        <categoryLink id="b4d0-3e16-7002-7db2" name="DAUGHTERS OF KHAINE" hidden="false" targetId="9efd-7c5d-dc14-2302" primary="false"/>
+        <categoryLink id="95a0-b783-37db-5442" name="AELF" hidden="false" targetId="7fe9-bc03-2c82-0a00" primary="false"/>
+        <categoryLink id="9724-81b0-3446-e61b" name="HAGG NAR" hidden="false" targetId="3c71-230c-aaa7-b35c" primary="false"/>
+        <categoryLink id="0db9-6b4d-5a62-47df" name="KHAINITE SHADOWSTALKERS" hidden="false" targetId="c69d-372a-d0d9-dd8c" primary="false"/>
+        <categoryLink id="70f7-7e8e-fa92-f803" name="THE SHADEBORN" hidden="false" targetId="57cc-bf86-1cf1-dbb4" primary="false"/>
+        <categoryLink id="3595-77a8-8195-d28f" name="Unique" hidden="false" targetId="088b-3a27-03f7-8249" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="fc77-a42c-c653-03d6" name="Cursed Missiles" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8dbc-86a6-5d83-3ebd" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2071-77f1-7aac-8e29" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="b9e7-abb7-24fb-4246" name="Cursed Missiles" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Missile</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">6&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">2</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry id="87cf-bba1-c74d-495d" name="Assassin&apos;s Blades" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0c4c-4759-959f-4545" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="afab-7573-d654-11b3" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="210d-1eed-67ed-4163" name="Assassin&apos;s Blades" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">4</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
+      <entryLinks>
+        <entryLink id="8842-b7bc-2358-4fa0" name="Battalions" hidden="false" collective="false" import="true" targetId="02b3-b822-778d-f61c" type="selectionEntryGroup"/>
+      </entryLinks>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
@@ -5265,6 +5464,11 @@ On a 5+, you can re-roll wound rolls for attacks made with melee weapons by that
 This model cannot attack with its Torrent of Burning Blood or Avatar’s Sword unless its AVATAR OF KHAINE is animated.</characteristic>
         <characteristic name="Answer Value" typeId="276a-ab7e-145d-3ffc">3</characteristic>
         <characteristic name="Range" typeId="fd81-4e98-28ac-092a">-</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="b73f-1edc-842a-e629" name="Shadow Leap" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+      <characteristics>
+        <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">In your movement phase, instead of making a normal move with this unit, you can say that it will shadow leap. If you do so, remove this unit from the battlefield and set it up again anywhere on the battlefield more than 9&quot; from any enemy units.</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
