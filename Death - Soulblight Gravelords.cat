@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="0364-070f-023f-64d9" name="Death - Soulblight Gravelords" revision="11" battleScribeVersion="2.03" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="119" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="0364-070f-023f-64d9" name="Death - Soulblight Gravelords" revision="13" battleScribeVersion="2.03" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="128" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+  <categoryEntries>
+    <categoryEntry id="d72b-b718-4010-345d" name="DEINTALOS THE EXILE" hidden="false"/>
+    <categoryEntry id="68d2-327f-6699-51f3" name="THE EXILED DEAD" hidden="false"/>
+  </categoryEntries>
   <entryLinks>
     <entryLink id="1b98-1990-d907-a577" name="Belladamma Volga" hidden="false" collective="false" import="true" targetId="fde2-6663-ed5e-7641" type="selectionEntry"/>
     <entryLink id="a5f4-34d2-4e8c-9727" name="Deathrattle Skeletons" hidden="false" collective="false" import="true" targetId="0398-bd49-3de5-90a8" type="selectionEntry"/>
@@ -59,6 +63,8 @@
     <entryLink id="fc0b-eee0-441f-50bb" name="Soulblight Core Battalion: Deathstench Drove" hidden="false" collective="false" import="true" targetId="e376-28f6-2951-33d2" type="selectionEntry"/>
     <entryLink id="7a62-8d78-059b-3a03" name="Soulblight Core Battalion: Fellwing Flock" hidden="false" collective="false" import="true" targetId="9554-59ae-52c4-77fc" type="selectionEntry"/>
     <entryLink id="1dc6-a8ab-53ee-0238" name="Soulblight Core Battalion: Radukar&apos;s Court" hidden="false" collective="false" import="true" targetId="f5d7-8594-2b91-7104" type="selectionEntry"/>
+    <entryLink id="836c-dc0c-2d2e-2ba9" name="Deintalos the Exile" hidden="false" collective="false" import="true" targetId="98de-3585-725a-a25d" type="selectionEntry"/>
+    <entryLink id="735c-9fc2-c05b-4b2d" name="The Exiled Dead" hidden="false" collective="false" import="true" targetId="7cec-ef8c-e266-e541" type="selectionEntry"/>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="de5e-4bdf-a5d4-f1cb" name="Battalion: Red Banqueters" hidden="false" collective="false" import="true" type="upgrade">
@@ -326,6 +332,250 @@
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="98de-3585-725a-a25d" name="Deintalos the Exile" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="c1f6-7668-5e8c-2ef8" value="1.0">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7cec-ef8c-e266-e541" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3d9b-fc2b-95d9-8893" type="max"/>
+        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c1f6-7668-5e8c-2ef8" type="min"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1934-3591-61da-86c0" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="22ef-da4a-0276-c76a" name="Deintalos the Exile" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
+          <characteristics>
+            <characteristic name="Move" typeId="8655-6213-2824-1752">6&quot;</characteristic>
+            <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">6</characteristic>
+            <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">10</characteristic>
+            <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">4+</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="6597-1129-5ce5-e43a" name="Magic" hidden="false" typeId="f55d-ee3a-1597-110f" typeName="Magic">
+          <characteristics>
+            <characteristic name="Cast/Unbind" typeId="8294-f605-2c0f-8f92">1/1</characteristic>
+            <characteristic name="Spells Known" typeId="dc9c-47d3-6931-859c">Arcane Bolt, Mystic Shield, Channelled Dynamism</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="2285-1057-9a05-812b" name="Channelled Dynamism" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+          <characteristics>
+            <characteristic name="Casting Value" typeId="2508-b604-1258-a920">3</characteristic>
+            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">6&quot;</characteristic>
+            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick 1 friendly THE EXILED DEAD unit wholly within range and visible to the caster. Until your next hero phase, that unit can run and still charge later in the turn.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="6d36-e4e3-224d-6def" name="Crackling Field" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This unit has a ward of 5+.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="b4a7-6f27-b2f4-b45d" name="Terrible Dynamism" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the end of the battleshock phase, if a friendly THE EXILED DEAD unit is within 6” of this unit, you can return 1 slain model to that unit. </characteristic>
+          </characteristics>
+        </profile>
+        <profile id="c726-33be-dd62-35c0" name="The Hunger" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Each time this unit fights, after all of its attacks have been resolved, you can heal up to a number of wounds allocated to this unit equal to the number of wounds and mortal wounds caused by attacks made by this unit in that phase that were allocated to enemy units.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="df4f-0320-2d1c-7ea0" name="Leader" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
+        <categoryLink id="c7b9-d364-0ee0-20d2" name="9 or less wounds Leader" hidden="false" targetId="a8ed-ca35-24e0-cf2e" primary="false"/>
+        <categoryLink id="82f7-6472-b138-2f70" name="DEATH" hidden="false" targetId="6cdf-dd4f-0e91-e9c4" primary="false"/>
+        <categoryLink id="1c84-9a62-035b-837f" name="SOULBLIGHT GRAVELORDS" hidden="false" targetId="3d31-12d5-6735-011c" primary="false"/>
+        <categoryLink id="c3ea-f960-b497-8815" name="VAMPIRE" hidden="false" targetId="d1e1-d80a-c667-b587" primary="false"/>
+        <categoryLink id="0946-a17e-2cb7-f1ff" name="HERO" hidden="false" targetId="4e0e-664d-51ea-0929" primary="false"/>
+        <categoryLink id="4edf-790c-325b-e1e2" name="WIZARD" hidden="false" targetId="4f53-8230-2f02-9639" primary="false"/>
+        <categoryLink id="4874-5fc1-f0b9-ffec" name="DEINTALOS THE EXILE" hidden="false" targetId="d72b-b718-4010-345d" primary="false"/>
+        <categoryLink id="f314-5e96-2326-304d" name="Unique" hidden="false" targetId="088b-3a27-03f7-8249" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="01c1-df83-d82f-05cc" name="Dynamic Bolts" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a25c-c097-9d97-a6d6" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="79e5-16a7-1701-3c3b" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="5e0e-63b7-4ba3-3aec" name="Dynamic Bolts" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Missile</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">18&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">2</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">2+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-2</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="2b3e-f42c-ca21-4cff" name="Stave Dynamic" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5f04-4f42-697b-a6f4" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bd77-78d1-f0b4-5e0b" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="ecc5-5ae7-5794-eeb4" name="Stave Dynamic" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">3</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">2+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-2</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">D3</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <entryLinks>
+        <entryLink id="e722-950e-c8cf-0bb7" name="Battalions" hidden="false" collective="false" import="true" targetId="9df7-269b-fa20-74b2" type="selectionEntryGroup"/>
+        <entryLink id="0971-6d68-a511-a312" name="General" hidden="false" collective="false" import="true" targetId="88d2-d540-0573-3402" type="selectionEntry"/>
+        <entryLink id="ce18-33d4-9b46-688c" name="Spell Lores" hidden="false" collective="false" import="true" targetId="8417-93fc-9562-a748" type="selectionEntryGroup"/>
+        <entryLink id="1b6e-1dbe-976a-1358" name="Incarnate Bonding" hidden="false" collective="false" import="true" targetId="c890-acbd-0c80-55c9" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="220.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="7cec-ef8c-e266-e541" name="The Exiled Dead" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="7cb8-c84c-a289-4a1c" value="1.0">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="98de-3585-725a-a25d" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="49ee-84eb-e05c-9065" type="max"/>
+        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7cb8-c84c-a289-4a1c" type="min"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a983-de4a-57dd-4b37" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="79cf-6cd6-a74c-38c8" name="The Exiled Dead" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
+          <characteristics>
+            <characteristic name="Move" typeId="8655-6213-2824-1752">4&quot;</characteristic>
+            <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">2</characteristic>
+            <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">8</characteristic>
+            <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">-</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="e729-3f87-d57c-f816" name="Champion" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Prentice Marcov is the unit champion. He is armed with a Bonesaw instead of an Arco‑electric Weapon and has a Wounds characteristic of 3. Add 1 to casting and unbinding rolls for a friendly DEINTALOS THE EXILE if this unit includes Prentice Marcov.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="f1ef-eb1a-ad59-2b27" name="Regulus" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Regulus is armed with a Pitted Halberd instead of an Arco-electric Weapon.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="8416-cd2d-d697-f08a" name="Dynamic Cage" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If the unmodified hit roll for an attack made with an Arco-electric Weapon is 6, the target suffers 1 mortal wound and the attack sequence ends (do not make a wound roll or save roll).</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="a142-55a5-34d7-11b0" name="Crackling Field" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">While this unit is wholly within 9” of a friendly DEINTALOS THE EXILE, Bault, Vlash, Ione and Coyl have a ward of 5+.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="7a27-5ab4-2e00-a76c" name="New CategoryLink" hidden="false" targetId="065e-fda7-fd27-1f40" primary="true"/>
+        <categoryLink id="be32-cbd6-cb31-9c88" name="DEATH" hidden="false" targetId="6cdf-dd4f-0e91-e9c4" primary="false"/>
+        <categoryLink id="1bb5-ea3d-722c-1d8f" name="SOULBLIGHT GRAVELORDS" hidden="false" targetId="3d31-12d5-6735-011c" primary="false"/>
+        <categoryLink id="0b49-2bb2-a0fb-9784" name="DEADWALKERS" hidden="false" targetId="cba7-18df-b7ae-3365" primary="false"/>
+        <categoryLink id="daef-54e0-d2da-4815" name="THE EXILED DEAD" hidden="false" targetId="68d2-327f-6699-51f3" primary="false"/>
+        <categoryLink id="08c5-8f58-cc96-3757" name="Unique" hidden="false" targetId="088b-3a27-03f7-8249" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="5e12-c7ac-0330-cc7c" name="Arco-electric Weapon" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="116e-daa5-7116-fab3" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c421-42cf-663a-c73d" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="977e-fed8-ef5e-8b2b" name="Arco-electric Weapon" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">3</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">5+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">4+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="e25d-089a-69c5-0f99" name="Bonesaw" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="83a0-2ebe-d126-e4e2" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ffae-29f5-b49e-a6ca" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="f929-b7e4-4d28-1e29" name="Bonesaw" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">3</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="2577-f7f6-25b3-3fe9" name="Pitted Halberd" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e326-5712-d514-c677" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b21b-55ad-45b2-25bb" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="4f36-51a1-932e-bf46" name="Pitted Halberd" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">2</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">2</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <entryLinks>
+        <entryLink id="ad14-2d9d-e8db-986e" name="Battalions" hidden="false" collective="false" import="true" targetId="9df7-269b-fa20-74b2" type="selectionEntryGroup"/>
+      </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
