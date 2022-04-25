@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="de06-0235-6a96-193b" name="Chaos - Skaven - Data" revision="54" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="128" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="de06-0235-6a96-193b" name="Chaos - Skaven - Data" revision="56" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="128" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="bcc4-c671-pubd1e1" name="Chaos Battletome: Skaven"/>
     <publication id="bcc4-c671-pubd1e30758" name="Warscroll Compendium: Skaven"/>
@@ -115,11 +115,13 @@
         <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="da6b-47f0-4785-2374" type="max"/>
       </constraints>
     </categoryEntry>
+    <categoryEntry id="2040-3ea4-81f6-10a5" name="SLYNK SKITTERSHANK" hidden="false"/>
+    <categoryEntry id="e765-9b2c-ff62-3aa8" name="SKITTERSHANK&apos;S CLAWPACK" hidden="false"/>
   </categoryEntries>
   <sharedSelectionEntries>
     <selectionEntry id="aca2-1d43-0220-2465" name="Skritch Spiteclaw" publicationId="bcc4-c671-pubd1e1" page="118" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
-        <modifier type="set" field="6106-a3cd-0092-b3c0" value="1">
+        <modifier type="set" field="6106-a3cd-0092-b3c0" value="1.0">
           <conditions>
             <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0c25-586e-f397-9896" type="greaterThan"/>
           </conditions>
@@ -7797,6 +7799,251 @@ Roll a dice for each enemy unit that finishes a normal move, run, retreat or cha
       <costs>
         <cost name="pts" typeId="points" value="70.0"/>
       </costs>
+    </selectionEntry>
+    <selectionEntry id="62e1-2ee0-5628-6cce" name="Slynk Skittershank" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="5403-ab8a-54b1-3b81" value="1.0">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0074-3e19-a788-57d8" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8501-76db-a8c8-3ee0" type="max"/>
+        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5403-ab8a-54b1-3b81" type="min"/>
+      </constraints>
+      <profiles>
+        <profile id="0329-ef9a-10ee-14ca" name="Slynk Skittershank" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
+          <characteristics>
+            <characteristic name="Move" typeId="8655-6213-2824-1752">7&quot;</characteristic>
+            <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">5</characteristic>
+            <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">5</characteristic>
+            <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">4+</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="2cb1-f9c6-3175-5498" name="Eshin Toxins" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If the unmodified hit roll for an attack made by this unit is 6, the target suffers D3 mortal wounds and the attack sequence ends (do not make a wound roll or save roll).</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="4350-b7c9-0ee5-9099" name="Running Death" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This unit can run and still shoot later in the turn.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="77e1-3df8-5d85-3cd1" name="Misdirection" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If this unit is within 1” of a friendly SKITTERSHANK&apos;S CLAWPACK unit at the start of the combat phase, the strike-first effect applies to this unit in that combat phase. In addition, after this unit has fought for the first time in the combat phase, if this unit is within 1” of a friendly SKITTERSHANK’S CLAWPACK unit, this unit can retreat.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="e0ff-42f9-271d-1348" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
+        <categoryLink id="c082-d6aa-71f2-3523" name="9 or less wounds Leader" hidden="false" targetId="a8ed-ca35-24e0-cf2e" primary="false"/>
+        <categoryLink id="c7b9-ef39-2882-72da" name="CHAOS" hidden="false" targetId="7cdd-80ea-cbeb-8e16" primary="false"/>
+        <categoryLink id="d375-f483-9feb-5986" name="SKAVEN" hidden="false" targetId="8f8a-7c29-799e-ace9" primary="false"/>
+        <categoryLink id="646c-1988-bc88-90c5" name="CLANS ESHIN" hidden="false" targetId="9a0b-8f23-d27c-491a" primary="false"/>
+        <categoryLink id="923a-a8a3-c414-adc1" name="HERO" hidden="false" targetId="4e0e-664d-51ea-0929" primary="false"/>
+        <categoryLink id="ecf4-2d2c-87bd-2b17" name="DEATHMASTER" hidden="false" targetId="ab95-95da-239d-dd92" primary="false"/>
+        <categoryLink id="277f-cffd-4186-996a" name="SLYNK SKITTERSHANK" hidden="false" targetId="2040-3ea4-81f6-10a5" primary="false"/>
+        <categoryLink id="c420-6a3a-4e77-8c63" name="Unique" hidden="false" targetId="088b-3a27-03f7-8249" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="4782-31de-e80b-1db0" name="Eshin Throwing Stars" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b856-fb95-84ce-c9ea" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b4a4-c2e2-22ae-2925" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="0cf5-63a1-29c3-68e2" name="Eshin Throwing Stars" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Missile</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">12&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">4</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">4+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">D3</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry id="2ffb-81e7-0970-057e" name="Paired Weeping Blades" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="488a-621c-dafe-d86c" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="789e-5e66-997d-c17b" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="39b2-8ca1-214e-c937" name="Paired Weeping Blades" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">6</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">D3</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
+      <entryLinks>
+        <entryLink id="6742-1cf7-e949-5325" name="General - Clans Eshin" hidden="false" collective="false" import="true" targetId="230d-5573-4086-e687" type="selectionEntry"/>
+        <entryLink id="c74d-898f-9acc-6b2c" name="Battalions" hidden="false" collective="false" import="true" targetId="286a-2838-49be-5968" type="selectionEntryGroup"/>
+        <entryLink id="f478-30fb-5996-4852" name="Incarnate Bonding" hidden="false" collective="false" import="true" targetId="c890-acbd-0c80-55c9" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="225.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="0074-3e19-a788-57d8" name="Skittershank&apos;s Clawpack" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="c6f3-8d3b-40bd-f271" value="1.0">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="62e1-2ee0-5628-6cce" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="cb87-61d6-d7aa-0686" type="max"/>
+        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c6f3-8d3b-40bd-f271" type="min"/>
+      </constraints>
+      <profiles>
+        <profile id="1968-af6e-46dc-9193" name="Skittershank&apos;s Clawpack" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
+          <characteristics>
+            <characteristic name="Move" typeId="8655-6213-2824-1752">7&quot;</characteristic>
+            <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">2</characteristic>
+            <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">5</characteristic>
+            <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">5+</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="a535-da22-3e8a-1820" name="Kinwhisper&apos;s Ratlings" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">During deployment, instead of setting up this unit on the battlefield, you can place it to one side and say that it is infiltrating the foe as a reserve unit. If you do so, when you would set up a friendly Slynk Skittershank during deployment, you can say that it will join this unit infiltrating the foe as a reserve unit.
+
+At the end of your first movement phase, you must set up this unit on the battlefield, wholly within 6” of a terrain feature and more than 6” from all enemy units. Then, if SLYNK SKITTERSHANK joined this unit in reserve, set up that unit within 1” of this unit and more than 6” from all enemy units.
+</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="9f4c-7ca8-cbfb-33da" name="Running Death" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This unit can run and still shoot later in the turn.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="41ca-3f20-e5a3-9265" name="Eshin Toxins" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If the unmodified hit roll for an attack made by this unit is 6, the target suffers D3 mortal wounds and the attack sequence ends (do not make a wound roll or save roll).</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="692a-32cd-a3a1-7c72" name="CHAOS" hidden="false" targetId="7cdd-80ea-cbeb-8e16" primary="false"/>
+        <categoryLink id="03d4-c51c-c5fc-b6eb" name="New CategoryLink" hidden="false" targetId="065e-fda7-fd27-1f40" primary="true"/>
+        <categoryLink id="2544-3654-8c39-01fe" name="CLANS ESHIN" hidden="false" targetId="9a0b-8f23-d27c-491a" primary="false"/>
+        <categoryLink id="15ba-bcb1-0876-f93d" name="SKITTERSHANK&apos;S CLAWPACK" hidden="false" targetId="e765-9b2c-ff62-3aa8" primary="false"/>
+        <categoryLink id="a469-8901-6407-815c" name="Unique" hidden="false" targetId="088b-3a27-03f7-8249" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="0d89-3416-73ac-6fcb" name="Eshin Sling" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ffc3-12c1-598d-5f79" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e6c5-a0fb-a10a-0137" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="c266-3bef-b6e2-4607" name="Eshin Sling" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Missile</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">12&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">4</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">4+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry id="f337-1575-63d7-705c" name="Sword and Fighting Claw" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4eb1-012e-6208-14eb" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="77d9-b01e-5a36-c70d" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="e886-e00f-656e-ebe1" name="Sword and Fighting Claw" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">3</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry id="4891-356a-4963-2c2a" name="Bladed Tonfa and Dagger" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3b4e-5ef3-df5b-cc98" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f9b5-731d-fa62-a118" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="7e21-a2a7-b0e5-87e6" name="Bladed Tonfa and Dagger" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">2</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry id="e67f-dc4d-dac0-2f1b" name="Trifang Triskele and Net" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="089f-8d77-86bf-1129" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1b4c-8ce7-fcde-eca5" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="3afb-71b5-e403-c009" name="Trifang Triskele and Net" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">3&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">2</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">4+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry id="73c4-2bad-566c-6511" name="Stabbing Blade" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b0f3-eded-0e35-0f2a" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="663a-320b-86ee-175d" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="34a4-5d21-9906-f489" name="Stabbing Blade" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">2</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">4+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
+      <entryLinks>
+        <entryLink id="06ec-f955-0397-f2c5" name="Battalions" hidden="false" collective="false" import="true" targetId="286a-2838-49be-5968" type="selectionEntryGroup"/>
+      </entryLinks>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
