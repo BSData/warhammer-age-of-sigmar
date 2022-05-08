@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="0339-0157-6910-d29c" name="Chaos Data" revision="132" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="128" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="0339-0157-6910-d29c" name="Chaos Data" revision="133" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="128" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="c9b2-1fe6-pubN65537" name="Battletome: Beasts of Chaos"/>
     <publication id="6894-a70d-pubN65537" name="Chaos Battletome: Maggotkin of Nurgle"/>
@@ -7,6 +7,7 @@
     <publication id="78aa-9f5e-4e07-07b5" name="Warhammer Legends: Tamurkhan&apos;s Horde"/>
     <publication id="9e8b-79b7-ac3a-51ba" name="Maggotkin of Nurgle FAQ"/>
     <publication id="a4ca-1bc7-0120-7e88" name="White Dwarf 474"/>
+    <publication id="3399-6351-a2da-3fd0" name="White Dwarf 476"/>
   </publications>
   <profileTypes>
     <profileType id="7b16-1457-b3e4-b90c" name="Chimera Wounds">
@@ -267,6 +268,7 @@
     <categoryEntry id="2c28-b5c2-819c-374a" name="Rot Coven" hidden="false"/>
     <categoryEntry id="9e0a-6815-a6d8-1bff" name="BLADES OF KHORNE" hidden="false"/>
     <categoryEntry id="874b-91b7-c2e3-c0db" name="DISCIPLES OF TZEENTCH" hidden="false"/>
+    <categoryEntry id="8c5a-82b5-6fc7-3b79" name="Slaanesh Core Battalion" hidden="false"/>
   </categoryEntries>
   <sharedSelectionEntries>
     <selectionEntry id="1982-d915-63a1-b8fb" name="1. Arch-Slaughterer" hidden="false" collective="false" import="true" type="upgrade">
@@ -451,6 +453,15 @@ If you have any depravity points at the end of your movement phase, you can summ
         <profile id="1ec3-b7ce-35d8-f8a2" name="Total Acquiescence" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
           <characteristics>
             <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">Any number of SLAANESH WIZARDS in a Hedonites of Slaanesh army that have the Acquiescence spell on their warscroll can use it in the same turn, but the same WIZARD cannot attempt to cast it more than once per turn.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="07e3-6f2c-db2e-751e" name="Revel in Pain" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
+          <characteristics>
+            <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">During battle, a Hedonites of Slaanesh army gaines the following abilities based on their amount of unspent depravity points (DP). These abilities are cumulative:
+
+6+: If a friendly HEDONITES OF SLAANESH unit receives the Rally command (core rules 7.2) you can return 1 slain model to the unit for each 5+ instead of each 6.
+12+: Add 2&quot; to the Move characteristic of friendly HEDONITES OF SLAANESH units.
+18+: Friendly HEDONITES OF SLAANESH units have a ward of 5+.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -10922,6 +10933,39 @@ If the roll is less than that unit’s Save characteristic but not a 6, that uni
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="528d-983f-cbe2-ea0d" name="Slaanesh Core Battalion: Epicurean Revellers" publicationId="3399-6351-a2da-3fd0" hidden="true" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ff93-966b-c16d-8149" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <profiles>
+        <profile id="2fca-b64a-7853-2765" name="Core Battalion: Epicurean Revellers" hidden="false" typeId="75e0-a332-e4f5-bf36" typeName="Battalion Organisation">
+          <characteristics>
+            <characteristic name="Required" typeId="eb5f-e9d2-e457-bff5">2-6 Daemonettes
+0-1 Exalted Chariot
+0-1 Fiends
+0-1 Hellflayer</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="5580-b8a1-50af-2152" name="Unified" hidden="false" targetId="9439-c5f6-945d-2d65" type="profile"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="95aa-58a2-1e68-ad2d" name="New CategoryLink" hidden="false" targetId="6575-7d6c-ce4d-ada4" primary="true"/>
+        <categoryLink id="7b19-fe2c-b66b-fb77" name="Battalion" hidden="false" targetId="3ecc-4c0d-d717-29bd" primary="false"/>
+        <categoryLink id="189f-3b8c-e08a-d3a0" name="Slaanesh Core Battalion" hidden="false" targetId="8c5a-82b5-6fc7-3b79" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="bfe1-942f-800b-f5c1" name="Slayers" hidden="false" collective="false" import="true" targetId="4b40-2b5f-d7f7-2e4b" type="selectionEntry"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="e7ff-4d02-bb3b-4151" name="Blood Blessings of Khorne" hidden="false" collective="false" import="true">
@@ -17526,6 +17570,7 @@ Kneel: Subtract 1 from save rolls for attacks that target that unit until your n
         <entryLink id="54d7-d108-1b01-dec6" name="Core Battalions" hidden="false" collective="false" import="true" targetId="b275-810f-adfc-156b" type="selectionEntryGroup"/>
         <entryLink id="bb87-f73e-fd3c-afb7" name="Nurgle Core Battalions" hidden="false" collective="false" import="true" targetId="02bd-3e94-b133-19cf" type="selectionEntryGroup"/>
         <entryLink id="0f9a-ffd5-a12b-38d5" name="Nurgle Warscroll Battalions" hidden="false" collective="false" import="true" targetId="1194-3292-976b-ceff" type="selectionEntryGroup"/>
+        <entryLink id="22b5-0ffe-b232-29f1" name="Slaanesh Core Battalions" hidden="false" collective="false" import="true" targetId="3c8f-237c-b499-6899" type="selectionEntryGroup"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="50da-deca-b92f-8995" name="Coalition" hidden="false" collective="false" import="true">
@@ -17634,6 +17679,7 @@ Kneel: Subtract 1 from save rolls for attacks that target that unit until your n
         <entryLink id="f49c-1b3d-2995-4429" name="Slaves to Darkness Grand Strategy" hidden="false" collective="false" import="true" targetId="32c3-1df7-13f4-8fec" type="selectionEntryGroup"/>
         <entryLink id="c68f-5380-422b-dd35" name="Universal Grand Strategy" hidden="false" collective="false" import="true" targetId="1e64-bcdc-3709-7ec7" type="selectionEntryGroup"/>
         <entryLink id="d62e-e496-17a4-596d" name="Nurgle Grand Strategy" hidden="false" collective="false" import="true" targetId="9dc6-5556-9af5-0f5c" type="selectionEntryGroup"/>
+        <entryLink id="0480-41e3-2fda-8ee9" name="Slaanesh Grand Strategy" hidden="false" collective="false" import="true" targetId="0547-e0ab-b720-e2e2" type="selectionEntryGroup"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="9dc6-5556-9af5-0f5c" name="Nurgle Grand Strategy" hidden="false" collective="false" import="true">
@@ -18119,6 +18165,180 @@ Kneel: Subtract 1 from save rolls for attacks that target that unit until your n
                 <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="044b-3ee1-b277-4ede" type="min"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="28f1-7310-6c33-11b2" type="max"/>
               </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="3c8f-237c-b499-6899" name="Slaanesh Core Battalions" hidden="true" collective="false" import="true">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8c5a-82b5-6fc7-3b79" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="8cbc-7214-07b4-f9e4" name="Epicurean Revellers" hidden="true" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="528d-983f-cbe2-ea0d" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3a29-6062-f814-a7d6" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="0568-6405-99f9-df51" name="Epicurean Revellers - 0-1 Fiends" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c90b-f419-dd3d-ed81" type="instanceOf"/>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="528d-983f-cbe2-ea0d" type="greaterThan"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="increment" field="0dcc-1075-9942-bd82" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="528d-983f-cbe2-ea0d" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0dcc-1075-9942-bd82" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="bd39-638b-270c-a78c" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8d1d-15d7-661f-411b" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="5ee3-01bb-ed61-00a3" name="Epicurean Revellers - 2-6 Daemonettes" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="528d-983f-cbe2-ea0d" type="greaterThan"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="01a7-7785-07b8-3834" type="instanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="increment" field="5b46-4789-3c10-3796" value="2.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="528d-983f-cbe2-ea0d" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="increment" field="0c98-a78b-fb10-1b97" value="6.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="528d-983f-cbe2-ea0d" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0c98-a78b-fb10-1b97" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5b46-4789-3c10-3796" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="99ac-1e7b-133b-8c20" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="f36d-a154-af36-186a" name="Epicurean Revellers - 0-1 Hellflayer" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8447-1b5f-998c-2af9" type="instanceOf"/>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="528d-983f-cbe2-ea0d" type="greaterThan"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="increment" field="9f25-2ff6-f86a-037a" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="528d-983f-cbe2-ea0d" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9f25-2ff6-f86a-037a" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5554-6106-1665-bf18" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="fa6d-78d8-828f-c199" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="a8aa-bec9-ffc5-9c56" name="Epicurean Revellers - 0-1 Exalted Chariot" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4b29-9ec1-b210-0d53" type="instanceOf"/>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="528d-983f-cbe2-ea0d" type="greaterThan"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="increment" field="a218-95ea-69a0-6e06" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="528d-983f-cbe2-ea0d" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a218-95ea-69a0-6e06" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8129-9364-d4d2-9667" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="da63-4d3c-82d6-9ce0" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="0547-e0ab-b720-e2e2" name="Slaanesh Grand Strategy" hidden="false" collective="false" import="true">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d7d9-b723-6fdb-51cb" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ac3f-9fb2-3049-1439" type="max"/>
+      </constraints>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="d229-c579-d31d-c7a3" name="Grand Vanities" publicationId="3399-6351-a2da-3fd0" hidden="false" collective="false" import="true">
+          <selectionEntries>
+            <selectionEntry id="2e2d-1cbd-157d-e8f1" name="Coveted Riches" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="65a1-8c1c-63a2-224e" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="d895-484c-a724-3479" name="Coveted Riches" publicationId="3399-6351-a2da-3fd0" hidden="false" typeId="9c01-ec20-32c1-0948" typeName="Grand Strategy">
+                  <characteristics>
+                    <characteristic name="Description" typeId="53c8-cc18-16d1-e890">When the battle ends, you complete this grand strategy if there are no enemy units with artefacts of power on the battlefield and there are 1 or more friendly units with artefacts of power on the battlefield.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <categoryLinks>
+                <categoryLink id="cafc-dfbe-9984-ae40" name="Grand Strategy" hidden="false" targetId="5dff-3614-49fd-c3e4" primary="false"/>
+              </categoryLinks>
               <costs>
                 <cost name="pts" typeId="points" value="0.0"/>
               </costs>
