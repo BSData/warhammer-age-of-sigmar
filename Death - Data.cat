@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="e37a-2f18-f168-6ed3" name="Death Data" revision="100" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="128" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="e37a-2f18-f168-6ed3" name="Death Data" revision="101" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="128" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="e320-d5ec-pubN65537" name="Battletome: Legions of Nagash and Battletome: Nighthaunt"/>
     <publication id="e320-d5ec-pubN65555" name="Battletome: Nighthaunt"/>
@@ -151,7 +151,7 @@
     <categoryEntry id="cb1a-7964-cd9e-f9ed" name="THE SEPULCHRAL GUARD" hidden="false"/>
     <categoryEntry id="62f7-04dd-0ebd-bd4e" name="KNIGHT OF SHROUDS" hidden="false"/>
     <categoryEntry id="d4fa-feac-6db1-0da7" name="GUARDIAN OF SOULS" hidden="false"/>
-    <categoryEntry id="f6a0-5e71-c565-59b9" name="CHAINRASP HORDE" hidden="false"/>
+    <categoryEntry id="f6a0-5e71-c565-59b9" name="CHAINRASPS" hidden="false"/>
     <categoryEntry id="0990-2a28-1a07-3ce8" name="LORD EXECUTIONER" hidden="false"/>
     <categoryEntry id="4869-e53c-ea69-5b32" name="SPIRIT TORMENT" hidden="false"/>
     <categoryEntry id="0760-c965-9249-df53" name="GLAIVEWRAITH STALKERS" hidden="false"/>
@@ -194,6 +194,7 @@
     <categoryEntry id="fc63-23ce-ef98-c993" name="RADUKAR THE BEAST" hidden="false"/>
     <categoryEntry id="f40d-1d71-6120-3cd1" name="Allegiance OBR" hidden="false"/>
     <categoryEntry id="9a08-c6fd-0e5a-de0c" name="Soulblight Core Battalion" hidden="false"/>
+    <categoryEntry id="740e-2e73-948d-375a" name="GRIEVING LEGION" hidden="false"/>
   </categoryEntries>
   <sharedSelectionEntries>
     <selectionEntry id="7f4c-7d4b-6b8e-575b" name="Allegiance" hidden="false" collective="false" import="true" type="upgrade">
@@ -2175,7 +2176,7 @@
         <cost name="pts" typeId="points" value="180.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="7c0c-91b9-f052-24af" name="Nagash, Supreme Lord of the Undead" publicationId="7a08-6611-3750-6469" page="98" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="7c0c-91b9-f052-24af" name="Nagash, Supreme Lord of the Undead" publicationId="241a-2f06-84ad-d21d" page="78" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditionGroups>
@@ -5205,34 +5206,38 @@ caster for each mortal wound caused by this spell that is not negated.</characte
     </selectionEntry>
     <selectionEntry id="0595-259c-9405-8b88" name="Allegiance: Nighthaunt" hidden="false" collective="false" import="true" type="upgrade">
       <profiles>
-        <profile id="934b-374d-6c6e-0d57" name="Deathless Spirits" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
+        <profile id="934b-374d-6c6e-0d57" name="Discorporate" hidden="false" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
           <characteristics>
-            <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">Roll a dice for each wound or mortal wound inflicted on a friendly NIGHTHAUNT unit wholly within 12&quot; of your general or a friendly NIGHTHAUNT HERO from your army. On a 6+ the wound is negated.</characteristic>
+            <characteristic name="Command Ability Details" typeId="1b71-4c83-4e8c-093f">You can use this command ability when a friendly NIGHTHAUNT unit is picked as the target of an attack in the shooting or combat phase. That unit must receive the command. That unit has a ward of 5+ instaed of 6+ until the end of that phase.</characteristic>
           </characteristics>
         </profile>
         <profile id="f383-083e-3e1d-f92b" name="Aura of Dread" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
           <characteristics>
-            <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">Subtract 1 from the Bravery characteristic of enemy units while they are within 6&quot; of any friendly NIGHTHAUNT units.</characteristic>
+            <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">Enemy units are terrified while they are within 3&quot; of any friendly NIGHTHAUNT units. While a unit is terrified, it cannot issue or receive the Inspiring Presence command. This ability has no effect on NIGHTHAUNT units.</characteristic>
           </characteristics>
         </profile>
-        <profile id="a5dc-58fa-8248-ffb8" name="From the Underworlds They Come" publicationId="e320-d5ec-pubN65555" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
+        <profile id="a5dc-58fa-8248-ffb8" name="Vanishing Phantasms" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
           <characteristics>
-            <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">Instead of setting up a NIGHTHAUNT unit on the battlefield, you can place it to one side and say that it is in the underworlds as a reserve unit. You can set up one unit in the underworlds for each unit you set up on the battlefield. At the end of your movement phase you can set up any of these models ore than 9&quot; from any enemy models. This counts as their move for that turn. Any units which are not set up on the battlefield before the start of the fourth battle round are slain.</characteristic>
+            <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">At the end of deployment, before determining control of objectives, you can remove up to 3 friendly NIGHTHAUNT units from the battlefield and place them to one side to be set up in ambush as reserve units. At the end of your movement phase, you can set up 1 or more of the reserve units in ambush on the battlefield, more than 9&quot; from all enemy units.</characteristic>
           </characteristics>
         </profile>
         <profile id="bf18-12c2-0d57-88d1" name="Wave of Terror" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
           <characteristics>
-            <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">If you make an unmodified charge roll of 10+ for a friendly NIGHTHAUNT unit, it can fight immediately after you complete the charge move. This does not stop the unit from being picked to fight in the combat phase of the same turn.</characteristic>
+            <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">After a friendly NIGHTHAUNT unit finishes a charge move, you can look up the unmodified charge roll for the charging unit on the Wave of Terror table below, pick 1 enemy unit within 1&quot; of that NIGHTHAUNT unit, and the apply the relevant effect from the table to that enemy unit. If you prefer, you can pi ck an effect for a lower unmodified charge roll (e.g. if you rolled an 8, you could choose to apply the Shriek effect instead of the Stun effect). 
+
+4-7 - Shriek: Subtract 1 from hit rolls for attacks made by that unit in the following combat phase. 
+8-9 - Stun: Subtract 1 from save rolls for attacks that target that unit in the following combat phase.
+10+ - Petrify: The strike-last effect applies to that unit in the following combat phase.</characteristic>
           </characteristics>
         </profile>
-        <profile id="1039-2664-ee8d-ade2" name="Feed on Terror" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
+        <profile id="1039-2664-ee8d-ade2" name="Frightful Touch" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
           <characteristics>
-            <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">Each time an enemy unit fails a battleshock test, pick one friendly NIGHTHAUNT HERO within 6&quot; of that enemy unit. Heal 1 wound that has been allocated to that HERO.</characteristic>
+            <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">If the unmodified hit roll for an attack made by a friendly NIGHTHAUNT unit is 6, that attack wounds the target automatically (do not make a wound roll).</characteristic>
           </characteristics>
         </profile>
-        <profile id="0293-f479-ce94-3df3" name="Spectral Summons" hidden="false" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
+        <profile id="4f59-a2cc-d5b9-d4ae" name="Ethereal" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
           <characteristics>
-            <characteristic name="Command Ability Details" typeId="1b71-4c83-4e8c-093f">You can use this command ability at the start of your movement phase. If you do so, pick a friendly NIGHTHAUNT unit that is on the battlefield. Remove that unit from the battlefield, and then set it up wholly within 12&apos; of your general and more than 9&quot; from any enemy models. This counts as their move for that movement phase.</characteristic>
+            <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">Friendly NIGHTHAUNT units have a ward of 6+. IN addition, friendly NIGHTHAUNT units can retreat and still charge in the same turn. Ignore modifiers (positive and negative) to save rolls for attacks that target friendly NIGHTHAUNT units.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -5249,12 +5254,7 @@ caster for each mortal wound caused by this spell that is not negated.</characte
               <profiles>
                 <profile id="894a-9fb0-0c3b-b10d" name="The Emerald Curse" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
                   <characteristics>
-                    <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">After armies are set up but before the first battle round begins, you can pick 1 enemy HERO.  For the duration of the battle, subtract 1 from save rolls for attacks that target that HERO.</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="c75a-8123-8bb1-9267" name="Knights of Regret" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
-                  <characteristics>
-                    <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">Add 1 to the Attacks characteristic of melee weapons used by EMERALD HOST HEXWRAITHS units that have made a charge move in the same turn.  In addition, roll a dice before you allocate a wound or mortal wound to your general if they are within 3&quot; of any friendly EMERALD HOST HEXWRAITHS units.  On a 2+, you must allocate that wound or mortal wound to one of those units instead.</characteristic>
+                    <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">After armies have been set up but before the first battle round begins, you can pick up to D3+1 different enemy units on the battlefield. At the end of each battle round, roll a dice for each unit you picked that is on the battlefield. On a 2+, that unit suffers D3 mortal wounds. If that unit is a MONSTER, it suffers D3+1 mortal wounds instead of D3.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -5262,24 +5262,35 @@ caster for each mortal wound caused by this spell that is not negated.</characte
                 <cost name="pts" typeId="points" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="375e-634d-ca69-27b2" name="Reikenor&apos;s Condemned" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="375e-634d-ca69-27b2" name="The Scarlet Doom" hidden="false" collective="false" import="true" type="upgrade">
               <profiles>
-                <profile id="d055-6bc5-4a66-ec17" name="Unrelenting Taskmasters" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
+                <profile id="24cd-8795-fc23-f588" name="Vortex of Frenzied Violence" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
                   <characteristics>
-                    <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">You can re-roll failed hit rolls for attacks made by friendly REIKENOR&apos;S CONDEMNED CHAINWRASP HORDE units and REIKENOR&apos;S CONDEMNED GLAIVEWRAITH STALKERS units while they are wholly within 15&quot; of any friendly REIKENOR&apos;S CONDEMNED SPIRIT TORMENTS or REIKENOR&apos;S CONDEMNED CHAINGHASTS.
-
-In addition, each time a friendly REIKENOR&apos;S CONDEMNED CHAINRASP HORDE unit or REIKENOR&apos;S CONDEMNED GLAIVEWRAITH STALKERS unit is affected by the Spectral Lure or Temporal Translocation spell cast by a GUARDIAN OF SOULS, you can return D6 slain models to that unit (in addition to any models returned to the unit by the Spectral Lure spell).</characteristic>
+                    <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">After a firendly SCARLET DOOM BLADEGHEIST REVENANTS unit makes a charge move, you cna pick 1 enemy unit within 1&quot; of that unit. If you do so, roll a number of dice equal to the number of models from the charging unit. For each 5+, the target suffers 1 mortal wound.</characteristic>
                   </characteristics>
                 </profile>
-                <profile id="24cd-8795-fc23-f588" name="Acolyte of the Grimhaller" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="9f7a-90c4-8468-4f33" name="The Grieving Legion" hidden="false" collective="false" import="true" type="upgrade">
+              <profiles>
+                <profile id="a21a-aeaa-8b15-7f46" name="Dragged into the Grave" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
                   <characteristics>
-                    <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">If REIKENOR THE GRIMHALLER is included in your army, he is treated as a general in addition to the model that is chosen to be the army general.</characteristic>
+                    <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">Enemy units cannot retreat while they are within 3&quot; of any friendly GRIEVING LEGION units with 10 or more models.</characteristic>
                   </characteristics>
                 </profile>
-                <profile id="1383-28dd-f713-606e" name="Death Comes Swiftly" hidden="false" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="427a-e300-0f27-d580" name="The Quicksilver Dead" hidden="false" collective="false" import="true" type="upgrade">
+              <profiles>
+                <profile id="6786-819b-a387-1f41" name="Artisans of Harrowing Death" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
                   <characteristics>
-                    <characteristic name="Command Ability Details" typeId="1b71-4c83-4e8c-093f">You can use this command ability at the start of your movement phase. If you do, pick 1 friendly REIKENOR’S CONDEMNED CHAINRASP HORDE unit or REIKENOR’S CONDEMNED GLAIVEWRAITH STALKERS unit that is wholly within 12&quot; of a friendly REIKENOR’S CONDEMNED HERO or wholly within  18&quot; of a friendly REIKENOR’S CONDEMNED general. Add 6&quot; to that unit’s Move characteristic until the
-end of that phase.</characteristic>
+                    <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">Ward rolls cannot be made for wounds caused by attacks made wtih melee weapons by friendly QUICKSILVER DEAD DREADSCYTHE HARRIDANS units.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -5528,34 +5539,6 @@ end of that phase.</characteristic>
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
-      <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="e2da-e050-1c0c-9e64" name="The Traitors Knight&apos;s Blade" hidden="false" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="a39c-887e-9b4b-76f3" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="209c-5d8c-97df-2110" type="max"/>
-      </constraints>
-      <profiles>
-        <profile id="ccaa-4ebf-1520-3a99" name="The Traitors Knight&apos;s Blade" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-          <characteristics>
-            <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Add 1 to the Attacks characteristic of the bearer&apos;s Sword of Stolen Hours.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <categoryLinks>
-        <categoryLink id="e4c0-e63a-a2d4-d7b1" name="Artefact" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-      </categoryLinks>
-      <entryLinks>
-        <entryLink id="5a05-0456-a98b-886b" name="Battalions" hidden="false" collective="false" import="true" targetId="9df7-269b-fa20-74b2" type="selectionEntryGroup"/>
-      </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
@@ -7320,6 +7303,68 @@ If the enemy had a Wounds characteristic of 2 or less:
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
+        <selectionEntry id="7a6d-e77e-fa85-94ac" name="Lore of the Underworlds" hidden="true" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="0595-259c-9405-8b88" type="greaterThan"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="a101-e735-2b72-e4f6" value="1.0">
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="0595-259c-9405-8b88" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a101-e735-2b72-e4f6" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bcce-be27-9cf8-f1fb" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="1bd2-24cd-2085-47f3" name="Lifestealer" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+              <characteristics>
+                <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
+                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">12&quot;</characteristic>
+                <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick 1 enemy unit within range and visible to the caster. The target suffers D3 mortalw ounds. You can heal 1 wound allocated to the caster for each mortal wound that was allocated (and not negated) by this spell.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="80e4-79c7-32e8-51b2" name="Seal of Shyish" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+              <characteristics>
+                <characteristic name="Casting Value" typeId="2508-b604-1258-a920">5</characteristic>
+                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">12&quot;</characteristic>
+                <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick 1 friendly NIGHTHAUNT unit wholly within range and visible to the caster. That unit has a ward of 5+ until your next hero phase.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="5ead-e656-d526-751c" name="Shademist" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+              <characteristics>
+                <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
+                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">12&quot;</characteristic>
+                <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick 1 friendly NIGHTHAUNT unit wholly within range and visible to the caster. Subtract 1 from wound rolls for attacks that target that unit until your next hero phase.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="2876-d48e-71e4-b9dd" name="Soul Cage" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+              <characteristics>
+                <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
+                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">12&quot;</characteristic>
+                <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick 1 enemy unit within range and visible to the caster. The strike last effect applies to that unit until the end of that turn. </characteristic>
+              </characteristics>
+            </profile>
+            <profile id="c58e-9df7-2078-4c49" name="Spectral Tether" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+              <characteristics>
+                <characteristic name="Casting Value" typeId="2508-b604-1258-a920">4</characteristic>
+                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">-</characteristic>
+                <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, remove the caster from the battlefield and set it up again on the battlefield more than 9&quot; from all enemy units. The caster cannot move in the following movement phase.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="787b-7a18-87c4-eaa9" name="Spirit Drain" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+              <characteristics>
+                <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
+                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">18&quot;</characteristic>
+                <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick 1 enemy unit within range and visible to the caster. Roll a number of dice equal to the number of models in the target unit. For each 6, that unit suffers 1 mortal wound.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
       </selectionEntries>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
@@ -7460,7 +7505,7 @@ VARGSKYR
       <profiles>
         <profile id="6046-eacc-9a48-2de3" name="Lady Olynder, Mortarch of Grief" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
           <characteristics>
-            <characteristic name="Move" typeId="8655-6213-2824-1752">6&quot;</characteristic>
+            <characteristic name="Move" typeId="8655-6213-2824-1752">8&quot;</characteristic>
             <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">7</characteristic>
             <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">10</characteristic>
             <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">4+</characteristic>
@@ -7468,22 +7513,22 @@ VARGSKYR
         </profile>
         <profile id="2ae2-bfdb-d55d-b0b4" name="Grave-sands of Time" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Once per battle, in your hero phase, you can choose either to inflict D6 mortal sounds on an enemy HERO within 6&quot; of this model, or heal D6 wounds that have been allocated to this model.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This unit has a ward of 4+.</characteristic>
           </characteristics>
         </profile>
         <profile id="e77e-acd1-21fb-7c7e" name="Lifting the Veil" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the start of your hero phase, pick an enemy unit within 12&quot; of this model and that is visible to her and roll a dice. On a 1, nothing happens. On a 2+ that unit suffers a number of mortal wounds equal to the roll. In addition, if any enemy models are slain by this ability, immediately heal D3 wounds that have been allocated to this model.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the start of your shooting phase, you can pick 1 enemy unit within 12&quot; of this unit and roll a dice. On a 2+, that unit suffers a number of mortal wounds equal to the roll. Add 1 to the number of mortal wounds the target suffers if it is terrified. If any enemy models are slain by this ability, you can heal up to D3 wounds allocated to this unit for each enemy model that was slain.</characteristic>
           </characteristics>
         </profile>
         <profile id="627a-57b0-5d35-a4e8" name="Mortarch of Grief" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Add 1 to the number of models that flee from enemy units that fail a battleshock test while they are within 12&quot; of this model.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Roll a dice each time an enemy unit issues a command within 12&quot; of this unit. On a 5+, that command is not received (it still counts as having been used) and the command point that was spent to issue that command is lost.</characteristic>
           </characteristics>
         </profile>
-        <profile id="e313-436b-0324-f7f7" name="Wail of the Damned" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+        <profile id="e313-436b-0324-f7f7" name="Warmaster" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the start of your shooting phase, roll 2D6 for each enemy unit within 10&quot; of this model. If the roll for the unit is higher than its Bravery characteristic, it suffers D3 mortal wounds.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If this unit is included in a Nighthaunt army, it is treated as a general even if it is not the model picked to be the army&apos;s general.</characteristic>
           </characteristics>
         </profile>
         <profile id="d504-6140-2bb9-a7d1" name="Lady Olynder, Mortarch of Grief" hidden="false" typeId="f55d-ee3a-1597-110f" typeName="Magic">
@@ -7496,7 +7541,7 @@ VARGSKYR
           <characteristics>
             <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
             <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">18&quot;</characteristic>
-            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick an enemy unit that is within 18&quot; of the caster and visible to them. Until your next hero phase, subtract 1 from hit rolls for attacks made by that unit and add 1 to hit rolls for attacks made with melee weapons that target that unit.</characteristic>
+            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick 1 enemy unit within range and visible to the caster. Subtract 1 from hit rolls for attacks made by that unit and add 1 to hit rolls for attacks made with melee weapons by friendly NIGHTHAUNT units that target that unit until your next hero phase.</characteristic>
           </characteristics>
         </profile>
         <profile id="a527-934d-f534-4166" name="No Rest for the Wicked" hidden="false" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
@@ -7507,7 +7552,6 @@ VARGSKYR
       </profiles>
       <infoLinks>
         <infoLink id="33d4-7130-f2eb-1246" name="Fly" hidden="false" targetId="8e0c-cbe4-27be-8a30" type="profile"/>
-        <infoLink id="1954-59a5-ac55-80e9" name="Ethereal" hidden="false" targetId="2cf0-8194-2a24-cf92" type="profile"/>
         <infoLink id="0360-da7f-7371-f355" name="Arcane Bolt" hidden="false" targetId="ae02-a84f-a903-1ff8" type="profile"/>
         <infoLink id="4870-1207-26c5-5b81" name="Mystic Shield" hidden="false" targetId="b41f-f1ce-7aa5-4f81" type="profile"/>
       </infoLinks>
@@ -7522,6 +7566,7 @@ VARGSKYR
         <categoryLink id="0d50-6e65-655b-254f" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
         <categoryLink id="eaa2-974b-2525-16d0" name="9 or less wounds Leader" hidden="false" targetId="a8ed-ca35-24e0-cf2e" primary="false"/>
         <categoryLink id="6357-a2d6-3a09-6393" name="Unique" hidden="false" targetId="088b-3a27-03f7-8249" primary="false"/>
+        <categoryLink id="9b93-bac2-d4db-25dd" name="GRIEVING LEGION" hidden="false" targetId="740e-2e73-948d-375a" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="af89-1865-5a46-fb17" name="Staff of Midnight" hidden="false" collective="false" import="true" type="upgrade">
@@ -7534,11 +7579,11 @@ VARGSKYR
               <characteristics>
                 <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
                 <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">2&quot;</characteristic>
-                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">3</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">4</characteristic>
                 <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
                 <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
                 <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-2</characteristic>
-                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">D3</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">2</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -7565,13 +7610,8 @@ VARGSKYR
                     <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">6</characteristic>
                     <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
                     <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">4+</characteristic>
-                    <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
+                    <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
                     <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="8db5-b99e-4e19-f2f3" name="Frightful Touch" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-                  <characteristics>
-                    <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If the unmodified hit roll for an attack made with this model&apos;s Spectral Claws is 6, that attack inflicts 1 mortal wound on the target and the attack sequence ends (do not make a wound or save roll).</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -7608,7 +7648,7 @@ VARGSKYR
         <entryLink id="3d9d-9a70-b2ef-9d42" name="Incarnate Bonding" hidden="false" collective="false" import="true" targetId="c890-acbd-0c80-55c9" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="215.0"/>
+        <cost name="pts" typeId="points" value="340.0"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>
@@ -7686,36 +7726,9 @@ VARGSKYR
             </modifier>
           </modifiers>
         </entryLink>
-        <entryLink id="02e5-e3fe-ab52-8bcf" name="Artefacts: Relics of the Underworld" hidden="false" collective="false" import="true" targetId="3113-73d1-4b73-452c" type="selectionEntryGroup">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0595-259c-9405-8b88" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </entryLink>
         <entryLink id="5fe6-6e9f-702b-241b" name="Universal Artefacts of Power" hidden="false" collective="false" import="true" targetId="11c4-fd82-92a7-de8a" type="selectionEntryGroup"/>
         <entryLink id="7405-5c06-b918-3187" name="Realm Artefacts of Power" hidden="false" collective="false" import="true" targetId="37b0-af21-630c-d8af" type="selectionEntryGroup"/>
         <entryLink id="15dd-8852-8efc-5e81" name="Malign Portents Artefacts - Knight of Shrouds" hidden="false" collective="false" import="true" targetId="4cbc-1957-55b4-3c6c" type="selectionEntryGroup"/>
-        <entryLink id="cb4f-1be9-9501-76cd" name="Artefacts: Infernal Lanterns" hidden="false" collective="false" import="true" targetId="f7e1-3f30-8b5b-bff6" type="selectionEntryGroup">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d4fa-feac-6db1-0da7" type="notInstanceOf"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </entryLink>
-        <entryLink id="0aa8-97e5-4f79-c8d6" name="Artefacts: Weapons of the Damned" hidden="false" collective="false" import="true" targetId="93e1-80cd-e655-89d4" type="selectionEntryGroup">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0595-259c-9405-8b88" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </entryLink>
         <entryLink id="bc81-01bd-403c-15f4" name="Artefacts: Relics of Anguish" hidden="false" collective="false" import="true" targetId="7db3-a584-7d30-4412" type="selectionEntryGroup">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
@@ -8240,7 +8253,7 @@ VARGSKYR
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0de4-62df-c1e8-cd50" type="max"/>
       </constraints>
       <entryLinks>
-        <entryLink id="8284-552d-f751-e23c" name="Lore of the Underworlds" hidden="false" collective="false" import="true" targetId="1d74-9116-3b63-3ea2" type="selectionEntryGroup"/>
+        <entryLink id="8284-552d-f751-e23c" name="Nighthaunt Spell Lores" hidden="false" collective="false" import="true" targetId="28e5-284f-53db-c075" type="selectionEntryGroup"/>
         <entryLink id="f73e-bb01-738a-a680" name="Lore of Sorrows" hidden="false" collective="false" import="true" targetId="75b2-7567-deab-a948" type="selectionEntryGroup"/>
         <entryLink id="5e7c-ea70-5f5d-dfa6" name="Lore of the Deathmages" hidden="false" collective="false" import="true" targetId="17ec-0f53-8531-15b5" type="selectionEntryGroup"/>
         <entryLink id="791c-c6f7-aef6-76cd" name="Lore of the Vampires" hidden="false" collective="false" import="true" targetId="25a7-5ed4-85ee-938e" type="selectionEntryGroup"/>
@@ -8506,15 +8519,6 @@ VARGSKYR
             </modifier>
           </modifiers>
         </entryLink>
-        <entryLink id="19c7-dc17-0c49-a8d0" name="Traits: Shades of Death" hidden="false" collective="false" import="true" targetId="35f4-3de6-0ede-c816" type="selectionEntryGroup">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0595-259c-9405-8b88" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </entryLink>
         <entryLink id="0591-16f8-c7c7-1e07" name="Traits: Grand Host of Nagash" hidden="false" collective="false" import="true" targetId="2d6e-6f22-c967-c81f" type="selectionEntryGroup">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
@@ -8674,313 +8678,6 @@ VARGSKYR
             <profile id="f4f3-010a-abae-0426" name="Blood Fury" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
               <characteristics>
                 <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">Add 1 to the Attacks characteristic of melee weapons used by this general.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-    </selectionEntryGroup>
-    <selectionEntryGroup id="3113-73d1-4b73-452c" name="Artefacts: Relics of the Underworld" hidden="false" collective="false" import="true">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0595-259c-9405-8b88" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2ca1-f00d-66b4-3673" type="max"/>
-      </constraints>
-      <selectionEntries>
-        <selectionEntry id="fd73-621f-ccc4-45fa" name="1. Cloak of the Waxing Moon" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a271-c506-3b55-059f" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="f933-cfd0-e2fd-6196" name="Cloak of the Waxing Moon" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">The Deathless Spirits battle traits negates wounds inflicted by melee weapons that are allocated to the bearer on a 5+ instead of a 6+</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="9b21-139a-2a9c-68a6" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="8833-7633-30e3-e8ce" name="2. Pendant of the Fell Wind" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6d85-93b1-804c-f4d7" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="83e7-89ca-e3f5-198c" name="Pendant of the Fell Wind" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Add 3&quot; to normal moves made by friendly NIGHTHAUNT units that are wholly within 12&quot; of the bearer at the start of that normal move.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="3fe7-0d96-9e42-7a73" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="8501-ea06-bf17-04ac" name="3. Dreadbolt Ring" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4419-f0c3-47c3-e96f" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="5bec-4a89-073e-bd52" name="Dreadbolt Ring" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">When this bearer fights, if they inflict one or more wounds with their melee weapons, you can inflict D3 mortal wounds on one enemy unit within 3&apos; of the bearer after all of the bearers attacks have been made.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="70b3-1ed5-f774-f823" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="8426-2638-3ab7-b3d2" name="4. Mirror of Screaming Souls" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1a72-0c18-d4f7-020e" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="24ac-a397-ee69-8e8e" name="Mirror of Screaming Souls" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">At the start of your shooting phase, roll 2D6 for each enemy unit within 8&quot; of the bearer. If the roll is higher that than unit&apos;s Bravery characteristic, it suffers 1 mortal wound.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="b6f5-fe0d-124c-0e25" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="cf9b-d93e-e334-5f50" name="5. Midnight Tome" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="23d6-a36f-3029-f078" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="12b8-f233-9efa-cca5" name="Midnight Tome" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">The bearer of the Midnight Tome becomes a WIZARD and knows the Arcane Bolt and Mystic Shield spells, as well as one spell from the Lore of the Underworlds. They can attempt to cast one spell in each of your hero phases, and attempt to unbind one spell in each enemy hero phase. If the bearer was already a wizard, they can attempt to cast one additional spell in each of your hero phases instead.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <infoLinks>
-            <infoLink id="0a97-e14c-1876-33cb" name="Mystic Shield" hidden="false" targetId="b41f-f1ce-7aa5-4f81" type="profile">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4f53-8230-2f02-9639" type="instanceOf"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </infoLink>
-            <infoLink id="ca67-b137-51e0-e4eb" name="Arcane Bolt" hidden="false" targetId="ae02-a84f-a903-1ff8" type="profile">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4f53-8230-2f02-9639" type="instanceOf"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </infoLink>
-          </infoLinks>
-          <categoryLinks>
-            <categoryLink id="ed77-d444-13cd-002d" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <entryLinks>
-            <entryLink id="9e90-8711-2eca-5bb9" name="Lore of the Underworld" hidden="false" collective="false" import="true" targetId="1d74-9116-3b63-3ea2" type="selectionEntryGroup">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4f53-8230-2f02-9639" type="instanceOf"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </entryLink>
-          </entryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="b3ed-44e8-8fa1-3e43" name="6. Covetous Familiar" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6f8d-7cee-3ac0-367b" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="63f6-cd27-2128-a557" name="Covetous Familiar" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">At the start of each combat phase, roll a dice for each enemy unit within 3&quot; of the bearer. On a 2+ that unit suffers 1 mortal wound.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="19c6-3d43-8fdc-85ac" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="d2d6-fb14-13ac-7460" name="0. Corpse Candle" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="375e-634d-ca69-27b2" type="equalTo"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="71ac-bc25-9316-7f36" value="1.0">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="375e-634d-ca69-27b2" type="equalTo"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="ca4c-da72-00b9-cc2a" value="1.0">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="375e-634d-ca69-27b2" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="71ac-bc25-9316-7f36" type="max"/>
-            <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ca4c-da72-00b9-cc2a" type="min"/>
-          </constraints>
-          <profiles>
-            <profile id="493c-59b2-462d-0f3e" name="Corpse Candle" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Once per battle, in your hero phase or the combat phase, the bearer can snuff out the corpse candle. If they do so in your hero phase, pick the bearer or 1 enemy model within 12&quot; of them. The model you picked suffers 1 mortal wound. If the mortal wound was suffered by an enemy model, add 1 to the bearer’s next casting roll; if the mortal wound was suffered by the bearer, add 3 to their next casting roll. 
-
-If the bearer snuffs out the corpse candle in the combat phase, pick the bearer or an enemy model within 12&quot; of them. The model you picked suffers 1 mortal wound. If the mortal wound was suffered by an enemy model, add 1 to hit rolls for attacks made by the bearer in that phase; if the mortal wound was suffered by bearer, add 1 to hit and wound rolls for attacks made by the bearer in that phase.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="b934-b7c4-ee9e-42e0" name="Artefact" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-    </selectionEntryGroup>
-    <selectionEntryGroup id="35f4-3de6-0ede-c816" name="Traits: Shades of Death" hidden="false" collective="false" import="true">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a6c5-66f1-73cf-8375" type="max"/>
-      </constraints>
-      <selectionEntries>
-        <selectionEntry id="fe57-fcf8-f154-a020" name="1. Hatred of the Living" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2777-fd53-237c-e7ab" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="1a9b-40f7-a479-7506" name="1. Hatred of the Living" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
-              <characteristics>
-                <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">You can re-roll failed hit rolls for attacks made with this general&apos;s melee weapons unless the target has the DEATH keyword.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="1911-5767-62b8-8811" name="2. Terrifying Entity" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9411-340c-12e8-fa87" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="2ce5-527e-41cc-c788" name="Terrifying Entity" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
-              <characteristics>
-                <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">At the start of the enemy&apos;s movement phase, roll a dice for each enemy unit within 3&quot; of this model. If the roll is equal to or greater than that enemy unit&apos;s Bravery characteristic, that unit must make a retreat move in that movement phase.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="1418-3c0f-3aaa-44f6" name="3. Lingering Spirit" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1dfc-3d56-5a84-a507" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="ae1a-a1d9-1ea3-8a5b" name="Lingering Spirit" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
-              <characteristics>
-                <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">Add 1 to this general’s Wounds characteristic.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="4102-26a6-7c40-fc69" name="4. Spiteful Spirit" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cd32-16c6-dfff-c84f" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="6bcf-532c-ad7c-d92c" name="Spiteful Spirit" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
-              <characteristics>
-                <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">Roll  dice each time you allocate a wound to this general that was inflicted by a melee weapon. On a 5+, the attacking unit suffers 1 mortal wound after all of its attacks have been made.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="dced-2fc7-400b-dc91" name="5. Cloaked in Shadow" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="de79-48b2-c9b5-6838" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="1baf-8b74-6415-96f1" name="Cloaked in Shadow" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
-              <characteristics>
-                <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">Subtract 1 from hit rolls for attacks made with missile weapons that target this general.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="c34d-1632-1e37-cefc" name="6. Ruler of the Spirit Host" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dbd8-8522-3383-b81f" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="b22f-f277-da05-0ae5" name="Ruler of the Spirit Host" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
-              <characteristics>
-                <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">At the start of your hero phase, you can pick a friendly SUMMONABLE NIGHTHAUNT unit within 9&quot; of this general and return D3 slain models to that unit The returning models must be setup within 9&quot; of this general.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="96a1-a81f-5ccc-a60e" name="0. Lord of the Host" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="a39c-887e-9b4b-76f3" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <profiles>
-            <profile id="d9e6-798e-110d-2b99" name="Lord of the Host" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
-              <characteristics>
-                <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">Once per battle, you can use the command ability on this general’s warscroll without a command point being spent (if the general does not have a command ability on their warscroll, this command trait has no effect).</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -9305,274 +9002,6 @@ If the bearer snuffs out the corpse candle in the combat phase, pick the bearer 
       </constraints>
       <entryLinks>
         <entryLink id="0539-24b2-de7c-5daa" name="3. Balefire Blade" hidden="false" collective="false" import="true" targetId="afc8-8d6f-3a5e-ccea" type="selectionEntry"/>
-      </entryLinks>
-    </selectionEntryGroup>
-    <selectionEntryGroup id="f7e1-3f30-8b5b-bff6" name="Artefacts: Infernal Lanterns" hidden="false" collective="false" import="true">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="469f-24b2-d1fb-d182" type="notInstanceOf"/>
-                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0595-259c-9405-8b88" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d86c-900d-efff-988c" type="max"/>
-      </constraints>
-      <selectionEntries>
-        <selectionEntry id="66ec-df3b-dcf8-4b7c" name="3. Beacon of Nagashizzar" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6a72-9773-01bb-0040" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="6684-f75e-ca51-b1c1" name="Beacon of Nagashizzar" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">If the bearer successfully casts the Spectral Lure spell and it is not unbound, instead of the normal effects of the spell you an either heal D6+3 wounds that have been allocated to the target unit or, if no wounds have been allocated to that unit, you can return a number of slain models to it that have a combined Wounds characteristic equal to or less than D6+3.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="2956-d595-8b85-f787" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="5f01-9b96-61b8-9150" name="2. Wychlight Lantern" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="263a-5afc-6c49-4603" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="1640-02d0-0f36-7681" name="Wychlight Lantern" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Add 1 to casting rolls for the bearer.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="9ad8-0eb2-d715-1769" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="eb25-71e7-b687-0edb" name="1. Lightshard of the Harvest Moon" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8b60-fdb5-0fa5-e3a2" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="d795-9d88-e6b2-bd78" name="Lightshard of the Harvest Moon" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Once per battle, at the start of the combat phase the bearer can use this artefact. If they do so, you can re-roll failed hit rolls for attacks made by friendly NIGHTHAUNT units that are wholly within 12&quot; of the bearer when they attack in the combat phase.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="db1a-f7d7-e07f-b4d4" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-    </selectionEntryGroup>
-    <selectionEntryGroup id="1d74-9116-3b63-3ea2" name="Lore of the Underworlds" hidden="true" collective="false" import="true">
-      <modifiers>
-        <modifier type="set" field="hidden" value="false">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0595-259c-9405-8b88" type="equalTo"/>
-              </conditions>
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c352-dff7-7050-6f8d" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
-      <selectionEntries>
-        <selectionEntry id="be93-b186-a379-a9e8" name="1. Soul Cage" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="51d3-f944-12ef-b951" type="max"/>
-          </constraints>
-          <infoLinks>
-            <infoLink id="4200-3906-15f6-69cb" name="Soul Cage" hidden="false" targetId="1981-c54d-2d8f-06e3" type="profile"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="f424-1444-db9a-f3f6" name="6. Spectral Tether" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5b91-fce8-6365-3331" type="max"/>
-          </constraints>
-          <infoLinks>
-            <infoLink id="b3b6-b8f4-c814-d571" name="Spectral Tether" hidden="false" targetId="9cdd-2895-7b8a-9721" type="profile"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="9d3a-e68e-ac33-7b99" name="5. Shademist" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2177-dcdf-897f-0658" type="max"/>
-          </constraints>
-          <infoLinks>
-            <infoLink id="bd9e-cc9c-75f3-3d7c" name="Shademist" hidden="false" targetId="f5b7-fe13-c80d-4434" type="profile"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="5af8-1088-92e1-ec85" name="4. Reaping Scythe" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1290-ffe2-f529-4cfc" type="max"/>
-          </constraints>
-          <infoLinks>
-            <infoLink id="1b82-867f-a6c9-3263" name="Reaping Scythe" hidden="false" targetId="310b-85eb-deb2-2337" type="profile"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="518b-d9be-ff22-bcd9" name="3. Lifestealer" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="afd1-02d5-5a72-04b0" type="max"/>
-          </constraints>
-          <infoLinks>
-            <infoLink id="b714-df4c-2a41-4753" name="Lifestealer" hidden="false" targetId="ca1c-1cf9-35fe-4a9c" type="profile"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="aca2-4016-8b28-31a3" name="2. Spirit Drain" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1e87-b852-27e2-f4a9" type="max"/>
-          </constraints>
-          <infoLinks>
-            <infoLink id="aa8c-c384-978a-78f4" name="Spirit Drain" hidden="false" targetId="ba4f-5793-20e0-5040" type="profile"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-    </selectionEntryGroup>
-    <selectionEntryGroup id="93e1-80cd-e655-89d4" name="Artefacts: Weapons of the Damned" hidden="false" collective="false" import="true">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0595-259c-9405-8b88" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5be2-391f-c38e-ccc7" type="max"/>
-      </constraints>
-      <selectionEntries>
-        <selectionEntry id="949c-080b-3d07-dcd1" name="1. Shadow&apos;s Edge" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0100-c482-6295-bc7f" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="d425-7f34-6d0c-9efd" name="Shadow&apos;s Edge" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Pick one of the bearer&apos;s melee weapons. If the unmodified hit roll for an attack made with this weapon is 6, that attack inflicts D3 mortal sounds and the attack sequence ends (do not make a wound or save roll).</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="5298-755e-5119-2d3c" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="af93-5774-0103-42a3" name="6. Shrieking Blade" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0d2f-8245-7c14-b299" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="8382-3e39-2aaa-a99b" name="Shrieking Blade" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Subtract 1 from hit rolls for attacks made with melee weapons that target the bearer.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="4b52-8f76-748a-7d52" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="4a53-2f91-1485-634b" name="4. Slitter" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6e45-f6cd-5a0c-4bd5" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="22f3-ed84-95ad-2b68" name="Slitter" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">After picking the bearer to fight, before they pile in you can pick one enemy model within 1&quot; of the bearer and roll a dice; if the roll is greater than that model&apos;s Wounds characteristic, it is slain.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="89dd-358e-f730-7464" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="8a05-47ed-73bd-acad" name="5. Headsman&apos;s Judgement" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d435-9dd9-b159-5e18" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="adbb-6c60-f259-f778" name="Headsman&apos;s Judgement" publicationId="e320-d5ec-pubN65537" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Pick one of the bearer&apos;s melee weapons. Add 1 to hit and wound rolls for attacks made with that weapon.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="d9a5-561c-83bf-d15f" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="f7e8-1e50-06ec-96b7" name="2. Reaper of Sorrows" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="fb32-1b35-796a-7f4b" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="70ec-af5b-46cc-95a1" name="Reaper of Sorrows" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Pick one of the bearer&apos;s melee weapons. Before attacking with that weapon, roll 2D6. If the roll is higher than the target unit&apos;s Bravery, that weapon&apos;s Rend characteristic is -3 for attacks made against that unit.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="bdec-3fe2-4551-24c1" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-      <entryLinks>
-        <entryLink id="9959-4a64-02b8-c893" name="3. Balefire Blade" hidden="false" collective="false" import="true" targetId="afc8-8d6f-3a5e-ccea" type="selectionEntry"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="17ec-0f53-8531-15b5" name="Lore of the Deathmages" publicationId="7a08-6611-3750-6469" page="85" hidden="true" collective="false" import="true">
@@ -11250,13 +10679,136 @@ This general does not receive any further modification to this number for being 
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
+    <selectionEntryGroup id="28e5-284f-53db-c075" name="Nighthaunt Spell Lores" hidden="false" collective="false" import="true">
+      <selectionEntryGroups>
+        <selectionEntryGroup id="c303-0b68-2689-a8a4" name="Lore of the Underworlds" hidden="true" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0595-259c-9405-8b88" type="equalTo"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c352-dff7-7050-6f8d" type="instanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <selectionEntries>
+            <selectionEntry id="aa68-c3d0-63be-4809" name="Soul Cage" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="309a-6042-40c5-2b6d" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="fed8-2004-60fd-8c3e" name="Soul Cage" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+                  <characteristics>
+                    <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
+                    <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">12&quot;</characteristic>
+                    <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick 1 enemy unit within range and visible to the caster. The strike last effect applies to that unit until the end of that turn. </characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="eb05-aba4-6c0f-b4ed" name="Spectral Tether" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5c9a-d373-709d-9980" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="79e5-94db-0721-489c" name="Spectral Tether" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+                  <characteristics>
+                    <characteristic name="Casting Value" typeId="2508-b604-1258-a920">4</characteristic>
+                    <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">-</characteristic>
+                    <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, remove the caster from the battlefield and set it up again on the battlefield more than 9&quot; from all enemy units. The caster cannot move in the following movement phase.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="13ba-6f59-6015-3f3f" name="Shademist" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dd11-9343-873c-d0dd" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="753d-bd7f-7d2f-c860" name="Shademist" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+                  <characteristics>
+                    <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
+                    <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">12&quot;</characteristic>
+                    <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick 1 friendly NIGHTHAUNT unit wholly within range and visible to the caster. Subtract 1 from wound rolls for attacks that target that unit until your next hero phase.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="3777-28df-bd5d-6b65" name="Seal of Shyish" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="eb39-eeaa-80c3-7ce8" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="4086-9dbd-b48e-0a44" name="Seal of Shyish" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+                  <characteristics>
+                    <characteristic name="Casting Value" typeId="2508-b604-1258-a920">5</characteristic>
+                    <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">12&quot;</characteristic>
+                    <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick 1 friendly NIGHTHAUNT unit wholly within range and visible to the caster. That unit has a ward of 5+ until your next hero phase.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="9792-cff6-4cf1-08f9" name="Lifestealer" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9804-2316-743c-d68c" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="4095-9b9d-8923-7697" name="Lifestealer" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+                  <characteristics>
+                    <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
+                    <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">12&quot;</characteristic>
+                    <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick 1 enemy unit within range and visible to the caster. The target suffers D3 mortalw ounds. You can heal 1 wound allocated to the caster for each mortal wound that was allocated (and not negated) by this spell.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="d661-cba6-77a0-63ad" name="Spirit Drain" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fb53-abcd-6426-02d7" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="7cf5-221d-1119-1045" name="Spirit Drain" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+                  <characteristics>
+                    <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
+                    <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">18&quot;</characteristic>
+                    <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick 1 enemy unit within range and visible to the caster. Roll a number of dice equal to the number of models in the target unit. For each 6, that unit suffers 1 mortal wound.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <sharedProfiles>
-    <profile id="2cf0-8194-2a24-cf92" name="Ethereal" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-      <characteristics>
-        <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Ignore modifiers (positive or negative) when making save rolls for this unit.</characteristic>
-      </characteristics>
-    </profile>
     <profile id="82d7-72c8-891a-50e8" name="STANDARD BEARER" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
       <characteristics>
         <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Models in this unit may be Standard Bearers. Subtract 1 from the Bravery characteristic of enemy units whilst they are within 6&quot; of any DEATH Standard Bearers.</characteristic>
@@ -11455,48 +11007,6 @@ Any number of SOULBLIGHT GRAVELORDS WIZARDS can attempt to cast Invigorating Aur
         <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
         <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">3&quot;</characteristic>
         <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, each enemy unit within 3&quot; of the caster suffers D3 mortal wounds. In addition, for each mortal wound inflicted by this spell and not negated, roll a dice.  For each 5+, you can heal 1 wound allocated to the caster.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="1981-c54d-2d8f-06e3" name="Soul Cage" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
-      <characteristics>
-        <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
-        <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">12&quot;</characteristic>
-        <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick an enemy unit within 12&quot; of the caster that is visible to them. Until the start of your next hero phase, that unit cannot retreat. In addition, until your next hero phase, the strike-last effect applies to that unit.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="ba4f-5793-20e0-5040" name="Spirit Drain" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
-      <characteristics>
-        <characteristic name="Casting Value" typeId="2508-b604-1258-a920">4</characteristic>
-        <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">18&quot;</characteristic>
-        <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick an enemy model within 18&quot; of the caster that is visible to them. Roll a number of dice equal to the model&apos;s Wounds characteristic. For each 6+ that model&apos;s unit suffers 1 mortal wound.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="ca1c-1cf9-35fe-4a9c" name="Lifestealer" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
-      <characteristics>
-        <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
-        <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">12&quot;</characteristic>
-        <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick an enemy unit within 12&quot; of the caster that is visible to them. That unit suffers D3 mortal wounds. Foe each mortal wound suffered by that enemy unit, you can heal 1 wound allocated to the caster.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="310b-85eb-deb2-2337" name="Reaping Scythe" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
-      <characteristics>
-        <characteristic name="Casting Value" typeId="2508-b604-1258-a920">4</characteristic>
-        <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">-</characteristic>
-        <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick one of the caster&apos;s weapons. Until the start of your next hero phase, you can re-roll failed hit and wound rolls for attacks made with that weapon.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="f5b7-fe13-c80d-4434" name="Shademist" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
-      <characteristics>
-        <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
-        <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">12&quot;</characteristic>
-        <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick a friendly NIGHTHAUNT unit wholly within 12&quot; of the caster that is visible to them. Subtract 1 from wound rolls for attacks that target that unit until the start of your next hero phase.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="9cdd-2895-7b8a-9721" name="Spectral Tether" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
-      <characteristics>
-        <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
-        <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">12&quot;</characteristic>
-        <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick a friendly NIGHTHAUNT HERO within 12&quot; of the caster. Heal D3 wounds that have been allocated to that unit.</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
