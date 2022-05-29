@@ -88,7 +88,7 @@
     <categoryEntry id="07f3-a813-9aea-eff4" name="CLANS MOULDER" hidden="false"/>
     <categoryEntry id="15a7-9973-d20d-8127" name="FIGHTING BEAST" hidden="false"/>
     <categoryEntry id="1c25-073b-6d5f-cec3" name="CLANS PESTILENS" hidden="false"/>
-    <categoryEntry id="3058-1b6c-3bc2-746d" name="CLANS VERMINOUS" hidden="false"/>
+    <categoryEntry id="3058-1b6c-3bc2-746d" name="CLANS VERMINUS" hidden="false"/>
     <categoryEntry id="ab95-95da-239d-dd92" name="DEATHMASTER" hidden="false"/>
     <categoryEntry id="9a0b-8f23-d27c-491a" name="CLANS ESHIN" hidden="false"/>
     <categoryEntry id="6c31-d5f5-4a7e-638e" name="CLAWLORD" hidden="false"/>
@@ -115,13 +115,11 @@
         <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="da6b-47f0-4785-2374" type="max"/>
       </constraints>
     </categoryEntry>
-    <categoryEntry id="2040-3ea4-81f6-10a5" name="SLYNK SKITTERSHANK" hidden="false"/>
-    <categoryEntry id="e765-9b2c-ff62-3aa8" name="SKITTERSHANK&apos;S CLAWPACK" hidden="false"/>
   </categoryEntries>
   <sharedSelectionEntries>
     <selectionEntry id="aca2-1d43-0220-2465" name="Skritch Spiteclaw" publicationId="bcc4-c671-pubd1e1" page="118" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
-        <modifier type="set" field="6106-a3cd-0092-b3c0" value="1.0">
+        <modifier type="set" field="6106-a3cd-0092-b3c0" value="1">
           <conditions>
             <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0c25-586e-f397-9896" type="greaterThan"/>
           </conditions>
@@ -622,12 +620,17 @@
             <characteristic name="Move" typeId="8655-6213-2824-1752">6&quot;</characteristic>
             <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">1</characteristic>
             <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">4</characteristic>
-            <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">6+</characteristic>
+            <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">5+</characteristic>
           </characteristics>
         </profile>
         <profile id="b8c8-ebb3-3066-8b65" name="Clawleader" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 model in this unit can be a Clawleader. Add 1 to the Attacks characteristic of that model’s melee weapons.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 model in this unit can be a Clawleader. Add 1 to the Attacks characteristic of that model’s melee weapon.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="b6f9-7057-a0ae-21c2" name="Seething Swarm" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the end of the battleshock phase, you can return D3 slain models to this unit.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -661,20 +664,9 @@
             <cost name="pts" typeId="points" value="130.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="0310-abdc-ac78-9bc0" name="Clanshields" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5894-3962-21b0-2dd5" type="max"/>
-          </constraints>
-          <infoLinks>
-            <infoLink id="228d-67f1-065f-000d" name="Clanshield" hidden="false" targetId="12f7-d1c7-a2a6-fdb6" type="profile"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
         <selectionEntry id="945b-5613-21f7-e1c9" name="Standard Bearers" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
-            <modifier type="increment" field="99a2-1354-610b-6862" value="1">
+            <modifier type="increment" field="99a2-1354-610b-6862" value="2.0">
               <repeats>
                 <repeat field="selections" scope="ff51-5dac-313e-b769" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6748-9377-38f3-2237" repeats="1" roundUp="false"/>
               </repeats>
@@ -684,16 +676,20 @@
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="99a2-1354-610b-6862" type="max"/>
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d643-7af0-f1bd-0bfe" type="min"/>
           </constraints>
-          <infoLinks>
-            <infoLink id="17a9-dde0-c677-90e4" name="Standard Bearer" hidden="false" targetId="cedf-5e55-0b61-504b" type="profile"/>
-          </infoLinks>
+          <profiles>
+            <profile id="758e-ed67-d369-b51b" name="Standard Bearer" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+              <characteristics>
+                <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 in every 10 models in this unit can be a Clanrat Standard Bearer. This unit can retreat and still charge later in the turn if it includes any Clanrat Standard Bearers.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="b51c-c6a6-b1da-821e" name="Bell Ringer" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
-            <modifier type="increment" field="7afb-6c81-e6f1-f3c6" value="1">
+            <modifier type="increment" field="7afb-6c81-e6f1-f3c6" value="2.0">
               <repeats>
                 <repeat field="selections" scope="ff51-5dac-313e-b769" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6748-9377-38f3-2237" repeats="1" roundUp="false"/>
               </repeats>
@@ -704,9 +700,9 @@
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b146-1c8f-fe7a-d949" type="min"/>
           </constraints>
           <profiles>
-            <profile id="8174-2407-75b0-9105" name="Bell Ringer" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+            <profile id="8174-2407-75b0-9105" name="Bellringer" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
               <characteristics>
-                <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 in every 20 models in this unit can be a Clanrat Bell-ringer. Add 2 to run rolls for this unit while it includes any Clanrat Bell-ringers.</characteristic>
+                <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 in every 10 models in this unit can be a Clanrat Bellringer. Add 2 to run rolls for this unit if it includes any Clanrat Bellringers.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -3238,59 +3234,31 @@ Knowledge of the Warrior: Add 1 to hit rolls for attacks made by this model.</ch
             <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">4+</characteristic>
           </characteristics>
         </profile>
-        <profile id="e4df-d845-ea6c-3dd4" name="-" hidden="false" typeId="d0c4-0803-9249-9cd3" typeName="Peal of Doom - 2D6 Roll">
+        <profile id="7fa6-6e38-bebb-391e" name="Peal of Doom" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Effect" typeId="bbc9-6420-c480-59b5">In your hero phase, the Screaming Bell tolls. Roll two dice, add the scores together and consult the table below to see what happens (no modifier can be applied to this roll). If a result says that it affects units &apos;within range of the Peal of Doom&apos;, consult the Damage Table to see the current range of that effect.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="9ddf-74f6-dbf4-4c0c" name="02 - Magical Backlash" hidden="false" typeId="d0c4-0803-9249-9cd3" typeName="Peal of Doom - 2D6 Roll">
-          <characteristics>
-            <characteristic name="Effect" typeId="bbc9-6420-c480-59b5">Each unit within 3&quot; of this model suffers D3 mortal wounds.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="1c01-0b20-8022-ced3" name="03-04 - Unholy Clamour" hidden="false" typeId="d0c4-0803-9249-9cd3" typeName="Peal of Doom - 2D6 Roll">
-          <characteristics>
-            <characteristic name="Effect" typeId="bbc9-6420-c480-59b5">Add D6&quot; to this model’s Move characteristic until your next hero phase.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="335d-1ff7-bae2-f5aa" name="05-06 - Deafening Peals" hidden="false" typeId="d0c4-0803-9249-9cd3" typeName="Peal of Doom - 2D6 Roll">
-          <characteristics>
-            <characteristic name="Effect" typeId="bbc9-6420-c480-59b5">Roll a dice for each enemy unit within range of this model’s Peal of Doom. On a 4+ that unit suffers 1 mortal wound.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="7fa6-6e38-bebb-391e" name="07 - Avalanche of Energy" hidden="false" typeId="d0c4-0803-9249-9cd3" typeName="Peal of Doom - 2D6 Roll">
-          <characteristics>
-            <characteristic name="Effect" typeId="bbc9-6420-c480-59b5">Until the end of this hero phase, add 1 to casting rolls for friendly SKAVENTIDE WIZARDS that are within range of this model’s Peal of Doom.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="9da0-707c-1613-4247" name="08-09 - Apocalyptic Doom" hidden="false" typeId="d0c4-0803-9249-9cd3" typeName="Peal of Doom - 2D6 Roll">
-          <characteristics>
-            <characteristic name="Effect" typeId="bbc9-6420-c480-59b5">Roll a dice for each enemy unit within range of this model’s Peal of Doom. On a 4+ that unit suffers D3 mortal wounds.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="ed28-3143-b5de-cbfa" name="10-11 - Wall of Unholy Sound" hidden="false" typeId="d0c4-0803-9249-9cd3" typeName="Peal of Doom - 2D6 Roll">
-          <characteristics>
-            <characteristic name="Effect" typeId="bbc9-6420-c480-59b5">Until your next hero phase, subtract 1 from hit rolls for attacks made by enemy units while they are wholly within range of this model’s Peal of Doom.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="0adc-1615-5d1b-6ff6" name="12 - A Stirring Beyond the Veil" hidden="false" typeId="d0c4-0803-9249-9cd3" typeName="Peal of Doom - 2D6 Roll">
-          <characteristics>
-            <characteristic name="Effect" typeId="bbc9-6420-c480-59b5">You can summon a VERMINLORD to the battlefield and add it to your army. The summoned unit must be set up within range of this model’s Peal of Doom and more than 9&quot; from any enemy units. If you roll this result a second or subsequent time during a battle, heal up to 12 wounds allocated to this model instead of summoning a VERMINLORD.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the start of you rhero phase, you can say that this unit will ring its Screaming Bell. If you do so, roll a dice and look up thre result on the table below:
+
+1. Magical Backlash: This unit suffers D3 mortal wounds that cannot be negated.
+2. Unholy Clamour: Add 6&quot; to this unit&apos;s Move characteristic u ntil your next hero phase.
+3. Wall of Unholy Sound: Until your next hero phase, subtract 1 from hit rolls for attacks made by enemy units that are within 13&quot; of any friendly SCREAMING BELLS for which you rolled this result in this phase.
+4. Deafening Peals: Until your next hero phase, roll a dice each time an enemy model is picked to issue a command while it is within 13&quot; of any friendly SCREAMING BELLS for which you rolled this result in this phase. On a 5+, that command cannot be issued.
+5. Screaming Crescendo: Until your next hero phase, after this unit makes a charge move, you can pick 1 enemy unit within 1&quot; of this unit and roll a dice. On a 2+, that unit suffers D6 mortal wounds.
+6. Apocalyptic Doom: At the end of this hero phase, roll a dice for each enemy unit that is within 13&quot; of any friendly SCREAMING BELLS for which you rolled this result in this phase. On a 4+, that unit suffers D3 mortal wounds.</characteristic>
           </characteristics>
         </profile>
         <profile id="6ec5-2207-8d2c-17f6" name="Pushed Into Battle" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This model cannot move unless it starts the move within 6&quot; of 10 or more friendly SKAVENTIDE models. In addition, this model’s Rusty Spikes have an Attacks characteristic of 2D6 instead of D6 if this model made a charge move in the same turn.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This unit cannot move unlless it starts th emove within 6&quot; of 10 or more other friendly SKAVEN models.</characteristic>
           </characteristics>
         </profile>
         <profile id="4361-1170-6290-b512" name="Alter of the Horned Rat" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Do not take battleshock tests for friendly SKAVENTIDE units while they are wholly within 13&quot; of this model.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This unit has a ward of 5+. In addition, at the start of your hero phase, you can say that this unit will beseech the Horned Rat instead of attempting to cast spells in that phase. If you do so, in that phase, this unit is treated as having the PRIEST keyword instead of the WIZARD keyword.</characteristic>
           </characteristics>
         </profile>
         <profile id="1d06-4bd4-2977-d91d" name="Screaming Bell" hidden="false" typeId="f55d-ee3a-1597-110f" typeName="Magic">
           <characteristics>
-            <characteristic name="Cast/Unbind" typeId="8294-f605-2c0f-8f92">2/2</characteristic>
+            <characteristic name="Cast/Unbind" typeId="8294-f605-2c0f-8f92">1/1</characteristic>
             <characteristic name="Spells Known" typeId="dc9c-47d3-6931-859c">Arcane Bolt, Mystic Shield, Cracks Call</characteristic>
           </characteristics>
         </profile>
@@ -3299,47 +3267,56 @@ Knowledge of the Warrior: Add 1 to hit rolls for attacks made by this model.</ch
             <characteristic name="Variable 1" typeId="420a-645a-ab28-93a0">Wounds Suffered</characteristic>
             <characteristic name="Variable 2" typeId="4cdd-1e03-530f-0ff7">Move</characteristic>
             <characteristic name="Variable 3" typeId="b1ea-56be-ba52-16e9">Rusty Spikes</characteristic>
-            <characteristic name="Variable 4" typeId="ad26-bf56-95c4-80f1">Peal of Doom Range</characteristic>
+            <characteristic name="Variable 4" typeId="ad26-bf56-95c4-80f1">Avalanche of Energy</characteristic>
           </characteristics>
         </profile>
         <profile id="f5bf-2e87-c3ec-80ac" name="Screaming Bell1" hidden="false" typeId="90d1-a434-348d-a861" typeName="Damage Table">
           <characteristics>
-            <characteristic name="Variable 1" typeId="420a-645a-ab28-93a0">0-3</characteristic>
+            <characteristic name="Variable 1" typeId="420a-645a-ab28-93a0">0-6</characteristic>
             <characteristic name="Variable 2" typeId="4cdd-1e03-530f-0ff7">6&quot;</characteristic>
-            <characteristic name="Variable 3" typeId="b1ea-56be-ba52-16e9">2+</characteristic>
-            <characteristic name="Variable 4" typeId="ad26-bf56-95c4-80f1">26&quot;</characteristic>
+            <characteristic name="Variable 3" typeId="b1ea-56be-ba52-16e9">6</characteristic>
+            <characteristic name="Variable 4" typeId="ad26-bf56-95c4-80f1">Casting +2/Chanting +1</characteristic>
           </characteristics>
         </profile>
         <profile id="d6b8-d28c-961c-80a1" name="Screaming Bell2" hidden="false" typeId="90d1-a434-348d-a861" typeName="Damage Table">
           <characteristics>
-            <characteristic name="Variable 1" typeId="420a-645a-ab28-93a0">4-5</characteristic>
-            <characteristic name="Variable 2" typeId="4cdd-1e03-530f-0ff7">6&quot;</characteristic>
-            <characteristic name="Variable 3" typeId="b1ea-56be-ba52-16e9">3+</characteristic>
-            <characteristic name="Variable 4" typeId="ad26-bf56-95c4-80f1">22&quot;</characteristic>
+            <characteristic name="Variable 1" typeId="420a-645a-ab28-93a0">7-9</characteristic>
+            <characteristic name="Variable 2" typeId="4cdd-1e03-530f-0ff7">5&quot;</characteristic>
+            <characteristic name="Variable 3" typeId="b1ea-56be-ba52-16e9">5</characteristic>
+            <characteristic name="Variable 4" typeId="ad26-bf56-95c4-80f1">Casting +1/Chanting +1</characteristic>
           </characteristics>
         </profile>
         <profile id="7829-828f-bee0-028a" name="Screaming Bell3" hidden="false" typeId="90d1-a434-348d-a861" typeName="Damage Table">
           <characteristics>
-            <characteristic name="Variable 1" typeId="420a-645a-ab28-93a0">6-8</characteristic>
+            <characteristic name="Variable 1" typeId="420a-645a-ab28-93a0">10-12</characteristic>
             <characteristic name="Variable 2" typeId="4cdd-1e03-530f-0ff7">4&quot;</characteristic>
-            <characteristic name="Variable 3" typeId="b1ea-56be-ba52-16e9">4+</characteristic>
-            <characteristic name="Variable 4" typeId="ad26-bf56-95c4-80f1">18&quot;</characteristic>
+            <characteristic name="Variable 3" typeId="b1ea-56be-ba52-16e9">4</characteristic>
+            <characteristic name="Variable 4" typeId="ad26-bf56-95c4-80f1">Casting +1/Chanting 0</characteristic>
           </characteristics>
         </profile>
         <profile id="c3b1-e6f4-7f8e-c1a6" name="Screaming Bell4" hidden="false" typeId="90d1-a434-348d-a861" typeName="Damage Table">
           <characteristics>
-            <characteristic name="Variable 1" typeId="420a-645a-ab28-93a0">9-10</characteristic>
-            <characteristic name="Variable 2" typeId="4cdd-1e03-530f-0ff7">4&quot;</characteristic>
-            <characteristic name="Variable 3" typeId="b1ea-56be-ba52-16e9">4+</characteristic>
-            <characteristic name="Variable 4" typeId="ad26-bf56-95c4-80f1">14&quot;</characteristic>
+            <characteristic name="Variable 1" typeId="420a-645a-ab28-93a0">13+</characteristic>
+            <characteristic name="Variable 2" typeId="4cdd-1e03-530f-0ff7">3&quot;</characteristic>
+            <characteristic name="Variable 3" typeId="b1ea-56be-ba52-16e9">3</characteristic>
+            <characteristic name="Variable 4" typeId="ad26-bf56-95c4-80f1">Casting 0/Chanting 0</characteristic>
           </characteristics>
         </profile>
-        <profile id="93be-23f6-f130-b415" name="Screaming Bell5" hidden="false" typeId="90d1-a434-348d-a861" typeName="Damage Table">
+        <profile id="cf30-92c4-e58f-7a06" name="Avalanche of Energy" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Variable 1" typeId="420a-645a-ab28-93a0">11+</characteristic>
-            <characteristic name="Variable 2" typeId="4cdd-1e03-530f-0ff7">3&quot;</characteristic>
-            <characteristic name="Variable 3" typeId="b1ea-56be-ba52-16e9">5+</characteristic>
-            <characteristic name="Variable 4" typeId="ad26-bf56-95c4-80f1">10&quot;</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Add the Avalanche of Energy value on this unit&apos;s damage table to casting and chanting rolls for this unit.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="a501-db7d-3574-c34b" name="Cracks Call" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+          <characteristics>
+            <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
+            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">13&quot;</characteristic>
+            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick 1 enemy unit within range and visible to the caster and roll 2D6. If the roll is greater than that unit&apos;s Move characteristic, that unit suffers a number of mortal wounds equal to the difference between its Move characteristic and the roll (rounding up). This spell has no effect on units that can fly.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="fcd4-d61a-9bf6-c3a8" name="A Stirring Beyond the Veil" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Once per battle, at the start of your hero phase, if 7 or more wounds are allocated to this unit, you can say that the Grey Seer will shatter the Screaming Bell. If you do so, roll a dice. On a 1, this unit is destroyed. On any other roll, add the number of wounds allocated to this unit to the roll. If the modified roll is 12 or less, the Screaming Bell is shattered (see below). If the modified roll is 13 or more, the Screaming Bell is shattered and you can summon 1 VERMINLORD and add it to your army. The VERMINLORD must be set up wholly within 13&quot; of this unit. It can be set up within 3&quot; of an enemy unit if this unit is within 3&quot; of that enemy unit, otherwise it must be set up more than 9&quot; from all enemy units. If this unit&apos;s Screaming Bell is shattered, it can no longer attempt to cast Cracks Call, and it can no longer use its Peal of Doom ability.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -3353,26 +3330,11 @@ Knowledge of the Warrior: Add 1 to hit rolls for attacks made by this model.</ch
         <categoryLink id="2d5a-3118-e606-36d6" name="New CategoryLink" hidden="false" targetId="6121-6eca-d0db-8078" primary="false"/>
         <categoryLink id="cf55-81da-db8a-820b" name="SKAVENTIDE" hidden="false" targetId="5ed5-bfa0-f1f7-8b61" primary="false"/>
         <categoryLink id="d5f8-fcec-ffde-ed48" name="WAR MACHINE" hidden="false" targetId="880e-1e33-b965-71ec" primary="false"/>
+        <categoryLink id="32ec-41f4-c9f0-5433" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
+        <categoryLink id="6b5e-861a-9119-4c07" name="Behemoth" hidden="false" targetId="fa0c-9044-2568-fa02" primary="false"/>
+        <categoryLink id="cc27-48f2-8bce-597a" name="TOTEM" hidden="false" targetId="3504-ea8e-28ec-5150" primary="false"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="4e75-31a7-ff86-418e" name="Cracks Call" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7fe0-1644-a433-1055" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a48c-cf88-d6fd-7641" type="min"/>
-          </constraints>
-          <profiles>
-            <profile id="34bc-e88a-3557-e3f0" name="Cracks Call" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
-              <characteristics>
-                <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
-                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
-                <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick 1 enemy unit within 18&quot; of the caster and visible to them, and roll 2D6. If the roll is greater than that unit’s Move characteristic, that unit suffers a number of mortal wounds equal to the difference between its Move characteristic and the roll. This spell has no effect on units that can fly.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
         <selectionEntry id="e93d-4814-79e8-3068" name="Warpstone Staff" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e52b-ea91-7a8e-3dfa" type="min"/>
@@ -3387,7 +3349,7 @@ Knowledge of the Warrior: Add 1 to hit rolls for attacks made by this model.</ch
                 <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
                 <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">4+</characteristic>
                 <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
-                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">D3</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -3427,27 +3389,11 @@ Knowledge of the Warrior: Add 1 to hit rolls for attacks made by this model.</ch
               <characteristics>
                 <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
                 <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
-                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">D6</characteristic>
-                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">*</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">*</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
                 <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
                 <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
                 <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="54de-3ba3-ce43-265c" name="Protection of the Horned Rat" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8ea2-b5f3-ae32-a33e" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b5ff-9ac3-293d-b578" type="min"/>
-          </constraints>
-          <profiles>
-            <profile id="ea28-4623-6dc1-edbd" name="Protection of the Horned Rat" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-              <characteristics>
-                <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Roll a dice each time you allocate a wound or mortal wound to this model. On a 5+ that wound or mortal wound is negated.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -3963,7 +3909,12 @@ Knowledge of the Warrior: Add 1 to hit rolls for attacks made by this model.</ch
             <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">5+</characteristic>
           </characteristics>
         </profile>
-        <profile id="aece-1530-ab73-d82c" name="Fangleader" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+        <profile id="aece-1530-ab73-d82c" name="Elite Bodyguards" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If a friendly SKAVEN HERO is within 3&quot; of this unit, before you allocate a wound or mortal wound to that HERO, or instead of making a ward roll for that HERO, you can roll a dice. Add 2 to the roll if the HERO has the CLANS VERMINUS keyword. On a 4+, that wound is allocated to t his unit instead and cannot be negated.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="43ce-16c2-64e6-3229" name="Fangleader" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
             <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 model in this unit can be a Fangleader. Add 1 to the Attacks characteristic of that model’s Rusty Halberd.</characteristic>
           </characteristics>
@@ -3972,10 +3923,8 @@ Knowledge of the Warrior: Add 1 to hit rolls for attacks made by this model.</ch
       <categoryLinks>
         <categoryLink id="d145-adc9-e23e-61f8" name="New CategoryLink" hidden="false" targetId="7cdd-80ea-cbeb-8e16" primary="false"/>
         <categoryLink id="92a2-1efe-ae27-4c5f" name="New CategoryLink" hidden="false" targetId="8f8a-7c29-799e-ace9" primary="false"/>
-        <categoryLink id="cd8f-dcfb-29ed-d835" name="New CategoryLink" hidden="false" targetId="d8c1-7849-6f19-d10e" primary="false"/>
         <categoryLink id="611b-08ae-d102-8620" name="New CategoryLink" hidden="false" targetId="2748-c707-2441-d25c" primary="false"/>
         <categoryLink id="43df-bbc8-28ed-a8f2" name="CLANS VERMINOUS" hidden="false" targetId="3058-1b6c-3bc2-746d" primary="false"/>
-        <categoryLink id="491c-4a08-33b4-3fbf" name="SKAVENTIDE" hidden="false" targetId="5ed5-bfa0-f1f7-8b61" primary="false"/>
         <categoryLink id="78c9-779a-5366-c41f" name="Battleline" hidden="false" targetId="e9f2-765a-b7b8-ce8e" primary="true"/>
       </categoryLinks>
       <selectionEntries>
@@ -3997,7 +3946,7 @@ Knowledge of the Warrior: Add 1 to hit rolls for attacks made by this model.</ch
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5877-a41f-9693-d9d3" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="110.0"/>
+            <cost name="pts" typeId="points" value="135.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="f68c-6727-492c-4a78" name="Rusty Halberds" hidden="false" collective="false" import="true" type="upgrade">
@@ -4009,9 +3958,9 @@ Knowledge of the Warrior: Add 1 to hit rolls for attacks made by this model.</ch
             <profile id="82b4-419a-74b8-19db" name="Rusty Halberd" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
               <characteristics>
                 <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
-                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">2&quot;</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
                 <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">2</characteristic>
-                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
                 <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
                 <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
                 <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
@@ -4022,20 +3971,9 @@ Knowledge of the Warrior: Add 1 to hit rolls for attacks made by this model.</ch
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="3d11-3b7b-1c88-ca0f" name="Clanshields" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9f2a-3399-fde3-dfeb" type="max"/>
-          </constraints>
-          <infoLinks>
-            <infoLink id="8059-d2e9-6b24-6544" name="Clanshield" hidden="false" targetId="12f7-d1c7-a2a6-fdb6" type="profile"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
         <selectionEntry id="3a46-d50e-d70a-d68d" name="Standard Bearers" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
-            <modifier type="increment" field="f9da-13a0-8310-d4fb" value="1">
+            <modifier type="increment" field="f9da-13a0-8310-d4fb" value="2.0">
               <repeats>
                 <repeat field="selections" scope="f870-2e45-e4aa-eb7b" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2673-7682-0b49-852a" repeats="1" roundUp="false"/>
               </repeats>
@@ -4045,9 +3983,13 @@ Knowledge of the Warrior: Add 1 to hit rolls for attacks made by this model.</ch
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f9da-13a0-8310-d4fb" type="max"/>
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a53f-5dec-db0f-88ff" type="min"/>
           </constraints>
-          <infoLinks>
-            <infoLink id="509c-388e-b8bd-4f73" name="Standard Bearer" hidden="false" targetId="cedf-5e55-0b61-504b" type="profile"/>
-          </infoLinks>
+          <profiles>
+            <profile id="5558-6bb7-dde1-34c5" name="Standard Bearer" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+              <characteristics>
+                <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 in every 10 models in this unit can be a Clanrat Standard Bearer. This unit can retreat and still charge later in the turn if it includes any Clanrat Standard Bearers.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
@@ -4067,7 +4009,7 @@ Knowledge of the Warrior: Add 1 to hit rolls for attacks made by this model.</ch
           <profiles>
             <profile id="124a-f15a-2248-bb4d" name="Pack Drummers" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
               <characteristics>
-                <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 in every 10 models in this unit can be a Stormvermin Drummer. Add 2 to run rolls for this unit while it includes any Stormvermin Drummers.</characteristic>
+                <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 in every 10 models in this unit can be a Stormvermin Drummer. Add 2 to run rolls for this unit if it includes any Stormvermin Drummers.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -4082,7 +4024,7 @@ Knowledge of the Warrior: Add 1 to hit rolls for attacks made by this model.</ch
             <modifier type="set" field="95f2-6885-756f-9ea5" value="2.0"/>
           </modifiers>
           <costs>
-            <cost name="pts" typeId="points" value="110.0"/>
+            <cost name="pts" typeId="points" value="135.0"/>
           </costs>
         </entryLink>
         <entryLink id="85f8-b2d2-2375-e34b" name="Battalions" hidden="false" collective="false" import="true" targetId="286a-2838-49be-5968" type="selectionEntryGroup"/>
@@ -6486,17 +6428,24 @@ If you do so, at the end of your movement phase, you can set up this model wholl
             <characteristic name="Move" typeId="8655-6213-2824-1752">7</characteristic>
             <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">5</characteristic>
             <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">5</characteristic>
-            <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">4</characteristic>
+            <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">4+</characteristic>
           </characteristics>
         </profile>
-        <profile id="c640-928b-3353-e660" name="Hidden Killer" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+        <profile id="c640-928b-3353-e660" name="Eshin Toxins" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Instead of setting up this model on the battlefield, you can place it to one side and say that it is set up in hiding as a reserve unit. If you do so, at the start of a combat phase, you can set up this model within 1&quot; of a friendly SKAVENTIDE unit that has 5 or more models and a Wounds characteristic of 1. If this model is not set up on the battlefield before the start of the fourth battle round, it is slain.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If the unmodified hit roll for an attack made by this unit is 6, the target suffers D3 mortal wounds and the attack sequence ends (do not make a wound roll or save roll).</characteristic>
           </characteristics>
         </profile>
         <profile id="6778-b32d-11a6-6683" name="Running Death" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This model can run and still shoot later in the same turn.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This unit can run and still shoot later in the turn.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="5f49-e37c-8344-4b10" name="Hidden Killer" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">When you select this unit to be part of your army, you can pick 1 CLANRATS or STORMVERMIN unit on your army roster to be the unit in which this unit is hiding. Record this information on a separate p iece of paper. Do not set up this unit until it is revealed as described next. You cannot hide more than 1 DEATHMASTER in the same CLANRATS or STORMVERMIN unit. 
+
+At the start of the combat phase, if this unit is hidden, you can reveal it. In addition, if the unit in which this unit is hidden is destroyed ,you must reveal this unit before the last model in thae unit in which it is hidden is removed from play. When you reveal this unit, set it up wholly within 3&quot; of the unit in which it is hidden. If this unit was revealed because the unit in which is was hidden iswas destroyed, this unit suffers 1 mortal wound after it is set up.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -6506,8 +6455,8 @@ If you do so, at the end of your movement phase, you can set up this model wholl
         <categoryLink id="0e24-e681-2295-f257" name="DEATHMASTER" hidden="false" targetId="ab95-95da-239d-dd92" primary="false"/>
         <categoryLink id="5912-9135-9bdb-4b7c" name="HERO" hidden="false" targetId="4e0e-664d-51ea-0929" primary="false"/>
         <categoryLink id="4664-2b16-de26-3819" name="SKAVEN" hidden="false" targetId="8f8a-7c29-799e-ace9" primary="false"/>
-        <categoryLink id="433a-8dcd-9ab8-bd7c" name="SKAVENTIDE" hidden="false" targetId="5ed5-bfa0-f1f7-8b61" primary="false"/>
         <categoryLink id="bf49-2f98-51b5-1a30" name="10 or less wounds Leader" hidden="false" targetId="a8ed-ca35-24e0-cf2e" primary="false"/>
+        <categoryLink id="35e3-b80d-b7e8-8b20" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="ebbf-ade4-389e-5f42" name="Eshin Throwing Stars" hidden="false" collective="false" import="true" type="upgrade">
@@ -6519,17 +6468,34 @@ If you do so, at the end of your movement phase, you can set up this model wholl
             <profile id="7f35-aa81-0e80-fad6" name="Eshin Throwing Stars" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
               <characteristics>
                 <characteristic name="Type" typeId="655c-362e-a663-3e50">Missile</characteristic>
-                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">12</characteristic>
-                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">4</characteristic>
-                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4</characteristic>
-                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">12&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">5</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">4+</characteristic>
                 <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
-                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">D3</characteristic>
               </characteristics>
             </profile>
-            <profile id="949c-2030-0af6-f096" name="Throwing Stars" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="4773-000f-ad1a-597a" name="Weeping Blades" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b417-9905-4639-6e83" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="da4f-2a7a-4b22-ea30" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="603d-2542-0b45-e4ab" name="Weeping Blade" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
               <characteristics>
-                <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If the unmodified hit roll for an attack made with Eshin Throwing Stars is 6, that attack inflicts 2 hits on the target instead of 1. Make a wound and save roll for each hit.</characteristic>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">5</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">D3</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -6538,52 +6504,6 @@ If you do so, at the end of your movement phase, you can set up this model wholl
           </costs>
         </selectionEntry>
       </selectionEntries>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="7627-504e-e4bd-f4d7" name="Weapon Option" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c49d-b4f9-09e9-50cd" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0ebf-982a-9512-8bc9" type="max"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="0588-1d1f-7771-a1a9" name="Fighting Claws" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="cdcf-7b0c-c175-b236" name="Fighting Claws" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
-                    <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1</characteristic>
-                    <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">7</characteristic>
-                    <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3</characteristic>
-                    <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3</characteristic>
-                    <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
-                    <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="points" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="bf73-5574-cdca-9f47" name="Weeping Blades" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="0d14-aaea-43e0-678a" name="Weeping Blades" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
-                    <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1</characteristic>
-                    <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">3</characteristic>
-                    <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3</characteristic>
-                    <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3</characteristic>
-                    <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
-                    <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">D3</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="points" value="0.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
       <entryLinks>
         <entryLink id="7ef9-af0f-9799-c054" name="General - Clans Eshin" hidden="false" collective="false" import="true" targetId="230d-5573-4086-e687" type="selectionEntry"/>
         <entryLink id="7a86-2912-bc39-a4aa" name="Artefacts" hidden="false" collective="false" import="true" targetId="01be-261c-a6e1-68d6" type="selectionEntryGroup"/>
@@ -6601,7 +6521,7 @@ If you do so, at the end of your movement phase, you can set up this model wholl
         <entryLink id="1587-3542-59cc-9fea" name="Incarnate Bonding" hidden="false" collective="false" import="true" targetId="c890-acbd-0c80-55c9" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="100.0"/>
+        <cost name="pts" typeId="points" value="170.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="876b-6949-face-f2c6" name="Master Moulder" publicationId="bcc4-c671-pubd1e1" page="120" hidden="false" collective="false" import="true" type="unit">
@@ -7799,251 +7719,6 @@ Roll a dice for each enemy unit that finishes a normal move, run, retreat or cha
       <costs>
         <cost name="pts" typeId="points" value="70.0"/>
       </costs>
-    </selectionEntry>
-    <selectionEntry id="62e1-2ee0-5628-6cce" name="Slynk Skittershank" hidden="false" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="set" field="5403-ab8a-54b1-3b81" value="1.0">
-          <conditions>
-            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0074-3e19-a788-57d8" type="greaterThan"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <constraints>
-        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8501-76db-a8c8-3ee0" type="max"/>
-        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5403-ab8a-54b1-3b81" type="min"/>
-      </constraints>
-      <profiles>
-        <profile id="0329-ef9a-10ee-14ca" name="Slynk Skittershank" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
-          <characteristics>
-            <characteristic name="Move" typeId="8655-6213-2824-1752">7&quot;</characteristic>
-            <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">5</characteristic>
-            <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">5</characteristic>
-            <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">4+</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="2cb1-f9c6-3175-5498" name="Eshin Toxins" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If the unmodified hit roll for an attack made by this unit is 6, the target suffers D3 mortal wounds and the attack sequence ends (do not make a wound roll or save roll).</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="4350-b7c9-0ee5-9099" name="Running Death" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This unit can run and still shoot later in the turn.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="77e1-3df8-5d85-3cd1" name="Misdirection" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If this unit is within 1” of a friendly SKITTERSHANK&apos;S CLAWPACK unit at the start of the combat phase, the strike-first effect applies to this unit in that combat phase. In addition, after this unit has fought for the first time in the combat phase, if this unit is within 1” of a friendly SKITTERSHANK’S CLAWPACK unit, this unit can retreat.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <categoryLinks>
-        <categoryLink id="e0ff-42f9-271d-1348" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
-        <categoryLink id="c082-d6aa-71f2-3523" name="9 or less wounds Leader" hidden="false" targetId="a8ed-ca35-24e0-cf2e" primary="false"/>
-        <categoryLink id="c7b9-ef39-2882-72da" name="CHAOS" hidden="false" targetId="7cdd-80ea-cbeb-8e16" primary="false"/>
-        <categoryLink id="d375-f483-9feb-5986" name="SKAVEN" hidden="false" targetId="8f8a-7c29-799e-ace9" primary="false"/>
-        <categoryLink id="646c-1988-bc88-90c5" name="CLANS ESHIN" hidden="false" targetId="9a0b-8f23-d27c-491a" primary="false"/>
-        <categoryLink id="923a-a8a3-c414-adc1" name="HERO" hidden="false" targetId="4e0e-664d-51ea-0929" primary="false"/>
-        <categoryLink id="ecf4-2d2c-87bd-2b17" name="DEATHMASTER" hidden="false" targetId="ab95-95da-239d-dd92" primary="false"/>
-        <categoryLink id="277f-cffd-4186-996a" name="SLYNK SKITTERSHANK" hidden="false" targetId="2040-3ea4-81f6-10a5" primary="false"/>
-        <categoryLink id="c420-6a3a-4e77-8c63" name="Unique" hidden="false" targetId="088b-3a27-03f7-8249" primary="false"/>
-      </categoryLinks>
-      <selectionEntries>
-        <selectionEntry id="4782-31de-e80b-1db0" name="Eshin Throwing Stars" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b856-fb95-84ce-c9ea" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b4a4-c2e2-22ae-2925" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="0cf5-63a1-29c3-68e2" name="Eshin Throwing Stars" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
-              <characteristics>
-                <characteristic name="Type" typeId="655c-362e-a663-3e50">Missile</characteristic>
-                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">12&quot;</characteristic>
-                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">4</characteristic>
-                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
-                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">4+</characteristic>
-                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
-                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">D3</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-        </selectionEntry>
-        <selectionEntry id="2ffb-81e7-0970-057e" name="Paired Weeping Blades" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="488a-621c-dafe-d86c" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="789e-5e66-997d-c17b" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="39b2-8ca1-214e-c937" name="Paired Weeping Blades" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
-              <characteristics>
-                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
-                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
-                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">6</characteristic>
-                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
-                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
-                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
-                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">D3</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-        </selectionEntry>
-      </selectionEntries>
-      <entryLinks>
-        <entryLink id="6742-1cf7-e949-5325" name="General - Clans Eshin" hidden="false" collective="false" import="true" targetId="230d-5573-4086-e687" type="selectionEntry"/>
-        <entryLink id="c74d-898f-9acc-6b2c" name="Battalions" hidden="false" collective="false" import="true" targetId="286a-2838-49be-5968" type="selectionEntryGroup"/>
-        <entryLink id="f478-30fb-5996-4852" name="Incarnate Bonding" hidden="false" collective="false" import="true" targetId="c890-acbd-0c80-55c9" type="selectionEntryGroup"/>
-      </entryLinks>
-      <costs>
-        <cost name="pts" typeId="points" value="225.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="0074-3e19-a788-57d8" name="Skittershank&apos;s Clawpack" hidden="false" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="set" field="c6f3-8d3b-40bd-f271" value="1.0">
-          <conditions>
-            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="62e1-2ee0-5628-6cce" type="greaterThan"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <constraints>
-        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="cb87-61d6-d7aa-0686" type="max"/>
-        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c6f3-8d3b-40bd-f271" type="min"/>
-      </constraints>
-      <profiles>
-        <profile id="1968-af6e-46dc-9193" name="Skittershank&apos;s Clawpack" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
-          <characteristics>
-            <characteristic name="Move" typeId="8655-6213-2824-1752">7&quot;</characteristic>
-            <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">2</characteristic>
-            <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">5</characteristic>
-            <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">5+</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="a535-da22-3e8a-1820" name="Kinwhisper&apos;s Ratlings" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">During deployment, instead of setting up this unit on the battlefield, you can place it to one side and say that it is infiltrating the foe as a reserve unit. If you do so, when you would set up a friendly Slynk Skittershank during deployment, you can say that it will join this unit infiltrating the foe as a reserve unit.
-
-At the end of your first movement phase, you must set up this unit on the battlefield, wholly within 6” of a terrain feature and more than 6” from all enemy units. Then, if SLYNK SKITTERSHANK joined this unit in reserve, set up that unit within 1” of this unit and more than 6” from all enemy units.
-</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="9f4c-7ca8-cbfb-33da" name="Running Death" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This unit can run and still shoot later in the turn.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="41ca-3f20-e5a3-9265" name="Eshin Toxins" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If the unmodified hit roll for an attack made by this unit is 6, the target suffers D3 mortal wounds and the attack sequence ends (do not make a wound roll or save roll).</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <categoryLinks>
-        <categoryLink id="692a-32cd-a3a1-7c72" name="CHAOS" hidden="false" targetId="7cdd-80ea-cbeb-8e16" primary="false"/>
-        <categoryLink id="03d4-c51c-c5fc-b6eb" name="New CategoryLink" hidden="false" targetId="065e-fda7-fd27-1f40" primary="true"/>
-        <categoryLink id="2544-3654-8c39-01fe" name="CLANS ESHIN" hidden="false" targetId="9a0b-8f23-d27c-491a" primary="false"/>
-        <categoryLink id="15ba-bcb1-0876-f93d" name="SKITTERSHANK&apos;S CLAWPACK" hidden="false" targetId="e765-9b2c-ff62-3aa8" primary="false"/>
-        <categoryLink id="a469-8901-6407-815c" name="Unique" hidden="false" targetId="088b-3a27-03f7-8249" primary="false"/>
-      </categoryLinks>
-      <selectionEntries>
-        <selectionEntry id="0d89-3416-73ac-6fcb" name="Eshin Sling" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ffc3-12c1-598d-5f79" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e6c5-a0fb-a10a-0137" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="c266-3bef-b6e2-4607" name="Eshin Sling" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
-              <characteristics>
-                <characteristic name="Type" typeId="655c-362e-a663-3e50">Missile</characteristic>
-                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">12&quot;</characteristic>
-                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">4</characteristic>
-                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
-                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">4+</characteristic>
-                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
-                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-        </selectionEntry>
-        <selectionEntry id="f337-1575-63d7-705c" name="Sword and Fighting Claw" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4eb1-012e-6208-14eb" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="77d9-b01e-5a36-c70d" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="e886-e00f-656e-ebe1" name="Sword and Fighting Claw" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
-              <characteristics>
-                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
-                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
-                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">3</characteristic>
-                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
-                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
-                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
-                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-        </selectionEntry>
-        <selectionEntry id="4891-356a-4963-2c2a" name="Bladed Tonfa and Dagger" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3b4e-5ef3-df5b-cc98" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f9b5-731d-fa62-a118" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="7e21-a2a7-b0e5-87e6" name="Bladed Tonfa and Dagger" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
-              <characteristics>
-                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
-                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
-                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">2</characteristic>
-                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
-                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
-                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
-                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-        </selectionEntry>
-        <selectionEntry id="e67f-dc4d-dac0-2f1b" name="Trifang Triskele and Net" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="089f-8d77-86bf-1129" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1b4c-8ce7-fcde-eca5" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="3afb-71b5-e403-c009" name="Trifang Triskele and Net" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
-              <characteristics>
-                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
-                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">3&quot;</characteristic>
-                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">2</characteristic>
-                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
-                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">4+</characteristic>
-                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
-                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-        </selectionEntry>
-        <selectionEntry id="73c4-2bad-566c-6511" name="Stabbing Blade" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b0f3-eded-0e35-0f2a" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="663a-320b-86ee-175d" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="34a4-5d21-9906-f489" name="Stabbing Blade" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
-              <characteristics>
-                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
-                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
-                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">2</characteristic>
-                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
-                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">4+</characteristic>
-                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
-                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-        </selectionEntry>
-      </selectionEntries>
-      <entryLinks>
-        <entryLink id="06ec-f955-0397-f2c5" name="Battalions" hidden="false" collective="false" import="true" targetId="286a-2838-49be-5968" type="selectionEntryGroup"/>
-      </entryLinks>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
