@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="128" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="129" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <publications>
     <publication id="e51d-b1a3-pubEC" name="The General&apos;s Handbook"/>
     <publication id="e51d-b1a3-pubEQ" name="Core Rules"/>
@@ -2095,7 +2095,7 @@ In addition, this incarnate can carry out the Devour Endless Spell monstrous ram
           <characteristics>
             <characteristic name="State" typeId="79ce-900f-e8fe-9c3d">Abolished</characteristic>
             <characteristic name="Level" typeId="f5a2-60bf-7d68-c7bb">0</characteristic>
-            <characteristic name="Domination Range" typeId="c4a5-38f6-3e66-de87"></characteristic>
+            <characteristic name="Domination Range" typeId="c4a5-38f6-3e66-de87"/>
           </characteristics>
         </profile>
         <profile id="b963-2f3d-b2fd-1d0b" name="Melee Weapon Attacks *" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
@@ -2133,6 +2133,9 @@ In addition, this incarnate can carry out the Devour Endless Spell monstrous ram
               </characteristics>
             </profile>
           </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="a5ec-9fec-0925-7245" name="Tearing Fangs" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -2152,8 +2155,14 @@ In addition, this incarnate can carry out the Devour Endless Spell monstrous ram
               </characteristics>
             </profile>
           </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
+      <entryLinks>
+        <entryLink id="58b4-3c0f-d717-315d" name="Battalions" hidden="false" collective="false" import="true" targetId="6138-3410-520c-bd01" type="selectionEntryGroup"/>
+      </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="400.0"/>
       </costs>
@@ -4401,6 +4410,9 @@ In addition, this incarnate can carry out the Devour Endless Spell monstrous ram
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6059-cc4f-4bb9-9e36" type="max"/>
             <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0268-d00b-8709-08a4" type="min"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
