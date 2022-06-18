@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="6d29-cde4-372b-08d3" name="Death - Flesh-eater Courts" revision="67" battleScribeVersion="2.03" authorName="https://discord.gg/4MSsD7" authorContact="" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="128" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="6d29-cde4-372b-08d3" name="Death - Flesh-eater Courts" revision="69" battleScribeVersion="2.03" authorName="https://discord.gg/4MSsD7" authorContact="" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="131" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="6d29-cde4-pubN65537" name="Battletome: Flesh-eater Courts 2019"/>
     <publication id="6d29-cde4-pubN65555" name="Battletome: Flesh-eater Courts"/>
@@ -499,6 +499,7 @@
     <entryLink id="1811-bee8-aedf-8149" name="Endless Spell: Cadaverous Barricade" hidden="false" collective="false" import="true" targetId="5525-51ac-7d2e-6a3e" type="selectionEntry"/>
     <entryLink id="1219-d696-8363-cdc7" name="Endless Spell: Corpsemare Stampede" hidden="false" collective="false" import="true" targetId="67e9-09b1-bc11-a859" type="selectionEntry"/>
     <entryLink id="c014-9dd7-2fdc-09bb" name="Endless Spell: Chalice of Ushoran" hidden="false" collective="false" import="true" targetId="a1c1-4af5-032e-8823" type="selectionEntry"/>
+    <entryLink id="90d5-da38-a8cc-bbbd" name="Flesh-eater Courts Battle Tactics" hidden="false" collective="false" import="true" targetId="ae1d-e49b-1bda-8d2a" type="selectionEntry"/>
   </entryLinks>
   <rules>
     <rule id="1b49-484e-bc30-aa58" name="Muster Abilities" publicationId="6d29-cde4-pubN65555" page="75" hidden="false">
@@ -1066,6 +1067,13 @@
                 <profile id="c1d0-c159-47c2-5b79" name="Courts of Delusion" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
                   <characteristics>
                     <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">Before you select your general&apos;s command trait, pick one of the delusions for the army you have.  Alternatively, you can roll a dice to randomly determine the delusion the army has.  The delusion applies to all friendly FLESH-EATER COURTS unit for the duration of the battle, even if the general is slain (if you must select a new general during the battle, do not generate a new delusion for the army).</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="d0ed-d7c0-491a-bb8c" name="Muster Reinforcements" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
+                  <characteristics>
+                    <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">At the start of your hero phase, you can carry out this heroic action with a friendly FLESH-EATER COURTS HERO instead of any other heroic action you can carry out with that HERO. 
+
+Muster Reinforcements: Pick 1 friendly FLESH-EATER COURTS HERO and roll 6 dice. For each 2+, you can return 1 slain model to a friendly SERFS unit within 10&quot; of that HERO. For each 5+, you can return 1 slain model to a friendly KNIGHTS unit within 10&quot; of that HERO instead. Slain models can be returned to more than 1 unit if you wish, but each successful dice roll can only be used to return 1 model to a single unit. </characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -2409,6 +2417,13 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="631c-0dae-5912-196d" name="Crypt Ghouls" page="135" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="add" field="category" value="7ede-19c1-7261-f88b">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1411-460f-c135-a667" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="acac-fe56-1bdf-3cf2" name="Boundless Ferocity" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
@@ -3371,12 +3386,12 @@
       <profiles>
         <profile id="2621-1cdd-1bbb-0df8" name="Ghoulish Landmark" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Add 1 to the Bravery characteristic of FLESH-EATER COURTS units that are within 1&quot; of any Charnel Thrones. Subtract 1 from the Bravery characteristic of other units that are within 1&quot; of any Charnel Thrones.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">While an enemy unit is within 12&quot; of any terrain features with this scenery rule, it cannot be affected by any abilities that allow units to ignore battleshock tests. </characteristic>
           </characteristics>
         </profile>
         <profile id="c6eb-b81f-0ca9-91fd" name="Ruler of All He Surveys" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If you use the Summon Men-at-arms or Summon Imperial Guard command ability and the model you pick to issue the command is within 1&quot; of this terrain feature, you can do so without a command point being spent.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">While a friendly FLESH-EATER COURTS HERO is garrisoning a terrain feature with this scenery rule, friendly FLESH-EATER COURTS HEROES wholly within 12&quot; of this terrain feature can issue the Summon Men-at-arms, Summon Courtier, Summon Royal Guard, and Summon Imperial Guard commands without a command point being spent. </characteristic>
           </characteristics>
         </profile>
         <profile id="2659-991f-ea21-dc99" name="Set-Up" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
@@ -3386,7 +3401,7 @@
         </profile>
         <profile id="4f5c-6d55-4833-5bce" name="Defensible" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This terrain feature is a defensible terrain feature that can be garrisoned by 1 HERO with a Wounds characteristic of 8 or less.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This terrain feature is a defensible terrain feature that can be garrisoned by 1 FLESH-EATER COURTS HERO with a Wounds characteristic of 8 or less.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -3934,7 +3949,36 @@
       </categoryLinks>
       <entryLinks>
         <entryLink id="e9be-96f6-19db-f87c" name="Universal Grand Strategy" hidden="false" collective="false" import="true" targetId="1e64-bcdc-3709-7ec7" type="selectionEntryGroup"/>
+        <entryLink id="6591-d433-abe4-bcbb" name="Flesh-eater Courts Grand Strategies" hidden="false" collective="false" import="true" targetId="0393-72f4-620e-30a1" type="selectionEntryGroup"/>
       </entryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="ae1d-e49b-1bda-8d2a" name="Flesh-eater Courts Battle Tactics" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3500-22ad-c629-d0a5" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="2764-fb8e-2b75-67eb" name="The Royal Hunt" hidden="false" typeId="eba0-4bf6-65fe-fdbc" typeName="Battle Tactic">
+          <characteristics>
+            <characteristic name="Description" typeId="f882-48d5-21a4-1787">When you reveal this battle tactic, pick 1 enemy MONSTER on the battlefield that has less than 5 wounds allocated to it. You complete this battle tactic if that MONSTER is slain during this turn. If that enemy MONSTER was slain by an attack made by a friendly ABHORRANT, score 1 additional victory point.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="c9a3-2319-8ef6-04a1" name="United Court" hidden="false" typeId="eba0-4bf6-65fe-fdbc" typeName="Battle Tactic">
+          <characteristics>
+            <characteristic name="Description" typeId="f882-48d5-21a4-1787">When you reveal this battle tactic, pick 1 objective on the battlefield that your opponent controlls. You complete this battle tactic if you control that objective at the end of your turn and it is contested by at least 1 friendly SERFS mode, 1 friendly KNIGHTS model, and 1 friendly COURTIER model. </characteristic>
+          </characteristics>
+        </profile>
+        <profile id="0bc1-1741-e54d-0f64" name="Screamed to Death" hidden="false" typeId="eba0-4bf6-65fe-fdbc" typeName="Battle Tactic">
+          <characteristics>
+            <characteristic name="Description" typeId="f882-48d5-21a4-1787">Pick 1 enemy unit on the battlefield. You complete this battle tactic if that unit is destroyed this turn by attacks made with missile weapons by friendly Crypt Flayers units, Royal Terrorgheists, or Abhorrant Ghoul Kings on Royal Terrorgheists. </characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="2908-44bc-fcfa-d877" name="New CategoryLink" hidden="false" targetId="1974-3f49-7f0b-8422" primary="true"/>
+      </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
@@ -5232,6 +5276,32 @@
         <entryLink id="f50c-79e1-41db-1f0b" name="Lore of Madness" hidden="false" collective="false" import="true" targetId="948b-4376-36a6-33c8" type="selectionEntryGroup"/>
         <entryLink id="9155-9b7f-9948-08c2" name="Universal Spell Lore" hidden="false" collective="false" import="true" targetId="20c3-23a0-9d79-b491" type="selectionEntryGroup"/>
       </entryLinks>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="0393-72f4-620e-30a1" name="Flesh-eater Courts Grand Strategies" hidden="false" collective="false" import="true">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="fdda-848f-6cf3-9d70" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="458e-698a-865a-7fb7" type="max"/>
+      </constraints>
+      <selectionEntries>
+        <selectionEntry id="5fe7-b574-a2e8-4e16" name="Growing Kingdom" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c662-11e2-f780-d678" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="3d8e-bd41-20f6-f9f5" name="Growing Kingdom" hidden="false" typeId="9c01-ec20-32c1-0948" typeName="Grand Strategy">
+              <characteristics>
+                <characteristic name="Description" typeId="53c8-cc18-16d1-e890">When the battle ends, you complete this grand strategy if there are art least 3 friendly FLESH-EATER COURTS units on the battlefield that were not in your starting army. </characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <categoryLinks>
+            <categoryLink id="4fe3-90c8-341c-f39f" name="Grand Strategy" hidden="false" targetId="5dff-3614-49fd-c3e4" primary="false"/>
+          </categoryLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <sharedProfiles>
