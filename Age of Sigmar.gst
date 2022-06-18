@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="131" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="133" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <publications>
     <publication id="e51d-b1a3-pubEC" name="The General&apos;s Handbook"/>
     <publication id="e51d-b1a3-pubEQ" name="Core Rules"/>
@@ -1788,6 +1788,9 @@
       <categoryLinks>
         <categoryLink id="1663-e2f8-1f43-cc44" name="New CategoryLink" hidden="false" targetId="1974-3f49-7f0b-8422" primary="true"/>
       </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
     </selectionEntry>
   </selectionEntries>
   <entryLinks>
@@ -3564,7 +3567,11 @@ In addition, this incarnate can carry out the Devour Endless Spell monstrous ram
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="6f6e-2199-1c40-fa84" name="Battle: Gallet, the Splintered Land" hidden="false" collective="false" import="true" type="upgrade"/>
+        <selectionEntry id="6f6e-2199-1c40-fa84" name="Battle: Gallet, the Splintered Land" hidden="false" collective="false" import="true" type="upgrade">
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
     <selectionEntryGroup id="b275-810f-adfc-156b" name="Universal Core Battalions" hidden="true" collective="false" import="true">
@@ -4687,12 +4694,17 @@ In addition, this incarnate can carry out the Devour Endless Spell monstrous ram
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="a35f-513d-9f57-e941" name="Dominating Presence" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="a35f-513d-9f57-e941" name="Dominating Presence" hidden="true" collective="false" import="true" type="upgrade">
           <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3b40-f0c2-a6e6-01ff" type="instanceOf"/>
-              </conditions>
+            <modifier type="set" field="hidden" value="false">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3b40-f0c2-a6e6-01ff" type="greaterThan"/>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="36b7-ee1e-0855-f23f" type="greaterThan"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
           <constraints>
@@ -4712,12 +4724,17 @@ In addition, this incarnate can carry out the Devour Endless Spell monstrous ram
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="8e7f-3814-4b8a-ef1f" name="Beast Master" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="8e7f-3814-4b8a-ef1f" name="Beast Master" hidden="true" collective="false" import="true" type="upgrade">
           <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3b40-f0c2-a6e6-01ff" type="instanceOf"/>
-              </conditions>
+            <modifier type="set" field="hidden" value="false">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3b40-f0c2-a6e6-01ff" type="greaterThan"/>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="36b7-ee1e-0855-f23f" type="greaterThan"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
           <constraints>
@@ -4737,12 +4754,17 @@ In addition, this incarnate can carry out the Devour Endless Spell monstrous ram
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="14f2-5c1f-5abb-15de" name="Prized Sorcery" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="14f2-5c1f-5abb-15de" name="Prized Sorcery" hidden="true" collective="false" import="true" type="upgrade">
           <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3b40-f0c2-a6e6-01ff" type="instanceOf"/>
-              </conditions>
+            <modifier type="set" field="hidden" value="false">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3b40-f0c2-a6e6-01ff" type="greaterThan"/>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="36b7-ee1e-0855-f23f" type="greaterThan"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
           <constraints>
@@ -4762,12 +4784,17 @@ In addition, this incarnate can carry out the Devour Endless Spell monstrous ram
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="beb8-5f44-3575-b445" name="Pillars of Belief" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="beb8-5f44-3575-b445" name="Pillars of Belief" hidden="true" collective="false" import="true" type="upgrade">
           <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3b40-f0c2-a6e6-01ff" type="instanceOf"/>
-              </conditions>
+            <modifier type="set" field="hidden" value="false">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3b40-f0c2-a6e6-01ff" type="greaterThan"/>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="36b7-ee1e-0855-f23f" type="greaterThan"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
           <constraints>
@@ -4787,12 +4814,17 @@ In addition, this incarnate can carry out the Devour Endless Spell monstrous ram
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="13b2-13a9-40f1-6d75" name="Predator&apos;s Domain" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="13b2-13a9-40f1-6d75" name="Predator&apos;s Domain" hidden="true" collective="false" import="true" type="upgrade">
           <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3b40-f0c2-a6e6-01ff" type="instanceOf"/>
-              </conditions>
+            <modifier type="set" field="hidden" value="false">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3b40-f0c2-a6e6-01ff" type="greaterThan"/>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="36b7-ee1e-0855-f23f" type="greaterThan"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
           <constraints>
@@ -4831,6 +4863,127 @@ In addition, this incarnate can carry out the Devour Endless Spell monstrous ram
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="37a0-5e57-c536-dd07" name="GHB 2022 Grand Strategies" hidden="true" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1411-460f-c135-a667" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <selectionEntries>
+            <selectionEntry id="f994-2af7-674d-2235" name="No Place for the Weak" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0102-93f2-dae9-10c7" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="8e96-8521-de2d-cf76" name="No Place for the Weak" hidden="false" typeId="9c01-ec20-32c1-0948" typeName="Grand Strategy">
+                  <characteristics>
+                    <characteristic name="Description" typeId="53c8-cc18-16d1-e890">When the battle ends, you complete this grand strategy if there are no Battleline units from your opponent&apos;s starting army on the battlefield.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <categoryLinks>
+                <categoryLink id="5eec-2661-2225-9080" name="Grand Strategy" hidden="false" targetId="5dff-3614-49fd-c3e4" primary="false"/>
+              </categoryLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="7c48-fb10-63bc-8a6a" name="Tame the Land" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="05ea-3b27-b2f2-8dd3" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="28fd-3583-d6d6-b2c7" name="Tame the Land" hidden="false" typeId="9c01-ec20-32c1-0948" typeName="Grand Strategy">
+                  <characteristics>
+                    <characteristic name="Description" typeId="53c8-cc18-16d1-e890">When the battle ends, you complete this grand strategy if you control all of the objectives on the battlefield that are wholly outside your territory.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <categoryLinks>
+                <categoryLink id="d8ab-453f-1227-d04f" name="Grand Strategy" hidden="false" targetId="5dff-3614-49fd-c3e4" primary="false"/>
+              </categoryLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="ffa9-44ee-2b1d-29a6" name="Defend What&apos;s Ours" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="fba4-02d3-d9f9-08d1" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="e4bb-6e7a-4110-e5c5" name="Defend What&apos;s Ours" hidden="false" typeId="9c01-ec20-32c1-0948" typeName="Grand Strategy">
+                  <characteristics>
+                    <characteristic name="Description" typeId="53c8-cc18-16d1-e890">When the battle ends, you complete this grand strategy if there are no enemy units wholly within your territory.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <categoryLinks>
+                <categoryLink id="06d5-8348-eeb2-76c0" name="Grand Strategy" hidden="false" targetId="5dff-3614-49fd-c3e4" primary="false"/>
+              </categoryLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="c279-224f-09cd-4984" name="Take What&apos;s Theirs" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e4ea-80d0-95a6-b0ca" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="2e2d-bde2-5bab-3cfd" name="Take What&apos;s Theirs" hidden="false" typeId="9c01-ec20-32c1-0948" typeName="Grand Strategy">
+                  <characteristics>
+                    <characteristic name="Description" typeId="53c8-cc18-16d1-e890">When the battle ends, you complete this grand strategy if there are more friendly units than enemy units wholly within your opponent&apos;s territory.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <categoryLinks>
+                <categoryLink id="d543-e1d3-b4b8-2e13" name="Grand Strategy" hidden="false" targetId="5dff-3614-49fd-c3e4" primary="false"/>
+              </categoryLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="31d2-9a3a-9126-4db9" name="Demonstration of Strength" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="749d-a7c2-38f6-2001" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="581f-2b72-07cb-fcc6" name="Demonstration of Strength" hidden="false" typeId="9c01-ec20-32c1-0948" typeName="Grand Strategy">
+                  <characteristics>
+                    <characteristic name="Description" typeId="53c8-cc18-16d1-e890">When the battle ends, you complete this grand strategy if there are 3 or more GALLETIAN VETERANS units from your starting army on the battlefield.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <categoryLinks>
+                <categoryLink id="a663-ea41-232b-4807" name="Grand Strategy" hidden="false" targetId="5dff-3614-49fd-c3e4" primary="false"/>
+              </categoryLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="330d-a3e4-d911-f346" name="Show of Dominance" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b6e9-beaa-0177-b81e" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="b742-a2c9-b35e-0cb0" name="Show of Dominance" hidden="false" typeId="9c01-ec20-32c1-0948" typeName="Grand Strategy">
+                  <characteristics>
+                    <characteristic name="Description" typeId="53c8-cc18-16d1-e890">When the battle ends, you complete this grand strategy if therea are any friendly GALLETIAN VETERANS units in each quarter of the battlefield.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <categoryLinks>
+                <categoryLink id="150e-155b-ad34-d7de" name="Grand Strategy" hidden="false" targetId="5dff-3614-49fd-c3e4" primary="false"/>
+              </categoryLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntryGroup>
     <selectionEntryGroup id="055f-7077-c87d-f9a8" name="Triumphs" hidden="false" collective="false" import="true">
       <modifiers>
