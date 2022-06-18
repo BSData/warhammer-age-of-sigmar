@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="130" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="131" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <publications>
     <publication id="e51d-b1a3-pubEC" name="The General&apos;s Handbook"/>
     <publication id="e51d-b1a3-pubEQ" name="Core Rules"/>
@@ -27,6 +27,7 @@
     <publication id="6bd9-9ed8-1840-8dc4" name="Battlescroll: Gods &amp; Heroes - December 2021" publisherUrl="https://www.warhammer-community.com/wp-content/uploads/2021/12/XTPR7PzBSVcNAAOd.pdf"/>
     <publication id="b7f9-e968-f5d8-b92b" name="Battlescroll: The Hunt"/>
     <publication id="e984-0732-33ea-1669" name="Season of War - Thondia"/>
+    <publication id="b393-b3a1-628b-d5ca" name="General&apos;s Handbook 2022"/>
   </publications>
   <costTypes>
     <costType id="points" name="pts" defaultCostLimit="0.0" hidden="false"/>
@@ -341,6 +342,7 @@
     <categoryEntry id="74b1-b223-a366-572d" name="Prime Hunters" publicationId="b7f9-e968-f5d8-b92b" hidden="false"/>
     <categoryEntry id="a7c8-8a45-50a1-eb95" name="INCARNATE" hidden="false"/>
     <categoryEntry id="73d2-3f60-289e-24fe" name="KRONDSPINE INCARNATE" hidden="false"/>
+    <categoryEntry id="7ede-19c1-7261-f88b" name="GALLETIAN VETERANS" hidden="false"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry id="36b7-ee1e-0855-f23f" name="**Pitched Battle GHB 2021**" hidden="false">
@@ -1352,6 +1354,341 @@
         </categoryLink>
       </categoryLinks>
     </forceEntry>
+    <forceEntry id="1411-460f-c135-a667" name="**Pitched Battle GHB 2022**" hidden="false">
+      <modifiers>
+        <modifier type="set" field="984d-45bb-517d-a3a2" value="1000.0">
+          <conditions>
+            <condition field="selections" scope="1411-460f-c135-a667" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fd9f-428a-177d-c765" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="984d-45bb-517d-a3a2" value="2000.0">
+          <conditions>
+            <condition field="selections" scope="1411-460f-c135-a667" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6330-7561-7a32-0851" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="984d-45bb-517d-a3a2" value="2500.0">
+          <conditions>
+            <condition field="selections" scope="1411-460f-c135-a667" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1e63-0b49-ac04-321f" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="append" field="name" value="1,000">
+          <conditions>
+            <condition field="selections" scope="1411-460f-c135-a667" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fd9f-428a-177d-c765" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="append" field="name" value="2,000">
+          <conditions>
+            <condition field="selections" scope="1411-460f-c135-a667" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6330-7561-7a32-0851" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="append" field="name" value="2,500">
+          <conditions>
+            <condition field="selections" scope="1411-460f-c135-a667" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1e63-0b49-ac04-321f" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="decrement" field="984d-45bb-517d-a3a2" value="250.0">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="aa3a-742d-9e34-e701" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="increment" field="984d-45bb-517d-a3a2" value="500.0">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="45c9-0873-d072-007a" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="decrement" field="984d-45bb-517d-a3a2" value="500.0">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6a86-ed1f-1db7-6f7c" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="increment" field="984d-45bb-517d-a3a2" value="250.0">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4c1d-7a55-fa32-d2be" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="points" scope="roster" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" id="984d-45bb-517d-a3a2" type="max"/>
+      </constraints>
+      <forceEntries>
+        <forceEntry id="1e36-e511-437b-5de8" name="Allies" hidden="false">
+          <modifiers>
+            <modifier type="set" field="a079-907b-0179-e965" value="100.0">
+              <conditions>
+                <condition field="selections" scope="1411-460f-c135-a667" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e860-9b1e-36bd-a54f" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="a079-907b-0179-e965" value="400.0">
+              <conditions>
+                <condition field="selections" scope="1411-460f-c135-a667" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cea8-e4b2-c44f-c7b4" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="a079-907b-0179-e965" value="200.0">
+              <conditions>
+                <condition field="selections" scope="1411-460f-c135-a667" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e9fc-6b3a-1b9a-e807" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="a079-907b-0179-e965" value="520.0">
+              <conditions>
+                <condition field="selections" scope="78f3-8a59-699a-61e8" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="24c2-fff5-f17c-3d07" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="a079-907b-0179-e965" value="300.0">
+              <conditions>
+                <condition field="selections" scope="1411-460f-c135-a667" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a3cc-3b86-4778-0b11" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="a079-907b-0179-e965" value="600.0">
+              <conditions>
+                <condition field="selections" scope="1411-460f-c135-a667" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ef67-15fb-487c-397a" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="points" scope="roster" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" id="a079-907b-0179-e965" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="e0d7-3885-b6ea-6e22" name="Artillery" hidden="false" targetId="1d26-07fc-6a66-d73e" primary="false"/>
+            <categoryLink id="db88-807d-b7e9-e1e9" name="Behemoth" hidden="false" targetId="fa0c-9044-2568-fa02" primary="false"/>
+            <categoryLink id="1312-b374-b77c-e604" name="Leader" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="false"/>
+            <categoryLink id="1f9e-1157-34ae-7cda" name="Other" hidden="false" targetId="065e-fda7-fd27-1f40" primary="false"/>
+            <categoryLink id="5ce3-3c0a-59f2-de80" name="Battleline" hidden="false" targetId="e9f2-765a-b7b8-ce8e" primary="false"/>
+          </categoryLinks>
+        </forceEntry>
+        <forceEntry id="fc4e-6be8-ec51-c113" name="Coalition" hidden="false">
+          <categoryLinks>
+            <categoryLink id="bb81-a783-8fee-783b" name="Artillery" hidden="false" targetId="1d26-07fc-6a66-d73e" primary="false"/>
+            <categoryLink id="b298-14c7-80a6-08e9" name="Behemoth" hidden="false" targetId="fa0c-9044-2568-fa02" primary="false"/>
+            <categoryLink id="1799-ed63-4742-c19d" name="Leader" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="false"/>
+            <categoryLink id="05c1-0655-0118-c61a" name="Other" hidden="false" targetId="065e-fda7-fd27-1f40" primary="false"/>
+            <categoryLink id="b58c-ceab-883c-de3f" name="Battleline" hidden="false" targetId="e9f2-765a-b7b8-ce8e" primary="false"/>
+          </categoryLinks>
+        </forceEntry>
+      </forceEntries>
+      <categoryLinks>
+        <categoryLink id="96c3-4c28-6916-7469" name="Core Battalion" hidden="false" targetId="6575-7d6c-ce4d-ada4" primary="false"/>
+        <categoryLink id="353e-d1f1-c5fa-26f6" name="Leader" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="false">
+          <modifiers>
+            <modifier type="set" field="4c21-e195-2b14-e003" value="4.0">
+              <conditions>
+                <condition field="selections" scope="1411-460f-c135-a667" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a3cc-3b86-4778-0b11" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="4c21-e195-2b14-e003" value="6.0">
+              <conditions>
+                <condition field="selections" scope="1411-460f-c135-a667" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cea8-e4b2-c44f-c7b4" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="4c21-e195-2b14-e003" value="8.0">
+              <conditions>
+                <condition field="selections" scope="1411-460f-c135-a667" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ef67-15fb-487c-397a" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="1d82-ddff-7647-645d" value="2.0">
+              <conditions>
+                <condition field="selections" scope="1411-460f-c135-a667" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e860-9b1e-36bd-a54f" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="1d82-ddff-7647-645d" value="3.0">
+              <conditions>
+                <condition field="selections" scope="1411-460f-c135-a667" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e9fc-6b3a-1b9a-e807" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="1d82-ddff-7647-645d" type="min"/>
+            <constraint field="selections" scope="roster" value="-1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="4c21-e195-2b14-e003" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="5c13-687b-bb66-11b5" name="Behemoth" hidden="false" targetId="fa0c-9044-2568-fa02" primary="false">
+          <modifiers>
+            <modifier type="set" field="4184-8d88-ec21-9128" value="3.0">
+              <conditions>
+                <condition field="selections" scope="1411-460f-c135-a667" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a3cc-3b86-4778-0b11" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="4184-8d88-ec21-9128" value="4.0">
+              <conditions>
+                <condition field="selections" scope="1411-460f-c135-a667" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cea8-e4b2-c44f-c7b4" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="4184-8d88-ec21-9128" value="6.0">
+              <conditions>
+                <condition field="selections" scope="1411-460f-c135-a667" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ef67-15fb-487c-397a" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="4184-8d88-ec21-9128" value="2.0">
+              <conditions>
+                <condition field="selections" scope="1411-460f-c135-a667" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e9fc-6b3a-1b9a-e807" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="4184-8d88-ec21-9128" value="1.0">
+              <conditions>
+                <condition field="selections" scope="1411-460f-c135-a667" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e860-9b1e-36bd-a54f" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="roster" value="-1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="4184-8d88-ec21-9128" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="19b6-6a3b-c803-cb79" name="Battleline" hidden="false" targetId="e9f2-765a-b7b8-ce8e" primary="false">
+          <modifiers>
+            <modifier type="set" field="cc5f-8c25-587e-8dd2" value="2.0">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="1411-460f-c135-a667" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a3cc-3b86-4778-0b11" type="equalTo"/>
+                    <condition field="selections" scope="1411-460f-c135-a667" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e9fc-6b3a-1b9a-e807" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" field="cc5f-8c25-587e-8dd2" value="1.0">
+              <conditions>
+                <condition field="selections" scope="1411-460f-c135-a667" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e860-9b1e-36bd-a54f" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="cc5f-8c25-587e-8dd2" value="3.0">
+              <conditions>
+                <condition field="selections" scope="1411-460f-c135-a667" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cea8-e4b2-c44f-c7b4" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="cc5f-8c25-587e-8dd2" value="4.0">
+              <conditions>
+                <condition field="selections" scope="1411-460f-c135-a667" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ef67-15fb-487c-397a" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="7a4f-ee50-90e0-01a7" type="min"/>
+            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="cc5f-8c25-587e-8dd2" type="min"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="0eb8-6b3f-b41b-585c" name="Other" hidden="false" targetId="065e-fda7-fd27-1f40" primary="false"/>
+        <categoryLink id="d8dc-63f6-c4f6-0ffa" name="Artillery" hidden="false" targetId="1d26-07fc-6a66-d73e" primary="false">
+          <modifiers>
+            <modifier type="set" field="799a-320c-f177-e697" value="3.0">
+              <conditions>
+                <condition field="selections" scope="1411-460f-c135-a667" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a3cc-3b86-4778-0b11" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="799a-320c-f177-e697" value="4.0">
+              <conditions>
+                <condition field="selections" scope="1411-460f-c135-a667" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cea8-e4b2-c44f-c7b4" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="799a-320c-f177-e697" value="6.0">
+              <conditions>
+                <condition field="selections" scope="1411-460f-c135-a667" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ef67-15fb-487c-397a" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="799a-320c-f177-e697" value="2.0">
+              <conditions>
+                <condition field="selections" scope="1411-460f-c135-a667" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e9fc-6b3a-1b9a-e807" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="799a-320c-f177-e697" value="1.0">
+              <conditions>
+                <condition field="selections" scope="1411-460f-c135-a667" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e860-9b1e-36bd-a54f" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="roster" value="-1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="799a-320c-f177-e697" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="7b01-e066-510d-32f7" name="Scenery" hidden="false" targetId="bc8a-9257-1601-6d62" primary="false"/>
+        <categoryLink id="ee7a-0246-97d5-b24b" name="General" hidden="false" targetId="b745-17c4-8fbf-8b04" primary="false"/>
+        <categoryLink id="786f-7673-91ac-2ff8" name="Artefact" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
+        <categoryLink id="c861-0b4e-3dfb-eac2" name="Allegiance" hidden="false" targetId="87e8-c095-f059-5f7b" primary="false">
+          <constraints>
+            <constraint field="selections" scope="1411-460f-c135-a667" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b9c7-c7a2-d93b-1f7b" type="min"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="d111-ffc6-869a-10ef" name="Game Options" hidden="false" targetId="1974-3f49-7f0b-8422" primary="false"/>
+        <categoryLink id="c76d-e152-7de3-b49a" name="Realm of Origin" hidden="false" targetId="5c6d-5384-bcb1-b474" primary="false">
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" id="d554-2db5-37f2-c2fd" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="f038-6564-d8db-5227" name="Malign Sorcery" hidden="false" targetId="eecb-ed66-d474-9ddd" primary="false">
+          <modifiers>
+            <modifier type="set" field="184a-5ebe-4aaa-c8d4" value="3.0">
+              <conditions>
+                <condition field="selections" scope="1411-460f-c135-a667" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cea8-e4b2-c44f-c7b4" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="184a-5ebe-4aaa-c8d4" value="4.0">
+              <conditions>
+                <condition field="selections" scope="1411-460f-c135-a667" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ef67-15fb-487c-397a" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="184a-5ebe-4aaa-c8d4" value="1.0">
+              <conditions>
+                <condition field="selections" scope="1411-460f-c135-a667" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e860-9b1e-36bd-a54f" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="184a-5ebe-4aaa-c8d4" value="2.0">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="1411-460f-c135-a667" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e9fc-6b3a-1b9a-e807" type="equalTo"/>
+                    <condition field="selections" scope="1411-460f-c135-a667" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a3cc-3b86-4778-0b11" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="roster" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="184a-5ebe-4aaa-c8d4" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="919d-e4d9-10d3-f173" name="Command Points" hidden="false" targetId="8be8-3ccd-be93-b55e" primary="false"/>
+        <categoryLink id="bd07-8034-ba93-3588" name="Realm of Battle" hidden="false" targetId="5e28-c4f1-4a92-b75c" primary="false">
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" id="9235-7529-1d03-ace8" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="2af2-96e5-b37b-3010" name="Reinforced" hidden="false" targetId="1109-7ce6-b7a3-3a0c" primary="false">
+          <modifiers>
+            <modifier type="set" field="a0bd-117b-f165-22cd" value="3.0">
+              <conditions>
+                <condition field="selections" scope="1411-460f-c135-a667" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a3cc-3b86-4778-0b11" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="a0bd-117b-f165-22cd" value="4.0">
+              <conditions>
+                <condition field="selections" scope="1411-460f-c135-a667" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cea8-e4b2-c44f-c7b4" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="a0bd-117b-f165-22cd" value="6.0">
+              <conditions>
+                <condition field="selections" scope="1411-460f-c135-a667" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ef67-15fb-487c-397a" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="a0bd-117b-f165-22cd" value="2.0">
+              <conditions>
+                <condition field="selections" scope="1411-460f-c135-a667" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e9fc-6b3a-1b9a-e807" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="a0bd-117b-f165-22cd" value="1.0">
+              <conditions>
+                <condition field="selections" scope="1411-460f-c135-a667" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e860-9b1e-36bd-a54f" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="roster" value="-1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="a0bd-117b-f165-22cd" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="c692-4edd-2b3d-3bb0" name="Legends" hidden="false" targetId="787f-7260-bb51-08c8" primary="false">
+          <constraints>
+            <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="32e1-a8f0-7026-4eea" type="max"/>
+          </constraints>
+        </categoryLink>
+      </categoryLinks>
+    </forceEntry>
   </forceEntries>
   <selectionEntries>
     <selectionEntry id="19fe-0099-8319-6fdf" name="Points Variation" hidden="true" collective="false" import="true" type="upgrade">
@@ -1407,6 +1744,51 @@
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="5e69-9e5f-725b-66a6" name="GHB 2022 Rules" hidden="true" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1411-460f-c135-a667" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="400d-be39-3e9c-115f" type="max"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9089-ef80-cd7d-43f9" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="761d-fbdd-fdae-76b0" name="Realm Command: Overwhelming Assault" hidden="false" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
+          <characteristics>
+            <characteristic name="Command Ability Details" typeId="1b71-4c83-4e8c-093f">You can use this command ability at the end of your charge phase. The unit that receives the command must be a GALLETIAN VETERANS that has 10 or more models. Pick 1 enemy unit within 1&quot; of that unit that has a Wounds characteristic of 4 or less and roll a dice. If the roll is greater than the number of models in that enemy unit, the strike-last effect applies to that enemy unit in the following combat phase.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="6c16-2f47-654d-6164" name="Gaze of Ghur" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+          <characteristics>
+            <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
+            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">12&quot;</characteristic>
+            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick 1 enemy unit within range and visible to the caster. When determining the number of models in that enemy unit that are contesting an objective, your opponenet must halve that number, rounding down.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="63a5-b54e-6be0-a48f" name="The Bonds of Battle" hidden="false" typeId="6bf0-7801-561f-cc28" typeName="Special Rules">
+          <characteristics>
+            <characteristic name="Description" typeId="82bd-2ffd-8589-576c">When a model in a GALLETIAN VETERANS unit makes an attack with a melee weapon, you can target an enemy unit within 1/2&quot; of another model from that GALLETIAN VETERANS unit instead of using the weapon&apos;s Range characteristic for that attack. If you do so, the attacking model must be within 12/2&quot; of another model from its own unit that is within 12&quot; of the target.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="9bbf-623a-02e8-89f5" name="Proving Grounds" hidden="false" typeId="6bf0-7801-561f-cc28" typeName="Special Rules">
+          <characteristics>
+            <characteristic name="Description" typeId="82bd-2ffd-8589-576c">At the start of each battle round, after the players have determined who will take the first turn, the player who will take the second turn can pick 1 objective on the battlefield to be the proving ground until the end of that battle round. The same objective cannot be picked as the proving ground more than once per battle, and only 1 objective can be marked as the proving ground ant any one time. Only models in units with the GALLETIAN VETERANS keyword can contest an bojective marked as the proving ground. </characteristic>
+          </characteristics>
+        </profile>
+        <profile id="e681-1ade-ef65-e311" name="Masters of the Splintered Land" hidden="false" typeId="6bf0-7801-561f-cc28" typeName="Special Rules">
+          <characteristics>
+            <characteristic name="Description" typeId="82bd-2ffd-8589-576c">Friendly Battleline units that have a Wounds characteristic of 4 or less and do not have mounts gain the GALLETIAN VETERANS keyword. </characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="1663-e2f8-1f43-cc44" name="New CategoryLink" hidden="false" targetId="1974-3f49-7f0b-8422" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
   </selectionEntries>
   <entryLinks>
     <entryLink id="1a07-20e9-829c-2f2a" name="Realm of Origin" hidden="false" collective="false" import="true" targetId="268a-c131-4914-7087" type="selectionEntry">
@@ -1444,6 +1826,8 @@
       </categoryLinks>
     </entryLink>
     <entryLink id="c958-5caf-b101-fdc6" name="Krondspine Incanate of Ghur" hidden="false" collective="false" import="true" targetId="0553-10ac-2bd9-01a5" type="selectionEntry"/>
+    <entryLink id="8b70-ad45-3372-56d9" name="Core Battalion: Bounty Hunters" hidden="false" collective="false" import="true" targetId="c7a2-43b2-11cd-3ad1" type="selectionEntry"/>
+    <entryLink id="958c-2bc1-3022-47ab" name="Core Battalion: Expert Conquerors" hidden="false" collective="false" import="true" targetId="15e3-8b94-19b1-a6dc" type="selectionEntry"/>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="869c-168d-eba5-eacf" name="Arcane Bolt" hidden="false" collective="false" import="true" type="upgrade">
@@ -2164,6 +2548,70 @@ In addition, this incarnate can carry out the Devour Endless Spell monstrous ram
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="400.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="15e3-8b94-19b1-a6dc" name="Core Battalion: Expert Conquerors" publicationId="b393-b3a1-628b-d5ca" hidden="true" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1411-460f-c135-a667" type="greaterThan"/>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f5c9-2d9a-2ffb-edd5" type="greaterThan"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <profiles>
+        <profile id="9075-d3b2-8f61-ebd3" name="Dominant Force" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
+          <characteristics>
+            <characteristic name="Battalion Ability Details" typeId="08e0-9ead-1dbe-c801">GALLETIAN VETERANS units only. Each model in this battalion counts as 3 models for the p urposes of contesting objectives.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="8c44-b929-4631-1da3" name="Core Battalion: Expert Conquerors" hidden="false" typeId="75e0-a332-e4f5-bf36" typeName="Battalion Organisation">
+          <characteristics>
+            <characteristic name="Required" typeId="eb5f-e9d2-e457-bff5">2-3 Troops</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="70e9-088a-1d97-e716" name="New CategoryLink" hidden="false" targetId="6575-7d6c-ce4d-ada4" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="c7a2-43b2-11cd-3ad1" name="Core Battalion: Bounty Hunters" publicationId="b393-b3a1-628b-d5ca" hidden="true" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1411-460f-c135-a667" type="greaterThan"/>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f5c9-2d9a-2ffb-edd5" type="greaterThan"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <profiles>
+        <profile id="d226-d50c-b28f-f59f" name="Headhunters" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
+          <characteristics>
+            <characteristic name="Battalion Ability Details" typeId="08e0-9ead-1dbe-c801">If the target of an attack made with a melee weapon by a model in this battalion is a GALLETIAN VETERANS unit, add 1 to the Damage characteristic of that weapon for that attack.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="fd71-85c3-bc73-595b" name="Core Battalion: Bounty Hunters" hidden="false" typeId="75e0-a332-e4f5-bf36" typeName="Battalion Organisation">
+          <characteristics>
+            <characteristic name="Required" typeId="eb5f-e9d2-e457-bff5">2-3 Troops</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="b917-0ab4-a585-dff2" name="New CategoryLink" hidden="false" targetId="6575-7d6c-ce4d-ada4" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>
@@ -3116,6 +3564,7 @@ In addition, this incarnate can carry out the Devour Endless Spell monstrous ram
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
+        <selectionEntry id="6f6e-2199-1c40-fa84" name="Battle: Gallet, the Splintered Land" hidden="false" collective="false" import="true" type="upgrade"/>
       </selectionEntries>
     </selectionEntryGroup>
     <selectionEntryGroup id="b275-810f-adfc-156b" name="Universal Core Battalions" hidden="true" collective="false" import="true">
@@ -3792,6 +4241,103 @@ In addition, this incarnate can carry out the Devour Endless Spell monstrous ram
                 <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="60d7-2737-b6d8-d69f" type="max"/>
                 <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="fea2-f20a-9deb-7b8d" type="min"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9d84-fb9e-1e87-2260" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="7d8b-0b85-54cf-b02e" name="Expert Conquerors" hidden="true" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="15e3-8b94-19b1-a6dc" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a64c-c4dd-57e6-65b3" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="1c3f-60ef-a66d-85e5" name="Expert Conquerors - 2-3 Troops" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="e9c3-2235-93f5-296d" value="3.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="15e3-8b94-19b1-a6dc" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fa0c-9044-2568-fa02" type="notInstanceOf"/>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="15e3-8b94-19b1-a6dc" type="greaterThan"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1d26-07fc-6a66-d73e" type="notInstanceOf"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6c6b-e787-f9b8-a510" type="notInstanceOf"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7ede-19c1-7261-f88b" type="instanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="increment" field="cb2d-9026-6c1e-7639" value="2.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="15e3-8b94-19b1-a6dc" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e9c3-2235-93f5-296d" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="cb2d-9026-6c1e-7639" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="eadb-ea04-9a9d-a2a0" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="b57d-af1f-40f9-88e2" name="Bounty Hunters" hidden="true" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="c7a2-43b2-11cd-3ad1" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f040-f1a6-ac30-c852" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="55ad-95e3-8997-94ed" name="Bounty Hunters - 2-3 Troops" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="21ff-467b-0e58-078d" value="3.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="c7a2-43b2-11cd-3ad1" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fa0c-9044-2568-fa02" type="notInstanceOf"/>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="c7a2-43b2-11cd-3ad1" type="greaterThan"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1d26-07fc-6a66-d73e" type="notInstanceOf"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6c6b-e787-f9b8-a510" type="notInstanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="increment" field="5dca-a7ee-7b5b-7a73" value="2.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="c7a2-43b2-11cd-3ad1" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="21ff-467b-0e58-078d" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5dca-a7ee-7b5b-7a73" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="eb0d-d593-eef5-1dd1" type="max"/>
               </constraints>
               <costs>
                 <cost name="pts" typeId="points" value="0.0"/>
