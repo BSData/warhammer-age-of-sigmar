@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="de06-0235-6a96-193b" name="Chaos - Skaven - Data" revision="62" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="133" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="de06-0235-6a96-193b" name="Chaos - Skaven - Data" revision="63" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="133" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="bcc4-c671-pubd1e1" name="Chaos Battletome: Skaven"/>
     <publication id="bcc4-c671-pubd1e30758" name="Warscroll Compendium: Skaven"/>
@@ -118,6 +118,10 @@
     </categoryEntry>
     <categoryEntry id="d463-82b8-2e15-bc10" name="SLYNK SKITTERSHANK" hidden="false"/>
     <categoryEntry id="e383-6316-4bfc-b0aa" name="SKITTERSHANK&apos;S CLAWPACK" hidden="false"/>
+    <categoryEntry id="49c7-82f9-bb26-9c3b" name="Eshin Hero" hidden="false"/>
+    <categoryEntry id="9e59-60ce-fa88-2648" name="Moulder Hero" hidden="false"/>
+    <categoryEntry id="7c7b-d978-12c6-b6a0" name="Pestilens Hero" hidden="false"/>
+    <categoryEntry id="e48f-d0ab-be89-7b30" name="Skryre Hero" hidden="false"/>
   </categoryEntries>
   <sharedSelectionEntries>
     <selectionEntry id="aca2-1d43-0220-2465" name="Skritch Spiteclaw" publicationId="bcc4-c671-pubd1e1" page="118" hidden="false" collective="false" import="true" type="unit">
@@ -440,6 +444,7 @@
         <categoryLink id="756d-d18b-5dfc-c3e0" name="WARLOCK ENGINEER" hidden="false" targetId="9319-f73a-ef27-fd21" primary="false"/>
         <categoryLink id="b5a4-7bae-bd98-bc3e" name="10 or less wounds Leader" hidden="false" targetId="a8ed-ca35-24e0-cf2e" primary="false"/>
         <categoryLink id="6a91-9e5d-c51c-f804" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
+        <categoryLink id="7435-eaf7-6e2c-8920" name="Skryre Hero" hidden="false" targetId="e48f-d0ab-be89-7b30" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="d577-751f-577a-e7b3" name="Warpfire Gauntlet" hidden="false" collective="false" import="true" type="upgrade">
@@ -983,30 +988,8 @@ At the end of your charge phase, you can reveal this hidden unit if the unit in 
             <conditionGroup type="and">
               <conditions>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="51b7-c778-b260-8e6a" type="equalTo"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9e59-60ce-fa88-2648" type="greaterThan"/>
               </conditions>
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1ebc-adcb-d870-3ea6" type="greaterThan"/>
-                  </conditions>
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3478-7e3a-da0b-2d36" type="greaterThan"/>
-                        <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="49f5-6781-e150-eb5f" type="equalTo"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9a0b-8f23-d27c-491a" type="equalTo"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5e5d-af59-6ea5-832c" type="equalTo"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3058-1b6c-3bc2-746d" type="equalTo"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1c25-073b-6d5f-cec3" type="equalTo"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
             </conditionGroup>
           </conditionGroups>
         </modifier>
@@ -1118,29 +1101,10 @@ At the end of your charge phase, you can reveal this hidden unit if the unit in 
             <modifier type="set" field="95f2-6885-756f-9ea5" value="2.0">
               <conditionGroups>
                 <conditionGroup type="and">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1ebc-adcb-d870-3ea6" type="greaterThan"/>
-                      </conditions>
-                      <conditionGroups>
-                        <conditionGroup type="and">
-                          <conditions>
-                            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3478-7e3a-da0b-2d36" type="greaterThan"/>
-                            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="49f5-6781-e150-eb5f" type="equalTo"/>
-                          </conditions>
-                        </conditionGroup>
-                      </conditionGroups>
-                    </conditionGroup>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9a0b-8f23-d27c-491a" type="equalTo"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5e5d-af59-6ea5-832c" type="equalTo"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3058-1b6c-3bc2-746d" type="equalTo"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1c25-073b-6d5f-cec3" type="equalTo"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="51b7-c778-b260-8e6a" type="equalTo"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9e59-60ce-fa88-2648" type="greaterThan"/>
+                  </conditions>
                 </conditionGroup>
               </conditionGroups>
             </modifier>
@@ -1254,30 +1218,8 @@ If the 3D6 roll was not 13, remove 1 dice of your choice and use the remaining 2
             <conditionGroup type="and">
               <conditions>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="51b7-c778-b260-8e6a" type="equalTo"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="49c7-82f9-bb26-9c3b" type="greaterThan"/>
               </conditions>
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="230d-5573-4086-e687" type="greaterThan"/>
-                  </conditions>
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3478-7e3a-da0b-2d36" type="greaterThan"/>
-                        <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="49f5-6781-e150-eb5f" type="equalTo"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5e5d-af59-6ea5-832c" type="equalTo"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="07f3-a813-9aea-eff4" type="equalTo"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3058-1b6c-3bc2-746d" type="equalTo"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1c25-073b-6d5f-cec3" type="equalTo"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
             </conditionGroup>
           </conditionGroups>
         </modifier>
@@ -1418,29 +1360,10 @@ If the 3D6 roll was not 13, remove 1 dice of your choice and use the remaining 2
             <modifier type="set" field="95f2-6885-756f-9ea5" value="2.0">
               <conditionGroups>
                 <conditionGroup type="and">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="230d-5573-4086-e687" type="greaterThan"/>
-                      </conditions>
-                      <conditionGroups>
-                        <conditionGroup type="and">
-                          <conditions>
-                            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3478-7e3a-da0b-2d36" type="greaterThan"/>
-                            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="49f5-6781-e150-eb5f" type="equalTo"/>
-                          </conditions>
-                        </conditionGroup>
-                      </conditionGroups>
-                    </conditionGroup>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5e5d-af59-6ea5-832c" type="equalTo"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="07f3-a813-9aea-eff4" type="equalTo"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3058-1b6c-3bc2-746d" type="equalTo"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1c25-073b-6d5f-cec3" type="equalTo"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="51b7-c778-b260-8e6a" type="equalTo"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="49c7-82f9-bb26-9c3b" type="greaterThan"/>
+                  </conditions>
                 </conditionGroup>
               </conditionGroups>
             </modifier>
@@ -1855,31 +1778,8 @@ You can then summon 1 unit of CLANRATS to the battlefield, and add it to your ar
             <conditionGroup type="and">
               <conditions>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="51b7-c778-b260-8e6a" type="equalTo"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="49c7-82f9-bb26-9c3b" type="greaterThan"/>
               </conditions>
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="230d-5573-4086-e687" type="greaterThan"/>
-                  </conditions>
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3478-7e3a-da0b-2d36" type="greaterThan"/>
-                        <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="49f5-6781-e150-eb5f" type="equalTo"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="07f3-a813-9aea-eff4" type="equalTo"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5e5d-af59-6ea5-832c" type="equalTo"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3058-1b6c-3bc2-746d" type="equalTo"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1c25-073b-6d5f-cec3" type="equalTo"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fa82-5fdb-6243-958a" type="equalTo"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
             </conditionGroup>
           </conditionGroups>
         </modifier>
@@ -2028,30 +1928,10 @@ You can then summon 1 unit of CLANRATS to the battlefield, and add it to your ar
             <modifier type="set" field="95f2-6885-756f-9ea5" value="2.0">
               <conditionGroups>
                 <conditionGroup type="and">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="230d-5573-4086-e687" type="greaterThan"/>
-                      </conditions>
-                      <conditionGroups>
-                        <conditionGroup type="and">
-                          <conditions>
-                            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3478-7e3a-da0b-2d36" type="greaterThan"/>
-                            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="49f5-6781-e150-eb5f" type="equalTo"/>
-                          </conditions>
-                        </conditionGroup>
-                      </conditionGroups>
-                    </conditionGroup>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="07f3-a813-9aea-eff4" type="equalTo"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5e5d-af59-6ea5-832c" type="equalTo"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3058-1b6c-3bc2-746d" type="equalTo"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1c25-073b-6d5f-cec3" type="equalTo"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fa82-5fdb-6243-958a" type="equalTo"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="51b7-c778-b260-8e6a" type="equalTo"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="49c7-82f9-bb26-9c3b" type="greaterThan"/>
+                  </conditions>
                 </conditionGroup>
               </conditionGroups>
             </modifier>
@@ -2073,31 +1953,8 @@ You can then summon 1 unit of CLANRATS to the battlefield, and add it to your ar
             <conditionGroup type="and">
               <conditions>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="51b7-c778-b260-8e6a" type="equalTo"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7c7b-d978-12c6-b6a0" type="greaterThan"/>
               </conditions>
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="113c-cd67-094e-5195" type="greaterThan"/>
-                  </conditions>
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3478-7e3a-da0b-2d36" type="greaterThan"/>
-                        <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="49f5-6781-e150-eb5f" type="equalTo"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="07f3-a813-9aea-eff4" type="equalTo"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5e5d-af59-6ea5-832c" type="equalTo"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3058-1b6c-3bc2-746d" type="equalTo"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9a0b-8f23-d27c-491a" type="equalTo"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fa82-5fdb-6243-958a" type="equalTo"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
             </conditionGroup>
           </conditionGroups>
         </modifier>
@@ -2230,30 +2087,10 @@ You can then summon 1 unit of CLANRATS to the battlefield, and add it to your ar
             <modifier type="set" field="95f2-6885-756f-9ea5" value="2.0">
               <conditionGroups>
                 <conditionGroup type="and">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="113c-cd67-094e-5195" type="greaterThan"/>
-                      </conditions>
-                      <conditionGroups>
-                        <conditionGroup type="and">
-                          <conditions>
-                            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3478-7e3a-da0b-2d36" type="greaterThan"/>
-                            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="49f5-6781-e150-eb5f" type="equalTo"/>
-                          </conditions>
-                        </conditionGroup>
-                      </conditionGroups>
-                    </conditionGroup>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="07f3-a813-9aea-eff4" type="equalTo"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5e5d-af59-6ea5-832c" type="equalTo"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3058-1b6c-3bc2-746d" type="equalTo"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9a0b-8f23-d27c-491a" type="equalTo"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fa82-5fdb-6243-958a" type="equalTo"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="51b7-c778-b260-8e6a" type="equalTo"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7c7b-d978-12c6-b6a0" type="greaterThan"/>
+                  </conditions>
                 </conditionGroup>
               </conditionGroups>
             </modifier>
@@ -2372,6 +2209,7 @@ You can then summon 1 unit of CLANRATS to the battlefield, and add it to your ar
         <categoryLink id="71d5-c77e-3ce9-40de" name="CLANS PESTILENS" hidden="false" targetId="1c25-073b-6d5f-cec3" primary="false"/>
         <categoryLink id="a4ba-9a7c-e56d-5e83" name="Behemoth" hidden="false" targetId="fa0c-9044-2568-fa02" primary="false"/>
         <categoryLink id="0557-f3b8-b090-f3e7" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
+        <categoryLink id="ac98-0fa5-ad65-05f4" name="Pestilens Hero" hidden="false" targetId="7c7b-d978-12c6-b6a0" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="4298-a573-99c3-17a3" name="Great Plague Censer" hidden="false" collective="false" import="true" type="upgrade">
@@ -2506,24 +2344,8 @@ You can then summon 1 unit of CLANRATS to the battlefield, and add it to your ar
             <conditionGroup type="and">
               <conditions>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="51b7-c778-b260-8e6a" type="equalTo"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7c7b-d978-12c6-b6a0" type="greaterThan"/>
               </conditions>
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="113c-cd67-094e-5195" type="greaterThan"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3478-7e3a-da0b-2d36" type="greaterThan"/>
-                  </conditions>
-                </conditionGroup>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="07f3-a813-9aea-eff4" type="equalTo"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5e5d-af59-6ea5-832c" type="equalTo"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3058-1b6c-3bc2-746d" type="equalTo"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9a0b-8f23-d27c-491a" type="equalTo"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fa82-5fdb-6243-958a" type="equalTo"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
             </conditionGroup>
           </conditionGroups>
         </modifier>
@@ -2703,23 +2525,10 @@ You can then summon 1 unit of CLANRATS to the battlefield, and add it to your ar
             <modifier type="set" field="95f2-6885-756f-9ea5" value="2.0">
               <conditionGroups>
                 <conditionGroup type="and">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="113c-cd67-094e-5195" type="greaterThan"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3478-7e3a-da0b-2d36" type="greaterThan"/>
-                      </conditions>
-                    </conditionGroup>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="07f3-a813-9aea-eff4" type="equalTo"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5e5d-af59-6ea5-832c" type="equalTo"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3058-1b6c-3bc2-746d" type="equalTo"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9a0b-8f23-d27c-491a" type="equalTo"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fa82-5fdb-6243-958a" type="equalTo"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="51b7-c778-b260-8e6a" type="equalTo"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7c7b-d978-12c6-b6a0" type="greaterThan"/>
+                  </conditions>
                 </conditionGroup>
               </conditionGroups>
             </modifier>
@@ -2780,6 +2589,7 @@ You can then summon 1 unit of CLANRATS to the battlefield, and add it to your ar
         <categoryLink id="39c0-72aa-c9c2-8076" name="CLANS PESTILENS" hidden="false" targetId="1c25-073b-6d5f-cec3" primary="false"/>
         <categoryLink id="f184-4658-2c66-71ce" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
         <categoryLink id="0592-9012-1cb2-4193" name="10 or less wounds Leader" hidden="false" targetId="a8ed-ca35-24e0-cf2e" primary="false"/>
+        <categoryLink id="08bc-561f-be52-6bf3" name="Pestilens Hero" hidden="false" targetId="7c7b-d978-12c6-b6a0" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="b52f-a903-c2cd-cc96" name="Plague Censer" hidden="false" collective="false" import="true" type="upgrade">
@@ -2976,30 +2786,8 @@ In addition, if the target unit has 10 or more models, add 1 to hit rolls for at
             <conditionGroup type="and">
               <conditions>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="51b7-c778-b260-8e6a" type="equalTo"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9e59-60ce-fa88-2648" type="greaterThan"/>
               </conditions>
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1ebc-adcb-d870-3ea6" type="greaterThan"/>
-                  </conditions>
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3478-7e3a-da0b-2d36" type="greaterThan"/>
-                        <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="49f5-6781-e150-eb5f" type="equalTo"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9a0b-8f23-d27c-491a" type="equalTo"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3058-1b6c-3bc2-746d" type="equalTo"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1c25-073b-6d5f-cec3" type="equalTo"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5e5d-af59-6ea5-832c" type="equalTo"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
             </conditionGroup>
           </conditionGroups>
         </modifier>
@@ -3141,29 +2929,10 @@ In addition, if the target unit has 10 or more models, add 1 to hit rolls for at
             <modifier type="set" field="95f2-6885-756f-9ea5" value="2.0">
               <conditionGroups>
                 <conditionGroup type="and">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1ebc-adcb-d870-3ea6" type="greaterThan"/>
-                      </conditions>
-                      <conditionGroups>
-                        <conditionGroup type="and">
-                          <conditions>
-                            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3478-7e3a-da0b-2d36" type="greaterThan"/>
-                            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="49f5-6781-e150-eb5f" type="equalTo"/>
-                          </conditions>
-                        </conditionGroup>
-                      </conditionGroups>
-                    </conditionGroup>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9a0b-8f23-d27c-491a" type="equalTo"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3058-1b6c-3bc2-746d" type="equalTo"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1c25-073b-6d5f-cec3" type="equalTo"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5e5d-af59-6ea5-832c" type="equalTo"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="51b7-c778-b260-8e6a" type="equalTo"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9e59-60ce-fa88-2648" type="greaterThan"/>
+                  </conditions>
                 </conditionGroup>
               </conditionGroups>
             </modifier>
@@ -3534,30 +3303,8 @@ At the start of your shooting phase, you can reveal this hidden unit.  If you do
             <conditionGroup type="and">
               <conditions>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="51b7-c778-b260-8e6a" type="equalTo"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e48f-d0ab-be89-7b30" type="greaterThan"/>
               </conditions>
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="103a-ea19-f285-ca41" type="greaterThan"/>
-                  </conditions>
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3478-7e3a-da0b-2d36" type="greaterThan"/>
-                        <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="49f5-6781-e150-eb5f" type="equalTo"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9a0b-8f23-d27c-491a" type="equalTo"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="07f3-a813-9aea-eff4" type="equalTo"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3058-1b6c-3bc2-746d" type="equalTo"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1c25-073b-6d5f-cec3" type="equalTo"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
             </conditionGroup>
           </conditionGroups>
         </modifier>
@@ -3662,29 +3409,10 @@ At the start of your shooting phase, you can reveal this hidden unit.  If you do
             <modifier type="set" field="95f2-6885-756f-9ea5" value="2.0">
               <conditionGroups>
                 <conditionGroup type="and">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="103a-ea19-f285-ca41" type="greaterThan"/>
-                      </conditions>
-                      <conditionGroups>
-                        <conditionGroup type="and">
-                          <conditions>
-                            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3478-7e3a-da0b-2d36" type="greaterThan"/>
-                            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="49f5-6781-e150-eb5f" type="equalTo"/>
-                          </conditions>
-                        </conditionGroup>
-                      </conditionGroups>
-                    </conditionGroup>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9a0b-8f23-d27c-491a" type="equalTo"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="07f3-a813-9aea-eff4" type="equalTo"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3058-1b6c-3bc2-746d" type="equalTo"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1c25-073b-6d5f-cec3" type="equalTo"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="51b7-c778-b260-8e6a" type="equalTo"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e48f-d0ab-be89-7b30" type="greaterThan"/>
+                  </conditions>
                 </conditionGroup>
               </conditionGroups>
             </modifier>
@@ -3706,30 +3434,8 @@ At the start of your shooting phase, you can reveal this hidden unit.  If you do
             <conditionGroup type="and">
               <conditions>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="51b7-c778-b260-8e6a" type="equalTo"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e48f-d0ab-be89-7b30" type="greaterThan"/>
               </conditions>
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="103a-ea19-f285-ca41" type="greaterThan"/>
-                  </conditions>
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3478-7e3a-da0b-2d36" type="greaterThan"/>
-                        <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="49f5-6781-e150-eb5f" type="equalTo"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9a0b-8f23-d27c-491a" type="equalTo"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="07f3-a813-9aea-eff4" type="equalTo"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3058-1b6c-3bc2-746d" type="equalTo"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1c25-073b-6d5f-cec3" type="equalTo"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
             </conditionGroup>
           </conditionGroups>
         </modifier>
@@ -3976,29 +3682,10 @@ In addition, add 1 wound hit rolls for attacks made with Windlaunchers if the ta
             <modifier type="set" field="95f2-6885-756f-9ea5" value="2.0">
               <conditionGroups>
                 <conditionGroup type="and">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="103a-ea19-f285-ca41" type="greaterThan"/>
-                      </conditions>
-                      <conditionGroups>
-                        <conditionGroup type="and">
-                          <conditions>
-                            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3478-7e3a-da0b-2d36" type="greaterThan"/>
-                            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="49f5-6781-e150-eb5f" type="equalTo"/>
-                          </conditions>
-                        </conditionGroup>
-                      </conditionGroups>
-                    </conditionGroup>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9a0b-8f23-d27c-491a" type="equalTo"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="07f3-a813-9aea-eff4" type="equalTo"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3058-1b6c-3bc2-746d" type="equalTo"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1c25-073b-6d5f-cec3" type="equalTo"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="51b7-c778-b260-8e6a" type="equalTo"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e48f-d0ab-be89-7b30" type="greaterThan"/>
+                  </conditions>
                 </conditionGroup>
               </conditionGroups>
             </modifier>
@@ -4492,6 +4179,7 @@ If the 3D6 roll was not 13, remove 1 dice of your choice and use the remaining 2
         <categoryLink id="49f8-ba21-7dae-454a" name="Behemoth" hidden="false" targetId="fa0c-9044-2568-fa02" primary="false"/>
         <categoryLink id="8187-ad9c-b226-3503" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
         <categoryLink id="5064-ea1e-c2fa-e18d" name="SKAVEN" hidden="false" targetId="8f8a-7c29-799e-ace9" primary="false"/>
+        <categoryLink id="e1cb-07d8-8c60-0b0e" name="Pestilens Hero" hidden="false" targetId="7c7b-d978-12c6-b6a0" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="9d09-3943-afe3-3617" name="Plaguereapers" hidden="false" collective="false" import="true" type="upgrade">
@@ -4634,6 +4322,7 @@ If the 3D6 roll was not 13, remove 1 dice of your choice and use the remaining 2
         <categoryLink id="8f75-32f5-7595-358a" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
         <categoryLink id="7431-9c20-593b-7184" name="Behemoth" hidden="false" targetId="fa0c-9044-2568-fa02" primary="false"/>
         <categoryLink id="1421-fc44-2736-879b" name="SKAVEN" hidden="false" targetId="8f8a-7c29-799e-ace9" primary="false"/>
+        <categoryLink id="8ac9-c9fd-4312-8c1e" name="Eshin Hero" hidden="false" targetId="49c7-82f9-bb26-9c3b" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="db4c-5498-a98e-35f8" name="Doomstar" hidden="false" collective="false" import="true" type="upgrade">
@@ -5013,6 +4702,7 @@ If the 3D6 roll was not 13, remove 1 dice of your choice and use the remaining 2
         <categoryLink id="22f0-ff7a-2404-21a7" name="CLANS SKYRE" hidden="false" targetId="5e5d-af59-6ea5-832c" primary="false"/>
         <categoryLink id="9c80-1aa4-c95e-f05c" name="10 or less wounds Leader" hidden="false" targetId="a8ed-ca35-24e0-cf2e" primary="false"/>
         <categoryLink id="789c-6b3c-88f4-5a84" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
+        <categoryLink id="6201-f58b-1782-f86b" name="Skryre Hero" hidden="false" targetId="e48f-d0ab-be89-7b30" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="3845-8836-0ee7-9f49" name="Warp Lightning" hidden="false" collective="false" import="true" type="upgrade">
@@ -6566,6 +6256,7 @@ At the start of the combat phase, if this unit is hidden, you can reveal it. In 
         <categoryLink id="4664-2b16-de26-3819" name="SKAVEN" hidden="false" targetId="8f8a-7c29-799e-ace9" primary="false"/>
         <categoryLink id="bf49-2f98-51b5-1a30" name="10 or less wounds Leader" hidden="false" targetId="a8ed-ca35-24e0-cf2e" primary="false"/>
         <categoryLink id="35e3-b80d-b7e8-8b20" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
+        <categoryLink id="f974-0b4d-dfd9-e995" name="Eshin Hero" hidden="false" targetId="49c7-82f9-bb26-9c3b" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="ebbf-ade4-389e-5f42" name="Eshin Throwing Stars" hidden="false" collective="false" import="true" type="upgrade">
@@ -6667,6 +6358,7 @@ At the start of the combat phase, if this unit is hidden, you can reveal it. In 
         <categoryLink id="e1b3-ff7f-1eee-294f" name="SKAVEN" hidden="false" targetId="8f8a-7c29-799e-ace9" primary="false"/>
         <categoryLink id="e90e-66c9-2405-76c4" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
         <categoryLink id="bb53-85db-67fb-d705" name="10 or less wounds Leader" hidden="false" targetId="a8ed-ca35-24e0-cf2e" primary="false"/>
+        <categoryLink id="4d1c-f932-9cc8-d05e" name="Moulder Hero" hidden="false" targetId="9e59-60ce-fa88-2648" primary="false"/>
       </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="9cd0-fbf7-5022-c070" name="Weapon Options" hidden="false" collective="false" import="true">
@@ -6781,6 +6473,7 @@ Alternatively, before making the casting roll, you can say that this model will 
         <categoryLink id="7399-692d-ca44-f291" name="WIZARD" hidden="false" targetId="4f53-8230-2f02-9639" primary="false"/>
         <categoryLink id="03bc-450a-9793-0963" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
         <categoryLink id="c634-3b88-9731-aa22" name="10 or less wounds Leader" hidden="false" targetId="a8ed-ca35-24e0-cf2e" primary="false"/>
+        <categoryLink id="68ec-cf45-4e10-d213" name="Skryre Hero" hidden="false" targetId="e48f-d0ab-be89-7b30" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="f7de-a232-fb79-9d43" name="Doomrocket" hidden="false" collective="false" import="true" type="upgrade">
@@ -7914,6 +7607,7 @@ Alternatively, before making the casting roll, you can say that this model will 
         <categoryLink id="7c02-c960-a89b-161a" name="DEATHMASTER" hidden="false" targetId="ab95-95da-239d-dd92" primary="false"/>
         <categoryLink id="bfd9-05cd-0c25-d7f5" name="SLINK SKITTERSHANK" hidden="false" targetId="d463-82b8-2e15-bc10" primary="false"/>
         <categoryLink id="7f9f-8206-eb60-6d2c" name="9 or less wounds Leader" hidden="false" targetId="a8ed-ca35-24e0-cf2e" primary="false"/>
+        <categoryLink id="c3ef-f3bb-f7e5-1ac6" name="Eshin Hero" hidden="false" targetId="49c7-82f9-bb26-9c3b" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="6cc5-b12c-03ca-e3a0" name="Eshin Throwing Stars" hidden="false" collective="false" import="true" type="upgrade">
