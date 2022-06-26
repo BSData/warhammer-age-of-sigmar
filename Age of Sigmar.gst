@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="133" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="134" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <publications>
     <publication id="e51d-b1a3-pubEC" name="The General&apos;s Handbook"/>
     <publication id="e51d-b1a3-pubEQ" name="Core Rules"/>
@@ -1484,12 +1484,12 @@
                 <condition field="selections" scope="1411-460f-c135-a667" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ef67-15fb-487c-397a" type="equalTo"/>
               </conditions>
             </modifier>
-            <modifier type="set" field="1d82-ddff-7647-645d" value="2.0">
+            <modifier type="set" field="4c21-e195-2b14-e003" value="2.0">
               <conditions>
                 <condition field="selections" scope="1411-460f-c135-a667" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e860-9b1e-36bd-a54f" type="equalTo"/>
               </conditions>
             </modifier>
-            <modifier type="set" field="1d82-ddff-7647-645d" value="3.0">
+            <modifier type="set" field="4c21-e195-2b14-e003" value="3.0">
               <conditions>
                 <condition field="selections" scope="1411-460f-c135-a667" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e9fc-6b3a-1b9a-e807" type="equalTo"/>
               </conditions>
