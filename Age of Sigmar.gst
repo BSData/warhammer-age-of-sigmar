@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="134" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="136" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <publications>
     <publication id="e51d-b1a3-pubEC" name="The General&apos;s Handbook"/>
     <publication id="e51d-b1a3-pubEQ" name="Core Rules"/>
@@ -1823,7 +1823,14 @@
     <entryLink id="da26-f2b9-ea3b-b117" name="Core Battalion: Command Entourage" hidden="false" collective="false" import="true" targetId="7f89-26d0-ff93-83fe" type="selectionEntry"/>
     <entryLink id="49ae-7ee3-101e-5204" name="Core Battalion: Grand Battery" hidden="false" collective="false" import="true" targetId="be2d-ba53-4ebc-f035" type="selectionEntry"/>
     <entryLink id="8da1-0246-3653-3c8c" name="Triumphs" hidden="false" collective="false" import="true" targetId="472e-6c0c-b6d5-b996" type="selectionEntry"/>
-    <entryLink id="255d-ce0f-7c15-7f7e" name="Battle Tactics" hidden="false" collective="false" import="true" targetId="a059-b97e-2ec6-51eb" type="selectionEntry">
+    <entryLink id="255d-ce0f-7c15-7f7e" name="Battle Tactics (GHB2021)" hidden="true" collective="false" import="true" targetId="a059-b97e-2ec6-51eb" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="36b7-ee1e-0855-f23f" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <categoryLinks>
         <categoryLink id="b022-0116-e8fb-91ac" name="New CategoryLink" hidden="false" targetId="1974-3f49-7f0b-8422" primary="true"/>
       </categoryLinks>
@@ -1831,6 +1838,18 @@
     <entryLink id="c958-5caf-b101-fdc6" name="Krondspine Incanate of Ghur" hidden="false" collective="false" import="true" targetId="0553-10ac-2bd9-01a5" type="selectionEntry"/>
     <entryLink id="8b70-ad45-3372-56d9" name="Core Battalion: Bounty Hunters" hidden="false" collective="false" import="true" targetId="c7a2-43b2-11cd-3ad1" type="selectionEntry"/>
     <entryLink id="958c-2bc1-3022-47ab" name="Core Battalion: Expert Conquerors" hidden="false" collective="false" import="true" targetId="15e3-8b94-19b1-a6dc" type="selectionEntry"/>
+    <entryLink id="2d24-1256-d55a-1a15" name="Battle Tactics (GHB2022)" hidden="true" collective="false" import="true" targetId="ed60-d117-889c-8a84" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1411-460f-c135-a667" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="28f6-3a0c-1990-cee7" name="New CategoryLink" hidden="false" targetId="1974-3f49-7f0b-8422" primary="true"/>
+      </categoryLinks>
+    </entryLink>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="869c-168d-eba5-eacf" name="Arcane Bolt" hidden="false" collective="false" import="true" type="upgrade">
@@ -2356,7 +2375,7 @@
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="a059-b97e-2ec6-51eb" name="Battle Tactics" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="a059-b97e-2ec6-51eb" name="Battle Tactics (GHB2021)" publicationId="e434-aae2-8d86-e264" page="15" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9096-32e3-dd68-b294" type="max"/>
       </constraints>
@@ -2613,6 +2632,56 @@ In addition, this incarnate can carry out the Devour Endless Spell monstrous ram
       <categoryLinks>
         <categoryLink id="b917-0ab4-a585-dff2" name="New CategoryLink" hidden="false" targetId="6575-7d6c-ce4d-ada4" primary="true"/>
       </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="ed60-d117-889c-8a84" name="Battle Tactics (GHB2022)" publicationId="b393-b3a1-628b-d5ca" page="15" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9dec-e5ac-f157-c4d0" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="07d9-e627-971b-d129" name="Gaining Momentum" hidden="false" typeId="eba0-4bf6-65fe-fdbc" typeName="Battle Tactic">
+          <characteristics>
+            <characteristic name="Description" typeId="f882-48d5-21a4-1787">Pick 1 enemy unit on the battlefield.  You complete this battle tactic if that unit is destroyed during this turn and you control more objectives than your opponent at the end of the turn.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="ae4e-0795-1108-1562" name="An Eye for an Eye" hidden="false" typeId="eba0-4bf6-65fe-fdbc" typeName="Battle Tactic">
+          <characteristics>
+            <characteristic name="Description" typeId="f882-48d5-21a4-1787">You complete this battle tactic if 1 or more friendly units were destroyed in the previous turn and 1 or more enemy units are destroyed during this turn.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="e360-c5d5-b76d-b2a1" name="Desecrate their Lands" hidden="false" typeId="eba0-4bf6-65fe-fdbc" typeName="Battle Tactic">
+          <characteristics>
+            <characteristic name="Description" typeId="f882-48d5-21a4-1787">Pick 1 terrain feature on faction terrain feature that is partially or wholly within your opponent&apos;s territory.   You complete this battle tactic if you control that terrain feature at the end of this turn.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="16fa-8eef-d91e-13d5" name="This One&apos;s Mine!" hidden="false" typeId="eba0-4bf6-65fe-fdbc" typeName="Battle Tactic">
+          <characteristics>
+            <characteristic name="Description" typeId="f882-48d5-21a4-1787">Pick 1 enemy unit on the battlefield.  You complete this battle tactic if that unit is destroyed during this turn of that unit is destroyed this turn by an attack made by the model picked to be your general.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="6f79-45b6-2328-2b81" name="Head-to-Head" hidden="false" typeId="eba0-4bf6-65fe-fdbc" typeName="Battle Tactic">
+          <characteristics>
+            <characteristic name="Description" typeId="f882-48d5-21a4-1787">Pick 1 enemy GALLETIAN VETERANS unit on the battlefield.  You complete this battle tactic if that unit is destroyed during this turn by an attack made by a friendly GALLETIAN VETERANS unit or an ability of a friendly GALLETIAN VETERANS UNIT.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="ce01-343e-46fd-ebc1" name="Outmuscle" hidden="false" typeId="eba0-4bf6-65fe-fdbc" typeName="Battle Tactic">
+          <characteristics>
+            <characteristic name="Description" typeId="f882-48d5-21a4-1787">Pick 1 enemy GALLETIAN VETERANS unit that has any models contesting an objected marked as the proving ground .  You complete this battle tactic if no models from that enemy unit are contesting that proving ground at the end of this turn.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="cd1f-c0dd-5773-0857" name="Against the Odds" hidden="false" typeId="eba0-4bf6-65fe-fdbc" typeName="Battle Tactic">
+          <characteristics>
+            <characteristic name="Description" typeId="f882-48d5-21a4-1787">Pick 1 unit from your starting army on the battlefield.  You complete this battle tactic if, at the end of this turn, any models from that unit are contesting an objective you control and that objective is not being contested by any enemy GALLETIAN VETERANS models.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="88cc-ce19-9e34-15b7" name="Barge Through Enemy Lines" hidden="false" typeId="eba0-4bf6-65fe-fdbc" typeName="Battle Tactic">
+          <characteristics>
+            <characteristic name="Description" typeId="f882-48d5-21a4-1787">You complete this battle tactic if there are 2 or more units from your starting army wholly within your opponent&apos;s territory at the end of this turn.  If 2 or more of those units are GALLETIAN VETERANS units, score 1 additional victory point. </characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
