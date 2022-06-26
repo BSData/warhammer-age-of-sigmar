@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="ab8b-39f3-ebc0-e9ab" name="Order - Sylvaneth - Data" revision="96" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="133" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="ab8b-39f3-ebc0-e9ab" name="Order - Sylvaneth - Data" revision="99" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="133" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
-    <publication id="3eb3-ef35-59aa-b7e2" name="Battletome: Sylvaneth 2019"/>
+    <publication id="3eb3-ef35-59aa-b7e2" name="Order Battletome: Sylvaneth 2019"/>
     <publication id="0ab2-9698-def7-3126" name="Battletome: Sylvaneth Errata, July 2021"/>
-    <publication id="b366-6e64-4cd5-0c51" name="Battletome: Sylvaneth 2022"/>
+    <publication id="b366-6e64-4cd5-0c51" name="Order Battletome: Sylvaneth 2022" publicationDate="June 2022"/>
   </publications>
   <profileTypes>
     <profileType id="d7d9-eaac-6963-eea0" name="Alarielle Wounds Suffered">
@@ -95,7 +95,7 @@
     <categoryEntry id="3ca6-a83c-2f4b-d25c" name="Sylvaneth Warscroll Battalion" hidden="false"/>
   </categoryEntries>
   <sharedSelectionEntries>
-    <selectionEntry id="4d73-8d1e-89ba-a66a" name="Alarielle the Everqueen" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="4d73-8d1e-89ba-a66a" name="Alarielle the Everqueen" publicationId="b366-6e64-4cd5-0c51" page="84" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
         <modifier type="add" field="category" value="40e2-c2ea-a45a-3253">
           <conditions>
@@ -375,127 +375,95 @@ The summoned unit is added to your army, and must be set up wholly within 9&quot
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="756d-d96e-e298-5558" name="Battalion: Forest Folk" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="756d-d96e-e298-5558" name="Sylvaneth Warscroll Battalion: Forest Folk" publicationId="b366-6e64-4cd5-0c51" page="80" hidden="true" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e82b-43a4-90b3-1d15" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
-        <profile id="f722-6541-53af-92e3" name="Fade from View" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
+        <profile id="ebfa-de89-8684-c698" name="Sylvaneth Warscroll Battalion: Forest Folk" hidden="false" typeId="75e0-a332-e4f5-bf36" typeName="Battalion Organisation">
           <characteristics>
-            <characteristic name="Battalion Ability Details" typeId="08e0-9ead-1dbe-c801">Units from this battalion can retreat and still charge later in the same turn.</characteristic>
+            <characteristic name="Required" typeId="eb5f-e9d2-e457-bff5">3 Dryads units</characteristic>
           </characteristics>
         </profile>
       </profiles>
+      <infoLinks>
+        <infoLink id="57ec-0ef2-378f-450c" name="Mighty Wyldwoods" hidden="false" targetId="6734-791f-f20f-9821" type="profile"/>
+      </infoLinks>
       <categoryLinks>
         <categoryLink id="b9d3-1819-4057-41de" name="New CategoryLink" hidden="false" targetId="be17-6bbd-b857-3f43" primary="true"/>
+        <categoryLink id="b46a-8b9e-ca2b-658f" name="Sylvaneth Warscroll Battalion" hidden="false" targetId="3ca6-a83c-2f4b-d25c" primary="false"/>
+        <categoryLink id="16aa-183f-0a6f-2173" name="Battalion" hidden="false" targetId="3ecc-4c0d-d717-29bd" primary="false"/>
       </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="acde-5411-66f4-566d" name="2. 3 units of Dryads" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a75c-b300-17a6-cfa6" type="min"/>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0db6-e999-3928-1468" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="e457-1003-81e2-3c43" name="Dryads" hidden="false" collective="false" import="true" targetId="0a14-90fc-1335-3c79" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="bcf3-8e2b-396e-2b30" name="1. 1 Branchwraith" hidden="false" collective="false" import="true">
-          <entryLinks>
-            <entryLink id="6fb6-e353-c23e-9886" name="Branchwraith" hidden="false" collective="false" import="true" targetId="67ae-bbfe-04fe-0e20" type="selectionEntry">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8623-f406-12df-29f5" type="max"/>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1e14-5869-91b8-9965" type="min"/>
-              </constraints>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="f852-7524-198b-2957" name="Battalion: Free Spirits" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="f852-7524-198b-2957" name="Sylvaneth Warscroll Battalion: Free Spirits" publicationId="b366-6e64-4cd5-0c51" page="80" hidden="true" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e82b-43a4-90b3-1d15" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
-        <profile id="a7de-5a06-4c3b-9386" name="Swift Vengeance" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
+        <profile id="0541-8246-2d7a-04e2" name="Sylvaneth Warscroll Battalion: Free Spirits" hidden="false" typeId="75e0-a332-e4f5-bf36" typeName="Battalion Organisation">
           <characteristics>
-            <characteristic name="Battalion Ability Details" typeId="08e0-9ead-1dbe-c801">In your movement phase, if you declare a unit from this battalion will run, do not make a run roll.  Instead, add 6&quot; to the Move characteristic of that unit for that phase.</characteristic>
+            <characteristic name="Required" typeId="eb5f-e9d2-e457-bff5">1 Spirit of Durthu
+1 Arch-Revenant
+3 KURNOTH HUNTERS units
+1 Gossamid Archers unit
+1 Dragonspite Lancers unit</characteristic>
           </characteristics>
         </profile>
       </profiles>
+      <infoLinks>
+        <infoLink id="005b-8926-1782-9c5e" name="Mighty Wyldwoods" hidden="false" targetId="6734-791f-f20f-9821" type="profile"/>
+      </infoLinks>
       <categoryLinks>
         <categoryLink id="9f1e-2839-b211-ec5f" name="New CategoryLink" hidden="false" targetId="be17-6bbd-b857-3f43" primary="true"/>
+        <categoryLink id="99a6-b4d1-3eb7-cd29" name="Battalion" hidden="false" targetId="3ecc-4c0d-d717-29bd" primary="false"/>
+        <categoryLink id="783f-a6a6-e967-a1ef" name="Sylvaneth Warscroll Battalion" hidden="false" targetId="3ca6-a83c-2f4b-d25c" primary="false"/>
       </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="bd43-1a3d-d8d8-5b40" name="1. 1 Spirit of Durthu" hidden="false" collective="false" import="true">
-          <entryLinks>
-            <entryLink id="20b9-036d-fc22-51a7" name="Spirit of Durthu" hidden="false" collective="false" import="true" targetId="ef77-af66-26da-3a02" type="selectionEntry">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="67e1-2b15-c909-67ff" type="max"/>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8009-6084-d931-4fa4" type="min"/>
-              </constraints>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="72ce-b6b3-5d37-f757" name="2. 3 units of Kurnoth Hunters" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8601-e420-6a77-a1d6" type="min"/>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9ea5-7e10-2d34-a4fa" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="edd8-7353-b745-98f2" name="Kurnoth Hunters with Greatbows" hidden="false" collective="false" import="true" targetId="e14d-00c2-5ed8-220a" type="selectionEntry"/>
-            <entryLink id="066a-4e0c-9af9-8344" name="Kurnoth Hunters with Greatswords" hidden="false" collective="false" import="true" targetId="22da-4eb1-f286-36f7" type="selectionEntry"/>
-            <entryLink id="72fd-73ca-8096-bbf8" name="Kurnoth Hunters with Scythes" hidden="false" collective="false" import="true" targetId="98e8-f568-7bb1-0fbb" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="d141-06d7-9c9e-d410" name="Battalion: Household" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="d141-06d7-9c9e-d410" name="Sylvaneth Warscroll Battalion: Household" publicationId="b366-6e64-4cd5-0c51" page="80" hidden="true" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e82b-43a4-90b3-1d15" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
-        <profile id="4ace-9902-4344-7a60" name="Discipline of the Ages" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
+        <profile id="ddc8-129c-75bd-a828" name="Sylvaneth Warscroll Battalion: Household" hidden="false" typeId="75e0-a332-e4f5-bf36" typeName="Battalion Organisation">
           <characteristics>
-            <characteristic name="Battalion Ability Details" typeId="08e0-9ead-1dbe-c801">Enemy units within 3&quot; of any units from this battalion cannot retreat. </characteristic>
+            <characteristic name="Required" typeId="eb5f-e9d2-e457-bff5">1 Treelord
+1 Branchwych
+1 Tree-Revenants unit
+1 Revenant Seekers unit</characteristic>
           </characteristics>
         </profile>
       </profiles>
+      <infoLinks>
+        <infoLink id="1c2a-9014-eca4-6f6f" name="Mighty Wyldwoods" hidden="false" targetId="6734-791f-f20f-9821" type="profile"/>
+      </infoLinks>
       <categoryLinks>
         <categoryLink id="a487-1ee0-d719-a55c" name="New CategoryLink" hidden="false" targetId="be17-6bbd-b857-3f43" primary="true"/>
+        <categoryLink id="ee68-e244-6314-bd3b" name="Battalion" hidden="false" targetId="3ecc-4c0d-d717-29bd" primary="false"/>
+        <categoryLink id="dfe8-6374-09d8-b68b" name="Sylvaneth Warscroll Battalion" hidden="false" targetId="3ca6-a83c-2f4b-d25c" primary="false"/>
       </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="5e09-6e10-bd24-d190" name="1. 1 Treelord" hidden="false" collective="false" import="true">
-          <entryLinks>
-            <entryLink id="d2a2-c0e3-1793-ebaa" name="Treelord" hidden="false" collective="false" import="true" targetId="0861-c6bd-bf12-f2f4" type="selectionEntry">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="598a-1e1d-ee5d-7725" type="max"/>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bf06-be44-3321-a507" type="min"/>
-              </constraints>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="8336-643d-7c1e-da7b" name="2. 1 Branchwych" hidden="false" collective="false" import="true">
-          <entryLinks>
-            <entryLink id="4a83-9e02-ee12-1780" name="Branchwych" hidden="false" collective="false" import="true" targetId="d65c-84f8-43bf-d534" type="selectionEntry">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9e05-a05e-85d9-6b4e" type="max"/>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6305-ace0-6b89-2225" type="min"/>
-              </constraints>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="f3aa-de1a-5ba7-0fc2" name="3. 1 unit of Tree-Revenants" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="253f-bf83-a574-d32d" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="de77-defc-0dea-55e8" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="05c2-0067-34e9-c9db" name="Tree-Revenants" hidden="false" collective="false" import="true" targetId="a74a-7377-3ed9-0f5e" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="3388-e687-3bd2-98a8" name="Sylvaneth Core Battalion: Lords of the Clan" hidden="true" collective="false" import="true" type="upgrade">
+    <selectionEntry id="3388-e687-3bd2-98a8" name="Sylvaneth Core Battalion: Lords of the Clan" publicationId="b366-6e64-4cd5-0c51" page="83" hidden="true" collective="false" import="true" type="upgrade">
       <modifiers>
         <modifier type="set" field="hidden" value="false">
           <conditions>
@@ -523,28 +491,29 @@ The summoned unit is added to your army, and must be set up wholly within 9&quot
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="471d-38f0-5388-84a0" name="Battalion: Outcasts" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="471d-38f0-5388-84a0" name="Sylvaneth Warscroll Battalion: Outcasts" publicationId="b366-6e64-4cd5-0c51" page="80" hidden="true" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e82b-43a4-90b3-1d15" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
-        <profile id="95c7-3d09-084a-b02b" name="Fear the Forest-kin" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
+        <profile id="b1a7-773a-d39f-ac9f" name="Sylvaneth Warscroll Battalion: Outcasts" hidden="false" typeId="75e0-a332-e4f5-bf36" typeName="Battalion Organisation">
           <characteristics>
-            <characteristic name="Battalion Ability Details" typeId="08e0-9ead-1dbe-c801">If an enemy unit fails a battleshock test within 3&quot; of any units from this battalion, add D3 to the number of models that flee.</characteristic>
+            <characteristic name="Required" typeId="eb5f-e9d2-e457-bff5">3 Spite-Revenants units</characteristic>
           </characteristics>
         </profile>
       </profiles>
+      <infoLinks>
+        <infoLink id="926f-e614-247d-53cf" name="Mighty Wyldwoods" hidden="false" targetId="6734-791f-f20f-9821" type="profile"/>
+      </infoLinks>
       <categoryLinks>
         <categoryLink id="7a4e-3b10-986e-c2fb" name="New CategoryLink" hidden="false" targetId="be17-6bbd-b857-3f43" primary="true"/>
+        <categoryLink id="002b-37c9-1a02-0095" name="Battalion" hidden="false" targetId="3ecc-4c0d-d717-29bd" primary="false"/>
+        <categoryLink id="7769-cd42-4b69-8aa2" name="Sylvaneth Warscroll Battalion" hidden="false" targetId="3ca6-a83c-2f4b-d25c" primary="false"/>
       </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="b9ea-fa55-0289-7ece" name="1. 3 units of Spite-Revenants" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="961a-940d-213e-9ca8" type="min"/>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c95d-d43a-dc40-e99a" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="4dc3-c978-c5f8-cdbb" name="Spite-Revenants" hidden="false" collective="false" import="true" targetId="b487-315c-b64c-88b0" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
@@ -641,7 +610,7 @@ The summoned unit is added to your army, and must be set up wholly within 9&quot
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="d65c-84f8-43bf-d534" name="Branchwych" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="d65c-84f8-43bf-d534" name="Branchwych" publicationId="b366-6e64-4cd5-0c51" page="93" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
         <modifier type="add" field="category" value="40e2-c2ea-a45a-3253">
           <conditions>
@@ -755,7 +724,7 @@ The summoned unit is added to your army, and must be set up wholly within 9&quot
         <cost name="pts" typeId="points" value="130.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="0a14-90fc-1335-3c79" name="Dryads" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="0a14-90fc-1335-3c79" name="Dryads" publicationId="b366-6e64-4cd5-0c51" page="97" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
         <modifier type="add" field="category" value="40e2-c2ea-a45a-3253">
           <conditions>
@@ -864,7 +833,7 @@ The summoned unit is added to your army, and must be set up wholly within 9&quot
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="02a8-7840-22ef-b8f5" name="Drycha Hamadreth" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="02a8-7840-22ef-b8f5" name="Drycha Hamadreth" publicationId="b366-6e64-4cd5-0c51" page="87" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
         <modifier type="add" field="category" value="40e2-c2ea-a45a-3253">
           <conditions>
@@ -1038,7 +1007,7 @@ If this unit is Embittered, its Swarm of Squirmlings has an Attacks characterist
         <cost name="pts" typeId="points" value="335.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="e14d-00c2-5ed8-220a" name="Kurnoth Hunters with Kurnoth Greatbows" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="e14d-00c2-5ed8-220a" name="Kurnoth Hunters with Kurnoth Greatbows" publicationId="b366-6e64-4cd5-0c51" page="96" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
         <modifier type="add" field="category" value="40e2-c2ea-a45a-3253">
           <conditions>
@@ -1183,7 +1152,7 @@ If this unit is Embittered, its Swarm of Squirmlings has an Attacks characterist
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="ef77-af66-26da-3a02" name="Spirit of Durthu" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="ef77-af66-26da-3a02" name="Spirit of Durthu" publicationId="b366-6e64-4cd5-0c51" page="90" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
         <modifier type="add" field="category" value="40e2-c2ea-a45a-3253">
           <conditions>
@@ -1353,7 +1322,7 @@ If this unit is Embittered, its Swarm of Squirmlings has an Attacks characterist
         <cost name="pts" typeId="points" value="370.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="b487-315c-b64c-88b0" name="Spite-Revenants" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="b487-315c-b64c-88b0" name="Spite-Revenants" publicationId="b366-6e64-4cd5-0c51" page="98" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
         <modifier type="add" field="category" value="40e2-c2ea-a45a-3253">
           <conditions>
@@ -1484,7 +1453,7 @@ If this unit is Embittered, its Swarm of Squirmlings has an Attacks characterist
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="a74a-7377-3ed9-0f5e" name="Tree-Revenants" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="a74a-7377-3ed9-0f5e" name="Tree-Revenants" publicationId="b366-6e64-4cd5-0c51" page="98" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
         <modifier type="add" field="category" value="40e2-c2ea-a45a-3253">
           <conditions>
@@ -1663,7 +1632,7 @@ If this unit is Embittered, its Swarm of Squirmlings has an Attacks characterist
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="0861-c6bd-bf12-f2f4" name="Treelord" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="0861-c6bd-bf12-f2f4" name="Treelord" publicationId="b366-6e64-4cd5-0c51" page="92" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
         <modifier type="add" field="category" value="40e2-c2ea-a45a-3253">
           <conditions>
@@ -1817,7 +1786,7 @@ If this unit is Embittered, its Swarm of Squirmlings has an Attacks characterist
         <cost name="pts" typeId="points" value="260.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="524f-f49b-0bfd-9414" name="Treelord Ancient" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="524f-f49b-0bfd-9414" name="Treelord Ancient" publicationId="b366-6e64-4cd5-0c51" page="91" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
         <modifier type="add" field="category" value="40e2-c2ea-a45a-3253">
           <conditions>
@@ -2017,7 +1986,7 @@ If this unit is Embittered, its Swarm of Squirmlings has an Attacks characterist
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="ff4d-f06f-e2c4-9513" name="Arch-Revenant" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="ff4d-f06f-e2c4-9513" name="Arch-Revenant" publicationId="b366-6e64-4cd5-0c51" page="89" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
         <modifier type="add" field="category" value="40e2-c2ea-a45a-3253">
           <conditions>
@@ -2133,7 +2102,7 @@ If this unit is Embittered, its Swarm of Squirmlings has an Attacks characterist
         <cost name="pts" typeId="points" value="120.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="87c1-5306-8bdd-b182" name="Ylthari" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="87c1-5306-8bdd-b182" name="Ylthari" publicationId="b366-6e64-4cd5-0c51" page="100" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
         <modifier type="set" field="a9f5-75cb-1040-4b72" value="1">
           <conditions>
@@ -2280,7 +2249,7 @@ If this unit is Embittered, its Swarm of Squirmlings has an Attacks characterist
         <cost name="pts" typeId="points" value="180.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="2b90-c828-a79b-d060" name="Ylthari&apos;s Guardians" hidden="false" collective="false" import="true" type="model">
+    <selectionEntry id="2b90-c828-a79b-d060" name="Ylthari&apos;s Guardians" publicationId="b366-6e64-4cd5-0c51" page="100" hidden="false" collective="false" import="true" type="model">
       <modifiers>
         <modifier type="set" field="59d7-35b9-5b0a-685b" value="1.0">
           <conditions>
@@ -2425,69 +2394,7 @@ If this unit is Embittered, its Swarm of Squirmlings has an Attacks characterist
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="a0bc-6ab2-909e-f18c" name="Super Battalion: Wargrove" hidden="false" collective="false" import="true" type="upgrade">
-      <profiles>
-        <profile id="f3fd-98ac-f18d-8e5b" name="Mighty-Wyldwood" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
-          <characteristics>
-            <characteristic name="Battalion Ability Details" typeId="08e0-9ead-1dbe-c801">When you choose a Sylvaneth army, you can include 2 AWAKENED WYLDWOOD terrain features instead of 1 if your army includes this battalion.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <categoryLinks>
-        <categoryLink id="97fe-c041-3f24-65a2" name="New CategoryLink" hidden="false" targetId="be17-6bbd-b857-3f43" primary="true"/>
-      </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="d87b-01a1-07cb-b6aa" name="1. 1 Lords of the Clan battalion" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ca5f-f512-58a6-485f" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4707-514b-421a-c5d9" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="4e9b-cd40-826b-0a17" name="Battalion: Lords of the Clan" hidden="false" collective="false" import="true" targetId="3388-e687-3bd2-98a8" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="e987-8494-1222-21de" name="2. 3 Household battalions" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="211e-df94-3885-31f2" type="min"/>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9a33-ba6e-e355-01c2" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="0017-cec2-d35a-f163" name="Battalion: Household" hidden="false" collective="false" import="true" targetId="d141-06d7-9c9e-d410" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="cdb8-df6d-b2d0-83ec" name="3. 3 Forest Folk battalions" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ad5a-756c-d10d-bff1" type="min"/>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ac7d-2e0c-ef19-6e58" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="9f81-7d5d-8f96-747f" name="Battalion: Forest Folk" hidden="false" collective="false" import="true" targetId="756d-d96e-e298-5558" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="c870-8be1-69cb-b8f6" name="4. 1 Free Spirits battalion" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4201-16cb-028d-c85a" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="eb7e-ca65-783d-eec6" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="f846-352d-977f-eb5a" name="Battalion: Free Spirits" hidden="false" collective="false" import="true" targetId="f852-7524-198b-2957" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="b5e6-2b8c-cec9-53a9" name="5. 1 Outcasts battalion" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3b25-aedb-6de8-4df3" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2877-49c8-4e27-6fa2" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="5bd8-6f9e-ee31-538b" name="Battalion: Outcasts" hidden="false" collective="false" import="true" targetId="471d-38f0-5388-84a0" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="3d16-0108-0433-c4e8" name="Awakened Wyldwood" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="3d16-0108-0433-c4e8" name="Awakened Wyldwood" publicationId="b366-6e64-4cd5-0c51" page="102" hidden="false" collective="false" import="true" type="upgrade">
       <profiles>
         <profile id="32e3-fb24-1ca5-fa58" name="Overgrown Wilderness" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
@@ -2518,7 +2425,7 @@ Abilities that allow you to add Awakened Wyldwood to your army during the battle
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="02f2-388c-b66b-5159" name="Skaeth&apos;s Wild Hunt" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="02f2-388c-b66b-5159" name="Skaeth&apos;s Wild Hunt" publicationId="b366-6e64-4cd5-0c51" page="99" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
         <modifier type="add" field="category" value="40e2-c2ea-a45a-3253">
           <conditions>
@@ -2676,49 +2583,30 @@ Abilities that allow you to add Awakened Wyldwood to your army during the battle
         <cost name="pts" typeId="points" value="110.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="daeb-d5d0-700a-2f3b" name="Battalion: Heartwood Host" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="daeb-d5d0-700a-2f3b" name="Sylvaneth Warscroll Battalion: Lords of the Clan" publicationId="b366-6e64-4cd5-0c51" page="80" hidden="true" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e82b-43a4-90b3-1d15" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
-        <profile id="7711-1aec-bc83-facf" name="Blessings of the Heartwood" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
+        <profile id="876c-70d2-3d05-97d5" name="Sylvaneth Warscroll Battalion: Lords of the Clan" hidden="false" typeId="75e0-a332-e4f5-bf36" typeName="Battalion Organisation">
           <characteristics>
-            <characteristic name="Battalion Ability Details" typeId="08e0-9ead-1dbe-c801">During each hero phase, the host&apos;s Branchwych and Treelord heal one wound lost earlier in the battle, whilst its Dryads add 1 model to their unit that was slain earlier in the battle.</characteristic>
+            <characteristic name="Required" typeId="eb5f-e9d2-e457-bff5">2-4 Treelord Ancients
+1-3 Treelords</characteristic>
           </characteristics>
         </profile>
       </profiles>
+      <infoLinks>
+        <infoLink id="6d41-68da-c804-7be2" name="Mighty Wyldwoods" hidden="false" targetId="6734-791f-f20f-9821" type="profile"/>
+      </infoLinks>
       <categoryLinks>
         <categoryLink id="2384-b283-8764-7d14" name="New CategoryLink" hidden="false" targetId="be17-6bbd-b857-3f43" primary="true"/>
+        <categoryLink id="058c-91ae-178e-598e" name="Battalion" hidden="false" targetId="3ecc-4c0d-d717-29bd" primary="false"/>
+        <categoryLink id="efbb-e133-a3de-55db" name="Sylvaneth Warscroll Battalion" hidden="false" targetId="3ca6-a83c-2f4b-d25c" primary="false"/>
       </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="6b36-7133-0eaa-13be" name="3. 1 Treelord" hidden="false" collective="false" import="true">
-          <entryLinks>
-            <entryLink id="fa67-ba77-3dcc-2a67" name="Treelord" hidden="false" collective="false" import="true" targetId="0861-c6bd-bf12-f2f4" type="selectionEntry">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e935-1bd3-008d-82a6" type="max"/>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="34a7-3dd5-853e-8836" type="min"/>
-              </constraints>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="3166-5f33-95e7-dddf" name="1. 1 Branchwych" hidden="false" collective="false" import="true">
-          <entryLinks>
-            <entryLink id="714d-15da-f81a-1912" name="Branchwych" hidden="false" collective="false" import="true" targetId="d65c-84f8-43bf-d534" type="selectionEntry">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b588-3c5c-f4ac-e9fc" type="max"/>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f887-0c48-2020-909a" type="min"/>
-              </constraints>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="16a6-61e5-2d68-40bb" name="2. 1 unit of Dryads" hidden="false" collective="false" import="true">
-          <entryLinks>
-            <entryLink id="6def-a6c6-0fbe-e894" name="Dryads" hidden="false" collective="false" import="true" targetId="0a14-90fc-1335-3c79" type="selectionEntry">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="723e-82a0-b131-f5ba" type="min"/>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3b9f-fc0b-50f4-e138" type="max"/>
-              </constraints>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
@@ -2828,7 +2716,7 @@ Abilities that allow you to add Awakened Wyldwood to your army during the battle
         <cost name="pts" typeId="points" value="100.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="17d6-310e-d190-28e7" name="Warsong Revenant" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="17d6-310e-d190-28e7" name="Warsong Revenant" publicationId="b366-6e64-4cd5-0c51" page="88" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
         <modifier type="add" field="category" value="40e2-c2ea-a45a-3253">
           <conditions>
@@ -2953,56 +2841,29 @@ Abilities that allow you to add Awakened Wyldwood to your army during the battle
         <cost name="pts" typeId="points" value="305.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="83c1-fa24-5b0d-1a1d" name="Battalion: Drycha&apos;s Spitegrove" hidden="false" collective="false" import="true" type="upgrade">
-      <profiles>
-        <profile id="bb0c-8108-02ef-a724" name="The Spitegrove" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
-          <characteristics>
-            <characteristic name="Battalion Ability Details" typeId="08e0-9ead-1dbe-c801">The Cruel Talons and Fangs used by units in this battalion have a Rend characteristic of -1 instead of &apos;-&apos;.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <categoryLinks>
-        <categoryLink id="dbbf-bf50-1aad-8380" name="New CategoryLink" hidden="false" targetId="be17-6bbd-b857-3f43" primary="true"/>
-      </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="5b3c-8b8a-b416-5b5b" name="2. 2 units of Spite-Revenants" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1491-3f93-b1e8-1e25" type="min"/>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5a09-7414-e45a-6e11" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="8171-fde1-8250-c7a1" name="Spite-Revenants" hidden="false" collective="false" import="true" targetId="b487-315c-b64c-88b0" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="d024-c46b-26b1-aa03" name="1. Drycha Hamadreth" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="65c0-edbc-1a5a-cd18" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1e42-a690-eff1-846e" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="cc37-3758-7d92-2007" name="Drycha Hamadreth" hidden="false" collective="false" import="true" targetId="02a8-7840-22ef-b8f5" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="22da-4eb1-f286-36f7" name="Kurnoth Hunters with Greatswords" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="22da-4eb1-f286-36f7" name="Kurnoth Hunters with Greatswords" publicationId="b366-6e64-4cd5-0c51" page="96" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
         <modifier type="add" field="category" value="40e2-c2ea-a45a-3253">
           <conditions>
             <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d3f7-43ab-ed49-cd5c" type="equalTo"/>
           </conditions>
         </modifier>
-==== BASE ====
+        <modifier type="set-primary" field="category" value="e9f2-765a-b7b8-ce8e">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="50c1-4664-ab23-afc3" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="remove" field="category" value="065e-fda7-fd27-1f40">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="50c1-4664-ab23-afc3" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <profiles>
-        <profile id="b1bb-fabb-7f4c-1f52" name="Hunters with Greatswords" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
+        <profile id="b1bb-fabb-7f4c-1f52" name="Kurnoth Hunters with Greatswords" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
           <characteristics>
             <characteristic name="Move" typeId="8655-6213-2824-1752">5&quot;</characteristic>
             <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">5</characteristic>
-==== BASE ====
             <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">7</characteristic>
             <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">3+</characteristic>
           </characteristics>
@@ -3108,7 +2969,7 @@ Abilities that allow you to add Awakened Wyldwood to your army during the battle
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="98e8-f568-7bb1-0fbb" name="Kurnoth Hunters with Scythes" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="98e8-f568-7bb1-0fbb" name="Kurnoth Hunters with Scythes" publicationId="b366-6e64-4cd5-0c51" page="97" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
         <modifier type="add" field="category" value="40e2-c2ea-a45a-3253">
           <conditions>
@@ -3269,7 +3130,7 @@ Abilities that allow you to add Awakened Wyldwood to your army during the battle
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="5ac4-2ff5-4daf-6ffd" name="The Lady of Vines" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="5ac4-2ff5-4daf-6ffd" name="The Lady of Vines" publicationId="b366-6e64-4cd5-0c51" page="86" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
         <modifier type="add" field="category" value="40e2-c2ea-a45a-3253">
           <conditions>
@@ -3402,7 +3263,7 @@ Abilities that allow you to add Awakened Wyldwood to your army during the battle
         <cost name="pts" typeId="points" value="325.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="1e4c-a6ea-f4f8-9885" name="Gossamid Archers" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="1e4c-a6ea-f4f8-9885" name="Gossamid Archers" publicationId="b366-6e64-4cd5-0c51" page="94" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
         <modifier type="add" field="category" value="40e2-c2ea-a45a-3253">
           <conditions>
@@ -3530,8 +3391,69 @@ Abilities that allow you to add Awakened Wyldwood to your army during the battle
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="da40-7e35-25b5-c1b4" name="Revenant Seekers" hidden="false" collective="false" import="true" type="unit">
-==== BASE ====
+    <selectionEntry id="da40-7e35-25b5-c1b4" name="Revenant Seekers" publicationId="b366-6e64-4cd5-0c51" page="95" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="add" field="category" value="40e2-c2ea-a45a-3253">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d3f7-43ab-ed49-cd5c" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set-primary" field="category" value="e9f2-765a-b7b8-ce8e">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="82cd-1e37-8f14-663c" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="remove" field="category" value="065e-fda7-fd27-1f40">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="82cd-1e37-8f14-663c" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <profiles>
+        <profile id="df10-e8b6-ffbc-9007" name="Revenant Seekers" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
+          <characteristics>
+            <characteristic name="Move" typeId="8655-6213-2824-1752">12&quot;</characteristic>
+            <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">5</characteristic>
+            <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">7</characteristic>
+            <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">4+</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="7155-ee82-21cf-d24f" name="Champion" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 model in this unit can be a Revenant Soulwarden.  Add 1 to the Attacks characteristic of that model&apos;s Seeker&apos;s Sickle.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="c95d-0b2d-35ae-0523" name="Musician" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 in every 3 models in this unit can be a Spiterider Hornblower.  If this unit receives the Rally command while it includes any Spiterider Hornblowers, when you roll a dice for a slain model from this unit, you can return 1 slain model to this unit on a 5+ instead of only a 6.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="320a-f915-6c36-ed76" name="Standard Bearer" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 in every 3 models in this unit can be a Spiterider Banner Bearer.  If this unit includes any Spiterider Banner Bearers, models in the unit can move up to 6&quot; when make a pile-in move instead of up to 3&quot;.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="0930-38f9-73c8-f11d" name="Harvesters of the Lamentiri" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Once per turn, at the end your movement phase, you can pick 1 friendly SYLVANETH unit with a Wounds characteristic of 5 or less that is wholly within 12&quot; of this unit and roll a dice.  On a 2+, you can return 1 slain model to that unit.  You cannot pick the same unit to benefit from this ability more than once per turn.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="74b6-b337-c602-da64" name="Thrumming with Life" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the end of each phase, if any enemy models were slain by an attack made by this unit, you can heal all wounds allocated to this unit.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="ecec-f250-a6e0-47c4" name="Fly" hidden="false" targetId="8e0c-cbe4-27be-8a30" type="profile"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="1668-bc60-f068-6f55" name="New CategoryLink" hidden="false" targetId="065e-fda7-fd27-1f40" primary="true"/>
+        <categoryLink id="5044-2655-86f2-79cb" name="ORDER" hidden="false" targetId="b970-b3bf-e1a4-a6fc" primary="false"/>
+        <categoryLink id="b504-8285-de53-1413" name="SYLVANETH" hidden="false" targetId="de6f-3fcb-09b2-a59e" primary="false"/>
+        <categoryLink id="4332-a4ab-5564-bb07" name="NOBLE SPIRITS" hidden="false" targetId="634f-ae38-b430-da17" primary="false"/>
+        <categoryLink id="53de-ce05-701b-0e01" name="REVENANT SEEKERS" hidden="false" targetId="777c-0bed-887e-4104" primary="false"/>
+      </categoryLinks>
       <selectionEntries>
         <selectionEntry id="d8bc-03b6-2aa0-a9e3" name="3 Revenant Seekers" hidden="false" collective="false" import="true" type="model">
           <modifiers>
@@ -3545,7 +3467,6 @@ Abilities that allow you to add Awakened Wyldwood to your army during the battle
                 <condition field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0a8d-cde8-fba1-6c0d" type="equalTo"/>
               </conditions>
             </modifier>
-==== BASE ====
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9ef3-bdc2-128c-c023" type="min"/>
@@ -3620,7 +3541,7 @@ Abilities that allow you to add Awakened Wyldwood to your army during the battle
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="1de6-4be2-bf97-326b" name="Spiterider Lancers" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="1de6-4be2-bf97-326b" name="Spiterider Lancers" publicationId="b366-6e64-4cd5-0c51" page="95" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
         <modifier type="add" field="category" value="40e2-c2ea-a45a-3253">
           <conditions>
@@ -3763,14 +3684,14 @@ Abilities that allow you to add Awakened Wyldwood to your army during the battle
             <cost name="pts" typeId="points" value="210.0"/>
           </costs>
         </entryLink>
-==== BASE ====
-==== BASE ====
+        <entryLink id="79ce-bc6f-29d9-a976" name="Battalions" hidden="false" collective="false" import="true" targetId="d014-2004-2d0f-2c6d" type="selectionEntryGroup"/>
+        <entryLink id="a3ac-ab2d-4f9f-438f" name="Honoured Retinue" hidden="false" collective="false" import="true" targetId="cb24-5c4a-8232-6c5b" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="1295-7081-d7bd-f08c" name="Battle Tactics: Song of War" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="1295-7081-d7bd-f08c" name="Battle Tactics: Song of War" publicationId="b366-6e64-4cd5-0c51" page="82" hidden="false" collective="false" import="true" type="upgrade">
       <profiles>
         <profile id="7667-0011-3627-1f9d" name="Eradicate Trespassers" hidden="false" typeId="eba0-4bf6-65fe-fdbc" typeName="Battle Tactic">
           <characteristics>
@@ -3802,92 +3723,30 @@ Abilities that allow you to add Awakened Wyldwood to your army during the battle
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="7118-26c2-ccea-7e63" name="Seasons of War" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="7118-26c2-ccea-7e63" name="Seasons of War" publicationId="b366-6e64-4cd5-0c51" page="64" hidden="true" collective="false" import="true" type="upgrade">
       <modifiers>
-        <modifier type="set" field="0c15-a7c6-5840-1735" value="0.0">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8af4-649e-9ee2-22ee" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="78f3-8a59-699a-61e8" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="24d6-500b-7e3f-1470" type="instanceOf"/>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8c26-2422-34d3-31a5" type="instanceOf"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
+        <modifier type="set" field="0c15-a7c6-5840-1735" value="1.0">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e82b-43a4-90b3-1d15" type="greaterThan"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e82b-43a4-90b3-1d15" type="greaterThan"/>
+          </conditions>
         </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5372-a248-6683-5c41" type="max"/>
-        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0c15-a7c6-5840-1735" type="min"/>
+        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0c15-a7c6-5840-1735" type="min"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6540-39e1-c833-e325" type="max"/>
       </constraints>
       <categoryLinks>
         <categoryLink id="0fa2-0da1-dea2-44dc" name="New CategoryLink" hidden="false" targetId="1974-3f49-7f0b-8422" primary="true"/>
       </categoryLinks>
-      <selectionEntries>
-        <selectionEntry id="01a0-735d-7744-3f7d" name="The Burgeoning" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a5b5-76e3-ceb7-9ac2" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="2007-5810-30ce-087d" name="The Burgeoning" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
-              <characteristics>
-                <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">Friendly SYLVANETH units that did not charge in the same turn and are wholly within 9&quot; of an overgrown terrain feature or friendly Awakened Wyldwood have a ward of 6+.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="7450-ba2e-e46d-ab67" name="The Reaping" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5b86-6b0c-a1ed-15a5" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="4222-82b6-9d5d-01b4" name="The Reaping" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
-              <characteristics>
-                <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">Add 3&quot; to the range within which you can pick friendly SYLVANETH units with the Places of Power and From the Woodland Depths battle traits.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="5af3-23b9-e635-f906" name="The Dwindling" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="abe5-bcd5-2705-5cf8" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="ac9d-dd40-f648-6ccd" name="The Dwindling" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
-              <characteristics>
-                <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">In the hero phase, you can re-roll 1 casting roll, 1 unbinding roll and 1 dispelling roll, so long as the friendly WIZARD you pick is a SYLVANETH WIZARD that is wholly within 9&quot; of an overgrown terrain feature or friendly Awakened Wyldwood.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="471b-155e-4b70-9e8f" name="Everdusk" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f867-b0ba-65af-4345" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="797a-b07d-c605-d335" name="Everdusk" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
-              <characteristics>
-                <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">Subtract 3&quot; from the range within which you can pick friendly SYLVANETH units with the Places of Power and From the Woodland Depths battle traits.  However, if the unmodified hit roll for an attack made with a melee weapon by a friendly SYLVANETH unit wholly within 6&quot; of an overgrown terrain feature or friendly Awakened Wyldwood is 6, that attack scores 2 hits on the target instead of 1.  Make a wound and save roll for each hit.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
+      <entryLinks>
+        <entryLink id="a209-f950-4a7d-6235" name="Seasons of War" hidden="false" collective="false" import="true" targetId="1fb1-80f4-fc95-d98f" type="selectionEntryGroup"/>
+      </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
@@ -3901,7 +3760,732 @@ Abilities that allow you to add Awakened Wyldwood to your army during the battle
       <entryLinks>
         <entryLink id="d204-2f45-071a-272e" name="Universal Core Battalions" hidden="false" collective="false" import="true" targetId="b275-810f-adfc-156b" type="selectionEntryGroup"/>
         <entryLink id="dbf4-b111-3845-bf98" name="Sylvaneth Core Battalions" hidden="false" collective="false" import="true" targetId="7919-04c5-9ff8-87d7" type="selectionEntryGroup"/>
+        <entryLink id="c478-c3c7-b860-86bb" name="Sylvaneth Warscroll Battalions" hidden="false" collective="false" import="true" targetId="6423-1641-b1cb-04e4" type="selectionEntryGroup"/>
       </entryLinks>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="0cd9-8b03-3635-aac5" name="Sylvaneth Grand Strategy" hidden="true" collective="false" import="true">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e82b-43a4-90b3-1d15" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="cbe6-c1fa-5f63-3902" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="fed9-2ca0-af67-5af2" type="max"/>
+      </constraints>
+      <selectionEntries>
+        <selectionEntry id="6df0-19f7-da60-668e" name="Chorus of the Woodlands" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3acf-5be1-0617-931a" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="772f-a102-b955-fd0c" name="Chorus of the Woodlands" hidden="false" typeId="9c01-ec20-32c1-0948" typeName="Grand Strategy">
+              <characteristics>
+                <characteristic name="Description" typeId="53c8-cc18-16d1-e890">When the battle ends, you complete this grand strategy if you completed at least 4 battle tactics and every battle tactic you completed was from the &apos;Songs of War&apos; list.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <categoryLinks>
+            <categoryLink id="9a75-62a2-1827-1117" name="Grand Strategy" hidden="false" targetId="5dff-3614-49fd-c3e4" primary="false"/>
+          </categoryLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="c365-0985-d6a6-aaa9" name="Vengeance and Spite" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ed28-3116-48c6-947a" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="f144-a255-db9b-9012" name="Vengeance and Spite" hidden="false" typeId="9c01-ec20-32c1-0948" typeName="Grand Strategy">
+              <characteristics>
+                <characteristic name="Description" typeId="53c8-cc18-16d1-e890">When the battle ends, you complete this grand strategy if the model picked to be your opponent&apos;s general was slain by an attack made by a friendly OUTCASTS unit.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <categoryLinks>
+            <categoryLink id="15ec-ae17-1178-bc22" name="Grand Strategy" hidden="false" targetId="5dff-3614-49fd-c3e4" primary="false"/>
+          </categoryLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="ee73-bd70-93e2-679d" name="The Roots of Victory" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5c75-7afe-fc5b-bfbc" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="0bc0-75f7-c30f-d636" name="The Roots of Victory" hidden="false" typeId="9c01-ec20-32c1-0948" typeName="Grand Strategy">
+              <characteristics>
+                <characteristic name="Description" typeId="53c8-cc18-16d1-e890">When the battle ends, you complete this grand strategy if there is a friendly Awakened Wyldwood in each quater of the battlefield and all enemy units are more than 6&quot; from all friendly Awakened Wyldwoods on the battlefield.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <categoryLinks>
+            <categoryLink id="6625-c67f-3f94-7673" name="Grand Strategy" hidden="false" targetId="5dff-3614-49fd-c3e4" primary="false"/>
+          </categoryLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="7919-04c5-9ff8-87d7" name="Sylvaneth Core Battalions" hidden="true" collective="false" import="true">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1918-acc9-b950-648e" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="b20e-a807-87ba-7d3c" name="Lords of the Clan" hidden="true" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3388-e687-3bd2-98a8" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5331-6831-069c-641c" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="3477-1794-d5b8-7ebe" name="Clan Elder - 2-4 Treelord Ancients" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="1b3e-8386-4d3d-fdbc" value="4.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3388-e687-3bd2-98a8" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="increment" field="f0d6-16c7-06bb-4613" value="2.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3388-e687-3bd2-98a8" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3388-e687-3bd2-98a8" type="greaterThan"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4b76-b5c5-2c23-c72a" type="instanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1b3e-8386-4d3d-fdbc" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f0d6-16c7-06bb-4613" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1057-b572-a428-bf50" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="f807-18d7-34e5-be38" name="Clan Noble - 1-3 Treelords" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="67bc-f771-1af7-b5f7" value="3.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3388-e687-3bd2-98a8" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="increment" field="a4de-ffcc-c52a-169e" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3388-e687-3bd2-98a8" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3388-e687-3bd2-98a8" type="greaterThan"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f301-21bf-5de1-a0f4" type="instanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="67bc-f771-1af7-b5f7" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a4de-ffcc-c52a-169e" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6821-ef7d-c795-0517" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="1fb1-80f4-fc95-d98f" name="Seasons of War" hidden="false" collective="false" import="true">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2b55-8896-d8d5-a7fc" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2060-0682-d76b-2fbe" type="max"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="cbd4-f5e4-3189-d9e6" type="min"/>
+      </constraints>
+      <selectionEntries>
+        <selectionEntry id="ab0e-1ec6-d1e6-c829" name="Everdusk" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="34c4-9144-60c6-0932" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="a9a5-ad92-9937-2cc2" name="Everdusk" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
+              <characteristics>
+                <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">Subtract 3&quot; from the range within which you can pick friendly SYLVANETH units with the Places of Power and From the Woodland Depths battle traits.  However, if the unmodified hit roll for an attack made with a melee weapon by a friendly SYLVANETH unit wholly within 6&quot; of an overgrown terrain feature or friendly Awakened Wyldwood is 6, that attack scores 2 hits on the target instead of 1.  Make a wound and save roll for each hit.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="c95f-1dd0-27cf-1b38" name="The Burgeoning" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c284-ceb5-f574-dc15" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="5233-1798-cb73-3198" name="The Burgeoning" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
+              <characteristics>
+                <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">Friendly SYLVANETH units that did not charge in the same turn and are wholly within 9&quot; of an overgrown terrain feature or friendly Awakened Wyldwood have a ward of 6+.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="d3c1-a779-8515-1a39" name="The Dwindling" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7e09-f905-5fae-a3df" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="03fe-9513-a43e-3240" name="The Dwindling" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
+              <characteristics>
+                <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">In the hero phase, you can re-roll 1 casting roll, 1 unbinding roll and 1 dispelling roll, so long as the friendly WIZARD you pick is a SYLVANETH WIZARD that is wholly within 9&quot; of an overgrown terrain feature or friendly Awakened Wyldwood.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="e886-3883-9f06-0e03" name="The Reaping" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="814b-e67a-c375-6d71" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="04a8-8c5e-ea92-15fc" name="The Reaping" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
+              <characteristics>
+                <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">Add 3&quot; to the range within which you can pick friendly SYLVANETH units with the Places of Power and From the Woodland Depths battle traits.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="6423-1641-b1cb-04e4" name="Sylvaneth Warscroll Battalions" hidden="true" collective="false" import="true">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3ca6-a83c-2f4b-d25c" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="d586-4c42-6ba6-cc3e" name="Lords of the Clan" hidden="true" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="daeb-d5d0-700a-2f3b" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e6df-5a6c-56e7-f2d1" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="1951-6f33-bf9e-9ac9" name="2-4 Treelord Ancients" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="26d4-b4db-c4f5-f0f4" value="4.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="daeb-d5d0-700a-2f3b" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="increment" field="6831-9742-d5dd-c651" value="2.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="daeb-d5d0-700a-2f3b" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="daeb-d5d0-700a-2f3b" type="greaterThan"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4b76-b5c5-2c23-c72a" type="instanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="26d4-b4db-c4f5-f0f4" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6831-9742-d5dd-c651" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7390-8726-48a5-bf50" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="8e9a-3012-29ba-942a" name="1-3 Treelords" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="6e40-00a7-bfb7-b9e5" value="3.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="daeb-d5d0-700a-2f3b" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="increment" field="4c64-1617-32b4-be2b" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="daeb-d5d0-700a-2f3b" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="daeb-d5d0-700a-2f3b" type="greaterThan"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f301-21bf-5de1-a0f4" type="instanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6e40-00a7-bfb7-b9e5" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4c64-1617-32b4-be2b" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c4df-67d3-9841-6c1c" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="98bd-7411-8f1f-2078" name="Outcasts" hidden="true" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="471d-38f0-5388-84a0" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="bff6-b048-1d87-25d0" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="621b-c53c-8f3e-d636" name="3 Spite-Revenants" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="471d-38f0-5388-84a0" type="greaterThan"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b487-315c-b64c-88b0" type="instanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="increment" field="fa28-f296-bd49-641d" value="3.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="471d-38f0-5388-84a0" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="increment" field="cb43-88d0-f0e1-e236" value="3.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="471d-38f0-5388-84a0" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cc96-e5e7-3b51-b40c" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="fa28-f296-bd49-641d" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="cb43-88d0-f0e1-e236" type="min"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="6d78-d8c4-4d07-ae03" name="Household" hidden="true" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d141-06d7-9c9e-d410" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="eb1b-6908-1a8b-8084" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="3da6-4ef8-ec0e-e226" name="1 Treelord" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="d141-06d7-9c9e-d410" type="greaterThan"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0861-c6bd-bf12-f2f4" type="instanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="increment" field="0b32-ec59-62ff-1a64" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="d141-06d7-9c9e-d410" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="increment" field="7af4-e77c-378f-5bfd" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="d141-06d7-9c9e-d410" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2893-2b33-a873-7914" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0b32-ec59-62ff-1a64" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7af4-e77c-378f-5bfd" type="min"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="62be-c730-c95c-6209" name="1 Branchwych" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="d141-06d7-9c9e-d410" type="greaterThan"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d65c-84f8-43bf-d534" type="instanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="increment" field="0c40-74e3-f3e7-635a" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="d141-06d7-9c9e-d410" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="increment" field="8c7c-a359-4f54-09e5" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="d141-06d7-9c9e-d410" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3a49-19a9-7524-0282" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0c40-74e3-f3e7-635a" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8c7c-a359-4f54-09e5" type="min"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="d93e-45c5-d534-1eb3" name="1 Tree-Revenant" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="d141-06d7-9c9e-d410" type="greaterThan"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a74a-7377-3ed9-0f5e" type="instanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="increment" field="aa6e-712e-b745-a1fc" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="d141-06d7-9c9e-d410" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="increment" field="6d6d-13da-f738-e766" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="d141-06d7-9c9e-d410" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="02ae-5848-50e3-abea" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="aa6e-712e-b745-a1fc" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6d6d-13da-f738-e766" type="min"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="c0e7-bc89-276c-88c9" name="1 Revenant Seekers" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="d141-06d7-9c9e-d410" type="greaterThan"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="da40-7e35-25b5-c1b4" type="instanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="increment" field="4e1d-0b3f-2cc4-b641" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="d141-06d7-9c9e-d410" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="increment" field="5a12-a65d-06dd-abcd" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="d141-06d7-9c9e-d410" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="937a-55f3-68bf-e2eb" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4e1d-0b3f-2cc4-b641" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5a12-a65d-06dd-abcd" type="min"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="6deb-ffed-a4e1-275e" name="Free Spirits" hidden="true" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f852-7524-198b-2957" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="77cb-0726-5328-be09" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="c1c7-1c09-9959-1d8a" name="1 Spirit of Durthu" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="f852-7524-198b-2957" type="greaterThan"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ef77-af66-26da-3a02" type="instanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="increment" field="6c8a-c123-7961-7212" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f852-7524-198b-2957" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="increment" field="4d09-e47e-f28e-cac1" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f852-7524-198b-2957" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ca6b-3eba-40fd-4680" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6c8a-c123-7961-7212" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4d09-e47e-f28e-cac1" type="min"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="40e4-6ff4-89f9-3405" name="1 Arch-Revenant" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="f852-7524-198b-2957" type="greaterThan"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ff4d-f06f-e2c4-9513" type="instanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="increment" field="a869-0085-7f9f-120e" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f852-7524-198b-2957" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="increment" field="452a-ea2c-60a7-a64c" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f852-7524-198b-2957" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f171-57d8-1f81-7b25" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a869-0085-7f9f-120e" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="452a-ea2c-60a7-a64c" type="min"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="a1cc-e417-9512-f42a" name="3 KURNOTH HUNTERS" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="f852-7524-198b-2957" type="greaterThan"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="84fa-90fa-3fe9-33f1" type="instanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="increment" field="05a6-8c95-c17f-aaf0" value="3.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f852-7524-198b-2957" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="increment" field="4264-c3e7-3a7b-0fa3" value="3.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f852-7524-198b-2957" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e139-f630-2260-21d4" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="05a6-8c95-c17f-aaf0" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4264-c3e7-3a7b-0fa3" type="min"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="3c1a-9ff3-3c5d-a4a3" name="1 Gossamid Archers" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="f852-7524-198b-2957" type="greaterThan"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1e4c-a6ea-f4f8-9885" type="instanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="increment" field="f0f7-85b4-6b6d-cc1e" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f852-7524-198b-2957" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="increment" field="1d4d-10e6-cfc4-e3da" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f852-7524-198b-2957" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e519-0173-e775-cb44" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f0f7-85b4-6b6d-cc1e" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1d4d-10e6-cfc4-e3da" type="min"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="5ac0-ba8e-223b-34ac" name="1 Spiterider Lancers" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="f852-7524-198b-2957" type="greaterThan"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1de6-4be2-bf97-326b" type="instanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="increment" field="ede6-3929-9013-3683" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f852-7524-198b-2957" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="increment" field="a44c-8c7c-c43b-19d8" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f852-7524-198b-2957" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="30fa-db8f-5de2-fe46" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ede6-3929-9013-3683" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a44c-8c7c-c43b-19d8" type="min"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="76e2-a804-fdb5-135d" name="Forest Folk" hidden="true" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="756d-d96e-e298-5558" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7d9e-016d-3308-491f" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="7d9f-c036-d4e0-7692" name="3 Dryads" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="5dc1-b52a-e095-be79" value="3.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="756d-d96e-e298-5558" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="increment" field="c220-a6fc-d74c-cc95" value="3.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="756d-d96e-e298-5558" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="756d-d96e-e298-5558" type="greaterThan"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0a14-90fc-1335-3c79" type="instanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5dc1-b52a-e095-be79" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c220-a6fc-d74c-cc95" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d4d2-24ad-40ca-d347" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <sharedProfiles>
@@ -3920,6 +4504,11 @@ Abilities that allow you to add Awakened Wyldwood to your army during the battle
         <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
         <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">18&quot;</characteristic>
         <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, set up 1 Awakened Wyldwood terrain feature wholly within range and visible to the caster, and more than 3&quot; from all other models, endless spells, invocations, terrain features and objectives, and add it to your army.</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="6734-791f-f20f-9821" name="Mighty Wyldwoods" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
+      <characteristics>
+        <characteristic name="Battalion Ability Details" typeId="08e0-9ead-1dbe-c801">When you pick your army, you can select 2 Awakened Wyldwood faction terrain features instead of 1 if your army includes this battalion.</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
