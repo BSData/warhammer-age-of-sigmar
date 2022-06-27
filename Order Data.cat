@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="1d4c-207e-6a42-ac7d" name="Order Data" revision="43" battleScribeVersion="2.03" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="133" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="1d4c-207e-6a42-ac7d" name="Order Data" revision="44" battleScribeVersion="2.03" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="136" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="4bb2-2339-a79f-51d7" name="Battletome: Cities of Sigmar "/>
     <publication id="6c99-1e0f-3bc1-11ae" name="Battletome: Stormcast Eternals (2nd Edition)"/>
@@ -2734,11 +2734,11 @@ If the bearer has a Wounds characteristic of 7 or more, while they are in cover,
         </modifier>
       </modifiers>
       <selectionEntryGroups>
-        <selectionEntryGroup id="d932-eba9-6dec-0665" name="Boons of the Everqueen" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="d932-eba9-6dec-0665" name="Boons of the Everqueen" hidden="true" collective="false" import="true">
           <modifiers>
-            <modifier type="set" field="hidden" value="true">
+            <modifier type="set" field="hidden" value="false">
               <conditions>
-                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="e82b-43a4-90b3-1d15" type="equalTo"/>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e82b-43a4-90b3-1d15" type="greaterThan"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -2793,22 +2793,15 @@ If the bearer has a Wounds characteristic of 7 or more, while they are in cover,
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup id="8ef8-1e5c-ae63-5cfc" name="Relics of Nature" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="8ef8-1e5c-ae63-5cfc" name="Relics of Nature" hidden="true" collective="false" import="true">
           <modifiers>
-            <modifier type="set" field="hidden" value="true">
+            <modifier type="set" field="hidden" value="false">
               <conditionGroups>
                 <conditionGroup type="and">
                   <conditions>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="e82b-43a4-90b3-1d15" type="equalTo"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4f53-8230-2f02-9639" type="instanceOf"/>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e82b-43a4-90b3-1d15" type="greaterThan"/>
                   </conditions>
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4f53-8230-2f02-9639" type="notInstanceOf"/>
-                        <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="e82b-43a4-90b3-1d15" type="equalTo"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
                 </conditionGroup>
               </conditionGroups>
             </modifier>
