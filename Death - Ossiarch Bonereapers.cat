@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="b3c2-9aff-8664-1d07" name="Death - Ossiarch Bonereapers" revision="60" battleScribeVersion="2.03" authorName="TigerWraith" authorContact="TigerWraith#5618 on Discord" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="133" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="b3c2-9aff-8664-1d07" name="Death - Ossiarch Bonereapers" revision="61" battleScribeVersion="2.03" authorName="TigerWraith" authorContact="TigerWraith#5618 on Discord" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="136" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="cb62-7d89-9fa6-76ad" name="Battletome: Ossiarch Bonereapers"/>
+    <publication id="254c-b9bb-a650-0c40" name="White Dwarf Issue 472"/>
   </publications>
   <profileTypes>
     <profileType id="cbb7-50b4-7858-c68c" name="Katakros Wounds Suffered">
@@ -285,6 +286,15 @@
     <entryLink id="ffaa-7d26-e911-b449" name="Endless Spell: Bone-tithe Shrieker" hidden="false" collective="false" import="true" targetId="b1d1-7112-2b5a-3b1f" type="selectionEntry"/>
     <entryLink id="fd88-7a4d-452c-4e89" name="Endless Spell: Nightmare Predator" hidden="false" collective="false" import="true" targetId="10e2-e521-0f19-af15" type="selectionEntry"/>
     <entryLink id="34bb-bebb-4d1b-d4f1" name="Endless Spell: Soulstealer Carrion" hidden="false" collective="false" import="true" targetId="9643-6bdc-b3c2-deb1" type="selectionEntry"/>
+    <entryLink id="228c-8bbb-04fd-2ede" name="Battle Tactics: Flawless Executions" hidden="true" collective="false" import="true" targetId="09a2-53e5-aec8-25e3" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4030-1d9b-ec45-bc4b" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="5f00-f498-a38e-fd3f" name="Katakros, Mortarch of the Necropolis" publicationId="cb62-7d89-9fa6-76ad" hidden="false" collective="false" import="true" type="unit">
@@ -542,7 +552,7 @@
     </selectionEntry>
     <selectionEntry id="4030-1d9b-ec45-bc4b" name="Allegiance: The Ossiarch Empire" publicationId="cb62-7d89-9fa6-76ad" hidden="false" collective="false" import="true" type="upgrade">
       <profiles>
-        <profile id="18d0-b9ce-e638-2219" name="Relentless Discipline" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
+        <profile id="18d0-b9ce-e638-2219" name="Relentless Discipline" publicationId="254c-b9bb-a650-0c40" page="104" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
           <characteristics>
             <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">If your army is an Ossiarch Bonereapers army, you do not receive command points. Instead, you receive relentless discipline points.
 
@@ -554,11 +564,15 @@ You receive relentless discipline points in the following ways:
 
 • If you will take the first turn, you receive 1 relentless discipline point. If you will take the second turn, you receive 2 relentless discipline points.
 
-• At the start of each hero phase, roll a dice for each friendly OSSIARCH BONEREAPERS unit on the battlefield (including any HEROES). For each 6, you receive 1 extra relentless discipline point. All Relentless discipline points that you have remaining are lost at the end of each battle round.
+• At the start of each hero phase, roll a dice for each friendly OSSIARCH BONEREAPERS unit on the battlefield (including any HEROES). For each 6, you receive 1 extra relentless discipline point. 
+
+All Relentless discipline points that you have remaining are lost at the end of each battle round.
 
 USING RELENTLESS DISCIPLINE POINTS
 
-Relentless discipline points are used to issue a command in the same manner as command points, but can only be used to issue a command with command abilities that appear on a warscroll that has the OSSIARCH BONEREAPERS keyword, or to issue a command with an OSSIARCH BONEREAPERS Legion command ability, or to issue the Unstoppable Advance command below. The restriction that you cannot use the same command ability more than once in the same phase does not apply to command abilities used with relentless discipline points. For example, you can use the Shieldwall command ability on the Mortek Guard warscroll more than once in the same phase, as long as that command is issued by a model that has not already issued a command in that phase and it is received by a unit that has not already received a command in that phase.
+Relentless discipline points are used to issue a command in the same manner as command points, but they can only be spent to use an Ossiarch command ability.  Ossiarch command abilities are command abilities that appear on a warscroll that has the OSSIARCH BONEREAPERS keyword, or are an OSSIARCH BONEREAPERS Legion command ability, or are included in the list of Ossiarch command abilities. 
+
+The restriction that you cannot use the same command ability more than once in the same phase does not apply to Ossiarch command abilities. For example, you can use the Shieldwall command ability on the Mortek Guard warscroll more than once in the same phase, as long as that command is issued by a model that has not already issued a command in that phase and it is received by a unit that has not already received a command in that phase.
 
 In addition, you cannot use the Expert, Slayers, Strategists or Swift battalion abilities (core rules, 26.3). Instead, for each battalion in your army that has any of these battalion abilities, once per battle at the start of any battle round, you can choose to receive 1 relentless discipline point.</characteristic>
           </characteristics>
@@ -573,9 +587,24 @@ In addition, you cannot use the Expert, Slayers, Strategists or Swift battalion 
             <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">Do not take battleshock tests for friendly OSSIARCH BONEREAPERS units.</characteristic>
           </characteristics>
         </profile>
-        <profile id="e82a-1f03-63ab-46be" name="Unstoppable Advance" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
+        <profile id="e82a-1f03-63ab-46be" name="Unstoppable Advance" hidden="false" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
           <characteristics>
-            <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">You can use this command ability in your movement phase when you pick a friendly OSSIARCH BONEREAPERS unit to make a normal move, run or retreat. Add 3&quot; to that unit’s Move characteristic in that phase.</characteristic>
+            <characteristic name="Command Ability Details" typeId="1b71-4c83-4e8c-093f">You can use this Ossiarch command ability in your movement phase when you pick a friendly OSSIARCH BONEREAPERS unit to make a normal move, run or retreat. Add 3&quot; to that unit’s Move characteristic in that phase.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="b6cc-f15c-8b4b-f521" name="Reknit Constructs" publicationId="254c-b9bb-a650-0c40" page="104" hidden="false" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
+          <characteristics>
+            <characteristic name="Command Ability Details" typeId="1b71-4c83-4e8c-093f">You can use this Ossiarch command ability at the end of your movement phase.  The unit that receives the command must be a friendly OSSIARCH BONEREAPERS unit that remained stationary in that phase, and that is more than 3&quot; from all enemy units.  You can heal up to D3 wounds allocated to that unit or, if no wounds are allocated to it, you can return a number of slain models to that unit that have combined Wounds characteristic of D3 or less.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="736f-e0b0-d62f-e432" name="Unflinching Coordination" publicationId="254c-b9bb-a650-0c40" page="104" hidden="false" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
+          <characteristics>
+            <characteristic name="Command Ability Details" typeId="1b71-4c83-4e8c-093f">You can use this Ossiarch command ability in the combat phase after a friendly OSSIARCH BONEREAPERS HERO has fought for the first time in that phase.  The unit that issues the command must be a friendly OSSIARCH BONEREAPERS HERO that has already fought in that phase.  The unit that receives the command must be a friendly OSSIARCH BONEREAPERS unit that is not a HERO, that not yet fought in that phase, and that is within 3&quot; of an enemy unit.  That unit can fight immediately.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="1f12-e015-3e49-b5c8" name="Relentless Leadership" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
+          <characteristics>
+            <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">Pick 1 friendly OSSIARCH BONEREAPERS HERO.  Until the end of this turn, you can use an Ossiarch command ability to issue a command with that HERO without a relentless discipline point being spent.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -3308,7 +3337,33 @@ You can roll D3 additional dice when this LIEGE uses their Unstoppable Charge ab
       </categoryLinks>
       <entryLinks>
         <entryLink id="864a-e125-cea0-67c7" name="Universal Grand Strategy" hidden="false" collective="false" import="true" targetId="1e64-bcdc-3709-7ec7" type="selectionEntryGroup"/>
+        <entryLink id="9574-76e5-8399-af0e" name="Demands of the Tithe (Grand Strategy)" hidden="false" collective="false" import="true" targetId="5fa7-90e8-49df-f52f" type="selectionEntryGroup"/>
       </entryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="09a2-53e5-aec8-25e3" name="Battle Tactics: Flawless Executions" publicationId="254c-b9bb-a650-0c40" page="107" hidden="false" collective="false" import="true" type="upgrade">
+      <profiles>
+        <profile id="213a-4242-19e5-7517" name="Trample the Defiant" hidden="false" typeId="eba0-4bf6-65fe-fdbc" typeName="Battle Tactic">
+          <characteristics>
+            <characteristic name="Description" typeId="f882-48d5-21a4-1787">Pick 1 friendly KAVALOS DEATHRIDERS unit that is more than 3&quot; form all enemy units.  You complete this battle tactic if that unit make a charge move this turn and is within 3&quot; of any enemy units at the end of this turn.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="8a6b-5ac8-3a2b-83ea" name="Unfeeling Recursion" hidden="false" typeId="eba0-4bf6-65fe-fdbc" typeName="Battle Tactic">
+          <characteristics>
+            <characteristic name="Description" typeId="f882-48d5-21a4-1787">You complete this battle tactic if two or more friendly OSSIARCH BONEREAPERS units had slain models returned to them with the Reknit Construct Ossiarch command ability this turn.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="9134-eeea-85d9-d3f9" name="The Tithe Demands" hidden="false" typeId="eba0-4bf6-65fe-fdbc" typeName="Battle Tactic">
+          <characteristics>
+            <characteristic name="Description" typeId="f882-48d5-21a4-1787">Pick 1 enemy HERO or MONSTER on the battlefield.  You complete this battle tactic if that unit is destroyed this turn.  If that enemy HERO or MONSTER was destroyed by an attack made by a friendly GOTHIZZAR HARVESTER, score 1 additional victory point.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="466b-db38-59f7-2a7e" name="New CategoryLink" hidden="false" targetId="1974-3f49-7f0b-8422" primary="true"/>
+      </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
@@ -4441,6 +4496,39 @@ You can roll D3 additional dice when this LIEGE uses their Unstoppable Charge ab
         </entryLink>
         <entryLink id="b93d-bfde-24e2-545b" name="Universal Spell Lore" hidden="false" collective="false" import="true" targetId="20c3-23a0-9d79-b491" type="selectionEntryGroup"/>
       </entryLinks>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="5fa7-90e8-49df-f52f" name="Demands of the Tithe (Grand Strategy)" publicationId="254c-b9bb-a650-0c40" page="107" hidden="true" collective="false" import="true">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4030-1d9b-ec45-bc4b" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="cdb3-fc55-1e9c-25d4" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="793e-ffda-ee0c-6e26" type="max"/>
+      </constraints>
+      <selectionEntries>
+        <selectionEntry id="cc4b-8abc-4254-75f3" name="Unrelenting Efficiency" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="af8c-999d-caa4-b12d" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="0f96-9b91-39c7-9cf6" name="Unrelenting Efficiency" hidden="false" typeId="9c01-ec20-32c1-0948" typeName="Grand Strategy">
+              <characteristics>
+                <characteristic name="Description" typeId="53c8-cc18-16d1-e890">When the battle ends, you complete this grand strategy if any friendly MORTEK GUARD or KAVALOS DEATHRIDERS units from your starting army have the same number of models in that unit as they had at the start of the battle.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <categoryLinks>
+            <categoryLink id="56b0-37f9-e7ee-1a79" name="Grand Strategy" hidden="false" targetId="5dff-3614-49fd-c3e4" primary="false"/>
+          </categoryLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <sharedProfiles>
