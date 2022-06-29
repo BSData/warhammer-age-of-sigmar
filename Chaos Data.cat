@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="0339-0157-6910-d29c" name="Chaos Data" revision="142" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="133" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="0339-0157-6910-d29c" name="Chaos Data" revision="143" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="137" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="c9b2-1fe6-pubN65537" name="Battletome: Beasts of Chaos"/>
     <publication id="6894-a70d-pubN65537" name="Chaos Battletome: Maggotkin of Nurgle"/>
@@ -17752,14 +17752,15 @@ Kneel: Subtract 1 from save rolls for attacks that target that unit until your n
     </selectionEntryGroup>
     <selectionEntryGroup id="826e-2c9e-cfaf-844b" name="Grand Strategy" hidden="false" collective="false" import="true">
       <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5e32-3b0f-35bc-b9cb" type="min"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="36e8-d5db-68c4-c7e9" type="max"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ec25-aa2d-9bac-ad72" type="min"/>
       </constraints>
       <entryLinks>
         <entryLink id="f49c-1b3d-2995-4429" name="Slaves to Darkness Grand Strategy" hidden="false" collective="false" import="true" targetId="32c3-1df7-13f4-8fec" type="selectionEntryGroup"/>
         <entryLink id="c68f-5380-422b-dd35" name="Universal Grand Strategy" hidden="false" collective="false" import="true" targetId="1e64-bcdc-3709-7ec7" type="selectionEntryGroup"/>
         <entryLink id="d62e-e496-17a4-596d" name="Nurgle Grand Strategy" hidden="false" collective="false" import="true" targetId="9dc6-5556-9af5-0f5c" type="selectionEntryGroup"/>
         <entryLink id="0480-41e3-2fda-8ee9" name="Slaanesh Grand Strategy" hidden="false" collective="false" import="true" targetId="0547-e0ab-b720-e2e2" type="selectionEntryGroup"/>
+        <entryLink id="a15d-0a3a-6b82-c5d0" name="Blades of Khorne Grand Strategy" hidden="false" collective="false" import="true" targetId="c9a1-8415-c9c4-a91a" type="selectionEntryGroup"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="9dc6-5556-9af5-0f5c" name="Nurgle Grand Strategy" hidden="false" collective="false" import="true">
@@ -18426,6 +18427,39 @@ Kneel: Subtract 1 from save rolls for attacks that target that unit until your n
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="c9a1-8415-c9c4-a91a" name="Blades of Khorne Grand Strategy" hidden="true" collective="false" import="true">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b541-3b22-08bb-d772" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="579a-5240-b6ef-17b5" type="max"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6609-bbff-5435-9c20" type="max"/>
+      </constraints>
+      <selectionEntries>
+        <selectionEntry id="0b17-e4ad-0fd2-ac25" name="The Blood Legions March" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ac50-2e31-cb0a-3b98" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="70f7-fb64-1a41-28e3" name="The Blood Legions March" hidden="false" typeId="9c01-ec20-32c1-0948" typeName="Grand Strategy">
+              <characteristics>
+                <characteristic name="Description" typeId="53c8-cc18-16d1-e890">When the battle ends, you complete this grand strategy if in every battle round after the first, you summoned KHORNE DAEMON units to the battlefield by expending blood tithe points.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <categoryLinks>
+            <categoryLink id="a1ac-78e3-781c-62ea" name="Grand Strategy" hidden="false" targetId="5dff-3614-49fd-c3e4" primary="false"/>
+          </categoryLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <sharedProfiles>
