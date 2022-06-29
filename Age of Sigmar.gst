@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="136" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="137" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <publications>
     <publication id="e51d-b1a3-pubEC" name="The General&apos;s Handbook"/>
     <publication id="e51d-b1a3-pubEQ" name="Core Rules"/>
@@ -2126,6 +2126,9 @@
           </conditionGroups>
         </modifier>
       </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="c7b5-fe66-9bb3-af2e" type="max"/>
+      </constraints>
       <profiles>
         <profile id="4929-a4e9-9630-afa6" name="Scent Tracking" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
           <characteristics>
@@ -2158,6 +2161,9 @@
           </conditionGroups>
         </modifier>
       </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="2bad-0177-c7ce-7979" type="max"/>
+      </constraints>
       <profiles>
         <profile id="2046-2f7f-2027-2ef5" name="Expert Underdogs" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
           <characteristics>
@@ -2585,6 +2591,9 @@ In addition, this incarnate can carry out the Devour Endless Spell monstrous ram
           </conditionGroups>
         </modifier>
       </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="ef18-52b3-54a9-c2d4" type="max"/>
+      </constraints>
       <profiles>
         <profile id="9075-d3b2-8f61-ebd3" name="Dominant Force" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
           <characteristics>
@@ -2617,6 +2626,9 @@ In addition, this incarnate can carry out the Devour Endless Spell monstrous ram
           </conditionGroups>
         </modifier>
       </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="edc0-084a-56cc-a24d" type="max"/>
+      </constraints>
       <profiles>
         <profile id="d226-d50c-b28f-f59f" name="Headhunters" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
           <characteristics>
