@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="137" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="138" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <publications>
     <publication id="e51d-b1a3-pubEC" name="The General&apos;s Handbook"/>
     <publication id="e51d-b1a3-pubEQ" name="Core Rules"/>
@@ -1766,7 +1766,7 @@
           <characteristics>
             <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
             <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">12&quot;</characteristic>
-            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick 1 enemy unit within range and visible to the caster. When determining the number of models in that enemy unit that are contesting an objective, your opponenet must halve that number, rounding down.</characteristic>
+            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick 1 enemy unit within range and visible to the caster. When determining the number of models in that enemy unit that are contesting an objective, your opponent must halve that number, rounding down.</characteristic>
           </characteristics>
         </profile>
         <profile id="63a5-b54e-6be0-a48f" name="The Bonds of Battle" hidden="false" typeId="6bf0-7801-561f-cc28" typeName="Special Rules">
@@ -1776,7 +1776,7 @@
         </profile>
         <profile id="9bbf-623a-02e8-89f5" name="Proving Grounds" hidden="false" typeId="6bf0-7801-561f-cc28" typeName="Special Rules">
           <characteristics>
-            <characteristic name="Description" typeId="82bd-2ffd-8589-576c">At the start of each battle round, after the players have determined who will take the first turn, the player who will take the second turn can pick 1 objective on the battlefield to be the proving ground until the end of that battle round. The same objective cannot be picked as the proving ground more than once per battle, and only 1 objective can be marked as the proving ground ant any one time. Only models in units with the GALLETIAN VETERANS keyword can contest an bojective marked as the proving ground. </characteristic>
+            <characteristic name="Description" typeId="82bd-2ffd-8589-576c">At the start of each battle round, after the players have determined who will take the first turn, the player who will take the second turn can pick 1 objective on the battlefield to be the proving ground until the end of that battle round. The same objective cannot be picked as the proving ground more than once per battle, and only 1 objective can be marked as the proving ground ant any one time. Only models in units with the GALLETIAN VETERANS keyword can contest an objective marked as the proving ground. </characteristic>
           </characteristics>
         </profile>
         <profile id="e681-1ade-ef65-e311" name="Masters of the Splintered Land" hidden="false" typeId="6bf0-7801-561f-cc28" typeName="Special Rules">
@@ -2462,16 +2462,16 @@ Add 1 to casting, dispelling and unbinding rolls for a WIZARD that is within dom
         </profile>
         <profile id="0c29-9e07-7375-55c2" name="Inflamed Savagery" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">The following effects apply to all units that are wholly iwthin domination range of this incarnate: 
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">The following effects apply to all units that are wholly within domination range of this incarnate: 
 
-- The unit&apos;s commanding nplayer can re-roll run rolls and charge rolls for the unit. 
+- The unit&apos;s commanding player can re-roll run rolls and charge rolls for the unit. 
 - The unit cannot retreat.
 - If the unit is a WIZARD that is not bonded to this incarnate, subtract 1 from casting, dispelling, and unbinding rolls for that WIZARD. </characteristic>
           </characteristics>
         </profile>
         <profile id="ba73-8afd-fc53-88d8" name="Arcane Predator" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">In your charge phase, if this incarnate is within 12&quot; of an endless spell that was summoned by an enemy WIZARD, it can attempt a chrage, and it can make a charge move as long as the charge move finishes within 1/2&quot; of an enemy model or endless spell that was summoned by an enemy WIZARD. 
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">In your charge phase, if this incarnate is within 12&quot; of an endless spell that was summoned by an enemy WIZARD, it can attempt a charge, and it can make a charge move as long as the charge move finishes within 1/2&quot; of an enemy model or endless spell that was summoned by an enemy WIZARD. 
 
 In addition, this incarnate can carry out the Devour Endless Spell monstrous rampage below instead of any other monstrous rampage it can carry out. </characteristic>
           </characteristics>
@@ -2597,7 +2597,7 @@ In addition, this incarnate can carry out the Devour Endless Spell monstrous ram
       <profiles>
         <profile id="9075-d3b2-8f61-ebd3" name="Dominant Force" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
           <characteristics>
-            <characteristic name="Battalion Ability Details" typeId="08e0-9ead-1dbe-c801">GALLETIAN VETERANS units only. Each model in this battalion counts as 3 models for the p urposes of contesting objectives.</characteristic>
+            <characteristic name="Battalion Ability Details" typeId="08e0-9ead-1dbe-c801">GALLETIAN VETERANS units only. Each model in this battalion counts as 3 models for the purposes of contesting objectives.</characteristic>
           </characteristics>
         </profile>
         <profile id="8c44-b929-4631-1da3" name="Core Battalion: Expert Conquerors" hidden="false" typeId="75e0-a332-e4f5-bf36" typeName="Battalion Organisation">
@@ -5051,7 +5051,7 @@ In addition, this incarnate can carry out the Devour Endless Spell monstrous ram
               <profiles>
                 <profile id="b742-a2c9-b35e-0cb0" name="Show of Dominance" hidden="false" typeId="9c01-ec20-32c1-0948" typeName="Grand Strategy">
                   <characteristics>
-                    <characteristic name="Description" typeId="53c8-cc18-16d1-e890">When the battle ends, you complete this grand strategy if therea are any friendly GALLETIAN VETERANS units in each quarter of the battlefield.</characteristic>
+                    <characteristic name="Description" typeId="53c8-cc18-16d1-e890">When the battle ends, you complete this grand strategy if there are any friendly GALLETIAN VETERANS units in each quarter of the battlefield.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
