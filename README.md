@@ -33,7 +33,7 @@ to develop - cool! We need you! Take a look at [our homepage][BSData.net]
 
 __Okay, nice project. Is it actually working?__ _I just want those files..._
 
-Yeah! We have it hosted on AppSpot. Take a look: [BattleScribe Data on Appspot][]
+Yeah! We have it hosted on AppSpot. Take a look: [BattleScribe Data on Appspot]
 
 __I found a bug!__ / *I have another request*
 
@@ -47,4 +47,5 @@ Great, thank you! Please [Report a bug][bug report] - you can also suggest enhan
 
 [WAoS Catalog Wiki - Implementation Guidelines]: https://github.com/BSData/warhammer-age-of-sigmar/wiki/Implementation-Guidelines
 [BSData.net]: https://www.bsdata.net/
+[BattleScribe Data on Appspot]: https://battlescribedata.appspot.com/#/repo/warhammer-age-of-sigmar
 [bug report]: https://github.com/BSData/warhammer-age-of-sigmar/issues/new/choose
