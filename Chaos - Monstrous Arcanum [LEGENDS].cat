@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="956f-20ef-7502-1ba0" name="Chaos - Monstrous Arcanum [LEGENDS]" revision="15" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="114" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="956f-20ef-7502-1ba0" name="Chaos - Monstrous Arcanum [LEGENDS]" revision="16" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="138" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profileTypes>
     <profileType id="1d9d-3543-a777-a151" name="Aura of Mutation - D6">
       <characteristicTypes>
@@ -59,6 +59,19 @@
         <characteristicType id="9351-6382-fb70-8e24" name="Variable 1"/>
         <characteristicType id="1cb4-9037-5862-664b" name="Variable 2"/>
         <characteristicType id="696c-59f2-2e6d-79d0" name="Variable 3"/>
+      </characteristicTypes>
+    </profileType>
+    <profileType id="9c4b-b5a4-fbb4-a246" name="Siege Gargant Wounds">
+      <characteristicTypes>
+        <characteristicType id="b979-6784-b1e0-8a37" name="Move"/>
+        <characteristicType id="a004-2293-5a8f-103a" name="Colossal Hook-blades"/>
+      </characteristicTypes>
+    </profileType>
+    <profileType id="dfc0-1cd3-c47a-a1bf" name="Mammoth Wounds">
+      <characteristicTypes>
+        <characteristicType id="9fd9-be30-5c66-70bd" name="Move"/>
+        <characteristicType id="152c-3962-a5b7-0ebf" name="Goring Tusks"/>
+        <characteristicType id="c62c-5e1a-712f-c068" name="Trampling Feet"/>
       </characteristicTypes>
     </profileType>
   </profileTypes>
@@ -480,30 +493,6 @@
             <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">5+</characteristic>
           </characteristics>
         </profile>
-        <profile id="5f00-86d7-b920-4c79" name="00-04" hidden="false" typeId="ccb4-0ae9-71ef-9e90" typeName="Gigantic Chaos Spawn Wounds Suffered">
-          <characteristics>
-            <characteristic name="Move" typeId="cd21-3420-bc4c-48b5">3D6&quot;</characteristic>
-            <characteristic name="Crushing Jaws" typeId="af68-3526-4abc-036d">-2</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="31dc-b46b-5f2e-ea56" name="05-06" hidden="false" typeId="ccb4-0ae9-71ef-9e90" typeName="Gigantic Chaos Spawn Wounds Suffered">
-          <characteristics>
-            <characteristic name="Move" typeId="cd21-3420-bc4c-48b5">2D6&quot;</characteristic>
-            <characteristic name="Crushing Jaws" typeId="af68-3526-4abc-036d">-2</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="1e6d-20db-af7f-a5c5" name="07-08" hidden="false" typeId="ccb4-0ae9-71ef-9e90" typeName="Gigantic Chaos Spawn Wounds Suffered">
-          <characteristics>
-            <characteristic name="Move" typeId="cd21-3420-bc4c-48b5">2D6&quot;</characteristic>
-            <characteristic name="Crushing Jaws" typeId="af68-3526-4abc-036d">-1</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="ba4f-0da2-b8ae-01f3" name="09+" hidden="false" typeId="ccb4-0ae9-71ef-9e90" typeName="Gigantic Chaos Spawn Wounds Suffered">
-          <characteristics>
-            <characteristic name="Move" typeId="cd21-3420-bc4c-48b5">D6&quot;</characteristic>
-            <characteristic name="Crushing Jaws" typeId="af68-3526-4abc-036d">-1</characteristic>
-          </characteristics>
-        </profile>
         <profile id="d2ad-411b-aa0c-e6ec" name="Plaything of the Dark Gods" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
             <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the start of your hero phase, roll a dice. On a 1, this model suffers D3 mortal wounds. On a 2+, you can heal up to D3 wounds allocated to this model. If you roll a 2+ and no wounds are allocated to this model, add D3 to its Wounds characteristic for the rest of the battle instead of healing D3 wounds.</characteristic>
@@ -567,6 +556,38 @@
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
+        <selectionEntry id="b9f0-586d-1a61-9d76" name="Wound Track" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ed05-2596-a76d-fab7" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f343-833e-e216-586a" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="e91d-3ba0-edc2-df25" name="00-04" hidden="false" typeId="ccb4-0ae9-71ef-9e90" typeName="Gigantic Chaos Spawn Wounds Suffered">
+              <characteristics>
+                <characteristic name="Move" typeId="cd21-3420-bc4c-48b5">3D6&quot;</characteristic>
+                <characteristic name="Crushing Jaws" typeId="af68-3526-4abc-036d">-2</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="7e2a-6b3a-6fd0-97be" name="05-06" hidden="false" typeId="ccb4-0ae9-71ef-9e90" typeName="Gigantic Chaos Spawn Wounds Suffered">
+              <characteristics>
+                <characteristic name="Move" typeId="cd21-3420-bc4c-48b5">2D6&quot;</characteristic>
+                <characteristic name="Crushing Jaws" typeId="af68-3526-4abc-036d">-2</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="08e5-24f8-4dc6-364a" name="07-08" hidden="false" typeId="ccb4-0ae9-71ef-9e90" typeName="Gigantic Chaos Spawn Wounds Suffered">
+              <characteristics>
+                <characteristic name="Move" typeId="cd21-3420-bc4c-48b5">2D6&quot;</characteristic>
+                <characteristic name="Crushing Jaws" typeId="af68-3526-4abc-036d">-1</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="304e-727a-d458-2595" name="09+" hidden="false" typeId="ccb4-0ae9-71ef-9e90" typeName="Gigantic Chaos Spawn Wounds Suffered">
+              <characteristics>
+                <characteristic name="Move" typeId="cd21-3420-bc4c-48b5">D6&quot;</characteristic>
+                <characteristic name="Crushing Jaws" typeId="af68-3526-4abc-036d">-1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
       </selectionEntries>
       <entryLinks>
         <entryLink id="f313-885b-3142-945e" name="Mark of Chaos" hidden="false" collective="false" import="true" targetId="c73b-8365-4180-fa10" type="selectionEntryGroup"/>
@@ -594,41 +615,6 @@
         <profile id="345c-e673-3e2a-26fb" name="Timber!" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
             <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If this model is slain, before removing it from play, the players must roll off. The winner must pick a point on the battlefield 4&quot; from this model. Each unit within 3&quot; of that point suffers D3 mortal wounds unless it is a GARGANT. This model is then removed from play</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="427a-5131-40e6-3ade" name="WoundTable0" hidden="false" typeId="fd46-5bf4-a5cc-f4eb" typeName="Gargant Wounds">
-          <characteristics>
-            <characteristic name="Move" typeId="9351-6382-fb70-8e24">Wounds Suffered</characteristic>
-            <characteristic name="Massive Club" typeId="1cb4-9037-5862-664b">Move</characteristic>
-            <characteristic name="Vicious &apos;Eadbutt" typeId="696c-59f2-2e6d-79d0">Colossal Hook-Blades</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="0602-1c1b-f830-5009" name="WoundTable1" hidden="false" typeId="fd46-5bf4-a5cc-f4eb" typeName="Gargant Wounds">
-          <characteristics>
-            <characteristic name="Move" typeId="9351-6382-fb70-8e24">0-5</characteristic>
-            <characteristic name="Massive Club" typeId="1cb4-9037-5862-664b">7&quot;</characteristic>
-            <characteristic name="Vicious &apos;Eadbutt" typeId="696c-59f2-2e6d-79d0">7</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="faf0-0362-b232-de92" name="WoundTable2" hidden="false" typeId="fd46-5bf4-a5cc-f4eb" typeName="Gargant Wounds">
-          <characteristics>
-            <characteristic name="Move" typeId="9351-6382-fb70-8e24">6-7</characteristic>
-            <characteristic name="Massive Club" typeId="1cb4-9037-5862-664b">6&quot;</characteristic>
-            <characteristic name="Vicious &apos;Eadbutt" typeId="696c-59f2-2e6d-79d0">6</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="2ac8-e7ba-85d3-e17c" name="WoundTable3" hidden="false" typeId="fd46-5bf4-a5cc-f4eb" typeName="Gargant Wounds">
-          <characteristics>
-            <characteristic name="Move" typeId="9351-6382-fb70-8e24">8-9</characteristic>
-            <characteristic name="Massive Club" typeId="1cb4-9037-5862-664b">5&quot;</characteristic>
-            <characteristic name="Vicious &apos;Eadbutt" typeId="696c-59f2-2e6d-79d0">5</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="18d1-380a-5571-e98c" name="WoundTable4" hidden="false" typeId="fd46-5bf4-a5cc-f4eb" typeName="Gargant Wounds">
-          <characteristics>
-            <characteristic name="Move" typeId="9351-6382-fb70-8e24">10+</characteristic>
-            <characteristic name="Massive Club" typeId="1cb4-9037-5862-664b">4&quot;</characteristic>
-            <characteristic name="Vicious &apos;Eadbutt" typeId="696c-59f2-2e6d-79d0">4</characteristic>
           </characteristics>
         </profile>
         <profile id="6db5-a278-97ed-8ac0" name="Monstrous Ally" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
@@ -689,6 +675,38 @@
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
+        <selectionEntry id="30fe-f6e3-2b55-45fb" name="Wound Track" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b417-0633-10cc-d743" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="729a-18d9-b441-a221" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="d60b-ddba-22ee-1752" name="00-05" hidden="false" typeId="9c4b-b5a4-fbb4-a246" typeName="Siege Gargant Wounds">
+              <characteristics>
+                <characteristic name="Move" typeId="b979-6784-b1e0-8a37">7&quot;</characteristic>
+                <characteristic name="Colossal Hook-blades" typeId="a004-2293-5a8f-103a">7</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="ec82-dab4-6f5d-b8ee" name="06-07" hidden="false" typeId="9c4b-b5a4-fbb4-a246" typeName="Siege Gargant Wounds">
+              <characteristics>
+                <characteristic name="Move" typeId="b979-6784-b1e0-8a37">6&quot;</characteristic>
+                <characteristic name="Colossal Hook-blades" typeId="a004-2293-5a8f-103a">6</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="28fa-630d-d71a-5ae0" name="08-09" hidden="false" typeId="9c4b-b5a4-fbb4-a246" typeName="Siege Gargant Wounds">
+              <characteristics>
+                <characteristic name="Move" typeId="b979-6784-b1e0-8a37">5&quot;</characteristic>
+                <characteristic name="Colossal Hook-blades" typeId="a004-2293-5a8f-103a">5</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="55f2-f856-458c-091c" name="10+" hidden="false" typeId="9c4b-b5a4-fbb4-a246" typeName="Siege Gargant Wounds">
+              <characteristics>
+                <characteristic name="Move" typeId="b979-6784-b1e0-8a37">4&quot;</characteristic>
+                <characteristic name="Colossal Hook-blades" typeId="a004-2293-5a8f-103a">4</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
       </selectionEntries>
       <entryLinks>
         <entryLink id="2ef5-5218-5d2d-a781" name="Battalions" hidden="false" collective="false" import="true" targetId="cab0-f907-f734-2384" type="selectionEntryGroup"/>
@@ -707,28 +725,6 @@
             <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">4+</characteristic>
           </characteristics>
         </profile>
-        <profile id="f133-7af7-71d3-b786" name="Goring Tusks" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
-          <characteristics>
-            <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
-            <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">3&quot;</characteristic>
-            <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">1</characteristic>
-            <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">See rules</characteristic>
-            <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">See rules</characteristic>
-            <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">See rules</characteristic>
-            <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">See rules</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="4edf-da5a-3cf7-854e" name="Trampling Feet" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
-          <characteristics>
-            <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
-            <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
-            <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">*</characteristic>
-            <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
-            <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
-            <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-2</characteristic>
-            <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">D3</characteristic>
-          </characteristics>
-        </profile>
         <profile id="eac9-b642-caa4-7c6c" name="Goring Tusks" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
             <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Do not use the attack sequence for an attack made with Goring Tusks. Instead, roll a number of dice equal to the Goring Tusks value shown on the damage table above. Add 1 to the roll if the target unit is a MONSTER. For each 3+, the target unit suffers D3 mortal wounds.</characteristic>
@@ -737,46 +733,6 @@
         <profile id="389c-2bbc-332e-9cca" name="Crushing Fall" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
             <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If this model is slain, before removing it from play, the players must roll off. The winner must pick a point on the battlefield 4&quot; from this model. Each unit within 4&quot; of that point suffers D6 mortal wounds. This model is then removed from play</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="59f7-c0e4-447f-912a" name="WoundTable0" hidden="false" typeId="90d1-a434-348d-a861" typeName="Damage Table">
-          <characteristics>
-            <characteristic name="Variable 1" typeId="420a-645a-ab28-93a0">Wounds Suffered</characteristic>
-            <characteristic name="Variable 2" typeId="4cdd-1e03-530f-0ff7"> Move</characteristic>
-            <characteristic name="Variable 3" typeId="b1ea-56be-ba52-16e9">Goring Tusks</characteristic>
-            <characteristic name="Variable 4" typeId="ad26-bf56-95c4-80f1">Trampling Feet</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="0fa3-bd8b-f91d-b659" name="WoundTable1" hidden="false" typeId="90d1-a434-348d-a861" typeName="Damage Table">
-          <characteristics>
-            <characteristic name="Variable 1" typeId="420a-645a-ab28-93a0">0-10</characteristic>
-            <characteristic name="Variable 2" typeId="4cdd-1e03-530f-0ff7">12&quot;</characteristic>
-            <characteristic name="Variable 3" typeId="b1ea-56be-ba52-16e9">5</characteristic>
-            <characteristic name="Variable 4" typeId="ad26-bf56-95c4-80f1">10</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="19a6-bd2a-89d8-75aa" name="WoundTable2" hidden="false" typeId="90d1-a434-348d-a861" typeName="Damage Table">
-          <characteristics>
-            <characteristic name="Variable 1" typeId="420a-645a-ab28-93a0">11-14</characteristic>
-            <characteristic name="Variable 2" typeId="4cdd-1e03-530f-0ff7">10&quot;</characteristic>
-            <characteristic name="Variable 3" typeId="b1ea-56be-ba52-16e9">4</characteristic>
-            <characteristic name="Variable 4" typeId="ad26-bf56-95c4-80f1">8</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="028c-7aaa-bfd7-fc69" name="WoundTable3" hidden="false" typeId="90d1-a434-348d-a861" typeName="Damage Table">
-          <characteristics>
-            <characteristic name="Variable 1" typeId="420a-645a-ab28-93a0">15-19</characteristic>
-            <characteristic name="Variable 2" typeId="4cdd-1e03-530f-0ff7">8&quot;</characteristic>
-            <characteristic name="Variable 3" typeId="b1ea-56be-ba52-16e9">3</characteristic>
-            <characteristic name="Variable 4" typeId="ad26-bf56-95c4-80f1">6</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="9dee-71bd-8138-3b7c" name="WoundTable4" hidden="false" typeId="90d1-a434-348d-a861" typeName="Damage Table">
-          <characteristics>
-            <characteristic name="Variable 1" typeId="420a-645a-ab28-93a0">20+</characteristic>
-            <characteristic name="Variable 2" typeId="4cdd-1e03-530f-0ff7">6&quot;</characteristic>
-            <characteristic name="Variable 3" typeId="b1ea-56be-ba52-16e9">2</characteristic>
-            <characteristic name="Variable 4" typeId="ad26-bf56-95c4-80f1">4</characteristic>
           </characteristics>
         </profile>
         <profile id="856b-d0fe-3b34-b208" name="Monstrous Ally" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
@@ -817,6 +773,80 @@
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
+        </selectionEntry>
+        <selectionEntry id="d5b1-5833-c7bf-dcc1" name="Goring Tusks" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6aab-f821-3168-4722" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9f95-4d62-600c-3c99" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="cb07-9a2c-06cc-72ef" name="Goring Tusks" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">3&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">1</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">See rules</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">See rules</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">See rules</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">See rules</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry id="15d9-fbe4-f425-8394" name="Trampling Feet" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="060c-c8a8-946f-735a" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="402b-64c2-9a97-5156" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="da24-b243-1998-1936" name="Trampling Feet" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">*</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-2</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">D3</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry id="5916-6ed3-553f-ddd8" name="Wound Track" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="94e8-9ad8-f804-df0a" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f385-e7a7-be3d-77ef" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="1208-8f72-4753-5a12" name="00-10" hidden="false" typeId="dfc0-1cd3-c47a-a1bf" typeName="Mammoth Wounds">
+              <characteristics>
+                <characteristic name="Move" typeId="9fd9-be30-5c66-70bd">12&quot;</characteristic>
+                <characteristic name="Goring Tusks" typeId="152c-3962-a5b7-0ebf">5</characteristic>
+                <characteristic name="Trampling Feet" typeId="c62c-5e1a-712f-c068">10</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="2130-f8c5-398a-5082" name="11-14" hidden="false" typeId="dfc0-1cd3-c47a-a1bf" typeName="Mammoth Wounds">
+              <characteristics>
+                <characteristic name="Move" typeId="9fd9-be30-5c66-70bd">10&quot;</characteristic>
+                <characteristic name="Goring Tusks" typeId="152c-3962-a5b7-0ebf">4</characteristic>
+                <characteristic name="Trampling Feet" typeId="c62c-5e1a-712f-c068">8</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="63ec-20b6-47f1-48d8" name="15-19" hidden="false" typeId="dfc0-1cd3-c47a-a1bf" typeName="Mammoth Wounds">
+              <characteristics>
+                <characteristic name="Move" typeId="9fd9-be30-5c66-70bd">8&quot;</characteristic>
+                <characteristic name="Goring Tusks" typeId="152c-3962-a5b7-0ebf">3</characteristic>
+                <characteristic name="Trampling Feet" typeId="c62c-5e1a-712f-c068">6</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="d717-7abc-c1ea-b8b9" name="20+" hidden="false" typeId="dfc0-1cd3-c47a-a1bf" typeName="Mammoth Wounds">
+              <characteristics>
+                <characteristic name="Move" typeId="9fd9-be30-5c66-70bd">6&quot;</characteristic>
+                <characteristic name="Goring Tusks" typeId="152c-3962-a5b7-0ebf">2</characteristic>
+                <characteristic name="Trampling Feet" typeId="c62c-5e1a-712f-c068">4</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
