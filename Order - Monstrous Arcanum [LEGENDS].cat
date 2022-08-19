@@ -1,8 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="7b81-c642-43f2-ebcc" name="Order - Monstrous Arcanum [LEGENDS]" revision="9" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="108" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="7b81-c642-43f2-ebcc" name="Order - Monstrous Arcanum [LEGENDS]" revision="10" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="138" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="7b81-c642-pubN65537" name="Monstrous Arcanum Warscroll Compendium"/>
   </publications>
+  <profileTypes>
+    <profileType id="c9ea-2656-07c5-7ed0" name="Carmine Dragon Wounds">
+      <characteristicTypes>
+        <characteristicType id="1282-fd8c-5d31-3989" name="Move"/>
+        <characteristicType id="d4c1-45d8-1eda-bfce" name="Raking Claws"/>
+        <characteristicType id="35c1-82f0-4aa0-0113" name="Amethyst Fangs"/>
+      </characteristicTypes>
+    </profileType>
+  </profileTypes>
   <categoryEntries>
     <categoryEntry id="8f19-a239-fe0f-58df" name="CARMINE DRAGON" hidden="false"/>
   </categoryEntries>
@@ -22,46 +31,6 @@
             <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">14</characteristic>
             <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">10</characteristic>
             <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">3+</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="ffcf-8259-3c40-132a" name="Wounds0" hidden="false" typeId="90d1-a434-348d-a861" typeName="Damage Table">
-          <characteristics>
-            <characteristic name="Variable 1" typeId="420a-645a-ab28-93a0">Wounds Suffered</characteristic>
-            <characteristic name="Variable 2" typeId="4cdd-1e03-530f-0ff7">Move</characteristic>
-            <characteristic name="Variable 3" typeId="b1ea-56be-ba52-16e9">Raking Claws</characteristic>
-            <characteristic name="Variable 4" typeId="ad26-bf56-95c4-80f1">Amethyst Fangs</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="4cd0-b9d0-87f7-002d" name="Wounds1" hidden="false" typeId="90d1-a434-348d-a861" typeName="Damage Table">
-          <characteristics>
-            <characteristic name="Variable 1" typeId="420a-645a-ab28-93a0">0-6</characteristic>
-            <characteristic name="Variable 2" typeId="4cdd-1e03-530f-0ff7">16&quot;</characteristic>
-            <characteristic name="Variable 3" typeId="b1ea-56be-ba52-16e9">8</characteristic>
-            <characteristic name="Variable 4" typeId="ad26-bf56-95c4-80f1">2+</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="3025-cf99-975b-fbe6" name="Wounds2" hidden="false" typeId="90d1-a434-348d-a861" typeName="Damage Table">
-          <characteristics>
-            <characteristic name="Variable 1" typeId="420a-645a-ab28-93a0">7-9</characteristic>
-            <characteristic name="Variable 2" typeId="4cdd-1e03-530f-0ff7">14&quot;</characteristic>
-            <characteristic name="Variable 3" typeId="b1ea-56be-ba52-16e9">7</characteristic>
-            <characteristic name="Variable 4" typeId="ad26-bf56-95c4-80f1">3+</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="57d0-8ad4-03b7-749d" name="Wounds3" hidden="false" typeId="90d1-a434-348d-a861" typeName="Damage Table">
-          <characteristics>
-            <characteristic name="Variable 1" typeId="420a-645a-ab28-93a0">10-11</characteristic>
-            <characteristic name="Variable 2" typeId="4cdd-1e03-530f-0ff7">11&quot;</characteristic>
-            <characteristic name="Variable 3" typeId="b1ea-56be-ba52-16e9">6</characteristic>
-            <characteristic name="Variable 4" typeId="ad26-bf56-95c4-80f1">4+</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="7f8a-9c08-40e0-f130" name="Wounds4" hidden="false" typeId="90d1-a434-348d-a861" typeName="Damage Table">
-          <characteristics>
-            <characteristic name="Variable 1" typeId="420a-645a-ab28-93a0">12+</characteristic>
-            <characteristic name="Variable 2" typeId="4cdd-1e03-530f-0ff7">9&quot;</characteristic>
-            <characteristic name="Variable 3" typeId="b1ea-56be-ba52-16e9">5</characteristic>
-            <characteristic name="Variable 4" typeId="ad26-bf56-95c4-80f1">5+</characteristic>
           </characteristics>
         </profile>
         <profile id="4fbd-d37e-0479-8a4e" name="Deathly Dark Scales" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
@@ -161,6 +130,42 @@
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
+        </selectionEntry>
+        <selectionEntry id="703f-7ce2-c5fb-9bd2" name="Wound Tracker" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b998-5b85-2dfd-530b" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0ac1-755e-1c7d-f958" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="f5dd-9b12-d321-0703" name="00-06" hidden="false" typeId="c9ea-2656-07c5-7ed0" typeName="Carmine Dragon Wounds">
+              <characteristics>
+                <characteristic name="Move" typeId="1282-fd8c-5d31-3989">16&quot;</characteristic>
+                <characteristic name="Raking Claws" typeId="d4c1-45d8-1eda-bfce">8</characteristic>
+                <characteristic name="Amethyst Fangs" typeId="35c1-82f0-4aa0-0113">2+</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="b7dc-d792-301e-f027" name="07-09" hidden="false" typeId="c9ea-2656-07c5-7ed0" typeName="Carmine Dragon Wounds">
+              <characteristics>
+                <characteristic name="Move" typeId="1282-fd8c-5d31-3989">14&quot;</characteristic>
+                <characteristic name="Raking Claws" typeId="d4c1-45d8-1eda-bfce">7</characteristic>
+                <characteristic name="Amethyst Fangs" typeId="35c1-82f0-4aa0-0113">3+</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="a09f-be97-2c74-d518" name="10-11" hidden="false" typeId="c9ea-2656-07c5-7ed0" typeName="Carmine Dragon Wounds">
+              <characteristics>
+                <characteristic name="Move" typeId="1282-fd8c-5d31-3989">11&quot;</characteristic>
+                <characteristic name="Raking Claws" typeId="d4c1-45d8-1eda-bfce">6</characteristic>
+                <characteristic name="Amethyst Fangs" typeId="35c1-82f0-4aa0-0113">4+</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="94b2-9b12-bcb8-d63b" name="12+" hidden="false" typeId="c9ea-2656-07c5-7ed0" typeName="Carmine Dragon Wounds">
+              <characteristics>
+                <characteristic name="Move" typeId="1282-fd8c-5d31-3989">9&quot;</characteristic>
+                <characteristic name="Raking Claws" typeId="d4c1-45d8-1eda-bfce">5</characteristic>
+                <characteristic name="Amethyst Fangs" typeId="35c1-82f0-4aa0-0113">5+</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
         </selectionEntry>
       </selectionEntries>
       <costs>
