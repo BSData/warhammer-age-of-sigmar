@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="3a4f-b93a-26ba-a2d1" name="Order - Lumineth" revision="78" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="139" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="3a4f-b93a-26ba-a2d1" name="Order - Lumineth" revision="79" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="138" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="695b-f18a-c0a9-6bf4" name="Order Battletome - Lumineth Realm-Lords"/>
     <publication id="98eb-b95a-7da9-94a4" name="Order Battletome - Lumineth Realm-Lords 2021"/>
@@ -106,6 +106,7 @@
       </constraints>
     </categoryEntry>
     <categoryEntry id="d3da-ab05-ccda-349a" name="SCINARI HERO" hidden="false"/>
+    <categoryEntry id="2fa8-92e2-8292-8030" name="ENLIGHTENER" hidden="false"/>
   </categoryEntries>
   <entryLinks>
     <entryLink id="2249-c919-580f-d2b3" name="Vanari Auralan Wardens" hidden="false" collective="false" import="true" targetId="3b53-dbf5-8f73-b10d" type="selectionEntry"/>
@@ -196,6 +197,7 @@
     <entryLink id="ea31-2d12-71f6-16d6" name="Endless Spell: Hyshian Twinstones" hidden="false" collective="false" import="true" targetId="0969-9868-6c43-b024" type="selectionEntry"/>
     <entryLink id="95a0-ac7e-3e13-cad1" name="Endless Spell: Rune of Petrification" hidden="false" collective="false" import="true" targetId="c3aa-f1d6-5300-761b" type="selectionEntry"/>
     <entryLink id="3969-c060-2df5-76c0" name="Endless Spell: Sanctum of Amyntok" hidden="false" collective="false" import="true" targetId="8118-ffac-9dad-ff7f" type="selectionEntry"/>
+    <entryLink id="5818-fe34-8d73-d8ad" name="Scinari Enlightener" hidden="false" collective="false" import="true" targetId="a5b4-5e1d-5c27-cf3d" type="selectionEntry"/>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="6548-ab09-c1f0-3594" name="Allegiance" hidden="false" collective="false" import="true" type="upgrade">
@@ -477,11 +479,6 @@
                 <cost name="pts" typeId="points" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="e635-e34d-bb4f-b84c" name="Allegiance: *Order*" hidden="false" collective="false" import="true" type="upgrade">
-              <costs>
-                <cost name="pts" typeId="points" value="0.0"/>
-              </costs>
-            </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -513,7 +510,7 @@
             <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the start of the combat phase, you can say that this unit will use its Deathly Furrows ability. If you do so, in that phase, you can either add 1 to the Attacks characteristic of this unit’s melee weapons, but it can only target units that have a Wounds characteristic of 1 or 2 and do not have a mount, or you can add 2 to the Attacks characteristic of this unit’s melee weapons, but it can only target units that have a Wounds characteristic of 1 and do not have a mount.</characteristic>
           </characteristics>
         </profile>
-        <profile id="cf97-01e3-db71-6b54" name="Vanari Dawnriders (Magic)" hidden="false" typeId="f55d-ee3a-1597-110f" typeName="Magic">
+        <profile id="cf97-01e3-db71-6b54" name="Wizard (Steedmaster)" hidden="false" typeId="f55d-ee3a-1597-110f" typeName="Magic">
           <characteristics>
             <characteristic name="Cast/Unbind" typeId="8294-f605-2c0f-8f92">1/1</characteristic>
             <characteristic name="Spells Known" typeId="dc9c-47d3-6931-859c">Power of Hysh</characteristic>
@@ -525,6 +522,11 @@
             <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">2</characteristic>
             <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">7</characteristic>
             <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">4+</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="54c7-6849-43e0-a66e" name="Shining Company" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Subtract 1 from hit rolls for attacks that target this unit if the base of each model in this unit is touching the bases of 2 or more other models in the same unit.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -558,7 +560,7 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1221-de05-a4e9-309d" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="140.0"/>
+            <cost name="pts" typeId="points" value="160.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="3f62-7e04-356a-274a" name="Steedmaster" hidden="false" collective="false" import="true" type="upgrade">
@@ -570,7 +572,7 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c799-22ba-d298-8e49" type="max"/>
           </constraints>
           <profiles>
-            <profile id="fc78-32bc-3168-7348" name="Steedmaster" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+            <profile id="fc78-32bc-3168-7348" name="Champion" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
               <characteristics>
                 <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 model in this unit can be a Steedmaster. A Steedmaster is armed with a Sunmetal Lance and a Guardian’s Sword.</characteristic>
               </characteristics>
@@ -672,7 +674,7 @@
             </modifier>
           </modifiers>
           <costs>
-            <cost name="pts" typeId="points" value="140.0"/>
+            <cost name="pts" typeId="points" value="160.0"/>
           </costs>
         </entryLink>
         <entryLink id="0b51-1cdc-08ee-fb4c" name="Spell Lores" hidden="false" collective="false" import="true" targetId="3a17-eca0-d1c0-8fca" type="selectionEntryGroup"/>
@@ -726,7 +728,7 @@
             <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If the target unit made a charge move in the same turn, add 1 to wound rolls for attacks made with this unit’s Warden’s Pikes and improve the Rend characteristic of that weapon by 1.</characteristic>
           </characteristics>
         </profile>
-        <profile id="4b22-6134-b50c-631a" name="High Warden (Magic)" hidden="false" typeId="f55d-ee3a-1597-110f" typeName="Magic">
+        <profile id="4b22-6134-b50c-631a" name="Wizard (High Warden)" hidden="false" typeId="f55d-ee3a-1597-110f" typeName="Magic">
           <characteristics>
             <characteristic name="Cast/Unbind" typeId="8294-f605-2c0f-8f92">1/1</characteristic>
             <characteristic name="Spells Known" typeId="dc9c-47d3-6931-859c">Power of Hysh</characteristic>
@@ -1016,7 +1018,7 @@
             <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the start of the combat phase, you can say that this model will adopt the Stonemage Stance.  If you do so, this model and any friendly ALARITH STONEGUARD units wholly within 12&quot; of this model cannot make a pile-in move in that phase.   However, until the end of that phase, improve the Rend characteristic of melee weapons used by 1.</characteristic>
           </characteristics>
         </profile>
-        <profile id="2192-92bc-1549-2067" name="Magic" hidden="false" typeId="f55d-ee3a-1597-110f" typeName="Magic">
+        <profile id="2192-92bc-1549-2067" name="Wizard" hidden="false" typeId="f55d-ee3a-1597-110f" typeName="Magic">
           <characteristics>
             <characteristic name="Cast/Unbind" typeId="8294-f605-2c0f-8f92">1/1</characteristic>
             <characteristic name="Spells Known" typeId="dc9c-47d3-6931-859c">Gravitic Redirection, Arcane Bolt, Mystic Shield</characteristic>
@@ -1391,7 +1393,7 @@
             <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Each time a friendly unit within range of this model&apos;s Aura of Celennar ability is affected by an endless spell or a spell cast by an enemy WIZARD, you can roll a dice.  On a 4+, ignore the effects of that spell or endless spell on that unit.  Then, pick 1 enemy unit within 18&quot; of that unit.  That unit suffers D3 mortal wounds.  The range of the Aura of Celennar ability for this model is found in the Wound Tracker table.</characteristic>
           </characteristics>
         </profile>
-        <profile id="575b-1d4b-e2cc-6a9e" name="Magic" hidden="false" typeId="f55d-ee3a-1597-110f" typeName="Magic">
+        <profile id="575b-1d4b-e2cc-6a9e" name="Wizard" hidden="false" typeId="f55d-ee3a-1597-110f" typeName="Magic">
           <characteristics>
             <characteristic name="Cast/Unbind" typeId="8294-f605-2c0f-8f92">1-4/Any</characteristic>
             <characteristic name="Spells Known" typeId="dc9c-47d3-6931-859c">Arcane Bolt, Mystic Shield, Protection of Teclis, Storm of Searing White Light</characteristic>
@@ -1578,7 +1580,7 @@
             <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the start of the battleshock phase, you can pick 1 friendly LUMINETH REALM-LORDS unit wholly within 18&quot; of this model and roll a dice.  On a 2+, do not take a battleshock test for that unit.  In addition, if any models from that unit were slain during that turn, you can pick 1 enemy unit within 18&quot; of this model that has to take a battleshock test in that phase.   If you do so, add the number of models from that friendly unit that were slain during that turn to the modified battleshock roll for that enemy unit.</characteristic>
           </characteristics>
         </profile>
-        <profile id="3ca3-2191-eca6-96f6" name="Magic" hidden="false" typeId="f55d-ee3a-1597-110f" typeName="Magic">
+        <profile id="3ca3-2191-eca6-96f6" name="Wizard" hidden="false" typeId="f55d-ee3a-1597-110f" typeName="Magic">
           <characteristics>
             <characteristic name="Cast/Unbind" typeId="8294-f605-2c0f-8f92">1/1</characteristic>
             <characteristic name="Spells Known" typeId="dc9c-47d3-6931-859c">Arcane Bolt, Mystic Shield, Darkness of the Soul</characteristic>
@@ -1685,10 +1687,15 @@
             <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Before attacking with Auralan Bows, choose either the Aimed or Lofted missile weapon characteristics for all shooting attacks made by this unit in that phase.</characteristic>
           </characteristics>
         </profile>
-        <profile id="0e37-a2c4-0d0a-44a8" name="High Sentinel (Magic)" hidden="false" typeId="f55d-ee3a-1597-110f" typeName="Magic">
+        <profile id="0e37-a2c4-0d0a-44a8" name="Wizard (High Sentinel)" hidden="false" typeId="f55d-ee3a-1597-110f" typeName="Magic">
           <characteristics>
             <characteristic name="Cast/Unbind" typeId="8294-f605-2c0f-8f92">1/1</characteristic>
             <characteristic name="Spells Known" typeId="dc9c-47d3-6931-859c">Power of Hysh</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="ca23-aac3-e264-33f9" name="Shining Company" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Subtract 1 from hit rolls for attacks that target this unit if the base of each model in this unit is touching the bases of 2 or more other models in the same unit.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1731,7 +1738,7 @@
                 <profile id="593c-f26f-e655-0acf" name="Auralan Bow: Lofted" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
                   <characteristics>
                     <characteristic name="Type" typeId="655c-362e-a663-3e50">Missile</characteristic>
-                    <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">30&quot;</characteristic>
+                    <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">24&quot;</characteristic>
                     <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">1</characteristic>
                     <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
                     <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">4+</characteristic>
@@ -1790,7 +1797,7 @@
             </selectionEntry>
           </selectionEntries>
           <costs>
-            <cost name="pts" typeId="points" value="170.0"/>
+            <cost name="pts" typeId="points" value="165.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="8e84-946f-f309-8bf4" name="High Sentinel" hidden="false" collective="false" import="true" type="upgrade">
@@ -1799,14 +1806,14 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d444-88ed-cf13-39ca" type="max"/>
           </constraints>
           <profiles>
-            <profile id="235f-2e2d-5c46-b6c1" name="High Sentinel" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+            <profile id="235f-2e2d-5c46-b6c1" name="Champion" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
               <characteristics>
                 <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 model in this unit can be a High Sentinel.  A High Sentinel is armed with a Champion&apos;s Blade instead of an Auralan Bow and Vanari Dagger, and they carry a Scryhawk Lantern.</characteristic>
               </characteristics>
             </profile>
             <profile id="3e36-d875-3a0b-68b7" name="Scryhawk Lantern" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
               <characteristics>
-                <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the start of your shooting phase, you can pick 1 enemy unit within 30&quot; of this unit&apos;s High Sentinel that is not visible to them.  If you do so, you must choose the Lofted missile weapon characteristic for all attacks made with this unit&apos;s Auralan Bows in that phase, but that enemy unit is treated as being visible to all friendly models from this unit until the end of that phase.</characteristic>
+                <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the start of your shooting phase, you can pick 1 enemy unit within 24&quot; of this unit&apos;s High Sentinel that is in cover.  If you do so, you must choose the Lofted missile weapon characteristic for all attacks made with this unit&apos;s Auralan Bows in that phase, but that enemy unit does not receive the benefit of being in cover from attacks made by this unit until the end of that phase.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -1850,7 +1857,7 @@
             </modifier>
           </modifiers>
           <costs>
-            <cost name="pts" typeId="points" value="170.0"/>
+            <cost name="pts" typeId="points" value="165.0"/>
           </costs>
         </entryLink>
         <entryLink id="bf7a-3f65-99c0-f2d2" name="Spell Lores" hidden="false" collective="false" import="true" targetId="3a17-eca0-d1c0-8fca" type="selectionEntryGroup"/>
@@ -2446,7 +2453,7 @@ LUMINETH REALM-LORDS AELF HERO is within 6&quot; of this model at the start of y
             <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">5+</characteristic>
           </characteristics>
         </profile>
-        <profile id="d779-9906-1c9d-1db4" name="Magic" hidden="false" typeId="f55d-ee3a-1597-110f" typeName="Magic">
+        <profile id="d779-9906-1c9d-1db4" name="Wizard" hidden="false" typeId="f55d-ee3a-1597-110f" typeName="Magic">
           <characteristics>
             <characteristic name="Cast/Unbind" typeId="8294-f605-2c0f-8f92">1/1</characteristic>
             <characteristic name="Spells Known" typeId="dc9c-47d3-6931-859c">Arcane Bolt, Mystic Shield, Dazzling Light</characteristic>
@@ -2727,7 +2734,7 @@ LUMINETH REALM-LORDS AELF HERO is within 6&quot; of this model at the start of y
             <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the end of the combat phase, roll a dice if this model fought in that phase. If the roll is less than the number of the current battle round or less than the number of wounds allocated to this model, heal up to D6 wounds allocated to this model then remove it from the battlefield. Then, set up this model anywhere on the battlefield that is more than 12&quot; from any enemy models. If this is impossible, this model is removed from play but does not count as having been slain.</characteristic>
           </characteristics>
         </profile>
-        <profile id="717b-88d3-f923-2d45" name="Magic" hidden="false" typeId="f55d-ee3a-1597-110f" typeName="Magic">
+        <profile id="717b-88d3-f923-2d45" name="Wizard" hidden="false" typeId="f55d-ee3a-1597-110f" typeName="Magic">
           <characteristics>
             <characteristic name="Cast/Unbind" typeId="8294-f605-2c0f-8f92">2/2</characteristic>
             <characteristic name="Spells Known" typeId="dc9c-47d3-6931-859c">Arcane Bolt, Mystic Shield, Salvation of Hysh</characteristic>
@@ -3003,7 +3010,7 @@ In addition, if an enemy model starts a pile-in move within 3&quot; of any frien
             <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If a friendly WINDCHARGERS unit starts a move wholly within 6&quot; of this model, when it makes that move, that unit has a Move characteristic of 16&quot; and can fly.</characteristic>
           </characteristics>
         </profile>
-        <profile id="0f85-09c3-9cf8-ba7c" name="Magic" hidden="false" typeId="f55d-ee3a-1597-110f" typeName="Magic">
+        <profile id="0f85-09c3-9cf8-ba7c" name="Wizard" hidden="false" typeId="f55d-ee3a-1597-110f" typeName="Magic">
           <characteristics>
             <characteristic name="Cast/Unbind" typeId="8294-f605-2c0f-8f92">1/1</characteristic>
             <characteristic name="Spells Known" typeId="dc9c-47d3-6931-859c">Arcane Bolt, Mystic Shield, Windblast Vortex</characteristic>
@@ -3260,7 +3267,7 @@ In addition, if an enemy model starts a pile-in move within 3&quot; of any frien
             <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">3+</characteristic>
           </characteristics>
         </profile>
-        <profile id="b0fe-c166-a1b7-607d" name="Magic" hidden="false" typeId="f55d-ee3a-1597-110f" typeName="Magic">
+        <profile id="b0fe-c166-a1b7-607d" name="Wizard" hidden="false" typeId="f55d-ee3a-1597-110f" typeName="Magic">
           <characteristics>
             <characteristic name="Cast/Unbind" typeId="8294-f605-2c0f-8f92">1/1</characteristic>
             <characteristic name="Spells Known" typeId="dc9c-47d3-6931-859c">Greater Power of Hysh</characteristic>
@@ -3428,7 +3435,7 @@ In addition, if an enemy model starts a pile-in move within 3&quot; of any frien
 In addition, instead of setting up this model on the battlefield, you can place it to one side and say that it is set up as a Lone Agent reserve unit. If you do so, at the start of the first battle round, before determining who has the first turn, you must set up this model on the battlefield anywhere that is more than 3&quot; from any enemy Damage units and not in your territory. If you set up this model within 6&quot; of an objective that has no enemy units within 6&quot; of it, you gain control of that objective, and your opponent cannot gain control of it while this model is within 6&quot; of it.</characteristic>
           </characteristics>
         </profile>
-        <profile id="e7b9-c221-671c-8e84" name="Magic" hidden="false" typeId="f55d-ee3a-1597-110f" typeName="Magic">
+        <profile id="e7b9-c221-671c-8e84" name="Wizard" hidden="false" typeId="f55d-ee3a-1597-110f" typeName="Magic">
           <characteristics>
             <characteristic name="Cast/Unbind" typeId="8294-f605-2c0f-8f92">1/1</characteristic>
             <characteristic name="Spells Known" typeId="dc9c-47d3-6931-859c">Arcane Bolt, Mystic Shield</characteristic>
@@ -3535,7 +3542,7 @@ In addition, instead of setting up this model on the battlefield, you can place 
             <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Once per battle, in your hero phase, instead of attempting to cast any spells with 1 friendly model with this ability, you can roll a dice. Add the number of the current battle round to the roll. On a 5+, pick a point anywhere on the battlefield. For the rest of the battle, do not take battleshock tests for friendly LUMINETH REALM‐LORDS units that are wholly within 9&quot; of that point, and add 1 to casting, dispelling and unbinding rolls for friendly LUMINETH REALM‐LORDS WIZARDS that are within 9&quot; of that point.</characteristic>
           </characteristics>
         </profile>
-        <profile id="8025-6c74-6a72-3783" name="Magic" hidden="false" typeId="f55d-ee3a-1597-110f" typeName="Magic">
+        <profile id="8025-6c74-6a72-3783" name="Wizard" hidden="false" typeId="f55d-ee3a-1597-110f" typeName="Magic">
           <characteristics>
             <characteristic name="Cast/Unbind" typeId="8294-f605-2c0f-8f92">1/1</characteristic>
             <characteristic name="Spells Known" typeId="dc9c-47d3-6931-859c">Arcane Bolt, Mystic Shield, Erasure</characteristic>
@@ -3782,22 +3789,29 @@ In addition, if an enemy model starts a pile-in move within 3&quot; of any frien
         </profile>
         <profile id="c761-2aca-e006-5508" name="Guardians" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Roll a dice before you allocate a wound or mortal wound to a friendly SCINARI model within 3&quot; of any friendly units with this ability. On a 2+, you must allocate that wound or mortal wound to a friendly unit with this ability within 3&quot; of that model, instead of to that model.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Before you allocate a wound or mortal wound to a friendly SCINARI HERO unit, or instead of making a ward roll for a wound or mortal wound that would be allocated to that HERO, you can roll a dice.  On a 2+, that wound or mortal wound is allocated to a friendly unit with this ability within 3&quot; of that HERO instead of that HERO and cannot be negated.</characteristic>
           </characteristics>
         </profile>
         <profile id="60c5-8e6d-7df5-935b" name="Swordmasters" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Before fighting with this unit, choose either the Perfect Strike or Flurry of Blows Sunmetal Greatblade weapon characteristics. All of the models in the unit armed with Sunmetal Greatblades must use those characteristics when they attack. A Perfect Strike always hits (do not make a hit roll). A Flurry of Blows has an Attacks characteristic equal to the number of enemy models within 2&quot; of the attacking model.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Before fighting with this unit, choose either the Perfect Strike or Flurry of Blows Sunmetal Greatblade weapon characteristics. All of the models in the unit armed with Sunmetal Greatblades must use those characteristics when they attack. 
+
+A Perfect Strike always hits (do not make a hit roll). A Flurry of Blows has an Attacks characteristic equal to the number of enemy models within 2&quot; of the attacking model.</characteristic>
           </characteristics>
         </profile>
         <profile id="2aa6-a4ff-78ef-3a56" name="Vanashimor Banners" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Each time this unit is affected by a spell or endless spell, you can roll a dice. If you do so, on a 4+, ignore the effects of that spell or endless spell on this unit.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Each time this unit is affected by a spell or the abilities of an endless spell, you can roll a dice. On a 4+, ignore the effect of that spell or the effects of that endless spell&apos;s abilities on this unit.</characteristic>
           </characteristics>
         </profile>
-        <profile id="b9ab-79e1-9864-5ae5" name="Bladelord Seneschal" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+        <profile id="b9ab-79e1-9864-5ae5" name="Champion" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 model in this unit can be a Bladelord Seneschal. That model is armed with a Sunmetal Greatblade or Sunmetal Dual Blades. Add 1 to the Attacks characteristic a Bladelord Seneschal’s Sunmetal Greatblade.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 model in this unit can be a Bladelord Seneschal. That model is armed with a Sunmetal Greatblade or Sunmetal Dual Blades. Add 1 to the Attacks characteristic of that model&apos;s Sunmetal Greatblade.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="4845-688d-5b08-e444" name="Shining Company" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Subtract 1 from hit rolls for attacks that target this unit if the base of each model in this unit is touching the bases of 2 or more other models in the same unit.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -3872,7 +3886,7 @@ In addition, if an enemy model starts a pile-in move within 3&quot; of any frien
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4aa0-cbbe-8fe7-119c" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="130.0"/>
+            <cost name="pts" typeId="points" value="145.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="e062-04a1-cce5-9208" name="Sunmetal Dual Blades (Seneschal)" hidden="false" collective="false" import="true" type="upgrade">
@@ -3909,7 +3923,7 @@ In addition, if an enemy model starts a pile-in move within 3&quot; of any frien
             </modifier>
           </modifiers>
           <costs>
-            <cost name="pts" typeId="points" value="130.0"/>
+            <cost name="pts" typeId="points" value="145.0"/>
           </costs>
         </entryLink>
       </entryLinks>
@@ -4023,7 +4037,7 @@ In addition, once per battle at the start of any phase, you can say that this mo
             <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">3+</characteristic>
           </characteristics>
         </profile>
-        <profile id="35f7-ff8c-58e1-c725" name="Magic" hidden="false" typeId="f55d-ee3a-1597-110f" typeName="Magic">
+        <profile id="35f7-ff8c-58e1-c725" name="Wizard" hidden="false" typeId="f55d-ee3a-1597-110f" typeName="Magic">
           <characteristics>
             <characteristic name="Cast/Unbind" typeId="8294-f605-2c0f-8f92">1/1</characteristic>
             <characteristic name="Spells Known" typeId="dc9c-47d3-6931-859c">Greater Power of Hysh</characteristic>
@@ -4498,6 +4512,125 @@ In addition, once per battle at the start of any phase, you can say that this mo
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="a5b4-5e1d-5c27-cf3d" name="Scinari Enlightener" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="add" field="category" value="c7a4-dfe4-ade3-9a92">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="43c3-c915-f204-94d6" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <profiles>
+        <profile id="54bb-d473-a42a-3443" name="Scinari Enlightener" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
+          <characteristics>
+            <characteristic name="Move" typeId="8655-6213-2824-1752">6&quot;</characteristic>
+            <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">5</characteristic>
+            <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">7</characteristic>
+            <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">5+</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="e6b3-a8de-4aea-6693" name="Wizard" hidden="false" typeId="f55d-ee3a-1597-110f" typeName="Magic">
+          <characteristics>
+            <characteristic name="Cast/Unbind" typeId="8294-f605-2c0f-8f92">2/2</characteristic>
+            <characteristic name="Spells Known" typeId="dc9c-47d3-6931-859c">Arcane Bolt, Mystic Shield, Twinned Tether</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="cd56-749b-9498-1f42" name="Deep Thinkers" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Once per battle, in your hero phase, when this unit attempts to cast its first spell in that phase, it is automatically cast with a casting roll of 9 that cannot be modified (do not roll 2D6), but it can be unbound.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="12d6-ab53-0fa0-3fb1" name="Rune of Enthlai" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Once per turn, if this unit successfully casts a spell from the Lore of Hysh, and that spell is not unbound, you can roll a dice after the effect of that spell has been resolved.  On a 3+, you can immediately resolve the effect of that spell for a second time.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="2e27-185e-9d92-d6bc" name="Twinned Tether" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+          <characteristics>
+            <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
+            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">12&quot;</characteristic>
+            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick 1 enemy unit within range and visible to the caster.  Until your next hero phase, each time a wound or mortal wound is allocated to the caster, your opponent must allocated a wound to that enemy unit.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="e042-7f9d-fb88-e222" name="Arcane Bolt" hidden="false" targetId="ae02-a84f-a903-1ff8" type="profile"/>
+        <infoLink id="77d9-7ecc-5bbd-301f" name="Mystic Shield" hidden="false" targetId="b41f-f1ce-7aa5-4f81" type="profile"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="7b7c-74ae-7495-312d" name="9 or less wounds Leader" hidden="false" targetId="a8ed-ca35-24e0-cf2e" primary="false"/>
+        <categoryLink id="71d3-6afc-8a4d-c6f2" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
+        <categoryLink id="f027-a296-318b-195c" name="ORDER" hidden="false" targetId="b970-b3bf-e1a4-a6fc" primary="false"/>
+        <categoryLink id="262a-7305-bd93-3b61" name="LUMINETH REALM-LORDS" hidden="false" targetId="a64e-c067-e836-3c21" primary="false"/>
+        <categoryLink id="b093-faf1-7755-e80e" name="AELF" hidden="false" targetId="a5b9-bc50-8b42-8152" primary="false"/>
+        <categoryLink id="6bcd-0b5b-7ea5-56f6" name="SCINARI" hidden="false" targetId="d2e2-9363-65a6-64ee" primary="false"/>
+        <categoryLink id="b8d6-a2f9-971a-c4d4" name="HERO" hidden="false" targetId="4e0e-664d-51ea-0929" primary="false"/>
+        <categoryLink id="83bc-e61d-eaef-6550" name="WIZARD" hidden="false" targetId="4f53-8230-2f02-9639" primary="false"/>
+        <categoryLink id="c529-7571-44c5-8723" name="ENLIGHTENER" hidden="false" targetId="2fa8-92e2-8292-8030" primary="false"/>
+        <categoryLink id="43eb-bd83-8470-dcea" name="SCINARI HERO" hidden="false" targetId="d3da-ab05-ccda-349a" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="6540-4011-c999-a95b" name="Crescent Staff" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e564-8964-064d-dd08" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0876-6bf6-48c7-78f3" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="61e4-dcc6-9c44-627e" name="Crescent Staff" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Missile</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">18&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">D6</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="e9d0-dbec-d87c-c8a8" name="Moonshimmer Blade" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c77c-34e0-2f82-3853" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8108-b577-345b-e9b6" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="02a0-5f7a-65de-8346" name="Moonshimmer Blade" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">3</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <entryLinks>
+        <entryLink id="c485-608b-cde2-ea2d" name="Spell Lores" hidden="false" collective="false" import="true" targetId="3a17-eca0-d1c0-8fca" type="selectionEntryGroup"/>
+        <entryLink id="9541-f0d6-0970-5a60" name="General" hidden="false" collective="false" import="true" targetId="ad2a-0c5e-e657-4141" type="selectionEntry">
+          <categoryLinks>
+            <categoryLink id="2e8f-5fea-7b93-8997" name="General" hidden="false" targetId="b745-17c4-8fbf-8b04" primary="false"/>
+          </categoryLinks>
+        </entryLink>
+        <entryLink id="b1ab-e228-f01a-fdbf" name="Artefacts" hidden="false" collective="false" import="true" targetId="cded-c966-cbb5-8c65" type="selectionEntryGroup"/>
+        <entryLink id="26fe-4044-6efe-7e74" name="Battalions" hidden="false" collective="false" import="true" targetId="df33-b274-b965-f65e" type="selectionEntryGroup"/>
+        <entryLink id="b8a7-090b-3d66-5863" name="Command Traits" hidden="false" collective="false" import="true" targetId="9a6f-e12d-c86b-6ebb" type="selectionEntryGroup"/>
+        <entryLink id="51cf-849c-6b69-4979" name="Incarnate Bonding" hidden="false" collective="false" import="true" targetId="c890-acbd-0c80-55c9" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="165.0"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>
@@ -5884,7 +6017,9 @@ If the spell directs the missiles, until your next hero phase, add 1 to hit roll
       <characteristics>
         <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
         <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">-</characteristic>
-        <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, until your next hero phase, the Sunmetal Weapons ability for the caster and/or the unit they are part of causes mortal wounds to be inflicted on an unmodified hit roll of 5+ instead of 6. Any number of Lumineth Realm-lords Wizards can attempt to cast Power of Hysh in the same hero phase.</characteristic>
+        <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, until your next hero phase, the Sunmetal Weapons ability for the caster and/or the unit they are part of causes mortal wounds to be inflicted on an unmodified hit roll of 5+ instead of 6. 
+
+Any number of LUMINETH REALM-LORDS WIZARDS can attempt to cast Power of Hysh in the same hero phase.</characteristic>
       </characteristics>
     </profile>
     <profile id="d703-b48c-8553-96c0" name="Greater Power of Hysh" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
