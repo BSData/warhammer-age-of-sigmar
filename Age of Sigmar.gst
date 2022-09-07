@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="140" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="141" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <publications>
     <publication id="e51d-b1a3-pubEC" name="The General&apos;s Handbook"/>
     <publication id="e51d-b1a3-pubEQ" name="Core Rules"/>
@@ -2431,9 +2431,9 @@
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="0553-10ac-2bd9-01a5" name="Krondspine Incanate of Ghur" publicationId="e984-0732-33ea-1669" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="0553-10ac-2bd9-01a5" name="Krondspine Incarnate of Ghur" publicationId="e984-0732-33ea-1669" hidden="false" collective="false" import="true" type="unit">
       <profiles>
-        <profile id="ace5-a065-5a57-5b42" name="Krondspine Incanate of Ghur" hidden="false" typeId="2903-43e4-1107-d856" typeName="Incarnate">
+        <profile id="ace5-a065-5a57-5b42" name="Krondspine Incarnate of Ghur" hidden="false" typeId="2903-43e4-1107-d856" typeName="Incarnate">
           <characteristics>
             <characteristic name="Move" typeId="08a5-f537-67c7-4e20">12&quot;</characteristic>
             <characteristic name="Bravery" typeId="949b-f151-7f08-d860">10</characteristic>
