@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="3981-271d-5871-845b" name="Order - Kharadron Overlords - Data" revision="62" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="138" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="3981-271d-5871-845b" name="Order - Kharadron Overlords - Data" revision="64" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="141" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="e23c-3deb-pubN65537" name="Order Battletome: Kharadron Overlords"/>
     <publication id="e23c-3deb-pubN66862" name="Order Official FAQs and errata, Version 1.4"/>
@@ -70,6 +70,7 @@
     </categoryEntry>
     <categoryEntry id="61f7-31d0-bcdd-5e25" name="Kharadron Core Battalion" hidden="false"/>
     <categoryEntry id="9366-a9cc-a215-3d75" name="DREKKI FLYNT" hidden="false"/>
+    <categoryEntry id="f89f-d988-9a02-82b0" name="ENDRIMASTER WITH DIRIGIBLE General" hidden="false"/>
   </categoryEntries>
   <sharedSelectionEntries>
     <selectionEntry id="129e-f84a-5017-ca90" name="Aether-Khemist" hidden="false" collective="false" import="true" type="unit">
@@ -194,6 +195,9 @@
                 <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
                 <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="78f3-8a59-699a-61e8" type="instanceOf"/>
                 <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="24d6-500b-7e3f-1470" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fc4e-6be8-ec51-c113" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8c26-2422-34d3-31a5" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1e36-e511-437b-5de8" type="instanceOf"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -1547,7 +1551,11 @@ An attack made by a weapon that is in range of this model can target either this
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink id="e8fc-0f2e-1426-a50b" name="General" hidden="false" collective="false" import="true" targetId="b341-0885-3f1c-7d8a" type="selectionEntry"/>
+        <entryLink id="e8fc-0f2e-1426-a50b" name="General" hidden="false" collective="false" import="true" targetId="b341-0885-3f1c-7d8a" type="selectionEntry">
+          <categoryLinks>
+            <categoryLink id="d130-4c4c-71d6-67aa" name="Unique General" hidden="false" targetId="fe3f-d230-7e2c-fba2" primary="false"/>
+          </categoryLinks>
+        </entryLink>
         <entryLink id="95ac-f427-e7cc-5131" name="Battalions" hidden="false" collective="false" import="true" targetId="ff18-f62e-a289-717c" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
@@ -1567,7 +1575,7 @@ An attack made by a weapon that is in range of this model can target either this
           <modifiers>
             <modifier type="set" field="cd0e-fea6-411f-904d" value="8">
               <conditions>
-                <condition field="selections" scope="b35b-ad7f-1673-0c71" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="eefc-07f5-c5b9-93ec" type="greaterThan"/>
+                <condition field="selections" scope="b35b-ad7f-1673-0c71" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="eefc-07f5-c5b9-93ec" type="greaterThan"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -1641,6 +1649,13 @@ An attack made by a weapon that is in range of this model can target either this
       </selectionEntries>
       <entryLinks>
         <entryLink id="ad6b-90f4-b8dc-12c2" name="General" hidden="false" collective="false" import="true" targetId="b341-0885-3f1c-7d8a" type="selectionEntry">
+          <modifiers>
+            <modifier type="remove" field="category" value="e4e2-6076-dafa-ec2c">
+              <conditions>
+                <condition field="selections" scope="b35b-ad7f-1673-0c71" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="eefc-07f5-c5b9-93ec" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <categoryLinks>
             <categoryLink id="3cd6-8f6a-d582-ae17" name="6_under_wounds" hidden="false" targetId="e4e2-6076-dafa-ec2c" primary="false"/>
           </categoryLinks>
@@ -1668,7 +1683,7 @@ An attack made by a weapon that is in range of this model can target either this
       <modifiers>
         <modifier type="set-primary" field="category" value="e9f2-765a-b7b8-ce8e">
           <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1a87-84ca-7678-2d03" type="greaterThan"/>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f89f-d988-9a02-82b0" type="greaterThan"/>
           </conditions>
         </modifier>
         <modifier type="add" field="category" value="fdc4-053a-6279-bc9e">
@@ -1680,7 +1695,7 @@ An attack made by a weapon that is in range of this model can target either this
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1a87-84ca-7678-2d03" type="greaterThan"/>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f89f-d988-9a02-82b0" type="greaterThan"/>
                 <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1411-460f-c135-a667" type="greaterThan"/>
               </conditions>
             </conditionGroup>
@@ -1877,7 +1892,7 @@ An attack made by a weapon that is in range of this model can target either this
           <modifiers>
             <modifier type="set" field="95f2-6885-756f-9ea5" value="2.0">
               <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1a87-84ca-7678-2d03" type="greaterThan"/>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f89f-d988-9a02-82b0" type="greaterThan"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -2393,7 +2408,7 @@ An attack made by a weapon that is in range of this model can target either this
       <modifiers>
         <modifier type="set-primary" field="category" value="e9f2-765a-b7b8-ce8e">
           <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1a87-84ca-7678-2d03" type="greaterThan"/>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f89f-d988-9a02-82b0" type="greaterThan"/>
           </conditions>
         </modifier>
         <modifier type="add" field="category" value="fdc4-053a-6279-bc9e">
@@ -2406,7 +2421,7 @@ An attack made by a weapon that is in range of this model can target either this
             <conditionGroup type="and">
               <conditions>
                 <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1411-460f-c135-a667" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1a87-84ca-7678-2d03" type="greaterThan"/>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f89f-d988-9a02-82b0" type="greaterThan"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -2601,7 +2616,7 @@ An attack made by a weapon that is in range of this model can target either this
           <modifiers>
             <modifier type="set" field="95f2-6885-756f-9ea5" value="2.0">
               <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1a87-84ca-7678-2d03" type="greaterThan"/>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f89f-d988-9a02-82b0" type="greaterThan"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -2628,6 +2643,7 @@ An attack made by a weapon that is in range of this model can target either this
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8c26-2422-34d3-31a5" type="instanceOf"/>
                 <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1e36-e511-437b-5de8" type="instanceOf"/>
                 <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fc4e-6be8-ec51-c113" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8af4-649e-9ee2-22ee" type="instanceOf"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -2644,11 +2660,6 @@ An attack made by a weapon that is in range of this model can target either this
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a261-5cf3-414b-dd88" type="max"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="5f36-82f1-44e9-156b" name="Allegiance: *Order*" hidden="false" collective="false" import="true" type="upgrade">
-              <costs>
-                <cost name="pts" typeId="points" value="0.0"/>
-              </costs>
-            </selectionEntry>
             <selectionEntry id="ae0a-a47d-3660-4c46" name="Allegiance: Kharadron Overlords" hidden="false" collective="false" import="true" type="upgrade">
               <profiles>
                 <profile id="9ba4-d20e-985e-d96e" name="Aether-gold" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
@@ -3234,6 +3245,7 @@ Once per phase, you can say that 1 unit from your army that has any shares of ae
         <entryLink id="1202-dce7-ffc1-750d" name="General" hidden="false" collective="false" import="true" targetId="b341-0885-3f1c-7d8a" type="selectionEntry">
           <categoryLinks>
             <categoryLink id="3cfb-ddef-0615-28c6" name="6_under_wounds" hidden="false" targetId="e4e2-6076-dafa-ec2c" primary="false"/>
+            <categoryLink id="981b-7ef6-2975-ed96" name="Unique General" hidden="false" targetId="fe3f-d230-7e2c-fba2" primary="false"/>
           </categoryLinks>
         </entryLink>
         <entryLink id="4a1f-0912-fa49-ff4f" name="General&apos;s Adjutant" hidden="false" collective="false" import="true" targetId="65e4-9e34-5cf6-2bec" type="selectionEntry"/>
@@ -3578,7 +3590,6 @@ Once per phase, you can say that 1 unit from your army that has any shares of ae
       <entryLinks>
         <entryLink id="fef1-63a4-0eef-7b82" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="8fdb-e603-9c1c-fd57" type="selectionEntryGroup"/>
         <entryLink id="da84-41d6-f8f9-b26e" name="Command Traits" hidden="false" collective="false" import="true" targetId="b698-a92e-00ae-4631" type="selectionEntryGroup"/>
-        <entryLink id="d2b5-6325-ac43-dd81" name="General - Endrinmaster with Dirigible Suit" hidden="false" collective="false" import="true" targetId="1a87-84ca-7678-2d03" type="selectionEntry"/>
         <entryLink id="c895-7e23-fea2-bf7e" name="Battalions" hidden="false" collective="false" import="true" targetId="ff18-f62e-a289-717c" type="selectionEntryGroup"/>
         <entryLink id="e9b2-6a29-ff7b-25b6" name="Spell Lores" hidden="true" collective="false" import="true" targetId="b094-0ec4-692a-78ec" type="selectionEntryGroup">
           <modifiers>
@@ -3590,36 +3601,14 @@ Once per phase, you can say that 1 unit from your army that has any shares of ae
           </modifiers>
         </entryLink>
         <entryLink id="2569-6744-1a72-b02c" name="Incarnate Bonding" hidden="false" collective="false" import="true" targetId="c890-acbd-0c80-55c9" type="selectionEntryGroup"/>
+        <entryLink id="abf3-f3ea-8931-255a" name="General" hidden="false" collective="false" import="true" targetId="b341-0885-3f1c-7d8a" type="selectionEntry">
+          <categoryLinks>
+            <categoryLink id="add0-efbc-b06e-c2ae" name="ENDRIMASTER WITH DIRIGIBLE General" hidden="false" targetId="f89f-d988-9a02-82b0" primary="false"/>
+          </categoryLinks>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="180.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="1a87-84ca-7678-2d03" name="General - Endrinmaster with Dirigible Suit" hidden="false" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8af4-649e-9ee2-22ee" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="78f3-8a59-699a-61e8" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="24d6-500b-7e3f-1470" type="instanceOf"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2e8e-2b13-19bb-9217" type="max"/>
-        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3484-fd85-050f-31ba" type="max"/>
-      </constraints>
-      <categoryLinks>
-        <categoryLink id="d24f-b1ad-390b-0556" name="New CategoryLink" hidden="false" targetId="b745-17c4-8fbf-8b04" primary="false"/>
-      </categoryLinks>
-      <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="0cb8-ad19-8612-9cd8" name="Battalion: Intrepid Prospectors" hidden="false" collective="false" import="true" type="unit">
@@ -3827,6 +3816,7 @@ Once per phase, you can say that 1 unit from your army that has any shares of ae
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8c26-2422-34d3-31a5" type="instanceOf"/>
                 <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1e36-e511-437b-5de8" type="instanceOf"/>
                 <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fc4e-6be8-ec51-c113" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8af4-649e-9ee2-22ee" type="instanceOf"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -3996,6 +3986,9 @@ say that Drekki will try to &apos;borrow&apos; that artefact. If you do so, roll
               </characteristics>
             </profile>
           </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="d459-f2c5-d793-575b" name="Grunnsson&apos;s Axe" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -4015,6 +4008,9 @@ say that Drekki will try to &apos;borrow&apos; that artefact. If you do so, roll
               </characteristics>
             </profile>
           </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
@@ -4061,14 +4057,9 @@ say that Drekki will try to &apos;borrow&apos; that artefact. If you do so, roll
     <selectionEntryGroup id="b698-a92e-00ae-4631" name="Command Traits" hidden="false" collective="false" import="true">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b341-0885-3f1c-7d8a" type="equalTo"/>
-                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1a87-84ca-7678-2d03" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
+          <conditions>
+            <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b341-0885-3f1c-7d8a" type="equalTo"/>
+          </conditions>
         </modifier>
       </modifiers>
       <constraints>
