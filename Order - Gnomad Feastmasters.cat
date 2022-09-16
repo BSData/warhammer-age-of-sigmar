@@ -15,6 +15,19 @@
         <characteristicType id="571e-8cea-9fb0-3579" name="Short Spears"/>
       </characteristicTypes>
     </profileType>
+    <profileType id="6ffb-a2e7-8aa3-364d" name="Swan Wound Table">
+      <characteristicTypes>
+        <characteristicType id="d490-bea9-6ce8-dad3" name="Move"/>
+        <characteristicType id="cf81-0f30-1b70-9ca2" name="Homogenenous Appetite"/>
+        <characteristicType id="de33-2d12-a8db-1b38" name="Beating Wings"/>
+      </characteristicTypes>
+    </profileType>
+    <profileType id="ceb1-72b6-0cde-566b" name="Shimmering Feathers">
+      <characteristicTypes>
+        <characteristicType id="c2ef-f03a-0cd6-94da" name="Rend of attacking unit&apos;s weapon"/>
+        <characteristicType id="3561-d536-9a89-4451" name="Save"/>
+      </characteristicTypes>
+    </profileType>
   </profileTypes>
   <categoryEntries>
     <categoryEntry id="78d7-bfa7-c521-f7ff" name="GNOMAD FEASTMASTERS" hidden="false"/>
@@ -26,6 +39,15 @@
     <categoryEntry id="5355-e082-e84b-ba56" name="BAREFOOT" hidden="false"/>
     <categoryEntry id="d7a4-bdcc-b845-d90a" name="HEAD CHEF" hidden="false"/>
     <categoryEntry id="74c4-7f57-a4dc-edbd" name="HEDGE HERMIT" hidden="false"/>
+    <categoryEntry id="99ac-4c6f-593f-7d7d" name="TRAIL THIEF" hidden="false"/>
+    <categoryEntry id="2055-bcba-5582-b7fd" name="MEPHISTO HARTSTOCK" hidden="false"/>
+    <categoryEntry id="7176-8526-3f93-3dbf" name="GNOMAD HOTPOT" hidden="false"/>
+    <categoryEntry id="3290-e9e1-59b5-b03d" name="FORAGER" hidden="false"/>
+    <categoryEntry id="df0a-e8da-2dc4-e72c" name="GNOMAD SCOUTS" hidden="false"/>
+    <categoryEntry id="2b9e-6560-6b2d-6006" name="GRYPH-HOUND HOBELARS" hidden="false"/>
+    <categoryEntry id="e94c-9e75-d725-5167" name="GNOMAD SCOUTS RIDING JADE EAGLES" hidden="false"/>
+    <categoryEntry id="68c9-e539-a746-08cb" name="GNOMAD DROVERS" hidden="false"/>
+    <categoryEntry id="9644-7572-85d6-e47d" name="YONELLA LIGHTFOOT" hidden="false"/>
   </categoryEntries>
   <entryLinks>
     <entryLink id="f06c-202d-4c22-9c72" name="Allegiance" hidden="false" collective="false" import="true" targetId="0374-ed65-bd71-b4a7" type="selectionEntry"/>
@@ -618,25 +640,185 @@ All friendly GNOMAD FEASTMASTERS units within 3&quot; of this model may treat th
       </costs>
     </selectionEntry>
     <selectionEntry id="1062-1c2d-cc88-f90e" name="Hedge Hermit" hidden="false" collective="false" import="true" type="unit">
+      <profiles>
+        <profile id="cb45-a253-2202-1bec" name="Hedge Hermit" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
+          <characteristics>
+            <characteristic name="Move" typeId="8655-6213-2824-1752">4&quot;</characteristic>
+            <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">4</characteristic>
+            <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">6</characteristic>
+            <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">6+</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="7a66-b452-f29a-901e" name="Soil Affinity" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This model may choose to ignore any effects of Scenery Rules or abilities on SCENERY Warscrolls.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="ce2f-7cad-937d-6ebd" name="Tree Friend" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Friendly TREELORD, TREELORD ANCIENT or SPIRIT OF DURTHU models may be garrissoned by this model, even though it is not a terrain feature.
+
+This model cannot join or leave that model&apos;s garrison if that model has made a move in the same phase (they can join or leave before it does so).  This model in that model&apos;s garrison is not counted towards gaining control of an objective.
+
+An attack made by a weapon that is in range of this model can target either this model or the unit it is garrisoning within.  If the unit this model is garrisoning within is destroyed, before it is removed from play, roll 1 dice for this model.   On a 1, this model is slain.  Set up this model wholly within 6&quot; of the destroyed unit and more than 3&quot; from any enemy units if it survives.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="d295-a1f6-5d65-2adc" name="Frondescencial Refuge" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+          <characteristics>
+            <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
+            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">12&quot;</characteristic>
+            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, friendly GNOMAD FEASTMASTERS units wholly within 12&quot; are treated as being wholly on or within a terrain feature until the start of your next hero phase.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="7a72-a13d-3024-9aef" name="Wizard" hidden="false" typeId="f55d-ee3a-1597-110f" typeName="Magic">
+          <characteristics>
+            <characteristic name="Cast/Unbind" typeId="8294-f605-2c0f-8f92">1/1</characteristic>
+            <characteristic name="Spells Known" typeId="dc9c-47d3-6931-859c">Arcane Bolt, Mystic Shield, Frondescencial Refuge</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="0d88-6752-b0e7-f1fb" name="Mystic Shield" hidden="false" targetId="b41f-f1ce-7aa5-4f81" type="profile"/>
+        <infoLink id="8c55-a400-a877-ee0c" name="Arcane Bolt" hidden="false" targetId="ae02-a84f-a903-1ff8" type="profile"/>
+      </infoLinks>
       <categoryLinks>
         <categoryLink id="a321-77b6-ac09-8e13" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
+        <categoryLink id="4b8e-4512-0d0d-1ced" name="ORDER" hidden="false" targetId="b970-b3bf-e1a4-a6fc" primary="false"/>
+        <categoryLink id="896a-3cac-a30e-d319" name="GNOMAD FEASTMASTERS" hidden="false" targetId="78d7-bfa7-c521-f7ff" primary="false"/>
+        <categoryLink id="1d65-9a35-28ab-1b8b" name="BAREFOOT" hidden="false" targetId="5355-e082-e84b-ba56" primary="false"/>
+        <categoryLink id="c6e0-1aa0-c784-1868" name="HERO" hidden="false" targetId="4e0e-664d-51ea-0929" primary="false"/>
+        <categoryLink id="71e7-c1bd-ecf6-ff6a" name="WIZARD" hidden="false" targetId="4f53-8230-2f02-9639" primary="false"/>
+        <categoryLink id="b77a-e7e7-d91f-63d4" name="HEDGE HERMIT" hidden="false" targetId="74c4-7f57-a4dc-edbd" primary="false"/>
       </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="41f0-ad5e-8b9f-a3be" name="Throwing Stones" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="851c-4326-9f57-6f5a" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f0cd-88fb-819e-9391" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="c04b-90f1-3f4f-0a88" name="Throwing Stones" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Missile</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">6&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">1</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">5+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry id="aad7-8732-b85c-5ff3" name="Gnarled Staff" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2603-75c4-b48c-ed96" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="613b-8105-03a4-05b1" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="feb7-955c-c4a2-a1b0" name="Gnarled Staff" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">3+</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">4+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">D3</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
       <entryLinks>
         <entryLink id="b11d-479e-6c65-2a14" name="General" hidden="false" collective="false" import="true" targetId="3900-28c8-0008-3643" type="selectionEntry"/>
         <entryLink id="d716-f8b1-7d3c-502c" name="Battalions" hidden="false" collective="false" import="true" targetId="af68-6b3b-c1ed-a74e" type="selectionEntryGroup"/>
         <entryLink id="0528-418c-3a0d-084c" name="Artefacts" hidden="false" collective="false" import="true" targetId="95d7-5c61-46da-973d" type="selectionEntryGroup"/>
         <entryLink id="d978-c7a6-b78a-f93d" name="Incarnate Bonding" hidden="false" collective="false" import="true" targetId="c890-acbd-0c80-55c9" type="selectionEntryGroup"/>
         <entryLink id="b18a-2aea-1604-d8cc" name="Command Traits" hidden="false" collective="false" import="true" targetId="c806-f7da-5402-20ad" type="selectionEntryGroup"/>
+        <entryLink id="b4a2-540b-8601-759c" name="Spell Lores" hidden="false" collective="false" import="true" targetId="fa95-8483-67d3-1ac6" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="120.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="f18d-3f59-7fab-481a" name="Mephisto Hartstock" hidden="false" collective="false" import="true" type="unit">
+      <profiles>
+        <profile id="edbb-ea5b-a274-11c3" name="Mephisto Hartstock" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
+          <characteristics>
+            <characteristic name="Move" typeId="8655-6213-2824-1752">3&quot;</characteristic>
+            <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">5</characteristic>
+            <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">6</characteristic>
+            <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">6+</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="38ef-a03a-0f2d-dd81" name="Chef&apos;s Special" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Once per battle in your hero phase you may select 1 friendly GNOMAD HOTPOT unit within 3&quot; of this model.  Apply an additional Last Meal Eaten to the selected GNOMAD HOTPOT for the &quot;Go with your Gut&quot; trait until the start of your next hero phase.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="d9ca-87b3-c1ad-4eb6" name="Now That&apos;s One Spicy Meatball!" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">When the Those Lucky Scoundrels battle trait applies to GNOMAD HOTPOT units within 3&quot; of this model, their Serve Piping Hot! ability causes a unit by Left Overs to suffer D6 mortal wounds (instead of D3).</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="10bf-b353-21de-790a" name="They&apos;ll Be Some Fine Dining Should You Survive This One Lads!" hidden="false" targetId="9e57-9285-77bb-0011" type="profile"/>
+        <infoLink id="bc50-b39b-9ebc-2764" name="Always Hangry" hidden="false" targetId="ef80-9242-71e4-c290" type="profile"/>
+        <infoLink id="b215-30d9-3dc9-88fb" name="Waste not, Want not" hidden="false" targetId="cce3-0b68-2446-b96b" type="profile"/>
+      </infoLinks>
       <categoryLinks>
         <categoryLink id="0b48-0192-f3fb-6439" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
         <categoryLink id="af73-c726-a9fa-57a3" name="Unique" hidden="false" targetId="088b-3a27-03f7-8249" primary="false"/>
+        <categoryLink id="bc5d-dd3c-283e-3f2d" name="ORDER" hidden="false" targetId="b970-b3bf-e1a4-a6fc" primary="false"/>
+        <categoryLink id="b6e4-660e-db59-5f66" name="GNOMAD FEASTMASTERS" hidden="false" targetId="78d7-bfa7-c521-f7ff" primary="false"/>
+        <categoryLink id="3bd4-f490-895e-309c" name="BAREFOOT" hidden="false" targetId="5355-e082-e84b-ba56" primary="false"/>
+        <categoryLink id="b9ab-5539-bb18-4509" name="HERO" hidden="false" targetId="4e0e-664d-51ea-0929" primary="false"/>
+        <categoryLink id="fc8c-1491-5b44-1cae" name="PRIEST" hidden="false" targetId="e8a5-e4c1-3d11-e7dd" primary="false"/>
+        <categoryLink id="7163-1eb1-b65e-a447" name="HEAD CHEF" hidden="false" targetId="d7a4-bdcc-b845-d90a" primary="false"/>
+        <categoryLink id="4a46-f310-3fe1-ce33" name="MEPHISTO HARTSTOCK" hidden="false" targetId="2055-bcba-5582-b7fd" primary="false"/>
       </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="6e2b-19b3-ac0f-92f5" name="Community Cleaver" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="380b-aeca-fbc9-6272" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8ca2-549c-e459-4796" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="a97e-7f4a-c710-ed53" name="Community Cleaver" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">2</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">4+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry id="8ed8-187d-3f76-7b0c" name="Chef&apos;s Steel" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7706-3d27-cce1-5b43" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8999-f4f8-d7a7-d7d9" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="2864-6024-625c-7ea2" name="Chef&apos;s Steel" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">3</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">5+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
       <entryLinks>
         <entryLink id="3ce1-41aa-09fe-c7f6" name="General" hidden="false" collective="false" import="true" targetId="3900-28c8-0008-3643" type="selectionEntry">
           <categoryLinks>
@@ -651,9 +833,70 @@ All friendly GNOMAD FEASTMASTERS units within 3&quot; of this model may treat th
       </costs>
     </selectionEntry>
     <selectionEntry id="9b65-8ed5-cd8c-cd91" name="Head Chef" hidden="false" collective="false" import="true" type="unit">
+      <profiles>
+        <profile id="5126-5e6e-2e5f-38b3" name="Head Chef" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
+          <characteristics>
+            <characteristic name="Move" typeId="8655-6213-2824-1752">4&quot;</characteristic>
+            <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">5</characteristic>
+            <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">6</characteristic>
+            <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">6+</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="2f39-9e17-5e9d-06e1" name="They&apos;ll Be Some Fine Dining Should You Survive This One Lads!" hidden="false" targetId="9e57-9285-77bb-0011" type="profile"/>
+        <infoLink id="2d40-fe37-3fae-f03d" name="Always Hangry" hidden="false" targetId="ef80-9242-71e4-c290" type="profile"/>
+        <infoLink id="0f0b-0c4f-356f-0360" name="Waste not, Want not" hidden="false" targetId="cce3-0b68-2446-b96b" type="profile"/>
+      </infoLinks>
       <categoryLinks>
         <categoryLink id="b5f1-c5ca-01ae-5fc4" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
+        <categoryLink id="8129-074d-a9d2-1bdc" name="ORDER" hidden="false" targetId="b970-b3bf-e1a4-a6fc" primary="false"/>
+        <categoryLink id="fdb4-ba4f-06ff-2cb8" name="GNOMAD FEASTMASTERS" hidden="false" targetId="78d7-bfa7-c521-f7ff" primary="false"/>
+        <categoryLink id="61d9-4feb-682b-e5be" name="BAREFOOT" hidden="false" targetId="5355-e082-e84b-ba56" primary="false"/>
+        <categoryLink id="75f4-58e0-da74-9db8" name="PRIEST" hidden="false" targetId="e8a5-e4c1-3d11-e7dd" primary="false"/>
+        <categoryLink id="3545-ab80-08dc-a815" name="HERO" hidden="false" targetId="4e0e-664d-51ea-0929" primary="false"/>
+        <categoryLink id="5235-6ed8-a1a7-18b4" name="HEAD CHEF" hidden="false" targetId="d7a4-bdcc-b845-d90a" primary="false"/>
       </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="280d-71b5-80d1-5c5b" name="Chef&apos;s Steel" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0230-7bcc-b89c-b311" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="920e-ec16-19b7-f0e3" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="c6ef-f194-3c17-0806" name="Chef&apos;s Steel" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">3</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">5+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry id="4ed0-fe23-687e-766c" name="Community Cleaver" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0906-4dab-425c-0556" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e149-b79d-fd72-ad34" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="e8ad-f47f-e7d7-db1a" name="Community Cleaver" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">2</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">4+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
       <entryLinks>
         <entryLink id="6af0-a521-faa1-665c" name="General" hidden="false" collective="false" import="true" targetId="3900-28c8-0008-3643" type="selectionEntry"/>
         <entryLink id="8157-875d-2eb0-c567" name="Battalions" hidden="false" collective="false" import="true" targetId="af68-6b3b-c1ed-a74e" type="selectionEntryGroup"/>
@@ -666,9 +909,87 @@ All friendly GNOMAD FEASTMASTERS units within 3&quot; of this model may treat th
       </costs>
     </selectionEntry>
     <selectionEntry id="fcf0-ba2e-3a95-8bc9" name="Trail Thief" hidden="false" collective="false" import="true" type="unit">
+      <profiles>
+        <profile id="9f61-1bf8-9439-7d4b" name="Trail Thief" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
+          <characteristics>
+            <characteristic name="Move" typeId="8655-6213-2824-1752">5&quot;</characteristic>
+            <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">4</characteristic>
+            <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">6</characteristic>
+            <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">6+</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="4c3a-7a66-b174-c14d" name="Smoke me a Kipper, I&apos;ll be back for Breakfast!" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Instead of setting up this model on the battlefield, you can set it to one side and say it is set up in a concealed position.  If you do so, select one of the following missions and say the number of this model will attempt the selected mission.
+
+Master of the wit and the repartee:  Your opponent loses a triumph roll; you gain that triumph roll.
+
+His command of the realm directives is uncanny: Once per battle, when your opponent receives a command point, your opponent loses that command point and you gain it.
+
+How come he&apos;s such a genius? Don&apos;t ask me!:  A randomly selected artefact of power carried by one of your opponent&apos;s HERO keyword can no longer be used (if it was used to enhance a weapon, that weapon reverts back to its normal form).
+
+At the start of the first battle round, after determining who has the first turn, roll a dice, and add the number of your turns that this model will attempt the selected mission.
+
+On a roll of 6+, the selected mission is successful.
+
+This model cannot be set up on the battlefield until after the number of your turns that this model will attempt the selected mission, after which, at the end of your movement phase, you can set this model up on the battlefield more than 6&quot; away from any enemy units.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="0d8b-1a5b-e7a0-6897" name="Nuffle&apos;s Chosen" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This model is always counted as being affected by the Those Lucky Scoundrels battle trait.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
       <categoryLinks>
-        <categoryLink id="afd1-97e7-20c9-ff58" name="Leader" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="false"/>
+        <categoryLink id="afd1-97e7-20c9-ff58" name="Leader" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
+        <categoryLink id="140f-1f6b-07d4-55ab" name="ORDER" hidden="false" targetId="b970-b3bf-e1a4-a6fc" primary="false"/>
+        <categoryLink id="8362-2905-011f-4e58" name="GNOMAD FEASTMASTERS" hidden="false" targetId="78d7-bfa7-c521-f7ff" primary="false"/>
+        <categoryLink id="1766-ad11-b7eb-03cb" name="BAREFOOT" hidden="false" targetId="5355-e082-e84b-ba56" primary="false"/>
+        <categoryLink id="53d3-689e-a006-f69d" name="HERO" hidden="false" targetId="4e0e-664d-51ea-0929" primary="false"/>
+        <categoryLink id="fc0a-b4c1-1edd-9b40" name="TRAIL THIEF" hidden="false" targetId="99ac-4c6f-593f-7d7d" primary="false"/>
+        <categoryLink id="fdbe-8a0b-c5de-0973" name="FORAGER" hidden="false" targetId="3290-e9e1-59b5-b03d" primary="false"/>
       </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="7c89-2c4d-e42d-c9cc" name="Throwing Knives" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b44e-2da0-5308-f94b" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b2dc-9325-4245-8212" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="848e-c0ff-8c0d-d5db" name="Throwing Knives" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Missile</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">6&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">3</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">5+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry id="7f3a-481d-4279-becc" name="Concealed Blade" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="48c3-5916-030a-40b1" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c580-a838-fea5-c24b" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="de41-0c86-8faa-a050" name="Concealed Blade" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">2</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">5+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
       <entryLinks>
         <entryLink id="92c1-ec81-e55b-77f5" name="Battalions" hidden="false" collective="false" import="true" targetId="af68-6b3b-c1ed-a74e" type="selectionEntryGroup"/>
         <entryLink id="33c6-5c8d-d1b5-54e9" name="Artefacts" hidden="false" collective="false" import="true" targetId="95d7-5c61-46da-973d" type="selectionEntryGroup"/>
@@ -679,10 +1000,164 @@ All friendly GNOMAD FEASTMASTERS units within 3&quot; of this model may treat th
       </costs>
     </selectionEntry>
     <selectionEntry id="8ca4-c1bb-852f-2c74" name="Yonella Lightfoot" hidden="false" collective="false" import="true" type="unit">
+      <profiles>
+        <profile id="7300-f1bd-6ad8-614a" name="Yonella Lightfoot" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
+          <characteristics>
+            <characteristic name="Move" typeId="8655-6213-2824-1752">*</characteristic>
+            <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">12</characteristic>
+            <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">8</characteristic>
+            <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">5+</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="8d4d-f4b1-4e04-9b9b" name="Wizard" hidden="false" typeId="f55d-ee3a-1597-110f" typeName="Magic">
+          <characteristics>
+            <characteristic name="Cast/Unbind" typeId="8294-f605-2c0f-8f92">D3/2</characteristic>
+            <characteristic name="Spells Known" typeId="dc9c-47d3-6931-859c">Arcane Bolt, Mystic Shield, Sanguine Sundering</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="7576-164c-c69f-2f29" name="Mount" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This unit&apos;s Giant Swan is armed with a Snapping Beak and Beating Wings.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="44e0-e62b-4fea-9204" name="Homogeeous Appetite" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This unit is always affected by the Breakfast, Lunch and Dinner Last Meals Eaten from the Go with your Gut trait; and this model may ignore any or all modifiers from the &quot;It&apos;s been a long day...&quot; trait.
+
+In addition, before the roll off to decide who takes the first turn at the start of each battle round, you must say whether you plan to take the first turn or the second turn.  If you lose the roll off and your opponent decides to take the first turn (or second) turn when you said you plan to the first (or second) turn, then the Breakfast, Lunch and Dinner Last Meals Eaten from the Go with your Gut trait affect any GNOMAD FEASTMASTERS units wholly within range of this model&apos;s Homongeneous Appetite.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="d236-b909-67c0-277d" name="Dawn&apos;s Fortune" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If this unit is on the battlefield, during the first battle round, the Those Lucky Scoundrels ability applies to all friendly GNOMAD FEASTMASTERS units.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="a13e-0e34-64cc-8c97" name="Sanguine Sundering" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+          <characteristics>
+            <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
+            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">18&quot;</characteristic>
+            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, until the start of your next hero phase, at the end of the combat phase, make a battleshock test for the selected unit; and any abilities that mean that the selected unit does not take a battleshock test do not affect it.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="a7f2-4911-ed9d-f33d" name="Fly" hidden="false" targetId="8e0c-cbe4-27be-8a30" type="profile"/>
+        <infoLink id="df80-ad20-a33e-d167" name="Arcane Bolt" hidden="false" targetId="ae02-a84f-a903-1ff8" type="profile"/>
+        <infoLink id="e1b4-83d2-7361-384e" name="Mystic Shield" hidden="false" targetId="b41f-f1ce-7aa5-4f81" type="profile"/>
+      </infoLinks>
       <categoryLinks>
         <categoryLink id="b3cf-984c-16c0-c20e" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
         <categoryLink id="3d72-ef6a-93f3-0446" name="Behemoth" hidden="false" targetId="fa0c-9044-2568-fa02" primary="false"/>
+        <categoryLink id="23ff-e147-79f2-2e83" name="ORDER" hidden="false" targetId="b970-b3bf-e1a4-a6fc" primary="false"/>
+        <categoryLink id="781d-5814-2e90-391f" name="GNOMAD FEASTMASTERS" hidden="false" targetId="78d7-bfa7-c521-f7ff" primary="false"/>
+        <categoryLink id="0616-2725-ce07-216d" name="MONSTER" hidden="false" targetId="1959-9f6a-3056-913a" primary="false"/>
+        <categoryLink id="a172-d1f0-3601-68da" name="HERO" hidden="false" targetId="4e0e-664d-51ea-0929" primary="false"/>
+        <categoryLink id="68b4-281c-7d1c-388f" name="WIZARD" hidden="false" targetId="4f53-8230-2f02-9639" primary="false"/>
+        <categoryLink id="440b-4144-2275-4fed" name="YONELLA LIGHTFOOT" hidden="false" targetId="9644-7572-85d6-e47d" primary="false"/>
+        <categoryLink id="88ac-107b-ded3-f2eb" name="Unique" hidden="false" targetId="088b-3a27-03f7-8249" primary="false"/>
       </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="d6fe-3573-d37c-faed" name="Wound Track" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a0c6-af23-46a9-8f47" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="08ca-e621-8afe-3ac5" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="4015-4a7b-87c7-5d46" name="00-02" hidden="false" typeId="6ffb-a2e7-8aa3-364d" typeName="Swan Wound Table">
+              <characteristics>
+                <characteristic name="Move" typeId="d490-bea9-6ce8-dad3">14&quot;</characteristic>
+                <characteristic name="Homogenenous Appetite" typeId="cf81-0f30-1b70-9ca2">18&quot;</characteristic>
+                <characteristic name="Beating Wings" typeId="de33-2d12-a8db-1b38">6</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="d0d7-5306-2cbb-a9aa" name="03-04" hidden="false" typeId="6ffb-a2e7-8aa3-364d" typeName="Swan Wound Table">
+              <characteristics>
+                <characteristic name="Move" typeId="d490-bea9-6ce8-dad3">12&quot;</characteristic>
+                <characteristic name="Homogenenous Appetite" typeId="cf81-0f30-1b70-9ca2">15&quot;</characteristic>
+                <characteristic name="Beating Wings" typeId="de33-2d12-a8db-1b38">5</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="ab5d-773c-5d64-9b68" name="05-07" hidden="false" typeId="6ffb-a2e7-8aa3-364d" typeName="Swan Wound Table">
+              <characteristics>
+                <characteristic name="Move" typeId="d490-bea9-6ce8-dad3">10&quot;</characteristic>
+                <characteristic name="Homogenenous Appetite" typeId="cf81-0f30-1b70-9ca2">12&quot;</characteristic>
+                <characteristic name="Beating Wings" typeId="de33-2d12-a8db-1b38">5</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="b797-718b-1d4e-6bb5" name="08-09" hidden="false" typeId="6ffb-a2e7-8aa3-364d" typeName="Swan Wound Table">
+              <characteristics>
+                <characteristic name="Move" typeId="d490-bea9-6ce8-dad3">8&quot;</characteristic>
+                <characteristic name="Homogenenous Appetite" typeId="cf81-0f30-1b70-9ca2">9&quot;</characteristic>
+                <characteristic name="Beating Wings" typeId="de33-2d12-a8db-1b38">5</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="ac98-14d1-114d-5e0a" name="10+" hidden="false" typeId="6ffb-a2e7-8aa3-364d" typeName="Swan Wound Table">
+              <characteristics>
+                <characteristic name="Move" typeId="d490-bea9-6ce8-dad3">6&quot;</characteristic>
+                <characteristic name="Homogenenous Appetite" typeId="cf81-0f30-1b70-9ca2">6&quot;</characteristic>
+                <characteristic name="Beating Wings" typeId="de33-2d12-a8db-1b38">4</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry id="070a-7237-a36b-c514" name="Shimmering Feathers" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cd2c-f3c7-43b6-45c1" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4689-a44c-6af8-f2b1" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="fdca-996b-da81-95f3" name="Shimmering Feathers" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+              <characteristics>
+                <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Use the table below for the Save characteristic of this unit.  Ignore modifiers (positive and negative) when making save rolls for attacks that target this unit.  In addition, this unit is treated as having a Save characteristic of 4+ for the purposes of abilities.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry id="7c08-0c4c-4f15-dda7" name="Table" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2234-12e2-38a0-635f" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ed3d-86d8-c13a-e753" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="5258-e770-eeb6-9bc8" name="01" hidden="false" typeId="ceb1-72b6-0cde-566b" typeName="Shimmering Feathers">
+              <characteristics>
+                <characteristic name="Rend of attacking unit&apos;s weapon" typeId="c2ef-f03a-0cd6-94da">0</characteristic>
+                <characteristic name="Save" typeId="3561-d536-9a89-4451">5+</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="b9f6-29ce-b8fa-15eb" name="02" hidden="false" typeId="ceb1-72b6-0cde-566b" typeName="Shimmering Feathers">
+              <characteristics>
+                <characteristic name="Rend of attacking unit&apos;s weapon" typeId="c2ef-f03a-0cd6-94da">-1</characteristic>
+                <characteristic name="Save" typeId="3561-d536-9a89-4451">4+</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="b0c7-7bf4-ab11-2690" name="03" hidden="false" typeId="ceb1-72b6-0cde-566b" typeName="Shimmering Feathers">
+              <characteristics>
+                <characteristic name="Rend of attacking unit&apos;s weapon" typeId="c2ef-f03a-0cd6-94da">-2</characteristic>
+                <characteristic name="Save" typeId="3561-d536-9a89-4451">3+</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="3c20-23da-461f-d5c1" name="04" hidden="false" typeId="ceb1-72b6-0cde-566b" typeName="Shimmering Feathers">
+              <characteristics>
+                <characteristic name="Rend of attacking unit&apos;s weapon" typeId="c2ef-f03a-0cd6-94da">-3</characteristic>
+                <characteristic name="Save" typeId="3561-d536-9a89-4451">2+</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="627b-5ed0-bbf9-a2a9" name="05" hidden="false" typeId="ceb1-72b6-0cde-566b" typeName="Shimmering Feathers">
+              <characteristics>
+                <characteristic name="Rend of attacking unit&apos;s weapon" typeId="c2ef-f03a-0cd6-94da">-4</characteristic>
+                <characteristic name="Save" typeId="3561-d536-9a89-4451">1+</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="3bfc-6622-48c6-10fc" name="06" hidden="false" typeId="ceb1-72b6-0cde-566b" typeName="Shimmering Feathers">
+              <characteristics>
+                <characteristic name="Rend of attacking unit&apos;s weapon" typeId="c2ef-f03a-0cd6-94da">-5</characteristic>
+                <characteristic name="Save" typeId="3561-d536-9a89-4451">0</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
       <entryLinks>
         <entryLink id="3554-a80f-d79b-b41a" name="General" hidden="false" collective="false" import="true" targetId="3900-28c8-0008-3643" type="selectionEntry">
           <categoryLinks>
@@ -725,8 +1200,49 @@ All friendly GNOMAD FEASTMASTERS units within 3&quot; of this model may treat th
       </costs>
     </selectionEntry>
     <selectionEntry id="1a59-8a49-82b3-7fff" name="Gnomad Drovers" hidden="false" collective="false" import="true" type="unit">
+      <profiles>
+        <profile id="a68e-2a08-7f87-43ce" name="Gnomad Drovers" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
+          <characteristics>
+            <characteristic name="Move" typeId="8655-6213-2824-1752">4&quot;</characteristic>
+            <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">1</characteristic>
+            <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">5</characteristic>
+            <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">-</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="be96-ec66-09db-3d87" name="Champion" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 model in this unit can be an Oldfoot.  Add 1 to the Attacks characteristic of that model&apos;s weapons.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="6f76-85cf-3939-2305" name="Trail Flagger" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 in every 15 models can be a Trail Flagger.  Add 1 to the Bravery characteristic of friendly BAREFOOT units within 6&quot; of any friendly Trail Flaggers.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="0799-4b36-d6b5-b31a" name="Gnomad Drovers" hidden="false" typeId="e1c7-10dc-2430-935e" typeName="Drycha Wounds Suffered">
+          <characteristics>
+            <characteristic name="Slashing Talons" typeId="6e61-13a9-0c7a-fd95"/>
+            <characteristic name="Colony of Flitterfuries" typeId="677e-3240-4c85-8b7d"/>
+            <characteristic name="Swarm of Squirmlings" typeId="19d9-c4ca-7332-dbf4"/>
+          </characteristics>
+        </profile>
+        <profile id="1d89-786a-c005-1fb7" name="Loud Mouth" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 in every 15 models can be a Loud Mouth.  While this unit includes any Loud Mouths, during the charge phase roll a dice each time you allocate a wound or mortal wound to this unit.  On a 3+ that wound or mortal wound is negated.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="234e-123c-b077-7898" name="Rabble Oomph" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Each successful hit roll for an attack made with weapons used by this unit scores 2 hits on the target instead of 1 while this unit has at least 20 models.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
       <categoryLinks>
         <categoryLink id="d08c-6f75-23dd-79fc" name="New CategoryLink" hidden="false" targetId="e9f2-765a-b7b8-ce8e" primary="true"/>
+        <categoryLink id="716e-1c5c-0f94-be88" name="ORDER" hidden="false" targetId="b970-b3bf-e1a4-a6fc" primary="false"/>
+        <categoryLink id="0b54-cf91-2f92-d8cc" name="GNOMAD DROVERS" hidden="false" targetId="68c9-e539-a746-08cb" primary="false"/>
+        <categoryLink id="c0eb-3748-0d7a-4b4b" name="GNOMAD FEASTMASTERS" hidden="false" targetId="78d7-bfa7-c521-f7ff" primary="false"/>
+        <categoryLink id="abf7-5ba9-4cdc-7369" name="BAREFOOT" hidden="false" targetId="5355-e082-e84b-ba56" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="80b9-5f40-fd87-5fc8" name="15 Gnomad Drovers" hidden="false" collective="false" import="true" type="upgrade">
@@ -751,6 +1267,90 @@ All friendly GNOMAD FEASTMASTERS units within 3&quot; of this model may treat th
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="b9f4-2517-2856-5b60" name="Weapon Option" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1662-9ddb-057e-f196" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cfe6-d761-f0a2-866d" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="2757-f25b-0f09-c9b5" name="Drover Bows and Pots and Spons" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5eef-e4dd-791a-7c9d" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8d8c-46a4-0ac3-08dd" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="06a2-ba37-ade1-9f51" name="Drover Bow" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+                  <characteristics>
+                    <characteristic name="Type" typeId="655c-362e-a663-3e50">Missile</characteristic>
+                    <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">15&quot;</characteristic>
+                    <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">1</characteristic>
+                    <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">5+</characteristic>
+                    <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">5+</characteristic>
+                    <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
+                    <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="aa1c-755f-6e54-a16f" name="Pots and Spoons" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+                  <characteristics>
+                    <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                    <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
+                    <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">1</characteristic>
+                    <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">5+</characteristic>
+                    <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">5+</characteristic>
+                    <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
+                    <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry id="bf98-75c4-9128-31a4" name="Clubs/Mauls and Bracken Shields" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="edd5-c7f0-1bc8-b6d0" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ba1f-a95a-252d-6751" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="055c-5346-ca01-2125" name="Club/Mauls" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+                  <characteristics>
+                    <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                    <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
+                    <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">1</characteristic>
+                    <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
+                    <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">4+</characteristic>
+                    <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
+                    <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <infoLinks>
+                <infoLink id="10bc-9d55-e033-d1b1" name="Bracken Shields" hidden="false" targetId="da02-e03e-f9da-19c9" type="profile"/>
+              </infoLinks>
+            </selectionEntry>
+            <selectionEntry id="dfa7-e9db-49e8-a5b4" name="Short Spears and Bracken Shields" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="615a-5771-fde9-22cf" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4433-d4b3-ef3a-4b07" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="2b92-223e-3775-3185" name="Short Spear" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+                  <characteristics>
+                    <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                    <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">2&quot;</characteristic>
+                    <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">1</characteristic>
+                    <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">5+</characteristic>
+                    <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">4+</characteristic>
+                    <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
+                    <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <infoLinks>
+                <infoLink id="2d93-75d1-6658-147e" name="Bracken Shields" hidden="false" targetId="da02-e03e-f9da-19c9" type="profile"/>
+              </infoLinks>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
       <entryLinks>
         <entryLink id="c280-3798-f3f1-2b94" name="Battalions" hidden="false" collective="false" import="true" targetId="af68-6b3b-c1ed-a74e" type="selectionEntryGroup"/>
       </entryLinks>
@@ -793,6 +1393,14 @@ All friendly GNOMAD FEASTMASTERS units within 3&quot; of this model may treat th
         <profile id="3853-626a-c8a4-3be6" name="Leaping Headbutt" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
             <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If the hit roll for an attack made by this unit&apos;s Prodigious Horns is an unmodified 6, that attack inflcts 1 mortal wound on the target of the attack in addition to any normal damage.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="3b51-6747-ca95-cecd" name="Gastrognome Guard" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
+          <characteristics>
+            <characteristic name="Move" typeId="8655-6213-2824-1752">8&quot;</characteristic>
+            <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">3</characteristic>
+            <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">6</characteristic>
+            <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">5+</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -878,8 +1486,43 @@ All friendly GNOMAD FEASTMASTERS units within 3&quot; of this model may treat th
       </costs>
     </selectionEntry>
     <selectionEntry id="645e-31e0-4c29-3ae3" name="Gnomad Scouts" hidden="false" collective="false" import="true" type="unit">
+      <profiles>
+        <profile id="6c86-42e0-a762-224b" name="Gnomad Scouts" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
+          <characteristics>
+            <characteristic name="Move" typeId="8655-6213-2824-1752">5&quot;</characteristic>
+            <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">1</characteristic>
+            <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">6</characteristic>
+            <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">6+</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="6dd7-8e96-3035-0387" name="Champion" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 model in this unit can be a Cloakfoot.  Add 1 to  the Attacks characteristic of that model&apos;s weapons.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="fb44-feda-f4ab-8c07" name="Land Huggers" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">During your hero phase, if this unit is wholly on or within a terrain feature, it can adopt the Prone Stance until the start of your next hero phase.  While in the Prone Stance, enemy units may not pick this unit as the target for an attack with a missile weapon; this unit may not move or attack with its missile weapons; and this unit fights at the start of the combat phase (this unit cannot fight again in that phase unless an ability or spells allows it to fight more than once).</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="b3a8-3826-37ca-9c55" name="Veilded Cloaks" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Instead of setting up this unit on the battlefield, you can place it to one side and say that it is making a veiled advance as a reserve unit.  If you do so, at the end of your movement phase, you can set up this unit on the battlefield more than 6&quot; from enemy units and wholly on or within a terrain feature.  At the start of the fourth battle round, any models that are still in reserve are slain.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="5461-98e1-b945-c395" name="Skilled Foragers" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This unit may ignore any or all modifiers from the &quot;It&apos;s been a long day...&quot; trait.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
       <categoryLinks>
         <categoryLink id="391b-0698-8172-7954" name="New CategoryLink" hidden="false" targetId="065e-fda7-fd27-1f40" primary="true"/>
+        <categoryLink id="cff9-b0e6-e38a-52b9" name="ORDER" hidden="false" targetId="b970-b3bf-e1a4-a6fc" primary="false"/>
+        <categoryLink id="2a71-5730-2631-a4da" name="GNOMAD SCOUTS" hidden="false" targetId="df0a-e8da-2dc4-e72c" primary="false"/>
+        <categoryLink id="257e-ab3d-c41d-2ee4" name="GNOMAD FEASTMASTERS" hidden="false" targetId="78d7-bfa7-c521-f7ff" primary="false"/>
+        <categoryLink id="15ca-7751-2b43-2f39" name="BAREFOOT" hidden="false" targetId="5355-e082-e84b-ba56" primary="false"/>
+        <categoryLink id="6a76-b1ba-ed20-8d47" name="FORAGER" hidden="false" targetId="3290-e9e1-59b5-b03d" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="dfc6-05a9-4f62-8621" name="10 Gnomad Scouts" hidden="false" collective="false" import="true" type="upgrade">
@@ -903,6 +1546,44 @@ All friendly GNOMAD FEASTMASTERS units within 3&quot; of this model may treat th
             <cost name="pts" typeId="points" value="100.0"/>
           </costs>
         </selectionEntry>
+        <selectionEntry id="dd2c-934b-2ebc-38b1" name="Hunting Bow" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7e02-39c3-766c-8b41" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6d29-fe51-d4ba-0732" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="3281-06a9-f4ad-08e0" name="Hunting Bow" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Missile</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">18&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">1</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">4+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry id="68d4-2ea4-ee2b-1b9f" name="Forager Knife" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e0e0-2ccc-8e3c-cd82" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7361-85f2-b900-d8b5" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="f3e6-e11b-6afd-ba80" name="Forager Knife" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">1</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">5+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
       </selectionEntries>
       <entryLinks>
         <entryLink id="ed39-9de4-d53d-cb7c" name="Battalions" hidden="false" collective="false" import="true" targetId="af68-6b3b-c1ed-a74e" type="selectionEntryGroup"/>
@@ -912,8 +1593,42 @@ All friendly GNOMAD FEASTMASTERS units within 3&quot; of this model may treat th
       </costs>
     </selectionEntry>
     <selectionEntry id="2d03-925b-2732-7867" name="Gryph-Hound Hobelars" hidden="false" collective="false" import="true" type="unit">
+      <profiles>
+        <profile id="be30-1886-87ff-66d5" name="Gryph-Hound Hobelars" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
+          <characteristics>
+            <characteristic name="Move" typeId="8655-6213-2824-1752">9&quot;</characteristic>
+            <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">3</characteristic>
+            <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">6</characteristic>
+            <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">6+</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="ee73-40a8-1bd6-1e14" name="Champion" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 model in this unit may be a Clawfoot.  Add 1 to the Attacks characteristic of this model&apos;s weapons.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="0c54-fd57-7ff2-8167" name="Tandem Hunting" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Add 2 to the Attacks characteristic of this unit&apos;s Beaks and Claws for attacks made with Beaks and Claws that target a unit previously hit by any attacks made by another friendly FORAGER unit in the same turn.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="9a92-65ff-ff41-ce71" name="Darting Attacks" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Each time this unit attacks with its melee weapons it can make a normal move after all of its attacks have been resolved.  If it does so, it must finish the normal move more than 3&quot; from enemy units.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="3f43-9f6d-e5f0-a35c" name="Warning Cry" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If a reserve enemy unit is set up on the battlefield for the first time within 10&quot; of this unit, friendly GNOMAD FEASTMASTERS units wholly within 12&quot; of this unit can attack that reserve enemy unit with all of the missile weapons that they are armed with.  A unit that uses this ability to attack a reserve unit cannot use this ability to attack another reserve unit in the same phase.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
       <categoryLinks>
         <categoryLink id="0e0e-f2e2-2bac-7628" name="New CategoryLink" hidden="false" targetId="065e-fda7-fd27-1f40" primary="true"/>
+        <categoryLink id="e137-424a-a6f6-4138" name="ORDER" hidden="false" targetId="b970-b3bf-e1a4-a6fc" primary="false"/>
+        <categoryLink id="883c-f94f-f5e1-86d4" name="GNOMAD FEASTMASTERS" hidden="false" targetId="78d7-bfa7-c521-f7ff" primary="false"/>
+        <categoryLink id="52f4-b853-61a7-ba07" name="GRYPH-HOUND HOBELARS" hidden="false" targetId="2b9e-6560-6b2d-6006" primary="false"/>
+        <categoryLink id="f6dc-fe1f-1806-0b6f" name="FORAGER" hidden="false" targetId="3290-e9e1-59b5-b03d" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="f33b-0c12-cc05-afe5" name="5 Gryph-Hound Hobelars" hidden="false" collective="false" import="true" type="upgrade">
@@ -937,6 +1652,63 @@ All friendly GNOMAD FEASTMASTERS units within 3&quot; of this model may treat th
             <cost name="pts" typeId="points" value="120.0"/>
           </costs>
         </selectionEntry>
+        <selectionEntry id="6f3c-e815-15fb-e5d2" name="Hunting Bow" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9153-1cb5-1138-a401" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="40a1-33ab-f70f-1a58" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="287b-2551-2e62-7422" name="Hunting Bow" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Missile</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">15&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">1</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">4+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry id="6c02-e846-92e6-7682" name="Skinning Knives" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2f80-988e-8c10-4e41" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f2b4-0551-26e2-a73a" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="ddbd-feb9-bb5a-79a4" name="Skinning Knives" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">1</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">5+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry id="fbf0-7a09-8964-f33b" name="Beaks and Claws" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a2ce-af52-1753-a44e" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b106-7a8d-b924-457b" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="7eac-9576-3ac7-8856" name="Beaks and Claws" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">2</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">4+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
       </selectionEntries>
       <entryLinks>
         <entryLink id="7989-3312-50e2-4421" name="Battalions" hidden="false" collective="false" import="true" targetId="af68-6b3b-c1ed-a74e" type="selectionEntryGroup"/>
@@ -946,8 +1718,45 @@ All friendly GNOMAD FEASTMASTERS units within 3&quot; of this model may treat th
       </costs>
     </selectionEntry>
     <selectionEntry id="ac9c-9aa0-5202-453e" name="Gnomad Scouts Riding Jade Eagles" hidden="false" collective="false" import="true" type="unit">
+      <profiles>
+        <profile id="751d-2c75-6a14-58a9" name="Gnomad Scouts Riding Jade Eagles" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
+          <characteristics>
+            <characteristic name="Move" typeId="8655-6213-2824-1752">16&quot;</characteristic>
+            <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">3</characteristic>
+            <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">6</characteristic>
+            <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">6+</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="d4bb-ccd3-9c65-472e" name="Mount" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This unit&apos;s Jade Eagles attack with their Beaks and Talons.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="6b8f-8332-b8ea-aa64" name="Champion" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 model in this unit may be a Swiftfoot.  Add 1 to the Attacks characteristic of this model&apos;s Short Spear.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="47d7-9c40-c8de-ea69" name="Tandem Hunting" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Add 2 to the Attacks characteristic of this unit&apos;s Beaks and Talons for attacks made with Beaks and Talons that target a unit previously hit by any attacks made by another friendly FORAGER unit in the same turn.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="7e3c-7daf-35ed-02c4" name="Thermal Highway" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If the Last Meal Eaten from the Go with your Gut battle trait for this unit was Lunch, then this unit may receive the Redeploy command without a command being issues and with a command point being spent.  In addition, instead of making a Redeploy roll for this unit, you can choose the result of the roll.  The result chosen must for a D6 must be a whole number from 1 to 6.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="c97c-387a-273a-a366" name="Fly" hidden="false" targetId="8e0c-cbe4-27be-8a30" type="profile"/>
+      </infoLinks>
       <categoryLinks>
         <categoryLink id="5723-0059-3e8e-61f3" name="New CategoryLink" hidden="false" targetId="065e-fda7-fd27-1f40" primary="true"/>
+        <categoryLink id="00de-cdde-e16b-2ccc" name="ORDER" hidden="false" targetId="b970-b3bf-e1a4-a6fc" primary="false"/>
+        <categoryLink id="d625-7fa1-cf8f-e896" name="GNOMAD FEASTMASTERS" hidden="false" targetId="78d7-bfa7-c521-f7ff" primary="false"/>
+        <categoryLink id="e8c1-977e-9777-bbf3" name="GNOMAD SCOUTS RIDING JADE EAGLES" hidden="false" targetId="e94c-9e75-d725-5167" primary="false"/>
+        <categoryLink id="8a28-570d-9234-54fc" name="FORAGER" hidden="false" targetId="3290-e9e1-59b5-b03d" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="6f1a-1530-3db8-bb7c" name="5 Gnomad Scouts Riding Jade Eagles" hidden="false" collective="false" import="true" type="upgrade">
@@ -971,6 +1780,44 @@ All friendly GNOMAD FEASTMASTERS units within 3&quot; of this model may treat th
             <cost name="pts" typeId="points" value="130.0"/>
           </costs>
         </selectionEntry>
+        <selectionEntry id="f004-b2bf-f6f9-cf5f" name="Short Spear" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4189-3629-7028-2a5b" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="baaa-df9c-2589-bf89" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="8d01-cef7-813c-80f3" name="Short Spear" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">2&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">1</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">5+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry id="a291-0cc4-7a5e-db92" name="Beaks and Talons" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a33c-ce72-bad4-4228" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cdd4-95f3-6666-57c9" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="9aa5-9f62-04e9-97ca" name="Beaks and Talons" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">4</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
       </selectionEntries>
       <entryLinks>
         <entryLink id="c9f5-3c0a-258d-39d9" name="Battalions" hidden="false" collective="false" import="true" targetId="af68-6b3b-c1ed-a74e" type="selectionEntryGroup"/>
@@ -980,15 +1827,89 @@ All friendly GNOMAD FEASTMASTERS units within 3&quot; of this model may treat th
       </costs>
     </selectionEntry>
     <selectionEntry id="3164-6da1-19a9-d436" name="Gnomad Hotpot" hidden="false" collective="false" import="true" type="unit">
+      <profiles>
+        <profile id="f8b5-95df-8b83-888d" name="Gnomad Hotpot" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
+          <characteristics>
+            <characteristic name="Move" typeId="8655-6213-2824-1752">4&quot;</characteristic>
+            <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">6</characteristic>
+            <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">6</characteristic>
+            <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">5+</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="a414-5f14-bbbe-b496" name="There&apos;s no problem a good meal won&apos;t fix" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">A unit that is hit by Left Overs is affected by one of the following abilities, until the start of your next hero phase, depending on the Last Meal(s) Eaten by the Gnomad Hotpot from the Go with your Gut trait.
+
+Breakfast: Subtract 2 from the Move characteristic for that unit and subtract 2 from that unit&apos;s run and charge rolls.
+
+Lunch: Subtract 1 from wound rolls for attacks made by that unit.
+
+Dinner: Subtract 1 from the Save characteristic of that unit. 
+
+The same unit cannot suffer from each of Breakfast, Lunch or Dinner more than once in the same turn.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="af08-72d9-d169-adda" name="Please Sir, May I have some more...?" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Any Last Meals Eaten by the GNOMAD HOTPOT from the Go with your Gut trait affect any GNOMAD FEASTMASTERS units wholly within 12&quot; of this model (except for other GNOMAD HOTPOT units).</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="b1b8-c01c-e315-cc46" name="Serve Piping Hot" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">A unit that is hit by Left Overs suffers D3 mortal wounds.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
       <categoryLinks>
         <categoryLink id="82c5-757d-57f5-4b0a" name="New CategoryLink" hidden="false" targetId="1d26-07fc-6a66-d73e" primary="true"/>
+        <categoryLink id="b4e7-1ea3-63b5-0a2a" name="ORDER" hidden="false" targetId="b970-b3bf-e1a4-a6fc" primary="false"/>
+        <categoryLink id="958d-14fb-8790-eff3" name="GNOMAD FEASTMASTERS" hidden="false" targetId="78d7-bfa7-c521-f7ff" primary="false"/>
+        <categoryLink id="7dde-8170-1b31-0626" name="BAREFOOT" hidden="false" targetId="5355-e082-e84b-ba56" primary="false"/>
+        <categoryLink id="c3cd-14de-1b06-7a26" name="WAR MACHINE" hidden="false" targetId="880e-1e33-b965-71ec" primary="false"/>
+        <categoryLink id="5c82-3a7b-3a1d-252a" name="GNOMAD HOTPOT" hidden="false" targetId="7176-8526-3f93-3dbf" primary="false"/>
       </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="a241-b754-ca84-d88e" name="Left Overs" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b038-1fea-7c0b-74bd" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c277-9e77-41be-17cf" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="f190-188c-9a91-c5c3" name="Left Overs" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Missile</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">24&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">1</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">*</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">*</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">*</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry id="2f6b-b7e8-ce8d-669a" name="Heavy Spoons" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="14dc-5c25-e4b3-8c83" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7687-017c-c326-9667" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="bd9b-34b5-395f-eba2" name="Heavy Spoons" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">2</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">5+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
       <entryLinks>
-        <entryLink id="147f-c6a0-5511-f4ba" name="General" hidden="false" collective="false" import="true" targetId="3900-28c8-0008-3643" type="selectionEntry"/>
         <entryLink id="e380-6fa1-ef09-01e1" name="Battalions" hidden="false" collective="false" import="true" targetId="af68-6b3b-c1ed-a74e" type="selectionEntryGroup"/>
-        <entryLink id="5306-ba40-4ecc-e5c1" name="Artefacts" hidden="false" collective="false" import="true" targetId="95d7-5c61-46da-973d" type="selectionEntryGroup"/>
-        <entryLink id="ab29-cd5c-c279-69f2" name="Incarnate Bonding" hidden="false" collective="false" import="true" targetId="c890-acbd-0c80-55c9" type="selectionEntryGroup"/>
-        <entryLink id="f4a6-d3e2-0bd4-8783" name="Command Traits" hidden="false" collective="false" import="true" targetId="c806-f7da-5402-20ad" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="140.0"/>
@@ -1094,6 +2015,58 @@ All friendly GNOMAD FEASTMASTERS units within 3&quot; of this model may treat th
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fee1-bf32-27ef-710f" type="max"/>
       </constraints>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="7a3f-1a60-599f-5e27" name="Artefacts: Adventitious Curios" hidden="true" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bfeb-5790-b319-e85e" type="notInstanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="60f8-6240-64ff-ceb5" name="Artefacts: Under the Cloche" hidden="true" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d7a4-bdcc-b845-d90a" type="notInstanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="d6b1-8aad-c376-aaa5" name="Artefacts: Blessed Baubles" hidden="true" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="74c4-7f57-a4dc-edbd" type="notInstanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="203f-7076-351a-4356" name="Artefacts: Propitious Pilferings" hidden="true" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="99ac-4c6f-593f-7d7d" type="notInstanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="eb51-e841-a038-22cc" name="Artefacts: Ghyran&apos;s Bounty" hidden="true" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4b76-b5c5-2c23-c72a" type="notInstanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ffd4-9a6e-6fb7-d477" type="notInstanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
       <entryLinks>
         <entryLink id="e0a7-1a3f-2633-9b72" name="Universal Artefacts of Power" hidden="false" collective="false" import="true" targetId="11c4-fd82-92a7-de8a" type="selectionEntryGroup"/>
       </entryLinks>
@@ -1132,7 +2105,12 @@ All friendly GNOMAD FEASTMASTERS units within 3&quot; of this model may treat th
           <modifiers>
             <modifier type="set" field="hidden" value="false">
               <conditionGroups>
-                <conditionGroup type="or"/>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4b76-b5c5-2c23-c72a" type="notInstanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ffd4-9a6e-6fb7-d477" type="notInstanceOf"/>
+                  </conditions>
+                </conditionGroup>
               </conditionGroups>
             </modifier>
           </modifiers>
@@ -1174,11 +2152,135 @@ All friendly GNOMAD FEASTMASTERS units within 3&quot; of this model may treat th
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="19df-63f0-ad6c-368f" type="max"/>
       </constraints>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="bc8e-f131-788a-68c7" name="The Lore of Terraforma" hidden="false" collective="false" import="true">
+          <selectionEntries>
+            <selectionEntry id="868f-55a7-7808-b435" name="Benign Landscape" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="64c1-7e06-110f-edfc" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="bb0d-aab3-6f82-6c27" name="Benign Landscape" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+                  <characteristics>
+                    <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
+                    <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">18&quot;</characteristic>
+                    <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, select a terrain feature within 18” of this model. Until the start of your next hero phase, add 6” to the range of any abilities or scenery rules aecting
+that terrain feature and GNOMAD FEASTMASTERS units wholly within 6” of this terrain feature count as being wholly on or within a terrain feature.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry id="2e93-8734-647a-6995" name="Guardian of Ghyran" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0ba6-cae7-a61b-bd46" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="1c91-1d7a-ab3d-3567" name="Guardian of Ghyran" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+                  <characteristics>
+                    <characteristic name="Casting Value" typeId="2508-b604-1258-a920">5</characteristic>
+                    <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">12&quot;</characteristic>
+                    <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, select a terrain feature within 12” of the caster and add a Guardian Counter to it.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry id="9dd7-7bb9-72b5-b349" name="Nature&apos;s Whimsy" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8fd7-737d-d54b-789d" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="1abc-56fd-e42d-e807" name="Nature&apos;s Whimsy" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+                  <characteristics>
+                    <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
+                    <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">12&quot;</characteristic>
+                    <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, select a terrain feature with a scenery rule from a Mysterious Terrain table within 12” of the caster and roll a dice. 
+
+On a 1, your opponent may select a dierent scenery rule from a Mysterious Terrain table to replace the existing scenery rule.
+
+On a 2, you may roll again for a new scenery rule from a Mysterious Terrain table to replace the existing scenery rule.
+
+On a 3-6, you may pick a dierent scenery rule from a Mysterious Terrain table to replace the existing scenery rule. 
+
+Any replaced scenery rules apply for the duration of the battle. </characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry id="cde6-789f-be02-4967" name="Leaves of Empathy" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4818-eea4-aceb-a8aa" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="54d0-7125-7c5b-1224" name="Leaves of Empathy" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+                  <characteristics>
+                    <characteristic name="Casting Value" typeId="2508-b604-1258-a920">5</characteristic>
+                    <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">12&quot;</characteristic>
+                    <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, until the start of your next hero phase, all friendly units wholly within 12” of the caster gain the GNOMAD FEASTMASTERS keyword until the start of your next hero phase. In addition, any Last Meals Eaten by the caster for the Go with your Gut trait affect all friendly GNOMAD FEASTMASTERS and friendly units wholly within 12” of the caster.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry id="7b81-42c6-e850-bf71" name="Earth Howl" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a10c-58d1-0923-6ee5" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="4a38-b6ac-aede-e3b2" name="Earth Howl" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+                  <characteristics>
+                    <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
+                    <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">18&quot;</characteristic>
+                    <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, select a terrain feature within 18” of the caster. Until the start of your next hero phase, if your opponent spends a command point or relentless discipline point for a HERO or unit within 6” of that terrain feature to use a command ability, roll a dice. On a 4+ the command point or relentless discipline point is used, but the command ability has no effect.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry id="066d-3150-843c-57f7" name="Auspicious Tidings" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a1bc-d110-90ab-2f98" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="f20b-4b9b-35dd-3444" name="Auspicious Tidings" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+                  <characteristics>
+                    <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
+                    <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">6&quot;</characteristic>
+                    <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, select a friendly GNOMAD FEASTMASTERS unit within 6” of the caster or within 6” of a GASTROGNOME ENCAMPMENT.  Until your next Hero Phase, apply the
+Those Lucky Scoundrels battle trait to this unit.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
       <entryLinks>
         <entryLink id="5ab2-4ff5-f303-3818" name="Universal Spell Lore" hidden="false" collective="false" import="true" targetId="20c3-23a0-9d79-b491" type="selectionEntryGroup"/>
       </entryLinks>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
+  <sharedProfiles>
+    <profile id="9e57-9285-77bb-0011" name="They&apos;ll Be Some Fine Dining Should You Survive This One Lads!" hidden="false" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
+      <characteristics>
+        <characteristic name="Command Ability Details" typeId="1b71-4c83-4e8c-093f">You can use this command ability during your hero phase.  If you do so, select a GNOMAD FEASTMASTERS unit wholly within 12&quot; of a model with this command ability.  Until the start of your next hero phase, replace the Last Meal Eaten from the Go with your Gut trait for the selected unit with another Last Meal Eaten of your choice.</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="ef80-9242-71e4-c290" name="Always Hangry" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+      <characteristics>
+        <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This unit always counts as being Hangry instead of the normal ability under &quot;It&apos;s been a long day...&quot;.
+
+In addition, in your hero phase, you may select a GNOMAD FEASTMASTERS unit within 3&quot; of this unit.  Until the start of your next hero phase, the selected unit counts as Hangry instead of the normal ability under &quot;It&apos;s been a long day...&quot;.</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="cce3-0b68-2446-b96b" name="Waste not, Want not" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+      <characteristics>
+        <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">The &quot;Please Sir, May I have some More&quot; ability of GNOMAD HOTPOT units within 3&quot; of this model affects any GNOMAD FEASTMASTERS units wholly within 18&quot; of that model (except for other GNOMAD HOTPOT units).</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="da02-e03e-f9da-19c9" name="Bracken Shields" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+      <characteristics>
+        <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Gnomad Drovers armed with Bracken Shields have a Save characteristic of 6+.</characteristic>
+      </characteristics>
+    </profile>
+  </sharedProfiles>
   <catalogueLinks>
     <catalogueLink id="56c2-4799-155b-2437" name="Order - Sylvaneth - Data" targetId="ab8b-39f3-ebc0-e9ab" type="catalogue" importRootEntries="true"/>
     <catalogueLink id="8e1e-6920-29da-9fc2" name="Destruction - Sons of Behemat" targetId="f904-b52f-810a-e446" type="catalogue" importRootEntries="true"/>
