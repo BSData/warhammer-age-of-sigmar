@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="1bfd-6403-b65a-f52d" name="Order - Gnomad Feastmasters" revision="5" battleScribeVersion="2.03" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="141" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="1bfd-6403-b65a-f52d" name="Order - Gnomad Feastmasters (Beta)" revision="10" battleScribeVersion="2.03" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="141" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profileTypes>
     <profileType id="924f-9868-074a-de36" name="Cockerel Wound Table">
       <characteristicTypes>
@@ -35,6 +35,16 @@
         <characteristicType id="0350-01d3-5724-0f0e" name="Massive Impaling Talons"/>
       </characteristicTypes>
     </profileType>
+    <profileType id="cd3d-b39b-3f06-4b41" name="Last Meal Eaten">
+      <characteristicTypes>
+        <characteristicType id="2ca4-0d1f-5b01-bb17" name="Effect"/>
+      </characteristicTypes>
+    </profileType>
+    <profileType id="317e-ed0e-e077-0a74" name="It&apos;s Been a Long Day">
+      <characteristicTypes>
+        <characteristicType id="f953-962d-6528-56f4" name="Effect"/>
+      </characteristicTypes>
+    </profileType>
   </profileTypes>
   <categoryEntries>
     <categoryEntry id="78d7-bfa7-c521-f7ff" name="GNOMAD FEASTMASTERS" hidden="false"/>
@@ -58,11 +68,58 @@
     <categoryEntry id="a0f2-c4f7-b995-1d39" name="ARWEN&apos;JAX SON OF THE JADE FOREST" hidden="false"/>
     <categoryEntry id="76c3-7e02-dc01-ce50" name="STOUT General" hidden="false"/>
     <categoryEntry id="99db-fc21-5394-1c2b" name="Gnomad Core Battalion" hidden="false"/>
+    <categoryEntry id="fc1b-fa96-391e-99fd" name="Coalition: Towering Allies" hidden="false">
+      <modifiers>
+        <modifier type="increment" field="6f2c-267d-f8bb-e69b" value="1.0">
+          <repeats>
+            <repeat field="selections" scope="roster" value="4.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="unit" repeats="1" roundUp="false"/>
+          </repeats>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="6f2c-267d-f8bb-e69b" type="max"/>
+      </constraints>
+    </categoryEntry>
+    <categoryEntry id="ed82-7794-2f36-f55e" name="Coalition: Hungry Guides" hidden="false">
+      <modifiers>
+        <modifier type="increment" field="b677-2061-b1f0-b4da" value="1.0">
+          <repeats>
+            <repeat field="selections" scope="roster" value="4.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="unit" repeats="1" roundUp="false"/>
+          </repeats>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="b677-2061-b1f0-b4da" type="max"/>
+      </constraints>
+    </categoryEntry>
   </categoryEntries>
   <entryLinks>
     <entryLink id="f06c-202d-4c22-9c72" name="Allegiance" hidden="false" collective="false" import="true" targetId="0374-ed65-bd71-b4a7" type="selectionEntry"/>
-    <entryLink id="67f7-ff18-bf4c-0994" name="Arwen&apos;Jax, Son of the Jade Forest" hidden="false" collective="false" import="true" targetId="00ec-672b-d599-7078" type="selectionEntry"/>
-    <entryLink id="4d52-bb8c-2d43-0421" name="Endless Spell: Detrius Denizen Swarm" hidden="false" collective="false" import="true" targetId="6bcc-9888-89d2-56a4" type="selectionEntry"/>
+    <entryLink id="67f7-ff18-bf4c-0994" name="Arwen&apos;Jax, Son of the Jade Forest" hidden="false" collective="false" import="true" targetId="00ec-672b-d599-7078" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d5a0-2526-1edf-5bf5" type="equalTo"/>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7f54-1f57-e4f3-ab3e" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="add" field="category" value="fc1b-fa96-391e-99fd">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d5a0-2526-1edf-5bf5" type="greaterThan"/>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7f54-1f57-e4f3-ab3e" type="greaterThan"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink id="4d52-bb8c-2d43-0421" name="Endless Spell: Detritus Denizen Swarm" hidden="false" collective="false" import="true" targetId="6bcc-9888-89d2-56a4" type="selectionEntry"/>
     <entryLink id="88ae-e793-ec89-1341" name="Endless Spell: Habbinkerr Sentry" hidden="false" collective="false" import="true" targetId="7a27-7057-5ac8-2b24" type="selectionEntry"/>
     <entryLink id="13ec-d22d-2c6f-d479" name="Endless Spell: Spectral Briar Hedge" hidden="false" collective="false" import="true" targetId="fb01-4b41-5f02-05a5" type="selectionEntry"/>
     <entryLink id="8bfd-ead7-a1ac-b5ea" name="Gastrognome Encampment" hidden="false" collective="false" import="true" targetId="57fd-faf2-8065-288e" type="selectionEntry"/>
@@ -81,6 +138,81 @@
     <entryLink id="663d-1f36-73dc-9e22" name="Yonella Lightfoot" hidden="false" collective="false" import="true" targetId="8ca4-c1bb-852f-2c74" type="selectionEntry"/>
     <entryLink id="a320-0e9b-24f0-0239" name="Grand Strategy" hidden="false" collective="false" import="true" targetId="31f7-db2a-3e6a-0a0f" type="selectionEntry"/>
     <entryLink id="024e-04b0-92b6-b309" name="Battle Tactics: The Perennial Watch" hidden="false" collective="false" import="true" targetId="75f9-ec61-54ef-37c2" type="selectionEntry"/>
+    <entryLink id="b659-7f6a-8461-d373" name="Spirit of Durthu" hidden="false" collective="false" import="true" targetId="ef77-af66-26da-3a02" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d5a0-2526-1edf-5bf5" type="equalTo"/>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7f54-1f57-e4f3-ab3e" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="add" field="category" value="fc1b-fa96-391e-99fd">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d5a0-2526-1edf-5bf5" type="greaterThan"/>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7f54-1f57-e4f3-ab3e" type="greaterThan"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink id="1355-49af-4551-8cae" name="Treelord" hidden="false" collective="false" import="true" targetId="0861-c6bd-bf12-f2f4" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d5a0-2526-1edf-5bf5" type="equalTo"/>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7f54-1f57-e4f3-ab3e" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="add" field="category" value="fc1b-fa96-391e-99fd">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d5a0-2526-1edf-5bf5" type="greaterThan"/>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7f54-1f57-e4f3-ab3e" type="greaterThan"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink id="49c9-a3a0-635d-e67f" name="Treelord Ancient" hidden="false" collective="false" import="true" targetId="524f-f49b-0bfd-9414" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d5a0-2526-1edf-5bf5" type="equalTo"/>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7f54-1f57-e4f3-ab3e" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="add" field="category" value="fc1b-fa96-391e-99fd">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d5a0-2526-1edf-5bf5" type="greaterThan"/>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7f54-1f57-e4f3-ab3e" type="greaterThan"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink id="31f2-a17c-9baf-e712" name="Gnomad Core Battalion: Coniferous Conflabulations" hidden="false" collective="false" import="true" targetId="0970-0d2e-b140-14a9" type="selectionEntry"/>
+    <entryLink id="b617-1d69-5983-844f" name="Gnomad Core Battalion: Gourmet Brigade" hidden="false" collective="false" import="true" targetId="5974-0066-ae6b-bd37" type="selectionEntry"/>
+    <entryLink id="89c0-f222-bc6a-45bd" name="Gnomad Core Battalion: Laager Voortrekkers" hidden="false" collective="false" import="true" targetId="95f7-245c-c5b9-53e4" type="selectionEntry"/>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="0374-ed65-bd71-b4a7" name="Allegiance" hidden="false" collective="false" import="true" type="upgrade">
@@ -109,7 +241,7 @@
         <categoryLink id="280e-af6d-b37a-267d" name="New CategoryLink" hidden="false" targetId="87e8-c095-f059-5f7b" primary="true"/>
       </categoryLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="3589-bcdc-47b8-cbad" name="Allegiance" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="3589-bcdc-47b8-cbad" name="Allegiance" hidden="false" collective="false" import="true" defaultSelectionEntryId="622f-05e4-da19-477b">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c54f-2b65-0ec1-b67a" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b50f-ed0d-74be-7bfd" type="max"/>
@@ -119,8 +251,7 @@
               <profiles>
                 <profile id="f79d-540f-a989-dc22" name="Nimble" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
                   <characteristics>
-                    <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">Hit rolls made for attacks that target friendly BAREFOOT units always fail on an unmodified roll of 1 or 2 (instead of
-only on a 1) and unmodified hit rolls of 1 or 2 cannot be re-rolled.
+                    <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">Hit rolls made for attacks that target friendly BAREFOOT units always fail on an unmodified roll of 1 or 2 (instead of only on a 1) and unmodified hit rolls of 1 or 2 cannot be re-rolled.
 
 Improve the Save characteristic of models in a BAREFOOT unit that is in cover by 1. A BAREFOOT unit that has made a charge move in the same turn does receive the benefit of cover.
 
@@ -136,20 +267,16 @@ In addition, enemy units may not pick a BAREFOOT HERO as the target for an attac
                   <characteristics>
                     <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">A GNOMAD FEASTMASTERS army can summon a TREELORD by adding Guardian Counters to terrain features.
 
-When 3 Guardian Counters have been added to a terrain feature, the player who added the third Guardian Counter
-may spend all Guardian Counters from that terrain feature and summon a TREELORD to the battlefield and add it to their army.
+When 3 Guardian Counters have been added to a terrain feature, the player who added the third Guardian Counter may spend all Guardian Counters from that terrain feature and summon a TREELORD to the battlefield and add it to their army.
 
 Any summoned units must be set up wholly within 6” of the terrain feature and more than 6” from any enemy units.
 
-When an enemy MONSTER picks a terrain feature that has one or more Guardian Counters using the Smash To
-Rubble monstrous rampage, remove any Guardian Counters from that terrain feature (in addition to any other
-effects of Smash To Rubble under core rule 21.1).</characteristic>
+When an enemy MONSTER picks a terrain feature that has one or more Guardian Counters using the Smash To Rubble monstrous rampage, remove any Guardian Counters from that terrain feature (in addition to any other effects of Smash To Rubble under core rule 21.1).</characteristic>
                   </characteristics>
                 </profile>
                 <profile id="aff5-bb98-cbcd-cddf" name="Those Lucky Scoundrels" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
                   <characteristics>
-                    <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">If either player has two consecutive turns as a result of the priority roll (core rule 4.1) then this battle trait applies.
-Apply all the following rules for that battle round.
+                    <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">If either player has two consecutive turns as a result of the priority roll (core rule 4.1) then this battle trait applies. Apply all the following rules for that battle round.
 
 GNOMAD FEASTMASTERS units ignore negative modifiers to their hit and wound rolls.
 
@@ -158,13 +285,6 @@ If the wound roll for an attack made by a friendly GNOMAD FEASTMASTERS unit is a
 Friendly GNOMAD FEASTMASTERS units have a 5+ ward.
 
 Your opponent cannot re-roll, multiply or modify any casting, unbinding, dispelling, chanting or banishing rolls.</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="c3fa-5d6c-cfcb-ff1a" name="Tectonic Bulwark" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
-                  <characteristics>
-                    <characteristic name="Casting Value" typeId="2508-b604-1258-a920">5</characteristic>
-                    <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">24&quot;</characteristic>
-                    <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successful select a friendly GNOMAD FEASTMASTERS unit wholly within range of this model. Until the start of your next hero phase, the selected unit counts as being wholly on or within a terrain feature.</characteristic>
                   </characteristics>
                 </profile>
                 <profile id="2b43-02b4-bee2-d9ac" name="Expedient Providence" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
@@ -185,26 +305,24 @@ Pick 1 friendly GNOMAD FEASTMASTERS HERO. Until the end of the turn, the Those L
                     <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e391-84fd-01e9-4438" type="max"/>
                   </constraints>
                   <profiles>
-                    <profile id="33c3-c1bd-158f-6501" name="-- Last Meal Effect" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
+                    <profile id="33c3-c1bd-158f-6501" name="Last Meal Effect" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
                       <characteristics>
                         <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">Gnomads&apos; battle prowess largely depends on the Last Meal Eaten. Before the battle begins, immediately before setting up armies, roll a D6 and look up the Last Meal Eaten effect on the list below. A Last Meal Eaten effect applies to all friendly GNOMAD FEASTMASTERS units until the end of the battle.</characteristic>
                       </characteristics>
                     </profile>
-                    <profile id="3766-d8de-50a6-be3b" name="1-2 Breakfast" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
+                    <profile id="3766-d8de-50a6-be3b" name="1-2 Breakfast" hidden="false" typeId="cd3d-b39b-3f06-4b41" typeName="Last Meal Eaten">
                       <characteristics>
-                        <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">Add 3” to the range of all friendly GNOMAD FEASTMASTERS units&apos; missile weapons; and add 1 to run and charge rolls. In addition, friendly GNOMAD FEASTMASTERS units may retreat and still shoot or charge later in their turn.</characteristic>
+                        <characteristic name="Effect" typeId="2ca4-0d1f-5b01-bb17">Add 3” to the range of all friendly GNOMAD FEASTMASTERS units&apos; missile weapons; and add 1 to run and charge rolls. In addition, friendly GNOMAD FEASTMASTERS units may retreat and still shoot or charge later in their turn.</characteristic>
                       </characteristics>
                     </profile>
-                    <profile id="1dc8-e709-b75e-06a6" name="3-4 Lunch" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
+                    <profile id="1dc8-e709-b75e-06a6" name="3-4 Lunch" hidden="false" typeId="cd3d-b39b-3f06-4b41" typeName="Last Meal Eaten">
                       <characteristics>
-                        <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">Friendly GNOMAD FEASTMASTERS units may add 2 to their Nature&apos;s Blessings rolls. In addition, your opponent may
-not re-roll any hit or wound rolls for attacks that target friendly BAREFOOT units.</characteristic>
+                        <characteristic name="Effect" typeId="2ca4-0d1f-5b01-bb17">Friendly GNOMAD FEASTMASTERS units may add 2 to their Nature&apos;s Blessings rolls. In addition, your opponent may not re-roll any hit or wound rolls for attacks that target friendly BAREFOOT units.</characteristic>
                       </characteristics>
                     </profile>
-                    <profile id="8ef9-74ca-3dce-e1c5" name="5-6 Dinner" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
+                    <profile id="8ef9-74ca-3dce-e1c5" name="5-6 Dinner" hidden="false" typeId="cd3d-b39b-3f06-4b41" typeName="Last Meal Eaten">
                       <characteristics>
-                        <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">Subtract 3” from the range of all friendly GNOMAD FEASTMASTERS units&apos; missile weapons; and subtract 1 from
-run and charge rolls. In addition, GNOMAD FEASTMASTERS units benefiting from the Those Lucky Scoundrels battle trait have a 4+ ward (instead of a 5+ ward).</characteristic>
+                        <characteristic name="Effect" typeId="2ca4-0d1f-5b01-bb17">Subtract 3” from the range of all friendly GNOMAD FEASTMASTERS units&apos; missile weapons; and subtract 1 from run and charge rolls. In addition, GNOMAD FEASTMASTERS units benefiting from the Those Lucky Scoundrels battle trait have a 4+ ward (instead of a 5+ ward).</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -215,32 +333,32 @@ run and charge rolls. In addition, GNOMAD FEASTMASTERS units benefiting from the
                 <selectionEntry id="9b42-51d2-5828-ec6e" name="It&apos;s Been A Long Day" hidden="false" collective="false" import="true" type="upgrade">
                   <constraints>
                     <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="370d-6fc3-d387-4d8f" type="min"/>
-                    <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d789-994c-052d-4707" type="max"/>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d789-994c-052d-4707" type="max"/>
                   </constraints>
                   <profiles>
-                    <profile id="f4df-a7dd-41e8-8b62" name="-- It&apos;s Been A Long Day" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
+                    <profile id="f4df-a7dd-41e8-8b62" name="It&apos;s Been A Long Day" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
                       <characteristics>
                         <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">GNOMAD FEASTMASTERS units have a different “It’s been a long day…” ability each battle round, as shown on the table [below].  These effects are not cumulative.</characteristic>
                       </characteristics>
                     </profile>
-                    <profile id="86da-6457-ccb7-2f55" name="Battleround 2" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
+                    <profile id="86da-6457-ccb7-2f55" name="Battleround 2" hidden="false" typeId="317e-ed0e-e077-0a74" typeName="It&apos;s Been a Long Day">
                       <characteristics>
-                        <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">Subtract 1 from run rolls for this unit.</characteristic>
+                        <characteristic name="Effect" typeId="f953-962d-6528-56f4">Subtract 1 from run rolls for this unit.</characteristic>
                       </characteristics>
                     </profile>
-                    <profile id="9257-22d3-f469-721b" name="Battleround 3" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
+                    <profile id="9257-22d3-f469-721b" name="Battleround 3" hidden="false" typeId="317e-ed0e-e077-0a74" typeName="It&apos;s Been a Long Day">
                       <characteristics>
-                        <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">Subtract 1 from run and charge rolls for this unit.</characteristic>
+                        <characteristic name="Effect" typeId="f953-962d-6528-56f4">Subtract 1 from run and charge rolls for this unit.</characteristic>
                       </characteristics>
                     </profile>
-                    <profile id="5952-7b3a-b507-4e66" name="Battleround 4" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
+                    <profile id="5952-7b3a-b507-4e66" name="Battleround 4" hidden="false" typeId="317e-ed0e-e077-0a74" typeName="It&apos;s Been a Long Day">
                       <characteristics>
-                        <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">Subtract 1 from run and charge rolls for this unit. In addition, this unit can only move up to 1” when making a pile-in move.</characteristic>
+                        <characteristic name="Effect" typeId="f953-962d-6528-56f4">Subtract 1 from run and charge rolls for this unit. In addition, this unit can only move up to 1” when making a pile-in move.</characteristic>
                       </characteristics>
                     </profile>
-                    <profile id="ec03-6b38-31d5-62b2" name="Battleround 5" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
+                    <profile id="ec03-6b38-31d5-62b2" name="Battleround 5" hidden="false" typeId="317e-ed0e-e077-0a74" typeName="It&apos;s Been a Long Day">
                       <characteristics>
-                        <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">Add 1 to all wound rolls. In addition, halve the number of models, rounding any fractions down, that have been slain this turn when this unit makes a battleshock roll.</characteristic>
+                        <characteristic name="Effect" typeId="f953-962d-6528-56f4">Add 1 to all wound rolls. In addition, halve the number of models, rounding any fractions down, that have been slain this turn when this unit makes a battleshock roll.</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -252,11 +370,13 @@ run and charge rolls. In addition, GNOMAD FEASTMASTERS units benefiting from the
               <selectionEntryGroups>
                 <selectionEntryGroup id="44c0-1cde-041e-603a" name="Trail" hidden="false" collective="false" import="true">
                   <constraints>
-                    <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="18fe-838f-ed58-9778" type="max"/>
                     <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="283b-b64b-897b-0660" type="max"/>
                   </constraints>
                   <selectionEntries>
                     <selectionEntry id="7f54-1f57-e4f3-ab3e" name="Gnomiad Trail" hidden="false" collective="false" import="true" type="upgrade">
+                      <constraints>
+                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3bde-1e77-4d9f-ef39" type="max"/>
+                      </constraints>
                       <profiles>
                         <profile id="1610-f43b-6335-29c0" name="Antediluvian Protectors" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
                           <characteristics>
@@ -281,6 +401,9 @@ Any summoned SPIRIT OF DURTHU units must be set up wholly within 6” of the ter
                       </costs>
                     </selectionEntry>
                     <selectionEntry id="234a-a6e2-1ff1-d932" name="Curet Trail" hidden="false" collective="false" import="true" type="upgrade">
+                      <constraints>
+                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6f66-742c-16d6-c5a1" type="max"/>
+                      </constraints>
                       <profiles>
                         <profile id="d92d-f6e9-6d03-eb38" name="So Hangry" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
                           <characteristics>
@@ -298,6 +421,9 @@ Any summoned SPIRIT OF DURTHU units must be set up wholly within 6” of the ter
                       </costs>
                     </selectionEntry>
                     <selectionEntry id="d5a0-2526-1edf-5bf5" name="Blazed Trail" hidden="false" collective="false" import="true" type="upgrade">
+                      <constraints>
+                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8fe3-c294-aab1-2143" type="max"/>
+                      </constraints>
                       <profiles>
                         <profile id="aec8-a026-db86-abc2" name="Rollin&apos;, rollin&apos;, rollin&apos;" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
                           <characteristics>
@@ -315,10 +441,7 @@ In addition, if you are fighting a Pitched Battle, you can include one additiona
                         </profile>
                         <profile id="17dd-5986-4bf1-283a" name="They&apos;ll never see this one coming!" hidden="false" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
                           <characteristics>
-                            <characteristic name="Command Ability Details" typeId="1b71-4c83-4e8c-093f">At the start of each battle round, if you gain a command point from the Dumb Pluck command trait, you may
-immediately spend that command point to use this command ability. If you do so, immediately select a unit
-wholly within 12” of a BLAZED TRAIL hero or wholly within 18” of a BLAZED TRAIL general. The selected unit
-can shoot or, if it is within 3” of any enemy units, it can fight; and counts as being affected by the Those Lucky Scoundrels battle trait when making attacks when it shoots or fights (at the start of this battle round).</characteristic>
+                            <characteristic name="Command Ability Details" typeId="1b71-4c83-4e8c-093f">At the start of each battle round, if you gain a command point from the Dumb Pluck command trait, you may immediately spend that command point to use this command ability. If you do so, immediately select a unit wholly within 12” of a BLAZED TRAIL hero or wholly within 18” of a BLAZED TRAIL general. The selected unit can shoot or, if it is within 3” of any enemy units, it can fight; and counts as being affected by the Those Lucky Scoundrels battle trait when making attacks when it shoots or fights (at the start of this battle round).</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
@@ -522,11 +645,25 @@ All friendly GNOMAD FEASTMASTERS units within 3&quot; of this model may treat th
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink id="86f7-5163-fecd-cb5a" name="General" hidden="false" collective="false" import="true" targetId="3900-28c8-0008-3643" type="selectionEntry"/>
+        <entryLink id="86f7-5163-fecd-cb5a" name="General" hidden="false" collective="false" import="true" targetId="3900-28c8-0008-3643" type="selectionEntry">
+          <categoryLinks>
+            <categoryLink id="115c-2a7f-1f63-2b35" name="STOUT General" hidden="false" targetId="76c3-7e02-dc01-ce50" primary="false"/>
+          </categoryLinks>
+        </entryLink>
         <entryLink id="068a-3cfb-ebe3-bb96" name="Battalions" hidden="false" collective="false" import="true" targetId="af68-6b3b-c1ed-a74e" type="selectionEntryGroup"/>
         <entryLink id="b955-9a36-94ef-49ac" name="Artefacts" hidden="false" collective="false" import="true" targetId="95d7-5c61-46da-973d" type="selectionEntryGroup"/>
         <entryLink id="7436-d879-393a-dc6c" name="Incarnate Bonding" hidden="false" collective="false" import="true" targetId="c890-acbd-0c80-55c9" type="selectionEntryGroup"/>
         <entryLink id="7dd8-4ed7-9c4f-41ed" name="Command Traits" hidden="false" collective="false" import="true" targetId="c806-f7da-5402-20ad" type="selectionEntryGroup"/>
+        <entryLink id="426f-eec6-0332-0f31" name="Mount Traits" hidden="false" collective="false" import="true" targetId="e903-73c9-93cc-62e9" type="selectionEntryGroup"/>
+        <entryLink id="9711-2021-804c-a97f" name="Spell Lores" hidden="true" collective="false" import="true" targetId="b094-0ec4-692a-78ec" type="selectionEntryGroup">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9918-5a46-2468-35e2" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="200.0"/>
@@ -773,6 +910,7 @@ An attack made by a weapon that is in range of this model can target either this
       <infoLinks>
         <infoLink id="0d88-6752-b0e7-f1fb" name="Mystic Shield" hidden="false" targetId="b41f-f1ce-7aa5-4f81" type="profile"/>
         <infoLink id="8c55-a400-a877-ee0c" name="Arcane Bolt" hidden="false" targetId="ae02-a84f-a903-1ff8" type="profile"/>
+        <infoLink id="86cb-5ef8-987f-5028" name="Tectonic Bulwark" hidden="false" targetId="f53e-0757-4ae0-a4e1" type="profile"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="a321-77b6-ac09-8e13" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
@@ -1014,6 +1152,15 @@ An attack made by a weapon that is in range of this model can target either this
         <entryLink id="bd5c-3b11-706d-16e0" name="Artefacts" hidden="false" collective="false" import="true" targetId="95d7-5c61-46da-973d" type="selectionEntryGroup"/>
         <entryLink id="30d0-e8cb-c6e4-7bb6" name="Incarnate Bonding" hidden="false" collective="false" import="true" targetId="c890-acbd-0c80-55c9" type="selectionEntryGroup"/>
         <entryLink id="f898-37cf-5f91-b881" name="Command Traits" hidden="false" collective="false" import="true" targetId="c806-f7da-5402-20ad" type="selectionEntryGroup"/>
+        <entryLink id="77cb-d7d1-9cc3-f5af" name="Spell Lores" hidden="true" collective="false" import="true" targetId="b094-0ec4-692a-78ec" type="selectionEntryGroup">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9918-5a46-2468-35e2" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="100.0"/>
@@ -1111,6 +1258,15 @@ This model cannot be set up on the battlefield until after the number of your tu
         <entryLink id="92c1-ec81-e55b-77f5" name="Battalions" hidden="false" collective="false" import="true" targetId="af68-6b3b-c1ed-a74e" type="selectionEntryGroup"/>
         <entryLink id="33c6-5c8d-d1b5-54e9" name="Artefacts" hidden="false" collective="false" import="true" targetId="95d7-5c61-46da-973d" type="selectionEntryGroup"/>
         <entryLink id="9cd2-7c5e-cdde-be51" name="Incarnate Bonding" hidden="false" collective="false" import="true" targetId="c890-acbd-0c80-55c9" type="selectionEntryGroup"/>
+        <entryLink id="c10f-6b8b-ff98-3eaa" name="Spell Lores" hidden="true" collective="false" import="true" targetId="b094-0ec4-692a-78ec" type="selectionEntryGroup">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9918-5a46-2468-35e2" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="110.0"/>
@@ -1161,6 +1317,7 @@ In addition, before the roll off to decide who takes the first turn at the start
         <infoLink id="a7f2-4911-ed9d-f33d" name="Fly" hidden="false" targetId="8e0c-cbe4-27be-8a30" type="profile"/>
         <infoLink id="df80-ad20-a33e-d167" name="Arcane Bolt" hidden="false" targetId="ae02-a84f-a903-1ff8" type="profile"/>
         <infoLink id="e1b4-83d2-7361-384e" name="Mystic Shield" hidden="false" targetId="b41f-f1ce-7aa5-4f81" type="profile"/>
+        <infoLink id="8225-07b2-b4a2-fb50" name="Tectonic Bulwark" hidden="false" targetId="f53e-0757-4ae0-a4e1" type="profile"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="b3cf-984c-16c0-c20e" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
@@ -1335,6 +1492,7 @@ In addition, before the roll off to decide who takes the first turn at the start
         <infoLink id="6bd5-f794-3583-ffe7" name="Groundshaker" hidden="false" targetId="8bb4-1563-bd32-83fd" type="profile"/>
         <infoLink id="ff06-3695-4431-baba" name="Arcane Bolt" hidden="false" targetId="ae02-a84f-a903-1ff8" type="profile"/>
         <infoLink id="2853-a326-f0a7-ca92" name="Mystic Shield" hidden="false" targetId="b41f-f1ce-7aa5-4f81" type="profile"/>
+        <infoLink id="eecc-8b3e-8ca5-a8dc" name="Tectonic Bulwark" hidden="false" targetId="f53e-0757-4ae0-a4e1" type="profile"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="feda-932d-5b9b-c0d5" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
@@ -1531,7 +1689,6 @@ In addition, before the roll off to decide who takes the first turn at the start
           <selectionEntries>
             <selectionEntry id="2757-f25b-0f09-c9b5" name="Drover Bows and Pots and Spons" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5eef-e4dd-791a-7c9d" type="min"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8d8c-46a4-0ac3-08dd" type="max"/>
               </constraints>
               <profiles>
@@ -1564,7 +1721,6 @@ In addition, before the roll off to decide who takes the first turn at the start
             </selectionEntry>
             <selectionEntry id="bf98-75c4-9128-31a4" name="Clubs/Mauls and Bracken Shields" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="edd5-c7f0-1bc8-b6d0" type="min"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ba1f-a95a-252d-6751" type="max"/>
               </constraints>
               <profiles>
@@ -1589,7 +1745,6 @@ In addition, before the roll off to decide who takes the first turn at the start
             </selectionEntry>
             <selectionEntry id="dfa7-e9db-49e8-a5b4" name="Short Spears and Bracken Shields" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="615a-5771-fde9-22cf" type="min"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4433-d4b3-ef3a-4b07" type="max"/>
               </constraints>
               <profiles>
@@ -1621,6 +1776,9 @@ In addition, before the roll off to decide who takes the first turn at the start
           <modifiers>
             <modifier type="set" field="95f2-6885-756f-9ea5" value="2.0"/>
           </modifiers>
+          <costs>
+            <cost name="pts" typeId="points" value="100.0"/>
+          </costs>
         </entryLink>
       </entryLinks>
       <costs>
@@ -1628,6 +1786,18 @@ In addition, before the roll off to decide who takes the first turn at the start
       </costs>
     </selectionEntry>
     <selectionEntry id="06de-9981-6954-506b" name="Gastrognome Guard" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set-primary" field="category" value="e9f2-765a-b7b8-ce8e">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d5a0-2526-1edf-5bf5" type="greaterThan"/>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="76c3-7e02-dc01-ce50" type="greaterThan"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="efcb-cd7e-7dfb-ae62" name="Mount" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
@@ -1749,13 +1919,36 @@ In addition, before the roll off to decide who takes the first turn at the start
       </selectionEntries>
       <entryLinks>
         <entryLink id="5ced-90e7-82d9-3b64" name="Battalions" hidden="false" collective="false" import="true" targetId="af68-6b3b-c1ed-a74e" type="selectionEntryGroup"/>
-        <entryLink id="0f89-58e9-7078-463d" name="Reinforced" hidden="false" collective="false" import="true" targetId="0a8d-cde8-fba1-6c0d" type="selectionEntry"/>
+        <entryLink id="0f89-58e9-7078-463d" name="Reinforced" hidden="false" collective="false" import="true" targetId="0a8d-cde8-fba1-6c0d" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="95f2-6885-756f-9ea5" value="2.0">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d5a0-2526-1edf-5bf5" type="greaterThan"/>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="76c3-7e02-dc01-ce50" type="greaterThan"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <costs>
+            <cost name="pts" typeId="points" value="140.0"/>
+          </costs>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="645e-31e0-4c29-3ae3" name="Gnomad Scouts" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="add" field="category" value="7ede-19c1-7261-f88b">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1411-460f-c135-a667" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="6c86-42e0-a762-224b" name="Gnomad Scouts" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
           <characteristics>
@@ -1863,7 +2056,11 @@ In addition, before the roll off to decide who takes the first turn at the start
       </selectionEntries>
       <entryLinks>
         <entryLink id="ed39-9de4-d53d-cb7c" name="Battalions" hidden="false" collective="false" import="true" targetId="af68-6b3b-c1ed-a74e" type="selectionEntryGroup"/>
-        <entryLink id="4434-5081-1b82-65a6" name="Reinforced" hidden="false" collective="false" import="true" targetId="0a8d-cde8-fba1-6c0d" type="selectionEntry"/>
+        <entryLink id="4434-5081-1b82-65a6" name="Reinforced" hidden="false" collective="false" import="true" targetId="0a8d-cde8-fba1-6c0d" type="selectionEntry">
+          <costs>
+            <cost name="pts" typeId="points" value="100.0"/>
+          </costs>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
@@ -1998,7 +2195,11 @@ In addition, before the roll off to decide who takes the first turn at the start
       </selectionEntries>
       <entryLinks>
         <entryLink id="7989-3312-50e2-4421" name="Battalions" hidden="false" collective="false" import="true" targetId="af68-6b3b-c1ed-a74e" type="selectionEntryGroup"/>
-        <entryLink id="964c-c248-ff9f-b313" name="Reinforced" hidden="false" collective="false" import="true" targetId="0a8d-cde8-fba1-6c0d" type="selectionEntry"/>
+        <entryLink id="964c-c248-ff9f-b313" name="Reinforced" hidden="false" collective="false" import="true" targetId="0a8d-cde8-fba1-6c0d" type="selectionEntry">
+          <costs>
+            <cost name="pts" typeId="points" value="120.0"/>
+          </costs>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
@@ -2114,7 +2315,11 @@ In addition, before the roll off to decide who takes the first turn at the start
       </selectionEntries>
       <entryLinks>
         <entryLink id="c9f5-3c0a-258d-39d9" name="Battalions" hidden="false" collective="false" import="true" targetId="af68-6b3b-c1ed-a74e" type="selectionEntryGroup"/>
-        <entryLink id="4627-5f2e-579d-5584" name="Reinforced" hidden="false" collective="false" import="true" targetId="0a8d-cde8-fba1-6c0d" type="selectionEntry"/>
+        <entryLink id="4627-5f2e-579d-5584" name="Reinforced" hidden="false" collective="false" import="true" targetId="0a8d-cde8-fba1-6c0d" type="selectionEntry">
+          <costs>
+            <cost name="pts" typeId="points" value="130.0"/>
+          </costs>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
@@ -2216,32 +2421,149 @@ The same unit cannot suffer from each of Breakfast, Lunch or Dinner more than on
       </costs>
     </selectionEntry>
     <selectionEntry id="fb01-4b41-5f02-05a5" name="Endless Spell: Spectral Briar Hedge" hidden="false" collective="false" import="true" type="unit">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9d5b-cb29-b73d-4fe8" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="82d6-5d63-b81d-6fbc" name="Summoning" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+          <characteristics>
+            <characteristic name="Casting Value" typeId="2508-b604-1258-a920">5</characteristic>
+            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">18&quot;</characteristic>
+            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, set up 1 Spectral Briar Hedge model wholly within 18&quot; of the caster.
+
+Only GNOMAD FEASTMASTERS WIZARDS can attempt to summon this endless spell.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="2a8f-f7c1-3565-2d4f" name="Help and Hinder" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Increase the Range characteristics of melee weapons to 3&quot; for models in a GNOMAD FEASTMASTERS unit within 1&quot; of this model.   In addition, reduce the Range characteristic of melee weapons of enemy units within 3&quot; of this model to 1&quot;.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="9569-2800-58a7-2ebe" name="Thorny Defence" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Hit rolls for attacks made with melee weapons that target GNOMAD FEASTMASTERS units wholly within 6&quot; of this model always fail on an unmodified 1, 2 or 3 (instead of only on a 1) and unmodified hit rolls of 1, 2 or 3 cannot be rerolled.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
       <categoryLinks>
         <categoryLink id="3045-518f-0740-3443" name="New CategoryLink" hidden="false" targetId="eecb-ed66-d474-9ddd" primary="true"/>
+        <categoryLink id="32c9-c151-1fb6-e412" name="ENDLESS SPELL" hidden="false" targetId="31f4-2067-3ade-e6f8" primary="false"/>
+        <categoryLink id="58bd-8004-088c-f53b" name="GHYRAN" hidden="false" targetId="0b26-9340-45cf-07ee" primary="false"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="40.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="7a27-7057-5ac8-2b24" name="Endless Spell: Habbinkerr Sentry" hidden="false" collective="false" import="true" type="unit">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="42a6-b656-44c5-da28" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="c94f-a45f-0058-eb49" name="Summoning" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+          <characteristics>
+            <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
+            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">12&quot;</characteristic>
+            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, set up 1 Habbiker Sentry model wholly within 12&quot; of the caster.
+
+Only GNOMAD FEASTMASTERS WIZARDS can attempt to summon this endless spell.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="4245-e052-63c1-764e" name="Preditory" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">A Habbinker Sentry is a predatory endless spell.  It can move up to 9&quot; and can fly.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="0282-7b94-ebbb-d90b" name="Earthshattering Stomps" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the start of the combat phase, roll a dice for each unit within 3&quot; of this model.  On a 4+ the strike last effect applies to that enemy unit in the following combat phase.  This ability does not affect GNOMAD FEASTMASTERS units.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="ff0a-fa5c-2780-23dc" name="Harvest Pulse" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">After this endless spell has moved, you can pick a unit within 12&quot; of this endless spell.  For each Guardian Counter on any terrain feature within 3&quot; of this model that unit suffers 1 mortal wound.  This ability does not affect GNOMAD FEASTMASTERS units.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="7d25-ff94-c77d-3709" name="Fly" hidden="false" targetId="8e0c-cbe4-27be-8a30" type="profile"/>
+      </infoLinks>
       <categoryLinks>
         <categoryLink id="d93e-bfff-e293-00b8" name="New CategoryLink" hidden="false" targetId="eecb-ed66-d474-9ddd" primary="true"/>
+        <categoryLink id="ca5d-0f26-85dc-6fbc" name="ENDLESS SPELL" hidden="false" targetId="31f4-2067-3ade-e6f8" primary="false"/>
+        <categoryLink id="fb2c-5e61-cd5b-ac7b" name="GHYRAN" hidden="false" targetId="0b26-9340-45cf-07ee" primary="false"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="50.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="6bcc-9888-89d2-56a4" name="Endless Spell: Detrius Denizen Swarm" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="6bcc-9888-89d2-56a4" name="Endless Spell: Detritus Denizen Swarm" hidden="false" collective="false" import="true" type="unit">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="bf0d-769c-1157-9a3b" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="a5d4-0929-afaf-efe3" name="Summoning" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+          <characteristics>
+            <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
+            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">-</characteristic>
+            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, set up 1 Detritus Denizen Swarm model wholly within 6&quot; of a terrain feature.
+
+Only GNOMAD FEASTMASTERS WIZARDS can attempt to summon this endless spell.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="0fc8-6f6f-2821-6ab4" name="Preditory" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">A Detritus Denizen Swarm is a predatory endless spell.  A Detritus Denizen Swarm can move up to 6&quot;.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="9eda-f8d0-2487-a4c2" name="Scurrying Mass" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">After setting up or moving this model, you can pick 1 enemy unit within 1&quot; of this model and roll 6 dice.  For each roll of 5+ that unit suffers 1 mortal wound.   In addition, your opponent may not re-roll any dice rolls for any unit that suffers any mortal wounds from this ability until the end of the battle round.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="c8be-a756-11c8-0dfc" name="Soil Kin" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">The Scurrying Mass ability does not affect GNOMAD FEASTMASTERS units.  In addition, models in GNOMAD FEASTMASTERS units can move across this model in the same manner as a unit that can fly.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
       <categoryLinks>
         <categoryLink id="f35d-5674-1d12-1535" name="New CategoryLink" hidden="false" targetId="eecb-ed66-d474-9ddd" primary="true"/>
+        <categoryLink id="4a07-be83-fd7c-b712" name="ENDLESS SPELL" hidden="false" targetId="31f4-2067-3ade-e6f8" primary="false"/>
+        <categoryLink id="0501-62e8-a101-5601" name="GHYRAN" hidden="false" targetId="0b26-9340-45cf-07ee" primary="false"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="50.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="57fd-faf2-8065-288e" name="Gastrognome Encampment" hidden="false" collective="false" import="true" type="unit">
+      <profiles>
+        <profile id="afdc-2a74-d895-eebf" name="Set-Up" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">After territories have been chosen but before armies are set up, you can set up the GASTROGNOME ENCAMPMENT wholly within 6&quot; of an objective within your territory.
+
+No other restrictions apply when setting up a GASTROGNOME ENCAMPMENT.  If this isn&apos;t possible because other terrain features have been placed obscuring that objective, you can remove those terrain features that are wholly or partially within your territor and attempt to set up this faction terrain feature again.   If there are no objectives on the table or within your territory, you can set up the GASTROGNOME ENCAMPMENT wholly within your territory.
+
+If both players can set up faction terrain features at the same time, they must roll off and the winner chooses who sets up their faction terrain features first.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="f488-b92c-4070-f71e" name="Gastrognome Encampment" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">A GASTROGNOME ENCAMPMENT is a single terrain feature.  It is an obstacle.
+
+GNOMAD FEASTMASTERS units treat this terrain feature as having the Inspiring scenery rule.
+
+When determining control of an objective, each GNOMAD FEASTMASTERS BAREFOOT model wholly on or within a GASTROGNOME ENCAMPMENT counts a 2 models instead of 1.
+
+Enemy units may not be set up within 3&quot; of this terrain feature.
+
+If there are 10 or more GNOMAD FEASTMASTERS models wholly on or within the GASTROGNOME ENCAMPMENT, roll a dice each time an enemy unit uses an ability whose effect involves picking this terrain feature.  On a 3+, that ability has no effect.  In addition, on an unmodified 6, that enemy unit suffers D3+3 mortal wounds.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
       <categoryLinks>
         <categoryLink id="f436-7637-1c20-9e82" name="New CategoryLink" hidden="false" targetId="bc8a-9257-1601-6d62" primary="true"/>
+        <categoryLink id="c6e4-c889-5375-f90e" name="SCENERY" hidden="false" targetId="8910-7c1d-6c74-37ff" primary="false"/>
+        <categoryLink id="aa2b-205a-4bef-74a1" name="GNOMAD FEASTMASTERS" hidden="false" targetId="78d7-bfa7-c521-f7ff" primary="false"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
@@ -2279,7 +2601,7 @@ The same unit cannot suffer from each of Breakfast, Lunch or Dinner more than on
         <profile id="9338-2cfc-ae95-9c5d" name="Core Battalion: Gourmet Brigade" hidden="false" typeId="75e0-a332-e4f5-bf36" typeName="Battalion Organisation">
           <characteristics>
             <characteristic name="Required" typeId="eb5f-e9d2-e457-bff5">1-2 HEAD CHEF units
-2-4 GNOMAD HOT POT units</characteristic>
+2-4 GNOMAD HOTPOT units</characteristic>
           </characteristics>
         </profile>
         <profile id="3f36-ca59-73d9-38b6" name="Abundance" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
@@ -2293,10 +2615,13 @@ The same unit cannot suffer from each of Breakfast, Lunch or Dinner more than on
         <infoLink id="8a47-b72a-92a3-e139" name="Strategist" hidden="false" targetId="d430-efbb-5f30-d60a" type="profile"/>
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="4ac2-613b-1bec-c7f3" name="Core Battalion" hidden="false" targetId="6575-7d6c-ce4d-ada4" primary="false"/>
+        <categoryLink id="4ac2-613b-1bec-c7f3" name="Core Battalion" hidden="false" targetId="6575-7d6c-ce4d-ada4" primary="true"/>
         <categoryLink id="b59e-1dc7-9588-f30b" name="Gnomad Core Battalion" hidden="false" targetId="99db-fc21-5394-1c2b" primary="false"/>
         <categoryLink id="0c9c-96a4-4541-3d0f" name="Battalion" hidden="false" targetId="3ecc-4c0d-d717-29bd" primary="false"/>
       </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="95f7-245c-c5b9-53e4" name="Gnomad Core Battalion: Laager Voortrekkers" hidden="true" collective="false" import="true" type="upgrade">
       <modifiers>
@@ -2323,12 +2648,16 @@ The same unit cannot suffer from each of Breakfast, Lunch or Dinner more than on
         <categoryLink id="733b-339f-2e1e-5a60" name="Battalion" hidden="false" targetId="3ecc-4c0d-d717-29bd" primary="false"/>
         <categoryLink id="8322-3c41-d73f-8000" name="Gnomad Core Battalion" hidden="false" targetId="99db-fc21-5394-1c2b" primary="false"/>
       </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="0970-0d2e-b140-14a9" name="Gnomad Core Battalion: Coniferous Conflabulations" hidden="true" collective="false" import="true" type="upgrade">
       <modifiers>
         <modifier type="set" field="hidden" value="false">
           <conditions>
             <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="622f-05e4-da19-477b" type="greaterThan"/>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="234a-a6e2-1ff1-d932" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -2355,6 +2684,9 @@ The same unit cannot suffer from each of Breakfast, Lunch or Dinner more than on
         <categoryLink id="23e8-4144-cc1d-b15b" name="Gnomad Core Battalion" hidden="false" targetId="99db-fc21-5394-1c2b" primary="false"/>
         <categoryLink id="0df1-fb15-b4b8-4bb0" name="Battalion" hidden="false" targetId="3ecc-4c0d-d717-29bd" primary="false"/>
       </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
@@ -2475,7 +2807,7 @@ The same unit cannot suffer from each of Breakfast, Lunch or Dinner more than on
           <modifiers>
             <modifier type="set" field="hidden" value="false">
               <conditions>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bfeb-5790-b319-e85e" type="notInstanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bfeb-5790-b319-e85e" type="instanceOf"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -2543,7 +2875,7 @@ The same unit cannot suffer from each of Breakfast, Lunch or Dinner more than on
           <modifiers>
             <modifier type="set" field="hidden" value="false">
               <conditions>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d7a4-bdcc-b845-d90a" type="notInstanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d7a4-bdcc-b845-d90a" type="instanceOf"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -2611,7 +2943,7 @@ The same unit cannot suffer from each of Breakfast, Lunch or Dinner more than on
           <modifiers>
             <modifier type="set" field="hidden" value="false">
               <conditions>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="74c4-7f57-a4dc-edbd" type="notInstanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="74c4-7f57-a4dc-edbd" type="instanceOf"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -2679,7 +3011,7 @@ The same unit cannot suffer from each of Breakfast, Lunch or Dinner more than on
           <modifiers>
             <modifier type="set" field="hidden" value="false">
               <conditions>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="99ac-4c6f-593f-7d7d" type="notInstanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="99ac-4c6f-593f-7d7d" type="instanceOf"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -2750,8 +3082,8 @@ mission, after which, at the end of your movement phase, you can set this model 
               <conditionGroups>
                 <conditionGroup type="or">
                   <conditions>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4b76-b5c5-2c23-c72a" type="notInstanceOf"/>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ffd4-9a6e-6fb7-d477" type="notInstanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4b76-b5c5-2c23-c72a" type="instanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ffd4-9a6e-6fb7-d477" type="instanceOf"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -2938,7 +3270,7 @@ mission, after which, at the end of your movement phase, you can set this model 
           <modifiers>
             <modifier type="set" field="hidden" value="false">
               <conditions>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bfeb-5790-b319-e85e" type="notInstanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bfeb-5790-b319-e85e" type="instanceOf"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -2988,7 +3320,7 @@ mission, after which, at the end of your movement phase, you can set this model 
           <modifiers>
             <modifier type="set" field="hidden" value="false">
               <conditions>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d7a4-bdcc-b845-d90a" type="notInstanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d7a4-bdcc-b845-d90a" type="instanceOf"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -3040,8 +3372,8 @@ mission, after which, at the end of your movement phase, you can set this model 
               <conditionGroups>
                 <conditionGroup type="or">
                   <conditions>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4b76-b5c5-2c23-c72a" type="notInstanceOf"/>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ffd4-9a6e-6fb7-d477" type="notInstanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4b76-b5c5-2c23-c72a" type="instanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ffd4-9a6e-6fb7-d477" type="instanceOf"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -3096,7 +3428,7 @@ rules purposes.</characteristic>
           <modifiers>
             <modifier type="set" field="hidden" value="false">
               <conditions>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="74c4-7f57-a4dc-edbd" type="notInstanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="74c4-7f57-a4dc-edbd" type="instanceOf"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -3532,6 +3864,9 @@ Those Lucky Scoundrels battle trait to this unit.</characteristic>
           <categoryLinks>
             <categoryLink id="85c8-ed76-71a4-4c1c" name="Grand Strategy" hidden="false" targetId="5dff-3614-49fd-c3e4" primary="false"/>
           </categoryLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
@@ -3548,19 +3883,280 @@ Those Lucky Scoundrels battle trait to this unit.</characteristic>
       </constraints>
       <selectionEntryGroups>
         <selectionEntryGroup id="2905-d10b-9f3a-a213" name="Gourmet Brigade" hidden="true" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5974-0066-ae6b-bd37" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ebed-7ae8-7393-5b35" type="max"/>
           </constraints>
+          <selectionEntries>
+            <selectionEntry id="e660-d532-95c0-a50f" name="Gourmet Brigade - 1-2 HEAD CHEFS" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="e844-dddd-c3ca-70e0" value="2.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5974-0066-ae6b-bd37" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="increment" field="6951-98f2-89c3-ab5e" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5974-0066-ae6b-bd37" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d7a4-bdcc-b845-d90a" type="instanceOf"/>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5974-0066-ae6b-bd37" type="greaterThan"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e844-dddd-c3ca-70e0" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6951-98f2-89c3-ab5e" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7c5f-787c-0a4d-8bfb" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="6158-6132-ee38-987f" name="Gourmet Brigade - 2-4 GNOMAD HOTPOTS" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="e7c4-7a1f-7e3a-0ec6" value="4.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5974-0066-ae6b-bd37" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="increment" field="d642-a29c-fc98-699c" value="2.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5974-0066-ae6b-bd37" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7176-8526-3f93-3dbf" type="instanceOf"/>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5974-0066-ae6b-bd37" type="greaterThan"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e7c4-7a1f-7e3a-0ec6" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d642-a29c-fc98-699c" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7e26-d1ba-cb09-e9ee" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
         </selectionEntryGroup>
         <selectionEntryGroup id="b8b0-37fd-c294-9753" name="Laagor Voortrekkers" hidden="true" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="95f7-245c-c5b9-53e4" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6bbf-44f4-d438-209f" type="max"/>
           </constraints>
+          <selectionEntries>
+            <selectionEntry id="8072-b97d-a152-5922" name="Laager Voortrekkers - 1-3 GASTROGNOME WAR CARAVAN" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="c64b-4709-6df3-1196" value="3.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="95f7-245c-c5b9-53e4" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="increment" field="142a-3aa4-4293-0711" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="95f7-245c-c5b9-53e4" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3164-cc58-0391-618c" type="instanceOf"/>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="95f7-245c-c5b9-53e4" type="greaterThan"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c64b-4709-6df3-1196" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="142a-3aa4-4293-0711" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1ca1-48ea-612f-62a5" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="fae2-b621-d4d4-c21a" name="Laager Voortrekkers - 1-3 BAREFOOT" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="5ad2-35b3-978e-6d4b" value="3.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="95f7-245c-c5b9-53e4" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="increment" field="03de-645a-15de-018a" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="95f7-245c-c5b9-53e4" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5355-e082-e84b-ba56" type="instanceOf"/>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="95f7-245c-c5b9-53e4" type="greaterThan"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5ad2-35b3-978e-6d4b" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="03de-645a-15de-018a" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1287-4f0d-8257-1440" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
         </selectionEntryGroup>
         <selectionEntryGroup id="f8a1-ce97-4455-581f" name="Coniferous Conflabulations" hidden="true" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0970-0d2e-b140-14a9" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d742-8d5d-f49f-0663" type="max"/>
           </constraints>
+          <selectionEntries>
+            <selectionEntry id="6894-4b6c-4864-6fc3" name="Coniferous Conflabulations - 1 TREELORD ANCIENT unit" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="91ed-fe03-fac1-8273" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="0970-0d2e-b140-14a9" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="increment" field="929b-7b0e-be96-692e" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="0970-0d2e-b140-14a9" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4b76-b5c5-2c23-c72a" type="instanceOf"/>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0970-0d2e-b140-14a9" type="greaterThan"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="929b-7b0e-be96-692e" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="91ed-fe03-fac1-8273" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="acfe-a4e8-2de5-fccb" type="max"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry id="078f-f94a-c229-94d4" name="Coniferous Conflabulations - 1-2 HEDGE HERMIT units" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="bdbb-5c1a-caf6-628f" value="2.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="0970-0d2e-b140-14a9" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="increment" field="7fd3-50bb-cbe6-0225" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="0970-0d2e-b140-14a9" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="74c4-7f57-a4dc-edbd" type="instanceOf"/>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0970-0d2e-b140-14a9" type="greaterThan"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="bdbb-5c1a-caf6-628f" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7fd3-50bb-cbe6-0225" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d3ee-6485-eb00-3253" type="max"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry id="6603-22a6-f304-bf39" name="Coniferous Conflabulations - 0-1 SPIRIT OF DURTHU unit" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="74ae-ac33-8033-fb10" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="0970-0d2e-b140-14a9" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ffd4-9a6e-6fb7-d477" type="instanceOf"/>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0970-0d2e-b140-14a9" type="greaterThan"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="74ae-ac33-8033-fb10" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d4e4-19e6-360a-ca15" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="fec2-2737-befa-f004" type="max"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry id="1a15-ef36-082d-da4b" name="Coniferous Conflabulations - 0-2 TREELORD units" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="6296-d96b-3836-ff35" value="2.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="0970-0d2e-b140-14a9" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f301-21bf-5de1-a0f4" type="instanceOf"/>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0970-0d2e-b140-14a9" type="greaterThan"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6296-d96b-3836-ff35" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7b0f-3f0e-263c-5ba4" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c327-987b-74dd-1afa" type="max"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntryGroup>
@@ -3586,6 +4182,13 @@ In addition, in your hero phase, you may select a GNOMAD FEASTMASTERS unit withi
     <profile id="da02-e03e-f9da-19c9" name="Bracken Shields" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
       <characteristics>
         <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Gnomad Drovers armed with Bracken Shields have a Save characteristic of 6+.</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="f53e-0757-4ae0-a4e1" name="Tectonic Bulwark" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+      <characteristics>
+        <characteristic name="Casting Value" typeId="2508-b604-1258-a920">5</characteristic>
+        <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">24&quot;</characteristic>
+        <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successful select a friendly GNOMAD FEASTMASTERS unit wholly within range of this model. Until the start of your next hero phase, the selected unit counts as being wholly on or within a terrain feature.</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
