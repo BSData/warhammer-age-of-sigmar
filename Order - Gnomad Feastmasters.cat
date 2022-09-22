@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="1bfd-6403-b65a-f52d" name="Order - Gnomad Feastmasters (Beta)" revision="13" battleScribeVersion="2.03" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="141" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="1bfd-6403-b65a-f52d" name="Order - Gnomad Feastmasters (Unofficial)" revision="15" battleScribeVersion="2.03" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="141" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+  <readme>The Gnomad Feastmasters is an unofficial battletome.</readme>
   <publications>
     <publication id="5d18-ec94-c8dd-a621" name="Unofficial Order Battletome: Gnomad Beastmasters (Beta)" shortName="Order Battletome: Gnomad Beastmasters" publisherUrl="https://drive.google.com/drive/folders/1-q4z4uhGnDBYAlvcuyygbXgHlqR7YZUB?usp=sharing"/>
   </publications>
@@ -460,7 +461,7 @@ Pick 1 friendly GNOMAD FEASTMASTERS HERO. Until the end of the turn, the Those L
                 </selectionEntry>
               </selectionEntries>
               <selectionEntryGroups>
-                <selectionEntryGroup id="44c0-1cde-041e-603a" name="Trail" hidden="false" collective="false" import="true">
+                <selectionEntryGroup id="44c0-1cde-041e-603a" name="Trail" hidden="false" collective="false" import="true" defaultSelectionEntryId="7f54-1f57-e4f3-ab3e">
                   <constraints>
                     <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="283b-b64b-897b-0660" type="max"/>
                   </constraints>
@@ -965,6 +966,7 @@ All friendly GNOMAD FEASTMASTERS units within 3&quot; of this model may treat th
       </selectionEntries>
       <entryLinks>
         <entryLink id="52df-d571-1181-e92c" name="Battalions" hidden="false" collective="false" import="true" targetId="af68-6b3b-c1ed-a74e" type="selectionEntryGroup"/>
+        <entryLink id="f798-b7b1-e2fa-4f88" name="Unique Enhancements" hidden="false" collective="false" import="true" targetId="b90a-47b2-19b6-d1fc" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="220.0"/>
@@ -1836,7 +1838,7 @@ In addition, before the roll off to decide who takes the first turn at the start
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup id="b9f4-2517-2856-5b60" name="Weapon Option" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="b9f4-2517-2856-5b60" name="Weapon Option" hidden="false" collective="false" import="true" defaultSelectionEntryId="bf98-75c4-9128-31a4">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1662-9ddb-057e-f196" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cfe6-d761-f0a2-866d" type="max"/>
@@ -2909,7 +2911,7 @@ If there are 10 or more GNOMAD FEASTMASTERS models wholly on or within the GASTR
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup id="a780-5dad-b9a3-9113" name="Weapon Options" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="a780-5dad-b9a3-9113" name="Weapon Options" hidden="false" collective="false" import="true" defaultSelectionEntryId="b1fa-8055-b29c-ab3b">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1de7-4371-a83f-d93c" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b63c-1164-c10f-de31" type="max"/>
@@ -4735,8 +4737,24 @@ Any replaced scenery rules apply for the duration of the battle. </characteristi
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8603-c85a-0706-8d28" type="max"/>
       </constraints>
       <entryLinks>
-        <entryLink id="a230-596d-5040-5cef" name="Gnomad Tinkers" hidden="false" collective="false" import="true" targetId="c2db-47d8-893a-b50d" type="selectionEntryGroup"/>
-        <entryLink id="3964-a124-301f-5723" name="Condiments of War" hidden="false" collective="false" import="true" targetId="3ccd-88eb-cf6e-3de7" type="selectionEntryGroup"/>
+        <entryLink id="a230-596d-5040-5cef" name="Gnomad Tinkers" hidden="true" collective="false" import="true" targetId="c2db-47d8-893a-b50d" type="selectionEntryGroup">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3164-cc58-0391-618c" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
+        <entryLink id="3964-a124-301f-5723" name="Condiments of War" hidden="false" collective="false" import="true" targetId="3ccd-88eb-cf6e-3de7" type="selectionEntryGroup">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3164-cc58-0391-618c" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="c2db-47d8-893a-b50d" name="Gnomad Tinkers" hidden="false" collective="false" import="true">
