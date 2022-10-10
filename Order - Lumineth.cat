@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="3a4f-b93a-26ba-a2d1" name="Order - Lumineth" revision="84" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="141" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="3a4f-b93a-26ba-a2d1" name="Order - Lumineth" revision="86" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="141" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="917d-f08b-e601-8ff5" name="Order Battletome - Lumineth Realm-Lords 2022"/>
   </publications>
@@ -105,6 +105,7 @@
     </categoryEntry>
     <categoryEntry id="d3da-ab05-ccda-349a" name="SCINARI HERO" hidden="false"/>
     <categoryEntry id="2fa8-92e2-8292-8030" name="ENLIGHTENER" hidden="false"/>
+    <categoryEntry id="ca2d-fd45-2f8f-758f" name="Lumineth Warscroll Battalion" hidden="false"/>
   </categoryEntries>
   <entryLinks>
     <entryLink id="2249-c919-580f-d2b3" name="Vanari Auralan Wardens" hidden="false" collective="false" import="true" targetId="3b53-dbf5-8f73-b10d" type="selectionEntry"/>
@@ -1875,124 +1876,87 @@ The High Sentinel of this unit is a WIZARD while this unit has 5 or more models.
         <cost name="pts" typeId="points" value="380.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="c23e-5efb-33d9-f73c" name="Battalion: Alarith Temple" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="c23e-5efb-33d9-f73c" name="Lumineth Warscroll Battalion: Alarith Battlehost" hidden="true" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8eb2-2489-29ec-c757" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
-        <profile id="ceb7-f3af-e13d-52e1" name="Skin to Stone" page="" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
+        <profile id="259d-3999-8d95-aba0" name="Warscroll Battalion: Alarith Battlehost" hidden="false" typeId="75e0-a332-e4f5-bf36" typeName="Battalion Organisation">
           <characteristics>
-            <characteristic name="Battalion Ability Details" typeId="08e0-9ead-1dbe-c801">At the start of the combat phase, any friendly STONEGUARD units from this battalion that are wholly within 12&quot; of a friendly HERO from the same battalion can turn their skin to stone until the end of that phase.  Add 1 to save rolls for attacks that target a unit that has turned its skin to stone, but models in a unit that has turned its skin to stone can only move 1&quot; when they pile in.</characteristic>
+            <characteristic name="Required" typeId="eb5f-e9d2-e457-bff5">1 Avalenor The Stoneheart King or 1 Alarith Spirit of the Mountain
+1 Alarith Stonemage
+1-3 Alarith Stoneguard units</characteristic>
           </characteristics>
         </profile>
       </profiles>
+      <infoLinks>
+        <infoLink id="d8e2-30ba-9071-0e39" name="*****nary Discipline" hidden="false" targetId="954b-7577-9f30-e6e7" type="profile"/>
+      </infoLinks>
       <categoryLinks>
         <categoryLink id="abc1-b9c8-eaa4-a3e7" name="New CategoryLink" hidden="false" targetId="be17-6bbd-b857-3f43" primary="true"/>
+        <categoryLink id="b20d-c94a-8bd0-de5b" name="Lumineth Warscroll Battalion" hidden="false" targetId="ca2d-fd45-2f8f-758f" primary="false"/>
       </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="b5f8-1b0f-6e91-3ffe" name="1. Avalenor or Alarith Spirit of the Mountain" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1279-509d-6296-cbde" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0da5-df4c-0bb3-05e9" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="79cf-a948-1d7f-688c" name="Alarith Spirit of the Mountain" hidden="false" collective="false" import="true" targetId="b647-1ba5-997e-38f1" type="selectionEntry"/>
-            <entryLink id="f856-e35f-1fb6-c6b5" name="Avalenor The Stoneheart King" hidden="false" collective="false" import="true" targetId="82cb-87ad-442e-b94c" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="9734-cd38-b678-c07a" name="2. Alarith Stonemage" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2a53-e200-352d-4e83" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9198-8652-6b92-a332" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="b407-88ea-7773-6c4c" name="Alarith Stonemage" hidden="false" collective="false" import="true" targetId="9d49-6a12-a92e-d50b" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="badf-a569-585d-d176" name="3. Alarith Stoneguard (1-3)" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="81fc-afdc-be85-7614" type="min"/>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9d0c-91ed-a380-0ebf" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="6589-0d10-6880-0b89" name="Alarith Stoneguard" hidden="false" collective="false" import="true" targetId="b6da-3afb-1b0b-aa4d" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="62b5-2e4a-fc33-6e7f" name="Battalion: Auralan Legion" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="62b5-2e4a-fc33-6e7f" name="Lumineth Warscroll Battalion: Auralan Battlehost" hidden="true" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8eb2-2489-29ec-c757" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
-        <profile id="4dcd-d94d-b4c1-5c63" name="Shield of Light" page="" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
+        <profile id="f7e6-3abc-2eca-7a4e" name="Warscroll Battalion: Auralan Battlehost" hidden="false" typeId="75e0-a332-e4f5-bf36" typeName="Battalion Organisation">
           <characteristics>
-            <characteristic name="Battalion Ability Details" typeId="08e0-9ead-1dbe-c801">Add 1 to save rolls for attacks made with missile weapons that target a friendly unit from this battalion while it is within 3&quot; of any other friendly units from the same battalion.</characteristic>
+            <characteristic name="Required" typeId="eb5f-e9d2-e457-bff5">1 Scinari Cathaller
+2-4 Vanari Auralan Sentinels units and an equal number of Vanari Auralan Wardens units
+0-1 Lyrior Uthralle
+0-1 Vanari Lord Regents
+0-1 Vanari Bannerblades
+0-3 SCINARI HEROS</characteristic>
           </characteristics>
         </profile>
       </profiles>
+      <infoLinks>
+        <infoLink id="cf3b-081c-0ac6-068f" name="*****nary Discipline" hidden="false" targetId="954b-7577-9f30-e6e7" type="profile"/>
+      </infoLinks>
       <categoryLinks>
         <categoryLink id="ad92-e47a-94fe-87b3" name="New CategoryLink" hidden="false" targetId="be17-6bbd-b857-3f43" primary="true"/>
+        <categoryLink id="fe8f-837d-a42a-3c5d" name="Lumineth Warscroll Battalion" hidden="false" targetId="ca2d-fd45-2f8f-758f" primary="false"/>
       </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="e01c-7153-1f92-0f99" name="1. Scinari Cathallar" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="65cb-9f59-f225-bcee" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e612-d217-f7f2-e0e7" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="5314-d4f6-789f-70ad" name="Scinari Cathallar" hidden="false" collective="false" import="true" targetId="51f3-d54a-496d-478f" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="65ab-346a-c374-c535" name="2. Vanari Auralan Sentinels (2-4)" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7a27-a28d-4c75-bec2" type="min"/>
-            <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d86f-2b16-64ad-e9bb" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="090d-22d3-9441-1168" name="Vanari Auralan Sentinels" hidden="false" collective="false" import="true" targetId="aff6-a2af-96b1-a76d" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="6725-ec77-ded4-59c5" name="3. Vanari Auralan Wardens (equal number as Sentinels)" hidden="false" collective="false" import="true">
-          <modifiers>
-            <modifier type="increment" field="0030-acd8-584b-ad56" value="1.0">
-              <repeats>
-                <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="65ab-346a-c374-c535" repeats="1" roundUp="false"/>
-              </repeats>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a0bd-f9f2-fb42-9b6d" type="max"/>
-            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0030-acd8-584b-ad56" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="1db6-cac9-69f3-be45" name="Vanari Auralan Wardens" hidden="false" collective="false" import="true" targetId="3b53-dbf5-8f73-b10d" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="192b-70c7-e4a4-d8cc" name="Battalion: Dawnrider Lance" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="192b-70c7-e4a4-d8cc" name="Lumineth Warscroll Battalion: Dawnrider Battlehost" hidden="true" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8eb2-2489-29ec-c757" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
-        <profile id="421f-0f91-f159-2027" name="Shafts of Light" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
+        <profile id="3493-c3c7-0e46-2da3" name="Warscroll Battalion: Dawnrider Battlehost" hidden="false" typeId="75e0-a332-e4f5-bf36" typeName="Battalion Organisation">
           <characteristics>
-            <characteristic name="Battalion Ability Details" typeId="08e0-9ead-1dbe-c801">You can re-roll hit rolls of 1 for attacks made with melee weapons by a friendly unit from this battalion that has made a charge move in the same turn.</characteristic>
+            <characteristic name="Required" typeId="eb5f-e9d2-e457-bff5">2-3 Vanari Dawnriders units</characteristic>
           </characteristics>
         </profile>
       </profiles>
+      <infoLinks>
+        <infoLink id="98ee-0c65-b757-b50d" name="*****nary Discipline" hidden="false" targetId="954b-7577-9f30-e6e7" type="profile"/>
+      </infoLinks>
       <categoryLinks>
         <categoryLink id="704e-3455-ca86-7031" name="New CategoryLink" hidden="false" targetId="be17-6bbd-b857-3f43" primary="true"/>
+        <categoryLink id="68b7-9b65-3b21-9f36" name="Lumineth Warscroll Battalion" hidden="false" targetId="ca2d-fd45-2f8f-758f" primary="false"/>
       </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="4e20-f99e-0236-a4fe" name="1. Vanari Dawnriders (2-3)" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="49bf-1993-bd6d-ebd0" type="min"/>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f07c-905e-56e0-e3ff" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="5942-224a-aa74-44e4" name="Vanari Dawnriders" hidden="false" collective="false" import="true" targetId="3747-0abb-f1c7-a143" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
@@ -4019,124 +3983,84 @@ In addition, once per battle at the start of any phase, you can say that this un
         <cost name="pts" typeId="points" value="130.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="4e24-1123-2f95-d918" name="Battalion: Bladelord Host" page="" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="4e24-1123-2f95-d918" name="Lumineth Warscroll Battalion: Bladelord Host" page="" hidden="true" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8eb2-2489-29ec-c757" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
-        <profile id="cba9-e95b-06a2-e199" name="Calculated Response" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
+        <profile id="72f4-f37b-eade-fed5" name="Warscroll Battalion: Bladelord Host" hidden="false" typeId="75e0-a332-e4f5-bf36" typeName="Battalion Organisation">
           <characteristics>
-            <characteristic name="Battalion Ability Details" typeId="08e0-9ead-1dbe-c801">You can re-roll hit rolls of 1 for attacks made with melee weapons by units from this battalion that target an enemy unit that has made a charge move in the same turn.</characteristic>
+            <characteristic name="Required" typeId="eb5f-e9d2-e457-bff5">1 VANARI HERO or 1 SCINARI HERO
+2-3 Vanari Bladelords units</characteristic>
           </characteristics>
         </profile>
       </profiles>
+      <infoLinks>
+        <infoLink id="1e24-2042-14c3-a33e" name="*****nary Discipline" hidden="false" targetId="954b-7577-9f30-e6e7" type="profile"/>
+      </infoLinks>
       <categoryLinks>
         <categoryLink id="fc69-ccb0-f699-a51d" name="New CategoryLink" hidden="false" targetId="be17-6bbd-b857-3f43" primary="true"/>
+        <categoryLink id="d177-b786-670b-3411" name="Lumineth Warscroll Battalion" hidden="false" targetId="ca2d-fd45-2f8f-758f" primary="false"/>
       </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="145a-4411-4b8e-9da6" name="1. 1 VANARI or SCINARI HERO" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e087-b449-5f4b-c3ee" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bc16-4802-5ca3-6234" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="b423-6c91-b49d-f5e2" name="Scinari Calligrave" hidden="false" collective="false" import="true" targetId="ffc6-2591-d3c9-42df" type="selectionEntry"/>
-            <entryLink id="21ae-dc47-f59c-c980" name="Scinari Cathallar" hidden="false" collective="false" import="true" targetId="51f3-d54a-496d-478f" type="selectionEntry"/>
-            <entryLink id="32f6-5737-9504-a449" name="Scinari Loreseeker" hidden="false" collective="false" import="true" targetId="a038-d370-995c-04c7" type="selectionEntry"/>
-            <entryLink id="d9b7-f38b-3bb8-bad8" name="Vanari Bannerblade" hidden="false" collective="false" import="true" targetId="762a-1c04-3e37-d02a" type="selectionEntry"/>
-            <entryLink id="afbe-bffb-31e9-3f60" name="Vanari Lord Regent" hidden="false" collective="false" import="true" targetId="539c-9ab7-b5b8-7034" type="selectionEntry"/>
-            <entryLink id="19ec-b010-1d56-83f9" name="Ellania and Ellathor" hidden="false" collective="false" import="true" targetId="a4f2-49b5-9120-9a27" type="selectionEntry"/>
-            <entryLink id="ea4e-212c-5ce7-a964" name="Lyrior Uthralle" hidden="false" collective="false" import="true" targetId="4b2b-5535-d1ba-6635" type="selectionEntry"/>
-            <entryLink id="a094-fc9e-c759-d6fb" name="Myari Lightcaller" hidden="false" collective="false" import="true" targetId="33f2-9e1b-9fb9-c53b" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="1b3e-ef06-c36e-2611" name="2. 2-3 units of Vanari Bladelords" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="097f-5f61-47f6-dbed" type="max"/>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="899a-4584-a6a9-7b45" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="7b99-cc90-5b6c-c9cb" name="Vanari Bladelords" hidden="false" collective="false" import="true" targetId="1059-75b9-4acb-31fd" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="5105-4973-3756-8030" name="Battalion: Hurakan Temple" page="" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="5105-4973-3756-8030" name="Lumineth Warscroll Battalion: Hurakan Battlehost" page="" hidden="true" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8eb2-2489-29ec-c757" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
-        <profile id="6663-1870-585b-fcd2" name="Whirling Tornadoes" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
+        <profile id="f0aa-5b9b-4faa-ea17" name="Warscroll Battalion: Hurakan Battlehost" hidden="false" typeId="75e0-a332-e4f5-bf36" typeName="Battalion Organisation">
           <characteristics>
-            <characteristic name="Battalion Ability Details" typeId="08e0-9ead-1dbe-c801">If a unit from this battalion is wholly within 12&quot; of a HERO from the same battalion at the start of the combat phase, the models in that unit count as having made a charge move in the same turn.</characteristic>
+            <characteristic name="Required" typeId="eb5f-e9d2-e457-bff5">1 Severith or 1 Hurakan Spirit of the Wind
+1 Hurakan Windmage
+1-3 Hurakan Windchargers units</characteristic>
           </characteristics>
         </profile>
       </profiles>
+      <infoLinks>
+        <infoLink id="74e1-29a0-f999-b997" name="*****nary Discipline" hidden="false" targetId="954b-7577-9f30-e6e7" type="profile"/>
+      </infoLinks>
       <categoryLinks>
         <categoryLink id="43ff-180e-0d29-bff2" name="New CategoryLink" hidden="false" targetId="be17-6bbd-b857-3f43" primary="true"/>
+        <categoryLink id="ead9-4b82-12fc-fb3d" name="Lumineth Warscroll Battalion" hidden="false" targetId="ca2d-fd45-2f8f-758f" primary="false"/>
       </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="0f41-d9fa-11a6-e13f" name="1. Sevireth or 1 Hurakan Spirit of the Wind" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="80c5-d571-5c5e-ecad" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ccc2-a345-4d29-119e" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="7826-f1fe-8691-9b74" name="Sevireth, Lord of the Seventh Wind" hidden="false" collective="false" import="true" targetId="3cf4-41c0-24a9-a6c8" type="selectionEntry"/>
-            <entryLink id="21d5-b483-4cf7-d18a" name="Hurakan Spirit of the Wind" hidden="false" collective="false" import="true" targetId="9a38-ee2a-01b8-d03d" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="ba73-4c72-f90f-3937" name="2. 1 Hurakan Windmage" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3bd4-c4c7-803c-1374" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a00b-d06d-6cd4-ed11" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="7738-9466-50fa-dde6" name="Hurakan Windmage" hidden="false" collective="false" import="true" targetId="39ee-7941-5364-9136" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="8077-a0b5-6e93-09f1" name="3. 1-3 units of Hurakan Windchargers" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f199-25e4-d4c8-d7d2" type="min"/>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0358-e9cd-899c-2807" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="279d-87dc-8a98-1776" name="Hurakan Windchargers" hidden="false" collective="false" import="true" targetId="c797-4898-48a6-29cd" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="a750-db4e-a44e-a22f" name="Battalion: Starshard Battery" page="" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="a750-db4e-a44e-a22f" name="Lumineth Warscroll Battalion: Starshard Battery" page="" hidden="true" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8eb2-2489-29ec-c757" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
-        <profile id="c8b3-52ec-50d3-e7f0" name="Ward Barrier" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
+        <profile id="30b7-acbb-9d59-38e6" name="Warscroll Battalion: Starshard Battery" hidden="false" typeId="75e0-a332-e4f5-bf36" typeName="Battalion Organisation">
           <characteristics>
-            <characteristic name="Battalion Ability Details" typeId="08e0-9ead-1dbe-c801">If a STARSHARD BALLISTAS unit from this battalion is within 3&quot; of another STARSHARD BALLISTAS unit from the same battalion, replace its Warding Lantern ability with: &quot;Roll a dice each time you allocate a wound or mortal wound to this unit if it has not made a move in the same turn.  On a 5+, that wound or mortal wound is negated.  In addition, add 1 to the Attacks characteristic of this unit&apos;s Starshard Bolts if it has not made a move in the same turn.&quot;</characteristic>
+            <characteristic name="Required" typeId="eb5f-e9d2-e457-bff5">1 Scinari Calligrave
+3-5 Vanari Starshard Ballistas units</characteristic>
           </characteristics>
         </profile>
       </profiles>
+      <infoLinks>
+        <infoLink id="0a30-b00d-e399-02af" name="*****nary Discipline" hidden="false" targetId="954b-7577-9f30-e6e7" type="profile"/>
+      </infoLinks>
       <categoryLinks>
         <categoryLink id="210d-1f9c-ff2e-32b8" name="New CategoryLink" hidden="false" targetId="be17-6bbd-b857-3f43" primary="true"/>
+        <categoryLink id="3160-2906-038e-32ff" name="Lumineth Warscroll Battalion" hidden="false" targetId="ca2d-fd45-2f8f-758f" primary="false"/>
       </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="c255-6669-ed94-2eac" name="1. Scinari Calligrave" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="553f-7e85-a89b-fda6" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="faf8-b6da-9a3d-2d27" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="ffbd-cef4-18d7-d6af" name="Scinari Calligrave" hidden="false" collective="false" import="true" targetId="ffc6-2591-d3c9-42df" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="7037-1f08-733b-8170" name="2. 3-5 units of Vanari Starshard Ballistas" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="aad7-99c3-8b26-6342" type="min"/>
-            <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ed3b-7035-9f5e-3b24" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="7ada-5271-2102-8481" name="Vanari Starshard Ballistas" hidden="false" collective="false" import="true" targetId="5b00-2d0f-b9cd-b0f6" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
@@ -5271,6 +5195,7 @@ In addition, once per battle at the start of any phase, you can say that this un
       </constraints>
       <entryLinks>
         <entryLink id="78ac-8cf6-b12d-117d" name="Core Battalions" hidden="false" collective="false" import="true" targetId="b275-810f-adfc-156b" type="selectionEntryGroup"/>
+        <entryLink id="6501-5517-eba2-c506" name="Lumineth Warscroll Battalions" hidden="false" collective="false" import="true" targetId="e6c6-5013-6b13-6e2b" type="selectionEntryGroup"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="3a17-eca0-d1c0-8fca" name="Spell Lores" hidden="false" collective="false" import="true">
@@ -5423,6 +5348,509 @@ In addition, once per battle at the start of any phase, you can say that this un
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
+    <selectionEntryGroup id="e6c6-5013-6b13-6e2b" name="Lumineth Warscroll Battalions" hidden="true" collective="false" import="true">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="ca2d-fd45-2f8f-758f" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="a0c4-73b5-e38a-663b" name="Alarith Battlehost" hidden="true" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="c23e-5efb-33d9-f73c" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="fcb0-8050-6e1f-bf54" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="43ac-50c9-c1f9-11e1" name="Alarith Battlehost - Avalenor or Alarith Spirit of the Mountain" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="a256-7f9e-85bb-04ad" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="c23e-5efb-33d9-f73c" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="increment" field="840b-747c-6409-ff8e" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="c23e-5efb-33d9-f73c" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="c23e-5efb-33d9-f73c" type="greaterThan"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b647-1ba5-997e-38f1" type="instanceOf"/>
+                            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="82cb-87ad-442e-b94c" type="instanceOf"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a256-7f9e-85bb-04ad" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="840b-747c-6409-ff8e" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2bfe-0b82-11b2-f0e4" type="max"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry id="eb53-286c-a55c-8b55" name="Alarith Battlehost - Alarith Stonemage" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="2f34-113b-41d7-92fa" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="c23e-5efb-33d9-f73c" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="increment" field="f47c-a1af-e98e-d1cd" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="c23e-5efb-33d9-f73c" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="c23e-5efb-33d9-f73c" type="greaterThan"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9d49-6a12-a92e-d50b" type="instanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2f34-113b-41d7-92fa" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f47c-a1af-e98e-d1cd" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e3ce-2978-2611-d856" type="max"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry id="4dbf-4023-a298-7cc5" name="Alarith Battlehost - 1-3 Alarith Stoneguard units" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="37dc-27fc-b3e8-a49f" value="3.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="c23e-5efb-33d9-f73c" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="increment" field="c5cd-0f4b-dd83-a5ee" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="c23e-5efb-33d9-f73c" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="c23e-5efb-33d9-f73c" type="greaterThan"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b6da-3afb-1b0b-aa4d" type="instanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="37dc-27fc-b3e8-a49f" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c5cd-0f4b-dd83-a5ee" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="543d-fed8-be17-a1d8" type="max"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="112f-fde9-9cd8-3f97" name="Hurakan Battlehost" hidden="true" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5105-4973-3756-8030" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f64d-cdf6-e8c8-708d" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="5acb-668e-490d-755c" name="Hurakan Battlehost - Severith or Hurakan Spirit of the Wind" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="db85-9119-4412-5ff9" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5105-4973-3756-8030" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="increment" field="8826-7c3f-0e39-7d43" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5105-4973-3756-8030" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5105-4973-3756-8030" type="greaterThan"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9a38-ee2a-01b8-d03d" type="instanceOf"/>
+                            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3cf4-41c0-24a9-a6c8" type="instanceOf"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="db85-9119-4412-5ff9" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8826-7c3f-0e39-7d43" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8a51-d2ac-033c-653b" type="max"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry id="c989-52c5-7476-cc23" name="Hurakan Battlehost - 1-3 Hurakan Windchargers units" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="8da9-524f-b5d8-099d" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5105-4973-3756-8030" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="increment" field="d72e-d5fc-622f-ecbf" value="3.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5105-4973-3756-8030" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5105-4973-3756-8030" type="greaterThan"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c797-4898-48a6-29cd" type="instanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d72e-d5fc-622f-ecbf" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8da9-524f-b5d8-099d" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d30f-03e0-66d0-03cf" type="max"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="6bc9-427f-3e78-3f0d" name="Auralan Battlehost" hidden="true" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="62b5-2e4a-fc33-6e7f" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0dd2-c6c0-4c60-fa7c" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="c6b2-c79d-5b0b-ec1c" name="Auralan Battlehost - Scinari Cathaller" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="7985-e8c7-1deb-20a8" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="62b5-2e4a-fc33-6e7f" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="increment" field="81cc-636b-609d-f363" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="62b5-2e4a-fc33-6e7f" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="62b5-2e4a-fc33-6e7f" type="greaterThan"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="51f3-d54a-496d-478f" type="instanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7985-e8c7-1deb-20a8" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="81cc-636b-609d-f363" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="fc2a-7a0f-e64b-ed6f" type="max"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry id="1ef2-36e7-7e67-0817" name="Auralan Battlehost - 2-4 Vanari Auralan Sentinels units" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="2f58-0005-7f98-690e" value="4.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="62b5-2e4a-fc33-6e7f" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="increment" field="a4e5-59cb-03ae-338e" value="2.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="62b5-2e4a-fc33-6e7f" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="62b5-2e4a-fc33-6e7f" type="greaterThan"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="aff6-a2af-96b1-a76d" type="instanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2f58-0005-7f98-690e" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a4e5-59cb-03ae-338e" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7230-0070-873b-e9e8" type="max"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry id="623a-8ae2-5564-5dea" name="Auralan Battlehost - 2-4 Vanari Auralan Wardens units" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="8c03-e431-952d-3a23" value="2.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="62b5-2e4a-fc33-6e7f" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="increment" field="3f35-b0c6-6e34-8583" value="4.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="62b5-2e4a-fc33-6e7f" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="62b5-2e4a-fc33-6e7f" type="greaterThan"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3b53-dbf5-8f73-b10d" type="instanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3f35-b0c6-6e34-8583" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8c03-e431-952d-3a23" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8535-d874-06b3-d409" type="max"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="aa04-bacf-6c9a-9b9e" name="Dawnrider Battlehost" hidden="true" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="192b-70c7-e4a4-d8cc" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="74ba-201a-5fb6-e9c7" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="b57b-3fc8-186c-b5d5" name="Dawnrider Battlehost - 2-3 Vanari Dawnriders units" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="2ca3-99ce-1672-eb62" value="3.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="192b-70c7-e4a4-d8cc" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="increment" field="2827-bdc2-9ca4-652b" value="2.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="192b-70c7-e4a4-d8cc" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="192b-70c7-e4a4-d8cc" type="greaterThan"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3747-0abb-f1c7-a143" type="instanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2ca3-99ce-1672-eb62" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2827-bdc2-9ca4-652b" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4b32-b518-0cdd-7ccb" type="max"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="3ebb-28cd-edca-04fc" name="Bladelord Host" hidden="true" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4e24-1123-2f95-d918" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1508-e7c1-200e-6483" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="a5d6-8642-a07e-4bdb" name="Bladelord Host - 1 VANARI or SCINARI HERO" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="c31f-fd51-d33e-dcd8" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4e24-1123-2f95-d918" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="increment" field="681d-c3fd-43fc-39af" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4e24-1123-2f95-d918" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4e24-1123-2f95-d918" type="greaterThan"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditionGroups>
+                            <conditionGroup type="and">
+                              <conditions>
+                                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d2e2-9363-65a6-64ee" type="instanceOf"/>
+                                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4e0e-664d-51ea-0929" type="instanceOf"/>
+                              </conditions>
+                            </conditionGroup>
+                            <conditionGroup type="and">
+                              <conditions>
+                                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e242-d4cd-5ab5-5586" type="instanceOf"/>
+                                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4e0e-664d-51ea-0929" type="instanceOf"/>
+                              </conditions>
+                            </conditionGroup>
+                          </conditionGroups>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c31f-fd51-d33e-dcd8" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="681d-c3fd-43fc-39af" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f7f8-ca8c-668b-cde8" type="max"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry id="abec-19a9-0001-0c10" name="Bladelord Host - 2-3 Vanari Bladelords units" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="2893-17d4-a171-629f" value="2.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4e24-1123-2f95-d918" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="increment" field="f4e8-b9ef-fa37-9aaf" value="3.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4e24-1123-2f95-d918" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4e24-1123-2f95-d918" type="greaterThan"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1059-75b9-4acb-31fd" type="instanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f4e8-b9ef-fa37-9aaf" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2893-17d4-a171-629f" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7f95-9b1d-a04c-5223" type="max"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="c94f-c8a2-2867-545f" name="Starshard Battery" hidden="true" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="a750-db4e-a44e-a22f" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a0fb-4f1d-56aa-d807" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="5099-f108-18b1-571d" name="Starshard Battery - Scinari Calligrave" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="3665-4d6a-1260-4fe9" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="a750-db4e-a44e-a22f" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="increment" field="e1e5-9203-e7a5-723c" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="a750-db4e-a44e-a22f" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="a750-db4e-a44e-a22f" type="greaterThan"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ffc6-2591-d3c9-42df" type="instanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3665-4d6a-1260-4fe9" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e1e5-9203-e7a5-723c" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e17f-d9fb-7f40-06f0" type="max"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry id="22de-e250-334f-03cb" name="Starshard Battery - 3-5 Vanari Starshard Ballistas" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="8d16-c634-2441-6525" value="5.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="a750-db4e-a44e-a22f" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="increment" field="b465-3567-2a7d-12db" value="3.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="a750-db4e-a44e-a22f" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="a750-db4e-a44e-a22f" type="greaterThan"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5b00-2d0f-b9cd-b0f6" type="instanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8d16-c634-2441-6525" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b465-3567-2a7d-12db" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8745-17e4-b45e-7b33" type="max"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <sharedProfiles>
     <profile id="d1d7-5f61-4f19-5b5f" name="Power of Hysh" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
@@ -5469,6 +5897,11 @@ Any number of LUMINETH REALM-LORDS WIZARDS can attempt to cast Power of Hysh in 
     <profile id="9cea-bd66-6d2e-abab" name="Living Cyclone" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
       <characteristics>
         <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Roll a dice for each enemy unit that is within 3&quot; of this unit after this unit makes a charge move. On a 3+, that unit suffers 1 mortal wound, and subtract 1 from hit rolls for that unit until the end of the next combat phase. The same unit cannot be affected by this ability more than once per phase.</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="954b-7577-9f30-e6e7" name="*****nary Discipline" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
+      <characteristics>
+        <characteristic name="Battalion Ability Details" typeId="08e0-9ead-1dbe-c801">.... is part of your army, at the start of your hero phase, .... each HERO in this battalion that is on the battlefield,  ... HERO can issue a command in that turn with a command point being spent.</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
