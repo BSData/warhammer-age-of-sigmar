@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="141" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="142" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <publications>
     <publication id="e51d-b1a3-pubEC" name="The General&apos;s Handbook"/>
     <publication id="e51d-b1a3-pubEQ" name="Core Rules"/>
@@ -28,6 +28,7 @@
     <publication id="b7f9-e968-f5d8-b92b" name="Battlescroll: The Hunt"/>
     <publication id="e984-0732-33ea-1669" name="Season of War - Thondia"/>
     <publication id="b393-b3a1-628b-d5ca" name="General&apos;s Handbook 2022"/>
+    <publication id="2cb9-2931-59e8-5ae9" name="Battlescroll: Galletian Reinforcement - October 2022" publisherUrl="https://www.warhammer-community.com/wp-content/uploads/2022/10/NDq0U3c5F0hiPLeW.pdf"/>
   </publications>
   <costTypes>
     <costType id="points" name="pts" defaultCostLimit="0.0" hidden="false"/>
@@ -2431,7 +2432,7 @@
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="0553-10ac-2bd9-01a5" name="Krondspine Incarnate of Ghur" publicationId="e984-0732-33ea-1669" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="0553-10ac-2bd9-01a5" name="Krondspine Incarnate of Ghur" publicationId="2cb9-2931-59e8-5ae9" hidden="false" collective="false" import="true" type="unit">
       <profiles>
         <profile id="ace5-a065-5a57-5b42" name="Krondspine Incarnate of Ghur" hidden="false" typeId="2903-43e4-1107-d856" typeName="Incarnate">
           <characteristics>
@@ -2575,7 +2576,7 @@ In addition, this incarnate can carry out the Devour Endless Spell monstrous ram
         <entryLink id="58b4-3c0f-d717-315d" name="Battalions" hidden="false" collective="false" import="true" targetId="6138-3410-520c-bd01" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="400.0"/>
+        <cost name="pts" typeId="points" value="480.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="15e3-8b94-19b1-a6dc" name="Core Battalion: Expert Conquerors" publicationId="b393-b3a1-628b-d5ca" hidden="true" collective="false" import="true" type="upgrade">
