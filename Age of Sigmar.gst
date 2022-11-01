@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="142" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="143" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <publications>
     <publication id="e51d-b1a3-pubEC" name="The General&apos;s Handbook"/>
     <publication id="e51d-b1a3-pubEQ" name="Core Rules"/>
@@ -1851,6 +1851,11 @@
         <categoryLink id="28f6-3a0c-1990-cee7" name="New CategoryLink" hidden="false" targetId="1974-3f49-7f0b-8422" primary="true"/>
       </categoryLinks>
     </entryLink>
+    <entryLink id="f745-8710-0c48-20f0" name="Monstrous Rampages" hidden="false" collective="false" import="true" targetId="3f58-0a1f-43ec-af75" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="96da-0373-6321-9640" name="New CategoryLink" hidden="false" targetId="1974-3f49-7f0b-8422" primary="true"/>
+      </categoryLinks>
+    </entryLink>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="869c-168d-eba5-eacf" name="Arcane Bolt" hidden="false" collective="false" import="true" type="upgrade">
@@ -2698,6 +2703,30 @@ In addition, this incarnate can carry out the Devour Endless Spell monstrous ram
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
+    </selectionEntry>
+    <selectionEntry id="3f58-0a1f-43ec-af75" name="Monstrous Rampages" hidden="false" collective="false" import="true" type="upgrade">
+      <profiles>
+        <profile id="27de-0c34-0418-ca46" name="Roar" hidden="false" typeId="84d9-7a5a-fe76-b740" typeName="Monstrous Rampage">
+          <characteristics>
+            <characteristic name="Description" typeId="827b-962b-59a3-3b4d">Pick 1 enemy unit within 3&quot; of this model and roll a dice.  On a 3+, that unit cannot issue or receive commands in the following combat phase.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="adfa-e4cd-874e-d2d1" name="Stomp" hidden="false" typeId="84d9-7a5a-fe76-b740" typeName="Monstrous Rampage">
+          <characteristics>
+            <characteristic name="Description" typeId="827b-962b-59a3-3b4d">Pick 1 enemy unit within 3&quot; of this model that is not a MONSTER and roll a dice.  On a 2+, that unit suffers D3 mortal wounds.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="32ef-96c6-acd2-af54" name="Titanic Duel" hidden="false" typeId="84d9-7a5a-fe76-b740" typeName="Monstrous Rampage">
+          <characteristics>
+            <characteristic name="Description" typeId="827b-962b-59a3-3b4d">Pick 1 enemy MONSTER within 3&quot; of this model.  Add 1 to hit rolls for attacks made by this model that target that enemy MONSTER until the end of the following combat phase.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="0bf2-310f-7c64-9da4" name="Smash to Rubble" hidden="false" typeId="84d9-7a5a-fe76-b740" typeName="Monstrous Rampage">
+          <characteristics>
+            <characteristic name="Description" typeId="827b-962b-59a3-3b4d">Pick 1 faction terrain feature or defensible terrain feature within 3&quot; of this model and roll a dice.  On a 3+, the terrain feature is demolished if it was defensible (see 17.2.3), and the scenery rules on its warscroll cannot be used for the rest of the battle if it was a faction terrain feature.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
