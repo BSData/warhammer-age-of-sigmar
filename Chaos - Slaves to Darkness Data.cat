@@ -93,6 +93,8 @@
     <categoryEntry id="6d69-c749-5733-a710" name="ETERNUS" hidden="false"/>
     <categoryEntry id="adaf-9b63-9abb-6622" name="HOST OF THE EVERCHOSEN" hidden="false"/>
     <categoryEntry id="59c9-6833-1ddb-b990" name="ZARSHIA BITTERSOUL" hidden="false"/>
+    <categoryEntry id="9990-21ba-46fb-4c73" name="SPHIRANX" hidden="false"/>
+    <categoryEntry id="e3de-a269-6cfb-15f2" name="MINDSTEALER SPHIRANX" hidden="false"/>
   </categoryEntries>
   <sharedSelectionEntries>
     <selectionEntry id="8bc4-05d4-ff31-086b" name="Chaos Chariots" hidden="false" collective="false" import="true" type="unit">
@@ -367,6 +369,21 @@
             <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="6cfb-e3ec-d110-80ae" type="greaterThan"/>
           </conditions>
         </modifier>
+        <modifier type="set-primary" field="category" value="e9f2-765a-b7b8-ce8e">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5b93-77a7-e224-34c9" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="add" field="category" value="7ede-19c1-7261-f88b">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1411-460f-c135-a667" type="greaterThan"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5b93-77a7-e224-34c9" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <profiles>
         <profile id="605f-9d5f-715e-bbbe" name="Chaos Chosen" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
@@ -392,6 +409,16 @@
             <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If this unit is part of a Slaves to Darkness army, after deployment, you can roll once of the Eye of the Gods table for this unit.</characteristic>
           </characteristics>
         </profile>
+        <profile id="863e-1a2b-56a9-467a" name="Musician" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 in every 5 models in this unit can be a Skull Drummer. Add 1 to charge rolls for this unit while it includes any Skull Drummers.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="26c7-08f7-dae4-9760" name="Standard Bearer" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 in every 5 models in this unit can be an Icon Bearer. Add 1 to the Bravery characteristic of this unit if it includes any Icon Bearers.</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
       <categoryLinks>
         <categoryLink id="e1be-84a3-eec6-07e1" name="New CategoryLink" hidden="false" targetId="34db-a213-41b8-ec7e" primary="false"/>
@@ -401,36 +428,6 @@
         <categoryLink id="a230-f18a-deb5-954b" name="MARK OF CHAOS" hidden="false" targetId="4aac-dedf-8e4b-e00a" primary="false"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="07b2-a68e-5495-3210" name="Icon Bearer" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cb22-71ba-8961-ed2d" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="6d5d-029b-f0ec-67c1" name="Standard Bearer" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-              <characteristics>
-                <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 in every 5 models in this unit can be an Icon Bearer. Add 1 to the Bravery characteristic of this unit if it includes any Icon Bearers.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="3a47-49a8-e313-73da" name="Musician" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6fe9-6283-e6d2-a30e" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="dce2-7f27-36e7-5f35" name="Skull Drummer" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-              <characteristics>
-                <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 in every 5 models in this unit can be a Skull Drummer. Add 1 to charge rolls for this unit while it includes any Skull Drummers.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
         <selectionEntry id="d72c-f132-51f1-d944" name="Soul Splitter" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="37a4-870e-788d-c3f5" type="min"/>
@@ -483,6 +480,13 @@
       <entryLinks>
         <entryLink id="1b0e-a97c-b19b-8b44" name="Mark of Chaos" hidden="false" collective="false" import="true" targetId="24d3-e75e-90ef-632f" type="selectionEntryGroup"/>
         <entryLink id="c316-e11a-5174-d4e0" name="Reinforced" hidden="false" collective="false" import="true" targetId="0a8d-cde8-fba1-6c0d" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="95f2-6885-756f-9ea5" value="2.0">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5b93-77a7-e224-34c9" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <costs>
             <cost name="pts" typeId="points" value="240.0"/>
           </costs>
@@ -503,19 +507,14 @@
         </modifier>
       </modifiers>
       <profiles>
-        <profile id="5378-a71f-b901-59ac" name="Explosive Brutality" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+        <profile id="7706-4714-c9b0-a4d8" name="Unstoppable Momentum" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If you make a charge move with this unit and the unmodified charge roll was 8+, add 1 to hit and wound rolls for attacks made by this unit’s Crushing Fists until your next hero phase.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the end of your combat phase, if this unit made a charge move this turn, it can make a normal move and can do so even if it is within 3&quot; of any enemy units.  If it does so, it can pass across other models with a Wounds characteristic of 4 or less in the same manner as a model that can fly.  In addition, after each such move, you can pick 1 enemy unit it passed across and roll a dice for each model in this unit.  For each 3+, that enemy unit suffers D6 mortal wounds.</characteristic>
           </characteristics>
         </profile>
-        <profile id="7706-4714-c9b0-a4d8" name="Crashing Charge" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+        <profile id="f797-a33f-ea01-c627" name="Champion" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">After this unit makes a charge move, roll a dice for each enemy unit within 1&quot; of this unit. On a 2+, that enemy unit suffers D3 mortal wounds.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="f797-a33f-ea01-c627" name="Exalted Charioteer" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If this unit has 2 or more models, 1 model in this unit can be an Exalted Charioteer. Add 1 to hit rolls for attacks made with that model’s melee weapons (excluding those of its mount).</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If this unit has 2 or more models, 1 model in this unit can be an Exalted Charioteer. Add 1 to the Attacks characteristic of that model&apos;s melee weapons (not including its mount).</characteristic>
           </characteristics>
         </profile>
         <profile id="e1bb-207a-008a-9f43" name="Chaos Gorebeast Chariot" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
@@ -609,8 +608,8 @@
                   <characteristics>
                     <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
                     <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">2&quot;</characteristic>
-                    <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">2</characteristic>
-                    <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+                    <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">3</characteristic>
+                    <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
                     <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
                     <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
                     <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">2</characteristic>
@@ -627,8 +626,8 @@
                   <characteristics>
                     <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
                     <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">2&quot;</characteristic>
-                    <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">D6</characteristic>
-                    <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
+                    <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">6</characteristic>
+                    <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
                     <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
                     <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
                     <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
@@ -672,14 +671,19 @@
             <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">3+</characteristic>
           </characteristics>
         </profile>
-        <profile id="398e-bab9-0306-3002" name="Terrifying Champions" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+        <profile id="398e-bab9-0306-3002" name="Riders of Doom" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Subtract 1 from the Bravery characteristic of enemy units within 3&quot; of any friendly units with this ability in the battleshock phase.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">When a model in this unit make an attack with its Cursed Lance, instead of a using the Range characteristic for that attack, you can target enemy units that are within 1/2&quot; of another model from this unit that is itself within 1/2&quot; of the attacking model.</characteristic>
           </characteristics>
         </profile>
-        <profile id="fcca-163e-fc65-a267" name="Doom Knight" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+        <profile id="fcca-163e-fc65-a267" name="Champion" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 model in this unit can be a Doom Knight. Add 1 to the Attacks characteristic that model’s melee weapons (excluding its mount). In addition, that model can replace its weapon option with a Cursed Flail and Chaos Runeshield. </characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 model in this unit can be a Doom Knight. Add 1 to the Attacks characteristic that model’s Cursed Lance.  A Doom Knight can be armed with a Cursed Flail or Ensorcelled Warhammer instead of a Cursed Lance.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="e612-772d-e2af-ee22" name="Impaling Charge" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Add 1 to the Damage characteristic and improve the Rend characteristic of this unit’s Cursed Lances by 1 if it made a charge move in the same turn.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -722,14 +726,14 @@
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="dcea-2f0c-43b8-7b8b" name="Hornblower" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="dcea-2f0c-43b8-7b8b" name="Musician" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a36f-b516-3954-2ca9" type="max"/>
           </constraints>
           <profiles>
-            <profile id="50ba-bfe7-0c3e-c6c7" name="Hornblower" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+            <profile id="50ba-bfe7-0c3e-c6c7" name="Musician" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
               <characteristics>
-                <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 in every 5 models in this unit can be a Hornblower. Add 1 to run and charge rolls for a unit that includes any Hornblowers.</characteristic>
+                <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 in every 5 models in this unit can be a Hornblower. When you make a charge roll for this unit, if it includes any Hornblowers, you can change one of the dice in that roll to a 4.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -750,27 +754,6 @@
                 <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">2</characteristic>
                 <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
                 <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">4+</characteristic>
-                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
-                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="8f8a-3483-5d8e-a1c2" name="Cursed Flail for Doom Knight" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3dab-10f4-3d2e-48a6" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="a26c-82b0-0c1c-0eeb" name="Cursed Flail" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
-              <characteristics>
-                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
-                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">2&quot;</characteristic>
-                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">D6</characteristic>
-                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
-                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
                 <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
                 <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
               </characteristics>
@@ -801,25 +784,47 @@
             <cost name="pts" typeId="points" value="230.0"/>
           </costs>
         </selectionEntry>
+        <selectionEntry id="d5eb-8968-5ea6-4f7d" name="Cursed Lance" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cdc7-2fa4-f06a-5130" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d42a-5e8f-c887-7f51" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="d8af-d894-5ce1-2705" name="Cursed Lance" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">2&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">2</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup id="b7e4-dda4-8964-e222" name="Weapon option" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="b7e4-dda4-8964-e222" name="Champion Weapon Option" hidden="false" collective="false" import="true">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c960-6ab3-b205-c9b6" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="939e-9b47-a917-77c1" type="max"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="f28c-eb44-532e-d5ac" name="Ensorcelled Weapon" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="f28c-eb44-532e-d5ac" name="Ensorcelled Warhammer" hidden="false" collective="false" import="true" type="upgrade">
               <profiles>
-                <profile id="4216-8849-32eb-68e6" name="Ensorcelled Weapon" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+                <profile id="4216-8849-32eb-68e6" name="Ensorcelled Warhammer" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
                   <characteristics>
                     <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
                     <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
                     <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">3</characteristic>
-                    <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+                    <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
                     <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
                     <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
-                    <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+                    <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">2</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -829,20 +834,33 @@
             </selectionEntry>
             <selectionEntry id="df65-9460-6afb-14bc" name="Cursed Lance" hidden="false" collective="false" import="true" type="upgrade">
               <profiles>
-                <profile id="036d-6620-5728-c2df" name="Cursed Lance" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+                <profile id="036d-6620-5728-c2df" name="Cursed Lance (Doom Knight)" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
                   <characteristics>
                     <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
                     <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">2&quot;</characteristic>
-                    <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">2</characteristic>
+                    <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">3</characteristic>
                     <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
                     <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
                     <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
                     <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
                   </characteristics>
                 </profile>
-                <profile id="6b9f-dc0f-493f-cc67" name="Impaling Charge" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="bcbe-cf30-2b7c-790b" name="Cursed Flail" hidden="false" collective="false" import="true" type="upgrade">
+              <profiles>
+                <profile id="a828-4a6b-9dca-4c49" name="Cursed Flail" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
                   <characteristics>
-                    <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Add 1 to the Damage characteristic and improve the Rend characteristic of this unit’s Cursed Lances by 2 if it made a charge move in the same turn.</characteristic>
+                    <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                    <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">2&quot;</characteristic>
+                    <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">6</characteristic>
+                    <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+                    <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+                    <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
+                    <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1333,17 +1351,17 @@
         </profile>
         <profile id="a410-76dd-49ce-a2a2" name="Feigned Flight" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This unit can retreat and still shoot and/or charge later in the same turn.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This unit can retreat and still shoot and/or charge later in the same turn.  In addition, add 1 to hit rolls for attacks made by this unit if they made a retreat move in the same turn.</characteristic>
           </characteristics>
         </profile>
-        <profile id="f1ed-03f2-2af0-06ba" name="Horsemaster" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+        <profile id="f1ed-03f2-2af0-06ba" name="Champion" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 model in this unit can be a Horsemaster. Add 1 to the Attacks characteristic of a Horsemaster’s melee weapons.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 model in this unit can be a Horsemaster. Add 1 to the Attacks characteristic of that model&apos;s melee weapons (excluding its mount).</characteristic>
           </characteristics>
         </profile>
-        <profile id="2d6d-9c31-50f7-639c" name="Barbarian Hordes" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+        <profile id="2d6d-9c31-50f7-639c" name="Swift Raiders" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Add 1 to hit rolls for attacks made by this unit while it has at least 10 models.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Subtract 1 from wound rolls for attacks made with missile weapons that target this unit.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1370,14 +1388,14 @@
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="367d-9fd0-4f75-7fe2" name="Hornblower" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="367d-9fd0-4f75-7fe2" name="Musician" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a165-ae1d-0bb8-de4b" type="max"/>
           </constraints>
           <profiles>
-            <profile id="7d2e-ead8-fd99-2004" name="Hornblower" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+            <profile id="7d2e-ead8-fd99-2004" name="Musician" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
               <characteristics>
-                <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 in every 5 models in this unit can be a Hornblower. Add 1 to run and charge rolls for this unit while it includes any Hornblowers.</characteristic>
+                <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 in every 5 models in this unit can be a Hornblower. Add 1 to charge rolls for this unit while it includes any Hornblowers.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -1451,7 +1469,7 @@
                 </profile>
                 <profile id="29b5-69be-9713-4161" name="Darkwood Shields" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
                   <characteristics>
-                    <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Add 1 to save rolls for attacks that target a unit with Darkwood Shields.</characteristic>
+                    <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If this unit is armed with a Darkwood Shield, it  has a Save characteristic of 5+ instead of 6+.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1464,11 +1482,11 @@
                 <profile id="7b3e-a993-65e5-5da3" name="Barbarian Flail" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
                   <characteristics>
                     <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
-                    <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">2&quot;</characteristic>
-                    <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">1</characteristic>
-                    <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
-                    <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
-                    <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
+                    <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
+                    <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">3</characteristic>
+                    <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+                    <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">4+</characteristic>
+                    <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
                     <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
                   </characteristics>
                 </profile>
@@ -1482,11 +1500,11 @@
                 <profile id="2ae8-1988-b934-6a20" name="Marauder Javelin (Melee)" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
                   <characteristics>
                     <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
-                    <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">2&quot;</characteristic>
+                    <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
                     <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">1</characteristic>
                     <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
-                    <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
-                    <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
+                    <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">4+</characteristic>
+                    <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
                     <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
                   </characteristics>
                 </profile>
@@ -1496,14 +1514,14 @@
                     <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">12&quot;</characteristic>
                     <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">1</characteristic>
                     <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
-                    <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+                    <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">4+</characteristic>
                     <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
                     <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
                   </characteristics>
                 </profile>
                 <profile id="2ff5-9084-9269-fb61" name="Darkwood Shields" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
                   <characteristics>
-                    <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Add 1 to save rolls for attacks that target a unit with Darkwood Shields.</characteristic>
+                    <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If this unit is armed with a Darkwood Shield, it  has a Save characteristic of 5+ instead of 6+.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1567,19 +1585,14 @@
             <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">6+</characteristic>
           </characteristics>
         </profile>
-        <profile id="5e48-b487-5957-8471" name="Barbarian Hordes" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Add 1 to hit rolls for attacks made by this unit while it has at least 10 models. In addition, improve the Rend characteristic of this unit’s melee weapons by 1 while it has at least 20 models.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="c94b-0a2d-f4c2-7914" name="Marauder Chieftain" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+        <profile id="c94b-0a2d-f4c2-7914" name="Champion" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
             <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 model in this unit can be a Marauder Chieftain. Add 1 to the Attacks characteristic of that model’s melee weapons.</characteristic>
           </characteristics>
         </profile>
         <profile id="9640-cdf1-5768-61d9" name="Boundless Ferocity" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">When you make a charge roll for this unit, change the lowest dice in that roll to a 6. If the roll is a double, change one of the dice to a 6 instead.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Add 1 to hit rolls for attacks made by this unit if this unit made a charge move in the same turn.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1591,14 +1604,14 @@
         <categoryLink id="9ba1-52f8-aa5d-6c51" name="Battleline" hidden="false" targetId="e9f2-765a-b7b8-ce8e" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="7aac-17fd-7461-f7eb" name="Icon Bearer" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="7aac-17fd-7461-f7eb" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dd3c-1dbe-9842-cec8" type="max"/>
           </constraints>
           <profiles>
-            <profile id="b207-0c28-fc7b-0196" name="Icon Bearer" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+            <profile id="b207-0c28-fc7b-0196" name="Standard Bearer" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
               <characteristics>
-                <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 in every 5 models in this unit can be an Icon Bearer. Subtract 1 from the Bravery characteristic of enemy units while they are within 6&quot; of any friendly Icon Bearers.</characteristic>
+                <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 in every 5 models in this unit can be an Icon Bearer. Add 1 to the Bravery characteristic of this unit while it includes any Icon Bearers.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -1606,14 +1619,14 @@
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="d379-7a84-0be9-38cc" name="Drummer" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="d379-7a84-0be9-38cc" name="Musician" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="065a-21f6-82dd-0349" type="max"/>
           </constraints>
           <profiles>
-            <profile id="069b-d8cb-5352-6350" name="Drummer" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+            <profile id="069b-d8cb-5352-6350" name="Musician" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
               <characteristics>
-                <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 in every 5 models in this unit can be a Barbarian Drummer. Add 1 to run and charge rolls for this unit while it includes any Barbarian Drummers.</characteristic>
+                <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 in every 5 models in this unit can be a Barbarian Drummer. Add 1 to charge rolls for this unit while it includes any Barbarian Drummers.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -1656,7 +1669,7 @@
                   <characteristics>
                     <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
                     <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
-                    <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">2</characteristic>
+                    <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">1</characteristic>
                     <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
                     <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">4+</characteristic>
                     <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
@@ -1665,7 +1678,7 @@
                 </profile>
                 <profile id="d497-03a1-0cef-d780" name="Darkwood Shields" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
                   <characteristics>
-                    <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Add 1 to save rolls for attacks that target a unit with Darkwood Shields.</characteristic>
+                    <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If this unit is armed with Barbarian Ax and Darkwood Shields, it has a Save characteristic of 5+ instead of 6+.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1678,10 +1691,10 @@
                 <profile id="5e6a-e374-eeb4-4a2f" name="Barbarian Flail" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
                   <characteristics>
                     <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
-                    <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">2&quot;</characteristic>
-                    <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">1</characteristic>
-                    <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
-                    <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+                    <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
+                    <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">2</characteristic>
+                    <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+                    <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">4+</characteristic>
                     <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
                     <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
                   </characteristics>
@@ -2001,6 +2014,11 @@
             <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">5+</characteristic>
           </characteristics>
         </profile>
+        <profile id="8a3b-04d2-41d0-3296" name="Drawn to Power" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">While this unit is within 9&quot; of a friendly DAEMON PRINCE and they share 1 of the following keywords: KHORNE, TZEENTCH, NURGLE, SLAANESH or UNDIVIDED you can re-roll 1 of the dice when determining this unit&apos;s Move characteristic, and each time a model in this unit fights you can re-roll 1 of the dice when determining the number of attacks made by its Freakish Mutations.</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
       <categoryLinks>
         <categoryLink id="76ed-d683-9ece-070c" name="New CategoryLink" hidden="false" targetId="7cdd-80ea-cbeb-8e16" primary="false"/>
@@ -2069,11 +2087,6 @@
             <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">3+</characteristic>
           </characteristics>
         </profile>
-        <profile id="0be6-bbf4-b162-b6a0" name="Legions of Chaos" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Add 1 to save rolls for attacks that target this unit while it has at least 10 models.</characteristic>
-          </characteristics>
-        </profile>
         <profile id="48a0-b5f0-5b7f-2cae" name="Champion" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
             <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 model in this unit can be an Aspiring Champion. Add 1 to the Attacks characteristic of that model’s melee weapons.</characteristic>
@@ -2082,6 +2095,11 @@
         <profile id="6b01-2eff-78d3-0586" name="Chaos Runeshield" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
             <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This unit has a ward of 5+ against mortal wounds.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="d63b-42ea-a180-6557" name="Bringers of Desolation" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Add 1 to the Attacks characteristic of this unit&apos;s melee weapons while it is wholly within enemy territory or wholly within 12&quot; of an objective that you do not control.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -2113,7 +2131,7 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b9b2-b167-e8c6-130b" type="max"/>
           </constraints>
           <profiles>
-            <profile id="ac2f-602a-27f0-f3f6" name="Hornblower" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+            <profile id="ac2f-602a-27f0-f3f6" name="Musician" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
               <characteristics>
                 <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 in every 10 models in this unit can be a Hornblower. Add 1 to charge rolls for this unit while it includes any Hornblowers.</characteristic>
               </characteristics>
@@ -2176,7 +2194,7 @@
                   <characteristics>
                     <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
                     <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">2&quot;</characteristic>
-                    <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">1</characteristic>
+                    <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">2</characteristic>
                     <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
                     <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
                     <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
@@ -3692,6 +3710,9 @@
               </characteristics>
             </profile>
           </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="feeb-4dab-bb63-db5c" name="Nightmare Sickles" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -3711,6 +3732,9 @@
               </characteristics>
             </profile>
           </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
@@ -3848,6 +3872,9 @@
               </characteristics>
             </profile>
           </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
@@ -3980,6 +4007,9 @@
               </characteristics>
             </profile>
           </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="94cc-8ec9-15d3-2623" name="Hooked Weapons" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -3999,6 +4029,9 @@
               </characteristics>
             </profile>
           </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
@@ -4132,6 +4165,9 @@
               </characteristics>
             </profile>
           </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="920e-3aa5-774e-b27b" name="Exotic Blades" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -4151,6 +4187,9 @@
               </characteristics>
             </profile>
           </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
@@ -4216,39 +4255,17 @@
         </profile>
         <profile id="cbe8-894c-0fa0-b49e" name="Dominar" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Add 1 to the Attacks characteristic of a Dominar&apos;s melee weapons.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 in every 8 models in this unit must be a Dominar. Add 1 to the Attacks characteristic to that model&apos;s melee weapons. In addition, Dominars can issue commands to their own unit.</characteristic>
           </characteristics>
         </profile>
         <profile id="809c-b7b9-1a65-c322" name="Ogor Breacher" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Ogor Breachers have a Wounds characteristic of 3.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 in every 8 models in this unit must be an Ogor Breacher.  Add 1 to the Damage characteristic of that model&apos;s melee weapons.  In addition, Ogor Breachers have a Wounds characteristic of 3.</characteristic>
           </characteristics>
         </profile>
-        <profile id="ff0b-a639-0b1f-8828" name="Bolas" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+        <profile id="d035-d3ac-37e9-25ca" name="Standard Bearer" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Type" typeId="655c-362e-a663-3e50">Missile</characteristic>
-            <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">8&quot;</characteristic>
-            <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">1</characteristic>
-            <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
-            <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">4+</characteristic>
-            <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
-            <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="51a2-821a-bfaf-e96e" name="Legion Weapons" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
-          <characteristics>
-            <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
-            <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
-            <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">1</characteristic>
-            <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
-            <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">4+</characteristic>
-            <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
-            <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="d035-d3ac-37e9-25ca" name="Signifer" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Add 2 to the Bravery characteristic of this unit while it includes any Signifers.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 in every 8 models in this unit must be a Signifer.  Add 1 to the Bravery characteristic of a unit that includes a Signifers.</characteristic>
           </characteristics>
         </profile>
         <profile id="c139-612b-3b6b-eda4" name="Iron Resilience" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
@@ -4264,6 +4281,7 @@
         <categoryLink id="5bd2-dc0f-ecac-4c54" name="CULTISTS" hidden="false" targetId="52ec-fd49-1015-f908" primary="false"/>
         <categoryLink id="2adf-b066-0fcc-151b" name="IRON GOLEMS" hidden="false" targetId="2e28-0732-fe20-bf9e" primary="false"/>
         <categoryLink id="31cf-f054-cd0d-5e00" name="New CategoryLink" hidden="false" targetId="e9f2-765a-b7b8-ce8e" primary="true"/>
+        <categoryLink id="576f-f9ed-f314-c359" name="UNDIVIDED" hidden="false" targetId="bbc8-3154-75f0-f8e2" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="e2ef-c902-52f8-32bb" name="8 Iron Golems" hidden="false" collective="false" import="true" type="model">
@@ -4287,6 +4305,44 @@
             <cost name="pts" typeId="points" value="100.0"/>
           </costs>
         </selectionEntry>
+        <selectionEntry id="86ac-6184-350e-ad89" name="Bolas" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9f85-8640-40d4-47ff" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="85d7-bef6-0ec9-f8d1" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="7e01-c1db-60f5-7077" name="Bolas" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Missile</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">8&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">1</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">4+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry id="1425-b48b-87bb-3fe6" name="Legion Weapons" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="57c5-6d56-c3c4-4d9a" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cb78-f8e1-9e2b-0b4b" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="32cd-d756-44c0-9aeb" name="Legion Weapons" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">1</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">4+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
       </selectionEntries>
       <entryLinks>
         <entryLink id="1de5-1715-b506-4546" name="Reinforced" hidden="false" collective="false" import="true" targetId="0a8d-cde8-fba1-6c0d" type="selectionEntry">
@@ -4298,7 +4354,6 @@
           </costs>
         </entryLink>
         <entryLink id="573f-ad6b-e42d-1cf4" name="Battalions" hidden="false" collective="false" import="true" targetId="f862-da0a-22bb-e3c1" type="selectionEntryGroup"/>
-        <entryLink id="6989-bf9d-5ba8-5533" name="Mark of Chaos" hidden="false" collective="false" import="true" targetId="24d3-e75e-90ef-632f" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
@@ -4345,50 +4400,28 @@
           <characteristics>
             <characteristic name="Move" typeId="8655-6213-2824-1752">6&quot;</characteristic>
             <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">1</characteristic>
-            <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">5</characteristic>
+            <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">6</characteristic>
             <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">6+</characteristic>
           </characteristics>
         </profile>
         <profile id="10fb-36ae-c221-f592" name="First Fang" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">A First Fang is armed with a Jagged Harpoon in addition to their other weapons.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 in every 9 models in this unit must be a First Fang.  A First Fang is armed with a Jagged Harpoon and Hunting Weapons.</characteristic>
           </characteristics>
         </profile>
         <profile id="cc05-621f-d8af-88d2" name="Rocktusk Prowler" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Rocktusk Prowlers have a Wounds characteristic of 2.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 in every 9 models in this unit must be a Rocktusk Prowler.  Add 1 to the Damage characteristic of that model&apos;s melee weapons.  In addition, Rocktusk Prowlers have a Wounds characteristic of 2.</characteristic>
           </characteristics>
         </profile>
         <profile id="e908-5d4a-a43d-793b" name="Heart-Eater" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Add 1 to the Attacks characteristic of a Heart-Eater&apos;s melee weapons.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 in every 9 models in this unit must be a Heart-eater. Add 1 to the Attacks characteristic of that model&apos;s melee weapons.  In addition, Heart-eaters can issue commands to their own unit.</characteristic>
           </characteristics>
         </profile>
         <profile id="6de1-e8db-164d-d2aa" name="Unleash the Beast" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This unit can run and still charge later in the same turn. In addition, after armies are set up but before the first battle round begins, this unit can move up to 6&quot;.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="9f7d-f438-ab11-008f" name="Hunting Weapons" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
-          <characteristics>
-            <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
-            <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
-            <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">1</characteristic>
-            <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
-            <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">4+</characteristic>
-            <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
-            <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="7447-4654-e253-e94f" name="Jagged Harpoon" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
-          <characteristics>
-            <characteristic name="Type" typeId="655c-362e-a663-3e50">Missile</characteristic>
-            <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">8&quot;</characteristic>
-            <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">1</characteristic>
-            <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
-            <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
-            <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
-            <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">2</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This unit can run and still charge later in the same turn. In addition, after armies are set up but before the first battle round begins, this unit can make a normal move (it cannot run).</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -4399,6 +4432,7 @@
         <categoryLink id="ec88-cbcb-17dd-8617" name="CULTISTS" hidden="false" targetId="52ec-fd49-1015-f908" primary="false"/>
         <categoryLink id="52f6-bb31-6f2b-9ab9" name="UNTAMED BEASTS" hidden="false" targetId="47d7-36eb-c3e3-92d4" primary="false"/>
         <categoryLink id="0504-af45-4be3-b077" name="Battleline" hidden="false" targetId="e9f2-765a-b7b8-ce8e" primary="false"/>
+        <categoryLink id="43cd-bac4-459c-66ea" name="UNDIVIDED" hidden="false" targetId="bbc8-3154-75f0-f8e2" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="2bc5-998b-a5ca-9c6c" name="9 Untamed Beasts" hidden="false" collective="false" import="true" type="model">
@@ -4422,6 +4456,44 @@
             <cost name="pts" typeId="points" value="90.0"/>
           </costs>
         </selectionEntry>
+        <selectionEntry id="2d8d-6675-42c7-d085" name="Hunting Weapons" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cd19-2bea-0e35-e294" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8358-7679-ccb1-5b96" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="b560-9bad-e6f1-d67e" name="Hunting Weapons" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">1</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">4+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry id="7219-c611-2989-9b75" name="Jagged Harpoon" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d7e7-ec04-eab0-d118" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e939-3c61-ac13-9e3f" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="0a58-7ee7-796c-286f" name="Jagged Harpoon" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Missile</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">8&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">1</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">2</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
       </selectionEntries>
       <entryLinks>
         <entryLink id="1483-f1e5-ea7b-3417" name="Reinforced" hidden="false" collective="false" import="true" targetId="0a8d-cde8-fba1-6c0d" type="selectionEntry">
@@ -4433,7 +4505,6 @@
           </costs>
         </entryLink>
         <entryLink id="7271-6d05-0bfb-e3f1" name="Battalions" hidden="false" collective="false" import="true" targetId="f862-da0a-22bb-e3c1" type="selectionEntryGroup"/>
-        <entryLink id="fe2a-0141-5d43-e0fa" name="Mark of Chaos" hidden="false" collective="false" import="true" targetId="24d3-e75e-90ef-632f" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
@@ -4461,30 +4532,34 @@
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set-primary" field="category" value="e9f2-765a-b7b8-ce8e">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="36f6-947b-e8b5-a917" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="add" field="category" value="7ede-19c1-7261-f88b">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1411-460f-c135-a667" type="greaterThan"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="36f6-947b-e8b5-a917" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <profiles>
         <profile id="292c-c78a-34cf-37b0" name="Furies" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
           <characteristics>
             <characteristic name="Move" typeId="8655-6213-2824-1752">12&quot;</characteristic>
             <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">2</characteristic>
-            <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">10</characteristic>
-            <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">-</characteristic>
+            <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">6</characteristic>
+            <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">6+</characteristic>
           </characteristics>
         </profile>
         <profile id="1327-43e7-a11e-6f13" name="Sneaky Little Devils" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">In the combat phase, when you pick this unit to fight, you can say it will cower instead of fighting. If you do so, this unit must retreat.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="3fdf-66e2-d77c-8614" name="Razor-sharp Dagger and Claws" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
-          <characteristics>
-            <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
-            <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
-            <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">2</characteristic>
-            <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
-            <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
-            <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
-            <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">In the combat phase, when you pick this unit to fight, you can say it will cower instead of fighting. If you do so, this unit must retreat instead of fighting.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -4497,6 +4572,7 @@
         <categoryLink id="b2da-fb8b-f62a-b84b" name="DAEMON" hidden="false" targetId="1418-9a68-9f9e-e9a7" primary="false"/>
         <categoryLink id="ff5b-3c4c-0f36-717f" name="FURIES" hidden="false" targetId="07df-ac79-3896-05ab" primary="false"/>
         <categoryLink id="b1e7-b183-1cb6-3815" name="New CategoryLink" hidden="false" targetId="065e-fda7-fd27-1f40" primary="true"/>
+        <categoryLink id="fce2-e21a-46ac-fa82" name="UNDIVIDED" hidden="false" targetId="bbc8-3154-75f0-f8e2" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="3d94-8765-d3aa-36d3" name="6 Furies" hidden="false" collective="false" import="true" type="model">
@@ -4515,9 +4591,35 @@
             <cost name="pts" typeId="points" value="90.0"/>
           </costs>
         </selectionEntry>
+        <selectionEntry id="0678-0c9f-59a5-64ee" name="Razor-sharp Dagger and Claws" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b27f-0492-1837-fe2c" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8f65-5444-f4ec-ca55" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="63c6-83d7-5ce3-aeac" name="Razor-sharp Dagger and Claws" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">2</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
       </selectionEntries>
       <entryLinks>
         <entryLink id="9ec5-23d4-d968-5a55" name="Reinforced" hidden="false" collective="false" import="true" targetId="0a8d-cde8-fba1-6c0d" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="95f2-6885-756f-9ea5" value="2.0">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="36f6-947b-e8b5-a917" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <costs>
             <cost name="pts" typeId="points" value="90.0"/>
           </costs>
@@ -4554,10 +4656,10 @@
       <profiles>
         <profile id="fab5-397b-c34d-1357" name="Raptoryx" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
           <characteristics>
-            <characteristic name="Move" typeId="8655-6213-2824-1752">12&quot;</characteristic>
+            <characteristic name="Move" typeId="8655-6213-2824-1752">10&quot;</characteristic>
             <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">2</characteristic>
             <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">6</characteristic>
-            <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">-</characteristic>
+            <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">6+</characteristic>
           </characteristics>
         </profile>
         <profile id="5727-fc75-3a18-594c" name="Crazed Flock" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
@@ -4565,15 +4667,9 @@
             <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Add 1 to the Attacks characteristic of this unit&apos;s melee weapons if it made a charge move in the same turn.</characteristic>
           </characteristics>
         </profile>
-        <profile id="ddec-80a2-e307-beb5" name="Razor-sharp Beak and Talons" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+        <profile id="18dd-723e-e42d-e0ce" name="Dark Symbiosis" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
-            <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
-            <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">2</characteristic>
-            <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
-            <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
-            <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
-            <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Do not make battleshock tests for this unit while it is within 3&quot; of a friendly MONSTER.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -4604,6 +4700,25 @@
           <costs>
             <cost name="pts" typeId="points" value="80.0"/>
           </costs>
+        </selectionEntry>
+        <selectionEntry id="98a8-4823-b644-066b" name="Razor-sharp Beak and Talons" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6452-d542-0ee5-99c4" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5bf5-f264-1d47-2be9" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="0306-5be5-19a0-1321" name="Razor-sharp Beak and Talons" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">2</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
@@ -5984,14 +6099,14 @@ The unit can receive the following commands if they are issued by its master:</c
         <profile id="6f36-eb78-a943-82da" name="Mutalith Vortex Beast" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
           <characteristics>
             <characteristic name="Move" typeId="8655-6213-2824-1752">*</characteristic>
-            <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">12</characteristic>
+            <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">14</characteristic>
             <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">7</characteristic>
             <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">4+</characteristic>
           </characteristics>
         </profile>
         <profile id="cace-2430-c3da-e960" name="Mutant Regeneration" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">In your hero phase, you can heal up to D3 wounds allocated to this model.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">In your hero phase, you can heal up to D3 wounds allocated to this unit.</characteristic>
           </characteristics>
         </profile>
         <profile id="ef59-3263-223e-e47f" name="1. Hideous Disfigurements" hidden="false" typeId="1d9d-3543-a777-a151" typeName="Aura of Mutation - D6">
@@ -6026,7 +6141,7 @@ The unit can receive the following commands if they are issued by its master:</c
         </profile>
         <profile id="8137-4f8f-5f93-3706" name="Aura of Mutation" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">In your hero phase, you can pick 1 enemy unit within 18&quot; of this model, roll a dice and look up the effect on the table below:</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">In your hero phase, you can pick 1 enemy unit within 18&quot; of this model, roll a dice and look up the effect on the table below.  If this unit is within 9&quot; of a friendly TZEENTCH WIZARD, you can roll 2 dice instead of 1 and pick either to look up the corresponding effect on the table below.</characteristic>
           </characteristics>
         </profile>
         <profile id="6d04-4578-db04-83db" name="Mutalith Vortex Beast" hidden="false" typeId="90d1-a434-348d-a861" typeName="Damage Table">
@@ -6037,33 +6152,25 @@ The unit can receive the following commands if they are issued by its master:</c
             <characteristic name="Variable 4" typeId="ad26-bf56-95c4-80f1">Betentacled Maw</characteristic>
           </characteristics>
         </profile>
-        <profile id="8c9b-d5ff-a865-cbe2" name="Mutalith Vortex Beast5" hidden="false" typeId="90d1-a434-348d-a861" typeName="Damage Table">
-          <characteristics>
-            <characteristic name="Variable 1" typeId="420a-645a-ab28-93a0">10+</characteristic>
-            <characteristic name="Variable 2" typeId="4cdd-1e03-530f-0ff7">4&quot;</characteristic>
-            <characteristic name="Variable 3" typeId="b1ea-56be-ba52-16e9">5+</characteristic>
-            <characteristic name="Variable 4" typeId="ad26-bf56-95c4-80f1">1</characteristic>
-          </characteristics>
-        </profile>
         <profile id="e3be-0440-b39a-446e" name="Mutalith Vortex Beast4" hidden="false" typeId="90d1-a434-348d-a861" typeName="Damage Table">
           <characteristics>
-            <characteristic name="Variable 1" typeId="420a-645a-ab28-93a0">8-9</characteristic>
-            <characteristic name="Variable 2" typeId="4cdd-1e03-530f-0ff7">6&quot;</characteristic>
+            <characteristic name="Variable 1" typeId="420a-645a-ab28-93a0">12+</characteristic>
+            <characteristic name="Variable 2" typeId="4cdd-1e03-530f-0ff7">4&quot;</characteristic>
             <characteristic name="Variable 3" typeId="b1ea-56be-ba52-16e9">4+</characteristic>
             <characteristic name="Variable 4" typeId="ad26-bf56-95c4-80f1">D3</characteristic>
           </characteristics>
         </profile>
         <profile id="7f02-ca65-b636-cc9c" name="Mutalith Vortex Beast3" hidden="false" typeId="90d1-a434-348d-a861" typeName="Damage Table">
           <characteristics>
-            <characteristic name="Variable 1" typeId="420a-645a-ab28-93a0">5-7</characteristic>
-            <characteristic name="Variable 2" typeId="4cdd-1e03-530f-0ff7">8&quot;</characteristic>
+            <characteristic name="Variable 1" typeId="420a-645a-ab28-93a0">09-11</characteristic>
+            <characteristic name="Variable 2" typeId="4cdd-1e03-530f-0ff7">6&quot;</characteristic>
             <characteristic name="Variable 3" typeId="b1ea-56be-ba52-16e9">3+</characteristic>
             <characteristic name="Variable 4" typeId="ad26-bf56-95c4-80f1">D6</characteristic>
           </characteristics>
         </profile>
         <profile id="2efd-c192-6e40-536b" name="Mutalith Vortex Beast1" hidden="false" typeId="90d1-a434-348d-a861" typeName="Damage Table">
           <characteristics>
-            <characteristic name="Variable 1" typeId="420a-645a-ab28-93a0">0-2</characteristic>
+            <characteristic name="Variable 1" typeId="420a-645a-ab28-93a0">00-05</characteristic>
             <characteristic name="Variable 2" typeId="4cdd-1e03-530f-0ff7">10&quot;</characteristic>
             <characteristic name="Variable 3" typeId="b1ea-56be-ba52-16e9">1+</characteristic>
             <characteristic name="Variable 4" typeId="ad26-bf56-95c4-80f1">3D6</characteristic>
@@ -6071,7 +6178,7 @@ The unit can receive the following commands if they are issued by its master:</c
         </profile>
         <profile id="0528-9dce-3d09-62f0" name="Mutalith Vortex Beast2" hidden="false" typeId="90d1-a434-348d-a861" typeName="Damage Table">
           <characteristics>
-            <characteristic name="Variable 1" typeId="420a-645a-ab28-93a0">3-4</characteristic>
+            <characteristic name="Variable 1" typeId="420a-645a-ab28-93a0">06-08</characteristic>
             <characteristic name="Variable 2" typeId="4cdd-1e03-530f-0ff7">8&quot;</characteristic>
             <characteristic name="Variable 3" typeId="b1ea-56be-ba52-16e9">2+</characteristic>
             <characteristic name="Variable 4" typeId="ad26-bf56-95c4-80f1">2D6</characteristic>
@@ -6083,7 +6190,7 @@ The unit can receive the following commands if they are issued by its master:</c
         <categoryLink id="c01a-7575-15ff-303d" name="New CategoryLink" hidden="false" targetId="1959-9f6a-3056-913a" primary="false"/>
         <categoryLink id="6e63-e6ea-983b-d017" name="New CategoryLink" hidden="false" targetId="fa0c-9044-2568-fa02" primary="true"/>
         <categoryLink id="7da4-d145-0f0d-3263" name="SLAVES TO DARKNESS" hidden="false" targetId="4ba7-618a-4e30-2e0c" primary="false"/>
-        <categoryLink id="8d33-9149-f049-3ec4" name="MARK OF CHAOS" hidden="false" targetId="d796-09d7-dd44-2578" primary="false"/>
+        <categoryLink id="34cf-3800-4b78-dc69" name="TZEENTCH" hidden="false" targetId="7d12-f4c5-3832-0f19" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="d65d-5df8-e275-cf68" name="Betentacled Maw" hidden="false" collective="false" import="true" type="upgrade">
@@ -6126,17 +6233,6 @@ The unit can receive the following commands if they are issued by its master:</c
               </characteristics>
             </profile>
           </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="eb56-6c45-6422-28c2" name="Mark of Tzeentch" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="23b6-8bc3-c53e-8d2b" type="max"/>
-          </constraints>
-          <categoryLinks>
-            <categoryLink id="a0a9-e357-97df-6a6d" name="TZEENTCH" hidden="false" targetId="7d12-f4c5-3832-0f19" primary="false"/>
-          </categoryLinks>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
@@ -6267,6 +6363,9 @@ The unit can receive the following commands if they are issued by its master:</c
               </characteristics>
             </profile>
           </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
@@ -6313,29 +6412,23 @@ The unit can receive the following commands if they are issued by its master:</c
           <characteristics>
             <characteristic name="Move" typeId="8655-6213-2824-1752">10&quot;</characteristic>
             <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">10</characteristic>
-            <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">10</characteristic>
+            <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">9</characteristic>
             <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">5+</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="7fec-a13d-9b3f-26a0" name="Telepathic Dread" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Subtract 2 from the Bravery characteristic of enemy units while they are within 12&quot; of any friendly models with this ability.</characteristic>
           </characteristics>
         </profile>
         <profile id="fbcf-2fb6-efaf-c2a0" name="Dominate Mind" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">In your hero phase, you can pick 1 enemy unit within 12&quot; of this model that is visible to it. If you do so, both you and your opponent must secretly place a dice so that it shows any number, then reveal them. If the numbers shown on the dice are the same, this ability has no effect. If the numbers shown on the dice are different, the enemy unit you picked fights at the end of the combat phase until the next battle round. You cannot pick the same unit as the target for this ability more than once in the same turn (whether this ability has an effect or not).</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the start of each combat phase, pick 1 enemy unit within 9&quot; of this unit that is visible to it and roll 2D6.  If the roll equals to exceeds the Bravery characteristic of that enemy unit, the strike-last effect applies to it until the end of that phase.  You cannot pick the same unit as the target for this ability more than once in the same phase.</characteristic>
           </characteristics>
         </profile>
       </profiles>
       <categoryLinks>
         <categoryLink id="c00d-2520-64f4-2d77" name="New CategoryLink" hidden="false" targetId="7cdd-80ea-cbeb-8e16" primary="false"/>
-        <categoryLink id="592b-99e2-ab71-0d5e" name="New CategoryLink" hidden="false" targetId="a934-6d15-9932-b7ea" primary="false"/>
         <categoryLink id="d694-a0e0-e7f1-73ed" name="New CategoryLink" hidden="false" targetId="4ba7-618a-4e30-2e0c" primary="false"/>
-        <categoryLink id="d767-f097-00d7-c236" name="New CategoryLink" hidden="false" targetId="4e0e-664d-51ea-0929" primary="false"/>
-        <categoryLink id="455e-d512-a0c0-55c0" name="MARK OF CHAOS" hidden="false" targetId="d796-09d7-dd44-2578" primary="false"/>
         <categoryLink id="d6c5-25f2-4c55-3e65" name="New CategoryLink" hidden="false" targetId="065e-fda7-fd27-1f40" primary="true"/>
-        <categoryLink id="4930-59f1-c39d-1697" name="MONSTER" hidden="false" targetId="1959-9f6a-3056-913a" primary="false"/>
+        <categoryLink id="eb55-d733-4e47-945b" name="UNDIVIDED" hidden="false" targetId="bbc8-3154-75f0-f8e2" primary="false"/>
+        <categoryLink id="1f79-1314-4382-9536" name="MINDSTEALER SPHIRANX" hidden="false" targetId="e3de-a269-6cfb-15f2" primary="false"/>
+        <categoryLink id="4894-1050-5e8b-f6e2" name="SPHIRANX" hidden="false" targetId="9990-21ba-46fb-4c73" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="3d59-9980-80fe-e3c6" name="Shredding Claws" hidden="false" collective="false" import="true" type="upgrade">
@@ -6348,33 +6441,11 @@ The unit can receive the following commands if they are issued by its master:</c
               <characteristics>
                 <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
                 <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
-                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">3</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">5</characteristic>
                 <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
                 <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
                 <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
-                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="8133-9e59-e4ed-f8e3" name="Lashing Tail" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7260-ef16-3257-5f84" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1058-0f55-7433-6243" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="5a1d-c4fc-dce5-bedd" name="Lashing Tail" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
-              <characteristics>
-                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
-                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
-                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">2</characteristic>
-                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
-                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
-                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
-                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">2</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -7901,6 +7972,9 @@ The unit can receive the following commands if they are issued by its master:</c
       <entryLinks>
         <entryLink id="d5ad-84e4-25b3-5286" name="Battalions" hidden="false" collective="false" import="true" targetId="f862-da0a-22bb-e3c1" type="selectionEntryGroup"/>
       </entryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="e6ae-10ec-a11b-4836" name="Scions of the Flame" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
@@ -8060,6 +8134,9 @@ The unit can receive the following commands if they are issued by its master:</c
               </characteristics>
             </profile>
           </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
@@ -8266,7 +8343,7 @@ Choose 1 unit from the following list:
         <entryLink id="b6ae-84ba-815e-c33f" name="Incarnate Bonding" hidden="false" collective="false" import="true" targetId="c890-acbd-0c80-55c9" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="230.0"/>
+        <cost name="pts" typeId="points" value="240.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="4717-cfa4-26e7-5618" name="Slaves to Darkness Core Battalion: Chaos Warband" hidden="true" collective="false" import="true" type="upgrade">
@@ -8429,39 +8506,6 @@ Choose 1 unit from the following list:
             <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">When this unit makes a move, it can pass across terrain features in the same manner as a model that can fly.</characteristic>
           </characteristics>
         </profile>
-        <profile id="8d75-56d5-9563-d7b5" name="Envenomed Projectiles" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
-          <characteristics>
-            <characteristic name="Type" typeId="655c-362e-a663-3e50">Missile</characteristic>
-            <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">8&quot;</characteristic>
-            <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">1</characteristic>
-            <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
-            <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">2+</characteristic>
-            <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
-            <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="9b80-1e34-484e-41fe" name="Venomous Bites" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
-          <characteristics>
-            <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
-            <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
-            <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">4</characteristic>
-            <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">5+</characteristic>
-            <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
-            <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
-            <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="2bc0-02bc-4fd9-12c4" name="Brood Weapons" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
-          <characteristics>
-            <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
-            <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">2&quot;</characteristic>
-            <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">2</characteristic>
-            <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
-            <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">4+</characteristic>
-            <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
-            <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
-          </characteristics>
-        </profile>
       </profiles>
       <categoryLinks>
         <categoryLink id="3c70-ec6a-2b67-4b49" name="New CategoryLink" hidden="false" targetId="7cdd-80ea-cbeb-8e16" primary="false"/>
@@ -8470,6 +8514,7 @@ Choose 1 unit from the following list:
         <categoryLink id="bcd6-43e9-aeb6-e9d5" name="CULTISTS" hidden="false" targetId="52ec-fd49-1015-f908" primary="false"/>
         <categoryLink id="2407-d2fb-d197-35e9" name="TARANTULOUS BROOD" hidden="false" targetId="d067-c83e-7292-83fe" primary="false"/>
         <categoryLink id="3ff7-b4e2-8b13-58a6" name="New CategoryLink" hidden="false" targetId="e9f2-765a-b7b8-ce8e" primary="true"/>
+        <categoryLink id="1607-f533-86cf-8dfb" name="UNDIVIDED" hidden="false" targetId="bbc8-3154-75f0-f8e2" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="affd-5e88-5423-d0e0" name="13 Tarantulos Brood" hidden="false" collective="false" import="true" type="model">
@@ -8492,6 +8537,63 @@ Choose 1 unit from the following list:
           <costs>
             <cost name="pts" typeId="points" value="100.0"/>
           </costs>
+        </selectionEntry>
+        <selectionEntry id="4184-d57f-9465-aa4f" name="Envenomed Projectiles" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1d45-8147-5aa1-7db2" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c1fa-13a4-4a4c-8fcb" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="79ef-60b4-3a46-4f32" name="Envenomed Projectiles" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Missile</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">8&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">1</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">2+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry id="c2c8-e033-4939-ccea" name="Brood Weapons" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9f7a-58c3-a29e-f2bf" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6579-49e4-7ab6-acfe" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="a6b9-e1f9-cf10-946f" name="Brood Weapons" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">2&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">2</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">4+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry id="ebbc-c9c4-fece-b7ed" name="Venomous Bites" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="25ae-3dd8-0b2b-7300" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e27c-6ded-b9d0-c707" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="89f7-1b08-5f7a-22a4" name="Venomous Bites" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">4</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">5+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
@@ -8557,23 +8659,12 @@ Choose 1 unit from the following list:
         </profile>
         <profile id="f5f1-537b-7a58-7136" name="Proven" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0"> 2 in every 10 models in this unit must be a Proven. Add 1 to the Damage characteristic of those models’ melee weapons.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0"> 2 in every 10 models in this unit must be a Proven. Add 1 to the Damage characteristic of those models&apos; melee weapons.</characteristic>
           </characteristics>
         </profile>
         <profile id="3248-02b5-8759-28ff" name="Deathblow" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
             <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If the unmodified hit roll for an attack made with a Darkoath Weapon is 6, that attack inflicts 1 mortal wound on the target in addition to any normal damage.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="71c4-2bb0-d948-0815" name="Darkoath Weapons" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
-          <characteristics>
-            <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
-            <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
-            <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">2</characteristic>
-            <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
-            <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">4+</characteristic>
-            <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
-            <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
           </characteristics>
         </profile>
         <profile id="89d5-a4e5-651b-4b11" name="Oath of Conquest" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
@@ -8621,6 +8712,25 @@ Choose 1 unit from the following list:
           <costs>
             <cost name="pts" typeId="points" value="100.0"/>
           </costs>
+        </selectionEntry>
+        <selectionEntry id="673b-d14d-a85a-9ddb" name="Darkoath Weapons" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e6c3-9969-e3c0-af5f" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1169-ecb8-1153-0400" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="0423-33cf-1f73-1016" name="Darkoath Weapons" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">2</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">4+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
@@ -9347,6 +9457,9 @@ Choose 1 unit from the following list:
               </characteristics>
             </profile>
           </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
