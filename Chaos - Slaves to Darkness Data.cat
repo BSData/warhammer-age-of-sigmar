@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="e0d8-b631-6934-ee34" name="Chaos - Slaves to Darkness Data" revision="111" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="144" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="e0d8-b631-6934-ee34" name="Chaos - Slaves to Darkness Data" revision="112" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="144" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profileTypes>
     <profileType id="56f6-e336-faed-bb00" name="Aura of Chaos Power">
       <characteristicTypes>
@@ -21,6 +21,27 @@
         <characteristicType id="513f-7c33-2b23-d08d" name="Move"/>
         <characteristicType id="5bc6-6003-6dc4-c692" name="Chimeric Heads"/>
         <characteristicType id="f34f-ebad-f121-747c" name="Monstrous Claws"/>
+      </characteristicTypes>
+    </profileType>
+    <profileType id="5c5d-f32c-f118-f1c6" name="Slaughterbrute Damage">
+      <characteristicTypes>
+        <characteristicType id="9293-f6a4-a38d-389a" name="Move"/>
+        <characteristicType id="03cd-9c89-4af4-6f60" name="Razor-tipped Claws"/>
+        <characteristicType id="5f40-0a64-7438-b26f" name="Mighty Jaws"/>
+      </characteristicTypes>
+    </profileType>
+    <profileType id="8620-df2a-54f8-726a" name="Vortex Beast Damage">
+      <characteristicTypes>
+        <characteristicType id="f364-959b-b9d8-5d98" name="Move"/>
+        <characteristicType id="9e45-cf03-0ffd-9f8f" name="Crushing Claws"/>
+        <characteristicType id="90bd-e441-aa68-0f3c" name="Betentacled Maw"/>
+      </characteristicTypes>
+    </profileType>
+    <profileType id="d5ed-1416-23a2-db62" name="Warshrine Damage">
+      <characteristicTypes>
+        <characteristicType id="b65b-fc94-4bf1-6770" name="Move"/>
+        <characteristicType id="0390-86fe-f058-bd48" name="Flailing Fists"/>
+        <characteristicType id="f01f-e32a-ef3e-d76d" name="Protection of the Dark Gods"/>
       </characteristicTypes>
     </profileType>
   </profileTypes>
@@ -745,7 +766,7 @@
               <characteristics>
                 <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
                 <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">2&quot;</characteristic>
-                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">2</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">3</characteristic>
                 <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
                 <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
                 <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
@@ -789,10 +810,10 @@
                   <characteristics>
                     <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
                     <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">2&quot;</characteristic>
-                    <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">3</characteristic>
+                    <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">4</characteristic>
                     <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
                     <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
-                    <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
+                    <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
                     <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
                   </characteristics>
                 </profile>
@@ -943,6 +964,11 @@
                     <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
                     <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
                     <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="fa49-9e3c-490d-a211" name="Chaos Lance" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+                  <characteristics>
+                    <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Add 1 to the Damage characteristic and improve the Rend characteristic of this unit&apos;s Chaos Lance by 1 if it made a charge move in the same turn.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1316,14 +1342,14 @@
         <categoryLink id="de1b-6459-53b3-a4ba" name="MARK OF CHAOS" hidden="false" targetId="4aac-dedf-8e4b-e00a" primary="false"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="4665-98d4-8886-5fd6" name="Icon Bearer" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="4665-98d4-8886-5fd6" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="07df-45ce-3465-f76f" type="max"/>
           </constraints>
           <profiles>
-            <profile id="2dd2-9a1c-6dfd-3bf7" name="Icon Bearer" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+            <profile id="2dd2-9a1c-6dfd-3bf7" name="Standard Bearer" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
               <characteristics>
-                <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 in every 5 models in this unit can be an Icon Bearer. Subtract 1 from the Bravery characteristic of enemy units while they are within 6&quot; of any friendly Icon Bearers.</characteristic>
+                <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 in every 5 models in this unit can be an Icon Bearer. Add 1 to the Bravery characteristic of this unit if it includes any Icon Bearers.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -1338,7 +1364,7 @@
           <profiles>
             <profile id="7d2e-ead8-fd99-2004" name="Musician" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
               <characteristics>
-                <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 in every 5 models in this unit can be a Hornblower. Add 1 to charge rolls for this unit while it includes any Hornblowers.</characteristic>
+                <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 in every 5 models in this unit can be a Hornblower. Add 1 to charge rolls for this unit if it includes any Hornblowers.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -1540,7 +1566,7 @@
           <profiles>
             <profile id="b207-0c28-fc7b-0196" name="Standard Bearer" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
               <characteristics>
-                <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 in every 5 models in this unit can be an Icon Bearer. Add 1 to the Bravery characteristic of this unit while it includes any Icon Bearers.</characteristic>
+                <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 in every 5 models in this unit can be an Icon Bearer. Add 1 to the Bravery characteristic of this unit if it includes any Icon Bearers.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -1555,7 +1581,7 @@
           <profiles>
             <profile id="069b-d8cb-5352-6350" name="Musician" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
               <characteristics>
-                <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 in every 5 models in this unit can be a Barbarian Drummer. Add 1 to charge rolls for this unit while it includes any Barbarian Drummers.</characteristic>
+                <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 in every 5 models in this unit can be a Barbarian Drummer. Add 1 to charge rolls for this unit if it includes any Barbarian Drummers.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -1607,7 +1633,7 @@
                 </profile>
                 <profile id="d497-03a1-0cef-d780" name="Darkwood Shields" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
                   <characteristics>
-                    <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If this unit is armed with Barbarian Ax and Darkwood Shields, it has a Save characteristic of 5+ instead of 6+.</characteristic>
+                    <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If this unit is armed with Barbarian Axe and Darkwood Shields, it has a Save characteristic of 5+ instead of 6+.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1674,7 +1700,7 @@
             <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">4+</characteristic>
           </characteristics>
         </profile>
-        <profile id="7f55-9b81-8d1f-aa50" name="Chaos Sorcerer Lord" hidden="false" typeId="f55d-ee3a-1597-110f" typeName="Magic">
+        <profile id="7f55-9b81-8d1f-aa50" name="Wizard" hidden="false" typeId="f55d-ee3a-1597-110f" typeName="Magic">
           <characteristics>
             <characteristic name="Cast/Unbind" typeId="8294-f605-2c0f-8f92">1/1</characteristic>
             <characteristic name="Spells Known" typeId="dc9c-47d3-6931-859c">Arcane Bolt, Mystic Shield, Daemonic Power</characteristic>
@@ -1682,7 +1708,7 @@
         </profile>
         <profile id="ad4c-95c8-2863-232d" name="Oracular Visions" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">In your hero phase, you can pick 1 friendly MORTAL SLAVES TO DARKNESS unit wholly within 12&quot; of this unit. If you do so, add 1 to save rolls for attacks that target that unit until your next hero phase.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">In your hero phase, you can pick 1 friendly MORTAL SLAVES TO DARKNESS unit wholly within 12&quot; of this unit. If you do so, that unit has a ward of 6+ until the start of your next hero phase.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1709,7 +1735,7 @@
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
                 <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">18&quot;</characteristic>
-                <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick 1 friendly MORTAL SLAVES TO DARKNESS unit wholly within 18&quot; of the caster and visible to them. You can re-roll hit and wound rolls for attacks made by that unit until your next hero phase.</characteristic>
+                <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick 1 friendly MORTAL SLAVES TO DARKNESS unit wholly within range and visible to the caster. Add 1 to hit and wound rolls for attacks made with melee weapons by that unit until the start of your next hero phase.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -1793,13 +1819,13 @@
       <profiles>
         <profile id="0deb-bf71-e192-76cf" name="Chaos Sorcerer Lord on Manticore" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
           <characteristics>
-            <characteristic name="Move" typeId="8655-6213-2824-1752">12</characteristic>
+            <characteristic name="Move" typeId="8655-6213-2824-1752">12&quot;</characteristic>
             <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">12</characteristic>
             <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">8</characteristic>
             <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">4+</characteristic>
           </characteristics>
         </profile>
-        <profile id="5c01-172c-f59f-6cfc" name="Chaos Sorcerer Lord on Manticore" hidden="false" typeId="f55d-ee3a-1597-110f" typeName="Magic">
+        <profile id="5c01-172c-f59f-6cfc" name="Wizard" hidden="false" typeId="f55d-ee3a-1597-110f" typeName="Magic">
           <characteristics>
             <characteristic name="Cast/Unbind" typeId="8294-f605-2c0f-8f92">1/1</characteristic>
             <characteristic name="Spells Known" typeId="dc9c-47d3-6931-859c">Arcane Bolt, Mystic Shield, Wind of Chaos</characteristic>
@@ -1809,12 +1835,12 @@
           <characteristics>
             <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
             <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">18&quot;</characteristic>
-            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick 1 enemy unit within 18&quot; of the caster and visible to them. Roll a number of dice equal to the number of models in that unit. For each 5, that unit suffers 1 mortal wound. For each 6, that unit suffers D3 mortal wounds.</characteristic>
+            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick 1 enemy unit within range and visible to the caster. Roll a number of dice equal to the number of models in that unit. For each 5, that unit suffers 1 mortal wound. For each 6, that unit suffers 2 mortal wounds.</characteristic>
           </characteristics>
         </profile>
         <profile id="3298-8f06-7940-b366" name="Oracular Visions" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">In your hero phase, you can pick 1 friendly Mortal Slaves to Darkness unit wholly within 12&quot; of this unit. If you do so, add 1 to save rolls for attacks that target that unit until your next hero phase.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">In your hero phase, you can pick 1 friendly Mortal Slaves to Darkness unit wholly within 12&quot; of this model. If you do so, that unit has a ward of 6+ until the start of your next hero phase.</characteristic>
           </characteristics>
         </profile>
         <profile id="d299-bee6-52f2-ae10" name="Territorial Predator" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
@@ -2049,7 +2075,7 @@
           <profiles>
             <profile id="7ef6-f37b-24c9-db6d" name="Standard Bearer" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
               <characteristics>
-                <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 in every 10 models in this unit can be a Standard Bearer. Add 1 to the Bravery characteristic of this unit while it includes any Standard Bearers.</characteristic>
+                <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 in every 10 models in this unit can be a Standard Bearer. Add 1 to the Bravery characteristic of this unit if it includes any Standard Bearers.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -2064,7 +2090,7 @@
           <profiles>
             <profile id="ac2f-602a-27f0-f3f6" name="Musician" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
               <characteristics>
-                <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 in every 10 models in this unit can be a Hornblower. Add 1 to charge rolls for this unit while it includes any Hornblowers.</characteristic>
+                <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 in every 10 models in this unit can be a Hornblower. Add 1 to charge rolls for this unit if it includes any Hornblowers.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -2221,46 +2247,6 @@
             <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Friendly MORTAL SLAVES TO DARKNESS have a ward 6+ while they are wholly within range of this unit’s Protection of the Dark Gods ability, as shown on the damage table above.</characteristic>
           </characteristics>
         </profile>
-        <profile id="4411-8188-e5c5-3810" name="Chaos Warshrine" hidden="false" typeId="90d1-a434-348d-a861" typeName="Damage Table">
-          <characteristics>
-            <characteristic name="Variable 1" typeId="420a-645a-ab28-93a0">Wounds Suffered</characteristic>
-            <characteristic name="Variable 2" typeId="4cdd-1e03-530f-0ff7">Move</characteristic>
-            <characteristic name="Variable 3" typeId="b1ea-56be-ba52-16e9">Flailing Fists</characteristic>
-            <characteristic name="Variable 4" typeId="ad26-bf56-95c4-80f1">Protection of the Dark Gods</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="7caa-0198-90c7-f89c" name="Chaos Warshrine1" hidden="false" typeId="90d1-a434-348d-a861" typeName="Damage Table">
-          <characteristics>
-            <characteristic name="Variable 1" typeId="420a-645a-ab28-93a0">0-5</characteristic>
-            <characteristic name="Variable 2" typeId="4cdd-1e03-530f-0ff7">8&quot;</characteristic>
-            <characteristic name="Variable 3" typeId="b1ea-56be-ba52-16e9">6</characteristic>
-            <characteristic name="Variable 4" typeId="ad26-bf56-95c4-80f1">18&quot;</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="1b35-3f57-034e-0444" name="Chaos Warshrine2" hidden="false" typeId="90d1-a434-348d-a861" typeName="Damage Table">
-          <characteristics>
-            <characteristic name="Variable 1" typeId="420a-645a-ab28-93a0">6-8</characteristic>
-            <characteristic name="Variable 2" typeId="4cdd-1e03-530f-0ff7">7&quot;</characteristic>
-            <characteristic name="Variable 3" typeId="b1ea-56be-ba52-16e9">5</characteristic>
-            <characteristic name="Variable 4" typeId="ad26-bf56-95c4-80f1">15&quot;</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="eb05-ae46-2d75-698f" name="Chaos Warshrine3" hidden="false" typeId="90d1-a434-348d-a861" typeName="Damage Table">
-          <characteristics>
-            <characteristic name="Variable 1" typeId="420a-645a-ab28-93a0">9-11</characteristic>
-            <characteristic name="Variable 2" typeId="4cdd-1e03-530f-0ff7">6&quot;</characteristic>
-            <characteristic name="Variable 3" typeId="b1ea-56be-ba52-16e9">4</characteristic>
-            <characteristic name="Variable 4" typeId="ad26-bf56-95c4-80f1">12&quot;</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="1b65-34c9-aa39-e5cb" name="Chaos Warshrine4" hidden="false" typeId="90d1-a434-348d-a861" typeName="Damage Table">
-          <characteristics>
-            <characteristic name="Variable 1" typeId="420a-645a-ab28-93a0">12+</characteristic>
-            <characteristic name="Variable 2" typeId="4cdd-1e03-530f-0ff7">5&quot;</characteristic>
-            <characteristic name="Variable 3" typeId="b1ea-56be-ba52-16e9">3</characteristic>
-            <characteristic name="Variable 4" typeId="ad26-bf56-95c4-80f1">9&quot;</characteristic>
-          </characteristics>
-        </profile>
       </profiles>
       <categoryLinks>
         <categoryLink id="4db5-8ff6-b6da-f5a6" name="New CategoryLink" hidden="false" targetId="7cdd-80ea-cbeb-8e16" primary="false"/>
@@ -2317,6 +2303,45 @@
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
+        <selectionEntry id="36e2-ce6b-48dd-2186" name="Damage Table" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="221d-eb97-ec02-a622" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fc1c-fb2b-f73e-2fb6" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="1c4f-f4ff-93bb-1313" name="00-05" hidden="false" typeId="d5ed-1416-23a2-db62" typeName="Warshrine Damage">
+              <characteristics>
+                <characteristic name="Move" typeId="b65b-fc94-4bf1-6770">8&quot;</characteristic>
+                <characteristic name="Flailing Fists" typeId="0390-86fe-f058-bd48">6</characteristic>
+                <characteristic name="Protection of the Dark Gods" typeId="f01f-e32a-ef3e-d76d">18&quot;</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="916c-433d-e8f8-0aa7" name="06-08" hidden="false" typeId="d5ed-1416-23a2-db62" typeName="Warshrine Damage">
+              <characteristics>
+                <characteristic name="Move" typeId="b65b-fc94-4bf1-6770">7&quot;</characteristic>
+                <characteristic name="Flailing Fists" typeId="0390-86fe-f058-bd48">5</characteristic>
+                <characteristic name="Protection of the Dark Gods" typeId="f01f-e32a-ef3e-d76d">15&quot;</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="565f-7622-a172-a246" name="09-11" hidden="false" typeId="d5ed-1416-23a2-db62" typeName="Warshrine Damage">
+              <characteristics>
+                <characteristic name="Move" typeId="b65b-fc94-4bf1-6770">6&quot;</characteristic>
+                <characteristic name="Flailing Fists" typeId="0390-86fe-f058-bd48">4</characteristic>
+                <characteristic name="Protection of the Dark Gods" typeId="f01f-e32a-ef3e-d76d">12&quot;</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="61db-5e5e-08bf-5a4e" name="12+" hidden="false" typeId="d5ed-1416-23a2-db62" typeName="Warshrine Damage">
+              <characteristics>
+                <characteristic name="Move" typeId="b65b-fc94-4bf1-6770">5&quot;</characteristic>
+                <characteristic name="Flailing Fists" typeId="0390-86fe-f058-bd48">3</characteristic>
+                <characteristic name="Protection of the Dark Gods" typeId="f01f-e32a-ef3e-d76d">9&quot;</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
       </selectionEntries>
       <entryLinks>
         <entryLink id="f74f-a3ef-3526-2d7f" name="Marks of Chaos" hidden="false" collective="false" import="true" targetId="a8e3-b2cd-762d-14e3" type="selectionEntryGroup"/>
@@ -2327,223 +2352,6 @@
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="185.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="b2a4-c572-6ab2-6b4e" name="Slaves to Darkness Daemon Prince" hidden="false" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="add" field="category" value="624c-a3f1-ce3c-0169">
-          <conditions>
-            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="6cfb-e3ec-d110-80ae" type="greaterThan"/>
-          </conditions>
-        </modifier>
-        <modifier type="add" field="category" value="4f53-8230-2f02-9639">
-          <conditions>
-            <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9918-5a46-2468-35e2" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <profiles>
-        <profile id="8c41-5d9f-9ddc-ceb5" name="Aura of Chaos" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This unit has a ward of 6+.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <categoryLinks>
-        <categoryLink id="75bd-cb81-5f7d-9ebc" name="New CategoryLink" hidden="false" targetId="7cdd-80ea-cbeb-8e16" primary="false"/>
-        <categoryLink id="7881-4bac-5d15-bbf1" name="New CategoryLink" hidden="false" targetId="1418-9a68-9f9e-e9a7" primary="false"/>
-        <categoryLink id="3599-dc89-2771-763f" name="New CategoryLink" hidden="false" targetId="4e0e-664d-51ea-0929" primary="false"/>
-        <categoryLink id="a1a5-9768-a407-2534" name="New CategoryLink" hidden="false" targetId="84ea-2e37-06de-d81e" primary="false"/>
-        <categoryLink id="cd5a-c260-1831-967b" name="SLAVES TO DARKNESS" hidden="false" targetId="4ba7-618a-4e30-2e0c" primary="false"/>
-        <categoryLink id="4aed-c02d-c12d-5aba" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
-        <categoryLink id="8b7a-c304-1c6a-2311" name="MARK OF CHAOS" hidden="false" targetId="4aac-dedf-8e4b-e00a" primary="false"/>
-      </categoryLinks>
-      <selectionEntries>
-        <selectionEntry id="a973-b781-d510-7282" name="Malefic Talons" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2090-626b-b9af-0652" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5914-0e6a-ad17-018f" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="c55a-875d-fcf7-81e0" name="Malefic Talons" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
-              <characteristics>
-                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
-                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
-                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">8</characteristic>
-                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
-                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
-                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
-                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">2</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="ad00-42b5-6961-254c" name="Immortal Champion" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9a3a-b049-20d3-9d4e" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c772-6c7f-ee40-a5c6" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="c35e-4dfc-5ddd-ccac" name="Immortal Champion" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-              <characteristics>
-                <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">You can carry out one of the following heroic actions with this unit instead of any other heroic actions you can carry out with it.</characteristic>
-              </characteristics>
-            </profile>
-            <profile id="83db-edf4-42f2-57c9" name="Fiendish Speed" hidden="false" typeId="fff7-7178-1bdb-79d1" typeName="Heroic Action">
-              <characteristics>
-                <characteristic name="Description" typeId="ff08-d093-0b68-a4d6">UNDIVIDED DAEMON PRINCE only.  Until the end of the turn, the strike-first effect applies to this unit.</characteristic>
-              </characteristics>
-            </profile>
-            <profile id="db44-e1ad-2623-c6b7" name="Pledge of Skulls" hidden="false" typeId="fff7-7178-1bdb-79d1" typeName="Heroic Action">
-              <characteristics>
-                <characteristic name="Description" typeId="ff08-d093-0b68-a4d6">KHORNE DAEMON PRINCE only.  Until the end of the turn, each time an enemy model is slain by wounds allocated from attacks made by this unit, heal 1 wound allocated to this unit.</characteristic>
-              </characteristics>
-            </profile>
-            <profile id="fd54-4a7f-4400-dfe0" name="Eldritch Architect" hidden="false" typeId="fff7-7178-1bdb-79d1" typeName="Heroic Action">
-              <characteristics>
-                <characteristic name="Description" typeId="ff08-d093-0b68-a4d6">TZEENTCH DAEMON PRINCE only.  If it is the enemy hero phase, you can roll a dice each time a spell targets this unit.  On a 2+, that spell has no effect on this unit.  If it is your hero phase, this unit can attempt to cast 1 spell from the Lore of the Damned in the same manner as a WIZARD.  If this unit is already a WIZARD, this spell is in addition to any others it can attempt to cast.</characteristic>
-              </characteristics>
-            </profile>
-            <profile id="32a1-0990-6472-3193" name="Eroding Miasma" hidden="false" typeId="fff7-7178-1bdb-79d1" typeName="Heroic Action">
-              <characteristics>
-                <characteristic name="Description" typeId="ff08-d093-0b68-a4d6">NURGLE DAEMON PRINCE only.  Until the end of the turn, ward rolls cannot be made for enemy units while they are within 3&quot; of this unit.</characteristic>
-              </characteristics>
-            </profile>
-            <profile id="06fc-7851-0bcb-93d0" name="Ecstatic Carnage" hidden="false" typeId="fff7-7178-1bdb-79d1" typeName="Heroic Action">
-              <characteristics>
-                <characteristic name="Description" typeId="ff08-d093-0b68-a4d6">SLAANESH DAEMON PRINCE only.  If this unit makes a charge move this turn, add 1 to the Attacks characteristic of this unit&apos;s melee weapons until the end of the turn.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="73c1-fb4f-ba01-6ff7" name="Weapon choice" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3907-5a88-203d-ff7e" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="932e-0f4e-a55f-0211" type="max"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="c6d0-189b-c2a6-7158" name="Hellforged Sword" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="8035-0560-e097-04ec" name="Hellforged Sword" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
-                    <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">2&quot;</characteristic>
-                    <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">5</characteristic>
-                    <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
-                    <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">4+</characteristic>
-                    <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
-                    <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">D3</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="743d-fa0e-d714-d3a5" name="Hellforged Sword" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-                  <characteristics>
-                    <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If the unmodified hit roll for an attack made with a Hellforged Sword is 6, that attack inflicts D3 mortal wounds on the target and the attack sequence ends (do not make a wound or save roll).</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="points" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="97fb-ae2f-872d-40d4" name="Daemonic Axe" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="dc02-064e-cdcd-5f83" name="Daemonic Axe" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
-                    <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">2&quot;</characteristic>
-                    <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">5</characteristic>
-                    <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
-                    <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
-                    <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-2</characteristic>
-                    <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">2</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="points" value="0.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="d7cd-8418-91ca-2914" name="Unit Options" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="06c5-6c7b-0c78-c46b" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1ad6-472d-cfba-3e26" type="max"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="800b-23ee-591f-c542" name="Wings" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="9101-4875-a91a-4a07" name="Wings" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-                  <characteristics>
-                    <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If this unit has wings, it can fly and has a Move characteristic of 12&quot; instead of 8&quot;.</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="0f34-166c-8495-5d41" name="Daemon Prince" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
-                  <characteristics>
-                    <characteristic name="Move" typeId="8655-6213-2824-1752">12&quot;</characteristic>
-                    <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">10</characteristic>
-                    <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">10</characteristic>
-                    <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">3+</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink id="895f-49bc-b426-1b5a" name="Fly" hidden="false" targetId="8e0c-cbe4-27be-8a30" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="ba3c-0ed0-b325-55ee" name="The Mounted Skulls of Fallen Foes" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="657f-b8fd-7760-740a" name="The Mounted Skulls of Fallen Foes" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-                  <characteristics>
-                    <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If this unit has a trophy rack, do not take battleshock tests for friendly units wholly within 9&quot; of this unit.  In addition, each time an enemy HERO or MONSTER is destroyed by this unit in the same turn, increase the range of this ability by 3&quot;.</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="c1fa-0fac-b5fc-cdc5" name="Daemon Prince" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
-                  <characteristics>
-                    <characteristic name="Move" typeId="8655-6213-2824-1752">8&quot;</characteristic>
-                    <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">10</characteristic>
-                    <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">10</characteristic>
-                    <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">3+</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="points" value="0.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <entryLinks>
-        <entryLink id="3da5-ea7a-aaf2-8680" name="General" hidden="false" collective="false" import="true" targetId="ef0e-df26-edb6-5ac7" type="selectionEntry"/>
-        <entryLink id="0318-1d41-afe8-eb91" name="Command Traits" hidden="false" collective="false" import="true" targetId="8b24-9365-3403-e1bf" type="selectionEntryGroup"/>
-        <entryLink id="3ca4-c1ae-3676-071a" name="Artefacts" hidden="false" collective="false" import="true" targetId="8772-4947-7126-37dd" type="selectionEntryGroup"/>
-        <entryLink id="63f2-7ddb-0ca2-05bd" name="Battalions" hidden="false" collective="false" import="true" targetId="f862-da0a-22bb-e3c1" type="selectionEntryGroup"/>
-        <entryLink id="af94-4b6a-5477-a0ce" name="Spell Lores" hidden="true" collective="false" import="true" targetId="a331-0f40-50c9-37e3" type="selectionEntryGroup">
-          <modifiers>
-            <modifier type="set" field="hidden" value="false">
-              <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9918-5a46-2468-35e2" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </entryLink>
-        <entryLink id="a284-8f13-a7ad-1423" name="Incarnate Bonding" hidden="false" collective="false" import="true" targetId="c890-acbd-0c80-55c9" type="selectionEntryGroup"/>
-        <entryLink id="ce88-756c-0857-4919" name="Marks of Chaos" hidden="false" collective="false" import="true" targetId="a8e3-b2cd-762d-14e3" type="selectionEntryGroup"/>
-      </entryLinks>
-      <costs>
-        <cost name="pts" typeId="points" value="195.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="559b-42f8-886d-3900" name="Darkoath Chieftain" hidden="false" collective="false" import="true" type="unit">
@@ -2869,154 +2677,6 @@
         <cost name="pts" typeId="points" value="100.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="0757-631a-f82f-e7d2" name="Battalion: Godsworn Champions of Ruin" hidden="false" collective="false" import="true" type="upgrade">
-      <profiles>
-        <profile id="b290-c7c5-9a9b-53b3" name="Fury of the Damned" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
-          <characteristics>
-            <characteristic name="Battalion Ability Details" typeId="08e0-9ead-1dbe-c801">In your hero phase, you can pick 1 HERO from this battalion that is within 3&quot; of an enemy unit. If you do so, that HERO can fight.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <categoryLinks>
-        <categoryLink id="43e2-b011-efea-7eac" name="Battalion" hidden="false" targetId="be17-6bbd-b857-3f43" primary="true"/>
-      </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="8122-dbc5-1a69-ec6b" name="1 unit from this list:" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6393-fe99-e0cb-70ac" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="01c7-0868-3567-e306" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="4a43-c6aa-7c38-9195" name="Daemon Prince" hidden="false" collective="false" import="true" targetId="b2a4-c572-6ab2-6b4e" type="selectionEntry">
-              <categoryLinks>
-                <categoryLink id="384e-c6ce-2de1-35f0" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
-                <categoryLink id="b61f-08bc-170f-de53" name="New CategoryLink" hidden="false" targetId="fa0c-9044-2568-fa02" primary="false"/>
-              </categoryLinks>
-            </entryLink>
-            <entryLink id="ce06-6a17-9786-156a" name="Chaos Lord on Manticore" hidden="false" collective="false" import="true" targetId="3303-cef0-2064-a5f5" type="selectionEntry"/>
-            <entryLink id="2c99-817c-86d8-1d13" name="Chaos Sorcerer Lord on Manticore" hidden="false" collective="false" import="true" targetId="c132-1271-a655-1e16" type="selectionEntry">
-              <categoryLinks>
-                <categoryLink id="3556-efa7-7a50-7964" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
-                <categoryLink id="3b2a-4303-b570-58e5" name="New CategoryLink" hidden="false" targetId="fa0c-9044-2568-fa02" primary="false"/>
-              </categoryLinks>
-            </entryLink>
-            <entryLink id="7648-12e6-7eee-4d17" name="Chaos Sorcerer Lord" hidden="false" collective="false" import="true" targetId="1080-2582-0880-dd78" type="selectionEntry">
-              <categoryLinks>
-                <categoryLink id="4d9d-9083-d1c2-49de" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
-              </categoryLinks>
-            </entryLink>
-            <entryLink id="d257-1846-4863-ce32" name="Lord of Chaos" hidden="false" collective="false" import="true" targetId="1ccb-5743-64df-f027" type="selectionEntry"/>
-            <entryLink id="4eb8-0dbf-d85d-ec63" name="Chaos Lord on Daemonic Mount" hidden="false" collective="false" import="true" targetId="ae9b-b9fe-18ba-2f9a" type="selectionEntry"/>
-            <entryLink id="2921-c206-0d34-4cc0" name="Chaos Lord on Karkadrak" hidden="false" collective="false" import="true" targetId="e6c9-c984-cd6f-33e3" type="selectionEntry"/>
-            <entryLink id="6941-58ca-7d15-695c" name="Exalted Hero of Chaos" hidden="false" collective="false" import="true" targetId="69e5-b08e-9813-f378" type="selectionEntry"/>
-            <entryLink id="20f0-a3ab-0b1c-6a86" name="Darkoath Chieftain" hidden="false" collective="false" import="true" targetId="559b-42f8-886d-3900" type="selectionEntry"/>
-            <entryLink id="eb63-12a1-3b5b-e5f1" name="Darkoath Warqueen" hidden="false" collective="false" import="true" targetId="817b-e028-2550-90ea" type="selectionEntry"/>
-            <entryLink id="01e9-d25d-a9a5-5e71" name="Ogroid Myrmidon" hidden="false" collective="false" import="true" targetId="4647-1070-9de5-b23a" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="e334-346d-72a8-ee63" name="4-8 units chosen in any combination:" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d665-a2fb-5e88-4fac" type="min"/>
-            <constraint field="selections" scope="parent" value="8.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2843-8765-5d20-5f1b" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="5371-65a9-5957-4b47" name="Chaos Marauders" hidden="false" collective="false" import="true" targetId="08c1-05a1-4828-6983" type="selectionEntry"/>
-            <entryLink id="d49d-2183-c442-5c30" name="Chaos Marauder Horsemen" hidden="false" collective="false" import="true" targetId="ce01-c0f8-2c4b-fddc" type="selectionEntry"/>
-            <entryLink id="8577-b3f1-2223-5888" name="Chaos Knights" hidden="false" collective="false" import="true" targetId="e432-9436-085d-4c93" type="selectionEntry"/>
-            <entryLink id="066d-709f-b5cf-3732" name="Chaos Chosen" hidden="false" collective="false" import="true" targetId="7117-c074-dd10-883d" type="selectionEntry"/>
-            <entryLink id="6bde-8cf3-104e-c60a" name="Chaos Warriors" hidden="false" collective="false" import="true" targetId="22ed-600b-a62c-7ebe" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="7861-8f67-30d3-91a7" name="Battalion: Godswrath Warband" hidden="false" collective="false" import="true" type="upgrade">
-      <profiles>
-        <profile id="424a-f637-e763-7c9f" name="Searing Doombolts" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
-          <characteristics>
-            <characteristic name="Battalion Ability Details" typeId="08e0-9ead-1dbe-c801">In your hero phase, you can pick 1 CHAOS WARSHRINE from this battalion and roll a dice for each enemy unit within 24&quot; of that CHAOS WARSHRINE and visible to it. For each 6, that unit suffers D3 mortal wounds.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <categoryLinks>
-        <categoryLink id="b2e8-02d4-6cbf-3491" name="Battalion" hidden="false" targetId="be17-6bbd-b857-3f43" primary="true"/>
-      </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="9913-fa62-0a16-ea86" name="1 or more Chaos Warshrines" hidden="false" collective="false" import="true" defaultSelectionEntryId="4b36-84eb-02bc-f7e0">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9fe5-6e21-db42-8ca5" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="4b36-84eb-02bc-f7e0" name="Chaos Warshrine" hidden="false" collective="false" import="true" targetId="89b1-9d63-4211-96da" type="selectionEntry">
-              <categoryLinks>
-                <categoryLink id="340f-4124-4d0d-3f71" name="New CategoryLink" hidden="false" targetId="fa0c-9044-2568-fa02" primary="true"/>
-              </categoryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="618a-437a-fa2c-800f" name="4-8 Units:" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7388-b1ef-17f4-5064" type="min"/>
-            <constraint field="selections" scope="parent" value="8.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1175-7da3-3c1d-6ef9" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="fd97-4b99-b88d-363c" name="Chaos Knights" hidden="false" collective="false" import="true" targetId="e432-9436-085d-4c93" type="selectionEntry"/>
-            <entryLink id="db25-60b7-d384-e59d" name="Chaos Chosen" hidden="false" collective="false" import="true" targetId="7117-c074-dd10-883d" type="selectionEntry">
-              <categoryLinks>
-                <categoryLink id="c07d-cca2-6c24-785a" name="New CategoryLink" hidden="false" targetId="065e-fda7-fd27-1f40" primary="true"/>
-              </categoryLinks>
-            </entryLink>
-            <entryLink id="d7cb-d8e5-3eb3-b9d5" name="Chaos Warriors" hidden="false" collective="false" import="true" targetId="22ed-600b-a62c-7ebe" type="selectionEntry"/>
-            <entryLink id="0368-63e7-df21-2f27" name="Chaos Marauders" hidden="false" collective="false" import="true" targetId="08c1-05a1-4828-6983" type="selectionEntry"/>
-            <entryLink id="d12c-09e1-bd4f-3504" name="Chaos Marauder Horsemen" hidden="false" collective="false" import="true" targetId="ce01-c0f8-2c4b-fddc" type="selectionEntry">
-              <categoryLinks>
-                <categoryLink id="366d-e1ad-0e7a-d74c" name="New CategoryLink" hidden="false" targetId="065e-fda7-fd27-1f40" primary="true"/>
-              </categoryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="e144-e9d8-c6e7-e7d1" name="1 unit from this list:" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5028-5863-b00a-3dd5" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1c5d-a39a-a4dd-b318" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="f756-701b-42e9-76ee" name="Chaos Lord on Manticore" hidden="false" collective="false" import="true" targetId="3303-cef0-2064-a5f5" type="selectionEntry"/>
-            <entryLink id="d082-7ea9-a4e8-93e4" name="Chaos Sorcerer Lord on Manticore" hidden="false" collective="false" import="true" targetId="c132-1271-a655-1e16" type="selectionEntry">
-              <categoryLinks>
-                <categoryLink id="ac4d-a3eb-c271-c8a6" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
-                <categoryLink id="46af-22a1-af4d-cfb2" name="New CategoryLink" hidden="false" targetId="fa0c-9044-2568-fa02" primary="false"/>
-              </categoryLinks>
-            </entryLink>
-            <entryLink id="5ff3-3414-6877-9592" name="Chaos Sorcerer Lord" hidden="false" collective="false" import="true" targetId="1080-2582-0880-dd78" type="selectionEntry">
-              <categoryLinks>
-                <categoryLink id="bc31-5f10-cc32-6aa5" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
-              </categoryLinks>
-            </entryLink>
-            <entryLink id="ec65-518d-086f-3b5c" name="Chaos Lord on Daemonic Mount" hidden="false" collective="false" import="true" targetId="ae9b-b9fe-18ba-2f9a" type="selectionEntry">
-              <categoryLinks>
-                <categoryLink id="e080-834a-bf1c-d278" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
-              </categoryLinks>
-            </entryLink>
-            <entryLink id="4a21-89e6-f645-0dda" name="Chaos Lord on Karkadrak" hidden="false" collective="false" import="true" targetId="e6c9-c984-cd6f-33e3" type="selectionEntry">
-              <categoryLinks>
-                <categoryLink id="4dea-7413-e276-2473" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
-              </categoryLinks>
-            </entryLink>
-            <entryLink id="87f2-5aad-3eac-b82e" name="Lord of Chaos" hidden="false" collective="false" import="true" targetId="1ccb-5743-64df-f027" type="selectionEntry">
-              <categoryLinks>
-                <categoryLink id="0957-2993-a60e-4ec4" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
-              </categoryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
-      </costs>
-    </selectionEntry>
     <selectionEntry id="1ccb-5743-64df-f027" name="Chaos Lord" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
         <modifier type="add" field="category" value="624c-a3f1-ce3c-0169">
@@ -3120,7 +2780,7 @@
                     <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">2&quot;</characteristic>
                     <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">6</characteristic>
                     <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
-                    <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">4+</characteristic>
+                    <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
                     <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-2</characteristic>
                     <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
                   </characteristics>
@@ -3152,53 +2812,6 @@
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="115.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="ca1d-13ba-4662-6e9f" name="Battalion: Ruinbringer Warband" hidden="false" collective="false" import="true" type="upgrade">
-      <profiles>
-        <profile id="c31c-fdde-3e3f-a00d" name="Dark Cavalry" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
-          <characteristics>
-            <characteristic name="Battalion Ability Details" typeId="08e0-9ead-1dbe-c801">Each time a unit from this battalion finishes a charge move, you can pick 1 enemy unit within 1&quot; of that unit. If you do so, roll a dice. On a 2+, that enemy unit suffers D3 mortal wounds.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <categoryLinks>
-        <categoryLink id="90c1-0cbb-cda0-06fa" name="Battalion" hidden="false" targetId="be17-6bbd-b857-3f43" primary="true"/>
-      </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="dd75-9f51-113c-5dcf" name="1 Chaos Lord on Daemonic Mount or Karkadrak" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="83aa-a4cf-e876-e1c5" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8557-af80-5565-0051" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="4347-5b48-366f-2597" name="Chaos Lord on Daemonic Mount" hidden="false" collective="false" import="true" targetId="ae9b-b9fe-18ba-2f9a" type="selectionEntry">
-              <categoryLinks>
-                <categoryLink id="95c6-1268-bcca-429d" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
-              </categoryLinks>
-            </entryLink>
-            <entryLink id="ef49-986f-af39-c168" name="Chaos Lord on Karkadrak" hidden="false" collective="false" import="true" targetId="e6c9-c984-cd6f-33e3" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="5a4c-3fee-ab49-bd16" name="4-8 Units: " hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3614-21a7-0101-527c" type="min"/>
-            <constraint field="selections" scope="parent" value="8.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3dab-a6fe-1594-063b" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="9379-a9c9-1af7-4c0f" name="Chaos Knights" hidden="false" collective="false" import="true" targetId="e432-9436-085d-4c93" type="selectionEntry"/>
-            <entryLink id="86b2-f922-bdfd-463a" name="Chaos Chariots" hidden="false" collective="false" import="true" targetId="8bc4-05d4-ff31-086b" type="selectionEntry"/>
-            <entryLink id="f4cf-7b60-f78e-24ae" name="Gorebeast Chariots" hidden="false" collective="false" import="true" targetId="44d4-5116-6301-5c92" type="selectionEntry">
-              <categoryLinks>
-                <categoryLink id="7b1d-e5e1-0b36-102d" name="New CategoryLink" hidden="false" targetId="065e-fda7-fd27-1f40" primary="true"/>
-              </categoryLinks>
-            </entryLink>
-            <entryLink id="4a15-2428-5dc6-eefd" name="Chaos Marauder Horsemen" hidden="false" collective="false" import="true" targetId="ce01-c0f8-2c4b-fddc" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="689f-b7f7-e2ec-8a31" name="Sayl the Faithless [LEGENDS]" publicationId="dd94-71a7-8549-0d65" hidden="false" collective="false" import="true" type="unit">
@@ -4224,7 +3837,7 @@
               <characteristics>
                 <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
                 <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
-                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">1</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">2</characteristic>
                 <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
                 <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">4+</characteristic>
                 <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
@@ -4359,7 +3972,7 @@
               <characteristics>
                 <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
                 <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
-                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">1</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">2</characteristic>
                 <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
                 <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">4+</characteristic>
                 <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
@@ -4382,10 +3995,10 @@
                 <characteristic name="Type" typeId="655c-362e-a663-3e50">Missile</characteristic>
                 <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">8&quot;</characteristic>
                 <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">1</characteristic>
-                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
                 <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
                 <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
-                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">2</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">D3</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -5315,14 +4928,9 @@
             <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">4+</characteristic>
           </characteristics>
         </profile>
-        <profile id="69a9-d554-deda-ab52" name="Pit Marshal" hidden="false" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
-          <characteristics>
-            <characteristic name="Command Ability Details" typeId="1b71-4c83-4e8c-093f">You can use this command ability in the combat phase. If you do so, pick 1 friendly CULTISTS unit wholly within 12&quot; of a friendly model with this command ability. Do not take battleshock tests for that unit until the start of your next hero phase. </characteristic>
-          </characteristics>
-        </profile>
         <profile id="df5f-8564-f4ac-be34" name="Berserk Rage" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">You can re-roll hit and wound rolls for attacks made with melee weapons by this model if any wounds or mortal wounds were allocated to this model earlier in the same phase. </characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Add 1 to wound rolls for attacks made with melee weapons by this unit if any wounds or mortal wounds were allocated to it earlier in the same phase.</characteristic>
           </characteristics>
         </profile>
         <profile id="1fb2-7e08-0cec-7c2d" name="Arcane Fury" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
@@ -5361,33 +4969,11 @@
               <characteristics>
                 <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
                 <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">2&quot;</characteristic>
-                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">6</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">4</characteristic>
                 <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
                 <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
                 <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
-                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="528b-8a70-37ac-e7d8" name="Great Horns" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6f84-1b3e-8ec2-4931" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f64a-e706-0ed8-d8e8" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="8682-d7a2-cadf-7096" name="Great Horns" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
-              <characteristics>
-                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
-                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
-                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">1</characteristic>
-                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
-                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
-                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-2</characteristic>
-                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">3</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">2</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -5571,7 +5157,7 @@
         </profile>
         <profile id="f21c-22cd-6196-8a70" name="Oath of Conquest" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If you gain control of an objective previously controlled by your opponent while this unit is contesting it, this unit fulfills its oath.  Once this unit fulfills its oath, until the end of the battle, this unit has a ward of 5+.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If you gain control of an objective previously controlled by your opponent while this unit is contesting it, this unit fulfills its oath.  Once this unit fulfills its oath, until the end of the battle, this unit has a 5+ ward.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -5662,7 +5248,7 @@
           <profiles>
             <profile id="aaf3-6e18-72e7-5d22" name="Ensorcelled Javelin" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
               <characteristics>
-                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Missile</characteristic>
                 <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">12&quot;</characteristic>
                 <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">1</characteristic>
                 <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
@@ -5730,51 +5316,6 @@
 The unit can receive the following commands if they are issued by its master:</characteristic>
           </characteristics>
         </profile>
-        <profile id="11b1-f75a-9a3e-c6e4" name="Beast Unbound" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If this model is within 6&quot; of an enemy unit and more than 12&quot; from its master (see left) at the start of the charge phase, you must roll a dice. On a 4+, the closest other unit within 6&quot; of this model immediately suffers D3 mortal wounds.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="716c-a0f7-6d8f-efd7" name="Slaughterbrute" hidden="false" typeId="90d1-a434-348d-a861" typeName="Damage Table">
-          <characteristics>
-            <characteristic name="Variable 1" typeId="420a-645a-ab28-93a0">Wounds Suffered</characteristic>
-            <characteristic name="Variable 2" typeId="4cdd-1e03-530f-0ff7">Move</characteristic>
-            <characteristic name="Variable 3" typeId="b1ea-56be-ba52-16e9">Razor-tipped Claws</characteristic>
-            <characteristic name="Variable 4" typeId="ad26-bf56-95c4-80f1">Mighty Jaws</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="3dea-fb7d-7daa-65fe" name="Slaughterbrute1" hidden="false" typeId="90d1-a434-348d-a861" typeName="Damage Table">
-          <characteristics>
-            <characteristic name="Variable 1" typeId="420a-645a-ab28-93a0">00-05</characteristic>
-            <characteristic name="Variable 2" typeId="4cdd-1e03-530f-0ff7">10&quot;</characteristic>
-            <characteristic name="Variable 3" typeId="b1ea-56be-ba52-16e9">8</characteristic>
-            <characteristic name="Variable 4" typeId="ad26-bf56-95c4-80f1">1+</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="da72-4f8d-c2b9-66f1" name="Slaughterbrute3" hidden="false" typeId="90d1-a434-348d-a861" typeName="Damage Table">
-          <characteristics>
-            <characteristic name="Variable 1" typeId="420a-645a-ab28-93a0">09-11</characteristic>
-            <characteristic name="Variable 2" typeId="4cdd-1e03-530f-0ff7">6&quot;</characteristic>
-            <characteristic name="Variable 3" typeId="b1ea-56be-ba52-16e9">6</characteristic>
-            <characteristic name="Variable 4" typeId="ad26-bf56-95c4-80f1">3+</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="0ac1-4fc3-0137-03b3" name="Slaughterbrute4" hidden="false" typeId="90d1-a434-348d-a861" typeName="Damage Table">
-          <characteristics>
-            <characteristic name="Variable 1" typeId="420a-645a-ab28-93a0">12+</characteristic>
-            <characteristic name="Variable 2" typeId="4cdd-1e03-530f-0ff7">4&quot;</characteristic>
-            <characteristic name="Variable 3" typeId="b1ea-56be-ba52-16e9">5</characteristic>
-            <characteristic name="Variable 4" typeId="ad26-bf56-95c4-80f1">4+</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="be28-08d6-4862-54e1" name="Slaughterbrute2" hidden="false" typeId="90d1-a434-348d-a861" typeName="Damage Table">
-          <characteristics>
-            <characteristic name="Variable 1" typeId="420a-645a-ab28-93a0">06-08</characteristic>
-            <characteristic name="Variable 2" typeId="4cdd-1e03-530f-0ff7">8&quot;</characteristic>
-            <characteristic name="Variable 3" typeId="b1ea-56be-ba52-16e9">7</characteristic>
-            <characteristic name="Variable 4" typeId="ad26-bf56-95c4-80f1">2+</characteristic>
-          </characteristics>
-        </profile>
         <profile id="49b5-a2c1-a569-78ee" name="Leave None Alive" hidden="false" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
           <characteristics>
             <characteristic name="Command Ability Details" typeId="1b71-4c83-4e8c-093f">You can use this command ability at the start of the combat phase.  The unit that issues the command must be this unit&apos;s master and the unit that receives the command must be this unit.  Until the end of that phase, use the top row on this unit&apos;s damage table, regardless of how many wounds it has suffered.</characteristic>
@@ -5839,13 +5380,41 @@ The unit can receive the following commands if they are issued by its master:</c
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="0a29-a61e-4c84-37f5" name="Mark of Khorne" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="abb8-e9d8-8c06-1c15" name="Damage Table" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fbf1-6811-d5c4-40a0" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8a05-03a4-5c33-f636" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="937e-e552-87b5-c4af" type="max"/>
           </constraints>
-          <categoryLinks>
-            <categoryLink id="325d-5ec6-9060-0b1c" name="KHORNE" hidden="false" targetId="f22b-976f-fc38-366a" primary="false"/>
-          </categoryLinks>
+          <profiles>
+            <profile id="e98b-bc5d-98c5-ad66" name="00-05" hidden="false" typeId="5c5d-f32c-f118-f1c6" typeName="Slaughterbrute Damage">
+              <characteristics>
+                <characteristic name="Move" typeId="9293-f6a4-a38d-389a">10&quot;</characteristic>
+                <characteristic name="Razor-tipped Claws" typeId="03cd-9c89-4af4-6f60">8</characteristic>
+                <characteristic name="Mighty Jaws" typeId="5f40-0a64-7438-b26f">1+</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="4e85-2655-510c-5ba9" name="06-08" hidden="false" typeId="5c5d-f32c-f118-f1c6" typeName="Slaughterbrute Damage">
+              <characteristics>
+                <characteristic name="Move" typeId="9293-f6a4-a38d-389a">8&quot;</characteristic>
+                <characteristic name="Razor-tipped Claws" typeId="03cd-9c89-4af4-6f60">7</characteristic>
+                <characteristic name="Mighty Jaws" typeId="5f40-0a64-7438-b26f">2+</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="8723-202a-4d82-9c79" name="09-11" hidden="false" typeId="5c5d-f32c-f118-f1c6" typeName="Slaughterbrute Damage">
+              <characteristics>
+                <characteristic name="Move" typeId="9293-f6a4-a38d-389a">6&quot;</characteristic>
+                <characteristic name="Razor-tipped Claws" typeId="03cd-9c89-4af4-6f60">6</characteristic>
+                <characteristic name="Mighty Jaws" typeId="5f40-0a64-7438-b26f">3+</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="5de6-35f9-bfb2-592d" name="12+" hidden="false" typeId="5c5d-f32c-f118-f1c6" typeName="Slaughterbrute Damage">
+              <characteristics>
+                <characteristic name="Move" typeId="9293-f6a4-a38d-389a">4&quot;</characteristic>
+                <characteristic name="Razor-tipped Claws" typeId="03cd-9c89-4af4-6f60">5</characteristic>
+                <characteristic name="Mighty Jaws" typeId="5f40-0a64-7438-b26f">4+</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
@@ -5915,46 +5484,6 @@ The unit can receive the following commands if they are issued by its master:</c
             <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">In your hero phase, you can pick 1 enemy unit within 18&quot; of this model, roll a dice and look up the effect on the table below.  If this unit is within 9&quot; of a friendly TZEENTCH WIZARD, you can roll 2 dice instead of 1 and pick either to look up the corresponding effect on the table below.</characteristic>
           </characteristics>
         </profile>
-        <profile id="6d04-4578-db04-83db" name="Mutalith Vortex Beast" hidden="false" typeId="90d1-a434-348d-a861" typeName="Damage Table">
-          <characteristics>
-            <characteristic name="Variable 1" typeId="420a-645a-ab28-93a0">Wounds Suffered</characteristic>
-            <characteristic name="Variable 2" typeId="4cdd-1e03-530f-0ff7">Move</characteristic>
-            <characteristic name="Variable 3" typeId="b1ea-56be-ba52-16e9">Crushing Claws</characteristic>
-            <characteristic name="Variable 4" typeId="ad26-bf56-95c4-80f1">Betentacled Maw</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="e3be-0440-b39a-446e" name="Mutalith Vortex Beast4" hidden="false" typeId="90d1-a434-348d-a861" typeName="Damage Table">
-          <characteristics>
-            <characteristic name="Variable 1" typeId="420a-645a-ab28-93a0">12+</characteristic>
-            <characteristic name="Variable 2" typeId="4cdd-1e03-530f-0ff7">4&quot;</characteristic>
-            <characteristic name="Variable 3" typeId="b1ea-56be-ba52-16e9">4+</characteristic>
-            <characteristic name="Variable 4" typeId="ad26-bf56-95c4-80f1">D3</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="7f02-ca65-b636-cc9c" name="Mutalith Vortex Beast3" hidden="false" typeId="90d1-a434-348d-a861" typeName="Damage Table">
-          <characteristics>
-            <characteristic name="Variable 1" typeId="420a-645a-ab28-93a0">09-11</characteristic>
-            <characteristic name="Variable 2" typeId="4cdd-1e03-530f-0ff7">6&quot;</characteristic>
-            <characteristic name="Variable 3" typeId="b1ea-56be-ba52-16e9">3+</characteristic>
-            <characteristic name="Variable 4" typeId="ad26-bf56-95c4-80f1">D6</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="2efd-c192-6e40-536b" name="Mutalith Vortex Beast1" hidden="false" typeId="90d1-a434-348d-a861" typeName="Damage Table">
-          <characteristics>
-            <characteristic name="Variable 1" typeId="420a-645a-ab28-93a0">00-05</characteristic>
-            <characteristic name="Variable 2" typeId="4cdd-1e03-530f-0ff7">10&quot;</characteristic>
-            <characteristic name="Variable 3" typeId="b1ea-56be-ba52-16e9">1+</characteristic>
-            <characteristic name="Variable 4" typeId="ad26-bf56-95c4-80f1">3D6</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="0528-9dce-3d09-62f0" name="Mutalith Vortex Beast2" hidden="false" typeId="90d1-a434-348d-a861" typeName="Damage Table">
-          <characteristics>
-            <characteristic name="Variable 1" typeId="420a-645a-ab28-93a0">06-08</characteristic>
-            <characteristic name="Variable 2" typeId="4cdd-1e03-530f-0ff7">8&quot;</characteristic>
-            <characteristic name="Variable 3" typeId="b1ea-56be-ba52-16e9">2+</characteristic>
-            <characteristic name="Variable 4" typeId="ad26-bf56-95c4-80f1">2D6</characteristic>
-          </characteristics>
-        </profile>
       </profiles>
       <categoryLinks>
         <categoryLink id="1532-b086-3ff8-9549" name="New CategoryLink" hidden="false" targetId="7cdd-80ea-cbeb-8e16" primary="false"/>
@@ -6002,6 +5531,45 @@ The unit can receive the following commands if they are issued by its master:</c
                 <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">*</characteristic>
                 <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
                 <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">D3</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="eb13-2194-3c59-ca5c" name="Damage Table" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5dbc-0443-e6f4-6870" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a8a3-0504-065c-9db6" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="0abf-2d38-9c77-85ec" name="00-05" hidden="false" typeId="8620-df2a-54f8-726a" typeName="Vortex Beast Damage">
+              <characteristics>
+                <characteristic name="Move" typeId="f364-959b-b9d8-5d98">10&quot;</characteristic>
+                <characteristic name="Crushing Claws" typeId="9e45-cf03-0ffd-9f8f">1+</characteristic>
+                <characteristic name="Betentacled Maw" typeId="90bd-e441-aa68-0f3c">3D6</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="34ea-cb7b-c25c-44ec" name="06-08" hidden="false" typeId="8620-df2a-54f8-726a" typeName="Vortex Beast Damage">
+              <characteristics>
+                <characteristic name="Move" typeId="f364-959b-b9d8-5d98">8&quot;</characteristic>
+                <characteristic name="Crushing Claws" typeId="9e45-cf03-0ffd-9f8f">2+</characteristic>
+                <characteristic name="Betentacled Maw" typeId="90bd-e441-aa68-0f3c">2D6</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="b75e-ac40-df7a-4fd7" name="09-11" hidden="false" typeId="8620-df2a-54f8-726a" typeName="Vortex Beast Damage">
+              <characteristics>
+                <characteristic name="Move" typeId="f364-959b-b9d8-5d98">6&quot;</characteristic>
+                <characteristic name="Crushing Claws" typeId="9e45-cf03-0ffd-9f8f">3+</characteristic>
+                <characteristic name="Betentacled Maw" typeId="90bd-e441-aa68-0f3c">D6</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="b7d2-eba6-ed65-bde9" name="12+" hidden="false" typeId="8620-df2a-54f8-726a" typeName="Vortex Beast Damage">
+              <characteristics>
+                <characteristic name="Move" typeId="f364-959b-b9d8-5d98">4&quot;</characteristic>
+                <characteristic name="Crushing Claws" typeId="9e45-cf03-0ffd-9f8f">4+</characteristic>
+                <characteristic name="Betentacled Maw" typeId="90bd-e441-aa68-0f3c">D3</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -6336,407 +5904,6 @@ The unit can receive the following commands if they are issued by its master:</c
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="100.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="310b-4c10-bb67-d5aa" name="Super Battalion: Chaos Horde" hidden="false" collective="false" import="true" type="upgrade">
-      <profiles>
-        <profile id="4b93-a29a-5771-abc9" name="Oncoming Onslaught" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
-          <characteristics>
-            <characteristic name="Battalion Ability Details" typeId="08e0-9ead-1dbe-c801">Once per turn, you can use 1 command ability on the warscroll of a HERO from this battalion without a command point being spent. In addition, add 2&quot; to the Move characteristic of units from this battalion in the first battle round.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <categoryLinks>
-        <categoryLink id="9e9b-9c08-3099-01d5" name="New CategoryLink" hidden="false" targetId="be17-6bbd-b857-3f43" primary="true"/>
-      </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="a746-8bf0-0bf5-5f71" name="1 Godsworn Champions of Ruin" hidden="false" collective="false" import="true" defaultSelectionEntryId="507b-e73a-3b71-4420">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4e8a-bf75-93bc-e901" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a341-9cf3-e7a1-3715" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="507b-e73a-3b71-4420" name="Battalion: Godsworn Champions of Ruin" hidden="false" collective="false" import="true" targetId="0757-631a-f82f-e7d2" type="selectionEntry">
-              <categoryLinks>
-                <categoryLink id="b89f-2bbe-9584-4d6a" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
-              </categoryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="ce78-e368-05fc-a6ef" name="4-8 Additional Battalions" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="8.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b3f8-59b4-15c8-39b7" type="max"/>
-            <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3fbf-5c30-b343-b0a6" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="d3d7-49fb-2a9f-022e" name="Battalion: Plaguetouched Warband" hidden="false" collective="false" import="true" targetId="6d82-6504-2eb9-7ffb" type="selectionEntry"/>
-            <entryLink id="0cc0-cc62-57da-cb5b" name="Battalion: Overlords of Chaos" hidden="false" collective="false" import="true" targetId="efcf-1554-a66f-5b81" type="selectionEntry"/>
-            <entryLink id="e681-d352-f12b-b3bd" name="Battalion: Godswrath Warband" hidden="false" collective="false" import="true" targetId="7861-8f67-30d3-91a7" type="selectionEntry"/>
-            <entryLink id="264b-d53c-980b-9cc9" name="Battalion: Pleasurebound Warband" hidden="false" collective="false" import="true" targetId="071d-a9cb-814e-6e7c" type="selectionEntry"/>
-            <entryLink id="263f-d854-2401-ba0e" name="Battalion: Bloodmarked Warband" hidden="false" collective="false" import="true" targetId="552b-50ad-cd20-d625" type="selectionEntry"/>
-            <entryLink id="9495-fb3f-1477-13d1" name="Battalion: Fatesworn Warband" hidden="false" collective="false" import="true" targetId="e608-f9b6-63f4-075c" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <costs>
-        <cost name="pts" typeId="points" value="140.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="552b-50ad-cd20-d625" name="Battalion: Bloodmarked Warband" hidden="false" collective="false" import="true" type="upgrade">
-      <profiles>
-        <profile id="255f-664f-7e54-a884" name="Blood Rage" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
-          <characteristics>
-            <characteristic name="Battalion Ability Details" typeId="08e0-9ead-1dbe-c801">If a HERO from this battalion slays any enemy models in the combat phase, you can pick 1 unit from the same battalion wholly within 12&quot; of that HERO. Add 1 to the Attacks characteristic of that unit’s melee weapons until your next hero phase. The same unit cannot benefit from this ability more than once per battle round.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <categoryLinks>
-        <categoryLink id="2c3d-96a1-5568-2189" name="Battalion" hidden="false" targetId="be17-6bbd-b857-3f43" primary="true"/>
-      </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="7d36-1855-f556-9184" name="1 MORTAL SLAVES TO DARKNESS KHORNE HERO" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5664-4136-5610-7b8d" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6938-02d3-c971-1be5" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="5940-5e32-7bbf-3248" name="Chaos Lord on Daemonic Mount" hidden="false" collective="false" import="true" targetId="ae9b-b9fe-18ba-2f9a" type="selectionEntry">
-              <categoryLinks>
-                <categoryLink id="7916-3d67-28b6-8ff7" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
-              </categoryLinks>
-            </entryLink>
-            <entryLink id="1f8e-da44-404c-f485" name="Archaon" hidden="false" collective="false" import="true" targetId="ee9e-b8de-b25d-b6f1" type="selectionEntry"/>
-            <entryLink id="15f7-fa2d-175b-9036" name="Exalted Hero of Chaos" hidden="false" collective="false" import="true" targetId="69e5-b08e-9813-f378" type="selectionEntry"/>
-            <entryLink id="97f4-0a25-e6dc-666a" name="Chaos Lord" hidden="false" collective="false" import="true" targetId="1ccb-5743-64df-f027" type="selectionEntry"/>
-            <entryLink id="8d38-0664-8c38-dd49" name="Chaos Lord on Karkadrak" hidden="false" collective="false" import="true" targetId="e6c9-c984-cd6f-33e3" type="selectionEntry"/>
-            <entryLink id="3563-3be4-38d8-36cb" name="Chaos Lord on Manticore" hidden="false" collective="false" import="true" targetId="3303-cef0-2064-a5f5" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="7e41-342f-25db-590d" name="8 MORTAL SLAVES TO DARKNESS KHORNE Units" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="8.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3397-1da5-5aa2-b431" type="min"/>
-            <constraint field="selections" scope="parent" value="8.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="52f7-3ea6-fc54-8972" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="a1e5-8e19-ab07-4e55" name="Chaos Knights" hidden="false" collective="false" import="true" targetId="e432-9436-085d-4c93" type="selectionEntry"/>
-            <entryLink id="c4af-fd50-9888-4c8e" name="Chaos Gorebeast Chariots" hidden="false" collective="false" import="true" targetId="44d4-5116-6301-5c92" type="selectionEntry">
-              <categoryLinks>
-                <categoryLink id="d00e-0d33-0b9d-f77f" name="New CategoryLink" hidden="false" targetId="065e-fda7-fd27-1f40" primary="true"/>
-              </categoryLinks>
-            </entryLink>
-            <entryLink id="35f5-758d-db8d-1d83" name="Chaos Marauder Horsemen" hidden="false" collective="false" import="true" targetId="ce01-c0f8-2c4b-fddc" type="selectionEntry"/>
-            <entryLink id="802b-2ce1-3dde-208d" name="Varanguard" hidden="false" collective="false" import="true" targetId="d055-3a02-ab50-ca0d" type="selectionEntry"/>
-            <entryLink id="fb2b-2322-cd35-3f11" name="Chaos Warshrine" hidden="false" collective="false" import="true" targetId="89b1-9d63-4211-96da" type="selectionEntry"/>
-            <entryLink id="a540-bb59-4442-ef13" name="Chaos Warriors" hidden="false" collective="false" import="true" targetId="22ed-600b-a62c-7ebe" type="selectionEntry"/>
-            <entryLink id="0836-3417-68d9-ee97" name="Chaos Chariots" hidden="false" collective="false" import="true" targetId="8bc4-05d4-ff31-086b" type="selectionEntry"/>
-            <entryLink id="5f56-e64b-92dc-8c7c" name="Chaos Marauders" hidden="false" collective="false" import="true" targetId="08c1-05a1-4828-6983" type="selectionEntry"/>
-            <entryLink id="fc7a-f2b4-6af5-f172" name="Chaos Chosen" hidden="false" collective="false" import="true" targetId="7117-c074-dd10-883d" type="selectionEntry"/>
-            <entryLink id="1817-897e-4379-f81b" name="Archaon the Everchosen" hidden="false" collective="false" import="true" targetId="ee9e-b8de-b25d-b6f1" type="selectionEntry"/>
-            <entryLink id="f5d5-f4ee-8eec-4ac0" name="Chaos Lord" hidden="false" collective="false" import="true" targetId="1ccb-5743-64df-f027" type="selectionEntry"/>
-            <entryLink id="7b7b-79a4-a59f-0521" name="Chaos Lord on Daemonic Mount" hidden="false" collective="false" import="true" targetId="ae9b-b9fe-18ba-2f9a" type="selectionEntry">
-              <categoryLinks>
-                <categoryLink id="e197-f9fe-56b7-0aa7" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
-              </categoryLinks>
-            </entryLink>
-            <entryLink id="9918-170b-daf0-48b6" name="Chaos Lord on Karkadrak" hidden="false" collective="false" import="true" targetId="e6c9-c984-cd6f-33e3" type="selectionEntry"/>
-            <entryLink id="f929-eba3-0e0a-480b" name="Chaos Lord on Manticore" hidden="false" collective="false" import="true" targetId="3303-cef0-2064-a5f5" type="selectionEntry"/>
-            <entryLink id="5579-8af4-f6da-7489" name="Exalted Hero of Chaos" hidden="false" collective="false" import="true" targetId="69e5-b08e-9813-f378" type="selectionEntry"/>
-            <entryLink id="876a-4347-0b81-7e8a" name="Chaos Spawn" hidden="false" collective="false" import="true" targetId="494c-81bb-bb30-3d33" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="e608-f9b6-63f4-075c" name="Battalion: Fatesworn Warband" hidden="false" collective="false" import="true" type="upgrade">
-      <profiles>
-        <profile id="cc1e-eb33-c6d2-3423" name="Scions of Change" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
-          <characteristics>
-            <characteristic name="Battalion Ability Details" typeId="08e0-9ead-1dbe-c801">At the start of your hero phase, you can pick 1 unit from this battalion that has 9 or more models. If you do so, until the end of that phase, that unit can attempt to cast 1 spell and attempt to dispel 1 endless spell. It knows the Stolen Sting spell:</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="d21b-d01f-def9-fb07" name="Stolen Sting" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
-          <characteristics>
-            <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
-            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick 1 enemy unit within 18&quot; of the caster and visible to them. Worsen the Rend characteristic of that unit’s melee weapons by 1 until your next hero phase. A unit cannot be affected by this spell more than once per turn.</characteristic>
-            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
-          </characteristics>
-        </profile>
-      </profiles>
-      <categoryLinks>
-        <categoryLink id="c9a2-c272-b65b-c555" name="Battalion" hidden="false" targetId="be17-6bbd-b857-3f43" primary="true"/>
-      </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="44e8-0031-1254-fc4d" name="1 MORTAL SLAVES TO DARKNESS TZEENTCH HERO" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5d83-b034-4f56-b905" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e308-a81f-1d45-724b" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="3ef1-97af-346e-d3d3" name="Chaos Lord on Daemonic Mount" hidden="false" collective="false" import="true" targetId="ae9b-b9fe-18ba-2f9a" type="selectionEntry">
-              <categoryLinks>
-                <categoryLink id="fba9-620f-6688-41db" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
-              </categoryLinks>
-            </entryLink>
-            <entryLink id="bde9-da8a-1424-84b1" name="Archaon the Everchosen" hidden="false" collective="false" import="true" targetId="ee9e-b8de-b25d-b6f1" type="selectionEntry"/>
-            <entryLink id="cfdb-6fef-4bc5-574f" name="Exalted Hero of Chaos" hidden="false" collective="false" import="true" targetId="69e5-b08e-9813-f378" type="selectionEntry"/>
-            <entryLink id="e87c-3a5f-416f-05d6" name="Chaos Lord" hidden="false" collective="false" import="true" targetId="1ccb-5743-64df-f027" type="selectionEntry"/>
-            <entryLink id="9a64-2a86-92b8-1930" name="Chaos Lord on Karkadrak" hidden="false" collective="false" import="true" targetId="e6c9-c984-cd6f-33e3" type="selectionEntry"/>
-            <entryLink id="d500-3878-3821-c6a2" name="Chaos Lord on Manticore" hidden="false" collective="false" import="true" targetId="3303-cef0-2064-a5f5" type="selectionEntry"/>
-            <entryLink id="73a3-6e50-8398-982f" name="Chaos Sorcerer Lord on Manticore" hidden="false" collective="false" import="true" targetId="c132-1271-a655-1e16" type="selectionEntry"/>
-            <entryLink id="c12b-8f5e-84eb-33cf" name="Chaos Sorcerer Lord" hidden="false" collective="false" import="true" targetId="1080-2582-0880-dd78" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="7f89-96f7-d78c-6b3d" name="9 MORTAL SLAVES TO DARKNESS TZEENTCH Units" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="9.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5e96-56e1-d848-5592" type="min"/>
-            <constraint field="selections" scope="parent" value="9.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f1f6-0971-870e-fabc" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="a0f3-cf95-6211-0861" name="Chaos Knights" hidden="false" collective="false" import="true" targetId="e432-9436-085d-4c93" type="selectionEntry"/>
-            <entryLink id="8d48-a500-5abc-9266" name="Chaos Gorebeast Chariots" hidden="false" collective="false" import="true" targetId="44d4-5116-6301-5c92" type="selectionEntry">
-              <categoryLinks>
-                <categoryLink id="817e-5ede-3ebd-82bf" name="New CategoryLink" hidden="false" targetId="065e-fda7-fd27-1f40" primary="true"/>
-              </categoryLinks>
-            </entryLink>
-            <entryLink id="3bf3-d4b6-4405-fa6a" name="Chaos Marauder Horsemen" hidden="false" collective="false" import="true" targetId="ce01-c0f8-2c4b-fddc" type="selectionEntry"/>
-            <entryLink id="7d1a-8e3e-cea8-2637" name="Varanguard" hidden="false" collective="false" import="true" targetId="d055-3a02-ab50-ca0d" type="selectionEntry"/>
-            <entryLink id="bb7b-6e94-5336-3755" name="Chaos Warshrine" hidden="false" collective="false" import="true" targetId="89b1-9d63-4211-96da" type="selectionEntry"/>
-            <entryLink id="c33c-8571-c778-682c" name="Chaos Warriors" hidden="false" collective="false" import="true" targetId="22ed-600b-a62c-7ebe" type="selectionEntry"/>
-            <entryLink id="373c-0cf1-6df2-d0cd" name="Chaos Chariots" hidden="false" collective="false" import="true" targetId="8bc4-05d4-ff31-086b" type="selectionEntry"/>
-            <entryLink id="6022-c74c-28f3-050c" name="Chaos Marauders" hidden="false" collective="false" import="true" targetId="08c1-05a1-4828-6983" type="selectionEntry"/>
-            <entryLink id="bf37-4f47-9824-2773" name="Chaos Chosen" hidden="false" collective="false" import="true" targetId="7117-c074-dd10-883d" type="selectionEntry"/>
-            <entryLink id="d5a9-1f9d-29d0-c76b" name="Archaon the Everchosen" hidden="false" collective="false" import="true" targetId="ee9e-b8de-b25d-b6f1" type="selectionEntry"/>
-            <entryLink id="2881-3f83-8b33-b9a4" name="Chaos Lord" hidden="false" collective="false" import="true" targetId="1ccb-5743-64df-f027" type="selectionEntry"/>
-            <entryLink id="2b53-ce04-8b3c-1342" name="Chaos Lord on Daemonic Mount" hidden="false" collective="false" import="true" targetId="ae9b-b9fe-18ba-2f9a" type="selectionEntry">
-              <categoryLinks>
-                <categoryLink id="731c-4129-cde9-5eca" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
-              </categoryLinks>
-            </entryLink>
-            <entryLink id="e7c5-cfca-f83b-993a" name="Chaos Lord on Karkadrak" hidden="false" collective="false" import="true" targetId="e6c9-c984-cd6f-33e3" type="selectionEntry"/>
-            <entryLink id="3444-c5d6-ad2c-4249" name="Chaos Lord on Manticore" hidden="false" collective="false" import="true" targetId="3303-cef0-2064-a5f5" type="selectionEntry"/>
-            <entryLink id="8810-3468-5ab3-e347" name="Exalted Hero of Chaos" hidden="false" collective="false" import="true" targetId="69e5-b08e-9813-f378" type="selectionEntry"/>
-            <entryLink id="6261-8c3b-34f9-c101" name="Chaos Sorcerer Lord on Manticore" hidden="false" collective="false" import="true" targetId="c132-1271-a655-1e16" type="selectionEntry"/>
-            <entryLink id="a3c1-ca8a-967e-a900" name="Chaos Sorcerer Lord" hidden="false" collective="false" import="true" targetId="1080-2582-0880-dd78" type="selectionEntry"/>
-            <entryLink id="2253-346e-7580-c12e" name="Chaos Spawn" hidden="false" collective="false" import="true" targetId="494c-81bb-bb30-3d33" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="6d82-6504-2eb9-7ffb" name="Battalion: Plaguetouched Warband" hidden="false" collective="false" import="true" type="upgrade">
-      <profiles>
-        <profile id="aaa0-2e92-7656-7d5f" name="Grandfather&apos;s Favour" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
-          <characteristics>
-            <characteristic name="Battalion Ability Details" typeId="08e0-9ead-1dbe-c801">If the unmodified wound roll for an attack made with a melee weapon that targets a unit from this battalion is 6, the attacking unit suffers 1 mortal wound after all of its attacks have been resolved. In addition, in your hero phase, you can pick 1 unit from this battalion and 1 enemy unit within 1&quot; of it. If you do so, roll a dice. On a 3+, that enemy unit suffers D3 mortal wounds.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <categoryLinks>
-        <categoryLink id="96e7-4990-b308-938a" name="Battalion" hidden="false" targetId="be17-6bbd-b857-3f43" primary="true"/>
-      </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="dace-9ffd-2d9f-66cf" name="1 MORTAL SLAVES TO DARKNESS NURGLE HERO" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3b02-4114-3fe6-7fec" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="babd-aa04-e5e4-fa2b" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="936c-c7e6-3a15-d4f3" name="Chaos Lord on Daemonic Mount" hidden="false" collective="false" import="true" targetId="ae9b-b9fe-18ba-2f9a" type="selectionEntry">
-              <categoryLinks>
-                <categoryLink id="b945-87e1-c665-706f" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
-              </categoryLinks>
-            </entryLink>
-            <entryLink id="6d4a-fec1-8228-64f9" name="Archaon" hidden="false" collective="false" import="true" targetId="ee9e-b8de-b25d-b6f1" type="selectionEntry"/>
-            <entryLink id="a7e0-c642-18cb-8540" name="Exalted Hero of Chaos" hidden="false" collective="false" import="true" targetId="69e5-b08e-9813-f378" type="selectionEntry"/>
-            <entryLink id="02fc-c71d-0af6-b773" name="Chaos Lord" hidden="false" collective="false" import="true" targetId="1ccb-5743-64df-f027" type="selectionEntry"/>
-            <entryLink id="e550-4122-09ad-8f53" name="Chaos Lord on Karkadrak" hidden="false" collective="false" import="true" targetId="e6c9-c984-cd6f-33e3" type="selectionEntry"/>
-            <entryLink id="1998-5728-2538-6455" name="Chaos Lord on Manticore" hidden="false" collective="false" import="true" targetId="3303-cef0-2064-a5f5" type="selectionEntry"/>
-            <entryLink id="3524-b8d3-c267-30d4" name="Chaos Sorcerer Lord on Manticore" hidden="false" collective="false" import="true" targetId="c132-1271-a655-1e16" type="selectionEntry"/>
-            <entryLink id="bed3-a625-d711-94cf" name="Chaos Sorcerer Lord" hidden="false" collective="false" import="true" targetId="1080-2582-0880-dd78" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="9ab6-85f4-cc7b-4ad8" name="7 MORTAL SLAVES TO DARKNESS NURGLE Units" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="7.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9052-97d2-b68e-a81e" type="min"/>
-            <constraint field="selections" scope="parent" value="7.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e0c1-a3d6-fb82-8ad5" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="e4e7-7fb6-e00c-b274" name="Chaos Knights" hidden="false" collective="false" import="true" targetId="e432-9436-085d-4c93" type="selectionEntry"/>
-            <entryLink id="bf3c-f8cb-0528-35d6" name="Chaos Gorebeast Chariots" hidden="false" collective="false" import="true" targetId="44d4-5116-6301-5c92" type="selectionEntry">
-              <categoryLinks>
-                <categoryLink id="0cae-b075-1cef-60c5" name="New CategoryLink" hidden="false" targetId="065e-fda7-fd27-1f40" primary="true"/>
-              </categoryLinks>
-            </entryLink>
-            <entryLink id="aa6c-1687-9dad-53f2" name="Chaos Marauder Horsemen" hidden="false" collective="false" import="true" targetId="ce01-c0f8-2c4b-fddc" type="selectionEntry"/>
-            <entryLink id="861d-f87f-6389-5816" name="Varanguard" hidden="false" collective="false" import="true" targetId="d055-3a02-ab50-ca0d" type="selectionEntry"/>
-            <entryLink id="847e-9c69-84db-5179" name="Chaos Warshrine" hidden="false" collective="false" import="true" targetId="89b1-9d63-4211-96da" type="selectionEntry"/>
-            <entryLink id="2c5c-dfb3-930e-6a61" name="Chaos Warriors" hidden="false" collective="false" import="true" targetId="22ed-600b-a62c-7ebe" type="selectionEntry"/>
-            <entryLink id="5b37-a4f1-c502-4b8c" name="Chaos Chariots" hidden="false" collective="false" import="true" targetId="8bc4-05d4-ff31-086b" type="selectionEntry"/>
-            <entryLink id="925b-1476-3730-df76" name="Chaos Marauders" hidden="false" collective="false" import="true" targetId="08c1-05a1-4828-6983" type="selectionEntry"/>
-            <entryLink id="b85e-ea00-5d0c-1af8" name="Chaos Chosen" hidden="false" collective="false" import="true" targetId="7117-c074-dd10-883d" type="selectionEntry"/>
-            <entryLink id="84c2-6bb0-ca22-ea76" name="Archaon the Everchosen" hidden="false" collective="false" import="true" targetId="ee9e-b8de-b25d-b6f1" type="selectionEntry"/>
-            <entryLink id="5b4b-3561-f35c-b68e" name="Chaos Lord" hidden="false" collective="false" import="true" targetId="1ccb-5743-64df-f027" type="selectionEntry"/>
-            <entryLink id="dee1-4ddb-4884-e7b9" name="Chaos Lord on Daemonic Mount" hidden="false" collective="false" import="true" targetId="ae9b-b9fe-18ba-2f9a" type="selectionEntry">
-              <categoryLinks>
-                <categoryLink id="e2ed-a8cd-e360-662b" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
-              </categoryLinks>
-            </entryLink>
-            <entryLink id="8fa1-5097-2e82-68e6" name="Chaos Lord on Karkadrak" hidden="false" collective="false" import="true" targetId="e6c9-c984-cd6f-33e3" type="selectionEntry"/>
-            <entryLink id="7061-f554-56d1-f989" name="Chaos Lord on Manticore" hidden="false" collective="false" import="true" targetId="3303-cef0-2064-a5f5" type="selectionEntry"/>
-            <entryLink id="f8a3-c049-77c1-b255" name="Exalted Hero of Chaos" hidden="false" collective="false" import="true" targetId="69e5-b08e-9813-f378" type="selectionEntry"/>
-            <entryLink id="7116-fa18-722b-62cb" name="Chaos Sorcerer Lord on Manticore" hidden="false" collective="false" import="true" targetId="c132-1271-a655-1e16" type="selectionEntry"/>
-            <entryLink id="c371-e02f-371e-ad52" name="Chaos Sorcerer Lord" hidden="false" collective="false" import="true" targetId="1080-2582-0880-dd78" type="selectionEntry"/>
-            <entryLink id="65c3-4734-c94d-aa19" name="Chaos Spawn" hidden="false" collective="false" import="true" targetId="494c-81bb-bb30-3d33" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="071d-a9cb-814e-6e7c" name="Battalion: Pleasurebound Warband" hidden="false" collective="false" import="true" type="upgrade">
-      <profiles>
-        <profile id="9bd8-e5ed-2abd-d1b3" name="Perverse Yearnings" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
-          <characteristics>
-            <characteristic name="Battalion Ability Details" typeId="08e0-9ead-1dbe-c801">If a model from this battalion is slain in the combat phase, units from the same battalion can move an extra 3&quot; when they pile in until your next hero phase.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <categoryLinks>
-        <categoryLink id="8522-b677-17ec-7b85" name="Battalion" hidden="false" targetId="be17-6bbd-b857-3f43" primary="true"/>
-      </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="62db-d52f-92b4-0bd2" name="1 MORTAL SLAVES TO DARKNESS SLAANESH HERO" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6bbb-6b7e-5b13-64c0" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="577e-2723-feac-efcb" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="49e5-cbb8-5d01-a203" name="Chaos Lord on Daemonic Mount" hidden="false" collective="false" import="true" targetId="ae9b-b9fe-18ba-2f9a" type="selectionEntry">
-              <categoryLinks>
-                <categoryLink id="564d-196f-99b5-92ce" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
-              </categoryLinks>
-            </entryLink>
-            <entryLink id="56d1-5639-eb0a-a611" name="Exalted Hero of Chaos" hidden="false" collective="false" import="true" targetId="69e5-b08e-9813-f378" type="selectionEntry"/>
-            <entryLink id="f957-e95a-6931-d642" name="Chaos Lord" hidden="false" collective="false" import="true" targetId="1ccb-5743-64df-f027" type="selectionEntry"/>
-            <entryLink id="6b12-6482-c274-c669" name="Chaos Lord on Karkadrak" hidden="false" collective="false" import="true" targetId="e6c9-c984-cd6f-33e3" type="selectionEntry"/>
-            <entryLink id="fb3d-8f99-b22d-705e" name="Chaos Lord on Manticore" hidden="false" collective="false" import="true" targetId="3303-cef0-2064-a5f5" type="selectionEntry"/>
-            <entryLink id="c63a-b685-3916-9a90" name="Chaos Sorcerer Lord on Manticore" hidden="false" collective="false" import="true" targetId="c132-1271-a655-1e16" type="selectionEntry"/>
-            <entryLink id="3e50-b4cc-fc59-9136" name="Chaos Sorcerer Lord" hidden="false" collective="false" import="true" targetId="1080-2582-0880-dd78" type="selectionEntry"/>
-            <entryLink id="0f45-a863-cecc-2b13" name="Archaon" hidden="false" collective="false" import="true" targetId="ee9e-b8de-b25d-b6f1" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="fcfe-6ffe-3ea7-d848" name="6 MORTAL SLAVES TO DARKNESS SLAANESH Units" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1c37-0b0e-dd2a-3bec" type="min"/>
-            <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c763-8aa0-6264-4ef6" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="81ea-a9b3-de75-300d" name="Chaos Knights" hidden="false" collective="false" import="true" targetId="e432-9436-085d-4c93" type="selectionEntry"/>
-            <entryLink id="08eb-d319-6650-a45e" name="Chaos Gorebeast Chariots" hidden="false" collective="false" import="true" targetId="44d4-5116-6301-5c92" type="selectionEntry">
-              <categoryLinks>
-                <categoryLink id="8980-2f8c-34f9-2cd0" name="New CategoryLink" hidden="false" targetId="065e-fda7-fd27-1f40" primary="true"/>
-              </categoryLinks>
-            </entryLink>
-            <entryLink id="c962-5560-b27a-8694" name="Chaos Marauder Horsemen" hidden="false" collective="false" import="true" targetId="ce01-c0f8-2c4b-fddc" type="selectionEntry"/>
-            <entryLink id="8e35-c6e3-9710-03e4" name="Varanguard" hidden="false" collective="false" import="true" targetId="d055-3a02-ab50-ca0d" type="selectionEntry"/>
-            <entryLink id="15c2-3340-ed5d-b45a" name="Chaos Warshrine" hidden="false" collective="false" import="true" targetId="89b1-9d63-4211-96da" type="selectionEntry"/>
-            <entryLink id="6fbb-833a-7f31-6f22" name="Chaos Warriors" hidden="false" collective="false" import="true" targetId="22ed-600b-a62c-7ebe" type="selectionEntry"/>
-            <entryLink id="75ec-8c50-d5a8-6377" name="Chaos Chariots" hidden="false" collective="false" import="true" targetId="8bc4-05d4-ff31-086b" type="selectionEntry"/>
-            <entryLink id="8336-c131-3137-e6d1" name="Chaos Marauders" hidden="false" collective="false" import="true" targetId="08c1-05a1-4828-6983" type="selectionEntry"/>
-            <entryLink id="c127-12bd-f8f1-3ab8" name="Chaos Chosen" hidden="false" collective="false" import="true" targetId="7117-c074-dd10-883d" type="selectionEntry"/>
-            <entryLink id="5b4d-b4f2-10d3-775a" name="Chaos Lord" hidden="false" collective="false" import="true" targetId="1ccb-5743-64df-f027" type="selectionEntry"/>
-            <entryLink id="fcab-c654-6971-3678" name="Chaos Lord on Daemonic Mount" hidden="false" collective="false" import="true" targetId="ae9b-b9fe-18ba-2f9a" type="selectionEntry">
-              <categoryLinks>
-                <categoryLink id="de17-a33b-fd15-862e" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
-              </categoryLinks>
-            </entryLink>
-            <entryLink id="e598-a421-e800-e7c7" name="Chaos Lord on Karkadrak" hidden="false" collective="false" import="true" targetId="e6c9-c984-cd6f-33e3" type="selectionEntry"/>
-            <entryLink id="7bda-8f52-1e7f-5b53" name="Chaos Lord on Manticore" hidden="false" collective="false" import="true" targetId="3303-cef0-2064-a5f5" type="selectionEntry"/>
-            <entryLink id="489a-5aed-ee36-3079" name="Exalted Hero of Chaos" hidden="false" collective="false" import="true" targetId="69e5-b08e-9813-f378" type="selectionEntry"/>
-            <entryLink id="9b88-0186-b4b4-bdd6" name="Chaos Sorcerer Lord on Manticore" hidden="false" collective="false" import="true" targetId="c132-1271-a655-1e16" type="selectionEntry"/>
-            <entryLink id="e375-9d5b-f621-cb2c" name="Chaos Sorcerer Lord" hidden="false" collective="false" import="true" targetId="1080-2582-0880-dd78" type="selectionEntry"/>
-            <entryLink id="795b-7442-b7fa-4373" name="Archaon the Everchosen" hidden="false" collective="false" import="true" targetId="ee9e-b8de-b25d-b6f1" type="selectionEntry"/>
-            <entryLink id="abea-c539-717d-8043" name="Chaos Spawn" hidden="false" collective="false" import="true" targetId="494c-81bb-bb30-3d33" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="efcf-1554-a66f-5b81" name="Battalion: Overlords of Chaos" hidden="false" collective="false" import="true" type="upgrade">
-      <profiles>
-        <profile id="3f58-c30f-7f67-9802" name="The Circles Unleashed" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
-          <characteristics>
-            <characteristic name="Battalion Ability Details" typeId="08e0-9ead-1dbe-c801">When you select this battalion to be part of your army, for each unit from this battalion, you can replace the keyword you chose from the list in the Eight Circles of the Varanguard battle trait with a different keyword from the same list.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <categoryLinks>
-        <categoryLink id="e59b-676e-29cc-ed39" name="Battalion" hidden="false" targetId="be17-6bbd-b857-3f43" primary="true"/>
-      </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="d6d6-072d-3949-1215" name="3-6 HOSTS OF THE EVERCHOSEN Varanguard" hidden="false" collective="false" import="true" defaultSelectionEntryId="b808-897e-703d-a025">
-          <constraints>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="91bf-4534-d1d1-faf8" type="min"/>
-            <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5580-ce7c-d1f0-0a5f" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="b808-897e-703d-a025" name="Varanguard" hidden="false" collective="false" import="true" targetId="d055-3a02-ab50-ca0d" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="15b2-c4a8-3935-0e39" name="Battalion: Gresh&apos;s Iron Reapers" hidden="false" collective="false" import="true" type="upgrade">
-      <profiles>
-        <profile id="f424-c790-e722-169a" name="Soulbutcher" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
-          <characteristics>
-            <characteristic name="Battalion Ability Details" typeId="08e0-9ead-1dbe-c801">The Chaos Greatblade used by the IDOLATOR LORD from this battalion has an Attacks characteristic of 4 instead of 2 and a Damage characteristic of D3 instead of 2. In addition, if the unmodified hit roll for an attack made with that weapon is 6, that attack inflicts D3 mortal wounds on the target and the attack sequence ends (do not make a wound or save roll).</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <categoryLinks>
-        <categoryLink id="40f3-bdba-3fd0-750f" name="Battalion" hidden="false" targetId="be17-6bbd-b857-3f43" primary="true"/>
-      </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="2d67-33cf-27cd-7c8f" name="1 unit from this list:" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="496d-a0c5-00a1-5723" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="05cb-5d1f-eeed-b9c3" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="f01c-f8f9-8878-2daa" name="Chaos Chariots" hidden="false" collective="false" import="true" targetId="8bc4-05d4-ff31-086b" type="selectionEntry">
-              <modifiers>
-                <modifier type="set" field="name" value="Rokar Gresh (Chaos Chariot)"/>
-              </modifiers>
-            </entryLink>
-            <entryLink id="98ad-0c6f-7866-5e53" name="Gorebeast Chariots" hidden="false" collective="false" import="true" targetId="44d4-5116-6301-5c92" type="selectionEntry">
-              <modifiers>
-                <modifier type="set" field="name" value="Rokar Gresh (Gorebeast Chariot)"/>
-              </modifiers>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="1e39-8c2a-9378-e1ec" name="2 Gorebeast Chariots" hidden="false" collective="false" import="true" defaultSelectionEntryId="364c-fbf0-5000-c77c">
-          <constraints>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c8c8-32e2-491a-f576" type="min"/>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="44a8-8c15-a723-ef73" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="364c-fbf0-5000-c77c" name="Gorebeast Chariots" hidden="false" collective="false" import="true" targetId="44d4-5116-6301-5c92" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="9d76-1092-faa7-69a8" name="Khagra&apos;s Ravagers" hidden="false" collective="false" import="true" type="unit">
@@ -8142,7 +7309,7 @@ The unit can receive the following commands if they are issued by its master:</c
         <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6d03-8b74-c2b4-a88f" type="min"/>
       </constraints>
       <profiles>
-        <profile id="b47e-bdcb-16d5-5135" name="Zarshia Bittersould" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
+        <profile id="b47e-bdcb-16d5-5135" name="Zarshia Bittersoul" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
           <characteristics>
             <characteristic name="Move" typeId="8655-6213-2824-1752">5&quot;</characteristic>
             <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">5</characteristic>
@@ -8456,16 +7623,6 @@ The unit can receive the following commands if they are issued by its master:</c
       <selectionEntries>
         <selectionEntry id="af73-094f-f62f-ee11" name="Profane Oratory" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="15b2-c4a8-3935-0e39" type="notInstanceOf"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="1fa5-e37a-6754-90dc" value="1.0">
-              <conditions>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="15b2-c4a8-3935-0e39" type="instanceOf"/>
-              </conditions>
-            </modifier>
             <modifier type="set" field="hidden" value="true">
               <conditions>
                 <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b745-17c4-8fbf-8b04" type="equalTo"/>
