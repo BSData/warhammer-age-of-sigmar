@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="e0d8-b631-6934-ee34" name="Chaos - Slaves to Darkness Data" revision="112" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="144" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="e0d8-b631-6934-ee34" name="Chaos - Slaves to Darkness Data" revision="104" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="144" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profileTypes>
     <profileType id="56f6-e336-faed-bb00" name="Aura of Chaos Power">
       <characteristicTypes>
@@ -107,7 +107,6 @@
     <categoryEntry id="ae25-2d4a-633b-e7d8" name="CHAOS LEGIONNAIRES" hidden="false"/>
     <categoryEntry id="9e58-9ea8-6faf-ab31" name="CENTURION MARSHALL" hidden="false"/>
     <categoryEntry id="0c55-fcc4-067f-0e1b" name="OGROID THERIDONS" hidden="false"/>
-    <categoryEntry id="3ffb-f2cb-dba4-a311" name="OGROID" hidden="false"/>
     <categoryEntry id="6d69-c749-5733-a710" name="ETERNUS" hidden="false"/>
     <categoryEntry id="59c9-6833-1ddb-b990" name="ZARSHIA BITTERSOUL" hidden="false"/>
     <categoryEntry id="9990-21ba-46fb-4c73" name="SPHIRANX" hidden="false"/>
@@ -122,6 +121,19 @@
     <categoryEntry id="7496-9446-38f3-b340" name="SLAUGHTERBRUTE" hidden="false"/>
     <categoryEntry id="3b5c-2261-3346-d61e" name="THEDDRA SKULL-SCRYER" hidden="false"/>
     <categoryEntry id="84bc-7f12-e5f4-d7d9" name="GODSWORN HUNT" hidden="false"/>
+    <categoryEntry id="1c9b-2a07-1640-3d75" name="Ogroid Battleline" hidden="false">
+      <modifiers>
+        <modifier type="increment" field="573c-79be-eeb4-0bc2" value="1.0">
+          <repeats>
+            <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="efee-980d-07bd-6218" repeats="1" roundUp="false"/>
+          </repeats>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="573c-79be-eeb4-0bc2" type="max"/>
+      </constraints>
+    </categoryEntry>
+    <categoryEntry id="efee-980d-07bd-6218" name="OGROID MYRMIDON" hidden="false"/>
   </categoryEntries>
   <sharedSelectionEntries>
     <selectionEntry id="8bc4-05d4-ff31-086b" name="Chaos Chariots" hidden="false" collective="false" import="true" type="unit">
@@ -4946,6 +4958,8 @@
         <categoryLink id="0531-a6dd-1ff2-653c" name="New CategoryLink" hidden="false" targetId="4e0e-664d-51ea-0929" primary="false"/>
         <categoryLink id="555b-be4b-151d-1a45" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
         <categoryLink id="9b4d-f867-2223-9142" name="10 or less wounds Leader" hidden="false" targetId="a8ed-ca35-24e0-cf2e" primary="false"/>
+        <categoryLink id="2924-8609-4d83-d74d" name="OGROID MYRMIDON" hidden="false" targetId="efee-980d-07bd-6218" primary="false"/>
+        <categoryLink id="f0e0-df6f-6999-5f4f" name="OGROID" hidden="false" targetId="31af-c675-d39a-1610" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="4f2b-4d02-ef0e-db32" name="Gladiator Spear" hidden="false" collective="false" import="true" type="upgrade">
@@ -7066,11 +7080,23 @@ The unit can receive the following commands if they are issued by its master:</c
         <categoryLink id="7903-ec49-1a92-c24a" name="CHAOS" hidden="false" targetId="7cdd-80ea-cbeb-8e16" primary="false"/>
         <categoryLink id="0d6d-8b62-fd57-c833" name="SLAVES TO DARKNESS" hidden="false" targetId="4ba7-618a-4e30-2e0c" primary="false"/>
         <categoryLink id="7c15-6bbe-7850-eb6f" name="MARK OF CHAOS" hidden="false" targetId="4aac-dedf-8e4b-e00a" primary="false"/>
-        <categoryLink id="c0b8-9613-977e-5ee7" name="OGROID" hidden="false" targetId="3ffb-f2cb-dba4-a311" primary="false"/>
         <categoryLink id="44d0-34cc-420b-522a" name="New CategoryLink" hidden="false" targetId="065e-fda7-fd27-1f40" primary="true"/>
+        <categoryLink id="98bb-6629-5229-2538" name="OGROID" hidden="false" targetId="31af-c675-d39a-1610" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="8b46-83d6-b098-24a5" name="3 Ogroid Theridons" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="name" value="6 Ogroid Theridons">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0a8d-cde8-fba1-6c0d" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="name" value="9 Ogroid Theridons">
+              <conditions>
+                <condition field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0a8d-cde8-fba1-6c0d" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6412-0466-5417-8011" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="08b7-2b75-f051-63b4" type="max"/>
@@ -7149,6 +7175,13 @@ The unit can receive the following commands if they are issued by its master:</c
       </selectionEntryGroups>
       <entryLinks>
         <entryLink id="891c-9d4a-4a14-9ea8" name="Reinforced" hidden="false" collective="false" import="true" targetId="0a8d-cde8-fba1-6c0d" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="95f2-6885-756f-9ea5" value="2.0">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1c9b-2a07-1640-3d75" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <costs>
             <cost name="pts" typeId="points" value="190.0"/>
           </costs>
