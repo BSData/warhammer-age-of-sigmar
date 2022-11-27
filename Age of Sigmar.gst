@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="144" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="145" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <publications>
     <publication id="e51d-b1a3-pubEC" name="The General&apos;s Handbook"/>
     <publication id="e51d-b1a3-pubEQ" name="Core Rules"/>
@@ -363,7 +363,7 @@
             <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6330-7561-7a32-0851" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="set" field="e8e3-9adc-3526-c6d6" value="2500">
+        <modifier type="set" field="e8e3-9adc-3526-c6d6" value="3000.0">
           <conditions>
             <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1e63-0b49-ac04-321f" type="equalTo"/>
           </conditions>
@@ -378,7 +378,7 @@
             <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6330-7561-7a32-0851" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="append" field="name" value="2,500">
+        <modifier type="append" field="name" value="3000">
           <conditions>
             <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1e63-0b49-ac04-321f" type="equalTo"/>
           </conditions>
@@ -1372,7 +1372,7 @@
             <condition field="selections" scope="1411-460f-c135-a667" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6330-7561-7a32-0851" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="set" field="984d-45bb-517d-a3a2" value="2500.0">
+        <modifier type="set" field="984d-45bb-517d-a3a2" value="3000.0">
           <conditions>
             <condition field="selections" scope="1411-460f-c135-a667" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1e63-0b49-ac04-321f" type="equalTo"/>
           </conditions>
@@ -1387,7 +1387,7 @@
             <condition field="selections" scope="1411-460f-c135-a667" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6330-7561-7a32-0851" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="append" field="name" value="2,500">
+        <modifier type="append" field="name" value="3000">
           <conditions>
             <condition field="selections" scope="1411-460f-c135-a667" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1e63-0b49-ac04-321f" type="equalTo"/>
           </conditions>
