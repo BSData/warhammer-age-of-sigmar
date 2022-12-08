@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="0364-070f-023f-64d9" name="Death - Soulblight Gravelords" revision="18" battleScribeVersion="2.03" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="139" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="0364-070f-023f-64d9" name="Death - Soulblight Gravelords" revision="19" battleScribeVersion="2.03" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="145" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="d72b-b718-4010-345d" name="DEINTALOS THE EXILE" hidden="false"/>
     <categoryEntry id="68d2-327f-6699-51f3" name="THE EXILED DEAD" hidden="false"/>
+    <categoryEntry id="312a-dc3d-4c6a-2687" name="KING MORLAK VELMORN" hidden="false"/>
+    <categoryEntry id="508f-5e4f-8ffd-ff24" name="THE SONS OF VELMORN" hidden="false"/>
   </categoryEntries>
   <entryLinks>
     <entryLink id="1b98-1990-d907-a577" name="Belladamma Volga" hidden="false" collective="false" import="true" targetId="fde2-6663-ed5e-7641" type="selectionEntry"/>
@@ -67,6 +69,8 @@
     <entryLink id="735c-9fc2-c05b-4b2d" name="The Exiled Dead" hidden="false" collective="false" import="true" targetId="7cec-ef8c-e266-e541" type="selectionEntry"/>
     <entryLink id="28b9-86e1-8200-aba3" name="Battle Tactics: Terror of the Undead" hidden="false" collective="false" import="true" targetId="cdb4-1c8b-ee6d-55ab" type="selectionEntry"/>
     <entryLink id="150c-60af-8823-5dbb" name="Cado Ezechiar, the Hollow King" hidden="false" collective="false" import="true" targetId="364b-9f77-019a-1565" type="selectionEntry"/>
+    <entryLink id="e239-13e7-b452-a3ad" name="The Sons of Velmorn" hidden="false" collective="false" import="true" targetId="55fe-7871-2714-4010" type="selectionEntry"/>
+    <entryLink id="5ce9-ef70-b945-c33a" name="King Morlak Velmorn" hidden="false" collective="false" import="true" targetId="6b37-28df-c36d-2fbe" type="selectionEntry"/>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="de5e-4bdf-a5d4-f1cb" name="Battalion: Red Banqueters" hidden="false" collective="false" import="true" type="upgrade">
@@ -608,6 +612,229 @@
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
+    </selectionEntry>
+    <selectionEntry id="6b37-28df-c36d-2fbe" name="King Morlak Velmorn" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="1e42-4ba9-f849-19c0" value="1.0">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="55fe-7871-2714-4010" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1b46-11a2-4390-0abd" type="max"/>
+        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1e42-4ba9-f849-19c0" type="min"/>
+      </constraints>
+      <profiles>
+        <profile id="7bc5-52da-efac-ae58" name="King Morlak Velmorn" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
+          <characteristics>
+            <characteristic name="Move" typeId="8655-6213-2824-1752">4&quot;</characteristic>
+            <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">5</characteristic>
+            <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">10</characteristic>
+            <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">3+</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="7ac2-9987-3ada-f9c1" name="Beheading Strike" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If the unmodified hit roll for an attack made with a Baleful Tomb Blade is 6, that attack causes 2 mortal wounds to the target in addition to any damage it inflicts.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="afc6-a4c7-52fb-1930" name="Deadly Command" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Once per turn, this unit can issue a command to a friendly THE SONS OF VELMORN unit without a command point being spent.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="d114-9887-5107-e322" name="Undying Dynasty" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the start of the combat phase, roll a dice for each slain model from a friendly THE SONS OF VELMORN unit wholly within 12&quot; of this unit. On a 4+, you can return 1 slain model to that unit.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="ccac-cb80-6212-c634" name="9 or less wounds Leader" hidden="false" targetId="a8ed-ca35-24e0-cf2e" primary="false"/>
+        <categoryLink id="3535-4947-bcf4-3089" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
+        <categoryLink id="4da2-c18e-2835-268e" name="Unique" hidden="false" targetId="088b-3a27-03f7-8249" primary="false"/>
+        <categoryLink id="66ef-8eb6-52e5-9b2c" name="DEATH" hidden="false" targetId="6cdf-dd4f-0e91-e9c4" primary="false"/>
+        <categoryLink id="9d56-8086-2eb6-25c5" name="SOULBLIGHT GRAVELORDS" hidden="false" targetId="3d31-12d5-6735-011c" primary="false"/>
+        <categoryLink id="ce9f-135d-50b2-b98e" name="DEATHRATTLE" hidden="false" targetId="96d0-849a-a8cc-a6cf" primary="false"/>
+        <categoryLink id="d66c-97c7-e217-6840" name="HERO" hidden="false" targetId="4e0e-664d-51ea-0929" primary="false"/>
+        <categoryLink id="a730-cb91-df19-36c3" name="WIGHT KING" hidden="false" targetId="3844-597f-8938-7d8d" primary="false"/>
+        <categoryLink id="7f0f-44b3-c32d-b017" name="KING MORLAK VELMORN" hidden="false" targetId="312a-dc3d-4c6a-2687" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="91e2-7a73-adaa-b47d" name="Baleful Tomb Blade" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9cf9-1544-bf21-f0c6" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6bb5-76f3-9688-b1cb" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="50c6-8089-418c-68dc" name="Baleful Tomb Blade" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">5</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">2</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <entryLinks>
+        <entryLink id="8aae-dde1-b49f-b95a" name="General" hidden="false" collective="false" import="true" targetId="88d2-d540-0573-3402" type="selectionEntry"/>
+        <entryLink id="a26f-9411-d674-bc0c" name="Battalions" hidden="false" collective="false" import="true" targetId="9df7-269b-fa20-74b2" type="selectionEntryGroup"/>
+        <entryLink id="88c0-99e6-057f-7925" name="Incarnate Bonding" hidden="false" collective="false" import="true" targetId="c890-acbd-0c80-55c9" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="220.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="55fe-7871-2714-4010" name="The Sons of Velmorn" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="8add-b9c1-248f-11b2" value="1.0">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6b37-28df-c36d-2fbe" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0242-94a8-d437-a793" type="max"/>
+        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8add-b9c1-248f-11b2" type="min"/>
+      </constraints>
+      <profiles>
+        <profile id="3af8-9da3-b525-f03b" name="The Sons of Velmorn" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
+          <characteristics>
+            <characteristic name="Move" typeId="8655-6213-2824-1752">6&quot;</characteristic>
+            <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">2</characteristic>
+            <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">10</characteristic>
+            <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">4+</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="6531-3ecc-095d-2e99" name="Sir Jedran Falseborn" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Sir Jedran Falseborn has a Wounds characteristic of 4.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="bbc4-416f-2d6f-cd5b" name="Cursed Weapons" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If the unmodified wound roll for an attack made with a melee weapon by this unit is 6, that attack causes 1 mortal wound to the target in addition to any damage it inflicts.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="e0c1-0f3a-dbee-575f" name="Shield Up!" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Once per turn, at the start of the combat phase, you can say that this unit will form a shieldwall. If you do so, this unit has a Save characteristic of 3+ instead of 4+ until the end of that phase. However, if you do so, this unit cannot make pile-in moves in that phase.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="0c5e-98a2-5245-606d" name="Canny Strike" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the start of the combat phase, you can pick 1 enemy unit within 1&quot; of this unit and roll a dice. On a 2+, that unit cannot make pile-in moves in that phase.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="c34a-ec55-e81b-6171" name="New CategoryLink" hidden="false" targetId="065e-fda7-fd27-1f40" primary="true"/>
+        <categoryLink id="f20a-6b2c-afd2-931f" name="Unique" hidden="false" targetId="088b-3a27-03f7-8249" primary="false"/>
+        <categoryLink id="c4e4-ba38-4e02-f7ab" name="DEATH" hidden="false" targetId="6cdf-dd4f-0e91-e9c4" primary="false"/>
+        <categoryLink id="ad70-5a72-7f2f-471a" name="DEATHRATTLE" hidden="false" targetId="96d0-849a-a8cc-a6cf" primary="false"/>
+        <categoryLink id="9bca-f4e0-5447-aa52" name="SOULBLIGHT GRAVELORDS" hidden="false" targetId="3d31-12d5-6735-011c" primary="false"/>
+        <categoryLink id="c48f-297a-2d7d-dbe5" name="GRAVE GUARD" hidden="false" targetId="e8f4-3b13-f9d1-eb56" primary="false"/>
+        <categoryLink id="5b9f-1853-19d1-1aef" name="THE SONS OF VELMORN" hidden="false" targetId="508f-5e4f-8ffd-ff24" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="2630-90c0-b6ab-f267" name="Great Wight Blade" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ff39-f746-85dc-fe83" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d390-e17d-d794-e2c8" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="9048-1643-5c04-0da5" name="Great Wight Blade" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">2&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">1</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">2</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="5dfc-3c7f-bd4b-8e04" name="Wight Blade" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ff5c-950d-f55a-b5f5" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="aaeb-d91f-1f38-4b3a" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="0f4f-e7f3-352c-4206" name="Wight Blade" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">2</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="1d0e-ba3d-402c-338f" name="Wight Axe" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="97f6-dc35-eeaa-6b51" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a114-02b5-b72b-b662" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="1f1e-1add-86b7-5138" name="Wight Axe" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">2</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="99fb-086c-49d9-dd2e" name="Great Tomb Blade" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2de3-9b5a-397a-30a8" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="464b-b404-e909-df17" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="e867-144a-61b5-496f" name="Great Tomb Blade" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">2&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">3</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">2</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntry>
   </sharedSelectionEntries>
   <catalogueLinks>

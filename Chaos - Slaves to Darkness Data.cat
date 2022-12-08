@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="e0d8-b631-6934-ee34" name="Chaos - Slaves to Darkness Data" revision="116" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="145" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="e0d8-b631-6934-ee34" name="Chaos - Slaves to Darkness Data" revision="117" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="145" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profileTypes>
     <profileType id="56f6-e336-faed-bb00" name="Aura of Chaos Power">
       <characteristicTypes>
@@ -135,6 +135,8 @@
     </categoryEntry>
     <categoryEntry id="efee-980d-07bd-6218" name="OGROID MYRMIDON" hidden="false"/>
     <categoryEntry id="4d05-e576-bd9f-f48a" name="STD Warscroll Battalion" hidden="false"/>
+    <categoryEntry id="a20c-a150-5372-1778" name="SARRAKKAR BLACKWING" hidden="false"/>
+    <categoryEntry id="1290-2b2c-a73f-39b5" name="THE GNARLSPIRIT PACK" hidden="false"/>
   </categoryEntries>
   <sharedSelectionEntries>
     <selectionEntry id="8bc4-05d4-ff31-086b" name="Chaos Chariots" hidden="false" collective="false" import="true" type="unit">
@@ -5313,6 +5315,8 @@
         </entryLink>
         <entryLink id="314c-2e1e-aa98-5923" name="Battalions" hidden="false" collective="false" import="true" targetId="f862-da0a-22bb-e3c1" type="selectionEntryGroup"/>
         <entryLink id="2572-8352-bf0d-dd64" name="Incarnate Bonding" hidden="false" collective="false" import="true" targetId="c890-acbd-0c80-55c9" type="selectionEntryGroup"/>
+        <entryLink id="0ad2-6ca3-8085-fbd8" name="Arcane Bolt" hidden="false" collective="false" import="true" targetId="869c-168d-eba5-eacf" type="selectionEntry"/>
+        <entryLink id="77d8-efd1-83e8-9e4f" name="Mystic Shield" hidden="false" collective="false" import="true" targetId="5fdd-6634-f9f8-068a" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="160.0"/>
@@ -8433,6 +8437,216 @@ The unit can receive the following commands if they are issued by its master:</c
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
+    </selectionEntry>
+    <selectionEntry id="f418-c3b6-2ff2-05fd" name="Sarrakkar Blackwing" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="add" field="category" value="624c-a3f1-ce3c-0169">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="6cfb-e3ec-d110-80ae" type="greaterThan"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="2425-9b28-42e9-8037" value="1.0">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bd2e-7f31-f4f4-7629" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4b68-5569-2860-770c" type="max"/>
+        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2425-9b28-42e9-8037" type="min"/>
+      </constraints>
+      <profiles>
+        <profile id="7b8e-fbfe-a2e9-4346" name="Sarrakkar Blackwing" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
+          <characteristics>
+            <characteristic name="Move" typeId="8655-6213-2824-1752">6&quot;</characteristic>
+            <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">5</characteristic>
+            <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">7</characteristic>
+            <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">5+</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="f943-a591-20a0-b61e" name="Wizard" hidden="false" typeId="f55d-ee3a-1597-110f" typeName="Magic">
+          <characteristics>
+            <characteristic name="Cast/Unbind" typeId="8294-f605-2c0f-8f92">1/1</characteristic>
+            <characteristic name="Spells Known" typeId="dc9c-47d3-6931-859c">Arcane Bolt, Mystic Shield, Raptor Bolt</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="ac22-eb68-4775-66da" name="Oath of Dark Sacrifice" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the end of your hero phase, if this unit successfully cast Raptor Bolt in that phase and any enemy models were slain by that spell, this unit fulfils its oath. Once this unit has fulfilled its oath, it has a ward of 5+ until the end of the battle.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="b218-daa0-3761-38ec" name="Animalistic Hunters" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">During deployment, instead of setting up this unit on the battlefield, you can place it to one side and say that it is hunting in the shadows as a reserve unit. If you do so, at the end of your movement phase, you can set up this unit on the battlefield more than 9&quot; from all enemy units, or you can set up this unit on the battlefield more than 7&quot; from all enemy units and within 12&quot; of 1 or more enemy models that have any wounds allocated to them.
+
+Any reserve units hunting in the shadows that are not set up on the battlefield before the start of the fourth battle round are destroyed.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="aa11-5e12-4ed0-b79e" name="Raptor Bolt" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+          <characteristics>
+            <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
+            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">12&quot;</characteristic>
+            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick 1 enemy unit within range and visible to the caster. That unit suffers D3 mortal wounds.
+
+If this unit has fulfilled its oath, the range of this spell is 18&quot; instead of 12&quot; and if successfully cast, the enemy unit suffers D6 mortal wounds instead of D3.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="a819-a644-11c7-3fbc" name="CHAOS" hidden="false" targetId="7cdd-80ea-cbeb-8e16" primary="false"/>
+        <categoryLink id="4b0f-5958-299f-8a90" name="SLAVES TO DARKNESS" hidden="false" targetId="4ba7-618a-4e30-2e0c" primary="false"/>
+        <categoryLink id="28b1-fe6b-2453-3fba" name="UNDIVIDED" hidden="false" targetId="bbc8-3154-75f0-f8e2" primary="false"/>
+        <categoryLink id="867a-293c-fdf2-7284" name="MORTAL" hidden="false" targetId="a934-6d15-9932-b7ea" primary="false"/>
+        <categoryLink id="51b2-ca65-b9d6-5f08" name="DARKOATH" hidden="false" targetId="3b65-64b8-8475-1ff7" primary="false"/>
+        <categoryLink id="058f-a28b-86eb-15c2" name="HERO" hidden="false" targetId="4e0e-664d-51ea-0929" primary="false"/>
+        <categoryLink id="beac-5ac6-36ba-2541" name="WIZARD" hidden="false" targetId="4f53-8230-2f02-9639" primary="false"/>
+        <categoryLink id="29ff-0b22-31e2-5d6a" name="SARRAKKAR BLACKWING" hidden="false" targetId="a20c-a150-5372-1778" primary="false"/>
+        <categoryLink id="aaf3-f7c6-b342-982b" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
+        <categoryLink id="474c-5791-f642-6ee5" name="9 or less wounds Leader" hidden="false" targetId="a8ed-ca35-24e0-cf2e" primary="false"/>
+        <categoryLink id="0342-cdd7-61b2-16b0" name="Unique" hidden="false" targetId="088b-3a27-03f7-8249" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="078c-83e2-77f9-0f46" name="Wildstaff" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8166-8ec0-3f50-fc58" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1764-b2a9-d66c-2e49" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="7871-490d-e756-87e9" name="Wildstaff" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">2&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">3</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">D3</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <entryLinks>
+        <entryLink id="04ce-7aed-a445-1730" name="Arcane Bolt" hidden="false" collective="false" import="true" targetId="869c-168d-eba5-eacf" type="selectionEntry"/>
+        <entryLink id="6354-e01c-7d1f-26c3" name="General" hidden="false" collective="false" import="true" targetId="ef0e-df26-edb6-5ac7" type="selectionEntry"/>
+        <entryLink id="5e5e-6381-bd69-a966" name="Mystic Shield" hidden="false" collective="false" import="true" targetId="5fdd-6634-f9f8-068a" type="selectionEntry"/>
+        <entryLink id="3b71-1da1-e5e4-8366" name="Battalions" hidden="false" collective="false" import="true" targetId="f862-da0a-22bb-e3c1" type="selectionEntryGroup"/>
+        <entryLink id="cd03-3c7d-e71b-e3c4" name="Incarnate Bonding" hidden="false" collective="false" import="true" targetId="c890-acbd-0c80-55c9" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="160.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="bd2e-7f31-f4f4-7629" name="The Gnarlspirit Pack" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="add" field="category" value="624c-a3f1-ce3c-0169">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="6cfb-e3ec-d110-80ae" type="greaterThan"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="3250-e75f-617d-fde6" value="1.0">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f418-c3b6-2ff2-05fd" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="babe-47af-e435-e833" type="max"/>
+        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3250-e75f-617d-fde6" type="min"/>
+      </constraints>
+      <profiles>
+        <profile id="73ca-8aaf-dc7a-6a2c" name="The Gnarlspirit Pack" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
+          <characteristics>
+            <characteristic name="Move" typeId="8655-6213-2824-1752">6&quot;</characteristic>
+            <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">2</characteristic>
+            <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">6</characteristic>
+            <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">5+</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="8d9b-b21b-32c2-15d1" name="Gorl Spinehammer" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Gorl Spinehammer has a Wounds characteristic of 3.  Gorl Spinehammer is armed with a Spinehammer.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="f4a3-12c5-d84a-a36b" name="Animalistic Hunters" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">During deployment, instead of setting up this unit on the battlefield, you can place it to one side and say that it is hunting in the shadows as a reserve unit. If you do so, at the end of your movement phase, you can set up this unit on the battlefield more than 9&quot; from all enemy units, or you can set up this unit on the battlefield more than 7&quot; from all enemy units and within 12&quot; of 1 or more enemy models that have any wounds allocated to them.
+
+Any reserve units hunting in the shadows that are not set up on the battlefield before the start of the fourth battle round are destroyed.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="9887-d1fd-afee-a9e4" name="Oath of the Hunt" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the end of your charge phase, if this unit made a charge move in that phase and is wholly within 12&quot; of a friendly SARRAKKAR BLACKWING, this unit fulfils its oath. Once this unit has fulfilled its oath, the following effects apply until the end of the battle:
+
+• This unit has a ward of 5+.
+
+• If the unmodified hit roll for an attack made with a melee weapon by this unit is 6, that attack causes 1 mortal wound to the target in addition to any damage it inflicts.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="7660-b0e9-b109-42de" name="New CategoryLink" hidden="false" targetId="065e-fda7-fd27-1f40" primary="true"/>
+        <categoryLink id="e97a-7826-da01-4927" name="CHAOS" hidden="false" targetId="7cdd-80ea-cbeb-8e16" primary="false"/>
+        <categoryLink id="50b0-03dd-8e41-383f" name="SLAVES TO DARKNESS" hidden="false" targetId="4ba7-618a-4e30-2e0c" primary="false"/>
+        <categoryLink id="59df-ec07-dd86-bbe7" name="UNDIVIDED" hidden="false" targetId="bbc8-3154-75f0-f8e2" primary="false"/>
+        <categoryLink id="adac-e7e6-9def-9673" name="MORTAL" hidden="false" targetId="a934-6d15-9932-b7ea" primary="false"/>
+        <categoryLink id="a855-0617-577f-30e8" name="DARKOATH" hidden="false" targetId="3b65-64b8-8475-1ff7" primary="false"/>
+        <categoryLink id="10a8-4ed7-9fe3-6860" name="THE GNARLSPIRIT PACK" hidden="false" targetId="1290-2b2c-a73f-39b5" primary="false"/>
+        <categoryLink id="3b44-5a07-0966-816a" name="Unique" hidden="false" targetId="088b-3a27-03f7-8249" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="db08-66a6-386b-ccad" name="Hunting Weapons" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="82de-48b0-a192-a3b2" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fb1d-cda7-02fe-da80" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="e39a-80d5-ad8b-9f50" name="Hunting Weapons" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">4</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="c3c1-a380-32fc-b013" name="Spinehammer" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6f43-dd78-3e09-9369" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4798-15a1-1e7d-f89a" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="9f37-f2a4-409e-e6b2" name="Spinehammer" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">2&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">3</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-2</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">2</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <entryLinks>
+        <entryLink id="b3c1-8a7c-d8d2-f7be" name="Battalions" hidden="false" collective="false" import="true" targetId="f862-da0a-22bb-e3c1" type="selectionEntryGroup"/>
+      </entryLinks>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
