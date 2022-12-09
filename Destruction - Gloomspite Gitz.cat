@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="750c-157c-3186-61d3" name="Destruction - Gloomspite Gitz" revision="97" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="142" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="750c-157c-3186-61d3" name="Destruction - Gloomspite Gitz" revision="98" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="145" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="3323-8984-c803-feb5" name="Gloomspite Errata/Points, July 2019"/>
     <publication id="0dee-8846-061a-5504" name="White Dwarf - Issue 455" shortName="White Dwarf" publisher="Issue 455" publicationDate="August 2020"/>
@@ -90,6 +90,8 @@
     <categoryEntry id="eb3a-be57-699b-d09f" name="MOONCLAN General" hidden="false"/>
     <categoryEntry id="8179-1944-43fb-3b0e" name="SPIDERFANG General" hidden="false"/>
     <categoryEntry id="cc62-4b00-9336-deff" name="TROGGBOSS General" hidden="false"/>
+    <categoryEntry id="9cc7-7eae-5c78-54ff" name="GRINKRAK" hidden="false"/>
+    <categoryEntry id="5d20-58e2-7048-4131" name="GRINKRAK&apos;S LOONCOURT" hidden="false"/>
   </categoryEntries>
   <entryLinks>
     <entryLink id="d894-1877-e48a-d85d" name="Madcap Shaman" hidden="false" collective="false" import="true" targetId="4456-155d-685b-bd18" type="selectionEntry"/>
@@ -225,6 +227,8 @@
     <entryLink id="53b5-542b-813c-a472" name="Endless Spell: Scrapskuttle&apos;s Arachnacauldron" hidden="false" collective="false" import="true" targetId="9050-16f2-22bd-12b6" type="selectionEntry"/>
     <entryLink id="a3f1-cc18-66d5-ee32" name="Endless Spell: Scuttletide" hidden="false" collective="false" import="true" targetId="5a68-16ef-4275-58e1" type="selectionEntry"/>
     <entryLink id="dc84-e5e0-ad87-cbff" name="Odo Godswallow - Beast-smasher Mercenary" hidden="false" collective="false" import="true" targetId="6373-4970-e2af-dd88" type="selectionEntry"/>
+    <entryLink id="9b4a-e11e-2086-e158" name="Grinkrak the Great" hidden="false" collective="false" import="true" targetId="abf2-1ad3-e015-fee3" type="selectionEntry"/>
+    <entryLink id="f737-d8c8-fe28-6dd5" name="Grinkrak&apos;s Looncourt" hidden="false" collective="false" import="true" targetId="f6f9-aee9-3912-1538" type="selectionEntry"/>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="73c2-8a55-9faa-bb56" name="Squig Hoppers" hidden="false" collective="false" import="true" type="unit">
@@ -8119,6 +8123,219 @@ At the start of the combat phase, you can reveal 1 or more hidden NASTY SKULKERS
       <categoryLinks>
         <categoryLink id="da46-1498-2517-8446" name="General" hidden="false" targetId="b745-17c4-8fbf-8b04" primary="false"/>
       </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="abf2-1ad3-e015-fee3" name="Grinkrak the Great" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="2839-b5fe-7d75-ae9f" value="1.0">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f6f9-aee9-3912-1538" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2839-b5fe-7d75-ae9f" type="min"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4952-3b94-657d-7e2b" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="6ab2-acf9-4b55-8c9b" name="Grinkrak the Great" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
+          <characteristics>
+            <characteristic name="Move" typeId="8655-6213-2824-1752">5&quot;</characteristic>
+            <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">6</characteristic>
+            <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">5</characteristic>
+            <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">4</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="3ebc-8d04-8bc9-fe4e" name="Dead Tricksy" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This unit has a ward of 6+.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="3092-bb19-51ec-0dd2" name="&apos;I Dub Thee...&apos;" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the start of the combat phase, you can pick 1 other friendly MOONCLAN unit within 3&quot; of this unit to be dubbed. If you do so, until the end of that phase, if any models in that unit are slain, those models can fight before they are removed from play.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="f64c-3f91-34fa-bbbe" name="9 or less wounds Leader" hidden="false" targetId="a8ed-ca35-24e0-cf2e" primary="false"/>
+        <categoryLink id="0bba-07b3-c0b0-4681" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
+        <categoryLink id="0cb0-b428-3cf5-7ab7" name="Unique" hidden="false" targetId="088b-3a27-03f7-8249" primary="false"/>
+        <categoryLink id="c1ba-d215-c897-075e" name="DESTRUCTION" hidden="false" targetId="d963-a5fb-c348-2371" primary="false"/>
+        <categoryLink id="0d37-0155-8148-a555" name="GLOOMSPITE GITZ" hidden="false" targetId="19e1-59e0-e5c6-2e94" primary="false"/>
+        <categoryLink id="ad3a-0fba-bc62-acf5" name="GROT" hidden="false" targetId="ef9c-701b-aad2-4e19" primary="false"/>
+        <categoryLink id="5dab-67f6-4e8c-ee79" name="MOONCLAN" hidden="false" targetId="2736-9589-d74d-1c51" primary="false"/>
+        <categoryLink id="958d-54b3-e91b-83da" name="HERO" hidden="false" targetId="4e0e-664d-51ea-0929" primary="false"/>
+        <categoryLink id="d27e-a4f4-6a35-1a81" name="GRINKRAK" hidden="false" targetId="9cc7-7eae-5c78-54ff" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="018f-314a-71d4-8fda" name="Moon-slicer" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dba9-eef8-57d8-5bcb" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f955-f414-1f55-6b5b" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="4511-57bf-b1dc-0532" name="Moon-slicer" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">2&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">5</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">D3</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <entryLinks>
+        <entryLink id="8569-17d6-9e9d-af5d" name="General" hidden="false" collective="false" import="true" targetId="3323-24e9-4b23-a6e7" type="selectionEntry">
+          <categoryLinks>
+            <categoryLink id="c036-ffcb-f5b9-62bf" name="MOONCLAN General" hidden="false" targetId="eb3a-be57-699b-d09f" primary="false"/>
+            <categoryLink id="2fa7-a5fd-b7fe-f792" name="Unique General" hidden="false" targetId="fe3f-d230-7e2c-fba2" primary="false"/>
+          </categoryLinks>
+        </entryLink>
+        <entryLink id="48b1-43d8-218e-7e9d" name="Battalions" hidden="false" collective="false" import="true" targetId="6e6f-024b-5a57-3e3d" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="190.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="f6f9-aee9-3912-1538" name="Grinkrak&apos;s Looncourt" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="3d48-818c-d805-23ca" value="1.0">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="abf2-1ad3-e015-fee3" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3d48-818c-d805-23ca" type="min"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="742b-eb32-f700-fd9d" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="0302-165f-4ff2-2acc" name="Grinkrak&apos;s Looncourt" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
+          <characteristics>
+            <characteristic name="Move" typeId="8655-6213-2824-1752">5&quot;</characteristic>
+            <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">2</characteristic>
+            <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">5</characteristic>
+            <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">5+</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="06f3-fca4-6540-f302" name="The Looncourt&apos;s Quest" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">After this unit has been set up on the battlefield for the first time, you can pick 1 objective or 1 terrain feature in enemy territory to be the object of this unit’s quest. If you gain control of that objective or terrain feature while this unit is contesting it, this unit completes its quest. Once the quest is complete, for the rest of the battle, this unit has a ward of 4+.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="6b76-8cb6-775e-33a7" name="Grinkrak&apos;s Toadies" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Before you allocate a wound or mortal wound to a friendly GRINKRAK, or instead of making a ward roll for a wound or mortal wound that would be allocated to a friendly GRINKRAK, if this unit is within 3&quot; of that friendly GRINKRAK, you can roll a dice. On a 1-2, that wound or mortal wound is allocated to that GRINKRAK as normal. On a 3+, that wound or mortal wound is allocated to this unit instead.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="f6f2-e47a-025d-f9b0" name="New CategoryLink" hidden="false" targetId="065e-fda7-fd27-1f40" primary="true"/>
+        <categoryLink id="5e20-d0a4-3e69-6a94" name="Unique" hidden="false" targetId="088b-3a27-03f7-8249" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="8089-3f61-ae54-db95" name="Wonky Lance" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f8ee-1eab-83e4-5360" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8b94-7143-620a-c88a" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="4774-ffae-f659-b515" name="Wonky Lance" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">2&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">3</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">D3</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="6333-8e9d-5639-7b89" name="Squig Spear" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9482-1dcf-e38a-5456" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0931-6eab-d241-cff6" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="3817-b0ce-4da3-7a54" name="Squig Spear" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">2&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">3</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="7d8e-9b4f-f3af-a32c" name="Jaggedy Blade" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5ba1-0b1a-3171-4db5" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="014a-67b6-ecb8-08bd" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="e0d2-226d-9c3c-6b7b" name="Jaggedy Blade" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">2</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">4+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="5acd-9ee2-5017-fb26" name="Squigapult" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7bc4-7461-8d5c-f756" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6ad0-1e0b-b73f-3003" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="59c0-3520-6cbf-c823" name="Squigapult" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Missile</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">16&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">1</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">D3+2</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <entryLinks>
+        <entryLink id="b507-1101-1f4e-cb48" name="Battalions" hidden="false" collective="false" import="true" targetId="6e6f-024b-5a57-3e3d" type="selectionEntryGroup"/>
+      </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
