@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="86c6-f50d-4d44-9d02" name="Destruction - Ogor Mawtribes" revision="75" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="145" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="86c6-f50d-4d44-9d02" name="Destruction - Ogor Mawtribes" revision="76" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="145" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="50c5-e039-pubN80915" name="Destruction Battletome: Ironjawz"/>
     <publication id="50c5-e039-pubN81384" name="Destruction Battletome: Ogor Mawtribes"/>
     <publication id="a12c-746f-81e0-57e2" name="Battletome: Beastclaw Raiders Official Errata, July 2018"/>
     <publication id="eec8-0670-5b7c-4733" name="Battletome: Ogor Mawtribes 2022"/>
+    <publication id="6ca4-1891-8cad-cd1e" name="Battletome: Ogor Mawtribes Errata, December 2022"/>
   </publications>
   <profileTypes>
     <profileType id="f7ce-f73f-e66e-8a92" name="Damage Table: Stornhorn">
@@ -1064,12 +1065,10 @@
                     <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">3</characteristic>
                   </characteristics>
                 </profile>
-                <profile id="316a-34b8-ad55-94de" name="Reel &apos;Em In" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-                  <characteristics>
-                    <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If an attack made with a Chaitrap scores a hit on an enemy MONSTER unit, if that MONSTER unit is destroyed and not already snagged (see below), after that attack has been resolved, you can roll a dice.  On a 4+, that MONSTER unit is snagged until the start of your next shooting phase.  While a MONSTER unit is snagged, each time it make a move, if must finish that move at least as close to the unit that snagged it as it was at teh start of the move.</characteristic>
-                  </characteristics>
-                </profile>
               </profiles>
+              <infoLinks>
+                <infoLink id="979f-0f67-f0a7-a30e" name="Reel &apos;Em In" hidden="false" targetId="3129-38df-c0a0-3acc" type="profile"/>
+              </infoLinks>
               <costs>
                 <cost name="pts" typeId="points" value="0.0"/>
               </costs>
@@ -1308,12 +1307,10 @@
                     <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">3</characteristic>
                   </characteristics>
                 </profile>
-                <profile id="1944-4cfd-f200-8466" name="Reel &apos;Em In" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-                  <characteristics>
-                    <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If an attack made with a Chaitrap scores a hit on an enemy MONSTER unit, if that MONSTER unit is destroyed and not already snagged (see below), after that attack has been resolved, you can roll a dice.  On a 4+, that MONSTER unit is snagged until the start of your next shooting phase.  While a MONSTER unit is snagged, each time it make a move, if must finish that move at least as close to the unit that snagged it as it was at teh start of the move.</characteristic>
-                  </characteristics>
-                </profile>
               </profiles>
+              <infoLinks>
+                <infoLink id="7903-e1f8-1750-1aa5" name="Reel &apos;Em In" hidden="false" targetId="3129-38df-c0a0-3acc" type="profile"/>
+              </infoLinks>
               <costs>
                 <cost name="pts" typeId="points" value="0.0"/>
               </costs>
@@ -2040,9 +2037,30 @@ At the end of your movement phase, you can set up this unit anywhere on the batt
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
+        <selectionEntry id="227f-2cb2-d228-5101" name="Harpoon Launcher" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="aa26-517c-1cd5-0fc1" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="b4f4-b68f-8e4c-4520" name="Harpoon Launcher" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Missile</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">20&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">1</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">D3</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup id="7b91-5f65-f4ce-3698" name="Weapon Options" hidden="false" collective="false" import="true" defaultSelectionEntryId="6ac9-34db-cba0-94dd">
+        <selectionEntryGroup id="7b91-5f65-f4ce-3698" name="Weapon Options" hidden="false" collective="false" import="true">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9f07-bb92-fa11-d8cb" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b1d0-6896-9906-10c4" type="min"/>
@@ -2064,12 +2082,10 @@ At the end of your movement phase, you can set up this unit anywhere on the batt
                     <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">3</characteristic>
                   </characteristics>
                 </profile>
-                <profile id="f534-cf2d-6a84-688f" name="Reel &apos;Em In" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-                  <characteristics>
-                    <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If an attack made with a Chaitrap scores a hit on an enemy MONSTER unit, if that MONSTER unit is destroyed and not already snagged (see below), after that attack has been resolved, you can roll a dice.  On a 4+, that MONSTER unit is snagged until the start of your next shooting phase.  While a MONSTER unit is snagged, each time it make a move, if must finish that move at least as close to the unit that snagged it as it was at teh start of the move.</characteristic>
-                  </characteristics>
-                </profile>
               </profiles>
+              <infoLinks>
+                <infoLink id="10e5-74a9-0598-468b" name="Reel &apos;Em In" hidden="false" targetId="3129-38df-c0a0-3acc" type="profile"/>
+              </infoLinks>
               <costs>
                 <cost name="pts" typeId="points" value="0.0"/>
               </costs>
@@ -2082,27 +2098,6 @@ At the end of your movement phase, you can set up this unit anywhere on the batt
                 <profile id="1e33-3161-3709-9e0b" name="Blood Vulture" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
                   <characteristics>
                     <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If this unit is armed with a Blood Vulture, at the start of your shooting phase, pick 1 enemy unit on the battlefield that is visible to it and roll a dice. On a 2+, that unit suffers 1 mortal wound.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="points" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="6ac9-34db-cba0-94dd" name="Harpoon Launcher" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="34de-accc-5b42-434e" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="afe4-485a-1cc7-acd9" name="Harpoon Launcher" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Type" typeId="655c-362e-a663-3e50">Missile</characteristic>
-                    <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">20&quot;</characteristic>
-                    <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">1</characteristic>
-                    <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
-                    <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
-                    <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
-                    <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">D3</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -2268,9 +2263,30 @@ At the end of your movement phase, you can set up this unit anywhere on the batt
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
+        <selectionEntry id="198d-45aa-a2e8-c8db" name="Harpoon Launcher" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cb4e-3e7b-03db-e11a" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="db1d-db25-12cd-4ea8" name="Harpoon Launcher" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Missile</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">20&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">1</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">D3</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup id="a8c8-a5a1-4812-55f3" name="Weapon Options" hidden="false" collective="false" import="true" defaultSelectionEntryId="73b6-c55a-e3f8-39d6">
+        <selectionEntryGroup id="a8c8-a5a1-4812-55f3" name="Weapon Options" hidden="false" collective="false" import="true">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="09c5-f2b5-6bf8-ebee" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3a09-1a2e-b0c0-068d" type="min"/>
@@ -2292,12 +2308,10 @@ At the end of your movement phase, you can set up this unit anywhere on the batt
                     <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">3</characteristic>
                   </characteristics>
                 </profile>
-                <profile id="a37a-aedf-fa87-983c" name="Reel &apos;Em In" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-                  <characteristics>
-                    <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If an attack made with a Chaitrap scores a hit on an enemy MONSTER unit, if that MONSTER unit is destroyed and not already snagged (see below), after that attack has been resolved, you can roll a dice.  On a 4+, that MONSTER unit is snagged until the start of your next shooting phase.  While a MONSTER unit is snagged, each time it make a move, if must finish that move at least as close to the unit that snagged it as it was at teh start of the move.</characteristic>
-                  </characteristics>
-                </profile>
               </profiles>
+              <infoLinks>
+                <infoLink id="f864-3097-9543-7578" name="Reel &apos;Em In" hidden="false" targetId="3129-38df-c0a0-3acc" type="profile"/>
+              </infoLinks>
               <costs>
                 <cost name="pts" typeId="points" value="0.0"/>
               </costs>
@@ -2310,27 +2324,6 @@ At the end of your movement phase, you can set up this unit anywhere on the batt
                 <profile id="b732-0ba1-992d-e764" name="Blood Vulture" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
                   <characteristics>
                     <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If this unit is armed with a Blood Vulture, at the start of your shooting phase, pick 1 enemy unit on the battlefield that is visible to it and roll a dice. On a 2+, that unit suffers 1 mortal wound.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="points" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="73b6-c55a-e3f8-39d6" name="Harpoon Launcher" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3666-df1b-ba9d-cf77" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="652b-8bf3-53cb-7925" name="Harpoon Launcher" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Type" typeId="655c-362e-a663-3e50">Missile</characteristic>
-                    <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">20&quot;</characteristic>
-                    <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">1</characteristic>
-                    <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
-                    <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
-                    <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
-                    <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">D3</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -4689,9 +4682,9 @@ Shreek: In your shooting phase, you can pick 1 enemy unit within 18&quot; of thi
             <characteristic name="Description" typeId="f882-48d5-21a4-1787">Pick 1 enemy HERO or enemy MONSTER. You complete this tactic if that enemy unit is destroyed within 6&quot; of an empty Great Mawpot in your army.</characteristic>
           </characteristics>
         </profile>
-        <profile id="9dd1-5ba0-8e73-51f2" name="Eat Your Fill" hidden="false" typeId="eba0-4bf6-65fe-fdbc" typeName="Battle Tactic">
+        <profile id="9dd1-5ba0-8e73-51f2" name="Eat Your Fill" publicationId="6ca4-1891-8cad-cd1e" hidden="false" typeId="eba0-4bf6-65fe-fdbc" typeName="Battle Tactic">
           <characteristics>
-            <characteristic name="Description" typeId="f882-48d5-21a4-1787">You complete this tactic at the start of the combat phase if every friendly OGOR unit is eating.</characteristic>
+            <characteristic name="Description" typeId="f882-48d5-21a4-1787">You complete this tactic at the start of the combat phase if every friendly OGOR unit on the battlefield is eating.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -7441,6 +7434,11 @@ D6 Everwinter’s Blessing Result
     <profile id="d10a-39a1-1e44-7551" name="Alfrostun Avalanche" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
       <characteristics>
         <characteristic name="Battalion Ability Details" typeId="08e0-9ead-1dbe-c801">Subtract 1 from rolls made for enemy units within 3&quot; of any units in this battalion for the purposes of the Grasp of the Everwinter battle trait (pg 64).</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="3129-38df-c0a0-3acc" name="Reel &apos;Em In" publicationId="6ca4-1891-8cad-cd1e" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+      <characteristics>
+        <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If an attack made with a Chaintrap scores a hit on an enemy MONSTER unit, if that MONSTER unit is not destroyed and not already snagged (see below), after that attack has been resolved, you can roll a dice. On a 4+, that MONSTER unit is snagged until the start of your next shooting phase. While a MONSTER unit is snagged and the unit that snagged it is on the battlefield, each time that MONSTER unit makes a move, it must finish that move at least as close to the unit that snagged it as it was at the start of the move.</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
