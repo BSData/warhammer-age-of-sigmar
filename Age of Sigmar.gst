@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="145" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="146" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <publications>
     <publication id="e51d-b1a3-pubEC" name="The General&apos;s Handbook"/>
     <publication id="e51d-b1a3-pubEQ" name="Core Rules"/>
@@ -1861,6 +1861,18 @@
         <categoryLink id="96da-0373-6321-9640" name="New CategoryLink" hidden="false" targetId="1974-3f49-7f0b-8422" primary="true"/>
       </categoryLinks>
     </entryLink>
+    <entryLink id="c0a5-d926-e44b-3978" name="Tiers of Battle" hidden="true" collective="false" import="true" targetId="192b-3ef0-3f9b-9940" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f5c9-2d9a-2ffb-edd5" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="cc20-099b-cec2-34ca" name="New CategoryLink" hidden="false" targetId="1974-3f49-7f0b-8422" primary="true"/>
+      </categoryLinks>
+    </entryLink>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="869c-168d-eba5-eacf" name="Arcane Bolt" hidden="false" collective="false" import="true" type="upgrade">
@@ -2732,6 +2744,114 @@ In addition, this incarnate can carry out the Devour Endless Spell monstrous ram
           </characteristics>
         </profile>
       </profiles>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="192b-3ef0-3f9b-9940" name="Tiers of Battle" hidden="false" collective="false" import="true" type="upgrade">
+      <selectionEntryGroups>
+        <selectionEntryGroup id="d592-b688-2f3f-7d86" name="Tier of Battle" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bfb5-6475-e98f-50f5" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7c03-eba2-fa12-2e0a" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="8d60-e819-f8a2-12cd" name="Lower" hidden="false" collective="false" import="true" type="upgrade">
+              <entryLinks>
+                <entryLink id="212f-ed30-85ca-d896" name="Extra Enhancement: Artefacts of Power" hidden="false" collective="false" import="true" targetId="2a8b-93fa-e1b9-4102" type="selectionEntry">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="603d-27f9-630a-6b0c" type="min"/>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9956-1779-e8aa-a2c4" type="max"/>
+                  </constraints>
+                </entryLink>
+                <entryLink id="644a-1f10-19e0-f966" name="Extra Enhancement: Prayer Scriptures" hidden="false" collective="false" import="true" targetId="24e6-c9b0-8d0d-02a2" type="selectionEntry">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0e5f-0bef-605f-e7eb" type="min"/>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d88d-46cb-4ff5-a3b5" type="max"/>
+                  </constraints>
+                </entryLink>
+                <entryLink id="bd8e-2716-a73e-2d75" name="Extra Enhancement: Spell Lores" hidden="false" collective="false" import="true" targetId="bdb0-7f20-53ff-f804" type="selectionEntry">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4e44-9538-826c-4e88" type="min"/>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e634-5b95-3880-49c1" type="max"/>
+                  </constraints>
+                </entryLink>
+                <entryLink id="281e-5a13-558a-1428" name="Extra Enhancement: Unique Enhancement" hidden="false" collective="false" import="true" targetId="c893-b6c9-b1ff-dce5" type="selectionEntry">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6dc6-af4e-e27d-2434" type="max"/>
+                    <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2d0e-724c-87e7-1874" type="min"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="9252-01d9-4127-8b81" name="Middle" hidden="false" collective="false" import="true" type="upgrade">
+              <entryLinks>
+                <entryLink id="c1a7-c7f5-3622-b6b0" name="Extra Enhancement: Artefacts of Power" hidden="false" collective="false" import="true" targetId="2a8b-93fa-e1b9-4102" type="selectionEntry">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="916d-7fd0-c6d1-bc9c" type="min"/>
+                    <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2d6c-7af1-45ba-1823" type="max"/>
+                  </constraints>
+                </entryLink>
+                <entryLink id="7cfe-1b80-1ff8-cd86" name="Extra Enhancement: Prayer Scriptures" hidden="false" collective="false" import="true" targetId="24e6-c9b0-8d0d-02a2" type="selectionEntry">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9c52-4b76-59bf-78ab" type="min"/>
+                    <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3e7e-981c-2d23-f6ff" type="max"/>
+                  </constraints>
+                </entryLink>
+                <entryLink id="a89f-39fe-7bb3-de85" name="Extra Enhancement: Spell Lores" hidden="false" collective="false" import="true" targetId="bdb0-7f20-53ff-f804" type="selectionEntry">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="07bc-dddd-4282-9284" type="min"/>
+                    <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="76a6-7aff-05f8-25a7" type="max"/>
+                  </constraints>
+                </entryLink>
+                <entryLink id="ad94-f4fa-eb22-96e4" name="Extra Enhancement: Unique Enhancement" hidden="false" collective="false" import="true" targetId="c893-b6c9-b1ff-dce5" type="selectionEntry">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ab1f-b6b9-204c-02d1" type="max"/>
+                    <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4e2d-82b7-929c-8b3f" type="min"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="eda1-8ab2-c2cb-150f" name="Higher" hidden="false" collective="false" import="true" type="upgrade">
+              <entryLinks>
+                <entryLink id="aa23-764f-a9df-3a18" name="Extra Enhancement: Artefacts of Power" hidden="false" collective="false" import="true" targetId="2a8b-93fa-e1b9-4102" type="selectionEntry">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1176-a7f5-008f-5cb5" type="min"/>
+                    <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="deea-a01c-edf7-e765" type="max"/>
+                  </constraints>
+                </entryLink>
+                <entryLink id="0254-8cea-94a4-55bb" name="Extra Enhancement: Prayer Scriptures" hidden="false" collective="false" import="true" targetId="24e6-c9b0-8d0d-02a2" type="selectionEntry">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3474-b1bf-3789-4f74" type="min"/>
+                    <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="00f7-c6c1-6ff9-7e4c" type="max"/>
+                  </constraints>
+                </entryLink>
+                <entryLink id="fa98-05ad-7936-4590" name="Extra Enhancement: Spell Lores" hidden="false" collective="false" import="true" targetId="bdb0-7f20-53ff-f804" type="selectionEntry">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bbba-0a9b-082f-7b34" type="min"/>
+                    <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e2f5-8846-a52e-2603" type="max"/>
+                  </constraints>
+                </entryLink>
+                <entryLink id="c940-e632-558b-6d45" name="Extra Enhancement: Unique Enhancement" hidden="false" collective="false" import="true" targetId="c893-b6c9-b1ff-dce5" type="selectionEntry">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="64dc-c688-ff83-f489" type="max"/>
+                    <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="168f-128b-14b5-f9e4" type="min"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
