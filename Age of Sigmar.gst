@@ -5180,6 +5180,9 @@ In addition, this incarnate can carry out the Devour Endless Spell monstrous ram
                 <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="48cf-6d78-dcd1-26f9" type="min"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5940-9054-64f9-a784" type="max"/>
               </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
             </selectionEntry>
             <selectionEntry id="7ba6-6f00-3169-e578" name="Galletian Command - 1 Infantry" hidden="true" collective="false" import="true" type="upgrade">
               <modifiers>
@@ -5209,6 +5212,9 @@ In addition, this incarnate can carry out the Devour Endless Spell monstrous ram
                 <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c514-d77e-0952-2140" type="min"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="bf64-1b8d-a302-867b" type="max"/>
               </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -5252,6 +5258,9 @@ In addition, this incarnate can carry out the Devour Endless Spell monstrous ram
                 <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c0f6-547c-0c84-55ad" type="min"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9577-bd47-9a9e-f76a" type="max"/>
               </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -5295,6 +5304,9 @@ In addition, this incarnate can carry out the Devour Endless Spell monstrous ram
                 <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ebfa-00a5-a90e-ee6b" type="min"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a9ed-ad85-f300-11ee" type="max"/>
               </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -6024,6 +6036,9 @@ In addition, this incarnate can carry out the Devour Endless Spell monstrous ram
                   </characteristics>
                 </profile>
               </profiles>
+              <categoryLinks>
+                <categoryLink id="5f88-3f30-696f-e2cb" name="Grand Strategy" hidden="false" targetId="5dff-3614-49fd-c3e4" primary="false"/>
+              </categoryLinks>
               <costs>
                 <cost name="pts" typeId="points" value="0.0"/>
               </costs>
@@ -6039,6 +6054,9 @@ In addition, this incarnate can carry out the Devour Endless Spell monstrous ram
                   </characteristics>
                 </profile>
               </profiles>
+              <categoryLinks>
+                <categoryLink id="a48f-03e4-7fbf-92c8" name="Grand Strategy" hidden="false" targetId="5dff-3614-49fd-c3e4" primary="false"/>
+              </categoryLinks>
               <costs>
                 <cost name="pts" typeId="points" value="0.0"/>
               </costs>
@@ -6054,6 +6072,9 @@ In addition, this incarnate can carry out the Devour Endless Spell monstrous ram
                   </characteristics>
                 </profile>
               </profiles>
+              <categoryLinks>
+                <categoryLink id="baa4-0486-eede-9f40" name="Grand Strategy" hidden="false" targetId="5dff-3614-49fd-c3e4" primary="false"/>
+              </categoryLinks>
               <costs>
                 <cost name="pts" typeId="points" value="0.0"/>
               </costs>
