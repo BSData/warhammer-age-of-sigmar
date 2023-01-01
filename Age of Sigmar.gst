@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="149" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="151" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <publications>
     <publication id="e51d-b1a3-pubEC" name="The General&apos;s Handbook"/>
     <publication id="e51d-b1a3-pubEQ" name="Core Rules"/>
@@ -29,7 +29,7 @@
     <publication id="e984-0732-33ea-1669" name="Season of War - Thondia"/>
     <publication id="b393-b3a1-628b-d5ca" name="General&apos;s Handbook 2022"/>
     <publication id="2cb9-2931-59e8-5ae9" name="Battlescroll: Galletian Reinforcement - October 2022" publisherUrl="https://www.warhammer-community.com/wp-content/uploads/2022/10/NDq0U3c5F0hiPLeW.pdf"/>
-    <publication id="4911-03f2-4062-53db" name="General&apos;s Handbook 2023"/>
+    <publication id="4911-03f2-4062-53db" name="General&apos;s Handbook 2022-23 - Season 2"/>
   </publications>
   <costTypes>
     <costType id="points" name="pts" defaultCostLimit="0.0" hidden="false"/>
@@ -2149,26 +2149,46 @@
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c832-531d-90a4-df56" type="max"/>
       </constraints>
       <profiles>
-        <profile id="8f7b-9a39-608a-ca85" name="Realm Command: No Retreat, No Surrender" hidden="false" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
+        <profile id="8f7b-9a39-608a-ca85" name="Realm Command: No Retreat, No Surrender" publicationId="4911-03f2-4062-53db" page="13" hidden="false" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
           <characteristics>
             <characteristic name="Command Ability Details" typeId="1b71-4c83-4e8c-093f">You can use this command ability at the start of the combat phase.  The unit that receives the command must be a friendly unit that is not a HERO or MONSTER, that did not charge in the same turn, and that is within 3&quot; of an enemy unit.  That unit cannot make pile-in moves in that phase, but add 1 to the Attacks characteristic of melee weapons used by that unit until the end of that phase (excluding those of its mounts, if it has any).</characteristic>
           </characteristics>
         </profile>
-        <profile id="0efc-5f3f-0ab1-5f56" name="Grinding Teeth of Gallet" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+        <profile id="0efc-5f3f-0ab1-5f56" name="Grinding Teeth of Gallet" publicationId="4911-03f2-4062-53db" page="13" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
           <characteristics>
             <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
             <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">12&quot;</characteristic>
             <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick 1 objective within range and visible to the caster.  Then, roll a dice for each unit within 6&quot; of that objective.  On a 4+, that unit suffers D6 mortal wounds.</characteristic>
           </characteristics>
         </profile>
-        <profile id="bf57-a5e5-a7c9-66dc" name="Galletian Champion" hidden="false" typeId="6bf0-7801-561f-cc28" typeName="Special Rules">
+        <profile id="bf57-a5e5-a7c9-66dc" name="Galletian Champions" publicationId="4911-03f2-4062-53db" page="12" hidden="false" typeId="6bf0-7801-561f-cc28" typeName="Special Rules">
           <characteristics>
-            <characteristic name="Description" typeId="82bd-2ffd-8589-576c">HERO with a Wounds characteristic of less than 10, that does not have a mount and is not Unique.</characteristic>
+            <characteristic name="Description" typeId="82bd-2ffd-8589-576c">HEROES with a Wounds characteristic of less than 10, that do not have a mount and that are not Unique gain the GALLETIAN CHAMPION keyword.</characteristic>
           </characteristics>
         </profile>
         <profile id="5268-b17a-b711-5ec9" name="Infantry" hidden="false" typeId="6bf0-7801-561f-cc28" typeName="Special Rules">
           <characteristics>
             <characteristic name="Description" typeId="82bd-2ffd-8589-576c">Unit with a Wounds characteristic of 4 or less that is not Leader, Artillery or Behemoth and does not have a mount.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="a94e-692a-45fe-7b14" name="Heroic Action: Strike at the Opening" publicationId="4911-03f2-4062-53db" page="12" hidden="false" typeId="fff7-7178-1bdb-79d1" typeName="Heroic Action">
+          <characteristics>
+            <characteristic name="Description" typeId="ff08-d093-0b68-a4d6">Pick 1 friendly GALLETIAN CHAMPION within 3&quot; of an enemy unit. That HERO can fight if it has not already fought in that phase. However, that HERO cannot fight again in that phase and the strike-last effect applies to that HERO until the end of the turn.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="f526-e225-240d-6e1b" name="Heroic Action: Lead by Example" publicationId="4911-03f2-4062-53db" page="12" hidden="false" typeId="fff7-7178-1bdb-79d1" typeName="Heroic Action">
+          <characteristics>
+            <characteristic name="Description" typeId="ff08-d093-0b68-a4d6">Pick 1 friendly GALLETIAN CHAMPION that has a Sworn Bodyguard unit (pg 14) and that has just carried out the ‘Strike at the Opening’ heroic action. If that Sworn Bodyguard unit is wholly within 6&quot; of that GALLETIAN CHAMPION and within 3&quot; of an enemy unit, that Sworn Bodyguard unit can fight if it has not already fought in that phase. However, that unit cannot fight again in that phase and the strike-last effect applies to that unit until the end of the turn.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="f9f7-483a-7889-4485" name="Desperate Action" publicationId="4911-03f2-4062-53db" page="12" hidden="false" typeId="6bf0-7801-561f-cc28" typeName="Special Rules">
+          <characteristics>
+            <characteristic name="Description" typeId="82bd-2ffd-8589-576c">If you are taking the second turn in the current battle round, at the start of your hero phase, you can pick 1 friendly GALLETIAN CHAMPION on the battlefield to carry out 2 different heroic actions in that phase instead of 1.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="dbfe-c168-1237-1ec6" name="The Key to Victory" publicationId="4911-03f2-4062-53db" page="12" hidden="false" typeId="6bf0-7801-561f-cc28" typeName="Special Rules">
+          <characteristics>
+            <characteristic name="Description" typeId="82bd-2ffd-8589-576c">Friendly GALLETIAN CHAMPIONS cannot be picked as the target of attacks made with missile weapons while they are within 1&quot; of any friendly Battleline units.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -3249,7 +3269,7 @@ In addition, this incarnate can carry out the Devour Endless Spell monstrous ram
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="b613-f3b6-6918-a718" name="Battle Tactics (GHB2023)" page="" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="b613-f3b6-6918-a718" name="Battle Tactics (GHB2023)" publicationId="4911-03f2-4062-53db" page="17" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a716-9efe-3cc7-3f69" type="max"/>
       </constraints>
@@ -3299,7 +3319,7 @@ In addition, this incarnate can carry out the Devour Endless Spell monstrous ram
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="9e66-17d5-01c5-6bbe" name="Core Battalion: Galletian Command" hidden="true" collective="false" import="true" type="upgrade">
+    <selectionEntry id="9e66-17d5-01c5-6bbe" name="Core Battalion: Galletian Command" publicationId="4911-03f2-4062-53db" page="14" hidden="true" collective="false" import="true" type="upgrade">
       <modifiers>
         <modifier type="set" field="hidden" value="false">
           <conditionGroups>
@@ -3335,7 +3355,7 @@ In addition, this incarnate can carry out the Devour Endless Spell monstrous ram
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="9205-24bc-d583-d3de" name="Core Battalion: Galletian Sharpshooters" hidden="true" collective="false" import="true" type="upgrade">
+    <selectionEntry id="9205-24bc-d583-d3de" name="Core Battalion: Galletian Sharpshooters" publicationId="4911-03f2-4062-53db" page="14" hidden="true" collective="false" import="true" type="upgrade">
       <modifiers>
         <modifier type="set" field="hidden" value="false">
           <conditionGroups>
@@ -3370,7 +3390,7 @@ In addition, this incarnate can carry out the Devour Endless Spell monstrous ram
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="7553-d853-b719-2278" name="Core Battalion: Galletian Veterans" hidden="true" collective="false" import="true" type="upgrade">
+    <selectionEntry id="7553-d853-b719-2278" name="Core Battalion: Galletian Veterans" publicationId="4911-03f2-4062-53db" page="14" hidden="true" collective="false" import="true" type="upgrade">
       <modifiers>
         <modifier type="set" field="hidden" value="false">
           <conditionGroups>
@@ -5962,7 +5982,7 @@ In addition, this incarnate can carry out the Devour Endless Spell monstrous ram
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup id="a265-30d5-4c83-ba98" name="GHB 2023 Grand Strategies" hidden="true" collective="false" import="true">
+        <selectionEntryGroup id="a265-30d5-4c83-ba98" name="GHB 2023 Grand Strategies" publicationId="4911-03f2-4062-53db" page="16" hidden="true" collective="false" import="true">
           <modifiers>
             <modifier type="set" field="hidden" value="false">
               <conditions>
@@ -6206,6 +6226,164 @@ In addition, this incarnate can carry out the Devour Endless Spell monstrous ram
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6059-cc4f-4bb9-9e36" type="max"/>
             <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0268-d00b-8709-08a4" type="min"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="d27f-9ad5-990c-2915" name="Relics of Gallet" publicationId="4911-03f2-4062-53db" page="15" hidden="true" collective="false" import="true">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9f18-9ffb-0267-3e08" type="greaterThan"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="89f7-d50b-0aa9-01ce" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="82d1-1465-25ee-6abd" type="max"/>
+      </constraints>
+      <selectionEntries>
+        <selectionEntry id="3e92-e580-e9c6-b719" name="Tuskhelm" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1094-bebe-7345-f223" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="8b9f-c00c-85fa-8945" name="Tuskhelm" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
+              <characteristics>
+                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">After the bearer makes a charge move, you can pick 1 enemy unit within 1&quot; of the bearer.  If you do so, roll a number of dice equal to the unmodified charge roll for that charge move.   For each 4+, the target suffers 1 mortal wound.  If the bearer already has an ability with an effect that triggers after they make a charge move, you must pick which effect applies (you cannot use both).</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <categoryLinks>
+            <categoryLink id="f14c-d390-d19e-062d" name="Artefact" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
+          </categoryLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="4a99-5247-e2b9-3bb9" name="Nightflyer Cloak" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4e69-9572-6d39-d72f" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="9f5e-d4a2-5477-97dd" name="Nightflyer Cloak" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
+              <characteristics>
+                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">During deployment, instead of setting up the bearer on the battlefield, you can place them to one side and say that they are set up in ambush as a reserve unit.  At the end of your movement phase, you can set up the bearer on the battlefield, within 1&quot; of a friendly Battleline unit and more than 9&quot; from all enemy units.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="cbf6-c513-5a7f-5557" name="Gryph-feather Charm" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b9af-1a30-0241-f515" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="4612-6a86-cea6-3231" name="Gryph-feather Charm" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
+              <characteristics>
+                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">The bearer has a ward of 5+.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="8ea7-6458-0b70-b429" name="Aspects of the Champion" publicationId="4911-03f2-4062-53db" page="15" hidden="true" collective="false" import="true">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9f18-9ffb-0267-3e08" type="greaterThan"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="89f7-d50b-0aa9-01ce" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6135-a2e5-bd6a-83bc" type="max"/>
+      </constraints>
+      <selectionEntries>
+        <selectionEntry id="1b2c-4723-5ff0-773e" name="Tunnel Master" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3d0e-bc44-8096-dd8c" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="83a5-2f00-cdfd-745c" name="Tunnel Master" hidden="false" typeId="6bf0-7801-561f-cc28" typeName="Special Rules">
+              <characteristics>
+                <characteristic name="Description" typeId="82bd-2ffd-8589-576c">Once per battle, instead of picking this GALLETIAN CHAMPION to make a normal move, you can remove it from the battlefield and set it up again on the battlefield more than 9&quot; from all enemy units.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <categoryLinks>
+            <categoryLink id="de38-c1d0-4a2f-d22e" name="Unique Enhancement" hidden="false" targetId="dbef-7476-90e0-f480" primary="false"/>
+          </categoryLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="3ad3-a53e-af7a-1042" name="Fuelled by Ghurish Rage" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2d8e-16e2-943d-e363" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="adcd-2b37-e163-e5ab" name="Fuelled by Ghurish Rage" hidden="false" typeId="6bf0-7801-561f-cc28" typeName="Special Rules">
+              <characteristics>
+                <characteristic name="Description" typeId="82bd-2ffd-8589-576c">Once per battle, before you allocate a wound or mortal wound to this GALLETIAN CHAMPION and that wound or mortal wound would cause it to be slain, you can roll a dice.  On a 3+, that wound or mortal wound is negated, you can heal up to D3 wounds allocated to it and any wounds that currently remain to be allocated to it are negated.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <categoryLinks>
+            <categoryLink id="3e0e-a1cd-17a0-a646" name="Unique Enhancement" hidden="false" targetId="dbef-7476-90e0-f480" primary="false"/>
+          </categoryLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="4ee5-ee4b-59a0-2df8" name="Stubborn as a Rhinox" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6c98-31ef-c61a-8d5c" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="ca73-aef2-94df-f804" name="Stubborn as a Rhinox" hidden="false" typeId="6bf0-7801-561f-cc28" typeName="Special Rules">
+              <characteristics>
+                <characteristic name="Description" typeId="82bd-2ffd-8589-576c">This GALLETIAN CHAMPION counts as 10 models for the purposes of contesting objectives while there are no enemy GALLETIAN CHAMPIONS contesting the same objective.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <categoryLinks>
+            <categoryLink id="93e0-e751-30f1-8633" name="Unique Enhancement" hidden="false" targetId="dbef-7476-90e0-f480" primary="false"/>
+          </categoryLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="85b0-cfd8-7f65-dc7c" name="Leadership of the Alpha" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7846-fd23-f260-af4b" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="5f47-8bbf-59a2-63a6" name="Leadership of the Alpha" hidden="false" typeId="6bf0-7801-561f-cc28" typeName="Special Rules">
+              <characteristics>
+                <characteristic name="Description" typeId="82bd-2ffd-8589-576c">Once per battle, this GALLETIAN CHAMPION can issue one of the following commands up to 3 times in the same phase: Rally, All-out Attack, All-out Defence or Redeploy.  If it does so, no command point is spent the second and third times this GALLETIAN CHAMPION issues that command in that phase.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <categoryLinks>
+            <categoryLink id="06c1-e520-ee8d-b487" name="Unique Enhancement" hidden="false" targetId="dbef-7476-90e0-f480" primary="false"/>
+          </categoryLinks>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
