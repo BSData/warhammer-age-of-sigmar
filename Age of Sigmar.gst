@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="151" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="152" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <publications>
     <publication id="e51d-b1a3-pubEC" name="The General&apos;s Handbook"/>
     <publication id="e51d-b1a3-pubEQ" name="Core Rules"/>
@@ -30,6 +30,7 @@
     <publication id="b393-b3a1-628b-d5ca" name="General&apos;s Handbook 2022"/>
     <publication id="2cb9-2931-59e8-5ae9" name="Battlescroll: Galletian Reinforcement - October 2022" publisherUrl="https://www.warhammer-community.com/wp-content/uploads/2022/10/NDq0U3c5F0hiPLeW.pdf"/>
     <publication id="4911-03f2-4062-53db" name="General&apos;s Handbook 2022-23 - Season 2"/>
+    <publication id="d78d-74e8-6533-986c" name="Season of War: Thondia Errata January 2023"/>
   </publications>
   <costTypes>
     <costType id="points" name="pts" defaultCostLimit="0.0" hidden="false"/>
@@ -2460,7 +2461,7 @@
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="points" value="485.0"/>
+        <cost name="pts" typeId="points" value="480.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="0a8d-cde8-fba1-6c0d" name="Reinforced" hidden="false" collective="false" import="true" type="upgrade">
@@ -2891,9 +2892,9 @@ Add 1 to casting, dispelling and unbinding rolls for a WIZARD that is within dom
             <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If a MONSTER is slain by wounds inflicted by this incarnate&apos;s attacks, increase this incarnate&apos;s level by 1. </characteristic>
           </characteristics>
         </profile>
-        <profile id="db6f-6bb3-7cb5-dc32" name="Wild Form" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+        <profile id="db6f-6bb3-7cb5-dc32" name="Wild Form" publicationId="d78d-74e8-6533-986c" page="1" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Add 1 to hit rolls for attacks made by this incarnate while it is in its wild form. This incarnate can run and still charge in the same turn while it is in its wild form. If this incarnate is in its wild form and is within 12&quot; of a  unit or an endless spell at the start of your charge phase, it must attempt a charge and must make a charge move if it is possible for it to do so. </characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Add 1 to hit rolls for attacks made by this incarnate while it is in its wild form. This incarnate can run and still charge in the same turn while it is in its wild form. If this incarnate is in its wild form, is within 12&quot; of another unit or an endless spell, and is not within 3&quot; of another unit at the start of your charge phase, it must attempt a charge and must make a charge move if it is possible for it to do so.</characteristic>
           </characteristics>
         </profile>
         <profile id="0c29-9e07-7375-55c2" name="Inflamed Savagery" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
