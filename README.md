@@ -1,4 +1,4 @@
-Warhammer Age of Sigmar v3.0 (2021 Edition)
+Warhammer Age of Sigmar v3.2 (2023 Edition)
 ============================
 
 [![Latest release](https://img.shields.io/github/release/BSData/warhammer-age-of-sigmar.svg?style=flat-square)](https://github.com/BSData/warhammer-age-of-sigmar/releases/latest)
@@ -14,14 +14,15 @@ Warhammer Age of Sigmar v3.0 (2021 Edition)
 **The Battlescribe data editor can cause problems when merging updates. Because of this, and also to avoid duplicated 
 effort where multiple people are working on the same files, please join us on Discord before you commit changes to the files.**
 
-**UPDATE AoS 3.0:**
-The Catalogs have been updated to support Matched Play points and FAQ's for AoS v3.0 release. 
-The **\***Pitched Battle***\** Profile supports matched play and includes the new Core Battalions.
-The new **\***Narrative Battle***\** Profile supports play with warscroll Battalions.  This is where you'll find all the previous
-edition Battalion warscrolls.
+**UPDATE AoS 3.2:**
+The Catalogs have been updated to support Matched Play points and FAQ's for AoS v3.2 release. 
+The **\***Pitched Battle GHB 2021***\** Profile supports matched play from the GHB 2021 edition.
+The **\***Pitched Battle GHB 2022***\** Profile supports matched play from the GHB 2022 (Season 1) edition.
+The **\***Pitched Battle GHB 2023***\** Profile supports matched play from the GHB 2023 (Season 2) edition.
+The **\***Narrative Battle***\** Profile supports play with warscroll Battalions.  This is where you'll find all the previous
+edition Battalion warscrolls.  The Narrative Battle profile has limited validation.
 
-The changes for AoS 3.0 are significant and undoubtedly some things are broken, missing or just plain wrong.  Please file a bug
-for errors, omissions per the bug reporting documented below.
+Please file a bug for errors, omissions per the bug reporting documented below.
 
 ## Overview ##
 
