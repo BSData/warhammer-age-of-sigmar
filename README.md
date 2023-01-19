@@ -15,12 +15,14 @@ Warhammer Age of Sigmar v3.2 (2023 Edition)
 effort where multiple people are working on the same files, please join us on Discord before you commit changes to the files.**
 
 **UPDATE AoS 3.2:**
-The Catalogs have been updated to support Matched Play points and FAQ's for AoS v3.2 release. 
-The **\***Pitched Battle GHB 2021***\** Profile supports matched play from the GHB 2021 edition.
-The **\***Pitched Battle GHB 2022***\** Profile supports matched play from the GHB 2022 (Season 1) edition.
-The **\***Pitched Battle GHB 2023***\** Profile supports matched play from the GHB 2023 (Season 2) edition.
-The **\***Narrative Battle***\** Profile supports play with warscroll Battalions.  This is where you'll find all the previous
-edition Battalion warscrolls.  The Narrative Battle profile has limited validation.
+The Catalogs have been updated to support Matched Play points and FAQ's for the General's Handbook
+Pitched Battles 2022-23 - Season 2.  Previous edition General's Handbook rules continue to be supported.
+- **\***Pitched Battle GHB 2023***\** Profile supports matched play from the GHB 2023 (Season 2) edition.
+- **\***Pitched Battle GHB 2022***\** Profile supports matched play from the GHB 2022 (Season 1) edition.
+- **\***Pitched Battle GHB 2021***\** Profile supports matched play from the GHB 2021 edition.
+- **\***Narrative Battle***\** Profile supports play with warscroll Battalions.  
+
+The Narrative Battle profile has limited validation.  The Narrative Battle profile is where you'll find all the of the Battalion warscrolls.  
 
 Please file a bug for errors, omissions per the bug reporting documented below.
 
