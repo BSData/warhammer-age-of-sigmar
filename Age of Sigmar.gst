@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="146" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="153" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <publications>
     <publication id="e51d-b1a3-pubEC" name="The General&apos;s Handbook"/>
     <publication id="e51d-b1a3-pubEQ" name="Core Rules"/>
@@ -29,6 +29,8 @@
     <publication id="e984-0732-33ea-1669" name="Season of War - Thondia"/>
     <publication id="b393-b3a1-628b-d5ca" name="General&apos;s Handbook 2022"/>
     <publication id="2cb9-2931-59e8-5ae9" name="Battlescroll: Galletian Reinforcement - October 2022" publisherUrl="https://www.warhammer-community.com/wp-content/uploads/2022/10/NDq0U3c5F0hiPLeW.pdf"/>
+    <publication id="4911-03f2-4062-53db" name="General&apos;s Handbook 2022-23 - Season 2"/>
+    <publication id="d78d-74e8-6533-986c" name="Season of War: Thondia Errata January 2023"/>
   </publications>
   <costTypes>
     <costType id="points" name="pts" defaultCostLimit="0.0" hidden="false"/>
@@ -349,6 +351,8 @@
     <categoryEntry id="a7c8-8a45-50a1-eb95" name="INCARNATE" hidden="false"/>
     <categoryEntry id="73d2-3f60-289e-24fe" name="KRONDSPINE INCARNATE" hidden="false"/>
     <categoryEntry id="7ede-19c1-7261-f88b" name="GALLETIAN VETERANS" hidden="false"/>
+    <categoryEntry id="89f7-d50b-0aa9-01ce" name="GALLETIAN CHAMPION" hidden="false"/>
+    <categoryEntry id="7f45-c5b3-c698-138d" name="Infantry" hidden="false"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry id="36b7-ee1e-0855-f23f" name="**Pitched Battle GHB 2021**" hidden="false">
@@ -1695,6 +1699,341 @@
         </categoryLink>
       </categoryLinks>
     </forceEntry>
+    <forceEntry id="9f18-9ffb-0267-3e08" name="**Pitched Battle GHB 2023**" hidden="false">
+      <modifiers>
+        <modifier type="set" field="9c79-2464-c01c-4fe8" value="1000.0">
+          <conditions>
+            <condition field="selections" scope="9f18-9ffb-0267-3e08" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fd9f-428a-177d-c765" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="9c79-2464-c01c-4fe8" value="2000.0">
+          <conditions>
+            <condition field="selections" scope="9f18-9ffb-0267-3e08" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6330-7561-7a32-0851" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="9c79-2464-c01c-4fe8" value="3000.0">
+          <conditions>
+            <condition field="selections" scope="9f18-9ffb-0267-3e08" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1e63-0b49-ac04-321f" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="append" field="name" value="1,000">
+          <conditions>
+            <condition field="selections" scope="9f18-9ffb-0267-3e08" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fd9f-428a-177d-c765" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="append" field="name" value="2,000">
+          <conditions>
+            <condition field="selections" scope="9f18-9ffb-0267-3e08" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6330-7561-7a32-0851" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="append" field="name" value="3000">
+          <conditions>
+            <condition field="selections" scope="9f18-9ffb-0267-3e08" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1e63-0b49-ac04-321f" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="decrement" field="9c79-2464-c01c-4fe8" value="250.0">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="aa3a-742d-9e34-e701" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="increment" field="9c79-2464-c01c-4fe8" value="500.0">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="45c9-0873-d072-007a" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="decrement" field="9c79-2464-c01c-4fe8" value="500.0">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6a86-ed1f-1db7-6f7c" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="increment" field="9c79-2464-c01c-4fe8" value="250.0">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4c1d-7a55-fa32-d2be" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="points" scope="roster" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" id="9c79-2464-c01c-4fe8" type="max"/>
+      </constraints>
+      <forceEntries>
+        <forceEntry id="524e-8001-63ee-cdf7" name="Allies" hidden="false">
+          <modifiers>
+            <modifier type="set" field="edf6-851c-83bc-df35" value="100.0">
+              <conditions>
+                <condition field="selections" scope="9f18-9ffb-0267-3e08" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e860-9b1e-36bd-a54f" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="edf6-851c-83bc-df35" value="400.0">
+              <conditions>
+                <condition field="selections" scope="9f18-9ffb-0267-3e08" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cea8-e4b2-c44f-c7b4" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="edf6-851c-83bc-df35" value="200.0">
+              <conditions>
+                <condition field="selections" scope="9f18-9ffb-0267-3e08" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e9fc-6b3a-1b9a-e807" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="edf6-851c-83bc-df35" value="520.0">
+              <conditions>
+                <condition field="selections" scope="78f3-8a59-699a-61e8" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="24c2-fff5-f17c-3d07" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="edf6-851c-83bc-df35" value="300.0">
+              <conditions>
+                <condition field="selections" scope="9f18-9ffb-0267-3e08" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a3cc-3b86-4778-0b11" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="edf6-851c-83bc-df35" value="600.0">
+              <conditions>
+                <condition field="selections" scope="9f18-9ffb-0267-3e08" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ef67-15fb-487c-397a" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="points" scope="roster" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" id="edf6-851c-83bc-df35" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="ef2b-cc88-a338-1435" name="Artillery" hidden="false" targetId="1d26-07fc-6a66-d73e" primary="false"/>
+            <categoryLink id="7eb4-7a7f-46e4-5d7c" name="Behemoth" hidden="false" targetId="fa0c-9044-2568-fa02" primary="false"/>
+            <categoryLink id="bdb2-036c-7336-5a57" name="Leader" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="false"/>
+            <categoryLink id="5338-c707-2d41-c10d" name="Other" hidden="false" targetId="065e-fda7-fd27-1f40" primary="false"/>
+            <categoryLink id="1007-ef42-3250-613f" name="Battleline" hidden="false" targetId="e9f2-765a-b7b8-ce8e" primary="false"/>
+          </categoryLinks>
+        </forceEntry>
+        <forceEntry id="f92d-bf15-574c-d04a" name="Coalition" hidden="false">
+          <categoryLinks>
+            <categoryLink id="7476-3fc0-8c26-6d29" name="Artillery" hidden="false" targetId="1d26-07fc-6a66-d73e" primary="false"/>
+            <categoryLink id="1b03-7366-12a5-0890" name="Behemoth" hidden="false" targetId="fa0c-9044-2568-fa02" primary="false"/>
+            <categoryLink id="f197-26f1-0fa2-0622" name="Leader" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="false"/>
+            <categoryLink id="690e-8476-b9b8-582e" name="Other" hidden="false" targetId="065e-fda7-fd27-1f40" primary="false"/>
+            <categoryLink id="aecf-4f9e-4d4d-d70f" name="Battleline" hidden="false" targetId="e9f2-765a-b7b8-ce8e" primary="false"/>
+          </categoryLinks>
+        </forceEntry>
+      </forceEntries>
+      <categoryLinks>
+        <categoryLink id="fa58-80d1-e3ad-6c1f" name="Core Battalion" hidden="false" targetId="6575-7d6c-ce4d-ada4" primary="false"/>
+        <categoryLink id="cd7b-d6bc-de11-8c6f" name="Leader" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="false">
+          <modifiers>
+            <modifier type="set" field="a171-aecb-c6ee-b382" value="4.0">
+              <conditions>
+                <condition field="selections" scope="9f18-9ffb-0267-3e08" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a3cc-3b86-4778-0b11" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="a171-aecb-c6ee-b382" value="6.0">
+              <conditions>
+                <condition field="selections" scope="9f18-9ffb-0267-3e08" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cea8-e4b2-c44f-c7b4" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="a171-aecb-c6ee-b382" value="8.0">
+              <conditions>
+                <condition field="selections" scope="9f18-9ffb-0267-3e08" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ef67-15fb-487c-397a" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="a171-aecb-c6ee-b382" value="2.0">
+              <conditions>
+                <condition field="selections" scope="9f18-9ffb-0267-3e08" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e860-9b1e-36bd-a54f" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="a171-aecb-c6ee-b382" value="3.0">
+              <conditions>
+                <condition field="selections" scope="9f18-9ffb-0267-3e08" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e9fc-6b3a-1b9a-e807" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="8db2-19b1-d601-fd68" type="min"/>
+            <constraint field="selections" scope="roster" value="-1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="a171-aecb-c6ee-b382" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="e1bc-ca8a-4154-5d47" name="Behemoth" hidden="false" targetId="fa0c-9044-2568-fa02" primary="false">
+          <modifiers>
+            <modifier type="set" field="e9b8-f95e-0a39-6180" value="3.0">
+              <conditions>
+                <condition field="selections" scope="9f18-9ffb-0267-3e08" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a3cc-3b86-4778-0b11" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="e9b8-f95e-0a39-6180" value="4.0">
+              <conditions>
+                <condition field="selections" scope="9f18-9ffb-0267-3e08" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cea8-e4b2-c44f-c7b4" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="e9b8-f95e-0a39-6180" value="6.0">
+              <conditions>
+                <condition field="selections" scope="9f18-9ffb-0267-3e08" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ef67-15fb-487c-397a" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="e9b8-f95e-0a39-6180" value="2.0">
+              <conditions>
+                <condition field="selections" scope="9f18-9ffb-0267-3e08" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e9fc-6b3a-1b9a-e807" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="e9b8-f95e-0a39-6180" value="1.0">
+              <conditions>
+                <condition field="selections" scope="9f18-9ffb-0267-3e08" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e860-9b1e-36bd-a54f" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="roster" value="-1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="e9b8-f95e-0a39-6180" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="b0f4-c957-3344-7aa5" name="Battleline" hidden="false" targetId="e9f2-765a-b7b8-ce8e" primary="false">
+          <modifiers>
+            <modifier type="set" field="bcf8-36c4-cf5d-be60" value="2.0">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="9f18-9ffb-0267-3e08" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a3cc-3b86-4778-0b11" type="equalTo"/>
+                    <condition field="selections" scope="9f18-9ffb-0267-3e08" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e9fc-6b3a-1b9a-e807" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" field="bcf8-36c4-cf5d-be60" value="1.0">
+              <conditions>
+                <condition field="selections" scope="9f18-9ffb-0267-3e08" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e860-9b1e-36bd-a54f" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="bcf8-36c4-cf5d-be60" value="3.0">
+              <conditions>
+                <condition field="selections" scope="9f18-9ffb-0267-3e08" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cea8-e4b2-c44f-c7b4" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="bcf8-36c4-cf5d-be60" value="4.0">
+              <conditions>
+                <condition field="selections" scope="9f18-9ffb-0267-3e08" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ef67-15fb-487c-397a" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="2491-7055-db6d-da03" type="min"/>
+            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="bcf8-36c4-cf5d-be60" type="min"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="9c44-ed6e-d6ba-82df" name="Other" hidden="false" targetId="065e-fda7-fd27-1f40" primary="false"/>
+        <categoryLink id="ba9e-8e90-d17b-6777" name="Artillery" hidden="false" targetId="1d26-07fc-6a66-d73e" primary="false">
+          <modifiers>
+            <modifier type="set" field="5440-7c40-d1ba-32f7" value="3.0">
+              <conditions>
+                <condition field="selections" scope="9f18-9ffb-0267-3e08" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a3cc-3b86-4778-0b11" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="5440-7c40-d1ba-32f7" value="4.0">
+              <conditions>
+                <condition field="selections" scope="9f18-9ffb-0267-3e08" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cea8-e4b2-c44f-c7b4" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="5440-7c40-d1ba-32f7" value="6.0">
+              <conditions>
+                <condition field="selections" scope="9f18-9ffb-0267-3e08" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ef67-15fb-487c-397a" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="5440-7c40-d1ba-32f7" value="2.0">
+              <conditions>
+                <condition field="selections" scope="9f18-9ffb-0267-3e08" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e9fc-6b3a-1b9a-e807" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="5440-7c40-d1ba-32f7" value="1.0">
+              <conditions>
+                <condition field="selections" scope="9f18-9ffb-0267-3e08" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e860-9b1e-36bd-a54f" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="roster" value="-1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="5440-7c40-d1ba-32f7" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="de79-49c4-142a-831f" name="Scenery" hidden="false" targetId="bc8a-9257-1601-6d62" primary="false"/>
+        <categoryLink id="907b-27be-570d-50dc" name="General" hidden="false" targetId="b745-17c4-8fbf-8b04" primary="false"/>
+        <categoryLink id="3ffe-7d8a-55d6-3847" name="Artefact" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
+        <categoryLink id="4b35-e1d5-a2c7-453b" name="Allegiance" hidden="false" targetId="87e8-c095-f059-5f7b" primary="false">
+          <constraints>
+            <constraint field="selections" scope="9f18-9ffb-0267-3e08" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4758-02da-3fde-e124" type="min"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="8f75-78cd-01d9-7c63" name="Game Options" hidden="false" targetId="1974-3f49-7f0b-8422" primary="false"/>
+        <categoryLink id="e09d-5c34-42dc-58b7" name="Realm of Origin" hidden="false" targetId="5c6d-5384-bcb1-b474" primary="false">
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" id="58f3-8b76-cb00-9173" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="3d01-2025-33b6-f575" name="Malign Sorcery" hidden="false" targetId="eecb-ed66-d474-9ddd" primary="false">
+          <modifiers>
+            <modifier type="set" field="4c40-d24c-c3ca-44f7" value="3.0">
+              <conditions>
+                <condition field="selections" scope="9f18-9ffb-0267-3e08" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cea8-e4b2-c44f-c7b4" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="4c40-d24c-c3ca-44f7" value="4.0">
+              <conditions>
+                <condition field="selections" scope="9f18-9ffb-0267-3e08" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ef67-15fb-487c-397a" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="4c40-d24c-c3ca-44f7" value="1.0">
+              <conditions>
+                <condition field="selections" scope="9f18-9ffb-0267-3e08" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e860-9b1e-36bd-a54f" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="4c40-d24c-c3ca-44f7" value="2.0">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="9f18-9ffb-0267-3e08" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e9fc-6b3a-1b9a-e807" type="equalTo"/>
+                    <condition field="selections" scope="9f18-9ffb-0267-3e08" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a3cc-3b86-4778-0b11" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="roster" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="4c40-d24c-c3ca-44f7" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="811d-2851-b549-e57a" name="Command Points" hidden="false" targetId="8be8-3ccd-be93-b55e" primary="false"/>
+        <categoryLink id="5459-e116-a8c7-8ffc" name="Realm of Battle" hidden="false" targetId="5e28-c4f1-4a92-b75c" primary="false">
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" id="dd85-2633-62b6-03f0" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="f501-b9b9-bbf3-7beb" name="Reinforced" hidden="false" targetId="1109-7ce6-b7a3-3a0c" primary="false">
+          <modifiers>
+            <modifier type="set" field="3535-87e2-5eb9-ca9d" value="3.0">
+              <conditions>
+                <condition field="selections" scope="9f18-9ffb-0267-3e08" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a3cc-3b86-4778-0b11" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="3535-87e2-5eb9-ca9d" value="4.0">
+              <conditions>
+                <condition field="selections" scope="9f18-9ffb-0267-3e08" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cea8-e4b2-c44f-c7b4" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="3535-87e2-5eb9-ca9d" value="6.0">
+              <conditions>
+                <condition field="selections" scope="9f18-9ffb-0267-3e08" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ef67-15fb-487c-397a" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="3535-87e2-5eb9-ca9d" value="2.0">
+              <conditions>
+                <condition field="selections" scope="9f18-9ffb-0267-3e08" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e9fc-6b3a-1b9a-e807" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="3535-87e2-5eb9-ca9d" value="1.0">
+              <conditions>
+                <condition field="selections" scope="9f18-9ffb-0267-3e08" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e860-9b1e-36bd-a54f" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="roster" value="-1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="3535-87e2-5eb9-ca9d" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="eb8e-2636-b0f1-66a7" name="Legends" hidden="false" targetId="787f-7260-bb51-08c8" primary="false">
+          <constraints>
+            <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="a38a-c872-6489-b5b0" type="max"/>
+          </constraints>
+        </categoryLink>
+      </categoryLinks>
+    </forceEntry>
   </forceEntries>
   <selectionEntries>
     <selectionEntry id="19fe-0099-8319-6fdf" name="Points Variation" hidden="true" collective="false" import="true" type="upgrade">
@@ -1798,6 +2137,69 @@
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="e690-3dac-f72b-ce33" name="GHB 2023 Rules" hidden="true" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9f18-9ffb-0267-3e08" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a9bf-25f6-c76d-dddd" type="max"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c832-531d-90a4-df56" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="8f7b-9a39-608a-ca85" name="Realm Command: No Retreat, No Surrender" publicationId="4911-03f2-4062-53db" page="13" hidden="false" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
+          <characteristics>
+            <characteristic name="Command Ability Details" typeId="1b71-4c83-4e8c-093f">You can use this command ability at the start of the combat phase.  The unit that receives the command must be a friendly unit that is not a HERO or MONSTER, that did not charge in the same turn, and that is within 3&quot; of an enemy unit.  That unit cannot make pile-in moves in that phase, but add 1 to the Attacks characteristic of melee weapons used by that unit until the end of that phase (excluding those of its mounts, if it has any).</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="0efc-5f3f-0ab1-5f56" name="Grinding Teeth of Gallet" publicationId="4911-03f2-4062-53db" page="13" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+          <characteristics>
+            <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
+            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">12&quot;</characteristic>
+            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick 1 objective within range and visible to the caster.  Then, roll a dice for each unit within 6&quot; of that objective.  On a 4+, that unit suffers D6 mortal wounds.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="bf57-a5e5-a7c9-66dc" name="Galletian Champions" publicationId="4911-03f2-4062-53db" page="12" hidden="false" typeId="6bf0-7801-561f-cc28" typeName="Special Rules">
+          <characteristics>
+            <characteristic name="Description" typeId="82bd-2ffd-8589-576c">HEROES with a Wounds characteristic of less than 10, that do not have a mount and that are not Unique gain the GALLETIAN CHAMPION keyword.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="5268-b17a-b711-5ec9" name="Infantry" hidden="false" typeId="6bf0-7801-561f-cc28" typeName="Special Rules">
+          <characteristics>
+            <characteristic name="Description" typeId="82bd-2ffd-8589-576c">Unit with a Wounds characteristic of 4 or less that is not Leader, Artillery or Behemoth and does not have a mount.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="a94e-692a-45fe-7b14" name="Heroic Action: Strike at the Opening" publicationId="4911-03f2-4062-53db" page="12" hidden="false" typeId="fff7-7178-1bdb-79d1" typeName="Heroic Action">
+          <characteristics>
+            <characteristic name="Description" typeId="ff08-d093-0b68-a4d6">Pick 1 friendly GALLETIAN CHAMPION within 3&quot; of an enemy unit. That HERO can fight if it has not already fought in that phase. However, that HERO cannot fight again in that phase and the strike-last effect applies to that HERO until the end of the turn.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="f526-e225-240d-6e1b" name="Heroic Action: Lead by Example" publicationId="4911-03f2-4062-53db" page="12" hidden="false" typeId="fff7-7178-1bdb-79d1" typeName="Heroic Action">
+          <characteristics>
+            <characteristic name="Description" typeId="ff08-d093-0b68-a4d6">Pick 1 friendly GALLETIAN CHAMPION that has a Sworn Bodyguard unit (pg 14) and that has just carried out the ‘Strike at the Opening’ heroic action. If that Sworn Bodyguard unit is wholly within 6&quot; of that GALLETIAN CHAMPION and within 3&quot; of an enemy unit, that Sworn Bodyguard unit can fight if it has not already fought in that phase. However, that unit cannot fight again in that phase and the strike-last effect applies to that unit until the end of the turn.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="f9f7-483a-7889-4485" name="Desperate Action" publicationId="4911-03f2-4062-53db" page="12" hidden="false" typeId="6bf0-7801-561f-cc28" typeName="Special Rules">
+          <characteristics>
+            <characteristic name="Description" typeId="82bd-2ffd-8589-576c">If you are taking the second turn in the current battle round, at the start of your hero phase, you can pick 1 friendly GALLETIAN CHAMPION on the battlefield to carry out 2 different heroic actions in that phase instead of 1.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="dbfe-c168-1237-1ec6" name="The Key to Victory" publicationId="4911-03f2-4062-53db" page="12" hidden="false" typeId="6bf0-7801-561f-cc28" typeName="Special Rules">
+          <characteristics>
+            <characteristic name="Description" typeId="82bd-2ffd-8589-576c">Friendly GALLETIAN CHAMPIONS cannot be picked as the target of attacks made with missile weapons while they are within 1&quot; of any friendly Battleline units.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="0274-eb7b-650a-0537" name="New CategoryLink" hidden="false" targetId="1974-3f49-7f0b-8422" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
   </selectionEntries>
   <entryLinks>
     <entryLink id="1a07-20e9-829c-2f2a" name="Realm of Origin" hidden="false" collective="false" import="true" targetId="268a-c131-4914-7087" type="selectionEntry">
@@ -1873,6 +2275,21 @@
         <categoryLink id="cc20-099b-cec2-34ca" name="New CategoryLink" hidden="false" targetId="1974-3f49-7f0b-8422" primary="true"/>
       </categoryLinks>
     </entryLink>
+    <entryLink id="f19b-6a53-3119-abbe" name="Battle Tactics (GHB2023)" hidden="true" collective="false" import="true" targetId="b613-f3b6-6918-a718" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9f18-9ffb-0267-3e08" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="a993-7847-8af1-f892" name="New CategoryLink" hidden="false" targetId="1974-3f49-7f0b-8422" primary="true"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="abb5-47a4-87cb-7204" name="Core Battalion: Galletian Command" hidden="false" collective="false" import="true" targetId="9e66-17d5-01c5-6bbe" type="selectionEntry"/>
+    <entryLink id="5bdf-b593-1b6f-3ca9" name="Core Battalion: Galletian Sharpshooters" hidden="false" collective="false" import="true" targetId="9205-24bc-d583-d3de" type="selectionEntry"/>
+    <entryLink id="5237-852a-bb97-f380" name="Core Battalion: Galletian Veterans" hidden="false" collective="false" import="true" targetId="7553-d853-b719-2278" type="selectionEntry"/>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="869c-168d-eba5-eacf" name="Arcane Bolt" hidden="false" collective="false" import="true" type="upgrade">
@@ -2047,7 +2464,7 @@
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="points" value="485.0"/>
+        <cost name="pts" typeId="points" value="480.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="0a8d-cde8-fba1-6c0d" name="Reinforced" hidden="false" collective="false" import="true" type="upgrade">
@@ -2478,9 +2895,9 @@ Add 1 to casting, dispelling and unbinding rolls for a WIZARD that is within dom
             <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If a MONSTER is slain by wounds inflicted by this incarnate&apos;s attacks, increase this incarnate&apos;s level by 1. </characteristic>
           </characteristics>
         </profile>
-        <profile id="db6f-6bb3-7cb5-dc32" name="Wild Form" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+        <profile id="db6f-6bb3-7cb5-dc32" name="Wild Form" publicationId="d78d-74e8-6533-986c" page="1" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Add 1 to hit rolls for attacks made by this incarnate while it is in its wild form. This incarnate can run and still charge in the same turn while it is in its wild form. If this incarnate is in its wild form and is within 12&quot; of a  unit or an endless spell at the start of your charge phase, it must attempt a charge and must make a charge move if it is possible for it to do so. </characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Add 1 to hit rolls for attacks made by this incarnate while it is in its wild form. This incarnate can run and still charge in the same turn while it is in its wild form. If this incarnate is in its wild form, is within 12&quot; of another unit or an endless spell, and is not within 3&quot; of another unit at the start of your charge phase, it must attempt a charge and must make a charge move if it is possible for it to do so.</characteristic>
           </characteristics>
         </profile>
         <profile id="0c29-9e07-7375-55c2" name="Inflamed Savagery" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
@@ -2852,6 +3269,162 @@ In addition, this incarnate can carry out the Devour Endless Spell monstrous ram
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="b613-f3b6-6918-a718" name="Battle Tactics (GHB2023)" publicationId="4911-03f2-4062-53db" page="17" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a716-9efe-3cc7-3f69" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="e153-5a46-3a9d-9126" name="Gaining Momentum" hidden="false" typeId="eba0-4bf6-65fe-fdbc" typeName="Battle Tactic">
+          <characteristics>
+            <characteristic name="Description" typeId="f882-48d5-21a4-1787">Pick 1 enemy unit on the battlefield.  You complete this battle tactic if that unit is destroyed during this turn and you control more objectives than your opponent at the end of the turn.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="6102-cb39-362e-e860" name="An Eye for an Eye" hidden="false" typeId="eba0-4bf6-65fe-fdbc" typeName="Battle Tactic">
+          <characteristics>
+            <characteristic name="Description" typeId="f882-48d5-21a4-1787">You complete this battle tactic if 1 or more friendly units were destroyed in the previous turn and 1 or more enemy units are destroyed during this turn.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="7203-8b22-fb23-a82a" name="Desecrate their Lands" hidden="false" typeId="eba0-4bf6-65fe-fdbc" typeName="Battle Tactic">
+          <characteristics>
+            <characteristic name="Description" typeId="f882-48d5-21a4-1787">Pick 1 terrain feature on faction terrain feature that is partially or wholly within your opponent&apos;s territory.   You complete this battle tactic if you control that terrain feature at the end of this turn.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="9cee-bedb-d771-013e" name="This One&apos;s Mine!" hidden="false" typeId="eba0-4bf6-65fe-fdbc" typeName="Battle Tactic">
+          <characteristics>
+            <characteristic name="Description" typeId="f882-48d5-21a4-1787">Pick 1 enemy unit on the battlefield.  You complete this battle tactic if that unit is destroyed during this turn of that unit is destroyed this turn by an attack made by the model picked to be your general.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="f36d-8dfd-320c-5143" name="United Offence" hidden="false" typeId="eba0-4bf6-65fe-fdbc" typeName="Battle Tactic">
+          <characteristics>
+            <characteristic name="Description" typeId="f882-48d5-21a4-1787">Pick 1 objective controlled by your opponent.  You complete this battle tactic if you control that objective and 2 or more friendly GALLETIAN CHAMPIONS are contesting that objective at the end of this turn.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="c61c-22ee-1fcf-c335" name="Cunning Manoeuvre" hidden="false" typeId="eba0-4bf6-65fe-fdbc" typeName="Battle Tactic">
+          <characteristics>
+            <characteristic name="Description" typeId="f882-48d5-21a4-1787">Pick 1 friendly GALLETIAN CHAMPION on the battlefield that is more than 3&quot; from all enemy units.  You complete this battle tactic if, at the end of the turn, that GALLETIAN CHAMPION is more than 3&quot; from all enemy units and is contesting an objective you control that is wholly outside your territory.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="607d-44b4-7e48-4775" name="A Matter of Honour" hidden="false" typeId="eba0-4bf6-65fe-fdbc" typeName="Battle Tactic">
+          <characteristics>
+            <characteristic name="Description" typeId="f882-48d5-21a4-1787">Pick 1 enemy GALLETIAN CHAMPION of Sworn Bodyguard unit on the battlefield.  You complete this battle tactic if that unit is destroyed during this turn by an attack made by a friendly GALLETIAN CHAMPION or Sworn Bodyguard unit.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="2edc-f6d0-645a-a98a" name="Lead the Assault" hidden="false" typeId="eba0-4bf6-65fe-fdbc" typeName="Battle Tactic">
+          <characteristics>
+            <characteristic name="Description" typeId="f882-48d5-21a4-1787">You complete this battle tactic if at least 2 of the objectives you control are in enemy territory and each are contested by any friendly GALLETIAN CHAMPIONS.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="9e66-17d5-01c5-6bbe" name="Core Battalion: Galletian Command" publicationId="4911-03f2-4062-53db" page="14" hidden="true" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9f18-9ffb-0267-3e08" type="greaterThan"/>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f5c9-2d9a-2ffb-edd5" type="greaterThan"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="9149-ac5d-ade6-4df3" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="893c-d9f4-3c73-c080" name="United in Purpose" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
+          <characteristics>
+            <characteristic name="Battalion Ability Details" typeId="08e0-9ead-1dbe-c801">The Infantry unit in this battalion is the Sworn Bodyguard of the GALLETIAN CHAMPION in this battalion.  In the combat phase, when you pick the GALLETIAN CHAMPION in this battalion to fight for the first time in that phase, if the Sworn Bodyguard in this battalion is wholly within 6&quot; of that GALLETIAN CHAMPION and has not yet fought in that phase, the GALLETIAN CHAMPION and the Sworn Bodyguard can fight one after the other in the order of your choice.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="aaac-eba0-2bbe-4c0d" name="Core Battalion: Galletian Command" hidden="false" typeId="75e0-a332-e4f5-bf36" typeName="Battalion Organisation">
+          <characteristics>
+            <characteristic name="Required" typeId="eb5f-e9d2-e457-bff5">1 GALLETIAN CHAMPION
+1 Infantry unit</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="3d9e-3157-a47d-6bac" name="New CategoryLink" hidden="false" targetId="6575-7d6c-ce4d-ada4" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="9205-24bc-d583-d3de" name="Core Battalion: Galletian Sharpshooters" publicationId="4911-03f2-4062-53db" page="14" hidden="true" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9f18-9ffb-0267-3e08" type="greaterThan"/>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f5c9-2d9a-2ffb-edd5" type="greaterThan"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="e5cb-397e-a068-e9e4" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="cfff-58cd-eb29-de20" name="Focus on Your Mark" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
+          <characteristics>
+            <characteristic name="Battalion Ability Details" typeId="08e0-9ead-1dbe-c801">Attacks made with missile weapons by units in this battalion are prevented from targeting enemy GALLETIAN CHAMPIONS that are within 1&quot; of any enemy Battleline units (see &apos;The Key to Victory&apos;, pg 12).</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="4a09-834c-a141-1fe9" name="Core Battalion: Galletian Sharpshooters" hidden="false" typeId="75e0-a332-e4f5-bf36" typeName="Battalion Organisation">
+          <characteristics>
+            <characteristic name="Required" typeId="eb5f-e9d2-e457-bff5">3 Infantry units</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="0efb-5502-23b3-f5f3" name="New CategoryLink" hidden="false" targetId="6575-7d6c-ce4d-ada4" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="7553-d853-b719-2278" name="Core Battalion: Galletian Veterans" publicationId="4911-03f2-4062-53db" page="14" hidden="true" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9f18-9ffb-0267-3e08" type="greaterThan"/>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f5c9-2d9a-2ffb-edd5" type="greaterThan"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="d2c5-0a7b-abb4-43b3" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="c741-3bf0-3fb5-7783" name="The Bonds of Battle" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
+          <characteristics>
+            <characteristic name="Battalion Ability Details" typeId="08e0-9ead-1dbe-c801">When a model in this battalion makes an attack with a melee weapon, you can target an enemy unit within 1/2&quot; of another model from the attacking unit instead of using the weaon&apos;s Range characteristic for that attack.  If you do so, the attacking model must be within 1/2&quot; of another model from its own unit that is within 1/2&quot; of the target.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="288b-e9d5-5492-9dc4" name="Core Battalion: Galletian Veterans" hidden="false" typeId="75e0-a332-e4f5-bf36" typeName="Battalion Organisation">
+          <characteristics>
+            <characteristic name="Required" typeId="eb5f-e9d2-e457-bff5">2-4 Infantry units</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="b514-7c62-db66-a2c8" name="New CategoryLink" hidden="false" targetId="6575-7d6c-ce4d-ada4" primary="true"/>
+      </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
@@ -4591,6 +5164,176 @@ In addition, this incarnate can carry out the Devour Endless Spell monstrous ram
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
+        <selectionEntryGroup id="9920-4a05-1185-3702" name="Galletian Command" hidden="true" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="9e66-17d5-01c5-6bbe" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="35e5-ad9e-19bb-7053" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="fa7f-6195-6b99-f695" name="Galletian Command - 1 Galletian Champion" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="100a-9c38-5b9f-5f4d" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="9e66-17d5-01c5-6bbe" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="increment" field="48cf-6d78-dcd1-26f9" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="9e66-17d5-01c5-6bbe" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="89f7-d50b-0aa9-01ce" type="instanceOf"/>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="9e66-17d5-01c5-6bbe" type="greaterThan"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="100a-9c38-5b9f-5f4d" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="48cf-6d78-dcd1-26f9" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5940-9054-64f9-a784" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="7ba6-6f00-3169-e578" name="Galletian Command - 1 Infantry" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="7bc4-1c05-f964-4f44" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="9e66-17d5-01c5-6bbe" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="increment" field="c514-d77e-0952-2140" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="9e66-17d5-01c5-6bbe" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7f45-c5b3-c698-138d" type="instanceOf"/>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="9e66-17d5-01c5-6bbe" type="greaterThan"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7bc4-1c05-f964-4f44" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c514-d77e-0952-2140" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="bf64-1b8d-a302-867b" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="f2b9-c37d-ceb4-f58e" name="Galletian Sharpshooters" hidden="true" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="9205-24bc-d583-d3de" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0d7d-a8bc-76b5-d159" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="9ce6-a67a-7185-4082" name="Galletian Sharpshooter - 3 Infantry units" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="cfc4-00be-090a-b1b5" value="3.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="9205-24bc-d583-d3de" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="increment" field="c0f6-547c-0c84-55ad" value="3.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="9205-24bc-d583-d3de" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7f45-c5b3-c698-138d" type="instanceOf"/>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="9205-24bc-d583-d3de" type="greaterThan"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="cfc4-00be-090a-b1b5" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c0f6-547c-0c84-55ad" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9577-bd47-9a9e-f76a" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="3b6d-3b30-f29d-df9e" name="Galletian Veterans" hidden="true" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="7553-d853-b719-2278" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0a9a-c8c2-b6c7-565e" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="c726-5153-41d9-ed5a" name="Galletian Veterans - 2-4 Infantry units" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="ebfa-00a5-a90e-ee6b" value="2.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="7553-d853-b719-2278" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="increment" field="6c00-a686-613a-86bf" value="4.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="7553-d853-b719-2278" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7f45-c5b3-c698-138d" type="instanceOf"/>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="7553-d853-b719-2278" type="greaterThan"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6c00-a686-613a-86bf" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ebfa-00a5-a90e-ee6b" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a9ed-ad85-f300-11ee" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntryGroup>
     <selectionEntryGroup id="6138-3410-520c-bd01" name="Battalions" hidden="false" collective="false" import="true">
@@ -5243,6 +5986,125 @@ In addition, this incarnate can carry out the Devour Endless Spell monstrous ram
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
+        <selectionEntryGroup id="a265-30d5-4c83-ba98" name="GHB 2023 Grand Strategies" publicationId="4911-03f2-4062-53db" page="16" hidden="true" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9f18-9ffb-0267-3e08" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <selectionEntries>
+            <selectionEntry id="fdbc-45b0-d1e0-252d" name="Tame the Land" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4f15-8e57-02a9-5094" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="fb0f-c81a-1998-25b1" name="Tame the Land" hidden="false" typeId="9c01-ec20-32c1-0948" typeName="Grand Strategy">
+                  <characteristics>
+                    <characteristic name="Description" typeId="53c8-cc18-16d1-e890">When the battle ends, you complete this grand strategy if you control all of the objectives on the battlefield that are wholly outside your territory.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <categoryLinks>
+                <categoryLink id="2aa4-0a52-11aa-e630" name="Grand Strategy" hidden="false" targetId="5dff-3614-49fd-c3e4" primary="false"/>
+              </categoryLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="080f-97e1-4b18-a15f" name="Defend What&apos;s Ours" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d221-6d02-e284-f8b1" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="09d4-f5cc-ab53-a75f" name="Defend What&apos;s Ours" hidden="false" typeId="9c01-ec20-32c1-0948" typeName="Grand Strategy">
+                  <characteristics>
+                    <characteristic name="Description" typeId="53c8-cc18-16d1-e890">When the battle ends, you complete this grand strategy if there are no enemy units wholly within your territory.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <categoryLinks>
+                <categoryLink id="8fd0-8a21-4f76-0627" name="Grand Strategy" hidden="false" targetId="5dff-3614-49fd-c3e4" primary="false"/>
+              </categoryLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="58e6-83c1-431d-54c8" name="Take What&apos;s Theirs" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a12c-0eba-4c35-0bb7" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="29ff-b226-022f-8b15" name="Take What&apos;s Theirs" hidden="false" typeId="9c01-ec20-32c1-0948" typeName="Grand Strategy">
+                  <characteristics>
+                    <characteristic name="Description" typeId="53c8-cc18-16d1-e890">When the battle ends, you complete this grand strategy if there are more friendly units than enemy units wholly within your opponent&apos;s territory.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <categoryLinks>
+                <categoryLink id="0faf-32af-3524-ad4a" name="Grand Strategy" hidden="false" targetId="5dff-3614-49fd-c3e4" primary="false"/>
+              </categoryLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="5c65-00d0-d176-acff" name="The Day is Ours!" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6f26-3d6c-f1ab-5d01" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="1be2-4f7c-20eb-65e0" name="The Day is Ours!" hidden="false" typeId="9c01-ec20-32c1-0948" typeName="Grand Strategy">
+                  <characteristics>
+                    <characteristic name="Description" typeId="53c8-cc18-16d1-e890">When the battle ends, you complete this grand strategy if there are more friendly GALLETIAN CHAMPIONS from your starting army than GALLETIAN CHAMPIONS from your opponent&apos;s starting army on the battlefield.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <categoryLinks>
+                <categoryLink id="5f88-3f30-696f-e2cb" name="Grand Strategy" hidden="false" targetId="5dff-3614-49fd-c3e4" primary="false"/>
+              </categoryLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="9cad-905f-b80e-6e39" name="Survivor&apos;s Instinct" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d076-3126-0374-28f4" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="299e-d52e-eb67-fd12" name="Survivor&apos;s Instinct" hidden="false" typeId="9c01-ec20-32c1-0948" typeName="Grand Strategy">
+                  <characteristics>
+                    <characteristic name="Description" typeId="53c8-cc18-16d1-e890">When the battle ends, you complete this grand strategy if the model picked to be your general is a GALLETIAN CHAMPION and that model is contesting an objective wholly outside your territory.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <categoryLinks>
+                <categoryLink id="a48f-03e4-7fbf-92c8" name="Grand Strategy" hidden="false" targetId="5dff-3614-49fd-c3e4" primary="false"/>
+              </categoryLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="2a45-94c5-f990-a714" name="Stake a Claim" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7602-00cb-3ea8-f8b0" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="b468-1d35-21d5-f2c4" name="Stake a Claim" hidden="false" typeId="9c01-ec20-32c1-0948" typeName="Grand Strategy">
+                  <characteristics>
+                    <characteristic name="Description" typeId="53c8-cc18-16d1-e890">When the battle ends, you complete this grand strategy if 3 or more friendly GALLETIAN CHAMPIONS are wholly within enemy territory.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <categoryLinks>
+                <categoryLink id="baa4-0486-eede-9f40" name="Grand Strategy" hidden="false" targetId="5dff-3614-49fd-c3e4" primary="false"/>
+              </categoryLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntryGroup>
     <selectionEntryGroup id="055f-7077-c87d-f9a8" name="Triumphs" hidden="false" collective="false" import="true">
@@ -5368,6 +6230,164 @@ In addition, this incarnate can carry out the Devour Endless Spell monstrous ram
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6059-cc4f-4bb9-9e36" type="max"/>
             <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0268-d00b-8709-08a4" type="min"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="d27f-9ad5-990c-2915" name="Relics of Gallet" publicationId="4911-03f2-4062-53db" page="15" hidden="true" collective="false" import="true">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9f18-9ffb-0267-3e08" type="greaterThan"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="89f7-d50b-0aa9-01ce" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="82d1-1465-25ee-6abd" type="max"/>
+      </constraints>
+      <selectionEntries>
+        <selectionEntry id="3e92-e580-e9c6-b719" name="Tuskhelm" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1094-bebe-7345-f223" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="8b9f-c00c-85fa-8945" name="Tuskhelm" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
+              <characteristics>
+                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">After the bearer makes a charge move, you can pick 1 enemy unit within 1&quot; of the bearer.  If you do so, roll a number of dice equal to the unmodified charge roll for that charge move.   For each 4+, the target suffers 1 mortal wound.  If the bearer already has an ability with an effect that triggers after they make a charge move, you must pick which effect applies (you cannot use both).</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <categoryLinks>
+            <categoryLink id="f14c-d390-d19e-062d" name="Artefact" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
+          </categoryLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="4a99-5247-e2b9-3bb9" name="Nightflyer Cloak" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4e69-9572-6d39-d72f" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="9f5e-d4a2-5477-97dd" name="Nightflyer Cloak" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
+              <characteristics>
+                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">During deployment, instead of setting up the bearer on the battlefield, you can place them to one side and say that they are set up in ambush as a reserve unit.  At the end of your movement phase, you can set up the bearer on the battlefield, within 1&quot; of a friendly Battleline unit and more than 9&quot; from all enemy units.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="cbf6-c513-5a7f-5557" name="Gryph-feather Charm" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b9af-1a30-0241-f515" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="4612-6a86-cea6-3231" name="Gryph-feather Charm" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
+              <characteristics>
+                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">The bearer has a ward of 5+.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="8ea7-6458-0b70-b429" name="Aspects of the Champion" publicationId="4911-03f2-4062-53db" page="15" hidden="true" collective="false" import="true">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9f18-9ffb-0267-3e08" type="greaterThan"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="89f7-d50b-0aa9-01ce" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6135-a2e5-bd6a-83bc" type="max"/>
+      </constraints>
+      <selectionEntries>
+        <selectionEntry id="1b2c-4723-5ff0-773e" name="Tunnel Master" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3d0e-bc44-8096-dd8c" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="83a5-2f00-cdfd-745c" name="Tunnel Master" hidden="false" typeId="6bf0-7801-561f-cc28" typeName="Special Rules">
+              <characteristics>
+                <characteristic name="Description" typeId="82bd-2ffd-8589-576c">Once per battle, instead of picking this GALLETIAN CHAMPION to make a normal move, you can remove it from the battlefield and set it up again on the battlefield more than 9&quot; from all enemy units.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <categoryLinks>
+            <categoryLink id="de38-c1d0-4a2f-d22e" name="Unique Enhancement" hidden="false" targetId="dbef-7476-90e0-f480" primary="false"/>
+          </categoryLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="3ad3-a53e-af7a-1042" name="Fuelled by Ghurish Rage" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2d8e-16e2-943d-e363" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="adcd-2b37-e163-e5ab" name="Fuelled by Ghurish Rage" hidden="false" typeId="6bf0-7801-561f-cc28" typeName="Special Rules">
+              <characteristics>
+                <characteristic name="Description" typeId="82bd-2ffd-8589-576c">Once per battle, before you allocate a wound or mortal wound to this GALLETIAN CHAMPION and that wound or mortal wound would cause it to be slain, you can roll a dice.  On a 3+, that wound or mortal wound is negated, you can heal up to D3 wounds allocated to it and any wounds that currently remain to be allocated to it are negated.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <categoryLinks>
+            <categoryLink id="3e0e-a1cd-17a0-a646" name="Unique Enhancement" hidden="false" targetId="dbef-7476-90e0-f480" primary="false"/>
+          </categoryLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="4ee5-ee4b-59a0-2df8" name="Stubborn as a Rhinox" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6c98-31ef-c61a-8d5c" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="ca73-aef2-94df-f804" name="Stubborn as a Rhinox" hidden="false" typeId="6bf0-7801-561f-cc28" typeName="Special Rules">
+              <characteristics>
+                <characteristic name="Description" typeId="82bd-2ffd-8589-576c">This GALLETIAN CHAMPION counts as 10 models for the purposes of contesting objectives while there are no enemy GALLETIAN CHAMPIONS contesting the same objective.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <categoryLinks>
+            <categoryLink id="93e0-e751-30f1-8633" name="Unique Enhancement" hidden="false" targetId="dbef-7476-90e0-f480" primary="false"/>
+          </categoryLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="85b0-cfd8-7f65-dc7c" name="Leadership of the Alpha" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7846-fd23-f260-af4b" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="5f47-8bbf-59a2-63a6" name="Leadership of the Alpha" hidden="false" typeId="6bf0-7801-561f-cc28" typeName="Special Rules">
+              <characteristics>
+                <characteristic name="Description" typeId="82bd-2ffd-8589-576c">Once per battle, this GALLETIAN CHAMPION can issue one of the following commands up to 3 times in the same phase: Rally, All-out Attack, All-out Defence or Redeploy.  If it does so, no command point is spent the second and third times this GALLETIAN CHAMPION issues that command in that phase.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <categoryLinks>
+            <categoryLink id="06c1-e520-ee8d-b487" name="Unique Enhancement" hidden="false" targetId="dbef-7476-90e0-f480" primary="false"/>
+          </categoryLinks>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>

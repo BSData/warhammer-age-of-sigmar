@@ -1,4 +1,4 @@
-Warhammer Age of Sigmar v3.0 (2021 Edition)
+Warhammer Age of Sigmar v3.2 (2023 Edition)
 ============================
 
 [![Latest release](https://img.shields.io/github/release/BSData/warhammer-age-of-sigmar.svg?style=flat-square)](https://github.com/BSData/warhammer-age-of-sigmar/releases/latest)
@@ -14,14 +14,17 @@ Warhammer Age of Sigmar v3.0 (2021 Edition)
 **The Battlescribe data editor can cause problems when merging updates. Because of this, and also to avoid duplicated 
 effort where multiple people are working on the same files, please join us on Discord before you commit changes to the files.**
 
-**UPDATE AoS 3.0:**
-The Catalogs have been updated to support Matched Play points and FAQ's for AoS v3.0 release. 
-The **\***Pitched Battle***\** Profile supports matched play and includes the new Core Battalions.
-The new **\***Narrative Battle***\** Profile supports play with warscroll Battalions.  This is where you'll find all the previous
-edition Battalion warscrolls.
+**UPDATE AoS 3.2:**
+The Catalogs have been updated to support Matched Play points and FAQ's for the General's Handbook
+Pitched Battles 2022-23 - Season 2.  Previous edition General's Handbook rules continue to be supported.
+- **\***Pitched Battle GHB 2023***\** Profile supports matched play from the GHB 2023 (Season 2) edition.
+- **\***Pitched Battle GHB 2022***\** Profile supports matched play from the GHB 2022 (Season 1) edition.
+- **\***Pitched Battle GHB 2021***\** Profile supports matched play from the GHB 2021 edition.
+- **\***Narrative Battle***\** Profile supports play with warscroll Battalions.  
 
-The changes for AoS 3.0 are significant and undoubtedly some things are broken, missing or just plain wrong.  Please file a bug
-for errors, omissions per the bug reporting documented below.
+The Narrative Battle profile has limited validation.  The Narrative Battle profile is where you'll find all the of the Battalion warscrolls.  
+
+Please file a bug for errors, omissions per the bug reporting documented below.
 
 ## Overview ##
 
