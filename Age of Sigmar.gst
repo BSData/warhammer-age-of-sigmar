@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="153" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="154" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <publications>
     <publication id="e51d-b1a3-pubEC" name="The General&apos;s Handbook"/>
     <publication id="e51d-b1a3-pubEQ" name="Core Rules"/>
@@ -3378,7 +3378,7 @@ In addition, this incarnate can carry out the Devour Endless Spell monstrous ram
       <profiles>
         <profile id="cfff-58cd-eb29-de20" name="Focus on Your Mark" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
           <characteristics>
-            <characteristic name="Battalion Ability Details" typeId="08e0-9ead-1dbe-c801">Attacks made with missile weapons by units in this battalion are prevented from targeting enemy GALLETIAN CHAMPIONS that are within 1&quot; of any enemy Battleline units (see &apos;The Key to Victory&apos;, pg 12).</characteristic>
+            <characteristic name="Battalion Ability Details" typeId="08e0-9ead-1dbe-c801">Attacks made with missile weapons by units in this battalion are not prevented from targeting enemy GALLETIAN CHAMPIONS that are within 1&quot; of any enemy Battleline units (see &apos;The Key to Victory&apos;, pg 12).</characteristic>
           </characteristics>
         </profile>
         <profile id="4a09-834c-a141-1fe9" name="Core Battalion: Galletian Sharpshooters" hidden="false" typeId="75e0-a332-e4f5-bf36" typeName="Battalion Organisation">
