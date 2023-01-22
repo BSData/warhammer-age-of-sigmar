@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="154" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="155" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <publications>
     <publication id="e51d-b1a3-pubEC" name="The General&apos;s Handbook"/>
     <publication id="e51d-b1a3-pubEQ" name="Core Rules"/>
@@ -3413,7 +3413,7 @@ In addition, this incarnate can carry out the Devour Endless Spell monstrous ram
       <profiles>
         <profile id="c741-3bf0-3fb5-7783" name="The Bonds of Battle" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
           <characteristics>
-            <characteristic name="Battalion Ability Details" typeId="08e0-9ead-1dbe-c801">When a model in this battalion makes an attack with a melee weapon, you can target an enemy unit within 1/2&quot; of another model from the attacking unit instead of using the weaon&apos;s Range characteristic for that attack.  If you do so, the attacking model must be within 1/2&quot; of another model from its own unit that is within 1/2&quot; of the target.</characteristic>
+            <characteristic name="Battalion Ability Details" typeId="08e0-9ead-1dbe-c801">When a model in this battalion makes an attack with a melee weapon, you can target an enemy unit within 1/2&quot; of another model from the attacking unit instead of using the weapon&apos;s Range characteristic for that attack.  If you do so, the attacking model must be within 1/2&quot; of another model from its own unit that is within 1/2&quot; of the target.</characteristic>
           </characteristics>
         </profile>
         <profile id="288b-e9d5-5492-9dc4" name="Core Battalion: Galletian Veterans" hidden="false" typeId="75e0-a332-e4f5-bf36" typeName="Battalion Organisation">
