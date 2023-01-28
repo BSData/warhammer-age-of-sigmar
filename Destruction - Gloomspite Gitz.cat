@@ -1740,12 +1740,12 @@
       <profiles>
         <profile id="b1c9-bc6c-67e0-971f" name="Dead Tricksy" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Subtract 1 from hit rolls for attacks that target this model.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This unit has a ward of 6+.</characteristic>
           </characteristics>
         </profile>
-        <profile id="c892-a39a-f6ab-f394" name="I&apos;m Da Boss, Now Stab &apos;Em Good!" hidden="false" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
+        <profile id="c892-a39a-f6ab-f394" name="I&apos;m Da Boss, Now Stab &apos;Em Good!" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Command Ability Details" typeId="1b71-4c83-4e8c-093f">You can use this command ability at the start of the combat phase. If you do so, pick 1 friendly MOONCLAN GROT unit wholly within 12&quot; of a friendly model with this command ability, or wholly within 24&quot; of a model with this command ability that is your general. If the unmodified wound roll for an attack made by that unit in that phase is 6, that attack inflicts 1 mortal wound on the target in addition to any normal damage. The same unit cannot be picked to be affected by this command ability more than once per phase.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">When this issues the All-out Attack command to a friendly MOONCLAN unit in the combat phase, until the end of that phase, if the unmodified wound roll for an attack made by that MOONCLAN unit is 6, that attack causes 1 mortal wound to the target in addition to any damage it inflicts.</characteristic>
           </characteristics>
         </profile>
         <profile id="674b-1555-6f1e-d5f4" name="Loonboss" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
@@ -1760,7 +1760,7 @@
             <characteristic name="Move" typeId="8655-6213-2824-1752">5&quot;</characteristic>
             <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">5</characteristic>
             <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">5</characteristic>
-            <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">5+</characteristic>
+            <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">4+</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1784,8 +1784,8 @@
             <profile id="1928-c2d8-d37b-12e7" name="Moon-slicer" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
               <characteristics>
                 <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
-                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
-                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">3</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">2&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">5</characteristic>
                 <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
                 <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
                 <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
@@ -8857,8 +8857,40 @@ Yellow Lurka: If the unmodified hit roll for an attack made by that unit with a 
         </entryLink>
         <entryLink id="f392-50a3-857f-bda6" name="Unique Enhancements" hidden="false" collective="false" import="true" targetId="7250-529f-3bad-93a0" type="selectionEntryGroup"/>
       </entryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
     </selectionEntry>
-    <selectionEntry id="a0b2-8bbf-ae34-2e77" name="Snarlfang Riders" hidden="false" collective="false" import="true" type="unit"/>
+    <selectionEntry id="a0b2-8bbf-ae34-2e77" name="Snarlfang Riders" hidden="false" collective="false" import="true" type="unit">
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="a06d-f6f6-49b9-900e" name="Battle Tactics" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="0f2f-9801-3f57-0451" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="54b3-3302-7450-aca1" name="Follow da Moon" hidden="false" typeId="eba0-4bf6-65fe-fdbc" typeName="Battle Tactic">
+          <characteristics>
+            <characteristic name="Description" typeId="f882-48d5-21a4-1787">You cannot pick this tactic in the first battle round.  You complete this tactic if at the end of this turn every friendly GLOOMSPITE GIZT unit on the battlefield is affected by the Light of the Bad Moon and you control more objectives than your opponent.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="9481-426c-1fd0-4898" name="Glory Grabbers" hidden="false" typeId="eba0-4bf6-65fe-fdbc" typeName="Battle Tactic">
+          <characteristics>
+            <characteristic name="Description" typeId="f882-48d5-21a4-1787">Pick 1 objective controlled by your opponent.  You complete this tactic if at the end of this turn you control that objective and a friendly GLOOMSPITE GITZ unit that was added to your army as a replacement unit using the Bad Moon Loonshrine&apos;s &apos;Moonclan Lairs&apos; ability is contesting it.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="e230-b1c0-30ae-d3fc" name="Venomous Assault" hidden="false" typeId="eba0-4bf6-65fe-fdbc" typeName="Battle Tactic">
+          <characteristics>
+            <characteristic name="Description" typeId="f882-48d5-21a4-1787">You complete this tactic if at least 8 mortal wounds were caused by the &apos;Spider Venom&apos; ability of friendly SPIDERFANG units during this turn and not negated.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="25fa-0cba-5852-3101" name="Game Options" hidden="false" targetId="1974-3f49-7f0b-8422" primary="false"/>
+      </categoryLinks>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="ef6a-94ec-582f-be56" name="Artefacts" hidden="false" collective="false" import="true">
