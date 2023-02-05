@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="a990-882b-7e62-27e9" name="Chaos - Beasts of Chaos - Data" revision="94" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="155" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="a990-882b-7e62-27e9" name="Chaos - Beasts of Chaos - Data" revision="96" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="155" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="c9b2-1fe6-pubN65537" name="Battletome: Beasts of Chaos"/>
     <publication id="ec9c-1f93-d9ca-18c7" name="White Dwarf 473" publisher="White Dwarf 473"/>
@@ -116,6 +116,7 @@
         <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7261-8c1f-93d2-6e4d" type="max"/>
       </constraints>
     </categoryEntry>
+    <categoryEntry id="b29d-a8cf-26e9-015a" name="BoC Warscroll Battalion" hidden="false"/>
   </categoryEntries>
   <sharedSelectionEntries>
     <selectionEntry id="04c9-810f-2f9a-91d2" name="Allegiance" hidden="false" collective="false" import="true" type="upgrade">
@@ -472,23 +473,6 @@ The same heroic action from the table below cannot be carried out more than once
             <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">5+</characteristic>
           </characteristics>
         </profile>
-        <profile id="8241-99f3-9c2c-c0dd" name="Indomitable Beast" hidden="true" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
-          <modifiers>
-            <modifier type="set" field="hidden" value="false">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition field="selections" scope="ancestor" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="976d-2577-d3d0-924d" type="instanceOf"/>
-                    <condition field="selections" scope="5645-9e3f-0298-de9d" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="921a-bbc5-8f84-b21c" type="equalTo"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-          <characteristics>
-            <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">Add 1 to this general&apos;s Wounds characteristic.</characteristic>
-          </characteristics>
-        </profile>
       </profiles>
       <categoryLinks>
         <categoryLink id="f4ed-e51b-812d-b35c" name="New CategoryLink" hidden="false" targetId="4e0e-664d-51ea-0929" primary="false"/>
@@ -546,24 +530,8 @@ The same heroic action from the table below cannot be carried out more than once
       <entryLinks>
         <entryLink id="648e-bf3d-7bdb-d4aa" name="Arcane Bolt" hidden="false" collective="false" import="true" targetId="869c-168d-eba5-eacf" type="selectionEntry"/>
         <entryLink id="076e-f447-7cc2-a620" name="Mystic Shield" hidden="false" collective="false" import="true" targetId="5fdd-6634-f9f8-068a" type="selectionEntry"/>
-        <entryLink id="4054-8580-2ffe-a0fc" name="Artefacts" hidden="false" collective="false" import="true" targetId="f1d8-fbad-26b3-1504" type="selectionEntryGroup">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="ancestor" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="976d-2577-d3d0-924d" type="instanceOf"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </entryLink>
-        <entryLink id="f7e6-8f77-6ef8-f957" name="Command Traits" hidden="false" collective="false" import="true" targetId="cbff-8503-320a-ce0d" type="selectionEntryGroup">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="ancestor" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="976d-2577-d3d0-924d" type="instanceOf"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </entryLink>
+        <entryLink id="4054-8580-2ffe-a0fc" name="Artefacts" hidden="false" collective="false" import="true" targetId="f1d8-fbad-26b3-1504" type="selectionEntryGroup"/>
+        <entryLink id="f7e6-8f77-6ef8-f957" name="Command Traits" hidden="false" collective="false" import="true" targetId="cbff-8503-320a-ce0d" type="selectionEntryGroup"/>
         <entryLink id="9174-3109-615a-3579" name="Spell Lores" hidden="false" collective="false" import="true" targetId="55d3-fe2c-594d-4e2b" type="selectionEntryGroup"/>
         <entryLink id="46bd-87d1-ef2f-36a3" name="Battalions" hidden="false" collective="false" import="true" targetId="3b62-f8ce-35a9-eb15" type="selectionEntryGroup"/>
         <entryLink id="41f1-db5a-eb2c-79c0" name="Incarnate Bonding" hidden="false" collective="false" import="true" targetId="c890-acbd-0c80-55c9" type="selectionEntryGroup"/>
@@ -4062,904 +4030,69 @@ For each model that is slain by a mortal wound caused by this spell, you can add
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="3eec-10f9-f9fe-b2f8" name="Battalion: Marauding Brayherd" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="3eec-10f9-f9fe-b2f8" name="Beasts of Chaos Warscroll Battalion: Marauding Brayherd" hidden="false" collective="false" import="true" type="upgrade">
       <profiles>
-        <profile id="fd4b-5965-8e3a-f73a" name="Ferocious Despoilers" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
+        <profile id="643c-ca15-883d-3b31" name="Battalion: Marauding Brayherd" hidden="false" typeId="75e0-a332-e4f5-bf36" typeName="Battalion Organisation">
           <characteristics>
-            <characteristic name="Battalion Ability Details" typeId="08e0-9ead-1dbe-c801">Add 1 to charge rolls for friendly BRAYHERD units from this battalion that were set up on the battlefield during the same turn.</characteristic>
+            <characteristic name="Required" typeId="eb5f-e9d2-e457-bff5">1 Beastlord
+1-3 Great Bray-Shamans
+2-6 Bestigors or Tuskgor Chariots units
+3-9 Gors units
+4-12 Ungors, Ungor Raiders or Centigors units</characteristic>
           </characteristics>
         </profile>
       </profiles>
+      <infoLinks>
+        <infoLink id="b540-fc46-a3a4-227e" name="Ferocious Despoilers" hidden="false" targetId="393b-4aff-aa49-5769" type="profile"/>
+      </infoLinks>
       <categoryLinks>
         <categoryLink id="73fc-4ea2-36b8-ed97" name="New CategoryLink" hidden="false" targetId="be17-6bbd-b857-3f43" primary="true"/>
+        <categoryLink id="5b32-f6f1-0dca-a73e" name="Battalion" hidden="false" targetId="3ecc-4c0d-d717-29bd" primary="false"/>
+        <categoryLink id="069f-7869-6fc2-f2fe" name="BoC Warscroll Battalion" hidden="false" targetId="b29d-a8cf-26e9-015a" primary="false"/>
       </categoryLinks>
-      <selectionEntries>
-        <selectionEntry id="a8aa-199b-1abd-b248" name="Marauding Brayherd" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f083-783d-c3d5-6c2a" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="78cd-8d5d-a60c-6d66" type="max"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="points" value="180.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="b9b4-008c-709a-69c1" name="1 Beastlord" hidden="false" collective="false" import="true" defaultSelectionEntryId="a24a-a49e-a19c-6c1a">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="347f-777d-c7f8-c1ed" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3acd-4e39-bd5e-0849" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="a24a-a49e-a19c-6c1a" name="Beastlord" hidden="false" collective="false" import="true" targetId="0ab8-4ac7-3a61-0cd4" type="selectionEntry">
-              <categoryLinks>
-                <categoryLink id="b97d-da76-509a-9791" name="Leader" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
-              </categoryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="cf2e-07d1-0114-9b6a" name="2-6 Bestigors or Tuskgor Chariots" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="893c-3d69-09bd-0454" type="min"/>
-            <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d1c6-6442-6096-40b5" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="bb0c-f879-a717-4469" name="Tuskgor Chariots" hidden="false" collective="false" import="true" targetId="26a3-0409-c61a-641b" type="selectionEntry">
-              <categoryLinks>
-                <categoryLink id="a259-6d93-db0a-e885" name="Other" hidden="false" targetId="065e-fda7-fd27-1f40" primary="false"/>
-              </categoryLinks>
-            </entryLink>
-            <entryLink id="cdd3-658c-20d8-f450" name="Bestigors" hidden="false" collective="false" import="true" targetId="a2ce-3a32-3c68-24fb" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="2bbe-f850-0d60-f864" name="1-3 Great Bray-Shamans" hidden="false" collective="false" import="true" defaultSelectionEntryId="9907-51de-7590-7d5b">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="044c-2d27-5123-374a" type="min"/>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="adce-0c0f-c894-6b6c" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="9907-51de-7590-7d5b" name="Great Bray-shaman" hidden="false" collective="false" import="true" targetId="5645-9e3f-0298-de9d" type="selectionEntry">
-              <categoryLinks>
-                <categoryLink id="cb9b-bab1-608c-35e7" name="Leader" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="false"/>
-              </categoryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="ed4a-42d3-197f-5561" name="3-9 Gors" hidden="false" collective="false" import="true" defaultSelectionEntryId="220c-c768-02f1-5d0c">
-          <constraints>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5726-7282-28e5-6aa9" type="min"/>
-            <constraint field="selections" scope="parent" value="9.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="edab-c789-ca99-12e0" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="220c-c768-02f1-5d0c" name="Gors ***" hidden="false" collective="false" import="true" targetId="3cd6-d61a-3181-b862" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="5ca2-3b5f-b818-d0c2" name="4-12 Ungors, Ungor Raiders, or Centigors" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4691-d84e-19b7-cebd" type="min"/>
-            <constraint field="selections" scope="parent" value="12.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ceea-3207-6198-e531" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="9e5e-beb3-8428-7fa5" name="Ungors ***" hidden="false" collective="false" import="true" targetId="860f-3974-14a3-3237" type="selectionEntry"/>
-            <entryLink id="ae8a-5c2e-660e-880f" name="Ungor Raiders ***" hidden="false" collective="false" import="true" targetId="6a9e-4be2-9c76-a1f1" type="selectionEntry"/>
-            <entryLink id="700b-b456-27e2-13b9" name="Centigors **" hidden="false" collective="false" import="true" targetId="a1a7-0dfc-a40b-d680" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="a8f5-4197-1a53-f2c6" name="Battalion: Hungering Warherd" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="a8f5-4197-1a53-f2c6" name="Beasts of Chaos Warscroll Battalion: Hungering Warherd" hidden="false" collective="false" import="true" type="upgrade">
       <profiles>
-        <profile id="918e-0120-5280-df92" name="Bloodscent" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
+        <profile id="4dc7-fc3d-1ba1-32fe" name="Battalion: Hungering Warherd" hidden="false" typeId="75e0-a332-e4f5-bf36" typeName="Battalion Organisation">
           <characteristics>
-            <characteristic name="Battalion Ability Details" typeId="08e0-9ead-1dbe-c801">Units from this battalion can move an extra 3&quot; when they pile in.</characteristic>
+            <characteristic name="Required" typeId="eb5f-e9d2-e457-bff5">1 Doombull
+3 Bullgors units
+1-3 Cygors or Ghorgons</characteristic>
           </characteristics>
         </profile>
       </profiles>
+      <infoLinks>
+        <infoLink id="b4d4-d3a2-1417-cd7f" name="Ferocious Despoilers" hidden="false" targetId="393b-4aff-aa49-5769" type="profile"/>
+      </infoLinks>
       <categoryLinks>
         <categoryLink id="dd72-53ff-a95b-f954" name="New CategoryLink" hidden="false" targetId="be17-6bbd-b857-3f43" primary="true"/>
+        <categoryLink id="3286-1ac7-4154-7854" name="BoC Warscroll Battalion" hidden="false" targetId="b29d-a8cf-26e9-015a" primary="false"/>
+        <categoryLink id="5a18-aa3e-2913-527c" name="Battalion" hidden="false" targetId="3ecc-4c0d-d717-29bd" primary="false"/>
       </categoryLinks>
-      <selectionEntries>
-        <selectionEntry id="b867-3b1f-ce8b-f0b7" name="Hungering Warherd" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b73c-e5fe-44a0-9337" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c26d-4ae8-ef66-10f9" type="max"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="points" value="150.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="ed3b-41b7-97a2-76f3" name="1 Doombull" hidden="false" collective="false" import="true" defaultSelectionEntryId="c4c8-f35a-735d-aad7">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4f04-117b-6b38-7721" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="00e1-fcf3-3df9-ec6d" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="c4c8-f35a-735d-aad7" name="Doombull ***" hidden="false" collective="false" import="true" targetId="d705-0e86-4132-7af8" type="selectionEntry">
-              <categoryLinks>
-                <categoryLink id="624d-3545-656d-f1fd" name="Leader" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
-              </categoryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="e71d-a69b-155c-2088" name="3 Bullgors" hidden="false" collective="false" import="true" defaultSelectionEntryId="d76d-fd8b-ae63-3f3a">
-          <constraints>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="896a-8492-7f37-4fa3" type="min"/>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c919-47ed-14d9-b936" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="d76d-fd8b-ae63-3f3a" name="Bullgors" hidden="false" collective="false" import="true" targetId="f6f6-dd85-23f1-45dd" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="5d45-ce1a-0bca-5a32" name="1-3 Cygors or Ghorgons" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="17d8-0a6d-8a49-8a09" type="min"/>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="72a7-f95c-fae5-0895" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="0b9f-68f9-410e-30c4" name="Cygor" hidden="false" collective="false" import="true" targetId="a400-2e81-dba4-82e4" type="selectionEntry">
-              <categoryLinks>
-                <categoryLink id="c347-2be0-58fa-a385" name="Behemoth" hidden="false" targetId="fa0c-9044-2568-fa02" primary="false"/>
-              </categoryLinks>
-            </entryLink>
-            <entryLink id="e16f-1196-539f-f0a2" name="Ghorgon" hidden="false" collective="false" import="true" targetId="f321-87b5-12d6-29b4" type="selectionEntry">
-              <categoryLinks>
-                <categoryLink id="3dc3-b93b-e066-5463" name="Behemoth" hidden="false" targetId="fa0c-9044-2568-fa02" primary="false"/>
-              </categoryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="6c18-b239-e416-77a3" name="Battalion: Desolating Beastherd" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="ea7b-a2f0-dd6e-f5b6" name="Beasts of Chaos Warscroll Battalion: Thunderscorn Stormherd" hidden="false" collective="false" import="true" type="upgrade">
       <profiles>
-        <profile id="64af-ead7-3c8a-6e8d" name="Bringers of the Wild" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
+        <profile id="6676-0393-4bae-56d5" name="Battalion: Thunderscorn Stormherd" hidden="false" typeId="75e0-a332-e4f5-bf36" typeName="Battalion Organisation">
           <characteristics>
-            <characteristic name="Battalion Ability Details" typeId="08e0-9ead-1dbe-c801">If the unmodified hit roll for an attack made by a unit from this battalion that is wholly within enemy territory is 6, that attack scores 2 hits on that target instead of 1. Make a wound and save roll for each hit.</characteristic>
+            <characteristic name="Required" typeId="eb5f-e9d2-e457-bff5">1-3 Dragon Ogor Shaggoths
+3-9 Dragon Ogors units</characteristic>
           </characteristics>
         </profile>
       </profiles>
-      <categoryLinks>
-        <categoryLink id="83af-7e3a-f512-4b5c" name="Warscroll Battalion" hidden="false" targetId="be17-6bbd-b857-3f43" primary="true"/>
-      </categoryLinks>
-      <selectionEntries>
-        <selectionEntry id="5de2-1921-36c7-7af1" name="Desolating Beastherd" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="98ca-530d-24b3-34ee" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0cce-a63a-dac0-a1b8" type="max"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="points" value="150.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="0bfe-21e9-5b89-630f" name="1 Beastlord or Doombull" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d432-160c-4812-0f3b" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2764-3ce1-41e9-72ce" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="1bab-b58e-ce6c-7135" name="Doombull" hidden="false" collective="false" import="true" targetId="d705-0e86-4132-7af8" type="selectionEntry">
-              <categoryLinks>
-                <categoryLink id="f00c-604e-9ace-859d" name="Leader" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
-              </categoryLinks>
-            </entryLink>
-            <entryLink id="54d7-29a1-2c61-14d4" name="Beastlord" hidden="false" collective="false" import="true" targetId="0ab8-4ac7-3a61-0cd4" type="selectionEntry">
-              <categoryLinks>
-                <categoryLink id="2361-7622-7aea-e00b" name="Leader" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="false"/>
-              </categoryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="fee3-f3cb-41c0-000c" name="1-3 Bestigors or Bullgors" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4dbe-9e11-cb51-8bb0" type="min"/>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ad09-fdc2-18f0-3154" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="e064-8544-a018-1bb5" name="Bullgors" hidden="false" collective="false" import="true" targetId="f6f6-dd85-23f1-45dd" type="selectionEntry"/>
-            <entryLink id="691c-7709-89bd-d0a1" name="Bestigors" hidden="false" collective="false" import="true" targetId="a2ce-3a32-3c68-24fb" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="5065-5eb3-3e67-5bcd" name="1-3 Great Bray-Shamans" hidden="false" collective="false" import="true" defaultSelectionEntryId="1c13-38c6-d13a-2f73">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1dae-4d30-5a96-3db9" type="min"/>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0efd-fa3f-2cbe-796f" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="1c13-38c6-d13a-2f73" name="Great Bray-shaman" hidden="false" collective="false" import="true" targetId="5645-9e3f-0298-de9d" type="selectionEntry">
-              <categoryLinks>
-                <categoryLink id="bfa2-9fdf-d1e2-5103" name="Leader" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="false"/>
-              </categoryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="d26c-818b-33e7-9984" name="2-6 Ungors or Ungor Raiders" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3185-0783-c09b-6973" type="min"/>
-            <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="62f2-ebf0-cfe3-e478" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="d68a-fe78-b6fe-c385" name="Ungor Raiders ***" hidden="false" collective="false" import="true" targetId="6a9e-4be2-9c76-a1f1" type="selectionEntry">
-              <categoryLinks>
-                <categoryLink id="16f0-5f36-58d6-d4ee" name="New CategoryLink" hidden="false" targetId="065e-fda7-fd27-1f40" primary="true"/>
-              </categoryLinks>
-            </entryLink>
-            <entryLink id="a6b2-b8c4-0119-4021" name="Ungors ***" hidden="false" collective="false" import="true" targetId="860f-3974-14a3-3237" type="selectionEntry">
-              <categoryLinks>
-                <categoryLink id="99e5-6f32-ba8d-e7c6" name="Battleline" hidden="false" targetId="e9f2-765a-b7b8-ce8e" primary="true"/>
-              </categoryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="3fa5-ba03-0d34-bb77" name="1-3 Gors or Tuskgor Chariots" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="650d-ee27-4233-f860" type="min"/>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="801c-4a34-d277-d037" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="3fcb-1b87-4575-a7d0" name="Tuskgor Chariots" hidden="false" collective="false" import="true" targetId="26a3-0409-c61a-641b" type="selectionEntry">
-              <categoryLinks>
-                <categoryLink id="63fe-8e0f-59cb-b994" name="Battleline" hidden="false" targetId="e9f2-765a-b7b8-ce8e" primary="true"/>
-              </categoryLinks>
-            </entryLink>
-            <entryLink id="ff6e-3702-b062-1c8b" name="Gors" hidden="false" collective="false" import="true" targetId="3cd6-d61a-3181-b862" type="selectionEntry">
-              <categoryLinks>
-                <categoryLink id="54d3-3190-7ec5-e9cd" name="Battleline" hidden="false" targetId="e9f2-765a-b7b8-ce8e" primary="true"/>
-              </categoryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="8aec-38c3-dcd1-c09e" name="0-1 Ghorgon or Cygor" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4cb1-8e44-9785-c5f7" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fa3a-8611-d8bc-5507" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="b830-9272-0a05-4dc1" name="Ghorgon" hidden="false" collective="false" import="true" targetId="f321-87b5-12d6-29b4" type="selectionEntry">
-              <categoryLinks>
-                <categoryLink id="1467-920b-8139-7d45" name="Behemoth" hidden="false" targetId="fa0c-9044-2568-fa02" primary="false"/>
-              </categoryLinks>
-            </entryLink>
-            <entryLink id="3537-6afd-d945-a3f3" name="Cygor" hidden="false" collective="false" import="true" targetId="a400-2e81-dba4-82e4" type="selectionEntry">
-              <categoryLinks>
-                <categoryLink id="41b3-9f3f-9e18-6703" name="Behemoth" hidden="false" targetId="fa0c-9044-2568-fa02" primary="false"/>
-              </categoryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="ea7b-a2f0-dd6e-f5b6" name="Battalion: Thunderscorn Stormherd" hidden="false" collective="false" import="true" type="upgrade">
-      <profiles>
-        <profile id="1430-3b4c-d7bd-58f3" name="Raging Storm" publicationId="7ca7-0a01-0c6c-9b61" page="134" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
-          <characteristics>
-            <characteristic name="Battalion Ability Details" typeId="08e0-9ead-1dbe-c801">In addition to the Raging Storm battle trait, you can re-roll the dice roll when determining if any wounds allocated to units from the battalion are healed, then you can re-roll the dice roll when determining if any enemy units within 1&quot; of any units from that battalion suffer 1 mortal wound</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
+      <infoLinks>
+        <infoLink id="8b59-0faa-a80e-61a7" name="Ferocious Despoilers" hidden="false" targetId="393b-4aff-aa49-5769" type="profile"/>
+      </infoLinks>
       <categoryLinks>
         <categoryLink id="d994-26d7-c41e-5e84" name="New CategoryLink" hidden="false" targetId="be17-6bbd-b857-3f43" primary="true"/>
+        <categoryLink id="abc5-6972-ae85-475b" name="Battalion" hidden="false" targetId="3ecc-4c0d-d717-29bd" primary="false"/>
+        <categoryLink id="ce0a-0707-a42b-24b2" name="BoC Warscroll Battalion" hidden="false" targetId="b29d-a8cf-26e9-015a" primary="false"/>
       </categoryLinks>
-      <selectionEntries>
-        <selectionEntry id="9f18-50f3-2bf9-0a6c" name="Thunderscorn Stormherd" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7f44-fa70-8f5e-b3e3" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f34d-9042-2836-caaf" type="max"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="points" value="160.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="3b43-af15-d13f-6af4" name="3-9 Dragon Ogors" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="359d-f348-2c8b-f550" type="min"/>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="feea-4c3a-333c-1909" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="ca35-452c-7f8a-677d" name="Dragon Ogors" hidden="true" collective="false" import="true" targetId="6bec-d4e0-72ef-77e0" type="selectionEntry">
-              <modifiers>
-                <modifier type="set" field="hidden" value="false">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1378-5154-1483-85b9" type="equalTo"/>
-                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="35ab-a34b-dc69-e3cc" type="greaterThan"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <categoryLinks>
-                <categoryLink id="3400-ba30-e257-9822" name="New CategoryLink" hidden="false" targetId="e9f2-765a-b7b8-ce8e" primary="true"/>
-              </categoryLinks>
-            </entryLink>
-            <entryLink id="d471-0c48-d2cb-2863" name="Dragon Ogors" hidden="false" collective="false" import="true" targetId="6bec-d4e0-72ef-77e0" type="selectionEntry">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1378-5154-1483-85b9" type="equalTo"/>
-                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="35ab-a34b-dc69-e3cc" type="greaterThan"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <categoryLinks>
-                <categoryLink id="e31c-ee62-8860-b404" name="New CategoryLink" hidden="false" targetId="065e-fda7-fd27-1f40" primary="true"/>
-              </categoryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="ceb3-2b25-72ff-d960" name="1-3 Dragon Ogor Shaggoths" hidden="false" collective="false" import="true" defaultSelectionEntryId="95f6-f964-1394-1545">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0dbf-5396-5a25-4895" type="min"/>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="044c-b8cd-5071-4ff0" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="95f6-f964-1394-1545" name="Dragon Ogor Shaggoth" hidden="false" collective="false" import="true" targetId="f427-1a9c-c749-a639" type="selectionEntry">
-              <categoryLinks>
-                <categoryLink id="85db-df63-0114-8b7b" name="Leader" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="false"/>
-              </categoryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="2bdd-7375-7d96-1766" name="Battalion: Depraved Drove" hidden="false" collective="false" import="true" type="upgrade">
-      <profiles>
-        <profile id="a7fb-f8ee-9a4c-ebdb" name="Covetous Fury" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
-          <characteristics>
-            <characteristic name="Battalion Ability Details" typeId="08e0-9ead-1dbe-c801">You can re-roll failed charge rolls made for units from this battalion while they are within 12&quot; of an enemy HERO with an artefact of power. In addition, you can re-roll hit rolls for attacks made with melee weapons by models from this battalion that target an enemy HERO with an artefact of power.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="39c8-63a0-b56c-b6cb" name="Marked by the Decadent Fiend" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
-          <characteristics>
-            <characteristic name="Battalion Ability Details" typeId="08e0-9ead-1dbe-c801">Units from this battalion gain the SLAANESH keyword. In addition, this warscroll battalion is part of the Slaanesh faction and the Beasts of Chaos faction.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <categoryLinks>
-        <categoryLink id="094e-3a70-3373-bf9a" name="SLAANESH" hidden="false" targetId="3963-2e99-aa63-c65e" primary="false"/>
-        <categoryLink id="149f-d937-f6bf-aca7" name="New CategoryLink" hidden="false" targetId="be17-6bbd-b857-3f43" primary="true"/>
-      </categoryLinks>
-      <selectionEntries>
-        <selectionEntry id="e4fd-0239-50cf-46e2" name="Depraved Drove" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7999-b3f3-7bdb-31e8" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ee40-29b2-2025-7bba" type="max"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="points" value="150.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="3673-c4b7-ad32-c172" name="1-4 HEROES" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b791-cbf4-9080-d4d4" type="min"/>
-            <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5ccf-8f2c-426d-6196" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="eb44-e38c-8563-772f" name="Doombull" hidden="false" collective="false" import="true" targetId="d705-0e86-4132-7af8" type="selectionEntry">
-              <categoryLinks>
-                <categoryLink id="2969-edc5-7415-1f03" name="Leader" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
-              </categoryLinks>
-            </entryLink>
-            <entryLink id="4ffe-a3dd-c130-78ab" name="Beastlord" hidden="false" collective="false" import="true" targetId="0ab8-4ac7-3a61-0cd4" type="selectionEntry">
-              <categoryLinks>
-                <categoryLink id="6dc1-d239-0894-f891" name="Leader" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="false"/>
-              </categoryLinks>
-            </entryLink>
-            <entryLink id="87cd-31a0-1d65-6930" name="Great Bray-shaman" hidden="false" collective="false" import="true" targetId="5645-9e3f-0298-de9d" type="selectionEntry">
-              <categoryLinks>
-                <categoryLink id="7c13-f826-78f2-039d" name="Leader" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="false"/>
-              </categoryLinks>
-            </entryLink>
-            <entryLink id="5d73-bcf8-ca36-d57e" name="Dragon Ogor Shaggoth" hidden="false" collective="false" import="true" targetId="f427-1a9c-c749-a639" type="selectionEntry">
-              <categoryLinks>
-                <categoryLink id="4fd8-39fd-dee6-d36c" name="Leader" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="false"/>
-              </categoryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="7683-d2ec-6415-dcc7" name="3-6 Centigors, Gors, Tuskgor Chariots, Ungors, or Ungor Raiders" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6040-49a0-f17a-3b9b" type="min"/>
-            <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d7fd-cbac-4604-9cc7" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="5559-036a-b7c0-501f" name="Gors" hidden="false" collective="false" import="true" targetId="3cd6-d61a-3181-b862" type="selectionEntry">
-              <categoryLinks>
-                <categoryLink id="5be9-7b56-3fcd-97ed" name="Battleline" hidden="false" targetId="e9f2-765a-b7b8-ce8e" primary="true"/>
-              </categoryLinks>
-            </entryLink>
-            <entryLink id="c6f3-405a-fc47-0992" name="Centigors" hidden="false" collective="false" import="true" targetId="a1a7-0dfc-a40b-d680" type="selectionEntry">
-              <categoryLinks>
-                <categoryLink id="3614-1b1b-74c0-98d5" name="Battleline" hidden="false" targetId="e9f2-765a-b7b8-ce8e" primary="true"/>
-              </categoryLinks>
-            </entryLink>
-            <entryLink id="6327-95d4-edda-acc4" name="Tuskgor Chariots" hidden="false" collective="false" import="true" targetId="26a3-0409-c61a-641b" type="selectionEntry">
-              <categoryLinks>
-                <categoryLink id="3aea-0f9c-17dc-8052" name="Other" hidden="false" targetId="065e-fda7-fd27-1f40" primary="false"/>
-              </categoryLinks>
-            </entryLink>
-            <entryLink id="59e2-664c-baa6-1218" name="Ungor Raiders" hidden="false" collective="false" import="true" targetId="6a9e-4be2-9c76-a1f1" type="selectionEntry">
-              <categoryLinks>
-                <categoryLink id="d0f3-1d4a-f365-d820" name="Other" hidden="false" targetId="065e-fda7-fd27-1f40" primary="false"/>
-              </categoryLinks>
-            </entryLink>
-            <entryLink id="7ff0-670e-89c9-89d3" name="Ungors" hidden="false" collective="false" import="true" targetId="860f-3974-14a3-3237" type="selectionEntry">
-              <categoryLinks>
-                <categoryLink id="8a2d-e69e-501f-2878" name="Other" hidden="false" targetId="065e-fda7-fd27-1f40" primary="false"/>
-              </categoryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="913e-83b6-fab6-a5f2" name="0-6 Units" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="76c2-35cc-3101-c897" type="min"/>
-            <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="746d-06c6-24d5-6666" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="28b2-452c-20cc-62f7" name="Dragon Ogors" hidden="false" collective="false" import="true" targetId="6bec-d4e0-72ef-77e0" type="selectionEntry"/>
-            <entryLink id="c6be-35c5-bad5-5350" name="Bestigors" hidden="false" collective="false" import="true" targetId="a2ce-3a32-3c68-24fb" type="selectionEntry"/>
-            <entryLink id="d615-8edc-38c8-b367" name="Bullgors" hidden="false" collective="false" import="true" targetId="f6f6-dd85-23f1-45dd" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="30f7-5db9-8e52-dd3d" name="0-2 Ghorgons or Cygors" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7278-fef4-aff4-e165" type="min"/>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="15f0-c5f3-63b3-fb8d" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="3fec-b206-8b5b-19f5" name="Ghorgon" hidden="false" collective="false" import="true" targetId="f321-87b5-12d6-29b4" type="selectionEntry">
-              <categoryLinks>
-                <categoryLink id="8a52-cbd9-f24f-947c" name="Behemoth" hidden="false" targetId="fa0c-9044-2568-fa02" primary="false"/>
-              </categoryLinks>
-            </entryLink>
-            <entryLink id="9c01-c72a-a861-a0ee" name="Cygor" hidden="false" collective="false" import="true" targetId="a400-2e81-dba4-82e4" type="selectionEntry">
-              <categoryLinks>
-                <categoryLink id="152b-7873-2d6e-340e" name="Behemoth" hidden="false" targetId="fa0c-9044-2568-fa02" primary="false"/>
-              </categoryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="2cc9-966b-bc31-6ea4" name="Battalion: Brass Despoilers" hidden="false" collective="false" import="true" type="upgrade">
-      <profiles>
-        <profile id="36b6-6c7d-0b58-83b1" name="Martial Ferocity" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
-          <characteristics>
-            <characteristic name="Battalion Ability Details" typeId="08e0-9ead-1dbe-c801">You can re-roll hit rolls of 1 for attacks made by units from this battalion while they are wholly within 9&quot; of another unit from the same battalion. In addition, once per battle, in your hero phase, you can choose to unleash this battalion’s bestial rage. If you do so, until your next hero phase you can re-roll failed wound rolls for attacks made by units from this battalion while they are wholly within 9&quot; of another unit from the same battalion</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="505e-2a29-f79a-706a" name="Followers of the Brass Bull" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
-          <characteristics>
-            <characteristic name="Battalion Ability Details" typeId="08e0-9ead-1dbe-c801">Units from this battalion gain the KHORNE keyword. In addition, this warscroll battalion is part of the Khorne faction and the Beasts of Chaos faction.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <categoryLinks>
-        <categoryLink id="e31d-1b6e-8348-f570" name="KHORNE" hidden="false" targetId="f22b-976f-fc38-366a" primary="false"/>
-        <categoryLink id="869a-d8e7-8f84-2d59" name="New CategoryLink" hidden="false" targetId="be17-6bbd-b857-3f43" primary="true"/>
-      </categoryLinks>
-      <selectionEntries>
-        <selectionEntry id="5d8d-5532-28c0-b3fc" name="Brass Despoilers" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5118-97f8-12b7-aaff" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d677-ed5d-3500-a6c8" type="max"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="points" value="180.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="9e1c-6110-026f-3da9" name="1-4 HEROES" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="362e-9647-b258-5d29" type="min"/>
-            <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b335-3613-afa7-2aa5" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="29fb-8478-9f80-dce2" name="Doombull" hidden="false" collective="false" import="true" targetId="d705-0e86-4132-7af8" type="selectionEntry">
-              <categoryLinks>
-                <categoryLink id="2dd2-813b-8b6c-9b4d" name="Leader" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
-              </categoryLinks>
-            </entryLink>
-            <entryLink id="b5d5-3907-e5e8-9088" name="Beastlord" hidden="false" collective="false" import="true" targetId="0ab8-4ac7-3a61-0cd4" type="selectionEntry">
-              <categoryLinks>
-                <categoryLink id="ff7b-ac2a-669a-10ee" name="Leader" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="false"/>
-              </categoryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="9262-ab19-fdf8-822f" name="3-8 Bestigors, Bullgors, or Gors" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="aa70-72b5-d127-03fa" type="min"/>
-            <constraint field="selections" scope="parent" value="8.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="024d-38b0-319a-f28d" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="843e-5de6-3bbf-40b3" name="Bullgors" hidden="false" collective="false" import="true" targetId="f6f6-dd85-23f1-45dd" type="selectionEntry"/>
-            <entryLink id="23ea-1573-df1f-ec91" name="Bestigors" hidden="false" collective="false" import="true" targetId="a2ce-3a32-3c68-24fb" type="selectionEntry"/>
-            <entryLink id="2009-0dec-d203-d833" name="Gors" hidden="false" collective="false" import="true" targetId="3cd6-d61a-3181-b862" type="selectionEntry">
-              <categoryLinks>
-                <categoryLink id="4943-11d0-2643-b311" name="Battleline" hidden="false" targetId="e9f2-765a-b7b8-ce8e" primary="true"/>
-              </categoryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="3619-a0d5-63d4-2e07" name="0-8 Units" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="28f0-a8c8-4e16-c29a" type="min"/>
-            <constraint field="selections" scope="parent" value="8.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ddfa-493b-56ea-d686" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="753d-eaa6-8dac-5c06" name="Centigors" hidden="false" collective="false" import="true" targetId="a1a7-0dfc-a40b-d680" type="selectionEntry">
-              <categoryLinks>
-                <categoryLink id="ed57-1a7c-7b32-f41d" name="Battleline" hidden="false" targetId="e9f2-765a-b7b8-ce8e" primary="true"/>
-              </categoryLinks>
-            </entryLink>
-            <entryLink id="acf6-ff36-cd74-c1de" name="Dragon Ogors" hidden="true" collective="false" import="true" targetId="6bec-d4e0-72ef-77e0" type="selectionEntry"/>
-            <entryLink id="1a8f-89c2-d416-29b4" name="Tuskgor Chariots" hidden="false" collective="false" import="true" targetId="26a3-0409-c61a-641b" type="selectionEntry">
-              <categoryLinks>
-                <categoryLink id="5009-da8e-21aa-5e84" name="Other" hidden="false" targetId="065e-fda7-fd27-1f40" primary="false"/>
-              </categoryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="d166-36d4-83db-5600" name="0-2 Ghorgons or Cygors" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fae9-432f-7533-1513" type="min"/>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="45b6-c1f7-c144-fc01" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="be29-ec9b-2c59-71f3" name="Ghorgon" hidden="false" collective="false" import="true" targetId="f321-87b5-12d6-29b4" type="selectionEntry">
-              <categoryLinks>
-                <categoryLink id="30b1-9c9f-6ea9-7783" name="Behemoth" hidden="false" targetId="fa0c-9044-2568-fa02" primary="false"/>
-              </categoryLinks>
-            </entryLink>
-            <entryLink id="0cbc-3d46-a30a-608c" name="Cygor" hidden="false" collective="false" import="true" targetId="a400-2e81-dba4-82e4" type="selectionEntry">
-              <categoryLinks>
-                <categoryLink id="9b6d-09d0-c02f-6a1a" name="Behemoth" hidden="false" targetId="fa0c-9044-2568-fa02" primary="false"/>
-              </categoryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="6224-8832-fe98-1596" name="Battalion: Phantasmagoria of Fate" hidden="false" collective="false" import="true" type="upgrade">
-      <profiles>
-        <profile id="26ae-ed8d-5404-c328" name="Devourers of the Arcane" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
-          <characteristics>
-            <characteristic name="Battalion Ability Details" typeId="08e0-9ead-1dbe-c801">Units from this battalion that do not have the WIZARD keyword can attempt to unbind one spell in the enemy hero phase in the same manner as a WIZARD if they are within 9&quot; of the caster.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="85c8-8982-b348-3862" name="Covens of the Changer" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
-          <characteristics>
-            <characteristic name="Battalion Ability Details" typeId="08e0-9ead-1dbe-c801">Units from this battalion gain the TZEENTCH keyword. In addition, this warscroll battalion is part of the Tzeentch faction and the Beasts of Chaos faction.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <categoryLinks>
-        <categoryLink id="6a94-0bc8-442d-5205" name="TZEENTCH" hidden="false" targetId="7d12-f4c5-3832-0f19" primary="false"/>
-        <categoryLink id="673d-e619-d550-f3b2" name="New CategoryLink" hidden="false" targetId="be17-6bbd-b857-3f43" primary="true"/>
-      </categoryLinks>
-      <selectionEntries>
-        <selectionEntry id="9e26-8a80-21b6-63ad" name="Phantasmagoria of Fate" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8934-6124-3ae9-7bf3" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4408-dc31-e170-b9f7" type="max"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="points" value="180.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="067f-a197-960f-b332" name="1-4 HEROES" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8039-67df-2b84-aa00" type="min"/>
-            <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="afaf-e07e-2e26-103c" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="4469-b7a9-c4e0-fffe" name="Doombull" hidden="false" collective="false" import="true" targetId="d705-0e86-4132-7af8" type="selectionEntry">
-              <categoryLinks>
-                <categoryLink id="66e0-9f9c-94f5-b240" name="Leader" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
-              </categoryLinks>
-            </entryLink>
-            <entryLink id="73b6-9fa6-5faf-13f5" name="Tzaangor Shaman" hidden="false" collective="false" import="true" targetId="cad5-c0e6-cbf2-99fb" type="selectionEntry">
-              <categoryLinks>
-                <categoryLink id="1ed7-374e-a27b-97b3" name="Leader" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="false"/>
-              </categoryLinks>
-            </entryLink>
-            <entryLink id="8463-ecff-43df-da16" name="Beastlord" hidden="false" collective="false" import="true" targetId="0ab8-4ac7-3a61-0cd4" type="selectionEntry">
-              <categoryLinks>
-                <categoryLink id="7ac7-4b33-a7c6-4b29" name="Leader" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="false"/>
-              </categoryLinks>
-            </entryLink>
-            <entryLink id="4b13-cd19-0179-c37d" name="Dragon Ogor Shaggoth" hidden="false" collective="false" import="true" targetId="f427-1a9c-c749-a639" type="selectionEntry">
-              <categoryLinks>
-                <categoryLink id="2355-a610-dfb5-4b2b" name="Leader" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="false"/>
-              </categoryLinks>
-            </entryLink>
-            <entryLink id="57d3-650b-aba9-3ef4" name="Great Bray-shaman" hidden="false" collective="false" import="true" targetId="5645-9e3f-0298-de9d" type="selectionEntry">
-              <categoryLinks>
-                <categoryLink id="0ec2-5027-8771-d75a" name="Leader" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="false"/>
-              </categoryLinks>
-            </entryLink>
-            <entryLink id="5bb9-a62c-2afb-05fd" name="Grashrak Fellhoof" hidden="false" collective="false" import="true" targetId="f76a-f671-565a-7552" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="3baa-dcd3-6116-5f41" name="3-9 Bestigors, Gors, Tzaangors, Ungors, or Ungor Raiders" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bfe2-6448-bbf1-b8a0" type="min"/>
-            <constraint field="selections" scope="parent" value="9.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4319-325a-2233-1a9a" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="fad1-07dc-5485-46bf" name="Tzaangors" hidden="false" collective="false" import="true" targetId="d636-0425-7a14-923c" type="selectionEntry"/>
-            <entryLink id="96cb-cf50-c609-6abd" name="Bestigors" hidden="false" collective="false" import="true" targetId="a2ce-3a32-3c68-24fb" type="selectionEntry"/>
-            <entryLink id="d64e-5a05-8fa6-d334" name="Gors" hidden="false" collective="false" import="true" targetId="3cd6-d61a-3181-b862" type="selectionEntry"/>
-            <entryLink id="4d69-2ea3-412e-7cd4" name="Ungors" hidden="false" collective="false" import="true" targetId="860f-3974-14a3-3237" type="selectionEntry"/>
-            <entryLink id="c00c-16b8-bdc9-7b6b" name="Ungor Raiders" hidden="false" collective="false" import="true" targetId="6a9e-4be2-9c76-a1f1" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="b9cb-daa1-bde7-f48c" name="0-9 Units" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="240b-4be3-68a2-7906" type="min"/>
-            <constraint field="selections" scope="parent" value="9.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4c04-f375-eb17-f74e" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="1c7f-311f-0bd4-ab07" name="Centigors" hidden="false" collective="false" import="true" targetId="a1a7-0dfc-a40b-d680" type="selectionEntry">
-              <categoryLinks>
-                <categoryLink id="60ff-e405-d203-58d3" name="Battleline" hidden="false" targetId="e9f2-765a-b7b8-ce8e" primary="true"/>
-              </categoryLinks>
-            </entryLink>
-            <entryLink id="1085-2f30-0268-bf2d" name="Dragon Ogors" hidden="true" collective="false" import="true" targetId="6bec-d4e0-72ef-77e0" type="selectionEntry">
-              <modifiers>
-                <modifier type="set" field="hidden" value="false">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1378-5154-1483-85b9" type="equalTo"/>
-                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="35ab-a34b-dc69-e3cc" type="greaterThan"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <categoryLinks>
-                <categoryLink id="fa8e-6e16-bd66-d8f7" name="New CategoryLink" hidden="false" targetId="e9f2-765a-b7b8-ce8e" primary="true"/>
-              </categoryLinks>
-            </entryLink>
-            <entryLink id="8ede-fc57-3234-ad30" name="Dragon Ogors" hidden="false" collective="false" import="true" targetId="6bec-d4e0-72ef-77e0" type="selectionEntry">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1378-5154-1483-85b9" type="equalTo"/>
-                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="35ab-a34b-dc69-e3cc" type="greaterThan"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <categoryLinks>
-                <categoryLink id="7151-48aa-f734-a571" name="New CategoryLink" hidden="false" targetId="065e-fda7-fd27-1f40" primary="true"/>
-              </categoryLinks>
-            </entryLink>
-            <entryLink id="cbd7-5875-04ea-19f1" name="Bullgors" hidden="true" collective="false" import="true" targetId="f6f6-dd85-23f1-45dd" type="selectionEntry">
-              <modifiers>
-                <modifier type="set" field="hidden" value="false">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1378-5154-1483-85b9" type="equalTo"/>
-                        <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d3b3-0c61-b966-f2cf" type="equalTo"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <categoryLinks>
-                <categoryLink id="fa0c-483e-c1c3-2b87" name="Battleline" hidden="false" targetId="e9f2-765a-b7b8-ce8e" primary="true"/>
-              </categoryLinks>
-            </entryLink>
-            <entryLink id="c337-bd4b-291d-4fcd" name="Bullgors" hidden="false" collective="false" import="true" targetId="f6f6-dd85-23f1-45dd" type="selectionEntry">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1378-5154-1483-85b9" type="equalTo"/>
-                        <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d3b3-0c61-b966-f2cf" type="equalTo"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <categoryLinks>
-                <categoryLink id="7f86-4b0e-e60d-3a11" name="New CategoryLink" hidden="false" targetId="065e-fda7-fd27-1f40" primary="true"/>
-              </categoryLinks>
-            </entryLink>
-            <entryLink id="90d1-e599-75de-b954" name="Tzaangor Enlightened" hidden="false" collective="false" import="true" targetId="15ed-b222-83e4-0ada" type="selectionEntry">
-              <categoryLinks>
-                <categoryLink id="4ee1-ecda-e3c7-0d08" name="New CategoryLink" hidden="false" targetId="065e-fda7-fd27-1f40" primary="true"/>
-              </categoryLinks>
-            </entryLink>
-            <entryLink id="a90b-868a-af6c-a294" name="Tzaangor Skyfires" hidden="false" collective="false" import="true" targetId="7aeb-7e4a-3ec8-90c5" type="selectionEntry">
-              <categoryLinks>
-                <categoryLink id="bcd2-d21d-872f-40e1" name="New CategoryLink" hidden="false" targetId="065e-fda7-fd27-1f40" primary="true"/>
-              </categoryLinks>
-            </entryLink>
-            <entryLink id="692e-37d6-4574-a8ff" name="Tuskgor Chariots" hidden="false" collective="false" import="true" targetId="26a3-0409-c61a-641b" type="selectionEntry">
-              <categoryLinks>
-                <categoryLink id="6a53-e1f8-bd9b-049e" name="Other" hidden="false" targetId="065e-fda7-fd27-1f40" primary="false"/>
-              </categoryLinks>
-            </entryLink>
-            <entryLink id="d793-27e8-b06d-058b" name="Tzaangor Enlightened on Discs of Tzeentch" hidden="false" collective="false" import="true" targetId="7fba-f6f3-688b-1092" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="3d7c-99b9-c5a5-2175" name="0-2 Ghorgons or Cygors" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2d78-368a-f514-cd7f" type="min"/>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0606-8eb4-fbd2-d6bd" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="7ee6-0d68-00ed-3176" name="Ghorgon ***" hidden="false" collective="false" import="true" targetId="f321-87b5-12d6-29b4" type="selectionEntry">
-              <categoryLinks>
-                <categoryLink id="1d03-4759-3e1c-ca90" name="Leader" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
-              </categoryLinks>
-            </entryLink>
-            <entryLink id="be5a-d5a7-b8cb-8af3" name="Cygor ***" hidden="false" collective="false" import="true" targetId="a400-2e81-dba4-82e4" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="d842-8970-3cae-866a" name="Battalion: Pestilent Throng" hidden="false" collective="false" import="true" type="upgrade">
-      <profiles>
-        <profile id="2277-e62a-ba1f-b650" name="Entropic Deluge" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
-          <characteristics>
-            <characteristic name="Battalion Ability Details" typeId="08e0-9ead-1dbe-c801">If a unit from this battalion is destroyed, roll a dice for each enemy unit within 7&quot;. On a 2+ that enemy unit suffers 1 mortal wound.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="4582-1f5d-50ca-a14c" name="Vectors of the Plague God" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
-          <characteristics>
-            <characteristic name="Battalion Ability Details" typeId="08e0-9ead-1dbe-c801">Units from this battalion gain the NURGLE keyword. In addition, this warscroll battalion is part of the Nurgle faction and the Beasts of Chaos faction.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <categoryLinks>
-        <categoryLink id="19fc-ef36-cf68-27b3" name="NURGLE" hidden="false" targetId="dd77-19a5-28eb-cbec" primary="false"/>
-        <categoryLink id="0e8d-6005-0808-736a" name="New CategoryLink" hidden="false" targetId="be17-6bbd-b857-3f43" primary="true"/>
-      </categoryLinks>
-      <selectionEntries>
-        <selectionEntry id="91cb-56b9-1baf-7beb" name="Pestilent Throng" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e620-a76c-bcff-15ed" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1bc1-cf51-0057-2f37" type="max"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="points" value="180.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="e871-caa8-17e1-44de" name="1-4 HEROES" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9106-ae42-934f-61f2" type="min"/>
-            <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4ca8-a066-5bea-b11f" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="a6f5-540f-6666-d754" name="Doombull" hidden="false" collective="false" import="true" targetId="d705-0e86-4132-7af8" type="selectionEntry">
-              <categoryLinks>
-                <categoryLink id="78a1-1bf5-1954-992a" name="Leader" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
-              </categoryLinks>
-            </entryLink>
-            <entryLink id="9ef5-513c-0b0a-0de2" name="Beastlord" hidden="false" collective="false" import="true" targetId="0ab8-4ac7-3a61-0cd4" type="selectionEntry">
-              <categoryLinks>
-                <categoryLink id="e44b-48e9-eff3-0fd1" name="Leader" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="false"/>
-              </categoryLinks>
-            </entryLink>
-            <entryLink id="96ce-a73f-bdc5-1603" name="Dragon Ogor Shaggoth" hidden="false" collective="false" import="true" targetId="f427-1a9c-c749-a639" type="selectionEntry">
-              <categoryLinks>
-                <categoryLink id="9270-efe1-e0ff-4e3d" name="Leader" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="false"/>
-              </categoryLinks>
-            </entryLink>
-            <entryLink id="c1f6-b517-28cd-d317" name="Great Bray-shaman" hidden="false" collective="false" import="true" targetId="5645-9e3f-0298-de9d" type="selectionEntry">
-              <categoryLinks>
-                <categoryLink id="14db-15ab-176d-a312" name="Leader" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="false"/>
-              </categoryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="aaf5-8523-eaad-5875" name="3-7 Bestigors, Gors, Ungors, or Ungor Raiders" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4992-6561-6844-3389" type="min"/>
-            <constraint field="selections" scope="parent" value="7.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d3d2-8cd9-d112-dabf" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="2b07-8b76-9009-1f41" name="Bestigors" hidden="false" collective="false" import="true" targetId="a2ce-3a32-3c68-24fb" type="selectionEntry"/>
-            <entryLink id="5cda-abd9-4c63-fb6d" name="Gors" hidden="false" collective="false" import="true" targetId="3cd6-d61a-3181-b862" type="selectionEntry">
-              <categoryLinks>
-                <categoryLink id="0528-81bd-f673-36f6" name="Battleline" hidden="false" targetId="e9f2-765a-b7b8-ce8e" primary="true"/>
-              </categoryLinks>
-            </entryLink>
-            <entryLink id="2924-b613-aa2f-8681" name="Ungors" hidden="false" collective="false" import="true" targetId="860f-3974-14a3-3237" type="selectionEntry">
-              <categoryLinks>
-                <categoryLink id="7654-c3a1-f5b3-2dda" name="Battleline" hidden="false" targetId="e9f2-765a-b7b8-ce8e" primary="false"/>
-              </categoryLinks>
-            </entryLink>
-            <entryLink id="9a37-d1bf-8256-48c0" name="Ungor Raiders" hidden="false" collective="false" import="true" targetId="6a9e-4be2-9c76-a1f1" type="selectionEntry">
-              <categoryLinks>
-                <categoryLink id="e8b6-abd3-63b2-b3d8" name="New CategoryLink" hidden="false" targetId="065e-fda7-fd27-1f40" primary="true"/>
-              </categoryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="f8bf-7768-a2c9-8a6b" name="0-7 Units" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4826-1330-1ec2-ce82" type="min"/>
-            <constraint field="selections" scope="parent" value="7.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4dd8-6385-a771-eeb9" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="a7d8-7144-b362-42e2" name="Centigors" hidden="false" collective="false" import="true" targetId="a1a7-0dfc-a40b-d680" type="selectionEntry"/>
-            <entryLink id="6f83-aad8-7497-5387" name="Dragon Ogors" hidden="true" collective="false" import="true" targetId="6bec-d4e0-72ef-77e0" type="selectionEntry"/>
-            <entryLink id="030d-4cdc-beff-10e0" name="Bullgors" hidden="false" collective="false" import="true" targetId="f6f6-dd85-23f1-45dd" type="selectionEntry"/>
-            <entryLink id="4882-750d-23d0-2d03" name="Tuskgor Chariots" hidden="false" collective="false" import="true" targetId="26a3-0409-c61a-641b" type="selectionEntry">
-              <categoryLinks>
-                <categoryLink id="9fd1-e609-df40-7fb1" name="Other" hidden="false" targetId="065e-fda7-fd27-1f40" primary="false"/>
-              </categoryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="39be-648d-cda3-1dad" name="0-2 Ghorgons or Cygors" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="44a4-4b9f-3d90-fc80" type="min"/>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9978-131f-06fd-58d8" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="45ec-2d45-23dd-9628" name="Cygor" hidden="false" collective="false" import="true" targetId="a400-2e81-dba4-82e4" type="selectionEntry">
-              <categoryLinks>
-                <categoryLink id="86b2-de63-520e-a7f9" name="Behemoth" hidden="false" targetId="fa0c-9044-2568-fa02" primary="false"/>
-              </categoryLinks>
-            </entryLink>
-            <entryLink id="bc07-e4e1-e66d-f037" name="Ghorgon" hidden="false" collective="false" import="true" targetId="f321-87b5-12d6-29b4" type="selectionEntry">
-              <categoryLinks>
-                <categoryLink id="7c1c-f185-e06a-8360" name="Behemoth" hidden="false" targetId="fa0c-9044-2568-fa02" primary="false"/>
-              </categoryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
@@ -5439,146 +4572,6 @@ From the start of the fourth battle round, improve the Rend characteristic of me
       <entryLinks>
         <entryLink id="ea35-9dc0-8562-b6d9" name="Battalions" hidden="false" collective="false" import="true" targetId="3b62-f8ce-35a9-eb15" type="selectionEntryGroup"/>
       </entryLinks>
-      <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="5310-1cd5-e313-e0d0" name="Battalion: Baerogg&apos;s Desecrators (Open/Narrative Play Only)" hidden="false" collective="false" import="true" type="upgrade">
-      <profiles>
-        <profile id="bf9c-bcef-c17f-3d40" name="Anarchic Ferocity" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
-          <characteristics>
-            <characteristic name="Battalion Ability Details" typeId="08e0-9ead-1dbe-c801">You can re-roll wound rolls of 1 for attacks made by units from this battalion while they are wholly within 12&quot; of this battalion&apos;s Great Bray-shaman.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <categoryLinks>
-        <categoryLink id="498e-dc1f-c2d3-d9d4" name="New CategoryLink" hidden="false" targetId="be17-6bbd-b857-3f43" primary="true"/>
-      </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="0446-ce64-aff3-6bc9" name="1 Great Bray-shaman" hidden="false" collective="false" import="true" defaultSelectionEntryId="aa38-8b45-e060-d880">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6b13-0fe2-a505-5f10" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="104a-ce8d-4c09-10dd" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="aa38-8b45-e060-d880" name="Great Bray-shaman" hidden="false" collective="false" import="true" targetId="5645-9e3f-0298-de9d" type="selectionEntry">
-              <categoryLinks>
-                <categoryLink id="7ce1-c10d-d189-f9f2" name="Leader" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="false"/>
-              </categoryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="408f-2e35-492c-5d0b" name="1 Bestigors" hidden="false" collective="false" import="true" defaultSelectionEntryId="8ac7-8393-5f06-9477">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="827c-719e-07b7-acb0" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6df5-b964-1528-2803" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="8ac7-8393-5f06-9477" name="Bestigors" hidden="false" collective="false" import="true" targetId="a2ce-3a32-3c68-24fb" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="9aad-4ea0-6225-ce6a" name="1 Ungors or Ungor Raiders" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1b7a-e4b4-5858-6840" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a582-a143-329f-fc91" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="4762-d4c5-f6f4-8a89" name="Ungors" hidden="false" collective="false" import="true" targetId="860f-3974-14a3-3237" type="selectionEntry">
-              <categoryLinks>
-                <categoryLink id="c204-f3db-6e2c-814c" name="Battleline" hidden="false" targetId="e9f2-765a-b7b8-ce8e" primary="true"/>
-              </categoryLinks>
-            </entryLink>
-            <entryLink id="f281-033a-33ea-689c" name="Ungor Raiders" hidden="true" collective="false" import="true" targetId="6a9e-4be2-9c76-a1f1" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="3eec-fb9f-8a48-a0dd" name="1 Ghorgons or Cygors" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="353f-801d-0d41-a989" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="45eb-1482-c875-c698" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="aa47-5f58-de0c-6f1e" name="Ghorgon" hidden="false" collective="false" import="true" targetId="f321-87b5-12d6-29b4" type="selectionEntry">
-              <categoryLinks>
-                <categoryLink id="2f21-be6f-2ffd-07bd" name="Behemoth" hidden="false" targetId="fa0c-9044-2568-fa02" primary="false"/>
-              </categoryLinks>
-            </entryLink>
-            <entryLink id="0403-5a4a-4503-2f02" name="Cygor" hidden="false" collective="false" import="true" targetId="a400-2e81-dba4-82e4" type="selectionEntry">
-              <categoryLinks>
-                <categoryLink id="6db7-7ad9-702d-d8a8" name="Behemoth" hidden="false" targetId="fa0c-9044-2568-fa02" primary="false"/>
-              </categoryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="91ce-9545-b0e8-c92f" name="Battalion: The Butcher-Herd" publicationId="7ca7-0a01-0c6c-9b61" hidden="false" collective="false" import="true" type="upgrade">
-      <profiles>
-        <profile id="b6ab-4271-0f61-aa51" name="Ghorraghan&apos;s Skull-staff" publicationId="7ca7-0a01-0c6c-9b61" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
-          <characteristics>
-            <characteristic name="Battalion Ability Details" typeId="08e0-9ead-1dbe-c801">Add 2 to the Attacks characteristic of Ghorraghan Khai&apos;s Fetish Staff. In addition, if the unmodified hit roll for an attack made with Ghorraghan Khai&apos;s Fetish Staff is 6, that attack inflicts D3 mortal wounds on the target and the attack sequence ends (do not make a wound or save roll).</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="e4ef-b003-7733-6327" name="Infuse with Chaos Energy" publicationId="7ca7-0a01-0c6c-9b61" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
-          <characteristics>
-            <characteristic name="Battalion Ability Details" typeId="08e0-9ead-1dbe-c801">Add 1 to hit rolls for attacks made by WARHERD units in this battalion who are wholly within 12&quot; of Ghorraghan Khai.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <categoryLinks>
-        <categoryLink id="f707-dafa-bfda-23da" name="Battalion" hidden="false" targetId="be17-6bbd-b857-3f43" primary="true"/>
-        <categoryLink id="5024-1c74-89b4-b82b" name="Broken Realms" hidden="false" targetId="16a2-be4e-d7a3-2fdc" primary="false"/>
-      </categoryLinks>
-      <selectionEntries>
-        <selectionEntry id="6962-f779-4407-1b21" name="The Butcher-Herd" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a5d0-8f0b-2685-8873" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b3e2-c326-0adc-8244" type="max"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="points" value="140.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="976d-2577-d3d0-924d" name="1 Great Bray-Shaman (Ghorraghan Khai)" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="67f8-693d-b858-ac30" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4393-9289-c8f9-d9b0" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="941e-2573-d554-c992" name="Great Bray-shaman" hidden="false" collective="false" import="true" targetId="5645-9e3f-0298-de9d" type="selectionEntry">
-              <modifiers>
-                <modifier type="set" field="name" value="Ghorraghan Khai"/>
-              </modifiers>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="98ff-c2e8-dadf-e6c2" name="2 Bullgors Units" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6c0e-db8d-630f-064f" type="min"/>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ada0-8409-1498-1855" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="6383-a7d1-5215-288c" name="Bullgors" hidden="false" collective="false" import="true" targetId="f6f6-dd85-23f1-45dd" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="be28-2442-699d-0594" name="1 Ghorgon" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="36bf-7aa7-2cc3-6d3b" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4876-529d-8a6a-e11d" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="471e-4ed2-887d-bd7a" name="Ghorgon" hidden="false" collective="false" import="true" targetId="f321-87b5-12d6-29b4" type="selectionEntry">
-              <categoryLinks>
-                <categoryLink id="74fb-ff4a-45df-f9a5" name="Behemoth" hidden="false" targetId="fa0c-9044-2568-fa02" primary="false"/>
-              </categoryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
@@ -6689,6 +5682,7 @@ From the start of the fourth battle round, improve the Rend characteristic of me
       </constraints>
       <entryLinks>
         <entryLink id="66a2-0441-28a7-e303" name="Core Battalions" hidden="false" collective="false" import="true" targetId="b275-810f-adfc-156b" type="selectionEntryGroup"/>
+        <entryLink id="daac-93a8-ca43-ca37" name="Beasts of Chaos Warscroll Battalions" hidden="false" collective="false" import="true" targetId="5f79-1a0b-bb21-9ce4" type="selectionEntryGroup"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="8ed5-7647-e7fe-5358" name="Beasts of Chaos Grand Strategy" hidden="true" collective="false" import="true">
@@ -6806,6 +5800,362 @@ From the start of the fourth battle round, improve the Rend characteristic of me
         <entryLink id="ab29-1d86-317f-35f9" name="Universal Prayer Scripture" hidden="false" collective="false" import="true" targetId="3674-103c-35c9-85a6" type="selectionEntryGroup"/>
       </entryLinks>
     </selectionEntryGroup>
+    <selectionEntryGroup id="5f79-1a0b-bb21-9ce4" name="Beasts of Chaos Warscroll Battalions" hidden="true" collective="false" import="true">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="b29d-a8cf-26e9-015a" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="064d-f132-fdaf-3908" name="Marauding Brayherd" hidden="true" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3eec-10f9-f9fe-b2f8" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <selectionEntries>
+            <selectionEntry id="61e7-56a0-c86a-6ead" name="Marauding Brayherd - 1 Beastlord" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="9c8d-02d4-80ba-0ef5" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3eec-10f9-f9fe-b2f8" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="increment" field="2e0f-7149-ac4c-9293" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3eec-10f9-f9fe-b2f8" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3eec-10f9-f9fe-b2f8" type="greaterThan"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0ab8-4ac7-3a61-0cd4" type="instanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2e0f-7149-ac4c-9293" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9c8d-02d4-80ba-0ef5" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b263-0682-0907-9ceb" type="max"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry id="b906-edd7-7b46-b947" name="Marauding Brayherd - 1-3 Great Bray-Shamans" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="4ccc-b1e6-0707-aca7" value="3.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3eec-10f9-f9fe-b2f8" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="increment" field="14ae-0481-da88-201e" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3eec-10f9-f9fe-b2f8" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3eec-10f9-f9fe-b2f8" type="greaterThan"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5645-9e3f-0298-de9d" type="instanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4ccc-b1e6-0707-aca7" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="14ae-0481-da88-201e" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="730a-d039-135d-d93e" type="max"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry id="86a8-2492-fdfa-f23f" name="Marauding Brayherd - 2-6 Bestigors or Tuskgor Chariots" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="ea71-61cd-8a8c-97e5" value="6.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3eec-10f9-f9fe-b2f8" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="increment" field="e8bc-0782-31b9-6497" value="2.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3eec-10f9-f9fe-b2f8" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3eec-10f9-f9fe-b2f8" type="greaterThan"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="26a3-0409-c61a-641b" type="instanceOf"/>
+                            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a2ce-3a32-3c68-24fb" type="instanceOf"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ea71-61cd-8a8c-97e5" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e8bc-0782-31b9-6497" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="68c3-85e4-0d6b-fabf" type="max"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry id="ced5-3634-650b-2c8b" name="Marauding Brayherd - 3-9 Gors" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="7ef2-4c99-d377-0d82" value="9.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3eec-10f9-f9fe-b2f8" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="increment" field="f2ff-07c8-2452-9435" value="3.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3eec-10f9-f9fe-b2f8" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3eec-10f9-f9fe-b2f8" type="greaterThan"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3cd6-d61a-3181-b862" type="instanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7ef2-4c99-d377-0d82" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f2ff-07c8-2452-9435" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7ca6-8fc2-f923-ab9b" type="max"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry id="afa5-5486-f2ea-2548" name="Marauding Brayherd - 4-12 Ungors, Ungor Raiders or Centigors" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="e62b-16c4-d469-f93c" value="12.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3eec-10f9-f9fe-b2f8" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="increment" field="fdea-be9b-0b8e-04c0" value="4.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3eec-10f9-f9fe-b2f8" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3eec-10f9-f9fe-b2f8" type="greaterThan"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6a9e-4be2-9c76-a1f1" type="instanceOf"/>
+                            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a1a7-0dfc-a40b-d680" type="instanceOf"/>
+                            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="860f-3974-14a3-3237" type="instanceOf"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e62b-16c4-d469-f93c" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="fdea-be9b-0b8e-04c0" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c5fa-ec17-7962-0f8c" type="max"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="02cd-5e8c-a845-0136" name="Hungering Warherd" hidden="true" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="a8f5-4197-1a53-f2c6" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <selectionEntries>
+            <selectionEntry id="44bf-21b0-b3bf-0323" name="Hungering Warherd - 1 Doombull" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="e958-4b2a-c72d-d02a" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="a8f5-4197-1a53-f2c6" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="increment" field="badb-bf77-5171-9648" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="a8f5-4197-1a53-f2c6" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="a8f5-4197-1a53-f2c6" type="greaterThan"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d705-0e86-4132-7af8" type="instanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="badb-bf77-5171-9648" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e958-4b2a-c72d-d02a" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f375-bfe4-3efc-8750" type="max"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry id="861c-43cb-4c3a-6c35" name="Hungering Warherd - 3 Bullgors" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="83e4-7a03-967f-aeee" value="3.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="a8f5-4197-1a53-f2c6" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="increment" field="050c-a790-895e-4bb6" value="3.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="a8f5-4197-1a53-f2c6" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="a8f5-4197-1a53-f2c6" type="greaterThan"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f6f6-dd85-23f1-45dd" type="instanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="83e4-7a03-967f-aeee" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="050c-a790-895e-4bb6" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e59a-0f16-5231-b38e" type="max"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry id="980a-cd36-a478-0f9b" name="Hungering Warherd - 1-3 Cygors or Ghorgons" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="208d-949f-c308-2fb2" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="a8f5-4197-1a53-f2c6" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="increment" field="937f-1096-ca1e-da77" value="3.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="a8f5-4197-1a53-f2c6" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="a8f5-4197-1a53-f2c6" type="greaterThan"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a400-2e81-dba4-82e4" type="instanceOf"/>
+                            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f321-87b5-12d6-29b4" type="instanceOf"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="937f-1096-ca1e-da77" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="208d-949f-c308-2fb2" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2aca-e249-1b12-8f5d" type="max"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="1d25-19c2-be13-ea02" name="Thunderscorn Stormherd" hidden="true" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="ea7b-a2f0-dd6e-f5b6" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <selectionEntries>
+            <selectionEntry id="0369-7c71-1d7d-df3a" name="Thunderscorn Stormherd - 1-3 Dragon Ogor Shaggoths" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="6931-473e-faae-deaa" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="ea7b-a2f0-dd6e-f5b6" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="increment" field="a4b9-a82f-2c68-f547" value="3.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="ea7b-a2f0-dd6e-f5b6" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="ea7b-a2f0-dd6e-f5b6" type="greaterThan"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f427-1a9c-c749-a639" type="instanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a4b9-a82f-2c68-f547" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6931-473e-faae-deaa" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0e55-5a82-0e15-3602" type="max"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry id="68a8-9d6c-c929-3674" name="Thunderscorn Stormherd - 3-9 Dragon Ogors" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="0086-8e98-7dab-7427" value="9.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="ea7b-a2f0-dd6e-f5b6" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="increment" field="5c72-0078-7000-2f2e" value="3.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="ea7b-a2f0-dd6e-f5b6" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="ea7b-a2f0-dd6e-f5b6" type="greaterThan"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6bec-d4e0-72ef-77e0" type="instanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0086-8e98-7dab-7427" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5c72-0078-7000-2f2e" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="64ed-7ce7-fca2-f6b5" type="max"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <sharedProfiles>
     <profile id="c29e-5df7-f312-8e74" name="Man-ripper Axe" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
@@ -6817,6 +6167,11 @@ From the start of the fourth battle round, improve the Rend characteristic of me
         <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
         <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
         <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="393b-4aff-aa49-5769" name="Ferocious Despoilers" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
+      <characteristics>
+        <characteristic name="Battalion Ability Details" typeId="08e0-9ead-1dbe-c801">Add 1 to hit rolls for attacks made with melee weapons by units in this battalion while they are within 6&quot; of any other units in the same battalion.  In addition, once per battle, in your hero phase, you can say that you will unleash this battalion&apos;s bestial fury.  If you do so, until your next hero phase, add 1 to the Attacks characteristic of melee weapons used by units in this battalion while they are within 6&quot; of any other units from the same battalion.</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
