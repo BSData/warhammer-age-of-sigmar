@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="155" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="156" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <publications>
     <publication id="e51d-b1a3-pubEC" name="The General&apos;s Handbook"/>
     <publication id="e51d-b1a3-pubEQ" name="Core Rules"/>
@@ -2159,7 +2159,7 @@
           <characteristics>
             <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
             <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">12&quot;</characteristic>
-            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick 1 objective within range and visible to the caster.  Then, roll a dice for each unit within 6&quot; of that objective.  On a 4+, that unit suffers D6 mortal wounds.</characteristic>
+            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick 1 objective within range. Then, roll a dice for each unit within 6&quot; of that objective. On a 4+, that unit suffers D6 mortal wounds.</characteristic>
           </characteristics>
         </profile>
         <profile id="bf57-a5e5-a7c9-66dc" name="Galletian Champions" publicationId="4911-03f2-4062-53db" page="12" hidden="false" typeId="6bf0-7801-561f-cc28" typeName="Special Rules">
@@ -2169,7 +2169,7 @@
         </profile>
         <profile id="5268-b17a-b711-5ec9" name="Infantry" hidden="false" typeId="6bf0-7801-561f-cc28" typeName="Special Rules">
           <characteristics>
-            <characteristic name="Description" typeId="82bd-2ffd-8589-576c">Unit with a Wounds characteristic of 4 or less that is not Leader, Artillery or Behemoth and does not have a mount.</characteristic>
+            <characteristic name="Description" typeId="82bd-2ffd-8589-576c">Unit with a Wounds characteristic of 4 or less that is not Leader, Artillery or Behemoth and does not have mounts (with the exception of companions).</characteristic>
           </characteristics>
         </profile>
         <profile id="a94e-692a-45fe-7b14" name="Heroic Action: Strike at the Opening" publicationId="4911-03f2-4062-53db" page="12" hidden="false" typeId="fff7-7178-1bdb-79d1" typeName="Heroic Action">
