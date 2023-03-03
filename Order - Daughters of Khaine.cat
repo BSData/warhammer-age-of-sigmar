@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="388b-16d3-8182-d6c0" name="Order - Daughters of Khaine" revision="133" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="155" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="388b-16d3-8182-d6c0" name="Order - Daughters of Khaine" revision="134" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="156" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="388b-16d3-pubN82262" name="Order Battletome: Daughters of Khaine (2022)"/>
     <publication id="bd99-1968-f56c-5ef0" name="Battletome: Daughters of Khaine Errata, June 2022"/>
@@ -72,6 +72,8 @@
     <categoryEntry id="52ca-8ea4-39e2-4dd0" name="Daughters of Khaine Core Battalion" hidden="false"/>
     <categoryEntry id="5824-cf79-db61-18b6" name="MELUSAI General" hidden="false"/>
     <categoryEntry id="b0b9-6622-856a-c8b7" name="MEDUSAE" hidden="false"/>
+    <categoryEntry id="fa86-f7a6-e4a4-c277" name="GRYSELLE&apos;S ARENAI" hidden="false"/>
+    <categoryEntry id="e9fb-50e6-d18c-e350" name="HAR KURON" hidden="false"/>
   </categoryEntries>
   <entryLinks>
     <entryLink id="7a3b-e742-323f-b2e8" name="Avatar of Khaine" hidden="false" collective="false" import="true" targetId="4948-910d-f0dd-f32a" type="selectionEntry"/>
@@ -161,6 +163,7 @@
         <categoryLink id="073b-f45e-4f96-525c" name="New CategoryLink" hidden="false" targetId="1974-3f49-7f0b-8422" primary="true"/>
       </categoryLinks>
     </entryLink>
+    <entryLink id="6a0c-ee6f-85ec-59e3" name="Gryselle&apos;s Arenai" hidden="false" collective="false" import="true" targetId="d169-6b97-3454-7c40" type="selectionEntry"/>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="8a66-cfb1-6e7e-9f11" name="General" hidden="false" collective="false" import="true" type="upgrade">
@@ -4143,6 +4146,104 @@ In addition, if the roll was a 6, this invocation is removed from play at the en
       </profiles>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="d169-6b97-3454-7c40" name="Gryselle&apos;s Arenai" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="add" field="category" value="269c-97ff-19c2-a0e7">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="add" field="category" value="7f45-c5b3-c698-138d">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9f18-9ffb-0267-3e08" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="cfc7-2600-a2ce-2def" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="3b66-70f6-c913-af73" name="Champion" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Gryselle, the Slaughterer, is the unit champion and has a Wounds characteristic of 3. That model can issue commands to their own unit.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="14ec-1c7b-307e-2749" name="Dance of Death" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This unit is eligible to fight in the combat phase if it is within 6&quot; of an enemy unit instead of 3&quot;, and it can move an extra 3&quot; when it piles in.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="ccf5-4a18-7840-b4e2" name="Acrobatic Bloodshed" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If the unmodified hit rolls of 3 or more attacks made by this unit that target the same enemy unit in the same phase are 6, the strike-last effect applies to that enemy unit until the end of the turn.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="cfa6-e483-c8c4-92f7" name="Gryselle&apos;s Arenai" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
+          <characteristics>
+            <characteristic name="Move" typeId="8655-6213-2824-1752">6&quot;</characteristic>
+            <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">2</characteristic>
+            <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">7</characteristic>
+            <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">5+</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="9bfd-0fa9-c2f8-3653" name="Unique" hidden="false" targetId="088b-3a27-03f7-8249" primary="false"/>
+        <categoryLink id="d814-3c94-b8fa-0426" name="ORDER" hidden="false" targetId="b970-b3bf-e1a4-a6fc" primary="false"/>
+        <categoryLink id="d009-0c84-7e61-3f85" name="DAUGHTERS OF KHAINE" hidden="false" targetId="9efd-7c5d-dc14-2302" primary="false"/>
+        <categoryLink id="740c-e3bb-0962-5df3" name="AELF" hidden="false" targetId="7fe9-bc03-2c82-0a00" primary="false"/>
+        <categoryLink id="8bc0-fd68-ffdb-c5e4" name="HAR KURON" hidden="false" targetId="e9fb-50e6-d18c-e350" primary="false"/>
+        <categoryLink id="b85f-3b11-cf02-292a" name="SISTERS OF SLAUGHTER" hidden="false" targetId="e6c7-c51f-9a4c-6843" primary="false"/>
+        <categoryLink id="f547-d48c-059e-ae79" name="GRYSELLE&apos;S ARENAI" hidden="false" targetId="fa86-f7a6-e4a4-c277" primary="false"/>
+        <categoryLink id="3761-d086-f453-0919" name="New CategoryLink" hidden="false" targetId="065e-fda7-fd27-1f40" primary="true"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="b114-8c58-93fc-34e7" name="Gladitorial Weapons" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d4d4-db25-51de-b588" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b1f0-417f-9c3c-3ad3" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="fe02-00d0-9b13-87fa" name="Gladitorial Weapons" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">3</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry id="30b5-6143-ce1e-4f6e" name="Gladitorial Blades (Gryselle)" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6580-f31d-52d6-22bd" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f8d6-717c-296a-e4dc" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="9cf1-62b2-18b8-8b31" name="Gladitorial Blades" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">4</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">D3</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
+      <entryLinks>
+        <entryLink id="3db8-713f-5ecf-c267" name="Battalions" hidden="false" collective="false" import="true" targetId="02b3-b822-778d-f61c" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="100.0"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>
