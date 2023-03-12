@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="3981-271d-5871-845b" name="Order - Kharadron Overlords - Data" revision="80" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="157" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="3981-271d-5871-845b" name="Order - Kharadron Overlords - Data" revision="84" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="157" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="e23c-3deb-pubN65537" name="Order Battletome: Kharadron Overlords"/>
     <publication id="e23c-3deb-pubN66862" name="Order Official FAQs and errata, Version 1.4"/>
@@ -80,6 +80,7 @@
     <categoryEntry id="1f3f-38a3-b4cb-58ab" name="CODEWRIGHT" hidden="false"/>
     <categoryEntry id="a177-aef3-c60a-a944" name="TRANSPORT VESSEL" hidden="false"/>
     <categoryEntry id="7130-1757-b3b5-e539" name="GRUNDSTOK" hidden="false"/>
+    <categoryEntry id="c21c-ef13-48e9-fe33" name="Kharadron Warscroll Battalion" hidden="false"/>
   </categoryEntries>
   <sharedSelectionEntries>
     <selectionEntry id="129e-f84a-5017-ca90" name="Aether-Khemist" hidden="false" collective="false" import="true" type="unit">
@@ -1226,164 +1227,92 @@ Favourable Conditions:  For each roll of 6, pick 1 different friendly SKYVESSEL 
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="bbea-50e0-5b3b-60e5" name="Battalion: Grundstok Escort Wing" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="bbea-50e0-5b3b-60e5" name="Kharadron Warscroll Battalion: Grundstok Escort Wing" hidden="true" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ae0a-a47d-3660-4c46" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
-        <profile id="a74e-eaf3-7fc7-ff61" name="Focused Fire" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
+        <profile id="56f7-7937-a6a0-83ea" name="Battalion: Grundstok Escort Wing" hidden="false" typeId="75e0-a332-e4f5-bf36" typeName="Battalion Organisation">
           <characteristics>
-            <characteristic name="Battalion Ability Details" typeId="08e0-9ead-1dbe-c801">At the start of your shooting phase, you can pick 1 enemy unit for this battalion to focus fire on. If you do so, you can re-roll hit rolls of 1 for attacks made by units from this battalion that target that unit in that phase.</characteristic>
+            <characteristic name="Required" typeId="eb5f-e9d2-e457-bff5">2-3 Grundstok Gunhaulers
+1 Arkanaut Ironclad or Arkanaut Frigate
+1 Grundsok Thunderers unit
+0-3 Skywardens units</characteristic>
           </characteristics>
         </profile>
       </profiles>
+      <infoLinks>
+        <infoLink id="f59e-b7b3-1e71-68e5" name="Lords of the Skies" hidden="false" targetId="7c16-6682-9c26-52f7" type="profile"/>
+      </infoLinks>
       <categoryLinks>
         <categoryLink id="f18d-346e-32b8-7349" name="New CategoryLink" hidden="false" targetId="be17-6bbd-b857-3f43" primary="true"/>
+        <categoryLink id="8281-d107-b9c8-4f32" name="Kharadron Warscroll Battalion" hidden="false" targetId="c21c-ef13-48e9-fe33" primary="false"/>
+        <categoryLink id="4852-a024-0c8e-f3c7" name="Battalion" hidden="false" targetId="3ecc-4c0d-d717-29bd" primary="false"/>
       </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="c65b-337b-f9a4-a13a" name="2) Arkanaut Ironclad or Frigate" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="40a0-8f24-278e-e8cf" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e635-2971-0b56-e742" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="7972-f934-fea5-4f11" name="Arkanaut Frigate" hidden="false" collective="false" import="true" targetId="75d5-622e-f185-7ce2" type="selectionEntry"/>
-            <entryLink id="e3ac-9f64-e715-f4b7" name="Arkanaut Ironclad" hidden="false" collective="false" import="true" targetId="fc3c-8879-dd3f-9e53" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="b54a-5c52-47ce-1bd5" name="1) 2-3 Grundstok Gunhaulers" hidden="false" collective="false" import="true" defaultSelectionEntryId="831c-73d4-a330-2491">
-          <constraints>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e1f1-4158-c0bd-dd6c" type="max"/>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="be84-92e4-42aa-cbae" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="831c-73d4-a330-2491" name="Grundstok Gunhauler" hidden="false" collective="false" import="true" targetId="fb69-6292-fcca-fba7" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="4eaf-1792-7103-c7d2" name="3) Grundstok Thunderers unit" hidden="false" collective="false" import="true" defaultSelectionEntryId="95ff-16c6-f5cd-9c6b">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="abb3-fdc1-f0ea-769c" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3d17-ea89-d834-f393" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="95ff-16c6-f5cd-9c6b" name="Grundstok Thunderers" hidden="false" collective="false" import="true" targetId="395d-4f2c-c544-43aa" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="a8c7-23bf-0760-21df" name="4) 0-3 Skywardens units" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c0fc-5f37-d264-29dd" type="max"/>
-            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="36ad-bc77-ca2e-da34" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="c3b6-a044-f1df-3c72" name="Skywardens" hidden="false" collective="false" import="true" targetId="6891-3bc7-0d14-3e01" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="f897-fdb5-ba26-606c" name="Battalion: Iron Sky Command" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="f897-fdb5-ba26-606c" name="Kharadron Warscroll Battalion: Iron Sky Command" hidden="true" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ae0a-a47d-3660-4c46" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
-        <profile id="2afc-d2a9-2f11-394c" name="Lords of the Skies" page="" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
+        <profile id="e6a0-aa85-3f0c-516c" name="Battalion: Iron Sky Command" hidden="false" typeId="75e0-a332-e4f5-bf36" typeName="Battalion Organisation">
           <characteristics>
-            <characteristic name="Battalion Ability Details" typeId="08e0-9ead-1dbe-c801">Do not take battleshock tests for friendly KHARADRON OVERLORDS units while they are wholly within 18&quot; of the ARKANAUT IRONCLAD from this battalion.</characteristic>
+            <characteristic name="Required" typeId="eb5f-e9d2-e457-bff5">0-1 Arkanaut Admiral or Brokk Grungsson
+0-1 Codewright
+1 Arkanaut Ironclad
+3 Aether-Khemist, Aether Navigator or ENDRINMASTER units
+1 Arkanaut Company unit
+1-3 Endrinriggers units</characteristic>
           </characteristics>
         </profile>
       </profiles>
+      <infoLinks>
+        <infoLink id="51b3-151b-99eb-d180" name="Lords of the Skies" hidden="false" targetId="7c16-6682-9c26-52f7" type="profile"/>
+      </infoLinks>
       <categoryLinks>
         <categoryLink id="86f8-a421-7a13-4a50" name="New CategoryLink" hidden="false" targetId="be17-6bbd-b857-3f43" primary="true"/>
+        <categoryLink id="4089-5614-2e9b-5871" name="Battalion" hidden="false" targetId="3ecc-4c0d-d717-29bd" primary="false"/>
+        <categoryLink id="e83b-9268-e1fc-b580" name="Kharadron Warscroll Battalion" hidden="false" targetId="c21c-ef13-48e9-fe33" primary="false"/>
       </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="dc23-a5f0-b43c-d5b7" name="3) 3 units chosen from the list below in any combination:" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9514-ee11-619b-abfd" type="max"/>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="68b8-494f-3e33-c554" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="9d7a-c5e1-36a5-3950" name="Aether-Khemist" hidden="false" collective="false" import="true" targetId="129e-f84a-5017-ca90" type="selectionEntry"/>
-            <entryLink id="d131-4b04-ae8f-79ef" name="Aetheric Navigator" hidden="false" collective="false" import="true" targetId="68fb-1a1e-6c58-b1f5" type="selectionEntry"/>
-            <entryLink id="6ae6-24b0-82fd-1323" name="Endrinmaster with Endrinharness" hidden="false" collective="false" import="true" targetId="b35b-ad7f-1673-0c71" type="selectionEntry"/>
-            <entryLink id="338c-d263-0cf6-5e20" name="Endrinmaster with Dirigible Suit" hidden="false" collective="false" import="true" targetId="81fb-5851-087f-131d" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="b51c-b223-7172-d7fb" name="4) Arkanaut Company unit" hidden="false" collective="false" import="true" defaultSelectionEntryId="0930-4b40-5791-df58">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8b72-fce0-1988-1da4" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b773-6280-d429-1807" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="0930-4b40-5791-df58" name="Arkanaut Company" hidden="false" collective="false" import="true" targetId="7d60-6000-c3d0-0a22" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="0a20-2e84-522c-b612" name="2) Arkanaut Ironclad" hidden="false" collective="false" import="true" defaultSelectionEntryId="ce2f-183c-4ada-5c80">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="df7e-4aef-22f7-ca37" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fb6a-a409-c2c0-19bf" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="ce2f-183c-4ada-5c80" name="Arkanaut Ironclad" hidden="false" collective="false" import="true" targetId="fc3c-8879-dd3f-9e53" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="6b95-1db2-bf8f-71b2" name="5) 1-3 Endrinrigger units" hidden="false" collective="false" import="true" defaultSelectionEntryId="765e-9141-8e3d-e919">
-          <constraints>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="686a-004c-c2e1-1825" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d03a-908b-8dd1-74ae" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="765e-9141-8e3d-e919" name="Endrinriggers" hidden="false" collective="false" import="true" targetId="0064-c926-85e4-d674" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="6dc3-ac81-d5be-ab52" name="1) 0-1 Arkanaut Admiral or Brokk Grungsson" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4d3f-219f-e223-92aa" type="max"/>
-            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f584-b845-57bf-37c0" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="fb1a-b8ff-9920-6a9f" name="Arkanaut Admiral" hidden="false" collective="false" import="true" targetId="44ad-2801-441f-6b44" type="selectionEntry"/>
-            <entryLink id="d3e0-b4ad-58ff-fad1" name="Brokk Grungsson, Lord-Magnate of Barak-Nar" hidden="false" collective="false" import="true" targetId="dcd4-8e51-66c7-b222" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="f09d-15d1-c470-cceb" name="Battalion: Iron Sky Attack Squadron" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="f09d-15d1-c470-cceb" name="Kharadron Warscroll Battalion: Iron Sky Attack Squadron" hidden="true" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ae0a-a47d-3660-4c46" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
-        <profile id="a1f0-b462-456f-d9d3" name="Bold Privateers" page="" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
+        <profile id="5269-6157-846d-a01e" name="Battalion: Iron Sky Attack Squadron" hidden="false" typeId="75e0-a332-e4f5-bf36" typeName="Battalion Organisation">
           <characteristics>
-            <characteristic name="Battalion Ability Details" typeId="08e0-9ead-1dbe-c801">ARKANAUT COMPANY units from this battalion can leave an ARKANAUT FRIGATE from the same battalion either before or after it has moved. In addition, roll 3D6 instead of 2D6 when making charge rolls for ARKANAUT COMPANY units from this battalion that left an ARKANAUT FRIGATE from the same battalion in the movement phase of the same turn.</characteristic>
+            <characteristic name="Required" typeId="eb5f-e9d2-e457-bff5">2+ Arkanaut Frigates
+1 Arkanaut Company for each Arkanaut Frigate in the battalion.</characteristic>
           </characteristics>
         </profile>
       </profiles>
+      <infoLinks>
+        <infoLink id="fe1d-cdd1-6a40-baa0" name="Lords of the Skies" hidden="false" targetId="7c16-6682-9c26-52f7" type="profile"/>
+      </infoLinks>
       <categoryLinks>
         <categoryLink id="9800-cadb-6898-d8c5" name="New CategoryLink" hidden="false" targetId="be17-6bbd-b857-3f43" primary="true"/>
+        <categoryLink id="3269-4fb9-0596-ee26" name="Battalion" hidden="false" targetId="3ecc-4c0d-d717-29bd" primary="false"/>
+        <categoryLink id="6488-d942-a2b5-8911" name="Kharadron Warscroll Battalion" hidden="false" targetId="c21c-ef13-48e9-fe33" primary="false"/>
       </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="d230-03ef-ace1-bb44" name="1) 2+ Arkanaut Frigates" hidden="false" collective="false" import="true" defaultSelectionEntryId="5853-4b83-e2ed-3c24">
-          <constraints>
-            <constraint field="selections" scope="parent" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8aaa-7c46-49b8-a615" type="max"/>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a1fa-9ff8-ee55-2d21" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="5853-4b83-e2ed-3c24" name="Arkanaut Frigate" hidden="false" collective="false" import="true" targetId="75d5-622e-f185-7ce2" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="d619-c4f7-a4fb-8d5b" name="2) 1 Arkanaut Company unit for each Arkanaut Frigate in the same battalion" hidden="false" collective="false" import="true">
-          <modifiers>
-            <modifier type="increment" field="05be-acb9-0948-8938" value="1.0">
-              <repeats>
-                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d230-03ef-ace1-bb44" repeats="1" roundUp="false"/>
-              </repeats>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2370-5d2b-730c-996c" type="max"/>
-            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="05be-acb9-0948-8938" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="f6d3-d152-95da-1ccd" name="Arkanaut Company" hidden="false" collective="false" import="true" targetId="7d60-6000-c3d0-0a22" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
@@ -4174,48 +4103,6 @@ say that Drekki will try to &apos;borrow&apos; that artefact. If you do so, roll
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup id="f047-bd63-c976-b1bd" name="Sky-port Endrinworks" hidden="true" collective="false" import="true">
-          <modifiers>
-            <modifier type="set" field="hidden" value="false">
-              <conditions>
-                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="483d-5d09-9a3e-b76c" type="greaterThan"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9e8a-82c3-0935-5dc1" type="max"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="c8d2-a675-70af-5093" name="1. Breath of Morgrim" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="d316-6ac6-ca14-2fd4" value="1.0">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="483d-5d09-9a3e-b76c" type="greaterThan"/>
-                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5528-5663-ecec-7274" type="greaterThan"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="d316-6ac6-ca14-2fd4" type="min"/>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9dc8-aa32-48e9-d516" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="1265-a428-b617-6925" name="Breath of Morgrim" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-                  <characteristics>
-                    <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">In your shooting phase, you can pick 1 enemy unit and roll 1 dice for each model from that unit within 6&quot; of the bearer. For each 6, that unit suffers 1 mortal wound.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="points" value="0.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntryGroup>
     <selectionEntryGroup id="0796-dc3b-0170-366d" name="Kharadron Overlords Command Traits" hidden="false" collective="false" import="true">
@@ -4549,6 +4436,7 @@ say that Drekki will try to &apos;borrow&apos; that artefact. If you do so, roll
       <entryLinks>
         <entryLink id="23a9-c2e0-1f6e-9f37" name="Universal Core Battalions" hidden="false" collective="false" import="true" targetId="b275-810f-adfc-156b" type="selectionEntryGroup"/>
         <entryLink id="ef63-0591-2835-c1d6" name="Kharadron Core Battalions" hidden="false" collective="false" import="true" targetId="520d-a72a-095a-1725" type="selectionEntryGroup"/>
+        <entryLink id="adc5-5281-b5b2-8c9b" name="Kharadron Warscroll Battalions" hidden="false" collective="false" import="true" targetId="ddda-825a-8ff6-5ef7" type="selectionEntryGroup"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="a39e-2a54-2fd2-b1fb" name="Spell Lores" hidden="false" collective="false" import="true">
@@ -4953,6 +4841,444 @@ say that Drekki will try to &apos;borrow&apos; that artefact. If you do so, roll
         <entryLink id="5ab8-2419-109a-9ef2" name="Aspects of the Champion" hidden="false" collective="false" import="true" targetId="8ea7-6458-0b70-b429" type="selectionEntryGroup"/>
       </entryLinks>
     </selectionEntryGroup>
+    <selectionEntryGroup id="ddda-825a-8ff6-5ef7" name="Kharadron Warscroll Battalions" hidden="true" collective="false" import="true">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c21c-ef13-48e9-fe33" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="baba-621f-f1c8-0eaf" name="Iron Sky Command" hidden="true" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="f897-fdb5-ba26-606c" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="266a-7d11-f14b-d202" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="07d0-1299-de03-7151" name="Iron Sky Command - 0-1 Arkanaut Admiral or Brokk Grungsson" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c21c-ef13-48e9-fe33" type="greaterThan"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="dcd4-8e51-66c7-b222" type="instanceOf"/>
+                            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="44ad-2801-441f-6b44" type="instanceOf"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="increment" field="1a01-1caf-5d42-3205" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="f897-fdb5-ba26-606c" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1a01-1caf-5d42-3205" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1e7d-7099-87b4-e5aa" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1bc9-ea91-232b-3b1d" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="2ee2-83b6-68cb-1f5e" name="Iron Sky Command - 0-1 Codewright" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c21c-ef13-48e9-fe33" type="greaterThan"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d201-4dd7-336e-ae09" type="instanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="increment" field="a20c-a8fd-a063-a936" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="f897-fdb5-ba26-606c" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a20c-a8fd-a063-a936" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0876-1d4f-0ecc-1ac3" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="528e-790f-783c-83db" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="fcda-d70b-ca7e-40ea" name="Iron Sky Command - 1 Arkanaut Ironclad" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c21c-ef13-48e9-fe33" type="greaterThan"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fc3c-8879-dd3f-9e53" type="instanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="increment" field="ea4f-1b43-f064-456b" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="f897-fdb5-ba26-606c" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="increment" field="5360-45d8-8fc7-6a4e" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="f897-fdb5-ba26-606c" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ea4f-1b43-f064-456b" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5360-45d8-8fc7-6a4e" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2011-358a-8795-1b03" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="78ea-a0e0-1b93-1c23" name="Iron Sky Command - 3 Aether-Khemist, Aetheric Navigator, ENDRINMASTER units" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c21c-ef13-48e9-fe33" type="greaterThan"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="68fb-1a1e-6c58-b1f5" type="instanceOf"/>
+                            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="129e-f84a-5017-ca90" type="instanceOf"/>
+                            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="456d-7017-4f43-6a76" type="instanceOf"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="increment" field="ea4f-f3be-d976-1a95" value="3.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="f897-fdb5-ba26-606c" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="increment" field="7d8f-ff06-b8e5-e982" value="3.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="f897-fdb5-ba26-606c" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ea4f-f3be-d976-1a95" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7d8f-ff06-b8e5-e982" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c784-e408-5f09-5f20" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="a399-4b89-c7de-c8de" name="Iron Sky Command - 1 Arkanaut Company unit" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c21c-ef13-48e9-fe33" type="greaterThan"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7d60-6000-c3d0-0a22" type="instanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="increment" field="9d0e-b9c4-2003-7ad8" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="f897-fdb5-ba26-606c" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="increment" field="7aef-e644-9a8a-8d38" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="f897-fdb5-ba26-606c" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9d0e-b9c4-2003-7ad8" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7aef-e644-9a8a-8d38" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="018a-cfcc-663b-544c" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="5e24-1770-9fd4-fee0" name="Iron Sky Command - 1-3 Endrinriggers units" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c21c-ef13-48e9-fe33" type="greaterThan"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0064-c926-85e4-d674" type="instanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="increment" field="08a4-c9c1-81d2-9c22" value="3.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="f897-fdb5-ba26-606c" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="increment" field="10a9-515e-90e4-427b" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="f897-fdb5-ba26-606c" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="08a4-c9c1-81d2-9c22" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="10a9-515e-90e4-427b" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d0b6-a103-f899-0360" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="6b26-c7ed-96d5-29e3" name="Iron Sky Attack Squadron" hidden="true" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="f09d-15d1-c470-cceb" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8e1c-e615-321c-ab55" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="08bf-52f1-7b66-0e4d" name="Iron Sky Attack - 2+ Arkanaut Frigates" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c21c-ef13-48e9-fe33" type="greaterThan"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="75d5-622e-f185-7ce2" type="instanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="increment" field="cd7c-5e24-4212-9b80" value="2.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="f09d-15d1-c470-cceb" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="cd7c-5e24-4212-9b80" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c748-93f2-c8e0-6717" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="9c3e-00e3-af21-55b2" name="Iron Sky Attack - 2+ Arkanaut Company units" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c21c-ef13-48e9-fe33" type="greaterThan"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7d60-6000-c3d0-0a22" type="instanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="increment" field="05c7-4f06-89d7-38f9" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="08bf-52f1-7b66-0e4d" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="increment" field="267a-0e0d-8c64-d2b3" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="08bf-52f1-7b66-0e4d" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="267a-0e0d-8c64-d2b3" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="53f1-2dc3-7662-e97b" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="05c7-4f06-89d7-38f9" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="077a-eb8d-5d08-6278" name="Grundstok Escort Wing" hidden="true" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="bbea-50e0-5b3b-60e5" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d163-c9c9-b160-033c" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="4cac-f21e-b374-4367" name="Escort Wing - 1 Arkanaut Ironclad or Arkanaut Frigate" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c21c-ef13-48e9-fe33" type="greaterThan"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fc3c-8879-dd3f-9e53" type="instanceOf"/>
+                            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="75d5-622e-f185-7ce2" type="instanceOf"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="increment" field="573e-6cc4-a925-5a4f" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="bbea-50e0-5b3b-60e5" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="increment" field="db8d-942b-b4d8-262e" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="bbea-50e0-5b3b-60e5" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="db8d-942b-b4d8-262e" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="573e-6cc4-a925-5a4f" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7648-a3e4-d8ee-0c28" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="fcf1-6086-4222-8c04" name="Escort Wing - 1 Grundstok Thunderers unit" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c21c-ef13-48e9-fe33" type="greaterThan"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="395d-4f2c-c544-43aa" type="instanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="increment" field="8621-6978-87ba-1476" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="bbea-50e0-5b3b-60e5" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="increment" field="45c4-827f-f9e3-5f6f" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="bbea-50e0-5b3b-60e5" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8621-6978-87ba-1476" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="45c4-827f-f9e3-5f6f" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6fb0-a3e5-d095-934c" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="a3c8-cbd0-948b-d126" name="Escort Wing - 0-3 Skywardens units" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c21c-ef13-48e9-fe33" type="greaterThan"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6891-3bc7-0d14-3e01" type="instanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="increment" field="d32b-331b-9c8e-556a" value="3.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="bbea-50e0-5b3b-60e5" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d32b-331b-9c8e-556a" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6bb7-d405-3662-a333" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4f52-26e8-d6e4-ab05" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="569e-fed7-a788-938d" name="Escort Wing - 2-3 Grundstok Gunhaulers" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c21c-ef13-48e9-fe33" type="greaterThan"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fb69-6292-fcca-fba7" type="instanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="increment" field="30f1-c7e4-1a20-dcb5" value="3.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="bbea-50e0-5b3b-60e5" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="increment" field="6108-04dd-967d-6880" value="2.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="bbea-50e0-5b3b-60e5" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="30f1-c7e4-1a20-dcb5" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6108-04dd-967d-6880" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9872-7e59-a54f-5cb2" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <sharedProfiles>
     <profile id="dd2e-337c-b58d-1990" name="Hitcher(s)" publicationId="bc3a-23b8-f1a0-4cb7" page="1" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
@@ -5121,6 +5447,11 @@ No more than 7 models can hitch a lift on the same SKYVESSEL in the same turn.</
     <profile id="3c46-71cc-0fee-a2d6" name="Magnificent Omniscope" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
       <characteristics>
         <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Add 2&quot; to this unit&apos;s Move characteristic.</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="7c16-6682-9c26-52f7" name="Lords of the Skies" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
+      <characteristics>
+        <characteristic name="Battalion Ability Details" typeId="08e0-9ead-1dbe-c801">Do not take battleshock tests for units in this battalion while they are embarked in a friendly TRANSPORT VESSEL.</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
