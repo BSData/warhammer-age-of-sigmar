@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="cac4-1eec-d548-b34d" name="Chaos - Khorne" revision="110" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="157" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="cac4-1eec-d548-b34d" name="Chaos - Khorne" revision="111" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="157" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="cac4-1eec-pubN65537" name="Chaos Battletome: Blades of Khorne"/>
     <publication id="cac4-1eec-pubN105675" name="Grand Alliance: Chaos"/>
@@ -110,8 +110,8 @@
     <categoryEntry id="55d5-ae5d-d4b5-3464" name="FLESH HOUNDS" hidden="false"/>
     <categoryEntry id="7ec0-4209-c4b7-9db7" name="GARREK&apos;S REAVERS" hidden="false"/>
     <categoryEntry id="be29-a763-1a69-3af5" name="KARANAK" hidden="false"/>
-    <categoryEntry id="48ee-c1ab-837f-cf7a" name="KHORGORATHS" hidden="false"/>
-    <categoryEntry id="cf14-4b5c-1c74-17b8" name="KHORGOS KHULL" hidden="false"/>
+    <categoryEntry id="48ee-c1ab-837f-cf7a" name="KHORGORATH" hidden="false"/>
+    <categoryEntry id="cf14-4b5c-1c74-17b8" name="KHORGOS KHUL" hidden="false"/>
     <categoryEntry id="eade-9643-cc4a-9793" name="MIGHTY LORD OF KHORNE" hidden="false"/>
     <categoryEntry id="483e-d372-62ad-99e9" name="LORD OF KHORNE ON JUGGERNAUT" hidden="false"/>
     <categoryEntry id="5a33-b1d2-75c2-db03" name="MIGHTY SKULLCRUSHERS" hidden="false"/>
@@ -213,7 +213,6 @@
     <entryLink id="8c7a-18ee-c18d-eccc" name="Wrathmongers" hidden="false" collective="false" import="true" targetId="4fc6-7808-d334-a716" type="selectionEntry"/>
     <entryLink id="8719-7b62-24be-584c" name="Exalted Greater Daemon of Khorne" hidden="false" collective="false" import="true" targetId="17c4-00a9-a8e9-0f6b" type="selectionEntry"/>
     <entryLink id="6136-e82d-4d9e-77e4" name="Magore&apos;s Fiends" hidden="false" collective="false" import="true" targetId="0b65-569d-9d0f-d290" type="selectionEntry"/>
-    <entryLink id="0559-b93e-4ef3-ea45" name="Riptooth" hidden="false" collective="false" import="true" targetId="d884-a283-9eba-c27b" type="selectionEntry"/>
     <entryLink id="f726-d283-09ad-8220" name="Mazarall the Butcher, Daemon Prince of Khorne" hidden="false" collective="false" import="true" targetId="ba1e-4f88-1a78-e9c5" type="selectionEntry"/>
     <entryLink id="9c94-d329-5bd2-7ba3" name="Skaarac the Bloodborn" hidden="false" collective="false" import="true" targetId="5582-7a1b-e477-10d5" type="selectionEntry"/>
     <entryLink id="998d-f80c-337e-a974" name="Battalion: Khorne Bloodbound Slaughterstorm (Open Play)" hidden="false" collective="false" import="true" targetId="61d9-ceff-02a4-d364" type="selectionEntry"/>
@@ -278,11 +277,6 @@
     </selectionEntry>
     <selectionEntry id="c098-9c13-471b-7fc8" name="Aspiring Deathbringer" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
-        <modifier type="append" field="name" value="with Goreaxe and Skullhammer">
-          <conditions>
-            <condition field="selections" scope="c098-9c13-471b-7fc8" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="57cc-05f8-a255-d1b9" type="equalTo"/>
-          </conditions>
-        </modifier>
         <modifier type="add" field="category" value="89f7-d50b-0aa9-01ce">
           <conditions>
             <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9f18-9ffb-0267-3e08" type="greaterThan"/>
@@ -295,7 +289,12 @@
             <characteristic name="Move" typeId="8655-6213-2824-1752">5&quot;</characteristic>
             <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">6</characteristic>
             <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">7</characteristic>
-            <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">4+</characteristic>
+            <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">3+</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="ec5d-1a05-bc7d-d67d" name="Favour Through Triumph" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If the unmodified hit roll for an attack made by this unit is 6 and the target is a HERO, that attack causes 1 mortal wound to the target in addition to any damage it inflicts.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -309,77 +308,32 @@
         <categoryLink id="f5d5-2df0-6271-f799" name="10 or less wounds Leader" hidden="false" targetId="a8ed-ca35-24e0-cf2e" primary="false"/>
         <categoryLink id="cd16-75c1-b66d-7b32" name="BLADES OF KHORNE" hidden="false" targetId="9e0a-6815-a6d8-1bff" primary="false"/>
         <categoryLink id="d7db-f1d0-6dde-8260" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
+        <categoryLink id="6a7a-721d-7f9f-8c3c" name="GORECHOSEN" hidden="false" targetId="d7a4-b27b-7d8d-0009" primary="false"/>
       </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="35b9-5efe-63de-964a" name="Weapons" hidden="false" collective="false" import="true" defaultSelectionEntryId="57cc-05f8-a255-d1b9">
+      <selectionEntries>
+        <selectionEntry id="1ce8-0eab-abac-6cd3" name="Goreaxe and Skullhammer" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="606b-29f6-3ec3-225f" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ff1b-3dee-856b-e64c" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f5e9-a1d1-a20d-2d1b" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="19b8-4e63-6001-5b83" type="min"/>
           </constraints>
-          <selectionEntries>
-            <selectionEntry id="47b3-88ec-1635-e022" name="Bloodaxe &amp; Wrath-hammer" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="61d9-ceff-02a4-d364" type="instanceOf"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="852e-8cba-a1d0-bc46" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="6fe7-db7c-ee41-167a" name="Bloodaxe" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
-                    <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
-                    <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">3</characteristic>
-                    <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
-                    <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">4+</characteristic>
-                    <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
-                    <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="8b51-deb0-4a18-bde9" name="Wrath-hammer" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
-                    <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">3&quot;</characteristic>
-                    <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">D3</characteristic>
-                    <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
-                    <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">4+</characteristic>
-                    <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
-                    <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="points" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="57cc-05f8-a255-d1b9" name="Goreaxe and Skullhammer" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="463a-257d-e699-de57" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="11e6-3b6f-784b-3cc6" name="Goreaxe and Skullhammer" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
-                    <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
-                    <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">5</characteristic>
-                    <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
-                    <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
-                    <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
-                    <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">2</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="points" value="0.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
+          <profiles>
+            <profile id="78c8-9c70-1d32-b539" name="Goreaxe and Skullhammer" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">5</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">2</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
       <entryLinks>
         <entryLink id="cb1f-aaf4-f6d0-5e87" name="General" hidden="false" collective="false" import="true" targetId="7ab9-de0a-88c2-4fd1" type="selectionEntry"/>
         <entryLink id="58ce-9909-ce60-9f1d" name="Command Traits" hidden="false" collective="false" import="true" targetId="0879-c394-8274-958b" type="selectionEntryGroup"/>
@@ -652,14 +606,14 @@
             <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">3+</characteristic>
           </characteristics>
         </profile>
-        <profile id="e674-6b12-4e9b-1db5" name="Chaos Champion" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+        <profile id="e674-6b12-4e9b-1db5" name="Champion" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 model in this unit can be a Chaos Champion. Add 1 to the Attacks characteristic of that model&apos;s Goreaxe(s).</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 model in this unit can be a Blood Champion. Add 1 to the Attacks characteristic of that model&apos;s melee weapons.</characteristic>
           </characteristics>
         </profile>
         <profile id="9255-e045-eda9-bf3b" name="No Respite" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If a model from this unit is slain in the combat phase, before that model is removed from play, that model can make a pile-in move and then attack with all of the melee weapons it is armed with.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If this unit is included in a Blades of Khorne army, each time a model in this unit is slain, you can make 2 murder rolls instead of 1.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -701,12 +655,12 @@
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="2a1f-b0b4-e59d-984b" name="Icon Bearer" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="2a1f-b0b4-e59d-984b" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2a0e-43ed-18c2-96ff" type="max"/>
           </constraints>
           <profiles>
-            <profile id="8cdd-d7cc-bf5e-3d7b" name="Icon Bearers" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+            <profile id="8cdd-d7cc-bf5e-3d7b" name="Standard Bearers" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
               <characteristics>
                 <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 in every 10 models in this unit can be an Icon Bearer. Add 1 to the Bravery characteristic of this unit while it includes any Icon Bearers.</characteristic>
               </characteristics>
@@ -1022,13 +976,13 @@
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="1068-5c47-aa14-e3ff" name="Juggernaut&apos;s Brazen Hooves" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="1068-5c47-aa14-e3ff" name="Brazen Hooves" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3b84-c478-06c7-d816" type="min"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="12d8-8f0c-86b6-0da0" type="max"/>
       </constraints>
       <profiles>
-        <profile id="3b68-27f9-8081-695a" name="Juggernaut&apos;s Brazen Hooves" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+        <profile id="3b68-27f9-8081-695a" name="Brazen Hooves" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
           <characteristics>
             <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
             <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
@@ -1150,14 +1104,14 @@
         <categoryLink id="a74e-4d84-8210-994c" name="BLADES OF KHORNE" hidden="false" targetId="9e0a-6815-a6d8-1bff" primary="false"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="9251-1842-07c1-44cc" name="Hornblowers" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="9251-1842-07c1-44cc" name="Musician" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="873f-07c6-0b68-d554" type="max"/>
           </constraints>
           <profiles>
-            <profile id="04b5-bbf6-9d18-c6e7" name="Hornblowers" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+            <profile id="04b5-bbf6-9d18-c6e7" name="Musician" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
               <characteristics>
-                <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 in every 10 models in this unit can be a Hornblower. Add 1 to run and charge rolls for this unit while it includes any Hornblowers.</characteristic>
+                <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 in every 10 models in this unit can be a Hornblower. Add 1 to charge rolls for this unit while it includes any Hornblowers.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -1165,12 +1119,12 @@
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="2ec0-21bc-c4e8-bfc3" name="Icon Bearers" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="2ec0-21bc-c4e8-bfc3" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fe35-2b64-91bb-b9b2" type="max"/>
           </constraints>
           <profiles>
-            <profile id="a38c-3eda-4500-1da1" name="Icon Bearers" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+            <profile id="a38c-3eda-4500-1da1" name="Standard Bearer" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
               <characteristics>
                 <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 in every 10 models in this unit can be an Icon Bearer. Add 1 to the Bravery characteristic of this unit while it includes any Icon Bearers.</characteristic>
               </characteristics>
@@ -1252,8 +1206,10 @@
         <entryLink id="6713-9732-8882-a794" name="Reinforced" hidden="false" collective="false" import="true" targetId="0a8d-cde8-fba1-6c0d" type="selectionEntry">
           <modifiers>
             <modifier type="set" field="95f2-6885-756f-9ea5" value="2.0"/>
-            <modifier type="set" field="points" value="80.0"/>
           </modifiers>
+          <costs>
+            <cost name="pts" typeId="points" value="80.0"/>
+          </costs>
         </entryLink>
         <entryLink id="693b-1de6-5e67-21c4" name="Battalions" hidden="false" collective="false" import="true" targetId="671a-89e2-447c-95cb" type="selectionEntryGroup"/>
       </entryLinks>
@@ -1273,14 +1229,19 @@
         <profile id="97f0-3252-8074-a95f" name="Bloodsecrator" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
           <characteristics>
             <characteristic name="Move" typeId="8655-6213-2824-1752">5&quot;</characteristic>
-            <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">8</characteristic>
+            <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">6</characteristic>
             <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">8</characteristic>
             <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">3+</characteristic>
           </characteristics>
         </profile>
         <profile id="1fed-101c-b6c3-52ae" name="Rage of Khorne" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Add 1 to the Attacks characteristic of melee weapons used by friendly BLADES OF KHORNE units while they are wholly within 16&quot; of any models with this ability.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Once per battle, at the start of the combat phase, you can pick 1 friendly unit on the battlefield with this ability to plant its Icon of Khorne.  If you do so, add 1 to the Attacks characteristic of melee weapons used by friendly BLADES OF KHORNE units on the battlefield until the end of that phase.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="76c8-63ca-276c-e413" name="Icon of the Blood God" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If this unit issues the Rally command (core rules, 7.2) to a friendly BLOODBOUND unit with a Wounds characteristic of 3 or less, you can return 1 slain model to that unit for each 4+ instead of each 6.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1295,6 +1256,7 @@
         <categoryLink id="671e-ef8d-35ac-a340" name="10 or less wounds Leader" hidden="false" targetId="a8ed-ca35-24e0-cf2e" primary="false"/>
         <categoryLink id="e6d0-dda0-0b03-9b75" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
         <categoryLink id="07d6-9fae-15cb-fa11" name="BLADES OF KHORNE" hidden="false" targetId="9e0a-6815-a6d8-1bff" primary="false"/>
+        <categoryLink id="7125-064c-0153-dea0" name="GORECHOSEN" hidden="false" targetId="d7a4-b27b-7d8d-0009" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="5b17-c8cf-39c5-f3ab" name="Ensorcelled Axe" hidden="false" collective="false" import="true" type="upgrade">
@@ -1365,6 +1327,7 @@
         <categoryLink id="6370-4d75-53bf-50ec" name="10 or less wounds Leader" hidden="false" targetId="a8ed-ca35-24e0-cf2e" primary="false"/>
         <categoryLink id="cd64-f013-5730-c67f" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
         <categoryLink id="23c4-0ec8-e628-25ff" name="BLADES OF KHORNE" hidden="false" targetId="9e0a-6815-a6d8-1bff" primary="false"/>
+        <categoryLink id="4c44-dd44-9923-750f" name="GORECHOSEN" hidden="false" targetId="d7a4-b27b-7d8d-0009" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="5537-e512-b224-1909" name="Torture Blade" hidden="false" collective="false" import="true" type="upgrade">
@@ -1819,14 +1782,14 @@
             <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">5+</characteristic>
           </characteristics>
         </profile>
-        <profile id="4038-864b-a028-21af" name="Blooded Lieutenant" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+        <profile id="c2e3-ec90-3f3d-3f54" name="Blood-marked Warrior" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If this model is not your general, add 2 to the Attacks characteristic of this model&apos;s melee weapons while it is wholly within 12&quot; of a friendly KHORNE general.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This unit has a ward of 5+.</characteristic>
           </characteristics>
         </profile>
-        <profile id="c722-e315-4770-5ea4" name="Brutal Command" hidden="false" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
+        <profile id="9757-d355-34f5-7714" name="First of the Gorechosen" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Command Ability Details" typeId="1b71-4c83-4e8c-093f">You can use this command ability at the start of the battleshock phase. If you do so, pick a friendly model with this command ability. until the end of that phase, you do not have to take battleshock tests for friendly BLADES OF KHORNE MORTAL units that are wholly within 18&quot; of that model.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Add 1 to hit rolls for attacks made by this unit while it is wholly within 8&quot; of another friendly BLOODBOUND unit that is a general.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1840,6 +1803,7 @@
         <categoryLink id="fa3c-bd29-f98d-f8df" name="10 or less wounds Leader" hidden="false" targetId="a8ed-ca35-24e0-cf2e" primary="false"/>
         <categoryLink id="aec5-21c2-92cb-770a" name="BLADES OF KHORNE" hidden="false" targetId="9e0a-6815-a6d8-1bff" primary="false"/>
         <categoryLink id="343d-22f4-d6f6-ec82" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
+        <categoryLink id="23a7-1482-c09b-d8d2" name="GORECHOSEN" hidden="false" targetId="d7a4-b27b-7d8d-0009" primary="false"/>
       </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="9806-6225-5da8-6fc9" name="Weapons" hidden="false" collective="false" import="true" defaultSelectionEntryId="bb32-8c3a-845d-6be4">
@@ -1848,38 +1812,12 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="09af-7b34-245b-7d98" type="max"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="4572-2ab0-352d-23b1" name="Bloodbite Axe &amp; Runemarked Shield" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="af9e-97e2-4e9e-e8b8" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="febe-ed7f-7494-4119" name="Bloodbite Axe" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
-                    <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
-                    <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">6</characteristic>
-                    <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
-                    <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">4+</characteristic>
-                    <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
-                    <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="af7c-688a-2b0c-f463" name="Runemarked Shield" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-                  <characteristics>
-                    <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Roll a dice each time you allocate a wound or mortal wound to this model that was inflicted by a spell. On a 2+ that wound or mortal wound is negated.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="points" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="14c1-4cae-ab80-7268" name="Ruinous Axe &amp; Skullgouger" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="14c1-4cae-ab80-7268" name="Ruinous Axe and Skullgouger" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7a26-3945-cb09-2a4d" type="max"/>
               </constraints>
               <profiles>
-                <profile id="c6fd-1b5e-6df4-b13c" name="Ruinous Axe" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+                <profile id="c6fd-1b5e-6df4-b13c" name="Ruinous Axe and Skullgouger" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
                   <characteristics>
                     <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
                     <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
@@ -1890,9 +1828,9 @@
                     <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">3</characteristic>
                   </characteristics>
                 </profile>
-                <profile id="6955-7655-5297-8488" name="Skullgouger" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+                <profile id="e5ca-fc0d-3438-04a0" name="Skullgouger" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
                   <characteristics>
-                    <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">In the combat phase, if the unmodified save roll for an attack that targets this model is 6, the attacking unit suffers D3 mortal wounds after all of its attacks have been resolved.</characteristic>
+                    <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If the unmodified save roll for an attack made with a melee weapons that targets a unit armed with a Ruinous Axe and Skullgouger is 6, the attacking unit suffers D3 mortal wounds after all of its attacks have been resolved.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1905,11 +1843,6 @@
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1145-70ca-00b7-e661" type="max"/>
               </constraints>
               <profiles>
-                <profile id="4d2c-3a44-3914-a8ed" name="Brutal Impalement" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-                  <characteristics>
-                    <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">if the unmodified roll for an attack made with an Impaling Spear is 6, that attack inflicts D3 mortal wounds on the target in addition to any normal damage.</characteristic>
-                  </characteristics>
-                </profile>
                 <profile id="4894-0980-fbc9-a1af" name="Impaling Spear" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
                   <characteristics>
                     <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
@@ -1953,17 +1886,17 @@
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1f72-4aac-a5bc-9cd1" type="max"/>
       </constraints>
       <profiles>
-        <profile id="77ed-672a-e576-4910" name="Frenzied Devotion" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Add 1 to the Attacks characteristic of this unit&apos;s melee weapons while this unit is wholly within 16&quot; of any friendly KHORNE TOTEMS.</characteristic>
-          </characteristics>
-        </profile>
         <profile id="f38c-25be-5141-cbfc" name="Garrek&apos;s Reavers" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
           <characteristics>
             <characteristic name="Move" typeId="8655-6213-2824-1752">6&quot;</characteristic>
             <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">2</characteristic>
             <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">6</characteristic>
             <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">6+</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="6eb4-ce9e-6c7a-a19f" name="Grisly Trophy" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If this unit is included in a Blades of Khorne army, at the end of the combat phase, if this unit is on the battlefield and any enemy models were slain by attacks made by this unit in that phase, you receive 1 additional Blood Tithe point.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1979,189 +1912,24 @@
         <categoryLink id="1aff-f2c2-4d23-b6d4" name="New CategoryLink" hidden="false" targetId="065e-fda7-fd27-1f40" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="daae-e9c1-9d30-732d" name="Blooded Saek" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="75b4-6eb3-2e52-099e" name="Reaver Axe" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3a00-27d3-99a4-143c" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6eee-706b-313d-e11b" type="max"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="df56-e786-97af-1778" name="Saek&apos;s Meatripper Axe" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cb42-3beb-0404-f600" type="min"/>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0ca4-b7ff-a67e-ca3e" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="6256-374c-f95d-a8fa" name="Saek&apos;s Meatripper Axe" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
-                    <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
-                    <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">1</characteristic>
-                    <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
-                    <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">4+</characteristic>
-                    <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
-                    <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="points" value="0.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="3771-d412-69d9-80e4" name="Garrek Gorebeard" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6fa1-114f-7b01-6074" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1e19-a585-5e8d-f617" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="720d-b80c-97cc-272a" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5b4e-a82e-199b-806c" type="max"/>
           </constraints>
           <profiles>
-            <profile id="be33-4fd5-d515-392f" name="Garrek Gorebeard" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+            <profile id="05ba-7879-7d2b-cf63" name="Reaver Axe" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
               <characteristics>
-                <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If the unmodified hit roll for an attack made with Garrek Gorebeard&apos;s Blooddrinker Axe is 6, that attack inflicts 1 mortal wound on the target and the attack sequence ends (do not make a wound or save roll).</characteristic>
-              </characteristics>
-            </profile>
-            <profile id="cbf7-343a-9dfa-88cc" name="Grisly Trophy" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-              <characteristics>
-                <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Do not take a battleshock test for this unit if any enemy models were slain by attacks made by this unit&apos;s Garrek Gorebeard earlier in the same turn.</characteristic>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">3</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">4+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
               </characteristics>
             </profile>
           </profiles>
-          <selectionEntries>
-            <selectionEntry id="2cf3-6c5b-c0b7-a7ea" name="Garrek&apos;s Blooddrinker Axe" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1098-8df0-dc63-7d69" type="min"/>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3513-6445-043c-d48e" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="73bd-6c4b-8d2f-69ee" name="Garrek&apos;s Blooddrinker Axe" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
-                    <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
-                    <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">3</characteristic>
-                    <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
-                    <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">4+</characteristic>
-                    <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
-                    <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="points" value="0.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="ff07-1ec0-dc0c-9546" name="Karsus the Chained" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5643-1cf3-8279-fa32" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f7e8-7818-29f2-39b8" type="max"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="ab3a-b3e1-aa73-d560" name="Karsus&apos; Chained Axe" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="87e1-f5c8-9d37-229b" type="min"/>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cb0b-0680-d30a-770c" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="bdf4-7d32-fcb8-8972" name="Karsus&apos; Chained Axe" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
-                    <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">2&quot;</characteristic>
-                    <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">D3</characteristic>
-                    <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
-                    <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">4+</characteristic>
-                    <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
-                    <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="points" value="0.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="4755-c29f-4a50-269c" name="Targor" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0221-33c5-90cf-341d" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="54f0-4c13-2918-edab" type="max"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="5507-08f6-d220-7415" name="Reaver Blades" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c4ec-2432-9746-423a" type="min"/>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="52ea-22a6-356b-874e" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="1a34-890d-b1da-d7b7" name="Reaver Blades" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
-                    <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
-                    <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">1</characteristic>
-                    <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
-                    <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">4+</characteristic>
-                    <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
-                    <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="99c4-e810-efd5-af8d" name="Reaver Blades" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-                  <characteristics>
-                    <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">You can re-roll hit rolls of 1 for attacks made with Reaver Blades.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="points" value="0.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="3113-3e7c-733b-8616" name="Arnulf" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="16d2-e41e-0231-fcfa" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6255-9a6f-53ee-4ceb" type="max"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="8d42-6716-662d-5d9f" name="Reaver Blades" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0054-704c-5938-652d" type="min"/>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="879e-6ed8-1fad-59c7" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="e13b-276f-58df-76a5" name="Reaver Blades" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
-                    <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
-                    <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">1</characteristic>
-                    <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
-                    <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">4+</characteristic>
-                    <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
-                    <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="662d-3cc9-0afe-4d61" name="Reaver Blades" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-                  <characteristics>
-                    <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">You can re-roll hit rolls of 1 for attacks made with Reaver Blades.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="points" value="0.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
@@ -2272,21 +2040,25 @@
             <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">4+</characteristic>
           </characteristics>
         </profile>
-        <profile id="f923-6a57-02f9-bdcd" name="Horrific Predator" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+        <profile id="f923-6a57-02f9-bdcd" name="Horrific Predators" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Add 1 to battleshock rolls for units that has any models slain by attacks made by KHORGORATHS in the same turn.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Enemy units cannot receive the Inspiring Presence command while they are within 3&quot; of any friendly units with this ability.</characteristic>
           </characteristics>
         </profile>
         <profile id="6369-782e-4c8d-7320" name="Taker of Heads" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the end of the combat phase, if any enemy models were slain by this unit&apos;s attacks in that combat phase, you can heal 1 wound allocated to this unit.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Each time an enemy model is slain by an attack made by this unit, you can heal 1 wound allocated to this unit.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="9357-9cad-24d1-cb6a" name="Violent Monstrousity" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If this unit is included in a Blades of Khorne army, when this unit destroyed, you can make 5 murder rolls instead of 1.</characteristic>
           </characteristics>
         </profile>
       </profiles>
       <categoryLinks>
         <categoryLink id="2f35-f24d-8ba9-7167" name="New CategoryLink" hidden="false" targetId="7cdd-80ea-cbeb-8e16" primary="false"/>
         <categoryLink id="57cc-965e-694a-315c" name="New CategoryLink" hidden="false" targetId="f22b-976f-fc38-366a" primary="false"/>
-        <categoryLink id="8bdf-c825-3b33-696e" name="New CategoryLink" hidden="false" targetId="1959-9f6a-3056-913a" primary="false"/>
         <categoryLink id="882a-d72d-5164-4e5b" name="New CategoryLink" hidden="false" targetId="48ee-c1ab-837f-cf7a" primary="false"/>
         <categoryLink id="244f-a878-6d71-336f" name="BLOODBOUND" hidden="false" targetId="635b-b8a4-d5ce-1a2d" primary="false"/>
         <categoryLink id="7891-79a5-0ff2-ee68" name="BLADES OF KHORNE" hidden="false" targetId="9e0a-6815-a6d8-1bff" primary="false"/>
@@ -2366,17 +2138,17 @@
       <profiles>
         <profile id="2734-9759-c7c4-3bdb" name="Collar of Khorne" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This model can attempt to unbind one spell in the enemy hero phase in the same manner as a WIZARD.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This unit can attempt to unbind 1 spell in the enemy hero phase in the same manner as a WIZARD.</characteristic>
           </characteristics>
         </profile>
         <profile id="fdf9-bab6-ec65-7380" name="Aqshy&apos;s Bane" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This model is eligible to fight in the combat phase if it is within 8&quot; of an enemy unit instead of 3&quot; and can move an extra 5&quot; when it piles in.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This unit is eligible to fight in the combat phase if it is within 8&quot; of an enemy unit instead of 3&quot; and it can move an extra 5&quot; when it piles in.</characteristic>
           </characteristics>
         </profile>
-        <profile id="0115-960c-b720-6f0f" name="Lord of the Goretide" hidden="false" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
+        <profile id="0115-960c-b720-6f0f" name="Lord of the Goretide" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Command Ability Details" typeId="1b71-4c83-4e8c-093f">You can use this command ability at the start of the combat phase. If you do so, pick a friendly model with this command ability that is a general. Until the end of that phase, you can re-roll hit rolls of 1 for attacks made by friendly GORETIDE units wholly within 16&quot; of that model.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If this unit is included in a Goretide army, once per battle, at the start of the combat phase, you can say that Khul will unleash the wrath of the Goretide.  If you do so, until the end of that phase, each time a friendly GORETIDE BLOODBOUND model is slain, you can make 1 additional murder roll.</characteristic>
           </characteristics>
         </profile>
         <profile id="257a-2d27-ce54-e4b4" name="Korghos Khul" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
@@ -2389,7 +2161,12 @@
         </profile>
         <profile id="e259-f4c0-2f5b-5a3a" name="Companion" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Khorghos Khul is accompanied by Grizzlemaw, who attacks with its Claws and Fangs. For rules purposes, Grizzlemaw is treated in the same manner as a mount.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This unit&apos;s Flesh Hound, Grizzelemaw, is armed with Blood-dark Claws.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="8e3f-e168-c841-f9ad" name="Reality-splitting Axe" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Each time this unit fights, wounds caused by its Blood-dark Claws must be allocated before wounds caused by its Axe of Khorne.  At the end of any phase, if any wounds caused by this unit&apos;s Axe of Khorne in that phase where allocated to an enemy model and that enemy model has not been slain, roll a dice.  On a 5+, that enemy model is slain.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -2423,11 +2200,6 @@
                 <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
                 <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-2</characteristic>
                 <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">2</characteristic>
-              </characteristics>
-            </profile>
-            <profile id="4ad5-29b3-75ac-fa72" name="Reality-splitting Axe" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-              <characteristics>
-                <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the end of any phase, if any wounds inflicted by this model&apos;s Axe of Khorne in that phase were allocated to an enemy model and not negated, and that enemy model has not been slain, roll a dice. On a 5+ that enemy model is slain.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -2483,17 +2255,17 @@
         </profile>
         <profile id="9f1a-11ef-6a89-4aff" name="Brass-clad Shield" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Roll a dice each time you allocate a wound or mortal wound to this model that was inflicted by a spell. On a 5+ that wound or mortal wound is negated.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This unit has a ward of 5+ against mortal wounds caused by spells and mortal wounds caused by the abilities of endless spells.</characteristic>
           </characteristics>
         </profile>
         <profile id="ad30-f939-b9b2-b377" name="Slaughterous Charge" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">After this model makes a charge move, you can pick 1 enemy unit within 1&quot; of it and roll a dice. On a 2+ that enemy unit suffers D3 mortal wounds.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">After this unit makes a charge move, pick 1 enemy unit within 3&quot; of this unit and roll a dice. On a 2+ that enemy unit suffers 3 mortal wounds.</characteristic>
           </characteristics>
         </profile>
-        <profile id="e3d4-ba23-433d-79a2" name="Blood Stampede" hidden="false" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
+        <profile id="3c90-639b-82ec-b809" name="Lord of Brass Stampede" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Command Ability Details" typeId="1b71-4c83-4e8c-093f">You can use this command ability at the start of the combat phase. If you do so, pick up to 3 friendly KHORNE MORTAL units that made a charge move in that turn and are wholly within 16&quot; of a model with this command ability. You can re-roll wound rolls of 1 for attacks made by those units in that combat phase.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Once per battle, at the start of the charge phase, you can say this unit will declare a Brass Stampede.  If you do so, until the end of that phase, you can re-roll charge rolls for this unit and friendly MIGHTY SKULLCRUSHER units wholly within 16&quot; of this unit.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -2533,7 +2305,7 @@
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink id="c20e-2ebb-df0b-4879" name="Juggernaut&apos;s Brazen Hooves" hidden="false" collective="false" import="true" targetId="1068-5c47-aa14-e3ff" type="selectionEntry"/>
+        <entryLink id="c20e-2ebb-df0b-4879" name="Brazen Hooves" hidden="false" collective="false" import="true" targetId="1068-5c47-aa14-e3ff" type="selectionEntry"/>
         <entryLink id="6685-9e94-c093-abc2" name="Artefacts" hidden="false" collective="false" import="true" targetId="0740-e91a-e615-4ac9" type="selectionEntryGroup"/>
         <entryLink id="680e-a861-4aa7-3f1e" name="Command Traits" hidden="false" collective="false" import="true" targetId="0879-c394-8274-958b" type="selectionEntryGroup"/>
         <entryLink id="97a6-1015-8446-f790" name="Battalions" hidden="false" collective="false" import="true" targetId="671a-89e2-447c-95cb" type="selectionEntryGroup"/>
@@ -2625,7 +2397,7 @@
             </profile>
             <profile id="a288-310c-f970-1c16" name="Collar of Khorne" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
               <characteristics>
-                <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This model can attempt to unbind one spell in the enemy hero phase in the same manner as a WIZARD. In addition, this model can attempt to dispel one endless spell at the start of your hero phase in the same manner as a WIZARD. </characteristic>
+                <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This unit can attempt to unbind 1 spell in the enemy hero phase in the same manner as a WIZARD.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -2679,14 +2451,19 @@
             <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">2+</characteristic>
           </characteristics>
         </profile>
-        <profile id="eb39-a14f-7990-c1ce" name="Skullhunter" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+        <profile id="eb39-a14f-7990-c1ce" name="Champion" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 model in this unit can be a Skullhunter. Add 1 to the Attacks characteristic of that model&apos;s melee weapons.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 model in this unit can be a Skullhunter. Add 1 to the Attacks characteristic of that model&apos;s Bloodglaive or Ensorcelled Axe.</characteristic>
           </characteristics>
         </profile>
         <profile id="2291-44d9-962c-c8b2" name="Murderous Charge" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">After a model in this unit makes a charge move, you can pick 1 enemy unit within 1&quot; of that model and roll a dice. On a 2+ that enemy unit suffers 1 mortal wound. If this unit has more than 1 model, roll to determine if mortal wounds are inflicted after each model completes its charge move, but do not allocate the mortal wounds until after all of the models in the unit have moved. If this unit has 6 or more models when it makes a charge move, change the mortal wounds inflicted by this ability from 1 to D3.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">After a model in this unit makes a charge move, pick 1 enemy unit and roll a dice for each model in this unit that is within 3&quot; of that enemy unit.  For each 2-4, that enemy unit suffers 1 mortal wound.  For each 5+, that enemy unit suffers 2 mortal wounds.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="a645-1ad7-d525-b5af" name="Brass-clad Shield" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This unit has a ward of 5+ against mortal wounds caused by spells and mortal wounds caused by the abilities of endless spells.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -2700,14 +2477,14 @@
         <categoryLink id="e71d-5b4b-e0bb-b866" name="BLADES OF KHORNE" hidden="false" targetId="9e0a-6815-a6d8-1bff" primary="false"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="ee3a-bd69-1f6f-26c8" name="Hornblowers" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="ee3a-bd69-1f6f-26c8" name="Musician" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6ff1-8d35-c91c-fd84" type="max"/>
           </constraints>
           <profiles>
-            <profile id="6a02-7f40-bc17-9834" name="Hornblowers" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+            <profile id="6a02-7f40-bc17-9834" name="Musician" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
               <characteristics>
-                <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 in every 3 models in this unit can be a Hornblower. Add 1 to run and charge rolls made for this unit while it includes any Hornblowers.</characteristic>
+                <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 in every 3 models in this unit can be a Hornblower. Add 1 to run and charge rolls for this unit while it includes any Hornblowers.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -2720,9 +2497,9 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8af0-d780-7887-8efe" type="max"/>
           </constraints>
           <profiles>
-            <profile id="722e-034e-12c7-4b05" name="Standard Bearers" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+            <profile id="722e-034e-12c7-4b05" name="Standard Bearer" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
               <characteristics>
-                <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 in every 3 models in this unit can be a Standard Bearer. Add 2 to the Bravery characteristic of this unit while it includes any Standard Bearers.</characteristic>
+                <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 in every 3 models in this unit can be a Standard Bearer. Add 1 to the Bravery characteristic of this unit while it includes any Standard Bearers.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -2799,7 +2576,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="0d90-2abf-920d-eaf2" name="Juggernaut&apos;s Brazen Hooves" hidden="false" collective="false" import="true" targetId="1068-5c47-aa14-e3ff" type="selectionEntry"/>
+        <entryLink id="0d90-2abf-920d-eaf2" name="Brazen Hooves" hidden="false" collective="false" import="true" targetId="1068-5c47-aa14-e3ff" type="selectionEntry"/>
         <entryLink id="1eee-2dfe-47f7-763d" name="Reinforced" hidden="false" collective="false" import="true" targetId="0a8d-cde8-fba1-6c0d" type="selectionEntry">
           <modifiers>
             <modifier type="set" field="95f2-6885-756f-9ea5" value="2.0">
@@ -2981,12 +2758,12 @@
         </profile>
         <profile id="4be1-8676-b729-3c7c" name="Brass Collar of Khorne" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This unit can attempt to unbind one spell in each enemy hero phase in the same manner as a WIZARD. In addition, this unit can attempt to dispel one endless spell at the start of your hero phase in the same manner as a WIZARD.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This unit can attempt to unbind 1 spell in each enemy hero phase in the same manner as a WIZARD. </characteristic>
           </characteristics>
         </profile>
         <profile id="40ea-64e2-585b-4b7f" name="Bestial Leap" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This model is eligible to fight in the combat phase if it is within 8&quot; of an enemy unit instead of 3&quot;, and can move an extra 5&quot; when it piles in.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This unit is eligible to fight in the combat phase if it is within 8&quot; of an enemy unit instead of 3&quot;, and can move an extra 5&quot; when it piles in.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -3075,12 +2852,17 @@
         </profile>
         <profile id="97d5-f527-838c-d20e" name="The Slaughterborn" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the end of the movement phase, if this model has been slain, roll 2D6. On an 8+ you can set up this model anywhere on the battlefield more than 9&quot; away from an enemy units, with all wounds allocated to it removed.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the end of the movement phase, if this unit has been slain, roll 2D6. On an 8+ you can set up this unit anywhere on the battlefield more than 9&quot; away from an enemy units and with no wounds allocated to it.</characteristic>
           </characteristics>
         </profile>
         <profile id="da59-0f7f-061b-9b4f" name="Slaughterstorm" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">The Attacks characteristic of this model&apos;s Bloodstorm Blades is either 5, or equal to the number of enemy models within 3&quot; of this model when the number of attacks made with the weapon is determined (whichever is higher).</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">The Attacks characteristic of the Bloodstorm Blades is either 5, or equal to the number of enemy models within 3&quot; of the attacking unit (whichever is higher).</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="900e-494d-f6ca-f3e2" name="Murderous Paragon" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If this unit is included in a Blades of Khorne army, you can make 1 additional murder roll each time a model from a friendly WRATHMONGERS unit within 8&quot; of this unit is slain.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -3150,14 +2932,9 @@
             <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">4+</characteristic>
           </characteristics>
         </profile>
-        <profile id="0f95-fb77-0603-de19" name="Fiery Anvil" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+        <profile id="0f95-fb77-0603-de19" name="Bone-crushing Strikes" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the end of the combat phase, you can pick 1 enemy HERO or MONSTER within 2&quot; of this model and roll a dice. On a 2+ that enemy unit suffers D3 mortal wounds.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="c7ca-de5a-c791-beff" name="Favoured by Khorne" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Add 1 to the Bravery characteristic of friendly BLADES OF KHORNE MORTAL units wholly within 12&quot; of any friendly models with this ability.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Add 1 to the Damage characteristic of this unit&apos;s Brazen Anvil for attacks that target an enemy MONSTER.  In addition, if any wounds caused by this unit&apos;s Brazen Anvil are allocated to an enemy MONSTER, the strike-last effect applies to the enemy MONSTER until the end of that phase.</characteristic>
           </characteristics>
         </profile>
         <profile id="b3bc-ef43-ccca-a0fa" name="Tempered with Fury" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
@@ -3176,6 +2953,7 @@
         <categoryLink id="e198-e794-7f60-f848" name="10 or less wounds Leader" hidden="false" targetId="a8ed-ca35-24e0-cf2e" primary="false"/>
         <categoryLink id="8c7c-b306-cd81-8eff" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
         <categoryLink id="cdf7-cab1-edca-00c0" name="BLADES OF KHORNE" hidden="false" targetId="9e0a-6815-a6d8-1bff" primary="false"/>
+        <categoryLink id="9101-dbab-6dd1-466c" name="GORECHOSEN" hidden="false" targetId="d7a4-b27b-7d8d-0009" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="9e7b-b3d9-7f43-4040" name="Brazen Anvil" hidden="false" collective="false" import="true" type="upgrade">
@@ -3230,35 +3008,19 @@
             <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">4+</characteristic>
           </characteristics>
         </profile>
-        <profile id="f80e-90e3-ce35-ac6c" name="Skullseeker" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+        <profile id="f80e-90e3-ce35-ac6c" name="Champion" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 model in this unit is a Skullseeker. That model is armed with a Vicious Mutation in addition to its other weapons.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 model in this unit is a Skullseeker.  A Skullseeker is armed with a Vicious Mutation in addition to Daemonforged Weapons.</characteristic>
           </characteristics>
         </profile>
-        <profile id="5917-8006-124a-a2d6" name="Vicious Mutation" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+        <profile id="4fb3-a6ba-1716-00dd" name="Reap a Deadly Toll" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
-            <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
-            <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">1</characteristic>
-            <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
-            <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">4+</characteristic>
-            <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
-            <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">D3</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="4fb3-a6ba-1716-00dd" name="Trial of Skulls" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">You can re-roll hit rolls for attacks made by this unit if the target unit has 5 or more models.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="c3ae-2258-4491-9832" name="Murderous to the Last" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Do not take battleshock tests for this unit. In addition, roll a dice each time a model from this unit is slain by an attack made with a melee weapon, before the model is removed from play. ON a 5+ pick 1 enemy unit within 1&quot; of the slain model. That unit suffers D3 mortal wounds after all of its attacks have been resolved.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Add 1 to hit rolls for attacks made by this unit if the target unit has 5 or more models.</characteristic>
           </characteristics>
         </profile>
         <profile id="e9c9-4552-54f2-8876" name="Daemonforged Weapons" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If the unmodified hit roll for an attack made with this unit&apos;s Gore-slick Blades, Daemonblades, Spinecleavers, and Soultearers is 6, that attack inflicts 1 mortal wound in addition to any normal damage.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If the unmodified hit roll for an attack made with this unit&apos;s Daemonforged Weapons is 6, that attack causes 1 mortal wound to the target in addition to any damage it inflicts.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -3323,6 +3085,28 @@
           </constraints>
           <costs>
             <cost name="pts" typeId="points" value="190.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="9a0f-b7e2-9f2d-eb10" name="Vicious Mutation" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a849-3c71-365d-b0c8" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e8ab-6a65-ffac-6832" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="24b1-2ba1-4394-7912" name="Vicious Mutation" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">1</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-2</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">D3</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -3605,28 +3389,14 @@
         </profile>
         <profile id="7170-5f82-7e6a-75ae" name="Scorn of Sorcery" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This model can attempt to unbind one spell in the enemy hero phase in the same manner as a WIZARD. In addition, this model can attempt to dispel one endless spell at the start of your hero phase in the same manner as a WIZARD.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="b55d-5a3f-24ed-eb34" name="-" hidden="false" typeId="eed7-4131-0a52-0668" typeName="Prayer">
-          <characteristics>
-            <characteristic name="Answer Value" typeId="276a-ab7e-145d-3ffc"/>
-            <characteristic name="Range" typeId="fd81-4e98-28ac-092a"/>
-            <characteristic name="Description" typeId="0746-6cfb-5e15-53cb">In your hero phase, this model can chant one of the following prayers. If he does so, pick one of the prayers and then make a prayer roll by rolling a dice. On a 1, this model suffers D3 mortal wounds and the prayer is not answered. On a 2-3 the prayer is not answered. On a 4+ the prayer is answered.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This unit can attempt to unbind 1 spell in the enemy hero phase in the same manner as a WIZARD.</characteristic>
           </characteristics>
         </profile>
         <profile id="4520-5aaa-f377-260c" name="Blood Boil" hidden="false" typeId="eed7-4131-0a52-0668" typeName="Prayer">
           <characteristics>
             <characteristic name="Answer Value" typeId="276a-ab7e-145d-3ffc">4</characteristic>
             <characteristic name="Range" typeId="fd81-4e98-28ac-092a">16&quot;</characteristic>
-            <characteristic name="Description" typeId="0746-6cfb-5e15-53cb">If answered, pick 1 enemy unit within range of the chanter that is visible to them. That unit suffers D6 mortal wounds.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="3574-3580-c0e6-1846" name="Blood Bind" hidden="false" typeId="eed7-4131-0a52-0668" typeName="Prayer">
-          <characteristics>
-            <characteristic name="Answer Value" typeId="276a-ab7e-145d-3ffc">4</characteristic>
-            <characteristic name="Range" typeId="fd81-4e98-28ac-092a">16&quot;</characteristic>
-            <characteristic name="Description" typeId="0746-6cfb-5e15-53cb">If answered, pick 1 enemy unit within range of the chanter that is visible to them and more than 3&quot; from all friendly units. Your opponent must move that unit a number of inches equal to the chanting roll. The first model to be moved from that unit must finish the move as close as possible to the closest unit in your army (it can finish the move within 3&quot; of units in your army). Any remaining models in that unit must finish their move in unit coherency and as close as possible to the closest unit from your army.</characteristic>
+            <characteristic name="Description" typeId="0746-6cfb-5e15-53cb">If answered, pick 1 enemy unit within range and visible to the chanter. That enemy unit suffers D6 mortal wounds.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -3641,6 +3411,7 @@
         <categoryLink id="c720-55b7-ad3c-c053" name="10 or less wounds Leader" hidden="false" targetId="a8ed-ca35-24e0-cf2e" primary="false"/>
         <categoryLink id="459c-9ac0-c6df-c3ef" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
         <categoryLink id="cd89-ac11-b92b-cf46" name="BLADES OF KHORNE" hidden="false" targetId="9e0a-6815-a6d8-1bff" primary="false"/>
+        <categoryLink id="575c-fdc8-7d62-2bd7" name="GORECHOSEN" hidden="false" targetId="d7a4-b27b-7d8d-0009" primary="false"/>
       </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="28a8-2726-c4ca-ec15" name="Weapons" hidden="false" collective="false" import="true" defaultSelectionEntryId="d01c-b03e-4f0e-c991">
@@ -3724,7 +3495,7 @@
         </profile>
         <profile id="6211-1c0d-6221-5b5b" name="The Gaze of Khorne" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">You can re-roll battleshock tests for friendly KHORNE MORTAL units wholly within 16&quot; of this model. However, if you do so and that unit still fails the battleshock test after the re-roll has been made, add D3 to the number of models that flee.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Add 3 to the Bravery characteristic of other friendly BLOODBOUND units while they are wholly within 16&quot; of this unit.  However, friendly BLOODBOUND unit cannot retreat while they are wholly within 16&quot; of this unit.</characteristic>
           </characteristics>
         </profile>
         <profile id="fd1d-5b4c-00d3-6ee6" name="Daemonshield" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
@@ -3802,19 +3573,19 @@
             <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">5+</characteristic>
           </characteristics>
         </profile>
-        <profile id="5dd8-4b27-6605-2992" name="Wrathmaster" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+        <profile id="5dd8-4b27-6605-2992" name="Champion" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 model in this unit can be a Wrathmaster. Add 1 to the Attacks characteristic of that model&apos;s Wrath-flails.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 model in this unit can be a Wrathmaster. Add 1 to the Attacks characteristic of that model&apos;s melee weapons.</characteristic>
           </characteristics>
         </profile>
         <profile id="1a10-e5b6-f319-6702" name="Crimson Haze" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Add 1 to the Attacks characteristic of melee weapons used by BLADES OF KHORNE units while they are wholly within 8&quot; of any units with this ability. This ability has no effect on WRATHMONGERS.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Add 1 to the Attacks characteristic of melee weapons used by friendly BLADES OF KHORNE units while they are wholly within 8&quot; of any units with this ability. This ability has no effect on WRATHMONGERS.</characteristic>
           </characteristics>
         </profile>
         <profile id="0858-2443-a610-441c" name="Bloodfury" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If a model in this unit is slain, before it is removed from play roll a dice for each enemy unit within 1&quot; of that model. Add 1 to the dice roll if 2 or more models from that enemy unit are within 1&quot; of the slain model. On a 1 nothing happens. On a 2-5 that enemy unit suffers 1 mortal wound after all of its attacks have been resolved. On a 6+ that enemy unit suffers D3 mortal wounds after all of its attacks have been resolved.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If the unmodified hit roll for an attack made with a melee weapon that targets this unit is 1, the attacking unit suffers 1 mortal wound after all of its attacks have been resolved.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -3960,11 +3731,6 @@
     </selectionEntry>
     <selectionEntry id="0b65-569d-9d0f-d290" name="Magore&apos;s Fiends" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
-        <modifier type="set" field="72cd-b7b7-b6a8-d1ad" value="1">
-          <conditions>
-            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d884-a283-9eba-c27b" type="greaterThan"/>
-          </conditions>
-        </modifier>
         <modifier type="add" field="category" value="7f45-c5b3-c698-138d">
           <conditions>
             <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9f18-9ffb-0267-3e08" type="greaterThan"/>
@@ -3973,13 +3739,11 @@
       </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7d2d-5857-68d2-e667" type="max"/>
-        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="72cd-b7b7-b6a8-d1ad" type="min"/>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a6fb-2573-cd24-8e11" type="max"/>
       </constraints>
       <profiles>
         <profile id="2f8a-b830-fa9a-6ed1" name="No Respite" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If a model from this unit is slain in the combat phase, before that model is removed from play, that model can make a pile-in move and then attack with all of the melee weapons it is armed with.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If this unit is included in a Blades of Khorne army, each time a model in this unit is slain, you can make 2 murder rolls instead of 1.</characteristic>
           </characteristics>
         </profile>
         <profile id="b80b-f63a-f684-42f7" name="Magore&apos;s Fiends" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
@@ -3988,6 +3752,11 @@
             <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">3</characteristic>
             <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">7</characteristic>
             <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">3+</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="8cc2-a9ba-11c4-8137" name="Riptooth" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">The first time this unit is set up on the battlefield, you must summon 1 FLESH HOUNDS unit consisting of 1 model to the battlefield and it to your army.  Set up that FLESH HOUNDS unit wholly within 3&quot; of this unit and more than 9&quot; from all enemy units.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -4003,28 +3772,6 @@
         <categoryLink id="449d-d159-1c6c-117f" name="New CategoryLink" hidden="false" targetId="065e-fda7-fd27-1f40" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="6c31-580a-68c3-cdc5" name="Magore&apos;s Belly Maw" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="761c-b8e9-283f-d7db" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ec79-3ad4-dcde-b18d" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="d59c-6c20-569f-4f29" name="Magore&apos;s Belly Maw" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
-              <characteristics>
-                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
-                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
-                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">1</characteristic>
-                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
-                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
-                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
-                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">D3</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
         <selectionEntry id="c7d1-9f2f-3b31-c44e" name="Goreaxe and Gorefist" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="23a9-209d-137f-89bf" type="max"/>
@@ -4033,7 +3780,7 @@
           <profiles>
             <profile id="6d8b-d2c3-90c8-acfe" name="Gorefist" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
               <characteristics>
-                <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If an unmodified save roll for an attack made with a melee weapon that targets a unit that includes any models armed with a Goreaxe and Gorefist is 6, the attacking unit suffers 1 mortal wound after all of its attacks have been resolved.</characteristic>
+                <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If the unmodified save roll for an attack made with a melee weapon that targets this unit is 6, the attacking unit suffers 1 mortal wound after all of its attacks have been resolved.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -4045,21 +3792,21 @@
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="0a04-5a23-4857-7009" name="Magore&apos;s Daemonic Axe" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="0a04-5a23-4857-7009" name="Daemonic Axe and Belly Maw" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4527-76cd-ae3b-a35f" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dce0-aa26-cbf2-2312" type="min"/>
           </constraints>
           <profiles>
-            <profile id="e958-1453-2c78-ba3a" name="Magore&apos;s Daemonic Axe" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+            <profile id="e958-1453-2c78-ba3a" name="Daemonic Axe and Belly Maw" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
               <characteristics>
                 <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
                 <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
                 <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">3</characteristic>
                 <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
                 <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
-                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
-                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-2</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">D3</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -4073,81 +3820,6 @@
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="120.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="d884-a283-9eba-c27b" name="Riptooth" hidden="false" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="set" field="7ccf-a946-837f-b079" value="1.0">
-          <conditions>
-            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0b65-569d-9d0f-d290" type="greaterThan"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <constraints>
-        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="72ec-1b9b-9861-49c3" type="max"/>
-        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7ccf-a946-837f-b079" type="min"/>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="901b-5163-6b0f-f9e4" type="max"/>
-      </constraints>
-      <profiles>
-        <profile id="3df9-f419-eb53-bbc7" name="Riptooth" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
-          <characteristics>
-            <characteristic name="Move" typeId="8655-6213-2824-1752">8&quot;</characteristic>
-            <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">2</characteristic>
-            <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">10</characteristic>
-            <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">5+</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="a9a9-c08a-9bcf-4f27" name="Collar of Khorne" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This unit can attempt to unbind one spell in each enemy hero phase in the same manner as a WIZARD. In addition, this unit can attempt to dispel one endless spell at the start of your hero phase in the same manner as a WIZARD. </characteristic>
-          </characteristics>
-        </profile>
-        <profile id="13a2-5792-2a40-004a" name="Unflagging Hunter" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">You can re-roll charge rolls for this model.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <categoryLinks>
-        <categoryLink id="e8db-5e9c-340c-8c56" name="New CategoryLink" hidden="false" targetId="7cdd-80ea-cbeb-8e16" primary="false"/>
-        <categoryLink id="ce0f-fcd3-8f0c-323d" name="New CategoryLink" hidden="false" targetId="1418-9a68-9f9e-e9a7" primary="false"/>
-        <categoryLink id="21d1-436f-c865-dee9" name="New CategoryLink" hidden="false" targetId="55d5-ae5d-d4b5-3464" primary="false"/>
-        <categoryLink id="211a-9e05-396c-386c" name="New CategoryLink" hidden="false" targetId="f22b-976f-fc38-366a" primary="false"/>
-        <categoryLink id="cd88-1547-daea-ea25" name="New CategoryLink" hidden="false" targetId="5d90-1f99-fb4d-2fd7" primary="false"/>
-        <categoryLink id="a8cd-e95e-5691-48b1" name="Unique" hidden="false" targetId="088b-3a27-03f7-8249" primary="false"/>
-        <categoryLink id="7588-38ec-27dc-8096" name="GORETIDE" hidden="false" targetId="1945-0f22-5b74-cb68" primary="false"/>
-        <categoryLink id="4d34-e0a4-3f04-4552" name="BLADES OF KHORNE" hidden="false" targetId="9e0a-6815-a6d8-1bff" primary="false"/>
-        <categoryLink id="43ad-c65b-c6eb-bba6" name="New CategoryLink" hidden="false" targetId="065e-fda7-fd27-1f40" primary="true"/>
-      </categoryLinks>
-      <selectionEntries>
-        <selectionEntry id="fc13-ea35-5e1a-2ae7" name="Blood-dark Claws" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="986e-6eaa-b40b-c47e" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="994f-ee84-1080-f3d4" type="min"/>
-          </constraints>
-          <profiles>
-            <profile id="5baa-d555-0cea-f552" name="Blood-dark Claws" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
-              <characteristics>
-                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
-                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
-                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">4</characteristic>
-                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
-                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">4+</characteristic>
-                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
-                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-      <entryLinks>
-        <entryLink id="577b-73e4-06a4-de2a" name="Battalions" hidden="false" collective="false" import="true" targetId="671a-89e2-447c-95cb" type="selectionEntryGroup"/>
-      </entryLinks>
-      <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="5582-7a1b-e477-10d5" name="Skaarac the Bloodborn" hidden="false" collective="false" import="true" type="unit">
@@ -5249,7 +4921,7 @@
       <profiles>
         <profile id="d345-8709-8c65-8dbc" name="Words of Hate" publicationId="a4ca-1bc7-0120-7e88" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">You can re-roll chanting rolls for friendly KHORNE PRIESTS wholly within 8&quot; of this terrain feature.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">You can re-roll chanting rolls for friendly BLADES OF KHORNE PRIESTS wholly within 8&quot; of this terrain feature.</characteristic>
           </characteristics>
         </profile>
         <profile id="e659-43f2-4f9d-a24a" name="Witchbane" publicationId="a4ca-1bc7-0120-7e88" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
@@ -5264,7 +4936,7 @@
         </profile>
         <profile id="8476-9397-0efa-3598" name="Invoke Judgement" publicationId="a4ca-1bc7-0120-7e88" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">While a KHORNE HERO garrisons this terrain features, it can attempt to summon invocations in the same manner as a KHORNE PRIEST and benefits from the &quot;Words of Hate&quot; ability when it does so.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">While a BLADES OF KHORNE PRIEST garrisons this terrain features, double the range of any prayers it chants to summon invocations.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -5284,7 +4956,7 @@
           <characteristics>
             <characteristic name="Answer Value" typeId="276a-ab7e-145d-3ffc">3</characteristic>
             <characteristic name="Range" typeId="fd81-4e98-28ac-092a">8&quot;</characteristic>
-            <characteristic name="Description" typeId="0746-6cfb-5e15-53cb">If answered, set up this invocation wholly within range and visible to the chanter, and more than 1&quot; from all models, other invocations and endless spells. Only KHORNE PRIESTS can attempt to summon this invocation.</characteristic>
+            <characteristic name="Description" typeId="0746-6cfb-5e15-53cb">If answered, set up this invocation wholly within range and visible to the chanter, and more than 1&quot; from all models, other invocations and endless spells. Only BLADES OF KHORNE PRIESTS can attempt to summon this invocation.</characteristic>
           </characteristics>
         </profile>
         <profile id="55ac-ac9e-b8dd-f2fd" name="Drifting Menace" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
@@ -5294,7 +4966,7 @@
         </profile>
         <profile id="f97e-8bf2-c45f-0e2e" name="Sigil of Doom" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Subtract 1 from the Bravery characteristic of units that are wholly  within 12&quot; of any Bleeding Icons. In addition, if a unit fails a battleshock test within 3&quot; of any Bleeding Icons, roll a dice. On a 1-5, add D3 to the number of models that flee. On a 6, add D6 to the number of models that flee, and then this invocation is removed from play. This ability has no effect on KHORNE units.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Units cannot receive the Inspiring Presence command while they are within 8&quot; of this invocation.  In addition, if a units a battleshock test within 8&quot; of any Bleeding Icons, roll a dice.  On a 1-5, add D3 to the number of models that flee.  On a 6, add D6 to the number of models that flee, and then this invocation is removed from play.  This ability has no effect on KHORNE units.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -5317,17 +4989,17 @@
           <characteristics>
             <characteristic name="Answer Value" typeId="276a-ab7e-145d-3ffc">3</characteristic>
             <characteristic name="Range" typeId="fd81-4e98-28ac-092a">8&quot;</characteristic>
-            <characteristic name="Description" typeId="0746-6cfb-5e15-53cb">If answered, set up the parts of the invocation wholly within range and visible to the chanter, within 6&quot; of each other and more than 1&quot; from all models, other invocations and endless spells. Only KHORNE PRIESTS can attempt to summon this invocation.</characteristic>
+            <characteristic name="Description" typeId="0746-6cfb-5e15-53cb">If answered, set up the parts of the invocation wholly within range and visible to the chanter, within 8&quot; of each other and more than 1&quot; from all models, other invocations and endless spells. Only BLADES OF KHORNE PRIESTS can attempt to summon this invocation.</characteristic>
           </characteristics>
         </profile>
         <profile id="0059-674a-8999-3c5f" name="Compelled by Hate" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">After this invocation is set up and at the start of each of their hero phases, the commanding player can move the parts of this invocation as if they were models with a Move characteristic of 8&quot; and that can fly. After the parts have been moved, they must be within 6&quot; of each other.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">After this invocation is set up and at the start of each of their hero phases, the commanding player can move the parts of this invocation as if they were models with a Move characteristic of 8&quot; and that can fly. After the parts have been moved, they must be within 8&quot; of each other.</characteristic>
           </characteristics>
         </profile>
         <profile id="4def-ee5a-0167-46bf" name="Hexgorgers" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Subtract 2 from casting rolls for WIZARDS that are within 12&quot; of any Hexgorger Skulls. In addition, if a WIZARD within 8&quot; of this invocation attempts to cast a spell and the unmodified casting roll is 8, then that casting attempt is not successful, that WIZARD no longer knows that spell, each WIZARD within 12&quot; of this invocation suffers D6 mortal wounds, and then this invocation is removed from play.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Subtract 2 from casting rolls for WIZARDS that are within 8&quot; of any Hexgorger Skulls. In addition, if a WIZARD within 8&quot; of this invocation attempts to cast a spell and the unmodified casting roll is 8, then that casting attempt is not successful, that WIZARD no longer knows that spell, each WIZARD within 8&quot; of this invocation suffers D6 mortal wounds, and then this invocation is removed from play.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -5350,7 +5022,7 @@
           <characteristics>
             <characteristic name="Answer Value" typeId="276a-ab7e-145d-3ffc">4</characteristic>
             <characteristic name="Range" typeId="fd81-4e98-28ac-092a">8&quot;</characteristic>
-            <characteristic name="Description" typeId="0746-6cfb-5e15-53cb">If answered, set up this invocation wholly within range and visible to the chanter, and more than 1&quot; from all models, other invocations and endless spells. Only KHORNE PRIESTS can attempt to summon this invocation.</characteristic>
+            <characteristic name="Description" typeId="0746-6cfb-5e15-53cb">If answered, set up this invocation wholly within range and visible to the chanter, and more than 1&quot; from all models, other invocations and endless spells. Only BLADES OF KHORNE PRIESTS can attempt to summon this invocation.</characteristic>
           </characteristics>
         </profile>
         <profile id="04dc-13cf-bc65-07af" name="Flung With Fury" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
@@ -5413,17 +5085,32 @@
       <profiles>
         <profile id="1b19-ad14-3d90-47bc" name="Blood for the Altar" publicationId="a4ca-1bc7-0120-7e88" page="" hidden="false" typeId="eba0-4bf6-65fe-fdbc" typeName="Battle Tactic">
           <characteristics>
-            <characteristic name="Description" typeId="f882-48d5-21a4-1787">Pick 1 enemy unit within 9&quot; of your Skull Altar. You complete this battle tactic if that unit is destroyed during this turn.</characteristic>
+            <characteristic name="Description" typeId="f882-48d5-21a4-1787">Pick 1 enemy unit within 8&quot; of your Skull Altar. You complete this battle tactic if that unit is destroyed during this turn.</characteristic>
           </characteristics>
         </profile>
         <profile id="b896-e7a0-26cb-37e5" name="Slay the Sorcerer" publicationId="a4ca-1bc7-0120-7e88" page="" hidden="false" typeId="eba0-4bf6-65fe-fdbc" typeName="Battle Tactic">
           <characteristics>
-            <characteristic name="Description" typeId="f882-48d5-21a4-1787">Pick 1 enemy HERO on the battlefield that is a WIZARD. You complete this battle tactic if that HERO is slain during this turn.</characteristic>
+            <characteristic name="Description" typeId="f882-48d5-21a4-1787">Pick 1 enemy WIZARD HERO on the battlefield. You complete this battle tactic if that HERO is slain during this turn.</characteristic>
           </characteristics>
         </profile>
         <profile id="3bb1-5f94-a544-0e1c" name="The Trial of Skulls" publicationId="a4ca-1bc7-0120-7e88" page="" hidden="false" typeId="eba0-4bf6-65fe-fdbc" typeName="Battle Tactic">
           <characteristics>
             <characteristic name="Description" typeId="f882-48d5-21a4-1787">Pick 1 friendly unit. You complete this battle tactic if 8 or more enemy models are slain by attacks made by that unit during this turn.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="f670-5256-572e-5184" name="The Battlefield Runs Red" hidden="false" typeId="eba0-4bf6-65fe-fdbc" typeName="Battle Tactic">
+          <characteristics>
+            <characteristic name="Description" typeId="f882-48d5-21a4-1787">You complete this battle tactic if 4 or more units were destroyed during this turn.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="1186-8b40-13f9-04e6" name="Leave None Standing" hidden="false" typeId="eba0-4bf6-65fe-fdbc" typeName="Battle Tactic">
+          <characteristics>
+            <characteristic name="Description" typeId="f882-48d5-21a4-1787">Pick 1 friendly unit within 3&quot; of any enemy units.  You complete this battle tactic if that unit fights in the combat phase of this turn and at the end of that phase there are no enemy units within 3&quot; of that unit.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="0ccf-57f5-5ada-dff6" name="No Cowards Among Us" hidden="false" typeId="eba0-4bf6-65fe-fdbc" typeName="Battle Tactic">
+          <characteristics>
+            <characteristic name="Description" typeId="f882-48d5-21a4-1787">You complete this battle tactic at the end of this turn if all friendly BLADES OF KHORNE units on the battlefield are within 8&quot; of any enemy units.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -5851,6 +5538,9 @@
               </characteristics>
             </profile>
           </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
