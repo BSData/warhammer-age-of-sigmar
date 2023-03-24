@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="0339-0157-6910-d29c" name="Chaos Data" revision="208" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="157" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="0339-0157-6910-d29c" name="Chaos Data" revision="209" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="157" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="c9b2-1fe6-pubN65537" name="Battletome: Beasts of Chaos"/>
     <publication id="6894-a70d-pubN65537" name="Chaos Battletome: Maggotkin of Nurgle"/>
@@ -330,6 +330,7 @@
     <categoryEntry id="d689-0c03-cd42-0e62" name="HERALD OF KHORNE ON BLOOD THRONE" hidden="false"/>
     <categoryEntry id="6cee-5948-aedd-42be" name="SKULL CANNON" hidden="false"/>
     <categoryEntry id="fbcd-e839-6427-87f6" name="BLOODSECRATOR" hidden="false"/>
+    <categoryEntry id="49be-b5fc-ebb6-c28c" name="True Priest" hidden="false"/>
   </categoryEntries>
   <sharedSelectionEntries>
     <selectionEntry id="6e55-96a1-c28d-3347" name="1. Grandfather&apos;s Blessing" hidden="false" collective="false" import="true" type="upgrade">
@@ -1981,6 +1982,7 @@ The summoned unit must be set up wholly within 12&quot; of the HERO  you picked 
         <categoryLink id="23c5-670a-5350-1ed7" name="HERALD OF KHORNE" hidden="false" targetId="d76a-388c-41d5-8950" primary="false"/>
         <categoryLink id="dd55-7015-8c0d-c3cd" name="PRIEST" hidden="false" targetId="e8a5-e4c1-3d11-e7dd" primary="false"/>
         <categoryLink id="0e37-6ec3-bb06-96cf" name="BLOODMASTER" hidden="false" targetId="0623-1054-33c4-17fc" primary="false"/>
+        <categoryLink id="740c-8ba8-f713-deda" name="True Priest" hidden="false" targetId="49be-b5fc-ebb6-c28c" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="b626-7eb5-f708-441d" name="Blade of Blood" hidden="false" collective="false" import="true" type="upgrade">
@@ -2687,6 +2689,7 @@ The summoned unit must be set up wholly within 12&quot; of the HERO  you picked 
         <categoryLink id="d69d-4c49-9041-2b60" name="PRIEST" hidden="false" targetId="e8a5-e4c1-3d11-e7dd" primary="false"/>
         <categoryLink id="4514-c6f0-3ad7-bc10" name="HERALD OF KHORNE ON BLOOD THRONE" hidden="false" targetId="d689-0c03-cd42-0e62" primary="false"/>
         <categoryLink id="cd66-2816-a3bd-b4d1" name="HERALD OF KHORNE" hidden="false" targetId="d76a-388c-41d5-8950" primary="false"/>
+        <categoryLink id="59ed-3e3c-9aff-fc3f" name="True Priest" hidden="false" targetId="49be-b5fc-ebb6-c28c" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="8e4e-c50f-d391-278b" name="Blade of Blood" hidden="false" collective="false" import="true" type="upgrade">
@@ -11611,9 +11614,14 @@ If the target of an attack made with a Barbed Stinger has a Wounds characteristi
           </conditions>
         </modifier>
         <modifier type="increment" field="2224-f37c-5efc-96b4" value="1.0">
-          <conditions>
-            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4d98-bef9-c0cb-8138" type="greaterThan"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4d98-bef9-c0cb-8138" type="greaterThan"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="49be-b5fc-ebb6-c28c" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -12228,7 +12236,14 @@ If a model already has a Change Coven keyword on its warscroll, it cannot gain a
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2655-7a90-56aa-33a1" type="max"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="c36d-31d5-bff0-81e2" name="Banner of Blood" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="c36d-31d5-bff0-81e2" name="Banner of Blood" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fbcd-e839-6427-87f6" type="instanceOf"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <profiles>
                 <profile id="8bd0-b5dd-ee61-a9a6" name="Banner of Blood" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
                   <characteristics>
@@ -12273,14 +12288,7 @@ If a model already has a Change Coven keyword on its warscroll, it cannot gain a
                 <cost name="pts" typeId="points" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="8a5d-7d6c-d0c3-8046" name="Blood Rune" hidden="true" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="hidden" value="false">
-                  <conditions>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fbcd-e839-6427-87f6" type="instanceOf"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
+            <selectionEntry id="8a5d-7d6c-d0c3-8046" name="Blood Rune" hidden="false" collective="false" import="true" type="upgrade">
               <profiles>
                 <profile id="1e0c-da8a-b77e-f3ae" name="Blood Rune" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
                   <characteristics>
