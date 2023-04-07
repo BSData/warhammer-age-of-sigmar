@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="157" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="159" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <publications>
     <publication id="e51d-b1a3-pubEC" name="The General&apos;s Handbook"/>
     <publication id="e51d-b1a3-pubEQ" name="Core Rules"/>
@@ -31,6 +31,7 @@
     <publication id="2cb9-2931-59e8-5ae9" name="Battlescroll: Galletian Reinforcement - October 2022" publisherUrl="https://www.warhammer-community.com/wp-content/uploads/2022/10/NDq0U3c5F0hiPLeW.pdf"/>
     <publication id="4911-03f2-4062-53db" name="General&apos;s Handbook 2022-23 - Season 2"/>
     <publication id="d78d-74e8-6533-986c" name="Season of War: Thondia Errata January 2023"/>
+    <publication id="5c4c-6bee-5256-7181" name="Core Rules Errata April 2023"/>
   </publications>
   <costTypes>
     <costType id="points" name="pts" defaultCostLimit="0.0" hidden="false"/>
@@ -5429,14 +5430,27 @@ In addition, this incarnate can carry out the Devour Endless Spell monstrous ram
           </costs>
         </selectionEntry>
         <selectionEntry id="9918-5a46-2468-35e2" name="Arcane Tome" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e8a5-e4c1-3d11-e7dd" type="instanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4f53-8230-2f02-9639" type="instanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f22b-976f-fc38-366a" type="instanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8714-d72f-f140-1e6b" type="max"/>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4694-7715-75cf-9e75" type="max"/>
           </constraints>
           <profiles>
-            <profile id="2867-2484-1105-673a" name="Arcane Tome" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
+            <profile id="2867-2484-1105-673a" name="Arcane Tome" publicationId="5c4c-6bee-5256-7181" page="10" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
               <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">The bearer becomes a WIZARD that knows the Arcane Bolt and Mystic Shield spells. They can attempt to cast 1 spell in your hero phase and attempt to unbind 1 spell in the enemy hero phase. If the bearer is already a Wizard, they can attempt to cast 1 additional spell instead.</characteristic>
+                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">HERO that does not have the WIZARD, PRIEST or KHORNE keyword. The bearer becomes a WIZARD that only knows the Arcane Bolt and Mystic Shield spells (if you take a spell lore enhancement, you cannot pick any spells from that spell lore for the bearer to know, but the bearer can attempt to summon any endless spells included on your roster if otherwise eligible). They can attempt to cast 1 spell in your hero phase and attempt to unbind 1 spell in the enemy hero phase.</characteristic>
               </characteristics>
             </profile>
           </profiles>
