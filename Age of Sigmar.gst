@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="159" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="160" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <publications>
     <publication id="e51d-b1a3-pubEC" name="The General&apos;s Handbook"/>
     <publication id="e51d-b1a3-pubEQ" name="Core Rules"/>
@@ -355,6 +355,7 @@
     <categoryEntry id="89f7-d50b-0aa9-01ce" name="GALLETIAN CHAMPION" hidden="false"/>
     <categoryEntry id="7f45-c5b3-c698-138d" name="Infantry" hidden="false"/>
     <categoryEntry id="e41b-4270-3cf6-e397" name="REGIMENT OF RENOWN" hidden="false"/>
+    <categoryEntry id="89d5-185d-4935-ee59" name="OSSIARCH BONEREAPERS" hidden="false"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry id="36b7-ee1e-0855-f23f" name="**Pitched Battle GHB 2021**" hidden="false">
