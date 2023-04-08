@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="b3c2-9aff-8664-1d07" name="Death - Ossiarch Bonereapers" revision="83" battleScribeVersion="2.03" authorName="TigerWraith" authorContact="TigerWraith#5618 on Discord" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="160" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="b3c2-9aff-8664-1d07" name="Death - Ossiarch Bonereapers" revision="84" battleScribeVersion="2.03" authorName="TigerWraith" authorContact="TigerWraith#5618 on Discord" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="160" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="cb62-7d89-9fa6-76ad" name="Battletome: Ossiarch Bonereapers"/>
     <publication id="254c-b9bb-a650-0c40" name="White Dwarf Issue 472"/>
@@ -57,6 +57,8 @@
     <categoryEntry id="02ae-a534-1d37-bacc" name="KAINAN&apos;S REAPERS" hidden="false"/>
     <categoryEntry id="496d-9428-b92f-6cab" name="Mortisan General" hidden="false"/>
     <categoryEntry id="b3e7-cff2-fece-655e" name="OSSIFECTOR" hidden="false"/>
+    <categoryEntry id="a766-0f08-430a-f9e4" name="Ossiarch Core Battalion" hidden="false"/>
+    <categoryEntry id="f13c-1c57-4ffc-8b58" name="Ossiarch Warscroll Battalion" hidden="false"/>
   </categoryEntries>
   <entryLinks>
     <entryLink id="60f9-e9e7-9284-3de3" name="Katakros, Mortarch of the Necropolis" hidden="false" collective="false" import="true" targetId="5f00-f498-a38e-fd3f" type="selectionEntry">
@@ -203,7 +205,7 @@
         <categoryLink id="d0e1-f594-07ca-a204" name="New CategoryLink" hidden="false" targetId="be17-6bbd-b857-3f43" primary="true"/>
       </categoryLinks>
     </entryLink>
-    <entryLink id="a67e-702f-47c1-553d" name="Battalion: Ossiarch Cohort" hidden="false" collective="false" import="true" targetId="879c-8978-385a-80d1" type="selectionEntry">
+    <entryLink id="a67e-702f-47c1-553d" name="Ossiarch Core Battalion: Ossiarch Cohort" hidden="false" collective="false" import="true" targetId="879c-8978-385a-80d1" type="selectionEntry">
       <categoryLinks>
         <categoryLink id="ce5a-fc5c-0a20-66f1" name="New CategoryLink" hidden="false" targetId="be17-6bbd-b857-3f43" primary="true"/>
       </categoryLinks>
@@ -279,6 +281,7 @@
       </modifiers>
     </entryLink>
     <entryLink id="9fa8-0bea-b913-4925" name="Regiment of Renown - Veremord&apos;s Shamblers" hidden="false" collective="false" import="true" targetId="fa3f-532f-9753-cd59" type="selectionEntry"/>
+    <entryLink id="def7-970b-2b47-c18f" name="Mortisan Ossifector" hidden="false" collective="false" import="true" targetId="4d8f-bc70-beb5-bd53" type="selectionEntry"/>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="5f00-f498-a38e-fd3f" name="Katakros, Mortarch of the Necropolis" publicationId="cb62-7d89-9fa6-76ad" hidden="false" collective="false" import="true" type="unit">
@@ -344,15 +347,14 @@ If that unit is an IMMORTIS GUARD or NECROPOLIS STALKERS unit, you can either he
         </profile>
       </profiles>
       <categoryLinks>
-        <categoryLink id="4ee9-2b59-9305-1aa3" name="DEATHLORDS" hidden="false" targetId="a3df-7eeb-bcac-ac90" primary="false"/>
         <categoryLink id="0033-6f53-2a67-375f" name="DEATH" hidden="false" targetId="6cdf-dd4f-0e91-e9c4" primary="false"/>
-        <categoryLink id="8048-e07f-c61e-bd38" name="LIEGE" hidden="false" targetId="54d9-50cd-9ea0-10b9" primary="false"/>
         <categoryLink id="8c49-4331-f048-b80e" name="HERO" hidden="false" targetId="4e0e-664d-51ea-0929" primary="false"/>
         <categoryLink id="d52b-f977-90be-f8ac" name="MORTIS PRAETORIANS" hidden="false" targetId="d3ef-4794-dca3-91fe" primary="false"/>
         <categoryLink id="e448-03bd-2671-c884" name="KATAKROS" hidden="false" targetId="6c5f-7df3-b2d1-f507" primary="false"/>
         <categoryLink id="b578-fc0f-6618-16e3" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
         <categoryLink id="7ad1-9171-81a5-9cff" name="Unique" hidden="false" targetId="088b-3a27-03f7-8249" primary="false"/>
         <categoryLink id="5545-d1ac-5921-d8de" name="OSSIARCH BONEREAPERS" hidden="false" targetId="89d5-185d-4935-ee59" primary="false"/>
+        <categoryLink id="5079-37c7-76a0-8cdb" name="MORTARCH" hidden="false" targetId="75f5-9da1-acc8-eb33" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="20dd-f77b-342d-db5c" name="Inda-Khaat" publicationId="cb62-7d89-9fa6-76ad" hidden="false" collective="false" import="true" type="upgrade">
@@ -663,20 +665,25 @@ If that unit is an IMMORTIS GUARD or NECROPOLIS STALKERS unit, you can either he
       <profiles>
         <profile id="f8d8-2891-fa97-292d" name="Deadly Gaze" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">In your hero phase, you can choose for this terrain feature to unleash one of the following punishments:
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">In your hero phase, you can choose for this terrain feature to deliver 1 of the following punishments:
 
-Punishment of Agony: Pick 1 enemy unit wholly within 18&quot; of this terrain feature and visible to it, and roll a dice. On a 4+, subtract 1 from hit rolls for attacks made by that unit until your next hero phase.
+Punishment of Agony: Pick 1 enemy unit wholly within 18&quot; of this terrain feature and visible to it, and roll a dice.  Add 1 to the roll if any enemy models were slain within 12&quot; of this terrain feature in the previous turn. On a 4+, subtract 1 from hit rolls for attacks made by that unit until your next hero phase.
 
-Punishment of Death: Pick 1 enemy unit within 36&quot; of this terrain feature and visible to it, and roll a dice. On a 2+, that unit suffers 1 mortal wound.
+Punishment of Death: Pick 1 enemy unit within 18&quot; of this terrain feature and visible to it, and roll a dice. Add 1 to the roll if any enemy models were slain within 12&quot; of this terrain feature in the previous turn.  On a 4+, that unit suffers D3 mortal wounds.
 
-Punishment of Ignorance: Pick 1 enemy WIZARD within 36&quot; of this terrain feature and visible to it, and roll a dice. On a 2+, subtract 1 from casting, dispelling and unbinding rolls for that unit until your next hero phase.
+Punishment of Ignorance: Pick 1 enemy WIZARD or PRIEST within 18&quot; of this terrain feature and visible to it, and roll a dice.  Add 1 to the roll if any enemy models were slain within 12&quot; of this terrain feature in the previous turn.  On a 4+, subtract 1 from casting or chanting rolls for that unit until your next hero phase.
 
-Punishment of Lethargy: Pick 1 enemy unit wholly within 18&quot; of this terrain feature and visible to it, and roll a dice. On a 4+, that unit cannot run until your next hero phase, and a D6 is used to make charge rolls for that unit instead of 2D6 until your next hero phase.</characteristic>
+Punishment of Lethargy: Pick 1 enemy unit within 18&quot; of this terrain feature and visible to it, and roll a dice. Add 1 to the roll if any enemy models were slain within 12&quot; of this terrain feature in the previous turn.  On a 4+, that unit cannot run until your next hero phase.  In addtion, subtract 3 from charge rolls for that unit until your next hero phase.</characteristic>
           </characteristics>
         </profile>
         <profile id="1a5c-cad4-2c04-9ee6" name="Set-Up" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
             <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">After territories are determined, you can set up this faction terrain feature wholly within your territory and more than 3&quot; from all objectives and other terrain features. If these restrictions mean you cannot set up this faction terrain feature, you can remove 1 terrain feature that is wholly or partially within your territory and attempt to set up this faction terrain feature again. If it is still impossible to set up this faction terrain feature, then it is not used. If both players can set up faction terrain features at the same time, they must roll off and the winner chooses who sets up their faction terrain features first.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="fa72-78d7-364e-6df0" name="Impassable" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">You cannot move a model over this terrain feature unless it can fly, and you cannot move a model onto this terrain feature or set up a model on this terrain feature (even if it can fly).</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -722,6 +729,11 @@ Punishment of Lethargy: Pick 1 enemy unit wholly within 18&quot; of this terrain
         <categoryLink id="b790-4175-588c-e599" name="9 or less wounds Leader" hidden="false" targetId="a8ed-ca35-24e0-cf2e" primary="false"/>
         <categoryLink id="d6e6-a3c0-b4bb-75e3" name="Unique" hidden="false" targetId="088b-3a27-03f7-8249" primary="false"/>
         <categoryLink id="ffa7-ffad-ae7c-5603" name="OSSIARCH BONEREAPERS" hidden="false" targetId="89d5-185d-4935-ee59" primary="false"/>
+        <categoryLink id="cb76-2311-55e6-fc31" name="DEATH" hidden="false" targetId="6cdf-dd4f-0e91-e9c4" primary="false"/>
+        <categoryLink id="2142-4fe1-142d-02d6" name="MORTIS PRAETORIANS" hidden="false" targetId="d3ef-4794-dca3-91fe" primary="false"/>
+        <categoryLink id="e9a6-34ac-e4af-93ad" name="HERO" hidden="false" targetId="4e0e-664d-51ea-0929" primary="false"/>
+        <categoryLink id="0630-d0f1-9274-03aa" name="LIEGE" hidden="false" targetId="54d9-50cd-9ea0-10b9" primary="false"/>
+        <categoryLink id="12bd-df96-fea8-a94b" name="ARCH-KAVALOS ZANDTOS" hidden="false" targetId="54de-4602-9d6c-bb39" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="9077-6ddc-0b46-cdc2" name="Dark Lance" hidden="false" collective="false" import="true" type="upgrade">
@@ -791,12 +803,12 @@ Punishment of Lethargy: Pick 1 enemy unit wholly within 18&quot; of this terrain
       <profiles>
         <profile id="eee5-cc4d-4b16-80e8" name="Unstoppable Charge" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">After this model makes a charge move, you can pick 1 enemy unit within 1&quot; of this model and roll a number of dice equal to the charge roll for that charge move. For each 6, that enemy unit suffers 1 mortal wound. In addition, this model can move an extra 3&quot; when it piles in if it made a charge move in the same turn.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">After this unit makes a charge move, you can pick 1 enemy unit within 1&quot; of this unit and roll a number of dice equal to the unmodified charge roll for that charge move. For each 5+, that enemy unit suffers 1 mortal wound. In addition, this unit can move an extra 3&quot; when it piles in if it made a charge move in the same turn.</characteristic>
           </characteristics>
         </profile>
         <profile id="498e-80ef-9ead-3fe2" name="Endless Duty" hidden="false" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
           <characteristics>
-            <characteristic name="Command Ability Details" typeId="1b71-4c83-4e8c-093f">You can use this command ability in your shooting phase or any combat phase. If you do so, pick 1 friendly OSSIARCH BONEREAPERS unit that is wholly within 12&quot; of a model with this command ability. Add 1 to the Attacks characteristic of weapons used by that unit in that phase. You cannot pick the same unit to benefit from this command ability more than once per phase</characteristic>
+            <characteristic name="Command Ability Details" typeId="1b71-4c83-4e8c-093f">You can use this command ability in your hero phase.  The unit that receives the command must be a friendly OSSIARCH BONEREAPERS unit.  Until your next hero phase, add 1 to the Attacks characteristic of that unit&apos;s melee weapons.</characteristic>
           </characteristics>
         </profile>
         <profile id="d754-1fab-c219-578a" name="Liege-Kavalos" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
@@ -805,6 +817,11 @@ Punishment of Lethargy: Pick 1 enemy unit wholly within 18&quot; of this terrain
             <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">7</characteristic>
             <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">10</characteristic>
             <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">3+</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="d766-3b7f-a243-ad74" name="The Will of the Legions" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Once per turn, this unit can issue a command to a friendly OSSIARCH BONEREAPERS unit without a command point being spent.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -916,14 +933,16 @@ Punishment of Lethargy: Pick 1 enemy unit wholly within 18&quot; of this terrain
       <profiles>
         <profile id="30e3-2cf4-13d5-31ff" name="Boneshaper" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">In your hero phase, you can pick 1 friendly OSSIARCH BONEREAPERS unit within 6&quot; of this model. You can either heal up to 3 wounds that have been allocated to that unit or, if no wounds have been allocated to the unit, you can return a number of slain models to it that have a combined Wounds characteristic of 3 or less.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">In your hero phase, you can pick 1 friendly OSSIARCH BONEREAPERS unit within 6&quot; of this unit. If that unit is not an IMMORTIS GUARD or NECROPOLIS STALKERS unit, you can either heal up to 3 wounds allocated to that unit or, if no wounds have been allocated to that unit, you can return a number slain models to it that have a combined Wounds characteristic of 3 or less.
+
+If that unit is a IMMORTIS GUARD or NECROPOLIS STALKERS unit, you can either heal up to 3 wounds allocated to this unit or, if no wounds have been allocated to that unit, roll a dice.  On a 3+, you can return 1 slain model to that unit.</characteristic>
           </characteristics>
         </profile>
         <profile id="0bfd-e239-3613-1a14" name="Shard-storm" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
           <characteristics>
             <characteristic name="Casting Value" typeId="2508-b604-1258-a920">5</characteristic>
             <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">18&quot;</characteristic>
-            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick 1 enemy unit and roll 1 dice for each model from that unit that is within 18&quot; of the caster and visible to them. For each 6, that unit suffers 1 mortal wound.</characteristic>
+            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick 1 enemy unit within range and visible to the caster and roll a number of dice equal to the number of models in that unit.  For each 5+, that unit suffers 1 mortal wound.</characteristic>
           </characteristics>
         </profile>
         <profile id="d7c9-f23f-0bad-2523" name="Mortisan Boneshaper" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
@@ -941,9 +960,6 @@ Punishment of Lethargy: Pick 1 enemy unit wholly within 18&quot; of this terrain
           </characteristics>
         </profile>
       </profiles>
-      <infoLinks>
-        <infoLink id="2922-a2ad-531f-bb2f" name="Mystic Shield" hidden="false" targetId="b41f-f1ce-7aa5-4f81" type="profile"/>
-      </infoLinks>
       <categoryLinks>
         <categoryLink id="e4f1-e560-920b-d586" name="DEATH" hidden="false" targetId="6cdf-dd4f-0e91-e9c4" primary="false"/>
         <categoryLink id="f714-c68b-b3ea-ff77" name="HERO" hidden="false" targetId="4e0e-664d-51ea-0929" primary="false"/>
@@ -991,6 +1007,7 @@ Punishment of Lethargy: Pick 1 enemy unit wholly within 18&quot; of this terrain
         <entryLink id="954e-d3df-1d47-6507" name="Spell Lores" hidden="false" collective="false" import="true" targetId="27ff-6862-cc17-b275" type="selectionEntryGroup"/>
         <entryLink id="dd11-6e10-748b-c5e5" name="Incarnate Bonding" hidden="false" collective="false" import="true" targetId="c890-acbd-0c80-55c9" type="selectionEntryGroup"/>
         <entryLink id="e157-d2ef-1ade-7286" name="Unique Enhancements" hidden="false" collective="false" import="true" targetId="62f4-174e-c529-75fe" type="selectionEntryGroup"/>
+        <entryLink id="d6ab-3724-9354-6159" name="Mystic Shield" hidden="false" collective="false" import="true" targetId="5fdd-6634-f9f8-068a" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="120.0"/>
@@ -1005,16 +1022,11 @@ Punishment of Lethargy: Pick 1 enemy unit wholly within 18&quot; of this terrain
         </modifier>
       </modifiers>
       <profiles>
-        <profile id="1e7a-e3dc-2427-7cf0" name="Deathly Touch" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If the unmodified hit roll for an attack made with a Soulreaper Scythe is 6, that attack inflicts 2 mortal wounds on the target and the attack sequence ends (do not make a wound or save roll).</characteristic>
-          </characteristics>
-        </profile>
         <profile id="3d07-f801-15d6-fcd1" name="Soul-blast" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
           <characteristics>
-            <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
-            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">-</characteristic>
-            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, you can either roll 1 dice for each enemy unit within 3&quot; of the caster or roll 1 dice for 1 enemy unit within 18&quot; of the caster that is visible to them. On a 1, nothing happens. On a 2-3, that unit suffers 1 mortal wound. On a 4+, that unit suffers D3 mortal wounds.</characteristic>
+            <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
+            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">12&quot;</characteristic>
+            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, at the start of any 1 phase before your next hero phase, you can pick 1 enemy unit within range and visible to the caster.  That unit suffers D3 mortal wounds.  If that unit is within 3&quot; of the caster, it suffers 3 mortal wounds instead of D3.</characteristic>
           </characteristics>
         </profile>
         <profile id="d6dd-477c-72d3-e6bf" name="Mortisan Soulreaper" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
@@ -1027,7 +1039,7 @@ Punishment of Lethargy: Pick 1 enemy unit wholly within 18&quot; of this terrain
         </profile>
         <profile id="1888-2d7e-8895-4249" name="Soulreaper" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">You can re-roll hit rolls for attacks made with a Soulreaper Scythe if the target unit has 5 or more models.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Each time this unit fights, you can say it will unleash a reaping strike.  If you do so, add 2 to the Attacks characteristic of this unit&apos;s melee weapons until the end of the phase, but this unit can only target enemy units that have 5 or more models.</characteristic>
           </characteristics>
         </profile>
         <profile id="c0f8-9022-0042-47a3" name="Wizard" hidden="false" typeId="f55d-ee3a-1597-110f" typeName="Magic">
@@ -1037,9 +1049,6 @@ Punishment of Lethargy: Pick 1 enemy unit wholly within 18&quot; of this terrain
           </characteristics>
         </profile>
       </profiles>
-      <infoLinks>
-        <infoLink id="1697-50b3-3b7a-9ddf" name="Mystic Shield" hidden="false" targetId="b41f-f1ce-7aa5-4f81" type="profile"/>
-      </infoLinks>
       <categoryLinks>
         <categoryLink id="fa07-21a4-90cb-94fc" name="DEATH" hidden="false" targetId="6cdf-dd4f-0e91-e9c4" primary="false"/>
         <categoryLink id="6450-0e27-05a6-3ec7" name="HERO" hidden="false" targetId="4e0e-664d-51ea-0929" primary="false"/>
@@ -1087,6 +1096,7 @@ Punishment of Lethargy: Pick 1 enemy unit wholly within 18&quot; of this terrain
         <entryLink id="4d8b-928d-b995-f8e5" name="Spell Lores" hidden="false" collective="false" import="true" targetId="27ff-6862-cc17-b275" type="selectionEntryGroup"/>
         <entryLink id="acbf-496c-0e8f-8e97" name="Incarnate Bonding" hidden="false" collective="false" import="true" targetId="c890-acbd-0c80-55c9" type="selectionEntryGroup"/>
         <entryLink id="7993-4d6f-83a8-ceeb" name="Unique Enhancements" hidden="false" collective="false" import="true" targetId="62f4-174e-c529-75fe" type="selectionEntryGroup"/>
+        <entryLink id="a885-24e8-f7df-0fd8" name="Mystic Shield" hidden="false" collective="false" import="true" targetId="5fdd-6634-f9f8-068a" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="120.0"/>
@@ -1096,14 +1106,14 @@ Punishment of Lethargy: Pick 1 enemy unit wholly within 18&quot; of this terrain
       <profiles>
         <profile id="73ca-0ae4-ba6b-197e" name="Mortek Throne" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the end of your hero phase, roll a dice for this model. On a 1, nothing happens. On a 2-5, this model can attempt to cast Soul-guide even if a casting attempt has already been made for that spell in the same phase. On a 6, this model can attempt to cast Soul-guide D3 more times even if a casting attempt has already been made for that spell in the same phase.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the end of your hero phase, roll a dice for this unit. On a 1, nothing happens. On a 2-5, this unit can attempt to cast Soul-guide even if a casting attempt has already been made for that spell in the same phase. On a 6, this unit can attempt to cast Soul-guide D3 more times even if a casting attempt has already been made for that spell in the same phase.</characteristic>
           </characteristics>
         </profile>
         <profile id="bce3-7457-dd26-6bba" name="Soul-guide" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
           <characteristics>
             <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
             <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">24&quot;</characteristic>
-            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick 1 friendly OSSIARCH BONEREAPERS unit wholly within 24&quot; of the caster that is visible to them. You can re-roll hit rolls of 1 for attacks made by that unit until your next hero phase.</characteristic>
+            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick 1 friendly MORTEK GUARD or KAVALOS DEATHRIDERS unit wholly within range and visible to the caster.  Add 1 to wound rolls for attacks made with melee weapons by that unit until your next hero phase.</characteristic>
           </characteristics>
         </profile>
         <profile id="f4e4-0326-50c4-aec3" name="Mortisan Soulmason" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
@@ -1121,9 +1131,6 @@ Punishment of Lethargy: Pick 1 enemy unit wholly within 18&quot; of this terrain
           </characteristics>
         </profile>
       </profiles>
-      <infoLinks>
-        <infoLink id="a0dd-42da-f981-ae07" name="Mystic Shield" hidden="false" targetId="b41f-f1ce-7aa5-4f81" type="profile"/>
-      </infoLinks>
       <categoryLinks>
         <categoryLink id="b126-fae6-5e27-7a56" name="DEATH" hidden="false" targetId="6cdf-dd4f-0e91-e9c4" primary="false"/>
         <categoryLink id="f867-f772-3606-8bce" name="HERO" hidden="false" targetId="4e0e-664d-51ea-0929" primary="false"/>
@@ -1193,6 +1200,7 @@ Punishment of Lethargy: Pick 1 enemy unit wholly within 18&quot; of this terrain
         <entryLink id="a4af-0c90-e1c7-3325" name="Spell Lores" hidden="false" collective="false" import="true" targetId="27ff-6862-cc17-b275" type="selectionEntryGroup"/>
         <entryLink id="3947-5c24-7e84-9d3e" name="Incarnate Bonding" hidden="false" collective="false" import="true" targetId="c890-acbd-0c80-55c9" type="selectionEntryGroup"/>
         <entryLink id="5e48-d775-8175-e11b" name="Unique Enhancements" hidden="false" collective="false" import="true" targetId="62f4-174e-c529-75fe" type="selectionEntryGroup"/>
+        <entryLink id="3d80-fc0b-96c0-d3ba" name="Mystic Shield" hidden="false" collective="false" import="true" targetId="5fdd-6634-f9f8-068a" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="160.0"/>
@@ -1235,9 +1243,6 @@ Punishment of Lethargy: Pick 1 enemy unit wholly within 18&quot; of this terrain
           </characteristics>
         </profile>
       </profiles>
-      <infoLinks>
-        <infoLink id="d60d-4121-cbae-f0fa" name="Mystic Shield" hidden="false" targetId="b41f-f1ce-7aa5-4f81" type="profile"/>
-      </infoLinks>
       <categoryLinks>
         <categoryLink id="f5e7-b65a-58bd-a4fe" name="DEATH" hidden="false" targetId="6cdf-dd4f-0e91-e9c4" primary="false"/>
         <categoryLink id="27eb-117f-3de6-1eae" name="HERO" hidden="false" targetId="4e0e-664d-51ea-0929" primary="false"/>
@@ -1305,6 +1310,7 @@ Punishment of Lethargy: Pick 1 enemy unit wholly within 18&quot; of this terrain
         </entryLink>
         <entryLink id="2c3c-94c4-a8f1-6180" name="Battalions" hidden="false" collective="false" import="true" targetId="4baa-4d7c-a4a3-3939" type="selectionEntryGroup"/>
         <entryLink id="fc4b-376c-f6ce-e473" name="Incarnate Bonding" hidden="false" collective="false" import="true" targetId="c890-acbd-0c80-55c9" type="selectionEntryGroup"/>
+        <entryLink id="04b2-fee4-fcef-5f67" name="Mystic Shield" hidden="false" collective="false" import="true" targetId="5fdd-6634-f9f8-068a" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="140.0"/>
@@ -1478,19 +1484,19 @@ Punishment of Lethargy: Pick 1 enemy unit wholly within 18&quot; of this terrain
     </selectionEntry>
     <selectionEntry id="67a7-9ab1-b14d-4542" name="Kavalos Deathriders" hidden="false" collective="false" import="true" type="unit">
       <profiles>
-        <profile id="79d4-98e2-b03a-f1c5" name="Mortek Hekatos" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+        <profile id="79d4-98e2-b03a-f1c5" name="Champion" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
             <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 model in this unit can be a Mortek Hekatos. Add 1 to the Attacks characteristic of that model’s melee weapon.</characteristic>
           </characteristics>
         </profile>
-        <profile id="e691-6d14-9842-63e6" name="Nadirite Weapons" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+        <profile id="e691-6d14-9842-63e6" name="Unstoppable Charge" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If the unmodified hit roll for an attack made with this unit’s Nadirite Blades or Nadirite Spears is 6, that attack scores 2 hits on the target instead of 1. Make a wound and save roll for each hit. For attacks made with Nadirite Spears, 2 hits are scored on a 5+ instead of 6 if this unit made a charge move in the same turn</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">After this unit makes a charge move, you can pick 1 enemy unit within 1&quot; of this unit and roll a number of dice equal to the unmodified charge roll for that charge move.  For each 5+, that enemy unit suffers 1 mortal wound.  In addition, this unit can move an extra 3&quot; when it piles in if it made a charge move in the same turn.</characteristic>
           </characteristics>
         </profile>
-        <profile id="d727-ba17-a465-eaaa" name="Necrophoros" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+        <profile id="d727-ba17-a465-eaaa" name="Standard Bearer" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 in every 5 models in this unit can be a Necrophoros. Add 1 to run and charge rolls for a unit that includes any Necrophoroi.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 in every 5 models in this unit can be a Necrophoros. Add 1 to run rolls and charge rolls for this unit if it includes any Necrophoroi.</characteristic>
           </characteristics>
         </profile>
         <profile id="4e4b-51a1-a6c1-6d3d" name="Kavalos Deathriders" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
@@ -1503,7 +1509,7 @@ Punishment of Lethargy: Pick 1 enemy unit wholly within 18&quot; of this terrain
         </profile>
         <profile id="c1a0-a2ec-154f-763a" name="Deathrider Wedge" hidden="false" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
           <characteristics>
-            <characteristic name="Command Ability Details" typeId="1b71-4c83-4e8c-093f">You can use this command ability when a friendly KAVALOS DEATHRIDERS unit that includes a Mortek Hekatos finishes a charge move. You can pick 1 enemy unit within 1&quot; of that KAVALOS DEATHRIDERS unit and roll a number of dice equal to the number of models in that KAVALOS DEATHRIDERS unit. For each 5+, the enemy unit suffers 1 mortal wound. In addition, in the following combat phase, that KAVALOS DEATHRIDERS unit can move an extra 3&quot; when it piles in. The same unit cannot benefit from this command ability more than once per turn.</characteristic>
+            <characteristic name="Command Ability Details" typeId="1b71-4c83-4e8c-093f">You can use this command ability in the charge phase.  The command can only be issued by this unit&apos;s Mortek Hekatos, and this unit must receive the command.  Until the end of that phase, models in this unit can pass across other models with a Wounds characteristic of 3 or less in the same manner as a model that can fly.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1645,17 +1651,12 @@ Punishment of Lethargy: Pick 1 enemy unit wholly within 18&quot; of this terrain
       <profiles>
         <profile id="77ee-fe2c-15aa-1cdc" name="Crushing Assault" hidden="false" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
           <characteristics>
-            <characteristic name="Command Ability Details" typeId="1b71-4c83-4e8c-093f">You can use this command ability in your combat phase after a friendly IMMORTIS GUARD unit has fought in that phase for the first time. If you do so, if that unit is within 3&quot; of an enemy unit, it can make a pile-in move and then attack with its Nadirite Battle-shields for a second time.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="3834-abc4-825d-73a2" name="Deadly Combination" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If the unmodified hit roll for an attack made with a Nadirite Battle-shield is 6, that attack inflicts 1 mortal wound on the target in addition to any normal damage.</characteristic>
+            <characteristic name="Command Ability Details" typeId="1b71-4c83-4e8c-093f">You can use this command ability once per battle, after this unit has fought for the first time in the combat phase.  The command can only be issued by a model in this unit, and this unit must receive the command.  This unit can fight for a second time in that phase.  The strike-last effect applies to this unit when it fights for the second time.</characteristic>
           </characteristics>
         </profile>
         <profile id="962f-ebf1-9691-67cc" name="Soulbound Protectors" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Roll a dice before you allocate a wound or mortal wound to a friendly OSSIARCH BONEREAPERS HERO while it is within 3&quot; of any friendly units with this ability. On a 2+, you must allocate that wound or mortal wound to a friendly unit with this ability that is within 3&quot; of that OSSIARCH BONEREAPERS HERO instead of allocating it to that OSSIARCH BONEREAPERS HERO.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If a friendly OSSIARCH BONEREAPERS HERO is within 3&quot; of this unit, before you allocate a wound or mortal wound to that HERO, or instead of making a ward roll for a wound or mortal wound that would be allocated to that HERO, roll a dice.  On a 2+, that wound or mortal wound is allocated to this unit instead of that HERO and cannot be negated.</characteristic>
           </characteristics>
         </profile>
         <profile id="661d-e4fe-13d2-fcea" name="Immortis Guard" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
@@ -1762,20 +1763,20 @@ Punishment of Lethargy: Pick 1 enemy unit wholly within 18&quot; of this terrain
       <profiles>
         <profile id="9b79-5b56-dc9b-c972" name="Hunt and Kill" hidden="false" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
           <characteristics>
-            <characteristic name="Command Ability Details" typeId="1b71-4c83-4e8c-093f">You can use this command ability at the start of your hero phase. If you do so, pick 1 friendly NECROPOLIS STALKERS unit. You can re-roll run and charge rolls for that unit until your next hero phase. In addition, until your next hero phase, when that unit makes a move, it can pass across terrain features in the same manner as a model that can fly.</characteristic>
+            <characteristic name="Command Ability Details" typeId="1b71-4c83-4e8c-093f">You can use this command ability in your hero phase.  The command can only be issued by a model in this unit, and this unit must receive the command.  Until your next hero phase, this unit can run and still charge later in the turn.  In addition, until your next hero phase, models in this unit can pass across terrain features in the same manner as models that can fly.</characteristic>
           </characteristics>
         </profile>
         <profile id="01ac-de8f-78f1-99d8" name="Quadrarch Aspects" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the start of each combat phase, you must pick one of the following aspects for this unit. The rule for that aspect applies to this unit until the end of that phase.
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the start of the combat phase, you must pick one of the following aspects to apply to this unit until the end of that phase.
 
-Blade-strike Aspect: You can re-roll hit rolls for attacks made by this unit.
+Blade-strike Aspect: Add 1 to hit rolls for attacks made by this unit.
 
-Blade-parry Aspect: You can re-roll save rolls for attacks that target this unit.
+Blade-parry Aspect: Add 1 to save rolls for attacks that target this unit.
 
-Destroyer Aspect: You can re-roll wound rolls for attacks made by this unit.
+Destroyer Aspect: Add 1 to wound rolls for attacks made by this unit.
 
-Precision Aspect: Improve the Rend and Damage characteristics of this unit’s melee weapons by 1.</characteristic>
+Precision Aspect: Add 1 to the Damage characteristic of this unit&apos;s melee weapons.</characteristic>
           </characteristics>
         </profile>
         <profile id="1b97-d476-11a8-7940" name="Necropolis Stalkers" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
@@ -1888,17 +1889,7 @@ Precision Aspect: Improve the Rend and Damage characteristics of this unit’s m
       <profiles>
         <profile id="3423-d732-7dc2-3abd" name="Dread Catapult" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Before shooting with a Dread Catapult, choose either the Necrotic Skulls, Cauldron of Torment or Cursed Stele weapon characteristics for that attack. Each Dread Catapult can only make 1 Cauldron of Torment and 1 Cursed Stele attack per battle.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="9b2f-0d17-415d-a145" name="Cauldron of Torment" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Do not use the attack sequence for an attack made with a Cauldron of Torment. Instead, pick 1 enemy unit that is in range of the attack and roll 1 dice for each model in the target unit. Add the modifier for Cauldron of Torment shown on the damage table above to each roll. If the result is equal to or greater than the unmodified Bravery characteristic of the target unit, 1 model from that unit is slain.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="d96a-7d64-1bc3-fdfa" name="Cursed Stele" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Do not use the attack sequence for an attack made with a Cursed Stele. Instead, pick 1 enemy model that is in range of the attack and roll 2D6. Add the modifier for Cursed Stele shown on the damage table above to the roll. If the result is equal to or greater than the Wounds characteristic of the target, it is slain.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Each time this unit shoots, choose either the Cauldron of Torment, Necrotic Skulls or Cursed Stele weapon characteristic for all the attacks it makes with its Dread Catapult.</characteristic>
           </characteristics>
         </profile>
         <profile id="dd7c-6b89-4072-f30d" name="Mortek Crawler" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
@@ -1911,7 +1902,12 @@ Precision Aspect: Improve the Rend and Damage characteristics of this unit’s m
         </profile>
         <profile id="45e5-b5ce-248e-9a73" name="Crew" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0"> This model has a crew of Mortek Engineers that attack with Crawler Tools. For rules purposes, the crew are treated in the same manner as a mount.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This unit has a crew of attendants armed with Crawler Tools.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="13a3-9c92-d7cc-eeeb" name="Deathly Barrage" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">After this unit shoots, roll a dice for each enemy unit that was targeted by this unit&apos;s attacks in that phase.  On a 5+, the strike-last effect applies to that unit until the end of that turn.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -2023,12 +2019,13 @@ Precision Aspect: Improve the Rend and Damage characteristics of this unit’s m
       <profiles>
         <profile id="d944-4c5b-bfd6-83ce" name="Bone Harvest" publicationId="51d8-050e-16e0-d1e3" page="3" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Roll a dice each time a model is removed from play after being slain within 3&quot; of any models with this ability. On a 4+, you can pick 1 friendly OSSIARCH BONEREAPERS unit within 6&quot; of this model. If you do so, and the slain model had a Wounds characteristic of 4 or less, you can heal 1 wound allocated to that unit; if the slain model had a Wounds characteristic of 5-9, you can heal up to D3 wounds allocated to that unit; or if the slain model had a Wounds characteristic of 10 or more, you can heal up to D6 wounds allocated to that unit. If there are no wounds allocated to the unit you pick, you can return a number of slain models to that unit with a combined Wounds characteristic that is equal to or less than the number of wounds you could have healed.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="1c51-9f61-af17-2ea4" name="Soulcrusher Bludgeons" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If the unmodified hit roll for an attack made with Soulcrusher Bludgeons is 6, that attack inflicts 2 mortal wounds on the target and the attack sequence ends (do not make a wound or save roll).</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Roll a dice each time a slain model within 6&quot; of this unit is removed from play.  If the slain model is within range of more than 1 friendly unit with this ability, you must pick which unit will use this ability. On a 4+, you can pick 1 friendly OSSIARCH BONEREAPERS unit within 6&quot; of this unit.
+
+If the slain model had a Wounds characteristic of 4 or less, you can heal 1 wound allocated to the unit you picked.
+
+If the slain model had a Wounds characteristic 5 or more, you can heal up to 3 wounds allcoated to the unit you picked.
+
+If no wounds have been allocated to the unit you picked, you can return a number of slain models to it that have a combined Wounds characteristic of equal to or less than the number of wounds you could have healed.</characteristic>
           </characteristics>
         </profile>
         <profile id="b30b-a408-9b7f-a90d" name="Gothizzar Harvester" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
@@ -2037,11 +2034,6 @@ Precision Aspect: Improve the Rend and Damage characteristics of this unit’s m
             <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">10</characteristic>
             <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">10</characteristic>
             <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">4+</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="7658-19ec-ba34-cd32" name="Soulcleaver Sickles" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Add 1 to hit rolls for attacks made with Soulreaver Sickles if the target unit has 5 or more models.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -2127,84 +2119,28 @@ Precision Aspect: Improve the Rend and Damage characteristics of this unit’s m
         <cost name="pts" typeId="points" value="210.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="879c-8978-385a-80d1" name="Battalion: Ossiarch Cohort" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="879c-8978-385a-80d1" name="Ossiarch Core Battalion: Ossiarch Cohort" hidden="true" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4030-1d9b-ec45-bc4b" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
-        <profile id="5b08-44e9-b47f-90e8" name="Unstoppable Battleforce" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
+        <profile id="676c-3f5c-4aee-248c" name="Ossiarch Core Battalion: Ossiarch Cohort" hidden="false" typeId="823d-e366-580b-9b07" typeName="Battalion Organization">
           <characteristics>
-            <characteristic name="Battalion Ability Details" typeId="08e0-9ead-1dbe-c801">At the start of your hero phase, if your general is from this battalion and on the battlefield, you receive D3 relentless discipline points.</characteristic>
+            <characteristic name="Required" typeId="bc6e-e731-eed7-c384">1 - Commander
+0-2 Sub-commanders
+2-5 Troops
+0-2 Monsters
+0-2 Artillery</characteristic>
           </characteristics>
         </profile>
       </profiles>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="5183-79d8-0769-97e6" name="Select 1 Leader" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="40c6-5c4d-349e-815c" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6db6-4436-28a7-572a" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="208c-0b4d-136c-8531" name="Katakros, Mortarch of the Necropolis" hidden="false" collective="false" import="true" targetId="5f00-f498-a38e-fd3f" type="selectionEntry"/>
-            <entryLink id="28f5-bb14-6e7d-46b1" name="Liege-Kavalos" hidden="false" collective="false" import="true" targetId="23d1-96dc-7497-7497" type="selectionEntry"/>
-            <entryLink id="9770-61f6-5b8a-2d1f" name="Arch-Kavalos Zandtos" hidden="false" collective="false" import="true" targetId="1bf3-85f9-33af-7104" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="fc5e-b902-ae29-9bac" name="1-3 Mortek Shield-corps" hidden="false" collective="false" import="true" defaultSelectionEntryId="8e48-57eb-1808-5076">
-          <constraints>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4066-13e3-596c-71b1" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3291-303f-94a1-0f42" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="8e48-57eb-1808-5076" name="Battalion: Mortek Shied-corps" hidden="false" collective="false" import="true" targetId="f292-62fc-26f6-51b1" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="cda7-8745-43e0-0590" name="1 Mortisan Trident" hidden="false" collective="false" import="true" defaultSelectionEntryId="853b-f99d-fb4b-910d">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="12b9-64b2-43e4-32d6" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7cb9-e19c-1748-cde0" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="853b-f99d-fb4b-910d" name="Battalion: Mortisan Trident" hidden="false" collective="false" import="true" targetId="0743-3125-e0e5-a0aa" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="216f-d216-2aa6-15ac" name="1-2 Katakrosian Deathglaives" hidden="false" collective="false" import="true" defaultSelectionEntryId="0ee8-0e08-440d-7a96">
-          <constraints>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="756a-054e-ce9e-95bb" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b88b-2672-cce9-582c" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="0ee8-0e08-440d-7a96" name="Battalion: Katakrosian Deathglaive" hidden="false" collective="false" import="true" targetId="c659-ccca-5704-9324" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="2702-96c2-ea2b-f83d" name="1 Aegis Immortal" hidden="false" collective="false" import="true" defaultSelectionEntryId="1683-d315-b6db-27e2">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8c92-aec8-8151-b69b" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e713-7771-f8d0-c626" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="1683-d315-b6db-27e2" name="Battalion: Aegis Immortal" hidden="false" collective="false" import="true" targetId="c5df-db6a-1dfb-d61f" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="ca07-6621-3b15-5e7c" name="1-3 Kavalos Lances" hidden="false" collective="false" import="true" defaultSelectionEntryId="2dc8-0e82-3086-c0df">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c5d2-d7d0-d8fe-eec0" type="min"/>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="be2c-b215-30a4-07fd" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="2dc8-0e82-3086-c0df" name="Battalion: Kavalos Lance" hidden="false" collective="false" import="true" targetId="7d6e-408f-07ba-1fde" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="4308-6565-7929-e38f" name="1 Mortek Ballistari" hidden="false" collective="false" import="true" defaultSelectionEntryId="6933-ee41-fb65-08ac">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="369e-44dd-0db7-75d3" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="264b-8200-1d76-0139" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="6933-ee41-fb65-08ac" name="Battalion: Mortek Ballistari" hidden="false" collective="false" import="true" targetId="a1e4-9ddc-e11f-51a5" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <costs>
-        <cost name="pts" typeId="points" value="100.0"/>
-      </costs>
+      <infoLinks>
+        <infoLink id="c5dc-1cdb-7f49-6112" name="Unified" hidden="false" targetId="9439-c5f6-945d-2d65" type="profile"/>
+      </infoLinks>
     </selectionEntry>
     <selectionEntry id="f292-62fc-26f6-51b1" name="Battalion: Mortek Shield-corps" hidden="false" collective="false" import="true" type="upgrade">
       <profiles>
@@ -3184,6 +3120,24 @@ Invigorated: Until you next hero phase, add 1 to the Attacks characteristic of m
             <characteristic name="Spells Known" typeId="dc9c-47d3-6931-859c">Arcane Bolt, Mystic Shield, Empower Ossification</characteristic>
           </characteristics>
         </profile>
+        <profile id="48db-4a63-b81f-f280" name="Refined Creations" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">In your hero phase, you can pick 1 friendly GOTHIZZAR HARVESTER, MORTEK CRAWLER or MORGHAST unit wholly within 12&quot; of this unit and pick 1 of the following augmentations to apply to that unit until your next hero phase.  The same unit cannot be picked to benefit from this ability more than once per turn.
+
+Ossified Barbs: Improve the Rend characteristic of that unit&apos;s melee weapons by 1.
+
+Accelerated Calcification: The first wound or mortal wound caused to that unit in each phase is negated.
+
+Enhanced Clawspan:  If the unmodified hit roll for an attack made with a missile weapon by this unit is 6, that attack scores 2 hits on the target instead of 1.  Make a wound roll and save roll for each hit.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="1f09-b35c-262e-acb6" name="Empower Ossification" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+          <characteristics>
+            <characteristic name="Casting Value" typeId="2508-b604-1258-a920">5</characteristic>
+            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">24&quot;</characteristic>
+            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, the caster can pick up to 3 different friendly GOTHIZZAR HARVESTERS, MORTEK CRAWLERS or MORGHAST units in any combination that are wholly within range to benefit from the Refined Creations ability instead of 1 unit that is wholly within 12&quot;.</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
       <categoryLinks>
         <categoryLink id="1c04-706e-6cfb-eadc" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
@@ -3192,6 +3146,8 @@ Invigorated: Until you next hero phase, add 1 to the Attacks characteristic of m
         <categoryLink id="87d1-3990-1d91-ceef" name="DEATH" hidden="false" targetId="6cdf-dd4f-0e91-e9c4" primary="false"/>
         <categoryLink id="3bf5-5f96-bcbc-4fea" name="OSSIFECTOR" hidden="false" targetId="b3e7-cff2-fece-655e" primary="false"/>
         <categoryLink id="8bcd-b3e0-c724-1b8c" name="OSSIARCH BONEREAPERS" hidden="false" targetId="89d5-185d-4935-ee59" primary="false"/>
+        <categoryLink id="86a5-0dde-1cbf-8d65" name="MORTISAN" hidden="false" targetId="c0a2-7436-d3b1-fbc4" primary="false"/>
+        <categoryLink id="e981-570e-18c0-c166" name="WIZARD" hidden="false" targetId="4f53-8230-2f02-9639" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="e330-21c5-b9ab-ea46" name="Ossified Talons" hidden="false" collective="false" import="true" type="upgrade">
@@ -3228,6 +3184,9 @@ Invigorated: Until you next hero phase, add 1 to the Attacks characteristic of m
         <entryLink id="d5bf-a513-f6bc-2da0" name="Command Traits" hidden="false" collective="false" import="true" targetId="3bb4-6aaa-4a0e-f67b" type="selectionEntryGroup"/>
         <entryLink id="a8a3-78d3-da76-a018" name="Incarnate Bonding" hidden="false" collective="false" import="true" targetId="c890-acbd-0c80-55c9" type="selectionEntryGroup"/>
         <entryLink id="ae16-923c-c6ab-1d36" name="Unique Enhancements" hidden="false" collective="false" import="true" targetId="62f4-174e-c529-75fe" type="selectionEntryGroup"/>
+        <entryLink id="8e65-cbf2-191d-2bf3" name="Mystic Shield" hidden="false" collective="false" import="true" targetId="5fdd-6634-f9f8-068a" type="selectionEntry"/>
+        <entryLink id="cedc-d25d-f76f-2427" name="Arcane Bolt" hidden="false" collective="false" import="true" targetId="869c-168d-eba5-eacf" type="selectionEntry"/>
+        <entryLink id="4df7-a750-6eaf-45e0" name="Spell Lores" hidden="false" collective="false" import="true" targetId="27ff-6862-cc17-b275" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="120.0"/>
@@ -3584,6 +3543,7 @@ Invigorated: Until you next hero phase, add 1 to the Attacks characteristic of m
       </constraints>
       <entryLinks>
         <entryLink id="3486-31e6-43a6-d313" name="Core Battalions" hidden="false" collective="false" import="true" targetId="b275-810f-adfc-156b" type="selectionEntryGroup"/>
+        <entryLink id="3e43-bb8d-b766-7d45" name="Ossiarch Core Battalions" hidden="false" collective="false" import="true" targetId="0964-7fb3-41c3-a4a5" type="selectionEntryGroup"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="27ff-6862-cc17-b275" name="Spell Lores" hidden="false" collective="false" import="true">
@@ -3701,6 +3661,178 @@ Invigorated: Until you next hero phase, add 1 to the Attacks characteristic of m
           </costs>
         </selectionEntry>
       </selectionEntries>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="0964-7fb3-41c3-a4a5" name="Ossiarch Core Battalions" hidden="false" collective="false" import="true">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0041-3b83-8424-b849" type="max"/>
+      </constraints>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="5c23-e9a4-236a-4906" name="Ossiarch Cohort" hidden="true" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="a67e-702f-47c1-553d" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c4db-55bd-5956-3a75" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="df96-18a7-5ff6-8d22" name="Ossiarch Cohort - 1 Commander" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="a67e-702f-47c1-553d" type="greaterThan"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6c6b-e787-f9b8-a510" type="instanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="increment" field="7873-833c-6a90-4e43" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="a67e-702f-47c1-553d" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="increment" field="c541-de26-57ea-5687" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="a67e-702f-47c1-553d" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c541-de26-57ea-5687" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7873-833c-6a90-4e43" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2141-8a54-ea6a-829f" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="679e-b02c-a087-13dc" name="Ossiarch Cohort - 0-2 Monster" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="a67e-702f-47c1-553d" type="greaterThan"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fa0c-9044-2568-fa02" type="instanceOf"/>
+                            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6c6b-e787-f9b8-a510" type="notInstanceOf"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="increment" field="3829-b899-2611-dca0" value="2.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="a67e-702f-47c1-553d" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3829-b899-2611-dca0" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2149-7d6c-41c1-e295" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="fe3e-5057-a52e-ed8b" name="Ossiarch Cohort - 0-2 Sub-Commander" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="a67e-702f-47c1-553d" type="greaterThan"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a8ed-ca35-24e0-cf2e" type="instanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="increment" field="dc9d-4a84-61c4-4048" value="2.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="a67e-702f-47c1-553d" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="dc9d-4a84-61c4-4048" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4be1-668a-bf04-11f2" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="8784-7303-3792-a4cc" name="Ossiarch Cohort - 2-5 Troops" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fa0c-9044-2568-fa02" type="notInstanceOf"/>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="a67e-702f-47c1-553d" type="greaterThan"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1d26-07fc-6a66-d73e" type="notInstanceOf"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6c6b-e787-f9b8-a510" type="notInstanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="increment" field="ef92-8a39-af53-247e" value="5.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="a67e-702f-47c1-553d" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="increment" field="e36d-c5d3-0dad-6da9" value="2.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="a67e-702f-47c1-553d" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ef92-8a39-af53-247e" type="max"/>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e36d-c5d3-0dad-6da9" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7b5c-20d2-5b71-80d3" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="9128-ae82-1703-4d25" name="Ossiarch Cohort - 0-2 Artillery" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="a67e-702f-47c1-553d" type="greaterThan"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1d26-07fc-6a66-d73e" type="instanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="increment" field="9b57-8694-5a58-3b4a" value="2.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="a67e-702f-47c1-553d" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9b57-8694-5a58-3b4a" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="bb2e-95ce-989f-1742" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <sharedProfiles>
