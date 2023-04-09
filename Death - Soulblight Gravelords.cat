@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="0364-070f-023f-64d9" name="Death - Soulblight Gravelords" revision="27" battleScribeVersion="2.03" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="159" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="0364-070f-023f-64d9" name="Death - Soulblight Gravelords" revision="29" battleScribeVersion="2.03" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="161" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="d72b-b718-4010-345d" name="DEINTALOS THE EXILE" hidden="false"/>
     <categoryEntry id="68d2-327f-6699-51f3" name="THE EXILED DEAD" hidden="false"/>
     <categoryEntry id="312a-dc3d-4c6a-2687" name="KING MORLAK VELMORN" hidden="false"/>
     <categoryEntry id="508f-5e4f-8ffd-ff24" name="THE SONS OF VELMORN" hidden="false"/>
     <categoryEntry id="9e10-8150-9ef1-0c1b" name="ASKURGAN TRUEBLOODS" hidden="false"/>
+    <categoryEntry id="a075-de42-a347-4f64" name="IVYA VOLGA" hidden="false"/>
   </categoryEntries>
   <entryLinks>
     <entryLink id="1b98-1990-d907-a577" name="Belladamma Volga" hidden="false" collective="false" import="true" targetId="fde2-6663-ed5e-7641" type="selectionEntry"/>
@@ -394,12 +395,10 @@
             <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the end of the battleshock phase, if a friendly THE EXILED DEAD unit is within 6” of this unit, you can return 1 slain model to that unit. </characteristic>
           </characteristics>
         </profile>
-        <profile id="c726-33be-dd62-35c0" name="The Hunger" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Each time this unit fights, after all of its attacks have been resolved, you can heal up to a number of wounds allocated to this unit equal to the number of wounds and mortal wounds caused by attacks made by this unit in that phase that were allocated to enemy units.</characteristic>
-          </characteristics>
-        </profile>
       </profiles>
+      <infoLinks>
+        <infoLink id="42b4-5684-9b3c-721c" name="The Hunger" hidden="false" targetId="2026-46db-b3fa-cd25" type="profile"/>
+      </infoLinks>
       <categoryLinks>
         <categoryLink id="df4f-0320-2d1c-7ea0" name="Leader" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
         <categoryLink id="c7b9-d364-0ee0-20d2" name="9 or less wounds Leader" hidden="false" targetId="a8ed-ca35-24e0-cf2e" primary="false"/>
@@ -459,12 +458,16 @@
       </selectionEntries>
       <entryLinks>
         <entryLink id="e722-950e-c8cf-0bb7" name="Battalions" hidden="false" collective="false" import="true" targetId="9df7-269b-fa20-74b2" type="selectionEntryGroup"/>
-        <entryLink id="0971-6d68-a511-a312" name="General" hidden="false" collective="false" import="true" targetId="88d2-d540-0573-3402" type="selectionEntry"/>
+        <entryLink id="0971-6d68-a511-a312" name="General" hidden="false" collective="false" import="true" targetId="88d2-d540-0573-3402" type="selectionEntry">
+          <categoryLinks>
+            <categoryLink id="d3bc-e7be-c764-9dc7" name="Unique General" hidden="false" targetId="fe3f-d230-7e2c-fba2" primary="false"/>
+          </categoryLinks>
+        </entryLink>
         <entryLink id="ce18-33d4-9b46-688c" name="Spell Lores" hidden="false" collective="false" import="true" targetId="8417-93fc-9562-a748" type="selectionEntryGroup"/>
         <entryLink id="1b6e-1dbe-976a-1358" name="Incarnate Bonding" hidden="false" collective="false" import="true" targetId="c890-acbd-0c80-55c9" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="240.0"/>
+        <cost name="pts" typeId="points" value="220.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="7cec-ef8c-e266-e541" name="The Exiled Dead" hidden="false" collective="false" import="true" type="unit">
@@ -696,7 +699,11 @@
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink id="8aae-dde1-b49f-b95a" name="General" hidden="false" collective="false" import="true" targetId="88d2-d540-0573-3402" type="selectionEntry"/>
+        <entryLink id="8aae-dde1-b49f-b95a" name="General" hidden="false" collective="false" import="true" targetId="88d2-d540-0573-3402" type="selectionEntry">
+          <categoryLinks>
+            <categoryLink id="e8b3-e437-e9fd-af86" name="Unique General" hidden="false" targetId="fe3f-d230-7e2c-fba2" primary="false"/>
+          </categoryLinks>
+        </entryLink>
         <entryLink id="a26f-9411-d674-bc0c" name="Battalions" hidden="false" collective="false" import="true" targetId="9df7-269b-fa20-74b2" type="selectionEntryGroup"/>
         <entryLink id="88c0-99e6-057f-7925" name="Incarnate Bonding" hidden="false" collective="false" import="true" targetId="c890-acbd-0c80-55c9" type="selectionEntryGroup"/>
       </entryLinks>
@@ -1031,10 +1038,106 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="d4ba-854e-8b3e-e7f6" name="Ivya Volga, the Outcast" hidden="false" collective="false" import="true" type="unit">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3067-90af-def8-daac" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="711d-4e4c-7996-cdbe" name="Ivya Volga, the Outcast" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
+          <characteristics>
+            <characteristic name="Move" typeId="8655-6213-2824-1752">6&quot;</characteristic>
+            <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">6</characteristic>
+            <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">10</characteristic>
+            <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">4+</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="da9d-eff8-28df-ac2e" name="Shrieking Swarm" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Subtract 1 from hit rolls for attacks that target this unit. In addition, if this unit has any wounds allocated to it, the Attacks characteristic if this unit&apos;s Needling Fangs is 12 instead of 2D6.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="316c-9368-d923-eaf3" name="Behemoth&apos;s Bane" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If any enemy MONSTERS are within 3&quot; of this unit, this unit counts as 10 models for the purposes of contesting objectives.  In addition, while an enemy MONSTER is within 3&quot; of this unit, the Attacks characteristic of that MONSTER&apos;s melee weapons is 1.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="c392-41d2-7704-46dc" name="Companion" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This unit is accompanied by a bat swarm armed with Needling Fangs.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="8361-f439-2fa6-cb1a" name="The Hunger" hidden="false" targetId="2026-46db-b3fa-cd25" type="profile"/>
+      </infoLinks>
       <categoryLinks>
         <categoryLink id="9fc6-1b86-ca26-0c86" name="9 or less wounds Leader" hidden="false" targetId="a8ed-ca35-24e0-cf2e" primary="false"/>
         <categoryLink id="9664-369e-9d0b-f8ae" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
+        <categoryLink id="ce74-9065-006d-31aa" name="Unique" hidden="false" targetId="088b-3a27-03f7-8249" primary="false"/>
+        <categoryLink id="ac03-14dc-b299-491a" name="IVYA VOLGA" hidden="false" targetId="a075-de42-a347-4f64" primary="false"/>
+        <categoryLink id="e056-3694-a290-4a62" name="DEATH" hidden="false" targetId="6cdf-dd4f-0e91-e9c4" primary="false"/>
+        <categoryLink id="8716-de4d-2e57-d91a" name="SOULBLIGHT GRAVELORDS" hidden="false" targetId="3d31-12d5-6735-011c" primary="false"/>
+        <categoryLink id="2cfd-51e7-50c1-1e90" name="VAMPIRE" hidden="false" targetId="d1e1-d80a-c667-b587" primary="false"/>
+        <categoryLink id="22ac-548a-511c-4b35" name="VYRKOS DYNASTY" hidden="false" targetId="c8b9-d6b2-34c8-79e5" primary="false"/>
+        <categoryLink id="d3e2-077f-13be-71a4" name="HERO" hidden="false" targetId="4e0e-664d-51ea-0929" primary="false"/>
       </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="be83-bb21-212c-ab90" name="Heirloom Axe" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0036-04e1-c2f6-5882" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3275-69d8-bdc3-c1b8" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="4785-c868-c7be-9e01" name="Heirloom Axe" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">5</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">2</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="912b-4666-fece-eac2" name="Needling Fangs" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fff9-5c43-13c1-a5db" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="60a6-3d6e-3a7b-38cd" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="6b38-c184-69ea-db5e" name="Needling Fangs" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">2D6</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">4+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <entryLinks>
+        <entryLink id="4629-ab91-6fa9-89fe" name="General" hidden="false" collective="false" import="true" targetId="88d2-d540-0573-3402" type="selectionEntry">
+          <categoryLinks>
+            <categoryLink id="25f5-7f72-9516-990c" name="Unique General" hidden="false" targetId="fe3f-d230-7e2c-fba2" primary="false"/>
+          </categoryLinks>
+        </entryLink>
+        <entryLink id="57cd-f4fa-71db-b7ca" name="Battalions" hidden="false" collective="false" import="true" targetId="9df7-269b-fa20-74b2" type="selectionEntryGroup"/>
+        <entryLink id="8ca8-e589-c7f2-0900" name="Incarnate Bonding" hidden="false" collective="false" import="true" targetId="c890-acbd-0c80-55c9" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="135.0"/>
+      </costs>
     </selectionEntry>
   </sharedSelectionEntries>
   <catalogueLinks>
