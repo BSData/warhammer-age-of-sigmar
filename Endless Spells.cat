@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="f0db-356d-9f9f-662d" name="Endless Spells" revision="26" battleScribeVersion="2.03" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="157" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="f0db-356d-9f9f-662d" name="Endless Spells" revision="28" battleScribeVersion="2.03" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="160" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="d1d1-5917-4fcf-8b1e" name="General&apos;s Handbook Pitched Battles 2022-23 - Season 1 September 2022 FAQ"/>
     <publication id="afcd-7621-7abc-1ba5" name="General&apos;s Handbook Pitched Battles 2022-23 - Season 2, Errata January 2023"/>
@@ -1282,12 +1282,17 @@ If they choose to hasten time, roll a dice for each unit within 6&quot; of this 
         </profile>
         <profile id="b8ae-4060-2d21-fb05" name="No Escape" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Add 1 to hit rolls for attacks made by OSSIARCH BONEREAPERS units that target a unit that is within 12&quot; of this endless spell.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Subtract 1 from ward rolls for units within 12&quot; of this endless spell.  This ability has no effect on OSSIARCH BONEREAPERS units.</characteristic>
           </characteristics>
         </profile>
         <profile id="9b51-da5e-f43b-d343" name="Predatory" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
             <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This endless spell is a predatory endless spell. It can be moved up to 8&quot; and can fly. </characteristic>
+          </characteristics>
+        </profile>
+        <profile id="8b8d-4c93-de48-1651" name="Bonded" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This endless spell is bonded to the model that summoned it.  A bonded endless spell is always controlled by the model to which it is bonded.  A model cannot be bonded to more than 1 endless spell at the same time and cannot attempt to summon other endless spells while it is bonded.  If the model that summoned this endless spell is removed from play, then this endless spell is removed from play.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1309,24 +1314,26 @@ If they choose to hasten time, roll a dice for each unit within 6&quot; of this 
       <profiles>
         <profile id="ae66-eef7-3b6f-98b2" name="Summoning" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
           <characteristics>
-            <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
-            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">6&quot;</characteristic>
-            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, set up this endless spell wholly within range and visible to the caster, and more than 1&quot; from all models, other endless spells and invocations. Only OSSIARCH BONEREAPERS WIZARDS can attempt to summon this endless spell.</characteristic>
+            <characteristic name="Casting Value" typeId="2508-b604-1258-a920">5</characteristic>
+            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">12&quot;</characteristic>
+            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, set up this endless spell within range and visible to the caster, and more than 1&quot; from all models, other endless spells and invocations. Only OSSIARCH BONEREAPERS WIZARDS can attempt to summon this endless spell.
+
+A WIZARD in a garrison cannot attempt to summon this endless spell, and if this endless spell is summoned, the WIZARD that summoned it cannot join a garrison until this endless spell has been removed from play.</characteristic>
           </characteristics>
         </profile>
-        <profile id="749f-29e1-1161-bb57" name="Perpetual Hunter" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+        <profile id="749f-29e1-1161-bb57" name="Bonded" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">When this endless spell is set up, the player who set it up can pick 1 HERO as its prey. If this endless spell’s prey is destroyed, this endless spell is removed from play.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This endless spell is bonded to the model that summoned it.  A bonded endless spell is always controlled by the model to which it is bonded.  A model cannot be bonded to more than 1 endless spell at the same time and cannot attempt to summon other endless spells while it is bonded.  If the model that summoned this endless spell is removed from play, then this endless spell is removed from play.</characteristic>
           </characteristics>
         </profile>
         <profile id="7147-2592-b734-0e9e" name="Death Incarnate" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">After this endless spell has moved, roll a dice for each unit within 3&quot; of it. On a 2+, that unit suffers D3 mortal wounds. If that unit was this endless spell’s prey, on a 2+, it suffers D6 mortal wounds instead of D3. This ability has no effect on OSSIARCH BONEREAPERS units.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">After this endless spell has moved, roll a dice for each unit that has any models it passed across.  On a 2+, that unit suffers D3 mortal wounds.  Then, the commanding player can pick 1 unit within 1&quot; of this endless spell and roll a dice. On a 1, nothing happens.  On a 2-5, that unit suffers D3 mortal wounds.  On a 6, that unit suffers D6 mortal wounds.  This ability has not affect on OSSIARCH BONEREAPERS units.</characteristic>
           </characteristics>
         </profile>
         <profile id="a256-f169-0e66-60d3" name="Predatory" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This endless spell is a predatory endless spell. It can be moved up to 2D6&quot; and can fly.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This endless spell is a predatory endless spell. It can be moved up to 8&quot; and can fly.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1348,24 +1355,24 @@ If they choose to hasten time, roll a dice for each unit within 6&quot; of this 
       <profiles>
         <profile id="faf4-a20f-1672-52c7" name="Summoning" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
           <characteristics>
-            <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
+            <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
             <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">-</characteristic>
             <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, set up this endless spell anywhere on the battlefield and visible to the caster, and more than 1&quot; from all models, other endless spells and invocations. Only OSSIARCH BONEREAPERS WIZARDS can attempt to summon this endless spell.</characteristic>
           </characteristics>
         </profile>
-        <profile id="2fe1-b396-54ef-da34" name="Second Sight" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+        <profile id="2fe1-b396-54ef-da34" name="Aviarch Sentry" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Anything visible to this endless spell is also visible to the model that is bonded to this endless spell.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="6792-6b5d-28c8-7feb" name="Soul Thief" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the end of each phase, the commanding player must roll a dice if any CHAOS, DESTRUCTION or ORDER models were slain within 6&quot; of this endless spell during that phase. On a 1-2, they can heal 1 wound allocated to the model bonded to this endless spell. On a 3-4, each CHAOS, DESTRUCTION and ORDER unit within 6&quot; of this endless spell suffers 1 mortal wound. On a 5-6, both of these effects apply.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Models with a Wounds characteristic of 1 or 2 that are within 6&quot; of this endless spell cannot contest objectives.  This ability has no effect on OSSIARCH BONEREAPERS units.</characteristic>
           </characteristics>
         </profile>
         <profile id="3d30-5869-ee99-f6b4" name="Predatory" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
             <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This endless spell is a predatory endless spell. It can be moved up to 8&quot; and can fly.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="60d3-5cc1-ebd5-2e80" name="Bonded" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This endless spell is bonded to the model that summoned it.  A bonded endless spell is always controlled by the model to which it is bonded.  A model cannot be bonded to more than 1 endless spell at the same time and cannot attempt to summon other endless spells while it is bonded.  If the model that summoned this endless spell is removed from play, then this endless spell is removed from play.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1377,7 +1384,7 @@ If they choose to hasten time, roll a dice for each unit within 6&quot; of this 
         <categoryLink id="12e8-70b1-0cdb-314b" name="New CategoryLink" hidden="false" targetId="eecb-ed66-d474-9ddd" primary="true"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="50.0"/>
+        <cost name="pts" typeId="points" value="40.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="30c6-9ad5-4148-2cc3" name="Endless Spell: Malevolent Moon" hidden="false" collective="false" import="true" type="upgrade">
