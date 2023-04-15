@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="86c6-f50d-4d44-9d02" name="Destruction - Ogor Mawtribes" revision="88" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="159" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="86c6-f50d-4d44-9d02" name="Destruction - Ogor Mawtribes" revision="89" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="161" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="50c5-e039-pubN80915" name="Destruction Battletome: Ironjawz"/>
     <publication id="50c5-e039-pubN81384" name="Destruction Battletome: Ogor Mawtribes"/>
@@ -160,7 +160,7 @@
               <profiles>
                 <profile id="6b2f-ca2d-be45-d674" name="Trampling Charge" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
                   <characteristics>
-                    <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">After an OGOR or RHINOX unit makes a charge move, you can pick 1 enemy unit within 1&quot; of this unit and roll a number of dice equal to the unmodified charge roll for that charge move. Add 2 to each roll if the OGOR unit that made the charge move has 8 or more models or is a MONSTER. For each 6+, that enemy unit suffers 1 mortal wound.</characteristic>
+                    <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">After a friendly OGOR or RHINOX unit makes a charge move, you can pick 1 enemy unit within 1&quot; of that unit and roll a number of dice equal to the unmodified charge roll for that charge move. Add 1 to each roll if the charging unit is an OGOR unit that has 3 or more models. Add 2 to each roll if it is a MONSTER. For each 6+, that enemy unit suffers 1 mortal wound.</characteristic>
                   </characteristics>
                 </profile>
                 <profile id="dbb8-cf57-08de-6b41" name="Grasp of the Everwinter" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
@@ -186,6 +186,16 @@
                 <profile id="d79d-9962-0abc-11b6" name="Gulping Bites" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
                   <characteristics>
                     <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">At the end of the combat phase, roll a dice for each enemy unit within 3&quot; of any friendly GUTBUSTERS OGOR units.  On a 4+, that unit suffers D3 mortal wounds.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="f21c-1f96-451d-d4fd" name="Unstoppable Charge" hidden="false" typeId="84d9-7a5a-fe76-b740" typeName="Monstrous Rampage">
+                  <characteristics>
+                    <characteristic name="Description" typeId="827b-962b-59a3-3b4d">Only a STONEHORN unit that has made a charge move in the same phase can carry out this monstrous rampage. This unit makes a 3D6&quot; move and can pass across enemy units in the same manner as a unit that can fly. It must finish the move within 3&quot; of any enemy units. At the end of the move, roll a dice for each unit it passed across. On a 2+, that unit suffers D3 mortal wounds.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="e5ef-fc04-0a16-de68" name="Chill of the Everwinter" hidden="false" typeId="84d9-7a5a-fe76-b740" typeName="Monstrous Rampage">
+                  <characteristics>
+                    <characteristic name="Description" typeId="827b-962b-59a3-3b4d">Only a THUNDERTUSK unit that has made a charge move in the same phase can carry out this monstrous rampage. Roll a dice for each enemy unit within 1&quot; of this unit. On a 3+, the strike-last effect applies to that unit until the end of the following combat phase.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -3798,6 +3808,15 @@ D6 Effect
             <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9f18-9ffb-0267-3e08" type="greaterThan"/>
           </conditions>
         </modifier>
+        <modifier type="set-primary" field="category" value="e9f2-765a-b7b8-ce8e">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="891b-2763-07b9-536f" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <profiles>
         <profile id="0c50-7888-d504-3ac5" name="Maneaters" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
@@ -3832,6 +3851,11 @@ D6 Effect
             <modifier type="set" field="name" value="6 Maneaters">
               <conditions>
                 <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0a8d-cde8-fba1-6c0d" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="name" value="9 Maneaters">
+              <conditions>
+                <condition field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0a8d-cde8-fba1-6c0d" type="equalTo"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -3967,6 +3991,17 @@ D6 Effect
       </selectionEntryGroups>
       <entryLinks>
         <entryLink id="e353-3711-97b9-ba5c" name="Reinforced" hidden="false" collective="false" import="true" targetId="0a8d-cde8-fba1-6c0d" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="95f2-6885-756f-9ea5" value="2.0">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="891b-2763-07b9-536f" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
           <costs>
             <cost name="pts" typeId="points" value="170.0"/>
           </costs>
