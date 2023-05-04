@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="40a7-b89a-b3cb-cea9" name="Chaos - Tzeentch" revision="113" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="159" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="40a7-b89a-b3cb-cea9" name="Chaos - Tzeentch" revision="114" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="161" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="40a7-b89a-pubN65537" name="Chaos Battletome: Disciples of Tzeentch"/>
     <publication id="40a7-b89a-pubN75398" name="1"/>
@@ -109,6 +109,8 @@
     <categoryEntry id="6d9f-55dc-54a8-ade1" name="MAGISTER ON DISC OF TZEENTCH" hidden="false"/>
     <categoryEntry id="d7f4-6d35-41a3-0a2c" name="CULT OF THE TRANSIENT FORM" hidden="false"/>
     <categoryEntry id="8b42-9761-57f6-04c0" name="JADE OBELISK" hidden="false"/>
+    <categoryEntry id="6f52-ce18-420b-4758" name="EPHILIM THE UNKNOWABLE" hidden="false"/>
+    <categoryEntry id="4f81-f21d-8f87-6fc6" name="EPHILIM&apos;S PANDAEMONIUM" hidden="false"/>
   </categoryEntries>
   <entryLinks>
     <entryLink id="c359-4ac3-5bea-3228" name="Exalted Greater Daemon of Tzeentch" hidden="false" collective="false" import="true" targetId="d367-61a5-8672-59bd" type="selectionEntry">
@@ -260,6 +262,12 @@
     <entryLink id="63d6-a7dd-15b3-6e1f" name="Tzeentch Core Battalion: Omniscient Oracles" hidden="false" collective="false" import="true" targetId="2656-8c35-b164-94a8" type="selectionEntry"/>
     <entryLink id="de55-7c9f-7e95-3bc1" name="Jade Obelisk" hidden="false" collective="false" import="true" targetId="bf3b-7b8c-dfca-7021" type="selectionEntry"/>
     <entryLink id="d440-23f3-3648-c705" name="Regiment of Renown - Hargax&apos;s Pit-beats" hidden="false" collective="false" import="true" targetId="f5e6-6888-e003-118d" type="selectionEntry"/>
+    <entryLink id="6369-ee09-ee78-ee24" name="Ephilim the Unknowable" hidden="false" collective="false" import="true" targetId="4839-d22f-27a6-b1f1" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="739a-333c-49c4-d8ae" name="Leader" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="f403-6467-61b0-8a2c" name="Ephilim&apos;s Pandaemonium" hidden="false" collective="false" import="true" targetId="c6e1-a584-afb9-c865" type="selectionEntry"/>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="7c81-4505-a4ab-e9fe" name="Curseling, Eye of Tzeentch" hidden="false" collective="false" import="true" type="unit">
@@ -2721,6 +2729,213 @@ If an enemy WIZARD successfully casts a spell within 18&quot; of a friendly unit
           </costs>
         </entryLink>
         <entryLink id="be8e-c56a-ab57-931e" name="Battalions" hidden="false" collective="false" import="true" targetId="dfe6-eb18-39a8-161d" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="4839-d22f-27a6-b1f1" name="Ephilim the Unknowable" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="67a2-f7cb-7b64-a8db" value="1.0">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c6e1-a584-afb9-c865" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2a8a-0f92-3306-b458" type="max"/>
+        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="67a2-f7cb-7b64-a8db" type="min"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2a05-9ed1-196f-b77d" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="6165-ff65-7373-6d81" name="Power Leech" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the start of your hero phase, you can say that Ephilim will siphon their abominations. If you do so, pick 1 friendly EPHILIM&apos;S PANDAEMONIUM unit within 3&quot; of this unit. D3 models in that unit are slain. Add 2 to casting rolls for this unit until the end of the phase.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="a83d-9413-6ac4-29f7" name="Wizard" hidden="false" typeId="f55d-ee3a-1597-110f" typeName="Magic">
+          <characteristics>
+            <characteristic name="Cast/Unbind" typeId="8294-f605-2c0f-8f92">1/1</characteristic>
+            <characteristic name="Spells Known" typeId="dc9c-47d3-6931-859c">Arcane Bolt, Mystic Shield, Sudden Warp-portal</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="b183-2af7-a6e8-1f89" name="Sudden Warp-portal" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+          <characteristics>
+            <characteristic name="Casting Value" typeId="2508-b604-1258-a920">8</characteristic>
+            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">18</characteristic>
+            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick 1 friendly DISCIPLES OF TZEENTCH unit wholly within range and visible to the caster, within 6&quot; of an objective and more than
+3&quot; from all enemy units. Remove that unit from the battlefield and set it up again anywhere on the battlefield more than 9&quot; from all enemy units and within 6&quot; of an objective. Units set up in this way cannot move in the following movement phase.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="d4f8-5233-de8d-562c" name="Keeper of the Pandaemonium" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Once per turn, in your hero phase, you can say that Ephilim will summon their abominations. If you do so, this unit cannot cast any spells this turn. Pick 1 friendly EPHILIM&apos;S PANDAEMONIUM unit wholly within 6&quot; of this unit. You can return up to D3 slain models to that unit.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="03ad-5576-52dc-c308" name="Ephilim the Unknowable" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
+          <characteristics>
+            <characteristic name="Move" typeId="8655-6213-2824-1752">5&quot;</characteristic>
+            <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">5</characteristic>
+            <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">7</characteristic>
+            <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">6+</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="30c8-e942-e971-9df5" name="New CategoryLink" hidden="false" targetId="7cdd-80ea-cbeb-8e16" primary="false"/>
+        <categoryLink id="cac0-d0f6-3eb8-b359" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
+        <categoryLink id="b936-9a4c-49bd-44a3" name="TZEENTCH" hidden="false" targetId="7d12-f4c5-3832-0f19" primary="false"/>
+        <categoryLink id="bb5e-7e65-10be-db53" name="WIZARD" hidden="false" targetId="4f53-8230-2f02-9639" primary="false"/>
+        <categoryLink id="c268-8ff7-3508-ebc1" name="HERO" hidden="false" targetId="4e0e-664d-51ea-0929" primary="false"/>
+        <categoryLink id="98d8-83ac-f417-315a" name="Named" hidden="false" targetId="088b-3a27-03f7-8249" primary="false"/>
+        <categoryLink id="56a7-81ad-663f-ae0a" name="10 or less wounds Leader" hidden="false" targetId="a8ed-ca35-24e0-cf2e" primary="false"/>
+        <categoryLink id="a206-0d15-c6ff-1ef8" name="DISCIPLES OF TZEENTCH" hidden="false" targetId="874b-91b7-c2e3-c0db" primary="false"/>
+        <categoryLink id="7362-657d-cc01-8aad" name="CULT OF THE TRANSIENT FORM" hidden="false" targetId="d7f4-6d35-41a3-0a2c" primary="false"/>
+        <categoryLink id="ee41-9b83-f4c1-7c83" name="EPHILIM THE UNKNOWABLE" hidden="false" targetId="6f52-ce18-420b-4758" primary="false"/>
+        <categoryLink id="50e0-43d9-1774-fd8f" name="DAEMON" hidden="false" targetId="1418-9a68-9f9e-e9a7" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="4a6e-00d9-81a5-a7bc" name="Warpstaff" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="443c-2cee-d0bc-f546" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="420d-c44e-2554-d224" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="2893-961a-55fb-e99d" name="Warpstaff" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">2&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">1</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">4+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">D3</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="8951-59e4-a295-5de6" name="Firey Changebolts" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e61a-4b7b-5fe8-1d12" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="491d-3c00-b1a5-3528" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="6d93-9021-edfb-fbbc" name="Firey Changebolts" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Missile</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">18&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">2</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">D3</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <entryLinks>
+        <entryLink id="ed20-356a-dc8b-ad59" name="Spell Lores" hidden="false" collective="false" import="true" targetId="265e-c66c-c5ff-ab54" type="selectionEntryGroup"/>
+        <entryLink id="47d1-a438-bc0a-44f8" name="General" hidden="false" collective="false" import="true" targetId="1a9a-117d-b9af-93ed" type="selectionEntry">
+          <categoryLinks>
+            <categoryLink id="8f40-ff53-afa9-b459" name="Unique General" hidden="false" targetId="fe3f-d230-7e2c-fba2" primary="false"/>
+          </categoryLinks>
+        </entryLink>
+        <entryLink id="9c6e-e7fe-1443-1f65" name="Battalions" hidden="false" collective="false" import="true" targetId="dfe6-eb18-39a8-161d" type="selectionEntryGroup"/>
+        <entryLink id="1225-ab2f-06e5-0f26" name="Incarnate Bonding" hidden="false" collective="false" import="true" targetId="c890-acbd-0c80-55c9" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="190.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="c6e1-a584-afb9-c865" name="Ephilim&apos;s Pandaemonium" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="99d7-53ee-e085-97ae" value="1.0">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4839-d22f-27a6-b1f1" type="greaterThan"/>
+          </conditions>
+        </modifier>
+        <modifier type="add" field="category" value="7f45-c5b3-c698-138d">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9f18-9ffb-0267-3e08" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4032-a4ee-56ba-9f3c" type="max"/>
+        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="99d7-53ee-e085-97ae" type="min"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e36e-6850-a1da-3c5d" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="c405-18ff-e5b9-eb92" name="Aether-tether" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Subtract 1 from hit rolls for attacks that target this unit while it is wholly within 6&quot; of a friendly Ephilim the Unknowable.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="8276-a03d-07df-d5f3" name="New CategoryLink" hidden="false" targetId="7cdd-80ea-cbeb-8e16" primary="false"/>
+        <categoryLink id="1607-62a0-5216-f788" name="Named" hidden="false" targetId="088b-3a27-03f7-8249" primary="false"/>
+        <categoryLink id="5ebd-142a-aae2-034c" name="TZEENTCH" hidden="false" targetId="7d12-f4c5-3832-0f19" primary="false"/>
+        <categoryLink id="5150-74cf-a4e5-65d1" name="New CategoryLink" hidden="false" targetId="065e-fda7-fd27-1f40" primary="true"/>
+        <categoryLink id="d53d-18ec-ba41-3d43" name="DISCIPLES OF TZEENTCH" hidden="false" targetId="874b-91b7-c2e3-c0db" primary="false"/>
+        <categoryLink id="f106-a302-831d-de5c" name="CULT OF THE TRANSIENT FORM" hidden="false" targetId="d7f4-6d35-41a3-0a2c" primary="false"/>
+        <categoryLink id="9404-bf9a-f366-d76a" name="DAEMON" hidden="false" targetId="1418-9a68-9f9e-e9a7" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="6160-0722-3fc1-0fb1" name="Hurled Wyrdflame Blasts" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f623-3ac9-471e-24bd" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c89b-ea6f-c1fb-04da" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="438c-f593-a303-1a63" name="Hurled Wyrdflame Blasts" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Missile</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">18&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">2</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">4+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="adbd-823b-74ec-0844" name="Flame-wreathed Hands and Jaws" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c309-9193-e41d-1cee" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a691-9b2e-eff0-2a01" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="10c9-8c5b-497a-09e4" name="Flame-wreathed Hands and Jaws" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">1</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">4+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">D3</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <entryLinks>
+        <entryLink id="95c7-64af-8d27-afcd" name="Battalions" hidden="false" collective="false" import="true" targetId="dfe6-eb18-39a8-161d" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>

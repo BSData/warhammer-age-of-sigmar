@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="82b4-f6e1-3e37-5ea1" name="Order - Stormcast Eternals - Data" revision="171" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="161" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="82b4-f6e1-3e37-5ea1" name="Order - Stormcast Eternals - Data" revision="172" battleScribeVersion="2.03" authorName="" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="161" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="ed04-877b-pubN65537" name="Order Battletome: Stormcast Eternals (2nd Edition)"/>
     <publication id="ed04-877b-pubN71576" name="Battletome: Stormcast Eternals (2nd Edition)"/>
@@ -152,6 +152,7 @@
     <categoryEntry id="2f31-3135-0590-48d7" name="VANQUISHERS" hidden="false"/>
     <categoryEntry id="57fc-29c5-1166-f602" name="XANDIRE&apos;S TRUTHSEEKERS" hidden="false"/>
     <categoryEntry id="fe6b-01c5-e4fe-8041" name="DACIAN ANVIL" hidden="false"/>
+    <categoryEntry id="daf2-c09f-c5dd-1a21" name="DOMITAN&apos;S STORMCOVEN" hidden="false"/>
   </categoryEntries>
   <sharedSelectionEntries>
     <selectionEntry id="c6a3-2acf-1e46-3896" name="Allegiance" hidden="false" collective="false" import="true" type="unit">
@@ -11793,6 +11794,118 @@ In addition, you can re-roll charge rolls for this unit if it was set-up on the 
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="130.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="824d-d27b-ae83-fdfb" name="Domitan&apos;s Stormcoven" page="" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="add" field="category" value="5cb0-860c-916b-5bcd">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="d43d-da9f-4261-e201" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="add" field="category" value="7f45-c5b3-c698-138d">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9f18-9ffb-0267-3e08" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="d6e9-529f-b455-7c03" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="5bb1-8d17-d14b-8f46" name="Domitan&apos;s Stormcoven" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
+          <characteristics>
+            <characteristic name="Move" typeId="8655-6213-2824-1752">5&quot;</characteristic>
+            <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">4</characteristic>
+            <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">8</characteristic>
+            <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">3+</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="384f-c5a5-f872-1d7b" name="Gather the Aether" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the start of each battle round, if this unit is on the battlefield, after determining who has the first turn but before the first turn begins, you can pick 1 large battlefield quarter. That battlefield quarter becomes aethercharged until the end of the battle round.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="d3f1-cca3-258d-f4c4" name="Aethershock" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+          <characteristics>
+            <characteristic name="Casting Value" typeId="2508-b604-1258-a920">8</characteristic>
+            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">-</characteristic>
+            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">This unit cannot attempt to cast this spell unless it is wholly within an aethercharged battlefield quarter. If successfully cast, pick 1 unit within an aethercharged battlefield quarter that is visible to the caster. If you picked a friendly unit, the strike-first effect applies to that unit until the start of your next hero phase. If you picked an enemy unit, the strike-last effect applies to that unit until the start of your next hero phase.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="2e33-51ea-7831-2b0c" name="Scouring Arcs" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Add 1 to hit rolls for attacks made by this unit while is wholly within an aethercharged battlefield quarter.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="8dc7-c7e8-92f7-1306" name="Wizard" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">While this unit has 2 or more models, it can attempt to cast 2 spells in your hero phase and attempt to unbind 2 spells in the enemy hero phase. While this unit has 1 model, it can attempt to cast 1 spell in your hero phase and attempt to unbind 1 spell in the enemy hero phase. </characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="116f-5da6-70a0-09d1" name="New CategoryLink" hidden="false" targetId="b970-b3bf-e1a4-a6fc" primary="false"/>
+        <categoryLink id="a438-0475-16de-87a3" name="New CategoryLink" hidden="false" targetId="b396-0600-80d6-cee9" primary="false"/>
+        <categoryLink id="9836-6a6b-57fe-a5e6" name="New CategoryLink" hidden="false" targetId="cf54-4907-2f8d-08bb" primary="false"/>
+        <categoryLink id="7d60-8f90-a5a7-167b" name="New CategoryLink" hidden="false" targetId="065e-fda7-fd27-1f40" primary="true"/>
+        <categoryLink id="4831-6e18-dec3-baa9" name="Unique" hidden="false" targetId="088b-3a27-03f7-8249" primary="false"/>
+        <categoryLink id="61ed-5067-03de-3d8c" name="THUNDERSTRIKE" hidden="false" targetId="8002-2f08-f5e1-4941" primary="false"/>
+        <categoryLink id="796d-28fb-b949-30f3" name="WIZARD" hidden="false" targetId="4f53-8230-2f02-9639" primary="false"/>
+        <categoryLink id="d108-cc3f-f217-6556" name="KNIGHT" hidden="false" targetId="03db-dfa5-53f2-1bb8" primary="false"/>
+        <categoryLink id="e47c-2491-a171-7492" name="DOMITAN&apos;S STORMCOVEN" hidden="false" targetId="daf2-c09f-c5dd-1a21" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="e66c-c3a5-fa7f-76ac" name="Azyrite Bolts" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="514a-10bd-6e69-1276" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0d37-17c5-7408-05ea" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="bc15-4087-9985-48df" name="Azyrite Bolts" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Missile</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">18&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">2</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">4+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">D3</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="2d80-dc9a-7e44-2789" name="Valedictor Weapons" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a96e-ef10-b3b7-3159" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="854e-c67d-3a88-7841" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="39a1-e633-6b3f-dff0" name="Valedictor Weapons" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">2&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">3</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">4+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">D3</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <entryLinks>
+        <entryLink id="f5e8-68a8-fc71-9c58" name="Battalions" hidden="false" collective="false" import="true" targetId="4165-f8c8-6f84-e4ca" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="275.0"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>
