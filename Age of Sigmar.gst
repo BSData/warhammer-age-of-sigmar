@@ -5655,346 +5655,65 @@ In addition, this incarnate can carry out the Devour Endless Spell monstrous ram
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="bc5c-6f2c-d51b-a351" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4717-1d01-b0b2-9a58" type="max"/>
       </constraints>
-      <selectionEntries>
-        <selectionEntry id="a409-36d2-41d9-a72f" name="Hold the Line" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1411-460f-c135-a667" type="greaterThan"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f393-8699-1137-f7d2" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="4fb4-1f59-e825-f56f" name="Hold the Line" hidden="false" typeId="9c01-ec20-32c1-0948" typeName="Grand Strategy">
-              <characteristics>
-                <characteristic name="Description" typeId="53c8-cc18-16d1-e890">When the battle ends,  you complete this grand strategy if there are any Battleline units from your starting army on the battlefield.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="8534-1492-baf8-21c2" name="Grand Strategy" hidden="false" targetId="5dff-3614-49fd-c3e4" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="1dbe-00f3-42f4-b04e" name="Vendetta" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1411-460f-c135-a667" type="greaterThan"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3f32-e4f4-487c-f487" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="d2bd-7f2d-40b6-a15a" name="Vendetta" hidden="false" typeId="9c01-ec20-32c1-0948" typeName="Grand Strategy">
-              <characteristics>
-                <characteristic name="Description" typeId="53c8-cc18-16d1-e890">When the battle ends,  you complete this grand strategy if the model chosen to be your opponent&apos;s general has been slain and the model chosen to be your general has not been slain.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="38aa-3eb6-f0cf-b3fe" name="Grand Strategy" hidden="false" targetId="5dff-3614-49fd-c3e4" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="a35f-513d-9f57-e941" name="Dominating Presence" hidden="true" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="false">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3b40-f0c2-a6e6-01ff" type="greaterThan"/>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="36b7-ee1e-0855-f23f" type="greaterThan"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1e09-d7e5-8fd1-e894" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="6fac-7f75-a8e8-f292" name="Dominating Presence" hidden="false" typeId="9c01-ec20-32c1-0948" typeName="Grand Strategy">
-              <characteristics>
-                <characteristic name="Description" typeId="53c8-cc18-16d1-e890">When the battle ends,  you complete this grand strategy if there are more units from your starting army on the battlefield than there are units from your opponent&apos;s starting army on the battlefield.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="e722-d703-73e6-24e7" name="Grand Strategy" hidden="false" targetId="5dff-3614-49fd-c3e4" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="8e7f-3814-4b8a-ef1f" name="Beast Master" hidden="true" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="false">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3b40-f0c2-a6e6-01ff" type="greaterThan"/>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="36b7-ee1e-0855-f23f" type="greaterThan"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4ba1-a0f2-c856-6216" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="8a2f-52ff-e81f-e3bc" name="Beast Master" hidden="false" typeId="9c01-ec20-32c1-0948" typeName="Grand Strategy">
-              <characteristics>
-                <characteristic name="Description" typeId="53c8-cc18-16d1-e890">When the battle ends,  you complete this grand strategy if there are any MONSTERS from your starting army on the battlefield.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="5ca7-e81d-2148-de9c" name="Grand Strategy" hidden="false" targetId="5dff-3614-49fd-c3e4" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="14f2-5c1f-5abb-15de" name="Prized Sorcery" hidden="true" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="false">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3b40-f0c2-a6e6-01ff" type="greaterThan"/>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="36b7-ee1e-0855-f23f" type="greaterThan"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3318-7553-48fd-0967" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="1774-98a0-c401-d161" name="Prized Sorcery" hidden="false" typeId="9c01-ec20-32c1-0948" typeName="Grand Strategy">
-              <characteristics>
-                <characteristic name="Description" typeId="53c8-cc18-16d1-e890">When the battle ends,  you complete this grand strategy if there are any WIZARDS from your starting army on the battlefield.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="f8e3-c615-f38a-1ac9" name="Grand Strategy" hidden="false" targetId="5dff-3614-49fd-c3e4" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="beb8-5f44-3575-b445" name="Pillars of Belief" hidden="true" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="false">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3b40-f0c2-a6e6-01ff" type="greaterThan"/>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="36b7-ee1e-0855-f23f" type="greaterThan"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="218e-ec75-d410-988d" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="6383-a7f2-eaef-03dd" name="Pillars of Belief" hidden="false" typeId="9c01-ec20-32c1-0948" typeName="Grand Strategy">
-              <characteristics>
-                <characteristic name="Description" typeId="53c8-cc18-16d1-e890">When the battle ends,  you complete this grand strategy if there are any PRIESTS from your starting army on the battlefield.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="a185-bbd8-569b-c2df" name="Grand Strategy" hidden="false" targetId="5dff-3614-49fd-c3e4" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="13b2-13a9-40f1-6d75" name="Predator&apos;s Domain" hidden="true" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="false">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3b40-f0c2-a6e6-01ff" type="greaterThan"/>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="36b7-ee1e-0855-f23f" type="greaterThan"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8256-d95e-0210-da9f" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="9706-5930-ef0a-dbcd" name="Predator&apos;s Domain" hidden="false" typeId="9c01-ec20-32c1-0948" typeName="Grand Strategy">
-              <characteristics>
-                <characteristic name="Description" typeId="53c8-cc18-16d1-e890">When the battle ends,  you complete this grand strategy if you control more terrain features than your opponent.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="d31e-acd1-46fc-e11f" name="Grand Strategy" hidden="false" targetId="5dff-3614-49fd-c3e4" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="8b9d-0de1-0ee1-4d92" name="Sever the Head" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1411-460f-c135-a667" type="greaterThan"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9a2c-73b9-bd2f-9ea8" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="dc8d-1188-4015-5ee0" name="Sever the Head" hidden="false" typeId="9c01-ec20-32c1-0948" typeName="Grand Strategy">
-              <characteristics>
-                <characteristic name="Description" typeId="53c8-cc18-16d1-e890">When the battle ends,  you complete this grand strategy if there are no HEROES from your opponent&apos;s starting army on the battlefield.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="6b7b-069a-f088-3ba9" name="Grand Strategy" hidden="false" targetId="5dff-3614-49fd-c3e4" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup id="37a0-5e57-c536-dd07" name="GHB 2022 Grand Strategies" hidden="true" collective="false" import="true">
+        <selectionEntryGroup id="37a0-5e57-c536-dd07" name="Contest of Generals Grand Strategies" hidden="true" collective="false" import="true">
           <modifiers>
             <modifier type="set" field="hidden" value="false">
               <conditions>
-                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1411-460f-c135-a667" type="greaterThan"/>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3b40-f0c2-a6e6-01ff" type="greaterThan"/>
               </conditions>
             </modifier>
           </modifiers>
           <selectionEntries>
-            <selectionEntry id="f994-2af7-674d-2235" name="No Place for the Weak" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="003c-bf66-6c5b-f74d" name="Sever the Head" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0102-93f2-dae9-10c7" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3788-6b2e-7853-b91c" type="max"/>
               </constraints>
               <profiles>
-                <profile id="8e96-8521-de2d-cf76" name="No Place for the Weak" hidden="false" typeId="9c01-ec20-32c1-0948" typeName="Grand Strategy">
+                <profile id="bea5-957c-b104-fb56" name="Sever the Head" hidden="false" typeId="9c01-ec20-32c1-0948" typeName="Grand Strategy">
                   <characteristics>
-                    <characteristic name="Description" typeId="53c8-cc18-16d1-e890">When the battle ends, you complete this grand strategy if there are no Battleline units from your opponent&apos;s starting army on the battlefield.</characteristic>
+                    <characteristic name="Description" typeId="53c8-cc18-16d1-e890">When the battle ends,  you complete this grand strategy if there are no HEROES from your opponent&apos;s starting army on the battlefield.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
               <categoryLinks>
-                <categoryLink id="5eec-2661-2225-9080" name="Grand Strategy" hidden="false" targetId="5dff-3614-49fd-c3e4" primary="false"/>
+                <categoryLink id="bb19-d379-a074-7045" name="Grand Strategy" hidden="false" targetId="5dff-3614-49fd-c3e4" primary="false"/>
               </categoryLinks>
               <costs>
                 <cost name="pts" typeId="points" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="7c48-fb10-63bc-8a6a" name="Tame the Land" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="2660-9f7e-a5db-6a89" name="Vendetta" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="05ea-3b27-b2f2-8dd3" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5a61-c100-9eb6-0552" type="max"/>
               </constraints>
               <profiles>
-                <profile id="28fd-3583-d6d6-b2c7" name="Tame the Land" hidden="false" typeId="9c01-ec20-32c1-0948" typeName="Grand Strategy">
+                <profile id="6864-75f7-f52f-ae25" name="Vendetta" hidden="false" typeId="9c01-ec20-32c1-0948" typeName="Grand Strategy">
                   <characteristics>
-                    <characteristic name="Description" typeId="53c8-cc18-16d1-e890">When the battle ends, you complete this grand strategy if you control all of the objectives on the battlefield that are wholly outside your territory.</characteristic>
+                    <characteristic name="Description" typeId="53c8-cc18-16d1-e890">When the battle ends,  you complete this grand strategy if the model chosen to be your opponent&apos;s general has been slain and the model chosen to be your general has not been slain.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
               <categoryLinks>
-                <categoryLink id="d8ab-453f-1227-d04f" name="Grand Strategy" hidden="false" targetId="5dff-3614-49fd-c3e4" primary="false"/>
+                <categoryLink id="cb00-6a9f-3485-cbb2" name="Grand Strategy" hidden="false" targetId="5dff-3614-49fd-c3e4" primary="false"/>
               </categoryLinks>
               <costs>
                 <cost name="pts" typeId="points" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="ffa9-44ee-2b1d-29a6" name="Defend What&apos;s Ours" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="63b3-4164-40fc-fb87" name="Hold the Line" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="fba4-02d3-d9f9-08d1" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f0cf-cbf6-192f-907f" type="max"/>
               </constraints>
               <profiles>
-                <profile id="e4bb-6e7a-4110-e5c5" name="Defend What&apos;s Ours" hidden="false" typeId="9c01-ec20-32c1-0948" typeName="Grand Strategy">
+                <profile id="b887-d39e-6c64-a2ad" name="Hold the Line" hidden="false" typeId="9c01-ec20-32c1-0948" typeName="Grand Strategy">
                   <characteristics>
-                    <characteristic name="Description" typeId="53c8-cc18-16d1-e890">When the battle ends, you complete this grand strategy if there are no enemy units wholly within your territory.</characteristic>
+                    <characteristic name="Description" typeId="53c8-cc18-16d1-e890">When the battle ends,  you complete this grand strategy if there are any Battleline units from your starting army on the battlefield.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
               <categoryLinks>
-                <categoryLink id="06d5-8348-eeb2-76c0" name="Grand Strategy" hidden="false" targetId="5dff-3614-49fd-c3e4" primary="false"/>
-              </categoryLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="c279-224f-09cd-4984" name="Take What&apos;s Theirs" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e4ea-80d0-95a6-b0ca" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="2e2d-bde2-5bab-3cfd" name="Take What&apos;s Theirs" hidden="false" typeId="9c01-ec20-32c1-0948" typeName="Grand Strategy">
-                  <characteristics>
-                    <characteristic name="Description" typeId="53c8-cc18-16d1-e890">When the battle ends, you complete this grand strategy if there are more friendly units than enemy units wholly within your opponent&apos;s territory.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <categoryLinks>
-                <categoryLink id="d543-e1d3-b4b8-2e13" name="Grand Strategy" hidden="false" targetId="5dff-3614-49fd-c3e4" primary="false"/>
-              </categoryLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="31d2-9a3a-9126-4db9" name="Demonstration of Strength" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="749d-a7c2-38f6-2001" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="581f-2b72-07cb-fcc6" name="Demonstration of Strength" hidden="false" typeId="9c01-ec20-32c1-0948" typeName="Grand Strategy">
-                  <characteristics>
-                    <characteristic name="Description" typeId="53c8-cc18-16d1-e890">When the battle ends, you complete this grand strategy if there are 3 or more GALLETIAN VETERANS units from your starting army on the battlefield.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <categoryLinks>
-                <categoryLink id="a663-ea41-232b-4807" name="Grand Strategy" hidden="false" targetId="5dff-3614-49fd-c3e4" primary="false"/>
-              </categoryLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="330d-a3e4-d911-f346" name="Show of Dominance" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b6e9-beaa-0177-b81e" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="b742-a2c9-b35e-0cb0" name="Show of Dominance" hidden="false" typeId="9c01-ec20-32c1-0948" typeName="Grand Strategy">
-                  <characteristics>
-                    <characteristic name="Description" typeId="53c8-cc18-16d1-e890">When the battle ends, you complete this grand strategy if there are any friendly GALLETIAN VETERANS units in each quarter of the battlefield.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <categoryLinks>
-                <categoryLink id="150e-155b-ad34-d7de" name="Grand Strategy" hidden="false" targetId="5dff-3614-49fd-c3e4" primary="false"/>
+                <categoryLink id="c619-10e5-0b62-3858" name="Grand Strategy" hidden="false" targetId="5dff-3614-49fd-c3e4" primary="false"/>
               </categoryLinks>
               <costs>
                 <cost name="pts" typeId="points" value="0.0"/>
@@ -6114,6 +5833,280 @@ In addition, this incarnate can carry out the Devour Endless Spell monstrous ram
               </profiles>
               <categoryLinks>
                 <categoryLink id="baa4-0486-eede-9f40" name="Grand Strategy" hidden="false" targetId="5dff-3614-49fd-c3e4" primary="false"/>
+              </categoryLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="4ee7-175d-2c36-5903" name="GHB 2022 Grand Strategies" hidden="true" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1411-460f-c135-a667" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <selectionEntries>
+            <selectionEntry id="86df-4ec4-f6bc-1448" name="No Place for the Weak" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="cf97-8cfc-26e1-271e" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="0c89-5685-115b-8d9c" name="No Place for the Weak" hidden="false" typeId="9c01-ec20-32c1-0948" typeName="Grand Strategy">
+                  <characteristics>
+                    <characteristic name="Description" typeId="53c8-cc18-16d1-e890">When the battle ends, you complete this grand strategy if there are no Battleline units from your opponent&apos;s starting army on the battlefield.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <categoryLinks>
+                <categoryLink id="4981-f4ec-5806-76f0" name="Grand Strategy" hidden="false" targetId="5dff-3614-49fd-c3e4" primary="false"/>
+              </categoryLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="fad7-9083-6ec4-3ac1" name="Tame the Land" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5ad8-35a9-c8db-aa78" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="1ff9-8f3e-4ca1-6d48" name="Tame the Land" hidden="false" typeId="9c01-ec20-32c1-0948" typeName="Grand Strategy">
+                  <characteristics>
+                    <characteristic name="Description" typeId="53c8-cc18-16d1-e890">When the battle ends, you complete this grand strategy if you control all of the objectives on the battlefield that are wholly outside your territory.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <categoryLinks>
+                <categoryLink id="3076-0eea-8f29-6253" name="Grand Strategy" hidden="false" targetId="5dff-3614-49fd-c3e4" primary="false"/>
+              </categoryLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="761b-b5b8-03fd-3c42" name="Defend What&apos;s Ours" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5455-2b46-045c-16fa" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="d37c-fadb-bfd7-67a1" name="Defend What&apos;s Ours" hidden="false" typeId="9c01-ec20-32c1-0948" typeName="Grand Strategy">
+                  <characteristics>
+                    <characteristic name="Description" typeId="53c8-cc18-16d1-e890">When the battle ends, you complete this grand strategy if there are no enemy units wholly within your territory.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <categoryLinks>
+                <categoryLink id="6b03-c2fd-9c29-aa39" name="Grand Strategy" hidden="false" targetId="5dff-3614-49fd-c3e4" primary="false"/>
+              </categoryLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="88c7-b979-b577-bc1e" name="Take What&apos;s Theirs" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e2ba-e1ad-69c2-20bb" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="2988-b15d-9baf-0b12" name="Take What&apos;s Theirs" hidden="false" typeId="9c01-ec20-32c1-0948" typeName="Grand Strategy">
+                  <characteristics>
+                    <characteristic name="Description" typeId="53c8-cc18-16d1-e890">When the battle ends, you complete this grand strategy if there are more friendly units than enemy units wholly within your opponent&apos;s territory.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <categoryLinks>
+                <categoryLink id="7b13-1006-80d8-14c7" name="Grand Strategy" hidden="false" targetId="5dff-3614-49fd-c3e4" primary="false"/>
+              </categoryLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="a2ce-c111-e05f-ff04" name="Demonstration of Strength" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b88a-79c0-05ed-bc7b" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="7445-6b40-e5ec-b2e4" name="Demonstration of Strength" hidden="false" typeId="9c01-ec20-32c1-0948" typeName="Grand Strategy">
+                  <characteristics>
+                    <characteristic name="Description" typeId="53c8-cc18-16d1-e890">When the battle ends, you complete this grand strategy if there are 3 or more GALLETIAN VETERANS units from your starting army on the battlefield.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <categoryLinks>
+                <categoryLink id="cb39-a756-efc3-8f32" name="Grand Strategy" hidden="false" targetId="5dff-3614-49fd-c3e4" primary="false"/>
+              </categoryLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="5864-ede8-647f-f72a" name="Show of Dominance" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2c87-8a5f-31da-aede" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="e879-8cb8-e537-9d57" name="Show of Dominance" hidden="false" typeId="9c01-ec20-32c1-0948" typeName="Grand Strategy">
+                  <characteristics>
+                    <characteristic name="Description" typeId="53c8-cc18-16d1-e890">When the battle ends, you complete this grand strategy if there are any friendly GALLETIAN VETERANS units in each quarter of the battlefield.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <categoryLinks>
+                <categoryLink id="3bb8-ea8b-4649-3b7e" name="Grand Strategy" hidden="false" targetId="5dff-3614-49fd-c3e4" primary="false"/>
+              </categoryLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="6d92-387e-d372-9ffd" name="GHB 2021 Grand Strategies" hidden="true" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3b40-f0c2-a6e6-01ff" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <selectionEntries>
+            <selectionEntry id="06f1-94ba-2122-43dd" name="Sever the Head" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="db41-b6ee-750e-652e" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="4ff6-a22b-9b64-643a" name="Sever the Head" hidden="false" typeId="9c01-ec20-32c1-0948" typeName="Grand Strategy">
+                  <characteristics>
+                    <characteristic name="Description" typeId="53c8-cc18-16d1-e890">When the battle ends,  you complete this grand strategy if there are no HEROES from your opponent&apos;s starting army on the battlefield.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <categoryLinks>
+                <categoryLink id="8412-c3da-b03b-1d42" name="Grand Strategy" hidden="false" targetId="5dff-3614-49fd-c3e4" primary="false"/>
+              </categoryLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="8088-e9e5-f09f-563e" name="Hold the Line" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9d20-501d-8980-7e02" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="05df-9ed7-3857-5053" name="Hold the Line" hidden="false" typeId="9c01-ec20-32c1-0948" typeName="Grand Strategy">
+                  <characteristics>
+                    <characteristic name="Description" typeId="53c8-cc18-16d1-e890">When the battle ends,  you complete this grand strategy if there are any Battleline units from your starting army on the battlefield.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <categoryLinks>
+                <categoryLink id="eff4-2ac9-b330-7ea2" name="Grand Strategy" hidden="false" targetId="5dff-3614-49fd-c3e4" primary="false"/>
+              </categoryLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="eb15-1f01-37dd-d904" name="Vendetta" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a0f0-8c22-7a79-a76e" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="6800-46ea-7489-657b" name="Vendetta" hidden="false" typeId="9c01-ec20-32c1-0948" typeName="Grand Strategy">
+                  <characteristics>
+                    <characteristic name="Description" typeId="53c8-cc18-16d1-e890">When the battle ends,  you complete this grand strategy if the model chosen to be your opponent&apos;s general has been slain and the model chosen to be your general has not been slain.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <categoryLinks>
+                <categoryLink id="be20-a309-35ed-6c5c" name="Grand Strategy" hidden="false" targetId="5dff-3614-49fd-c3e4" primary="false"/>
+              </categoryLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="f9b3-3950-d9f0-2457" name="Dominating Presence" hidden="true" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="fa6b-48df-934a-8a4a" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="152a-d543-740f-73fa" name="Dominating Presence" hidden="false" typeId="9c01-ec20-32c1-0948" typeName="Grand Strategy">
+                  <characteristics>
+                    <characteristic name="Description" typeId="53c8-cc18-16d1-e890">When the battle ends,  you complete this grand strategy if there are more units from your starting army on the battlefield than there are units from your opponent&apos;s starting army on the battlefield.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <categoryLinks>
+                <categoryLink id="dcce-4e91-2070-5fe2" name="Grand Strategy" hidden="false" targetId="5dff-3614-49fd-c3e4" primary="false"/>
+              </categoryLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="44fb-7016-1789-70e4" name="Beast Master" hidden="true" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2fa4-a4f8-29d6-bc34" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="0b12-ebce-344b-5dc0" name="Beast Master" hidden="false" typeId="9c01-ec20-32c1-0948" typeName="Grand Strategy">
+                  <characteristics>
+                    <characteristic name="Description" typeId="53c8-cc18-16d1-e890">When the battle ends,  you complete this grand strategy if there are any MONSTERS from your starting army on the battlefield.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <categoryLinks>
+                <categoryLink id="4815-19af-4ef3-065b" name="Grand Strategy" hidden="false" targetId="5dff-3614-49fd-c3e4" primary="false"/>
+              </categoryLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="2fdc-edf1-7953-6429" name="Prized Sorcery" hidden="true" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d233-810e-fb6b-f2cc" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="405f-cdf4-625b-525d" name="Prized Sorcery" hidden="false" typeId="9c01-ec20-32c1-0948" typeName="Grand Strategy">
+                  <characteristics>
+                    <characteristic name="Description" typeId="53c8-cc18-16d1-e890">When the battle ends,  you complete this grand strategy if there are any WIZARDS from your starting army on the battlefield.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <categoryLinks>
+                <categoryLink id="2a71-ecfb-49f4-342e" name="Grand Strategy" hidden="false" targetId="5dff-3614-49fd-c3e4" primary="false"/>
+              </categoryLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="dd27-cd9a-42ae-8756" name="Pillars of Belief" hidden="true" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f15c-ffa9-b441-b6c2" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="2401-50fd-e265-3408" name="Pillars of Belief" hidden="false" typeId="9c01-ec20-32c1-0948" typeName="Grand Strategy">
+                  <characteristics>
+                    <characteristic name="Description" typeId="53c8-cc18-16d1-e890">When the battle ends,  you complete this grand strategy if there are any PRIESTS from your starting army on the battlefield.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <categoryLinks>
+                <categoryLink id="72d7-8082-5969-fed4" name="Grand Strategy" hidden="false" targetId="5dff-3614-49fd-c3e4" primary="false"/>
+              </categoryLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="eeeb-1726-4dce-75bc" name="Predator&apos;s Domain" hidden="true" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ae41-18da-929c-33b0" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="dac4-e761-08c9-92bd" name="Predator&apos;s Domain" hidden="false" typeId="9c01-ec20-32c1-0948" typeName="Grand Strategy">
+                  <characteristics>
+                    <characteristic name="Description" typeId="53c8-cc18-16d1-e890">When the battle ends,  you complete this grand strategy if you control more terrain features than your opponent.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <categoryLinks>
+                <categoryLink id="4940-851c-0413-3a07" name="Grand Strategy" hidden="false" targetId="5dff-3614-49fd-c3e4" primary="false"/>
               </categoryLinks>
               <costs>
                 <cost name="pts" typeId="points" value="0.0"/>
