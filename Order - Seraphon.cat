@@ -175,15 +175,10 @@ To create a Seraphon force, first choose your allegiance. If you choose to align
     <entryLink id="db15-b565-2d0d-094a" name="Raptadon Chargers" hidden="false" collective="false" import="true" targetId="1833-a2bb-65a8-8c8d" type="selectionEntry"/>
     <entryLink id="efa1-06cb-04e0-0945" name="Raptadon Hunters" hidden="false" collective="false" import="true" targetId="89c6-3e76-d81d-b5a9" type="selectionEntry"/>
     <entryLink id="882d-e0fc-7c1e-9f93" name="Aggradon Lancers" hidden="false" collective="false" import="true" targetId="73ef-8f4e-9855-7752" type="selectionEntry"/>
+    <entryLink id="35ec-89a2-9cc8-103e" name="Battle Tactics (GHB2021)" hidden="false" collective="false" import="true" targetId="a059-b97e-2ec6-51eb" type="selectionEntry"/>
+    <entryLink id="4804-45bf-ce16-8f61" name="Grand Strategy" hidden="false" collective="false" import="true" targetId="b0be-6ace-9a70-09ac" type="selectionEntry"/>
+    <entryLink id="09ad-a6b5-be1e-b0e5" name="Battle Tactics: March of the Seraphon Host" hidden="false" collective="false" import="true" targetId="88b0-e31b-2344-379c" type="selectionEntry"/>
   </entryLinks>
-  <rules>
-    <rule id="ec6c-ffb7-7646-d1db" name="Seraphon Battle Traits" hidden="false">
-      <description>
-Might of the Starborne: Pick 1 objective on the battlefield. You complete this battle tactic if you summon a friendly unit that has a CCP cost of 20 or more during the turn, and that unit is wholly within 12&quot; of the objective you picked. 
-
-Stampede of Scales: Pick 3 different friendly MONSTERS. You complete this battle tactic if all of the units you picked run in the following movement phase and finish that run within 6&quot; of each other and wholly within enemy territory. </description>
-    </rule>
-  </rules>
   <sharedSelectionEntries>
     <selectionEntry id="9392-2a0a-99ca-28fe" name="Allegiance" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
@@ -937,21 +932,28 @@ At the start of your hero phase, you recieve 1 cosmic power point for each frien
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="5f32-ba2e-cc13-0d01" name="Coalesced Realmshaper Engine" publicationId="3721-70d4-pubN65537" hidden="false" collective="false" import="true" type="model">
+    <selectionEntry id="5f32-ba2e-cc13-0d01" name="Coalesced Realmshaper Engine" publicationId="3721-70d4-pubN65537" hidden="true" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bf4f-9b8f-13ae-9318" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
-        <profile id="5e96-d5fe-7176-c7a3" name="Defensible" publicationId="169e-bacf-c9ec-0520" page="2" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+        <profile id="0e97-cc10-ed1f-0e82" name="Fierce Guardians" publicationId="169e-bacf-c9ec-0520" page="2" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0"> This terrain feature is a defensible terrain feature that can be garrisoned by up to 15 models.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="0e97-cc10-ed1f-0e82" name="Power Unleashed" publicationId="169e-bacf-c9ec-0520" page="2" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">In your hero phase, if this terrain feature is garrisoned by a friendly SERAPHON WIZARD or friendly SERAPHON PRIEST, you can pick 1 other terrain feature on the battlefield and roll a dice for each enemy unit within 3&quot; of that terrain feature. Add 2 to the roll if that terrain feature is within 18&quot; of this terrain feature, and subtract 2 from the roll if that terrain feature is more than 36&quot; from this terrain feature. On a 4+, that enemy unit suffers D3 mortal wounds.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Add 1 to bite rolls made for COALESCED SAURUS and COALESCED KROXIGOR units using the Mighty Saurus Jaws, Saurus Jaws, or Vice-like Jaws if they are wholly within 12&quot; of this terrain feature. In addition, use the top rowon the damage tables of friendly COALESCED MONSTERS if they are wholly within 12&quot; of this terrain feature, regardless of how many wounds they have suffered.</characteristic>
           </characteristics>
         </profile>
         <profile id="c9f6-0b0d-636a-fb7f" name="Set-Up" publicationId="169e-bacf-c9ec-0520" page="2" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
             <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">After territories are determined, you can set up this faction terrain feature wholly within your territory and more than 3&quot; from all objectives and other terrain features. If these restrictions mean you cannot set up this faction terrain feature, you can remove 1 terrain feature that is wholly or partially within your territory and attempt to set up this faction terrain feature again. If it is still impossible to set up this faction terrain feature, then it is not used. If both players can set up faction terrain features at the same time, they must roll off and the winner chooses who sets up their faction terrain features first.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="ca16-9cbe-5c06-dfb9" name="Impassible" publicationId="169e-bacf-c9ec-0520" page="2" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">You cannot move a model over this terrain feature unless it can fly, and you cannot move a model onto this terrain feature or set up a model on this terrain feature (even if it can fly).</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -2005,7 +2007,6 @@ At the start of your hero phase, you recieve 1 cosmic power point for each frien
         <entryLink id="4a25-006a-a853-4056" name="Command Traits" hidden="false" collective="false" import="true" targetId="28de-f710-7727-248d" type="selectionEntryGroup"/>
         <entryLink id="0284-42bc-e419-85bb" name="Artefacts" hidden="false" collective="false" import="true" targetId="6609-c18e-96b3-a440" type="selectionEntryGroup"/>
         <entryLink id="2e7d-a586-ca47-8e8e" name="Battalions" hidden="false" collective="false" import="true" targetId="dcde-52e3-fae3-3e14" type="selectionEntryGroup"/>
-        <entryLink id="edf3-98b6-e396-0756" name="Mount Traits" hidden="false" collective="false" import="true" targetId="1de9-1b5b-e664-470e" type="selectionEntryGroup"/>
         <entryLink id="0a59-48fa-75f8-f776" name="Incarnate Bonding" hidden="false" collective="false" import="true" targetId="c890-acbd-0c80-55c9" type="selectionEntryGroup"/>
         <entryLink id="2da1-4a2f-b402-cb9a" name="Unique Enhancements" hidden="false" collective="false" import="true" targetId="6650-815c-aaf0-3964" type="selectionEntryGroup"/>
       </entryLinks>
@@ -2788,7 +2789,6 @@ At the start of your hero phase, you recieve 1 cosmic power point for each frien
         <entryLink id="53c5-33cc-4c68-82cc" name="Command Traits" hidden="false" collective="false" import="true" targetId="28de-f710-7727-248d" type="selectionEntryGroup"/>
         <entryLink id="d8e2-3434-9501-1d19" name="Artefacts" hidden="false" collective="false" import="true" targetId="6609-c18e-96b3-a440" type="selectionEntryGroup"/>
         <entryLink id="fdcc-0517-2e9b-523d" name="Battalions" hidden="false" collective="false" import="true" targetId="dcde-52e3-fae3-3e14" type="selectionEntryGroup"/>
-        <entryLink id="0950-4b44-b4fe-78c0" name="Mount Traits" hidden="false" collective="false" import="true" targetId="1de9-1b5b-e664-470e" type="selectionEntryGroup"/>
         <entryLink id="0c85-1274-b7f2-4568" name="Incarnate Bonding" hidden="false" collective="false" import="true" targetId="c890-acbd-0c80-55c9" type="selectionEntryGroup"/>
         <entryLink id="70d8-0342-91e5-9067" name="Unique Enhancements" hidden="false" collective="false" import="true" targetId="6650-815c-aaf0-3964" type="selectionEntryGroup"/>
       </entryLinks>
@@ -3912,7 +3912,6 @@ At the start of your hero phase, you recieve 1 cosmic power point for each frien
           </categoryLinks>
         </entryLink>
         <entryLink id="16fc-3608-3cdc-be6c" name="Battalions" hidden="false" collective="false" import="true" targetId="dcde-52e3-fae3-3e14" type="selectionEntryGroup"/>
-        <entryLink id="ee8e-0bb4-87e0-1e9e" name="Mount Traits" hidden="false" collective="false" import="true" targetId="1de9-1b5b-e664-470e" type="selectionEntryGroup"/>
         <entryLink id="26eb-4e21-5745-b812" name="Incarnate Bonding" hidden="false" collective="false" import="true" targetId="c890-acbd-0c80-55c9" type="selectionEntryGroup"/>
         <entryLink id="0427-6fdb-3813-dec3" name="Unique Enhancements" hidden="false" collective="false" import="true" targetId="6650-815c-aaf0-3964" type="selectionEntryGroup"/>
       </entryLinks>
@@ -4048,7 +4047,6 @@ At the start of your hero phase, you recieve 1 cosmic power point for each frien
         <entryLink id="e61d-30b4-e4c5-bcd4" name="Artefacts" hidden="false" collective="false" import="true" targetId="6609-c18e-96b3-a440" type="selectionEntryGroup"/>
         <entryLink id="60cc-15be-a9da-15fd" name="Command Traits" hidden="false" collective="false" import="true" targetId="28de-f710-7727-248d" type="selectionEntryGroup"/>
         <entryLink id="3338-19f1-1e72-9fa1" name="Battalions" hidden="false" collective="false" import="true" targetId="dcde-52e3-fae3-3e14" type="selectionEntryGroup"/>
-        <entryLink id="a098-aeba-3925-b6cf" name="Mount Traits" hidden="false" collective="false" import="true" targetId="1de9-1b5b-e664-470e" type="selectionEntryGroup"/>
         <entryLink id="2a20-607a-5b5c-3ffd" name="Incarnate Bonding" hidden="false" collective="false" import="true" targetId="c890-acbd-0c80-55c9" type="selectionEntryGroup"/>
         <entryLink id="d899-5ed6-7122-6d30" name="Unique Enhancements" hidden="false" collective="false" import="true" targetId="6650-815c-aaf0-3964" type="selectionEntryGroup"/>
       </entryLinks>
@@ -4278,7 +4276,6 @@ At the start of your hero phase, you recieve 1 cosmic power point for each frien
         <entryLink id="5949-1fda-a3c9-a343" name="Command Traits" hidden="false" collective="false" import="true" targetId="28de-f710-7727-248d" type="selectionEntryGroup"/>
         <entryLink id="6a9f-cbc4-96de-3fbc" name="Artefacts" hidden="false" collective="false" import="true" targetId="6609-c18e-96b3-a440" type="selectionEntryGroup"/>
         <entryLink id="be49-536e-5428-1cbb" name="Battalions" hidden="false" collective="false" import="true" targetId="dcde-52e3-fae3-3e14" type="selectionEntryGroup"/>
-        <entryLink id="4934-5aed-5557-6a70" name="Mount Traits" hidden="false" collective="false" import="true" targetId="1de9-1b5b-e664-470e" type="selectionEntryGroup"/>
         <entryLink id="dd6f-4d6b-cf0f-6286" name="Incarnate Bonding" hidden="false" collective="false" import="true" targetId="c890-acbd-0c80-55c9" type="selectionEntryGroup"/>
         <entryLink id="0071-26d3-0018-85c1" name="Unique Enhancements" hidden="false" collective="false" import="true" targetId="6650-815c-aaf0-3964" type="selectionEntryGroup"/>
       </entryLinks>
@@ -4581,9 +4578,11 @@ At the start of your hero phase, you recieve 1 cosmic power point for each frien
       <profiles>
         <profile id="cbaa-2e7f-5ec9-8de5" name="Core Battalion: Thunderquake" hidden="false" typeId="75e0-a332-e4f5-bf36" typeName="Battalion Organisation">
           <characteristics>
-            <characteristic name="Required" typeId="eb5f-e9d2-e457-bff5">1 ENGINE OF THE GODS or STEGADON WITH SKINK CHIEF
-2 BASTILADON or STEGADON
-1 KROXIGOR OR RAZORDONS or SALAMANDERS	</characteristic>
+            <characteristic name="Required" typeId="eb5f-e9d2-e457-bff5">1 Stegadon Chief
+2 Bastiladon or Stegadon
+0-2 KROXIGOR
+0-1 Engine of the Gods
+0-1 Spawn of Chotec</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -4594,8 +4593,14 @@ At the start of your hero phase, you recieve 1 cosmic power point for each frien
       </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="a794-d97b-bf8e-0b6f" name="Slayers or Swift" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0203-f26d-2e94-1a69" type="max"/>
+          </constraints>
           <selectionEntries>
             <selectionEntry id="e558-46b9-6ff2-d155" name="Swift" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f9e4-415a-5349-b623" type="max"/>
+              </constraints>
               <infoLinks>
                 <infoLink id="fa3d-d4aa-1e8a-1820" name="Swift" hidden="false" targetId="dec1-bec2-f318-91e6" type="profile"/>
               </infoLinks>
@@ -4605,7 +4610,11 @@ At the start of your hero phase, you recieve 1 cosmic power point for each frien
             </selectionEntry>
           </selectionEntries>
           <entryLinks>
-            <entryLink id="e3e6-fe44-7cdd-2e4d" name="Slayers" hidden="false" collective="false" import="true" targetId="4b40-2b5f-d7f7-2e4b" type="selectionEntry"/>
+            <entryLink id="e3e6-fe44-7cdd-2e4d" name="Slayers" hidden="false" collective="false" import="true" targetId="4b40-2b5f-d7f7-2e4b" type="selectionEntry">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7f8a-ee0c-a359-ce5e" type="max"/>
+              </constraints>
+            </entryLink>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -5371,16 +5380,23 @@ If this unit is on the battlefield at the end of your movement phase, you can re
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="d345-96b3-efa0-c76d" name="Starborne Realmshaper Engine" publicationId="3721-70d4-pubN65537" hidden="false" collective="false" import="true" type="model">
+    <selectionEntry id="d345-96b3-efa0-c76d" name="Starborne Realmshaper Engine" publicationId="3721-70d4-pubN65537" hidden="true" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a3db-d53d-b542-1396" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
-        <profile id="dee1-e6f6-73c0-8eae" name="Defensible" publicationId="169e-bacf-c9ec-0520" page="2" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+        <profile id="dee1-e6f6-73c0-8eae" name="Impassible" publicationId="169e-bacf-c9ec-0520" page="2" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0"> This terrain feature is a defensible terrain feature that can be garrisoned by up to 15 models.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">You cannot move a model over this terrain feature unless it can fly, and you cannot move a model onto this terrain feature or set up a model on this terrain feature (even if it can fly).</characteristic>
           </characteristics>
         </profile>
         <profile id="c69e-2baf-7160-78e8" name="Power Unleashed" publicationId="169e-bacf-c9ec-0520" page="2" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">In your hero phase, if this terrain feature is garrisoned by a friendly SERAPHON WIZARD or friendly SERAPHON PRIEST, you can pick 1 other terrain feature on the battlefield and roll a dice for each enemy unit within 3&quot; of that terrain feature. Add 2 to the roll if that terrain feature is within 18&quot; of this terrain feature, and subtract 2 from the roll if that terrain feature is more than 36&quot; from this terrain feature. On a 4+, that enemy unit suffers D3 mortal wounds.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">In your hero phase, if there are any friendly SERAPHON WIZARDS within 3&quot; of this terrain feature, you can pick 1 other terrain feature on the battlefield and roll a dice for each enemy unit within 3&quot; of that terrain feature. Add 2 to the roll if that terrain feature is within 18&quot; of this terrain feature, and subtract 2 from the roll if that terrain feature is more than 36&quot; from this terrain feature. On a 4+, that enemy unit suffers D3 mortal wounds.</characteristic>
           </characteristics>
         </profile>
         <profile id="aa8f-c440-1005-8dd8" name="Set-Up" publicationId="169e-bacf-c9ec-0520" page="2" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
@@ -6135,6 +6151,59 @@ If this unit is on the battlefield at the end of your movement phase, you can re
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="88b0-e31b-2344-379c" name="Battle Tactics: March of the Seraphon Host" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2769-f63b-fc02-fd64" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <profiles>
+        <profile id="a8fb-9bc8-306d-007f" name="Apex Predator" hidden="false" typeId="eba0-4bf6-65fe-fdbc" typeName="Battle Tactic">
+          <characteristics>
+            <characteristic name="Description" typeId="f882-48d5-21a4-1787">Pick 1 enemy MONSTER. You complete this tactic at the end of this turn if that enemy unit was destroyed by an attack made by a friendly SERAPHON MONTSER.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="d33d-6be9-402f-41bd" name="Celestial Obliteration" hidden="false" typeId="eba0-4bf6-65fe-fdbc" typeName="Battle Tactic">
+          <characteristics>
+            <characteristic name="Description" typeId="f882-48d5-21a4-1787">Pick 1 enemy unit on the battlefield. You complete this tactic if that unit is destroyed this turn by mortal wounds caused by a spell or the abilities of an endless spell.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="bfe6-0b50-b501-07a2" name="Overwhelming Numbers" hidden="false" typeId="eba0-4bf6-65fe-fdbc" typeName="Battle Tactic">
+          <characteristics>
+            <characteristic name="Description" typeId="f882-48d5-21a4-1787">Pick 1 objective controleld by the enemy. You complete this tactic at the end of thsi turn if you control that objective and all friendly units contesting it have the SKINK keyword.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="ec02-652d-a47b-b78b" name="Cold-blooded Resilience" hidden="false" typeId="eba0-4bf6-65fe-fdbc" typeName="Battle Tactic">
+          <characteristics>
+            <characteristic name="Description" typeId="f882-48d5-21a4-1787">Pick 1 friendly SAURUS or KROXIGOR unit within 3&quot; of an enemy unit. You complete this tactic at the end of this turn if that unit was not destroyed, did not retreat, and was not removed from the battlefield.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="177f-1e9e-4838-a79e" name="Pack Hunters" hidden="false" typeId="eba0-4bf6-65fe-fdbc" typeName="Battle Tactic">
+          <characteristics>
+            <characteristic name="Description" typeId="f882-48d5-21a4-1787">Pick 1 enemy unit within 3&quot; of only 1 friendlty AGGRADON unit. You complete this tactic if, at the end of this turn, that unit is within 3&quot; of 2 or more friendly AGGRADON units.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="49c8-14d3-5924-c429" name="Stampede of Scales" hidden="false" typeId="eba0-4bf6-65fe-fdbc" typeName="Battle Tactic">
+          <characteristics>
+            <characteristic name="Description" typeId="f882-48d5-21a4-1787">Pick 3 different friendly SERAPHON MONSTERS. You complete this tactic if each of those units runs in the following movement phase and finishes that run within 6&quot; of at least 1 of the other untis you picked and wholly within enemy territory.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="8ea8-881a-3234-361a" name="New CategoryLink" hidden="false" targetId="1974-3f49-7f0b-8422" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry id="b0be-6ace-9a70-09ac" name="Grand Strategy" hidden="false" collective="false" import="true" type="upgrade">
+      <categoryLinks>
+        <categoryLink id="60cd-f742-f172-2ffd" name="New CategoryLink" hidden="false" targetId="1974-3f49-7f0b-8422" primary="true"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="e08e-dc37-f503-624f" name="Masters of Order" hidden="false" collective="false" import="true" targetId="83d4-be90-a0b7-72d9" type="selectionEntryGroup"/>
+        <entryLink id="f7d6-a1a2-9e49-737e" name="Universal Grand Strategy" hidden="false" collective="false" import="true" targetId="1e64-bcdc-3709-7ec7" type="selectionEntryGroup"/>
+      </entryLinks>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="6609-c18e-96b3-a440" name="Artefacts" hidden="false" collective="false" import="true">
@@ -6269,7 +6338,7 @@ If this unit is on the battlefield at the end of your movement phase, you can re
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ab7a-1114-7b16-abee" type="max"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="3412-7090-50e2-35f5" name="Thunderquake - 1 ENGINE OF THE GODS or STEGADON WITH SKINK CHIEF" hidden="true" collective="false" import="true" type="upgrade">
+            <selectionEntry id="3412-7090-50e2-35f5" name="Thunderquake - 1 Stegadon Chief" hidden="true" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="set" field="hidden" value="false">
                   <conditionGroups>
@@ -6281,7 +6350,6 @@ If this unit is on the battlefield at the end of your movement phase, you can re
                         <conditionGroup type="or">
                           <conditions>
                             <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="afab-8206-4b38-c9ca" type="instanceOf"/>
-                            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="745f-fba0-2977-b1f3" type="instanceOf"/>
                           </conditions>
                         </conditionGroup>
                       </conditionGroups>
@@ -6308,7 +6376,7 @@ If this unit is on the battlefield at the end of your movement phase, you can re
                 <cost name="pts" typeId="points" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="0b1d-0820-6785-b7c0" name="Thunderquake - 2 BASTILADON or STEGADON" hidden="true" collective="false" import="true" type="upgrade">
+            <selectionEntry id="0b1d-0820-6785-b7c0" name="Thunderquake - 2 Bastiladon or Stegadon" hidden="true" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="set" field="hidden" value="false">
                   <conditionGroups>
@@ -6320,7 +6388,7 @@ If this unit is on the battlefield at the end of your movement phase, you can re
                         <conditionGroup type="or">
                           <conditions>
                             <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="80a2-1d9c-6074-0372" type="instanceOf"/>
-                            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c5c6-2fef-106b-bb33" type="instanceOf"/>
+                            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="df20-0084-5897-1698" type="instanceOf"/>
                           </conditions>
                         </conditionGroup>
                       </conditionGroups>
@@ -6347,7 +6415,7 @@ If this unit is on the battlefield at the end of your movement phase, you can re
                 <cost name="pts" typeId="points" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="957a-1a79-5e99-89a4" name="Thunderquake - 1 KROXIGOR, RAZORDON, or SALAMANDER" hidden="true" collective="false" import="true" type="upgrade">
+            <selectionEntry id="957a-1a79-5e99-89a4" name="Thunderquake - 0-2 KROXIGOR" hidden="true" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="set" field="hidden" value="false">
                   <conditionGroups>
@@ -6358,21 +6426,14 @@ If this unit is on the battlefield at the end of your movement phase, you can re
                       <conditionGroups>
                         <conditionGroup type="or">
                           <conditions>
-                            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f6d3-7f0a-a8a4-0559" type="instanceOf"/>
                             <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1515-c894-3a1a-369f" type="instanceOf"/>
-                            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e8a1-25c1-0976-c3f7" type="instanceOf"/>
                           </conditions>
                         </conditionGroup>
                       </conditionGroups>
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
-                <modifier type="increment" field="81a7-318e-1198-886a" value="1.0">
-                  <repeats>
-                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="619e-41b1-6e8a-9245" repeats="1" roundUp="false"/>
-                  </repeats>
-                </modifier>
-                <modifier type="increment" field="7e58-7b65-577d-b20b" value="1.0">
+                <modifier type="increment" field="81a7-318e-1198-886a" value="2.0">
                   <repeats>
                     <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="619e-41b1-6e8a-9245" repeats="1" roundUp="false"/>
                   </repeats>
@@ -6380,8 +6441,71 @@ If this unit is on the battlefield at the end of your movement phase, you can re
               </modifiers>
               <constraints>
                 <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="81a7-318e-1198-886a" type="max"/>
-                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7e58-7b65-577d-b20b" type="min"/>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a077-fdc8-964b-e4bd" type="max"/>
+                <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a077-fdc8-964b-e4bd" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="c8ec-d735-1ada-0122" name="Thunderquake - 0-1 Engine of the Gods" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="619e-41b1-6e8a-9245" type="greaterThan"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8ebf-5bc8-77d4-1f5d" type="instanceOf"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="increment" field="e9e3-bf63-b90c-bd73" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="619e-41b1-6e8a-9245" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e9e3-bf63-b90c-bd73" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ef4d-eb22-4996-d46f" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="773b-a588-be62-bf70" name="Thunderquake - 0-1 Spawn of Chotec" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="619e-41b1-6e8a-9245" type="greaterThan"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1617-159f-db38-2aa2" type="instanceOf"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="increment" field="9247-6974-81b7-4892" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="619e-41b1-6e8a-9245" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9247-6974-81b7-4892" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="cb75-7c4a-03c0-a24d" type="max"/>
               </constraints>
               <costs>
                 <cost name="pts" typeId="points" value="0.0"/>
@@ -6391,24 +6515,17 @@ If this unit is on the battlefield at the end of your movement phase, you can re
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntryGroup>
-    <selectionEntryGroup id="83d4-be90-a0b7-72d9" name="Seraphon Grand Strategy" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="83d4-be90-a0b7-72d9" name="Masters of Order" hidden="false" collective="false" import="true">
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="18d8-9794-c7b7-538a" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0de6-83d7-9b4c-c401" type="max"/>
       </constraints>
       <selectionEntries>
-        <selectionEntry id="d56a-c76c-6d7e-9e73" name="Continuous Expansion" hidden="true" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="false">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bf4f-9b8f-13ae-9318" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
+        <selectionEntry id="d56a-c76c-6d7e-9e73" name="Repel Corruption" hidden="false" collective="false" import="true" type="upgrade">
           <profiles>
-            <profile id="e3ee-3487-1b5c-7bee" name="Continuous Expansion" hidden="false" typeId="9c01-ec20-32c1-0948" typeName="Grand Strategy">
+            <profile id="e3ee-3487-1b5c-7bee" name="Repel Corruption" hidden="false" typeId="9c01-ec20-32c1-0948" typeName="Grand Strategy">
               <characteristics>
-                <characteristic name="Description" typeId="53c8-cc18-16d1-e890">Coalesced army only. When the battle ends, you complete this objective if you have at least 1 friendly unit wholly within each large quarter of the battlefield. </characteristic>
+                <characteristic name="Description" typeId="53c8-cc18-16d1-e890">When the battle ends, you complete this grand strategy if there is are no enemy units wholly within your territory.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -6419,18 +6536,11 @@ If this unit is on the battlefield at the end of your movement phase, you can re
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="7514-2a69-14f5-19e3" name="The Astromatrix" hidden="true" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="false">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a3db-d53d-b542-1396" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
+        <selectionEntry id="7514-2a69-14f5-19e3" name="Realmshaper Guardians" hidden="false" collective="false" import="true" type="upgrade">
           <profiles>
-            <profile id="e2e0-909a-8c6c-5768" name="The Astromatrix" hidden="false" typeId="9c01-ec20-32c1-0948" typeName="Grand Strategy">
+            <profile id="e2e0-909a-8c6c-5768" name="Realmshaper Guardians" hidden="false" typeId="9c01-ec20-32c1-0948" typeName="Grand Strategy">
               <characteristics>
-                <characteristic name="Description" typeId="53c8-cc18-16d1-e890">Starborne army only. An imaginary ley line 1mm wide runs from each corner of the battlefield to the diagonally opposite corner of the battlefield. When the battle ends, you complete this objective if a ley line does not pass over any enemy models with the WIZARD keyword, and at least 1 ley line passes over a friendly model with the WIZARD keyword.</characteristic>
+                <characteristic name="Description" typeId="53c8-cc18-16d1-e890">When the battle ends, you complete this grand strategy if you have a Coalesced/Starborne Realmshaper Engine on the battlefield, there are no enemy models within 12&quot; of it, and it was not affected by a successful Smash to Rubble monstrous rampage.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -6441,84 +6551,32 @@ If this unit is on the battlefield at the end of your movement phase, you can re
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-      </selectionEntries>
-    </selectionEntryGroup>
-    <selectionEntryGroup id="1de9-1b5b-e664-470e" name="Mount Traits" hidden="false" collective="false" import="true">
-      <modifiers>
-        <modifier type="increment" field="e012-5e2f-7d38-e48d" value="1.0">
-          <repeats>
-            <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c965-0f85-d28c-ea2a" repeats="1" roundUp="false"/>
-          </repeats>
-        </modifier>
-        <modifier type="set" field="hidden" value="true">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8af4-649e-9ee2-22ee" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="78f3-8a59-699a-61e8" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="24d6-500b-7e3f-1470" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1e36-e511-437b-5de8" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="524e-8001-63ee-cdf7" type="instanceOf"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e6d1-f3b4-3a30-0798" type="max"/>
-        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e012-5e2f-7d38-e48d" type="max"/>
-      </constraints>
-      <entryLinks>
-        <entryLink id="2d91-dffd-4b7f-a174" name="Seraphon Mount Traits" hidden="false" collective="false" import="true" targetId="50b4-7fbb-0c7e-b223" type="selectionEntryGroup"/>
-      </entryLinks>
-    </selectionEntryGroup>
-    <selectionEntryGroup id="50b4-7fbb-0c7e-b223" name="Seraphon Mount Traits" hidden="false" collective="false" import="true">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b61c-d7bd-25c7-d6ac" type="max"/>
-      </constraints>
-      <selectionEntries>
-        <selectionEntry id="a48c-7bf1-788d-929a" name="Beastmaster" hidden="true" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="false">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bf4f-9b8f-13ae-9318" type="equalTo"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
+        <selectionEntry id="23b9-99e0-e937-c5e7" name="Continuous Expansion" hidden="false" collective="false" import="true" type="upgrade">
           <profiles>
-            <profile id="ac1c-9cc4-7381-d7c1" name="Beastmaster" hidden="false" typeId="e6fe-61ec-3973-ad03" typeName="Mount Trait">
+            <profile id="4e89-4c96-9415-09ca" name="Continuous Expansion" hidden="false" typeId="9c01-ec20-32c1-0948" typeName="Grand Strategy">
               <characteristics>
-                <characteristic name="Mount Trait Details" typeId="0603-faf4-fada-3cbf">Once per battle, in your hero phase, you can declare that this mount will either be swift or savage.  If you choose for it to be swift, until your next hero phase, it can run and still shoot and/or charge in the same turn.  If you choose savage, until your next hero phase, add 1 to the Attacks characteristic of melee weapons used by this mount.</characteristic>
+                <characteristic name="Description" typeId="53c8-cc18-16d1-e890">When the battle ends, you complete this grand strategy if there is at least 1 friendly SERAPHON unit wholly within each large quarter of the battlefield.</characteristic>
               </characteristics>
             </profile>
           </profiles>
+          <categoryLinks>
+            <categoryLink id="c3c1-f71a-131a-caae" name="Grand Strategy" hidden="false" targetId="5dff-3614-49fd-c3e4" primary="false"/>
+          </categoryLinks>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="daec-ec6a-44fa-f6a5" name="Celestial Destruction" hidden="true" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="false">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a3db-d53d-b542-1396" type="equalTo"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
+        <selectionEntry id="0bae-0db1-d212-290d" name="Further the Great Plan" hidden="false" collective="false" import="true" type="upgrade">
           <profiles>
-            <profile id="47b7-8f5b-2875-a86e" name="Celestial Destruction" hidden="false" typeId="e6fe-61ec-3973-ad03" typeName="Mount Trait">
+            <profile id="66fd-99fc-b2d0-fc0b" name="Further the Great Plan" hidden="false" typeId="9c01-ec20-32c1-0948" typeName="Grand Strategy">
               <characteristics>
-                <characteristic name="Mount Trait Details" typeId="0603-faf4-fada-3cbf">You can carry out this monstrous rampage with this unit instead of any other monstrous rampage you can carry out with this unit.  If you do so, roll a dice for each enemy unit within 6&quot; of this unit.  Add 1 to the roll if the enemy unit has the CHAOS keyword.  On a 5+, that unit suffers D3 mortal wounds.</characteristic>
+                <characteristic name="Description" typeId="53c8-cc18-16d1-e890">When the battle ends, you complete this grand strateg if you completed 4 or more battle tactics and each of those battle tactics was from the March of the Seraphon Host table.</characteristic>
               </characteristics>
             </profile>
           </profiles>
+          <categoryLinks>
+            <categoryLink id="4114-a1e1-f0e0-1713" name="Grand Strategy" hidden="false" targetId="5dff-3614-49fd-c3e4" primary="false"/>
+          </categoryLinks>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
