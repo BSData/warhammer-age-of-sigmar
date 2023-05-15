@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="b3c2-9aff-8664-1d07" name="Death - Ossiarch Bonereapers" revision="84" battleScribeVersion="2.03" authorName="TigerWraith" authorContact="TigerWraith#5618 on Discord" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="161" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="b3c2-9aff-8664-1d07" name="Death - Ossiarch Bonereapers" revision="85" battleScribeVersion="2.03" authorName="TigerWraith" authorContact="TigerWraith#5618 on Discord" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="161" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="cb62-7d89-9fa6-76ad" name="Battletome: Ossiarch Bonereapers"/>
     <publication id="254c-b9bb-a650-0c40" name="White Dwarf Issue 472"/>
@@ -1728,9 +1728,14 @@ If that unit is a IMMORTIS GUARD or NECROPOLIS STALKERS unit, you can either hea
         <entryLink id="66d3-f3eb-2e41-9a10" name="Reinforced" hidden="false" collective="false" import="true" targetId="0a8d-cde8-fba1-6c0d" type="selectionEntry">
           <modifiers>
             <modifier type="set" field="95f2-6885-756f-9ea5" value="2.0">
-              <conditions>
-                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="496d-9428-b92f-6cab" type="greaterThan"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7c0c-91b9-f052-24af" type="greaterThan"/>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b9e5-10aa-60da-adb9" type="greaterThan"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
           <costs>
@@ -3509,6 +3514,11 @@ If that unit is an IMMORTIS GUARD or NECROPOLIS STALKERS unit, you can either he
       <selectionEntries>
         <selectionEntry id="2e0c-f19a-d15c-ebc4" name="2 Morghast Archai" hidden="false" collective="false" import="true" type="model">
           <modifiers>
+            <modifier type="set" field="name" value="6 Morghast Archai">
+              <conditions>
+                <condition field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0a8d-cde8-fba1-6c0d" type="equalTo"/>
+              </conditions>
+            </modifier>
             <modifier type="set" field="name" value="4 Morghast Archai">
               <conditions>
                 <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0a8d-cde8-fba1-6c0d" type="equalTo"/>
@@ -3517,7 +3527,7 @@ If that unit is an IMMORTIS GUARD or NECROPOLIS STALKERS unit, you can either he
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="93f9-37ae-1b55-06ec" type="min"/>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2a5c-fdbe-cad4-ca8a" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2a5c-fdbe-cad4-ca8a" type="max"/>
           </constraints>
           <costs>
             <cost name="pts" typeId="points" value="240.0"/>
@@ -3573,6 +3583,18 @@ If that unit is an IMMORTIS GUARD or NECROPOLIS STALKERS unit, you can either he
       <entryLinks>
         <entryLink id="4a93-79bc-7266-bd70" name="Battalions" hidden="false" collective="false" import="true" targetId="4baa-4d7c-a4a3-3939" type="selectionEntryGroup"/>
         <entryLink id="df20-a874-f3a3-0113" name="Reinforced" hidden="false" collective="false" import="true" targetId="0a8d-cde8-fba1-6c0d" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="95f2-6885-756f-9ea5" value="2.0">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7c0c-91b9-f052-24af" type="greaterThan"/>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b9e5-10aa-60da-adb9" type="greaterThan"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
           <costs>
             <cost name="pts" typeId="points" value="240.0"/>
           </costs>
@@ -3635,6 +3657,11 @@ If that unit is an IMMORTIS GUARD or NECROPOLIS STALKERS unit, you can either he
       <selectionEntries>
         <selectionEntry id="aed1-3f91-d99b-f7b2" name="2 Morghast Harbingers" hidden="false" collective="false" import="true" type="model">
           <modifiers>
+            <modifier type="set" field="name" value="6 Morghast Harbingers">
+              <conditions>
+                <condition field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0a8d-cde8-fba1-6c0d" type="equalTo"/>
+              </conditions>
+            </modifier>
             <modifier type="set" field="name" value="4 Morghast Harbingers">
               <conditions>
                 <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0a8d-cde8-fba1-6c0d" type="equalTo"/>
@@ -3643,7 +3670,7 @@ If that unit is an IMMORTIS GUARD or NECROPOLIS STALKERS unit, you can either he
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2cad-ffce-cc2b-6d29" type="min"/>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="db8b-807d-3d14-5812" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="db8b-807d-3d14-5812" type="max"/>
           </constraints>
           <costs>
             <cost name="pts" typeId="points" value="240.0"/>
@@ -3699,6 +3726,18 @@ If that unit is an IMMORTIS GUARD or NECROPOLIS STALKERS unit, you can either he
       <entryLinks>
         <entryLink id="b78f-554b-ee60-469a" name="Battalions" hidden="false" collective="false" import="true" targetId="4baa-4d7c-a4a3-3939" type="selectionEntryGroup"/>
         <entryLink id="4a9a-6aeb-b0dc-5085" name="Reinforced" hidden="false" collective="false" import="true" targetId="0a8d-cde8-fba1-6c0d" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="95f2-6885-756f-9ea5" value="2.0">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7c0c-91b9-f052-24af" type="greaterThan"/>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b9e5-10aa-60da-adb9" type="greaterThan"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
           <costs>
             <cost name="pts" typeId="points" value="240.0"/>
           </costs>
@@ -3860,7 +3899,7 @@ If that unit is an IMMORTIS GUARD or NECROPOLIS STALKERS unit, you can either he
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="18f7-8ab6-ec68-cb63" type="max"/>
           </constraints>
           <profiles>
-            <profile id="2c1e-c959-2a14-12d3" name="Helm of Tyrrany" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
+            <profile id="2c1e-c959-2a14-12d3" name="Helm of Tyranny" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
               <characteristics>
                 <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Enemy units cannot receive the Inspiring Presence command while they are within 3&quot; of the bearer.  In addition, if an enemy unit fails a battleshock test within 3&quot; of the bearer, add D3 to the number of models that flee.</characteristic>
               </characteristics>
@@ -3962,7 +4001,7 @@ If that unit is an IMMORTIS GUARD or NECROPOLIS STALKERS unit, you can either he
           <profiles>
             <profile id="22cf-7f94-e55e-4591" name="Gothizzar Cartouche" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
               <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">OSSIFECTOR only.  Add 1 to wound rolls for attacks made with melee weapons by friendly OSSIARCH BONEREAPERS units wholly within XX&quot; of the bearer.</characteristic>
+                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">OSSIFECTOR only.  Add 1 to wound rolls for attacks made with melee weapons by friendly OSSIARCH BONEREAPERS units wholly within 9&quot; of the bearer.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -4058,7 +4097,7 @@ If that unit is an IMMORTIS GUARD or NECROPOLIS STALKERS unit, you can either he
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="802d-c7f2-1521-0acc" type="max"/>
       </constraints>
       <entryLinks>
-        <entryLink id="3486-31e6-43a6-d313" name="Core Battalions" hidden="false" collective="false" import="true" targetId="b275-810f-adfc-156b" type="selectionEntryGroup"/>
+        <entryLink id="3486-31e6-43a6-d313" name="Universal Core Battalions" hidden="false" collective="false" import="true" targetId="b275-810f-adfc-156b" type="selectionEntryGroup"/>
         <entryLink id="3e43-bb8d-b766-7d45" name="Ossiarch Core Battalions" hidden="false" collective="false" import="true" targetId="0964-7fb3-41c3-a4a5" type="selectionEntryGroup"/>
       </entryLinks>
     </selectionEntryGroup>
@@ -4207,6 +4246,11 @@ If that unit is an IMMORTIS GUARD or NECROPOLIS STALKERS unit, you can either he
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c4db-55bd-5956-3a75" type="max"/>
           </constraints>
+          <categoryLinks>
+            <categoryLink id="fe4f-52c5-bd34-8724" name="Core Battalion" hidden="false" targetId="6575-7d6c-ce4d-ada4" primary="false"/>
+            <categoryLink id="5d17-894f-2040-338c" name="Ossiarch Core Battalion" hidden="false" targetId="a766-0f08-430a-f9e4" primary="false"/>
+            <categoryLink id="3d99-9c85-1d0b-a264" name="Battalion" hidden="false" targetId="3ecc-4c0d-d717-29bd" primary="false"/>
+          </categoryLinks>
           <selectionEntries>
             <selectionEntry id="df96-18a7-5ff6-8d22" name="Ossiarch Cohort - 1 Commander" hidden="true" collective="false" import="true" type="upgrade">
               <modifiers>
