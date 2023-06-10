@@ -653,7 +653,7 @@ If that unit is an IMMORTIS GUARD or NECROPOLIS STALKERS unit, you can either he
       <profiles>
         <profile id="a139-f0f9-86ac-a7d3" name="Unstoppable Juggernauts" hidden="false" typeId="f670-aa2b-192b-4937" typeName="Legion Abilities">
           <characteristics>
-            <characteristic name="Legion Abilities Details" typeId="42b4-00f1-787a-3067">Subtract 1 from the damage inflicted (to a minimum of 1) by each successful attack that targets a friendly  PETRIFEX ELITE HEKATOS or PRETRIFEX ELITE GOTHIZZAR HARVESTER unit.</characteristic>
+            <characteristic name="Legion Abilities Details" typeId="42b4-00f1-787a-3067">Subtract 1 from wound rolls for combat attacks that target friendly  PETRIFEX ELITE HEKATOS or PRETRIFEX ELITE GOTHIZZAR HARVESTER units.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1686,6 +1686,11 @@ If that unit is a IMMORTIS GUARD or NECROPOLIS STALKERS unit, you can either hea
       <selectionEntries>
         <selectionEntry id="97f8-eef6-c33d-eafd" name="3 Immortis Guard" hidden="false" collective="false" import="true" type="model">
           <modifiers>
+            <modifier type="set" field="name" value="9 Immortis Guard">
+              <conditions>
+                <condition field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0a8d-cde8-fba1-6c0d" type="equalTo"/>
+              </conditions>
+            </modifier>
             <modifier type="set" field="name" value="6 Immortis Guard">
               <conditions>
                 <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0a8d-cde8-fba1-6c0d" type="equalTo"/>
@@ -1806,6 +1811,11 @@ Precision Aspect: Add 1 to the Damage characteristic of this unit&apos;s melee w
                 <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0a8d-cde8-fba1-6c0d" type="equalTo"/>
               </conditions>
             </modifier>
+            <modifier type="set" field="name" value="9 Necropolis Stalkers">
+              <conditions>
+                <condition field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0a8d-cde8-fba1-6c0d" type="equalTo"/>
+              </conditions>
+            </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5d9a-e78f-4d98-17d1" type="min"/>
@@ -1841,7 +1851,7 @@ Precision Aspect: Add 1 to the Damage characteristic of this unit&apos;s melee w
           <modifiers>
             <modifier type="increment" field="4c21-14f9-d6a2-6ee2" value="1.0">
               <repeats>
-                <repeat field="selections" scope="274c-34ca-7a2d-c996" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e79a-6cb8-40b9-ae95" repeats="1" roundUp="false"/>
+                <repeat field="selections" scope="274c-34ca-7a2d-c996" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="66d3-f3eb-2e41-9a10" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
@@ -2019,13 +2029,11 @@ Precision Aspect: Add 1 to the Damage characteristic of this unit&apos;s melee w
       <profiles>
         <profile id="d944-4c5b-bfd6-83ce" name="Bone Harvest" publicationId="51d8-050e-16e0-d1e3" page="3" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Roll a dice each time a slain model within 6&quot; of this unit is removed from play.  If the slain model is within range of more than 1 friendly unit with this ability, you must pick which unit will use this ability. On a 4+, you can pick 1 friendly OSSIARCH BONEREAPERS unit within 6&quot; of this unit.
-
-If the slain model had a Wounds characteristic of 4 or less, you can heal 1 wound allocated to the unit you picked.
-
-If the slain model had a Wounds characteristic 5 or more, you can heal up to 3 wounds allcoated to the unit you picked.
-
-If no wounds have been allocated to the unit you picked, you can return a number of slain models to it that have a combined Wounds characteristic of equal to or less than the number of wounds you could have healed.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the end of the combat phase, you can pick 1 friendly OSSIARCH BONEREAPERS unit that is within 6&quot; of this unit and had models slain in that phase. If you do so, roll a dice for each model from that unit that was slain in that phase. On a 4+:
+• If the slain model had a Wounds characteristic of 4 or less, you can heal 1 wound allocated to its unit.
+• If the slain model had a Wounds characteristic of 5 or more, you can heal up to 3 wounds allocated to its unit.
+• If no wounds are currently allocated to the unit you picked, you can return a number of slain models to it that have a combined Wounds characteristic of equal to or less than the number of wounds you could have healed.
+You cannot pick the same unit with this ability more than once per phase.</characteristic>
           </characteristics>
         </profile>
         <profile id="b30b-a408-9b7f-a90d" name="Gothizzar Harvester" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
