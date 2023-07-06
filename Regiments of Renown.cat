@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="33cf-d309-6df3-50d6" name="Regiments of Renown" revision="5" battleScribeVersion="2.03" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="157" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" id="33cf-d309-6df3-50d6" name="Regiments of Renown" revision="5" battleScribeVersion="2.03" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="157" type="catalogue">
   <categoryEntries>
     <categoryEntry id="70bf-3963-c8b1-948f" name="ORRUK WARCLANS" hidden="false"/>
     <categoryEntry id="c391-fa3d-48c4-136f" name="ORRUK" hidden="false"/>
@@ -43,6 +43,11 @@
     <categoryEntry name="SQUIG HERD" hidden="false" id="41ce-fe66-fe4-fb42"/>
     <categoryEntry name="SQUIG HOPPERS" hidden="false" id="8004-cead-72b-4508"/>
     <categoryEntry name="GOBBAPALOOZA" hidden="false" id="aac6-458e-211-61c2"/>
+    <categoryEntry name="KNIGHTS" hidden="false" id="6e9d-1735-e220-1d85"/>
+    <categoryEntry name="CRYPT HORRORS" hidden="false" id="1422-5262-e6a4-3f92"/>
+    <categoryEntry name="CRYPT FLAYERS" hidden="false" id="b345-4cac-9e86-7855"/>
+    <categoryEntry name="SERFS" hidden="false" id="cc2e-27c1-2cef-a3dc"/>
+    <categoryEntry name="CRYPT GHOULS" hidden="false" id="c3d3-3207-8d4b-df18"/>
   </categoryEntries>
   <sharedSelectionEntries>
     <selectionEntry id="fa3f-532f-9753-cd59" name="Regiment of Renown - Veremord&apos;s Shamblers" hidden="false" collective="false" import="true" type="upgrade">
@@ -2842,7 +2847,8 @@ Nasty Poisons: You can only pick this effect while this unit has a Spiker.  Pick
         </profile>
         <profile id="2fe9-3cb6-928b-633f" name="Squigs Gone Wild" publicationId="9487-1927-1352-5d84" page="1" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Each time a Cave Squig in this unit flees as a result of a failed battleshock test, before that model is removed from play, roll a dice. On a 2+, you can pick 1 enemy unit within 9&quot; of that model. That unit suffers 1 mortal wound.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Each time a Cave Squig in this unit flees as a result of a failed battleshock test, before that model is removed from play, roll a dice. On a 3+, you can pick the closest enemy unit within 9&quot; of that model. That unit suffers 1 mortal wound. If multiple units are tied to be the closest within 9&quot; of it, you can pick which suffers the mortal wound.
+</characteristic>
           </characteristics>
         </profile>
         <profile id="73b5-cc02-f197-3c4d" name="Squig Herder" hidden="false" typeId="8b8c-5816-cbdb-9763" typeName="Unit Leader">
@@ -3024,6 +3030,201 @@ Nasty Poisons: You can only pick this effect while this unit has a Spiker.  Pick
           </selectionEntryGroups>
         </selectionEntryGroup>
       </selectionEntryGroups>
+    </selectionEntry>
+    <selectionEntry id="1c79-53c3-cbef-17fc" name="Crypt Horrors" page="135" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="add" field="category" value="7f45-c5b3-c698-138d">
+          <conditions>
+            <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9f18-9ffb-0267-3e08" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <profiles>
+        <profile id="16d3-f5cd-1238-e17d" name="Noble Blood" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">In your hero phase, you can heal up to D3 wounda allocated to this unit.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="8175-c50c-eb4f-66c2" name="Chosen of the King" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Improve the Rend characteristic of this unit&apos;s melee weapons by 1 while it is wholly within 9&quot; of any friendly COURTIERS or 18&quot; of any friendly ABHORRANTS.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="875e-ad65-9d16-393a" name="Warrior Elite" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If the unmodified wound roll for an attack made with a Club and Septic Talons is 6, that attack has a Damage characteristic of 3 instead of 2 for that attack.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="dc1d-6af9-f54e-36ee" name="Crypt Horrors" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
+          <characteristics>
+            <characteristic name="Move" typeId="8655-6213-2824-1752">7&quot;</characteristic>
+            <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">4</characteristic>
+            <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">10</characteristic>
+            <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">5+</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="58af-4803-f0e6-1cb2" name="Crypt Haunter" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">The leader of this unit is a Crypt Haunter. Add 1 to the Attacks characteristic of a Crypt Haunter’s Club and Septic Talons.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="6950-4344-a044-a9ac" name="New CategoryLink" hidden="false" targetId="53f6-aa54-91a5-fcfb" primary="false"/>
+        <categoryLink id="aa23-dfa4-f1bd-aa73" name="New CategoryLink" hidden="false" targetId="e8b9-1dad-bf27-3eff" primary="false"/>
+        <categoryLink id="e30a-da66-5504-2327" name="New CategoryLink" hidden="false" targetId="6cdf-dd4f-0e91-e9c4" primary="false"/>
+        <categoryLink id="ee50-84cf-d124-3f56" name="New CategoryLink" hidden="false" targetId="6b35-0508-c6cc-6592" primary="false"/>
+        <categoryLink id="7798-79f-df19-1781" name="KNIGHTS" hidden="false" targetId="3246-ccec-12af-67af" primary="false"/>
+        <categoryLink id="4692-1c1d-2c35-dfcd" name="New CategoryLink" hidden="false" targetId="065e-fda7-fd27-1f40" primary="true"/>
+        <categoryLink targetId="1422-5262-e6a4-3f92" id="eac4-fe9-4e33-5634" primary="false" name="CRYPT HORRORS"/>
+        <categoryLink targetId="6e9d-1735-e220-1d85" id="6b4d-79b3-e0c3-b6ba" primary="false" name="KNIGHTS"/>
+        <categoryLink targetId="e41b-4270-3cf6-e397" id="f313-fca5-c74d-cf52" primary="false" name="REGIMENT OF RENOWN"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="254e-32f2-3c17-46a4" name="3 Crypt Horrors" hidden="false" collective="false" import="true" type="model">
+          <modifiers>
+            <modifier type="set" field="name" value="6 Crypt Horrors">
+              <conditions>
+                <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0a8d-cde8-fba1-6c0d" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="name" value="9 Crypt Horrors">
+              <conditions>
+                <condition field="selections" scope="parent" value="2" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0a8d-cde8-fba1-6c0d" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="minSelections" type="min"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
+          </constraints>
+        </selectionEntry>
+        <selectionEntry id="7d71-a4c5-f1c8-7445" name="Clubs and Septic Talons" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7aab-0167-79af-1e88" type="min"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1fd7-bea6-42a6-1748" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="760c-359a-4ddd-2bbd" name="Clubs and Septic Talons" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">2&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">4</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">2</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntry>
+    <selectionEntry id="aafa-9c9d-1f97-f698" name="Crypt Flayers" page="135" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="add" field="category" value="7f45-c5b3-c698-138d">
+          <conditions>
+            <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9f18-9ffb-0267-3e08" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <profiles>
+        <profile id="fe34-fc04-399c-75eb" name="Crypt Flayers" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
+          <characteristics>
+            <characteristic name="Move" typeId="8655-6213-2824-1752">12&quot;</characteristic>
+            <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">4</characteristic>
+            <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">10</characteristic>
+            <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">5+</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="bda6-a8fb-4c1f-2bbf" name="Crypt Infernal" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">The leader of this unit is a Crypt Infernal. Add 1 to the Attacks characteristic of a Crypt Infernal’s Piercing Talons.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Escort Courtier" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities" hidden="false" id="aaeb-27de-5506-74cb">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">When you pick this unit to move in the movement phase, you pay pick 1 friendly FLESH-EATER COURTS HERO that has a Wounds characteristic of 7 or less, that cannot fly, and that is wholly within 3&quot; of this unit. If you do so, remove that HERO from the battlefield. After this unit has finished moving, set up that HERO wholly within 3&quot; of this unit and more than 3&quot; from all enemy units.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="1add-4dff-9396-8fcc" name="Fly" hidden="false" targetId="8e0c-cbe4-27be-8a30" type="profile"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="9eb0-ecd-8892-68f" name="New CategoryLink" hidden="false" targetId="53f6-aa54-91a5-fcfb" primary="false"/>
+        <categoryLink id="6af6-136d-ea42-9b59" name="New CategoryLink" hidden="false" targetId="b8b2-91fc-0a0d-ae80" primary="false"/>
+        <categoryLink id="6a61-7ab3-97f9-668f" name="New CategoryLink" hidden="false" targetId="6cdf-dd4f-0e91-e9c4" primary="false"/>
+        <categoryLink id="bd2c-9c74-38a7-f069" name="New CategoryLink" hidden="false" targetId="6b35-0508-c6cc-6592" primary="false"/>
+        <categoryLink id="373c-26f4-a53e-5450" name="KNIGHTS" hidden="false" targetId="3246-ccec-12af-67af" primary="false"/>
+        <categoryLink id="3610-21e6-2107-84a" name="New CategoryLink" hidden="false" targetId="065e-fda7-fd27-1f40" primary="true"/>
+        <categoryLink targetId="6e9d-1735-e220-1d85" id="acb2-8a0b-5cd1-547b" primary="false" name="KNIGHTS"/>
+        <categoryLink targetId="b345-4cac-9e86-7855" id="afa5-86aa-70a1-1f00" primary="false" name="CRYPT FLAYERS"/>
+        <categoryLink targetId="e41b-4270-3cf6-e397" id="2d79-7785-335a-1a8a" primary="false" name="REGIMENT OF RENOWN"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="e8fc-90f2-4eab-2791" name="3 Crypt Flayers" hidden="false" collective="false" import="true" type="model">
+          <modifiers>
+            <modifier type="set" field="name" value="6 Crypt Flayers">
+              <conditions>
+                <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0a8d-cde8-fba1-6c0d" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="name" value="9 Crypt Flayers">
+              <conditions>
+                <condition field="selections" scope="parent" value="2" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0a8d-cde8-fba1-6c0d" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="minSelections" type="min"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
+          </constraints>
+        </selectionEntry>
+        <selectionEntry id="dd5c-d24b-858-c493" name="Piercing Talons" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="95ad-4099-900c-63dc" type="min"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ef53-de3e-2893-06ef" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="88cc-cfef-6735-e7f8" name="Piercing Talons" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">2&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">4</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry id="ad82-e0c8-95bc-f480" name="Death Scream" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="516b-4630-1797-35c0" type="min"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3906-1e3b-7a2b-2777" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="3788-6b46-2cc3-5c9b" name="Death Scream" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Missile</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">10&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">4</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-2</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="f089-f5a7-df89-9d17" name="Death Scream" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+              <characteristics>
+                <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Add 1 to wound rolls for attacks made with a Death Scream if the target unit has a Bravery characteristic of 6 or less.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntry>
   </sharedSelectionEntries>
   <catalogueLinks>

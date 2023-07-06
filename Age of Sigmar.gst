@@ -4078,38 +4078,6 @@ WIZARDS cannot be included in this battalion.</characteristic>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
-    <selectionEntryGroup id="dff7-19b4-9850-89a7" name="Relics of Aqshy" hidden="true" collective="false" import="true">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="804d-fbe5-0759-58ce" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <constraints>
-        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9a2b-0c1a-55a2-1130" type="max"/>
-      </constraints>
-      <selectionEntries>
-        <selectionEntry id="c17a-4a8a-0041-6aa4" name="0. Incandescent Rageblade" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b558-0ae0-a88e-a88d" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="3285-b445-7ff8-02eb" name="Incandescent Rageblade" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
-              <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Pick 1 of the bearer’s melee weapons. If the unmodified hit roll for an attack made by that weapon is 6, that attack scores 2 hits on the target instead of 1. Make a wound and save roll for each hit.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="db95-222f-4d46-46f2" name="New CategoryLink" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-    </selectionEntryGroup>
     <selectionEntryGroup id="5927-9c5a-8b20-8f37" name="Game Type" hidden="false" collective="false" import="true" defaultSelectionEntryId="cea8-e4b2-c44f-c7b4">
       <constraints>
         <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9f24-8ab9-ab48-5541" type="max"/>
@@ -5752,7 +5720,9 @@ WIZARDS cannot be included in this battalion.</characteristic>
           <profiles>
             <profile id="2867-2484-1105-673a" name="Arcane Tome" publicationId="5c4c-6bee-5256-7181" page="10" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
               <characteristics>
-                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">HERO that does not have the WIZARD, PRIEST or KHORNE keyword. The bearer becomes a WIZARD that only knows the Arcane Bolt and Mystic Shield spells (if you take a spell lore enhancement, you cannot pick any spells from that spell lore for the bearer to know, but the bearer can attempt to summon any endless spells included on your roster if otherwise eligible). They can attempt to cast 1 spell in your hero phase and attempt to unbind 1 spell in the enemy hero phase.</characteristic>
+                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">HERO that does not have the WIZARD, PRIEST or KHORNE keyword. The bearer becomes a WIZARD that can only cast
+Arcane Bolt, Mystic Shield and spells to summon endless spells on your army roster. They can attempt to cast 1 spell in your hero phase and attempt to unbind 1 spell in the enemy hero phase.’
+</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -6555,6 +6525,73 @@ WIZARDS cannot be included in this battalion.</characteristic>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6059-cc4f-4bb9-9e36" type="max"/>
             <constraint field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0268-d00b-8709-08a4" type="min"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="d27f-9ad5-990c-2915" name="Relics of Gallet" publicationId="4911-03f2-4062-53db" page="15" hidden="true" collective="false" import="true">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9f18-9ffb-0267-3e08" type="greaterThan"/>
+                <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="89f7-d50b-0aa9-01ce" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="82d1-1465-25ee-6abd" type="max"/>
+      </constraints>
+      <selectionEntries>
+        <selectionEntry id="3e92-e580-e9c6-b719" name="Tuskhelm" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1094-bebe-7345-f223" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="8b9f-c00c-85fa-8945" name="Tuskhelm" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
+              <characteristics>
+                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">After the bearer makes a charge move, you can pick 1 enemy unit within 1&quot; of the bearer.  If you do so, roll a number of dice equal to the unmodified charge roll for that charge move.   For each 4+, the target suffers 1 mortal wound.  If the bearer already has an ability with an effect that triggers after they make a charge move, you must pick which effect applies (you cannot use both).</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <categoryLinks>
+            <categoryLink id="f14c-d390-d19e-062d" name="Artefact" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
+          </categoryLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="4a99-5247-e2b9-3bb9" name="Nightflyer Cloak" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4e69-9572-6d39-d72f" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="9f5e-d4a2-5477-97dd" name="Nightflyer Cloak" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
+              <characteristics>
+                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">During deployment, instead of setting up the bearer on the battlefield, you can place them to one side and say that they are set up in ambush as a reserve unit.  At the end of your movement phase, you can set up the bearer on the battlefield, within 1&quot; of a friendly Battleline unit and more than 9&quot; from all enemy units.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="cbf6-c513-5a7f-5557" name="Gryph-feather Charm" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b9af-1a30-0241-f515" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="4612-6a86-cea6-3231" name="Gryph-feather Charm" hidden="false" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
+              <characteristics>
+                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">The bearer has a ward of 5+.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
