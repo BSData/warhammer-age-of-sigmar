@@ -32,6 +32,7 @@
     <publication id="4911-03f2-4062-53db" name="General&apos;s Handbook 2022-23 - Season 2"/>
     <publication id="d78d-74e8-6533-986c" name="Season of War: Thondia Errata January 2023"/>
     <publication id="5c4c-6bee-5256-7181" name="Core Rules Errata April 2023"/>
+    <publication name="Github" hidden="false" id="746d-e204-2266-6377" shortName="BSData/age-of-sigmar" publisherUrl="https://github.com/BSData/age-of-sigmar"/>
   </publications>
   <costTypes>
     <costType id="points" name="pts" defaultCostLimit="0" hidden="false"/>
@@ -357,6 +358,7 @@
     <categoryEntry id="e41b-4270-3cf6-e397" name="REGIMENT OF RENOWN" hidden="false"/>
     <categoryEntry id="89d5-185d-4935-ee59" name="OSSIARCH BONEREAPERS" hidden="false"/>
     <categoryEntry name="ANDTORIAN LOCUS" hidden="false" id="8f5e-e464-221b-4f06"/>
+    <categoryEntry name="Champion" hidden="false" id="94b9-7eb-a81a-b892"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry id="36b7-ee1e-0855-f23f" name="**Pitched Battle GHB 2021-22**" hidden="false">
@@ -3928,10 +3930,8 @@ In addition, this incarnate can carry out the Devour Endless Spell monstrous ram
         </profile>
         <profile id="a069-ca68-8d79-a0da" name="Endless Expropriation" hidden="false" typeId="eba0-4bf6-65fe-fdbc" typeName="Battle Tactic">
           <characteristics>
-            <characteristic name="Description" typeId="f882-48d5-21a4-1787">Pick 1 enemy unit that is controlling or bonded to an endless spell or INCARNATE. You complete this battle tactic at the end of your turn if any of the following are true:
+            <characteristic name="Description" typeId="f882-48d5-21a4-1787">Pick 1 enemy unit that is controlling or bonded to an endless spell or INCARNATE. You complete this battle tactic at the end of your turn if either of the following are true:
 That enemy unit has been destroyed.
-That endless spell is wild.
-That endless spell is controlled by or bonded to a friendly unit.
 That INCARNATE is wild.</characteristic>
           </characteristics>
         </profile>
@@ -3942,7 +3942,7 @@ That INCARNATE is wild.</characteristic>
         </profile>
         <profile id="5e2b-9ef9-864a-3e1f" name="Magical Mayhem" hidden="false" typeId="eba0-4bf6-65fe-fdbc" typeName="Battle Tactic">
           <characteristics>
-            <characteristic name="Description" typeId="f882-48d5-21a4-1787">Pick 1 enemy unit on the battlefield. You complete this battle tactic if that unit is destroyed by damage inflicted by a spell or the abilities of an endless spell.</characteristic>
+            <characteristic name="Description" typeId="f882-48d5-21a4-1787">Pick 1 enemy unit on the battlefield. You complete this battle tactic if that unit is destroyed by a spell or the abilities of an endless spell.</characteristic>
           </characteristics>
         </profile>
         <profile id="d610-4db7-145-6441" name="Bait and Trap" hidden="false" typeId="eba0-4bf6-65fe-fdbc" typeName="Battle Tactic">
@@ -5603,6 +5603,144 @@ WIZARDS cannot be included in this battalion.</characteristic>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
+        <selectionEntryGroup id="2b4b-b10a-969b-2f53" name="Wizard-finders of Andtor" hidden="true" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="a017-9f12-295-8900" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6eef-e4a2-3c85-721d" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="db0b-7500-66ce-edd2" name="Wizard-finders of Andtor - 0-1 Monster" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5fba-34f2-e66f-fbcb" type="greaterThan"/>
+                        <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6c6b-e787-f9b8-a510" type="notInstanceOf"/>
+                        <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fa0c-9044-2568-fa02" type="instanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="increment" field="9494-57ad-66d5-8d10" value="1">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="7f89-26d0-ff93-83fe" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9494-57ad-66d5-8d10" type="max"/>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="00ab-4d38-d74e-f80e" type="max"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry id="f909-5f7e-af15-afc9" name="Wizard-finders of Andtor - 1-2 Infantry" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5fba-34f2-e66f-fbcb" type="greaterThan"/>
+                        <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7f45-c5b3-c698-138d" type="instanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="increment" field="1f0b-c2c1-41e6-31e8" value="1">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="7f89-26d0-ff93-83fe" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="increment" field="9726-eb33-7666-f030" value="2">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="7f89-26d0-ff93-83fe" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9726-eb33-7666-f030" type="max"/>
+                <constraint field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1f0b-c2c1-41e6-31e8" type="min"/>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2989-4502-9e29-7fcd" type="max"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry id="c948-caab-fc9d-2462" name="Wizard-finders of Andtor - 1 Champion" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5fba-34f2-e66f-fbcb" type="greaterThan"/>
+                        <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="94b9-7eb-a81a-b892" type="instanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="increment" field="9494-57ad-66d5-8d10" value="1">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="7f89-26d0-ff93-83fe" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="increment" field="d65e-a22e-42ca-9323" value="1">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="7f89-26d0-ff93-83fe" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9494-57ad-66d5-8d10" type="max"/>
+                <constraint field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d65e-a22e-42ca-9323" type="min"/>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="00ab-4d38-d74e-f80e" type="max"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="7310-75c3-18bc-fff2" name="Andtorian Acolytes" hidden="true" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="a017-9f12-295-8900" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6eef-e4a2-3c85-721d" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="f8d8-3be7-fe3d-e3be" name="Andtorian Acolytes - 2-3 Champion" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="ec61-8cc7-65fa-bce8" type="greaterThan"/>
+                        <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="94b9-7eb-a81a-b892" type="instanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="increment" field="9494-57ad-66d5-8d10" value="3">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="7f89-26d0-ff93-83fe" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="increment" field="759c-a974-2baa-ae3a" value="2">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5e7f-ccbb-a180-2e8b" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9494-57ad-66d5-8d10" type="max"/>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="00ab-4d38-d74e-f80e" type="max"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntryGroup>
     <selectionEntryGroup id="6138-3410-520c-bd01" name="Battalions" hidden="false" collective="false" import="true">
@@ -6718,7 +6856,7 @@ Arcane Bolt, Mystic Shield and spells to summon endless spells on your army rost
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">8</characteristic>
                 <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">12&quot;</characteristic>
-                <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick 1 friendly unit wholly within range and visible to the caster. Pick 1 melee weapon profile on that unit’s warscroll and roll a D3. Change the To Hit, To Wound or Rend characteristic of that melee weapon to match the result until the start of your next hero phase. For example, if the result was 2, you could change either the To Hit characteristic to 2+, the To Wound characteristic to 2+ or the Rend characteristic to -2</characteristic>
+                <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">Hoarfrost is a spell that has a casting value of 8 and a range of 12&quot;. If successfully cast, pick 1 friendly unit wholly within range and visible to the caster. Pick 1 melee weapon profile on that unit’s warscroll and roll a D3. Change the To Hit, To Wound or Rend characteristic of that melee weapon to match the result until the start of your next hero phase. For example, if the result was 2, you could change either the To Hit characteristic to 2+, the To Wound characteristic to 2+ or the Rend characteristic to -2. While a characteristic has been changed by the effects of this spell, that characteristic cannot be further changed or modified.</characteristic>
               </characteristics>
             </profile>
           </profiles>
