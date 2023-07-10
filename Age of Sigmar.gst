@@ -32,7 +32,7 @@
     <publication id="4911-03f2-4062-53db" name="General&apos;s Handbook 2022-23 - Season 2"/>
     <publication id="d78d-74e8-6533-986c" name="Season of War: Thondia Errata January 2023"/>
     <publication id="5c4c-6bee-5256-7181" name="Core Rules Errata April 2023"/>
-    <publication name="Github" hidden="false" id="746d-e204-2266-6377" shortName="BSData/age-of-sigmar" publisherUrl="https://github.com/BSData/age-of-sigmar"/>
+    <publication name="Github" hidden="false" id="746d-e204-2266-6377" shortName="BSData/age-of-sigmar" publisherUrl="https://github.com/BSData/warhammer-age-of-sigmar"/>
   </publications>
   <costTypes>
     <costType id="points" name="pts" defaultCostLimit="0" hidden="false"/>
@@ -5630,7 +5630,7 @@ WIZARDS cannot be included in this battalion.</characteristic>
                 </modifier>
                 <modifier type="increment" field="9494-57ad-66d5-8d10" value="1">
                   <repeats>
-                    <repeat field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="7f89-26d0-ff93-83fe" repeats="1" roundUp="false"/>
+                    <repeat field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5fba-34f2-e66f-fbcb" repeats="1" roundUp="false"/>
                   </repeats>
                 </modifier>
               </modifiers>
@@ -5651,14 +5651,14 @@ WIZARDS cannot be included in this battalion.</characteristic>
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
-                <modifier type="increment" field="1f0b-c2c1-41e6-31e8" value="1">
+                <modifier type="increment" field="9726-eb33-7666-f030" value="1">
                   <repeats>
-                    <repeat field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="7f89-26d0-ff93-83fe" repeats="1" roundUp="false"/>
+                    <repeat field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5fba-34f2-e66f-fbcb" repeats="1" roundUp="false"/>
                   </repeats>
                 </modifier>
-                <modifier type="increment" field="9726-eb33-7666-f030" value="2">
+                <modifier type="increment" field="1f0b-c2c1-41e6-31e8" value="1">
                   <repeats>
-                    <repeat field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="7f89-26d0-ff93-83fe" repeats="1" roundUp="false"/>
+                    <repeat field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5fba-34f2-e66f-fbcb" repeats="1" roundUp="false"/>
                   </repeats>
                 </modifier>
               </modifiers>
@@ -5682,12 +5682,12 @@ WIZARDS cannot be included in this battalion.</characteristic>
                 </modifier>
                 <modifier type="increment" field="9494-57ad-66d5-8d10" value="1">
                   <repeats>
-                    <repeat field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="7f89-26d0-ff93-83fe" repeats="1" roundUp="false"/>
+                    <repeat field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5fba-34f2-e66f-fbcb" repeats="1" roundUp="false"/>
                   </repeats>
                 </modifier>
                 <modifier type="increment" field="d65e-a22e-42ca-9323" value="1">
                   <repeats>
-                    <repeat field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="7f89-26d0-ff93-83fe" repeats="1" roundUp="false"/>
+                    <repeat field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5fba-34f2-e66f-fbcb" repeats="1" roundUp="false"/>
                   </repeats>
                 </modifier>
               </modifiers>
@@ -5703,7 +5703,7 @@ WIZARDS cannot be included in this battalion.</characteristic>
           <modifiers>
             <modifier type="set" field="hidden" value="false">
               <conditions>
-                <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="a017-9f12-295-8900" type="greaterThan"/>
+                <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="ec61-8cc7-65fa-bce8" type="greaterThan"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -5725,12 +5725,12 @@ WIZARDS cannot be included in this battalion.</characteristic>
                 </modifier>
                 <modifier type="increment" field="9494-57ad-66d5-8d10" value="3">
                   <repeats>
-                    <repeat field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="7f89-26d0-ff93-83fe" repeats="1" roundUp="false"/>
+                    <repeat field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="ec61-8cc7-65fa-bce8" repeats="1" roundUp="false"/>
                   </repeats>
                 </modifier>
                 <modifier type="increment" field="759c-a974-2baa-ae3a" value="2">
                   <repeats>
-                    <repeat field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5e7f-ccbb-a180-2e8b" repeats="1" roundUp="false"/>
+                    <repeat field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="ec61-8cc7-65fa-bce8" repeats="1" roundUp="false"/>
                   </repeats>
                 </modifier>
               </modifiers>
@@ -6520,6 +6520,107 @@ Arcane Bolt, Mystic Shield and spells to summon endless spells on your army rost
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
+        <selectionEntryGroup name="GHB 2023-24 Grand Strategies" hidden="false" id="2d2d-5cfd-ac8e-c402">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9f95-f6dc-e866-90a0" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <selectionEntries>
+            <selectionEntry id="2119-1e14-94b6-e73c" name="Spellcasting Savant" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d221-6d02-e284-f8b1" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="2467-905d-e6b6-d2f1" name="Spellcasting Savant" hidden="false" typeId="9c01-ec20-32c1-0948" typeName="Grand Strategy">
+                  <characteristics>
+                    <characteristic name="Description" typeId="53c8-cc18-16d1-e890">When the battle ends, you complete this grand strategy if the model picked to be your general is an ANDTORIAN LOCUS and that unit has not been slain</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <categoryLinks>
+                <categoryLink id="8951-6424-b4ee-95be" name="Grand Strategy" hidden="false" targetId="5dff-3614-49fd-c3e4" primary="false"/>
+              </categoryLinks>
+            </selectionEntry>
+            <selectionEntry id="65e0-6b72-51d5-aa2b" name="Slaughter of Sorcery" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d221-6d02-e284-f8b1" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="ccde-6021-4bfb-f3dd" name="Slaughter of Sorcery" hidden="false" typeId="9c01-ec20-32c1-0948" typeName="Grand Strategy">
+                  <characteristics>
+                    <characteristic name="Description" typeId="53c8-cc18-16d1-e890">When the battle ends, you complete this grand strategy if there are no WIZARD units on the battlefield</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <categoryLinks>
+                <categoryLink id="4646-af48-d2a6-1486" name="Grand Strategy" hidden="false" targetId="5dff-3614-49fd-c3e4" primary="false"/>
+              </categoryLinks>
+            </selectionEntry>
+            <selectionEntry id="5b52-8b29-ee1e-6511" name="Barren Icescape" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d221-6d02-e284-f8b1" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="1606-24b2-73a2-5175" name="Barren Icescape" hidden="false" typeId="9c01-ec20-32c1-0948" typeName="Grand Strategy">
+                  <characteristics>
+                    <characteristic name="Description" typeId="53c8-cc18-16d1-e890">When the battle ends, you complete this grand strategy if all enemy units that have artefacts of power are destroyed and there are no enemy units within 6&quot; of the centre of the battlefield</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <categoryLinks>
+                <categoryLink id="2bf-14c6-1b63-5062" name="Grand Strategy" hidden="false" targetId="5dff-3614-49fd-c3e4" primary="false"/>
+              </categoryLinks>
+            </selectionEntry>
+            <selectionEntry id="729f-d29b-2b13-c110" name="Overshadow" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d221-6d02-e284-f8b1" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="33c0-4b99-2187-9126" name="Overshadow" hidden="false" typeId="9c01-ec20-32c1-0948" typeName="Grand Strategy">
+                  <characteristics>
+                    <characteristic name="Description" typeId="53c8-cc18-16d1-e890">When the battle ends, you complete this grand strategy if all enemy Battleline units from your opponent’s starting army are destroyed and there is at least friendly Battleline unit from your starting army on the battlefield.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <categoryLinks>
+                <categoryLink id="c9c2-5898-c3f3-53a6" name="Grand Strategy" hidden="false" targetId="5dff-3614-49fd-c3e4" primary="false"/>
+              </categoryLinks>
+            </selectionEntry>
+            <selectionEntry id="60bf-ea93-f305-1349" name="Magic Made Manifest" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d221-6d02-e284-f8b1" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="eb72-8c08-3446-634e" name="Magic Made Manifest" hidden="false" typeId="9c01-ec20-32c1-0948" typeName="Grand Strategy">
+                  <characteristics>
+                    <characteristic name="Description" typeId="53c8-cc18-16d1-e890">When the battle ends, you complete this grand strategy if there are 2 or more endless spells or Incarnates on the battlefield that are controlled by or bonded to friendly units.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <categoryLinks>
+                <categoryLink id="16b2-cd03-5d2e-d2d4" name="Grand Strategy" hidden="false" targetId="5dff-3614-49fd-c3e4" primary="false"/>
+              </categoryLinks>
+            </selectionEntry>
+            <selectionEntry id="dc4d-d991-99af-2f61" name="Control the Nexus" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d221-6d02-e284-f8b1" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="1a3c-12ef-3479-a623" name="Control the Nexus" hidden="false" typeId="9c01-ec20-32c1-0948" typeName="Grand Strategy">
+                  <characteristics>
+                    <characteristic name="Description" typeId="53c8-cc18-16d1-e890">When the battle ends, you complete this grand strategy if 2 or more friendly Wizard units are wholly within 6&quot; of the centre of the battlefield.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <categoryLinks>
+                <categoryLink id="5a4a-dbcc-f3b5-e8f0" name="Grand Strategy" hidden="false" targetId="5dff-3614-49fd-c3e4" primary="false"/>
+              </categoryLinks>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntryGroup>
     <selectionEntryGroup id="055f-7077-c87d-f9a8" name="Triumphs" hidden="false" collective="false" import="true">
@@ -6957,9 +7058,6 @@ Arcane Bolt, Mystic Shield and spells to summon endless spells on your army rost
           </profiles>
         </selectionEntry>
       </selectionEntries>
-      <entryLinks>
-        <entryLink import="true" name="Dwellers of the Tundra" hidden="false" type="selectionEntryGroup" id="a198-7af7-b0fe-120f" targetId="b6b8-914a-dfca-18ee"/>
-      </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup name="Nullstone Adornments" hidden="true" id="5c1c-746a-9b36-30b">
       <modifiers>
