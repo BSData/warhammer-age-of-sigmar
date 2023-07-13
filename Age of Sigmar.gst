@@ -359,6 +359,7 @@
     <categoryEntry id="89d5-185d-4935-ee59" name="OSSIARCH BONEREAPERS" hidden="false"/>
     <categoryEntry name="ANDTORIAN LOCUS" hidden="false" id="8f5e-e464-221b-4f06"/>
     <categoryEntry name="Champion" hidden="false" id="94b9-7eb-a81a-b892"/>
+    <categoryEntry name="Ally" hidden="false" id="1111-11dc-777-cf35"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry id="36b7-ee1e-0855-f23f" name="**Pitched Battle GHB 2021-22**" hidden="false">
@@ -2820,6 +2821,7 @@ When a primal magic dice is rolled as part of a casting roll, on an unmodified c
         <categoryLink id="0c06-9f07-de91-de75" name="New CategoryLink" hidden="false" targetId="4e0e-664d-51ea-0929" primary="false"/>
         <categoryLink id="07d4-81bb-4b50-97fb" name="New CategoryLink" hidden="false" targetId="b970-b3bf-e1a4-a6fc" primary="false"/>
         <categoryLink id="a8a0-bc9c-5367-9e69" name="Other" hidden="false" targetId="065e-fda7-fd27-1f40" primary="true"/>
+        <categoryLink targetId="1111-11dc-777-cf35" id="2adc-76e7-1a9b-171f" primary="false" name="Ally"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="6d32-0db6-7da9-8a86" name="Zangrom-Thaz" hidden="false" collective="false" import="true" type="upgrade">
@@ -3451,6 +3453,7 @@ In addition, this incarnate can carry out the Devour Endless Spell monstrous ram
         <categoryLink id="a276-cc97-2dcc-2c69" name="GHUR" hidden="false" targetId="c33b-1c2d-83d9-53df" primary="false"/>
         <categoryLink id="9721-e622-a183-e312" name="MONSTER" hidden="false" targetId="1959-9f6a-3056-913a" primary="false"/>
         <categoryLink id="effc-24ea-5034-809a" name="KRONDSPINE INCARNATE" hidden="false" targetId="73d2-3f60-289e-24fe" primary="false"/>
+        <categoryLink targetId="1111-11dc-777-cf35" id="fea9-32d7-1ce9-5bc8" primary="false" name="Ally"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="3db4-29d7-4b58-7f25" name="Vicious Claws" hidden="false" collective="false" import="true" type="upgrade">
