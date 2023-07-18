@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="163" battleScribeVersion="2.03" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" type="gameSystem">
+<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="164" battleScribeVersion="2.03" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" type="gameSystem">
   <publications>
     <publication id="e51d-b1a3-pubEC" name="The General&apos;s Handbook"/>
     <publication id="e51d-b1a3-pubEQ" name="Core Rules"/>
@@ -360,6 +360,7 @@
     <categoryEntry name="ANDTORIAN LOCUS" hidden="false" id="8f5e-e464-221b-4f06"/>
     <categoryEntry name="Champion" hidden="false" id="94b9-7eb-a81a-b892"/>
     <categoryEntry name="Ally" hidden="false" id="1111-11dc-777-cf35"/>
+    <categoryEntry name="Command Trait" hidden="false" id="f464-c41d-1526-506c"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry id="36b7-ee1e-0855-f23f" name="**Pitched Battle GHB 2021-22**" hidden="false">
@@ -4025,7 +4026,9 @@ WIZARDS cannot be included in this battalion.</characteristic>
         </profile>
         <profile id="9d41-2d21-fce2-cede" name="Core Battalion: Wizard-finders of Andtor" hidden="false" typeId="75e0-a332-e4f5-bf36" typeName="Battalion Organisation">
           <characteristics>
-            <characteristic name="Required" typeId="eb5f-e9d2-e457-bff5">2-3 Monsters</characteristic>
+            <characteristic name="Required" typeId="eb5f-e9d2-e457-bff5">1 Champion
+1-2 Troops
+0-1 Monster</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -5936,6 +5939,9 @@ Arcane Bolt, Mystic Shield and spells to summon endless spells on your army rost
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
+          <categoryLinks>
+            <categoryLink targetId="f464-c41d-1526-506c" id="d20d-d9a0-603-d1b1" primary="false" name="Command Trait"/>
+          </categoryLinks>
         </selectionEntry>
         <selectionEntry id="3cb0-3862-b75f-2ee7" name="Chilled to the Bone" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -5951,6 +5957,9 @@ Arcane Bolt, Mystic Shield and spells to summon endless spells on your army rost
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
+          <categoryLinks>
+            <categoryLink targetId="f464-c41d-1526-506c" id="519e-4740-937c-3ed5" primary="false" name="Command Trait"/>
+          </categoryLinks>
         </selectionEntry>
         <selectionEntry id="6d31-4450-8ba4-2983" name="Eater of Magic" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -5966,6 +5975,9 @@ Arcane Bolt, Mystic Shield and spells to summon endless spells on your army rost
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
+          <categoryLinks>
+            <categoryLink targetId="f464-c41d-1526-506c" id="3a47-a5e8-8a8f-a02d" primary="false" name="Command Trait"/>
+          </categoryLinks>
         </selectionEntry>
         <selectionEntry id="949c-ae4b-898d-d906" name="Eye of the Blizzard" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -5981,6 +5993,9 @@ Arcane Bolt, Mystic Shield and spells to summon endless spells on your army rost
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
+          <categoryLinks>
+            <categoryLink targetId="f464-c41d-1526-506c" id="707c-48c6-2300-2ede" primary="false" name="Command Trait"/>
+          </categoryLinks>
         </selectionEntry>
       </selectionEntries>
       <modifiers>
@@ -6821,6 +6836,9 @@ Arcane Bolt, Mystic Shield and spells to summon endless spells on your army rost
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
+          <categoryLinks>
+            <categoryLink targetId="3564-4c26-10b4-d953" id="bc30-5c2e-4f96-fcb8" primary="false" name="Artefact"/>
+          </categoryLinks>
         </selectionEntry>
         <selectionEntry id="cbf6-c513-5a7f-5557" name="Gryph-feather Charm" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -6836,6 +6854,9 @@ Arcane Bolt, Mystic Shield and spells to summon endless spells on your army rost
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
+          <categoryLinks>
+            <categoryLink targetId="3564-4c26-10b4-d953" id="fd92-9758-d2c-7526" primary="false" name="Artefact"/>
+          </categoryLinks>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
@@ -7010,6 +7031,9 @@ Arcane Bolt, Mystic Shield and spells to summon endless spells on your army rost
               </characteristics>
             </profile>
           </profiles>
+          <categoryLinks>
+            <categoryLink targetId="f464-c41d-1526-506c" id="3019-8cbb-e2ab-d358" primary="false" name="Command Trait"/>
+          </categoryLinks>
         </selectionEntry>
         <selectionEntry id="35ce-c884-eb78-6fd3" name="Heroic Stature" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -7022,6 +7046,9 @@ Arcane Bolt, Mystic Shield and spells to summon endless spells on your army rost
               </characteristics>
             </profile>
           </profiles>
+          <categoryLinks>
+            <categoryLink targetId="f464-c41d-1526-506c" id="6a2a-111d-5802-e03b" primary="false" name="Command Trait"/>
+          </categoryLinks>
         </selectionEntry>
         <selectionEntry id="5fda-5dc6-7a6e-b464" name="Skilled Leader" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -7034,6 +7061,9 @@ Arcane Bolt, Mystic Shield and spells to summon endless spells on your army rost
               </characteristics>
             </profile>
           </profiles>
+          <categoryLinks>
+            <categoryLink targetId="f464-c41d-1526-506c" id="b38d-4cff-d299-9bb6" primary="false" name="Command Trait"/>
+          </categoryLinks>
         </selectionEntry>
         <selectionEntry id="bd8-98b8-b09e-b1d4" name="High Priest" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -7046,6 +7076,9 @@ Arcane Bolt, Mystic Shield and spells to summon endless spells on your army rost
               </characteristics>
             </profile>
           </profiles>
+          <categoryLinks>
+            <categoryLink targetId="f464-c41d-1526-506c" id="151-70db-b0a-eefd" primary="false" name="Command Trait"/>
+          </categoryLinks>
         </selectionEntry>
         <selectionEntry id="2af4-8ea9-bb1e-92be" name="Master of Magic" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -7058,6 +7091,9 @@ Arcane Bolt, Mystic Shield and spells to summon endless spells on your army rost
               </characteristics>
             </profile>
           </profiles>
+          <categoryLinks>
+            <categoryLink targetId="f464-c41d-1526-506c" id="dce4-e8e-b086-30aa" primary="false" name="Command Trait"/>
+          </categoryLinks>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
