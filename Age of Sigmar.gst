@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="163" battleScribeVersion="2.03" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" type="gameSystem">
+<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="165" battleScribeVersion="2.03" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" type="gameSystem">
   <publications>
     <publication id="e51d-b1a3-pubEC" name="The General&apos;s Handbook"/>
     <publication id="e51d-b1a3-pubEQ" name="Core Rules"/>
@@ -5654,7 +5654,7 @@ WIZARDS cannot be included in this battalion.</characteristic>
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
-                <modifier type="increment" field="9726-eb33-7666-f030" value="1">
+                <modifier type="increment" field="9726-eb33-7666-f030" value="2">
                   <repeats>
                     <repeat field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5fba-34f2-e66f-fbcb" repeats="1" roundUp="false"/>
                   </repeats>
@@ -5668,7 +5668,7 @@ WIZARDS cannot be included in this battalion.</characteristic>
               <constraints>
                 <constraint field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9726-eb33-7666-f030" type="max"/>
                 <constraint field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1f0b-c2c1-41e6-31e8" type="min"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2989-4502-9e29-7fcd" type="max"/>
+                <constraint field="selections" scope="parent" value="2" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2989-4502-9e29-7fcd" type="max"/>
               </constraints>
             </selectionEntry>
             <selectionEntry id="c948-caab-fc9d-2462" name="Wizard-finders of Andtor - 1 Champion" hidden="true" collective="false" import="true" type="upgrade">
@@ -6635,6 +6635,7 @@ Arcane Bolt, Mystic Shield and spells to summon endless spells on your army rost
       </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e5a4-883e-e670-08b8" type="max"/>
+        <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="b57e-29d8-e14f-52de"/>
       </constraints>
       <entryLinks>
         <entryLink id="e1b7-dfb6-e19d-05d9" name="Universal Triumphs" hidden="false" collective="false" import="true" targetId="5505-967d-b387-7aed" type="selectionEntryGroup"/>

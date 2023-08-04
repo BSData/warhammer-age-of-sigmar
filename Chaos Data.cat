@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" id="0339-0157-6910-d29c" name="Chaos Data" revision="228" battleScribeVersion="2.03" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="161" type="catalogue">
+<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" id="0339-0157-6910-d29c" name="Chaos Data" revision="230" battleScribeVersion="2.03" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="161" type="catalogue">
   <publications>
     <publication id="c9b2-1fe6-pubN65537" name="Battletome: Beasts of Chaos" publicationDate="2023"/>
     <publication id="6894-a70d-pubN65537" name="Chaos Battletome: Maggotkin of Nurgle"/>
@@ -848,16 +848,6 @@ At the start of the battleshock phase, for each disease point that an enemy unit
                 <profile id="0e7c-5e89-4e38-a528" name="Tamurkhan&apos;s Horde Army" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
                   <characteristics>
                     <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">After you have chosen the Maggotkin of Nurgle allegiance for your army, you can give it the TAMURKHAN&apos;S HORDE keyword. All MAGGOTKIN OF NURGLE units in your army gain that keyword (with the exception of named characters that do not already have the TAMURKHAN&apos;S HORDE keyword on their warscroll). All units with that keyword benefit from the Tamurkhan&apos;s Horde allegiance abilities, in addition to the allegiance abilities in Battletome: Maggotkin of Nurgle.</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="aaee-eb6e-dd4a-142a" name="Winds of Corruption" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
-                  <characteristics>
-                    <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">Subtract 1 from run and charge rolls for enemy units.</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="8892-f412-4372-8537" name="Shout of Command" hidden="false" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
-                  <characteristics>
-                    <characteristic name="Command Ability Details" typeId="1b71-4c83-4e8c-093f">You can use this command ability at the start of your charge phase. If you do so, pick 1 friendly TAMURKHAN&apos;S HORDE HERO. You can re-roll charge rolls for friendly TAMURKHAN&apos;S HORDE units while they are wholly within 14&quot; of that HERO in that phase.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -8390,7 +8380,7 @@ Replacement models added to this unit can take it above its maximum size.</chara
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b585-fe97-be2c-638f" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="1010"/>
+            <cost name="pts" typeId="points" value="100"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="eff9-9bce-0151-d901" name="Flensing Whips" hidden="false" collective="false" import="true" type="upgrade">
@@ -8519,9 +8509,10 @@ Replacement models added to this unit can take it above its maximum size.</chara
             <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, roll 2D6. Each enemy unit within range that has a Bravery characteristic of less than the roll suffers D3 mortal wounds (roll separately for each unit).</characteristic>
           </characteristics>
         </profile>
-        <profile id="18d4-ab97-b29a-ab2e" name="Excess of Violence" hidden="false" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
+        <profile id="18d4-ab97-b29a-ab2e" name="Excess of Violence" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Command Ability Details" typeId="1b71-4c83-4e8c-093f">Once per battle, in the combat phase, if any friendly units with this ability are on the battlefield, you can pick 1 different friendly HEDONITES OF SLAANESH unit that is wholly within 12&quot; of a friendly unit with this ability and that has not fought for the first time in that phase.  That unit can fight for a second time in that phase.  The strike-last effect applies to that unit when it fights for that second time.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Once per battle, in the combat phase, if any friendly units with this ability are on the battlefield, you can pick 1 different friendly HEDONITES OF SLAANESH unit that is wholly within 12\&quot; of a friendly unit with this ability and that has not fought for the first time in that phase. That unit can fight for a second time in that phase. The strike-last effect applies to that unit when it fights for that second time.
+</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -15519,6 +15510,28 @@ Before attempting to cast this spell, you can say that the caster will project t
         <entryLink id="a15d-0a3a-6b82-c5d0" name="Blades of Khorne Grand Strategy" hidden="false" collective="false" import="true" targetId="c9a1-8415-c9c4-a91a" type="selectionEntryGroup"/>
         <entryLink id="7bb4-5537-c870-d985" name="Tzeentch Grand Strategy" hidden="false" collective="false" import="true" targetId="652b-6271-0f3b-3de6" type="selectionEntryGroup"/>
       </entryLinks>
+      <modifiers>
+        <modifier type="set" field="ec25-aa2d-9bac-ad72" value="0">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="24d6-500b-7e3f-1470" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5c1d-d0be-e5cf-9fe3" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f2-a5fd-1371-927b" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="78f3-8a59-699a-61e8" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8c26-2422-34d3-31a5" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fc4e-6be8-ec51-c113" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1e36-e511-437b-5de8" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8af4-649e-9ee2-22ee" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f92d-bf15-574c-d04a" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="524e-8001-63ee-cdf7" type="instanceOf"/>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="f8ed-b018-a21b-e78c" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="4e47-2376-9338-8418" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntryGroup>
     <selectionEntryGroup id="9dc6-5556-9af5-0f5c" name="Nurgle Grand Strategy" hidden="false" collective="false" import="true">
       <modifiers>
