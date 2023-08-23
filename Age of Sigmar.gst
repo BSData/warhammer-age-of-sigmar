@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="165" battleScribeVersion="2.03" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" type="gameSystem">
+<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="166" battleScribeVersion="2.03" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" type="gameSystem">
   <publications>
     <publication id="e51d-b1a3-pubEC" name="The General&apos;s Handbook"/>
     <publication id="e51d-b1a3-pubEQ" name="Core Rules"/>
@@ -360,7 +360,6 @@
     <categoryEntry name="ANDTORIAN LOCUS" hidden="false" id="8f5e-e464-221b-4f06"/>
     <categoryEntry name="Champion" hidden="false" id="94b9-7eb-a81a-b892"/>
     <categoryEntry name="Ally" hidden="false" id="1111-11dc-777-cf35"/>
-    <categoryEntry name="Command Trait" hidden="false" id="f464-c41d-1526-506c"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry id="36b7-ee1e-0855-f23f" name="**Pitched Battle GHB 2021-22**" hidden="false">
@@ -2046,32 +2045,32 @@
       <modifiers>
         <modifier type="set" field="9c79-2464-c01c-4fe8" value="1000">
           <conditions>
-            <condition field="selections" scope="9f18-9ffb-0267-3e08" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fd9f-428a-177d-c765" type="equalTo"/>
+            <condition field="selections" scope="9f95-f6dc-e866-90a0" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fd9f-428a-177d-c765" type="equalTo"/>
           </conditions>
         </modifier>
         <modifier type="set" field="9c79-2464-c01c-4fe8" value="2000">
           <conditions>
-            <condition field="selections" scope="9f18-9ffb-0267-3e08" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6330-7561-7a32-0851" type="equalTo"/>
+            <condition field="selections" scope="9f95-f6dc-e866-90a0" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6330-7561-7a32-0851" type="equalTo"/>
           </conditions>
         </modifier>
         <modifier type="set" field="9c79-2464-c01c-4fe8" value="3000">
           <conditions>
-            <condition field="selections" scope="9f18-9ffb-0267-3e08" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1e63-0b49-ac04-321f" type="equalTo"/>
+            <condition field="selections" scope="9f95-f6dc-e866-90a0" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1e63-0b49-ac04-321f" type="equalTo"/>
           </conditions>
         </modifier>
         <modifier type="append" field="name" value="1,000">
           <conditions>
-            <condition field="selections" scope="9f18-9ffb-0267-3e08" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fd9f-428a-177d-c765" type="equalTo"/>
+            <condition field="selections" scope="9f95-f6dc-e866-90a0" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fd9f-428a-177d-c765" type="equalTo"/>
           </conditions>
         </modifier>
         <modifier type="append" field="name" value="2,000">
           <conditions>
-            <condition field="selections" scope="9f18-9ffb-0267-3e08" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6330-7561-7a32-0851" type="equalTo"/>
+            <condition field="selections" scope="9f95-f6dc-e866-90a0" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6330-7561-7a32-0851" type="equalTo"/>
           </conditions>
         </modifier>
         <modifier type="append" field="name" value="3000">
           <conditions>
-            <condition field="selections" scope="9f18-9ffb-0267-3e08" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1e63-0b49-ac04-321f" type="equalTo"/>
+            <condition field="selections" scope="9f95-f6dc-e866-90a0" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1e63-0b49-ac04-321f" type="equalTo"/>
           </conditions>
         </modifier>
         <modifier type="decrement" field="9c79-2464-c01c-4fe8" value="250">
@@ -2103,17 +2102,17 @@
           <modifiers>
             <modifier type="set" field="edf6-851c-83bc-df35" value="100">
               <conditions>
-                <condition field="selections" scope="9f18-9ffb-0267-3e08" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e860-9b1e-36bd-a54f" type="equalTo"/>
+                <condition field="selections" scope="9f95-f6dc-e866-90a0" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e860-9b1e-36bd-a54f" type="equalTo"/>
               </conditions>
             </modifier>
             <modifier type="set" field="edf6-851c-83bc-df35" value="400">
               <conditions>
-                <condition field="selections" scope="9f18-9ffb-0267-3e08" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cea8-e4b2-c44f-c7b4" type="equalTo"/>
+                <condition field="selections" scope="9f95-f6dc-e866-90a0" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cea8-e4b2-c44f-c7b4" type="equalTo"/>
               </conditions>
             </modifier>
             <modifier type="set" field="edf6-851c-83bc-df35" value="200">
               <conditions>
-                <condition field="selections" scope="9f18-9ffb-0267-3e08" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e9fc-6b3a-1b9a-e807" type="equalTo"/>
+                <condition field="selections" scope="9f95-f6dc-e866-90a0" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e9fc-6b3a-1b9a-e807" type="equalTo"/>
               </conditions>
             </modifier>
             <modifier type="set" field="edf6-851c-83bc-df35" value="520">
@@ -2123,12 +2122,12 @@
             </modifier>
             <modifier type="set" field="edf6-851c-83bc-df35" value="300">
               <conditions>
-                <condition field="selections" scope="9f18-9ffb-0267-3e08" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a3cc-3b86-4778-0b11" type="equalTo"/>
+                <condition field="selections" scope="9f95-f6dc-e866-90a0" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a3cc-3b86-4778-0b11" type="equalTo"/>
               </conditions>
             </modifier>
             <modifier type="set" field="edf6-851c-83bc-df35" value="600">
               <conditions>
-                <condition field="selections" scope="9f18-9ffb-0267-3e08" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ef67-15fb-487c-397a" type="equalTo"/>
+                <condition field="selections" scope="9f95-f6dc-e866-90a0" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ef67-15fb-487c-397a" type="equalTo"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -2159,27 +2158,27 @@
           <modifiers>
             <modifier type="set" field="a171-aecb-c6ee-b382" value="4">
               <conditions>
-                <condition field="selections" scope="9f18-9ffb-0267-3e08" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a3cc-3b86-4778-0b11" type="equalTo"/>
+                <condition field="selections" scope="9f95-f6dc-e866-90a0" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a3cc-3b86-4778-0b11" type="equalTo"/>
               </conditions>
             </modifier>
             <modifier type="set" field="a171-aecb-c6ee-b382" value="6">
               <conditions>
-                <condition field="selections" scope="9f18-9ffb-0267-3e08" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cea8-e4b2-c44f-c7b4" type="equalTo"/>
+                <condition field="selections" scope="9f95-f6dc-e866-90a0" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cea8-e4b2-c44f-c7b4" type="equalTo"/>
               </conditions>
             </modifier>
             <modifier type="set" field="a171-aecb-c6ee-b382" value="8">
               <conditions>
-                <condition field="selections" scope="9f18-9ffb-0267-3e08" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ef67-15fb-487c-397a" type="equalTo"/>
+                <condition field="selections" scope="9f95-f6dc-e866-90a0" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ef67-15fb-487c-397a" type="equalTo"/>
               </conditions>
             </modifier>
             <modifier type="set" field="a171-aecb-c6ee-b382" value="2">
               <conditions>
-                <condition field="selections" scope="9f18-9ffb-0267-3e08" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e860-9b1e-36bd-a54f" type="equalTo"/>
+                <condition field="selections" scope="9f95-f6dc-e866-90a0" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e860-9b1e-36bd-a54f" type="equalTo"/>
               </conditions>
             </modifier>
             <modifier type="set" field="a171-aecb-c6ee-b382" value="3">
               <conditions>
-                <condition field="selections" scope="9f18-9ffb-0267-3e08" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e9fc-6b3a-1b9a-e807" type="equalTo"/>
+                <condition field="selections" scope="9f95-f6dc-e866-90a0" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e9fc-6b3a-1b9a-e807" type="equalTo"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -2192,27 +2191,27 @@
           <modifiers>
             <modifier type="set" field="e9b8-f95e-0a39-6180" value="3">
               <conditions>
-                <condition field="selections" scope="9f18-9ffb-0267-3e08" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a3cc-3b86-4778-0b11" type="equalTo"/>
+                <condition field="selections" scope="9f95-f6dc-e866-90a0" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a3cc-3b86-4778-0b11" type="equalTo"/>
               </conditions>
             </modifier>
             <modifier type="set" field="e9b8-f95e-0a39-6180" value="4">
               <conditions>
-                <condition field="selections" scope="9f18-9ffb-0267-3e08" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cea8-e4b2-c44f-c7b4" type="equalTo"/>
+                <condition field="selections" scope="9f95-f6dc-e866-90a0" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cea8-e4b2-c44f-c7b4" type="equalTo"/>
               </conditions>
             </modifier>
             <modifier type="set" field="e9b8-f95e-0a39-6180" value="6">
               <conditions>
-                <condition field="selections" scope="9f18-9ffb-0267-3e08" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ef67-15fb-487c-397a" type="equalTo"/>
+                <condition field="selections" scope="9f95-f6dc-e866-90a0" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ef67-15fb-487c-397a" type="equalTo"/>
               </conditions>
             </modifier>
             <modifier type="set" field="e9b8-f95e-0a39-6180" value="2">
               <conditions>
-                <condition field="selections" scope="9f18-9ffb-0267-3e08" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e9fc-6b3a-1b9a-e807" type="equalTo"/>
+                <condition field="selections" scope="9f95-f6dc-e866-90a0" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e9fc-6b3a-1b9a-e807" type="equalTo"/>
               </conditions>
             </modifier>
             <modifier type="set" field="e9b8-f95e-0a39-6180" value="1">
               <conditions>
-                <condition field="selections" scope="9f18-9ffb-0267-3e08" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e860-9b1e-36bd-a54f" type="equalTo"/>
+                <condition field="selections" scope="9f95-f6dc-e866-90a0" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e860-9b1e-36bd-a54f" type="equalTo"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -2226,25 +2225,25 @@
               <conditionGroups>
                 <conditionGroup type="or">
                   <conditions>
-                    <condition field="selections" scope="9f18-9ffb-0267-3e08" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a3cc-3b86-4778-0b11" type="equalTo"/>
-                    <condition field="selections" scope="9f18-9ffb-0267-3e08" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e9fc-6b3a-1b9a-e807" type="equalTo"/>
+                    <condition field="selections" scope="9f95-f6dc-e866-90a0" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a3cc-3b86-4778-0b11" type="equalTo"/>
+                    <condition field="selections" scope="9f95-f6dc-e866-90a0" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e9fc-6b3a-1b9a-e807" type="equalTo"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
             </modifier>
             <modifier type="set" field="bcf8-36c4-cf5d-be60" value="1">
               <conditions>
-                <condition field="selections" scope="9f18-9ffb-0267-3e08" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e860-9b1e-36bd-a54f" type="equalTo"/>
+                <condition field="selections" scope="9f95-f6dc-e866-90a0" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e860-9b1e-36bd-a54f" type="equalTo"/>
               </conditions>
             </modifier>
             <modifier type="set" field="bcf8-36c4-cf5d-be60" value="3">
               <conditions>
-                <condition field="selections" scope="9f18-9ffb-0267-3e08" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cea8-e4b2-c44f-c7b4" type="equalTo"/>
+                <condition field="selections" scope="9f95-f6dc-e866-90a0" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cea8-e4b2-c44f-c7b4" type="equalTo"/>
               </conditions>
             </modifier>
             <modifier type="set" field="bcf8-36c4-cf5d-be60" value="4">
               <conditions>
-                <condition field="selections" scope="9f18-9ffb-0267-3e08" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ef67-15fb-487c-397a" type="equalTo"/>
+                <condition field="selections" scope="9f95-f6dc-e866-90a0" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ef67-15fb-487c-397a" type="equalTo"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -2258,27 +2257,27 @@
           <modifiers>
             <modifier type="set" field="5440-7c40-d1ba-32f7" value="3">
               <conditions>
-                <condition field="selections" scope="9f18-9ffb-0267-3e08" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a3cc-3b86-4778-0b11" type="equalTo"/>
+                <condition field="selections" scope="9f95-f6dc-e866-90a0" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a3cc-3b86-4778-0b11" type="equalTo"/>
               </conditions>
             </modifier>
             <modifier type="set" field="5440-7c40-d1ba-32f7" value="4">
               <conditions>
-                <condition field="selections" scope="9f18-9ffb-0267-3e08" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cea8-e4b2-c44f-c7b4" type="equalTo"/>
+                <condition field="selections" scope="9f95-f6dc-e866-90a0" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cea8-e4b2-c44f-c7b4" type="equalTo"/>
               </conditions>
             </modifier>
             <modifier type="set" field="5440-7c40-d1ba-32f7" value="6">
               <conditions>
-                <condition field="selections" scope="9f18-9ffb-0267-3e08" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ef67-15fb-487c-397a" type="equalTo"/>
+                <condition field="selections" scope="9f95-f6dc-e866-90a0" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ef67-15fb-487c-397a" type="equalTo"/>
               </conditions>
             </modifier>
             <modifier type="set" field="5440-7c40-d1ba-32f7" value="2">
               <conditions>
-                <condition field="selections" scope="9f18-9ffb-0267-3e08" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e9fc-6b3a-1b9a-e807" type="equalTo"/>
+                <condition field="selections" scope="9f95-f6dc-e866-90a0" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e9fc-6b3a-1b9a-e807" type="equalTo"/>
               </conditions>
             </modifier>
             <modifier type="set" field="5440-7c40-d1ba-32f7" value="1">
               <conditions>
-                <condition field="selections" scope="9f18-9ffb-0267-3e08" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e860-9b1e-36bd-a54f" type="equalTo"/>
+                <condition field="selections" scope="9f95-f6dc-e866-90a0" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e860-9b1e-36bd-a54f" type="equalTo"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -2291,38 +2290,33 @@
         <categoryLink id="b5bf-669d-967e-182a" name="Artefact" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
         <categoryLink id="ee66-984b-be0d-1c7" name="Allegiance" hidden="false" targetId="87e8-c095-f059-5f7b" primary="false">
           <constraints>
-            <constraint field="selections" scope="9f18-9ffb-0267-3e08" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4758-02da-3fde-e124" type="min"/>
+            <constraint field="selections" scope="9f95-f6dc-e866-90a0" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4758-02da-3fde-e124" type="min"/>
           </constraints>
         </categoryLink>
         <categoryLink id="9a6f-e030-df5e-d4c8" name="Game Options" hidden="false" targetId="1974-3f49-7f0b-8422" primary="false"/>
-        <categoryLink id="78a8-9a2-4446-73cc" name="Realm of Origin" hidden="false" targetId="5c6d-5384-bcb1-b474" primary="false">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" id="58f3-8b76-cb00-9173" type="max"/>
-          </constraints>
-        </categoryLink>
         <categoryLink id="b1c4-6b14-952f-d482" name="Malign Sorcery" hidden="false" targetId="eecb-ed66-d474-9ddd" primary="false">
           <modifiers>
             <modifier type="set" field="4c40-d24c-c3ca-44f7" value="3">
               <conditions>
-                <condition field="selections" scope="9f18-9ffb-0267-3e08" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cea8-e4b2-c44f-c7b4" type="equalTo"/>
+                <condition field="selections" scope="9f95-f6dc-e866-90a0" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cea8-e4b2-c44f-c7b4" type="equalTo"/>
               </conditions>
             </modifier>
             <modifier type="set" field="4c40-d24c-c3ca-44f7" value="4">
               <conditions>
-                <condition field="selections" scope="9f18-9ffb-0267-3e08" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ef67-15fb-487c-397a" type="equalTo"/>
+                <condition field="selections" scope="9f95-f6dc-e866-90a0" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ef67-15fb-487c-397a" type="equalTo"/>
               </conditions>
             </modifier>
             <modifier type="set" field="4c40-d24c-c3ca-44f7" value="1">
               <conditions>
-                <condition field="selections" scope="9f18-9ffb-0267-3e08" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e860-9b1e-36bd-a54f" type="equalTo"/>
+                <condition field="selections" scope="9f95-f6dc-e866-90a0" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e860-9b1e-36bd-a54f" type="equalTo"/>
               </conditions>
             </modifier>
             <modifier type="set" field="4c40-d24c-c3ca-44f7" value="2">
               <conditionGroups>
                 <conditionGroup type="or">
                   <conditions>
-                    <condition field="selections" scope="9f18-9ffb-0267-3e08" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e9fc-6b3a-1b9a-e807" type="equalTo"/>
-                    <condition field="selections" scope="9f18-9ffb-0267-3e08" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a3cc-3b86-4778-0b11" type="equalTo"/>
+                    <condition field="selections" scope="9f95-f6dc-e866-90a0" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e9fc-6b3a-1b9a-e807" type="equalTo"/>
+                    <condition field="selections" scope="9f95-f6dc-e866-90a0" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a3cc-3b86-4778-0b11" type="equalTo"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -2333,36 +2327,31 @@
           </constraints>
         </categoryLink>
         <categoryLink id="5c0d-4708-6be-d978" name="Command Points" hidden="false" targetId="8be8-3ccd-be93-b55e" primary="false"/>
-        <categoryLink id="4bf8-a38c-d51c-67e6" name="Realm of Battle" hidden="false" targetId="5e28-c4f1-4a92-b75c" primary="false">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" id="dd85-2633-62b6-03f0" type="max"/>
-          </constraints>
-        </categoryLink>
         <categoryLink id="8811-47c7-f9da-8593" name="Reinforced" hidden="false" targetId="1109-7ce6-b7a3-3a0c" primary="false">
           <modifiers>
             <modifier type="set" field="3535-87e2-5eb9-ca9d" value="3">
               <conditions>
-                <condition field="selections" scope="9f18-9ffb-0267-3e08" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a3cc-3b86-4778-0b11" type="equalTo"/>
+                <condition field="selections" scope="9f95-f6dc-e866-90a0" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a3cc-3b86-4778-0b11" type="equalTo"/>
               </conditions>
             </modifier>
             <modifier type="set" field="3535-87e2-5eb9-ca9d" value="4">
               <conditions>
-                <condition field="selections" scope="9f18-9ffb-0267-3e08" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cea8-e4b2-c44f-c7b4" type="equalTo"/>
+                <condition field="selections" scope="9f95-f6dc-e866-90a0" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cea8-e4b2-c44f-c7b4" type="equalTo"/>
               </conditions>
             </modifier>
             <modifier type="set" field="3535-87e2-5eb9-ca9d" value="6">
               <conditions>
-                <condition field="selections" scope="9f18-9ffb-0267-3e08" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ef67-15fb-487c-397a" type="equalTo"/>
+                <condition field="selections" scope="9f95-f6dc-e866-90a0" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ef67-15fb-487c-397a" type="equalTo"/>
               </conditions>
             </modifier>
             <modifier type="set" field="3535-87e2-5eb9-ca9d" value="2">
               <conditions>
-                <condition field="selections" scope="9f18-9ffb-0267-3e08" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e9fc-6b3a-1b9a-e807" type="equalTo"/>
+                <condition field="selections" scope="9f95-f6dc-e866-90a0" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e9fc-6b3a-1b9a-e807" type="equalTo"/>
               </conditions>
             </modifier>
             <modifier type="set" field="3535-87e2-5eb9-ca9d" value="1">
               <conditions>
-                <condition field="selections" scope="9f18-9ffb-0267-3e08" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e860-9b1e-36bd-a54f" type="equalTo"/>
+                <condition field="selections" scope="9f95-f6dc-e866-90a0" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e860-9b1e-36bd-a54f" type="equalTo"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -4026,9 +4015,7 @@ WIZARDS cannot be included in this battalion.</characteristic>
         </profile>
         <profile id="9d41-2d21-fce2-cede" name="Core Battalion: Wizard-finders of Andtor" hidden="false" typeId="75e0-a332-e4f5-bf36" typeName="Battalion Organisation">
           <characteristics>
-            <characteristic name="Required" typeId="eb5f-e9d2-e457-bff5">1 Champion
-1-2 Troops
-0-1 Monster</characteristic>
+            <characteristic name="Required" typeId="eb5f-e9d2-e457-bff5">2-3 Monsters</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -5871,6 +5858,7 @@ Arcane Bolt, Mystic Shield and spells to summon endless spells on your army rost
           </profiles>
           <categoryLinks>
             <categoryLink id="1e19-e5bd-256b-ae23" name="Artefact" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
+            <categoryLink targetId="4f53-8230-2f02-9639" id="2310-6652-631c-7b0f" primary="false" name="WIZARD"/>
           </categoryLinks>
           <entryLinks>
             <entryLink id="ab32-92a5-4fb0-d7ab" name="Arcane Bolt" hidden="false" collective="false" import="true" targetId="869c-168d-eba5-eacf" type="selectionEntry"/>
@@ -5939,9 +5927,6 @@ Arcane Bolt, Mystic Shield and spells to summon endless spells on your army rost
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
-          <categoryLinks>
-            <categoryLink targetId="f464-c41d-1526-506c" id="d20d-d9a0-603-d1b1" primary="false" name="Command Trait"/>
-          </categoryLinks>
         </selectionEntry>
         <selectionEntry id="3cb0-3862-b75f-2ee7" name="Chilled to the Bone" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -5957,9 +5942,6 @@ Arcane Bolt, Mystic Shield and spells to summon endless spells on your army rost
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
-          <categoryLinks>
-            <categoryLink targetId="f464-c41d-1526-506c" id="519e-4740-937c-3ed5" primary="false" name="Command Trait"/>
-          </categoryLinks>
         </selectionEntry>
         <selectionEntry id="6d31-4450-8ba4-2983" name="Eater of Magic" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -5975,9 +5957,6 @@ Arcane Bolt, Mystic Shield and spells to summon endless spells on your army rost
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
-          <categoryLinks>
-            <categoryLink targetId="f464-c41d-1526-506c" id="3a47-a5e8-8a8f-a02d" primary="false" name="Command Trait"/>
-          </categoryLinks>
         </selectionEntry>
         <selectionEntry id="949c-ae4b-898d-d906" name="Eye of the Blizzard" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -5993,9 +5972,6 @@ Arcane Bolt, Mystic Shield and spells to summon endless spells on your army rost
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
-          <categoryLinks>
-            <categoryLink targetId="f464-c41d-1526-506c" id="707c-48c6-2300-2ede" primary="false" name="Command Trait"/>
-          </categoryLinks>
         </selectionEntry>
       </selectionEntries>
       <modifiers>
@@ -6386,7 +6362,7 @@ Arcane Bolt, Mystic Shield and spells to summon endless spells on your army rost
           <modifiers>
             <modifier type="set" field="hidden" value="false">
               <conditions>
-                <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3b40-f0c2-a6e6-01ff" type="greaterThan"/>
+                <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="36b7-ee1e-0855-f23f" type="greaterThan"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -6537,7 +6513,7 @@ Arcane Bolt, Mystic Shield and spells to summon endless spells on your army rost
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup name="GHB 2023-24 Grand Strategies" hidden="false" id="2d2d-5cfd-ac8e-c402">
+        <selectionEntryGroup name="GHB 2023-24 Grand Strategies" hidden="true" id="2d2d-5cfd-ac8e-c402">
           <modifiers>
             <modifier type="set" field="hidden" value="false">
               <conditions>
@@ -6837,9 +6813,6 @@ Arcane Bolt, Mystic Shield and spells to summon endless spells on your army rost
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
-          <categoryLinks>
-            <categoryLink targetId="3564-4c26-10b4-d953" id="bc30-5c2e-4f96-fcb8" primary="false" name="Artefact"/>
-          </categoryLinks>
         </selectionEntry>
         <selectionEntry id="cbf6-c513-5a7f-5557" name="Gryph-feather Charm" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -6855,9 +6828,6 @@ Arcane Bolt, Mystic Shield and spells to summon endless spells on your army rost
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
-          <categoryLinks>
-            <categoryLink targetId="3564-4c26-10b4-d953" id="fd92-9758-d2c-7526" primary="false" name="Artefact"/>
-          </categoryLinks>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
@@ -7032,9 +7002,6 @@ Arcane Bolt, Mystic Shield and spells to summon endless spells on your army rost
               </characteristics>
             </profile>
           </profiles>
-          <categoryLinks>
-            <categoryLink targetId="f464-c41d-1526-506c" id="3019-8cbb-e2ab-d358" primary="false" name="Command Trait"/>
-          </categoryLinks>
         </selectionEntry>
         <selectionEntry id="35ce-c884-eb78-6fd3" name="Heroic Stature" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -7047,9 +7014,6 @@ Arcane Bolt, Mystic Shield and spells to summon endless spells on your army rost
               </characteristics>
             </profile>
           </profiles>
-          <categoryLinks>
-            <categoryLink targetId="f464-c41d-1526-506c" id="6a2a-111d-5802-e03b" primary="false" name="Command Trait"/>
-          </categoryLinks>
         </selectionEntry>
         <selectionEntry id="5fda-5dc6-7a6e-b464" name="Skilled Leader" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -7062,9 +7026,6 @@ Arcane Bolt, Mystic Shield and spells to summon endless spells on your army rost
               </characteristics>
             </profile>
           </profiles>
-          <categoryLinks>
-            <categoryLink targetId="f464-c41d-1526-506c" id="b38d-4cff-d299-9bb6" primary="false" name="Command Trait"/>
-          </categoryLinks>
         </selectionEntry>
         <selectionEntry id="bd8-98b8-b09e-b1d4" name="High Priest" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -7077,9 +7038,6 @@ Arcane Bolt, Mystic Shield and spells to summon endless spells on your army rost
               </characteristics>
             </profile>
           </profiles>
-          <categoryLinks>
-            <categoryLink targetId="f464-c41d-1526-506c" id="151-70db-b0a-eefd" primary="false" name="Command Trait"/>
-          </categoryLinks>
         </selectionEntry>
         <selectionEntry id="2af4-8ea9-bb1e-92be" name="Master of Magic" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -7092,9 +7050,6 @@ Arcane Bolt, Mystic Shield and spells to summon endless spells on your army rost
               </characteristics>
             </profile>
           </profiles>
-          <categoryLinks>
-            <categoryLink targetId="f464-c41d-1526-506c" id="dce4-e8e-b086-30aa" primary="false" name="Command Trait"/>
-          </categoryLinks>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
