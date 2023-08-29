@@ -2183,7 +2183,7 @@
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="8db2-19b1-d601-fd68" type="min"/>
+            <constraint field="selections" scope="roster" value="0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="8db2-19b1-d601-fd68" type="min"/>
             <constraint field="selections" scope="roster" value="-1" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="a171-aecb-c6ee-b382" type="max"/>
           </constraints>
         </categoryLink>
