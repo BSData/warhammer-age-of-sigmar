@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="166" battleScribeVersion="2.03" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" type="gameSystem">
+<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="167" battleScribeVersion="2.03" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" type="gameSystem">
   <publications>
     <publication id="e51d-b1a3-pubEC" name="The General&apos;s Handbook"/>
     <publication id="e51d-b1a3-pubEQ" name="Core Rules"/>
@@ -5858,7 +5858,6 @@ Arcane Bolt, Mystic Shield and spells to summon endless spells on your army rost
           </profiles>
           <categoryLinks>
             <categoryLink id="1e19-e5bd-256b-ae23" name="Artefact" hidden="false" targetId="3564-4c26-10b4-d953" primary="false"/>
-            <categoryLink targetId="4f53-8230-2f02-9639" id="2310-6652-631c-7b0f" primary="false" name="WIZARD"/>
           </categoryLinks>
           <entryLinks>
             <entryLink id="ab32-92a5-4fb0-d7ab" name="Arcane Bolt" hidden="false" collective="false" import="true" targetId="869c-168d-eba5-eacf" type="selectionEntry"/>
