@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" id="522a-d5b0-4c7e-321d" name="Order - Cities of Sigmar" revision="125" battleScribeVersion="2.03" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="159" type="catalogue">
+<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" id="522a-d5b0-4c7e-321d" name="Order - Cities of Sigmar" revision="128" battleScribeVersion="2.03" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="159" type="catalogue">
   <publications>
     <publication id="deec-d475-pubN65537" name="Grand Alliance: Order"/>
     <publication id="e440-9199-1072-a7a0" name="Cities of Sigmar Battletome"/>
@@ -5350,14 +5350,34 @@ Each time you make an unmodified wound roll of 6 for Precise Shots, change the R
         <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="eb9c-3335-9d86-4c8f" type="max"/>
       </constraints>
       <profiles>
-        <profile id="cc01-ef3a-7a0f-339f" name="Sanctify" hidden="false" typeId="eba0-4bf6-65fe-fdbc" typeName="Battle Tactic">
+        <profile name="Bring Full Arms to Bear" typeId="eba0-4bf6-65fe-fdbc" typeName="Battle Tactic" hidden="false" id="b6c5-3923-67fb-a16a">
           <characteristics>
-            <characteristic name="Description" typeId="f882-48d5-21a4-1787">Pick 1 friendly FLAGELLANTS unit that is not within 6&quot; of an objective wholly or partially within enemy territory. You complete this battle tactic if that unit is within 6&quot; of an objective wholly or partially within enemy territory at the end of this turn.</characteristic>
+            <characteristic name="Description" typeId="f882-48d5-21a4-1787">Pick 1 enemy unit. You complete this battle tactic if that unit is destroyed this turn and was suppressed as a result of the &apos;Suppressing Fire&apos; order.</characteristic>
           </characteristics>
         </profile>
-        <profile id="62c9-a404-1f9a-c1a0" name="Banners Held High" hidden="false" typeId="eba0-4bf6-65fe-fdbc" typeName="Battle Tactic">
+        <profile name="Raise the Banner" typeId="eba0-4bf6-65fe-fdbc" typeName="Battle Tactic" hidden="false" id="6492-5c24-e1c1-50a2">
           <characteristics>
-            <characteristic name="Description" typeId="f882-48d5-21a4-1787">Pick 2 objective markers on the battlefield that are not wholly within your territory and which are more than 12&quot; apart. You complete this battle tactic if a friendly Standard Bearer model is within 1&quot; of each objective marker at the end of this turn.</characteristic>
+            <characteristic name="Description" typeId="f882-48d5-21a4-1787">Pick 1 objective controlled by your opponent. You complete this tactic if you control that objective at the end of this turn and a friendly FREEGUILD COMMAND CORPS that includes a Great Herald contests it.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Iron Might" typeId="eba0-4bf6-65fe-fdbc" typeName="Battle Tactic" hidden="false" id="d727-9553-9582-74c5">
+          <characteristics>
+            <characteristic name="Description" typeId="f882-48d5-21a4-1787">You complete this battle tactic at the end of the turn if 3 or more friendly CITIES OF SIGMAR DUARDIN units fought this turn and no friendly CITIES OF SIGMAR DUARDIN units were destroyed this turn.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Mount the Charge" typeId="eba0-4bf6-65fe-fdbc" typeName="Battle Tactic" hidden="false" id="3fde-1537-b750-7b3">
+          <characteristics>
+            <characteristic name="Description" typeId="f882-48d5-21a4-1787">Pick 1 objective controlled by your opponent. You complete this tactic if you control that objective at the end of this turn and every friendly unit that contest it has a mount/s and made a charge move this turn.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Strike Without Warning" typeId="eba0-4bf6-65fe-fdbc" typeName="Battle Tactic" hidden="false" id="7724-5d4b-ff92-1e7c">
+          <characteristics>
+            <characteristic name="Description" typeId="f882-48d5-21a4-1787">You complete this battle tactic if 3 or more friendly CITIES OF SIGMAR AELF units made a charge move this turn.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Blackpowder Bombardment" typeId="eba0-4bf6-65fe-fdbc" typeName="Battle Tactic" hidden="false" id="2f93-6907-681b-726a">
+          <characteristics>
+            <characteristic name="Description" typeId="f882-48d5-21a4-1787">You complete this battle tactic if 3 or more enemy units are destroyed in your shooting phase this turn.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -5367,7 +5387,154 @@ Each time you make an unmodified wound roll of 6 for Precise Shots, change the R
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Allegiance: Cities of Sigmar" hidden="false" id="d18e-1efc-b6cb-c272">
       <selectionEntryGroups>
-        <selectionEntryGroup id="8ad3-261b-6505-66a8" name="Free Cities" hidden="false" collective="false" import="true" defaultSelectionEntryId="9966-bee3-772e-a50b"/>
+        <selectionEntryGroup id="8ad3-261b-6505-66a8" name="Free Cities" hidden="false" collective="false" import="true" defaultSelectionEntryId="9966-bee3-772e-a50b">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Hammerhal Aqsha" hidden="false" id="1e9b-d62b-eded-22c5">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6c22-9934-c130-8874"/>
+              </constraints>
+              <profiles>
+                <profile name="Officars of the Acadademae Martial" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait" hidden="false" id="7b64-6674-7bfd-5a19">
+                  <characteristics>
+                    <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">When orders are being given to friendly HAMMERHAL AQSHA HEROES, 1 of those units can  be given 2 orders instead of 1, but they must be different orders.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile name="The Magister of Hammerhal" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait" hidden="false" id="aa3a-1336-8691-7182">
+                  <characteristics>
+                    <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">If you command a Hammerhal Aqsha army that includes an allied AVENTIS FIRESTRIKE, at the start of your hero phase, you recieve 1 additional command point if that model is on the battlefield.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Tempest&apos;s Eye" hidden="false" id="c635-eccd-bd60-368d">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5334-553b-e447-1227"/>
+              </constraints>
+              <profiles>
+                <profile name="Rapid Redeploy" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait" hidden="false" id="8fd2-d243-a74c-de09">
+                  <characteristics>
+                    <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">Friendly TEMPEST&apos;S EYE and allied KHARADRON OVERLORDS SKYVESSEL units (including units embarked in them) can retreat and still shoot in the same turn.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Hallowheart" hidden="false" id="4e63-8962-b818-fb8e">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a09-ea5d-7b5f-a71b"/>
+              </constraints>
+              <profiles>
+                <profile name="Wild Magic" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait" hidden="false" id="a642-f89e-eb33-2d3e">
+                  <characteristics>
+                    <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">When you attempt to cast a spell with a friendly HALLOWHEART WIZARD, you can say that they will harness wild magic. If you do so, roll 3 dice instead of 2 for that casting roll. However, on an unmodified roll of 10+, the caster suffers D3 mortal wounds after any effects of the spell have been resolved.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Hammerhal Ghyra" hidden="false" id="7b49-3dbb-e23e-15bf">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="309e-b1f-f06f-da96"/>
+              </constraints>
+              <profiles>
+                <profile name="Bounty of the Verdant City" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait" hidden="false" id="96d7-a9d3-43c9-8d44">
+                  <characteristics>
+                    <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">When picking a Hammerhal Ghyra army, if the battlepack you are using has restrictions on the number of reinforced units you can include, you can include 1 additional CITIES OF SIGMAR reinforced unit in your army. In addition, friendly HAMMERHAL GHYRA HUMAN units have a Bravery characteristic of 10 while they have 10 or more models.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="The Living City" hidden="false" id="6a22-5586-5b7a-18ce">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="72f0-a807-8048-82b2"/>
+              </constraints>
+              <profiles>
+                <profile name="Hunters of the Hidden Paths" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait" hidden="false" id="4e52-e68-2211-dde6">
+                  <characteristics>
+                    <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">During deployment, instead of setting up a LIVING CITY unit or an allied SYLVANETH unit on the battlefield, you can place it to one side and say that it is set up in the Hidden Paths as a reserve unit. You can set up 1 unit in the Hidden Paths for each LIVING CITY unit you have set up on the battlefield. At the end of your movement phase, you can set up 1 or more of these reserve units on the battlefield, wholly within 6&quot; of the edge of the battlefield and more than 9&quot; from all enemy units.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Greywater Fastness" hidden="false" id="f6a-58f0-f6fa-b721">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5f80-140a-627d-f0a8"/>
+              </constraints>
+              <profiles>
+                <profile name="A Greywater Welcome" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait" hidden="false" id="d9bc-74ec-d081-f7b2">
+                  <characteristics>
+                    <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">You can use the All-out Attack command up to 3 times in your shooting phase. In addition, the first 2 times a friendly GREYWATER FASTENESS unit recieves the All-out Attack command in your shooting phase, a command point is not spent.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Lethis" hidden="false" id="120a-e90d-595b-3547">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ed04-956e-be7a-5855"/>
+              </constraints>
+              <profiles>
+                <profile name="The Raven Priests" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait" hidden="false" id="d4d3-2100-6868-1414">
+                  <characteristics>
+                    <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">Friendly LETHIS HUMAN HEROES that are not WIZARDS become PRIESTS. In addition, friendly LETHIS HUMAN PRIESTS and friendly allied STORMCAST ETERNALS PRIESTS know the Morrda&apos;s Embrace prayer in addition to any others they know.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile name="Morrda&apos;s Embrace" typeId="eed7-4131-0a52-0668" typeName="Prayer" hidden="false" id="2f5e-aebd-f1a5-132">
+                  <characteristics>
+                    <characteristic name="Answer Value" typeId="276a-ab7e-145d-3ffc">4</characteristic>
+                    <characteristic name="Range" typeId="fd81-4e98-28ac-092a">12&quot;</characteristic>
+                    <characteristic name="Description" typeId="0746-6cfb-5e15-53cb">If answered, pick 1 enemy unit within range and visible to the chanter. Ward rolls cannot be made for that enemy unit until the start of your next hero phase.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Vindicarum" hidden="false" id="1ba0-bb69-bab2-a63d">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8117-bfce-3698-a6c8"/>
+              </constraints>
+              <profiles>
+                <profile name="Unyielding Faith" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait" hidden="false" id="e38-1918-144d-d564">
+                  <characteristics>
+                    <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">Friendly VINDICARUM units can receive the Rally command while they are within 3&quot; of any enemy units. In addition, when a friendly VINDICARUM FLAGELLANDS unit receives the Rally command, you can return 1 slain model to that unit for each 5+ instead of each 6.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Excelsis" hidden="false" id="4c14-6e79-bd41-87b0">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b90f-46c1-8785-c865"/>
+              </constraints>
+              <profiles>
+                <profile name="Fearsome Breeds" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait" hidden="false" id="cbf2-2a1a-62df-f2db">
+                  <characteristics>
+                    <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">Add 1 to the Wounds characteristic of friendly EXCELSIS MONSTERS. In addition, each time a friendly EXCELSIS FREEGUILD CAVALIERS unit fights, after all of its attacks have been resolved, pick 1 enemy unit within 3&quot; of that FREEGUILD CAVALIERS unit and roll a dice for each model in that FREEGUILD CAVALIERS unit. For each roll of 4+, that enemy unit suffers 1 mortal wound.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Settler&apos;s Gain" hidden="false" id="68b8-4a61-8b8f-59cb">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="740d-faf5-51b-82fd"/>
+              </constraints>
+              <profiles>
+                <profile name="Expert Instruction" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait" hidden="false" id="9c79-3c77-43bb-dde4">
+                  <characteristics>
+                    <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">Add 1 to casting rolls for friendly SETTLER&apos;S GAIN WIZARDS. In addition, at the start of each hero phase, you receive 1 additional command point if the model picked to be your general is within 3&quot; of any friendly allied LUMINETH REALM-LORDS HEROES.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Misthåvn" hidden="false" id="8059-b35-a811-5f1c">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3262-d42c-b873-3fd5"/>
+              </constraints>
+              <profiles>
+                <profile name="Shadowed Approach" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait" hidden="false" id="b698-4beb-ef65-c455">
+                  <characteristics>
+                    <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">At the end of your hero phase, you can pick up to 3 different friendly MISTHÅVN units that are more than 12&quot; from all enemy units. Each of those units can make a move of up to D6&quot; (roll separately for each). If the unit has a mount/s, it can make a move of up to 2D&amp;&quot; instead of D6&quot;. Units can finish this move within 3&quot; of enemy units.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
       </selectionEntryGroups>
       <infoGroups>
         <infoGroup name="Orders" hidden="false" id="ff41-cb61-adf3-fc65">
@@ -5554,14 +5721,14 @@ At the end of the battle round, all orders are removed from play (including thos
         <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0d69-07ca-9994-050a" type="max"/>
       </constraints>
       <selectionEntries>
-        <selectionEntry id="e207-7ead-cfbd-c232" name="Mighty Beachhead" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="e207-7ead-cfbd-c232" name="Exemplar of the Academae Martial" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6491-455f-5f04-4dea" type="max"/>
           </constraints>
           <profiles>
-            <profile id="719f-38e2-1f18-8fc5" name="Mighty Beachhead" hidden="false" typeId="9c01-ec20-32c1-0948" typeName="Grand Strategy">
+            <profile name="Exemplar of the Academae Martial" typeId="9c01-ec20-32c1-0948" typeName="Grand Strategy" hidden="false" id="ebff-e23a-4a66-dad9">
               <characteristics>
-                <characteristic name="Description" typeId="53c8-cc18-16d1-e890">When the battle ends, you complete this grand strategy if you control more terrain features than your opponent. If your opponent has set up any faction terrain features, then they each count as 3 terrain features instead of 1 when determining if you have completed this grand strategy.</characteristic>
+                <characteristic name="Description" typeId="53c8-cc18-16d1-e890">When the battle ends, you complete this grand strategy if you completed at least 4 battle tactics and every battle tactic you completed this battle was from the &apos;For Honour and Glory&apos; list.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -5571,6 +5738,42 @@ At the end of the battle round, all orders are removed from play (including thos
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Reclaim for Sigmar!" hidden="false" id="2ec8-aaa1-ad2c-b968">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ab6a-5702-458e-83d5"/>
+          </constraints>
+          <profiles>
+            <profile name="Reclaim for Sigmar!" typeId="9c01-ec20-32c1-0948" typeName="Grand Strategy" hidden="false" id="499b-7b9e-fcdf-af88">
+              <characteristics>
+                <characteristic name="Description" typeId="53c8-cc18-16d1-e890">When the battle ends, you complete this grand strategy if there is at least 1 friendly CITIES OF SIGMAR unit wholly within each large quarter of the battlefield.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Hold the High Ground" hidden="false" id="a024-e702-aeb4-5195">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fb8c-58a1-f5d0-1679"/>
+          </constraints>
+          <profiles>
+            <profile name="Hold the High Ground" typeId="9c01-ec20-32c1-0948" typeName="Grand Strategy" hidden="false" id="5c57-3870-2fcc-ec8d">
+              <characteristics>
+                <characteristic name="Description" typeId="53c8-cc18-16d1-e890">When the battle ends, you complete this grand strategy if there are any friendly units within 12&quot; of the centre of the battlefield and no enemy units within 12&quot; of the centre of the battlefield.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Banners Held High" hidden="false" id="444-e4ce-45e-9da3">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4b90-c887-80e5-13eb"/>
+          </constraints>
+          <profiles>
+            <profile name="Banners Held High" typeId="9c01-ec20-32c1-0948" typeName="Grand Strategy" hidden="false" id="9212-720b-2f80-faf">
+              <characteristics>
+                <characteristic name="Description" typeId="53c8-cc18-16d1-e890">When the battle ends, each player totals the number of Standard Bearers and units with the TOTEM keyword in their army that are on the battlefield. If yours is higher, you complete this grand strategy.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
@@ -5797,20 +6000,378 @@ At the end of the battle round, all orders are removed from play (including thos
     </selectionEntryGroup>
     <selectionEntryGroup name="Cities of Sigmar Artefacts" hidden="false" id="9215-df2f-206d-77b9">
       <selectionEntryGroups>
-        <selectionEntryGroup name="Treasures of the Cities" hidden="false" id="d69a-150a-17e3-7035"/>
-        <selectionEntryGroup name="Ancestor Relics" hidden="false" id="ec42-781b-70bf-603d"/>
-        <selectionEntryGroup name="Exotic Armaments" hidden="false" id="629-3ef3-34ad-fc21"/>
+        <selectionEntryGroup name="Treasures of the Cities" hidden="false" id="d69a-150a-17e3-7035">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Glimmering" hidden="false" id="7813-a17f-b6dd-56ba">
+              <profiles>
+                <profile name="Glimmering" typeId="0ac4-aacb-2481-8e72" typeName="Artefact" hidden="false" id="6c07-d98f-2443-ee5b">
+                  <characteristics>
+                    <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Once per phase, you can re-roll 1 hit roll or wound roll for an attack made by the bearer, or 1 save roll for an attack that targets the bearer.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="371e-61f7-4d81-41f1"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Flask of Lethisian Darkwater" hidden="false" id="5eb7-d5bc-9a5b-1d81">
+              <profiles>
+                <profile name="Flask of Lethisian Darkwater" typeId="0ac4-aacb-2481-8e72" typeName="Artefact" hidden="false" id="6ca4-ab8-2a91-4512">
+                  <characteristics>
+                    <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Once per battle, at the end of any phase, you can say that the bearer will sip from the flask. If you do so, you can heal up to D6 wounds allocated to the bearer.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="884d-bc71-8dbf-ba3d"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Brazier of Holy Flame" hidden="false" id="f0e0-67c7-6eee-ca6f">
+              <profiles>
+                <profile name="Brazier of Holy Flame" typeId="0ac4-aacb-2481-8e72" typeName="Artefact" hidden="false" id="8923-5653-e499-c1ef">
+                  <characteristics>
+                    <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Roll a dice each time a model would flee from a friendly CITIES OF SIGMAR HUMAN unit that is wholly within 12&quot; of the bearer. On a 4+, that model does not flee.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2cab-4d78-e1f8-1c30"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Mastro Vivetti&apos;s Magnificent Macroscope" hidden="false" id="1d41-7e3c-71a5-6760">
+              <profiles>
+                <profile name="Mastro Vivetti&apos;s Magnificent Macroscope" typeId="0ac4-aacb-2481-8e72" typeName="Artefact" hidden="false" id="e601-68b1-7eb1-b718">
+                  <characteristics>
+                    <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Add 3&quot; to the Range characteristic of missile weapons used by friendly CITIES OF SIGMAR HUMAN units while they are wholly within 12&quot; of the bearer.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="789e-d296-ddc8-ff71"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Shemtek&apos;s Grimoire" hidden="false" id="f10-3894-2ab9-e5d0">
+              <profiles>
+                <profile name="Shemtek&apos;s Grimoire" typeId="0ac4-aacb-2481-8e72" typeName="Artefact" hidden="false" id="9d30-e820-c76a-c0b2">
+                  <characteristics>
+                    <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">WIZARD only. Once per battle, at the start of the enemy hero phase, you can say that the bearer will conjure a storm. If you do so, roll a D3. Until the end of that phase, subtract the amount of that roll from casting rolls made for enemy WIZARDS.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ed20-bd45-bcdc-4ce6"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Sigmarite Warhammer" hidden="false" id="88be-e048-b86d-4948">
+              <profiles>
+                <profile name="Sigmarite Warhammer" typeId="0ac4-aacb-2481-8e72" typeName="Artefact" hidden="false" id="dc21-1306-ec24-8092">
+                  <characteristics>
+                    <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Pick 1 of the bearer&apos;s melee weapons. Improve the Rend characteristic of that weapon by 1 and ad 1 to the Damage characteristic to that weapon.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="de90-a9b0-5049-9b08"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Ancestor Relics" hidden="false" id="ec42-781b-70bf-603d">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Book of Grudges" hidden="false" id="41ac-fa60-696a-a439">
+              <profiles>
+                <profile name="Book of Grudges" typeId="0ac4-aacb-2481-8e72" typeName="Artefact" hidden="false" id="ac51-b34d-77dd-3ad9">
+                  <characteristics>
+                    <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">At the start of your hero phase, if the bearer is more than 3&quot; from all enemy units, you can say they will read from the Book of Grudges. If you do so, pick 1 enemy unit that is visible to the bearer and roll a dice. On a 4+, a grudge is found. Add 1 to hit rolls for attacks made by friendly CITIES OF SIGMAR DUARDIN units that target that enemy unit until the next grudge is found.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b7ce-444f-ab29-1ab2"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Heavy Metal Ingot" hidden="false" id="485a-92cc-bad5-f8d2">
+              <profiles>
+                <profile name="Heavy Metal Ingot" typeId="0ac4-aacb-2481-8e72" typeName="Artefact" hidden="false" id="ff04-f78c-f35-a71f">
+                  <characteristics>
+                    <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Ignore negative modifiers to save rolls for attacks that target the bearer if the bearer has not made a move in the same turn.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ba8c-2eb1-9a1a-533d"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Piledriver Gauntlets" hidden="false" id="9d1b-d85b-5bc1-d037">
+              <profiles>
+                <profile name="Piledriver Gauntlets" typeId="0ac4-aacb-2481-8e72" typeName="Artefact" hidden="false" id="7c65-7657-3460-8708">
+                  <characteristics>
+                    <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">At the start of the combat phase, if this unit is within 3&quot; of any enemy units, you can say it will strike the ground. If you do so, the bearer cannot fight this phase; however, roll a dice for each enemy unit within 3&quot; of the bearer. On a 4+, the strike-last effect applies to that enemy unit until the end of the phase.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="98dd-cd61-9965-f644"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Exotic Armaments" hidden="false" id="629-3ef3-34ad-fc21">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Anklet of Epiphany" hidden="false" id="fc4e-9feb-6991-a488">
+              <profiles>
+                <profile name="Anklet of Epiphany" typeId="0ac4-aacb-2481-8e72" typeName="Artefact" hidden="false" id="f9ff-954-7114-b0e4">
+                  <characteristics>
+                    <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">WIZARD only. Add 6&quot; to the range of spells cast by the bearer while the bearer is wholly on a terrain feature and/or is contesting an objective.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f0b4-4202-d3c0-8e83"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Shadowshroud Ring" hidden="false" id="ba83-d285-3275-dd44">
+              <profiles>
+                <profile name="Shadowshroud Ring" typeId="0ac4-aacb-2481-8e72" typeName="Artefact" hidden="false" id="6078-bf9e-ae41-c3a3">
+                  <characteristics>
+                    <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Once per battle, at the start of your hero phase, you can say that the bearer will use the ring. If you do so, until the start of your next hero phase, the bearer is not visible to enemy units that are more than 12&quot; away.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ad44-3dc2-1f98-23ed"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Venomfang Blade" hidden="false" id="69e3-9473-f522-1f9">
+              <profiles>
+                <profile name="Venomfang Blade" typeId="0ac4-aacb-2481-8e72" typeName="Artefact" hidden="false" id="3db7-3c17-e0f-c82d">
+                  <characteristics>
+                    <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Pick 1 of the bearer&apos;s melee weapons. If the unmodified wound roll for an attack made with that weapon is 6, that attack causes D3 mortal wounds to the target in addition to any damage it inflicts.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1563-84ac-6083-59c1"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntryGroup>
     <selectionEntryGroup name="Cities of Sigmar Spell Lores" hidden="false" id="2d94-2cdd-f7f5-a50b">
       <selectionEntryGroups>
-        <selectionEntryGroup name="Lore of the Collegiate Arcane" hidden="false" id="21aa-f814-2c6e-c667"/>
-        <selectionEntryGroup name="Lore of Dark Sorcery" hidden="false" id="6daf-2600-f3f7-67a9"/>
+        <selectionEntryGroup name="Lore of the Collegiate Arcane" hidden="false" id="21aa-f814-2c6e-c667">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Fireball" hidden="false" id="8ad6-ee34-f7e1-c33b">
+              <profiles>
+                <profile name="Fireball" typeId="2e81-5e22-c6e1-73cb" typeName="Spell" hidden="false" id="8d5d-1906-83c-d2be">
+                  <characteristics>
+                    <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
+                    <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">18&quot;</characteristic>
+                    <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick 1 enemy unit within range and visible to the caster. For each roll of 6, that unit suffers 1 mortal wound.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="25bb-cb19-e4a1-9c0a"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Mistifying Miasma" hidden="false" id="99ed-e47b-796a-970f">
+              <profiles>
+                <profile name="Mystifying Miasma" typeId="2e81-5e22-c6e1-73cb" typeName="Spell" hidden="false" id="19ac-1e3-6b9f-98e4">
+                  <characteristics>
+                    <characteristic name="Casting Value" typeId="2508-b604-1258-a920">5</characteristic>
+                    <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">24&quot;</characteristic>
+                    <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick 1 enemy unit within range and visible to the caster. That unit cannot run until your next hero phase. In addition, subtract 2 from charge rolls for that unit until your next hero phase.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="25bb-cb19-e4a1-9c0b"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Pall of Doom" hidden="false" id="3541-9e49-5eb-ed12">
+              <profiles>
+                <profile name="Pall of Doom" typeId="2e81-5e22-c6e1-73cb" typeName="Spell" hidden="false" id="d89b-3353-a10a-d9b7">
+                  <characteristics>
+                    <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
+                    <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">18&quot;</characteristic>
+                    <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick 1 enemy unit within range and visible to the caster. That enemy unit cannot issue or receive commands until the start of your next hero phase.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4d70-da94-2fc8-2a1f"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Pha&apos;s Protection" hidden="false" id="93fe-b88-63-1032">
+              <profiles>
+                <profile name="Pha&apos;s Protection" typeId="2e81-5e22-c6e1-73cb" typeName="Spell" hidden="false" id="acaf-97b6-c313-55fa">
+                  <characteristics>
+                    <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
+                    <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">18&quot;</characteristic>
+                    <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick 1 friendly CITIES OF SIGMAR HUMAN unit wholly within range and visible to the caste. Until the start of your next hero phase, ignore modifiers (positive and negative) to save rolls for attacks that target that unit.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6605-ddb2-9f8b-7085"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Trasmutation of Lead" hidden="false" id="4f90-b673-bf56-4e8a">
+              <profiles>
+                <profile name="Transmutation of Lead" typeId="2e81-5e22-c6e1-73cb" typeName="Spell" hidden="false" id="c254-4de-bf15-29a">
+                  <characteristics>
+                    <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
+                    <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">12&quot;</characteristic>
+                    <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick 1 enemy unit within range and visible to the caster. Roll a number of dice equal to the number of models in that unit. For each roll that equals or exceeds that unit&apos;s Save characteristic, that unit suffers 1 mortal wound.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7960-7fcb-325d-7f6f"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Rain of Jade" hidden="false" id="304-111a-2fd6-36e5">
+              <profiles>
+                <profile name="Rain of Jade" typeId="2e81-5e22-c6e1-73cb" typeName="Spell" hidden="false" id="1c7b-af2f-d0c6-521b">
+                  <characteristics>
+                    <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
+                    <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">12&quot;</characteristic>
+                    <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick 1 friendly CITIES OF SIGMAR HUMAN model wholly within range and visible to the caster. Roll a dice for each wound currently allocated to that model. On a 5+, that wound is healed.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1c4c-d7a5-4992-3365"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Twin-tailed Comet" hidden="false" id="99bf-cc2f-8734-c005">
+              <profiles>
+                <profile name="Twin-tailed Comet" typeId="2e81-5e22-c6e1-73cb" typeName="Spell" hidden="false" id="adb9-beb7-f675-789e">
+                  <characteristics>
+                    <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
+                    <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">18&quot;</characteristic>
+                    <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick 1 enemy unit within range and visible to the caster. Draw a straight line between the caster and 1 model in that unit. Until the end of the turn, each friendly HUMAN unit the line passes over has a Bravery characteristic of 10. Then, the enemy unit you picked suffers D3 mortal wounds.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="de1d-ef12-3731-e738"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Wildform" hidden="false" id="b9cc-400-584-3de4">
+              <profiles>
+                <profile name="Wildform" typeId="2e81-5e22-c6e1-73cb" typeName="Spell" hidden="false" id="d00b-f5f2-3e3a-5066">
+                  <characteristics>
+                    <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
+                    <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">12&quot;</characteristic>
+                    <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick 1 friendly CITIES OF SIGMAR HUMAN unit that is wholly within range and visible to the caster. Until the start of your next hero phase, you can attempt a charge with that unit if it is within 18&quot; of the enemy instead of 12&quot;. In addition, roll 3D6 instead of 2D6 for charge rolls made for that unit until the start of your next hero phase.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="577f-d0b5-aad4-6638"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Lore of Dark Sorcery" hidden="false" id="6daf-2600-f3f7-67a9">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Sap Strength" hidden="false" id="ab62-6790-3187-faa3">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cc4d-46fc-1b5e-278f"/>
+              </constraints>
+              <profiles>
+                <profile name="Sap Strength" typeId="2e81-5e22-c6e1-73cb" typeName="Spell" hidden="false" id="cf3a-d4c-f85e-e4bb">
+                  <characteristics>
+                    <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
+                    <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">18&quot;</characteristic>
+                    <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick 1 enemy unit within range and visible to the caster. Subtract 1 from wound rolls for attacks made by that unit until the start of your next hero phase.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Tenebrael Blades" hidden="false" id="a0d8-ad7-5807-18df">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5b61-1cc9-490d-f3ff"/>
+              </constraints>
+              <profiles>
+                <profile name="Tenebrael Blades" typeId="2e81-5e22-c6e1-73cb" typeName="Spell" hidden="false" id="c5f-4791-cfd-e2cc">
+                  <characteristics>
+                    <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
+                    <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">9&quot;</characteristic>
+                    <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick 1 friendly CITIES OF SIGMAR AELF unit wholly within range and visible to the caster. Until the start of your next hero phase, when making save rolls for attacks made with melee weapons by that CITIES OF SIGMAR AELF unit, the target&apos;s Save characteristic is -.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Umbral Hex" hidden="false" id="aa78-6bf5-766a-79f6">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6462-582f-8d3b-45f0"/>
+              </constraints>
+              <profiles>
+                <profile name="Umbral Hex" typeId="2e81-5e22-c6e1-73cb" typeName="Spell" hidden="false" id="9f8-2c57-ee78-43be">
+                  <characteristics>
+                    <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
+                    <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">12&quot;</characteristic>
+                    <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick 1 enemy unit within range and visible to the caster. Until the start of your next hero phase, each time a battleshock roll is made for that unit, 2D6 must be rolled instead of 1 dice.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntryGroup>
     <selectionEntryGroup name="Cities of Sigmar Prayer Scriptures" hidden="false" id="8370-e5b-354d-2a34">
       <selectionEntryGroups>
-        <selectionEntryGroup name="Rune Lore" hidden="false" id="ada3-56c4-b28e-ba38"/>
+        <selectionEntryGroup name="Rune Lore" hidden="false" id="ada3-56c4-b28e-ba38">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Rune of Unfaltering Aim" hidden="false" id="c5f7-c2d3-8ff1-8625">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cfce-3d1-34fa-d777"/>
+              </constraints>
+              <profiles>
+                <profile name="Rune of Unfaltering Aim" typeId="eed7-4131-0a52-0668" typeName="Prayer" hidden="false" id="3172-87bf-c383-9c7d">
+                  <characteristics>
+                    <characteristic name="Answer Value" typeId="276a-ab7e-145d-3ffc">3</characteristic>
+                    <characteristic name="Range" typeId="fd81-4e98-28ac-092a">12&quot;</characteristic>
+                    <characteristic name="Description" typeId="0746-6cfb-5e15-53cb">If answered, pick 1 friendly CITIES OF SIGMAR DUARDIN unit wholly within range and visible to the chanter. Add 1 to hit rolls for attacks made with missile weapons by that unit until the start of your next hero phase.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Rune of Wrath and Ruin" hidden="false" id="6d9f-1749-7233-b404">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="521c-f2b-861b-ae64"/>
+              </constraints>
+              <profiles>
+                <profile name="Rune of Wrath and Ruin" typeId="eed7-4131-0a52-0668" typeName="Prayer" hidden="false" id="c34e-471d-199a-d120">
+                  <characteristics>
+                    <characteristic name="Answer Value" typeId="276a-ab7e-145d-3ffc">3</characteristic>
+                    <characteristic name="Range" typeId="fd81-4e98-28ac-092a">18&quot;</characteristic>
+                    <characteristic name="Description" typeId="0746-6cfb-5e15-53cb">If answered, pick 1 enemy unit within range and visible to the chanter. Roll 6 dice. For each roll of 5+, that enemy unit suffers 1 mortal wound. In addition, if a unit suffers 3 or more mortal wounds when this prayer is answered, that unit is ruined until the start of your next hero phase. While a unit is ruined, ignore positive modifiers to save rolls for attacks that target that unit.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Rune of Oath and Steel" hidden="false" id="bed0-bfc5-84f1-627f">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6392-fe31-21c0-baf2"/>
+              </constraints>
+              <profiles>
+                <profile name="Rune of Oath and Steel" typeId="eed7-4131-0a52-0668" typeName="Prayer" hidden="false" id="c8ea-ab3b-85b2-2dc0">
+                  <characteristics>
+                    <characteristic name="Answer Value" typeId="276a-ab7e-145d-3ffc">3</characteristic>
+                    <characteristic name="Range" typeId="fd81-4e98-28ac-092a">12&quot;</characteristic>
+                    <characteristic name="Description" typeId="0746-6cfb-5e15-53cb">If answered, pick 1 friendly CITIES OF SIGMAR DUARDIN unit wholly within range and visible to the chanter. Subtract 1 from wound rolls for attacks that target that unit until the start of your next hero phase.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntryGroup>
     <selectionEntryGroup name="Spell Lores" hidden="false" id="ad95-7edc-daee-ee36">
