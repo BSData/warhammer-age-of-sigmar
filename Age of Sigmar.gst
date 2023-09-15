@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="167" battleScribeVersion="2.03" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" type="gameSystem">
+<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="168" battleScribeVersion="2.03" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" type="gameSystem">
   <publications>
     <publication id="e51d-b1a3-pubEC" name="The General&apos;s Handbook"/>
     <publication id="e51d-b1a3-pubEQ" name="Core Rules"/>
@@ -3945,7 +3945,12 @@ That INCARNATE is wild.</characteristic>
         </profile>
         <profile id="8707-2381-bff5-c5bc" name="Led into the Maelstrom" hidden="false" typeId="eba0-4bf6-65fe-fdbc" typeName="Battle Tactic">
           <characteristics>
-            <characteristic name="Description" typeId="f882-48d5-21a4-1787">You complete this battle tactic if 1 or more friendly HEROES and 1 or more friendly Battleline units each made a charge move this turn and at least 1 of those units is within 3&quot; of an enemy unit at the end of the turn.</characteristic>
+            <characteristic name="Description" typeId="f882-48d5-21a4-1787">You complete this battle tactic if all of the following are true:
+- At least 2 friendly units charged this turn.
+- At least 1 friendly Battleline unit charged this turn.
+- At least 1 friendly HERO charged this turn.
+- At least 1 friendly Battleline or HERO unit that charged this turn is
+within 3&quot; of an enemy unit at the end of the turn.’</characteristic>
           </characteristics>
         </profile>
         <profile id="bdf3-5eb5-61b3-8989" name="Surround and Destroy" hidden="false" typeId="eba0-4bf6-65fe-fdbc" typeName="Battle Tactic">
@@ -6964,7 +6969,15 @@ Arcane Bolt, Mystic Shield and spells to summon endless spells on your army rost
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">10</characteristic>
                 <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">18&quot;</characteristic>
-                <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick 1 predatory endless spell or 1 Incarnate wholly within range and visible to the caster. The target immediately becomes wild and cannot be picked to be controlled or bonded for the rest of the battle</characteristic>
+                <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, resolve 1 of the following effects:
+• Pick 1 enemy INCARNATE within range and visible to the caster.
+Inflict D3 mortal wounds on the unit bonded to that INCARNATE.
+Then, that INCARNATE immediately loses a power level (to a
+minimum of 1) and becomes wild.
+• Pick 1 predatory endless spell within range and visible to the
+caster that was summoned by an enemy WIZARD. Inflict D3
+mortal wounds on that enemy WIZARD. Then, that endless spell
+is dispelled.’</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -6978,7 +6991,7 @@ Arcane Bolt, Mystic Shield and spells to summon endless spells on your army rost
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">12</characteristic>
                 <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">12&quot;</characteristic>
-                <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick 1 enemy unit within range and visible to the caster. That unit suffers 4D6 mortal wounds, but for each roll of 1, the caster also suffers D3 mortal wounds that cannot be negated. The range of this spell cannot be modified and must be measured from the caster, even if an ability would allow you to measure it from elsewhere.</characteristic>
+                <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick 1 enemy unit within range and visible to the caster. That unit suffers 4D6 mortal wounds, but for each roll of 1, the caster also suffers D3 mortal wounds that cannot be negated. The range of this spell cannot be modified and must be measured from the caster, even if an ability would allow you to measure it from elsewhere. This spell cannot be cast by a unit that was set up or moved earlier in this phase.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -7186,5 +7199,4 @@ Arcane Bolt, Mystic Shield and spells to summon endless spells on your army rost
       </characteristics>
     </profile>
   </sharedProfiles>
-  <xmlns>http://www.battlescribe.net/schema/gameSystemSchema</xmlns>
 </gameSystem>
