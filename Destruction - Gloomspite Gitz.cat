@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" id="750c-157c-3186-61d3" name="Destruction - Gloomspite Gitz" revision="131" battleScribeVersion="2.03" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="161" type="catalogue">
+<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" id="750c-157c-3186-61d3" name="Destruction - Gloomspite Gitz" revision="132" battleScribeVersion="2.03" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="161" type="catalogue">
   <publications>
     <publication id="36cf-97ac-7da2-5927" name="Battletome: Gloomspite Gitz 2023"/>
     <publication id="9487-1927-1352-5d84" name="Battletome: Gloomspite Gitz Errata, February 2023"/>
@@ -61,6 +61,13 @@
         <characteristicType id="9b5b-c24f-0e53-38a8" name="Strategem"/>
       </characteristicTypes>
     </profileType>
+    <profileType name="Wound Track Trugg" hidden="false" id="78da-6148-6157-45b2">
+      <characteristicTypes>
+        <characteristicType id="39d1-34c1-23a8-de39" name="Malfunctioning Leystone"/>
+        <characteristicType id="3d49-dd88-aecc-f41e" name="Ironshell Club"/>
+        <characteristicType id="9fbc-c5b2-eab5-16d6" name="Mighty Antlers"/>
+      </characteristicTypes>
+    </profileType>
   </profileTypes>
   <categoryEntries>
     <categoryEntry id="ef9c-701b-aad2-4e19" name="GROT" hidden="false"/>
@@ -113,6 +120,7 @@
     <categoryEntry id="9cc3-f779-d266-d466" name="MOONCLAN SHOOTAS" hidden="false"/>
     <categoryEntry id="47bf-74db-2d20-909d" name="MOONCLAN STABBAS" hidden="false"/>
     <categoryEntry id="20a2-f1cd-d89a-c62f" name="GOBBAPALOOZA" hidden="false"/>
+    <categoryEntry name="TRUGG" hidden="false" id="d381-1ff6-5e3-ee54"/>
   </categoryEntries>
   <entryLinks>
     <entryLink id="d894-1877-e48a-d85d" name="Madcap Shaman" hidden="false" collective="false" import="true" targetId="4456-155d-685b-bd18" type="selectionEntry"/>
@@ -535,6 +543,7 @@
     <entryLink id="ca3f-a345-52d4-bc92" name="Warscroll Battalion: Squiggly Hangerz-On" hidden="false" collective="false" import="true" targetId="217c-85be-e1f3-6722" type="selectionEntry"/>
     <entryLink id="9f64-034e-b605-1900" name="Regiment of Renown - Big Grikk&apos;s Kruleshots" hidden="false" collective="false" import="true" targetId="c9de-fb1a-e665-362f" type="selectionEntry"/>
     <entryLink import="true" name="Rabble-Rowza" hidden="false" type="selectionEntry" id="1279-7a3f-53c3-5395" targetId="1a31-bfa0-b7f-897e"/>
+    <entryLink import="true" name="Trugg, the Troggoth King" hidden="false" type="selectionEntry" id="f421-e567-909f-7864" targetId="4f62-33be-e388-3574"/>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="73c2-8a55-9faa-bb56" name="Squig Hoppers" publicationId="36cf-97ac-7da2-5927" page="104" hidden="false" collective="false" import="true" type="unit">
@@ -8331,6 +8340,139 @@ While a friendly MONSTER is goaded, it can run and still charge later in the tur
         <cost name="pts" typeId="points" value="100"/>
       </costs>
     </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Trugg, the Troggoth King" hidden="false" id="4f62-33be-e388-3574">
+      <costs>
+        <cost name="pts" typeId="points" value="320"/>
+      </costs>
+      <categoryLinks>
+        <categoryLink targetId="d381-1ff6-5e3-ee54" id="f91f-4a74-b936-2072" primary="false" name="TRUGG"/>
+        <categoryLink targetId="088b-3a27-03f7-8249" id="1a9f-65d8-cf7a-f419" primary="false" name="Unique"/>
+        <categoryLink targetId="fa0c-9044-2568-fa02" id="2096-799b-d648-a158" primary="false" name="Behemoth"/>
+        <categoryLink targetId="6c6b-e787-f9b8-a510" id="91e9-b6d0-b7ba-1115" primary="true" name="Leader"/>
+        <categoryLink targetId="19e1-59e0-e5c6-2e94" id="93ea-5fb-39f8-1738" primary="false" name="GLOOMSPITE GITZ"/>
+        <categoryLink targetId="d963-a5fb-c348-2371" id="ed6c-2f71-d85f-a93" primary="false" name="DESTRUCTION"/>
+        <categoryLink targetId="a84a-505c-8414-f995" id="d148-d296-c21e-f63d" primary="false" name="DANKHOLD TROGGBOSS"/>
+        <categoryLink targetId="b98e-fa5a-4d20-1b47" id="f80f-a4e3-72e1-e110" primary="false" name="DANKHOLD"/>
+        <categoryLink targetId="4e0e-664d-51ea-0929" id="b1be-bbe6-daf0-2f61" primary="false" name="HERO"/>
+        <categoryLink targetId="1959-9f6a-3056-913a" id="9217-76fc-9740-5527" primary="false" name="MONSTER"/>
+      </categoryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="2387-32b8-ee8d-ce35"/>
+      </constraints>
+      <entryLinks>
+        <entryLink id="1bcc-8989-ae43-f3b1" name="Battalions" hidden="false" collective="false" import="true" targetId="6e6f-024b-5a57-3e3d" type="selectionEntryGroup"/>
+        <entryLink id="da93-436b-8514-3f4" name="General" hidden="false" collective="false" import="true" targetId="3323-24e9-4b23-a6e7" type="selectionEntry">
+          <categoryLinks>
+            <categoryLink id="25cc-3303-df23-2134" name="MOONCLAN General" hidden="false" targetId="eb3a-be57-699b-d09f" primary="false"/>
+            <categoryLink id="e8ce-54a7-c4f3-f084" name="Unique General" hidden="false" targetId="fe3f-d230-7e2c-fba2" primary="false"/>
+          </categoryLinks>
+        </entryLink>
+      </entryLinks>
+      <profiles>
+        <profile name="Trugg, the Troggoth King" typeId="1960-ca8e-67ce-2014" typeName="Unit" hidden="false" id="786-77c3-3385-35fd">
+          <characteristics>
+            <characteristic name="Move" typeId="8655-6213-2824-1752">6&quot;</characteristic>
+            <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">16</characteristic>
+            <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">8</characteristic>
+            <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">4+</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="994e-191b-a849-459a" name="Warmaster" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If this unit is included in a Gloomspite Gitz army, it is treated as a general even if it is not the model picked to be the army&apos;s general.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Malfunctioning Leystone" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities" hidden="false" id="cdc3-ffc5-8ecc-1263">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the start of your hero phase, if this unit is on the battlefield, you can say that it will clobber its Malfunctioning Leystone. If you do so, roll a number of dice equal to the Malfunctioning Leystone value shown on this unit’s damage table. Each roll corresponds to one of the results below. You must pick 1 of the results you rolled and apply its effects. Results 2-6 last until this unit next clobbers its Malfunctioning Leystone.
+1. Glyph of Shyish: This unit suffers D3 mortal wounds.
+2. Glyph of Ghur: Add 1 to the Attacks characteristic of this unit’s melee weapons.
+3. Glyph of Aqshy: Improve the Rend characteristic of this unit’s melee weapons by 1.
+4. Glyph of Hysh: Roll a dice each time this unit receives a command. On a 2+, you receive 1 command point.
+5. Glyph of Ulgu: Only unmodified hit rolls of 6 for attacks made with missile weapons that target this unit score a hit.
+6. Glyph of Chamon: This unit has a ward of 5+.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Crushing Grip" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities" hidden="false" id="aefc-8f34-7f09-852c">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the end of the combat phase, pick 1 enemy model within 1&quot; of this unit and roll a dice. If the roll is equal to or greater than that model’s Wounds characteristic, it is slain.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="1cfa-987b-9302-6505" name="Regeneration" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the start of the hero phase, you can heal up to D3 wounds allocated to this unit.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Imbued with Life" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities" hidden="false" id="9cad-3c8e-9691-ffda">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">When you roll the dice that determines the number of wounds you can heal with this unit’s Regeneration ability, add 3 to the number of wounds you can heal.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Mighty Antlers" typeId="96df-ab28-5d72-bbb3" typeName="Weapon" hidden="false" id="4326-e766-bc9-287b">
+          <characteristics>
+            <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+            <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">3&quot;</characteristic>
+            <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">2</characteristic>
+            <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">*</characteristic>
+            <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">2+</characteristic>
+            <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-2</characteristic>
+            <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">D3+3</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Ironshell Club" typeId="96df-ab28-5d72-bbb3" typeName="Weapon" hidden="false" id="de06-6b43-4a1e-bd60">
+          <characteristics>
+            <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+            <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">3&quot;</characteristic>
+            <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">*</characteristic>
+            <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+            <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+            <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-2</characteristic>
+            <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">D6</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <selectionEntries>
+        <selectionEntry id="dd92-db77-30f4-1fb2" name="Damage Table" hidden="false" collective="false" import="true" type="upgrade" defaultAmount="">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fa42-6a43-22de-f7ae" type="min"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f884-114a-ca1-3c39" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="8214-3a81-1fa8-42f9" name="00-06" hidden="false" typeId="78da-6148-6157-45b2" typeName="Wound Track Trugg">
+              <characteristics>
+                <characteristic name="Malfunctioning Leystone" typeId="39d1-34c1-23a8-de39">4</characteristic>
+                <characteristic name="Ironshell Club" typeId="3d49-dd88-aecc-f41e">4</characteristic>
+                <characteristic name="Mighty Antlers" typeId="9fbc-c5b2-eab5-16d6">2:</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="2a15-b2b2-8108-1cfe" name="7-9" hidden="false" typeId="78da-6148-6157-45b2" typeName="Wound Track Trugg">
+              <characteristics>
+                <characteristic name="Malfunctioning Leystone" typeId="39d1-34c1-23a8-de39">3</characteristic>
+                <characteristic name="Ironshell Club" typeId="3d49-dd88-aecc-f41e">3</characteristic>
+                <characteristic name="Mighty Antlers" typeId="9fbc-c5b2-eab5-16d6">3:</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="6e31-3fc5-d2c3-6386" name="10-12" hidden="false" typeId="78da-6148-6157-45b2" typeName="Wound Track Trugg">
+              <characteristics>
+                <characteristic name="Malfunctioning Leystone" typeId="39d1-34c1-23a8-de39">2</characteristic>
+                <characteristic name="Ironshell Club" typeId="3d49-dd88-aecc-f41e">2</characteristic>
+                <characteristic name="Mighty Antlers" typeId="9fbc-c5b2-eab5-16d6">4+</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="fd7d-397a-84fb-3565" name="13+" hidden="false" typeId="78da-6148-6157-45b2" typeName="Wound Track Trugg">
+              <characteristics>
+                <characteristic name="Malfunctioning Leystone" typeId="39d1-34c1-23a8-de39">1</characteristic>
+                <characteristic name="Ironshell Club" typeId="3d49-dd88-aecc-f41e">1</characteristic>
+                <characteristic name="Mighty Antlers" typeId="9fbc-c5b2-eab5-16d6">5+</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="ef6a-94ec-582f-be56" name="Artefacts" hidden="false" collective="false" import="true">
@@ -8354,7 +8496,6 @@ While a friendly MONSTER is goaded, it can run and still charge later in the tur
       </constraints>
       <entryLinks>
         <entryLink id="760d-cbe4-ed71-37e5" name="Universal Artefacts of Power" hidden="false" collective="false" import="true" targetId="11c4-fd82-92a7-de8a" type="selectionEntryGroup"/>
-        <entryLink id="8e8f-7673-f231-2b7c" name="Realm Artefacts of Power" hidden="false" collective="false" import="true" targetId="37b0-af21-630c-d8af" type="selectionEntryGroup"/>
         <entryLink id="d4bb-abea-f672-320f" name="Glinty Gubbinz That Troggoths Found" hidden="false" collective="false" import="true" targetId="9bb1-b04c-1841-881a" type="selectionEntryGroup"/>
         <entryLink id="20c8-5a3b-dd7a-d7bd" name="Troglodytic Treasures" hidden="false" collective="false" import="true" targetId="41ab-c0e7-8a77-1441" type="selectionEntryGroup"/>
         <entryLink id="59b8-e564-ce83-815a" name="Venomous Valuables" hidden="false" collective="false" import="true" targetId="f763-0bc4-c5d5-d88b" type="selectionEntryGroup"/>
@@ -10143,5 +10284,4 @@ While a friendly MONSTER is goaded, it can run and still charge later in the tur
     <catalogueLink id="1315-4414-a9bc-9384" name="Endless Spells" targetId="f0db-356d-9f9f-662d" type="catalogue" importRootEntries="true"/>
     <catalogueLink id="aac1-6f4b-ce42-2e4f" name="Regiments of Renown" targetId="33cf-d309-6df3-50d6" type="catalogue" importRootEntries="true"/>
   </catalogueLinks>
-  <xmlns>http://www.battlescribe.net/schema/catalogueSchema</xmlns>
 </catalogue>
