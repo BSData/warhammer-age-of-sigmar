@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" id="0339-0157-6910-d29c" name="Chaos Data" revision="231" battleScribeVersion="2.03" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="161" type="catalogue">
+<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" id="0339-0157-6910-d29c" name="Chaos Data" revision="232" battleScribeVersion="2.03" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="161" type="catalogue">
   <publications>
     <publication id="c9b2-1fe6-pubN65537" name="Battletome: Beasts of Chaos" publicationDate="2023"/>
     <publication id="6894-a70d-pubN65537" name="Chaos Battletome: Maggotkin of Nurgle"/>
@@ -3991,6 +3991,15 @@ For each roll of 5+, add 1 to the tally of new diseases kept by Epidemius, to a 
         <entryLink id="a3bb-f6c0-ce0e-d46b" name="Battalions" hidden="false" collective="false" import="true" targetId="3301-c961-3e76-5cc7" type="selectionEntryGroup"/>
         <entryLink id="a733-a911-a242-d69c" name="Incarnate Bonding" hidden="false" collective="false" import="true" targetId="c890-acbd-0c80-55c9" type="selectionEntryGroup"/>
         <entryLink id="ae30-6e1f-090b-e576" name="Unique Enhancements" hidden="false" collective="false" import="true" targetId="d327-b794-76e4-172d" type="selectionEntryGroup"/>
+        <entryLink id="54c5-e74f-c711-68ea" name="Prayers" hidden="true" collective="false" import="true" targetId="44f1-249e-24ca-fadb" type="selectionEntryGroup">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4d98-bef9-c0cb-8138" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="190"/>
@@ -17080,6 +17089,19 @@ Before attempting to cast this spell, you can say that the caster will project t
               </conditionGroups>
             </modifier>
             <modifier type="add" field="category" value="bbc8-3154-75f0-f8e2"/>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="lessThan" value="1" field="selections" scope="roster" childId="812a-a8b3-7158-4adb" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
           </modifiers>
           <profiles>
             <profile id="6fa0-8cae-5e87-b39d" name="Slay Worthy Foes" publicationId="f3a5-ccd1-53af-9748" hidden="true" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
@@ -17120,11 +17142,22 @@ attacks made with melee weapons by that unit that target an enemy HERO or MONSTE
                         <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4e0e-664d-51ea-0929" type="instanceOf"/>
                       </conditions>
                     </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="lessThan" value="1" field="selections" scope="roster" childId="b541-3b22-08bb-d772" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="roster" childId="812a-a8b3-7158-4adb" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                      </conditions>
+                    </conditionGroup>
                   </conditionGroups>
                 </conditionGroup>
               </conditionGroups>
             </modifier>
             <modifier type="add" field="category" value="f22b-976f-fc38-366a"/>
+            <modifier type="set" value="1" field="1484-5568-afcf-32d3">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="b541-3b22-08bb-d772" shared="true" includeChildForces="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
           </modifiers>
           <profiles>
             <profile id="60db-451c-3aa4-f5c7" name="Let the Blood Flow" hidden="true" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
@@ -17146,10 +17179,32 @@ attacks made with melee weapons by that unit that target an enemy HERO or MONSTE
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
+          <constraints>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="1484-5568-afcf-32d3"/>
+          </constraints>
         </selectionEntry>
         <selectionEntry id="70c6-90c1-1bfb-f467" name="Mark of Tzeentch" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
             <modifier type="add" field="category" value="7d12-f4c5-3832-0f19"/>
+            <modifier type="set" value="1" field="a278-a03a-633c-2704">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="065f-c64d-3eb7-79d2" shared="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="lessThan" value="1" field="selections" scope="roster" childId="065f-c64d-3eb7-79d2" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="roster" childId="812a-a8b3-7158-4adb" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
           </modifiers>
           <infoLinks>
             <infoLink id="0fa7-e3a5-716c-76e7" name="Mark of Tzeentch" hidden="false" targetId="ec39-bb5d-e478-58e3" type="profile"/>
@@ -17166,10 +17221,32 @@ attacks made with melee weapons by that unit that target an enemy HERO or MONSTE
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
+          <constraints>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="a278-a03a-633c-2704"/>
+          </constraints>
         </selectionEntry>
         <selectionEntry id="ecc1-8de5-e07f-fc07" name="Mark of Nurgle" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
             <modifier type="add" field="category" value="dd77-19a5-28eb-cbec"/>
+            <modifier type="set" value="1" field="67ef-ee00-f7d7-7856">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="ff93-966b-c16d-8149" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="lessThan" value="1" field="selections" scope="roster" childId="ff93-966b-c16d-8149" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="roster" childId="812a-a8b3-7158-4adb" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
           </modifiers>
           <profiles>
             <profile id="2eb6-38a7-ad3b-ee06" name="Bestow Contagion" hidden="true" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
@@ -17191,10 +17268,32 @@ attacks made with melee weapons by that unit that target an enemy HERO or MONSTE
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
+          <constraints>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="67ef-ee00-f7d7-7856"/>
+          </constraints>
         </selectionEntry>
         <selectionEntry id="782a-8e0a-0b2f-8692" name="Mark of Slaanesh" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
             <modifier type="add" field="category" value="3963-2e99-aa63-c65e"/>
+            <modifier type="set" value="1" field="4031-8b9d-d873-e81f">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="d7d9-b723-6fdb-51cb" shared="true" includeChildForces="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="lessThan" value="1" field="selections" scope="roster" childId="d7d9-b723-6fdb-51cb" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="roster" childId="812a-a8b3-7158-4adb" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
           </modifiers>
           <profiles>
             <profile id="dfd0-4e3c-b3ea-69aa" name="Close in for the Kill" hidden="true" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
@@ -17216,6 +17315,9 @@ attacks made with melee weapons by that unit that target an enemy HERO or MONSTE
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
+          <constraints>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="4031-8b9d-d873-e81f"/>
+          </constraints>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>

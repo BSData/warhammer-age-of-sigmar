@@ -6932,7 +6932,7 @@ Arcane Bolt, Mystic Shield and spells to summon endless spells on your army rost
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
-    <selectionEntryGroup name="Lore of Primal Frost" hidden="false" id="a1be-2190-f61f-d59a">
+    <selectionEntryGroup name="Lore of Primal Frost" hidden="true" id="a1be-2190-f61f-d59a">
       <modifiers>
         <modifier type="set" field="hidden" value="false">
           <conditionGroups>
