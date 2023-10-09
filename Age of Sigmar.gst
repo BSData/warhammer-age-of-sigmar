@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="168" battleScribeVersion="2.03" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" type="gameSystem">
+<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="169" battleScribeVersion="2.03" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" type="gameSystem">
   <publications>
     <publication id="e51d-b1a3-pubEC" name="The General&apos;s Handbook"/>
     <publication id="e51d-b1a3-pubEQ" name="Core Rules"/>
@@ -360,6 +360,7 @@
     <categoryEntry name="ANDTORIAN LOCUS" hidden="false" id="8f5e-e464-221b-4f06"/>
     <categoryEntry name="Champion" hidden="false" id="94b9-7eb-a81a-b892"/>
     <categoryEntry name="Ally" hidden="false" id="1111-11dc-777-cf35"/>
+    <categoryEntry name="Army of Renown" hidden="false" id="a763-f425-1441-2df2"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry id="36b7-ee1e-0855-f23f" name="**Pitched Battle GHB 2021-22**" hidden="false">
@@ -2614,7 +2615,19 @@ When a primal magic dice is rolled as part of a casting roll, on an unmodified c
         <categoryLink id="b022-0116-e8fb-91ac" name="New CategoryLink" hidden="false" targetId="1974-3f49-7f0b-8422" primary="true"/>
       </categoryLinks>
     </entryLink>
-    <entryLink id="c958-5caf-b101-fdc6" name="Krondspine Incanate of Ghur" hidden="false" collective="false" import="true" targetId="0553-10ac-2bd9-01a5" type="selectionEntry"/>
+    <entryLink id="c958-5caf-b101-fdc6" name="Krondspine Incanate of Ghur" hidden="false" collective="false" import="true" targetId="0553-10ac-2bd9-01a5" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="a763-f425-1441-2df2" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </entryLink>
     <entryLink id="8b70-ad45-3372-56d9" name="Core Battalion: Bounty Hunters" hidden="false" collective="false" import="true" targetId="c7a2-43b2-11cd-3ad1" type="selectionEntry"/>
     <entryLink id="958c-2bc1-3022-47ab" name="Core Battalion: Expert Conquerors" hidden="false" collective="false" import="true" targetId="15e3-8b94-19b1-a6dc" type="selectionEntry"/>
     <entryLink id="2d24-1256-d55a-1a15" name="Battle Tactics (GHB2022-23 S1)" hidden="true" collective="false" import="true" targetId="ed60-d117-889c-8a84" type="selectionEntry">
