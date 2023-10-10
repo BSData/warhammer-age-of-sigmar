@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" id="0339-0157-6910-d29c" name="Chaos Data" revision="232" battleScribeVersion="2.03" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="161" type="catalogue">
+<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" id="0339-0157-6910-d29c" name="Chaos Data" revision="233" battleScribeVersion="2.03" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="161" type="catalogue">
   <publications>
     <publication id="c9b2-1fe6-pubN65537" name="Battletome: Beasts of Chaos" publicationDate="2023"/>
     <publication id="6894-a70d-pubN65537" name="Chaos Battletome: Maggotkin of Nurgle"/>
@@ -17126,6 +17126,17 @@ attacks made with melee weapons by that unit that target an enemy HERO or MONSTE
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
+          <infoGroups>
+            <infoGroup name="Mark of Chaos Abilities" hidden="true" id="a0c7-247b-6334-24ce">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="812a-a8b3-7158-4adb" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoGroup>
+          </infoGroups>
         </selectionEntry>
         <selectionEntry id="63f6-5366-89a2-7bd3" name="Mark of Khorne" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
@@ -17159,29 +17170,40 @@ attacks made with melee weapons by that unit that target an enemy HERO or MONSTE
               </conditions>
             </modifier>
           </modifiers>
-          <profiles>
-            <profile id="60db-451c-3aa4-f5c7" name="Let the Blood Flow" hidden="true" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
-              <modifiers>
-                <modifier type="set" field="hidden" value="false">
-                  <conditions>
-                    <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4e0e-664d-51ea-0929" type="instanceOf"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <characteristics>
-                <characteristic name="Command Ability Details" typeId="1b71-4c83-4e8c-093f">You can use this command ability at the start of your charge phase.  A friendly KHORNE SLAVES TO DARKNESS unit must receive this command.  After that unit makes a charge move, pick an enemy unit within 1&quot; and roll a dice.  On a 2+ that enemy unit suffers D3 mortal wounds.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <infoLinks>
-            <infoLink id="acd3-0456-96f2-e09b" name="Mark of Khorne" hidden="false" targetId="ace2-ea9a-725a-ca88" type="profile"/>
-          </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
           <constraints>
             <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="1484-5568-afcf-32d3"/>
           </constraints>
+          <infoGroups>
+            <infoGroup name="Mark of Chaos Abilities" hidden="true" id="784d-156b-72a4-8af3">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="812a-a8b3-7158-4adb" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <profiles>
+                <profile id="b62f-7250-e28f-dbe0" name="Let the Blood Flow" hidden="true" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
+                  <modifiers>
+                    <modifier type="set" field="hidden" value="false">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4e0e-664d-51ea-0929" type="instanceOf"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                  <characteristics>
+                    <characteristic name="Command Ability Details" typeId="1b71-4c83-4e8c-093f">You can use this command ability at the start of your charge phase.  A friendly KHORNE SLAVES TO DARKNESS unit must receive this command.  After that unit makes a charge move, pick an enemy unit within 1&quot; and roll a dice.  On a 2+ that enemy unit suffers D3 mortal wounds.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <infoLinks>
+                <infoLink id="71f-e0fb-1a23-858a" name="Mark of Khorne" hidden="false" targetId="ace2-ea9a-725a-ca88" type="profile"/>
+              </infoLinks>
+            </infoGroup>
+          </infoGroups>
         </selectionEntry>
         <selectionEntry id="70c6-90c1-1bfb-f467" name="Mark of Tzeentch" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
@@ -17206,24 +17228,35 @@ attacks made with melee weapons by that unit that target an enemy HERO or MONSTE
               </conditionGroups>
             </modifier>
           </modifiers>
-          <infoLinks>
-            <infoLink id="0fa7-e3a5-716c-76e7" name="Mark of Tzeentch" hidden="false" targetId="ec39-bb5d-e478-58e3" type="profile"/>
-            <infoLink id="7aa3-fc76-1580-baa1" name="Warp Reality" hidden="true" targetId="9a7e-ab8f-ee45-8d4c" type="profile">
-              <modifiers>
-                <modifier type="set" field="hidden" value="false">
-                  <conditions>
-                    <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4f53-8230-2f02-9639" type="instanceOf"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </infoLink>
-          </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
           <constraints>
             <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="a278-a03a-633c-2704"/>
           </constraints>
+          <infoGroups>
+            <infoGroup name="Mark of Chaos Abilities" hidden="true" id="bb0c-2ad0-6843-3b1f">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="812a-a8b3-7158-4adb" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <infoLinks>
+                <infoLink id="7f49-22f3-45b-93b5" name="Warp Reality" hidden="true" targetId="9a7e-ab8f-ee45-8d4c" type="profile">
+                  <modifiers>
+                    <modifier type="set" field="hidden" value="false">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4f53-8230-2f02-9639" type="instanceOf"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </infoLink>
+                <infoLink id="313e-6994-6bde-6570" name="Mark of Tzeentch" hidden="false" targetId="ec39-bb5d-e478-58e3" type="profile"/>
+              </infoLinks>
+            </infoGroup>
+          </infoGroups>
         </selectionEntry>
         <selectionEntry id="ecc1-8de5-e07f-fc07" name="Mark of Nurgle" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
@@ -17248,29 +17281,40 @@ attacks made with melee weapons by that unit that target an enemy HERO or MONSTE
               </conditionGroups>
             </modifier>
           </modifiers>
-          <profiles>
-            <profile id="2eb6-38a7-ad3b-ee06" name="Bestow Contagion" hidden="true" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
-              <modifiers>
-                <modifier type="set" field="hidden" value="false">
-                  <conditions>
-                    <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4e0e-664d-51ea-0929" type="instanceOf"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <characteristics>
-                <characteristic name="Command Ability Details" typeId="1b71-4c83-4e8c-093f">You can use this command ability at the start of the combat phase.  A friendly NURGLE SLAVES TO DARKNESS unit must receive this command.  After this unit fights for the first time in that phase, roll a dice for each enemy unit within 3&quot; of this unit.  On a 3+, that unit suffers D3 mortal wounds.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <infoLinks>
-            <infoLink id="3845-0008-2587-9c93" name="Mark of Nurgle" hidden="false" targetId="454a-dc83-8f39-434b" type="profile"/>
-          </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
           <constraints>
             <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="67ef-ee00-f7d7-7856"/>
           </constraints>
+          <infoGroups>
+            <infoGroup name="Mark of Chaos Abilities" hidden="true" id="20cd-f8e3-3915-2d9e">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="812a-a8b3-7158-4adb" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <profiles>
+                <profile id="c23c-2863-ecac-1a0c" name="Bestow Contagion" hidden="true" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
+                  <modifiers>
+                    <modifier type="set" field="hidden" value="false">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4e0e-664d-51ea-0929" type="instanceOf"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                  <characteristics>
+                    <characteristic name="Command Ability Details" typeId="1b71-4c83-4e8c-093f">You can use this command ability at the start of the combat phase.  A friendly NURGLE SLAVES TO DARKNESS unit must receive this command.  After this unit fights for the first time in that phase, roll a dice for each enemy unit within 3&quot; of this unit.  On a 3+, that unit suffers D3 mortal wounds.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <infoLinks>
+                <infoLink id="beb5-e554-a6fb-16a6" name="Mark of Nurgle" hidden="false" targetId="454a-dc83-8f39-434b" type="profile"/>
+              </infoLinks>
+            </infoGroup>
+          </infoGroups>
         </selectionEntry>
         <selectionEntry id="782a-8e0a-0b2f-8692" name="Mark of Slaanesh" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
@@ -17295,29 +17339,40 @@ attacks made with melee weapons by that unit that target an enemy HERO or MONSTE
               </conditionGroups>
             </modifier>
           </modifiers>
-          <profiles>
-            <profile id="dfd0-4e3c-b3ea-69aa" name="Close in for the Kill" hidden="true" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
-              <modifiers>
-                <modifier type="set" field="hidden" value="false">
-                  <conditions>
-                    <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4e0e-664d-51ea-0929" type="instanceOf"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <characteristics>
-                <characteristic name="Command Ability Details" typeId="1b71-4c83-4e8c-093f">You can use this command ability at the start of your charge phase.  A friendly SLAANESH SLAVES TO DARKNESS unit must receive this command.  That unit can run and still charge later in the same turn.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <infoLinks>
-            <infoLink id="aa1a-5540-375f-d1f3" name="Mark of Slaanesh" hidden="false" targetId="fc70-e18e-6421-e562" type="profile"/>
-          </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
           <constraints>
             <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="4031-8b9d-d873-e81f"/>
           </constraints>
+          <infoGroups>
+            <infoGroup name="Mark of Chaos Abilities" hidden="true" id="e095-a726-888d-c21c">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="812a-a8b3-7158-4adb" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <infoLinks>
+                <infoLink id="c734-9eed-a99c-1eba" name="Mark of Slaanesh" hidden="false" targetId="fc70-e18e-6421-e562" type="profile"/>
+              </infoLinks>
+              <profiles>
+                <profile id="a301-a01c-dc50-1715" name="Close in for the Kill" hidden="true" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
+                  <modifiers>
+                    <modifier type="set" field="hidden" value="false">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4e0e-664d-51ea-0929" type="instanceOf"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                  <characteristics>
+                    <characteristic name="Command Ability Details" typeId="1b71-4c83-4e8c-093f">You can use this command ability at the start of your charge phase.  A friendly SLAANESH SLAVES TO DARKNESS unit must receive this command.  That unit can run and still charge later in the same turn.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </infoGroup>
+          </infoGroups>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
