@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="169" battleScribeVersion="2.03" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" type="gameSystem">
+<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="170" battleScribeVersion="2.03" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" type="gameSystem">
   <publications>
     <publication id="e51d-b1a3-pubEC" name="The General&apos;s Handbook"/>
     <publication id="e51d-b1a3-pubEQ" name="Core Rules"/>
@@ -295,7 +295,7 @@
       </constraints>
     </categoryEntry>
     <categoryEntry id="2c4b-6186-2939-7f2b" name="BEASTS OF CHAOS" hidden="false"/>
-    <categoryEntry id="088b-3a27-03f7-8249" name="Unique" hidden="false"/>
+    <categoryEntry id="088b-3a27-03f7-8249" name="Unique" hidden="true"/>
     <categoryEntry id="2ff5-b7a1-655a-1655" name="GREATER DAEMON" hidden="false"/>
     <categoryEntry id="c34d-acb9-a4d9-74be" name="VOSTARG" hidden="false"/>
     <categoryEntry id="f60b-d58c-bfee-5aa7" name="GREYFYRD" hidden="false"/>
@@ -307,7 +307,7 @@
     <categoryEntry id="bc8a-9257-1601-6d62" name="Scenery" hidden="false"/>
     <categoryEntry id="a64e-c067-e836-3c21" name="LUMINETH REALM-LORDS" hidden="false"/>
     <categoryEntry id="5f5a-43ec-c3f8-f174" name="CITIES OF SIGMAR" hidden="false"/>
-    <categoryEntry id="fe3f-d230-7e2c-fba2" name="Unique General" hidden="false"/>
+    <categoryEntry id="fe3f-d230-7e2c-fba2" name="Unique General" hidden="true"/>
     <categoryEntry id="94f3-85a3-97e7-1f95" name="SETTLER&apos;S GAIN" hidden="false"/>
     <categoryEntry id="3d31-12d5-6735-011c" name="SOULBLIGHT GRAVELORDS" hidden="false"/>
     <categoryEntry id="c8b9-d6b2-34c8-79e5" name="VYRKOS" hidden="false"/>
@@ -315,7 +315,7 @@
     <categoryEntry id="d8da-21d5-cdf8-709f" name="AVENGORII" hidden="false"/>
     <categoryEntry id="1109-7ce6-b7a3-3a0c" name="Reinforced" hidden="false"/>
     <categoryEntry id="6575-7d6c-ce4d-ada4" name="Core Battalion" hidden="false"/>
-    <categoryEntry id="a8ed-ca35-24e0-cf2e" name="9 or less wounds Leader" hidden="false"/>
+    <categoryEntry id="a8ed-ca35-24e0-cf2e" name="9 or less wounds Leader" hidden="true"/>
     <categoryEntry id="787f-7260-bb51-08c8" name="Legends" hidden="false"/>
     <categoryEntry id="fa69-cc30-064b-f0ce" name="Allegiance KO" hidden="true"/>
     <categoryEntry id="7eab-14e8-d1c1-0117" name="Zainthar Kai" hidden="false"/>
