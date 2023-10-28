@@ -162,6 +162,9 @@
     <categoryEntry id="daf2-c09f-c5dd-1a21" name="DOMITAN&apos;S STORMCOVEN" hidden="false"/>
     <categoryEntry id="f8eb-76b1-5884-5036" name="QUESTOR SOULSWORN" hidden="false"/>
     <categoryEntry name="IONUS CRYPTBORN" hidden="false" id="f195-124b-1fa5-6d0b"/>
+    <categoryEntry name="NEAVE&apos;S COMPANIONS" hidden="false" id="4241-c8a0-30c6-7f77"/>
+    <categoryEntry name="THE BLACKTALONS" hidden="false" id="d43-ec51-42bb-6cfc"/>
+    <categoryEntry name="LORAI" hidden="false" id="52b5-4386-e267-574f"/>
   </categoryEntries>
   <sharedSelectionEntries>
     <selectionEntry id="c6a3-2acf-1e46-3896" name="Allegiance" hidden="false" collective="false" import="true" type="unit">
@@ -4952,29 +4955,35 @@ If you pick an enemy unit, roll a dice. On a 2+, the target suffers D3 mortal wo
     </selectionEntry>
     <selectionEntry id="e72f-58fe-d697-6be6" name="Neave Blacktalon" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
-        <modifier type="add" field="category" value="5cb0-860c-916b-5bcd">
-          <conditions>
-            <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="d43d-da9f-4261-e201" type="equalTo"/>
-          </conditions>
+        <modifier type="set" value="1" field="35e0-d302-2651-86db">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="28c-2340-487e-961f" shared="true" includeChildSelections="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="b3db-711-6ff9-6a52" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="db80-1e2e-fd44-1964" type="max"/>
+        <constraint type="min" value="0" field="selections" scope="roster" shared="true" id="35e0-d302-2651-86db" includeChildSelections="true"/>
       </constraints>
       <profiles>
-        <profile id="c2a2-94b7-8e4f-d9ec" name="Lightning-fast Strike" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+        <profile id="c2a2-94b7-8e4f-d9ec" name="Justice from Azyr" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Add D3 to the Attacks characteristic of this unit&apos;s Whirlwind Axes if this unit made a charge move in the same turn.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Add 1 to the Damage characteristic of this unit&apos;s Whirlwind Axes for attacks that target an enemy HERO.</characteristic>
           </characteristics>
         </profile>
-        <profile id="9d8a-8fb4-43ca-8a49" name="Tireless Hunter" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+        <profile id="9d8a-8fb4-43ca-8a49" name="Sigmar&apos;s Assassin" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This unit can run and still shoot later in the turn.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This unit can run and still shoot and/or chargelater in the turn.</characteristic>
           </characteristics>
         </profile>
         <profile id="913a-0cfb-00e9-bd78" name="Neave Blacktalon" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
           <characteristics>
-            <characteristic name="Move" typeId="8655-6213-2824-1752">6&quot;</characteristic>
+            <characteristic name="Move" typeId="8655-6213-2824-1752">8&quot;</characteristic>
             <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">6</characteristic>
             <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">10</characteristic>
             <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">3+</characteristic>
@@ -4982,7 +4991,7 @@ If you pick an enemy unit, roll a dice. On a 2+, the target suffers D3 mortal wo
         </profile>
         <profile id="3693-e38a-1a14-f678" name="Windrider" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Instead of picking this unit to make a normal move or retreat, you can say that it will ride the winds aetheric. If you do so, remove this unit from the battlefield and set it up again on the battlefield more than 1&quot; from all terrain features and objectives and more than 9&quot; from all enemy units.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">In your combat phase, immediately after this unit has fought and slain models (if any) have been removed from play, you can roll a dice. On a 2+, remove this unit from the battlefield and set it up again more than 3&quot; from all enemy units and wholly within 3&quot; of a friendly THE BLACKTALONS unit that is more than 3&quot; from all enemy units.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -5031,11 +5040,11 @@ If you pick an enemy unit, roll a dice. On a 2+, the target suffers D3 mortal wo
               <characteristics>
                 <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
                 <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
-                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">8</characteristic>
-                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">7</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">2+</characteristic>
                 <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
-                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
-                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-2</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">2</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -5051,11 +5060,10 @@ If you pick an enemy unit, roll a dice. On a 2+, the target suffers D3 mortal wo
             <categoryLink id="c630-a1ea-a2f4-4929" name="Unique General" hidden="false" targetId="fe3f-d230-7e2c-fba2" primary="false"/>
           </categoryLinks>
         </entryLink>
-        <entryLink id="41ac-7394-a634-e232" name="General&apos;s Adjutant" hidden="false" collective="false" import="true" targetId="65e4-9e34-5cf6-2bec" type="selectionEntry"/>
         <entryLink id="c847-30f2-237a-8c96" name="Battalions" hidden="false" collective="false" import="true" targetId="4165-f8c8-6f84-e4ca" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="110"/>
+        <cost name="pts" typeId="points" value="340"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="66fb-5872-a345-2ad5" name="Vandus Hammerhand" hidden="false" collective="false" import="true" type="unit">
@@ -12321,6 +12329,197 @@ At the start of the enemy hero phase, you can pick 1 endless spell or invocati
           </profiles>
         </infoGroup>
       </infoGroups>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Neave&apos;s Companions" hidden="false" id="b3db-711-6ff9-6a52">
+      <categoryLinks>
+        <categoryLink targetId="065e-fda7-fd27-1f40" id="850e-e002-e3f3-736" primary="true" name="Other"/>
+        <categoryLink targetId="b970-b3bf-e1a4-a6fc" id="4872-33a2-d852-40e6" primary="false" name="ORDER"/>
+        <categoryLink targetId="b396-0600-80d6-cee9" id="341c-469e-c056-2d33" primary="false" name="STORMCAST ETERNALS"/>
+        <categoryLink targetId="cf54-4907-2f8d-08bb" id="f175-5f66-4cf9-b9be" primary="false" name="HAMMERS OF SIGMAR"/>
+        <categoryLink targetId="d43-ec51-42bb-6cfc" id="e4bb-fc8e-a18d-19d" primary="false" name="THE BLACKTALONS"/>
+        <categoryLink targetId="4241-c8a0-30c6-7f77" id="3bf5-5ed9-dae4-8e95" primary="false" name="NEAVE&apos;S COMPANIONS"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="baf1-7148-798a-514b" name="Battalions" hidden="false" collective="false" import="true" targetId="4165-f8c8-6f84-e4ca" type="selectionEntryGroup"/>
+      </entryLinks>
+      <modifiers>
+        <modifier type="set" value="1" field="d666-6413-d1fb-6cad">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="28c-2340-487e-961f" shared="true" includeChildSelections="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="7d2b-3d65-f016-dd26" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint type="min" value="0" field="selections" scope="roster" shared="true" id="d666-6413-d1fb-6cad" includeChildSelections="true"/>
+        <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="fd50-7731-6948-8347" type="max"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Elite" hidden="false" type="profile" id="4b7-2c18-975e-6f0" targetId="46ca-dc4f-b7a1-726d"/>
+      </infoLinks>
+      <profiles>
+        <profile name="Neave&apos;s Companions" typeId="1960-ca8e-67ce-2014" typeName="Unit" hidden="false" id="763c-1d6f-a2b0-dc83">
+          <characteristics>
+            <characteristic name="Move" typeId="8655-6213-2824-1752">4&quot;</characteristic>
+            <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">2</characteristic>
+            <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">9</characteristic>
+            <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">3+</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Shield of Azyr" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities" hidden="false" id="2fae-129d-2980-f323">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If a friendly THE BLACKTALONS HERO is within 3&quot; of this unit, before you allocate a wound or mortal wound to this HERO, or instead of making a ward roll for a wound or mortal wound that would be allocated to that HERO, roll a dice. On a 2+, that wound or mortal wound is allocated to this unit instead of that HERO and cannot be negated.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Consummate Aim" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities" hidden="false" id="b397-b5e9-81f-9f5e">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Each time this unit shoots with its Typhoon Crossbow, if the target is an enemy HERO, you can choose the Headshot weapon characteristics. Otherwise, use the Rapid Shot weapon characteristics.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Typhoon Crossbow: Rapid Shot" typeId="96df-ab28-5d72-bbb3" typeName="Weapon" hidden="false" id="4a2d-39ee-b4ee-f1df">
+          <characteristics>
+            <characteristic name="Type" typeId="655c-362e-a663-3e50">Missile</characteristic>
+            <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">18&quot;</characteristic>
+            <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">6</characteristic>
+            <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+            <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+            <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
+            <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Typhoon Crossbow: Headshot" typeId="96df-ab28-5d72-bbb3" typeName="Weapon" hidden="false" id="6fab-1f6a-981-77e7">
+          <characteristics>
+            <characteristic name="Type" typeId="655c-362e-a663-3e50">Missile</characteristic>
+            <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">18&quot;</characteristic>
+            <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">1</characteristic>
+            <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">2+</characteristic>
+            <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+            <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-3</characteristic>
+            <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">3</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Celestial Talons" typeId="96df-ab28-5d72-bbb3" typeName="Weapon" hidden="false" id="8bcf-cbf7-8614-1d90">
+          <characteristics>
+            <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+            <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
+            <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">2</characteristic>
+            <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
+            <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+            <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
+            <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Stormcharged Warhammer" typeId="96df-ab28-5d72-bbb3" typeName="Weapon" hidden="false" id="cc8f-378f-cf93-25c4">
+          <characteristics>
+            <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+            <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">2&quot;</characteristic>
+            <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">4</characteristic>
+            <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+            <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">2+</characteristic>
+            <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-2</characteristic>
+            <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">2</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Cyclone Sword and Axe" typeId="96df-ab28-5d72-bbb3" typeName="Weapon" hidden="false" id="2e9f-b668-874c-5079">
+          <characteristics>
+            <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+            <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
+            <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">6</characteristic>
+            <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+            <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+            <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
+            <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Lorai, Child of the Abyss" hidden="false" id="28c-2340-487e-961f">
+      <modifiers>
+        <modifier type="set" value="1" field="4c93-b122-f2cb-ace5">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="e72f-58fe-d697-6be6" shared="true" includeChildSelections="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="b3db-711-6ff9-6a52" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint type="min" value="0" field="selections" scope="roster" shared="true" id="4c93-b122-f2cb-ace5" includeChildSelections="true" includeChildForces="true"/>
+        <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="2dae-7a50-445e-b857" type="max"/>
+      </constraints>
+      <entryLinks>
+        <entryLink id="23e9-4cd6-8ebd-a59" name="Battalions" hidden="false" collective="false" import="true" targetId="4165-f8c8-6f84-e4ca" type="selectionEntryGroup"/>
+        <entryLink id="2db6-c2da-2f2a-2417" name="General" hidden="false" collective="false" import="true" targetId="4e90-bcab-e5fd-60f1" type="selectionEntry">
+          <categoryLinks>
+            <categoryLink id="78ab-7d28-367f-59e9" name="6_under_wounds" hidden="false" targetId="e4e2-6076-dafa-ec2c" primary="false"/>
+            <categoryLink id="3c7b-adcb-aae-e3d4" name="Unique General" hidden="false" targetId="fe3f-d230-7e2c-fba2" primary="false"/>
+          </categoryLinks>
+        </entryLink>
+      </entryLinks>
+      <categoryLinks>
+        <categoryLink targetId="b970-b3bf-e1a4-a6fc" id="ea2-2ce1-e504-c5a3" primary="false" name="ORDER"/>
+        <categoryLink targetId="6ec4-4931-4d7f-006b" id="1300-4ff5-3a2-aaab" primary="false" name="IDONETH DEEPKIN"/>
+        <categoryLink targetId="7fe9-bc03-2c82-0a00" id="60bb-435f-507f-7f63" primary="false" name="AELF"/>
+        <categoryLink targetId="7d6b-20c2-e209-d69e" id="33c1-d336-440d-6e4d" primary="false" name="IONRACH"/>
+        <categoryLink targetId="4e0e-664d-51ea-0929" id="fa27-7850-d47-940" primary="false" name="HERO"/>
+        <categoryLink targetId="4f53-8230-2f02-9639" id="dbdc-e01e-3cfa-67f6" primary="false" name="WIZARD"/>
+        <categoryLink targetId="d297-61a8-974f-1e19" id="f8bb-3e10-158a-3692" primary="false" name="ISHARANN"/>
+        <categoryLink targetId="813c-f5d5-7de1-1313" id="4e38-9958-fedb-bb76" primary="false" name="SOULSCRYER"/>
+        <categoryLink targetId="d43-ec51-42bb-6cfc" id="452-78aa-ff2f-2f02" primary="false" name="THE BLACKTALONS"/>
+        <categoryLink targetId="52b5-4386-e267-574f" id="e6c9-dfab-c9a4-c810" primary="false" name="LORAI"/>
+        <categoryLink targetId="065e-fda7-fd27-1f40" id="9c5d-58ff-301f-d429" primary="true" name="Other"/>
+      </categoryLinks>
+      <profiles>
+        <profile name="Wizard" typeId="f55d-ee3a-1597-110f" typeName="Magic" hidden="false" id="d0c4-f223-6f3-9440">
+          <characteristics>
+            <characteristic name="Cast/Unbind" typeId="8294-f605-2c0f-8f92">1/1</characteristic>
+            <characteristic name="Spells Known" typeId="dc9c-47d3-6931-859c">Arcane Bolt, Mystic Shield, Nebulous Sea-fog</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Lorai, Child of the Abyss" typeId="1960-ca8e-67ce-2014" typeName="Unit" hidden="false" id="8983-9389-adfb-2493">
+          <characteristics>
+            <characteristic name="Move" typeId="8655-6213-2824-1752">6&quot;</characteristic>
+            <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">5</characteristic>
+            <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">8</characteristic>
+            <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">4+</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Aquatic Illusions" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities" hidden="false" id="4754-35e5-e9a2-be88">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Subtract 1 from hit rolls for combat attacks that target this unit.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Gift of the Depths" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities" hidden="false" id="c9e2-c9b7-e461-4346">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This unit has a ward of 5+</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Nebulous Sea-fog" typeId="2e81-5e22-c6e1-73cb" typeName="Spell" hidden="false" id="6924-6e2d-45ef-dbbf">
+          <characteristics>
+            <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
+            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">-</characteristic>
+            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If cast, until the start of your next hero phase, shooting attacks that target friendly THE BLACKTALONS units that are wholly within 6&quot; of this unit only score a hit on an unmodified hit roll of 6.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Abyssal Touch" typeId="96df-ab28-5d72-bbb3" typeName="Weapon" hidden="false" id="b93e-9736-c5-ec32">
+          <characteristics>
+            <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+            <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
+            <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">4</characteristic>
+            <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+            <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+            <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
+            <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
