@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" id="82b4-f6e1-3e37-5ea1" name="Order - Stormcast Eternals - Data" revision="179" battleScribeVersion="2.03" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="161" type="catalogue">
+<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" id="82b4-f6e1-3e37-5ea1" name="Order - Stormcast Eternals - Data" revision="180" battleScribeVersion="2.03" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="161" type="catalogue">
   <publications>
     <publication id="ed04-877b-pubN65537" name="Order Battletome: Stormcast Eternals (2nd Edition)"/>
     <publication id="ed04-877b-pubN71576" name="Battletome: Stormcast Eternals (2nd Edition)"/>
@@ -33,6 +33,13 @@
         <characteristicType id="f302-b2d9-e39f-8053" name="Move"/>
         <characteristicType id="729f-5bd0-e7aa-bff4" name="Rain of Stars"/>
         <characteristicType id="0117-b3ae-916b-32d3" name="Cavernous Jaws"/>
+      </characteristicTypes>
+    </profileType>
+    <profileType name="Ionus Damage Table" hidden="false" id="2eb1-eadc-93b1-f404">
+      <characteristicTypes>
+        <characteristicType id="b3b-d8a0-e0a7-c05f" name="Move"/>
+        <characteristicType id="e8aa-28ec-efb6-d644" name="Ancient Claws"/>
+        <characteristicType id="cd28-43b8-e842-ec21" name="Timeworn Fangs"/>
       </characteristicTypes>
     </profileType>
   </profileTypes>
@@ -154,6 +161,7 @@
     <categoryEntry id="fe6b-01c5-e4fe-8041" name="DACIAN ANVIL" hidden="false"/>
     <categoryEntry id="daf2-c09f-c5dd-1a21" name="DOMITAN&apos;S STORMCOVEN" hidden="false"/>
     <categoryEntry id="f8eb-76b1-5884-5036" name="QUESTOR SOULSWORN" hidden="false"/>
+    <categoryEntry name="IONUS CRYPTBORN" hidden="false" id="f195-124b-1fa5-6d0b"/>
   </categoryEntries>
   <sharedSelectionEntries>
     <selectionEntry id="c6a3-2acf-1e46-3896" name="Allegiance" hidden="false" collective="false" import="true" type="unit">
@@ -4823,7 +4831,6 @@ If you pick an enemy unit, roll a dice. On a 2+, the target suffers D3 mortal wo
             <categoryLink id="1d29-aa75-6aa7-2d34" name="Unique General" hidden="false" targetId="fe3f-d230-7e2c-fba2" primary="false"/>
           </categoryLinks>
         </entryLink>
-        <entryLink id="69a8-1ad8-61c8-40cc" name="General&apos;s Adjutant" hidden="false" collective="false" import="true" targetId="65e4-9e34-5cf6-2bec" type="selectionEntry"/>
         <entryLink id="f8b5-c70d-2b0d-51b9" name="Battalions" hidden="false" collective="false" import="true" targetId="4165-f8c8-6f84-e4ca" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
@@ -12159,6 +12166,161 @@ In addition, you can re-roll charge rolls for this unit if it was set-up on the 
           </modifiers>
         </selectionEntryGroup>
       </selectionEntryGroups>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Ionus Cryptborn, Warden of Lost Souls" hidden="false" id="9945-49e4-d88-9f9d">
+      <costs>
+        <cost name="pts" typeId="points" value="400"/>
+      </costs>
+      <categoryLinks>
+        <categoryLink targetId="6c6b-e787-f9b8-a510" id="213f-b28d-8464-af8e" primary="true" name="Leader"/>
+        <categoryLink targetId="fa0c-9044-2568-fa02" id="cc49-38a1-10b9-a9a0" primary="false" name="Behemoth"/>
+        <categoryLink targetId="4e0e-664d-51ea-0929" id="ebfd-6cb1-48f3-4af0" primary="false" name="HERO"/>
+        <categoryLink targetId="1959-9f6a-3056-913a" id="fb79-ebe8-da8-6f72" primary="false" name="MONSTER"/>
+        <categoryLink targetId="b970-b3bf-e1a4-a6fc" id="be24-cf16-375b-bc0d" primary="false" name="ORDER"/>
+        <categoryLink targetId="b396-0600-80d6-cee9" id="7298-2ccd-4899-dd35" primary="false" name="STORMCAST ETERNALS"/>
+        <categoryLink targetId="e8a5-e4c1-3d11-e7dd" id="a657-e5ff-c479-8f5d" primary="false" name="PRIEST"/>
+        <categoryLink targetId="072b-61c1-0802-681e" id="23b6-2eb1-7ede-58dc" primary="false" name="DRACONITH"/>
+        <categoryLink targetId="9869-7cfe-fb04-7291" id="4f13-ba28-5275-351b" primary="false" name="LORD"/>
+        <categoryLink targetId="f195-124b-1fa5-6d0b" id="2269-41f3-f562-a112" primary="false" name="IONUS CRYPTBORN"/>
+        <categoryLink targetId="088b-3a27-03f7-8249" id="3b8d-601e-5f28-6387" primary="false" name="Unique"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="b664-980b-b691-6aa5" name="General" hidden="false" collective="false" import="true" targetId="4e90-bcab-e5fd-60f1" type="selectionEntry">
+          <categoryLinks>
+            <categoryLink id="f58c-6c93-7b59-85b9" name="6_under_wounds" hidden="false" targetId="e4e2-6076-dafa-ec2c" primary="false"/>
+            <categoryLink id="62e-d54b-4158-5a92" name="Unique General" hidden="false" targetId="fe3f-d230-7e2c-fba2" primary="false"/>
+          </categoryLinks>
+        </entryLink>
+        <entryLink id="eedc-afae-2b74-2ee3" name="Battalions" hidden="false" collective="false" import="true" targetId="4165-f8c8-6f84-e4ca" type="selectionEntryGroup"/>
+      </entryLinks>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="b50a-384e-5bd9-aa38" type="max"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Fly" hidden="false" type="profile" id="5af6-89c4-535c-1553" targetId="8e0c-cbe4-27be-8a30"/>
+      </infoLinks>
+      <profiles>
+        <profile name="Ionus Cryptborn, Warden of Lost Souls" typeId="1960-ca8e-67ce-2014" typeName="Unit" hidden="false" id="fbe6-4e8a-4a26-df45">
+          <characteristics>
+            <characteristic name="Move" typeId="8655-6213-2824-1752">*</characteristic>
+            <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">16</characteristic>
+            <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">9</characteristic>
+            <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">3+</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Draconic Horror" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities" hidden="false" id="67b-8f2f-942f-9f8f">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Enemy units cannot receive the Rally and Inspiring Presence commands while they are within 12&quot; of this unit.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Scry Intent" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities" hidden="false" id="f05d-81d2-dfcd-7366">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Subtract 1 from the Attacks characteristic of melee weapons that target this unit (to a minimum of 1).</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Arch-Relictor" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities" hidden="false" id="e320-3e44-85bf-43ea">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">In your hero phase, this unit can chant 2 prayers that it knows instead of 1. At the start of your hero phase, you must say how many prayers this unit will chant. If you say 1, when it chants that prayer, it is automatically answered with a chanting roll of 6 and no additional prayers may be chanted. If you say 2, make chanting rolls for both prayers as normal.
+
+
+At the start of the enemy hero phase, you can pick 1 endless spell or invocation within 12&quot; of this unit and roll a dice. On a 2+, that endless spell is dispelled or that invocation is banished</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Lightning Tempest" typeId="eed7-4131-0a52-0668" typeName="Prayer" hidden="false" id="1721-8615-473e-acac">
+          <characteristics>
+            <characteristic name="Answer Value" typeId="276a-ab7e-145d-3ffc">3</characteristic>
+            <characteristic name="Range" typeId="fd81-4e98-28ac-092a">18&quot;</characteristic>
+            <characteristic name="Description" typeId="0746-6cfb-5e15-53cb">If answered, pick 1 enemy unit within range. That unit is struck by lightning and suffers D3 mortal wounds. Then, roll a dice. On a 1-2, the tempest clears and the sequence ends. On a 3+, pick 1 other enemy unit within 3&quot; of the last unit that was struck by lightning. That unit is struck by lightning and suffers D3 mortal wounds. Keep rolling dice in this way until the tempest clears or there are no other enemy units within 3&quot; of the last unit to be struck by lightning. A unit cannot be affected by this prayer more than once per hero phase.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Ancient Claws" typeId="96df-ab28-5d72-bbb3" typeName="Weapon" hidden="false" id="f193-6c36-c41c-4cf6">
+          <characteristics>
+            <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+            <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">2&quot;</characteristic>
+            <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">*</characteristic>
+            <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+            <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+            <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-2</characteristic>
+            <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">2</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Timeworn Fangs" typeId="96df-ab28-5d72-bbb3" typeName="Weapon" hidden="false" id="a8cc-f17d-bbda-3384">
+          <characteristics>
+            <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+            <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">3&quot;</characteristic>
+            <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">2</characteristic>
+            <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+            <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+            <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">*</characteristic>
+            <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">3</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Soulbreaker" typeId="96df-ab28-5d72-bbb3" typeName="Weapon" hidden="false" id="93d8-eb25-f2a7-8529">
+          <characteristics>
+            <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+            <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
+            <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">4</characteristic>
+            <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+            <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+            <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
+            <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">2</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup name="Spirit-scouring Flames" hidden="false" id="4e10-788-4aa1-11c8">
+          <profiles>
+            <profile name="Spirit-scouring Flames" typeId="96df-ab28-5d72-bbb3" typeName="Weapon" hidden="false" id="1616-fed6-a279-4c6c">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Missile</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">12&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">9</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-2</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Spirit-scouring Flames" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities" hidden="false" id="9e19-4ca6-7388-e9a7">
+              <characteristics>
+                <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Each time a wound caused by an attack made with Spirit-scouring Flames is allocated to an enemy unit, that unit is soulburned. At the end of each hero phase, roll a dice for each soulburned unit. If the roll is equal to or less than the number of the current battle round, that unit suffers D3 mortal wounds. When a player uses an ability that allows them to heal any wounds that have been allocated to a unit, instead of healing any wounds allocated to a soulburned unit, that unit is no longer soulburned.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+        <infoGroup name="Damage Table" hidden="false" id="2b1b-8276-db7c-a12d">
+          <profiles>
+            <profile name="0-5" typeId="2eb1-eadc-93b1-f404" typeName="Ionus Damage Table" hidden="false" id="9d58-8c8d-bf17-fae9">
+              <characteristics>
+                <characteristic name="Move" typeId="b3b-d8a0-e0a7-c05f">14&quot;</characteristic>
+                <characteristic name="Ancient Claws" typeId="e8aa-28ec-efb6-d644">5</characteristic>
+                <characteristic name="Timeworn Fangs" typeId="cd28-43b8-e842-ec21">-3</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="6-9" typeId="2eb1-eadc-93b1-f404" typeName="Ionus Damage Table" hidden="false" id="6eea-73e6-86bd-e645">
+              <characteristics>
+                <characteristic name="Move" typeId="b3b-d8a0-e0a7-c05f">12&quot;</characteristic>
+                <characteristic name="Ancient Claws" typeId="e8aa-28ec-efb6-d644">4</characteristic>
+                <characteristic name="Timeworn Fangs" typeId="cd28-43b8-e842-ec21">-2</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="10-14" typeId="2eb1-eadc-93b1-f404" typeName="Ionus Damage Table" hidden="false" id="7cc8-db55-2913-abab">
+              <characteristics>
+                <characteristic name="Move" typeId="b3b-d8a0-e0a7-c05f">10&quot;</characteristic>
+                <characteristic name="Ancient Claws" typeId="e8aa-28ec-efb6-d644">3</characteristic>
+                <characteristic name="Timeworn Fangs" typeId="cd28-43b8-e842-ec21">-3</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="15+" typeId="2eb1-eadc-93b1-f404" typeName="Ionus Damage Table" hidden="false" id="9a4-38ed-bcda-b47e">
+              <characteristics>
+                <characteristic name="Move" typeId="b3b-d8a0-e0a7-c05f">8&quot;</characteristic>
+                <characteristic name="Ancient Claws" typeId="e8aa-28ec-efb6-d644">2</characteristic>
+                <characteristic name="Timeworn Fangs" typeId="cd28-43b8-e842-ec21">-1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+      </infoGroups>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
