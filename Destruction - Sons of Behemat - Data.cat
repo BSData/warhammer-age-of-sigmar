@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" id="f904-b52f-810a-e446" name="Destruction - Sons of Behemat - Data" revision="70" battleScribeVersion="2.03" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="161" type="catalogue">
+<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" id="f904-b52f-810a-e446" name="Destruction - Sons of Behemat - Data" revision="73" battleScribeVersion="2.03" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="161" type="catalogue">
   <publications>
     <publication id="2cc2-ea66-5ff1-2f18" name="Battletome - Sons of Behemat 2022"/>
     <publication id="ceab-cbc0-42f5-446b" name="Battletome: Sons of Behemat Errata November 2022"/>
@@ -228,9 +228,14 @@
         <entryLink id="473b-5649-c363-7aaa" name="General" hidden="true" collective="false" import="true" targetId="831c-fe50-1f84-c97c" type="selectionEntry">
           <modifiers>
             <modifier type="set" field="hidden" value="false">
-              <conditions>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="16f3-eb4b-4d11-9a00" type="equalTo"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="16f3-eb4b-4d11-9a00" type="equalTo"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="bb6c-9d08-b9b3-4bf2" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
         </entryLink>
@@ -559,9 +564,14 @@
         <entryLink id="2779-9155-c0f8-b926" name="General" hidden="true" collective="false" import="true" targetId="831c-fe50-1f84-c97c" type="selectionEntry">
           <modifiers>
             <modifier type="set" field="hidden" value="false">
-              <conditions>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="fc9c-f271-a890-bf53" type="equalTo"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="fc9c-f271-a890-bf53" type="equalTo"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="bb6c-9d08-b9b3-4bf2" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
         </entryLink>
@@ -890,9 +900,14 @@
         <entryLink id="41a0-2bc3-ad85-99ba" name="General" hidden="true" collective="false" import="true" targetId="831c-fe50-1f84-c97c" type="selectionEntry">
           <modifiers>
             <modifier type="set" field="hidden" value="false">
-              <conditions>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="638b-43cd-95f5-f7a0" type="equalTo"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="638b-43cd-95f5-f7a0" type="equalTo"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="bb6c-9d08-b9b3-4bf2" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
         </entryLink>
@@ -1229,11 +1244,105 @@
                       </costs>
                     </selectionEntry>
                   </selectionEntries>
+                  <modifiers>
+                    <modifier type="set" value="true" field="hidden">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="bb6c-9d08-b9b3-4bf2" shared="true"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
                 </selectionEntryGroup>
               </selectionEntryGroups>
               <costs>
                 <cost name="pts" typeId="points" value="0"/>
               </costs>
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Allegiance: King Brodd&apos;s Stomp" hidden="false" id="bb6c-9d08-b9b3-4bf2">
+                  <categoryLinks>
+                    <categoryLink targetId="a763-f425-1441-2df2" id="5a17-5a82-dda2-7d46" primary="false" name="Army of Renown"/>
+                  </categoryLinks>
+                  <profiles>
+                    <profile name="The World Titan&apos;s Prophet" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait" hidden="false" id="d61f-8b28-64f1-1cc7">
+                      <characteristics>
+                        <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">If your army includes KING BRODD, he has a ward of 5+ while he is within 3&quot; of any other friendly units.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <infoGroups>
+                    <infoGroup name="Smash It All To Bits" hidden="false" id="53f6-2c97-e5fc-16ac">
+                      <profiles>
+                        <profile name="Smash It All To Bits" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait" hidden="false" id="a08d-5871-7345-1fed">
+                          <characteristics>
+                            <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">Once per turn, in your shooting phass, you can pick 1 terrain feature and 1 friendly MEGA-GARGANT within 1&quot; of it. If you do so, roll a dice. On a 2+, that terrain feature is sundered.
+
+
+If a terrain feature is sundered, roll a dice for each unit that has any models on or garrisoning that terrain feature. On a 2+, that unit suffers D3 mortal wounds. Then all models from units that were on or garrisoning that terrain feature must be set up wholly within 6&quot; of that terrain feature and more than 3&quot; from all enemy units. if a model cannot be set up wholly within 6&quot; of that terrain feature and more than 3&quot; from all enemy units, it is slain. The terrain feature is then removed from play.
+
+
+Finally, the MEGA-GARGANT you picked can make a shooting attack in that phase with the Hurled Terrain missile weapon.</characteristic>
+                          </characteristics>
+                        </profile>
+                        <profile name="Hurled Terrain" typeId="96df-ab28-5d72-bbb3" typeName="Weapon" hidden="false" id="8261-748-aa50-904a">
+                          <characteristics>
+                            <characteristic name="Type" typeId="655c-362e-a663-3e50">Missile</characteristic>
+                            <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">18&quot;</characteristic>
+                            <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">D6</characteristic>
+                            <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
+                            <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+                            <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-2</characteristic>
+                            <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">D3+3</characteristic>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                    </infoGroup>
+                    <infoGroup name="Wrath of Brodd" hidden="false" id="dc98-c9d1-a76b-513a">
+                      <profiles>
+                        <profile name="Wrath of Brodd" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait" hidden="false" id="8c92-339d-71cc-a5c4">
+                          <characteristics>
+                            <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">When you carry out a monstrous rampage with a friendly MEGA-GARGANT, you can carry out the monstrous rampage below instead of any other monstrous rampage you can carry out with that unit.</characteristic>
+                          </characteristics>
+                        </profile>
+                        <profile name="The King&apos;s Stomp" typeId="84d9-7a5a-fe76-b740" typeName="Monstrous Rampage" hidden="false" id="a23-e8da-eefe-6b4a">
+                          <characteristics>
+                            <characteristic name="Description" typeId="827b-962b-59a3-3b4d">Only a model that has made a charge move in the same phase can carry out this monstrous rampage. This model can make 3D6&quot; move but it must finish that move within 3&quot; of any enemy units. when it makes a move in this way, it can pass across models and terrain features in the same manner as a unit that can fly. At the end of the move, roll a dice for each unit it passed across. On a 2+, that unit suffers D3 mortal wounds.</characteristic>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                    </infoGroup>
+                  </infoGroups>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1bbe-e323-8b2b-1aae"/>
+                  </constraints>
+                </selectionEntry>
+              </selectionEntries>
+              <infoGroups>
+                <infoGroup name="Wrath of Titans" hidden="false" id="5d8f-e5ef-5ede-e857">
+                  <profiles>
+                    <profile id="1ab-53de-718f-74f4" name="Beast Grapple" publicationId="ceab-cbc0-42f5-446b" hidden="false" typeId="84d9-7a5a-fe76-b740" typeName="Monstrous Rampage">
+                      <characteristics>
+                        <characteristic name="Description" typeId="827b-962b-59a3-3b4d">Pick 1 enemy Monster that is not part of a unit consisting of 2 or more models, that is within 3&quot; of this unit and roll a dice. On a 3+, until the end of the following combat phase, the strike-last effect applies to both that Monster and the unit carrying out this monstrous rampage.</characteristic>
+                      </characteristics>
+                    </profile>
+                    <profile id="70a0-8b69-2d0d-fa73" name="Colossal Slam" hidden="false" typeId="84d9-7a5a-fe76-b740" typeName="Monstrous Rampage">
+                      <characteristics>
+                        <characteristic name="Description" typeId="827b-962b-59a3-3b4d">Pick 1 enemy MONSTER that is not part of a unit consisting of 2 or more models and that is within 1/2&quot; of this unit.  Roll a dice.  On a 3+, you can remove that MONSTER from the battlefield and set it up again anywhere wholly on open ground within 1/2&quot; of this unit.  That MONSTER suffers D3 mortal wounds.  In addition, subtract 1 from hit rolls for attacks made by the unit carrying out this monstrous rampage until the end of the following combat phase.</characteristic>
+                      </characteristics>
+                    </profile>
+                    <profile id="b727-83b4-6b56-4687" name="Earth-shaking Roar" hidden="false" typeId="84d9-7a5a-fe76-b740" typeName="Monstrous Rampage">
+                      <characteristics>
+                        <characteristic name="Description" typeId="827b-962b-59a3-3b4d">Pick 1 enemy unit with a Wounds characteristic of 1 or 2 within 3&quot; of this unit and roll 2D6.  If the roll is higher than that unit&apos;s Bravery characteristic, for each point by which the roll exceeds the unit&apos;s Bravery characteristic, 1 model in that unit flees.  That unit&apos;s commanding player decides which models flee.  The effect of this monstrous rampage is not considered to be a battleshock test.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <modifiers>
+                    <modifier type="set" value="true" field="hidden">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="bb6c-9d08-b9b3-4bf2" shared="true"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </infoGroup>
+              </infoGroups>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -2066,6 +2175,31 @@
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Brodd&apos;s Decree" hidden="false" id="aaa2-f2f5-8de4-ba">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Flatten the Lands" hidden="false" id="bbf-d1dd-2d6f-7010">
+              <profiles>
+                <profile name="Flatten the Lands" typeId="9c01-ec20-32c1-0948" typeName="Grand Strategy" hidden="false" id="326f-b288-d6a8-15cf">
+                  <characteristics>
+                    <characteristic name="Description" typeId="53c8-cc18-16d1-e890">When the battle ends, you complete this grand strategy if there are no terrain features on the battlefield.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="13c3-edb3-f972-8992" type="max"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="parent" childId="bb6c-9d08-b9b3-4bf2" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry id="ceb0-45ff-55d8-3c5d" name="Battle Tactics: Rampaging Gargants" hidden="false" collective="false" import="true" type="upgrade">
       <profiles>
@@ -2107,6 +2241,13 @@ a result.</characteristic>
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="parent" childId="bb6c-9d08-b9b3-4bf2" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="767d-622f-11f1-cff7" name="King Brodd" publicationId="2cc2-ea66-5ff1-2f18" page="89" hidden="false" collective="false" import="true" type="unit">
       <constraints>
@@ -2400,9 +2541,14 @@ Pummel All to Dust: Improve the Rend characteristic of the following melee weapo
         <entryLink id="7f54-a59c-66a9-1634" name="General" hidden="true" collective="false" import="true" targetId="831c-fe50-1f84-c97c" type="selectionEntry">
           <modifiers>
             <modifier type="set" field="hidden" value="false">
-              <conditions>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="7f2d-8539-009b-76ab" type="equalTo"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="7f2d-8539-009b-76ab" type="equalTo"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="bb6c-9d08-b9b3-4bf2" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
         </entryLink>
@@ -2574,30 +2720,31 @@ Pummel All to Dust: Improve the Rend characteristic of the following melee weapo
         <cost name="pts" typeId="points" value="450"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="3fba-64f0-6aab-a8f3" name="Wrath of Titans" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry type="upgrade" import="true" name="Battle Tactics: Gargantuan Goals" hidden="false" id="573b-ddd1-a3ec-f3be">
       <profiles>
-        <profile id="ec0d-47ac-48f4-0645" name="Beast Grapple" publicationId="ceab-cbc0-42f5-446b" hidden="false" typeId="84d9-7a5a-fe76-b740" typeName="Monstrous Rampage">
+        <profile name="&apos;Good Shot! Hur Hur!" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait" hidden="false" id="394e-a0bd-9eb7-c2bb">
           <characteristics>
-            <characteristic name="Description" typeId="827b-962b-59a3-3b4d">Pick 1 enemy Monster that is not part of a unit consisting of 2 or more models, that is within 3&quot; of this unit and roll a dice. On a 3+, until the end of the following combat phase, the strike-last effect applies to both that Monster and the unit carrying out this monstrous rampage.</characteristic>
+            <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">You complete this battle tactic if an enemy unit was destroyed during this turn by an attack made with the Hurled Terrain missile weapon.</characteristic>
           </characteristics>
         </profile>
-        <profile id="ba3e-cb7f-16a1-f6ba" name="Earth-shaking Roar" hidden="false" typeId="84d9-7a5a-fe76-b740" typeName="Monstrous Rampage">
+        <profile name="King&apos;s Conquest" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait" hidden="false" id="5f1b-34a9-2809-c9a0">
           <characteristics>
-            <characteristic name="Description" typeId="827b-962b-59a3-3b4d">Pick 1 enemy unit with a Wounds characteristic of 1 or 2 within 3&quot; of this unit and roll 2D6.  If the roll is higher than that unit&apos;s Bravery characteristic, for each point by which the roll exceeds the unit&apos;s Bravery characteristic, 1 model in that unit flees.  That unit&apos;s commanding player decides which models flee.  The effect of this monstrous rampage is not considered to be a battleshock test.</characteristic>
+            <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">You complete this battle tactic if a friendly KING BRODD and 1 other friendly KING BRODD&apos;S STOMP unit are contesting the same objective at the end of the turn and that objective was controlled by your opponent at the start of this turn.</characteristic>
           </characteristics>
         </profile>
-        <profile id="07cb-0c2e-ad4a-fdc9" name="Colossal Slam" hidden="false" typeId="84d9-7a5a-fe76-b740" typeName="Monstrous Rampage">
+        <profile name="Clear &apos;Em Out" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait" hidden="false" id="ba6-9f50-2ee4-2de0">
           <characteristics>
-            <characteristic name="Description" typeId="827b-962b-59a3-3b4d">Pick 1 enemy MONSTER that is not part of a unit consisting of 2 or more models and that is within 1/2&quot; of this unit.  Roll a dice.  On a 3+, you can remove that MONSTER from the battlefield and set it up again anywhere wholly on open ground within 1/2&quot; of this unit.  That MONSTER suffers D3 mortal wounds.  In addition, subtract 1 from hit rolls for attacks made by the unit carrying out this monstrous rampage until the end of the following combat phase.</characteristic>
+            <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">Pick 1 objective on the battlefield that you do not control. You complete this battle tactic if, at the end of this turn, you control that objective and that objective is contested by a friendly KING BRODD&apos;S STOMP unit that made a charge move this turn.</characteristic>
           </characteristics>
         </profile>
       </profiles>
-      <categoryLinks>
-        <categoryLink id="90ed-0fbb-0262-db19" name="New CategoryLink" hidden="false" targetId="1974-3f49-7f0b-8422" primary="true"/>
-      </categoryLinks>
-      <costs>
-        <cost name="pts" typeId="points" value="0"/>
-      </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="parent" childId="bb6c-9d08-b9b3-4bf2" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
@@ -2694,7 +2841,6 @@ Pummel All to Dust: Improve the Rend characteristic of the following melee weapo
             </modifier>
           </modifiers>
         </entryLink>
-        <entryLink id="f94f-2956-ebd2-cc32" name="Realm Artefacts of Power" hidden="false" collective="false" import="true" targetId="37b0-af21-630c-d8af" type="selectionEntryGroup"/>
         <entryLink id="17e9-8d3a-11bc-624a" name="Artefacts: Trappings of the Titan" hidden="false" collective="false" import="true" targetId="5d1d-9685-509c-07a7" type="selectionEntryGroup">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
@@ -2738,7 +2884,15 @@ Pummel All to Dust: Improve the Rend characteristic of the following melee weapo
           </modifiers>
         </entryLink>
         <entryLink id="5155-d522-1459-0969" name="Universal Artefacts of Power" hidden="false" collective="false" import="true" targetId="11c4-fd82-92a7-de8a" type="selectionEntryGroup"/>
-        <entryLink id="7c62-f561-ed3f-349e" name="Artefacts: Titanic Trophies" hidden="false" collective="false" import="true" targetId="eab5-945a-98c3-f6b3" type="selectionEntryGroup"/>
+        <entryLink id="7c62-f561-ed3f-349e" name="Artefacts: Titanic Trophies" hidden="false" collective="false" import="true" targetId="eab5-945a-98c3-f6b3" type="selectionEntryGroup">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="bb6c-9d08-b9b3-4bf2" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
         <entryLink id="3c3a-0309-8cf0-c91e" name="Artefacts: Smasher Tribe" hidden="false" collective="false" import="true" targetId="fcc7-2085-5230-8f94" type="selectionEntryGroup">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
@@ -2762,6 +2916,58 @@ Pummel All to Dust: Improve the Rend characteristic of the following melee weapo
         </entryLink>
         <entryLink id="a005-de8b-0981-d1fc" name="Relics of Gallet" hidden="false" collective="false" import="true" targetId="d27f-9ad5-990c-2915" type="selectionEntryGroup"/>
       </entryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Treasures of Behemat" hidden="false" id="2b26-114e-4012-d851">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="bb6c-9d08-b9b3-4bf2" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ab2c-6fb0-2120-c82c"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Crafty Creepers" hidden="false" id="4c68-58aa-788b-5bf7">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="33c1-1ed5-4ee6-b861" includeChildSelections="true" includeChildForces="true"/>
+              </constraints>
+              <profiles>
+                <profile name="Crafty Creepers" typeId="0ac4-aacb-2481-8e72" typeName="Artefact" hidden="false" id="45f8-fe2b-b547-1b5">
+                  <characteristics>
+                    <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">At the start of the combat phase, you can pick 1 enemy HERO that has an artefact of power and is within 1&quot; of the bearer and roll a dice. On a 5+, that artefact of power can no longer be used (if a weapon was picked when the artefact of power was selected, that weapon reverts to normal).</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Lucky Shiny Hat" hidden="false" id="459f-2ea8-d4a9-b375">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="d2fc-aceb-6e9d-ddd" includeChildSelections="true" includeChildForces="true"/>
+              </constraints>
+              <profiles>
+                <profile name="Lucky Shiny Hat" typeId="0ac4-aacb-2481-8e72" typeName="Artefact" hidden="false" id="4dcd-2f42-6f27-d300">
+                  <characteristics>
+                    <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">The bearer has a ward 5+ against mortal wounds.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Brand of the Gargant King" hidden="false" id="8a0b-a3eb-a033-6b62">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="ef3e-8af7-892e-daca" includeChildSelections="true" includeChildForces="true"/>
+              </constraints>
+              <profiles>
+                <profile name="Brand of the Gargant King" typeId="0ac4-aacb-2481-8e72" typeName="Artefact" hidden="false" id="d5ab-40c-3a43-9a77">
+                  <characteristics>
+                    <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">If the bearer makes a charge move and the unmodified charge roll was 8+, the strike-first effect applies to them until the end of the turn.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntryGroup>
     <selectionEntryGroup id="5d1d-9685-509c-07a7" name="Artefacts: Stomper Tribe" hidden="false" collective="false" import="true">
       <constraints>
@@ -2819,10 +3025,70 @@ Pummel All to Dust: Improve the Rend characteristic of the following melee weapo
         <entryLink id="c747-e120-90f3-8499" name="Command Traits: Taker Tribe" hidden="false" collective="false" import="true" targetId="d6ee-2248-5eee-a14b" type="selectionEntryGroup"/>
         <entryLink id="6f85-64be-bfff-df84" name="Traits: Unstoppable Besiegers" hidden="false" collective="false" import="true" targetId="ae2e-e1c7-2a1b-f4a7" type="selectionEntryGroup"/>
         <entryLink id="5818-80f3-c29f-ac78" name="Traits: Veterans of One-Sided Battle" hidden="false" collective="false" import="true" targetId="6eb6-fd8c-24dc-60cb" type="selectionEntryGroup"/>
-        <entryLink id="1f65-ba1a-925b-9029" name="Command Traits: Big Personalities" hidden="false" collective="false" import="true" targetId="921b-e4ea-f147-fe0f" type="selectionEntryGroup"/>
+        <entryLink id="1f65-ba1a-925b-9029" name="Command Traits: Big Personalities" hidden="false" collective="false" import="true" targetId="921b-e4ea-f147-fe0f" type="selectionEntryGroup">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="bb6c-9d08-b9b3-4bf2" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
         <entryLink id="6c4a-0be2-eaea-82d3" name="Command Traits: Smasher Tribe" hidden="false" collective="false" import="true" targetId="db68-5efe-5c07-683e" type="selectionEntryGroup"/>
         <entryLink import="true" name="Universal Command Traits" hidden="false" type="selectionEntryGroup" id="3d77-d2a0-7034-1c93" targetId="e372-6ace-3568-54e7"/>
       </entryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="The King&apos;s Best" hidden="false" id="e5de-762b-a345-d350">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="bb6c-9d08-b9b3-4bf2" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6cb-a7c2-2fef-d299"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Big Eater" hidden="false" id="2b0f-cb26-35cf-1278">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="f21e-d9b2-b1a1-2cd2" includeChildSelections="true" includeChildForces="true"/>
+              </constraints>
+              <profiles>
+                <profile name="Big Eater" typeId="c749-bae4-71a8-0c36" typeName="Command Trait" hidden="false" id="5665-86dc-421e-820b">
+                  <characteristics>
+                    <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">In the combat phase, if any enemy models are slain by attacks made by a friendly MEGA-GARGANT wholly within 12&quot; of this general, you can heal up to D3 wounds allocated to that MEGA-GARGANT after all of its attacks have been resolved.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Loud-mouthed Bully" hidden="false" id="b81d-debc-915e-e5f7">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="d937-bbde-69ce-5bd" includeChildSelections="true" includeChildForces="true"/>
+              </constraints>
+              <profiles>
+                <profile name="Loud-mouthed Bully" typeId="c749-bae4-71a8-0c36" typeName="Command Trait" hidden="false" id="fa1c-680b-d876-fc9f">
+                  <characteristics>
+                    <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">Once per turn, in the combat phase, you can pick 1 friendly KING BRODD&apos;S STOMP unit wholly within 12&quot; of this general. If you do so, until the end of that phase, use the top row on that unit&apos;s damage table, regardless of how many wounds it has suffered.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="High Expectations" hidden="false" id="f8b2-709f-3d35-6696">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="11d-5912-843d-f36a" includeChildSelections="true" includeChildForces="true"/>
+              </constraints>
+              <profiles>
+                <profile name="High Expectations" typeId="c749-bae4-71a8-0c36" typeName="Command Trait" hidden="false" id="e82d-19c0-19a2-bb43">
+                  <characteristics>
+                    <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">Add 1 to the Attacks characteristic of Death Grip attacks made by friendly MEGA-GARGANTS while they are within 3&quot; of any other friendly MEGA-GARGANTS.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntryGroup>
     <selectionEntryGroup id="d6ee-2248-5eee-a14b" name="Command Traits: Taker Tribe" hidden="true" collective="false" import="true">
       <modifiers>
@@ -3015,6 +3281,11 @@ Pummel All to Dust: Improve the Rend characteristic of the following melee weapo
             <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="74f6-1d32-c5df-cf31" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="parent" childId="bb6c-9d08-b9b3-4bf2" shared="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0486-b898-8032-3332" type="min"/>
@@ -3111,6 +3382,11 @@ Pummel All to Dust: Improve the Rend characteristic of the following melee weapo
         <modifier type="set" field="hidden" value="false">
           <conditions>
             <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6e5a-040b-4722-aa03" type="greaterThan"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="parent" childId="bb6c-9d08-b9b3-4bf2" shared="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -3320,6 +3596,13 @@ Pummel All to Dust: Improve the Rend characteristic of the following melee weapo
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="parent" childId="bb6c-9d08-b9b3-4bf2" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntryGroup>
     <selectionEntryGroup id="921b-e4ea-f147-fe0f" name="Command Traits: Big Personalities" hidden="false" collective="false" import="true">
       <constraints>
@@ -3372,6 +3655,13 @@ Pummel All to Dust: Improve the Rend characteristic of the following melee weapo
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="bb6c-9d08-b9b3-4bf2" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntryGroup>
     <selectionEntryGroup id="eab5-945a-98c3-f6b3" name="Artefacts: Titanic Trophies" hidden="false" collective="false" import="true">
       <constraints>
@@ -3439,6 +3729,13 @@ Pummel All to Dust: Improve the Rend characteristic of the following melee weapo
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="bb6c-9d08-b9b3-4bf2" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntryGroup>
     <selectionEntryGroup id="db68-5efe-5c07-683e" name="Command Traits: Smasher Tribe" hidden="true" collective="false" import="true">
       <modifiers>
@@ -3699,5 +3996,4 @@ In addition, if you carry out the Smash To Rubble monstrous rampage with this un
     <catalogueLink id="a6ae-cc24-0b06-af6a" name="Destruction - Data" targetId="9356-8da1-02b8-b092" type="catalogue" importRootEntries="true"/>
     <catalogueLink id="42e7-0ee1-c09f-289c" name="Endless Spells" targetId="f0db-356d-9f9f-662d" type="catalogue" importRootEntries="true"/>
   </catalogueLinks>
-  <xmlns>http://www.battlescribe.net/schema/catalogueSchema</xmlns>
 </catalogue>

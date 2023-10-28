@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="167" battleScribeVersion="2.03" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" type="gameSystem">
+<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="170" battleScribeVersion="2.03" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" type="gameSystem">
   <publications>
     <publication id="e51d-b1a3-pubEC" name="The General&apos;s Handbook"/>
     <publication id="e51d-b1a3-pubEQ" name="Core Rules"/>
@@ -295,7 +295,7 @@
       </constraints>
     </categoryEntry>
     <categoryEntry id="2c4b-6186-2939-7f2b" name="BEASTS OF CHAOS" hidden="false"/>
-    <categoryEntry id="088b-3a27-03f7-8249" name="Unique" hidden="false"/>
+    <categoryEntry id="088b-3a27-03f7-8249" name="Unique" hidden="true"/>
     <categoryEntry id="2ff5-b7a1-655a-1655" name="GREATER DAEMON" hidden="false"/>
     <categoryEntry id="c34d-acb9-a4d9-74be" name="VOSTARG" hidden="false"/>
     <categoryEntry id="f60b-d58c-bfee-5aa7" name="GREYFYRD" hidden="false"/>
@@ -307,7 +307,7 @@
     <categoryEntry id="bc8a-9257-1601-6d62" name="Scenery" hidden="false"/>
     <categoryEntry id="a64e-c067-e836-3c21" name="LUMINETH REALM-LORDS" hidden="false"/>
     <categoryEntry id="5f5a-43ec-c3f8-f174" name="CITIES OF SIGMAR" hidden="false"/>
-    <categoryEntry id="fe3f-d230-7e2c-fba2" name="Unique General" hidden="false"/>
+    <categoryEntry id="fe3f-d230-7e2c-fba2" name="Unique General" hidden="true"/>
     <categoryEntry id="94f3-85a3-97e7-1f95" name="SETTLER&apos;S GAIN" hidden="false"/>
     <categoryEntry id="3d31-12d5-6735-011c" name="SOULBLIGHT GRAVELORDS" hidden="false"/>
     <categoryEntry id="c8b9-d6b2-34c8-79e5" name="VYRKOS" hidden="false"/>
@@ -315,7 +315,7 @@
     <categoryEntry id="d8da-21d5-cdf8-709f" name="AVENGORII" hidden="false"/>
     <categoryEntry id="1109-7ce6-b7a3-3a0c" name="Reinforced" hidden="false"/>
     <categoryEntry id="6575-7d6c-ce4d-ada4" name="Core Battalion" hidden="false"/>
-    <categoryEntry id="a8ed-ca35-24e0-cf2e" name="9 or less wounds Leader" hidden="false"/>
+    <categoryEntry id="a8ed-ca35-24e0-cf2e" name="9 or less wounds Leader" hidden="true"/>
     <categoryEntry id="787f-7260-bb51-08c8" name="Legends" hidden="false"/>
     <categoryEntry id="fa69-cc30-064b-f0ce" name="Allegiance KO" hidden="true"/>
     <categoryEntry id="7eab-14e8-d1c1-0117" name="Zainthar Kai" hidden="false"/>
@@ -360,6 +360,7 @@
     <categoryEntry name="ANDTORIAN LOCUS" hidden="false" id="8f5e-e464-221b-4f06"/>
     <categoryEntry name="Champion" hidden="false" id="94b9-7eb-a81a-b892"/>
     <categoryEntry name="Ally" hidden="false" id="1111-11dc-777-cf35"/>
+    <categoryEntry name="Army of Renown" hidden="false" id="a763-f425-1441-2df2"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry id="36b7-ee1e-0855-f23f" name="**Pitched Battle GHB 2021-22**" hidden="false">
@@ -2614,7 +2615,19 @@ When a primal magic dice is rolled as part of a casting roll, on an unmodified c
         <categoryLink id="b022-0116-e8fb-91ac" name="New CategoryLink" hidden="false" targetId="1974-3f49-7f0b-8422" primary="true"/>
       </categoryLinks>
     </entryLink>
-    <entryLink id="c958-5caf-b101-fdc6" name="Krondspine Incanate of Ghur" hidden="false" collective="false" import="true" targetId="0553-10ac-2bd9-01a5" type="selectionEntry"/>
+    <entryLink id="c958-5caf-b101-fdc6" name="Krondspine Incanate of Ghur" hidden="false" collective="false" import="true" targetId="0553-10ac-2bd9-01a5" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="a763-f425-1441-2df2" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </entryLink>
     <entryLink id="8b70-ad45-3372-56d9" name="Core Battalion: Bounty Hunters" hidden="false" collective="false" import="true" targetId="c7a2-43b2-11cd-3ad1" type="selectionEntry"/>
     <entryLink id="958c-2bc1-3022-47ab" name="Core Battalion: Expert Conquerors" hidden="false" collective="false" import="true" targetId="15e3-8b94-19b1-a6dc" type="selectionEntry"/>
     <entryLink id="2d24-1256-d55a-1a15" name="Battle Tactics (GHB2022-23 S1)" hidden="true" collective="false" import="true" targetId="ed60-d117-889c-8a84" type="selectionEntry">
@@ -3945,7 +3958,12 @@ That INCARNATE is wild.</characteristic>
         </profile>
         <profile id="8707-2381-bff5-c5bc" name="Led into the Maelstrom" hidden="false" typeId="eba0-4bf6-65fe-fdbc" typeName="Battle Tactic">
           <characteristics>
-            <characteristic name="Description" typeId="f882-48d5-21a4-1787">You complete this battle tactic if 1 or more friendly HEROES and 1 or more friendly Battleline units each made a charge move this turn and at least 1 of those units is within 3&quot; of an enemy unit at the end of the turn.</characteristic>
+            <characteristic name="Description" typeId="f882-48d5-21a4-1787">You complete this battle tactic if all of the following are true:
+- At least 2 friendly units charged this turn.
+- At least 1 friendly Battleline unit charged this turn.
+- At least 1 friendly HERO charged this turn.
+- At least 1 friendly Battleline or HERO unit that charged this turn is
+within 3&quot; of an enemy unit at the end of the turn.’</characteristic>
           </characteristics>
         </profile>
         <profile id="bdf3-5eb5-61b3-8989" name="Surround and Destroy" hidden="false" typeId="eba0-4bf6-65fe-fdbc" typeName="Battle Tactic">
@@ -6927,7 +6945,7 @@ Arcane Bolt, Mystic Shield and spells to summon endless spells on your army rost
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
-    <selectionEntryGroup name="Lore of Primal Frost" hidden="false" id="a1be-2190-f61f-d59a">
+    <selectionEntryGroup name="Lore of Primal Frost" hidden="true" id="a1be-2190-f61f-d59a">
       <modifiers>
         <modifier type="set" field="hidden" value="false">
           <conditionGroups>
@@ -6964,7 +6982,15 @@ Arcane Bolt, Mystic Shield and spells to summon endless spells on your army rost
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">10</characteristic>
                 <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">18&quot;</characteristic>
-                <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick 1 predatory endless spell or 1 Incarnate wholly within range and visible to the caster. The target immediately becomes wild and cannot be picked to be controlled or bonded for the rest of the battle</characteristic>
+                <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, resolve 1 of the following effects:
+• Pick 1 enemy INCARNATE within range and visible to the caster.
+Inflict D3 mortal wounds on the unit bonded to that INCARNATE.
+Then, that INCARNATE immediately loses a power level (to a
+minimum of 1) and becomes wild.
+• Pick 1 predatory endless spell within range and visible to the
+caster that was summoned by an enemy WIZARD. Inflict D3
+mortal wounds on that enemy WIZARD. Then, that endless spell
+is dispelled.’</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -6978,7 +7004,7 @@ Arcane Bolt, Mystic Shield and spells to summon endless spells on your army rost
               <characteristics>
                 <characteristic name="Casting Value" typeId="2508-b604-1258-a920">12</characteristic>
                 <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">12&quot;</characteristic>
-                <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick 1 enemy unit within range and visible to the caster. That unit suffers 4D6 mortal wounds, but for each roll of 1, the caster also suffers D3 mortal wounds that cannot be negated. The range of this spell cannot be modified and must be measured from the caster, even if an ability would allow you to measure it from elsewhere.</characteristic>
+                <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick 1 enemy unit within range and visible to the caster. That unit suffers 4D6 mortal wounds, but for each roll of 1, the caster also suffers D3 mortal wounds that cannot be negated. The range of this spell cannot be modified and must be measured from the caster, even if an ability would allow you to measure it from elsewhere. This spell cannot be cast by a unit that was set up or moved earlier in this phase.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -7186,5 +7212,4 @@ Arcane Bolt, Mystic Shield and spells to summon endless spells on your army rost
       </characteristics>
     </profile>
   </sharedProfiles>
-  <xmlns>http://www.battlescribe.net/schema/gameSystemSchema</xmlns>
 </gameSystem>
