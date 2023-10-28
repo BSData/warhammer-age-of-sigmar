@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" id="86c6-f50d-4d44-9d02" name="Destruction - Ogor Mawtribes" revision="91" battleScribeVersion="2.03" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="161" type="catalogue">
+<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" id="86c6-f50d-4d44-9d02" name="Destruction - Ogor Mawtribes" revision="92" battleScribeVersion="2.03" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="161" type="catalogue">
   <publications>
     <publication id="50c5-e039-pubN80915" name="Destruction Battletome: Ironjawz"/>
     <publication id="50c5-e039-pubN81384" name="Destruction Battletome: Ogor Mawtribes"/>
@@ -60,6 +60,7 @@
     <categoryEntry id="cc65-589f-f438-60e2" name="Ogor Mawtribes Core Battalion" hidden="false"/>
     <categoryEntry id="5929-af5f-a4a5-592a" name="Ogor Mawtribes Warscroll Battalion" hidden="false"/>
     <categoryEntry id="98d2-7fe8-a94f-cecb" name="BEASTRIDERS" hidden="false"/>
+    <categoryEntry name="GORGER MAWPACK" hidden="false" id="2330-cadd-df5b-72b"/>
   </categoryEntries>
   <entryLinks>
     <entryLink id="fc4d-9292-0908-041e" name="Allegiance" hidden="false" collective="false" import="true" targetId="9dbb-2d1a-12d8-7faf" type="selectionEntry">
@@ -104,7 +105,16 @@
     <entryLink id="6120-21b6-b79f-06c3" name="Big Drogg Fort-Kicka - Gatebreaker Mercenary" hidden="false" collective="false" import="true" targetId="8c3b-e825-efb0-25bd" type="selectionEntry"/>
     <entryLink id="9650-dc05-c99f-06bf" name="One-Eyed Grunnock - Warstompa Mercenary" hidden="false" collective="false" import="true" targetId="40c7-4bb8-cfd9-7319" type="selectionEntry"/>
     <entryLink id="a1c3-f8b3-bccc-1687" name="Brawlsmasha - Bonegrinder Mercenary" hidden="false" collective="false" import="true" targetId="2f06-27c0-9f3d-40ad" type="selectionEntry"/>
-    <entryLink id="33e4-daee-18fb-8662" name="Kragnos, The End of Empires" hidden="false" collective="false" import="false" targetId="4eea-4e53-1088-fb6c" type="selectionEntry"/>
+    <entryLink id="33e4-daee-18fb-8662" name="Kragnos, The End of Empires" hidden="false" collective="false" import="false" targetId="4eea-4e53-1088-fb6c" type="selectionEntry">
+      <entryLinks>
+        <entryLink id="ab8f-b7e0-6fab-1fc7" name="General" hidden="false" collective="false" import="true" targetId="6c1f-5fc3-5498-24b7" type="selectionEntry">
+          <categoryLinks>
+            <categoryLink id="19b8-abc0-718f-cdc1" name="BEASTCLAW RAIDERS General" hidden="false" targetId="cdc4-4360-eef5-ad0f" primary="false"/>
+            <categoryLink id="136-fb7e-23c4-2fd7" name="THUNDERTUSK General" hidden="false" targetId="273a-dc0c-6a33-7172" primary="false"/>
+          </categoryLinks>
+        </entryLink>
+      </entryLinks>
+    </entryLink>
     <entryLink id="f4d5-0e85-d20a-ee81" name="Grand Strategy" hidden="false" collective="false" import="true" targetId="498a-ac1b-47f2-125b" type="selectionEntry"/>
     <entryLink id="4578-1148-0d85-ac00" name="Blackpowder&apos;s Buccaneers" hidden="false" collective="false" import="true" targetId="4b1b-e93c-0794-f6c0" type="selectionEntry"/>
     <entryLink id="e996-754d-6e71-c7f8" name="Odo Godswallow - Beast-smasher Mercenary" hidden="false" collective="false" import="true" targetId="6373-4970-e2af-dd88" type="selectionEntry"/>
@@ -120,6 +130,7 @@
     <entryLink id="9114-0e80-0ece-e91f" name="Ogor Mawtribes Warscroll Battalion: Junkmob" hidden="false" collective="false" import="true" targetId="0516-9e05-1093-1106" type="selectionEntry"/>
     <entryLink id="b2a9-4201-cd33-8924" name="Regiment of Renown - Big Grikk&apos;s Kruleshots" hidden="false" collective="false" import="true" targetId="c9de-fb1a-e665-362f" type="selectionEntry"/>
     <entryLink import="true" name="Regiment of Renown - Braggit&apos;s Bottle-Snatchaz" hidden="false" type="selectionEntry" id="9fb1-1811-e339-b2fd" targetId="a8ad-bed9-8486-fc56"/>
+    <entryLink import="true" name="Mawpit" hidden="false" type="selectionEntry" id="af99-3588-5808-8a47" targetId="744b-f36d-aef5-ddaf"/>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="9dbb-2d1a-12d8-7faf" name="Allegiance" hidden="false" collective="false" import="true" type="upgrade">
@@ -2379,6 +2390,9 @@ of that Great Mawpot (roll separately for each unit). Once all of the Great Mawp
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="e84f-4cae-1585-7c1e"/>
+      </constraints>
     </selectionEntry>
     <selectionEntry id="5061-05bb-783b-374a" name="Tyrant" publicationId="eec8-0670-5b7c-4733" page="85" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
@@ -5010,6 +5024,140 @@ Shreek: In your shooting phase, you can pick 1 enemy unit within 18&quot; of thi
         <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="b700-31ee-c9f1-d19f" name="Gorger Mawpack" publicationId="eec8-0670-5b7c-4733" page="89" hidden="false" collective="false" import="true" type="unit">
+      <profiles>
+        <profile id="4a8-4195-da07-d81" name="Gorger Mawpack" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
+          <characteristics>
+            <characteristic name="Move" typeId="8655-6213-2824-1752">6&quot;</characteristic>
+            <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">5</characteristic>
+            <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">8</characteristic>
+            <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">6+</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="90f4-d5c8-751a-bd79" name="Ambushing Hunters" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">During deployment, instead of setting up this unit on the battlefield, you can place it to one side and say that it is set up in ambush as a reserve unit. If you do so, at the end of your movement phase, you can set up this unit on the battlefield more than 9&quot; from all enemy units.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="863a-2efa-3cd3-26e3" name="Agonizing Roar" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Roll a dice each time an enemy unit receives a command within 12&quot; of a friendly Cave Howler. On a 5+, that command is not received (the command ability still counts as having been used) and the command point that was spent to issue that command is lost.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Bone-shattering Strikes" typeId="96df-ab28-5d72-bbb3" typeName="Weapon" hidden="false" id="f53f-f19f-c31a-bab9">
+          <characteristics>
+            <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+            <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">2&quot;</characteristic>
+            <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">3</characteristic>
+            <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+            <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+            <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
+            <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">2</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="5545-3164-834e-fae7" name="New CategoryLink" hidden="false" targetId="d963-a5fb-c348-2371" primary="false"/>
+        <categoryLink id="7338-8cbf-dfa4-1b8c" name="GUTBUSTERS" hidden="false" targetId="c27c-df63-07a7-9fe7" primary="false"/>
+        <categoryLink id="cb0-1ea0-a519-1704" name="New CategoryLink" hidden="false" targetId="065e-fda7-fd27-1f40" primary="true"/>
+        <categoryLink id="518c-6bb9-a0ed-4a62" name="OGOR MAWTRIBES" hidden="false" targetId="2246-c381-2650-4ca2" primary="false"/>
+        <categoryLink id="b25a-e70e-9b4f-b829" name="OGOR" hidden="false" targetId="1422-e165-b7d0-b2d9" primary="false"/>
+        <categoryLink id="b0d9-ce30-e694-1daf" name="GORGERS" hidden="false" targetId="8b26-9a89-34c1-e875" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="68e-4b8e-414-80f7" name="5 Gorgers" hidden="false" collective="false" import="true" type="model">
+          <modifiers>
+            <modifier type="set" field="name" value="10 Gorgers">
+              <conditions>
+                <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0a8d-cde8-fba1-6c0d" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="edd1-804b-5892-b84" type="min"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7d8-ebb5-3cf2-6ee0" type="max"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="220"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <entryLinks>
+        <entryLink id="b023-e3be-bcfb-29b9" name="Reinforced" hidden="false" collective="false" import="true" targetId="0a8d-cde8-fba1-6c0d" type="selectionEntry">
+          <costs>
+            <cost name="pts" typeId="points" value="220"/>
+          </costs>
+        </entryLink>
+        <entryLink id="4977-6e50-b25e-35d6" name="Battalions" hidden="false" collective="false" import="true" targetId="c2fb-53c6-5c52-5750" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="0"/>
+      </costs>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Command Models" hidden="false" id="13c0-7708-9411-3a00">
+          <profiles>
+            <profile name="Clawback" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities" hidden="false" id="87c8-6b9e-43f3-50ac">
+              <characteristics>
+                <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 in every 5 models in this unit must be a Clawback. Add 1 to the Attacks characteristic of that model’s Bone-shattering Strikes. That model can issue commands to their own unit.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Cave Howler" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities" hidden="false" id="25cd-d3b5-1657-ac67">
+              <characteristics>
+                <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 in every 5 models in this unit must be a Cave Howler.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </selectionEntry>
+    <selectionEntry id="744b-f36d-aef5-ddaf" name="Mawpit" publicationId="eec8-0670-5b7c-4733" page="103" hidden="false" collective="false" import="true" type="upgrade">
+      <profiles>
+        <profile id="1379-3544-1e93-344d" name="The Throat of Ghur" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the end of the charge phase, the player whose turn is taking place must roll a dice for each unit in their army that is within 12&quot; of this terrain feature and within 12&quot; of any units in their opponent’s army and more than 3&quot; from all units in their opponent’s army. On a 3+, that unit suffers D3 mortal wounds. If this terrain feature has a Head Butcher, this ability affects units within 18&quot; of this terrain feature instead of 12&quot;. This ability has no effect on GUTBUSTERS units.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="5cf1-199e-cc7a-88ea" name="It Fights Back" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If this terrain feature is picked as the target of the Smash To Rubble monstrous rampage, and that monstrous rampage is unsuccessful, the MONSTER that carried out that monstrous rampage suffers 3D6 mortal wounds.
+
+
+Designer’s Note: A Smash To Rubble monstrous rampage is unsuccessful if the roll was not a 3+.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="2d0a-cb40-f2cb-fe21" name="SET-UP" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">After territories are determined, you can set up this faction terrain feature wholly within your territory and more than 3&quot; from all objectives and other terrain features. If both players can set up faction terrain features at the same time, they must roll off and the winner chooses who sets up their faction terrain features first.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="e1b9-111c-6db5-2131" name="DEFENSIBLE" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This terrain feature is a defensible terrain feature that can be garrisoned by 1 BUTCHER. The garrison is referred to as the terrain feature’s ‘Head Butcher’ in the rules on this warscroll.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="ba9a-9554-5662-cd8c" name="Head Butcher" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If this terrain feature has a Head Butcher, in your hero phase, you can say that an offering will be made to the Mawpit. If you do so, pick 1 enemy unit within 18&quot; of this terrain feature and roll D6. If the roll is more than twice that enemy unit’s Wounds characteristic, 1 model in that unit is slain. If the roll is more than three times that enemy unit’s Wounds characteristic, 3 models in that unit are slain.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="e010-7b5-5f53-97cd" name="New CategoryLink" hidden="false" targetId="bc8a-9257-1601-6d62" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="0"/>
+      </costs>
+      <modifiers>
+        <modifier type="set" value="0" field="4020-13b3-63c4-aed8">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="c79f-a0ac-0103-4cc4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="4020-13b3-63c4-aed8"/>
+      </constraints>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="e342-fd48-5b29-c708" name="Artefacts: Plunder of the Glutthold" hidden="true" collective="false" import="true">
@@ -7554,5 +7702,4 @@ D6 Everwinter’s Blessing Result
     <catalogueLink id="2c92-0458-c31e-342e" name="Endless Spells" targetId="f0db-356d-9f9f-662d" type="catalogue" importRootEntries="true"/>
     <catalogueLink id="33fa-cc59-75e0-c39f" name="Regiments of Renown" targetId="33cf-d309-6df3-50d6" type="catalogue" importRootEntries="true"/>
   </catalogueLinks>
-  <xmlns>http://www.battlescribe.net/schema/catalogueSchema</xmlns>
 </catalogue>
