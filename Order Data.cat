@@ -30,6 +30,14 @@
               <conditions>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d626-eba3-6e2b-48d6" type="equalTo"/>
               </conditions>
+              <conditionGroups>
+                <conditionGroup type="and"/>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="cf46-7b83-d97b-7663" shared="true"/>
+              </conditions>
             </modifier>
           </modifiers>
           <characteristics>
@@ -40,11 +48,25 @@
           <characteristics>
             <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">You can pick 1 of the following subfactions for your army (core rules, 27.2.1). All STORMCAST ETERNALS units in your army gain the keyword of the subfaction you picked, and you can use the allegiance abilities for that subfaction. If a unit already has a different subfaction keyword on its warscroll, it cannot gain another one. This does not preclude you from including the unit in your army, but you cannot use the allegiance abilities for its subfaction.</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="cf46-7b83-d97b-7663" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </profile>
         <profile id="096a-7119-b6fe-ecbd" name="Blaze of Glory" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
           <characteristics>
             <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">If a friendly STORMCAST ETERNALS model is slain within 1&quot; of an enemy unit, before removing that model from play, pick 1 enemy unit within 1&quot; of that model and roll a number of dice equal to the Wounds characteristic of that model.  Add 1 to the number of dice you roll if the slain model has the THUNDERSTRIKE keyword.  For each 6, the target suffers 1 mortal wound at the end of that phase.</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="cf46-7b83-d97b-7663" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </profile>
       </profiles>
       <selectionEntries>
@@ -72,6 +94,54 @@
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="cf46-7b83-d97b-7663" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Allegiance: Draconith Skywing" hidden="false" id="cf46-7b83-d97b-7663">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a53b-a0e2-d510-43c9"/>
+          </constraints>
+          <profiles>
+            <profile name="Draconith Guardians" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait" hidden="false" id="ad65-8a70-986c-354d">
+              <characteristics>
+                <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">If a friendly IONUS CRYPTBORN is within 3&quot; of any friendly STORMDRAKE GUARD units, before you allocate a wound or mortal wound to that HERO, or instead of making a ward roll for a wound or mortal wound that would be allocated to that HERO, roll a dice. On a 4+, that wound or mortal wound is allocated to 1 of those friendly units instead of IONUS CRYPTBORN and cannot be negated.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Exemplars of Fury" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait" hidden="false" id="5aa-a2e3-6d67-eaa9">
+              <characteristics>
+                <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">At the start of the combat phase, if there are 2 or more other friendly DRACONITH SKYWING units within 6&quot; of a friendly HERO, add 1 to the Attacks characteristic of melee weapons used by that HERO&apos;s mount until the end of that phase.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoGroups>
+            <infoGroup name="The Storm Unleashed" hidden="false" id="19b5-dff0-c53d-6a66">
+              <profiles>
+                <profile name="The Storm Unleashed" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities" hidden="false" id="4ce6-bf6a-7c89-ce33">
+                  <characteristics>
+                    <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">When you carry out a monstrous rampage with a friendly DRACONITH, you can carry out 1 of the monstrous rampages below instead of any other monstrous rampage you can carry out with that unit.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile name="Stun" typeId="84d9-7a5a-fe76-b740" typeName="Monstrous Rampage" hidden="false" id="d85b-5193-fb7e-339a">
+                  <characteristics>
+                    <characteristic name="Description" typeId="827b-962b-59a3-3b4d">Pick 1 enemy unit within 3&quot; of this unit and roll a dice. On a 3+, subtract 1 from wound rolls for attacks made by that unit in the following combat phase.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile name="Impact Tremors" typeId="84d9-7a5a-fe76-b740" typeName="Monstrous Rampage" hidden="false" id="a9c7-85-98be-1802">
+                  <characteristics>
+                    <characteristic name="Description" typeId="827b-962b-59a3-3b4d">Pick 1 enemy unit within 3&quot; of this unit and roll a dice. On a 3+, in the following combat phase, models in that unit can only move up to 1&quot; when they make a pile-in move instead of up to 3&quot;.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </infoGroup>
+          </infoGroups>
+          <categoryLinks>
+            <categoryLink targetId="a763-f425-1441-2df2" id="a7db-732d-88b1-12be" primary="false" name="Army of Renown"/>
+          </categoryLinks>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -177,6 +247,13 @@
               </costs>
             </selectionEntry>
           </selectionEntries>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="cf46-7b83-d97b-7663" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
@@ -330,6 +407,27 @@ At the start of your hero phase, you can heal 1 wound allocated to each friendly
         <entryLink id="dbf9-ad9b-0ab0-3f5c" name="Stormcast Artefacts" hidden="false" collective="false" import="true" targetId="fc32-c0b6-4e52-3e53" type="selectionEntryGroup"/>
         <entryLink id="6276-57a6-c4f2-4c83" name="Relics of Gallet" hidden="false" collective="false" import="true" targetId="d27f-9ad5-990c-2915" type="selectionEntryGroup"/>
       </entryLinks>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Celestium Ensign" hidden="false" id="677d-8c02-6545-cab7">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cf46-7b83-d97b-7663" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f9ba-d974-e2-bfbf"/>
+          </constraints>
+          <profiles>
+            <profile name="Celestium Ensign" typeId="0ac4-aacb-2481-8e72" typeName="Artefact" hidden="false" id="552f-b628-beba-6c5c">
+              <characteristics>
+                <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Once per battle, at the start of any phase, the bearer can say that they will raise their Celestium Ensign. If they do so, you can heal up to D3 wounds allocated to each friendly DRACONITH unit wholly within 9&quot; of the bearer.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntryGroup>
     <selectionEntryGroup id="59ea-9242-251d-adc4" name="Command Traits" hidden="false" collective="false" import="true">
       <modifiers>
@@ -348,6 +446,27 @@ At the start of your hero phase, you can heal 1 wound allocated to each friendly
         <entryLink id="ee28-d37e-fcb7-9151" name="Sylvaneth Command Traits" hidden="false" collective="false" import="true" targetId="92c8-9645-c512-102e" type="selectionEntryGroup"/>
         <entryLink import="true" name="Universal Command Traits" hidden="false" type="selectionEntryGroup" id="1891-6d3b-3cbe-fd0c" targetId="e372-6ace-3568-54e7"/>
       </entryLinks>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Favour the Bold" hidden="false" id="5a01-8a4a-67bd-7f8d">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cf46-7b83-d97b-7663" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="39c4-c8d9-f834-100a"/>
+          </constraints>
+          <profiles>
+            <profile name="Favour the Bold" typeId="c749-bae4-71a8-0c36" typeName="Command Trait" hidden="false" id="9f4b-aafd-18f9-6d86">
+              <characteristics>
+                <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">After this general has fought for the first time in the combat phase, if there are no enemy units within 3&quot; of this general, roll a dice. On a 2+, this general can immediately make a D6&quot; move and can finish that move within 3&quot; of any enemy units.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntryGroup>
     <selectionEntryGroup id="84a5-e2c5-5f4a-ec3e" name="Lore of the Storm" publicationId="6c99-1e0f-3bc1-11ae" page="122" hidden="false" collective="false" import="true">
       <modifiers>
@@ -355,6 +474,7 @@ At the start of your hero phase, you can heal 1 wound allocated to each friendly
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cf46-7b83-d97b-7663" type="atLeast"/>
                 <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="26ae-0330-06d3-8f22" type="equalTo"/>
               </conditions>
               <conditionGroups>
@@ -732,9 +852,14 @@ At the start of your hero phase, you can heal 1 wound allocated to each friendly
     <selectionEntryGroup id="fc32-c0b6-4e52-3e53" name="Stormcast Artefacts" hidden="false" collective="false" import="true">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="26ae-0330-06d3-8f22" type="equalTo"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cf46-7b83-d97b-7663" type="atLeast"/>
+                <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="26ae-0330-06d3-8f22" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <selectionEntryGroups>
@@ -929,9 +1054,14 @@ At the start of your hero phase, you can heal 1 wound allocated to each friendly
     <selectionEntryGroup id="2e21-007e-8895-d0e8" name="Stormcast Command Traits" hidden="false" collective="false" import="true">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="26ae-0330-06d3-8f22" type="equalTo"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cf46-7b83-d97b-7663" type="atLeast"/>
+                <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="26ae-0330-06d3-8f22" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <selectionEntryGroups>
