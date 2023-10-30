@@ -2864,6 +2864,13 @@ When a primal magic dice is rolled as part of a casting roll, on an unmodified c
       <costs>
         <cost name="pts" typeId="points" value="480"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="a763-f425-1441-2df2" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="0a8d-cde8-fba1-6c0d" name="Reinforced" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>

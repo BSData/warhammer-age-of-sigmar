@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" id="81cf-7df5-86e6-b78f" name="Order - Fyreslayers - Data" revision="107" battleScribeVersion="2.03" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="159" type="catalogue">
+<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" id="81cf-7df5-86e6-b78f" name="Order - Fyreslayers - Data" revision="108" battleScribeVersion="2.03" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="159" type="catalogue">
   <publications>
     <publication id="e67a-06d2-pubN65537" name="Order Battletome: Fyreslayers (2022)"/>
     <publication id="9cbd-6717-1de9-c57a" name="White Dwarf - June 2019"/>
@@ -91,6 +91,13 @@
                   <characteristics>
                     <characteristic name="Command Ability Details" typeId="1b71-4c83-4e8c-093f">You can use this command ability at the start of the enemy combat phase.  The unit that receives the command must be an AURIC HEARTHGUARD, HEARTHGUARD BERZERKERS or VULKITE BERZERKERS unit that is within 3&quot; of an enemy unit that made a charge move in the same turn and is not within 3&quot; any enemy units that have not made charge move in the same turn.  The strike-first effect applies to that unit until the end of that phase.  A unit cannot receive this command more than once per battle.</characteristic>
                   </characteristics>
+                  <modifiers>
+                    <modifier type="set" value="true" field="hidden">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="84bb-5346-a2bc-906a" shared="true"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
                 </profile>
                 <profile id="2aaa-47bb-4403-cb9c" name="Grimwrath Oaths" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
                   <characteristics>
@@ -108,62 +115,66 @@
 
 &apos;I will strike hard and true in Grimnir&apos;s name!&apos;:  If the unmodified hit roll for an attack made by this unit is 6, that attack causes 1 mortal wound to the target in addition to any damage it inflicts.</characteristic>
                   </characteristics>
+                  <modifiers>
+                    <modifier type="set" value="true" field="hidden">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="84bb-5346-a2bc-906a" shared="true"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
                 </profile>
               </profiles>
               <selectionEntries>
-                <selectionEntry id="a46a-e086-cad7-00eb" name="Ur-Gold" hidden="false" collective="false" import="true" type="upgrade">
+                <selectionEntry type="upgrade" import="true" name="Allegiance: Lofnir Drothkeepers" hidden="false" id="84bb-5346-a2bc-906a">
                   <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9cfb-a42f-5683-1e22" type="min"/>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b0bd-04d7-2a7c-72b7" type="max"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="efd-265c-eeef-6e3b"/>
                   </constraints>
                   <profiles>
-                    <profile id="5a06-5d07-7912-d72c" name="Ur-gold Runes" publicationId="e67a-06d2-pubN65537" page="56" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
+                    <profile name="Skilled Drothwranglers" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait" hidden="false" id="d426-75f0-3061-b8b1">
                       <characteristics>
-                        <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">At the start of your hero phase, you can activate one of the following six ur-gold runes. To do so, state which rune will be activated and make an activation roll by rolling a dice.  On a 1-5, the standard effect applies.  On a 6, the enhanced effect also applies.  The effects last until the start of your next hero phase.  
-
-Each ur-gold rune can only be activated once per battle, and no more than 1 rune can be activated at the same time.  Once you have used a rune, you can choose a new one to activate in your next hero phase, but you cannot activate the same one again.</characteristic>
+                        <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">Once per turn, in your movement phase, you can pick 1 friendly VULKYN FLAMESEEKERS unit wholly within 6&quot; of a friendly MAGMADROTH that has not yet moved in that phase and say that it will hitch a lift on that MAGMADROTH. If you do so, after you have moved that MAGMADROTH, instead of making a move with that unit, remove it from the battlefield and set it up again on the battlefield wholly within 6&quot; of that MAGMADROTH and more than 3&quot; from all enemy units.</characteristic>
                       </characteristics>
                     </profile>
-                    <profile id="a8b9-dee6-e142-5dd4" name="Rune of Fury" hidden="false" typeId="84c1-a205-4de9-2105" typeName="Ur-Gold Rune">
+                    <profile name="Daring Tamers" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait" hidden="false" id="f3a3-39b9-ba38-118b">
                       <characteristics>
-                        <characteristic name="Effect" typeId="3b0b-93bb-c656-56a0">Add 1 to hit rolls for attacks made by friendly FYRESLAYERS units.</characteristic>
-                        <characteristic name="Enhanced Effect" typeId="4429-3e90-af34-dc14">Add 1 to the Attacks characteristic of melee weapons used by friendly FYRESLAYERS units.</characteristic>
+                        <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">The strike-last effect applies to enemy MONSTER units while they are within 3&quot; of 2 or more friendly VULKYN FLAMESEEKERS units.</characteristic>
                       </characteristics>
                     </profile>
-                    <profile id="1ece-0db0-057e-10e3" name="Rune of Searing Heat" hidden="false" typeId="84c1-a205-4de9-2105" typeName="Ur-Gold Rune">
+                    <profile name="Protective Family" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait" hidden="false" id="2309-87bc-b7-6de9">
                       <characteristics>
-                        <characteristic name="Effect" typeId="3b0b-93bb-c656-56a0">If the unmodified wound roll for an attack made by a friendly FYRESLAYERS unit is 6, that attack causes 1 mortal wound to the target in addition to any damage it inflicts.</characteristic>
-                        <characteristic name="Enhanced Effect" typeId="4429-3e90-af34-dc14">When this rune is activated, roll a dice for each enemy unit within 3&quot; of any friendly FYRESLAYERS units.  On a 2+, that enemy unit suffers 1 mortal wound.</characteristic>
-                      </characteristics>
-                    </profile>
-                    <profile id="9f8d-0e03-1cb5-752d" name="Rune of Awakened Steel" hidden="false" typeId="84c1-a205-4de9-2105" typeName="Ur-Gold Rune">
-                      <characteristics>
-                        <characteristic name="Effect" typeId="3b0b-93bb-c656-56a0">Improve the Rend characteristic of melee weapons used by friendly FYRESLAYERS units by 1.</characteristic>
-                        <characteristic name="Enhanced Effect" typeId="4429-3e90-af34-dc14">Improve the Rend characteristic by a further 1.</characteristic>
-                      </characteristics>
-                    </profile>
-                    <profile id="c961-fc0a-b899-607b" name="Rune of Fiery Determination" hidden="false" typeId="84c1-a205-4de9-2105" typeName="Ur-Gold Rune">
-                      <characteristics>
-                        <characteristic name="Effect" typeId="3b0b-93bb-c656-56a0">Friendly FYRESLAYERS units have a ward of 6+.</characteristic>
-                        <characteristic name="Enhanced Effect" typeId="4429-3e90-af34-dc14">Friendly FYRESLAYERS units have a ward of 5+.</characteristic>
-                      </characteristics>
-                    </profile>
-                    <profile id="31b4-fb40-a7e4-66ec" name="Rune of Relentless Zeal" hidden="false" typeId="84c1-a205-4de9-2105" typeName="Ur-Gold Rune">
-                      <characteristics>
-                        <characteristic name="Effect" typeId="3b0b-93bb-c656-56a0">Add 2&quot; to the Move characteristic of friendly FYRESLAYERS units.</characteristic>
-                        <characteristic name="Enhanced Effect" typeId="4429-3e90-af34-dc14">Add 2 to charge rolls for friendly FYRESLAYERS units.</characteristic>
-                      </characteristics>
-                    </profile>
-                    <profile id="17c8-2d62-77d9-98f5" name="Rune of Farsight" hidden="false" typeId="84c1-a205-4de9-2105" typeName="Ur-Gold Rune">
-                      <characteristics>
-                        <characteristic name="Effect" typeId="3b0b-93bb-c656-56a0">Add 1 to hit rolls for attacks made with Fyresteel Throwing Axes by friendly FYRESLAYERS units.</characteristic>
-                        <characteristic name="Enhanced Effect" typeId="4429-3e90-af34-dc14">Add 1 to wound rolls for attacks made with Fyresteel Throwing Axes by friendly FYRESLAYERS units.</characteristic>
+                        <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">While a friendly VULKYN FLAMESEEKERS Kyndledroth is within 1&quot; of a friendly MAGAMADROTH, that VULKYN FLAMESEEKERS unit has a ward of 5+.</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
+                  <infoGroups>
+                    <infoGroup name="Spawn of Vulcatrix" hidden="false" id="476d-dbeb-a30e-ced0">
+                      <profiles>
+                        <profile name="Spawn of Vulcatrix" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait" hidden="false" id="c2fe-3aa1-e38c-d0db">
+                          <characteristics>
+                            <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">When you carry out a monstrous rampage with a friendly MAGMADROTH, you can carry out 1 of the monstrous rampages instead of any other monstrous rampage you can carry out with that unit.</characteristic>
+                          </characteristics>
+                        </profile>
+                        <profile name="Eruption of Ferocity" typeId="84d9-7a5a-fe76-b740" typeName="Monstrous Rampage" hidden="false" id="c131-d134-89ba-42b6">
+                          <characteristics>
+                            <characteristic name="Description" typeId="827b-962b-59a3-3b4d">Pick 1 enemy unit within 3&quot; of this unit and roll a dice. On a 2+, ward rolls cannot be made for models in that unit in the following combat phase.</characteristic>
+                          </characteristics>
+                        </profile>
+                        <profile name="Magma-fuelled Grasp" typeId="84d9-7a5a-fe76-b740" typeName="Monstrous Rampage" hidden="false" id="4a57-1fa4-5cde-a20e">
+                          <characteristics>
+                            <characteristic name="Description" typeId="827b-962b-59a3-3b4d">Pick 1 enemy MONSTER within 3&quot; of this unit and roll a dice. On a 3+, improve the Rend characteristic of melee weapons used by other friendly LOFNIR DROTHKEEPERS units that target that MONSTER by 1 in the following combat phase.</characteristic>
+                          </characteristics>
+                        </profile>
+                        <profile name="Rearing Punches" typeId="84d9-7a5a-fe76-b740" typeName="Monstrous Rampage" hidden="false" id="bd08-ab99-65ae-e099">
+                          <characteristics>
+                            <characteristic name="Description" typeId="827b-962b-59a3-3b4d">Pick 1 enemy unit within 3&quot; of this unit and roll 2 dice. Add 2 to each roll if that unit is a MONSTER. For each 5+, that unit suffers D3 mortal wounds.</characteristic>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                    </infoGroup>
+                  </infoGroups>
+                  <categoryLinks>
+                    <categoryLink targetId="a763-f425-1441-2df2" id="d3f3-e528-2f56-e0a4" primary="false" name="Army of Renown"/>
+                  </categoryLinks>
                 </selectionEntry>
               </selectionEntries>
               <selectionEntryGroups>
@@ -233,11 +244,74 @@ Each ur-gold rune can only be activated once per battle, and no more than 1 rune
                       </costs>
                     </selectionEntry>
                   </selectionEntries>
+                  <modifiers>
+                    <modifier type="set" value="true" field="hidden">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="84bb-5346-a2bc-906a" shared="true"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
                 </selectionEntryGroup>
               </selectionEntryGroups>
               <costs>
                 <cost name="pts" typeId="points" value="0"/>
               </costs>
+              <infoGroups>
+                <infoGroup name="Ur-gold" hidden="false" id="a46a-e086-cad7-00eb">
+                  <profiles>
+                    <profile id="5d0e-5ee2-aabe-a833" name="Rune of Awakened Steel" hidden="false" typeId="84c1-a205-4de9-2105" typeName="Ur-Gold Rune">
+                      <characteristics>
+                        <characteristic name="Effect" typeId="3b0b-93bb-c656-56a0">Improve the Rend characteristic of melee weapons used by friendly FYRESLAYERS units by 1.</characteristic>
+                        <characteristic name="Enhanced Effect" typeId="4429-3e90-af34-dc14">Improve the Rend characteristic by a further 1.</characteristic>
+                      </characteristics>
+                    </profile>
+                    <profile id="af68-4f88-a655-c23f" name="Rune of Farsight" hidden="false" typeId="84c1-a205-4de9-2105" typeName="Ur-Gold Rune">
+                      <characteristics>
+                        <characteristic name="Effect" typeId="3b0b-93bb-c656-56a0">Add 1 to hit rolls for attacks made with Fyresteel Throwing Axes by friendly FYRESLAYERS units.</characteristic>
+                        <characteristic name="Enhanced Effect" typeId="4429-3e90-af34-dc14">Add 1 to wound rolls for attacks made with Fyresteel Throwing Axes by friendly FYRESLAYERS units.</characteristic>
+                      </characteristics>
+                    </profile>
+                    <profile id="d2a2-814c-8f9a-1721" name="Rune of Fiery Determination" hidden="false" typeId="84c1-a205-4de9-2105" typeName="Ur-Gold Rune">
+                      <characteristics>
+                        <characteristic name="Effect" typeId="3b0b-93bb-c656-56a0">Friendly FYRESLAYERS units have a ward of 6+.</characteristic>
+                        <characteristic name="Enhanced Effect" typeId="4429-3e90-af34-dc14">Friendly FYRESLAYERS units have a ward of 5+.</characteristic>
+                      </characteristics>
+                    </profile>
+                    <profile id="8e7e-8645-66fb-d99" name="Rune of Fury" hidden="false" typeId="84c1-a205-4de9-2105" typeName="Ur-Gold Rune">
+                      <characteristics>
+                        <characteristic name="Effect" typeId="3b0b-93bb-c656-56a0">Add 1 to hit rolls for attacks made by friendly FYRESLAYERS units.</characteristic>
+                        <characteristic name="Enhanced Effect" typeId="4429-3e90-af34-dc14">Add 1 to the Attacks characteristic of melee weapons used by friendly FYRESLAYERS units.</characteristic>
+                      </characteristics>
+                    </profile>
+                    <profile id="19ad-2fd4-e40b-12a5" name="Rune of Relentless Zeal" hidden="false" typeId="84c1-a205-4de9-2105" typeName="Ur-Gold Rune">
+                      <characteristics>
+                        <characteristic name="Effect" typeId="3b0b-93bb-c656-56a0">Add 2&quot; to the Move characteristic of friendly FYRESLAYERS units.</characteristic>
+                        <characteristic name="Enhanced Effect" typeId="4429-3e90-af34-dc14">Add 2 to charge rolls for friendly FYRESLAYERS units.</characteristic>
+                      </characteristics>
+                    </profile>
+                    <profile id="7212-fa-6ac9-9a67" name="Rune of Searing Heat" hidden="false" typeId="84c1-a205-4de9-2105" typeName="Ur-Gold Rune">
+                      <characteristics>
+                        <characteristic name="Effect" typeId="3b0b-93bb-c656-56a0">If the unmodified wound roll for an attack made by a friendly FYRESLAYERS unit is 6, that attack causes 1 mortal wound to the target in addition to any damage it inflicts.</characteristic>
+                        <characteristic name="Enhanced Effect" typeId="4429-3e90-af34-dc14">When this rune is activated, roll a dice for each enemy unit within 3&quot; of any friendly FYRESLAYERS units.  On a 2+, that enemy unit suffers 1 mortal wound.</characteristic>
+                      </characteristics>
+                    </profile>
+                    <profile id="33b-f95c-8b81-22e8" name="Ur-gold Runes" publicationId="e67a-06d2-pubN65537" page="56" hidden="false" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
+                      <characteristics>
+                        <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">At the start of your hero phase, you can activate one of the following six ur-gold runes. To do so, state which rune will be activated and make an activation roll by rolling a dice.  On a 1-5, the standard effect applies.  On a 6, the enhanced effect also applies.  The effects last until the start of your next hero phase.  
+
+Each ur-gold rune can only be activated once per battle, and no more than 1 rune can be activated at the same time.  Once you have used a rune, you can choose a new one to activate in your next hero phase, but you cannot activate the same one again.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <modifiers>
+                    <modifier type="set" value="true" field="hidden">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="84bb-5346-a2bc-906a" shared="true"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </infoGroup>
+              </infoGroups>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -2233,6 +2307,11 @@ In addition, in the combat phase, if this unit is destroyed while within 3&quot;
             <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3544-cf2b-f1ab-8663" type="greaterThan"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="primary-catalogue" childId="84bb-5346-a2bc-906a" shared="true" includeChildForces="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0854-7486-3458-f1b3" type="max"/>
@@ -2315,6 +2394,11 @@ In addition, in the combat phase, if this unit is destroyed while within 3&quot;
         <modifier type="add" field="category" value="7f45-c5b3-c698-138d">
           <conditions>
             <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9f18-9ffb-0267-3e08" type="greaterThan"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="84bb-5346-a2bc-906a" shared="true" includeChildForces="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -2721,6 +2805,13 @@ If the commanding player rolls 4 or more unmodified 6s, after the mortal wounds 
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="84bb-5346-a2bc-906a" shared="true" includeChildForces="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="7176-6508-38b6-738e" name="Grand Strategy" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
@@ -2759,6 +2850,27 @@ If the commanding player rolls 4 or more unmodified 6s, after the mortal wounds 
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Clear the Corral" hidden="false" id="ea44-250e-67ff-5429">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="84bb-5346-a2bc-906a" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fdf4-7759-475f-92e8"/>
+          </constraints>
+          <profiles>
+            <profile name="Clear the Corral" typeId="9c01-ec20-32c1-0948" typeName="Grand Strategy" hidden="false" id="56cc-8b82-b6da-f7c7">
+              <characteristics>
+                <characteristic name="Description" typeId="53c8-cc18-16d1-e890">When the battle ends, you complete this grand strategy if there are no enemy MONSTERS in your territory.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntry>
     <selectionEntry id="a94a-70fb-c23f-dcbf" name="Magmadroth Wound Table" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -3073,6 +3185,13 @@ Once per turn, at the start of the combat phase, if the value of the dice beside
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="84bb-5346-a2bc-906a" shared="true" includeChildForces="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="8fad-5545-73f9-1c6f" name="Grimhold Exile" hidden="false" collective="false" import="true" type="unit">
       <profiles>
@@ -3260,7 +3379,7 @@ Once per turn, at the start of the combat phase, if the value of the dice beside
           <profiles>
             <profile name="Vulkyn Runefather" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities" hidden="false" id="33da-38d9-953c-6df4">
               <characteristics>
-                <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0"> 1 in every 9 models in this unit must be a Vulkyn Runefather. Add 1 to the Attacks characteristic of that model’s Vulkyn Fyresteel Weapon. That model can issue commands to their own unit.</characteristic>
+                <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 in every 9 models in this unit must be a Vulkyn Runefather. Add 1 to the Attacks characteristic of that model’s Vulkyn Fyresteel Weapon. That model can issue commands to their own unit.</characteristic>
               </characteristics>
             </profile>
             <profile name="Kyndledroth" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities" hidden="false" id="5de-7101-de37-f085">
@@ -3270,7 +3389,7 @@ Once per turn, at the start of the combat phase, if the value of the dice beside
             </profile>
             <profile name="Drothmaster" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities" hidden="false" id="4e41-723f-5153-45bd">
               <characteristics>
-                <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 in every 9 models in this unit must be a Drothmaster. </characteristic>
+                <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 in every 9 models in this unit must be a Drothmaster.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -3284,6 +3403,32 @@ Once per turn, at the start of the combat phase, if the value of the dice beside
         <categoryLink targetId="a89a-9904-cf30-0d17" id="b08a-95cf-c785-7105" primary="false" name="LOFNIR"/>
         <categoryLink targetId="90c8-902-3ad3-db39" id="172c-2ebb-d1d0-10cc" primary="false" name="VULKYN FLAMESEEKERS"/>
       </categoryLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Battle Tactics: Forge-sworn Oaths" hidden="false" id="bbd5-afca-ce75-724">
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="84bb-5346-a2bc-906a" shared="true" includeChildForces="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <profiles>
+        <profile name="Sulphur Seam" typeId="eba0-4bf6-65fe-fdbc" typeName="Battle Tactic" hidden="false" id="9854-3bb7-2fcc-86b8">
+          <characteristics>
+            <characteristic name="Description" typeId="f882-48d5-21a4-1787">Pick 1 objective that is partially or wholly within enemy territory and 1 terrain feature or faction terrain feature that is partially or wholly within enemy territory and more than 6&quot; away from that objective. You complete this tactic if you control both that objective and that terrain feature at the end of this turn.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Circle the Magmadroths" typeId="eba0-4bf6-65fe-fdbc" typeName="Battle Tactic" hidden="false" id="e533-9f0f-42ef-bf9c">
+          <characteristics>
+            <characteristic name="Description" typeId="f882-48d5-21a4-1787">You complete this tactic if, at the end of this turn, any friendly LOFNIR DROTHKEEPERS units are within 6&quot; of the centre of the battlefield and there are 1 or more friendly LOFNIR DROTHKEEPERS units wholly within each large quarter of the battlefield.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Igneous Wranglers" typeId="eba0-4bf6-65fe-fdbc" typeName="Battle Tactic" hidden="false" id="d487-975-13d8-65c5">
+          <characteristics>
+            <characteristic name="Description" typeId="f882-48d5-21a4-1787">Pick 1 objective partially or wholly within enemy territory and 1 other objective anywhere on the battlefield. You complete this tactic if you control both objectives at the end of this turn and both are contested by friendly VULKYN FLAMESEEKERS units.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
@@ -3316,10 +3461,30 @@ Once per turn, at the start of the combat phase, if the value of the dice beside
             </modifier>
           </modifiers>
         </entryLink>
-        <entryLink id="a133-d14f-b6ed-4c5a" name="Realm Artefacts of Power" hidden="false" collective="false" import="true" targetId="37b0-af21-630c-d8af" type="selectionEntryGroup"/>
         <entryLink id="663e-db05-000f-fedd" name="Universal Artefacts of Power" hidden="false" collective="false" import="true" targetId="11c4-fd82-92a7-de8a" type="selectionEntryGroup"/>
         <entryLink id="1cb4-ad3a-af65-eb75" name="Relics of Gallet" hidden="false" collective="false" import="true" targetId="d27f-9ad5-990c-2915" type="selectionEntryGroup"/>
       </entryLinks>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Mastery over Monsters" hidden="false" id="376-284a-c1b-92a1">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="84bb-5346-a2bc-906a" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c48a-e1b5-2aed-ac2d"/>
+          </constraints>
+          <profiles>
+            <profile name="Mastery over Monsters" typeId="c749-bae4-71a8-0c36" typeName="Command Trait" hidden="false" id="57c-3eda-9328-47a">
+              <characteristics>
+                <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">While the bearer is contesting an objective, each enemy MONSTER contesting that objective counts as 2 models regardless of any other abilities that would allow that enemy MONSTER to count as more models (such as Mightier Makes Rightier).</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntryGroup>
     <selectionEntryGroup id="8db2-e52d-b376-b998" name="Command Traits" hidden="false" collective="false" import="true">
       <modifiers>
@@ -3345,6 +3510,27 @@ Once per turn, at the start of the combat phase, if the value of the dice beside
         <entryLink id="0dd7-3dc0-62c5-798c" name="Universal Command Traits" hidden="false" collective="false" import="true" targetId="b6b8-914a-dfca-18ee" type="selectionEntryGroup"/>
         <entryLink import="true" name="Universal Command Traits" hidden="false" type="selectionEntryGroup" id="8443-3ca6-6e00-367c" targetId="e372-6ace-3568-54e7"/>
       </entryLinks>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Revered Flamemaster" hidden="false" id="d0ba-12ac-a26a-7ffc">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="84bb-5346-a2bc-906a" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4b90-1c1b-381b-91bd"/>
+          </constraints>
+          <profiles>
+            <profile name="Revered Flamemaster" typeId="c749-bae4-71a8-0c36" typeName="Command Trait" hidden="false" id="ab53-403c-b26d-21fd">
+              <characteristics>
+                <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">Improve the Rend characteristic of melee weapons used by friendly LOFNIR DROTHKEEPERS units that do not have the MAGMADROTH keyword and are wholly within 9&quot; of this general by 2 if the target is a MONSTER.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntryGroup>
     <selectionEntryGroup id="af4d-33e5-4e65-e160" name="Fyreslayer Command Traits" hidden="false" collective="false" import="true">
       <constraints>
@@ -3354,6 +3540,13 @@ Once per turn, at the start of the combat phase, if the value of the dice beside
         <entryLink id="0d5a-6444-6da3-b6a7" name="Inheritance of Grimnir" hidden="false" collective="false" import="true" targetId="7f65-1f3e-31ba-5de5" type="selectionEntryGroup"/>
         <entryLink id="c3f5-1cbd-e512-380f" name="Magmic Empowerments" hidden="false" collective="false" import="true" targetId="48d8-2d62-fb87-82ea" type="selectionEntryGroup"/>
       </entryLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="parent" childId="84bb-5346-a2bc-906a" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntryGroup>
     <selectionEntryGroup id="871a-59b8-6df1-b751" name="Fyreslayer Artefacts" hidden="false" collective="false" import="true">
       <constraints>
@@ -3365,6 +3558,13 @@ Once per turn, at the start of the combat phase, if the value of the dice beside
         <entryLink id="a8db-7a6d-25c3-ac0d" name="Icons of Grimnir" hidden="false" collective="false" import="true" targetId="8a89-6828-bd55-ee17" type="selectionEntryGroup"/>
         <entryLink id="18d8-8944-6b45-a36e" name="Relics of the Fyrd" hidden="false" collective="false" import="true" targetId="e542-d128-b9c5-1849" type="selectionEntryGroup"/>
       </entryLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="parent" childId="84bb-5346-a2bc-906a" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntryGroup>
     <selectionEntryGroup id="3886-2846-4e7d-dd6a" name="Magmadroth Traits" hidden="false" collective="false" import="true">
       <modifiers>
@@ -3374,9 +3574,14 @@ Once per turn, at the start of the combat phase, if the value of the dice beside
           </conditions>
         </modifier>
         <modifier type="set" field="941a-d7e8-c4c7-b0fd" value="3">
-          <conditions>
-            <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a89a-9904-cf30-0d17" type="greaterThan"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a89a-9904-cf30-0d17" type="greaterThan"/>
+                <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="84bb-5346-a2bc-906a" type="greaterThan"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
         <modifier type="increment" field="941a-d7e8-c4c7-b0fd" value="1">
           <repeats>
@@ -3403,6 +3608,13 @@ Once per turn, at the start of the combat phase, if the value of the dice beside
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="84bb-5346-a2bc-906a" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
         <selectionEntry id="7fa8-05ed-497c-4d69" name="Lava-tongue Adult" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -3418,6 +3630,13 @@ Once per turn, at the start of the combat phase, if the value of the dice beside
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="84bb-5346-a2bc-906a" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
         <selectionEntry id="545d-8ddc-1bea-9dfc" name="Coal-heart Ancient" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -3433,8 +3652,64 @@ Once per turn, at the start of the combat phase, if the value of the dice beside
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="84bb-5346-a2bc-906a" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
       </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Hatched of Fire" hidden="false" id="c04-f02-d850-6748">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="84bb-5346-a2bc-906a" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Packdroth" hidden="false" id="a395-3faf-402b-b416">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8a36-3421-6087-4b85"/>
+              </constraints>
+              <profiles>
+                <profile name="Packdroth" typeId="e6fe-61ec-3973-ad03" typeName="Mount Trait" hidden="false" id="1260-77c9-1b6c-d7dc">
+                  <characteristics>
+                    <characteristic name="Mount Trait Details" typeId="0603-faf4-fada-3cbf">In your movement phase, before this unit makes a move, you can pick 1 friendly VULKYN FLAMESEEKERS unit to hitch a lift on this MAGMADROTH (see the Skilled Drothwranglers battle trait) even if another unit has already hitched a lift on a MAGMADROTH in the same phase. The same unit cannot hitch a lift on the same MAGMADROTH in the same phase.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Red-hot Fury" hidden="false" id="45ba-dd9f-48b9-5342">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d6d6-fa2e-495d-852f"/>
+              </constraints>
+              <profiles>
+                <profile name="Red-hot Fury" typeId="e6fe-61ec-3973-ad03" typeName="Mount Trait" hidden="false" id="b2d6-18b4-2973-cb2b">
+                  <characteristics>
+                    <characteristic name="Mount Trait Details" typeId="0603-faf4-fada-3cbf">At the end of the enemy charge phase, before carrying out monstrous rampages, if this unit is more than 3&quot; from all enemy units, it can attempt a charge. It must finish the charge move within 1/2&quot; if an enemy unit that is itself within 3&quot; of a friendly VULKYN FLAMESEEKERS Kyndledroth.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Scalding Steam-breath" hidden="false" id="af1-af25-cf6b-1431">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="421-606d-a502-827b"/>
+              </constraints>
+              <profiles>
+                <profile name="Scalding Steam-breath" typeId="e6fe-61ec-3973-ad03" typeName="Mount Trait" hidden="false" id="da7a-be08-38f4-3bda">
+                  <characteristics>
+                    <characteristic name="Mount Trait Details" typeId="0603-faf4-fada-3cbf">If the target is a MONSTER, the Damage characteristic of this unit&apos;s Blazing MAw is 3 instead of D3.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntryGroup>
     <selectionEntryGroup id="7f65-1f3e-31ba-5de5" name="Inheritance of Grimnir" hidden="false" collective="false" import="true">
       <modifiers>
@@ -3447,6 +3722,11 @@ Once per turn, at the start of the combat phase, if the value of the dice beside
               </conditions>
             </conditionGroup>
           </conditionGroups>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="parent" childId="84bb-5346-a2bc-906a" shared="true"/>
+          </conditions>
         </modifier>
       </modifiers>
       <constraints>
@@ -3515,6 +3795,11 @@ Once per turn, at the start of the combat phase, if the value of the dice beside
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="parent" childId="84bb-5346-a2bc-906a" shared="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d895-ba51-4cbe-158f" type="max"/>
@@ -3571,6 +3856,11 @@ If this general is slain and there is a Molten Infernoth invocation under your c
               </conditions>
             </conditionGroup>
           </conditionGroups>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="parent" childId="84bb-5346-a2bc-906a" shared="true"/>
+          </conditions>
         </modifier>
       </modifiers>
       <constraints>
@@ -3663,6 +3953,11 @@ If this general is slain and there is a Molten Infernoth invocation under your c
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="parent" childId="84bb-5346-a2bc-906a" shared="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c1aa-3120-9a67-8332" type="max"/>
@@ -3731,6 +4026,11 @@ If this general is slain and there is a Molten Infernoth invocation under your c
             <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="91e1-ab50-8554-4a6e" type="notInstanceOf"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="parent" childId="84bb-5346-a2bc-906a" shared="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9c78-c382-4832-7e81" type="max"/>
@@ -3758,6 +4058,11 @@ If this general is slain and there is a Molten Infernoth invocation under your c
         <modifier type="set" field="hidden" value="true">
           <conditions>
             <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="94c9-6cd1-da31-5c7e" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="parent" childId="84bb-5346-a2bc-906a" shared="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -3913,6 +4218,11 @@ If this general is slain and there is a Molten Infernoth invocation under your c
         <modifier type="set" field="hidden" value="false">
           <conditions>
             <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="f93b-36db-8238-f92f" type="greaterThan"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="parent" childId="84bb-5346-a2bc-906a" shared="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -4336,6 +4646,11 @@ If this general is slain and there is a Molten Infernoth invocation under your c
         <modifier type="set" field="hidden" value="false">
           <conditions>
             <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="94c9-6cd1-da31-5c7e" type="greaterThan"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="parent" childId="84bb-5346-a2bc-906a" shared="true"/>
           </conditions>
         </modifier>
       </modifiers>

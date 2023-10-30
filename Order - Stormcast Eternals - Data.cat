@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" id="82b4-f6e1-3e37-5ea1" name="Order - Stormcast Eternals - Data" revision="179" battleScribeVersion="2.03" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="161" type="catalogue">
+<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" id="82b4-f6e1-3e37-5ea1" name="Order - Stormcast Eternals - Data" revision="180" battleScribeVersion="2.03" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="161" type="catalogue">
   <publications>
     <publication id="ed04-877b-pubN65537" name="Order Battletome: Stormcast Eternals (2nd Edition)"/>
     <publication id="ed04-877b-pubN71576" name="Battletome: Stormcast Eternals (2nd Edition)"/>
@@ -33,6 +33,13 @@
         <characteristicType id="f302-b2d9-e39f-8053" name="Move"/>
         <characteristicType id="729f-5bd0-e7aa-bff4" name="Rain of Stars"/>
         <characteristicType id="0117-b3ae-916b-32d3" name="Cavernous Jaws"/>
+      </characteristicTypes>
+    </profileType>
+    <profileType name="Ionus Damage Table" hidden="false" id="2eb1-eadc-93b1-f404">
+      <characteristicTypes>
+        <characteristicType id="b3b-d8a0-e0a7-c05f" name="Move"/>
+        <characteristicType id="e8aa-28ec-efb6-d644" name="Ancient Claws"/>
+        <characteristicType id="cd28-43b8-e842-ec21" name="Timeworn Fangs"/>
       </characteristicTypes>
     </profileType>
   </profileTypes>
@@ -154,6 +161,10 @@
     <categoryEntry id="fe6b-01c5-e4fe-8041" name="DACIAN ANVIL" hidden="false"/>
     <categoryEntry id="daf2-c09f-c5dd-1a21" name="DOMITAN&apos;S STORMCOVEN" hidden="false"/>
     <categoryEntry id="f8eb-76b1-5884-5036" name="QUESTOR SOULSWORN" hidden="false"/>
+    <categoryEntry name="IONUS CRYPTBORN" hidden="false" id="f195-124b-1fa5-6d0b"/>
+    <categoryEntry name="NEAVE&apos;S COMPANIONS" hidden="false" id="4241-c8a0-30c6-7f77"/>
+    <categoryEntry name="THE BLACKTALONS" hidden="false" id="d43-ec51-42bb-6cfc"/>
+    <categoryEntry name="LORAI" hidden="false" id="52b5-4386-e267-574f"/>
   </categoryEntries>
   <sharedSelectionEntries>
     <selectionEntry id="c6a3-2acf-1e46-3896" name="Allegiance" hidden="false" collective="false" import="true" type="unit">
@@ -203,6 +214,11 @@
         <modifier type="add" field="category" value="5cb0-860c-916b-5bcd">
           <conditions>
             <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="d43d-da9f-4261-e201" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="cf46-7b83-d97b-7663" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -304,6 +320,11 @@ At the end of your movement phase, if this unit remains in reserve, add 2 to the
         <modifier type="remove" field="category" value="065e-fda7-fd27-1f40">
           <conditions>
             <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7b17-f747-341b-f1cd" type="greaterThan"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="cf46-7b83-d97b-7663" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -492,6 +513,11 @@ At the end of your movement phase, if this unit remains in reserve, add 2 to the
             <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9f18-9ffb-0267-3e08" type="greaterThan"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="cf46-7b83-d97b-7663" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <profiles>
         <profile id="25e9-5b8c-b73b-0bf6" name="Decimator" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
@@ -635,6 +661,11 @@ At the end of your movement phase, if this unit remains in reserve, add 2 to the
         <modifier type="remove" field="category" value="065e-fda7-fd27-1f40">
           <conditions>
             <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7b17-f747-341b-f1cd" type="greaterThan"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="cf46-7b83-d97b-7663" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -796,6 +827,11 @@ At the end of your movement phase, if this unit remains in reserve, add 2 to the
         <modifier type="add" field="category" value="5cb0-860c-916b-5bcd">
           <conditions>
             <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="d43d-da9f-4261-e201" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="cf46-7b83-d97b-7663" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -1087,6 +1123,11 @@ At the end of your movement phase, if this unit remains in reserve, add 2 to the
             <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7b17-f747-341b-f1cd" type="greaterThan"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="cf46-7b83-d97b-7663" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <profiles>
         <profile id="6795-e4b6-706b-d558" name="Dracothian Guard Fulminator" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
@@ -1254,6 +1295,11 @@ At the end of your movement phase, if this unit remains in reserve, add 2 to the
             <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9f18-9ffb-0267-3e08" type="greaterThan"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="cf46-7b83-d97b-7663" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <profiles>
         <profile id="de12-8b16-46ec-f74b" name="Gryph-Hounds" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
@@ -1360,6 +1406,11 @@ At the end of your movement phase, if this unit remains in reserve, add 2 to the
         <modifier type="add" field="category" value="7f45-c5b3-c698-138d">
           <conditions>
             <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9f18-9ffb-0267-3e08" type="greaterThan"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="cf46-7b83-d97b-7663" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -1515,6 +1566,11 @@ At the end of your movement phase, if this unit remains in reserve, add 2 to the
             <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9f18-9ffb-0267-3e08" type="greaterThan"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="cf46-7b83-d97b-7663" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <profiles>
         <profile id="6287-f315-4a3e-6cc7" name="Knight-Azyros" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
@@ -1597,6 +1653,11 @@ At the end of your movement phase, if this unit remains in reserve, add 2 to the
             <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9f18-9ffb-0267-3e08" type="greaterThan"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="cf46-7b83-d97b-7663" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <profiles>
         <profile id="8852-11c8-5b91-d7bd" name="Knight-Heraldor" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
@@ -1674,6 +1735,11 @@ At the end of your movement phase, if this unit remains in reserve, add 2 to the
         <modifier type="add" field="category" value="89f7-d50b-0aa9-01ce">
           <conditions>
             <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9f18-9ffb-0267-3e08" type="greaterThan"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="cf46-7b83-d97b-7663" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -1758,6 +1824,11 @@ At the end of your movement phase, if this unit remains in reserve, add 2 to the
         <modifier type="add" field="category" value="89f7-d50b-0aa9-01ce">
           <conditions>
             <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9f18-9ffb-0267-3e08" type="greaterThan"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="cf46-7b83-d97b-7663" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -1902,6 +1973,11 @@ At the end of your movement phase, if this unit remains in reserve, add 2 to the
             <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9f18-9ffb-0267-3e08" type="greaterThan"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="cf46-7b83-d97b-7663" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <profiles>
         <profile id="5ea0-565d-ec3f-2480" name="Knight-Vexillor" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
@@ -2025,6 +2101,11 @@ At the end of your movement phase, if this unit remains in reserve, add 2 to the
         <modifier type="add" field="category" value="7f45-c5b3-c698-138d">
           <conditions>
             <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9f18-9ffb-0267-3e08" type="greaterThan"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="cf46-7b83-d97b-7663" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -2202,6 +2283,11 @@ At the end of your movement phase, if this unit remains in reserve, add 2 to the
             <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9f18-9ffb-0267-3e08" type="greaterThan"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="cf46-7b83-d97b-7663" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <profiles>
         <profile id="b989-6398-4cc3-6c7d" name="Lord-Castellant" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
@@ -2306,6 +2392,11 @@ If you pick an enemy unit, roll a dice. On a 2+, the target suffers D3 mortal wo
         <modifier type="add" field="category" value="89f7-d50b-0aa9-01ce">
           <conditions>
             <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9f18-9ffb-0267-3e08" type="greaterThan"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="cf46-7b83-d97b-7663" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -2418,6 +2509,11 @@ If you pick an enemy unit, roll a dice. On a 2+, the target suffers D3 mortal wo
         <modifier type="add" field="category" value="5cb0-860c-916b-5bcd">
           <conditions>
             <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="d43d-da9f-4261-e201" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="cf46-7b83-d97b-7663" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -2650,6 +2746,11 @@ If you pick an enemy unit, roll a dice. On a 2+, the target suffers D3 mortal wo
         <modifier type="add" field="category" value="5cb0-860c-916b-5bcd">
           <conditions>
             <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="d43d-da9f-4261-e201" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="cf46-7b83-d97b-7663" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -2890,6 +2991,11 @@ If you pick an enemy unit, roll a dice. On a 2+, the target suffers D3 mortal wo
             <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9f18-9ffb-0267-3e08" type="greaterThan"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="cf46-7b83-d97b-7663" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <profiles>
         <profile id="6c27-df50-5164-0c3d" name="Lord-Relictor" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
@@ -2985,6 +3091,11 @@ If you pick an enemy unit, roll a dice. On a 2+, the target suffers D3 mortal wo
         <modifier type="add" field="category" value="89f7-d50b-0aa9-01ce">
           <conditions>
             <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9f18-9ffb-0267-3e08" type="greaterThan"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="cf46-7b83-d97b-7663" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -3118,6 +3229,11 @@ If you pick an enemy unit, roll a dice. On a 2+, the target suffers D3 mortal wo
         <modifier type="add" field="category" value="7f45-c5b3-c698-138d">
           <conditions>
             <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9f18-9ffb-0267-3e08" type="greaterThan"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="cf46-7b83-d97b-7663" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -3342,6 +3458,11 @@ If you pick an enemy unit, roll a dice. On a 2+, the target suffers D3 mortal wo
             <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9f18-9ffb-0267-3e08" type="greaterThan"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="cf46-7b83-d97b-7663" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <profiles>
         <profile id="fc80-e505-823c-5d34" name="Protector" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
@@ -3502,6 +3623,11 @@ If you pick an enemy unit, roll a dice. On a 2+, the target suffers D3 mortal wo
             <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9f18-9ffb-0267-3e08" type="greaterThan"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="cf46-7b83-d97b-7663" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <profiles>
         <profile id="b3ec-a2f4-ca6c-31d0" name="Retributor" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
@@ -3645,6 +3771,11 @@ If you pick an enemy unit, roll a dice. On a 2+, the target suffers D3 mortal wo
         <modifier type="remove" field="category" value="065e-fda7-fd27-1f40">
           <conditions>
             <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7b17-f747-341b-f1cd" type="greaterThan"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="cf46-7b83-d97b-7663" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -3835,6 +3966,11 @@ If you pick an enemy unit, roll a dice. On a 2+, the target suffers D3 mortal wo
             <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9f18-9ffb-0267-3e08" type="greaterThan"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="cf46-7b83-d97b-7663" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <profiles>
         <profile id="5ca8-8f4c-cc20-7c16" name="Aetherwing" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
@@ -3931,6 +4067,11 @@ If you pick an enemy unit, roll a dice. On a 2+, the target suffers D3 mortal wo
         <modifier type="add" field="category" value="5cb0-860c-916b-5bcd">
           <conditions>
             <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="d43d-da9f-4261-e201" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="cf46-7b83-d97b-7663" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -4105,6 +4246,11 @@ If you pick an enemy unit, roll a dice. On a 2+, the target suffers D3 mortal wo
             <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9f18-9ffb-0267-3e08" type="greaterThan"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="cf46-7b83-d97b-7663" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <profiles>
         <profile id="04b0-5405-0a0d-a513" name="Vanguard-Hunter" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
@@ -4247,6 +4393,11 @@ If you pick an enemy unit, roll a dice. On a 2+, the target suffers D3 mortal wo
         <modifier type="set-primary" field="category" value="e9f2-765a-b7b8-ce8e">
           <conditions>
             <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f157-c1a8-267c-5faa" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="cf46-7b83-d97b-7663" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -4453,6 +4604,11 @@ If you pick an enemy unit, roll a dice. On a 2+, the target suffers D3 mortal wo
             <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9f18-9ffb-0267-3e08" type="greaterThan"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="cf46-7b83-d97b-7663" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <profiles>
         <profile id="536f-bed8-6e27-18c7" name="Vanguard-Raptor with Hurricane Crossbow" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
@@ -4576,6 +4732,11 @@ If you pick an enemy unit, roll a dice. On a 2+, the target suffers D3 mortal wo
         <modifier type="add" field="category" value="7f45-c5b3-c698-138d">
           <conditions>
             <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9f18-9ffb-0267-3e08" type="greaterThan"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="cf46-7b83-d97b-7663" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -4751,6 +4912,11 @@ If you pick an enemy unit, roll a dice. On a 2+, the target suffers D3 mortal wo
             <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="d43d-da9f-4261-e201" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="cf46-7b83-d97b-7663" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="799f-f907-27bd-c399" type="max"/>
@@ -4823,7 +4989,6 @@ If you pick an enemy unit, roll a dice. On a 2+, the target suffers D3 mortal wo
             <categoryLink id="1d29-aa75-6aa7-2d34" name="Unique General" hidden="false" targetId="fe3f-d230-7e2c-fba2" primary="false"/>
           </categoryLinks>
         </entryLink>
-        <entryLink id="69a8-1ad8-61c8-40cc" name="General&apos;s Adjutant" hidden="false" collective="false" import="true" targetId="65e4-9e34-5cf6-2bec" type="selectionEntry"/>
         <entryLink id="f8b5-c70d-2b0d-51b9" name="Battalions" hidden="false" collective="false" import="true" targetId="4165-f8c8-6f84-e4ca" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
@@ -4840,6 +5005,11 @@ If you pick an enemy unit, roll a dice. On a 2+, the target suffers D3 mortal wo
         <modifier type="add" field="category" value="89f7-d50b-0aa9-01ce">
           <conditions>
             <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9f18-9ffb-0267-3e08" type="greaterThan"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="cf46-7b83-d97b-7663" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -4945,29 +5115,40 @@ If you pick an enemy unit, roll a dice. On a 2+, the target suffers D3 mortal wo
     </selectionEntry>
     <selectionEntry id="e72f-58fe-d697-6be6" name="Neave Blacktalon" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
-        <modifier type="add" field="category" value="5cb0-860c-916b-5bcd">
+        <modifier type="set" value="1" field="35e0-d302-2651-86db">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="28c-2340-487e-961f" shared="true" includeChildSelections="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="b3db-711-6ff9-6a52" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
           <conditions>
-            <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="d43d-da9f-4261-e201" type="equalTo"/>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="cf46-7b83-d97b-7663" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="db80-1e2e-fd44-1964" type="max"/>
+        <constraint type="min" value="0" field="selections" scope="roster" shared="true" id="35e0-d302-2651-86db" includeChildSelections="true"/>
       </constraints>
       <profiles>
-        <profile id="c2a2-94b7-8e4f-d9ec" name="Lightning-fast Strike" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+        <profile id="c2a2-94b7-8e4f-d9ec" name="Justice from Azyr" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Add D3 to the Attacks characteristic of this unit&apos;s Whirlwind Axes if this unit made a charge move in the same turn.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Add 1 to the Damage characteristic of this unit&apos;s Whirlwind Axes for attacks that target an enemy HERO.</characteristic>
           </characteristics>
         </profile>
-        <profile id="9d8a-8fb4-43ca-8a49" name="Tireless Hunter" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+        <profile id="9d8a-8fb4-43ca-8a49" name="Sigmar&apos;s Assassin" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This unit can run and still shoot later in the turn.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This unit can run and still shoot and/or chargelater in the turn.</characteristic>
           </characteristics>
         </profile>
         <profile id="913a-0cfb-00e9-bd78" name="Neave Blacktalon" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
           <characteristics>
-            <characteristic name="Move" typeId="8655-6213-2824-1752">6&quot;</characteristic>
+            <characteristic name="Move" typeId="8655-6213-2824-1752">8&quot;</characteristic>
             <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">6</characteristic>
             <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">10</characteristic>
             <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">3+</characteristic>
@@ -4975,7 +5156,7 @@ If you pick an enemy unit, roll a dice. On a 2+, the target suffers D3 mortal wo
         </profile>
         <profile id="3693-e38a-1a14-f678" name="Windrider" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Instead of picking this unit to make a normal move or retreat, you can say that it will ride the winds aetheric. If you do so, remove this unit from the battlefield and set it up again on the battlefield more than 1&quot; from all terrain features and objectives and more than 9&quot; from all enemy units.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">In your combat phase, immediately after this unit has fought and slain models (if any) have been removed from play, you can roll a dice. On a 2+, remove this unit from the battlefield and set it up again more than 3&quot; from all enemy units and wholly within 3&quot; of a friendly THE BLACKTALONS unit that is more than 3&quot; from all enemy units.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -5024,11 +5205,11 @@ If you pick an enemy unit, roll a dice. On a 2+, the target suffers D3 mortal wo
               <characteristics>
                 <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
                 <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
-                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">8</characteristic>
-                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">7</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">2+</characteristic>
                 <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
-                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
-                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-2</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">2</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -5044,11 +5225,10 @@ If you pick an enemy unit, roll a dice. On a 2+, the target suffers D3 mortal wo
             <categoryLink id="c630-a1ea-a2f4-4929" name="Unique General" hidden="false" targetId="fe3f-d230-7e2c-fba2" primary="false"/>
           </categoryLinks>
         </entryLink>
-        <entryLink id="41ac-7394-a634-e232" name="General&apos;s Adjutant" hidden="false" collective="false" import="true" targetId="65e4-9e34-5cf6-2bec" type="selectionEntry"/>
         <entryLink id="c847-30f2-237a-8c96" name="Battalions" hidden="false" collective="false" import="true" targetId="4165-f8c8-6f84-e4ca" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="110"/>
+        <cost name="pts" typeId="points" value="340"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="66fb-5872-a345-2ad5" name="Vandus Hammerhand" hidden="false" collective="false" import="true" type="unit">
@@ -5056,6 +5236,11 @@ If you pick an enemy unit, roll a dice. On a 2+, the target suffers D3 mortal wo
         <modifier type="add" field="category" value="5cb0-860c-916b-5bcd">
           <conditions>
             <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="d43d-da9f-4261-e201" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="cf46-7b83-d97b-7663" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -5202,6 +5387,11 @@ If you pick an enemy unit, roll a dice. On a 2+, the target suffers D3 mortal wo
             <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9f18-9ffb-0267-3e08" type="greaterThan"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="cf46-7b83-d97b-7663" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="cbdb-bf6e-dbed-dca0" type="max"/>
@@ -5329,6 +5519,11 @@ If you pick an enemy unit, roll a dice. On a 2+, the target suffers D3 mortal wo
             <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9f18-9ffb-0267-3e08" type="greaterThan"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="cf46-7b83-d97b-7663" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="6e23-6219-8f10-f785" type="max"/>
@@ -5432,6 +5627,11 @@ If you pick an enemy unit, roll a dice. On a 2+, the target suffers D3 mortal wo
         <modifier type="add" field="category" value="7f45-c5b3-c698-138d">
           <conditions>
             <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9f18-9ffb-0267-3e08" type="greaterThan"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="cf46-7b83-d97b-7663" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -5571,6 +5771,11 @@ If you pick power, until the end of that phase, this unit&apos;s Thunderhead Gre
         <modifier type="add" field="category" value="7f45-c5b3-c698-138d">
           <conditions>
             <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9f18-9ffb-0267-3e08" type="greaterThan"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="cf46-7b83-d97b-7663" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -5758,6 +5963,11 @@ If you choose its shields, until the end of that phase, this unit has a ward of 
             <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9f18-9ffb-0267-3e08" type="greaterThan"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="cf46-7b83-d97b-7663" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <profiles>
         <profile id="1522-405a-0a21-b36e" name="Evocators" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
@@ -5908,6 +6118,11 @@ If you choose its shields, until the end of that phase, this unit has a ward of 
             <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9f95-f6dc-e866-90a0" type="greaterThan"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="cf46-7b83-d97b-7663" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <profiles>
         <profile id="a027-4ae4-58d2-f0bf" name="Lord-Arcanum on Gryph-charger" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
@@ -6036,6 +6251,11 @@ If you choose its shields, until the end of that phase, this unit has a ward of 
             <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9f95-f6dc-e866-90a0" type="greaterThan"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="cf46-7b83-d97b-7663" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <profiles>
         <profile id="fa1e-dce0-7863-ccda" name="Knight-Incantor" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
@@ -6128,6 +6348,11 @@ If you choose its shields, until the end of that phase, this unit has a ward of 
         <modifier type="add" field="category" value="5cb0-860c-916b-5bcd">
           <conditions>
             <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="d43d-da9f-4261-e201" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="cf46-7b83-d97b-7663" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -6229,6 +6454,11 @@ If you choose its shields, until the end of that phase, this unit has a ward of 
         <modifier type="add" field="category" value="5cb0-860c-916b-5bcd">
           <conditions>
             <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="d43d-da9f-4261-e201" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="cf46-7b83-d97b-7663" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -6379,6 +6609,11 @@ If you choose its shields, until the end of that phase, this unit has a ward of 
         <modifier type="add" field="category" value="5cb0-860c-916b-5bcd">
           <conditions>
             <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="d43d-da9f-4261-e201" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="cf46-7b83-d97b-7663" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -6651,6 +6886,11 @@ If you choose its shields, until the end of that phase, this unit has a ward of 
             <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9f18-9ffb-0267-3e08" type="greaterThan"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="cf46-7b83-d97b-7663" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <profiles>
         <profile id="7c83-cda0-0cc0-d270" name="Knight-Zephyros" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
@@ -6762,6 +7002,11 @@ If you choose its shields, until the end of that phase, this unit has a ward of 
             <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9f95-f6dc-e866-90a0" type="greaterThan"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="cf46-7b83-d97b-7663" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <profiles>
         <profile id="da27-a08b-6887-3f5b" name="Wizard" hidden="false" typeId="f55d-ee3a-1597-110f" typeName="Magic">
@@ -6855,6 +7100,11 @@ If you choose its shields, until the end of that phase, this unit has a ward of 
         <modifier type="add" field="category" value="5cb0-860c-916b-5bcd">
           <conditions>
             <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="d43d-da9f-4261-e201" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="cf46-7b83-d97b-7663" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -6969,6 +7219,11 @@ If you choose its shields, until the end of that phase, this unit has a ward of 
         <modifier type="add" field="category" value="8f5e-e464-221b-4f06">
           <conditions>
             <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9f95-f6dc-e866-90a0" type="greaterThan"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="cf46-7b83-d97b-7663" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -7104,6 +7359,11 @@ If you choose its shields, until the end of that phase, this unit has a ward of 
             <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9f95-f6dc-e866-90a0" type="greaterThan"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="cf46-7b83-d97b-7663" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <profiles>
         <profile id="3415-dd7e-35d2-3d7c" name="Lord-Exorcist" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
@@ -7196,6 +7456,11 @@ If you choose its shields, until the end of that phase, this unit has a ward of 
         <modifier type="add" field="category" value="5cb0-860c-916b-5bcd">
           <conditions>
             <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="d43d-da9f-4261-e201" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="cf46-7b83-d97b-7663" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -7362,6 +7627,11 @@ If you choose its shields, until the end of that phase, this unit has a ward of 
             <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="d43d-da9f-4261-e201" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="cf46-7b83-d97b-7663" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="adbe-f062-3ee0-6e3f" type="max"/>
@@ -7458,6 +7728,11 @@ If you choose its shields, until the end of that phase, this unit has a ward of 
         <modifier type="add" field="category" value="5cb0-860c-916b-5bcd">
           <conditions>
             <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="d43d-da9f-4261-e201" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="cf46-7b83-d97b-7663" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -7613,12 +7888,24 @@ If you choose its shields, until the end of that phase, this unit has a ward of 
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="cf46-7b83-d97b-7663" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="9e60-d9e5-d5da-5a58" name="Lynus Ghalmorian on Gryph-charger" publicationId="c00c-5da3-6d9f-5746" page="34" hidden="true" collective="false" import="true" type="unit">
       <modifiers>
         <modifier type="add" field="category" value="5cb0-860c-916b-5bcd">
           <conditions>
             <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="d43d-da9f-4261-e201" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="cf46-7b83-d97b-7663" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -7737,6 +8024,11 @@ If you choose its shields, until the end of that phase, this unit has a ward of 
             <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="d43d-da9f-4261-e201" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="cf46-7b83-d97b-7663" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="99fb-2bd5-34bb-54c0" type="max"/>
@@ -7844,6 +8136,11 @@ If you choose its shields, until the end of that phase, this unit has a ward of 
         <modifier type="add" field="category" value="5cb0-860c-916b-5bcd">
           <conditions>
             <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="d43d-da9f-4261-e201" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="cf46-7b83-d97b-7663" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -7983,6 +8280,11 @@ If you choose its shields, until the end of that phase, this unit has a ward of 
             <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9f18-9ffb-0267-3e08" type="greaterThan"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="cf46-7b83-d97b-7663" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <profiles>
         <profile id="041b-9819-9b56-6ecc" name="Annihilators" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
@@ -8096,6 +8398,11 @@ In addition, you can re-roll charge rolls for this unit if it was set-up on the 
             <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9f18-9ffb-0267-3e08" type="greaterThan"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="cf46-7b83-d97b-7663" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <profiles>
         <profile id="6bee-fbc7-0a70-84d6" name="Champion" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
@@ -8194,6 +8501,11 @@ On a 1-2, that wound or mortal wound is allocated to that HERO as normal.  On a 
         <modifier type="add" field="category" value="7f45-c5b3-c698-138d">
           <conditions>
             <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9f18-9ffb-0267-3e08" type="greaterThan"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="cf46-7b83-d97b-7663" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -8313,6 +8625,11 @@ On a 1-2, that wound or mortal wound is allocated to that HERO as normal.  On a 
             <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9f18-9ffb-0267-3e08" type="greaterThan"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="cf46-7b83-d97b-7663" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <profiles>
         <profile id="9914-1654-f908-a41e" name="Knight-Vexillor with Banner of Apotheosis" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
@@ -8405,6 +8722,11 @@ If you pick a unit once with this ability, you can heal up to D3 wounds allocate
         <modifier type="add" field="category" value="8f5e-e464-221b-4f06">
           <conditions>
             <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9f95-f6dc-e866-90a0" type="greaterThan"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="cf46-7b83-d97b-7663" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -8504,6 +8826,11 @@ If you pick a unit once with this ability, you can heal up to D3 wounds allocate
         <modifier type="add" field="category" value="89f7-d50b-0aa9-01ce">
           <conditions>
             <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9f18-9ffb-0267-3e08" type="greaterThan"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="cf46-7b83-d97b-7663" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -8660,12 +8987,38 @@ If you pick a unit once with this ability, you can heal up to D3 wounds allocate
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="On Wings of Death" hidden="false" id="aac8-7ab7-bf0f-c3e1">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cf46-7b83-d97b-7663" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f8f8-b37f-b92b-e875"/>
+          </constraints>
+          <profiles>
+            <profile name="On Wings of Death" typeId="9c01-ec20-32c1-0948" typeName="Grand Strategy" hidden="false" id="3fab-fb90-2dbb-d929">
+              <characteristics>
+                <characteristic name="Description" typeId="53c8-cc18-16d1-e890">When the battle ends, you complete this grand strategy if 3 friendly DRACONITH units are wholly within 9&quot; of each other.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntry>
     <selectionEntry id="603a-d62d-58de-207a" name="Stormcast Core Battalion: Brotherhood Command" hidden="true" collective="false" import="true" type="upgrade">
       <modifiers>
         <modifier type="set" field="hidden" value="false">
           <conditions>
             <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="26ae-0330-06d3-8f22" type="greaterThan"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="cf46-7b83-d97b-7663" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -8696,6 +9049,11 @@ If you pick a unit once with this ability, you can heal up to D3 wounds allocate
             <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="26ae-0330-06d3-8f22" type="greaterThan"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="cf46-7b83-d97b-7663" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <profiles>
         <profile id="4b73-2878-6435-d059" name="Core Battalion: Redemption Brotherhood" hidden="false" typeId="75e0-a332-e4f5-bf36" typeName="Battalion Organisation">
@@ -8721,6 +9079,11 @@ If you pick a unit once with this ability, you can heal up to D3 wounds allocate
         <modifier type="set" field="hidden" value="false">
           <conditions>
             <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="26ae-0330-06d3-8f22" type="greaterThan"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="cf46-7b83-d97b-7663" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -8749,6 +9112,16 @@ If you pick a unit once with this ability, you can heal up to D3 wounds allocate
         <modifier type="set" field="hidden" value="false">
           <conditions>
             <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="26ae-0330-06d3-8f22" type="greaterThan"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="cf46-7b83-d97b-7663" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="cf46-7b83-d97b-7663" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -8781,6 +9154,11 @@ If you pick a unit once with this ability, you can heal up to D3 wounds allocate
             <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="26ae-0330-06d3-8f22" type="greaterThan"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="cf46-7b83-d97b-7663" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <profiles>
         <profile id="f629-37f9-6130-cbc7" name="Warscroll Battalion: Thunderhead Brotherhood" hidden="false" typeId="75e0-a332-e4f5-bf36" typeName="Battalion Organisation">
@@ -8811,6 +9189,11 @@ If you pick a unit once with this ability, you can heal up to D3 wounds allocate
             <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="26ae-0330-06d3-8f22" type="greaterThan"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="cf46-7b83-d97b-7663" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <profiles>
         <profile id="d73c-d2fc-4eb2-06bc" name="Warscroll Battalion: Hammerstrike Force" hidden="false" typeId="75e0-a332-e4f5-bf36" typeName="Battalion Organisation">
@@ -8839,6 +9222,11 @@ If you pick a unit once with this ability, you can heal up to D3 wounds allocate
         <modifier type="add" field="category" value="5cb0-860c-916b-5bcd">
           <conditions>
             <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="d43d-da9f-4261-e201" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="add" value="e9f2-765a-b7b8-ce8e" field="category">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="parent" childId="cf46-7b83-d97b-7663" shared="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -9039,7 +9427,7 @@ Flash-freezing Blizzard: Subtract 1 from save rolls for attacks that target that
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink id="98b0-dd21-ea5c-113d" name="Spell Lores" hidden="false" collective="false" import="true" targetId="b094-0ec4-692a-78ec" type="selectionEntryGroup"/>
+        <entryLink id="98b0-dd21-ea5c-113d" name="Unknown" hidden="false" collective="false" import="true" targetId="b094-0ec4-692a-78ec" type="selectionEntryGroup"/>
         <entryLink id="3869-4ebe-df11-2f4a" name="Battalions" hidden="false" collective="false" import="true" targetId="4165-f8c8-6f84-e4ca" type="selectionEntryGroup"/>
         <entryLink id="a819-ea70-5b82-527b" name="General" hidden="false" collective="false" import="true" targetId="4e90-bcab-e5fd-60f1" type="selectionEntry">
           <categoryLinks>
@@ -9057,6 +9445,11 @@ Flash-freezing Blizzard: Subtract 1 from save rolls for attacks that target that
         <modifier type="add" field="category" value="5cb0-860c-916b-5bcd">
           <conditions>
             <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="d43d-da9f-4261-e201" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="add" value="e9f2-765a-b7b8-ce8e" field="category">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="parent" childId="cf46-7b83-d97b-7663" shared="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -9252,6 +9645,11 @@ If the enemy unit had a Wounds characteristic of 2 or less, you can heal 1 wound
         <modifier type="add" field="category" value="5cb0-860c-916b-5bcd">
           <conditions>
             <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="d43d-da9f-4261-e201" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="cf46-7b83-d97b-7663" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -9490,6 +9888,11 @@ If the enemy unit had a Wounds characteristic of 2 or less, you can heal 1 wound
             <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9f18-9ffb-0267-3e08" type="greaterThan"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="cf46-7b83-d97b-7663" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <profiles>
         <profile id="d476-7977-6994-fa47" name="Knight-Relictor" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
@@ -9570,6 +9973,11 @@ If the enemy unit had a Wounds characteristic of 2 or less, you can heal 1 wound
         <modifier type="add" field="category" value="89f7-d50b-0aa9-01ce">
           <conditions>
             <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9f18-9ffb-0267-3e08" type="greaterThan"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="cf46-7b83-d97b-7663" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -9683,6 +10091,11 @@ If the enemy unit had a Wounds characteristic of 2 or less, you can heal 1 wound
         <modifier type="add" field="category" value="7f45-c5b3-c698-138d">
           <conditions>
             <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9f18-9ffb-0267-3e08" type="greaterThan"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="cf46-7b83-d97b-7663" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -9822,6 +10235,11 @@ If the enemy unit had a Wounds characteristic of 2 or less, you can heal 1 wound
         <modifier type="add" field="category" value="7f45-c5b3-c698-138d">
           <conditions>
             <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9f18-9ffb-0267-3e08" type="greaterThan"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="cf46-7b83-d97b-7663" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -9997,6 +10415,11 @@ If the enemy unit had a Wounds characteristic of 2 or less, you can heal 1 wound
             <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9f18-9ffb-0267-3e08" type="greaterThan"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="cf46-7b83-d97b-7663" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <profiles>
         <profile id="5f7b-7896-0e9f-a2e9" name="Vigilor" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
@@ -10127,6 +10550,11 @@ If the enemy unit had a Wounds characteristic of 2 or less, you can heal 1 wound
         <modifier type="add" field="category" value="5cb0-860c-916b-5bcd">
           <conditions>
             <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="d43d-da9f-4261-e201" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="cf46-7b83-d97b-7663" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -10303,6 +10731,11 @@ If the enemy unit had a Wounds characteristic of 2 or less, you can heal 1 wound
         <modifier type="add" field="category" value="7f45-c5b3-c698-138d">
           <conditions>
             <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9f18-9ffb-0267-3e08" type="greaterThan"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="cf46-7b83-d97b-7663" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -10499,6 +10932,11 @@ If the enemy unit had a Wounds characteristic of 2 or less, you can heal 1 wound
             <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9f18-9ffb-0267-3e08" type="greaterThan"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="cf46-7b83-d97b-7663" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <profiles>
         <profile id="0744-16c7-6c65-b029" name="Annihilators with Meteoric Grandhammers" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
@@ -10624,6 +11062,7 @@ In addition, you can re-roll charge rolls for this unit if it was set-up on the 
               <conditions>
                 <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1a0d-9b27-19cf-7cec" type="greaterThan"/>
                 <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f405-1c31-ac18-751d" type="greaterThan"/>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="cf46-7b83-d97b-7663" shared="true"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -10817,7 +11256,6 @@ In addition, you can re-roll charge rolls for this unit if it was set-up on the 
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="0f9d-966a-be17-1773" name="Honoured Retinue" hidden="false" collective="false" import="true" targetId="cb24-5c4a-8232-6c5b" type="selectionEntry"/>
         <entryLink id="f69e-8291-5021-b13c" name="Reinforced" hidden="false" collective="false" import="true" targetId="0a8d-cde8-fba1-6c0d" type="selectionEntry">
           <modifiers>
             <modifier type="set" field="95f2-6885-756f-9ea5" value="2">
@@ -10856,6 +11294,11 @@ In addition, you can re-roll charge rolls for this unit if it was set-up on the 
         <modifier type="set" field="hidden" value="false">
           <conditions>
             <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5232-9953-1b83-0097" type="greaterThan"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="cf46-7b83-d97b-7663" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -11002,10 +11445,21 @@ In addition, you can re-roll charge rolls for this unit if it was set-up on the 
           <repeats>
             <repeat field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7cfa-7c55-473d-f251" repeats="1" roundUp="false"/>
           </repeats>
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="parent" childId="cf46-7b83-d97b-7663" shared="true"/>
+          </conditions>
         </modifier>
         <modifier type="set" field="hidden" value="false">
           <conditions>
             <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7cfa-7c55-473d-f251" type="greaterThan"/>
+          </conditions>
+        </modifier>
+        <modifier type="increment" field="844a-c65c-2305-b7ad" value="1">
+          <repeats>
+            <repeat field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4e0e-664d-51ea-0929" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="parent" childId="cf46-7b83-d97b-7663" shared="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -11175,7 +11629,6 @@ In addition, you can re-roll charge rolls for this unit if it was set-up on the 
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="f38c-8d65-1acf-c2d2" name="Honoured Retinue" hidden="false" collective="false" import="true" targetId="cb24-5c4a-8232-6c5b" type="selectionEntry"/>
         <entryLink id="93a2-da56-5882-572b" name="Battalions" hidden="false" collective="false" import="true" targetId="4165-f8c8-6f84-e4ca" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
@@ -11187,6 +11640,11 @@ In addition, you can re-roll charge rolls for this unit if it was set-up on the 
         <modifier type="set" field="hidden" value="false">
           <conditions>
             <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="26ae-0330-06d3-8f22" type="greaterThan"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="cf46-7b83-d97b-7663" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -11219,6 +11677,11 @@ In addition, you can re-roll charge rolls for this unit if it was set-up on the 
             <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="26ae-0330-06d3-8f22" type="greaterThan"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="cf46-7b83-d97b-7663" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <profiles>
         <profile id="16de-f19d-4bd0-b4bb" name="Warscroll Battalion: Vanguard Wing" hidden="false" typeId="75e0-a332-e4f5-bf36" typeName="Battalion Organisation">
@@ -11247,6 +11710,11 @@ In addition, you can re-roll charge rolls for this unit if it was set-up on the 
         <modifier type="set" field="hidden" value="false">
           <conditions>
             <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="26ae-0330-06d3-8f22" type="greaterThan"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="cf46-7b83-d97b-7663" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -11279,6 +11747,11 @@ In addition, you can re-roll charge rolls for this unit if it was set-up on the 
             <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="26ae-0330-06d3-8f22" type="greaterThan"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="cf46-7b83-d97b-7663" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <profiles>
         <profile id="acec-e761-9f4e-e805" name="Warscroll Battalion: Hammerstrike Force" hidden="false" typeId="75e0-a332-e4f5-bf36" typeName="Battalion Organisation">
@@ -11306,6 +11779,11 @@ In addition, you can re-roll charge rolls for this unit if it was set-up on the 
         <modifier type="set" field="hidden" value="false">
           <conditions>
             <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="26ae-0330-06d3-8f22" type="greaterThan"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="cf46-7b83-d97b-7663" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -11338,6 +11816,11 @@ In addition, you can re-roll charge rolls for this unit if it was set-up on the 
             <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="26ae-0330-06d3-8f22" type="greaterThan"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="cf46-7b83-d97b-7663" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <profiles>
         <profile id="a427-7c8b-e9e7-aa2f" name="Warscroll Battalion: Vanguard Justicar Conclave" hidden="false" typeId="75e0-a332-e4f5-bf36" typeName="Battalion Organisation">
@@ -11366,6 +11849,11 @@ In addition, you can re-roll charge rolls for this unit if it was set-up on the 
         <modifier type="set" field="hidden" value="false">
           <conditions>
             <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="26ae-0330-06d3-8f22" type="greaterThan"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="cf46-7b83-d97b-7663" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -11398,6 +11886,11 @@ In addition, you can re-roll charge rolls for this unit if it was set-up on the 
             <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="26ae-0330-06d3-8f22" type="greaterThan"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="cf46-7b83-d97b-7663" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <profiles>
         <profile id="65a6-f5d1-7bd1-104d" name="Warscroll Battalion: Thunderwave Echelon" hidden="false" typeId="75e0-a332-e4f5-bf36" typeName="Battalion Organisation">
@@ -11428,6 +11921,11 @@ In addition, you can re-roll charge rolls for this unit if it was set-up on the 
             <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="26ae-0330-06d3-8f22" type="greaterThan"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="cf46-7b83-d97b-7663" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <profiles>
         <profile id="fe92-8447-54ac-74c0" name="Warscroll Battalion: Drakesworn Temple" hidden="false" typeId="75e0-a332-e4f5-bf36" typeName="Battalion Organisation">
@@ -11455,6 +11953,11 @@ In addition, you can re-roll charge rolls for this unit if it was set-up on the 
         <modifier type="set" field="hidden" value="false">
           <conditions>
             <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="26ae-0330-06d3-8f22" type="greaterThan"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="cf46-7b83-d97b-7663" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -11488,6 +11991,11 @@ In addition, you can re-roll charge rolls for this unit if it was set-up on the 
             <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="26ae-0330-06d3-8f22" type="greaterThan"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="cf46-7b83-d97b-7663" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <profiles>
         <profile id="e640-9129-e9b4-6a33" name="Warscroll Battalion: Hailstorm Battery" hidden="false" typeId="75e0-a332-e4f5-bf36" typeName="Battalion Organisation">
@@ -11517,6 +12025,11 @@ In addition, you can re-roll charge rolls for this unit if it was set-up on the 
         <modifier type="set" field="hidden" value="false">
           <conditions>
             <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="26ae-0330-06d3-8f22" type="greaterThan"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="cf46-7b83-d97b-7663" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -11583,12 +12096,29 @@ In addition, you can re-roll charge rolls for this unit if it was set-up on the 
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="cf46-7b83-d97b-7663" shared="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="parent" childId="26ae-0330-06d3-8f22" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="9a23-dbdc-7d24-65c3" name="Xandire&apos;s Truthseekers" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
         <modifier type="add" field="category" value="5cb0-860c-916b-5bcd">
           <conditions>
             <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="d43d-da9f-4261-e201" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="cf46-7b83-d97b-7663" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -11755,6 +12285,11 @@ In addition, you can re-roll charge rolls for this unit if it was set-up on the 
             <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="d43d-da9f-4261-e201" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="cf46-7b83-d97b-7663" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <profiles>
         <profile id="9162-5c4a-0623-5e1b" name="Knight-Questor Dacian Anvil" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
@@ -11874,6 +12409,11 @@ In addition, you can re-roll charge rolls for this unit if it was set-up on the 
             <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9f18-9ffb-0267-3e08" type="greaterThan"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="cf46-7b83-d97b-7663" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="d6e9-529f-b455-7c03" type="max"/>
@@ -11987,6 +12527,11 @@ In addition, you can re-roll charge rolls for this unit if it was set-up on the 
             <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9f18-9ffb-0267-3e08" type="greaterThan"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="cf46-7b83-d97b-7663" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <profiles>
         <profile id="ee4f-806d-7ed1-f0d3" name="Questor Soulsworn" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
@@ -12075,9 +12620,14 @@ In addition, you can re-roll charge rolls for this unit if it was set-up on the 
     <selectionEntry type="upgrade" import="true" name="Holy Commands" hidden="false" id="fd70-68a3-f7d4-f40c">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="26ae-0330-06d3-8f22" type="equalTo"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="cf46-7b83-d97b-7663" shared="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="parent" childId="26ae-0330-06d3-8f22" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <categoryLinks>
@@ -12160,6 +12710,395 @@ In addition, you can re-roll charge rolls for this unit if it was set-up on the 
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Ionus Cryptborn, Warden of Lost Souls" hidden="false" id="9945-49e4-d88-9f9d">
+      <costs>
+        <cost name="pts" typeId="points" value="400"/>
+      </costs>
+      <categoryLinks>
+        <categoryLink targetId="6c6b-e787-f9b8-a510" id="213f-b28d-8464-af8e" primary="true" name="Leader"/>
+        <categoryLink targetId="fa0c-9044-2568-fa02" id="cc49-38a1-10b9-a9a0" primary="false" name="Behemoth"/>
+        <categoryLink targetId="4e0e-664d-51ea-0929" id="ebfd-6cb1-48f3-4af0" primary="false" name="HERO"/>
+        <categoryLink targetId="1959-9f6a-3056-913a" id="fb79-ebe8-da8-6f72" primary="false" name="MONSTER"/>
+        <categoryLink targetId="b970-b3bf-e1a4-a6fc" id="be24-cf16-375b-bc0d" primary="false" name="ORDER"/>
+        <categoryLink targetId="b396-0600-80d6-cee9" id="7298-2ccd-4899-dd35" primary="false" name="STORMCAST ETERNALS"/>
+        <categoryLink targetId="e8a5-e4c1-3d11-e7dd" id="a657-e5ff-c479-8f5d" primary="false" name="PRIEST"/>
+        <categoryLink targetId="072b-61c1-0802-681e" id="23b6-2eb1-7ede-58dc" primary="false" name="DRACONITH"/>
+        <categoryLink targetId="9869-7cfe-fb04-7291" id="4f13-ba28-5275-351b" primary="false" name="LORD"/>
+        <categoryLink targetId="f195-124b-1fa5-6d0b" id="2269-41f3-f562-a112" primary="false" name="IONUS CRYPTBORN"/>
+        <categoryLink targetId="088b-3a27-03f7-8249" id="3b8d-601e-5f28-6387" primary="false" name="Unique"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="b664-980b-b691-6aa5" name="General" hidden="false" collective="false" import="true" targetId="4e90-bcab-e5fd-60f1" type="selectionEntry">
+          <categoryLinks>
+            <categoryLink id="f58c-6c93-7b59-85b9" name="6_under_wounds" hidden="false" targetId="e4e2-6076-dafa-ec2c" primary="false"/>
+            <categoryLink id="62e-d54b-4158-5a92" name="Unique General" hidden="false" targetId="fe3f-d230-7e2c-fba2" primary="false"/>
+          </categoryLinks>
+        </entryLink>
+        <entryLink id="eedc-afae-2b74-2ee3" name="Battalions" hidden="false" collective="false" import="true" targetId="4165-f8c8-6f84-e4ca" type="selectionEntryGroup"/>
+      </entryLinks>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="b50a-384e-5bd9-aa38" type="max"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Fly" hidden="false" type="profile" id="5af6-89c4-535c-1553" targetId="8e0c-cbe4-27be-8a30"/>
+      </infoLinks>
+      <profiles>
+        <profile name="Ionus Cryptborn, Warden of Lost Souls" typeId="1960-ca8e-67ce-2014" typeName="Unit" hidden="false" id="fbe6-4e8a-4a26-df45">
+          <characteristics>
+            <characteristic name="Move" typeId="8655-6213-2824-1752">*</characteristic>
+            <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">16</characteristic>
+            <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">9</characteristic>
+            <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">3+</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Draconic Horror" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities" hidden="false" id="67b-8f2f-942f-9f8f">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Enemy units cannot receive the Rally and Inspiring Presence commands while they are within 12&quot; of this unit.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Scry Intent" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities" hidden="false" id="f05d-81d2-dfcd-7366">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Subtract 1 from the Attacks characteristic of melee weapons that target this unit (to a minimum of 1).</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Arch-Relictor" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities" hidden="false" id="e320-3e44-85bf-43ea">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">In your hero phase, this unit can chant 2 prayers that it knows instead of 1. At the start of your hero phase, you must say how many prayers this unit will chant. If you say 1, when it chants that prayer, it is automatically answered with a chanting roll of 6 and no additional prayers may be chanted. If you say 2, make chanting rolls for both prayers as normal.
+
+
+At the start of the enemy hero phase, you can pick 1 endless spell or invocation within 12&quot; of this unit and roll a dice. On a 2+, that endless spell is dispelled or that invocation is banished</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Lightning Tempest" typeId="eed7-4131-0a52-0668" typeName="Prayer" hidden="false" id="1721-8615-473e-acac">
+          <characteristics>
+            <characteristic name="Answer Value" typeId="276a-ab7e-145d-3ffc">3</characteristic>
+            <characteristic name="Range" typeId="fd81-4e98-28ac-092a">18&quot;</characteristic>
+            <characteristic name="Description" typeId="0746-6cfb-5e15-53cb">If answered, pick 1 enemy unit within range. That unit is struck by lightning and suffers D3 mortal wounds. Then, roll a dice. On a 1-2, the tempest clears and the sequence ends. On a 3+, pick 1 other enemy unit within 3&quot; of the last unit that was struck by lightning. That unit is struck by lightning and suffers D3 mortal wounds. Keep rolling dice in this way until the tempest clears or there are no other enemy units within 3&quot; of the last unit to be struck by lightning. A unit cannot be affected by this prayer more than once per hero phase.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Ancient Claws" typeId="96df-ab28-5d72-bbb3" typeName="Weapon" hidden="false" id="f193-6c36-c41c-4cf6">
+          <characteristics>
+            <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+            <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">2&quot;</characteristic>
+            <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">*</characteristic>
+            <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+            <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+            <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-2</characteristic>
+            <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">2</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Timeworn Fangs" typeId="96df-ab28-5d72-bbb3" typeName="Weapon" hidden="false" id="a8cc-f17d-bbda-3384">
+          <characteristics>
+            <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+            <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">3&quot;</characteristic>
+            <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">2</characteristic>
+            <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+            <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+            <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">*</characteristic>
+            <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">3</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Soulbreaker" typeId="96df-ab28-5d72-bbb3" typeName="Weapon" hidden="false" id="93d8-eb25-f2a7-8529">
+          <characteristics>
+            <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+            <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
+            <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">4</characteristic>
+            <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+            <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+            <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
+            <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">2</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup name="Spirit-scouring Flames" hidden="false" id="4e10-788-4aa1-11c8">
+          <profiles>
+            <profile name="Spirit-scouring Flames" typeId="96df-ab28-5d72-bbb3" typeName="Weapon" hidden="false" id="1616-fed6-a279-4c6c">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Missile</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">12&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">9</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-2</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Spirit-scouring Flames" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities" hidden="false" id="9e19-4ca6-7388-e9a7">
+              <characteristics>
+                <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Each time a wound caused by an attack made with Spirit-scouring Flames is allocated to an enemy unit, that unit is soulburned. At the end of each hero phase, roll a dice for each soulburned unit. If the roll is equal to or less than the number of the current battle round, that unit suffers D3 mortal wounds. When a player uses an ability that allows them to heal any wounds that have been allocated to a unit, instead of healing any wounds allocated to a soulburned unit, that unit is no longer soulburned.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+        <infoGroup name="Damage Table" hidden="false" id="2b1b-8276-db7c-a12d">
+          <profiles>
+            <profile name="0-5" typeId="2eb1-eadc-93b1-f404" typeName="Ionus Damage Table" hidden="false" id="9d58-8c8d-bf17-fae9">
+              <characteristics>
+                <characteristic name="Move" typeId="b3b-d8a0-e0a7-c05f">14&quot;</characteristic>
+                <characteristic name="Ancient Claws" typeId="e8aa-28ec-efb6-d644">5</characteristic>
+                <characteristic name="Timeworn Fangs" typeId="cd28-43b8-e842-ec21">-3</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="6-9" typeId="2eb1-eadc-93b1-f404" typeName="Ionus Damage Table" hidden="false" id="6eea-73e6-86bd-e645">
+              <characteristics>
+                <characteristic name="Move" typeId="b3b-d8a0-e0a7-c05f">12&quot;</characteristic>
+                <characteristic name="Ancient Claws" typeId="e8aa-28ec-efb6-d644">4</characteristic>
+                <characteristic name="Timeworn Fangs" typeId="cd28-43b8-e842-ec21">-2</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="10-14" typeId="2eb1-eadc-93b1-f404" typeName="Ionus Damage Table" hidden="false" id="7cc8-db55-2913-abab">
+              <characteristics>
+                <characteristic name="Move" typeId="b3b-d8a0-e0a7-c05f">10&quot;</characteristic>
+                <characteristic name="Ancient Claws" typeId="e8aa-28ec-efb6-d644">3</characteristic>
+                <characteristic name="Timeworn Fangs" typeId="cd28-43b8-e842-ec21">-3</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="15+" typeId="2eb1-eadc-93b1-f404" typeName="Ionus Damage Table" hidden="false" id="9a4-38ed-bcda-b47e">
+              <characteristics>
+                <characteristic name="Move" typeId="b3b-d8a0-e0a7-c05f">8&quot;</characteristic>
+                <characteristic name="Ancient Claws" typeId="e8aa-28ec-efb6-d644">2</characteristic>
+                <characteristic name="Timeworn Fangs" typeId="cd28-43b8-e842-ec21">-1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+      </infoGroups>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Neave&apos;s Companions" hidden="false" id="b3db-711-6ff9-6a52">
+      <categoryLinks>
+        <categoryLink targetId="065e-fda7-fd27-1f40" id="850e-e002-e3f3-736" primary="true" name="Other"/>
+        <categoryLink targetId="b970-b3bf-e1a4-a6fc" id="4872-33a2-d852-40e6" primary="false" name="ORDER"/>
+        <categoryLink targetId="b396-0600-80d6-cee9" id="341c-469e-c056-2d33" primary="false" name="STORMCAST ETERNALS"/>
+        <categoryLink targetId="cf54-4907-2f8d-08bb" id="f175-5f66-4cf9-b9be" primary="false" name="HAMMERS OF SIGMAR"/>
+        <categoryLink targetId="d43-ec51-42bb-6cfc" id="e4bb-fc8e-a18d-19d" primary="false" name="THE BLACKTALONS"/>
+        <categoryLink targetId="4241-c8a0-30c6-7f77" id="3bf5-5ed9-dae4-8e95" primary="false" name="NEAVE&apos;S COMPANIONS"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="baf1-7148-798a-514b" name="Battalions" hidden="false" collective="false" import="true" targetId="4165-f8c8-6f84-e4ca" type="selectionEntryGroup"/>
+      </entryLinks>
+      <modifiers>
+        <modifier type="set" value="1" field="d666-6413-d1fb-6cad">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="28c-2340-487e-961f" shared="true" includeChildSelections="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="7d2b-3d65-f016-dd26" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="cf46-7b83-d97b-7663" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint type="min" value="0" field="selections" scope="roster" shared="true" id="d666-6413-d1fb-6cad" includeChildSelections="true"/>
+        <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="fd50-7731-6948-8347" type="max"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Elite" hidden="false" type="profile" id="4b7-2c18-975e-6f0" targetId="46ca-dc4f-b7a1-726d"/>
+      </infoLinks>
+      <profiles>
+        <profile name="Neave&apos;s Companions" typeId="1960-ca8e-67ce-2014" typeName="Unit" hidden="false" id="763c-1d6f-a2b0-dc83">
+          <characteristics>
+            <characteristic name="Move" typeId="8655-6213-2824-1752">4&quot;</characteristic>
+            <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">2</characteristic>
+            <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">9</characteristic>
+            <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">3+</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Shield of Azyr" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities" hidden="false" id="2fae-129d-2980-f323">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If a friendly THE BLACKTALONS HERO is within 3&quot; of this unit, before you allocate a wound or mortal wound to this HERO, or instead of making a ward roll for a wound or mortal wound that would be allocated to that HERO, roll a dice. On a 2+, that wound or mortal wound is allocated to this unit instead of that HERO and cannot be negated.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Consummate Aim" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities" hidden="false" id="b397-b5e9-81f-9f5e">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Each time this unit shoots with its Typhoon Crossbow, if the target is an enemy HERO, you can choose the Headshot weapon characteristics. Otherwise, use the Rapid Shot weapon characteristics.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Typhoon Crossbow: Rapid Shot" typeId="96df-ab28-5d72-bbb3" typeName="Weapon" hidden="false" id="4a2d-39ee-b4ee-f1df">
+          <characteristics>
+            <characteristic name="Type" typeId="655c-362e-a663-3e50">Missile</characteristic>
+            <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">18&quot;</characteristic>
+            <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">6</characteristic>
+            <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+            <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+            <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
+            <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Typhoon Crossbow: Headshot" typeId="96df-ab28-5d72-bbb3" typeName="Weapon" hidden="false" id="6fab-1f6a-981-77e7">
+          <characteristics>
+            <characteristic name="Type" typeId="655c-362e-a663-3e50">Missile</characteristic>
+            <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">18&quot;</characteristic>
+            <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">1</characteristic>
+            <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">2+</characteristic>
+            <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+            <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-3</characteristic>
+            <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">3</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Celestial Talons" typeId="96df-ab28-5d72-bbb3" typeName="Weapon" hidden="false" id="8bcf-cbf7-8614-1d90">
+          <characteristics>
+            <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+            <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
+            <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">2</characteristic>
+            <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
+            <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+            <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
+            <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Stormcharged Warhammer" typeId="96df-ab28-5d72-bbb3" typeName="Weapon" hidden="false" id="cc8f-378f-cf93-25c4">
+          <characteristics>
+            <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+            <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">2&quot;</characteristic>
+            <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">4</characteristic>
+            <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+            <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">2+</characteristic>
+            <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-2</characteristic>
+            <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">2</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Cyclone Sword and Axe" typeId="96df-ab28-5d72-bbb3" typeName="Weapon" hidden="false" id="2e9f-b668-874c-5079">
+          <characteristics>
+            <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+            <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
+            <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">6</characteristic>
+            <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+            <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+            <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
+            <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Lorai, Child of the Abyss" hidden="false" id="28c-2340-487e-961f">
+      <modifiers>
+        <modifier type="set" value="1" field="4c93-b122-f2cb-ace5">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="e72f-58fe-d697-6be6" shared="true" includeChildSelections="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="b3db-711-6ff9-6a52" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="cf46-7b83-d97b-7663" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint type="min" value="0" field="selections" scope="roster" shared="true" id="4c93-b122-f2cb-ace5" includeChildSelections="true" includeChildForces="true"/>
+        <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="2dae-7a50-445e-b857" type="max"/>
+      </constraints>
+      <entryLinks>
+        <entryLink id="23e9-4cd6-8ebd-a59" name="Battalions" hidden="false" collective="false" import="true" targetId="4165-f8c8-6f84-e4ca" type="selectionEntryGroup"/>
+        <entryLink id="2db6-c2da-2f2a-2417" name="General" hidden="false" collective="false" import="true" targetId="4e90-bcab-e5fd-60f1" type="selectionEntry">
+          <categoryLinks>
+            <categoryLink id="78ab-7d28-367f-59e9" name="6_under_wounds" hidden="false" targetId="e4e2-6076-dafa-ec2c" primary="false"/>
+            <categoryLink id="3c7b-adcb-aae-e3d4" name="Unique General" hidden="false" targetId="fe3f-d230-7e2c-fba2" primary="false"/>
+          </categoryLinks>
+        </entryLink>
+      </entryLinks>
+      <categoryLinks>
+        <categoryLink targetId="b970-b3bf-e1a4-a6fc" id="ea2-2ce1-e504-c5a3" primary="false" name="ORDER"/>
+        <categoryLink targetId="6ec4-4931-4d7f-006b" id="1300-4ff5-3a2-aaab" primary="false" name="IDONETH DEEPKIN"/>
+        <categoryLink targetId="7fe9-bc03-2c82-0a00" id="60bb-435f-507f-7f63" primary="false" name="AELF"/>
+        <categoryLink targetId="7d6b-20c2-e209-d69e" id="33c1-d336-440d-6e4d" primary="false" name="IONRACH"/>
+        <categoryLink targetId="4e0e-664d-51ea-0929" id="fa27-7850-d47-940" primary="false" name="HERO"/>
+        <categoryLink targetId="4f53-8230-2f02-9639" id="dbdc-e01e-3cfa-67f6" primary="false" name="WIZARD"/>
+        <categoryLink targetId="d297-61a8-974f-1e19" id="f8bb-3e10-158a-3692" primary="false" name="ISHARANN"/>
+        <categoryLink targetId="813c-f5d5-7de1-1313" id="4e38-9958-fedb-bb76" primary="false" name="SOULSCRYER"/>
+        <categoryLink targetId="d43-ec51-42bb-6cfc" id="452-78aa-ff2f-2f02" primary="false" name="THE BLACKTALONS"/>
+        <categoryLink targetId="52b5-4386-e267-574f" id="e6c9-dfab-c9a4-c810" primary="false" name="LORAI"/>
+        <categoryLink targetId="065e-fda7-fd27-1f40" id="9c5d-58ff-301f-d429" primary="true" name="Other"/>
+      </categoryLinks>
+      <profiles>
+        <profile name="Wizard" typeId="f55d-ee3a-1597-110f" typeName="Magic" hidden="false" id="d0c4-f223-6f3-9440">
+          <characteristics>
+            <characteristic name="Cast/Unbind" typeId="8294-f605-2c0f-8f92">1/1</characteristic>
+            <characteristic name="Spells Known" typeId="dc9c-47d3-6931-859c">Arcane Bolt, Mystic Shield, Nebulous Sea-fog</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Lorai, Child of the Abyss" typeId="1960-ca8e-67ce-2014" typeName="Unit" hidden="false" id="8983-9389-adfb-2493">
+          <characteristics>
+            <characteristic name="Move" typeId="8655-6213-2824-1752">6&quot;</characteristic>
+            <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">5</characteristic>
+            <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">8</characteristic>
+            <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">4+</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Aquatic Illusions" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities" hidden="false" id="4754-35e5-e9a2-be88">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Subtract 1 from hit rolls for combat attacks that target this unit.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Gift of the Depths" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities" hidden="false" id="c9e2-c9b7-e461-4346">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This unit has a ward of 5+</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Nebulous Sea-fog" typeId="2e81-5e22-c6e1-73cb" typeName="Spell" hidden="false" id="6924-6e2d-45ef-dbbf">
+          <characteristics>
+            <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
+            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">-</characteristic>
+            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If cast, until the start of your next hero phase, shooting attacks that target friendly THE BLACKTALONS units that are wholly within 6&quot; of this unit only score a hit on an unmodified hit roll of 6.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Abyssal Touch" typeId="96df-ab28-5d72-bbb3" typeName="Weapon" hidden="false" id="b93e-9736-c5-ec32">
+          <characteristics>
+            <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+            <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
+            <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">4</characteristic>
+            <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+            <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+            <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
+            <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry id="cd8a-3a00-7340-ff58" name="Battle Tactics: Skywing Manoeuvres" hidden="false" collective="false" import="true" type="upgrade">
+      <profiles>
+        <profile id="8b69-dccf-88d7-45d8" name="Cleansing Strike" publicationId="ed04-877b-pubN65537" page="132" hidden="false" typeId="eba0-4bf6-65fe-fdbc" typeName="Battle Tactic">
+          <characteristics>
+            <characteristic name="Description" typeId="f882-48d5-21a4-1787">Pick 2 objectives that are contested by enemy units. You complete this tactic if there are no enemy units contesting either objective at the end of this turn.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="e995-ed2f-654b-26bc" name="Focused Destruction" publicationId="ed04-877b-pubN65537" page="132" hidden="false" typeId="eba0-4bf6-65fe-fdbc" typeName="Battle Tactic">
+          <characteristics>
+            <characteristic name="Description" typeId="f882-48d5-21a4-1787">You complete this tactic if the same enemy unit was picked as the target of 3 different monstrous rampages carried out by friendly DRACONITH SKYWING units in this turn.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="3ea0-f597-d135-e0a2" name="Concentrated Force" publicationId="ed04-877b-pubN65537" page="132" hidden="false" typeId="eba0-4bf6-65fe-fdbc" typeName="Battle Tactic">
+          <characteristics>
+            <characteristic name="Description" typeId="f882-48d5-21a4-1787">You complete this tactic if the same enemy unit was targeted by attacks made with melee weapons by 3 or more friendly DRACONITH SKYWING units in the combat phase of this turn.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="pts" typeId="points" value="0"/>
+      </costs>
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="parent" childId="cf46-7b83-d97b-7663" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="549b-337e-63e4-7d1e" name="Mount Traits" hidden="false" collective="false" import="true">
@@ -12195,9 +13134,10 @@ In addition, you can re-roll charge rolls for this unit if it was set-up on the 
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditionGroups>
-            <conditionGroup type="and">
+            <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="26ae-0330-06d3-8f22" type="equalTo"/>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="cf46-7b83-d97b-7663" shared="true"/>
                 <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b396-0600-80d6-cee9" type="notInstanceOf"/>
               </conditions>
             </conditionGroup>
@@ -12261,9 +13201,14 @@ In addition, you can re-roll charge rolls for this unit if it was set-up on the 
     <selectionEntryGroup id="3d4c-b3f0-8c0f-1fb2" name="Traits of the Noble Beast" publicationId="ed04-877b-pubN65537" page="124" hidden="false" collective="false" import="true">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="26ae-0330-06d3-8f22" type="equalTo"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="26ae-0330-06d3-8f22" type="equalTo"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="cf46-7b83-d97b-7663" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -12416,6 +13361,7 @@ In addition, you can re-roll charge rolls for this unit if it was set-up on the 
       <entryLinks>
         <entryLink id="957d-dcfe-83d1-2c85" name="Universal Prayer Scripture" hidden="false" collective="false" import="true" targetId="3674-103c-35c9-85a6" type="selectionEntryGroup"/>
         <entryLink id="50a6-d27f-64bc-3cb8" name="Prayers of the Stormhosts" hidden="false" collective="false" import="true" targetId="3963-714a-777a-2f98" type="selectionEntryGroup"/>
+        <entryLink import="true" name="Prayers of the Draconith" hidden="false" type="selectionEntryGroup" id="f1f1-8574-f6f9-a7fd" targetId="feea-6fc1-dd12-1aa5"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="33b1-1fe5-b722-c955" name="Stormcast Core Battalions" hidden="true" collective="false" import="true">
@@ -12424,6 +13370,16 @@ In addition, you can re-roll charge rolls for this unit if it was set-up on the 
           <conditions>
             <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a2f8-c915-95f8-dc05" type="greaterThan"/>
           </conditions>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="26ae-0330-06d3-8f22" type="equalTo"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="cf46-7b83-d97b-7663" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <selectionEntryGroups>
@@ -12637,12 +13593,17 @@ In addition, you can re-roll charge rolls for this unit if it was set-up on the 
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntryGroup>
-    <selectionEntryGroup id="cf0f-b5eb-c8ee-0095" name="Stormcast Grand Strategy" hidden="true" collective="false" import="true">
+    <selectionEntryGroup id="cf0f-b5eb-c8ee-0095" name="Stormcast Grand Strategy" hidden="false" collective="false" import="true">
       <modifiers>
-        <modifier type="set" field="hidden" value="false">
-          <conditions>
-            <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="26ae-0330-06d3-8f22" type="greaterThan"/>
-          </conditions>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="26ae-0330-06d3-8f22" type="equalTo"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="cf46-7b83-d97b-7663" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -12712,6 +13673,16 @@ In addition, you can re-roll charge rolls for this unit if it was set-up on the 
           <conditions>
             <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8014-a453-b1ca-2e17" type="greaterThan"/>
           </conditions>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="26ae-0330-06d3-8f22" type="equalTo"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="cf46-7b83-d97b-7663" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <selectionEntryGroups>
@@ -14052,6 +15023,108 @@ In addition, you can re-roll charge rolls for this unit if it was set-up on the 
         <entryLink import="true" name="Nullstone Adornments" hidden="false" type="selectionEntryGroup" id="9ae5-5c15-b418-1fc0" targetId="5c1c-746a-9b36-30b"/>
         <entryLink id="12a0-454-4b28-efd1" name="Aspects of the Champion" hidden="false" collective="false" import="true" targetId="8ea7-6458-0b70-b429" type="selectionEntryGroup"/>
       </entryLinks>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="Spell Lores" hidden="false" id="b094-0ec4-692a-78ec">
+      <entryLinks>
+        <entryLink import="true" name="Universal Spell Lore" hidden="false" type="selectionEntryGroup" id="f192-c7e8-52e5-8a7" targetId="20c3-23a0-9d79-b491"/>
+        <entryLink import="true" name="Lore of the Storm" hidden="false" type="selectionEntryGroup" id="5405-9bee-f916-993f" targetId="84a5-e2c5-5f4a-ec3e"/>
+      </entryLinks>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="38f3-7d70-f5db-9e89" type="max"/>
+      </constraints>
+      <modifiers>
+        <modifier type="increment" field="38f3-7d70-f5db-9e89" value="1">
+          <repeats>
+            <repeat field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bdb0-7f20-53ff-f804" repeats="1" roundUp="false"/>
+          </repeats>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="26ae-0330-06d3-8f22" type="equalTo"/>
+                <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b396-0600-80d6-cee9" type="notInstanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Regal Authority" hidden="false" id="6da1-bd09-e128-3fa1">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cf46-7b83-d97b-7663" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b788-863d-afe0-86de"/>
+          </constraints>
+          <profiles>
+            <profile name="Regal Authority" typeId="2e81-5e22-c6e1-73cb" typeName="Spell" hidden="false" id="df55-8d20-9971-8b68">
+              <characteristics>
+                <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
+                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">18&quot;</characteristic>
+                <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick 1 friendly DRACONITH unit wholly within range and visible to the caster. Until the start of your next hero phase, each time that unit issues a command, roll a dice. On a 5+, the command point used to issue that command is not spent.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="Prayers of the Draconith" hidden="false" id="feea-6fc1-dd12-1aa5">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cf46-7b83-d97b-7663" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Sovreignty" hidden="false" id="a856-523b-20b1-83a">
+          <profiles>
+            <profile name="Sovereignty" typeId="eed7-4131-0a52-0668" typeName="Prayer" hidden="false" id="3349-27d2-224c-8bb8">
+              <characteristics>
+                <characteristic name="Answer Value" typeId="276a-ab7e-145d-3ffc">4</characteristic>
+                <characteristic name="Range" typeId="fd81-4e98-28ac-092a">12&quot;</characteristic>
+                <characteristic name="Description" typeId="0746-6cfb-5e15-53cb">If answered, pick 1 enemy unit within range. Until the start of your next hero phase, that unit counts as a maximum of 5 models for the purposes of contesting objectives.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fe57-2925-b0f9-e533"/>
+          </constraints>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Sanctification" hidden="false" id="4656-5d4e-a8b3-1905">
+          <profiles>
+            <profile name="Sanctification" typeId="eed7-4131-0a52-0668" typeName="Prayer" hidden="false" id="e297-2179-52dc-4063">
+              <characteristics>
+                <characteristic name="Answer Value" typeId="276a-ab7e-145d-3ffc">4</characteristic>
+                <characteristic name="Range" typeId="fd81-4e98-28ac-092a">12&quot;</characteristic>
+                <characteristic name="Description" typeId="0746-6cfb-5e15-53cb">If answered, until the start of your next hero phase, subtract 1 from casting rolls for enemy WIZARDS and subtract 1 from chanting rolls for enemy PRIESTS.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c714-f1ec-9780-79dc"/>
+          </constraints>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Sigmar&apos;s Grace" hidden="false" id="4df2-b682-97db-b62f">
+          <profiles>
+            <profile name="Sigmar&apos;s Grace" typeId="eed7-4131-0a52-0668" typeName="Prayer" hidden="false" id="5bf9-b56e-1a1d-7ee9">
+              <characteristics>
+                <characteristic name="Answer Value" typeId="276a-ab7e-145d-3ffc">3</characteristic>
+                <characteristic name="Range" typeId="fd81-4e98-28ac-092a">12&quot;</characteristic>
+                <characteristic name="Description" typeId="0746-6cfb-5e15-53cb">If answered, pick 1 friendly unit wholly within range and visible to the caster. You can heal up to 3 wounds allocated to that unit.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="13ab-de90-940b-fcd4"/>
+          </constraints>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <sharedProfiles>
