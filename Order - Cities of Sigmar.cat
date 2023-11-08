@@ -11796,6 +11796,10 @@ Power the Guns: Add 1 to the Attacks characteristic of this unit’s Steam Canno
         <entryLink id="ee22-02a8-8b60-152b" name="Universal Command Traits" hidden="false" collective="false" import="true" targetId="b6b8-914a-dfca-18ee" type="selectionEntryGroup"/>
         <entryLink import="true" name="Universal Command Traits" hidden="false" type="selectionEntryGroup" id="1c56-6967-ed6d-4dd2" targetId="e372-6ace-3568-54e7"/>
       </entryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c282-8784-16c-156e"/>
+        <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="b972-5631-1ecb-310a" includeChildSelections="true" includeChildForces="true"/>
+      </constraints>
     </selectionEntryGroup>
     <selectionEntryGroup id="0dcd-02fa-3297-c0aa" name="Artefacts" hidden="false" collective="false" import="true">
       <modifiers>
@@ -11812,9 +11816,15 @@ Power the Guns: Add 1 to the Attacks characteristic of this unit’s Steam Canno
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="increment" field="56d9-5c9c-62bc-57be" value="1">
+          <repeats>
+            <repeat field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a8b-93fa-e1b9-4102" repeats="1" roundUp="false"/>
+          </repeats>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="56d9-5c9c-62bc-57be" type="max"/>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="324d-69e0-f3c8-7581" includeChildSelections="true" includeChildForces="true"/>
       </constraints>
       <entryLinks>
         <entryLink id="0139-a38d-acdb-fee3" name="Universal Artefacts of Power" hidden="false" collective="false" import="true" targetId="11c4-fd82-92a7-de8a" type="selectionEntryGroup"/>
@@ -12800,7 +12810,6 @@ Power the Guns: Add 1 to the Attacks characteristic of this unit’s Steam Canno
       </constraints>
       <entryLinks>
         <entryLink import="true" name="Universal Spell Lore" hidden="false" type="selectionEntryGroup" id="ef65-7448-af8c-74b9" targetId="20c3-23a0-9d79-b491"/>
-        <entryLink import="true" name="Lore of Primal Frost" hidden="false" type="selectionEntryGroup" id="f09f-fa8b-9b8-93a4" targetId="a1be-2190-f61f-d59a"/>
         <entryLink import="true" name="Cities of Sigmar Spell Lores" hidden="false" type="selectionEntryGroup" id="45ff-afd6-8717-eff3" targetId="2d94-2cdd-f7f5-a50b"/>
       </entryLinks>
     </selectionEntryGroup>
