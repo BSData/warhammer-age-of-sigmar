@@ -493,12 +493,16 @@
                       <profiles>
                         <profile name="Shadowed Approach" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait" hidden="false" id="c37e-6d3f-4531-e019">
                           <characteristics>
-                            <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">At the end of your hero phase, you can pick up to 3 different friendly MISTHÅVN units that are more than 12&quot; from all enemy units. Each of those units can make a move of up to D6&quot; (roll separately for each). If the unit has a mount/s, it can make a move of up to 2D&amp;&quot; instead of D6&quot;. Units can finish this move within 3&quot; of enemy units.</characteristic>
+                            <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">At the end of your hero phase, you can pick up to 3 different friendly MISTHÅVN units that are more than 12&quot; from all enemy units. Each of those units can make a move of up to D6&quot; (roll separately for each). If the unit has a mount/s (not including crew and/or companions), it can make a move of up to 2D&amp;&quot; instead of D6&quot;. Units can finish this move within 3&quot; of enemy units.</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
                     </selectionEntry>
                   </selectionEntries>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="941-c874-adc4-5ecb"/>
+                    <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e71f-3ffc-61a1-bc9b" type="max"/>
+                  </constraints>
                 </selectionEntryGroup>
               </selectionEntryGroups>
               <infoGroups>
@@ -1251,16 +1255,15 @@ At the end of the battle round, all orders are removed from play (including thos
         </profile>
       </profiles>
       <categoryLinks>
-        <categoryLink id="64e1-510b-a6cc-4cae" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
         <categoryLink id="376c-b3eb-77e8-f64f" name="ORDER" hidden="false" targetId="b970-b3bf-e1a4-a6fc" primary="false"/>
         <categoryLink id="ee9e-6ce9-b319-5fc3" name="HUMAN" hidden="false" targetId="2308-7db2-829e-94b3" primary="false"/>
         <categoryLink id="d400-1bd2-0fd8-279a" name="CITIES OF SIGMAR" hidden="false" targetId="5f5a-43ec-c3f8-f174" primary="false"/>
         <categoryLink id="d0f6-8edb-ecfa-267b" name="HERO" hidden="false" targetId="4e0e-664d-51ea-0929" primary="false"/>
         <categoryLink id="a62e-e894-47f9-2040" name="WITCH HUNTER" hidden="false" targetId="3075-50e7-a792-da7d" primary="false"/>
         <categoryLink id="ef55-f586-1f5c-a143" name="DORALIA VEN DENST" hidden="false" targetId="caf4-935f-2cc1-72fe" primary="false"/>
-        <categoryLink id="c1a4-c1f0-22eb-5d7c" name="10 or less wounds Leader" hidden="false" targetId="a8ed-ca35-24e0-cf2e" primary="false"/>
         <categoryLink id="0010-9c52-7027-a127" name="Unique" hidden="false" targetId="088b-3a27-03f7-8249" primary="false"/>
         <categoryLink targetId="c189-dd5e-caf7-3564" id="a13-c706-fe51-4970" primary="false" name="ORDER OF AZYR"/>
+        <categoryLink targetId="065e-fda7-fd27-1f40" id="eb2a-5848-bf3d-9092" primary="true" name="Other"/>
       </categoryLinks>
       <entryLinks>
         <entryLink id="b658-1796-6845-32ec" name="General" hidden="false" collective="false" import="true" targetId="d618-803c-36f8-0a3a" type="selectionEntry">
@@ -5817,6 +5820,7 @@ Each time you make an unmodified wound roll of 6 for Precise Shots, change the R
         <entryLink id="9bf5-963f-24e8-ce71" name="Artefacts" hidden="false" collective="false" import="true" targetId="0dcd-02fa-3297-c0aa" type="selectionEntryGroup"/>
         <entryLink id="b0c2-69a4-37f9-29e6" name="Incarnate Bonding" hidden="false" collective="false" import="true" targetId="c890-acbd-0c80-55c9" type="selectionEntryGroup"/>
         <entryLink id="2d0a-f1cf-8540-2b6d" name="Unique Enhancements" hidden="false" collective="false" import="true" targetId="950b-e446-4a77-e62d" type="selectionEntryGroup"/>
+        <entryLink id="f608-5cc3-ad8a-1e35" name="Prayers" hidden="false" collective="false" import="true" targetId="e44c-8e15-9339-ec81" type="selectionEntryGroup"/>
       </entryLinks>
       <modifiers>
         <modifier type="add" field="category" value="89f7-d50b-0aa9-01ce">
@@ -6456,6 +6460,62 @@ Each time you make an unmodified wound roll of 6 for Precise Shots, change the R
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Command Models" hidden="false" id="e913-5309-50b3-a41a">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Champion" hidden="false" id="c70b-8a37-f954-1c97">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="39a4-c1d-2f61-b626"/>
+              </constraints>
+              <profiles>
+                <profile name="Champion" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities" hidden="false" id="c6ec-531f-f6c7-9eec">
+                  <characteristics>
+                    <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 model in this unit can be an Keeper of the Gate. Add 1 to the Attacks characteristic of that model&apos;s melee weapons.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Standard Bearer" hidden="false" id="bfe-d3c3-10b0-41ef">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7fde-ed60-ae3b-25c1"/>
+              </constraints>
+              <modifiers>
+                <modifier type="increment" value="1" field="7fde-ed60-ae3b-25c1">
+                  <repeats>
+                    <repeat value="1" repeats="1" field="selections" scope="parent" childId="0a8d-cde8-fba1-6c0d" shared="true" roundUp="false" id="92c3-1f4e-abc8-96c2"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <profiles>
+                <profile name="Standard Bearer" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities" hidden="false" id="b197-1ee8-1f0b-5f9">
+                  <characteristics>
+                    <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 in every 10 models in this unit can be a Standard Bearer. Add 1 to the Bravery characteristic of this unit while it includes any Standard Bearers.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Musician" hidden="false" id="215d-ab7d-8f51-a171">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e277-e5a2-9778-ec1a"/>
+              </constraints>
+              <modifiers>
+                <modifier type="increment" value="1" field="7fde-ed60-ae3b-25c1">
+                  <repeats>
+                    <repeat value="1" repeats="1" field="selections" scope="parent" childId="0a8d-cde8-fba1-6c0d" shared="true" roundUp="false" id="cbd7-fef0-4880-bd4e"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <profiles>
+                <profile name="Musician" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities" hidden="false" id="6d30-c26e-d804-e03">
+                  <characteristics>
+                    <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 in every 10 models in this unit can be a Musician. Add 1 to run rolls and charge rolls for this unit while it includes any Musicians.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Longbeards" hidden="false" id="8f3a-b3f4-689f-cabd">
       <entryLinks>
@@ -6718,6 +6778,7 @@ Each time you make an unmodified wound roll of 6 for Precise Shots, change the R
         <entryLink id="f101-a70d-f662-c2c6" name="Artefacts" hidden="false" collective="false" import="true" targetId="0dcd-02fa-3297-c0aa" type="selectionEntryGroup"/>
         <entryLink id="7e2c-f24d-f380-5705" name="Incarnate Bonding" hidden="false" collective="false" import="true" targetId="c890-acbd-0c80-55c9" type="selectionEntryGroup"/>
         <entryLink id="87ef-c50a-5a80-b297" name="Unique Enhancements" hidden="false" collective="false" import="true" targetId="950b-e446-4a77-e62d" type="selectionEntryGroup"/>
+        <entryLink id="91a2-5133-be40-8bee" name="Prayers" hidden="false" collective="false" import="true" targetId="e44c-8e15-9339-ec81" type="selectionEntryGroup"/>
       </entryLinks>
       <modifiers>
         <modifier type="add" field="category" value="89f7-d50b-0aa9-01ce">
@@ -9406,7 +9467,7 @@ Designers Note: This does not include Sorceress on Black Dragon units.</characte
         </profile>
         <profile name="Storm of Shemtek" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities" hidden="false" id="545b-6bc0-ed50-15a0">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">In the hero phase, you can pick 1 enemy unit within 18&quot; of this unit and roll a number of dice equal to the number of the current battle round. For each roll of 2+, that enemy unit suffers D3 mortal wounds.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">In your hero phase, you can pick 1 enemy unit within 18&quot; of this unit and roll a number of dice equal to the number of the current battle round. For each roll of 2+, that enemy unit suffers D3 mortal wounds.</characteristic>
           </characteristics>
         </profile>
         <profile name="Portents of Battle" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities" hidden="false" id="9e87-9411-c1f3-3d05">
@@ -9479,7 +9540,7 @@ Designers Note: This does not include Sorceress on Black Dragon units.</characte
         </profile>
         <profile name="Storm of Shemtek" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities" hidden="false" id="af8b-d323-9861-dae5">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">In the hero phase, you can pick 1 enemy unit within 18&quot; of this unit and roll a number of dice equal to the number of the current battle round. For each roll of 2+, that enemy unit suffers D3 mortal wounds.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">In your hero phase, you can pick 1 enemy unit within 18&quot; of this unit and roll a number of dice equal to the number of the current battle round. For each roll of 2+, that enemy unit suffers D3 mortal wounds.</characteristic>
           </characteristics>
         </profile>
         <profile name="Portents of Battle" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities" hidden="false" id="2a8c-4a60-b1fc-2a71">
@@ -9644,7 +9705,7 @@ Designers Note: This does not include Sorceress on Black Dragon units.</characte
         </profile>
         <profile name="Runic Crucible" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities" hidden="false" id="84e9-bb25-d45f-c04e">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the start of your hero phase, you can say this unit will either stoke or expend the power of its runic crucible. If this unit stokes the power of its runic crucible, add 1 to casting rolls for this unit until the end of the phase. If it expends the power of its runic crucible, it cannot cast any spells this phase, but until the start of your next hero phase, add 1 save rolls for friendly CITIES OF SIGMAR HUMAN units while they are wholly within 12&quot; of this unit.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the start of your hero phase, you can pick 1 friendly unit with this ability and say it will either stoke or expend the power of its runic crucible. If this unit stokes the power of its runic crucible, add 1 to casting rolls for this unit until the end of the phase. If it expends the power of its runic crucible, it cannot cast any spells this phase, but until the start of your next hero phase, add 1 save rolls for friendly CITIES OF SIGMAR HUMAN units while they are wholly within 12&quot; of this unit.</characteristic>
           </characteristics>
         </profile>
         <profile name="Blazing Weapons" typeId="2e81-5e22-c6e1-73cb" typeName="Spell" hidden="false" id="8c97-a011-26e0-c20b">
@@ -9668,7 +9729,7 @@ Designers Note: This does not include Sorceress on Black Dragon units.</characte
         </modifier>
       </modifiers>
       <costs>
-        <cost name="pts" typeId="points" value="90"/>
+        <cost name="pts" typeId="points" value="110"/>
       </costs>
       <categoryLinks>
         <categoryLink targetId="6c6b-e787-f9b8-a510" id="ec0b-53c7-d4ff-ebcb" primary="true" name="Leader"/>
@@ -10156,7 +10217,7 @@ Designer’s Note: The Relic Envoy’s miniature isn’t considered to be a mode
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6ef6-71d7-4ef9-acc7" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="150"/>
+            <cost name="pts" typeId="points" value="170"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -10170,7 +10231,7 @@ Designer’s Note: The Relic Envoy’s miniature isn’t considered to be a mode
             </modifier>
           </modifiers>
           <costs>
-            <cost name="pts" typeId="points" value="150"/>
+            <cost name="pts" typeId="points" value="170"/>
           </costs>
         </entryLink>
         <entryLink id="1618-a4d6-f969-59e2" name="Battalions" hidden="false" collective="false" import="true" targetId="0389-96f8-e8bd-4d7f" type="selectionEntryGroup"/>
@@ -10494,13 +10555,13 @@ Designer’s Note: The Relic Envoy’s miniature isn’t considered to be a mode
         </profile>
         <profile name="Ferocious Bite" typeId="96df-ab28-5d72-bbb3" typeName="Weapon" hidden="false" id="1a41-407b-f6fd-f5d5">
           <characteristics>
-            <characteristic name="Type" typeId="655c-362e-a663-3e50">Missile</characteristic>
-            <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">18&quot;</characteristic>
+            <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+            <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
             <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">3</characteristic>
             <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
             <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
             <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
-            <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">D6</characteristic>
+            <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
           </characteristics>
         </profile>
         <profile name="Volley Pistol" typeId="96df-ab28-5d72-bbb3" typeName="Weapon" hidden="false" id="eb4c-3544-8657-ef2f">
@@ -10571,7 +10632,7 @@ Designer’s Note: The Relic Envoy’s miniature isn’t considered to be a mode
         <categoryLink targetId="a8ed-ca35-24e0-cf2e" id="a212-1527-1ec8-3fc4" primary="false" name="9 or less wounds Leader"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="150"/>
+        <cost name="pts" typeId="points" value="180"/>
       </costs>
       <profiles>
         <profile name="Pontifex Zenestra, Matriarch of the Great Wheel" typeId="1960-ca8e-67ce-2014" typeName="Unit" hidden="false" id="f562-1c3e-ddd8-b83a">
@@ -11847,7 +11908,7 @@ Power the Guns: Add 1 to the Attacks characteristic of this unit’s Steam Canno
         <entryLink id="428f-18ac-035d-1a4f" name="Core Battalions" hidden="false" collective="false" import="true" targetId="b275-810f-adfc-156b" type="selectionEntryGroup"/>
       </entryLinks>
     </selectionEntryGroup>
-    <selectionEntryGroup id="e44c-8e15-9339-ec81" name="Prayers" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="e44c-8e15-9339-ec81" name="Prayers" hidden="true" collective="false" import="true">
       <modifiers>
         <modifier type="increment" field="150d-bbc9-68a6-692a" value="1">
           <repeats>
@@ -11864,15 +11925,27 @@ Power the Guns: Add 1 to the Attacks characteristic of this unit’s Steam Canno
                 <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1e36-e511-437b-5de8" type="instanceOf"/>
                 <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="524e-8001-63ee-cdf7" type="instanceOf"/>
               </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" value="false" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="e8a5-e4c1-3d11-e7dd" shared="true" includeChildSelections="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="3a30-dbee-86ff-a898" shared="true" includeChildSelections="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="eb97-83a8-6cea-a20c" shared="true" includeChildSelections="true"/>
+              </conditions>
               <conditionGroups>
                 <conditionGroup type="and">
                   <conditions>
-                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="e8a5-e4c1-3d11-e7dd" shared="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="9038-2fdc-8655-ace9" shared="true" includeChildSelections="true" includeChildForces="true"/>
                   </conditions>
                   <conditionGroups>
                     <conditionGroup type="or">
                       <conditions>
-                        <condition type="lessThan" value="1" field="selections" scope="roster" childId="9038-2fdc-8655-ace9" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="2308-7db2-829e-94b3" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="c676-36af-4faf-64db" shared="true" includeChildSelections="true"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -12113,6 +12186,9 @@ Power the Guns: Add 1 to the Attacks characteristic of this unit’s Steam Canno
               <constraints>
                 <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="150d-bbc9-68a6-692k" type="max"/>
               </constraints>
+              <categoryLinks>
+                <categoryLink targetId="e8a5-e4c1-3d11-e7dd" id="d982-1c62-6327-ff59" primary="false" name="PRIEST"/>
+              </categoryLinks>
             </selectionEntry>
           </selectionEntries>
           <modifiers>
@@ -12134,10 +12210,14 @@ Power the Guns: Add 1 to the Attacks characteristic of this unit’s Steam Canno
         <selectionEntryGroup name="Lords of the Mountains" hidden="true" id="9501-ef5d-4201-86fa">
           <modifiers>
             <modifier type="set" value="false" field="hidden">
-              <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="945b-2f5e-58f0-75e2" shared="true"/>
-                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="18fa-5e6c-8d0a-794e" shared="true"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="945b-2f5e-58f0-75e2" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="18fa-5e6c-8d0a-794e" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
           <constraints>
@@ -12167,6 +12247,9 @@ Power the Guns: Add 1 to the Attacks characteristic of this unit’s Steam Canno
               <constraints>
                 <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="150d-bbc9-68a6-692d" type="max"/>
               </constraints>
+              <categoryLinks>
+                <categoryLink targetId="e8a5-e4c1-3d11-e7dd" id="d0b9-1ab-c1ed-f94a" primary="false" name="PRIEST"/>
+              </categoryLinks>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Insurmountable Resilience" hidden="false" id="ac40-4ca-f819-8ce">
               <profiles>
@@ -12775,10 +12858,14 @@ Power the Guns: Add 1 to the Attacks characteristic of this unit’s Steam Canno
           </selectionEntries>
           <modifiers>
             <modifier type="set" value="false" field="hidden">
-              <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="945b-2f5e-58f0-75e2" shared="true"/>
-                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="18fa-5e6c-8d0a-794e" shared="true"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="945b-2f5e-58f0-75e2" shared="true" includeChildSelections="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="18fa-5e6c-8d0a-794e" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
         </selectionEntryGroup>
