@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="170" battleScribeVersion="2.03" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" type="gameSystem">
+<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="171" battleScribeVersion="2.03" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" type="gameSystem">
   <publications>
     <publication id="e51d-b1a3-pubEC" name="The General&apos;s Handbook"/>
     <publication id="e51d-b1a3-pubEQ" name="Core Rules"/>
@@ -4040,7 +4040,9 @@ WIZARDS cannot be included in this battalion.</characteristic>
         </profile>
         <profile id="9d41-2d21-fce2-cede" name="Core Battalion: Wizard-finders of Andtor" hidden="false" typeId="75e0-a332-e4f5-bf36" typeName="Battalion Organisation">
           <characteristics>
-            <characteristic name="Required" typeId="eb5f-e9d2-e457-bff5">2-3 Monsters</characteristic>
+            <characteristic name="Required" typeId="eb5f-e9d2-e457-bff5">1 Champion
+1-2 Infantry
+0-1 Monster</characteristic>
           </characteristics>
         </profile>
       </profiles>
