@@ -7674,12 +7674,12 @@ Each time you make an unmodified wound roll of 6 for Precise Shots, change the R
         </selectionEntry>
       </selectionEntries>
       <modifiers>
-        <modifier type="add" value="e9f2-765a-b7b8-ce8e" field="category">
+        <modifier type="set-primary" value="e9f2-765a-b7b8-ce8e" field="category">
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="37d9-15e4-373d-9f8f" shared="true"/>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="d46b-55a2-1ae6-cd2e" shared="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="37d9-15e4-373d-9f8f" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="d46b-55a2-1ae6-cd2e" shared="true" includeChildForces="true" includeChildSelections="true"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -8035,11 +8035,11 @@ Each time you make an unmodified wound roll of 6 for Precise Shots, change the R
         </entryLink>
       </entryLinks>
       <modifiers>
-        <modifier type="add" value="e9f2-765a-b7b8-ce8e" field="category">
+        <modifier type="set-primary" value="e9f2-765a-b7b8-ce8e" field="category">
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="540e-4ed7-72ab-26db" shared="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="540e-4ed7-72ab-26db" shared="true" includeChildForces="true" includeChildSelections="true"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -8726,11 +8726,11 @@ Designers Note: This does not include Sorceress on Black Dragon units.</characte
         </selectionEntry>
       </selectionEntries>
       <modifiers>
-        <modifier type="add" value="e9f2-765a-b7b8-ce8e" field="category">
+        <modifier type="set-primary" value="e9f2-765a-b7b8-ce8e" field="category">
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="de00-063b-84e1-69f6" shared="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="de00-063b-84e1-69f6" shared="true" includeChildForces="true" includeChildSelections="true"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -12160,17 +12160,29 @@ Power the Guns: Add 1 to the Attacks characteristic of this unit’s Steam Canno
                 <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="150d-bbc9-68a6-692f" type="max"/>
               </constraints>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Fiery Temper" hidden="false" id="3185-8988-c88c-723d">
+            <selectionEntry type="upgrade" import="true" name="Draconic Blood-pact" hidden="true" id="3185-8988-c88c-723d">
               <profiles>
-                <profile name="Fiery Temper" typeId="c749-bae4-71a8-0c36" typeName="Command Trait" hidden="false" id="f209-5ed5-950a-582b">
+                <profile name="Draconic Blood-pact" typeId="c749-bae4-71a8-0c36" typeName="Command Trait" hidden="false" id="f209-5ed5-950a-582b">
                   <characteristics>
-                    <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">You can re-roll charge rolls for this general. In addition, if this general made a charge move in the same turn, you can re-roll charge rolls for friendly CITIES OF SIGMAR HUMAN units while they are wholly within 18&quot; of this general.</characteristic>
+                    <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">At the start of the combat phase, you can say that this general will draw power from their draconic blood-pact. If you do so, this general suffers 1 mortal wound that cannot be negated. However, until the end of that phase, add 1 to the Attacks characteristic of the weapons this general’s mount is armed with.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
               <constraints>
                 <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="150d-bbc9-68a6-692h" type="max"/>
               </constraints>
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="7b4b-77ea-cb33-5c74" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="2531-9143-bb7d-cac5" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Secretive Warlock" hidden="true" id="8166-e7da-fd78-73d5">
               <profiles>
