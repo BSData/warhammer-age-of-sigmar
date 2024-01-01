@@ -76,6 +76,13 @@
     <categoryEntry id="52e4-3e6e-c3c9-58e0" name="ROYAL BEASTFLAYERS" hidden="false"/>
     <categoryEntry name="MARROWSCROLL HERALD" hidden="false" id="e331-5936-7c92-f48b"/>
     <categoryEntry name="USHORAN" hidden="false" id="ec00-f808-c337-38f5"/>
+    <categoryEntry name="ABHORRANT CARDINAL" hidden="false" id="9aa6-4e02-cf3-aa5b"/>
+    <categoryEntry name="ABHORRANT GOREWARDEN" hidden="false" id="fe0a-2400-fd27-1447"/>
+    <categoryEntry name="GRAND JUSTICE GORMAYNE" hidden="false" id="bb13-e01f-8d98-c68c"/>
+    <categoryEntry name="ROYAL DECAPITATOR" hidden="false" id="6aaf-34b3-15d0-400d"/>
+    <categoryEntry name="CRYPTGUARD" hidden="false" id="9527-1e4c-6681-2aa5"/>
+    <categoryEntry name="MORBHEG KNIGHTS" hidden="false" id="28ac-1b27-ef5e-33be"/>
+    <categoryEntry name="Gorewarden general" hidden="true" id="c89f-a721-882d-41b9"/>
   </categoryEntries>
   <entryLinks>
     <entryLink id="c7c9-5a8a-4868-57bc" name="Allegiance" hidden="false" collective="false" import="true" targetId="d563-f542-5dad-2b09" type="selectionEntry">
@@ -289,11 +296,6 @@
         </modifier>
       </modifiers>
       <profiles>
-        <profile id="ee85-ecbb-396d-2387" name="Royal Blood" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">In your hero phase, you can heal up to D3 wounds allocated to this model.</characteristic>
-          </characteristics>
-        </profile>
         <profile id="9087-1bc2-d242-968d" name="Wizard" hidden="false" typeId="f55d-ee3a-1597-110f" typeName="Magic">
           <characteristics>
             <characteristic name="Cast/Unbind" typeId="8294-f605-2c0f-8f92">1/1</characteristic>
@@ -308,9 +310,23 @@
             <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">4+</characteristic>
           </characteristics>
         </profile>
-        <profile id="e836-17c7-0674-8a88" name="Summon Men-at-arms" hidden="false" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
+        <profile id="e836-17c7-0674-8a88" name="Code of Honour" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Command Ability Details" typeId="1b71-4c83-4e8c-093f">You can use this command ability at the end of your movement phase. If you do so, pick 1 friendly model that has this command ability and has not used it before in the battle. That model summons 1 unit of up to 10 SERFS to the battlefield. The summoned unit is added to your army, and must be set up wholly within 6&quot; of the edge of the battlefield and more than 9&quot; from any enemy units.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the start of the combat phase, you can pick an enemy HERO within 1&quot; of this unit and say that this unit will duel that enemy HERO. If you do so, add 1 to the Damage characteristic of this unit’s melee weapons until the end of the phase, but it can only target that enemy HERO.
+
+</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="544c-2f8f-39d0-fffe" name="Royal Blood" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">In your hero phase, you can heal up to D3 wounds allocated to this unit.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Unnatural Speed" typeId="2e81-5e22-c6e1-73cb" typeName="Spell" hidden="false" id="884c-88cf-c581-3d05">
+          <characteristics>
+            <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
+            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
+            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, this unit can immediately attempt a charge and you can roll 3D6 for the charge roll. If the charge is successful, the strike-first effect applies to this unit in the following combat phase.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -341,29 +357,11 @@
               <characteristics>
                 <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
                 <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
-                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">6</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">5</characteristic>
                 <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
                 <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
                 <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
-                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="401c-96bf-e614-aa65" name="Black Hunger" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b7d2-f7f8-921f-34ab" type="min"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ba01-f029-7356-2450" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="d25d-27ca-3ea2-09d1" name="Black Hunger" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
-              <characteristics>
-                <characteristic name="Casting Value" typeId="2508-b604-1258-a920">5</characteristic>
-                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">24&quot;</characteristic>
-                <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick 1 friendly FLESH-EATER COURTS unit wholly within 24&quot; of the caster and visible to them. Add 1 to the Attacks characteristic of melee weapons used by that unit until your next hero phase.</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">2</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -382,7 +380,7 @@
         <entryLink id="7586-8f34-3277-64b1" name="Unique Enhancements" hidden="false" collective="false" import="true" targetId="62f4-174e-c529-75fe" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="170"/>
+        <cost name="pts" typeId="points" value="130"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="25e3-54ae-82f5-152f" name="Abhorrant Ghoul King on Royal Terrorgheist" publicationId="6afd-4f9a-0665-9b55" hidden="false" collective="false" import="true" type="unit">
@@ -590,60 +588,32 @@
         <profile id="d3cb-acad-a59b-e8ba" name="Wizard" hidden="false" typeId="f55d-ee3a-1597-110f" typeName="Magic">
           <characteristics>
             <characteristic name="Cast/Unbind" typeId="8294-f605-2c0f-8f92">1/1</characteristic>
-            <characteristic name="Spells Known" typeId="dc9c-47d3-6931-859c">Arcane Bolt, Mystic Shield and Malefic Hunger spells.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="44b3-6879-4336-6077" name="00-03" hidden="false" typeId="b1c1-c8b1-016e-4235" typeName="Zombie Dragon&apos;s Wound Table">
-          <characteristics>
-            <characteristic name="Move" typeId="1712-425e-7e40-a5b1">14&quot;</characteristic>
-            <characteristic name="Pestilential Breath" typeId="b17b-97f7-9c40-21e5">2+</characteristic>
-            <characteristic name="Sword-like Claws" typeId="e309-9fb0-c644-47ee">7</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="ed8d-976f-fc8a-5cbd" name="04-06" hidden="false" typeId="b1c1-c8b1-016e-4235" typeName="Zombie Dragon&apos;s Wound Table">
-          <characteristics>
-            <characteristic name="Move" typeId="1712-425e-7e40-a5b1">12&quot;</characteristic>
-            <characteristic name="Pestilential Breath" typeId="b17b-97f7-9c40-21e5">3+</characteristic>
-            <characteristic name="Sword-like Claws" typeId="e309-9fb0-c644-47ee">6</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="2f95-57cd-a600-4f24" name="07-09" hidden="false" typeId="b1c1-c8b1-016e-4235" typeName="Zombie Dragon&apos;s Wound Table">
-          <characteristics>
-            <characteristic name="Move" typeId="1712-425e-7e40-a5b1">10&quot;</characteristic>
-            <characteristic name="Pestilential Breath" typeId="b17b-97f7-9c40-21e5">4+</characteristic>
-            <characteristic name="Sword-like Claws" typeId="e309-9fb0-c644-47ee">5</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="3a66-5d5b-06b6-6295" name="10-12" hidden="false" typeId="b1c1-c8b1-016e-4235" typeName="Zombie Dragon&apos;s Wound Table">
-          <characteristics>
-            <characteristic name="Move" typeId="1712-425e-7e40-a5b1">8&quot;</characteristic>
-            <characteristic name="Pestilential Breath" typeId="b17b-97f7-9c40-21e5">5+</characteristic>
-            <characteristic name="Sword-like Claws" typeId="e309-9fb0-c644-47ee">4</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="a445-c165-01b7-0391" name="13+" hidden="false" typeId="b1c1-c8b1-016e-4235" typeName="Zombie Dragon&apos;s Wound Table">
-          <characteristics>
-            <characteristic name="Move" typeId="1712-425e-7e40-a5b1">6&quot;</characteristic>
-            <characteristic name="Pestilential Breath" typeId="b17b-97f7-9c40-21e5">6+</characteristic>
-            <characteristic name="Sword-like Claws" typeId="e309-9fb0-c644-47ee">3</characteristic>
+            <characteristic name="Spells Known" typeId="dc9c-47d3-6931-859c">Arcane Bolt, Mystic Shield and Monstrous Hunger spells.</characteristic>
           </characteristics>
         </profile>
         <profile id="353c-cd25-8bcd-cf3f" name="Abhorrant Ghoul King on Royal Zombie Dragon" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
           <characteristics>
             <characteristic name="Move" typeId="8655-6213-2824-1752">*</characteristic>
-            <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">14</characteristic>
+            <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">16</characteristic>
             <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">10</characteristic>
             <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">4+</characteristic>
           </characteristics>
         </profile>
-        <profile id="963d-3a48-1b7d-2936" name="Royal Blood" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+        <profile id="621c-a17b-3a1f-cc7e" name="Draconic Terror" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">In your hero phase, you can heal up to D3 wounds allocated to this model.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Enemy units cannot receive the Inspiring Presence command while they are within 3&quot; of any friendly units with this ability.</characteristic>
           </characteristics>
         </profile>
-        <profile id="dd33-f077-7952-fc7a" name="Summon Royal Courtier" hidden="false" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
+        <profile id="d9c9-be60-8d1c-e721" name="Royal Blood" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Command Ability Details" typeId="1b71-4c83-4e8c-093f">You can use this command ability at the end of your movement phase. If you do so, pick 1 friendly model that has this command ability and has not used it before in the battle. That model summons 1 Courtier unit to the battlefield. The summoned unit is added to your army, and must be set up wholly within 6&quot; of the edge of the battlefield and more than 9&quot; from any enemy units.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">In your hero phase, you can heal up to D3 wounds allocated to this unit.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Monstrous Hunger" typeId="2e81-5e22-c6e1-73cb" typeName="Spell" hidden="false" id="8ee9-bbe7-82e-2a64">
+          <characteristics>
+            <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
+            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">18&quot;</characteristic>
+            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, friendly FLESH-EATER COURTS MONSTERS wholly within range of the caster are filled with monstrous hunger until your next hero phase. A unit filled with monstrous hunger can run and still charge later in the turn.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -701,8 +671,8 @@
                 <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">3</characteristic>
                 <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
                 <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
-                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-2</characteristic>
-                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">D6</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-3</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">3</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -716,38 +686,15 @@
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="58ff-ad69-36dd-0f6b" type="max"/>
           </constraints>
           <profiles>
-            <profile id="563f-e2a7-1dcc-f820" name="Pestilential Breath" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-              <characteristics>
-                <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">When you attack with this model’s Pestilential Breath, roll a dice before making the hit roll for the attack. If the roll is less than or equal to the number of models in the target unit, the attack scores a hit without needing to make a hit roll.</characteristic>
-              </characteristics>
-            </profile>
             <profile id="e03a-7430-bd0e-d976" name="Pestilential Breath" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
               <characteristics>
                 <characteristic name="Type" typeId="655c-362e-a663-3e50">Missile</characteristic>
-                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">9&quot;</characteristic>
-                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">1</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">12&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">D6</characteristic>
                 <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
-                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">*</characteristic>
-                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-3</characteristic>
-                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">D6</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="5295-f692-14d0-bae7" name="Malefic Hunger" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1b2f-2705-cc1b-ef6c" type="min"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dcaf-423d-c63b-c714" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="e5cb-b4f2-e5de-ecb4" name="Malefic Hunger" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
-              <characteristics>
-                <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
-                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">-</characteristic>
-                <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, until your next hero phase you can re-roll wound rolls for attacks made with melee weapons by friendly Flesh‐eater Courts units wholly within 16&quot; of the caster.</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">3</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -765,11 +712,11 @@
               <characteristics>
                 <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
                 <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
-                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">5</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">4</characteristic>
                 <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
                 <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
                 <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
-                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">2</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -791,6 +738,36 @@
       <costs>
         <cost name="pts" typeId="points" value="430"/>
       </costs>
+      <infoGroups>
+        <infoGroup name="Damage Table" hidden="false" id="79f6-7731-b373-ba41">
+          <profiles>
+            <profile name="0-6" typeId="1fc7-f451-3937-0a17" typeName="Zombie Dragon&apos;s Wounds Suffered" hidden="false" id="6b42-9de3-3b09-7e13">
+              <characteristics>
+                <characteristic name="Move" typeId="1712-425e-7e40-a5b1">14&quot;</characteristic>
+                <characteristic name="Sword-like Claws" typeId="e309-9fb0-c644-47ee">7</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="7-8" typeId="1fc7-f451-3937-0a17" typeName="Zombie Dragon&apos;s Wounds Suffered" hidden="false" id="be9e-939a-67c2-e39a">
+              <characteristics>
+                <characteristic name="Move" typeId="1712-425e-7e40-a5b1">12&quot;</characteristic>
+                <characteristic name="Sword-like Claws" typeId="e309-9fb0-c644-47ee">6</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="9-11" typeId="1fc7-f451-3937-0a17" typeName="Zombie Dragon&apos;s Wounds Suffered" hidden="false" id="dcbc-5d2b-3870-2a4b">
+              <characteristics>
+                <characteristic name="Move" typeId="1712-425e-7e40-a5b1">10&quot;</characteristic>
+                <characteristic name="Sword-like Claws" typeId="e309-9fb0-c644-47ee">5</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="12+" typeId="1fc7-f451-3937-0a17" typeName="Zombie Dragon&apos;s Wounds Suffered" hidden="false" id="3c89-1ee9-b953-869a">
+              <characteristics>
+                <characteristic name="Move" typeId="1712-425e-7e40-a5b1">8&quot;</characteristic>
+                <characteristic name="Sword-like Claws" typeId="e309-9fb0-c644-47ee">4</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+      </infoGroups>
     </selectionEntry>
     <selectionEntry id="d563-f542-5dad-2b09" name="Allegiance" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
@@ -2036,7 +2013,6 @@ Each Flesh-eater Courts Hero can have a maximum of 6 noble deeds points at any o
               <conditionGroups>
                 <conditionGroup type="or">
                   <conditions>
-                    <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="af5a-c2ed-b1df-7760" type="equalTo"/>
                     <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="83a9-0464-b308-eef1" type="equalTo"/>
                   </conditions>
                 </conditionGroup>
@@ -2061,7 +2037,7 @@ Each Flesh-eater Courts Hero can have a maximum of 6 noble deeds points at any o
         </profile>
         <profile id="e471-2ee7-af1c-9fd2" name="Crypt Infernal" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">The leader of this unit is a Crypt Infernal. Add 1 to the Attacks characteristic of a Crypt Infernal’s Piercing Talons.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 model in this unit can be a Crypt Infernal. Add 1 to the Attacks characteristic of that model’s Piercing Talons.</characteristic>
           </characteristics>
         </profile>
         <profile name="Escort Courtier" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities" hidden="false" id="bb13-6aff-df80-f43a">
@@ -2101,7 +2077,7 @@ Each Flesh-eater Courts Hero can have a maximum of 6 noble deeds points at any o
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="180"/>
+            <cost name="pts" typeId="points" value="160"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="0208-ad2e-d4e9-620d" name="Piercing Talons" hidden="false" collective="false" import="true" type="upgrade">
@@ -2176,7 +2152,7 @@ Each Flesh-eater Courts Hero can have a maximum of 6 noble deeds points at any o
             </modifier>
           </modifiers>
           <costs>
-            <cost name="pts" typeId="points" value="180"/>
+            <cost name="pts" typeId="points" value="160"/>
           </costs>
         </entryLink>
         <entryLink id="fd5b-3bd3-4970-6129" name="Battalions" hidden="false" collective="false" import="true" targetId="3f3e-293b-65ed-e3fa" type="selectionEntryGroup"/>
@@ -2194,14 +2170,11 @@ Each Flesh-eater Courts Hero can have a maximum of 6 noble deeds points at any o
         </modifier>
       </modifiers>
       <profiles>
-        <profile id="4a48-5042-e157-f1a6" name="Muster Serfs" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+        <profile id="4a48-5042-e157-f1a6" name="Marshal of the Peasantry" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">In your hero phase, roll 6 dice for each friendly CRYPT GHAST COURTIER on the battlefield. For each 2+ you can return 1 slain model to a friendly SERFS unit that is within 10&quot; of that CRYPT GHAST COURTIER. Slain models can be returned to more than one unit if you wish, but each successful dice roll can only be used to return a model to a single unit.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="6ae5-0935-aaf9-1cc7" name="Trophy Hunter" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If any enemy models are slain by wounds inflicted by this model’s attacks, until the end of the phase in which the attacks were made add 1 to the Attacks characteristic of melee weapons used by friendly SERFS units while they are wholly within 16&quot; of this model.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">In the combat phase, after this unit has fought for the first time in that phase, you can pick 1 friendly SERFS unit that has not yet fought in that phase, is within 3&quot; of an enemy unit and is wholly within 9&quot; of this unit. That unit can fight immediately.
+
+</characteristic>
           </characteristics>
         </profile>
         <profile id="e884-a5cb-5d7c-2f00" name="Crypt Ghast Courtier" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
@@ -2210,6 +2183,17 @@ Each Flesh-eater Courts Hero can have a maximum of 6 noble deeds points at any o
             <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">4</characteristic>
             <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">10</characteristic>
             <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">5+</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Bone Club and Filthy Claws" typeId="96df-ab28-5d72-bbb3" typeName="Weapon" hidden="false" id="9c61-3c4e-2b24-f5df">
+          <characteristics>
+            <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+            <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
+            <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">5</characteristic>
+            <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
+            <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+            <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
+            <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">D3</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -2224,52 +2208,6 @@ Each Flesh-eater Courts Hero can have a maximum of 6 noble deeds points at any o
         <categoryLink id="3784-728c-ad9d-f665" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
         <categoryLink targetId="94b9-7eb-a81a-b892" id="da2e-c86-57a6-ecd3" primary="false" name="Champion"/>
       </categoryLinks>
-      <selectionEntries>
-        <selectionEntry id="e5af-89c5-5341-f0a8" name="Bone Club" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1e43-364f-4915-85bc" type="min"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e23c-83f6-4b4f-2f56" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="56c4-ec70-703c-92d8" name="Bone Club" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
-              <characteristics>
-                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
-                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
-                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">3</characteristic>
-                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
-                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
-                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
-                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="fec9-db2c-83be-d15c" name="Filthy Claws" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6406-223b-b90b-538b" type="min"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="23fb-9b34-50cc-f1bd" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="3874-7b64-b0e7-3a5b" name="Filthy Claws" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
-              <characteristics>
-                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
-                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
-                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">2</characteristic>
-                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
-                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
-                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
-                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
       <entryLinks>
         <entryLink id="3b99-af1e-01f2-ffe9" name="Artefacts" hidden="false" collective="false" import="true" targetId="c8cb-28b1-ffbb-2bbf" type="selectionEntryGroup"/>
         <entryLink id="ce4e-2370-acec-9876" name="General" hidden="false" collective="false" import="true" targetId="8228-415a-66c3-dffe" type="selectionEntry"/>
@@ -2279,7 +2217,7 @@ Each Flesh-eater Courts Hero can have a maximum of 6 noble deeds points at any o
         <entryLink id="9036-511d-eb99-0d73" name="Unique Enhancements" hidden="false" collective="false" import="true" targetId="62f4-174e-c529-75fe" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="70"/>
+        <cost name="pts" typeId="points" value="100"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="631c-0dae-5912-196d" name="Crypt Ghouls" page="135" hidden="false" collective="false" import="true" type="unit">
@@ -2330,14 +2268,14 @@ Each Flesh-eater Courts Hero can have a maximum of 6 noble deeds points at any o
         <categoryLink targetId="7f45-c5b3-c698-138d" id="ef1-efad-5b2f-85f1" primary="false" name="Infantry"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="3ce1-fdde-09b6-cbe7" name="10 Crypt Ghouls" hidden="false" collective="false" import="true" type="model">
+        <selectionEntry id="3ce1-fdde-09b6-cbe7" name="20 Crypt Ghouls" hidden="false" collective="false" import="true" type="model">
           <modifiers>
-            <modifier type="set" field="name" value="20 Crypt Ghouls">
+            <modifier type="set" field="name" value="40 Crypt Ghouls">
               <conditions>
                 <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0a8d-cde8-fba1-6c0d" type="equalTo"/>
               </conditions>
             </modifier>
-            <modifier type="set" field="name" value="30 Crypt Ghouls">
+            <modifier type="set" field="name" value="60 Crypt Ghouls">
               <conditions>
                 <condition field="selections" scope="parent" value="2" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0a8d-cde8-fba1-6c0d" type="equalTo"/>
               </conditions>
@@ -2348,7 +2286,7 @@ Each Flesh-eater Courts Hero can have a maximum of 6 noble deeds points at any o
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="80"/>
+            <cost name="pts" typeId="points" value="160"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="6cf7-ce8a-1a10-189f" name="Sharpened Teeth and Filthy Claws" hidden="false" collective="false" import="true" type="upgrade">
@@ -2380,7 +2318,7 @@ Each Flesh-eater Courts Hero can have a maximum of 6 noble deeds points at any o
             <modifier type="set" field="95f2-6885-756f-9ea5" value="2"/>
           </modifiers>
           <costs>
-            <cost name="pts" typeId="points" value="80"/>
+            <cost name="pts" typeId="points" value="160"/>
           </costs>
         </entryLink>
         <entryLink id="25be-6131-0679-2425" name="Battalions" hidden="false" collective="false" import="true" targetId="3f3e-293b-65ed-e3fa" type="selectionEntryGroup"/>
@@ -2398,19 +2336,14 @@ Each Flesh-eater Courts Hero can have a maximum of 6 noble deeds points at any o
         </modifier>
       </modifiers>
       <profiles>
-        <profile id="d96a-bd18-ce25-4e35" name="Muster King&apos;s Chosen" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+        <profile id="d96a-bd18-ce25-4e35" name="Knightly Retinue" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">In your hero phase, roll 6 dice for each friendly CRYPT HAUNTER COURTIER on the battlefield. For each 5+ you can return 1 slain model to a friendly CRYPT HORRORS unit that is within 10&quot; of that CRYPT HAUNTER COURTIER. Slain models can be returned to more than one unit if you wish, but each successful dice roll can only be used to return a model to a single unit.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">In the combat phase, after this unit has fought for the first time in that phase, you can pick 1 friendly CRYPT HORRORS unit that has not yet fought in that phase, is within 3&quot; of an enemy unit and is wholly within 9&quot; of this unit. That unit can fight immediately.</characteristic>
           </characteristics>
         </profile>
         <profile id="1360-c6d0-d6f7-8767" name="Noble Blood" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">In your hero phase, you can heal 1 wound allocated to this model.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="8ff0-b144-d920-c7e8" name="Chosen of the King" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">You can re-roll hit rolls for attacks made by this model while it is within 18&quot; of any friendly ABHORRANTS.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">In your hero phase, you can heal up to D3 wounds allocated to this unit.</characteristic>
           </characteristics>
         </profile>
         <profile id="6235-0287-78dc-1bf4" name="Crypt Haunter Courtier" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
@@ -2419,6 +2352,17 @@ Each Flesh-eater Courts Hero can have a maximum of 6 noble deeds points at any o
             <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">6</characteristic>
             <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">10</characteristic>
             <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">4+</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Massive Bone Club and Rancid Talons" typeId="96df-ab28-5d72-bbb3" typeName="Weapon" hidden="false" id="9ae5-b5b8-3b49-85f2">
+          <characteristics>
+            <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+            <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">2&quot;</characteristic>
+            <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">5</characteristic>
+            <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
+            <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+            <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-2</characteristic>
+            <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">3</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -2433,52 +2377,6 @@ Each Flesh-eater Courts Hero can have a maximum of 6 noble deeds points at any o
         <categoryLink id="07bd-c2ca-b7d1-9e00" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
         <categoryLink targetId="94b9-7eb-a81a-b892" id="fda-e796-a255-8ad0" primary="false" name="Champion"/>
       </categoryLinks>
-      <selectionEntries>
-        <selectionEntry id="ab65-03de-a1c1-1a23" name="Massive Bone Club" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7639-9976-f8f7-06a3" type="min"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1abe-d19c-ff07-707e" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="428e-ca00-b99a-6b15" name="Massive Bone Club" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
-              <characteristics>
-                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
-                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
-                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">3</characteristic>
-                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
-                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
-                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
-                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">3</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="97ba-4f42-1547-400d" name="Rancid Talons" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cca6-9403-bc73-2d71" type="min"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e0d8-e3b6-87b9-e743" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="47d6-4161-c5b9-3d45" name="Rancid Talons" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
-              <characteristics>
-                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
-                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
-                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">2</characteristic>
-                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
-                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
-                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
-                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
       <entryLinks>
         <entryLink id="07a2-14a4-cccf-9c4e" name="Command Traits" hidden="false" collective="false" import="true" targetId="2b46-6a34-bba4-a7a2" type="selectionEntryGroup"/>
         <entryLink id="dca0-933b-2b68-2248" name="Artefacts" hidden="false" collective="false" import="true" targetId="c8cb-28b1-ffbb-2bbf" type="selectionEntryGroup"/>
@@ -2492,7 +2390,7 @@ Each Flesh-eater Courts Hero can have a maximum of 6 noble deeds points at any o
         <entryLink id="ffa4-db8a-934c-72c5" name="Unique Enhancements" hidden="false" collective="false" import="true" targetId="62f4-174e-c529-75fe" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="110"/>
+        <cost name="pts" typeId="points" value="140"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="69e7-2a2c-7334-f453" name="Crypt Horrors" page="135" hidden="false" collective="false" import="true" type="unit">
@@ -2524,7 +2422,6 @@ Each Flesh-eater Courts Hero can have a maximum of 6 noble deeds points at any o
               <conditionGroups>
                 <conditionGroup type="or">
                   <conditions>
-                    <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e436-d1d7-652b-ab96" type="equalTo"/>
                     <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c6db-68c4-dfd6-58c0" type="equalTo"/>
                   </conditions>
                 </conditionGroup>
@@ -2541,7 +2438,7 @@ Each Flesh-eater Courts Hero can have a maximum of 6 noble deeds points at any o
       <profiles>
         <profile id="d016-cca4-6a93-0349" name="Noble Blood" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">In your hero phase, you can heal up to D3 wounda allocated to this unit.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">In your hero phase, you can heal up to D3 wounds allocated to this unit.</characteristic>
           </characteristics>
         </profile>
         <profile id="1bb1-c343-db65-261f" name="Chosen of the King" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
@@ -2662,9 +2559,9 @@ Each Flesh-eater Courts Hero can have a maximum of 6 noble deeds points at any o
         </modifier>
       </modifiers>
       <profiles>
-        <profile id="de60-35dd-57eb-215a" name="Muster Royal Guard" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+        <profile id="de60-35dd-57eb-215a" name="Mind-shattering Cacophony" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">In your hero phase, roll 6 dice for each friendly CRYPT INFERNAL COURTIER on the battlefield. For each 5+ you can return 1 slain model to a friendly CRYPT FLAYERS unit that is within 10&quot; of that CRYPT INFERNAL COURTIER. Slain models can be returned to more than one unit if you wish, but each successful dice roll can only be used to return a model to a single unit.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If any enemy models are slain by wounds caused by this unit’s Foetid Breath, until the end of the phase, add 1 to the Damage characteristic of missile weapons used by friendly CRYPT FLAYERS units while they are wholly within 9&quot; of this unit. The same CRYPT FLAYERS unit cannot benefit from this ability more than once per phase.</characteristic>
           </characteristics>
         </profile>
         <profile id="b244-cef4-38e4-157b" name="Crypt Infernal Courtier" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
@@ -2700,17 +2597,12 @@ Each Flesh-eater Courts Hero can have a maximum of 6 noble deeds points at any o
             <profile id="2d0a-9d98-a25d-68bc" name="Skewering Talons" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
               <characteristics>
                 <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
-                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">2&quot;</characteristic>
                 <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">5</characteristic>
                 <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
                 <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
                 <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
                 <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">2</characteristic>
-              </characteristics>
-            </profile>
-            <profile id="51b0-0058-41d6-18c7" name="Skewering Strike" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-              <characteristics>
-                <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If the unmodified hit roll for an attack made with Skewering Talons is 6, that attack inflicts 1 mortal wound on the target in addition to any normal damage.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -2727,11 +2619,11 @@ Each Flesh-eater Courts Hero can have a maximum of 6 noble deeds points at any o
             <profile id="72a5-61c4-20bb-6b2c" name="Foetid Breath" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
               <characteristics>
                 <characteristic name="Type" typeId="655c-362e-a663-3e50">Missile</characteristic>
-                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">9&quot;</characteristic>
-                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">1</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">10&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">4</characteristic>
                 <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
                 <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
-                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-2</characteristic>
                 <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">D3</characteristic>
               </characteristics>
             </profile>
@@ -2754,7 +2646,7 @@ Each Flesh-eater Courts Hero can have a maximum of 6 noble deeds points at any o
         <entryLink id="ad60-81bd-9a14-b5be" name="Unique Enhancements" hidden="false" collective="false" import="true" targetId="62f4-174e-c529-75fe" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="130"/>
+        <cost name="pts" typeId="points" value="145"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="f124-2ae2-055e-c865" name="Varghulf Courtier" page="80" hidden="false" collective="false" import="true" type="unit">
@@ -2771,33 +2663,29 @@ Each Flesh-eater Courts Hero can have a maximum of 6 noble deeds points at any o
             <characteristic name="Move" typeId="8655-6213-2824-1752">10&quot;</characteristic>
             <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">8</characteristic>
             <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">10</characteristic>
-            <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">5+</characteristic>
+            <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">4+</characteristic>
           </characteristics>
         </profile>
-        <profile id="e5a8-5d9f-2ba3-ed36" name="Muster Royal Household" page="80" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+        <profile id="e5a8-5d9f-2ba3-ed36" name="Bounding Strides" page="80" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">In your here phase, roll 6 dice for each friendly VARGHULF COURTIER on the battlefield.  For each 2+ you can return 1 slain model to a friendly SERFS unit within 10&quot; of that VARGHULF COURTIER.  For each 5+ you can return 1 slain model to a friendly KNIGHTS unit within 10&quot; of that VARGHULF COURTIER instead.  Slain models can be returned to more than one unit if you wish, but each successful dice roll can only be used to return a model to a single unit.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="bd0e-fd55-92b5-75f4" name="Feed on Dark Magic" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If a friendly ABHORRANT within 18&quot; of this model successfully casts a spell, and it is not unbound, you can re-roll hit rolls for this model until the start of your next hero phase.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">When this unit makes a move, it can pass across terrain features in the same manner as a model that can fly.
+
+</characteristic>
           </characteristics>
         </profile>
         <profile id="f01b-396c-d7c8-ed31" name="King&apos;s Champion" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Add 2 the Attacks characteristic of this model&apos;s Immense Claws if it is within 3&quot; of 10 or more enemy models when you pick the target unit(s) for its attacks.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the start of the combat phase, you can say that this unit will use this ability. If you do so, in that phase, you can add 2 to the Attacks characteristic of this unit’s melee weapons, but it can only target units that have a Wounds characteristic of 1 or 2 and do not have a mount.
+
+</characteristic>
           </characteristics>
         </profile>
         <profile id="ed9f-43e2-d254-da0f" name="Victory Feast" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the end of the combat phase, if any enemy models were slain by wounds inflicted by this model&apos;s attacks in that combat phase, you can heal up to D3 wounds allocated to this model.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the end of the combat phase, if any enemy models were slain by wounds caused by this unit’s attacks in that phase, you can heal up to D6 wounds allocated to this unit. In addition, at the end of the combat phase, this unit can immediately retreat.</characteristic>
           </characteristics>
         </profile>
       </profiles>
-      <infoLinks>
-        <infoLink id="6900-ec1b-51e6-5504" name="Fly" hidden="false" targetId="8e0c-cbe4-27be-8a30" type="profile"/>
-      </infoLinks>
       <categoryLinks>
         <categoryLink id="c70a-0f9b-4fc9-89d3" name="New CategoryLink" hidden="false" targetId="6cdf-dd4f-0e91-e9c4" primary="false"/>
         <categoryLink id="cd52-a3b4-e4c0-ab5a" name="New CategoryLink" hidden="false" targetId="53f6-aa54-91a5-fcfb" primary="false"/>
@@ -2820,7 +2708,7 @@ Each Flesh-eater Courts Hero can have a maximum of 6 noble deeds points at any o
               <characteristics>
                 <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
                 <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">2&quot;</characteristic>
-                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">4</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">5</characteristic>
                 <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
                 <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
                 <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
@@ -2841,12 +2729,12 @@ Each Flesh-eater Courts Hero can have a maximum of 6 noble deeds points at any o
             <profile id="bd3e-888c-848c-f951" name="Dagger-like Fangs" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
               <characteristics>
                 <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
-                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">2&quot;</characteristic>
                 <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">1</characteristic>
                 <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
                 <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">2+</characteristic>
                 <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-2</characteristic>
-                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">D3</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">3</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -2864,7 +2752,7 @@ Each Flesh-eater Courts Hero can have a maximum of 6 noble deeds points at any o
         <entryLink id="0fac-e76a-3c63-d4c7" name="Unique Enhancements" hidden="false" collective="false" import="true" targetId="62f4-174e-c529-75fe" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="160"/>
+        <cost name="pts" typeId="points" value="165"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="8228-415a-66c3-dffe" name="General" hidden="false" collective="false" import="true" type="upgrade">
@@ -2903,7 +2791,6 @@ Each Flesh-eater Courts Hero can have a maximum of 6 noble deeds points at any o
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="705f-02ae-f4f5-987a" type="equalTo"/>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="99b2-6989-d758-a4be" type="equalTo"/>
               </conditions>
             </conditionGroup>
@@ -2913,7 +2800,6 @@ Each Flesh-eater Courts Hero can have a maximum of 6 noble deeds points at any o
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="705f-02ae-f4f5-987a" type="equalTo"/>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="99b2-6989-d758-a4be" type="equalTo"/>
               </conditions>
             </conditionGroup>
@@ -2931,52 +2817,12 @@ Each Flesh-eater Courts Hero can have a maximum of 6 noble deeds points at any o
         </profile>
         <profile id="ac80-ae58-725a-b89f" name="Gaping Maw" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If the unmodified hit roll for an attack made with this model’s Fanged Maw is 6, that attack inflicts 6 mortal wounds on the target unit and the attack sequence ends (do not make a wound or save roll).</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If the unmodified hit roll for an attack made with this unit’s Fanged Maw is 6, the target suffers 6 mortal wounds and the attack sequence ends (do not make a wound roll or save roll).</characteristic>
           </characteristics>
         </profile>
         <profile id="c42b-b79a-b2d2-a62c" name="Infested" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If this model is slain, before this model is removed from play each unit within 3&quot; of this model suffers D3 mortal wounds.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="ce4e-4f85-b9e2-45a6" name="Royal Menagerie" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">In your hero phase, you can heal up to D3 wounds allocated to this model if this model is within 6&quot; of a friendly ABHORRANT.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="5c94-07cf-7941-ac90" name="00-03" hidden="false" typeId="cde6-89a6-4a4c-9d32" typeName="Terrorgheist Wound Table">
-          <characteristics>
-            <characteristic name="Move" typeId="2ad2-839b-d5ee-5770">14&quot;</characteristic>
-            <characteristic name="Death Shriek" typeId="dfdc-a86c-e979-1eb7">6</characteristic>
-            <characteristic name="Skeletal Claws" typeId="5b09-7a6b-dd30-faf1">4</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="d220-5b9d-07a1-2388" name="04-06" hidden="false" typeId="cde6-89a6-4a4c-9d32" typeName="Terrorgheist Wound Table">
-          <characteristics>
-            <characteristic name="Move" typeId="2ad2-839b-d5ee-5770">12&quot;</characteristic>
-            <characteristic name="Death Shriek" typeId="dfdc-a86c-e979-1eb7">5</characteristic>
-            <characteristic name="Skeletal Claws" typeId="5b09-7a6b-dd30-faf1">4</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="896f-946b-1fba-2cc3" name="07-09" hidden="false" typeId="cde6-89a6-4a4c-9d32" typeName="Terrorgheist Wound Table">
-          <characteristics>
-            <characteristic name="Move" typeId="2ad2-839b-d5ee-5770">10&quot;</characteristic>
-            <characteristic name="Death Shriek" typeId="dfdc-a86c-e979-1eb7">4</characteristic>
-            <characteristic name="Skeletal Claws" typeId="5b09-7a6b-dd30-faf1">3</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="d5aa-59db-8232-18ca" name="10-12" hidden="false" typeId="cde6-89a6-4a4c-9d32" typeName="Terrorgheist Wound Table">
-          <characteristics>
-            <characteristic name="Move" typeId="2ad2-839b-d5ee-5770">8&quot;</characteristic>
-            <characteristic name="Death Shriek" typeId="dfdc-a86c-e979-1eb7">3</characteristic>
-            <characteristic name="Skeletal Claws" typeId="5b09-7a6b-dd30-faf1">3</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="ed4e-a944-d348-5287" name="13+" hidden="false" typeId="cde6-89a6-4a4c-9d32" typeName="Terrorgheist Wound Table">
-          <characteristics>
-            <characteristic name="Move" typeId="2ad2-839b-d5ee-5770">6&quot;</characteristic>
-            <characteristic name="Death Shriek" typeId="dfdc-a86c-e979-1eb7">2</characteristic>
-            <characteristic name="Skeletal Claws" typeId="5b09-7a6b-dd30-faf1">2</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If this unit is destroyed, before it is removed from play, each enemy unit within 3&quot; of this unit suffers D3 mortal wounds.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -3011,7 +2857,9 @@ Each Flesh-eater Courts Hero can have a maximum of 6 noble deeds points at any o
             </profile>
             <profile id="f62c-7ea6-62c0-c1e1" name="Death Shriek" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
               <characteristics>
-                <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Do not use the attack sequence for an attack made with this model’s Death Shriek. Instead roll a dice and add the Death Shriek value shown on this model’s damage table. If the total is higher than the target unit’s Bravery characteristic, the target unit suffers a number of mortal wounds equal to the difference between its Bravery characteristic and the total.</characteristic>
+                <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Do not use the attack sequence for an attack made with this unit’s Death Shriek. Instead, roll a dice and add the Death Shriek value shown on this unit’s damage table. If the total is higher than the target unit’s Bravery characteristic, the target unit suffers a number of mortal wounds equal to the difference between its Bravery characteristic and the total.
+
+</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -3041,13 +2889,13 @@ Each Flesh-eater Courts Hero can have a maximum of 6 noble deeds points at any o
             <cost name="pts" typeId="points" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="8290-2e2c-4d2e-f6ad" name="Skeletal Claws" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="8290-2e2c-4d2e-f6ad" name="Skeletal Talons" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6f2d-e3fe-d947-a03d" type="min"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2270-7958-8350-7456" type="max"/>
           </constraints>
           <profiles>
-            <profile id="fd03-9006-54bf-fc0e" name="Skeletal Claws" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+            <profile id="fd03-9006-54bf-fc0e" name="Skeletal Talons" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
               <characteristics>
                 <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
                 <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">2&quot;</characteristic>
@@ -3055,7 +2903,7 @@ Each Flesh-eater Courts Hero can have a maximum of 6 noble deeds points at any o
                 <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
                 <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
                 <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
-                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">D3</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">2</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -3070,6 +2918,40 @@ Each Flesh-eater Courts Hero can have a maximum of 6 noble deeds points at any o
       <costs>
         <cost name="pts" typeId="points" value="260"/>
       </costs>
+      <infoGroups>
+        <infoGroup name="Damage Table" hidden="false" id="af58-d31a-a444-8e1a">
+          <profiles>
+            <profile name="0-6" typeId="370f-9356-a89a-06b3" typeName="Terrorgheist Wounds Suffered" hidden="false" id="3fa9-8bfd-fcb7-67f0">
+              <characteristics>
+                <characteristic name="Move" typeId="2ad2-839b-d5ee-5770">14&quot;</characteristic>
+                <characteristic name="Death Shriek" typeId="dfdc-a86c-e979-1eb7">6</characteristic>
+                <characteristic name="Skeletal Talons" typeId="5b09-7a6b-dd30-faf1">7</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="7-8" typeId="370f-9356-a89a-06b3" typeName="Terrorgheist Wounds Suffered" hidden="false" id="1b17-569e-abe-3a58">
+              <characteristics>
+                <characteristic name="Move" typeId="2ad2-839b-d5ee-5770">12&quot;</characteristic>
+                <characteristic name="Death Shriek" typeId="dfdc-a86c-e979-1eb7">5</characteristic>
+                <characteristic name="Skeletal Talons" typeId="5b09-7a6b-dd30-faf1">6</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="9-11" typeId="370f-9356-a89a-06b3" typeName="Terrorgheist Wounds Suffered" hidden="false" id="2dac-f6bf-338b-4a8b">
+              <characteristics>
+                <characteristic name="Move" typeId="2ad2-839b-d5ee-5770">10&quot;</characteristic>
+                <characteristic name="Death Shriek" typeId="dfdc-a86c-e979-1eb7">4</characteristic>
+                <characteristic name="Skeletal Talons" typeId="5b09-7a6b-dd30-faf1">5</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="12+" typeId="370f-9356-a89a-06b3" typeName="Terrorgheist Wounds Suffered" hidden="false" id="1ad8-d833-4967-8436">
+              <characteristics>
+                <characteristic name="Move" typeId="2ad2-839b-d5ee-5770">8&quot;</characteristic>
+                <characteristic name="Death Shriek" typeId="dfdc-a86c-e979-1eb7">3</characteristic>
+                <characteristic name="Skeletal Talons" typeId="5b09-7a6b-dd30-faf1">4</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+      </infoGroups>
     </selectionEntry>
     <selectionEntry id="a0a1-5316-0121-e73d" name="Royal Zombie Dragon" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
@@ -3103,39 +2985,14 @@ Each Flesh-eater Courts Hero can have a maximum of 6 noble deeds points at any o
             <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">4+</characteristic>
           </characteristics>
         </profile>
-        <profile id="de30-4d0d-5a8e-0d00" name="00-03" hidden="false" typeId="b1c1-c8b1-016e-4235" typeName="Zombie Dragon&apos;s Wound Table">
+        <profile id="eed4-8812-fa28-df9e" name="Terror" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Move" typeId="1712-425e-7e40-a5b1">14&quot;</characteristic>
-            <characteristic name="Pestilential Breath" typeId="b17b-97f7-9c40-21e5">2+</characteristic>
-            <characteristic name="Sword-like Claws" typeId="e309-9fb0-c644-47ee">7</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Enemy units cannot receive the Inspiring Presence command while they are within 3&quot; of any friendly units with this ability.</characteristic>
           </characteristics>
         </profile>
-        <profile id="5740-a1fd-8334-e04d" name="04-06" hidden="false" typeId="b1c1-c8b1-016e-4235" typeName="Zombie Dragon&apos;s Wound Table">
+        <profile name="Loathsome Descent" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities" hidden="false" id="a32-18ec-a831-580a">
           <characteristics>
-            <characteristic name="Move" typeId="1712-425e-7e40-a5b1">12&quot;</characteristic>
-            <characteristic name="Pestilential Breath" typeId="b17b-97f7-9c40-21e5">3+</characteristic>
-            <characteristic name="Sword-like Claws" typeId="e309-9fb0-c644-47ee">6</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="7d09-e9d8-8681-6c2a" name="07-09" hidden="false" typeId="b1c1-c8b1-016e-4235" typeName="Zombie Dragon&apos;s Wound Table">
-          <characteristics>
-            <characteristic name="Move" typeId="1712-425e-7e40-a5b1">10&quot;</characteristic>
-            <characteristic name="Pestilential Breath" typeId="b17b-97f7-9c40-21e5">4+</characteristic>
-            <characteristic name="Sword-like Claws" typeId="e309-9fb0-c644-47ee">5</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="2527-6fdb-5025-8ced" name="10-12" hidden="false" typeId="b1c1-c8b1-016e-4235" typeName="Zombie Dragon&apos;s Wound Table">
-          <characteristics>
-            <characteristic name="Move" typeId="1712-425e-7e40-a5b1">8&quot;</characteristic>
-            <characteristic name="Pestilential Breath" typeId="b17b-97f7-9c40-21e5">5+</characteristic>
-            <characteristic name="Sword-like Claws" typeId="e309-9fb0-c644-47ee">4</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="a487-b8cf-00cd-a24c" name="13+" hidden="false" typeId="b1c1-c8b1-016e-4235" typeName="Zombie Dragon&apos;s Wound Table">
-          <characteristics>
-            <characteristic name="Move" typeId="1712-425e-7e40-a5b1">6&quot;</characteristic>
-            <characteristic name="Pestilential Breath" typeId="b17b-97f7-9c40-21e5">6+</characteristic>
-            <characteristic name="Sword-like Claws" typeId="e309-9fb0-c644-47ee">3</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Instead of setting up this unit on the battlefield, you can place it to one side and say that it is circling high above as a reserve unit. If you do so, at the end of your movement phase, you can set up this unit on the battlefield more than 9&quot; from all enemy units.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -3179,20 +3036,15 @@ Each Flesh-eater Courts Hero can have a maximum of 6 noble deeds points at any o
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3644-919d-3e3d-0258" type="max"/>
           </constraints>
           <profiles>
-            <profile id="da9c-7c80-cc9b-6d8f" name="Pestilential Breath" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-              <characteristics>
-                <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">When you attack with this model’s Pestilential Breath, roll a dice before making the hit roll for the attack. If the roll is less than or equal to the number of models in the target unit, the attack scores a hit without needing to make a hit roll.</characteristic>
-              </characteristics>
-            </profile>
             <profile id="7713-9878-8575-e9ba" name="Pestilential Breath" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
               <characteristics>
                 <characteristic name="Type" typeId="655c-362e-a663-3e50">Missile</characteristic>
-                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">9&quot;</characteristic>
-                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">1</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">12&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">D6</characteristic>
                 <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
-                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">*</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
                 <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-3</characteristic>
-                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">D6</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">3</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -3213,7 +3065,7 @@ Each Flesh-eater Courts Hero can have a maximum of 6 noble deeds points at any o
                 <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">3</characteristic>
                 <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
                 <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
-                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-2</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-3</characteristic>
                 <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">D6</characteristic>
               </characteristics>
             </profile>
@@ -3229,6 +3081,36 @@ Each Flesh-eater Courts Hero can have a maximum of 6 noble deeds points at any o
       <costs>
         <cost name="pts" typeId="points" value="240"/>
       </costs>
+      <infoGroups>
+        <infoGroup name="Damage Table" hidden="false" id="9a85-38a3-d47e-1917">
+          <profiles>
+            <profile name="0-6" typeId="1fc7-f451-3937-0a17" typeName="Zombie Dragon&apos;s Wounds Suffered" hidden="false" id="f6b7-ae42-fc09-fbfd">
+              <characteristics>
+                <characteristic name="Move" typeId="1712-425e-7e40-a5b1">14&quot;</characteristic>
+                <characteristic name="Sword-like Claws" typeId="e309-9fb0-c644-47ee">7</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="7-8" typeId="1fc7-f451-3937-0a17" typeName="Zombie Dragon&apos;s Wounds Suffered" hidden="false" id="6817-dd08-49b8-4d2e">
+              <characteristics>
+                <characteristic name="Move" typeId="1712-425e-7e40-a5b1">12&quot;</characteristic>
+                <characteristic name="Sword-like Claws" typeId="e309-9fb0-c644-47ee">6</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="9-11" typeId="1fc7-f451-3937-0a17" typeName="Zombie Dragon&apos;s Wounds Suffered" hidden="false" id="86e9-7b6-3f27-12dd">
+              <characteristics>
+                <characteristic name="Move" typeId="1712-425e-7e40-a5b1">10&quot;</characteristic>
+                <characteristic name="Sword-like Claws" typeId="e309-9fb0-c644-47ee">5</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="12+" typeId="1fc7-f451-3937-0a17" typeName="Zombie Dragon&apos;s Wounds Suffered" hidden="false" id="d84a-8cac-b55c-7c9c">
+              <characteristics>
+                <characteristic name="Move" typeId="1712-425e-7e40-a5b1">8&quot;</characteristic>
+                <characteristic name="Sword-like Claws" typeId="e309-9fb0-c644-47ee">4</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+      </infoGroups>
     </selectionEntry>
     <selectionEntry id="e7cb-d62d-6411-53fd" name="Abhorrant Archregent" publicationId="6afd-4f9a-0665-9b55" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
@@ -3249,30 +3131,30 @@ Each Flesh-eater Courts Hero can have a maximum of 6 noble deeds points at any o
             <characteristic name="Move" typeId="8655-6213-2824-1752">6</characteristic>
             <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">7</characteristic>
             <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">10</characteristic>
-            <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">4</characteristic>
+            <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">4+</characteristic>
           </characteristics>
         </profile>
         <profile id="7e90-b3ff-a0a0-c637" name="Wizard" hidden="false" typeId="f55d-ee3a-1597-110f" typeName="Magic">
           <characteristics>
             <characteristic name="Cast/Unbind" typeId="8294-f605-2c0f-8f92">2/2</characteristic>
-            <characteristic name="Spells Known" typeId="dc9c-47d3-6931-859c">Arcane Bolt, Mystic Shield and Ferocious Hunger</characteristic>
+            <characteristic name="Spells Known" typeId="dc9c-47d3-6931-859c">Arcane Bolt, Mystic Shield and Carrion Call</characteristic>
           </characteristics>
         </profile>
-        <profile id="681e-93c7-6053-1226" name="Ferocious Hunger" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+        <profile id="fbcc-1a65-33f4-d1a7" name="Royal Blood" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">In your hero phase, you can heal up to D3 wounds allocated to this unit.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Countless Servants" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities" hidden="false" id="1e15-35d6-1ff5-a5cc">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the start of your hero phase, you can return up to 3 slain models to 1 friendly SERFS unit that is within 18&quot; of this unit, or you can return 1 slain model to 1 friendly KNIGHTS unit that is within 18&quot; of this unit.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Carrion Call" typeId="2e81-5e22-c6e1-73cb" typeName="Spell" hidden="false" id="f804-5542-241e-6b25">
           <characteristics>
             <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
-            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">24&quot;</characteristic>
-            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick 1 friendly FLESH‐EATER COURTS unit wholly within 24&quot; of the caster and visible to them, and roll a D3. Add the roll to the Attacks characteristic of melee weapons used by that unit until your next hero phase.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="207b-99e6-7314-927a" name="Summon Imperial Guard" hidden="false" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
-          <characteristics>
-            <characteristic name="Command Ability Details" typeId="1b71-4c83-4e8c-093f">You can use this command ability at the end of your movement phase. If you do so, pick 1 friendly model that has this command ability and has not used it before in the battle. That model summons 1 of the following units to the battlefield: 1 COURTIER; or 1 unit of up to 3 KNIGHTS; or 1 unit of up to 20 SERFS. The summoned unit is added to your army, and must be set up wholly within 6&quot; of the edge of the battlefield and more than 9&quot; from any enemy units.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="fbcc-1a65-33f4-d1a7" name="Imperial Blood" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
-          <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">In your hero phase, you can heal up to 3 wounds allocated to this model</characteristic>
+            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705"/>
+            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, in the following movement phase, friendly FLESH-EATER COURTS units that are set up at the end of the movement phase can immediately move D6&quot;.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -3302,11 +3184,11 @@ Each Flesh-eater Courts Hero can have a maximum of 6 noble deeds points at any o
               <characteristics>
                 <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
                 <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
-                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">7</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">5</characteristic>
                 <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
                 <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
                 <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
-                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">2</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -3333,12 +3215,14 @@ Each Flesh-eater Courts Hero can have a maximum of 6 noble deeds points at any o
       <profiles>
         <profile id="2621-1cdd-1bbb-0df8" name="Ghoulish Landmark" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">While an enemy unit is within 12&quot; of any terrain features with this scenery rule, it cannot be affected by any abilities that allow units to ignore battleshock tests.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">While an enemy unit is within 12&quot; of this terrain feature, it cannot be affected by any abilities that allow units to ignore battleshock tests.</characteristic>
           </characteristics>
         </profile>
-        <profile id="c6eb-b81f-0ca9-91fd" name="Ruler of All He Surveys" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+        <profile id="c6eb-b81f-0ca9-91fd" name="Ruler of All They Survey" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">While a friendly FLESH-EATER COURTS HERO is garrisoning a terrain feature with this scenery rule, friendly FLESH-EATER COURTS HEROES wholly within 12&quot; of this terrain feature can issue the Summon Men-at-arms, Summon Courtier, Summon Royal Guard, and Summon Imperial Guard commands without a command point being spent.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the start of your hero phase, add D3 noble deeds points to any friendly FLESH-EATER COURTS HERO that is garrisoning this terrain feature.
+
+</characteristic>
           </characteristics>
         </profile>
         <profile id="2659-991f-ea21-dc99" name="Set-Up" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
@@ -3348,7 +3232,7 @@ Each Flesh-eater Courts Hero can have a maximum of 6 noble deeds points at any o
         </profile>
         <profile id="4f5c-6d55-4833-5bce" name="Defensible" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This terrain feature is a defensible terrain feature that can be garrisoned by 1 FLESH-EATER COURTS HERO with a Wounds characteristic of 8 or less.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This terrain feature is a defensible terrain feature that can be garrisoned by 1 FLESH-EATER COURTS HERO that has a Wounds characteristic of up to 7.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -3697,7 +3581,7 @@ Each Flesh-eater Courts Hero can have a maximum of 6 noble deeds points at any o
         <cost name="pts" typeId="points" value="100"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="3659-35fc-ee8b-0f3e" name="Duke Crakmarrow" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="3659-35fc-ee8b-0f3e" name="Duke Crakmarrow" hidden="true" collective="false" import="true" type="unit">
       <modifiers>
         <modifier type="set" field="6531-19c3-a5c8-ebb0" value="1">
           <conditions>
@@ -3773,7 +3657,7 @@ Each Flesh-eater Courts Hero can have a maximum of 6 noble deeds points at any o
         <cost name="pts" typeId="points" value="120"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="29d5-0b2d-6b17-20ab" name="The Grymwatch" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="29d5-0b2d-6b17-20ab" name="The Grymwatch" hidden="true" collective="false" import="true" type="unit">
       <modifiers>
         <modifier type="set" field="d90e-de72-b8d2-ec3a" value="1">
           <conditions>
@@ -3943,8 +3827,7 @@ Each Flesh-eater Courts Hero can have a maximum of 6 noble deeds points at any o
         </profile>
         <profile id="62d9-92cd-dc2e-5d38" name="Screamed to Death" hidden="false" typeId="eba0-4bf6-65fe-fdbc" typeName="Battle Tactic">
           <characteristics>
-            <characteristic name="Description" typeId="f882-48d5-21a4-1787">Pick 1 enemy unit on the battlefield. You complete this battle tactic if that unit is destroyed this turn by an attack made with a missile weapon used by a friendly CRYPT FLAYERS unit, CRYPT IFERNAL COURTIER or ROYAL TERRORGHEIST.
-</characteristic>
+            <characteristic name="Description" typeId="f882-48d5-21a4-1787">Pick 1 enemy unit on the battlefield. You complete this battle tactic if that unit is destroyed this turn by an attack made with a missile weapon used by a friendly CRYPT FLAYERS unit, CRYPT IFERNAL COURTIER or ROYAL TERRORGHEIST.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -3966,8 +3849,7 @@ Each Flesh-eater Courts Hero can have a maximum of 6 noble deeds points at any o
       <profiles>
         <profile id="80b9-c2df-133c-c711" name="Hunter&apos;s Instincts" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
-            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Enemy MONSTERS within 3&quot; of this unit cannot carry out monstrous rampages. In addition, reduce the Damage
-characteristic of weapons used by enemy MONSTERS by 1 while they are within 3&quot; of this unit, to a minimum of 1.</characteristic>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Enemy MONSTERS within 3&quot; of this unit cannot carry out monstrous rampages. In addition, reduce the Damage characteristic of weapons used by enemy MONSTERS by 1 while they are within 3&quot; of any friendly units with this ability, to a minimum of 1.</characteristic>
           </characteristics>
         </profile>
         <profile id="ce79-aaee-e7e7-933a" name="Royal Beastflayers" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
@@ -4122,12 +4004,8 @@ characteristic of weapons used by enemy MONSTERS by 1 while they are within 3&qu
         <profile id="1df7-eb91-bb6a-4d28" name="The King&apos;s Entreaty" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
           <characteristics>
             <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the end of the charge phase, you can pick 1 enemy unit within 3&quot; of this unit and say that this unit will offer it an infected bone. If you do so, your opponent must choose whether that enemy unit accepts or refuses the bone.
-
-
 If it refuses, the strike-first effect applies to friendly FLESH-EATER COURTS units within 3&quot; of this unit until the end of the following combat phase.
-
-
-If it accepts, that enemy unit becomes infected. For the rest of the battle, roll 2D6 before an infected unit issues or receives a command, attempts to cast a spell, or chants a prayer. Make the roll before the action is carried out. If the roll is greater than that unit&apos;s Bravery characteristic, that unit cannot perform that action in that phase.</characteristic>
+If it accepts, that enemy unit becomes infected. For the rest of the battle, roll 2D6 before an infected unit issues or receives a command, attempts to cast a spell, or chants a prayer. Make the roll before the action is carried out. If the roll is greater than that unit’s Bravery characteristic, that unit cannot perform that action in that phase.</characteristic>
           </characteristics>
         </profile>
         <profile id="a817-5b9d-d49e-695" name="Marrowscroll Herald" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
@@ -4177,6 +4055,9 @@ If it accepts, that enemy unit becomes infected. For the rest of the battle, rol
           </conditions>
         </modifier>
       </modifiers>
+      <costs>
+        <cost name="pts" typeId="points" value="100"/>
+      </costs>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Ushoran, Mortarch of Delusion" hidden="false" id="3d22-faad-f95d-173a">
       <entryLinks>
@@ -4301,6 +4182,631 @@ If it accepts, that enemy unit becomes infected. For the rest of the battle, rol
           </profiles>
         </infoGroup>
       </infoGroups>
+      <costs>
+        <cost name="pts" typeId="points" value="460"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="eff7-5485-4d69-64c7" name="Abhorrant Cardinal" publicationId="6afd-4f9a-0665-9b55" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="add" field="category" value="89f7-d50b-0aa9-01ce">
+          <conditions>
+            <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9f18-9ffb-0267-3e08" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <profiles>
+        <profile id="5cfb-499e-ca4e-ab2b" name="Abhorrant Cardinal" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
+          <characteristics>
+            <characteristic name="Move" typeId="8655-6213-2824-1752">6&quot;</characteristic>
+            <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">5</characteristic>
+            <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">10</characteristic>
+            <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">5+</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Speak in Tongues" typeId="eed7-4131-0a52-0668" typeName="Prayer" hidden="false" id="e870-734a-c577-41a">
+          <characteristics>
+            <characteristic name="Answer Value" typeId="276a-ab7e-145d-3ffc">3</characteristic>
+            <characteristic name="Range" typeId="fd81-4e98-28ac-092a">18&quot;</characteristic>
+            <characteristic name="Description" typeId="0746-6cfb-5e15-53cb">If answered, pick 1 enemy unit within range and visible to the chanter. Until your next hero phase, roll a dice each time that enemy unit receives a command. On a 4+, that command has no effect.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="be20-c31b-d0f-1d4a" name="Royal Blood" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">In your hero phase, you can heal up to D3 wounds allocated to this unit.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="6aa0-6a3b-f744-193a" name="ABHORRANT" hidden="false" targetId="5b04-42e4-33ef-10b1" primary="false"/>
+        <categoryLink id="c6c0-53be-4520-1667" name="DEATH" hidden="false" targetId="6cdf-dd4f-0e91-e9c4" primary="false"/>
+        <categoryLink id="9d25-7186-3cb6-5997" name="FLESH-EATER COURTS" hidden="false" targetId="6b35-0508-c6cc-6592" primary="false"/>
+        <categoryLink id="b446-f8a3-558a-d318" name="HERO" hidden="false" targetId="4e0e-664d-51ea-0929" primary="false"/>
+        <categoryLink id="41e4-d61b-f5de-a629" name="9 or less wounds Leader" hidden="false" targetId="a8ed-ca35-24e0-cf2e" primary="false"/>
+        <categoryLink id="bf6c-7c1f-1b00-f648" name="VAMPIRE" hidden="false" targetId="d1e1-d80a-c667-b587" primary="false"/>
+        <categoryLink id="7089-47ba-263e-227b" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
+        <categoryLink targetId="94b9-7eb-a81a-b892" id="4e9f-70d2-4409-314d" primary="false" name="Champion"/>
+        <categoryLink targetId="e8a5-e4c1-3d11-e7dd" id="fb31-40be-9a0d-56f7" primary="false" name="PRIEST"/>
+        <categoryLink targetId="9aa6-4e02-cf3-aa5b" id="940-9079-8dc-c22a" primary="false" name="ABHORRANT CARDINAL"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="877d-c7bd-d69d-f40" name="Gory Talons and Fangs" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c785-4935-75b7-abfc" type="min"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b0b-766d-db73-d600" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="1890-5c94-1bca-bb5b" name="Gory Talons and Fangs" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">5</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">2</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <entryLinks>
+        <entryLink id="651d-9234-3c3c-e45" name="General" hidden="false" collective="false" import="true" targetId="8228-415a-66c3-dffe" type="selectionEntry"/>
+        <entryLink id="c757-19a4-cd45-cd83" name="Artefacts" hidden="false" collective="false" import="true" targetId="c8cb-28b1-ffbb-2bbf" type="selectionEntryGroup"/>
+        <entryLink id="c13c-dc-3b29-c83c" name="Command Traits" hidden="false" collective="false" import="true" targetId="2b46-6a34-bba4-a7a2" type="selectionEntryGroup"/>
+        <entryLink id="fb21-4f84-373b-f432" name="Battalions" hidden="false" collective="false" import="true" targetId="3f3e-293b-65ed-e3fa" type="selectionEntryGroup"/>
+        <entryLink id="7dbb-3877-a31b-f926" name="Incarnate Bonding" hidden="false" collective="false" import="true" targetId="c890-acbd-0c80-55c9" type="selectionEntryGroup"/>
+        <entryLink id="e2d-198f-5b54-515d" name="Unique Enhancements" hidden="false" collective="false" import="true" targetId="62f4-174e-c529-75fe" type="selectionEntryGroup"/>
+        <entryLink import="true" name="Prayer Scriptures" hidden="false" type="selectionEntryGroup" id="dc0e-2935-6676-bd3b" targetId="ec11-dabf-5c8-1a21"/>
+        <entryLink import="true" name="Smite" hidden="false" type="selectionEntry" id="598-2761-9802-6f86" targetId="be59-6ab9-bf9f-9434"/>
+        <entryLink import="true" name="Bless" hidden="false" type="selectionEntry" id="2b3e-67c1-23b5-e10e" targetId="c064-0ddb-52cf-5fb9"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="120"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="a617-c031-1894-e81b" name="Abhorrant Gorewarden" publicationId="6afd-4f9a-0665-9b55" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="add" field="category" value="89f7-d50b-0aa9-01ce">
+          <conditions>
+            <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9f18-9ffb-0267-3e08" type="greaterThan"/>
+          </conditions>
+        </modifier>
+        <modifier type="add" field="category" value="8f5e-e464-221b-4f06">
+          <conditions>
+            <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9f95-f6dc-e866-90a0" type="greaterThan"/>
+          </conditions>
+        </modifier>
+        <modifier type="add" value="c89f-a721-882d-41b9" field="category">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="parent" childId="b297-cecc-d8-c9d8" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <profiles>
+        <profile id="75fe-dca7-6506-bda4" name="Wizard" hidden="false" typeId="f55d-ee3a-1597-110f" typeName="Magic">
+          <characteristics>
+            <characteristic name="Cast/Unbind" typeId="8294-f605-2c0f-8f92">1/1</characteristic>
+            <characteristic name="Spells Known" typeId="dc9c-47d3-6931-859c">Arcane Bolt, Mystic Shield and Winds of Shyish spells.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="91e7-8d43-2b98-2680" name="Abhorrant Gorewarden" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
+          <characteristics>
+            <characteristic name="Move" typeId="8655-6213-2824-1752">12&quot;</characteristic>
+            <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">7</characteristic>
+            <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">10</characteristic>
+            <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">4+</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="839d-c458-d955-e230" name="Royal Hunting Party" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Instead of setting up this unit on the battlefield, you can place it to one side and say that it is circling in the skies as a reserve unit. If you do so, when you would set up a friendly CRYPT FLAYERS or MORBHEG KNIGHTS unit during deployment, that unit can join this unit circling in the skies as a reserve unit. A maximum of 1 unit can join this unit.
+
+
+At the end of your movement phase, you can set up this unit more than 9&quot; from all enemy units. If you do so, set up the unit that joined this unit wholly within 9&quot; of this unit and more than 9&quot; from all enemy units.
+
+</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="276b-6c93-edda-1e9a" name="Royal Blood" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">In your hero phase, you can heal up to D3 wounds allocated to this unit.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="717e-e8e9-41f2-123" name="Winds of Shyish" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+          <characteristics>
+            <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
+            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">9&quot;</characteristic>
+            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick 1 friendly FLESH-EATER COURTS unit that can fly and is wholly within range and visible to the caster. Remove this unit and the unit you picked from the battlefield and set them up again more than 9&quot; from all enemy units and wholly within 9&quot; of each other. Neither unit can move in the following movement phase.
+
+</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="c26e-6257-229f-b721" name="Arcane Bolt" hidden="false" targetId="ae02-a84f-a903-1ff8" type="profile"/>
+        <infoLink id="b5c8-9083-ce5c-a427" name="Mystic Shield" hidden="false" targetId="b41f-f1ce-7aa5-4f81" type="profile"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="d59-e9ee-6845-4b74" name="New CategoryLink" hidden="false" targetId="4e0e-664d-51ea-0929" primary="false"/>
+        <categoryLink id="c09c-bf4b-199d-8fb3" name="New CategoryLink" hidden="false" targetId="4f53-8230-2f02-9639" primary="false"/>
+        <categoryLink id="f1fd-f907-a8b7-40a2" name="New CategoryLink" hidden="false" targetId="6cdf-dd4f-0e91-e9c4" primary="false"/>
+        <categoryLink id="62d5-f45-59e9-84f3" name="New CategoryLink" hidden="false" targetId="6b35-0508-c6cc-6592" primary="false"/>
+        <categoryLink id="e430-b915-c83b-daa7" name="ABHORRANT" hidden="false" targetId="5b04-42e4-33ef-10b1" primary="false"/>
+        <categoryLink id="8ee4-e2db-c226-7b26" name="9 or less wounds Leader" hidden="false" targetId="a8ed-ca35-24e0-cf2e" primary="false"/>
+        <categoryLink id="11c3-6ad4-e360-b498" name="VAMPIRE" hidden="false" targetId="d1e1-d80a-c667-b587" primary="false"/>
+        <categoryLink id="cb4f-6e83-1ff3-7f99" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
+        <categoryLink targetId="94b9-7eb-a81a-b892" id="bdb6-7a38-6bc0-b6a9" primary="false" name="Champion"/>
+        <categoryLink targetId="fe0a-2400-fd27-1447" id="650e-1b76-864c-aee6" primary="false" name="ABHORRANT GOREWARDEN"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="b29d-acde-98a5-ab8e" name="Gory Talons and Fangs" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c1dd-a635-52d6-df3b" type="min"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6332-4782-daee-17af" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="a315-9e66-476-14a7" name="Gory Talons and Fangs" hidden="false" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+                <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
+                <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">5</characteristic>
+                <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+                <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+                <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
+                <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">2</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <entryLinks>
+        <entryLink id="b297-cecc-d8-c9d8" name="General" hidden="false" collective="false" import="true" targetId="8228-415a-66c3-dffe" type="selectionEntry"/>
+        <entryLink id="f058-a377-1094-43c7" name="Artefacts" hidden="false" collective="false" import="true" targetId="c8cb-28b1-ffbb-2bbf" type="selectionEntryGroup"/>
+        <entryLink id="f355-2bee-8148-94a2" name="Command Traits" hidden="false" collective="false" import="true" targetId="2b46-6a34-bba4-a7a2" type="selectionEntryGroup"/>
+        <entryLink id="cfaa-ab6c-4a1b-757c" name="Spell Lores" hidden="false" collective="false" import="true" targetId="011c-b2d0-4781-ff07" type="selectionEntryGroup"/>
+        <entryLink id="74fa-781-60ea-3d8e" name="Battalions" hidden="false" collective="false" import="true" targetId="3f3e-293b-65ed-e3fa" type="selectionEntryGroup"/>
+        <entryLink id="5270-fdab-6107-69bb" name="Incarnate Bonding" hidden="false" collective="false" import="true" targetId="c890-acbd-0c80-55c9" type="selectionEntryGroup"/>
+        <entryLink id="3f56-dd8-8545-d11d" name="Unique Enhancements" hidden="false" collective="false" import="true" targetId="62f4-174e-c529-75fe" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="150"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="6dba-937-c22b-bccf" name="Grand Justice Gormayne" publicationId="6afd-4f9a-0665-9b55" hidden="false" collective="false" import="true" type="unit">
+      <profiles>
+        <profile id="e2b4-9369-e0c-3977" name="Grand Justice Gormayne" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
+          <characteristics>
+            <characteristic name="Move" typeId="8655-6213-2824-1752">6&quot;</characteristic>
+            <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">6</characteristic>
+            <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">10</characteristic>
+            <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">4+</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="2e94-3df-78c4-2b94" name="Pronounce Judgement" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">In your hero phase, pick 1 of the following judgements to pronounce. The same unit cannot be affected by more than 1 judgement at the same time.
+
+
+Petty Transgression: Pick 1 enemy unit that is visible to this unit and roll a dice. On a 3+, add 1 to wound rolls for attacks made by friendly FLESH-EATER COURTS units that target that unit until the end of the turn.
+
+
+Dishonourable Conduct in Battle: Pick 1 enemy unit that is visible to this unit and more than 3&quot; from all friendly units. Roll a dice. On a 3+, friendly FLESH-EATER COURTS units can charge even if they ran earlier in the turn, as long as they finish the charge move within 1/2 of the enemy unit you picked.
+
+
+Grievous Insult to the Court: Pick 1 enemy unit that is visible to this unit and within 3&quot; of a friendly ABHORRANT. Roll a dice. On a 3+, add 1 to hit rolls for attacks made by friendly FLESH-EATER COURTS units that target that enemy unit until the end of the turn.
+
+
+Regicide: Pick 1 enemy unit that is visible to this unit and has slain a friendly ABHORRANT. Roll a dice. On a 3+, until the end of the turn, add 1 to the Damage characteristic of weapons used by friendly FLESH-EATER COURTS units for attacks that target that unit.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="2106-bcea-5e84-6e13" name="Royal Blood" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">In your hero phase, you can heal up to D3 wounds allocated to this unit.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="3375-f497-1948-b0fa" name="New CategoryLink" hidden="false" targetId="4e0e-664d-51ea-0929" primary="false"/>
+        <categoryLink id="2879-8932-d831-5b16" name="New CategoryLink" hidden="false" targetId="6cdf-dd4f-0e91-e9c4" primary="false"/>
+        <categoryLink id="854c-c339-f28e-e487" name="New CategoryLink" hidden="false" targetId="6b35-0508-c6cc-6592" primary="false"/>
+        <categoryLink id="4d5b-48d8-9a55-e195" name="ABHORRANT" hidden="false" targetId="5b04-42e4-33ef-10b1" primary="false"/>
+        <categoryLink id="fe7-46bf-37a3-5e4c" name="9 or less wounds Leader" hidden="false" targetId="a8ed-ca35-24e0-cf2e" primary="false"/>
+        <categoryLink id="8879-e79a-e2fc-674a" name="VAMPIRE" hidden="false" targetId="d1e1-d80a-c667-b587" primary="false"/>
+        <categoryLink id="7e86-8085-40dc-78e0" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="f15c-57b2-4667-ceb5" name="General" hidden="false" collective="false" import="true" targetId="8228-415a-66c3-dffe" type="selectionEntry"/>
+        <entryLink id="61d6-8ea6-b290-1a89" name="Battalions" hidden="false" collective="false" import="true" targetId="3f3e-293b-65ed-e3fa" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="140"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="698f-7fbf-7a84-59ff" name="Royal Decapitator" hidden="false" collective="false" import="true" type="unit">
+      <profiles>
+        <profile id="3e72-cc90-1e7d-5a26" name="Executioner’s Entourage" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">In the combat phase, after this unit has fought for the first time in that phase, you can pick 1 friendly SERFS unit that has not yet fought in that phase, is within 3&quot; of an enemy unit and is wholly within 9&quot; of this unit. That unit can fight immediately.
+
+</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="eff2-a805-f42f-2b6" name="Off with their Head!" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">At the end of the combat phase, if any wounds caused by this unit’s Headsman’s Axe in that phase were allocated to an enemy HERO and that enemy HERO has not been slain, roll a dice. On a 5+, that enemy HERO is slain.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="95eb-bfa3-2e5e-166a" name="Royal Decapitator" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
+          <characteristics>
+            <characteristic name="Move" typeId="8655-6213-2824-1752">6&quot;</characteristic>
+            <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">5</characteristic>
+            <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">10</characteristic>
+            <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">5+</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Headsman’s Axe" typeId="96df-ab28-5d72-bbb3" typeName="Weapon" hidden="false" id="4b0a-d029-c672-e955">
+          <characteristics>
+            <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+            <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
+            <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">3</characteristic>
+            <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
+            <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+            <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-2</characteristic>
+            <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">3</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="7190-ad04-7ed-b592" name="9 or less wounds Leader" hidden="false" targetId="a8ed-ca35-24e0-cf2e" primary="false"/>
+        <categoryLink id="fa54-1ced-7d08-3f2a" name="New CategoryLink" hidden="false" targetId="6c6b-e787-f9b8-a510" primary="true"/>
+        <categoryLink id="5340-248e-24bf-76a1" name="HERO" hidden="false" targetId="4e0e-664d-51ea-0929" primary="false"/>
+        <categoryLink targetId="6b35-0508-c6cc-6592" id="b702-b2e9-4fd5-239" primary="false" name="FLESH-EATER COURTS"/>
+        <categoryLink targetId="53f6-aa54-91a5-fcfb" id="fff4-d50-fe05-a164" primary="false" name="MORDANT"/>
+        <categoryLink targetId="6cdf-dd4f-0e91-e9c4" id="4544-e89e-1d-d0ab" primary="false" name="DEATH"/>
+        <categoryLink targetId="aabf-1ee9-60e2-638" id="2966-eeaa-4478-a544" primary="false" name="COURTIER"/>
+        <categoryLink targetId="5fca-46aa-3eee-233f" id="3d12-5ff9-b224-999f" primary="false" name="MAROWSCROLL HERALD"/>
+        <categoryLink targetId="94b9-7eb-a81a-b892" id="66c4-753e-6008-1817" primary="false" name="Champion"/>
+        <categoryLink targetId="6aaf-34b3-15d0-400d" id="e900-3c44-3227-3653" primary="false" name="ROYAL DECAPITATOR"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="9a26-6003-4126-9569" name="Artefacts" hidden="false" collective="false" import="true" targetId="c8cb-28b1-ffbb-2bbf" type="selectionEntryGroup"/>
+        <entryLink id="cde7-21b6-7f8f-71fb" name="Battalions" hidden="false" collective="false" import="true" targetId="3f3e-293b-65ed-e3fa" type="selectionEntryGroup"/>
+        <entryLink id="66d-6d76-ebc3-6229" name="Command Traits" hidden="false" collective="false" import="true" targetId="2b46-6a34-bba4-a7a2" type="selectionEntryGroup"/>
+        <entryLink id="23ee-5ba6-9b75-ba5b" name="General" hidden="false" collective="false" import="true" targetId="8228-415a-66c3-dffe" type="selectionEntry"/>
+        <entryLink id="59ee-1006-7d7-9c1f" name="Incarnate Bonding" hidden="false" collective="false" import="true" targetId="c890-acbd-0c80-55c9" type="selectionEntryGroup"/>
+        <entryLink id="af59-afc5-2f37-9786" name="Unique Enhancements" hidden="false" collective="false" import="true" targetId="62f4-174e-c529-75fe" type="selectionEntryGroup"/>
+      </entryLinks>
+      <modifiers>
+        <modifier type="add" field="category" value="89f7-d50b-0aa9-01ce">
+          <conditions>
+            <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9f18-9ffb-0267-3e08" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <costs>
+        <cost name="pts" typeId="points" value="100"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="b689-54f9-5b9e-47cb" name="Cryptguard" page="135" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="add" field="category" value="7ede-19c1-7261-f88b">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1411-460f-c135-a667" type="greaterThan"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="dbb1-fd69-0ebc-97df" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="add" field="category" value="7f45-c5b3-c698-138d">
+          <conditions>
+            <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9f18-9ffb-0267-3e08" type="greaterThan"/>
+          </conditions>
+        </modifier>
+        <modifier type="set-primary" value="e9f2-765a-b7b8-ce8e" field="category">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="dbb1-fd69-0ebc-97df" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <profiles>
+        <profile id="eeb3-768a-b05e-5fa0" name="Armoury of Madness" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If any wounds caused by this unit’s attacks are allocated to an enemy unit, that enemy unit cannot issue or receive commands until the end of the turn.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="712-56d-16b-95c2" name="Cryptguard" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
+          <characteristics>
+            <characteristic name="Move" typeId="8655-6213-2824-1752">6&quot;</characteristic>
+            <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">1</characteristic>
+            <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">10</characteristic>
+            <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">5+</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="2b33-3ab0-8180-617c" name="Royal Bodyguard" hidden="false" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This unit has a ward of 5+. In addition, add 1 to ward rolls for friendly FLESH-EATER COURTS HEROES wholly within 3&quot; of this unit.
+
+</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Cursed Weapon" typeId="96df-ab28-5d72-bbb3" typeName="Weapon" hidden="false" id="b95-85dc-a729-ee9a">
+          <characteristics>
+            <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+            <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">2&quot;</characteristic>
+            <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">2</characteristic>
+            <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+            <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+            <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
+            <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="7e3e-a909-9764-2fc5" name="New CategoryLink" hidden="false" targetId="53f6-aa54-91a5-fcfb" primary="false"/>
+        <categoryLink id="1c95-618e-e59a-2c25" name="New CategoryLink" hidden="false" targetId="6cdf-dd4f-0e91-e9c4" primary="false"/>
+        <categoryLink id="a5cc-2fe5-b1f2-cbbf" name="New CategoryLink" hidden="false" targetId="6b35-0508-c6cc-6592" primary="false"/>
+        <categoryLink id="a128-7fbc-8023-b150" name="SERFS" hidden="false" targetId="ee79-e29c-b47c-f2db" primary="false"/>
+        <categoryLink targetId="7f45-c5b3-c698-138d" id="d464-6948-8ccb-4d38" primary="false" name="Infantry"/>
+        <categoryLink targetId="065e-fda7-fd27-1f40" id="c5ae-702e-7510-ccd0" primary="true" name="Other"/>
+        <categoryLink targetId="9527-1e4c-6681-2aa5" id="aa02-e149-12da-9541" primary="false" name="CRYPTGUARD"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="d886-405d-fdee-27b9" name="10 Cryptguard" hidden="false" collective="false" import="true" type="model">
+          <modifiers>
+            <modifier type="set" field="name" value="20 Cryptguard">
+              <conditions>
+                <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0a8d-cde8-fba1-6c0d" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="name" value="30 Cryptguard">
+              <conditions>
+                <condition field="selections" scope="parent" value="2" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0a8d-cde8-fba1-6c0d" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e7fa-467f-c2c6-3d14" type="min"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="54b1-3b0a-b63f-d0c5" type="max"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="140"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <entryLinks>
+        <entryLink id="f7af-de61-e90c-71b5" name="Reinforced" hidden="false" collective="false" import="true" targetId="0a8d-cde8-fba1-6c0d" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="95f2-6885-756f-9ea5" value="2"/>
+          </modifiers>
+          <costs>
+            <cost name="pts" typeId="points" value="140"/>
+          </costs>
+        </entryLink>
+        <entryLink id="bd54-c42b-d951-b918" name="Battalions" hidden="false" collective="false" import="true" targetId="3f3e-293b-65ed-e3fa" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="0"/>
+      </costs>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Command Models" hidden="false" id="d4bc-42d0-1f45-fe2d">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Champion" hidden="false" id="87fb-ce0-189b-8596">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="86d8-d7b2-dce2-b3c4"/>
+              </constraints>
+              <profiles>
+                <profile name="Champion" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities" hidden="false" id="d54c-bce4-37fc-7de2">
+                  <characteristics>
+                    <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 model in this unit can be a Crypt Captain. Add 1 to the Attacks characteristic of that model’s melee weapon.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Standard Bearer" hidden="false" id="5ef-3e7-fc2c-935e">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4e9b-e423-718-d7e6"/>
+              </constraints>
+              <modifiers>
+                <modifier type="increment" value="1" field="4e9b-e423-718-d7e6">
+                  <repeats>
+                    <repeat value="1" repeats="1" field="selections" scope="parent" childId="f7af-de61-e90c-71b5" shared="true" roundUp="false" id="4bb3-607e-351a-c9c6"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <profiles>
+                <profile name="Standard Bearer" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities" hidden="false" id="d6bb-1474-b8bf-b484">
+                  <characteristics>
+                    <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 in every 10 models in this unit can be a Drummer. Add 1 to run rolls and charge rolls for this unit while it includes any Drummers.
+
+</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Musician" hidden="false" id="96f7-6797-17de-431">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a645-5c31-2a8e-d9a9"/>
+              </constraints>
+              <modifiers>
+                <modifier type="increment" value="1" field="a645-5c31-2a8e-d9a9">
+                  <repeats>
+                    <repeat value="1" repeats="1" field="selections" scope="parent" childId="f7af-de61-e90c-71b5" shared="true" roundUp="false" id="f3cc-2c74-95a4-772c"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <profiles>
+                <profile name="Musician" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities" hidden="false" id="8cfa-1092-ba2a-7906">
+                  <characteristics>
+                    <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 in every 10 models in this unit can be a Standard Bearer. While this unit includes a Standard Bearer, if this unit fails a battleshock test, halve the number of models that flee (rounding down).</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </selectionEntry>
+    <selectionEntry id="97d9-cba9-52a4-1b00" name="Morbheg Knights" page="135" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set-primary" field="category" value="e9f2-765a-b7b8-ce8e">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="705f-02ae-f4f5-987a" type="equalTo"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="c89f-a721-882d-41b9" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <profiles>
+        <profile id="7c48-c23-af4d-4ae7" name="Morbheg Knights" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
+          <characteristics>
+            <characteristic name="Move" typeId="8655-6213-2824-1752">12&quot;</characteristic>
+            <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">3</characteristic>
+            <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">10</characteristic>
+            <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">4+</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Shrieking Charge" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities" hidden="false" id="2c9-b966-75e6-9294">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">After this unit makes a charge move, you can pick 1 enemy unit within 1&quot; of this unit. That enemy unit cannot receive the Unleash Hell command in this phase. In addition, roll 1 dice for each model in this unit that is within 1&quot; of that enemy unit. For each 4+, that enemy unit suffers D3 mortal wounds.
+
+</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Predator’s Pounce" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities" hidden="false" id="cbd7-ca5c-63dc-dd36">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This unit can retreat and still charge later in the turn.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="f66-cf82-2c8e-46e1" name="Fly" hidden="false" targetId="8e0c-cbe4-27be-8a30" type="profile"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="29f4-df84-b27f-4d05" name="New CategoryLink" hidden="false" targetId="53f6-aa54-91a5-fcfb" primary="false"/>
+        <categoryLink id="be70-75c1-ad07-a95b" name="New CategoryLink" hidden="false" targetId="6cdf-dd4f-0e91-e9c4" primary="false"/>
+        <categoryLink id="6cbe-e77b-aeee-c20a" name="New CategoryLink" hidden="false" targetId="6b35-0508-c6cc-6592" primary="false"/>
+        <categoryLink id="8e01-a005-970b-4c4e" name="KNIGHTS" hidden="false" targetId="3246-ccec-12af-67af" primary="false"/>
+        <categoryLink id="ccff-9510-aaf8-78d1" name="New CategoryLink" hidden="false" targetId="065e-fda7-fd27-1f40" primary="true"/>
+        <categoryLink targetId="28ac-1b27-ef5e-33be" id="f559-1e92-5e5a-6ea6" primary="false" name="MORBHEG KNIGHTS"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="5c46-39a-2fc3-13c1" name="3 Morbheg Knights" hidden="false" collective="false" import="true" type="model">
+          <modifiers>
+            <modifier type="set" field="name" value="6 Morbheg Knights">
+              <conditions>
+                <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0a8d-cde8-fba1-6c0d" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="name" value="9 Morbheg Knights">
+              <conditions>
+                <condition field="selections" scope="parent" value="2" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0a8d-cde8-fba1-6c0d" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7c7a-787b-63f3-402" type="min"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="acd-43ac-b7c7-3771" type="max"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="150"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <entryLinks>
+        <entryLink id="dfe-1c95-872b-7749" name="Reinforced" hidden="false" collective="false" import="true" targetId="0a8d-cde8-fba1-6c0d" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="95f2-6885-756f-9ea5" value="2">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="c89f-a721-882d-41b9" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <costs>
+            <cost name="pts" typeId="points" value="150"/>
+          </costs>
+        </entryLink>
+        <entryLink id="98e3-b994-9b94-c10c" name="Battalions" hidden="false" collective="false" import="true" targetId="3f3e-293b-65ed-e3fa" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="0"/>
+      </costs>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Command Models" hidden="false" id="d0a6-1f01-a3c6-62bc">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Champion" hidden="false" id="d01c-c7a6-c3a5-5b5c">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d97e-d828-8557-de65"/>
+              </constraints>
+              <profiles>
+                <profile name="Champion" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities" hidden="false" id="3493-26a8-5e77-61f1">
+                  <characteristics>
+                    <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 model in this unit can be a Champion of Morbheg. Add 1 to the Attacks characteristic of that model’s Grisly Lance.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Standard Bearer" hidden="false" id="cbbf-ac2f-8dee-af27">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7e2f-7a77-8e31-7654"/>
+              </constraints>
+              <modifiers>
+                <modifier type="increment" value="1" field="7e2f-7a77-8e31-7654">
+                  <repeats>
+                    <repeat value="1" repeats="1" field="selections" scope="parent" childId="f7af-de61-e90c-71b5" shared="true" roundUp="false" id="d2ac-3374-eed2-a7ec"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <profiles>
+                <profile name="Standard Bearer" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities" hidden="false" id="7fdd-8bf0-1759-697b">
+                  <characteristics>
+                    <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 in every 3 models in this unit can be a Standard Bearer. While this unit includes any Standard Bearers, if it made a charge move in the same turn, each model in this unit counts as 3 models for the purposes of contesting objectives.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Musician" hidden="false" id="5a-d7e0-f89a-d837">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8d75-69e4-c065-e85f"/>
+              </constraints>
+              <modifiers>
+                <modifier type="increment" value="1" field="8d75-69e4-c065-e85f">
+                  <repeats>
+                    <repeat value="1" repeats="1" field="selections" scope="parent" childId="f7af-de61-e90c-71b5" shared="true" roundUp="false" id="7e00-6883-bb59-97d2"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <profiles>
+                <profile name="Musician" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities" hidden="false" id="e2a0-17ca-9226-c4c1">
+                  <characteristics>
+                    <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">1 in every 3 models in this unit can be a Hornblower. Add 1 to run rolls and charge rolls for this unit while it includes any Hornblowers.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
