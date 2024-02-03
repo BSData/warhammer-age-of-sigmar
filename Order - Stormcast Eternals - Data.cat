@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" id="82b4-f6e1-3e37-5ea1" name="Order - Stormcast Eternals - Data" revision="185" battleScribeVersion="2.03" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="161" type="catalogue">
+
   <publications>
     <publication id="ed04-877b-pubN65537" name="Order Battletome: Stormcast Eternals (2nd Edition)"/>
     <publication id="ed04-877b-pubN71576" name="Battletome: Stormcast Eternals (2nd Edition)"/>
@@ -9237,7 +9238,7 @@ If you pick a unit once with this ability, you can heal up to D3 wounds allocate
         </modifier>
         <modifier type="add" value="e9f2-765a-b7b8-ce8e" field="category">
           <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="parent" childId="cf46-7b83-d97b-7663" shared="true"/>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="cf46-7b83-d97b-7663" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
         <modifier type="add" value="1a0d-9b27-19cf-7cec" field="category">
@@ -9465,7 +9466,7 @@ Flash-freezing Blizzard: Subtract 1 from save rolls for attacks that target that
         </modifier>
         <modifier type="add" value="e9f2-765a-b7b8-ce8e" field="category">
           <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="parent" childId="cf46-7b83-d97b-7663" shared="true"/>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="cf46-7b83-d97b-7663" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
         <modifier type="add" value="1a0d-9b27-19cf-7cec" field="category">
@@ -12127,8 +12128,8 @@ In addition, you can re-roll charge rolls for this unit if it was set-up on the 
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="parent" childId="cf46-7b83-d97b-7663" shared="true"/>
-                <condition type="lessThan" value="1" field="selections" scope="parent" childId="26ae-0330-06d3-8f22" shared="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="cf46-7b83-d97b-7663" shared="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="26ae-0330-06d3-8f22" shared="true" includeChildSelections="true" includeChildForces="true"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -12891,6 +12892,7 @@ At the start of the enemy hero phase, you can pick 1 endless spell or invocati
           </profiles>
         </infoGroup>
       </infoGroups>
+<<<<<<< HEAD
       <modifiers>
         <modifier type="add" value="1a0d-9b27-19cf-7cec" field="category">
           <conditions>
@@ -12898,6 +12900,40 @@ At the start of the enemy hero phase, you can pick 1 endless spell or invocati
           </conditions>
         </modifier>
       </modifiers>
+=======
+      <selectionEntryGroups>
+        <selectionEntryGroup id="9d7e-7f3d-5f91-b862" name="Prayers" hidden="false" collective="false" import="true">
+          <modifiers>
+            <modifier type="increment" field="7690-b7fc-3e1e-4ed8" value="1">
+              <repeats>
+                <repeat field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="24e6-c9b0-8d0d-02a2" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8af4-649e-9ee2-22ee" type="instanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="78f3-8a59-699a-61e8" type="instanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="24d6-500b-7e3f-1470" type="instanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1e36-e511-437b-5de8" type="instanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="524e-8001-63ee-cdf7" type="instanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7690-b7fc-3e1e-4ed8" type="max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="97f-64ee-bf86-dd1c" name="Universal Prayer Scripture" hidden="false" collective="false" import="true" targetId="3674-103c-35c9-85a6" type="selectionEntryGroup"/>
+            <entryLink id="6dc-1192-4062-1b52" name="Prayers of the Stormhosts" hidden="false" collective="false" import="true" targetId="3963-714a-777a-2f98" type="selectionEntryGroup"/>
+            <entryLink import="true" name="Prayers of the Draconith" hidden="false" type="selectionEntryGroup" id="b89c-9e4b-8a20-fa13" targetId="feea-6fc1-dd12-1aa5"/>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+>>>>>>> master
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Neave&apos;s Companions" hidden="false" id="b3db-711-6ff9-6a52">
       <categoryLinks>
@@ -13127,7 +13163,7 @@ At the start of the enemy hero phase, you can pick 1 endless spell or invocati
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition type="lessThan" value="1" field="selections" scope="parent" childId="cf46-7b83-d97b-7663" shared="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="cf46-7b83-d97b-7663" shared="true" includeChildForces="true" includeChildSelections="true"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -13388,6 +13424,11 @@ At the start of the enemy hero phase, you can pick 1 endless spell or invocati
               </conditions>
             </conditionGroup>
           </conditionGroups>
+        </modifier>
+        <modifier type="increment" value="1" field="3f2f-f955-d7d9-0bc7">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="ce64-88a6-ce56-0940" shared="true" includeChildSelections="false" includeChildForces="false"/>
+          </conditions>
         </modifier>
       </modifiers>
       <constraints>
