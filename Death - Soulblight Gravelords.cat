@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" id="0364-070f-023f-64d9" name="Death - Soulblight Gravelords" revision="32" battleScribeVersion="2.03" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="161" type="catalogue">
+<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" id="0364-070f-023f-64d9" name="Death - Soulblight Gravelords" revision="34" battleScribeVersion="2.03" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="161" type="catalogue">
   <categoryEntries>
     <categoryEntry id="d72b-b718-4010-345d" name="DEINTALOS THE EXILE" hidden="false"/>
     <categoryEntry id="68d2-327f-6699-51f3" name="THE EXILED DEAD" hidden="false"/>
@@ -7,6 +7,7 @@
     <categoryEntry id="508f-5e4f-8ffd-ff24" name="THE SONS OF VELMORN" hidden="false"/>
     <categoryEntry id="9e10-8150-9ef1-0c1b" name="ASKURGAN TRUEBLOODS" hidden="false"/>
     <categoryEntry id="a075-de42-a347-4f64" name="IVYA VOLGA" hidden="false"/>
+    <categoryEntry name="SEKHAR" hidden="false" id="50c4-1b1e-bdf8-cf0f"/>
   </categoryEntries>
   <entryLinks>
     <entryLink id="1b98-1990-d907-a577" name="Belladamma Volga" hidden="false" collective="false" import="true" targetId="fde2-6663-ed5e-7641" type="selectionEntry"/>
@@ -75,6 +76,12 @@
     <entryLink id="bf68-6b21-042a-7ef9" name="Ivya Volga, the Outcast" hidden="false" collective="false" import="true" targetId="d4ba-854e-8b3e-e7f6" type="selectionEntry"/>
     <entryLink id="dde6-19a6-5b49-f001" name="Soulblight Warscroll Battalion: Deathmarch" hidden="false" collective="false" import="true" targetId="25ea-f40e-90d5-9b27" type="selectionEntry"/>
     <entryLink import="true" name="Regiment of Renown - Jerrion&apos;s Delegation" hidden="false" type="selectionEntry" id="a375-3dbb-ee29-6fcd" targetId="7836-fd33-36d8-9a7a"/>
+    <entryLink import="true" name="Sekhar, Fang of Nulahmia" hidden="false" type="selectionEntry" id="e030-8e50-1bd1-4427" targetId="15bc-2892-693c-2c8g"/>
+    <entryLink import="true" name="Battle Tacics: Scions of Nulahmia" hidden="false" id="cfdb-946e-ce65-4c70" targetId="747e-22fd-6c6d-b84a" type="selectionEntry"/>
+    <entryLink import="true" name="Regiment of Renown - The Sorrowmourne Choir" hidden="false" type="selectionEntry" id="8dff-7932-2046-ec3a" targetId="48ca-d15d-4e8b-be5b"/>
+    <entryLink import="true" name="Regiment of Renown - The Summerking&apos;s Entourage" hidden="false" type="selectionEntry" id="3d98-7fa-2755-c26a" targetId="2eda-9ef0-22d9-a4ba"/>
+    <entryLink import="true" name="Regiment of Renown - Scions of the Necropolis" hidden="false" type="selectionEntry" id="7768-a8b7-a27d-f18a" targetId="8fe0-4d59-efcf-50e0"/>
+    <entryLink import="true" name="Regiment of Renown - The Liche&apos;s Hand" hidden="false" type="selectionEntry" id="dc42-9e2d-1970-328" targetId="b809-9d2-4993-b523"/>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="42cd-b93d-0148-d66f" name="Allegiance" hidden="false" collective="false" import="true" type="upgrade">
@@ -129,6 +136,11 @@
         <modifier type="set" field="c1f6-7668-5e8c-2ef8" value="1">
           <conditions>
             <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7cec-ef8c-e266-e541" type="greaterThan"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="1189-76a9-df65-5ee4" shared="true" includeChildForces="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -257,6 +269,8 @@
             </modifier>
           </modifiers>
         </entryLink>
+        <entryLink import="true" name="Mystic Shield" hidden="false" type="selectionEntry" id="d997-6228-fc76-bb79" targetId="5fdd-6634-f9f8-068a"/>
+        <entryLink import="true" name="Arcane Bolt" hidden="false" type="selectionEntry" id="a2cd-6cb5-f656-fdac" targetId="869c-168d-eba5-eacf"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="220"/>
@@ -267,6 +281,11 @@
         <modifier type="set" field="7cb8-c84c-a289-4a1c" value="1">
           <conditions>
             <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="98de-3585-725a-a25d" type="greaterThan"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="1189-76a9-df65-5ee4" shared="true" includeChildForces="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -413,12 +432,24 @@
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="1189-76a9-df65-5ee4" shared="true" includeChildForces="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="6b37-28df-c36d-2fbe" name="King Morlak Velmorn" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
         <modifier type="set" field="1e42-4ba9-f849-19c0" value="1">
           <conditions>
             <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="55fe-7871-2714-4010" type="greaterThan"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="1189-76a9-df65-5ee4" shared="true" includeChildForces="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -523,6 +554,11 @@
         <modifier type="set" field="8add-b9c1-248f-11b2" value="1">
           <conditions>
             <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6b37-28df-c36d-2fbe" type="greaterThan"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="1189-76a9-df65-5ee4" shared="true" includeChildForces="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -673,6 +709,11 @@
         <modifier type="add" field="category" value="7ede-19c1-7261-f88b">
           <conditions>
             <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1411-460f-c135-a667" type="greaterThan"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="1189-76a9-df65-5ee4" shared="true" includeChildForces="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -956,6 +997,117 @@
       <costs>
         <cost name="pts" typeId="points" value="135"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="1189-76a9-df65-5ee4" shared="true" includeChildForces="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Sekhar, Fang of Nulahmia" hidden="false" id="15bc-2892-693c-2c8g">
+      <costs>
+        <cost name="pts" typeId="points" value="160"/>
+      </costs>
+      <categoryLinks>
+        <categoryLink targetId="6c6b-e787-f9b8-a510" id="8869-cf92-6167-d554" primary="true" name="Leader"/>
+        <categoryLink targetId="6cdf-dd4f-0e91-e9c4" id="7b68-1319-66fe-86f3" primary="false" name="DEATH"/>
+        <categoryLink targetId="3d31-12d5-6735-011c" id="7943-bc7a-34fe-4cd2" primary="false" name="SOULBLIGHT GRAVELORDS"/>
+        <categoryLink targetId="d1e1-d80a-c667-b587" id="8d93-e6b5-2f41-a2a0" primary="false" name="VAMPIRE"/>
+        <categoryLink targetId="2691-54ce-d160-1694" id="c029-738-11e-8a17" primary="false" name="LEGION OF BLOOD"/>
+        <categoryLink targetId="4e0e-664d-51ea-0929" id="2e32-45c4-5690-f1e2" primary="false" name="HERO"/>
+        <categoryLink targetId="4f53-8230-2f02-9639" id="e205-9da9-77ba-958e" primary="false" name="WIZARD"/>
+        <categoryLink targetId="50c4-1b1e-bdf8-cf0f" id="7985-8a66-355e-8f1c" primary="false" name="SEKHAR"/>
+        <categoryLink targetId="088b-3a27-03f7-8249" id="5cf-9f0c-d4a9-9193" primary="false" name="Unique"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="db49-afb9-e6f5-22b" name="Battalions" hidden="false" collective="false" import="true" targetId="9df7-269b-fa20-74b2" type="selectionEntryGroup"/>
+        <entryLink id="4794-403c-8f8a-21fc" name="General" hidden="false" collective="false" import="true" targetId="88d2-d540-0573-3402" type="selectionEntry">
+          <categoryLinks>
+            <categoryLink id="18d5-ef09-84-b364" name="Unique General" hidden="false" targetId="fe3f-d230-7e2c-fba2" primary="false"/>
+          </categoryLinks>
+        </entryLink>
+        <entryLink id="8b2d-b17-51d4-1f4b" name="Spell Lores" hidden="false" collective="false" import="true" targetId="8417-93fc-9562-a748" type="selectionEntryGroup"/>
+        <entryLink import="true" name="Arcane Bolt" hidden="false" type="selectionEntry" id="8792-145c-4070-63fa" targetId="869c-168d-eba5-eacf"/>
+        <entryLink import="true" name="Mystic Shield" hidden="false" type="selectionEntry" id="a40c-e459-c400-a7ba" targetId="5fdd-6634-f9f8-068a"/>
+      </entryLinks>
+      <profiles>
+        <profile id="b46e-dfcc-7d9a-4245" name="Wizard" hidden="false" typeId="f55d-ee3a-1597-110f" typeName="Magic">
+          <characteristics>
+            <characteristic name="Cast/Unbind" typeId="8294-f605-2c0f-8f92">2/2</characteristic>
+            <characteristic name="Spells Known" typeId="dc9c-47d3-6931-859c">Arcane Bolt, Mystic Shield, Death&apos;s Constriction</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Nulahmian Warglave" typeId="96df-ab28-5d72-bbb3" typeName="Weapon" hidden="false" id="e414-5b0f-1adf-da73">
+          <characteristics>
+            <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+            <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
+            <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">4</characteristic>
+            <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+            <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+            <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
+            <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">2</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Godhusk Fangs" typeId="96df-ab28-5d72-bbb3" typeName="Weapon" hidden="false" id="70b2-f57a-22f3-47ec">
+          <characteristics>
+            <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+            <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
+            <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">2</characteristic>
+            <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+            <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+            <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-2</characteristic>
+            <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">2</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Sekhar, Fang of Nulahmia" typeId="1960-ca8e-67ce-2014" typeName="Unit" hidden="false" id="1115-1786-f3fb-ca5a">
+          <characteristics>
+            <characteristic name="Move" typeId="8655-6213-2824-1752">6&quot;</characteristic>
+            <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">7</characteristic>
+            <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">10</characteristic>
+            <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">4+</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="The Time-Swallower&apos;s Maw" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities" hidden="false" id="71cb-d725-5f7d-ab4f">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Once per battle, at the start of the combat phase, you can say that Ouboroth will use the Time-Swallower&apos;s Maw. If you do so, roll 2D6. Each enemy unit within 6&quot; of this unit whose Move characteristic is lower than the roll suffers a number of mortal wounds equal to the difference between its Move characteristic and the roll.
+
+
+If the unit uses this ability, it does not benefit from the Serpentine Agility ability for the rest of the battle.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Serpentine Agility" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities" hidden="false" id="7bd-9a0-92fe-6cb7">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Attacks that target this unit only score a hit on an unmodified hit roll of 5 or 6.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Death&apos;s Constriction" typeId="2e81-5e22-c6e1-73cb" typeName="Spell" hidden="false" id="3693-e96b-b2bb-403c">
+          <characteristics>
+            <characteristic name="Casting Value" typeId="2508-b604-1258-a920">6</characteristic>
+            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">18&quot;</characteristic>
+            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick 1 enemy unit within range and visible to the caster. Until your next hero phase, that unit cannot pick this unit or friendly units wholly within 6&quot; of this unit as the target of spells, prayers, abilities or shooting attacks.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Battle Tacics: Scions of Nulahmia" hidden="false" id="747e-22fd-6c6d-b84a">
+      <profiles>
+        <profile name="No Sacred Ground" typeId="eba0-4bf6-65fe-fdbc" typeName="Battle Tactic" hidden="false" id="ada0-83c3-254d-3ef">
+          <characteristics>
+            <characteristic name="Description" typeId="f882-48d5-21a4-1787">Pick 1 enemy unit contesting an objective you do not control. You complete this tactic if that unit is destroyed this turn by an attack made by a friendly SUMMONABLE unit.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Companions of Royalty" typeId="eba0-4bf6-65fe-fdbc" typeName="Battle Tactic" hidden="false" id="2e8a-7666-5396-3701">
+          <characteristics>
+            <characteristic name="Description" typeId="f882-48d5-21a4-1787">Pick 1 friendly SUMMONABLE unit on the battlefield that has had any models slain. You complete this tactic if any models are added to that unit this turn and the number of models in that unit is above its starting size at the end of the turn.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Exquisite Plots" typeId="eba0-4bf6-65fe-fdbc" typeName="Battle Tactic" hidden="false" id="4262-a76a-3114-a845">
+          <characteristics>
+            <characteristic name="Description" typeId="f882-48d5-21a4-1787">You complete this tactic if you complete a plot from the Demise by Design battle trait with a HERO this turn.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
     </selectionEntry>
   </sharedSelectionEntries>
   <catalogueLinks>
@@ -963,5 +1115,12 @@
     <catalogueLink id="afb8-c624-cafa-ffda" name="Destruction - Sons of Behemat" targetId="f904-b52f-810a-e446" type="catalogue" importRootEntries="true"/>
     <catalogueLink id="08f2-e89a-7936-fe33" name="Regiments of Renown" targetId="33cf-d309-6df3-50d6" type="catalogue" importRootEntries="true"/>
   </catalogueLinks>
-  <xmlns>http://www.battlescribe.net/schema/catalogueSchema</xmlns>
+  <profileTypes>
+    <profileType name="Demise by Design" hidden="false" id="931c-9ae7-e882-34db">
+      <characteristicTypes>
+        <characteristicType id="e5af-ec89-d83e-9725" name="Plot"/>
+        <characteristicType id="3a65-e4f9-c0bc-d7af" name="Ability"/>
+      </characteristicTypes>
+    </profileType>
+  </profileTypes>
 </catalogue>
