@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="172" battleScribeVersion="2.03" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" type="gameSystem">
+<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="173" battleScribeVersion="2.03" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" type="gameSystem">
   <publications>
     <publication id="e51d-b1a3-pubEC" name="The General&apos;s Handbook"/>
     <publication id="e51d-b1a3-pubEQ" name="Core Rules"/>
@@ -756,38 +756,6 @@
       </constraints>
       <forceEntries>
         <forceEntry id="24d6-500b-7e3f-1470" name="Allies" hidden="false">
-          <modifiers>
-            <modifier type="set" field="4783-9a05-8cfe-7af2" value="100">
-              <conditions>
-                <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e860-9b1e-36bd-a54f" type="equalTo"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="4783-9a05-8cfe-7af2" value="400">
-              <conditions>
-                <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cea8-e4b2-c44f-c7b4" type="equalTo"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="4783-9a05-8cfe-7af2" value="200">
-              <conditions>
-                <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e9fc-6b3a-1b9a-e807" type="equalTo"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="4783-9a05-8cfe-7af2" value="520">
-              <conditions>
-                <condition field="selections" scope="78f3-8a59-699a-61e8" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="24c2-fff5-f17c-3d07" type="equalTo"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="4783-9a05-8cfe-7af2" value="300">
-              <conditions>
-                <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a3cc-3b86-4778-0b11" type="equalTo"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="4783-9a05-8cfe-7af2" value="600">
-              <conditions>
-                <condition field="selections" scope="36b7-ee1e-0855-f23f" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ef67-15fb-487c-397a" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <constraints>
             <constraint field="points" scope="roster" value="-1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" id="4783-9a05-8cfe-7af2" type="max"/>
           </constraints>
