@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="173" battleScribeVersion="2.03" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" type="gameSystem">
+<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="174" battleScribeVersion="2.03" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" type="gameSystem">
   <publications>
     <publication id="e51d-b1a3-pubEC" name="The General&apos;s Handbook"/>
     <publication id="e51d-b1a3-pubEQ" name="Core Rules"/>
@@ -3946,6 +3946,11 @@ within 3&quot; of an enemy unit at the end of the turn.’</characteristic>
             <characteristic name="Description" typeId="f882-48d5-21a4-1787">Pick 3 different friendly units on the battlefield. You complete this battle tactic at the end of your turn if each of those units is wholly within 6&quot; of a different battlefield edge and 2 or more of those units are wholly outside your territory.</characteristic>
           </characteristics>
         </profile>
+        <profile name="Drain Their Power" typeId="eba0-4bf6-65fe-fdbc" typeName="Battle Tactic" hidden="false" id="9fe2-6cb4-f5f0-a35f">
+          <characteristics>
+            <characteristic name="Description" typeId="f882-48d5-21a4-1787"> You complete this battle tactic at the end of your turn if a friendly HERO with a Nullstone Adornment is contesting an objective that was controlled by your opponent at the start of your turn.</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
       <constraints>
         <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a716-9efe-3cc7-3f69" type="max"/>
@@ -4002,7 +4007,7 @@ within 3&quot; of an enemy unit at the end of the turn.’</characteristic>
       <profiles>
         <profile id="6396-b457-3433-3056" name="Magic Hunters" hidden="false" typeId="bdc6-78da-3796-60a3" typeName="Battalion Abilities">
           <characteristics>
-            <characteristic name="Battalion Ability Details" typeId="08e0-9ead-1dbe-c801">Each time a unit in this battalion is picked to fight, you can say that it will go on a wizard hunt. If you do so, pick 1 melee weapon profile on that unit’s warscroll. Until the end of that phase, add 1 to the Attacks characteristic of that melee weapon, but all of the attacks that unit makes in that phase must target an enemy WIZARD.
+            <characteristic name="Battalion Ability Details" typeId="08e0-9ead-1dbe-c801">Each time a unit in this battalion is affected by a spell cast by an enemy unit or the abilities of an endless spell summoned by an enemy unit, you can roll a dice. On a 5+, ignore the effect of that spell or the effects of that endless spell’s abilities on this unit. Each time a unit in this battalion is picked to fight, you can say that it will go on a wizard hunt. If you do so, pick 1 melee weapon profile on that unit’s warscroll. Until the end of that phase, add 1 to the Attacks characteristic of that melee weapon, but all of the attacks that unit makes in that phase must target an enemy WIZARD.
 WIZARDS cannot be included in this battalion.</characteristic>
           </characteristics>
         </profile>
