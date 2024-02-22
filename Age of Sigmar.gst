@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="174" battleScribeVersion="2.03" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" type="gameSystem">
+<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="175" battleScribeVersion="2.03" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" type="gameSystem">
   <publications>
     <publication id="e51d-b1a3-pubEC" name="The General&apos;s Handbook"/>
     <publication id="e51d-b1a3-pubEQ" name="Core Rules"/>
@@ -3948,7 +3948,7 @@ within 3&quot; of an enemy unit at the end of the turn.’</characteristic>
         </profile>
         <profile name="Drain Their Power" typeId="eba0-4bf6-65fe-fdbc" typeName="Battle Tactic" hidden="false" id="9fe2-6cb4-f5f0-a35f">
           <characteristics>
-            <characteristic name="Description" typeId="f882-48d5-21a4-1787"> You complete this battle tactic at the end of your turn if a friendly HERO with a Nullstone Adornment is contesting an objective that was controlled by your opponent at the start of your turn.</characteristic>
+            <characteristic name="Description" typeId="f882-48d5-21a4-1787">You complete this battle tactic at the end of your turn if a friendly HERO with a Nullstone Adornment is contesting an objective that was controlled by your opponent at the start of your turn.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -4704,6 +4704,9 @@ WIZARDS cannot be included in this battalion.</characteristic>
               <costs>
                 <cost name="pts" typeId="points" value="0"/>
               </costs>
+              <associations>
+                <association min="1" max="1" scope="roster" childId="af2c-42ac-d610-4a10" name="Battalion" id="3342-b50f-786f-440" includeChildSelections="true"/>
+              </associations>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -4750,6 +4753,9 @@ WIZARDS cannot be included in this battalion.</characteristic>
               <costs>
                 <cost name="pts" typeId="points" value="0"/>
               </costs>
+              <associations>
+                <association min="1" max="1" scope="roster" childId="1878-56e2-2862-8da5" name="Battalion" id="3549-29d5-8ebb-3261" includeChildSelections="true"/>
+              </associations>
             </selectionEntry>
             <selectionEntry id="d495-9999-6da5-0fc8" name="Battle Regiment - 0-1 Monster or Artillery" hidden="true" collective="false" import="true" type="upgrade">
               <modifiers>
@@ -4790,6 +4796,9 @@ WIZARDS cannot be included in this battalion.</characteristic>
               <costs>
                 <cost name="pts" typeId="points" value="0"/>
               </costs>
+              <associations>
+                <association min="1" max="1" scope="roster" childId="1878-56e2-2862-8da5" name="Battalion" id="cef9-8097-a177-cb28" includeChildSelections="true"/>
+              </associations>
             </selectionEntry>
             <selectionEntry id="499a-198a-453a-3b6e" name="Battle Regiment - 0-2 Sub-Commander" hidden="true" collective="false" import="true" type="upgrade">
               <modifiers>
@@ -4816,6 +4825,9 @@ WIZARDS cannot be included in this battalion.</characteristic>
               <costs>
                 <cost name="pts" typeId="points" value="0"/>
               </costs>
+              <associations>
+                <association min="1" max="1" scope="roster" childId="1878-56e2-2862-8da5" name="Battalion" id="6971-95f-a61f-800a" includeChildSelections="true"/>
+              </associations>
             </selectionEntry>
             <selectionEntry id="4df0-9610-3fc2-96df" name="Battle Regiment - 2-5 Troops" hidden="true" collective="false" import="true" type="upgrade">
               <modifiers>
@@ -4850,6 +4862,9 @@ WIZARDS cannot be included in this battalion.</characteristic>
               <costs>
                 <cost name="pts" typeId="points" value="0"/>
               </costs>
+              <associations>
+                <association min="1" max="1" scope="roster" childId="1878-56e2-2862-8da5" name="Battalion" id="d6e6-e593-47ca-54cd" includeChildSelections="true"/>
+              </associations>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -4896,6 +4911,9 @@ WIZARDS cannot be included in this battalion.</characteristic>
               <costs>
                 <cost name="pts" typeId="points" value="0"/>
               </costs>
+              <associations>
+                <association min="1" max="1" scope="roster" childId="7f89-26d0-ff93-83fe" name="Battalion" id="f2ce-16ab-c868-9fe7" includeChildSelections="true"/>
+              </associations>
             </selectionEntry>
             <selectionEntry id="7174-fb53-6fd6-cec9" name="Command Entourage - 2-3 Sub-Commanders" hidden="true" collective="false" import="true" type="upgrade">
               <modifiers>
@@ -4928,6 +4946,9 @@ WIZARDS cannot be included in this battalion.</characteristic>
               <costs>
                 <cost name="pts" typeId="points" value="0"/>
               </costs>
+              <associations>
+                <association min="1" max="1" scope="roster" childId="7f89-26d0-ff93-83fe" name="Battalion" id="d2f3-984e-ed59-6be" includeChildSelections="true"/>
+              </associations>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -4974,6 +4995,9 @@ WIZARDS cannot be included in this battalion.</characteristic>
               <costs>
                 <cost name="pts" typeId="points" value="0"/>
               </costs>
+              <associations>
+                <association min="1" max="1" scope="roster" childId="be2d-ba53-4ebc-f035" name="Battalion" id="e4f9-ecdd-abbf-ae0d" includeChildSelections="true"/>
+              </associations>
             </selectionEntry>
             <selectionEntry id="509e-6936-d617-933a" name="Grand Battery - 1 Sub-commander" hidden="true" collective="false" import="true" type="upgrade">
               <modifiers>
@@ -5006,6 +5030,9 @@ WIZARDS cannot be included in this battalion.</characteristic>
               <costs>
                 <cost name="pts" typeId="points" value="0"/>
               </costs>
+              <associations>
+                <association min="1" max="1" scope="roster" childId="be2d-ba53-4ebc-f035" name="Battalion" id="5ca-a72d-f6b5-e09f" includeChildSelections="true"/>
+              </associations>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -5054,6 +5081,9 @@ WIZARDS cannot be included in this battalion.</characteristic>
               <costs>
                 <cost name="pts" typeId="points" value="0"/>
               </costs>
+              <associations>
+                <association min="1" max="1" scope="roster" childId="49a3-5845-b4df-11f3" name="Battalion" id="6e3-b653-5070-1e9b" includeChildSelections="true"/>
+              </associations>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -5102,6 +5132,9 @@ WIZARDS cannot be included in this battalion.</characteristic>
               <costs>
                 <cost name="pts" typeId="points" value="0"/>
               </costs>
+              <associations>
+                <association min="1" max="1" scope="roster" childId="bbed-22cb-b649-6938" name="Battalion" id="957f-2ca0-6106-8264" includeChildSelections="true"/>
+              </associations>
             </selectionEntry>
             <selectionEntry id="2836-5c19-a748-8dfb" name="Vanguard - 1 Sub Commander" hidden="true" collective="false" import="true" type="upgrade">
               <modifiers>
@@ -5135,6 +5168,9 @@ WIZARDS cannot be included in this battalion.</characteristic>
               <costs>
                 <cost name="pts" typeId="points" value="0"/>
               </costs>
+              <associations>
+                <association min="1" max="1" scope="roster" childId="bbed-22cb-b649-6938" name="Battalion" id="6ccd-99f3-cf29-b30d" includeChildSelections="true"/>
+              </associations>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -5183,6 +5219,9 @@ WIZARDS cannot be included in this battalion.</characteristic>
               <costs>
                 <cost name="pts" typeId="points" value="0"/>
               </costs>
+              <associations>
+                <association min="1" max="1" scope="roster" childId="5e7f-ccbb-a180-2e8b" name="Battalion" id="c16d-837f-323f-b2aa" includeChildSelections="true"/>
+              </associations>
             </selectionEntry>
             <selectionEntry id="a531-b832-8674-7a0b" name="Warlord - 2-4 Sub-Commanders" hidden="true" collective="false" import="true" type="upgrade">
               <modifiers>
@@ -5215,6 +5254,9 @@ WIZARDS cannot be included in this battalion.</characteristic>
               <costs>
                 <cost name="pts" typeId="points" value="0"/>
               </costs>
+              <associations>
+                <association min="1" max="1" scope="roster" childId="5e7f-ccbb-a180-2e8b" name="Battalion" id="283f-af1e-d1cc-2033" includeChildSelections="true"/>
+              </associations>
             </selectionEntry>
             <selectionEntry id="a248-92c9-88d3-fe44" name="Warlord - 1-2 Commanders" hidden="true" collective="false" import="true" type="upgrade">
               <modifiers>
@@ -5247,6 +5289,9 @@ WIZARDS cannot be included in this battalion.</characteristic>
               <costs>
                 <cost name="pts" typeId="points" value="0"/>
               </costs>
+              <associations>
+                <association min="1" max="1" scope="roster" childId="5e7f-ccbb-a180-2e8b" name="Battalion" id="a020-c2b9-b954-cbfe" includeChildSelections="true"/>
+              </associations>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -5293,6 +5338,9 @@ WIZARDS cannot be included in this battalion.</characteristic>
               <costs>
                 <cost name="pts" typeId="points" value="0"/>
               </costs>
+              <associations>
+                <association min="1" max="1" scope="roster" childId="fa77-b2b2-8b0c-22e2" name="Battalion" id="430b-10c8-9369-82ab" includeChildSelections="true"/>
+              </associations>
             </selectionEntry>
             <selectionEntry id="fbfa-468d-1fa3-26de" name="Linebreaker - 2-3 Monsters" hidden="true" collective="false" import="true" type="upgrade">
               <modifiers>
@@ -5326,6 +5374,9 @@ WIZARDS cannot be included in this battalion.</characteristic>
               <costs>
                 <cost name="pts" typeId="points" value="0"/>
               </costs>
+              <associations>
+                <association min="1" max="1" scope="roster" childId="fa77-b2b2-8b0c-22e2" name="Battalion" id="235d-48e6-fd7e-e6a7" includeChildSelections="true"/>
+              </associations>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -5375,6 +5426,9 @@ WIZARDS cannot be included in this battalion.</characteristic>
               <costs>
                 <cost name="pts" typeId="points" value="0"/>
               </costs>
+              <associations>
+                <association min="1" max="1" scope="roster" childId="15e3-8b94-19b1-a6dc" name="Battalion" id="5cc6-837a-f868-5a72" includeChildSelections="true"/>
+              </associations>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -5423,6 +5477,9 @@ WIZARDS cannot be included in this battalion.</characteristic>
               <costs>
                 <cost name="pts" typeId="points" value="0"/>
               </costs>
+              <associations>
+                <association min="1" max="1" scope="roster" childId="c7a2-43b2-11cd-3ad1" name="Battalion" id="703c-be0b-f2f-dc40" includeChildSelections="true"/>
+              </associations>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -5469,6 +5526,9 @@ WIZARDS cannot be included in this battalion.</characteristic>
               <costs>
                 <cost name="pts" typeId="points" value="0"/>
               </costs>
+              <associations>
+                <association min="1" max="1" scope="roster" childId="9e66-17d5-01c5-6bbe" name="Battalion" id="8c3c-49d3-881b-d8e9" includeChildSelections="true"/>
+              </associations>
             </selectionEntry>
             <selectionEntry id="7ba6-6f00-3169-e578" name="Galletian Command - 1 Infantry" hidden="true" collective="false" import="true" type="upgrade">
               <modifiers>
@@ -5501,6 +5561,9 @@ WIZARDS cannot be included in this battalion.</characteristic>
               <costs>
                 <cost name="pts" typeId="points" value="0"/>
               </costs>
+              <associations>
+                <association min="1" max="1" scope="roster" childId="9e66-17d5-01c5-6bbe" name="Battalion" id="1fe6-6fb2-6832-7f12" includeChildSelections="true"/>
+              </associations>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -5547,6 +5610,9 @@ WIZARDS cannot be included in this battalion.</characteristic>
               <costs>
                 <cost name="pts" typeId="points" value="0"/>
               </costs>
+              <associations>
+                <association min="1" max="1" scope="roster" childId="9205-24bc-d583-d3de" name="Battalion" id="adc9-632d-bbd4-ef63" includeChildSelections="true"/>
+              </associations>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -5593,6 +5659,9 @@ WIZARDS cannot be included in this battalion.</characteristic>
               <costs>
                 <cost name="pts" typeId="points" value="0"/>
               </costs>
+              <associations>
+                <association min="1" max="1" scope="roster" childId="7553-d853-b719-2278" name="Battalion" id="936d-7368-e0d2-5b42" includeChildSelections="true"/>
+              </associations>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -5631,6 +5700,9 @@ WIZARDS cannot be included in this battalion.</characteristic>
                 <constraint field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9494-57ad-66d5-8d10" type="max"/>
                 <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="00ab-4d38-d74e-f80e" type="max"/>
               </constraints>
+              <associations>
+                <association min="1" max="1" scope="roster" childId="5fba-34f2-e66f-fbcb" name="Battalion" id="91-ee5d-bb3d-70fa" includeChildSelections="true"/>
+              </associations>
             </selectionEntry>
             <selectionEntry id="f909-5f7e-af15-afc9" name="Wizard-finders of Andtor - 1-2 Infantry" hidden="true" collective="false" import="true" type="upgrade">
               <modifiers>
@@ -5660,6 +5732,9 @@ WIZARDS cannot be included in this battalion.</characteristic>
                 <constraint field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1f0b-c2c1-41e6-31e8" type="min"/>
                 <constraint field="selections" scope="parent" value="2" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2989-4502-9e29-7fcd" type="max"/>
               </constraints>
+              <associations>
+                <association min="1" max="1" scope="roster" childId="5fba-34f2-e66f-fbcb" name="Battalion" id="72a0-84ba-9fd0-9d4d" includeChildSelections="true"/>
+              </associations>
             </selectionEntry>
             <selectionEntry id="c948-caab-fc9d-2462" name="Wizard-finders of Andtor - 1 Champion" hidden="true" collective="false" import="true" type="upgrade">
               <modifiers>
@@ -5689,6 +5764,9 @@ WIZARDS cannot be included in this battalion.</characteristic>
                 <constraint field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d65e-a22e-42ca-9323" type="min"/>
                 <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="00ab-4d38-d74e-f80e" type="max"/>
               </constraints>
+              <associations>
+                <association min="1" max="1" scope="roster" childId="5fba-34f2-e66f-fbcb" name="Battalion" id="f9f9-bf5b-3589-f2a2" includeChildSelections="true"/>
+              </associations>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -5731,6 +5809,9 @@ WIZARDS cannot be included in this battalion.</characteristic>
                 <constraint field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9494-57ad-66d5-8d10" type="max"/>
                 <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="00ab-4d38-d74e-f80e" type="max"/>
               </constraints>
+              <associations>
+                <association min="1" max="1" scope="roster" childId="ec61-8cc7-65fa-bce8" name="Battalion" id="b177-dc13-bc95-b3e4" includeChildSelections="true"/>
+              </associations>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
