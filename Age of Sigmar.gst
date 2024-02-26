@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="175" battleScribeVersion="2.03" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" type="gameSystem">
+<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="176" battleScribeVersion="2.03" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" type="gameSystem">
   <publications>
     <publication id="e51d-b1a3-pubEC" name="The General&apos;s Handbook"/>
     <publication id="e51d-b1a3-pubEQ" name="Core Rules"/>
@@ -5744,6 +5744,7 @@ WIZARDS cannot be included in this battalion.</characteristic>
                       <conditions>
                         <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5fba-34f2-e66f-fbcb" type="greaterThan"/>
                         <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="94b9-7eb-a81a-b892" type="instanceOf"/>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="4f53-8230-2f02-9639" shared="true"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
