@@ -2540,6 +2540,11 @@ When a primal magic dice is rolled as part of a casting roll, on an unmodified c
         <categoryLink id="ab67-3c73-f240-65de" name="New CategoryLink" hidden="false" targetId="1974-3f49-7f0b-8422" primary="true"/>
       </categoryLinks>
     </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Allow Legends" hidden="false" id="f1b8-8df5-9e90-9345">
+      <categoryLinks>
+        <categoryLink targetId="1974-3f49-7f0b-8422" id="64bb-ad34-df29-9516" primary="true" name="Game Options"/>
+      </categoryLinks>
+    </selectionEntry>
   </selectionEntries>
   <entryLinks>
     <entryLink id="1a07-20e9-829c-2f2a" name="Realm of Origin" hidden="false" collective="false" import="true" targetId="268a-c131-4914-7087" type="selectionEntry">
