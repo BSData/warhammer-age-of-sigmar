@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="176" battleScribeVersion="2.03" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" type="gameSystem">
+<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="177" battleScribeVersion="2.03" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" type="gameSystem">
   <publications>
     <publication id="e51d-b1a3-pubEC" name="The General&apos;s Handbook"/>
     <publication id="e51d-b1a3-pubEQ" name="Core Rules"/>
@@ -2538,6 +2538,11 @@ When a primal magic dice is rolled as part of a casting roll, on an unmodified c
       </profiles>
       <categoryLinks>
         <categoryLink id="ab67-3c73-f240-65de" name="New CategoryLink" hidden="false" targetId="1974-3f49-7f0b-8422" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Allow Legends" hidden="false" id="f1b8-8df5-9e90-9345">
+      <categoryLinks>
+        <categoryLink targetId="1974-3f49-7f0b-8422" id="64bb-ad34-df29-9516" primary="true" name="Game Options"/>
       </categoryLinks>
     </selectionEntry>
   </selectionEntries>
@@ -6002,6 +6007,35 @@ Arcane Bolt, Mystic Shield and spells to summon endless spells on your army rost
             <profile id="b221-0e6a-6c15-dce1" name="Shaman of the Chilled Lands" hidden="false" typeId="c749-bae4-71a8-0c36" typeName="Command Trait">
               <characteristics>
                 <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">This general knows all of the spells from the Lore of Primal Frost.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="19dd-4fbc-e5e2-612f" name="Hoarfrost" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+              <characteristics>
+                <characteristic name="Casting Value" typeId="2508-b604-1258-a920">8</characteristic>
+                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">12&quot;</characteristic>
+                <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">Hoarfrost is a spell that has a casting value of 8 and a range of 12&quot;. If successfully cast, pick 1 friendly unit wholly within range and visible to the caster. Pick 1 melee weapon profile on that unit’s warscroll and roll a D3. Change the To Hit, To Wound or Rend characteristic of that melee weapon to match the result until the start of your next hero phase. For example, if the result was 2, you could change either the To Hit characteristic to 2+, the To Wound characteristic to 2+ or the Rend characteristic to -2. While a characteristic has been changed by the effects of this spell, that characteristic cannot be further changed or modified.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="99b7-cbff-4732-df0d" name="Merciless Blizzard" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+              <characteristics>
+                <characteristic name="Casting Value" typeId="2508-b604-1258-a920">12</characteristic>
+                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">12&quot;</characteristic>
+                <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick 1 enemy unit within range and visible to the caster. That unit suffers 4D6 mortal wounds, but for each roll of 1, the caster also suffers D3 mortal wounds that cannot be negated. The range of this spell cannot be modified and must be measured from the caster, even if an ability would allow you to measure it from elsewhere. This spell cannot be cast by a unit that was set up or moved earlier in this phase.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="93f0-438e-ee1c-3509" name="Rupture" hidden="false" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+              <characteristics>
+                <characteristic name="Casting Value" typeId="2508-b604-1258-a920">10</characteristic>
+                <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">18&quot;</characteristic>
+                <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, resolve 1 of the following effects:
+• Pick 1 enemy INCARNATE within range and visible to the caster.
+Inflict D3 mortal wounds on the unit bonded to that INCARNATE.
+Then, that INCARNATE immediately loses a power level (to a
+minimum of 1) and becomes wild.
+• Pick 1 predatory endless spell within range and visible to the
+caster that was summoned by an enemy WIZARD. Inflict D3
+mortal wounds on that enemy WIZARD. Then, that endless spell
+is dispelled.’</characteristic>
               </characteristics>
             </profile>
           </profiles>
