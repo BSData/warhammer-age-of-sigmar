@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" id="388b-16d3-8182-d6c0" name="Order - Daughters of Khaine" revision="147" battleScribeVersion="2.03" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="161" type="catalogue">
+<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" id="388b-16d3-8182-d6c0" name="Order - Daughters of Khaine" revision="148" battleScribeVersion="2.03" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="161" type="catalogue">
   <publications>
     <publication id="388b-16d3-pubN82262" name="Order Battletome: Daughters of Khaine (2022)"/>
     <publication id="bd99-1968-f56c-5ef0" name="Battletome: Daughters of Khaine Errata, June 2022"/>
@@ -74,6 +74,7 @@
     <categoryEntry id="b0b9-6622-856a-c8b7" name="MEDUSAE" hidden="false"/>
     <categoryEntry id="fa86-f7a6-e4a4-c277" name="GRYSELLE&apos;S ARENAI" hidden="false"/>
     <categoryEntry id="e9fb-50e6-d18c-e350" name="HAR KURON" hidden="false"/>
+    <categoryEntry name="KRETHUSA THE CRONESEER" hidden="false" id="6860-13b2-b10d-2ae6"/>
   </categoryEntries>
   <entryLinks>
     <entryLink id="7a3b-e742-323f-b2e8" name="Avatar of Khaine" hidden="false" collective="false" import="true" targetId="4948-910d-f0dd-f32a" type="selectionEntry"/>
@@ -173,6 +174,13 @@
         <entryLink id="661a-8f5d-587e-1dd8" name="Battalions" hidden="false" collective="false" import="true" targetId="02b3-b822-778d-f61c" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
+    <entryLink import="true" name="Krethusa the Croneseer" hidden="false" id="a75-463c-1f04-800f" targetId="b15a-32ff-b4ca-ed7f" type="selectionEntry"/>
+    <entryLink import="true" name="Battle Tactics: Fated Paths" hidden="false" id="2a87-efce-b8e6-ace" targetId="b6ef-e908-40ca-9ed1" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink targetId="1974-3f49-7f0b-8422" id="bff3-9564-f68c-e73d" primary="true" name="Game Options"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="Regiment of Renown - Saviours of Cinderfall" hidden="false" id="84a2-7c79-d401-e4b7" type="selectionEntry" targetId="241e-893b-ab5-be55"/>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="8a66-cfb1-6e7e-9f11" name="General" hidden="false" collective="false" import="true" type="upgrade">
@@ -322,12 +330,24 @@
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="4889-1074-2d0f-f630" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="f2fe-297c-ff91-51e7" name="Daughters of Khaine Core Battalion: Shadow Patrol" publicationId="388b-16d3-pubN82262" page="82" hidden="true" collective="false" import="true" type="upgrade">
       <modifiers>
         <modifier type="set" field="hidden" value="false">
           <conditions>
             <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="259d-0477-c9f8-2947" type="greaterThan"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="4889-1074-2d0f-f630" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -453,6 +473,13 @@
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="4889-1074-2d0f-f630" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="dd61-03bc-d54f-591f" name="Battalion: Slaughter Troupe" publicationId="388b-16d3-pubN82262" page="82" hidden="false" collective="false" import="true" type="upgrade">
       <profiles>
@@ -498,6 +525,13 @@
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="4889-1074-2d0f-f630" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="0b27-8173-22ce-6c56" name="Battalion: Temple Nest" hidden="false" collective="false" import="true" type="upgrade">
       <profiles>
@@ -562,6 +596,13 @@
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="4889-1074-2d0f-f630" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="3d14-26eb-d3cf-b280" name="Battalion: War Coven of Morathi" publicationId="388b-16d3-pubN82262" page="80" hidden="false" collective="false" import="true" type="upgrade">
       <profiles>
@@ -624,6 +665,13 @@
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="4889-1074-2d0f-f630" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="c1d9-d2b4-029b-1cc1" name="Bloodwrack Medusa" publicationId="388b-16d3-pubN82262" page="87" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
@@ -640,6 +688,11 @@
         <modifier type="add" field="category" value="8f5e-e464-221b-4f06">
           <conditions>
             <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9f95-f6dc-e866-90a0" type="greaterThan"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="4889-1074-2d0f-f630" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -945,6 +998,11 @@
             <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set-primary" value="e9f2-765a-b7b8-ce8e" field="category">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="4889-1074-2d0f-f630" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <profiles>
         <profile id="61f6-eef5-17bf-bb32" name="Doomfire Warlocks" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
@@ -1174,6 +1232,11 @@
         <modifier type="add" field="category" value="269c-97ff-19c2-a0e7">
           <conditions>
             <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="4889-1074-2d0f-f630" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -2167,6 +2230,11 @@ If the Shadow Queen is destroyed, after removing that unit from play, this unit 
             <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9f18-9ffb-0267-3e08" type="greaterThan"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="4889-1074-2d0f-f630" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <profiles>
         <profile id="4488-4e69-259e-5900" name="Blood Sisters" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
@@ -2311,6 +2379,11 @@ If the Shadow Queen is destroyed, after removing that unit from play, this unit 
         <modifier type="add" field="category" value="7f45-c5b3-c698-138d">
           <conditions>
             <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9f18-9ffb-0267-3e08" type="greaterThan"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="4889-1074-2d0f-f630" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -2463,6 +2536,11 @@ If the Shadow Queen is destroyed, after removing that unit from play, this unit 
             <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9f18-9ffb-0267-3e08" type="greaterThan"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="4889-1074-2d0f-f630" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <profiles>
         <profile id="cc0f-9a1a-18a3-1a3d" name="Khinerai Heartrenders" hidden="false" typeId="1960-ca8e-67ce-2014" typeName="Unit">
@@ -2571,6 +2649,11 @@ If the Shadow Queen is destroyed, after removing that unit from play, this unit 
         <modifier type="add" field="category" value="7f45-c5b3-c698-138d">
           <conditions>
             <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9f18-9ffb-0267-3e08" type="greaterThan"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="4889-1074-2d0f-f630" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -2719,16 +2802,37 @@ If the Shadow Queen is destroyed, after removing that unit from play, this unit 
 
 5. Unquenchable Fervour: Friendly DAUGHTERS OF KHAINE units have ward of 5+.</characteristic>
                   </characteristics>
+                  <modifiers>
+                    <modifier type="set" value="true" field="hidden">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="4889-1074-2d0f-f630" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
                 </profile>
                 <profile id="a98c-2dfa-ad96-5bd9" name="All-out Slaughter" hidden="false" typeId="f71f-b0a4-730e-ced3" typeName="Command Abilities">
                   <characteristics>
                     <characteristic name="Command Ability Details" typeId="1b71-4c83-4e8c-093f">You can use this command ability when a friendly DAUGHTERS OF KHAINE unit is picked to fight in the combat phase.  The command must be issued by a friendly DAUGHTERS OF KHAINE unit and received by a unit that has been picked to fight.  If the unmodified hit roll for an attack made by that unit in that phase is a 6, that attack scores 2 hits on the target instead of 1.  Make a wound roll and save roll for each hit.</characteristic>
                   </characteristics>
+                  <modifiers>
+                    <modifier type="set" value="true" field="hidden">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="4889-1074-2d0f-f630" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
                 </profile>
                 <profile id="7778-2849-2767-21a0" name="Battle Fury" hidden="false" typeId="6bf0-7801-561f-cc28" typeName="Special Rules">
                   <characteristics>
                     <characteristic name="Description" typeId="82bd-2ffd-8589-576c">This is a heroic action that you can carry out with 1 friendly DAUGHTERS OF KHAINE HERO that is not a MONSTER instead of picking 1 from the table in the core rules.  If you do so, add 2 to the Attacks characteristic of melee weapons used by that HERO until the end of that turn.  This heroic action does not affect the weapons used by that HERO&apos;s mount.</characteristic>
                   </characteristics>
+                  <modifiers>
+                    <modifier type="set" value="true" field="hidden">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="4889-1074-2d0f-f630" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
                 </profile>
               </profiles>
               <selectionEntryGroups>
@@ -2813,11 +2917,62 @@ If the Shadow Queen is destroyed, after removing that unit from play, this unit 
                       </costs>
                     </selectionEntry>
                   </selectionEntries>
+                  <modifiers>
+                    <modifier type="set" value="true" field="hidden">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="4889-1074-2d0f-f630" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
                 </selectionEntryGroup>
               </selectionEntryGroups>
               <costs>
                 <cost name="pts" typeId="points" value="0"/>
               </costs>
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Allegiance: The Croneseer&apos;s Pariahs" hidden="false" id="4889-1074-2d0f-f630">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="7634-ebb5-b990-57fc" includeChildSelections="true"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="22a1-42d4-75e4-6a4a"/>
+                  </constraints>
+                  <profiles>
+                    <profile name="Guided by Morai-Heg" hidden="false" id="1f8c-5542-2f2-7fc9" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
+                      <characteristics>
+                        <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">If the unmodified hit roll for an attack made by a friendly THE CRONESEER&apos;S PARIAHS unit is 6, that attack automatically wounds the target (do not make a wound roll) and the Rend characteristic for that attack is improved by 1.</characteristic>
+                      </characteristics>
+                    </profile>
+                    <profile name="Laden with Prophecy" hidden="false" id="1750-a4a9-41f0-9ed6" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
+                      <characteristics>
+                        <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">A friendly THE CRONESEER&apos;S PARIAHS CAULDRON OF BLOOD can be empty or full. At the start of the battle, it is empty. At the end of a phase in which an enemy model within 3&quot; of a friendly empty CAULDRON OF BLOOD is slain by an attack made by that CAULDRON OF BLOOD, that CAULDRON OF BLOOD becomes full. 
+
+
+A friendly full CAULDRON OF BLOOD has a ward of 4+ against wounds caused by shooting attacks. 
+
+
+Subtract 1 from hit rolls for attacks that target a friendly THE CRONESEER&apos;S PARIAHS unit while it is wholly within range of a friendly full CAULDRON OF BLOOD&apos;s Bloodshield ability.</characteristic>
+                      </characteristics>
+                    </profile>
+                    <profile name="Skilled Skirmishers" hidden="false" id="597d-c028-6bac-3993" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
+                      <characteristics>
+                        <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">Once per turn, in the charge phase, after an enemy unit finishes a charge move within 3&quot; of a friendl THE CRONESEER&apos;S PARIAHS DOOMFIRE WARLOCKS unit, roll a dice. Ona 3+, that friendly unit can immediately retreat 2D6&quot;. Only 1 friendly DOOMFIRE WARLOCKS unit can attempt this ability each turn.</characteristic>
+                      </characteristics>
+                    </profile>
+                    <profile name="Bloody Haruspices" hidden="false" id="f1fe-69c9-9814-f77c" typeId="c137-4d1f-9d1a-524d" typeName="Battle Trait">
+                      <characteristics>
+                        <characteristic name="Battle Trait Details" typeId="9fdd-b4b1-5f7a-0970">At the start of any phase, you can pick 1 friendly full THE CRONESEER&apos;S PARIAHS CAULDRON OF BLOOD within 6&quot; of a friendly KRETHUSA THE CRONESEER. IF you do so, that CAULDRON OF BLOOD becomes empty and that KRETHUSA THE CRONESEER can immediately use the Burnt Offerings ability. If it is the hero phase, that KRETHUSA THE CRONESEER can use the Burnt Offerings twice in that hero phase instead of once.</characteristic>
+                      </characteristics>
+                    </profile>
+                    <profile name="The Blood Reveals All" hidden="false" id="f71b-acd2-918-58fd" typeId="fff7-7178-1bdb-79d1" typeName="Heroic Action">
+                      <characteristics>
+                        <characteristic name="Description" typeId="ff08-d093-0b68-a4d6">Pick 1 friendly THE CRONESEERS PARIAHS HERO within 9&quot; of a friendly empty THE CRONESEER&apos;S PARIAHS CAULDRON OF BLOOD, then pick 1 other unit within 3&quot; of that HERO. That unit suffers D&amp; mortal wounds that cannot be negated, then roll a dice. On a 4+, that CAULDRON OF BLOOD becomes full.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <categoryLinks>
+                    <categoryLink targetId="a763-f425-1441-2df2" id="6ddf-2061-cb0c-4f23" primary="false" name="Army of Renown"/>
+                  </categoryLinks>
+                </selectionEntry>
+              </selectionEntries>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -2836,6 +2991,11 @@ If the Shadow Queen is destroyed, after removing that unit from play, this unit 
         <modifier type="add" field="category" value="269c-97ff-19c2-a0e7">
           <conditions>
             <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da26-db4e-8f50-6d03" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="4889-1074-2d0f-f630" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -3246,6 +3406,11 @@ Kyrae is armed with a Heartseeker Bow and Sacrificial Knives.</characteristic>
             <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="259d-0477-c9f8-2947" type="greaterThan"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="4889-1074-2d0f-f630" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <profiles>
         <profile id="9f7e-a8ec-825a-d1c9" name="Core Battalion: Vyperic Guard" hidden="false" typeId="75e0-a332-e4f5-bf36" typeName="Battalion Organisation">
@@ -3284,6 +3449,11 @@ Kyrae is armed with a Heartseeker Bow and Sacrificial Knives.</characteristic>
         <modifier type="add" field="category" value="89f7-d50b-0aa9-01ce">
           <conditions>
             <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9f18-9ffb-0267-3e08" type="greaterThan"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="4889-1074-2d0f-f630" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -3434,6 +3604,13 @@ Kyrae is armed with a Heartseeker Bow and Sacrificial Knives.</characteristic>
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="4889-1074-2d0f-f630" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="3408-9eed-139b-3048" name="Battalion: Shrine Brood" publicationId="1b21-9526-2c4d-4176" page="97" hidden="false" collective="false" import="true" type="upgrade">
       <profiles>
@@ -3480,6 +3657,13 @@ Kyrae is armed with a Heartseeker Bow and Sacrificial Knives.</characteristic>
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="4889-1074-2d0f-f630" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="d24e-bb16-a931-5bbe" name="Battalion: Tyralla&apos;s Scathcoven" hidden="false" collective="false" import="true" type="upgrade">
       <profiles>
@@ -3533,6 +3717,13 @@ Kyrae is armed with a Heartseeker Bow and Sacrificial Knives.</characteristic>
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="4889-1074-2d0f-f630" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="8169-6a5d-5083-2dae" name="Khainite Shadowstalkers" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
@@ -3769,6 +3960,32 @@ In addition, if the roll was a 6, this invocation is removed from play at the en
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Destined Deeds" hidden="false" id="1c52-7f1-c7a3-86b">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Hasten the Inevitable" hidden="false" id="1f1a-8dde-855f-163a">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ad73-9e56-66c1-6092"/>
+              </constraints>
+              <profiles>
+                <profile name="Hasten the Inevitable" typeId="9c01-ec20-32c1-0948" typeName="Grand Strategy" hidden="false" id="7d97-f2f5-92cf-11f0">
+                  <characteristics>
+                    <characteristic name="Description" hidden="false" id="63ff-4f4f-2857-2434" typeId="53c8-cc18-16d1-e890">When the battle ends, you complete this grand strategy if there are 1 or more friendly units wholly within 6&quot; of the long battlefield edge in enemy territory and more than 6&quot; from your territory.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="4889-1074-2d0f-f630" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="259d-0477-c9f8-2947" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry id="5140-26fb-f265-edcb" name="High Gladiatrix" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
@@ -4123,6 +4340,14 @@ In addition, if the roll was a 6, this invocation is removed from play at the en
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="4889-1074-2d0f-f630" shared="true" includeChildSelections="true" includeChildForces="true"/>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="259d-0477-c9f8-2947" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="d169-6b97-3454-7c40" name="Gryselle&apos;s Arenai" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
@@ -4264,6 +4489,13 @@ In addition, if the roll was a 6, this invocation is removed from play at the en
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="4889-1074-2d0f-f630" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="c533-7579-53ca-b5b6" name="Battalion: Vyperic Guard" publicationId="1b21-9526-2c4d-4176" page="97" hidden="false" collective="false" import="true" type="upgrade">
       <profiles>
@@ -4318,10 +4550,139 @@ In addition, if the roll was a 6, this invocation is removed from play at the en
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="4889-1074-2d0f-f630" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Krethusa the Croneseer" hidden="false" id="b15a-32ff-b4ca-ed7f">
+      <costs>
+        <cost name="pts" typeId="points" value="170"/>
+      </costs>
+      <categoryLinks>
+        <categoryLink targetId="6c6b-e787-f9b8-a510" id="8b6b-bca-28f-73e7" primary="true" name="Leader"/>
+        <categoryLink targetId="088b-3a27-03f7-8249" id="e15d-a8f2-d379-d57" primary="false" name="Unique"/>
+        <categoryLink targetId="b970-b3bf-e1a4-a6fc" id="a06a-ea7f-46e5-c04a" primary="false" name="ORDER"/>
+        <categoryLink targetId="9efd-7c5d-dc14-2302" id="48f1-64a5-22cc-41bd" primary="false" name="DAUGHTERS OF KHAINE"/>
+        <categoryLink targetId="a8ed-ca35-24e0-cf2e" id="29f0-be69-2872-14f1" primary="false" name="9 or less wounds Leader"/>
+        <categoryLink targetId="7fe9-bc03-2c82-0a00" id="5e21-f76b-c20-5c4d" primary="false" name="AELF"/>
+        <categoryLink targetId="4e0e-664d-51ea-0929" id="579d-c999-f698-57f8" primary="false" name="HERO"/>
+        <categoryLink targetId="e8a5-e4c1-3d11-e7dd" id="591c-735a-73b-753f" primary="false" name="PRIEST"/>
+        <categoryLink targetId="6860-13b2-b10d-2ae6" id="83ef-3463-56d-3b94" primary="false" name="KRETHUSA THE CRONESEER"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink import="true" name="General" hidden="false" id="b9b5-6039-2803-3d75" collective="false" targetId="8a66-cfb1-6e7e-9f11" type="selectionEntry">
+          <categoryLinks>
+            <categoryLink name="Unique General" hidden="false" id="58cd-d6a-b765-5134" targetId="fe3f-d230-7e2c-fba2" primary="false"/>
+          </categoryLinks>
+        </entryLink>
+        <entryLink import="true" name="Bless" hidden="false" id="e83-4927-fcf7-e6e9" collective="false" targetId="c064-0ddb-52cf-5fb9" type="selectionEntry"/>
+        <entryLink import="true" name="Smite" hidden="false" id="cda4-bdc7-aa8c-d79f" collective="false" targetId="be59-6ab9-bf9f-9434" type="selectionEntry"/>
+        <entryLink import="true" name="Battalions" hidden="false" id="70f8-3268-12c-6d2f" collective="false" targetId="02b3-b822-778d-f61c" type="selectionEntryGroup"/>
+        <entryLink import="true" name="Prayers" hidden="false" id="84db-1e96-9062-779b" collective="false" targetId="bf74-1ddd-a2f9-974a" type="selectionEntryGroup"/>
+      </entryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="dc8f-18cd-80d8-3779" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+      </constraints>
+      <profiles>
+        <profile name="Burnt Offerings" hidden="false" id="d133-98a9-54b8-29e2" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Once per turn, in the hero phase, if this unit is wholly within 6&quot; of a friendly CAULDRON Of BLOOD,
+you can say that it will commune with Morai-Heg.
+
+
+If you do so, pick 1 friendly DAUGHTERS OF KHAINE unit wholly within 9&quot; of this unit that does not have the SCÁTHBORN, MEDUSAE, MELUSAI, THE SHADOW QUEEN or MORATHI‑KHAINE keyword and roll a dice. On a 2+, you can pick 1 of the following prophecies to apply to that unit. A unit cannot be affected by the same prophecy more than once per turn.
+
+
+Prophecy of Silence: Until the end of the turn, enemy units within 3&quot; of this unit cannot receive commands.
+
+
+Prophecy of Dark Wings: This unit can immediately make a normal move if it has not already made a normal move, retreated or been set up on the battlefield in this phase.
+
+
+Prophecy of Reclamation: Until the end of the turn, while this unit is contesting an objective, enemy units can only contest that objective if they have the HERO or MONSTER keyword.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Foresight of Morai-Heg" hidden="false" id="244e-bb41-2e31-31dc" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This unit has a ward of 4+.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Krethusa the Croneseer" hidden="false" id="45d6-4525-1e98-b824" typeId="1960-ca8e-67ce-2014" typeName="Unit">
+          <characteristics>
+            <characteristic name="Move" typeId="8655-6213-2824-1752">12&quot;</characteristic>
+            <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">3</characteristic>
+            <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">9</characteristic>
+            <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">5+</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="New Profile" hidden="false" id="88e2-768e-efc9-57a6" typeId="eed7-4131-0a52-0668" typeName="Prayer">
+          <characteristics>
+            <characteristic name="Answer Value" typeId="276a-ab7e-145d-3ffc">4</characteristic>
+            <characteristic name="Range" typeId="fd81-4e98-28ac-092a">18&quot;</characteristic>
+            <characteristic name="Description" typeId="0746-6cfb-5e15-53cb">If answered, pick 1 enemy unit within range and visible to the chanter. That unit suffers D3 mortal wounds. Then, roll a dice. If the roll is equal to or higher than the Wounds characteristic of that enemy unit, subtract 1 from hit rolls for attacks made by that unit for the rest of the battle.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Staff of Morai-Heg" hidden="false" id="4a43-60f2-9945-dc54" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+            <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">2&quot;</characteristic>
+            <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">4</characteristic>
+            <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+            <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">4+</characteristic>
+            <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
+            <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">2</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Clawed Arm" typeId="96df-ab28-5d72-bbb3" typeName="Weapon" hidden="false" id="6507-4a2b-8dd7-768a">
+          <characteristics>
+            <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+            <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
+            <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">2</characteristic>
+            <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+            <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">4+</characteristic>
+            <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
+            <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Fly" hidden="false" id="63b6-f2bc-6267-93be" targetId="8e0c-cbe4-27be-8a30" type="profile"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Battle Tactics: Fated Paths" hidden="false" id="b6ef-e908-40ca-9ed1">
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="4889-1074-2d0f-f630" shared="true" includeChildSelections="true" includeChildForces="true"/>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="259d-0477-c9f8-2947" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <profiles>
+        <profile name="Murder the Unbeliever" hidden="false" id="aa56-584a-149e-942a" typeId="eba0-4bf6-65fe-fdbc" typeName="Battle Tactic">
+          <characteristics>
+            <characteristic name="Description" typeId="f882-48d5-21a4-1787">Pick 1 enemy unit within 3&quot; of a friendly THE CRONESEER&apos;S PARIAHS CAULDRON OF BLOOD. You complete this tactic at the end of this turn if that enemy unit has been destroyed.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Purge the Flock" typeId="eba0-4bf6-65fe-fdbc" typeName="Battle Tactic" hidden="false" id="1c17-e01d-c9ef-3fbd">
+          <characteristics>
+            <characteristic name="Description" typeId="f882-48d5-21a4-1787">Pick 1 objective controlled by your opponent. You complete this tactic if you control that objective at the end of this turn and there are no enemy models contesting it.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Proclamations of Morai-Heg" typeId="eba0-4bf6-65fe-fdbc" typeName="Battle Tactic" hidden="false" id="fad2-e9ed-7c10-5e87">
+          <characteristics>
+            <characteristic name="Description" typeId="f882-48d5-21a4-1787">You complete this tactic at the end of this turn if you used more command abilities than your opponent this turn.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
-    <selectionEntryGroup id="efcd-89d0-5707-f14a" name="Daughters of Khaine Command Traits" publicationId="388b-16d3-pubN82262" page="67" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="efcd-89d0-5707-f14a" name="Paragons of Murder" publicationId="388b-16d3-pubN82262" page="67" hidden="false" collective="false" import="true">
       <constraints>
         <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9bbe-116b-1245-f227" type="max"/>
       </constraints>
@@ -4432,6 +4793,13 @@ In addition, if the roll was a 6, this invocation is removed from play at the en
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="4889-1074-2d0f-f630" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntryGroup>
     <selectionEntryGroup id="0d48-c9e0-e8c1-6d3d" name="Lore of Shadows" publicationId="388b-16d3-pubN82262" page="66" hidden="false" collective="false" import="true">
       <constraints>
@@ -4505,6 +4873,13 @@ In addition, if the roll was a 6, this invocation is removed from play at the en
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="4889-1074-2d0f-f630" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntryGroup>
     <selectionEntryGroup id="51b2-9944-dcd9-447f" name="Prayers of the Khainite Cult" publicationId="388b-16d3-pubN82262" page="71" hidden="false" collective="false" import="true">
       <selectionEntries>
@@ -4611,6 +4986,13 @@ In addition, if the roll was a 6, this invocation is removed from play at the en
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="4889-1074-2d0f-f630" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntryGroup>
     <selectionEntryGroup id="f9fb-eb62-86d7-1a2b" name="Artefacts" hidden="false" collective="false" import="true">
       <modifiers>
@@ -4655,12 +5037,50 @@ In addition, if the roll was a 6, this invocation is removed from play at the en
         <entryLink id="565c-f60a-3960-5131" name="Universal Artefacts of Power" hidden="false" collective="false" import="true" targetId="11c4-fd82-92a7-de8a" type="selectionEntryGroup"/>
         <entryLink id="f836-b73a-b287-16ee" name="Relics of Gallet" hidden="false" collective="false" import="true" targetId="d27f-9ad5-990c-2915" type="selectionEntryGroup"/>
       </entryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Tools of Prophecy" hidden="false" id="165b-7c0b-e58c-bedc">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Rune of the Weave" hidden="false" id="bfa-a80e-883f-b156">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2d9b-4558-c343-3215" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <profiles>
+                <profile name="Rune of the Weave" hidden="false" id="80e-737c-f1ef-d590" typeId="0ac4-aacb-2481-8e72" typeName="Artefact">
+                  <characteristics>
+                    <characteristic name="Artefact Details" typeId="0918-c47a-d84e-c0cf">Once per battle, before carrying out The Blood Reveals All heroic action, the bearer can say that they will consult the Rune of the Weave. If they do so, when they carry out that heroic action, add 1 to the roll that determines whether the CAULDRON OF BLOOD becomes ful.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="169e-e625-8f65-4a79" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="4889-1074-2d0f-f630" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="roster" childId="259d-0477-c9f8-2947" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntryGroup>
     <selectionEntryGroup id="d6da-71f8-066d-8d67" name="Artefacts of Shadow" publicationId="388b-16d3-pubN82262" page="69" hidden="false" collective="false" import="true">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditions>
             <condition field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4f53-8230-2f02-9639" type="notInstanceOf"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="4889-1074-2d0f-f630" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -4802,12 +5222,24 @@ In addition, if the roll was a 6, this invocation is removed from play at the en
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="4889-1074-2d0f-f630" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntryGroup>
     <selectionEntryGroup id="2f0d-2282-dd83-288d" name="Relics of Khaine" publicationId="388b-16d3-pubN82262" page="69" hidden="false" collective="false" import="true">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditions>
             <condition field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e8a5-e4c1-3d11-e7dd" type="notInstanceOf"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="4889-1074-2d0f-f630" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -4869,7 +5301,7 @@ In addition, if the roll was a 6, this invocation is removed from play at the en
         <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ca9e-cd42-7e29-20d1" type="max"/>
       </constraints>
       <entryLinks>
-        <entryLink id="4c39-059c-9fd8-e430" name="Daughters of Khaine Command Traits" hidden="false" collective="false" import="true" targetId="efcd-89d0-5707-f14a" type="selectionEntryGroup">
+        <entryLink id="4c39-059c-9fd8-e430" name="Paragons of Murder" hidden="false" collective="false" import="true" targetId="efcd-89d0-5707-f14a" type="selectionEntryGroup">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
@@ -4881,6 +5313,39 @@ In addition, if the roll was a 6, this invocation is removed from play at the en
         <entryLink id="de33-ffe3-43d6-cebe" name="Universal Command Traits" hidden="false" collective="false" import="true" targetId="b6b8-914a-dfca-18ee" type="selectionEntryGroup"/>
         <entryLink import="true" name="Universal Command Traits" hidden="false" type="selectionEntryGroup" id="9c61-da28-8cad-5391" targetId="e372-6ace-3568-54e7"/>
       </entryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Blessings of the Crone" hidden="false" id="530f-82e5-d80e-e916">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Proselyte of Morai-Heg" hidden="false" id="7542-6f4d-8537-e372">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="775e-24ae-a0b6-57af" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <profiles>
+                <profile name="Proselyte of Morai-Heg" typeId="c749-bae4-71a8-0c36" typeName="Command Trait" hidden="false" id="df54-f7e4-8800-84d5">
+                  <characteristics>
+                    <characteristic name="Command Trait Details" typeId="ee96-6f3a-e5ca-2350">Roll a dice each time an enemy unit within 12&quot; of this general receives a command. On a 5+, your opponent must spend an additional command point to receive that command. If they choose not to spend the additional command point, that command is not received (the command ability still counts as having been used) and the command point that was spent to issue the command is lost.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d956-4682-72bc-efa0" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="4889-1074-2d0f-f630" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="roster" childId="259d-0477-c9f8-2947" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntryGroup>
     <selectionEntryGroup id="02b3-b822-778d-f61c" name="Battalions" hidden="false" collective="false" import="true">
       <constraints>
@@ -4935,6 +5400,61 @@ In addition, if the roll was a 6, this invocation is removed from play at the en
           </constraints>
         </entryLink>
       </entryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Prayers of Morai-Heg" hidden="false" id="f28f-ba3f-dd4f-a205">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Auspicious Strike" hidden="false" id="ca85-318c-d3e-373d">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a91c-be4b-ce8a-b1e7"/>
+              </constraints>
+              <profiles>
+                <profile name="Auspicious Strike" hidden="false" id="93d2-a0b7-1321-a0d1" typeId="eed7-4131-0a52-0668" typeName="Prayer">
+                  <characteristics>
+                    <characteristic name="Answer Value" typeId="276a-ab7e-145d-3ffc">4</characteristic>
+                    <characteristic name="Range" typeId="fd81-4e98-28ac-092a">14&quot;</characteristic>
+                    <characteristic name="Description" typeId="0746-6cfb-5e15-53cb">If answered, pick 1 friendly THE CRONESEER&apos;S PARIAH unit wholly within range and visible to the chanter. Until your next hero phase, if the unmodified hit roll for an attack made with a melee weapon is 1, the attacking unit suffers a number of mortal wounds equal to the Damage characteristic of that weapon after all of its attaaks have been resolved.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Augury of Battle" hidden="false" id="c0ba-a22b-40c3-7c12">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c127-86fb-3476-59e5"/>
+              </constraints>
+              <profiles>
+                <profile name="Augury of Battle" typeId="eed7-4131-0a52-0668" typeName="Prayer" hidden="false" id="f636-e14b-44b4-4573">
+                  <characteristics>
+                    <characteristic name="Answer Value" hidden="false" id="3e79-5e0-5917-341" typeId="276a-ab7e-145d-3ffc">4</characteristic>
+                    <characteristic name="Range" hidden="false" id="bf87-d553-bb46-3e2d" typeId="fd81-4e98-28ac-092a">14&quot;</characteristic>
+                    <characteristic name="Description" hidden="false" id="4a41-f1f2-e991-788a" typeId="0746-6cfb-5e15-53cb">If answered, pick 1 friendly THE CRONESEER&apos;S PARIAH unit wholly within range and visible to the chanter. Until the start of your next hero phase, that unit has a ward of 5+.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Wings of the Crone Goddess" hidden="false" id="63fc-1c9f-83-f453">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="efd5-b48-404e-6470"/>
+              </constraints>
+              <profiles>
+                <profile name="Wings of the Crone Goddess" typeId="eed7-4131-0a52-0668" typeName="Prayer" hidden="false" id="8c32-5728-f4a1-a0fe">
+                  <characteristics>
+                    <characteristic name="Answer Value" typeId="276a-ab7e-145d-3ffc">3</characteristic>
+                    <characteristic name="Range" typeId="fd81-4e98-28ac-092a">14&quot;</characteristic>
+                    <characteristic name="Description" typeId="0746-6cfb-5e15-53cb">If answered, pick 1 friendly THE CRONESEER&apos;S PARIAH unit wholly within range and visible to the chanter. That unit can make a normal move and can fly until the end of the phase.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="4889-1074-2d0f-f630" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntryGroup>
     <selectionEntryGroup id="3170-28ba-a091-950d" name="Spell Lores" hidden="false" collective="false" import="true">
       <modifiers>
@@ -4970,6 +5490,11 @@ In addition, if the roll was a 6, this invocation is removed from play at the en
         <modifier type="set" field="hidden" value="false">
           <conditions>
             <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="52ca-8ea4-39e2-4dd0" type="greaterThan"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="4889-1074-2d0f-f630" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -5243,6 +5768,7 @@ In addition, if the roll was a 6, this invocation is removed from play at the en
         <modifier type="set" field="hidden" value="false">
           <conditions>
             <condition field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="259d-0477-c9f8-2947" type="greaterThan"/>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="4889-1074-2d0f-f630" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
       </modifiers>
