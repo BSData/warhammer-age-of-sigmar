@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" id="522a-d5b0-4c7e-321d" name="Order - Cities of Sigmar" revision="147" battleScribeVersion="2.03" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="159" type="catalogue">
+<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" id="522a-d5b0-4c7e-321d" name="Order - Cities of Sigmar" revision="148" battleScribeVersion="2.03" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="159" type="catalogue">
   <publications>
     <publication id="deec-d475-pubN65537" name="Grand Alliance: Order"/>
     <publication id="e440-9199-1072-a7a0" name="Cities of Sigmar Battletome"/>
@@ -168,6 +168,9 @@
     <categoryEntry name="IRONWELD GREAT CANNON" hidden="false" id="9204-91af-ee37-f13f"/>
     <categoryEntry name="WILDERCORPS HUNTERS" hidden="false" id="2ac6-b00d-b59b-caf5"/>
     <categoryEntry name="FREEGUILD STEELHELMS" hidden="false" id="86c2-4b07-97ee-a111"/>
+    <categoryEntry name="CALLIS AND TOLL" hidden="false" id="6987-ce7-25f9-7dc7"/>
+    <categoryEntry name="SAVIOURS OF CINDERFALL" hidden="false" id="1997-6015-a80e-ef45"/>
+    <categoryEntry name="TOLL&apos;S COMPANIONS" hidden="false" id="b357-5d48-7689-9611"/>
   </categoryEntries>
   <entryLinks>
     <entryLink id="9a80-45f2-d7a6-f86c" name="Allegiance" hidden="false" collective="false" import="true" targetId="87f8-d0f2-e2c7-0668" type="selectionEntry">
@@ -284,6 +287,8 @@
     <entryLink import="true" name="Regiment of Renown - The Blacktalons" hidden="false" type="selectionEntry" id="d057-b7b7-3246-850c" targetId="41f8-64ce-7c63-f963"/>
     <entryLink import="true" name="Gotrek Gurnisson" hidden="false" type="selectionEntry" id="f339-e9d5-48ee-47c7" targetId="24c2-fff5-f17c-3d07"/>
     <entryLink import="true" name="Krondspine Incarnate of Ghur" hidden="false" type="selectionEntry" id="36c9-f87e-ce61-b646" targetId="0553-10ac-2bd9-01a5"/>
+    <entryLink import="true" name="Callis and Toll" hidden="false" id="bb72-fcc9-f4c2-ed41" targetId="ec1-6bb6-2542-35e8" type="selectionEntry"/>
+    <entryLink import="true" name="Toll&apos;s Companions" hidden="false" id="eddf-35a8-781b-c4fe" targetId="9ac8-8f19-c7cd-d56e" type="selectionEntry"/>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="d618-803c-36f8-0a3a" name="General" hidden="false" collective="false" import="true" type="upgrade">
@@ -11995,6 +12000,234 @@ Power the Guns: Add 1 to the Attacks characteristic of this unit’s Steam Canno
         <categoryLink targetId="8cbc-4611-1e6a-e77e" id="87f2-37bf-84cd-d713" primary="false" name="CASTELITE"/>
         <categoryLink targetId="86c2-4b07-97ee-a111" id="56d3-f18c-26fe-2bae" primary="false" name="FREEGUILD STEELHELMS"/>
       </categoryLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Callis and Toll" hidden="false" id="ec1-6bb6-2542-35e8">
+      <costs>
+        <cost name="pts" typeId="points" value="350"/>
+      </costs>
+      <entryLinks>
+        <entryLink import="true" name="General" hidden="false" id="fbcb-d4cc-c312-96b8" collective="false" targetId="d618-803c-36f8-0a3a" type="selectionEntry">
+          <categoryLinks>
+            <categoryLink name="Unique General" hidden="false" id="802-e167-f743-9a05" targetId="fe3f-d230-7e2c-fba2" primary="false"/>
+            <categoryLink name="6_under_wounds" hidden="false" id="651c-6bbc-c31d-fa65" targetId="e4e2-6076-dafa-ec2c" primary="false"/>
+          </categoryLinks>
+        </entryLink>
+        <entryLink import="true" name="Battalions" hidden="false" id="4ef7-dcd8-c075-5211" collective="false" targetId="0389-96f8-e8bd-4d7f" type="selectionEntryGroup"/>
+      </entryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="96f7-e308-b075-17df" includeChildSelections="true"/>
+        <constraint type="min" value="0" field="selections" scope="roster" shared="true" id="2056-215f-1eb5-586b" includeChildSelections="true" includeChildForces="true"/>
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="1" field="2056-215f-1eb5-586b">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="9ac8-8f19-c7cd-d56e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="General" hidden="true" id="7f7e-7bdc-44ad-1b4c">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="fbcb-d4cc-c312-96b8" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="General Callis" hidden="false" id="5352-9884-e1a9-3c08">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1472-3e77-9215-ce7e"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="General Toll" hidden="false" id="c270-e8d9-485d-3063">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="52a1-e308-84d8-4a09"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d212-4fba-1fba-e4f2"/>
+          </constraints>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink targetId="6c6b-e787-f9b8-a510" id="c679-aeb7-3e56-f9bc" primary="true" name="Leader"/>
+        <categoryLink targetId="4e0e-664d-51ea-0929" id="f37d-915-378f-cb49" primary="false" name="HERO"/>
+        <categoryLink targetId="b970-b3bf-e1a4-a6fc" id="f05d-8ebb-7ec9-7a0b" primary="false" name="ORDER"/>
+        <categoryLink targetId="5f5a-43ec-c3f8-f174" id="32b5-22fd-bfe9-f54a" primary="false" name="CITIES OF SIGMAR"/>
+        <categoryLink targetId="c676-36af-4faf-64db" id="b83a-cf24-bf53-765e" primary="false" name="HUMAN"/>
+        <categoryLink targetId="2308-7db2-829e-94b3" id="8804-ffe0-b495-b0da" primary="false" name="HUMAN"/>
+        <categoryLink targetId="c189-dd5e-caf7-3564" id="330e-9166-100e-e0c8" primary="false" name="ORDER OF AZYR"/>
+        <categoryLink targetId="79c4-ea6a-5383-cc32" id="2c8e-2dec-af22-c015" primary="false" name="HAMMERHAL AQSHA"/>
+        <categoryLink targetId="1997-6015-a80e-ef45" id="b979-2a17-1877-26d" primary="false" name="SAVIORS OF CINDERFALL"/>
+        <categoryLink targetId="6987-ce7-25f9-7dc7" id="3eb2-41e2-854d-71da" primary="false" name="CALLIS AND TOLL"/>
+      </categoryLinks>
+      <profiles>
+        <profile name="Aqshian Firewood Stakes" hidden="false" id="b21a-1238-8808-bf3" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">After this unit has fought for the first time in the combat phase, you can say that Hanniver Toll will attempt to plunge an Aqshian firewood stake into the heart of a foe. If you do so, pick 1 enemy model within 1&quot; of Hanniver Toll and roll 2D6. If the roll is greater than the Wounds characteristic of that enemy model’s unit, that model is slain.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Grim Resolve" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities" hidden="false" id="bd0e-a0a4-7da9-937c">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This unit has a ward of 5+.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Get It Done" hidden="false" id="c135-a7b4-db54-738d" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If this unit makes a charge move, you can re-roll charge rolls for friendly Toll’s Companions units within 12&quot; of this unit until the end of the phase.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Right Tool for the Job" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities" hidden="false" id="159b-6a9c-7d58-244c">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Double the Damage characteristic of an attack made with this unit’s weapons if the target of that attack is a WIZARD or DAEMON</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Flintlock Pistols" hidden="false" id="fbf0-c20b-759f-4694" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Type" typeId="655c-362e-a663-3e50">Missile</characteristic>
+            <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">12&quot;</characteristic>
+            <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">3</characteristic>
+            <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+            <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+            <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
+            <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Azyrite Blades" typeId="96df-ab28-5d72-bbb3" typeName="Weapon" hidden="false" id="4163-1b14-f25-38c7">
+          <characteristics>
+            <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+            <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
+            <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">4</characteristic>
+            <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+            <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+            <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
+            <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">2</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Toll&apos;s Companions" hidden="false" id="9ac8-8f19-c7cd-d56e">
+      <categoryLinks>
+        <categoryLink targetId="065e-fda7-fd27-1f40" id="e8e1-7837-527e-7a40" primary="true" name="Other"/>
+        <categoryLink targetId="b970-b3bf-e1a4-a6fc" id="d2f5-4b86-f2b1-7afb" primary="false" name="ORDER"/>
+        <categoryLink targetId="5f5a-43ec-c3f8-f174" id="3c19-5a5f-b343-ab7d" primary="false" name="CITIES OF SIGMAR"/>
+        <categoryLink targetId="2308-7db2-829e-94b3" id="fd87-c582-f84e-ea23" primary="false" name="HUMAN"/>
+        <categoryLink targetId="c676-36af-4faf-64db" id="3bcb-9b62-ea85-3916" primary="false" name="HUMAN"/>
+        <categoryLink targetId="c189-dd5e-caf7-3564" id="3cac-9a14-962f-5f31" primary="false" name="ORDER OF AZYR"/>
+        <categoryLink targetId="79c4-ea6a-5383-cc32" id="adfa-fb37-ec9c-a3bb" primary="false" name="HAMMERHAL AQSHA"/>
+        <categoryLink targetId="4e0e-664d-51ea-0929" id="7c0b-e133-890f-6394" primary="false" name="HERO"/>
+        <categoryLink targetId="1997-6015-a80e-ef45" id="a2c6-fc47-ea91-3046" primary="false" name="SAVIORS OF CINDERFALL"/>
+        <categoryLink targetId="b357-5d48-7689-9611" id="4626-b739-cf3e-9aad" primary="false" name="TOLL&apos;S COMPANIONS"/>
+      </categoryLinks>
+      <modifiers>
+        <modifier type="set" value="1" field="718e-537c-26a1-19ce">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="ec1-6bb6-2542-35e8" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint type="min" value="0" field="selections" scope="roster" shared="true" id="718e-537c-26a1-19ce" includeChildSelections="true" includeChildForces="true"/>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="cff9-4db9-3680-e20f" includeChildSelections="true"/>
+      </constraints>
+      <profiles>
+        <profile name="They Will Break Upon My Shield" hidden="false" id="b88e-900b-1d73-b8f2" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">While this unit includes Valius, the Keeper Aqshian, ignore negative modifiers to save rolls for attacks that target this unit.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Secrets from the Shadows" hidden="false" id="f32c-8b5c-554-1c1a" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">While this unit includes Mistress Verentia, each time an enemy unit within 12&quot; of this unit receives a command, roll a dice. On a 5+, you receive 1 command point.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Silent as Death" hidden="false" id="f80e-19aa-92d2-8b6a" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">During deployment, instead of setting up this unit and a friendly CALLIS AND TOLL unit on the battlefield, you can place those units to one side and say that they are keeping to the shadows as reserve units. At the end of your movement phase, you can set up this unit wholly within 3&quot; of any terrain features or faction terrain features and more than 9&quot; from all enemy units. Then, set up the friendly CALLIS AND TOLL unit within 3&quot; of this unit and more than 9&quot; from all enemy units. Both units can be set up in the same garrison.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Companion" hidden="false" id="adf-5ff3-f497-b84a" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">This unit is accompanied by a Gryph-hound armed with a Vicious Beak and Claws.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Valius, the Keeper Aqshian" hidden="false" id="2c2f-a3c0-233b-9197" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">Valius, the Keeper Aqshian, has a Wounds characteristic of 5.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Toll&apos;s Companions" hidden="false" id="75b6-cc2c-46f6-fcda" typeId="1960-ca8e-67ce-2014" typeName="Unit">
+          <characteristics>
+            <characteristic name="Move" typeId="8655-6213-2824-1752">5&quot;</characteristic>
+            <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">3</characteristic>
+            <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">8</characteristic>
+            <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">4+</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Cane Gun" hidden="false" id="338f-f694-e6e9-58fe" typeId="96df-ab28-5d72-bbb3" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Type" typeId="655c-362e-a663-3e50">Missile</characteristic>
+            <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">12&quot;</characteristic>
+            <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">2</characteristic>
+            <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
+            <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+            <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
+            <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Castellant&apos;s Sword" typeId="96df-ab28-5d72-bbb3" typeName="Weapon" hidden="false" id="39d3-9bdd-2adf-eff1">
+          <characteristics>
+            <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+            <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
+            <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">6</characteristic>
+            <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+            <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+            <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
+            <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Decking Rope and Grapnel" typeId="96df-ab28-5d72-bbb3" typeName="Weapon" hidden="false" id="ce26-1044-b41c-4961">
+          <characteristics>
+            <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+            <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">2&quot;</characteristic>
+            <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">4</characteristic>
+            <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">4+</characteristic>
+            <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">2+</characteristic>
+            <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-2</characteristic>
+            <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">3</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Perfectly Balanced Sabre" typeId="96df-ab28-5d72-bbb3" typeName="Weapon" hidden="false" id="d9-4805-7d6c-5f90">
+          <characteristics>
+            <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+            <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
+            <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">4</characteristic>
+            <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+            <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">3+</characteristic>
+            <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-1</characteristic>
+            <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Vicious Beak and Claws" typeId="96df-ab28-5d72-bbb3" typeName="Weapon" hidden="false" id="e3a2-f54f-e9f0-84b2">
+          <characteristics>
+            <characteristic name="Type" typeId="655c-362e-a663-3e50">Melee</characteristic>
+            <characteristic name="Range" typeId="ee32-7f8e-ccd7-b7b0">1&quot;</characteristic>
+            <characteristic name="Attacks" typeId="0bd7-bded-a0e0-19a0">4</characteristic>
+            <characteristic name="To Hit" typeId="87f2-fb99-33f9-7269">3+</characteristic>
+            <characteristic name="To Wound" typeId="8842-17f1-9794-4efc">4+</characteristic>
+            <characteristic name="Rend" typeId="f578-d2a5-f0d3-b707">-</characteristic>
+            <characteristic name="Damage" typeId="b5b6-4cbd-661d-1b70">1</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Elite" hidden="false" id="55fa-8c50-1ffa-3083" type="profile" targetId="46ca-dc4f-b7a1-726d"/>
+      </infoLinks>
+      <entryLinks>
+        <entryLink import="true" name="Battalions" hidden="false" id="d504-8da3-57e4-e672" collective="false" targetId="0389-96f8-e8bd-4d7f" type="selectionEntryGroup"/>
+      </entryLinks>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
