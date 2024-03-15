@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" id="f904-b52f-810a-e446" name="Destruction - Sons of Behemat - Data" revision="77" battleScribeVersion="2.03" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="161" type="catalogue">
+<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" id="f904-b52f-810a-e446" name="Destruction - Sons of Behemat - Data" revision="78" battleScribeVersion="2.03" library="true" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="161" type="catalogue">
   <publications>
     <publication id="2cc2-ea66-5ff1-2f18" name="Battletome - Sons of Behemat 2022"/>
     <publication id="ceab-cbc0-42f5-446b" name="Battletome: Sons of Behemat Errata November 2022"/>
@@ -2396,7 +2396,15 @@ Pummel All to Dust: Improve the Rend characteristic of the following melee weapo
         <entryLink id="d0b3-763f-99f1-2e8b" name="Incarnate Bonding" hidden="false" collective="false" import="true" targetId="c890-acbd-0c80-55c9" type="selectionEntryGroup"/>
         <entryLink id="622a-490f-437b-b749" name="Smite" hidden="false" collective="false" import="true" targetId="be59-6ab9-bf9f-9434" type="selectionEntry"/>
         <entryLink id="6906-3f98-4eb7-e1a3" name="Bless" hidden="false" collective="false" import="true" targetId="c064-0ddb-52cf-5fb9" type="selectionEntry"/>
-        <entryLink id="9902-f6e-5de0-7feb" name="Command Traits" hidden="false" collective="false" import="true" targetId="5525-cf6d-4cef-352f" type="selectionEntryGroup"/>
+        <entryLink id="9902-f6e-5de0-7feb" name="Command Traits" hidden="false" collective="false" import="true" targetId="5525-cf6d-4cef-352f" type="selectionEntryGroup">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="parent" childId="bb6c-9d08-b9b3-4bf2" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="520"/>
@@ -3006,28 +3014,13 @@ Pummel All to Dust: Improve the Rend characteristic of the following melee weapo
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
-    <selectionEntryGroup id="5525-cf6d-4cef-352f" name="Command Traits" hidden="true" collective="false" import="true">
-      <modifiers>
-        <modifier type="set" field="hidden" value="false">
-          <conditions>
-            <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bb6c-9d08-b9b3-4bf2" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
+    <selectionEntryGroup id="5525-cf6d-4cef-352f" name="Command Traits" hidden="false" collective="false" import="true">
       <entryLinks>
         <entryLink id="96a6-bc73-0419-5250" name="Universal Command Traits" hidden="true" collective="false" import="true" targetId="b6b8-914a-dfca-18ee" type="selectionEntryGroup"/>
         <entryLink id="c747-e120-90f3-8499" name="Command Traits: Taker Tribe" hidden="false" collective="false" import="true" targetId="d6ee-2248-5eee-a14b" type="selectionEntryGroup"/>
         <entryLink id="6f85-64be-bfff-df84" name="Traits: Unstoppable Besiegers" hidden="false" collective="false" import="true" targetId="ae2e-e1c7-2a1b-f4a7" type="selectionEntryGroup"/>
         <entryLink id="5818-80f3-c29f-ac78" name="Traits: Veterans of One-Sided Battle" hidden="false" collective="false" import="true" targetId="6eb6-fd8c-24dc-60cb" type="selectionEntryGroup"/>
-        <entryLink id="1f65-ba1a-925b-9029" name="Command Traits: Big Personalities" hidden="false" collective="false" import="true" targetId="921b-e4ea-f147-fe0f" type="selectionEntryGroup">
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="parent" childId="bb6c-9d08-b9b3-4bf2" shared="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </entryLink>
+        <entryLink id="1f65-ba1a-925b-9029" name="Command Traits: Big Personalities" hidden="false" collective="false" import="true" targetId="921b-e4ea-f147-fe0f" type="selectionEntryGroup"/>
         <entryLink id="6c4a-0be2-eaea-82d3" name="Command Traits: Smasher Tribe" hidden="false" collective="false" import="true" targetId="db68-5efe-5c07-683e" type="selectionEntryGroup"/>
         <entryLink import="true" name="Universal Command Traits" hidden="false" type="selectionEntryGroup" id="3d77-d2a0-7034-1c93" targetId="e372-6ace-3568-54e7">
           <modifiers>
