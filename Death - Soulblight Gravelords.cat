@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" id="0364-070f-023f-64d9" name="Death - Soulblight Gravelords" revision="36" battleScribeVersion="2.03" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="161" type="catalogue">
+<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" id="0364-070f-023f-64d9" name="Death - Soulblight Gravelords" revision="37" battleScribeVersion="2.03" library="false" gameSystemId="e51d-b1a3-75fc-dc33" gameSystemRevision="161" type="catalogue">
   <categoryEntries>
     <categoryEntry id="d72b-b718-4010-345d" name="DEINTALOS THE EXILE" hidden="false"/>
     <categoryEntry id="68d2-327f-6699-51f3" name="THE EXILED DEAD" hidden="false"/>
@@ -8,6 +8,8 @@
     <categoryEntry id="9e10-8150-9ef1-0c1b" name="ASKURGAN TRUEBLOODS" hidden="false"/>
     <categoryEntry id="a075-de42-a347-4f64" name="IVYA VOLGA" hidden="false"/>
     <categoryEntry name="SEKHAR" hidden="false" id="50c4-1b1e-bdf8-cf0f"/>
+    <categoryEntry name="ZONDARA RIVENHEART" hidden="false" id="471c-be46-b805-73cf"/>
+    <categoryEntry name="ZONDARA&apos;S GRAVEBREAKERS" hidden="false" id="7401-771-8ab5-93f5"/>
   </categoryEntries>
   <entryLinks>
     <entryLink id="1b98-1990-d907-a577" name="Belladamma Volga" hidden="false" collective="false" import="true" targetId="fde2-6663-ed5e-7641" type="selectionEntry"/>
@@ -90,6 +92,7 @@
     <entryLink import="true" name="Regiment of Renown - The Summerking&apos;s Entourage" hidden="false" type="selectionEntry" id="3d98-7fa-2755-c26a" targetId="2eda-9ef0-22d9-a4ba"/>
     <entryLink import="true" name="Regiment of Renown - Scions of the Necropolis" hidden="false" type="selectionEntry" id="7768-a8b7-a27d-f18a" targetId="8fe0-4d59-efcf-50e0"/>
     <entryLink import="true" name="Regiment of Renown - The Liche&apos;s Hand" hidden="false" type="selectionEntry" id="dc42-9e2d-1970-328" targetId="b809-9d2-4993-b523"/>
+    <entryLink import="true" name="Zondara&apos;s Gravebreakers" hidden="false" id="a0a5-91ec-5e8e-dbc6" targetId="6079-5aff-1f84-b816" type="selectionEntry"/>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="42cd-b93d-0148-d66f" name="Allegiance" hidden="false" collective="false" import="true" type="upgrade">
@@ -1042,6 +1045,7 @@
         <categoryLink targetId="4f53-8230-2f02-9639" id="e205-9da9-77ba-958e" primary="false" name="WIZARD"/>
         <categoryLink targetId="50c4-1b1e-bdf8-cf0f" id="7985-8a66-355e-8f1c" primary="false" name="SEKHAR"/>
         <categoryLink targetId="088b-3a27-03f7-8249" id="5cf-9f0c-d4a9-9193" primary="false" name="Unique"/>
+        <categoryLink targetId="a8ed-ca35-24e0-cf2e" id="7934-8417-7b6b-1af4" primary="false" name="9 or less wounds Leader"/>
       </categoryLinks>
       <entryLinks>
         <entryLink id="db49-afb9-e6f5-22b" name="Battalions" hidden="false" collective="false" import="true" targetId="9df7-269b-fa20-74b2" type="selectionEntryGroup"/>
@@ -1132,6 +1136,59 @@ If the unit uses this ability, it does not benefit from the Serpentine Agility a
         </profile>
       </profiles>
     </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Zondara&apos;s Gravebreakers" hidden="false" id="6079-5aff-1f84-b816" collective="false">
+      <modifiers>
+        <modifier type="set" value="1" field="db0b-4fb3-5198-4ea2">
+          <conditions>
+            <condition type="greaterThan" value="0" field="selections" scope="roster" childId="7773-9a87-c304-f756" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="1189-76a9-df65-5ee4" shared="true" includeChildForces="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="29f9-b31f-19e4-1486" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+        <constraint type="min" value="0" field="selections" scope="roster" shared="true" id="db0b-4fb3-5198-4ea2" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+      </constraints>
+      <profiles>
+        <profile name="Zondara&apos;s Gravebreakers" typeId="1960-ca8e-67ce-2014" typeName="Unit" hidden="false" id="1690-c20a-a622-a81a">
+          <characteristics>
+            <characteristic name="Move" typeId="8655-6213-2824-1752">4&quot;</characteristic>
+            <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">2</characteristic>
+            <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">10</characteristic>
+            <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">6+</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Unearthed Treasures" hidden="false" id="35c4-246d-1fb1-572e" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If this unit is included in a Soulblight Gravelords army, in your hero phase, you can pick 1 gravesite within 3&quot; of this unit and say that it will attempt to unearth treasures. If you do so, roll a dice and look up the corresponding effect on the following table. You cannot pick the same gravesite more than once per battle.
+1 Nothing but Old Bones: No effect.
+2-4 Exhumed Flesh: You can return up to D3 slain models to this unit.
+5-6 Buried Treasure: If a friendly ZONDARA RIVENHEART is within 3&quot; of this unit, you can pick 1 artefact of power from the Soulblight Gravelords allegiance abilities that no HERO in your army bears for ZONDARA RIVENHEART to bear. ZONDARA RIVENHEART can bear any number of artefacts in this manner.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink name="Other" hidden="false" id="92e6-f5e8-dee2-5358" targetId="065e-fda7-fd27-1f40" primary="true"/>
+        <categoryLink name="Unique" hidden="false" id="a818-c360-6a09-b10" targetId="088b-3a27-03f7-8249" primary="false"/>
+        <categoryLink name="DEATH" hidden="false" id="3bd8-a5-85f3-9cd" targetId="6cdf-dd4f-0e91-e9c4" primary="false"/>
+        <categoryLink name="DEATHRATTLE" hidden="false" id="b84b-cbc5-10da-8352" targetId="96d0-849a-a8cc-a6cf" primary="false"/>
+        <categoryLink name="SOULBLIGHT GRAVELORDS" hidden="false" id="b4b2-ca42-82e0-4e66" targetId="3d31-12d5-6735-011c" primary="false"/>
+        <categoryLink name="GRAVE GUARD" hidden="false" id="275b-9219-c3e2-a0f6" targetId="e8f4-3b13-f9d1-eb56" primary="false"/>
+        <categoryLink name="THE SONS OF VELMORN" hidden="false" id="9c75-1d27-a52b-1b96" targetId="508f-5e4f-8ffd-ff24" primary="false"/>
+        <categoryLink name="SUMMONABLE" hidden="false" id="3323-2cb3-3ba6-77a2" targetId="d51a-b7de-3b60-a231" primary="false"/>
+        <categoryLink name="Infantry" hidden="false" id="77fe-601c-e32-c63b" targetId="7f45-c5b3-c698-138d" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink import="true" name="Battalions" hidden="false" id="6f86-cea9-3864-9bf7" collective="false" targetId="9df7-269b-fa20-74b2" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" hidden="false" id="2882-5cf3-ae2c-fdb9" typeId="points" value="0"/>
+      </costs>
+    </selectionEntry>
   </sharedSelectionEntries>
   <catalogueLinks>
     <catalogueLink id="9058-e9a6-223f-f2db" name="Death - Data" targetId="e37a-2f18-f168-6ed3" type="catalogue" importRootEntries="true"/>
@@ -1146,4 +1203,97 @@ If the unit uses this ability, it does not benefit from the Serpentine Agility a
       </characteristicTypes>
     </profileType>
   </profileTypes>
+  <selectionEntries>
+    <selectionEntry type="unit" import="true" name="Zondara Rivenheart" hidden="false" id="7773-9a87-c304-f756" collective="false">
+      <modifiers>
+        <modifier type="set" value="1" field="76b3-7c03-c117-f051">
+          <conditions>
+            <condition type="greaterThan" value="0" field="selections" scope="roster" childId="6079-5aff-1f84-b816" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="1189-76a9-df65-5ee4" shared="true" includeChildForces="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="f097-df84-c7d5-6999" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+        <constraint type="min" value="0" field="selections" scope="roster" shared="true" id="76b3-7c03-c117-f051" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ce32-a870-65a8-b5eb" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+      </constraints>
+      <profiles>
+        <profile name="Zondara Rivenheart" typeId="1960-ca8e-67ce-2014" typeName="Unit" hidden="false" id="9f66-2621-5228-1f82">
+          <characteristics>
+            <characteristic name="Move" typeId="8655-6213-2824-1752">5&quot;</characteristic>
+            <characteristic name="Wounds" typeId="cd0e-fea6-411f-904d">5</characteristic>
+            <characteristic name="Bravery" typeId="0c85-bf79-836b-759e">10</characteristic>
+            <characteristic name="Save" typeId="f8dd-4f2a-8543-4f36">6+</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Wizard" typeId="f55d-ee3a-1597-110f" typeName="Magic" hidden="false" id="fde1-6e03-da68-bc81">
+          <characteristics>
+            <characteristic name="Cast/Unbind" typeId="8294-f605-2c0f-8f92">1/1</characteristic>
+            <characteristic name="Spells Known" typeId="dc9c-47d3-6931-859c">Arcane Bolt, Mystic Shield, Wild Incantation</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Zondara&apos;s Minions" hidden="false" id="45eb-c01c-149c-e27c" typeId="c924-5a68-471a-2fd5" typeName="Unit Abilities">
+          <characteristics>
+            <characteristic name="Ability Details" typeId="d4dc-8e81-bc0e-b8f0">If this unit is within 3&quot; of a friendly ZONDARA&apos;S GRAVEBREAKERS unit, before you allocate a wound or mortal wound to this unit, or instead of making a ward roll for a wound or mortal wound that would be allocated to this unit, roll a dice. On a 4+, that wound or mortal wound is allocated to that unit instead of this unit.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Wild Incantation" hidden="false" id="4801-e692-a8a7-c989" typeId="2e81-5e22-c6e1-73cb" typeName="Spell">
+          <characteristics>
+            <characteristic name="Casting Value" typeId="2508-b604-1258-a920">7</characteristic>
+            <characteristic name="Range" typeId="5b5c-1fd1-4c0f-5705">12&quot;</characteristic>
+            <characteristic name="Description" typeId="76ff-781d-b8e6-5f27">If successfully cast, pick a friendly DEADWALKERS unit wholly within range. Until the start of your next turn, unmodified hit rolls of 6 for attacks made by that unit automatically wound (do not make a wound roll).</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink name="Leader" hidden="false" id="bf91-8661-6a9b-79bc" targetId="6c6b-e787-f9b8-a510" primary="true"/>
+        <categoryLink name="9 or less wounds Leader" hidden="false" id="cc70-2da5-ec3d-db25" targetId="a8ed-ca35-24e0-cf2e" primary="false"/>
+        <categoryLink name="DEATH" hidden="false" id="9ccd-71b2-681f-b92b" targetId="6cdf-dd4f-0e91-e9c4" primary="false"/>
+        <categoryLink name="SOULBLIGHT GRAVELORDS" hidden="false" id="6811-e385-aefa-2f3e" targetId="3d31-12d5-6735-011c" primary="false"/>
+        <categoryLink name="HERO" hidden="false" id="806e-4333-1c6e-c750" targetId="4e0e-664d-51ea-0929" primary="false"/>
+        <categoryLink name="WIZARD" hidden="false" id="75bd-40d-e26b-8145" targetId="4f53-8230-2f02-9639" primary="false"/>
+        <categoryLink name="Unique" hidden="false" id="9da-f822-620a-9db3" targetId="088b-3a27-03f7-8249" primary="false"/>
+        <categoryLink targetId="f16f-2e67-9bf6-1c04" id="e4d-5fd7-821d-e06f" primary="false" name="NECROMANCER"/>
+        <categoryLink targetId="9b9d-ac6f-768a-123f" id="1f84-a1e8-4a6b-712f" primary="false" name="DEATHMAGES"/>
+        <categoryLink targetId="471c-be46-b805-73cf" id="5da6-76af-7aa-ced5" primary="false" name="ZONDARA RIVENHEART"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink import="true" name="Battalions" hidden="false" id="25e9-6d0f-8413-283f" collective="false" targetId="9df7-269b-fa20-74b2" type="selectionEntryGroup"/>
+        <entryLink import="true" name="General" hidden="false" id="58c5-2e46-ec85-2aa1" collective="false" targetId="88d2-d540-0573-3402" type="selectionEntry">
+          <categoryLinks>
+            <categoryLink name="Unique General" hidden="false" id="f846-83ab-8b83-dce8" targetId="fe3f-d230-7e2c-fba2" primary="false"/>
+          </categoryLinks>
+        </entryLink>
+        <entryLink import="true" name="Spell Lores" hidden="false" id="5622-222c-c0fa-cb72" collective="false" targetId="8417-93fc-9562-a748" type="selectionEntryGroup"/>
+        <entryLink import="true" name="Artefacts" hidden="true" id="a478-ea40-474d-49ad" collective="false" targetId="a2c1-3fba-5acb-d560" type="selectionEntryGroup">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="equalTo" value="1" field="selections" scope="roster" childId="9fec-247c-d146-ead4" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
+        <entryLink import="true" name="Command Traits" hidden="false" id="b04a-d4ba-d9e7-f0f3" collective="false" targetId="eda1-7945-4fea-a145" type="selectionEntryGroup">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="roster" childId="9fec-247c-d146-ead4" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
+        <entryLink import="true" name="Mystic Shield" hidden="false" id="c32e-4f63-7c3f-16d0" type="selectionEntry" targetId="5fdd-6634-f9f8-068a"/>
+        <entryLink import="true" name="Arcane Bolt" hidden="false" id="cc6b-cfa8-5cb0-181e" type="selectionEntry" targetId="869c-168d-eba5-eacf"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" hidden="false" id="7940-5806-b7c-6e79" typeId="points" value="220"/>
+      </costs>
+    </selectionEntry>
+  </selectionEntries>
 </catalogue>
