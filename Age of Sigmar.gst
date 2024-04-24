@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="177" battleScribeVersion="2.03" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" type="gameSystem">
+<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc33" name="Age of Sigmar" revision="178" battleScribeVersion="2.03" authorContact="@BSData" authorUrl="https://github.com/BSData/warhammer-age-of-sigmar" type="gameSystem">
   <publications>
     <publication id="e51d-b1a3-pubEC" name="The General&apos;s Handbook"/>
     <publication id="e51d-b1a3-pubEQ" name="Core Rules"/>
@@ -6644,7 +6644,7 @@ is dispelled.’</characteristic>
               <profiles>
                 <profile id="2467-905d-e6b6-d2f1" name="Spellcasting Savant" hidden="false" typeId="9c01-ec20-32c1-0948" typeName="Grand Strategy">
                   <characteristics>
-                    <characteristic name="Description" typeId="53c8-cc18-16d1-e890">When the battle ends, you complete this grand strategy if the model picked to be your general is an ANDTORIAN LOCUS and that unit has not been slain</characteristic>
+                    <characteristic name="Description" id="a1a5-59ef-c54a-d637" hidden="false" typeId="53c8-cc18-16d1-e890">When the battle ends, you complete this grand strategy if the model picked to be your general is an ANDTORIAN LOCUS and that model is on the battlefield and has not been slain.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
